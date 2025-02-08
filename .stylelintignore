@@ -1,0 +1,13 @@
+*.tsx
+*.jsx
+*.ts
+*.md
+*.svg
+/node_modules
+*.json
+/.vercel
+.ideag
+**/*.lock
+.env
+.stylelintignore
+.stylelintrc

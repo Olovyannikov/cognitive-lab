@@ -1,0 +1,17 @@
+@import url("@mantine/core/styles.css");
+@import url("@mantine/nprogress/styles.css");
+@import url("@mantine/notifications/styles.css");
+
+/* Components */
+@import url("./general/_fonts.css");
+@import url("./general/_scaffoldings.css");
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}

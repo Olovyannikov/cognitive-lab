@@ -1,0 +1,5 @@
+.back {
+  @mixin larger-than 976px {
+    margin-block: 40px;
+  }
+}

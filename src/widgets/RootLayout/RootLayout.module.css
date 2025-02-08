@@ -1,0 +1,17 @@
+.app {
+  display: grid;
+  grid-template: "h h h h" auto "m m m m" 1fr "f f f f" auto / auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+}
+
+.footer {
+  grid-area: f;
+}

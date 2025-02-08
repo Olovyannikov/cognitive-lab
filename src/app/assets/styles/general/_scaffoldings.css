@@ -1,0 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", "Roboto", "Arial", sans-serif;
+  background-color: var(--mantine-color-white);
+}
+
+#page-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body.page-is-transitioning #page-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+span:has(strong) {
+  font-size: 18px;
+
+  @mixin larger-than 1024px {
+    font-size: 22px;
+  }
+}
+
+pre {
+  overflow: auto;
+}
