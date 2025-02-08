@@ -12,7 +12,7 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
-  get: (a3, b2) => (typeof require !== "undefined" ? require : a3)[b2]
+  get: (a4, b2) => (typeof require !== "undefined" ? require : a4)[b2]
 }) : x)(function(x) {
   if (typeof require !== "undefined") return require.apply(this, arguments);
   throw Error('Dynamic require of "' + x + '" is not supported');
@@ -143,9 +143,9 @@ var require_picocolors = __commonJS({
       const cyan = formatter("\x1B[36m", "\x1B[39m");
       return {
         isColorSupported: enabled,
-        code: enabled ? cyan : (s5) => `\`${s5}\``,
-        string: enabled ? cyan : (s5) => `'${s5}'`,
-        reset: enabled ? (s5) => `\x1B[0m${s5}\x1B[0m` : String,
+        code: enabled ? cyan : (s10) => `\`${s10}\``,
+        string: enabled ? cyan : (s10) => `'${s10}'`,
+        reset: enabled ? (s10) => `\x1B[0m${s10}\x1B[0m` : String,
         bold: enabled ? formatter("\x1B[1m", "\x1B[22m", "\x1B[22m\x1B[1m") : String,
         dim: enabled ? formatter("\x1B[2m", "\x1B[22m", "\x1B[22m\x1B[2m") : String,
         italic: enabled ? formatter("\x1B[3m", "\x1B[23m") : String,
@@ -652,17 +652,17 @@ function resolveUrlPathnameRelative(pathnameRelative, base) {
   if (pathnameRelative.startsWith(".")) {
     stack.pop();
   }
-  for (const i3 in parts) {
-    const p2 = parts[i3];
-    if (p2 == "" && i3 === "0")
+  for (const i4 in parts) {
+    const p4 = parts[i4];
+    if (p4 == "" && i4 === "0")
       continue;
-    if (p2 == ".")
+    if (p4 == ".")
       continue;
-    if (p2 == "..")
+    if (p4 == "..")
       stack.pop();
     else {
       baseRestoreTrailingSlash = false;
-      stack.push(p2);
+      stack.push(p4);
     }
   }
   let pathnameAbsolute = stack.join("/");
@@ -717,7 +717,7 @@ function isUrlRedirectTarget(url) {
   return url.startsWith("/") || isUri(url) || isUrlWithProtocol(url);
 }
 function isUrlRelative(url) {
-  return [".", "?", "#"].some((c3) => url.startsWith(c3)) || url === "";
+  return [".", "?", "#"].some((c7) => url.startsWith(c7)) || url === "";
 }
 function isUrlWithProtocol(url) {
   const { protocol } = parseProtocol(url);
@@ -954,7 +954,7 @@ var init_compareString = __esm({
 var isNotNullish;
 var init_isNotNullish = __esm({
   "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/utils/isNotNullish.js"() {
-    isNotNullish = (p2) => p2 !== null && p2 !== void 0;
+    isNotNullish = (p4) => p4 !== null && p4 !== void 0;
   }
 });
 
@@ -1146,7 +1146,7 @@ var init_utils = __esm({
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/error-page.js
 function getErrorPageId(pageFilesAll, pageConfigs) {
   if (pageConfigs.length > 0) {
-    const errorPageConfigs = pageConfigs.filter((p2) => p2.isErrorPage);
+    const errorPageConfigs = pageConfigs.filter((p4) => p4.isErrorPage);
     if (errorPageConfigs.length === 0)
       return null;
     assertUsage2(errorPageConfigs.length === 1, "Only one error page can be defined");
@@ -1167,7 +1167,7 @@ function isErrorPageId(pageId, _isV1Design) {
 }
 function isErrorPage(pageId, pageConfigs) {
   if (pageConfigs.length > 0) {
-    const pageConfig = pageConfigs.find((p2) => p2.pageId === pageId);
+    const pageConfig = pageConfigs.find((p4) => p4.pageId === pageId);
     assert(pageConfig);
     return !!pageConfig.isErrorPage;
   } else {
@@ -1209,15 +1209,15 @@ function debug_(flag, options, ...msgs) {
   let [msgFirst, ...msgsRest] = msgs;
   const padding = " ".repeat(flag.length + 1);
   msgFirst = formatMsg(msgFirst, options, padding, "FIRST");
-  msgsRest = msgsRest.map((msg, i3) => {
-    const position = i3 === msgsRest.length - 1 ? "LAST" : "MIDDLE";
+  msgsRest = msgsRest.map((msg, i4) => {
+    const position = i4 === msgsRest.length - 1 ? "LAST" : "MIDDLE";
     return formatMsg(msg, options, padding, position);
   });
   let logFirst;
   let logsRest;
-  const noNewLine = msgsRest.length <= 1 && [msgFirst, ...msgsRest].every((m3) => typeof m3 === "string" && !m3.includes("\n"));
+  const noNewLine = msgsRest.length <= 1 && [msgFirst, ...msgsRest].every((m5) => typeof m5 === "string" && !m5.includes("\n"));
   if (noNewLine) {
-    logFirst = [msgFirst, ...msgsRest].map((m3) => String(m3).trim());
+    logFirst = [msgFirst, ...msgsRest].map((m5) => String(m5).trim());
     logsRest = [];
   } else {
     logFirst = [msgFirst];
@@ -1295,7 +1295,7 @@ function assertFlagsActivated() {
   const flagsActivated = getFlagsActivated();
   flagsActivated.forEach((flag) => {
     assertUsage2(flags.includes(flag), `Unknown DEBUG flag ${import_picocolors4.default.cyan(flag)}. Valid flags:
-${flags.map((f2) => `  ${import_picocolors4.default.cyan(f2)}`).join("\n")}`);
+${flags.map((f5) => `  ${import_picocolors4.default.cyan(f5)}`).join("\n")}`);
   });
 }
 function getFlagsActivated() {
@@ -1392,13 +1392,13 @@ function assertVersion(dependencyName, versionActual, versionExpected) {
 }
 function isVersionOrAbove(versionActual, versionExpected) {
   const p1 = parseVersion(versionActual);
-  const p2 = parseVersion(versionExpected);
-  if (p1[0] !== p2[0])
-    return p1[0] > p2[0];
-  if (p1[1] !== p2[1])
-    return p1[1] > p2[1];
-  if (p1[2] !== p2[2])
-    return p1[2] > p2[2];
+  const p22 = parseVersion(versionExpected);
+  if (p1[0] !== p22[0])
+    return p1[0] > p22[0];
+  if (p1[1] !== p22[1])
+    return p1[1] > p22[1];
+  if (p1[2] !== p22[2])
+    return p1[2] > p22[2];
   return true;
 }
 function parseVersion(version) {
@@ -1406,8 +1406,8 @@ function parseVersion(version) {
   let partsStr = version.split(".");
   partsStr = partsStr.slice(0, 3);
   assert(partsStr.length === 3);
-  assert(partsStr.every((s5) => s5.length > 0));
-  const parts = partsStr.map((s5) => parseInt(s5, 10));
+  assert(partsStr.every((s10) => s10.length > 0));
+  const parts = partsStr.map((s10) => parseInt(s10, 10));
   return parts;
 }
 var init_assertVersion = __esm({
@@ -1795,13 +1795,13 @@ function onLoad() {
   (0, import_require_shim.installRequireShim)();
 }
 function addEcosystemStamp() {
-  const g2 = globalThis;
-  g2._isVikeApp = /* Don't set to true so that consumers do `!!globalThis._isVikeApp` instead of `globalThis._isVikeApp === true`.
+  const g3 = globalThis;
+  g3._isVikeApp = /* Don't set to true so that consumers do `!!globalThis._isVikeApp` instead of `globalThis._isVikeApp === true`.
   true
   */
   // We use an object so that we can eventually, in the future, add helpful information as needed. (E.g. the Vike version, or global settings.)
   {};
-  g2._isVitePluginSsr = true;
+  g3._isVitePluginSsr = true;
 }
 var import_require_shim;
 var init_onLoad = __esm({
@@ -1998,11 +1998,11 @@ function parse(str) {
     importPath
   };
 }
-function invalid(s5) {
-  const firstLetter = s5[0];
+function invalid(s10) {
+  const firstLetter = s10[0];
   if (!firstLetter || !/[a-z0-9]/.test(firstLetter))
     return true;
-  if (/[^a-z0-9_\-\.]/.test(s5))
+  if (/[^a-z0-9_\-\.]/.test(s10))
     return true;
   return false;
 }
@@ -2205,7 +2205,7 @@ var init_formatHintLog = __esm({
 });
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/utils/joinEnglish.js
-function joinEnglish(arr, conjunction, colorizer = (s5) => s5) {
+function joinEnglish(arr, conjunction, colorizer = (s10) => s10) {
   assert(arr.length > 0);
   if (arr.length === 1)
     return colorizer(arr[0]);
@@ -2246,8 +2246,8 @@ var init_normalizeHeaders = __esm({
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/utils/isVikeReactApp.js
 function isVikeReactApp() {
-  const g2 = globalThis;
-  return !!g2._isVikeReactApp;
+  const g3 = globalThis;
+  return !!g3._isVikeReactApp;
 }
 var init_isVikeReactApp = __esm({
   "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/utils/isVikeReactApp.js"() {
@@ -2364,21 +2364,21 @@ var init_assertPageContextProvidedByUser = __esm({
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/node/runtime/html/injectAssets/injectHtmlTags.js
 function injectHtmlTags(htmlString, htmlTags, position) {
-  const htmlFragment = joinHtmlTags(htmlTags.filter((h2) => h2.position === position));
+  const htmlFragment = joinHtmlTags(htmlTags.filter((h4) => h4.position === position));
   if (htmlFragment) {
     htmlString = injectHtmlFragment(position, htmlFragment, htmlString);
   }
   return htmlString;
 }
 function injectHtmlTagsUsingStream(htmlTags, streamFromReactStreamingPackage) {
-  const htmlFragment = joinHtmlTags(htmlTags.filter((h2) => h2.position === "HTML_STREAM"));
+  const htmlFragment = joinHtmlTags(htmlTags.filter((h4) => h4.position === "HTML_STREAM"));
   if (htmlFragment) {
     assert(!streamFromReactStreamingPackage.hasStreamEnded());
     streamFromReactStreamingPackage.injectToStream(htmlFragment, { flush: true });
   }
 }
 function joinHtmlTags(htmlTags) {
-  const htmlFragment = htmlTags.map((h2) => resolveHtmlTag(h2.htmlTag)).join("");
+  const htmlFragment = htmlTags.map((h4) => resolveHtmlTag(h4.htmlTag)).join("");
   return htmlFragment;
 }
 function injectHtmlFragment(position, htmlFragment, htmlString) {
@@ -2594,8 +2594,8 @@ var require_types = __commonJS({
       })
     ];
     exports.types = types;
-    function ts(t4) {
-      return t4;
+    function ts(t8) {
+      return t8;
     }
   }
 });
@@ -2772,11 +2772,11 @@ var require_stringify = __commonJS({
       return subjectName;
     }
     function getPathString(path, canBeFirstKey) {
-      const pathString = path.map((key, i3) => {
+      const pathString = path.map((key, i4) => {
         if (typeof key === "number") {
           return `[${key}]`;
         }
-        if (i3 === 0 && canBeFirstKey && isKeyDotNotationCompatible2(key)) {
+        if (i4 === 0 && canBeFirstKey && isKeyDotNotationCompatible2(key)) {
           return key;
         }
         return getPropAccessNotation2(key);
@@ -2851,14 +2851,14 @@ function serializePageContextClientSide(pageContext) {
   passToClient.forEach((prop) => {
     pageContextClient[prop] = pageContext[prop];
   });
-  if (Object.keys(pageContext._pageContextInit).some((p2) => passToClient.includes(p2))) {
+  if (Object.keys(pageContext._pageContextInit).some((p4) => passToClient.includes(p4))) {
     pageContextClient[pageContextInitIsPassedToClient] = true;
   }
   let pageContextSerialized;
   try {
     pageContextSerialized = serialize(pageContextClient);
   } catch (err) {
-    const h2 = (s5) => import_picocolors12.default.cyan(s5);
+    const h4 = (s10) => import_picocolors12.default.cyan(s10);
     let hasWarned = false;
     const propsNonSerializable = [];
     passToClient.forEach((prop) => {
@@ -2875,11 +2875,11 @@ function serializePageContextClientSide(pageContext) {
           if ((0, import_stringify.isJsonSerializerError)(err2)) {
             pathString = err2.pathString;
           }
-          assertUsage2(false, `Cannot serialize config ${h2(pathString)} set by useConfig(), see https://vike.dev/useConfig#serialization-error`);
+          assertUsage2(false, `Cannot serialize config ${h4(pathString)} set by useConfig(), see https://vike.dev/useConfig#serialization-error`);
         }
         let msg = [
-          `${h2(varName)} can't be serialized and, therefore, can't be passed to the client side.`,
-          `Make sure ${h2(varName)} is serializable, or remove ${h2(propName2)} from ${h2("passToClient")}.`
+          `${h4(varName)} can't be serialized and, therefore, can't be passed to the client side.`,
+          `Make sure ${h4(varName)} is serializable, or remove ${h4(propName2)} from ${h4("passToClient")}.`
         ].join(" ");
         if ((0, import_stringify.isJsonSerializerError)(err2)) {
           msg = `${msg} Serialization error: ${err2.messageCore}.`;
@@ -2940,7 +2940,7 @@ function serializePageContextAbort(pageContext) {
   } else {
     assertWarning2(unknownProps.length === 0, [
       "The following pageContext values won't be available on the client-side:",
-      unknownProps.map((p2) => `  pageContext[${JSON.stringify(p2)}]`),
+      unknownProps.map((p4) => `  pageContext[${JSON.stringify(p4)}]`),
       "Use `throw render()` instead of `throw RenderErrorPage()`"
     ].join("\n"), {
       onlyOnce: false
@@ -3104,7 +3104,7 @@ var init_mergeScriptTags = __esm({
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/page-configs/helpers.js
 function getPageConfig(pageId, pageConfigs) {
-  const pageConfig = pageConfigs.find((p2) => p2.pageId === pageId);
+  const pageConfig = pageConfigs.find((p4) => p4.pageId === pageId);
   assert(pageConfigs.length > 0);
   assert(pageConfig);
   return pageConfig;
@@ -3182,12 +3182,12 @@ function getDefinedAtString(definedAtData, configName) {
   assert(files.length >= 1);
   const definedAtString = files.map((source) => {
     const { filePathToShowToUser, fileExportPathToShowToUser } = source;
-    let s5 = filePathToShowToUser;
+    let s10 = filePathToShowToUser;
     const exportPath = getExportPath(fileExportPathToShowToUser, configName);
     if (exportPath) {
-      s5 = `${s5} > ${import_picocolors13.default.cyan(exportPath)}`;
+      s10 = `${s10} > ${import_picocolors13.default.cyan(exportPath)}`;
     }
-    return s5;
+    return s10;
   }).join(" / ");
   return definedAtString;
 }
@@ -3495,21 +3495,21 @@ var require_rollupSourceMap = __commonJS({
 var require_utils2 = __commonJS({
   "node_modules/.pnpm/@brillout+vite-plugin-server-entry@0.5.8/node_modules/@brillout/vite-plugin-server-entry/dist/runtime/utils.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __exportStar2 = exports && exports.__exportStar || function(m3, exports2) {
-      for (var p2 in m3) if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2)) __createBinding2(exports2, m3, p2);
+    var __exportStar2 = exports && exports.__exportStar || function(m5, exports2) {
+      for (var p4 in m5) if (p4 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p4)) __createBinding2(exports2, m5, p4);
     };
     Object.defineProperty(exports, "__esModule", { value: true });
     __exportStar2(require_assert(), exports);
@@ -3525,21 +3525,21 @@ var require_utils2 = __commonJS({
 var require_utils3 = __commonJS({
   "node_modules/.pnpm/@brillout+vite-plugin-server-entry@0.5.8/node_modules/@brillout/vite-plugin-server-entry/dist/shared/utils.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __exportStar2 = exports && exports.__exportStar || function(m3, exports2) {
-      for (var p2 in m3) if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2)) __createBinding2(exports2, m3, p2);
+    var __exportStar2 = exports && exports.__exportStar || function(m5, exports2) {
+      for (var p4 in m5) if (p4 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p4)) __createBinding2(exports2, m5, p4);
     };
     Object.defineProperty(exports, "__esModule", { value: true });
     __exportStar2(require_assert(), exports);
@@ -3654,11 +3654,11 @@ var require_crawlServerEntry = __commonJS({
         return false;
       }
       const cwd = process.cwd();
-      const isPathAbsolute = (p2) => {
+      const isPathAbsolute = (p4) => {
         if (process.platform === "win32") {
-          return path.win32.isAbsolute(p2);
+          return path.win32.isAbsolute(p4);
         } else {
-          return p2.startsWith("/");
+          return p4.startsWith("/");
         }
       };
       if (outDir) {
@@ -3916,7 +3916,7 @@ function resolveRouteString(routeString, urlPathname) {
       return ".*";
     }
     return escapeRegex(segment.static);
-  }).map((s5) => `(${s5})`).join("");
+  }).map((s10) => `(${s10})`).join("");
   const routeRegex = new RegExp(`^${routeRegexStrInner}/?$`);
   const routeRegexMatch = urlPathname.match(routeRegex);
   if (!routeRegexMatch)
@@ -3925,8 +3925,8 @@ function resolveRouteString(routeString, urlPathname) {
   const [_2, ...segmentsValue] = routeRegexMatch;
   let globIdx = 0;
   const hasMultipleGlobs = segments.filter((segment) => segment.glob).length > 1;
-  segments.forEach((segment, i3) => {
-    let val = segmentsValue[i3];
+  segments.forEach((segment, i4) => {
+    let val = segmentsValue[i4];
     if (segment.param) {
       routeParams[segment.param] = val;
     }
@@ -3939,30 +3939,30 @@ function resolveRouteString(routeString, urlPathname) {
 }
 function parseRouteString(routeString) {
   const segments = [];
-  const pushStatic = (s5) => {
+  const pushStatic = (s10) => {
     const segmentLast = segments[segments.length - 1];
     if (segmentLast?.static) {
-      segmentLast.static += s5;
+      segmentLast.static += s10;
     } else {
-      segments.push({ static: s5 });
+      segments.push({ static: s10 });
     }
   };
   const parts = routeString.split("/");
-  parts.forEach((s5, i3) => {
-    if (i3 !== 0)
+  parts.forEach((s10, i4) => {
+    if (i4 !== 0)
       pushStatic("/");
-    if (isParam(s5)) {
-      assertWarning2(!s5.startsWith(PARAM_TOKEN_OLD), `Outdated Route String ${highlight(routeString)}, use ${highlight(routeString.split(PARAM_TOKEN_OLD).join(PARAM_TOKEN_NEW))} instead`, { onlyOnce: true });
-      segments.push({ param: s5.slice(1) });
+    if (isParam(s10)) {
+      assertWarning2(!s10.startsWith(PARAM_TOKEN_OLD), `Outdated Route String ${highlight(routeString)}, use ${highlight(routeString.split(PARAM_TOKEN_OLD).join(PARAM_TOKEN_NEW))} instead`, { onlyOnce: true });
+      segments.push({ param: s10.slice(1) });
     } else {
-      if (s5 === "*" && i3 === parts.length - 1 && routeString !== "*" && routeString !== "/*") {
+      if (s10 === "*" && i4 === parts.length - 1 && routeString !== "*" && routeString !== "/*") {
         segments.push({ glob: true });
       } else {
-        s5.split("*").forEach((s6, i4) => {
-          if (i4 !== 0)
+        s10.split("*").forEach((s11, i5) => {
+          if (i5 !== 0)
             segments.push({ glob: true });
-          if (s6 !== "") {
-            pushStatic(s6);
+          if (s11 !== "") {
+            pushStatic(s11);
           }
         });
       }
@@ -3972,16 +3972,16 @@ function parseRouteString(routeString) {
 }
 function analyzeRouteString(routeString) {
   const segments = parseRouteString(routeString);
-  const countStaticParts = (s5) => s5?.split("/").filter(Boolean).length || 0;
+  const countStaticParts = (s10) => s10?.split("/").filter(Boolean).length || 0;
   let numberOfStaticPartsBeginning = 0;
   for (const segment of segments) {
     if (!segment.static)
       break;
     numberOfStaticPartsBeginning += countStaticParts(segment.static);
   }
-  const numberOfStaticParts = segments.map((s5) => countStaticParts(s5.static)).reduce((sum, a3) => sum + a3, 0);
-  const numberOfParams = segments.filter((s5) => s5.param).length;
-  const numberOfGlobs = segments.filter((s5) => s5.glob).length;
+  const numberOfStaticParts = segments.map((s10) => countStaticParts(s10.static)).reduce((sum, a4) => sum + a4, 0);
+  const numberOfParams = segments.filter((s10) => s10.param).length;
+  const numberOfGlobs = segments.filter((s10) => s10.glob).length;
   return { numberOfStaticPartsBeginning, numberOfStaticParts, numberOfParams, numberOfGlobs };
 }
 function isParam(routeSegment) {
@@ -4136,23 +4136,23 @@ var init_resolveRouteFunction = __esm({
 function humanizeTime(milliseconds) {
   const seconds = milliseconds / 1e3;
   if (seconds < 120) {
-    const n2 = round(seconds);
-    return `${n2} second${plural(n2)}`;
+    const n3 = round(seconds);
+    return `${n3} second${plural(n3)}`;
   }
   {
     const minutes = seconds / 60;
-    const n2 = round(minutes);
-    return `${n2} minute${plural(n2)}`;
+    const n3 = round(minutes);
+    return `${n3} minute${plural(n3)}`;
   }
 }
-function round(n2) {
-  let rounded = n2.toFixed(1);
+function round(n3) {
+  let rounded = n3.toFixed(1);
   if (rounded.endsWith(".0"))
     rounded = rounded.slice(0, -2);
   return rounded;
 }
-function plural(n2) {
-  return n2 === "1" ? "" : "s";
+function plural(n3) {
+  return n3 === "1" ? "" : "s";
 }
 var init_humanizeTime = __esm({
   "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/utils/humanizeTime.js"() {
@@ -4268,7 +4268,7 @@ async function getPageContextFromHook(onBeforeRouteHook, pageContext) {
   if (hasProp(hookReturn.pageContext, "pageId") && !hasProp(hookReturn.pageContext, "pageId", "null")) {
     const errPrefix2 = `${errPrefix} returned ${import_picocolors18.default.cyan("{ pageContext: { pageId } }")} but ${import_picocolors18.default.cyan("pageId")} should be`;
     assertUsage2(hasProp(hookReturn.pageContext, "pageId", "string"), `${errPrefix2} a string or null`);
-    assertUsage2(pageContext._allPageIds.includes(hookReturn.pageContext.pageId), `${errPrefix2} ${joinEnglish(pageContext._allPageIds.map((s5) => import_picocolors18.default.cyan(s5)), "or")}`);
+    assertUsage2(pageContext._allPageIds.includes(hookReturn.pageContext.pageId), `${errPrefix2} ${joinEnglish(pageContext._allPageIds.map((s10) => import_picocolors18.default.cyan(s10)), "or")}`);
   }
   if (hasProp(hookReturn.pageContext, "routeParams")) {
     assertRouteParams(hookReturn.pageContext, `${errPrefix} returned ${import_picocolors18.default.cyan("{ pageContext: { routeParams } }")} but routeParams should`);
@@ -4629,7 +4629,7 @@ function assertPlusFileExport(fileExports, filePathToShowToUser, configName) {
     assertUsage2(false, `${filePathToShowToUser} is ambiguous: remove ${exportDefault} or ${exportNamed}`);
   }
   assert(exportNamesValid.length === 1);
-  const exportNamesInvalid = exportNames.filter((e3) => !isValid(e3)).filter((exportName) => !SIDE_EXPORTS_TOLERATE.includes(exportName));
+  const exportNamesInvalid = exportNames.filter((e4) => !isValid(e4)).filter((exportName) => !SIDE_EXPORTS_TOLERATE.includes(exportName));
   if (!SIDE_EXPORTS_DO_NOT_CHECK.some((ext) => filePathToShowToUser.endsWith(ext))) {
     exportNamesInvalid.forEach((exportInvalid) => {
       assertWarning2(false, `${filePathToShowToUser} unexpected ${import_picocolors20.default.cyan(`export { ${exportInvalid} }`)}, see https://vike.dev/no-side-exports`, {
@@ -4695,9 +4695,9 @@ function parseConfigValuesSerialized_tmp(configValuesSerialized3) {
     let configValue;
     if (configValueSeriliazed.type === "cumulative") {
       const { valueSerialized, ...common } = configValueSeriliazed;
-      const value = valueSerialized.map((valueSerializedElement, i3) => {
+      const value = valueSerialized.map((valueSerializedElement, i4) => {
         const { value: value2, sideExports } = parseValueSerialized(valueSerializedElement, configName, () => {
-          const definedAtFile = configValueSeriliazed.definedAtData[i3];
+          const definedAtFile = configValueSeriliazed.definedAtData[i4];
           assert(definedAtFile);
           return definedAtFile;
         });
@@ -4988,8 +4988,8 @@ function getPageConfigUserFriendlyNew(pageConfig) {
     if (configValue.type === "cumulative") {
       const src = {
         type: "configsCumulative",
-        values: configValue.value.map((value2, i3) => {
-          const definedAtFile = configValue.definedAtData[i3];
+        values: configValue.value.map((value2, i4) => {
+          const definedAtFile = configValue.definedAtData[i4];
           assert(definedAtFile);
           const definedAt = getDefinedAtString(definedAtFile, configName);
           return {
@@ -5117,7 +5117,7 @@ async function getPageFilesAll(isClientSide, isProduction) {
 function getAllPageIds(allPageFiles, pageConfigs) {
   const fileIds = allPageFiles.filter(({ isDefaultPageFile }) => !isDefaultPageFile).map(({ pageId }) => pageId);
   const allPageIds = unique(fileIds);
-  const allPageIds2 = pageConfigs.map((p2) => p2.pageId);
+  const allPageIds2 = pageConfigs.map((p4) => p4.pageId);
   return [...allPageIds, ...allPageIds2];
 }
 var globalObject4;
@@ -5296,8 +5296,8 @@ var require_react_production = __commonJS({
             }
         }
       if (invokeCallback)
-        return callback = callback(children), invokeCallback = "" === nameSoFar ? "." + getElementKey(children, 0) : nameSoFar, isArrayImpl(callback) ? (escapedPrefix = "", null != invokeCallback && (escapedPrefix = invokeCallback.replace(userProvidedKeyEscapeRegex, "$&/") + "/"), mapIntoArray(callback, array, escapedPrefix, "", function(c3) {
-          return c3;
+        return callback = callback(children), invokeCallback = "" === nameSoFar ? "." + getElementKey(children, 0) : nameSoFar, isArrayImpl(callback) ? (escapedPrefix = "", null != invokeCallback && (escapedPrefix = invokeCallback.replace(userProvidedKeyEscapeRegex, "$&/") + "/"), mapIntoArray(callback, array, escapedPrefix, "", function(c7) {
+          return c7;
         })) : null != callback && (isValidElement2(callback) && (callback = cloneAndReplaceKey(
           callback,
           escapedPrefix + (null == callback.key || children && children.key === callback.key ? "" : ("" + callback.key).replace(
@@ -5308,17 +5308,17 @@ var require_react_production = __commonJS({
       invokeCallback = 0;
       var nextNamePrefix = "" === nameSoFar ? "." : nameSoFar + ":";
       if (isArrayImpl(children))
-        for (var i3 = 0; i3 < children.length; i3++)
-          nameSoFar = children[i3], type = nextNamePrefix + getElementKey(nameSoFar, i3), invokeCallback += mapIntoArray(
+        for (var i4 = 0; i4 < children.length; i4++)
+          nameSoFar = children[i4], type = nextNamePrefix + getElementKey(nameSoFar, i4), invokeCallback += mapIntoArray(
             nameSoFar,
             array,
             escapedPrefix,
             type,
             callback
           );
-      else if (i3 = getIteratorFn(children), "function" === typeof i3)
-        for (children = i3.call(children), i3 = 0; !(nameSoFar = children.next()).done; )
-          nameSoFar = nameSoFar.value, type = nextNamePrefix + getElementKey(nameSoFar, i3++), invokeCallback += mapIntoArray(
+      else if (i4 = getIteratorFn(children), "function" === typeof i4)
+        for (children = i4.call(children), i4 = 0; !(nameSoFar = children.next()).done; )
+          nameSoFar = nameSoFar.value, type = nextNamePrefix + getElementKey(nameSoFar, i4++), invokeCallback += mapIntoArray(
             nameSoFar,
             array,
             escapedPrefix,
@@ -5397,11 +5397,11 @@ var require_react_production = __commonJS({
         );
       },
       count: function(children) {
-        var n2 = 0;
+        var n3 = 0;
         mapChildren(children, function() {
-          n2++;
+          n3++;
         });
-        return n2;
+        return n3;
       },
       toArray: function(children) {
         return mapChildren(children, function(child) {
@@ -5443,8 +5443,8 @@ var require_react_production = __commonJS({
       var propName = arguments.length - 2;
       if (1 === propName) props.children = children;
       else if (1 < propName) {
-        for (var childArray = Array(propName), i3 = 0; i3 < propName; i3++)
-          childArray[i3] = arguments[i3 + 2];
+        for (var childArray = Array(propName), i4 = 0; i4 < propName; i4++)
+          childArray[i4] = arguments[i4 + 2];
         props.children = childArray;
       }
       return ReactElement(element.type, key, void 0, void 0, owner, props);
@@ -5473,8 +5473,8 @@ var require_react_production = __commonJS({
       var childrenLength = arguments.length - 2;
       if (1 === childrenLength) props.children = children;
       else if (1 < childrenLength) {
-        for (var childArray = Array(childrenLength), i3 = 0; i3 < childrenLength; i3++)
-          childArray[i3] = arguments[i3 + 2];
+        for (var childArray = Array(childrenLength), i4 = 0; i4 < childrenLength; i4++)
+          childArray[i4] = arguments[i4 + 2];
         props.children = childArray;
       }
       if (type && type.defaultProps)
@@ -5619,13 +5619,13 @@ var init_Loading = __esm({
 var require_react_dom_production = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
+    var React7 = require_react();
     function formatProdErrorMessage(code) {
       var url = "https://react.dev/errors/" + code;
       if (1 < arguments.length) {
         url += "?args[]=" + encodeURIComponent(arguments[1]);
-        for (var i3 = 2; i3 < arguments.length; i3++)
-          url += "&args[]=" + encodeURIComponent(arguments[i3]);
+        for (var i4 = 2; i4 < arguments.length; i4++)
+          url += "&args[]=" + encodeURIComponent(arguments[i4]);
       }
       return "Minified React error #" + code + "; visit " + url + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
     }
@@ -5659,7 +5659,7 @@ var require_react_dom_production = __commonJS({
         implementation
       };
     }
-    var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    var ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     function getCrossOriginStringAs(as, input) {
       if ("font" === as) return "";
       if ("string" === typeof input)
@@ -5751,8 +5751,8 @@ var require_react_dom_production = __commonJS({
     exports.requestFormReset = function(form) {
       Internals.d.r(form);
     };
-    exports.unstable_batchedUpdates = function(fn, a3) {
-      return fn(a3);
+    exports.unstable_batchedUpdates = function(fn, a4) {
+      return fn(a4);
     };
     exports.useFormState = function(action, initialState, permalink) {
       return ReactSharedInternals.H.useFormState(action, initialState, permalink);
@@ -5794,7 +5794,7 @@ var require_react_dom = __commonJS({
 var require_react_dom_server_legacy_node_production = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
+    var React7 = require_react();
     var ReactDOM2 = require_react_dom();
     var REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element");
     var REACT_PORTAL_TYPE = Symbol.for("react.portal");
@@ -5990,7 +5990,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     function sanitizeURL(url) {
       return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
     }
-    var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    var ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var sharedNotPendingObject = {
       pending: false,
@@ -6012,8 +6012,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     };
     var PRELOAD_NO_CREDS = [];
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\u0073" : "\\u0053") + suffix2;
     }
     function createResumableState(identifierPrefix, externalRuntimeConfig, bootstrapScriptContent, bootstrapScripts, bootstrapModules) {
       return {
@@ -6304,7 +6304,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     }
     function flattenOptionChildren(children) {
       var content = "";
-      React5.Children.forEach(children, function(child) {
+      React7.Children.forEach(children, function(child) {
         null != child && (content += child);
       });
       return content;
@@ -6336,8 +6336,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -6538,8 +6538,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
           if (null != selectedValue) {
             var stringValue = null !== value ? "" + value : flattenOptionChildren(children$jscomp$1);
             if (isArrayImpl(selectedValue))
-              for (var i3 = 0; i3 < selectedValue.length; i3++) {
-                if ("" + selectedValue[i3] === stringValue) {
+              for (var i4 = 0; i4 < selectedValue.length; i4++) {
+                if ("" + selectedValue[i4] === stringValue) {
                   target$jscomp$0.push(' selected=""');
                   break;
                 }
@@ -7049,8 +7049,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               resumableState.imageResources[key$jscomp$0] = PRELOAD_NO_CREDS;
               var input = props.crossOrigin;
               var JSCompiler_inline_result$jscomp$8 = "string" === typeof input ? "use-credentials" === input ? input : "" : void 0;
-              var headers = renderState.headers, header;
-              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header = getPreloadAsHeader(src, "image", {
+              var headers = renderState.headers, header3;
+              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header3 = getPreloadAsHeader(src, "image", {
                 imageSrcSet: props.srcSet,
                 imageSizes: props.sizes,
                 crossOrigin: JSCompiler_inline_result$jscomp$8,
@@ -7059,7 +7059,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
                 type: props.type,
                 fetchPriority: props.fetchPriority,
                 referrerPolicy: props.refererPolicy
-              }), 0 <= (headers.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
+              }), 0 <= (headers.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header3) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
                 rel: "preload",
                 as: "image",
                 href: srcSet ? void 0 : src,
@@ -7180,9 +7180,9 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     }
     function writeBootstrap(destination, renderState) {
       renderState = renderState.bootstrapChunks;
-      for (var i3 = 0; i3 < renderState.length - 1; i3++)
-        destination.push(renderState[i3]);
-      return i3 < renderState.length ? (i3 = renderState[i3], renderState.length = 0, destination.push(i3)) : true;
+      for (var i4 = 0; i4 < renderState.length - 1; i4++)
+        destination.push(renderState[i4]);
+      return i4 < renderState.length ? (i4 = renderState[i4], renderState.length = 0, destination.push(i4)) : true;
     }
     function writeStartPendingSuspenseBoundary(destination, renderState, id) {
       destination.push('<!--$?--><template id="');
@@ -7286,15 +7286,15 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     var currentlyRenderingBoundaryHasStylesToHoist = false;
     var destinationHasCapacity = true;
     function flushStyleTagsLateForBoundary(styleQueue) {
-      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i3 = 0;
+      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i4 = 0;
       if (hrefs.length) {
         this.push('<style media="not all" data-precedence="');
         this.push(styleQueue.precedence);
-        for (this.push('" data-href="'); i3 < hrefs.length - 1; i3++)
-          this.push(hrefs[i3]), this.push(" ");
-        this.push(hrefs[i3]);
+        for (this.push('" data-href="'); i4 < hrefs.length - 1; i4++)
+          this.push(hrefs[i4]), this.push(" ");
+        this.push(hrefs[i4]);
         this.push('">');
-        for (i3 = 0; i3 < rules.length; i3++) this.push(rules[i3]);
+        for (i4 = 0; i4 < rules.length; i4++) this.push(rules[i4]);
         destinationHasCapacity = this.push("</style>");
         currentlyRenderingBoundaryHasStylesToHoist = true;
         rules.length = 0;
@@ -7313,14 +7313,14 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       return destinationHasCapacity;
     }
     function flushResource(resource) {
-      for (var i3 = 0; i3 < resource.length; i3++) this.push(resource[i3]);
+      for (var i4 = 0; i4 < resource.length; i4++) this.push(resource[i4]);
       resource.length = 0;
     }
     var stylesheetFlushingQueue = [];
     function flushStyleInPreamble(stylesheet) {
       pushLinkImpl(stylesheetFlushingQueue, stylesheet.props);
-      for (var i3 = 0; i3 < stylesheetFlushingQueue.length; i3++)
-        this.push(stylesheetFlushingQueue[i3]);
+      for (var i4 = 0; i4 < stylesheetFlushingQueue.length; i4++)
+        this.push(stylesheetFlushingQueue[i4]);
       stylesheetFlushingQueue.length = 0;
       stylesheet.state = 2;
     }
@@ -7466,13 +7466,13 @@ var require_react_dom_server_legacy_node_production = __commonJS({
           if (!resumableState.dnsResources.hasOwnProperty(href)) {
             resumableState.dnsResources[href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity)
-              JSCompiler_temp = (header = "<" + ("" + href).replace(
+              JSCompiler_temp = (header3 = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
                 escapeHrefForLinkHeaderURLContextReplacer
-              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header.length + 2));
-            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (header = [], pushLinkImpl(header, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header));
+              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header3.length + 2));
+            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (header3 = [], pushLinkImpl(header3, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header3));
           }
           enqueueFlush(request);
         }
@@ -7487,7 +7487,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
           if (!resumableState.connectResources[bucket].hasOwnProperty(href)) {
             resumableState.connectResources[bucket][href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity) {
               JSCompiler_temp = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
@@ -7500,9 +7500,9 @@ var require_react_dom_server_legacy_node_production = __commonJS({
                 );
                 JSCompiler_temp += '; crossorigin="' + escapedCrossOrigin + '"';
               }
-              JSCompiler_temp = (header = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header.length + 2));
+              JSCompiler_temp = (header3 = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header3.length + 2));
             }
-            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (bucket = [], pushLinkImpl(bucket, {
+            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (bucket = [], pushLinkImpl(bucket, {
               rel: "preconnect",
               href,
               crossOrigin
@@ -7528,8 +7528,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               if (resumableState.imageResources.hasOwnProperty(key)) return;
               resumableState.imageResources[key] = PRELOAD_NO_CREDS;
               resumableState = renderState.headers;
-              var header;
-              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header) : (resumableState = [], pushLinkImpl(
+              var header3;
+              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header3 = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header3) : (resumableState = [], pushLinkImpl(
                 resumableState,
                 assign(
                   { rel: "preload", href: imageSrcSet ? void 0 : href, as },
@@ -7735,8 +7735,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
         moduleScripts: /* @__PURE__ */ new Map()
       };
       if (void 0 !== bootstrapScripts)
-        for (var i3 = 0; i3 < bootstrapScripts.length; i3++) {
-          var scriptConfig = bootstrapScripts[i3], src, crossOrigin = void 0, integrity = void 0, props = {
+        for (var i4 = 0; i4 < bootstrapScripts.length; i4++) {
+          var scriptConfig = bootstrapScripts[i4], src, crossOrigin = void 0, integrity = void 0, props = {
             rel: "preload",
             as: "script",
             fetchPriority: "low",
@@ -7764,9 +7764,9 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             rel: "modulepreload",
             fetchPriority: "low",
             nonce: void 0
-          }, "string" === typeof props ? integrity.href = i3 = props : (integrity.href = i3 = props.src, integrity.integrity = crossOrigin = "string" === typeof props.integrity ? props.integrity : void 0, integrity.crossOrigin = src = "string" === typeof props || null == props.crossOrigin ? void 0 : "use-credentials" === props.crossOrigin ? "use-credentials" : ""), props = resumableState, scriptConfig = i3, props.scriptResources[scriptConfig] = null, props.moduleScriptResources[scriptConfig] = null, props = [], pushLinkImpl(props, integrity), JSCompiler_object_inline_bootstrapScripts_1500.add(props), bootstrapChunks.push(
+          }, "string" === typeof props ? integrity.href = i4 = props : (integrity.href = i4 = props.src, integrity.integrity = crossOrigin = "string" === typeof props.integrity ? props.integrity : void 0, integrity.crossOrigin = src = "string" === typeof props || null == props.crossOrigin ? void 0 : "use-credentials" === props.crossOrigin ? "use-credentials" : ""), props = resumableState, scriptConfig = i4, props.scriptResources[scriptConfig] = null, props.moduleScriptResources[scriptConfig] = null, props = [], pushLinkImpl(props, integrity), JSCompiler_object_inline_bootstrapScripts_1500.add(props), bootstrapChunks.push(
             '<script type="module" src="',
-            escapeTextForBrowser(i3)
+            escapeTextForBrowser(i4)
           ), "string" === typeof crossOrigin && bootstrapChunks.push(
             '" integrity="',
             escapeTextForBrowser(crossOrigin)
@@ -8008,8 +8008,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       suspendedThenable = null;
       return thenable;
     }
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
     var currentlyRenderingComponent = null;
@@ -8095,8 +8095,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
           var prevDeps = prevState[1];
           a: if (null === prevDeps) prevDeps = false;
           else {
-            for (var i3 = 0; i3 < prevDeps.length && i3 < deps.length; i3++)
-              if (!objectIs(deps[i3], prevDeps[i3])) {
+            for (var i4 = 0; i4 < prevDeps.length && i4 < deps.length; i4++)
+              if (!objectIs(deps[i4], prevDeps[i4])) {
                 prevDeps = false;
                 break a;
               }
@@ -8252,8 +8252,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
         return unsupportedRefresh;
       },
       useMemoCache: function(size) {
-        for (var data = Array(size), i3 = 0; i3 < size; i3++)
-          data[i3] = REACT_MEMO_CACHE_SENTINEL;
+        for (var data = Array(size), i4 = 0; i4 < size; i4++)
+          data[i4] = REACT_MEMO_CACHE_SENTINEL;
         return data;
       },
       useHostTransitionStatus: function() {
@@ -8648,8 +8648,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
         if (null !== segment) {
           didEmitActionStateMarkers = true;
           segment = segment.chunks;
-          for (var i3 = 0; i3 < actionStateCount; i3++)
-            i3 === actionStateMatchingIndex2 ? segment.push("<!--F!-->") : segment.push("<!--F-->");
+          for (var i4 = 0; i4 < actionStateCount; i4++)
+            i4 === actionStateMatchingIndex2 ? segment.push("<!--F!-->") : segment.push("<!--F-->");
         }
       }
       actionStateCount = task.keyPath;
@@ -8666,23 +8666,23 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             for (var propName in props)
               "ref" !== propName && (newProps[propName] = props[propName]);
           }
-          var defaultProps15 = type.defaultProps;
-          if (defaultProps15) {
+          var defaultProps29 = type.defaultProps;
+          if (defaultProps29) {
             newProps === props && (newProps = assign({}, newProps, props));
-            for (var propName$33 in defaultProps15)
-              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps15[propName$33]);
+            for (var propName$33 in defaultProps29)
+              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps29[propName$33]);
           }
           props = newProps;
           newProps = emptyContextObject;
-          defaultProps15 = type.contextType;
-          "object" === typeof defaultProps15 && null !== defaultProps15 && (newProps = defaultProps15._currentValue2);
+          defaultProps29 = type.contextType;
+          "object" === typeof defaultProps29 && null !== defaultProps29 && (newProps = defaultProps29._currentValue2);
           newProps = new type(props, newProps);
           var initialState = void 0 !== newProps.state ? newProps.state : null;
           newProps.updater = classComponentUpdater;
           newProps.props = props;
           newProps.state = initialState;
-          defaultProps15 = { queue: [], replace: false };
-          newProps._reactInternals = defaultProps15;
+          defaultProps29 = { queue: [], replace: false };
+          newProps._reactInternals = defaultProps29;
           ref = type.contextType;
           newProps.context = "object" === typeof ref && null !== ref ? ref._currentValue2 : emptyContextObject;
           ref = type.getDerivedStateFromProps;
@@ -8692,17 +8692,17 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               newProps,
               newProps.state,
               null
-            ), null !== defaultProps15.queue && 0 < defaultProps15.queue.length)
-              if (type = defaultProps15.queue, ref = defaultProps15.replace, defaultProps15.queue = null, defaultProps15.replace = false, ref && 1 === type.length)
+            ), null !== defaultProps29.queue && 0 < defaultProps29.queue.length)
+              if (type = defaultProps29.queue, ref = defaultProps29.replace, defaultProps29.queue = null, defaultProps29.replace = false, ref && 1 === type.length)
                 newProps.state = type[0];
               else {
-                defaultProps15 = ref ? type[0] : newProps.state;
+                defaultProps29 = ref ? type[0] : newProps.state;
                 initialState = true;
                 for (ref = ref ? 1 : 0; ref < type.length; ref++)
-                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps15, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps15 = assign({}, defaultProps15, propName$33)) : assign(defaultProps15, propName$33));
-                newProps.state = defaultProps15;
+                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps29, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps29 = assign({}, defaultProps29, propName$33)) : assign(defaultProps29, propName$33));
+                newProps.state = defaultProps29;
               }
-            else defaultProps15.queue = null;
+            else defaultProps29.queue = null;
           type = newProps.render();
           if (12 === request.status) throw null;
           props = task.keyPath;
@@ -8724,7 +8724,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
         }
       else if ("string" === typeof type)
         if (newProps = task.blockedSegment, null === newProps)
-          newProps = props.children, defaultProps15 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps15, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps15, task.keyPath = initialState;
+          newProps = props.children, defaultProps29 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps29, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps29, task.keyPath = initialState;
         else {
           initialState = pushStartInstance(
             newProps.chunks,
@@ -8738,12 +8738,12 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             task.isFallback
           );
           newProps.lastPushedText = false;
-          defaultProps15 = task.formatContext;
+          defaultProps29 = task.formatContext;
           ref = task.keyPath;
-          task.formatContext = getChildFormatContext(defaultProps15, type, props);
+          task.formatContext = getChildFormatContext(defaultProps29, type, props);
           task.keyPath = keyPath;
           renderNode(request, task, initialState, -1);
-          task.formatContext = defaultProps15;
+          task.formatContext = defaultProps29;
           task.keyPath = ref;
           a: {
             task = newProps.chunks;
@@ -8769,13 +8769,13 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               case "wbr":
                 break a;
               case "body":
-                if (1 >= defaultProps15.insertionMode) {
+                if (1 >= defaultProps29.insertionMode) {
                   request.hasBody = true;
                   break a;
                 }
                 break;
               case "html":
-                if (0 === defaultProps15.insertionMode) {
+                if (0 === defaultProps29.insertionMode) {
                   request.hasHtml = true;
                   break a;
                 }
@@ -8847,9 +8847,9 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               contentRootSegment.parentFlushed = true;
               if (null !== request.trackedPostpones) {
                 newProps = [keyPath[0], "Suspense Fallback", keyPath[2]];
-                defaultProps15 = [newProps[1], newProps[2], [], null];
-                request.trackedPostpones.workingMap.set(newProps, defaultProps15);
-                propName.trackedFallbackNode = defaultProps15;
+                defaultProps29 = [newProps[1], newProps[2], [], null];
+                request.trackedPostpones.workingMap.set(newProps, defaultProps29);
+                propName.trackedFallbackNode = defaultProps29;
                 task.blockedSegment = boundarySegment;
                 task.keyPath = newProps;
                 boundarySegment.status = 6;
@@ -8900,10 +8900,10 @@ var require_react_dom_server_legacy_node_production = __commonJS({
                     break a;
                   }
                 } catch (thrownValue$28) {
-                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps15 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
+                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps29 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
                     request,
                     newProps,
-                    defaultProps15
+                    defaultProps29
                   ), propName.errorDigest = initialState, untrackBoundary(request, propName);
                 } finally {
                   task.blockedBoundary = parentBoundary, task.hoistableState = parentHoistableState, task.blockedSegment = ref, task.keyPath = type;
@@ -8960,7 +8960,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               return;
             case REACT_PROVIDER_TYPE:
             case REACT_CONTEXT_TYPE:
-              defaultProps15 = props.children;
+              defaultProps29 = props.children;
               newProps = task.keyPath;
               props = props.value;
               initialState = type._currentValue2;
@@ -8975,7 +8975,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               };
               task.context = type;
               task.keyPath = keyPath;
-              renderNodeDestructive(request, task, defaultProps15, -1);
+              renderNodeDestructive(request, task, defaultProps29, -1);
               request = currentActiveSnapshot;
               if (null === request)
                 throw Error(
@@ -9403,8 +9403,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       null !== task && (task.status = 3, finishedTask(this, boundary, task));
     }
     function abortRemainingReplayNodes(request$jscomp$0, boundary, nodes, slots, error, errorDigest$jscomp$0) {
-      for (var i3 = 0; i3 < nodes.length; i3++) {
-        var node = nodes[i3];
+      for (var i4 = 0; i4 < nodes.length; i4++) {
+        var node = nodes[i4];
         if (4 === node.length)
           abortRemainingReplayNodes(
             request$jscomp$0,
@@ -9482,7 +9482,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               var queueIter = renderState.styles.values(), queueStep = queueIter.next();
               b: for (; 0 < headers.remainingCapacity && !queueStep.done; queueStep = queueIter.next())
                 for (var sheetIter = queueStep.value.sheets.values(), sheetStep = sheetIter.next(); 0 < headers.remainingCapacity && !sheetStep.done; sheetStep = sheetIter.next()) {
-                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header = getPreloadAsHeader(props$jscomp$0.href, "style", {
+                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header3 = getPreloadAsHeader(props$jscomp$0.href, "style", {
                     crossOrigin: props$jscomp$0.crossOrigin,
                     integrity: props$jscomp$0.integrity,
                     nonce: props$jscomp$0.nonce,
@@ -9491,8 +9491,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
                     referrerPolicy: props$jscomp$0.referrerPolicy,
                     media: props$jscomp$0.media
                   });
-                  if (0 <= (headers.remainingCapacity -= header.length + 2))
-                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
+                  if (0 <= (headers.remainingCapacity -= header3.length + 2))
+                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header3, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
                   else break b;
                 }
             }
@@ -9552,9 +9552,9 @@ var require_react_dom_server_legacy_node_production = __commonJS({
         var prevResumableState = currentResumableState;
         currentResumableState = request$jscomp$2.resumableState;
         try {
-          var pingedTasks = request$jscomp$2.pingedTasks, i3;
-          for (i3 = 0; i3 < pingedTasks.length; i3++) {
-            var task = pingedTasks[i3], request = request$jscomp$2, segment = task.blockedSegment;
+          var pingedTasks = request$jscomp$2.pingedTasks, i4;
+          for (i4 = 0; i4 < pingedTasks.length; i4++) {
+            var task = pingedTasks[i4], request = request$jscomp$2, segment = task.blockedSegment;
             if (null === segment) {
               var request$jscomp$0 = request;
               if (0 !== task.replay.pendingTasks) {
@@ -9649,7 +9649,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
               }
             }
           }
-          pingedTasks.splice(0, i3);
+          pingedTasks.splice(0, i4);
           null !== request$jscomp$2.destination && flushCompletedQueues(request$jscomp$2, request$jscomp$2.destination);
         } catch (error) {
           logRecoverableError(request$jscomp$2, error, {}), fatalError(request$jscomp$2, error);
@@ -9728,12 +9728,12 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       return writeEndSegment(destination, segment.parentFormatContext);
     }
     function flushCompletedBoundary(request, destination, boundary) {
-      for (var completedSegments = boundary.completedSegments, i3 = 0; i3 < completedSegments.length; i3++)
+      for (var completedSegments = boundary.completedSegments, i4 = 0; i4 < completedSegments.length; i4++)
         flushPartiallyCompletedSegment(
           request,
           destination,
           boundary,
-          completedSegments[i3]
+          completedSegments[i4]
         );
       completedSegments.length = 0;
       writeHoistablesForBoundary(
@@ -9743,7 +9743,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       );
       completedSegments = request.resumableState;
       request = request.renderState;
-      i3 = boundary.rootSegmentID;
+      i4 = boundary.rootSegmentID;
       boundary = boundary.contentState;
       var requiresStyleInsertion = request.stylesToHoist;
       request.stylesToHoist = false;
@@ -9755,7 +9755,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       )) : destination.push('$RR("') : 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 2, destination.push(
         '$RC=function(b,c,e){c=document.getElementById(c);c.parentNode.removeChild(c);var a=document.getElementById(b);if(a){b=a.previousSibling;if(e)b.data="$!",a.setAttribute("data-dgst",e);else{e=b.parentNode;a=b.nextSibling;var f=0;do{if(a&&8===a.nodeType){var d=a.data;if("/$"===d)if(0===f)break;else f--;else"$"!==d&&"$?"!==d&&"$!"!==d||f++}d=a.nextSibling;e.removeChild(a);a=d}while(a);for(;c.firstChild;)e.insertBefore(c.firstChild,a);b.data="$"}b._reactRetry&&b._reactRetry()}};$RC("'
       )) : destination.push('$RC("');
-      completedSegments = i3.toString(16);
+      completedSegments = i4.toString(16);
       destination.push(request.boundaryPrefix);
       destination.push(completedSegments);
       destination.push('","');
@@ -9796,7 +9796,7 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     function flushCompletedQueues(request, destination) {
       try {
         if (!(0 < request.pendingRootTasks)) {
-          var i3, completedRootSegment = request.completedRootSegment;
+          var i4, completedRootSegment = request.completedRootSegment;
           if (null !== completedRootSegment) {
             if (5 === completedRootSegment.status) return;
             var renderState = request.renderState, htmlChunks = renderState.htmlChunks, headChunks = renderState.headChunks, i$jscomp$0;
@@ -9875,8 +9875,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             destination.push(hoistableChunks$jscomp$0[completedRootSegment]);
           hoistableChunks$jscomp$0.length = 0;
           var clientRenderedBoundaries = request.clientRenderedBoundaries;
-          for (i3 = 0; i3 < clientRenderedBoundaries.length; i3++) {
-            var boundary = clientRenderedBoundaries[i3];
+          for (i4 = 0; i4 < clientRenderedBoundaries.length; i4++) {
+            var boundary = clientRenderedBoundaries[i4];
             renderState$jscomp$0 = destination;
             var resumableState = request.resumableState, renderState$jscomp$1 = request.renderState, id = boundary.rootSegmentID, errorDigest = boundary.errorDigest;
             renderState$jscomp$0.push(renderState$jscomp$1.startInlineScript);
@@ -9897,24 +9897,24 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             var JSCompiler_inline_result = renderState$jscomp$0.push(")</script>");
             if (!JSCompiler_inline_result) {
               request.destination = null;
-              i3++;
-              clientRenderedBoundaries.splice(0, i3);
+              i4++;
+              clientRenderedBoundaries.splice(0, i4);
               return;
             }
           }
-          clientRenderedBoundaries.splice(0, i3);
+          clientRenderedBoundaries.splice(0, i4);
           var completedBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < completedBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, completedBoundaries[i3])) {
+          for (i4 = 0; i4 < completedBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, completedBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              completedBoundaries.splice(0, i3);
+              i4++;
+              completedBoundaries.splice(0, i4);
               return;
             }
-          completedBoundaries.splice(0, i3);
+          completedBoundaries.splice(0, i4);
           var partialBoundaries = request.partialBoundaries;
-          for (i3 = 0; i3 < partialBoundaries.length; i3++) {
-            var boundary$51 = partialBoundaries[i3];
+          for (i4 = 0; i4 < partialBoundaries.length; i4++) {
+            var boundary$51 = partialBoundaries[i4];
             a: {
               clientRenderedBoundaries = request;
               boundary = destination;
@@ -9940,24 +9940,24 @@ var require_react_dom_server_legacy_node_production = __commonJS({
             }
             if (!JSCompiler_inline_result$jscomp$0) {
               request.destination = null;
-              i3++;
-              partialBoundaries.splice(0, i3);
+              i4++;
+              partialBoundaries.splice(0, i4);
               return;
             }
           }
-          partialBoundaries.splice(0, i3);
+          partialBoundaries.splice(0, i4);
           var largeBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < largeBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, largeBoundaries[i3])) {
+          for (i4 = 0; i4 < largeBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, largeBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              largeBoundaries.splice(0, i3);
+              i4++;
+              largeBoundaries.splice(0, i4);
               return;
             }
-          largeBoundaries.splice(0, i3);
+          largeBoundaries.splice(0, i4);
         }
       } finally {
-        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length && (request.flushScheduled = false, i3 = request.resumableState, i3.hasBody && (partialBoundaries = endChunkForTag("body"), destination.push(partialBoundaries)), i3.hasHtml && (i3 = endChunkForTag("html"), destination.push(i3)), request.status = 14, destination.push(null), request.destination = null);
+        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length && (request.flushScheduled = false, i4 = request.resumableState, i4.hasBody && (partialBoundaries = endChunkForTag("body"), destination.push(partialBoundaries)), i4.hasHtml && (i4 = endChunkForTag("html"), destination.push(i4)), request.status = 14, destination.push(null), request.destination = null);
       }
     }
     function enqueueFlush(request) {
@@ -10065,7 +10065,7 @@ var require_react_dom_server_node_production = __commonJS({
     var util = __require("util");
     var crypto = __require("crypto");
     var async_hooks = __require("async_hooks");
-    var React5 = require_react();
+    var React7 = require_react();
     var ReactDOM2 = require_react_dom();
     var stream = __require("stream");
     var REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element");
@@ -10285,7 +10285,7 @@ var require_react_dom_server_node_production = __commonJS({
     function sanitizeURL(url) {
       return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
     }
-    var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    var ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var sharedNotPendingObject = {
       pending: false,
@@ -10316,8 +10316,8 @@ var require_react_dom_server_node_production = __commonJS({
     var scriptCrossOrigin = stringToPrecomputedChunk('" crossorigin="');
     var endAsyncScript = stringToPrecomputedChunk('" async=""></script>');
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\u0073" : "\\u0053") + suffix2;
     }
     var importMapScriptStart = stringToPrecomputedChunk(
       '<script type="importmap">'
@@ -10810,7 +10810,7 @@ var require_react_dom_server_node_production = __commonJS({
     }
     function flattenOptionChildren(children) {
       var content = "";
-      React5.Children.forEach(children, function(child) {
+      React7.Children.forEach(children, function(child) {
         null != child && (content += child);
       });
       return content;
@@ -10848,8 +10848,8 @@ var require_react_dom_server_node_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -11052,8 +11052,8 @@ var require_react_dom_server_node_production = __commonJS({
           if (null != selectedValue) {
             var stringValue = null !== value ? "" + value : flattenOptionChildren(children$jscomp$1);
             if (isArrayImpl(selectedValue))
-              for (var i3 = 0; i3 < selectedValue.length; i3++) {
-                if ("" + selectedValue[i3] === stringValue) {
+              for (var i4 = 0; i4 < selectedValue.length; i4++) {
+                if ("" + selectedValue[i4] === stringValue) {
                   target$jscomp$0.push(selectedMarkerAttribute);
                   break;
                 }
@@ -11563,8 +11563,8 @@ var require_react_dom_server_node_production = __commonJS({
               resumableState.imageResources[key$jscomp$0] = PRELOAD_NO_CREDS;
               var input = props.crossOrigin;
               var JSCompiler_inline_result$jscomp$8 = "string" === typeof input ? "use-credentials" === input ? input : "" : void 0;
-              var headers = renderState.headers, header;
-              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header = getPreloadAsHeader(src, "image", {
+              var headers = renderState.headers, header3;
+              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header3 = getPreloadAsHeader(src, "image", {
                 imageSrcSet: props.srcSet,
                 imageSizes: props.sizes,
                 crossOrigin: JSCompiler_inline_result$jscomp$8,
@@ -11573,7 +11573,7 @@ var require_react_dom_server_node_production = __commonJS({
                 type: props.type,
                 fetchPriority: props.fetchPriority,
                 referrerPolicy: props.refererPolicy
-              }), 0 <= (headers.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
+              }), 0 <= (headers.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header3) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
                 rel: "preload",
                 as: "image",
                 href: srcSet ? void 0 : src,
@@ -11694,9 +11694,9 @@ var require_react_dom_server_node_production = __commonJS({
     }
     function writeBootstrap(destination, renderState) {
       renderState = renderState.bootstrapChunks;
-      for (var i3 = 0; i3 < renderState.length - 1; i3++)
-        writeChunk(destination, renderState[i3]);
-      return i3 < renderState.length ? (i3 = renderState[i3], renderState.length = 0, writeChunkAndReturn(destination, i3)) : true;
+      for (var i4 = 0; i4 < renderState.length - 1; i4++)
+        writeChunk(destination, renderState[i4]);
+      return i4 < renderState.length ? (i4 = renderState[i4], renderState.length = 0, writeChunkAndReturn(destination, i4)) : true;
     }
     var placeholder1 = stringToPrecomputedChunk('<template id="');
     var placeholder2 = stringToPrecomputedChunk('"></template>');
@@ -11887,15 +11887,15 @@ var require_react_dom_server_node_production = __commonJS({
     var currentlyRenderingBoundaryHasStylesToHoist = false;
     var destinationHasCapacity = true;
     function flushStyleTagsLateForBoundary(styleQueue) {
-      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i3 = 0;
+      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i4 = 0;
       if (hrefs.length) {
         writeChunk(this, lateStyleTagResourceOpen1);
         writeChunk(this, styleQueue.precedence);
-        for (writeChunk(this, lateStyleTagResourceOpen2); i3 < hrefs.length - 1; i3++)
-          writeChunk(this, hrefs[i3]), writeChunk(this, spaceSeparator);
-        writeChunk(this, hrefs[i3]);
+        for (writeChunk(this, lateStyleTagResourceOpen2); i4 < hrefs.length - 1; i4++)
+          writeChunk(this, hrefs[i4]), writeChunk(this, spaceSeparator);
+        writeChunk(this, hrefs[i4]);
         writeChunk(this, lateStyleTagResourceOpen3);
-        for (i3 = 0; i3 < rules.length; i3++) writeChunk(this, rules[i3]);
+        for (i4 = 0; i4 < rules.length; i4++) writeChunk(this, rules[i4]);
         destinationHasCapacity = writeChunkAndReturn(
           this,
           lateStyleTagTemplateClose
@@ -11917,14 +11917,14 @@ var require_react_dom_server_node_production = __commonJS({
       return destinationHasCapacity;
     }
     function flushResource(resource) {
-      for (var i3 = 0; i3 < resource.length; i3++) writeChunk(this, resource[i3]);
+      for (var i4 = 0; i4 < resource.length; i4++) writeChunk(this, resource[i4]);
       resource.length = 0;
     }
     var stylesheetFlushingQueue = [];
     function flushStyleInPreamble(stylesheet) {
       pushLinkImpl(stylesheetFlushingQueue, stylesheet.props);
-      for (var i3 = 0; i3 < stylesheetFlushingQueue.length; i3++)
-        writeChunk(this, stylesheetFlushingQueue[i3]);
+      for (var i4 = 0; i4 < stylesheetFlushingQueue.length; i4++)
+        writeChunk(this, stylesheetFlushingQueue[i4]);
       stylesheetFlushingQueue.length = 0;
       stylesheet.state = 2;
     }
@@ -12084,13 +12084,13 @@ var require_react_dom_server_node_production = __commonJS({
           if (!resumableState.dnsResources.hasOwnProperty(href)) {
             resumableState.dnsResources[href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity)
-              JSCompiler_temp = (header = "<" + ("" + href).replace(
+              JSCompiler_temp = (header3 = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
                 escapeHrefForLinkHeaderURLContextReplacer
-              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header.length + 2));
-            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (header = [], pushLinkImpl(header, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header));
+              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header3.length + 2));
+            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (header3 = [], pushLinkImpl(header3, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header3));
           }
           enqueueFlush(request);
         }
@@ -12105,7 +12105,7 @@ var require_react_dom_server_node_production = __commonJS({
           if (!resumableState.connectResources[bucket].hasOwnProperty(href)) {
             resumableState.connectResources[bucket][href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity) {
               JSCompiler_temp = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
@@ -12118,9 +12118,9 @@ var require_react_dom_server_node_production = __commonJS({
                 );
                 JSCompiler_temp += '; crossorigin="' + escapedCrossOrigin + '"';
               }
-              JSCompiler_temp = (header = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header.length + 2));
+              JSCompiler_temp = (header3 = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header3.length + 2));
             }
-            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (bucket = [], pushLinkImpl(bucket, {
+            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (bucket = [], pushLinkImpl(bucket, {
               rel: "preconnect",
               href,
               crossOrigin
@@ -12146,8 +12146,8 @@ var require_react_dom_server_node_production = __commonJS({
               if (resumableState.imageResources.hasOwnProperty(key)) return;
               resumableState.imageResources[key] = PRELOAD_NO_CREDS;
               resumableState = renderState.headers;
-              var header;
-              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header) : (resumableState = [], pushLinkImpl(
+              var header3;
+              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header3 = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header3) : (resumableState = [], pushLinkImpl(
                 resumableState,
                 assign(
                   { rel: "preload", href: imageSrcSet ? void 0 : href, as },
@@ -12531,8 +12531,8 @@ var require_react_dom_server_node_production = __commonJS({
       suspendedThenable = null;
       return thenable;
     }
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
     var currentlyRenderingComponent = null;
@@ -12618,8 +12618,8 @@ var require_react_dom_server_node_production = __commonJS({
           var prevDeps = prevState[1];
           a: if (null === prevDeps) prevDeps = false;
           else {
-            for (var i3 = 0; i3 < prevDeps.length && i3 < deps.length; i3++)
-              if (!objectIs(deps[i3], prevDeps[i3])) {
+            for (var i4 = 0; i4 < prevDeps.length && i4 < deps.length; i4++)
+              if (!objectIs(deps[i4], prevDeps[i4])) {
                 prevDeps = false;
                 break a;
               }
@@ -12780,8 +12780,8 @@ var require_react_dom_server_node_production = __commonJS({
         return unsupportedRefresh;
       },
       useMemoCache: function(size) {
-        for (var data = Array(size), i3 = 0; i3 < size; i3++)
-          data[i3] = REACT_MEMO_CACHE_SENTINEL;
+        for (var data = Array(size), i4 = 0; i4 < size; i4++)
+          data[i4] = REACT_MEMO_CACHE_SENTINEL;
         return data;
       },
       useHostTransitionStatus: function() {
@@ -12803,8 +12803,8 @@ var require_react_dom_server_node_production = __commonJS({
     };
     function prepareStackTrace(error, structuredStackTrace) {
       error = (error.name || "Error") + ": " + (error.message || "");
-      for (var i3 = 0; i3 < structuredStackTrace.length; i3++)
-        error += "\n    at " + structuredStackTrace[i3].toString();
+      for (var i4 = 0; i4 < structuredStackTrace.length; i4++)
+        error += "\n    at " + structuredStackTrace[i4].toString();
       return error;
     }
     var prefix;
@@ -13222,8 +13222,8 @@ var require_react_dom_server_node_production = __commonJS({
         if (null !== segment) {
           didEmitActionStateMarkers = true;
           segment = segment.chunks;
-          for (var i3 = 0; i3 < actionStateCount; i3++)
-            i3 === actionStateMatchingIndex2 ? segment.push(formStateMarkerIsMatching) : segment.push(formStateMarkerIsNotMatching);
+          for (var i4 = 0; i4 < actionStateCount; i4++)
+            i4 === actionStateMatchingIndex2 ? segment.push(formStateMarkerIsMatching) : segment.push(formStateMarkerIsNotMatching);
         }
       }
       actionStateCount = task.keyPath;
@@ -13240,23 +13240,23 @@ var require_react_dom_server_node_production = __commonJS({
             for (var propName in props)
               "ref" !== propName && (newProps[propName] = props[propName]);
           }
-          var defaultProps15 = type.defaultProps;
-          if (defaultProps15) {
+          var defaultProps29 = type.defaultProps;
+          if (defaultProps29) {
             newProps === props && (newProps = assign({}, newProps, props));
-            for (var propName$33 in defaultProps15)
-              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps15[propName$33]);
+            for (var propName$33 in defaultProps29)
+              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps29[propName$33]);
           }
           props = newProps;
           newProps = emptyContextObject;
-          defaultProps15 = type.contextType;
-          "object" === typeof defaultProps15 && null !== defaultProps15 && (newProps = defaultProps15._currentValue);
+          defaultProps29 = type.contextType;
+          "object" === typeof defaultProps29 && null !== defaultProps29 && (newProps = defaultProps29._currentValue);
           newProps = new type(props, newProps);
           var initialState = void 0 !== newProps.state ? newProps.state : null;
           newProps.updater = classComponentUpdater;
           newProps.props = props;
           newProps.state = initialState;
-          defaultProps15 = { queue: [], replace: false };
-          newProps._reactInternals = defaultProps15;
+          defaultProps29 = { queue: [], replace: false };
+          newProps._reactInternals = defaultProps29;
           ref = type.contextType;
           newProps.context = "object" === typeof ref && null !== ref ? ref._currentValue : emptyContextObject;
           ref = type.getDerivedStateFromProps;
@@ -13266,17 +13266,17 @@ var require_react_dom_server_node_production = __commonJS({
               newProps,
               newProps.state,
               null
-            ), null !== defaultProps15.queue && 0 < defaultProps15.queue.length)
-              if (type = defaultProps15.queue, ref = defaultProps15.replace, defaultProps15.queue = null, defaultProps15.replace = false, ref && 1 === type.length)
+            ), null !== defaultProps29.queue && 0 < defaultProps29.queue.length)
+              if (type = defaultProps29.queue, ref = defaultProps29.replace, defaultProps29.queue = null, defaultProps29.replace = false, ref && 1 === type.length)
                 newProps.state = type[0];
               else {
-                defaultProps15 = ref ? type[0] : newProps.state;
+                defaultProps29 = ref ? type[0] : newProps.state;
                 initialState = true;
                 for (ref = ref ? 1 : 0; ref < type.length; ref++)
-                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps15, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps15 = assign({}, defaultProps15, propName$33)) : assign(defaultProps15, propName$33));
-                newProps.state = defaultProps15;
+                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps29, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps29 = assign({}, defaultProps29, propName$33)) : assign(defaultProps29, propName$33));
+                newProps.state = defaultProps29;
               }
-            else defaultProps15.queue = null;
+            else defaultProps29.queue = null;
           type = newProps.render();
           if (12 === request.status) throw null;
           props = task.keyPath;
@@ -13298,7 +13298,7 @@ var require_react_dom_server_node_production = __commonJS({
         }
       else if ("string" === typeof type)
         if (newProps = task.blockedSegment, null === newProps)
-          newProps = props.children, defaultProps15 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps15, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps15, task.keyPath = initialState;
+          newProps = props.children, defaultProps29 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps29, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps29, task.keyPath = initialState;
         else {
           initialState = pushStartInstance(
             newProps.chunks,
@@ -13312,12 +13312,12 @@ var require_react_dom_server_node_production = __commonJS({
             task.isFallback
           );
           newProps.lastPushedText = false;
-          defaultProps15 = task.formatContext;
+          defaultProps29 = task.formatContext;
           ref = task.keyPath;
-          task.formatContext = getChildFormatContext(defaultProps15, type, props);
+          task.formatContext = getChildFormatContext(defaultProps29, type, props);
           task.keyPath = keyPath;
           renderNode(request, task, initialState, -1);
-          task.formatContext = defaultProps15;
+          task.formatContext = defaultProps29;
           task.keyPath = ref;
           a: {
             task = newProps.chunks;
@@ -13343,13 +13343,13 @@ var require_react_dom_server_node_production = __commonJS({
               case "wbr":
                 break a;
               case "body":
-                if (1 >= defaultProps15.insertionMode) {
+                if (1 >= defaultProps29.insertionMode) {
                   request.hasBody = true;
                   break a;
                 }
                 break;
               case "html":
-                if (0 === defaultProps15.insertionMode) {
+                if (0 === defaultProps29.insertionMode) {
                   request.hasHtml = true;
                   break a;
                 }
@@ -13421,9 +13421,9 @@ var require_react_dom_server_node_production = __commonJS({
               contentRootSegment.parentFlushed = true;
               if (null !== request.trackedPostpones) {
                 newProps = [keyPath[0], "Suspense Fallback", keyPath[2]];
-                defaultProps15 = [newProps[1], newProps[2], [], null];
-                request.trackedPostpones.workingMap.set(newProps, defaultProps15);
-                propName.trackedFallbackNode = defaultProps15;
+                defaultProps29 = [newProps[1], newProps[2], [], null];
+                request.trackedPostpones.workingMap.set(newProps, defaultProps29);
+                propName.trackedFallbackNode = defaultProps29;
                 task.blockedSegment = boundarySegment;
                 task.keyPath = newProps;
                 boundarySegment.status = 6;
@@ -13464,10 +13464,10 @@ var require_react_dom_server_node_production = __commonJS({
                     break a;
                   }
                 } catch (thrownValue$28) {
-                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps15 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
+                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps29 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
                     request,
                     newProps,
-                    defaultProps15
+                    defaultProps29
                   ), propName.errorDigest = initialState, untrackBoundary(request, propName);
                 } finally {
                   task.blockedBoundary = parentBoundary, task.hoistableState = parentHoistableState, task.blockedSegment = ref, task.keyPath = type;
@@ -13524,7 +13524,7 @@ var require_react_dom_server_node_production = __commonJS({
               return;
             case REACT_PROVIDER_TYPE:
             case REACT_CONTEXT_TYPE:
-              defaultProps15 = props.children;
+              defaultProps29 = props.children;
               newProps = task.keyPath;
               props = props.value;
               initialState = type._currentValue;
@@ -13539,7 +13539,7 @@ var require_react_dom_server_node_production = __commonJS({
               };
               task.context = type;
               task.keyPath = keyPath;
-              renderNodeDestructive(request, task, defaultProps15, -1);
+              renderNodeDestructive(request, task, defaultProps29, -1);
               request = currentActiveSnapshot;
               if (null === request)
                 throw Error(
@@ -13967,8 +13967,8 @@ var require_react_dom_server_node_production = __commonJS({
       null !== task && (task.status = 3, finishedTask(this, boundary, task));
     }
     function abortRemainingReplayNodes(request$jscomp$0, boundary, nodes, slots, error, errorDigest$jscomp$0) {
-      for (var i3 = 0; i3 < nodes.length; i3++) {
-        var node = nodes[i3];
+      for (var i4 = 0; i4 < nodes.length; i4++) {
+        var node = nodes[i4];
         if (4 === node.length)
           abortRemainingReplayNodes(
             request$jscomp$0,
@@ -14046,7 +14046,7 @@ var require_react_dom_server_node_production = __commonJS({
               var queueIter = renderState.styles.values(), queueStep = queueIter.next();
               b: for (; 0 < headers.remainingCapacity && !queueStep.done; queueStep = queueIter.next())
                 for (var sheetIter = queueStep.value.sheets.values(), sheetStep = sheetIter.next(); 0 < headers.remainingCapacity && !sheetStep.done; sheetStep = sheetIter.next()) {
-                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header = getPreloadAsHeader(props$jscomp$0.href, "style", {
+                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header3 = getPreloadAsHeader(props$jscomp$0.href, "style", {
                     crossOrigin: props$jscomp$0.crossOrigin,
                     integrity: props$jscomp$0.integrity,
                     nonce: props$jscomp$0.nonce,
@@ -14055,8 +14055,8 @@ var require_react_dom_server_node_production = __commonJS({
                     referrerPolicy: props$jscomp$0.referrerPolicy,
                     media: props$jscomp$0.media
                   });
-                  if (0 <= (headers.remainingCapacity -= header.length + 2))
-                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
+                  if (0 <= (headers.remainingCapacity -= header3.length + 2))
+                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header3, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
                   else break b;
                 }
             }
@@ -14116,9 +14116,9 @@ var require_react_dom_server_node_production = __commonJS({
         var prevResumableState = currentResumableState;
         currentResumableState = request$jscomp$2.resumableState;
         try {
-          var pingedTasks = request$jscomp$2.pingedTasks, i3;
-          for (i3 = 0; i3 < pingedTasks.length; i3++) {
-            var task = pingedTasks[i3], request = request$jscomp$2, segment = task.blockedSegment;
+          var pingedTasks = request$jscomp$2.pingedTasks, i4;
+          for (i4 = 0; i4 < pingedTasks.length; i4++) {
+            var task = pingedTasks[i4], request = request$jscomp$2, segment = task.blockedSegment;
             if (null === segment) {
               var request$jscomp$0 = request;
               if (0 !== task.replay.pendingTasks) {
@@ -14208,7 +14208,7 @@ var require_react_dom_server_node_production = __commonJS({
               }
             }
           }
-          pingedTasks.splice(0, i3);
+          pingedTasks.splice(0, i4);
           null !== request$jscomp$2.destination && flushCompletedQueues(request$jscomp$2, request$jscomp$2.destination);
         } catch (error) {
           logRecoverableError(request$jscomp$2, error, {}), fatalError(request$jscomp$2, error);
@@ -14291,12 +14291,12 @@ var require_react_dom_server_node_production = __commonJS({
       return writeEndSegment(destination, segment.parentFormatContext);
     }
     function flushCompletedBoundary(request, destination, boundary) {
-      for (var completedSegments = boundary.completedSegments, i3 = 0; i3 < completedSegments.length; i3++)
+      for (var completedSegments = boundary.completedSegments, i4 = 0; i4 < completedSegments.length; i4++)
         flushPartiallyCompletedSegment(
           request,
           destination,
           boundary,
-          completedSegments[i3]
+          completedSegments[i4]
         );
       completedSegments.length = 0;
       writeHoistablesForBoundary(
@@ -14306,13 +14306,13 @@ var require_react_dom_server_node_production = __commonJS({
       );
       completedSegments = request.resumableState;
       request = request.renderState;
-      i3 = boundary.rootSegmentID;
+      i4 = boundary.rootSegmentID;
       boundary = boundary.contentState;
       var requiresStyleInsertion = request.stylesToHoist;
       request.stylesToHoist = false;
       writeChunk(destination, request.startInlineScript);
       requiresStyleInsertion ? 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 10, writeChunk(destination, completeBoundaryWithStylesScript1FullBoth)) : 0 === (completedSegments.instructions & 8) ? (completedSegments.instructions |= 8, writeChunk(destination, completeBoundaryWithStylesScript1FullPartial)) : writeChunk(destination, completeBoundaryWithStylesScript1Partial) : 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 2, writeChunk(destination, completeBoundaryScript1Full)) : writeChunk(destination, completeBoundaryScript1Partial);
-      completedSegments = i3.toString(16);
+      completedSegments = i4.toString(16);
       writeChunk(destination, request.boundaryPrefix);
       writeChunk(destination, completedSegments);
       writeChunk(destination, completeBoundaryScript2);
@@ -14354,7 +14354,7 @@ var require_react_dom_server_node_production = __commonJS({
       destinationHasCapacity$1 = true;
       try {
         if (!(0 < request.pendingRootTasks)) {
-          var i3, completedRootSegment = request.completedRootSegment;
+          var i4, completedRootSegment = request.completedRootSegment;
           if (null !== completedRootSegment) {
             if (5 === completedRootSegment.status) return;
             var renderState = request.renderState, htmlChunks = renderState.htmlChunks, headChunks = renderState.headChunks, i$jscomp$0;
@@ -14427,8 +14427,8 @@ var require_react_dom_server_node_production = __commonJS({
             writeChunk(destination, hoistableChunks$jscomp$0[completedRootSegment]);
           hoistableChunks$jscomp$0.length = 0;
           var clientRenderedBoundaries = request.clientRenderedBoundaries;
-          for (i3 = 0; i3 < clientRenderedBoundaries.length; i3++) {
-            var boundary = clientRenderedBoundaries[i3];
+          for (i4 = 0; i4 < clientRenderedBoundaries.length; i4++) {
+            var boundary = clientRenderedBoundaries[i4];
             renderState$jscomp$0 = destination;
             var resumableState = request.resumableState, renderState$jscomp$1 = request.renderState, id = boundary.rootSegmentID, errorDigest = boundary.errorDigest;
             writeChunk(
@@ -14452,28 +14452,28 @@ var require_react_dom_server_node_production = __commonJS({
             );
             if (!JSCompiler_inline_result) {
               request.destination = null;
-              i3++;
-              clientRenderedBoundaries.splice(0, i3);
+              i4++;
+              clientRenderedBoundaries.splice(0, i4);
               return;
             }
           }
-          clientRenderedBoundaries.splice(0, i3);
+          clientRenderedBoundaries.splice(0, i4);
           var completedBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < completedBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, completedBoundaries[i3])) {
+          for (i4 = 0; i4 < completedBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, completedBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              completedBoundaries.splice(0, i3);
+              i4++;
+              completedBoundaries.splice(0, i4);
               return;
             }
-          completedBoundaries.splice(0, i3);
+          completedBoundaries.splice(0, i4);
           completeWriting(destination);
           currentView = new Uint8Array(2048);
           writtenBytes = 0;
           destinationHasCapacity$1 = true;
           var partialBoundaries = request.partialBoundaries;
-          for (i3 = 0; i3 < partialBoundaries.length; i3++) {
-            var boundary$51 = partialBoundaries[i3];
+          for (i4 = 0; i4 < partialBoundaries.length; i4++) {
+            var boundary$51 = partialBoundaries[i4];
             a: {
               clientRenderedBoundaries = request;
               boundary = destination;
@@ -14499,24 +14499,24 @@ var require_react_dom_server_node_production = __commonJS({
             }
             if (!JSCompiler_inline_result$jscomp$0) {
               request.destination = null;
-              i3++;
-              partialBoundaries.splice(0, i3);
+              i4++;
+              partialBoundaries.splice(0, i4);
               return;
             }
           }
-          partialBoundaries.splice(0, i3);
+          partialBoundaries.splice(0, i4);
           var largeBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < largeBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, largeBoundaries[i3])) {
+          for (i4 = 0; i4 < largeBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, largeBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              largeBoundaries.splice(0, i3);
+              i4++;
+              largeBoundaries.splice(0, i4);
               return;
             }
-          largeBoundaries.splice(0, i3);
+          largeBoundaries.splice(0, i4);
         }
       } finally {
-        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length ? (request.flushScheduled = false, i3 = request.resumableState, i3.hasBody && writeChunk(destination, endChunkForTag("body")), i3.hasHtml && writeChunk(destination, endChunkForTag("html")), completeWriting(destination), flushBuffered(destination), request.status = 14, destination.end(), request.destination = null) : (completeWriting(destination), flushBuffered(destination));
+        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length ? (request.flushScheduled = false, i4 = request.resumableState, i4.hasBody && writeChunk(destination, endChunkForTag("body")), i4.hasHtml && writeChunk(destination, endChunkForTag("html")), completeWriting(destination), flushBuffered(destination), request.status = 14, destination.end(), request.destination = null) : (completeWriting(destination), flushBuffered(destination));
       }
     }
     function startWork(request) {
@@ -14572,7 +14572,7 @@ var require_react_dom_server_node_production = __commonJS({
       }
     }
     function ensureCorrectIsomorphicReactVersion() {
-      var isomorphicReactPackageVersion = React5.version;
+      var isomorphicReactPackageVersion = React7.version;
       if ("19.0.0" !== isomorphicReactPackageVersion)
         throw Error(
           'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.0.0\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -14725,21 +14725,21 @@ var require_react_dom_server_node_production = __commonJS({
 var require_server_node = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/server.node.js"(exports) {
     "use strict";
-    var l3;
-    var s5;
+    var l5;
+    var s10;
     if (true) {
-      l3 = require_react_dom_server_legacy_node_production();
-      s5 = require_react_dom_server_node_production();
+      l5 = require_react_dom_server_legacy_node_production();
+      s10 = require_react_dom_server_node_production();
     } else {
-      l3 = null;
-      s5 = null;
+      l5 = null;
+      s10 = null;
     }
-    exports.version = l3.version;
-    exports.renderToString = l3.renderToString;
-    exports.renderToStaticMarkup = l3.renderToStaticMarkup;
-    exports.renderToPipeableStream = s5.renderToPipeableStream;
-    if (s5.resumeToPipeableStream) {
-      exports.resumeToPipeableStream = s5.resumeToPipeableStream;
+    exports.version = l5.version;
+    exports.renderToString = l5.renderToString;
+    exports.renderToStaticMarkup = l5.renderToStaticMarkup;
+    exports.renderToPipeableStream = s10.renderToPipeableStream;
+    if (s10.resumeToPipeableStream) {
+      exports.resumeToPipeableStream = s10.resumeToPipeableStream;
     }
   }
 });
@@ -15083,8 +15083,8 @@ var require_isVikeReactApp = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.isVikeReactApp = void 0;
     function isVikeReactApp2() {
-      const g2 = globalThis;
-      return !!g2._isVikeReactApp;
+      const g3 = globalThis;
+      return !!g3._isVikeReactApp;
     }
     exports.isVikeReactApp = isVikeReactApp2;
   }
@@ -15094,21 +15094,21 @@ var require_isVikeReactApp = __commonJS({
 var require_utils4 = __commonJS({
   "node_modules/.pnpm/react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-streaming/dist/cjs/server/utils.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __exportStar2 = exports && exports.__exportStar || function(m3, exports2) {
-      for (var p2 in m3) if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2)) __createBinding2(exports2, m3, p2);
+    var __exportStar2 = exports && exports.__exportStar || function(m5, exports2) {
+      for (var p4 in m5) if (p4 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p4)) __createBinding2(exports2, m5, p4);
     };
     Object.defineProperty(exports, "__esModule", { value: true });
     __exportStar2(require_assert2(), exports);
@@ -15124,23 +15124,23 @@ var require_utils4 = __commonJS({
 var require_useSuspenseData = __commonJS({
   "node_modules/.pnpm/react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-streaming/dist/cjs/server/useAsync/useSuspenseData.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o2, v2) {
-      Object.defineProperty(o2, "default", { enumerable: true, value: v2 });
-    } : function(o2, v2) {
-      o2["default"] = v2;
+    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o4, v2) {
+      Object.defineProperty(o4, "default", { enumerable: true, value: v2 });
+    } : function(o4, v2) {
+      o4["default"] = v2;
     });
     var __importStar2 = exports && exports.__importStar || function(mod) {
       if (mod && mod.__esModule) return mod;
@@ -15175,23 +15175,23 @@ var require_useSuspenseData = __commonJS({
 var require_useStream = __commonJS({
   "node_modules/.pnpm/react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-streaming/dist/cjs/server/useStream.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o2, v2) {
-      Object.defineProperty(o2, "default", { enumerable: true, value: v2 });
-    } : function(o2, v2) {
-      o2["default"] = v2;
+    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o4, v2) {
+      Object.defineProperty(o4, "default", { enumerable: true, value: v2 });
+    } : function(o4, v2) {
+      o4["default"] = v2;
     });
     var __importStar2 = exports && exports.__importStar || function(mod) {
       if (mod && mod.__esModule) return mod;
@@ -15354,23 +15354,23 @@ var require_common = __commonJS({
 var require_renderToStream = __commonJS({
   "node_modules/.pnpm/react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-streaming/dist/cjs/server/renderToStream.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o2, v2) {
-      Object.defineProperty(o2, "default", { enumerable: true, value: v2 });
-    } : function(o2, v2) {
-      o2["default"] = v2;
+    var __setModuleDefault2 = exports && exports.__setModuleDefault || (Object.create ? function(o4, v2) {
+      Object.defineProperty(o4, "default", { enumerable: true, value: v2 });
+    } : function(o4, v2) {
+      o4["default"] = v2;
     });
     var __importStar2 = exports && exports.__importStar || function(mod) {
       if (mod && mod.__esModule) return mod;
@@ -15831,14 +15831,14 @@ var require_createReadableWrapper = __commonJS({
 var require_react_dom_server_legacy_browser_production = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-server-legacy.browser.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
+    var React7 = require_react();
     var ReactDOM2 = require_react_dom();
     function formatProdErrorMessage(code) {
       var url = "https://react.dev/errors/" + code;
       if (1 < arguments.length) {
         url += "?args[]=" + encodeURIComponent(arguments[1]);
-        for (var i3 = 2; i3 < arguments.length; i3++)
-          url += "&args[]=" + encodeURIComponent(arguments[i3]);
+        for (var i4 = 2; i4 < arguments.length; i4++)
+          url += "&args[]=" + encodeURIComponent(arguments[i4]);
       }
       return "Minified React error #" + code + "; visit " + url + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
     }
@@ -16036,7 +16036,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     function sanitizeURL(url) {
       return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
     }
-    var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    var ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var sharedNotPendingObject = {
       pending: false,
@@ -16058,8 +16058,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     };
     var PRELOAD_NO_CREDS = [];
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\u0073" : "\\u0053") + suffix2;
     }
     function createResumableState(identifierPrefix, externalRuntimeConfig, bootstrapScriptContent, bootstrapScripts, bootstrapModules) {
       return {
@@ -16339,7 +16339,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     }
     function flattenOptionChildren(children) {
       var content = "";
-      React5.Children.forEach(children, function(child) {
+      React7.Children.forEach(children, function(child) {
         null != child && (content += child);
       });
       return content;
@@ -16369,8 +16369,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -16570,8 +16570,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
           if (null != selectedValue) {
             var stringValue = null !== value ? "" + value : flattenOptionChildren(children$jscomp$1);
             if (isArrayImpl(selectedValue))
-              for (var i3 = 0; i3 < selectedValue.length; i3++) {
-                if ("" + selectedValue[i3] === stringValue) {
+              for (var i4 = 0; i4 < selectedValue.length; i4++) {
+                if ("" + selectedValue[i4] === stringValue) {
                   target$jscomp$0.push(' selected=""');
                   break;
                 }
@@ -17067,8 +17067,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               resumableState.imageResources[key$jscomp$0] = PRELOAD_NO_CREDS;
               var input = props.crossOrigin;
               var JSCompiler_inline_result$jscomp$8 = "string" === typeof input ? "use-credentials" === input ? input : "" : void 0;
-              var headers = renderState.headers, header;
-              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header = getPreloadAsHeader(src, "image", {
+              var headers = renderState.headers, header3;
+              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header3 = getPreloadAsHeader(src, "image", {
                 imageSrcSet: props.srcSet,
                 imageSizes: props.sizes,
                 crossOrigin: JSCompiler_inline_result$jscomp$8,
@@ -17077,7 +17077,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
                 type: props.type,
                 fetchPriority: props.fetchPriority,
                 referrerPolicy: props.refererPolicy
-              }), 0 <= (headers.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
+              }), 0 <= (headers.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header3) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
                 rel: "preload",
                 as: "image",
                 href: srcSet ? void 0 : src,
@@ -17198,9 +17198,9 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     }
     function writeBootstrap(destination, renderState) {
       renderState = renderState.bootstrapChunks;
-      for (var i3 = 0; i3 < renderState.length - 1; i3++)
-        destination.push(renderState[i3]);
-      return i3 < renderState.length ? (i3 = renderState[i3], renderState.length = 0, destination.push(i3)) : true;
+      for (var i4 = 0; i4 < renderState.length - 1; i4++)
+        destination.push(renderState[i4]);
+      return i4 < renderState.length ? (i4 = renderState[i4], renderState.length = 0, destination.push(i4)) : true;
     }
     function writeStartPendingSuspenseBoundary(destination, renderState, id) {
       destination.push('<!--$?--><template id="');
@@ -17301,15 +17301,15 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     var currentlyRenderingBoundaryHasStylesToHoist = false;
     var destinationHasCapacity = true;
     function flushStyleTagsLateForBoundary(styleQueue) {
-      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i3 = 0;
+      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i4 = 0;
       if (hrefs.length) {
         this.push('<style media="not all" data-precedence="');
         this.push(styleQueue.precedence);
-        for (this.push('" data-href="'); i3 < hrefs.length - 1; i3++)
-          this.push(hrefs[i3]), this.push(" ");
-        this.push(hrefs[i3]);
+        for (this.push('" data-href="'); i4 < hrefs.length - 1; i4++)
+          this.push(hrefs[i4]), this.push(" ");
+        this.push(hrefs[i4]);
         this.push('">');
-        for (i3 = 0; i3 < rules.length; i3++) this.push(rules[i3]);
+        for (i4 = 0; i4 < rules.length; i4++) this.push(rules[i4]);
         destinationHasCapacity = this.push("</style>");
         currentlyRenderingBoundaryHasStylesToHoist = true;
         rules.length = 0;
@@ -17328,14 +17328,14 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       return destinationHasCapacity;
     }
     function flushResource(resource) {
-      for (var i3 = 0; i3 < resource.length; i3++) this.push(resource[i3]);
+      for (var i4 = 0; i4 < resource.length; i4++) this.push(resource[i4]);
       resource.length = 0;
     }
     var stylesheetFlushingQueue = [];
     function flushStyleInPreamble(stylesheet) {
       pushLinkImpl(stylesheetFlushingQueue, stylesheet.props);
-      for (var i3 = 0; i3 < stylesheetFlushingQueue.length; i3++)
-        this.push(stylesheetFlushingQueue[i3]);
+      for (var i4 = 0; i4 < stylesheetFlushingQueue.length; i4++)
+        this.push(stylesheetFlushingQueue[i4]);
       stylesheetFlushingQueue.length = 0;
       stylesheet.state = 2;
     }
@@ -17479,13 +17479,13 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
           if (!resumableState.dnsResources.hasOwnProperty(href)) {
             resumableState.dnsResources[href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity)
-              JSCompiler_temp = (header = "<" + ("" + href).replace(
+              JSCompiler_temp = (header3 = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
                 escapeHrefForLinkHeaderURLContextReplacer
-              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header.length + 2));
-            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (header = [], pushLinkImpl(header, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header));
+              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header3.length + 2));
+            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (header3 = [], pushLinkImpl(header3, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header3));
           }
           enqueueFlush(request);
         }
@@ -17500,7 +17500,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
           if (!resumableState.connectResources[bucket].hasOwnProperty(href)) {
             resumableState.connectResources[bucket][href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity) {
               JSCompiler_temp = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
@@ -17513,9 +17513,9 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
                 );
                 JSCompiler_temp += '; crossorigin="' + escapedCrossOrigin + '"';
               }
-              JSCompiler_temp = (header = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header.length + 2));
+              JSCompiler_temp = (header3 = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header3.length + 2));
             }
-            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (bucket = [], pushLinkImpl(bucket, {
+            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (bucket = [], pushLinkImpl(bucket, {
               rel: "preconnect",
               href,
               crossOrigin
@@ -17541,8 +17541,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               if (resumableState.imageResources.hasOwnProperty(key)) return;
               resumableState.imageResources[key] = PRELOAD_NO_CREDS;
               resumableState = renderState.headers;
-              var header;
-              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header) : (resumableState = [], pushLinkImpl(
+              var header3;
+              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header3 = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header3) : (resumableState = [], pushLinkImpl(
                 resumableState,
                 assign(
                   { rel: "preload", href: imageSrcSet ? void 0 : href, as },
@@ -17748,8 +17748,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
         moduleScripts: /* @__PURE__ */ new Map()
       };
       if (void 0 !== bootstrapScripts)
-        for (var i3 = 0; i3 < bootstrapScripts.length; i3++) {
-          var scriptConfig = bootstrapScripts[i3], src, crossOrigin = void 0, integrity = void 0, props = {
+        for (var i4 = 0; i4 < bootstrapScripts.length; i4++) {
+          var scriptConfig = bootstrapScripts[i4], src, crossOrigin = void 0, integrity = void 0, props = {
             rel: "preload",
             as: "script",
             fetchPriority: "low",
@@ -17777,9 +17777,9 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             rel: "modulepreload",
             fetchPriority: "low",
             nonce: void 0
-          }, "string" === typeof props ? integrity.href = i3 = props : (integrity.href = i3 = props.src, integrity.integrity = crossOrigin = "string" === typeof props.integrity ? props.integrity : void 0, integrity.crossOrigin = src = "string" === typeof props || null == props.crossOrigin ? void 0 : "use-credentials" === props.crossOrigin ? "use-credentials" : ""), props = resumableState, scriptConfig = i3, props.scriptResources[scriptConfig] = null, props.moduleScriptResources[scriptConfig] = null, props = [], pushLinkImpl(props, integrity), JSCompiler_object_inline_bootstrapScripts_1500.add(props), bootstrapChunks.push(
+          }, "string" === typeof props ? integrity.href = i4 = props : (integrity.href = i4 = props.src, integrity.integrity = crossOrigin = "string" === typeof props.integrity ? props.integrity : void 0, integrity.crossOrigin = src = "string" === typeof props || null == props.crossOrigin ? void 0 : "use-credentials" === props.crossOrigin ? "use-credentials" : ""), props = resumableState, scriptConfig = i4, props.scriptResources[scriptConfig] = null, props.moduleScriptResources[scriptConfig] = null, props = [], pushLinkImpl(props, integrity), JSCompiler_object_inline_bootstrapScripts_1500.add(props), bootstrapChunks.push(
             '<script type="module" src="',
-            escapeTextForBrowser(i3)
+            escapeTextForBrowser(i4)
           ), "string" === typeof crossOrigin && bootstrapChunks.push(
             '" integrity="',
             escapeTextForBrowser(crossOrigin)
@@ -18004,8 +18004,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       suspendedThenable = null;
       return thenable;
     }
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
     var currentlyRenderingComponent = null;
@@ -18088,8 +18088,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
           var prevDeps = prevState[1];
           a: if (null === prevDeps) prevDeps = false;
           else {
-            for (var i3 = 0; i3 < prevDeps.length && i3 < deps.length; i3++)
-              if (!objectIs(deps[i3], prevDeps[i3])) {
+            for (var i4 = 0; i4 < prevDeps.length && i4 < deps.length; i4++)
+              if (!objectIs(deps[i4], prevDeps[i4])) {
                 prevDeps = false;
                 break a;
               }
@@ -18236,8 +18236,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
         return unsupportedRefresh;
       },
       useMemoCache: function(size) {
-        for (var data = Array(size), i3 = 0; i3 < size; i3++)
-          data[i3] = REACT_MEMO_CACHE_SENTINEL;
+        for (var data = Array(size), i4 = 0; i4 < size; i4++)
+          data[i4] = REACT_MEMO_CACHE_SENTINEL;
         return data;
       },
       useHostTransitionStatus: function() {
@@ -18632,8 +18632,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
         if (null !== segment) {
           didEmitActionStateMarkers = true;
           segment = segment.chunks;
-          for (var i3 = 0; i3 < actionStateCount; i3++)
-            i3 === actionStateMatchingIndex2 ? segment.push("<!--F!-->") : segment.push("<!--F-->");
+          for (var i4 = 0; i4 < actionStateCount; i4++)
+            i4 === actionStateMatchingIndex2 ? segment.push("<!--F!-->") : segment.push("<!--F-->");
         }
       }
       actionStateCount = task.keyPath;
@@ -18650,23 +18650,23 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             for (var propName in props)
               "ref" !== propName && (newProps[propName] = props[propName]);
           }
-          var defaultProps15 = type.defaultProps;
-          if (defaultProps15) {
+          var defaultProps29 = type.defaultProps;
+          if (defaultProps29) {
             newProps === props && (newProps = assign({}, newProps, props));
-            for (var propName$33 in defaultProps15)
-              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps15[propName$33]);
+            for (var propName$33 in defaultProps29)
+              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps29[propName$33]);
           }
           props = newProps;
           newProps = emptyContextObject;
-          defaultProps15 = type.contextType;
-          "object" === typeof defaultProps15 && null !== defaultProps15 && (newProps = defaultProps15._currentValue2);
+          defaultProps29 = type.contextType;
+          "object" === typeof defaultProps29 && null !== defaultProps29 && (newProps = defaultProps29._currentValue2);
           newProps = new type(props, newProps);
           var initialState = void 0 !== newProps.state ? newProps.state : null;
           newProps.updater = classComponentUpdater;
           newProps.props = props;
           newProps.state = initialState;
-          defaultProps15 = { queue: [], replace: false };
-          newProps._reactInternals = defaultProps15;
+          defaultProps29 = { queue: [], replace: false };
+          newProps._reactInternals = defaultProps29;
           ref = type.contextType;
           newProps.context = "object" === typeof ref && null !== ref ? ref._currentValue2 : emptyContextObject;
           ref = type.getDerivedStateFromProps;
@@ -18676,17 +18676,17 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               newProps,
               newProps.state,
               null
-            ), null !== defaultProps15.queue && 0 < defaultProps15.queue.length)
-              if (type = defaultProps15.queue, ref = defaultProps15.replace, defaultProps15.queue = null, defaultProps15.replace = false, ref && 1 === type.length)
+            ), null !== defaultProps29.queue && 0 < defaultProps29.queue.length)
+              if (type = defaultProps29.queue, ref = defaultProps29.replace, defaultProps29.queue = null, defaultProps29.replace = false, ref && 1 === type.length)
                 newProps.state = type[0];
               else {
-                defaultProps15 = ref ? type[0] : newProps.state;
+                defaultProps29 = ref ? type[0] : newProps.state;
                 initialState = true;
                 for (ref = ref ? 1 : 0; ref < type.length; ref++)
-                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps15, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps15 = assign({}, defaultProps15, propName$33)) : assign(defaultProps15, propName$33));
-                newProps.state = defaultProps15;
+                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps29, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps29 = assign({}, defaultProps29, propName$33)) : assign(defaultProps29, propName$33));
+                newProps.state = defaultProps29;
               }
-            else defaultProps15.queue = null;
+            else defaultProps29.queue = null;
           type = newProps.render();
           if (12 === request.status) throw null;
           props = task.keyPath;
@@ -18708,7 +18708,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
         }
       else if ("string" === typeof type)
         if (newProps = task.blockedSegment, null === newProps)
-          newProps = props.children, defaultProps15 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps15, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps15, task.keyPath = initialState;
+          newProps = props.children, defaultProps29 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps29, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps29, task.keyPath = initialState;
         else {
           initialState = pushStartInstance(
             newProps.chunks,
@@ -18722,12 +18722,12 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             task.isFallback
           );
           newProps.lastPushedText = false;
-          defaultProps15 = task.formatContext;
+          defaultProps29 = task.formatContext;
           ref = task.keyPath;
-          task.formatContext = getChildFormatContext(defaultProps15, type, props);
+          task.formatContext = getChildFormatContext(defaultProps29, type, props);
           task.keyPath = keyPath;
           renderNode(request, task, initialState, -1);
-          task.formatContext = defaultProps15;
+          task.formatContext = defaultProps29;
           task.keyPath = ref;
           a: {
             task = newProps.chunks;
@@ -18753,13 +18753,13 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               case "wbr":
                 break a;
               case "body":
-                if (1 >= defaultProps15.insertionMode) {
+                if (1 >= defaultProps29.insertionMode) {
                   request.hasBody = true;
                   break a;
                 }
                 break;
               case "html":
-                if (0 === defaultProps15.insertionMode) {
+                if (0 === defaultProps29.insertionMode) {
                   request.hasHtml = true;
                   break a;
                 }
@@ -18831,9 +18831,9 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               contentRootSegment.parentFlushed = true;
               if (null !== request.trackedPostpones) {
                 newProps = [keyPath[0], "Suspense Fallback", keyPath[2]];
-                defaultProps15 = [newProps[1], newProps[2], [], null];
-                request.trackedPostpones.workingMap.set(newProps, defaultProps15);
-                propName.trackedFallbackNode = defaultProps15;
+                defaultProps29 = [newProps[1], newProps[2], [], null];
+                request.trackedPostpones.workingMap.set(newProps, defaultProps29);
+                propName.trackedFallbackNode = defaultProps29;
                 task.blockedSegment = boundarySegment;
                 task.keyPath = newProps;
                 boundarySegment.status = 6;
@@ -18884,10 +18884,10 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
                     break a;
                   }
                 } catch (thrownValue$28) {
-                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps15 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
+                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps29 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
                     request,
                     newProps,
-                    defaultProps15
+                    defaultProps29
                   ), propName.errorDigest = initialState, untrackBoundary(request, propName);
                 } finally {
                   task.blockedBoundary = parentBoundary, task.hoistableState = parentHoistableState, task.blockedSegment = ref, task.keyPath = type;
@@ -18944,7 +18944,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               return;
             case REACT_PROVIDER_TYPE:
             case REACT_CONTEXT_TYPE:
-              defaultProps15 = props.children;
+              defaultProps29 = props.children;
               newProps = task.keyPath;
               props = props.value;
               initialState = type._currentValue2;
@@ -18959,7 +18959,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               };
               task.context = type;
               task.keyPath = keyPath;
-              renderNodeDestructive(request, task, defaultProps15, -1);
+              renderNodeDestructive(request, task, defaultProps29, -1);
               request = currentActiveSnapshot;
               if (null === request) throw Error(formatProdErrorMessage(403));
               request.context._currentValue2 = request.parentValue;
@@ -19383,8 +19383,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       null !== task && (task.status = 3, finishedTask(this, boundary, task));
     }
     function abortRemainingReplayNodes(request$jscomp$0, boundary, nodes, slots, error, errorDigest$jscomp$0) {
-      for (var i3 = 0; i3 < nodes.length; i3++) {
-        var node = nodes[i3];
+      for (var i4 = 0; i4 < nodes.length; i4++) {
+        var node = nodes[i4];
         if (4 === node.length)
           abortRemainingReplayNodes(
             request$jscomp$0,
@@ -19459,7 +19459,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               var queueIter = renderState.styles.values(), queueStep = queueIter.next();
               b: for (; 0 < headers.remainingCapacity && !queueStep.done; queueStep = queueIter.next())
                 for (var sheetIter = queueStep.value.sheets.values(), sheetStep = sheetIter.next(); 0 < headers.remainingCapacity && !sheetStep.done; sheetStep = sheetIter.next()) {
-                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header = getPreloadAsHeader(props$jscomp$0.href, "style", {
+                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header3 = getPreloadAsHeader(props$jscomp$0.href, "style", {
                     crossOrigin: props$jscomp$0.crossOrigin,
                     integrity: props$jscomp$0.integrity,
                     nonce: props$jscomp$0.nonce,
@@ -19468,8 +19468,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
                     referrerPolicy: props$jscomp$0.referrerPolicy,
                     media: props$jscomp$0.media
                   });
-                  if (0 <= (headers.remainingCapacity -= header.length + 2))
-                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
+                  if (0 <= (headers.remainingCapacity -= header3.length + 2))
+                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header3, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
                   else break b;
                 }
             }
@@ -19527,9 +19527,9 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
         var prevResumableState = currentResumableState;
         currentResumableState = request$jscomp$2.resumableState;
         try {
-          var pingedTasks = request$jscomp$2.pingedTasks, i3;
-          for (i3 = 0; i3 < pingedTasks.length; i3++) {
-            var task = pingedTasks[i3], request = request$jscomp$2, segment = task.blockedSegment;
+          var pingedTasks = request$jscomp$2.pingedTasks, i4;
+          for (i4 = 0; i4 < pingedTasks.length; i4++) {
+            var task = pingedTasks[i4], request = request$jscomp$2, segment = task.blockedSegment;
             if (null === segment) {
               var request$jscomp$0 = request;
               if (0 !== task.replay.pendingTasks) {
@@ -19622,7 +19622,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
               }
             }
           }
-          pingedTasks.splice(0, i3);
+          pingedTasks.splice(0, i4);
           null !== request$jscomp$2.destination && flushCompletedQueues(request$jscomp$2, request$jscomp$2.destination);
         } catch (error) {
           logRecoverableError(request$jscomp$2, error, {}), fatalError(request$jscomp$2, error);
@@ -19696,12 +19696,12 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       return writeEndSegment(destination, segment.parentFormatContext);
     }
     function flushCompletedBoundary(request, destination, boundary) {
-      for (var completedSegments = boundary.completedSegments, i3 = 0; i3 < completedSegments.length; i3++)
+      for (var completedSegments = boundary.completedSegments, i4 = 0; i4 < completedSegments.length; i4++)
         flushPartiallyCompletedSegment(
           request,
           destination,
           boundary,
-          completedSegments[i3]
+          completedSegments[i4]
         );
       completedSegments.length = 0;
       writeHoistablesForBoundary(
@@ -19711,7 +19711,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       );
       completedSegments = request.resumableState;
       request = request.renderState;
-      i3 = boundary.rootSegmentID;
+      i4 = boundary.rootSegmentID;
       boundary = boundary.contentState;
       var requiresStyleInsertion = request.stylesToHoist;
       request.stylesToHoist = false;
@@ -19723,7 +19723,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       )) : destination.push('$RR("') : 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 2, destination.push(
         '$RC=function(b,c,e){c=document.getElementById(c);c.parentNode.removeChild(c);var a=document.getElementById(b);if(a){b=a.previousSibling;if(e)b.data="$!",a.setAttribute("data-dgst",e);else{e=b.parentNode;a=b.nextSibling;var f=0;do{if(a&&8===a.nodeType){var d=a.data;if("/$"===d)if(0===f)break;else f--;else"$"!==d&&"$?"!==d&&"$!"!==d||f++}d=a.nextSibling;e.removeChild(a);a=d}while(a);for(;c.firstChild;)e.insertBefore(c.firstChild,a);b.data="$"}b._reactRetry&&b._reactRetry()}};$RC("'
       )) : destination.push('$RC("');
-      completedSegments = i3.toString(16);
+      completedSegments = i4.toString(16);
       destination.push(request.boundaryPrefix);
       destination.push(completedSegments);
       destination.push('","');
@@ -19762,7 +19762,7 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     function flushCompletedQueues(request, destination) {
       try {
         if (!(0 < request.pendingRootTasks)) {
-          var i3, completedRootSegment = request.completedRootSegment;
+          var i4, completedRootSegment = request.completedRootSegment;
           if (null !== completedRootSegment) {
             if (5 === completedRootSegment.status) return;
             var renderState = request.renderState, htmlChunks = renderState.htmlChunks, headChunks = renderState.headChunks, i$jscomp$0;
@@ -19841,8 +19841,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             destination.push(hoistableChunks$jscomp$0[completedRootSegment]);
           hoistableChunks$jscomp$0.length = 0;
           var clientRenderedBoundaries = request.clientRenderedBoundaries;
-          for (i3 = 0; i3 < clientRenderedBoundaries.length; i3++) {
-            var boundary = clientRenderedBoundaries[i3];
+          for (i4 = 0; i4 < clientRenderedBoundaries.length; i4++) {
+            var boundary = clientRenderedBoundaries[i4];
             renderState$jscomp$0 = destination;
             var resumableState = request.resumableState, renderState$jscomp$1 = request.renderState, id = boundary.rootSegmentID, errorDigest = boundary.errorDigest;
             renderState$jscomp$0.push(renderState$jscomp$1.startInlineScript);
@@ -19863,24 +19863,24 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             var JSCompiler_inline_result = renderState$jscomp$0.push(")</script>");
             if (!JSCompiler_inline_result) {
               request.destination = null;
-              i3++;
-              clientRenderedBoundaries.splice(0, i3);
+              i4++;
+              clientRenderedBoundaries.splice(0, i4);
               return;
             }
           }
-          clientRenderedBoundaries.splice(0, i3);
+          clientRenderedBoundaries.splice(0, i4);
           var completedBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < completedBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, completedBoundaries[i3])) {
+          for (i4 = 0; i4 < completedBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, completedBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              completedBoundaries.splice(0, i3);
+              i4++;
+              completedBoundaries.splice(0, i4);
               return;
             }
-          completedBoundaries.splice(0, i3);
+          completedBoundaries.splice(0, i4);
           var partialBoundaries = request.partialBoundaries;
-          for (i3 = 0; i3 < partialBoundaries.length; i3++) {
-            var boundary$51 = partialBoundaries[i3];
+          for (i4 = 0; i4 < partialBoundaries.length; i4++) {
+            var boundary$51 = partialBoundaries[i4];
             a: {
               clientRenderedBoundaries = request;
               boundary = destination;
@@ -19906,24 +19906,24 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
             }
             if (!JSCompiler_inline_result$jscomp$0) {
               request.destination = null;
-              i3++;
-              partialBoundaries.splice(0, i3);
+              i4++;
+              partialBoundaries.splice(0, i4);
               return;
             }
           }
-          partialBoundaries.splice(0, i3);
+          partialBoundaries.splice(0, i4);
           var largeBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < largeBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, largeBoundaries[i3])) {
+          for (i4 = 0; i4 < largeBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, largeBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              largeBoundaries.splice(0, i3);
+              i4++;
+              largeBoundaries.splice(0, i4);
               return;
             }
-          largeBoundaries.splice(0, i3);
+          largeBoundaries.splice(0, i4);
         }
       } finally {
-        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length && (request.flushScheduled = false, i3 = request.resumableState, i3.hasBody && (partialBoundaries = endChunkForTag("body"), destination.push(partialBoundaries)), i3.hasHtml && (i3 = endChunkForTag("html"), destination.push(i3)), request.status = 14, destination.push(null), request.destination = null);
+        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length && (request.flushScheduled = false, i4 = request.resumableState, i4.hasBody && (partialBoundaries = endChunkForTag("body"), destination.push(partialBoundaries)), i4.hasHtml && (i4 = endChunkForTag("html"), destination.push(i4)), request.status = 14, destination.push(null), request.destination = null);
       }
     }
     function enqueueFlush(request) {
@@ -20025,14 +20025,14 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
 var require_react_dom_server_browser_production = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/cjs/react-dom-server.browser.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
+    var React7 = require_react();
     var ReactDOM2 = require_react_dom();
     function formatProdErrorMessage(code) {
       var url = "https://react.dev/errors/" + code;
       if (1 < arguments.length) {
         url += "?args[]=" + encodeURIComponent(arguments[1]);
-        for (var i3 = 2; i3 < arguments.length; i3++)
-          url += "&args[]=" + encodeURIComponent(arguments[i3]);
+        for (var i4 = 2; i4 < arguments.length; i4++)
+          url += "&args[]=" + encodeURIComponent(arguments[i4]);
       }
       return "Minified React error #" + code + "; visit " + url + " for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";
     }
@@ -20281,7 +20281,7 @@ var require_react_dom_server_browser_production = __commonJS({
     function sanitizeURL(url) {
       return isJavaScriptProtocol.test("" + url) ? "javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')" : url;
     }
-    var ReactSharedInternals = React5.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    var ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     var sharedNotPendingObject = {
       pending: false,
@@ -20312,8 +20312,8 @@ var require_react_dom_server_browser_production = __commonJS({
     var scriptCrossOrigin = stringToPrecomputedChunk('" crossorigin="');
     var endAsyncScript = stringToPrecomputedChunk('" async=""></script>');
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\u0073" : "\\u0053") + suffix2;
     }
     var importMapScriptStart = stringToPrecomputedChunk(
       '<script type="importmap">'
@@ -20817,7 +20817,7 @@ var require_react_dom_server_browser_production = __commonJS({
     }
     function flattenOptionChildren(children) {
       var content = "";
-      React5.Children.forEach(children, function(child) {
+      React7.Children.forEach(children, function(child) {
         null != child && (content += child);
       });
       return content;
@@ -20853,8 +20853,8 @@ var require_react_dom_server_browser_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s5, suffix2) {
-      return "" + prefix2 + ("s" === s5 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s10, suffix2) {
+      return "" + prefix2 + ("s" === s10 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -21058,8 +21058,8 @@ var require_react_dom_server_browser_production = __commonJS({
           if (null != selectedValue) {
             var stringValue = null !== value ? "" + value : flattenOptionChildren(children$jscomp$1);
             if (isArrayImpl(selectedValue))
-              for (var i3 = 0; i3 < selectedValue.length; i3++) {
-                if ("" + selectedValue[i3] === stringValue) {
+              for (var i4 = 0; i4 < selectedValue.length; i4++) {
+                if ("" + selectedValue[i4] === stringValue) {
                   target$jscomp$0.push(selectedMarkerAttribute);
                   break;
                 }
@@ -21569,8 +21569,8 @@ var require_react_dom_server_browser_production = __commonJS({
               resumableState.imageResources[key$jscomp$0] = PRELOAD_NO_CREDS;
               var input = props.crossOrigin;
               var JSCompiler_inline_result$jscomp$8 = "string" === typeof input ? "use-credentials" === input ? input : "" : void 0;
-              var headers = renderState.headers, header;
-              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header = getPreloadAsHeader(src, "image", {
+              var headers = renderState.headers, header3;
+              headers && 0 < headers.remainingCapacity && ("high" === props.fetchPriority || 500 > headers.highImagePreloads.length) && (header3 = getPreloadAsHeader(src, "image", {
                 imageSrcSet: props.srcSet,
                 imageSizes: props.sizes,
                 crossOrigin: JSCompiler_inline_result$jscomp$8,
@@ -21579,7 +21579,7 @@ var require_react_dom_server_browser_production = __commonJS({
                 type: props.type,
                 fetchPriority: props.fetchPriority,
                 referrerPolicy: props.refererPolicy
-              }), 0 <= (headers.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
+              }), 0 <= (headers.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key$jscomp$0] = PRELOAD_NO_CREDS, headers.highImagePreloads && (headers.highImagePreloads += ", "), headers.highImagePreloads += header3) : (resource$jscomp$1 = [], pushLinkImpl(resource$jscomp$1, {
                 rel: "preload",
                 as: "image",
                 href: srcSet ? void 0 : src,
@@ -21700,9 +21700,9 @@ var require_react_dom_server_browser_production = __commonJS({
     }
     function writeBootstrap(destination, renderState) {
       renderState = renderState.bootstrapChunks;
-      for (var i3 = 0; i3 < renderState.length - 1; i3++)
-        writeChunk(destination, renderState[i3]);
-      return i3 < renderState.length ? (i3 = renderState[i3], renderState.length = 0, writeChunkAndReturn(destination, i3)) : true;
+      for (var i4 = 0; i4 < renderState.length - 1; i4++)
+        writeChunk(destination, renderState[i4]);
+      return i4 < renderState.length ? (i4 = renderState[i4], renderState.length = 0, writeChunkAndReturn(destination, i4)) : true;
     }
     var placeholder1 = stringToPrecomputedChunk('<template id="');
     var placeholder2 = stringToPrecomputedChunk('"></template>');
@@ -21890,15 +21890,15 @@ var require_react_dom_server_browser_production = __commonJS({
     var currentlyRenderingBoundaryHasStylesToHoist = false;
     var destinationHasCapacity = true;
     function flushStyleTagsLateForBoundary(styleQueue) {
-      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i3 = 0;
+      var rules = styleQueue.rules, hrefs = styleQueue.hrefs, i4 = 0;
       if (hrefs.length) {
         writeChunk(this, lateStyleTagResourceOpen1);
         writeChunk(this, styleQueue.precedence);
-        for (writeChunk(this, lateStyleTagResourceOpen2); i3 < hrefs.length - 1; i3++)
-          writeChunk(this, hrefs[i3]), writeChunk(this, spaceSeparator);
-        writeChunk(this, hrefs[i3]);
+        for (writeChunk(this, lateStyleTagResourceOpen2); i4 < hrefs.length - 1; i4++)
+          writeChunk(this, hrefs[i4]), writeChunk(this, spaceSeparator);
+        writeChunk(this, hrefs[i4]);
         writeChunk(this, lateStyleTagResourceOpen3);
-        for (i3 = 0; i3 < rules.length; i3++) writeChunk(this, rules[i3]);
+        for (i4 = 0; i4 < rules.length; i4++) writeChunk(this, rules[i4]);
         destinationHasCapacity = writeChunkAndReturn(
           this,
           lateStyleTagTemplateClose
@@ -21920,14 +21920,14 @@ var require_react_dom_server_browser_production = __commonJS({
       return destinationHasCapacity;
     }
     function flushResource(resource) {
-      for (var i3 = 0; i3 < resource.length; i3++) writeChunk(this, resource[i3]);
+      for (var i4 = 0; i4 < resource.length; i4++) writeChunk(this, resource[i4]);
       resource.length = 0;
     }
     var stylesheetFlushingQueue = [];
     function flushStyleInPreamble(stylesheet) {
       pushLinkImpl(stylesheetFlushingQueue, stylesheet.props);
-      for (var i3 = 0; i3 < stylesheetFlushingQueue.length; i3++)
-        writeChunk(this, stylesheetFlushingQueue[i3]);
+      for (var i4 = 0; i4 < stylesheetFlushingQueue.length; i4++)
+        writeChunk(this, stylesheetFlushingQueue[i4]);
       stylesheetFlushingQueue.length = 0;
       stylesheet.state = 2;
     }
@@ -22093,13 +22093,13 @@ var require_react_dom_server_browser_production = __commonJS({
           if (!resumableState.dnsResources.hasOwnProperty(href)) {
             resumableState.dnsResources[href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity)
-              JSCompiler_temp = (header = "<" + ("" + href).replace(
+              JSCompiler_temp = (header3 = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
                 escapeHrefForLinkHeaderURLContextReplacer
-              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header.length + 2));
-            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (header = [], pushLinkImpl(header, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header));
+              ) + ">; rel=dns-prefetch", 0 <= (resumableState.remainingCapacity -= header3.length + 2));
+            JSCompiler_temp ? (renderState.resets.dns[href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (header3 = [], pushLinkImpl(header3, { href, rel: "dns-prefetch" }), renderState.preconnects.add(header3));
           }
           enqueueFlush(request);
         }
@@ -22114,7 +22114,7 @@ var require_react_dom_server_browser_production = __commonJS({
           if (!resumableState.connectResources[bucket].hasOwnProperty(href)) {
             resumableState.connectResources[bucket][href] = null;
             resumableState = renderState.headers;
-            var header, JSCompiler_temp;
+            var header3, JSCompiler_temp;
             if (JSCompiler_temp = resumableState && 0 < resumableState.remainingCapacity) {
               JSCompiler_temp = "<" + ("" + href).replace(
                 regexForHrefInLinkHeaderURLContext,
@@ -22127,9 +22127,9 @@ var require_react_dom_server_browser_production = __commonJS({
                 );
                 JSCompiler_temp += '; crossorigin="' + escapedCrossOrigin + '"';
               }
-              JSCompiler_temp = (header = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header.length + 2));
+              JSCompiler_temp = (header3 = JSCompiler_temp, 0 <= (resumableState.remainingCapacity -= header3.length + 2));
             }
-            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header) : (bucket = [], pushLinkImpl(bucket, {
+            JSCompiler_temp ? (renderState.resets.connect[bucket][href] = null, resumableState.preconnects && (resumableState.preconnects += ", "), resumableState.preconnects += header3) : (bucket = [], pushLinkImpl(bucket, {
               rel: "preconnect",
               href,
               crossOrigin
@@ -22155,8 +22155,8 @@ var require_react_dom_server_browser_production = __commonJS({
               if (resumableState.imageResources.hasOwnProperty(key)) return;
               resumableState.imageResources[key] = PRELOAD_NO_CREDS;
               resumableState = renderState.headers;
-              var header;
-              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header) : (resumableState = [], pushLinkImpl(
+              var header3;
+              resumableState && 0 < resumableState.remainingCapacity && "high" === fetchPriority && (header3 = getPreloadAsHeader(href, as, options), 0 <= (resumableState.remainingCapacity -= header3.length + 2)) ? (renderState.resets.image[key] = PRELOAD_NO_CREDS, resumableState.highImagePreloads && (resumableState.highImagePreloads += ", "), resumableState.highImagePreloads += header3) : (resumableState = [], pushLinkImpl(
                 resumableState,
                 assign(
                   { rel: "preload", href: imageSrcSet ? void 0 : href, as },
@@ -22522,8 +22522,8 @@ var require_react_dom_server_browser_production = __commonJS({
       suspendedThenable = null;
       return thenable;
     }
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
     var currentlyRenderingComponent = null;
@@ -22606,8 +22606,8 @@ var require_react_dom_server_browser_production = __commonJS({
           var prevDeps = prevState[1];
           a: if (null === prevDeps) prevDeps = false;
           else {
-            for (var i3 = 0; i3 < prevDeps.length && i3 < deps.length; i3++)
-              if (!objectIs(deps[i3], prevDeps[i3])) {
+            for (var i4 = 0; i4 < prevDeps.length && i4 < deps.length; i4++)
+              if (!objectIs(deps[i4], prevDeps[i4])) {
                 prevDeps = false;
                 break a;
               }
@@ -22754,8 +22754,8 @@ var require_react_dom_server_browser_production = __commonJS({
         return unsupportedRefresh;
       },
       useMemoCache: function(size) {
-        for (var data = Array(size), i3 = 0; i3 < size; i3++)
-          data[i3] = REACT_MEMO_CACHE_SENTINEL;
+        for (var data = Array(size), i4 = 0; i4 < size; i4++)
+          data[i4] = REACT_MEMO_CACHE_SENTINEL;
         return data;
       },
       useHostTransitionStatus: function() {
@@ -23185,8 +23185,8 @@ var require_react_dom_server_browser_production = __commonJS({
         if (null !== segment) {
           didEmitActionStateMarkers = true;
           segment = segment.chunks;
-          for (var i3 = 0; i3 < actionStateCount; i3++)
-            i3 === actionStateMatchingIndex2 ? segment.push(formStateMarkerIsMatching) : segment.push(formStateMarkerIsNotMatching);
+          for (var i4 = 0; i4 < actionStateCount; i4++)
+            i4 === actionStateMatchingIndex2 ? segment.push(formStateMarkerIsMatching) : segment.push(formStateMarkerIsNotMatching);
         }
       }
       actionStateCount = task.keyPath;
@@ -23203,23 +23203,23 @@ var require_react_dom_server_browser_production = __commonJS({
             for (var propName in props)
               "ref" !== propName && (newProps[propName] = props[propName]);
           }
-          var defaultProps15 = type.defaultProps;
-          if (defaultProps15) {
+          var defaultProps29 = type.defaultProps;
+          if (defaultProps29) {
             newProps === props && (newProps = assign({}, newProps, props));
-            for (var propName$33 in defaultProps15)
-              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps15[propName$33]);
+            for (var propName$33 in defaultProps29)
+              void 0 === newProps[propName$33] && (newProps[propName$33] = defaultProps29[propName$33]);
           }
           props = newProps;
           newProps = emptyContextObject;
-          defaultProps15 = type.contextType;
-          "object" === typeof defaultProps15 && null !== defaultProps15 && (newProps = defaultProps15._currentValue);
+          defaultProps29 = type.contextType;
+          "object" === typeof defaultProps29 && null !== defaultProps29 && (newProps = defaultProps29._currentValue);
           newProps = new type(props, newProps);
           var initialState = void 0 !== newProps.state ? newProps.state : null;
           newProps.updater = classComponentUpdater;
           newProps.props = props;
           newProps.state = initialState;
-          defaultProps15 = { queue: [], replace: false };
-          newProps._reactInternals = defaultProps15;
+          defaultProps29 = { queue: [], replace: false };
+          newProps._reactInternals = defaultProps29;
           ref = type.contextType;
           newProps.context = "object" === typeof ref && null !== ref ? ref._currentValue : emptyContextObject;
           ref = type.getDerivedStateFromProps;
@@ -23229,17 +23229,17 @@ var require_react_dom_server_browser_production = __commonJS({
               newProps,
               newProps.state,
               null
-            ), null !== defaultProps15.queue && 0 < defaultProps15.queue.length)
-              if (type = defaultProps15.queue, ref = defaultProps15.replace, defaultProps15.queue = null, defaultProps15.replace = false, ref && 1 === type.length)
+            ), null !== defaultProps29.queue && 0 < defaultProps29.queue.length)
+              if (type = defaultProps29.queue, ref = defaultProps29.replace, defaultProps29.queue = null, defaultProps29.replace = false, ref && 1 === type.length)
                 newProps.state = type[0];
               else {
-                defaultProps15 = ref ? type[0] : newProps.state;
+                defaultProps29 = ref ? type[0] : newProps.state;
                 initialState = true;
                 for (ref = ref ? 1 : 0; ref < type.length; ref++)
-                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps15, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps15 = assign({}, defaultProps15, propName$33)) : assign(defaultProps15, propName$33));
-                newProps.state = defaultProps15;
+                  propName$33 = type[ref], propName$33 = "function" === typeof propName$33 ? propName$33.call(newProps, defaultProps29, props, void 0) : propName$33, null != propName$33 && (initialState ? (initialState = false, defaultProps29 = assign({}, defaultProps29, propName$33)) : assign(defaultProps29, propName$33));
+                newProps.state = defaultProps29;
               }
-            else defaultProps15.queue = null;
+            else defaultProps29.queue = null;
           type = newProps.render();
           if (12 === request.status) throw null;
           props = task.keyPath;
@@ -23261,7 +23261,7 @@ var require_react_dom_server_browser_production = __commonJS({
         }
       else if ("string" === typeof type)
         if (newProps = task.blockedSegment, null === newProps)
-          newProps = props.children, defaultProps15 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps15, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps15, task.keyPath = initialState;
+          newProps = props.children, defaultProps29 = task.formatContext, initialState = task.keyPath, task.formatContext = getChildFormatContext(defaultProps29, type, props), task.keyPath = keyPath, renderNode(request, task, newProps, -1), task.formatContext = defaultProps29, task.keyPath = initialState;
         else {
           initialState = pushStartInstance(
             newProps.chunks,
@@ -23275,12 +23275,12 @@ var require_react_dom_server_browser_production = __commonJS({
             task.isFallback
           );
           newProps.lastPushedText = false;
-          defaultProps15 = task.formatContext;
+          defaultProps29 = task.formatContext;
           ref = task.keyPath;
-          task.formatContext = getChildFormatContext(defaultProps15, type, props);
+          task.formatContext = getChildFormatContext(defaultProps29, type, props);
           task.keyPath = keyPath;
           renderNode(request, task, initialState, -1);
-          task.formatContext = defaultProps15;
+          task.formatContext = defaultProps29;
           task.keyPath = ref;
           a: {
             task = newProps.chunks;
@@ -23306,13 +23306,13 @@ var require_react_dom_server_browser_production = __commonJS({
               case "wbr":
                 break a;
               case "body":
-                if (1 >= defaultProps15.insertionMode) {
+                if (1 >= defaultProps29.insertionMode) {
                   request.hasBody = true;
                   break a;
                 }
                 break;
               case "html":
-                if (0 === defaultProps15.insertionMode) {
+                if (0 === defaultProps29.insertionMode) {
                   request.hasHtml = true;
                   break a;
                 }
@@ -23384,9 +23384,9 @@ var require_react_dom_server_browser_production = __commonJS({
               contentRootSegment.parentFlushed = true;
               if (null !== request.trackedPostpones) {
                 newProps = [keyPath[0], "Suspense Fallback", keyPath[2]];
-                defaultProps15 = [newProps[1], newProps[2], [], null];
-                request.trackedPostpones.workingMap.set(newProps, defaultProps15);
-                propName.trackedFallbackNode = defaultProps15;
+                defaultProps29 = [newProps[1], newProps[2], [], null];
+                request.trackedPostpones.workingMap.set(newProps, defaultProps29);
+                propName.trackedFallbackNode = defaultProps29;
                 task.blockedSegment = boundarySegment;
                 task.keyPath = newProps;
                 boundarySegment.status = 6;
@@ -23427,10 +23427,10 @@ var require_react_dom_server_browser_production = __commonJS({
                     break a;
                   }
                 } catch (thrownValue$28) {
-                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps15 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
+                  propName.status = 4, 12 === request.status ? (contentRootSegment.status = 3, newProps = request.fatalError) : (contentRootSegment.status = 4, newProps = thrownValue$28), defaultProps29 = getThrownInfo(task.componentStack), initialState = logRecoverableError(
                     request,
                     newProps,
-                    defaultProps15
+                    defaultProps29
                   ), propName.errorDigest = initialState, untrackBoundary(request, propName);
                 } finally {
                   task.blockedBoundary = parentBoundary, task.hoistableState = parentHoistableState, task.blockedSegment = ref, task.keyPath = type;
@@ -23487,7 +23487,7 @@ var require_react_dom_server_browser_production = __commonJS({
               return;
             case REACT_PROVIDER_TYPE:
             case REACT_CONTEXT_TYPE:
-              defaultProps15 = props.children;
+              defaultProps29 = props.children;
               newProps = task.keyPath;
               props = props.value;
               initialState = type._currentValue;
@@ -23502,7 +23502,7 @@ var require_react_dom_server_browser_production = __commonJS({
               };
               task.context = type;
               task.keyPath = keyPath;
-              renderNodeDestructive(request, task, defaultProps15, -1);
+              renderNodeDestructive(request, task, defaultProps29, -1);
               request = currentActiveSnapshot;
               if (null === request) throw Error(formatProdErrorMessage(403));
               request.context._currentValue = request.parentValue;
@@ -23926,8 +23926,8 @@ var require_react_dom_server_browser_production = __commonJS({
       null !== task && (task.status = 3, finishedTask(this, boundary, task));
     }
     function abortRemainingReplayNodes(request$jscomp$0, boundary, nodes, slots, error, errorDigest$jscomp$0) {
-      for (var i3 = 0; i3 < nodes.length; i3++) {
-        var node = nodes[i3];
+      for (var i4 = 0; i4 < nodes.length; i4++) {
+        var node = nodes[i4];
         if (4 === node.length)
           abortRemainingReplayNodes(
             request$jscomp$0,
@@ -24002,7 +24002,7 @@ var require_react_dom_server_browser_production = __commonJS({
               var queueIter = renderState.styles.values(), queueStep = queueIter.next();
               b: for (; 0 < headers.remainingCapacity && !queueStep.done; queueStep = queueIter.next())
                 for (var sheetIter = queueStep.value.sheets.values(), sheetStep = sheetIter.next(); 0 < headers.remainingCapacity && !sheetStep.done; sheetStep = sheetIter.next()) {
-                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header = getPreloadAsHeader(props$jscomp$0.href, "style", {
+                  var sheet = sheetStep.value, props = sheet.props, key = props.href, props$jscomp$0 = sheet.props, header3 = getPreloadAsHeader(props$jscomp$0.href, "style", {
                     crossOrigin: props$jscomp$0.crossOrigin,
                     integrity: props$jscomp$0.integrity,
                     nonce: props$jscomp$0.nonce,
@@ -24011,8 +24011,8 @@ var require_react_dom_server_browser_production = __commonJS({
                     referrerPolicy: props$jscomp$0.referrerPolicy,
                     media: props$jscomp$0.media
                   });
-                  if (0 <= (headers.remainingCapacity -= header.length + 2))
-                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
+                  if (0 <= (headers.remainingCapacity -= header3.length + 2))
+                    renderState.resets.style[key] = PRELOAD_NO_CREDS, linkHeader && (linkHeader += ", "), linkHeader += header3, renderState.resets.style[key] = "string" === typeof props.crossOrigin || "string" === typeof props.integrity ? [props.crossOrigin, props.integrity] : PRELOAD_NO_CREDS;
                   else break b;
                 }
             }
@@ -24070,9 +24070,9 @@ var require_react_dom_server_browser_production = __commonJS({
         var prevResumableState = currentResumableState;
         currentResumableState = request$jscomp$2.resumableState;
         try {
-          var pingedTasks = request$jscomp$2.pingedTasks, i3;
-          for (i3 = 0; i3 < pingedTasks.length; i3++) {
-            var task = pingedTasks[i3], request = request$jscomp$2, segment = task.blockedSegment;
+          var pingedTasks = request$jscomp$2.pingedTasks, i4;
+          for (i4 = 0; i4 < pingedTasks.length; i4++) {
+            var task = pingedTasks[i4], request = request$jscomp$2, segment = task.blockedSegment;
             if (null === segment) {
               var request$jscomp$0 = request;
               if (0 !== task.replay.pendingTasks) {
@@ -24160,7 +24160,7 @@ var require_react_dom_server_browser_production = __commonJS({
               }
             }
           }
-          pingedTasks.splice(0, i3);
+          pingedTasks.splice(0, i4);
           null !== request$jscomp$2.destination && flushCompletedQueues(request$jscomp$2, request$jscomp$2.destination);
         } catch (error) {
           logRecoverableError(request$jscomp$2, error, {}), fatalError(request$jscomp$2, error);
@@ -24238,12 +24238,12 @@ var require_react_dom_server_browser_production = __commonJS({
       return writeEndSegment(destination, segment.parentFormatContext);
     }
     function flushCompletedBoundary(request, destination, boundary) {
-      for (var completedSegments = boundary.completedSegments, i3 = 0; i3 < completedSegments.length; i3++)
+      for (var completedSegments = boundary.completedSegments, i4 = 0; i4 < completedSegments.length; i4++)
         flushPartiallyCompletedSegment(
           request,
           destination,
           boundary,
-          completedSegments[i3]
+          completedSegments[i4]
         );
       completedSegments.length = 0;
       writeHoistablesForBoundary(
@@ -24253,13 +24253,13 @@ var require_react_dom_server_browser_production = __commonJS({
       );
       completedSegments = request.resumableState;
       request = request.renderState;
-      i3 = boundary.rootSegmentID;
+      i4 = boundary.rootSegmentID;
       boundary = boundary.contentState;
       var requiresStyleInsertion = request.stylesToHoist;
       request.stylesToHoist = false;
       writeChunk(destination, request.startInlineScript);
       requiresStyleInsertion ? 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 10, writeChunk(destination, completeBoundaryWithStylesScript1FullBoth)) : 0 === (completedSegments.instructions & 8) ? (completedSegments.instructions |= 8, writeChunk(destination, completeBoundaryWithStylesScript1FullPartial)) : writeChunk(destination, completeBoundaryWithStylesScript1Partial) : 0 === (completedSegments.instructions & 2) ? (completedSegments.instructions |= 2, writeChunk(destination, completeBoundaryScript1Full)) : writeChunk(destination, completeBoundaryScript1Partial);
-      completedSegments = stringToChunk(i3.toString(16));
+      completedSegments = stringToChunk(i4.toString(16));
       writeChunk(destination, request.boundaryPrefix);
       writeChunk(destination, completedSegments);
       writeChunk(destination, completeBoundaryScript2);
@@ -24298,7 +24298,7 @@ var require_react_dom_server_browser_production = __commonJS({
       writtenBytes = 0;
       try {
         if (!(0 < request.pendingRootTasks)) {
-          var i3, completedRootSegment = request.completedRootSegment;
+          var i4, completedRootSegment = request.completedRootSegment;
           if (null !== completedRootSegment) {
             if (5 === completedRootSegment.status) return;
             var renderState = request.renderState, htmlChunks = renderState.htmlChunks, headChunks = renderState.headChunks, i$jscomp$0;
@@ -24371,8 +24371,8 @@ var require_react_dom_server_browser_production = __commonJS({
             writeChunk(destination, hoistableChunks$jscomp$0[completedRootSegment]);
           hoistableChunks$jscomp$0.length = 0;
           var clientRenderedBoundaries = request.clientRenderedBoundaries;
-          for (i3 = 0; i3 < clientRenderedBoundaries.length; i3++) {
-            var boundary = clientRenderedBoundaries[i3];
+          for (i4 = 0; i4 < clientRenderedBoundaries.length; i4++) {
+            var boundary = clientRenderedBoundaries[i4];
             renderState$jscomp$0 = destination;
             var resumableState = request.resumableState, renderState$jscomp$1 = request.renderState, id = boundary.rootSegmentID, errorDigest = boundary.errorDigest;
             writeChunk(
@@ -24398,27 +24398,27 @@ var require_react_dom_server_browser_production = __commonJS({
             );
             if (!JSCompiler_inline_result) {
               request.destination = null;
-              i3++;
-              clientRenderedBoundaries.splice(0, i3);
+              i4++;
+              clientRenderedBoundaries.splice(0, i4);
               return;
             }
           }
-          clientRenderedBoundaries.splice(0, i3);
+          clientRenderedBoundaries.splice(0, i4);
           var completedBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < completedBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, completedBoundaries[i3])) {
+          for (i4 = 0; i4 < completedBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, completedBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              completedBoundaries.splice(0, i3);
+              i4++;
+              completedBoundaries.splice(0, i4);
               return;
             }
-          completedBoundaries.splice(0, i3);
+          completedBoundaries.splice(0, i4);
           completeWriting(destination);
           currentView = new Uint8Array(2048);
           writtenBytes = 0;
           var partialBoundaries = request.partialBoundaries;
-          for (i3 = 0; i3 < partialBoundaries.length; i3++) {
-            var boundary$51 = partialBoundaries[i3];
+          for (i4 = 0; i4 < partialBoundaries.length; i4++) {
+            var boundary$51 = partialBoundaries[i4];
             a: {
               clientRenderedBoundaries = request;
               boundary = destination;
@@ -24444,24 +24444,24 @@ var require_react_dom_server_browser_production = __commonJS({
             }
             if (!JSCompiler_inline_result$jscomp$0) {
               request.destination = null;
-              i3++;
-              partialBoundaries.splice(0, i3);
+              i4++;
+              partialBoundaries.splice(0, i4);
               return;
             }
           }
-          partialBoundaries.splice(0, i3);
+          partialBoundaries.splice(0, i4);
           var largeBoundaries = request.completedBoundaries;
-          for (i3 = 0; i3 < largeBoundaries.length; i3++)
-            if (!flushCompletedBoundary(request, destination, largeBoundaries[i3])) {
+          for (i4 = 0; i4 < largeBoundaries.length; i4++)
+            if (!flushCompletedBoundary(request, destination, largeBoundaries[i4])) {
               request.destination = null;
-              i3++;
-              largeBoundaries.splice(0, i3);
+              i4++;
+              largeBoundaries.splice(0, i4);
               return;
             }
-          largeBoundaries.splice(0, i3);
+          largeBoundaries.splice(0, i4);
         }
       } finally {
-        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length ? (request.flushScheduled = false, i3 = request.resumableState, i3.hasBody && writeChunk(destination, endChunkForTag("body")), i3.hasHtml && writeChunk(destination, endChunkForTag("html")), completeWriting(destination), request.status = 14, destination.close(), request.destination = null) : completeWriting(destination);
+        0 === request.allPendingTasks && 0 === request.pingedTasks.length && 0 === request.clientRenderedBoundaries.length && 0 === request.completedBoundaries.length ? (request.flushScheduled = false, i4 = request.resumableState, i4.hasBody && writeChunk(destination, endChunkForTag("body")), i4.hasHtml && writeChunk(destination, endChunkForTag("html")), completeWriting(destination), request.status = 14, destination.close(), request.destination = null) : completeWriting(destination);
       }
     }
     function startWork(request) {
@@ -24510,7 +24510,7 @@ var require_react_dom_server_browser_production = __commonJS({
       }
     }
     function ensureCorrectIsomorphicReactVersion() {
-      var isomorphicReactPackageVersion = React5.version;
+      var isomorphicReactPackageVersion = React7.version;
       if ("19.0.0" !== isomorphicReactPackageVersion)
         throw Error(
           formatProdErrorMessage(
@@ -24663,21 +24663,21 @@ var require_react_dom_server_browser_production = __commonJS({
 var require_server_browser = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/server.browser.js"(exports) {
     "use strict";
-    var l3;
-    var s5;
+    var l5;
+    var s10;
     if (true) {
-      l3 = require_react_dom_server_legacy_browser_production();
-      s5 = require_react_dom_server_browser_production();
+      l5 = require_react_dom_server_legacy_browser_production();
+      s10 = require_react_dom_server_browser_production();
     } else {
-      l3 = null;
-      s5 = null;
+      l5 = null;
+      s10 = null;
     }
-    exports.version = l3.version;
-    exports.renderToString = l3.renderToString;
-    exports.renderToStaticMarkup = l3.renderToStaticMarkup;
-    exports.renderToReadableStream = s5.renderToReadableStream;
-    if (s5.resume) {
-      exports.resume = s5.resume;
+    exports.version = l5.version;
+    exports.renderToString = l5.renderToString;
+    exports.renderToStaticMarkup = l5.renderToStaticMarkup;
+    exports.renderToReadableStream = s10.renderToReadableStream;
+    if (s10.resume) {
+      exports.resume = s10.resume;
     }
   }
 });
@@ -24752,21 +24752,21 @@ var require_renderToWebStream = __commonJS({
 var require_index_node_and_web = __commonJS({
   "node_modules/.pnpm/react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/react-streaming/dist/cjs/server/index.node-and-web.js"(exports) {
     "use strict";
-    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o2, m3, k, k2) {
+    var __createBinding2 = exports && exports.__createBinding || (Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     });
-    var __exportStar2 = exports && exports.__exportStar || function(m3, exports2) {
-      for (var p2 in m3) if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p2)) __createBinding2(exports2, m3, p2);
+    var __exportStar2 = exports && exports.__exportStar || function(m5, exports2) {
+      for (var p4 in m5) if (p4 !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p4)) __createBinding2(exports2, m5, p4);
     };
     Object.defineProperty(exports, "__esModule", { value: true });
     __exportStar2(require_server(), exports);
@@ -25055,8 +25055,8 @@ function getViewportTag(viewport) {
   return "";
 }
 function addEcosystemStamp2() {
-  const g2 = globalThis;
-  g2._isVikeReactApp = /* Don't set to true so that consumers do `!!globalThis._isVikeApp` instead of `globalThis._isVikeApp === true`.
+  const g3 = globalThis;
+  g3._isVikeReactApp = /* Don't set to true so that consumers do `!!globalThis._isVikeApp` instead of `globalThis._isVikeApp === true`.
   true
   */
   // We use an object so that we can eventually, in the future, add helpful information as needed. (E.g. the vike-react version.)
@@ -25182,31 +25182,31 @@ __export(tslib_es6_exports, {
   __values: () => __values,
   default: () => tslib_es6_default
 });
-function __extends(d3, b2) {
+function __extends(d5, b2) {
   if (typeof b2 !== "function" && b2 !== null)
     throw new TypeError("Class extends value " + String(b2) + " is not a constructor or null");
-  extendStatics(d3, b2);
+  extendStatics(d5, b2);
   function __() {
-    this.constructor = d3;
+    this.constructor = d5;
   }
-  d3.prototype = b2 === null ? Object.create(b2) : (__.prototype = b2.prototype, new __());
+  d5.prototype = b2 === null ? Object.create(b2) : (__.prototype = b2.prototype, new __());
 }
-function __rest(s5, e3) {
-  var t4 = {};
-  for (var p2 in s5) if (Object.prototype.hasOwnProperty.call(s5, p2) && e3.indexOf(p2) < 0)
-    t4[p2] = s5[p2];
-  if (s5 != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i3 = 0, p2 = Object.getOwnPropertySymbols(s5); i3 < p2.length; i3++) {
-      if (e3.indexOf(p2[i3]) < 0 && Object.prototype.propertyIsEnumerable.call(s5, p2[i3]))
-        t4[p2[i3]] = s5[p2[i3]];
+function __rest(s10, e4) {
+  var t8 = {};
+  for (var p4 in s10) if (Object.prototype.hasOwnProperty.call(s10, p4) && e4.indexOf(p4) < 0)
+    t8[p4] = s10[p4];
+  if (s10 != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i4 = 0, p4 = Object.getOwnPropertySymbols(s10); i4 < p4.length; i4++) {
+      if (e4.indexOf(p4[i4]) < 0 && Object.prototype.propertyIsEnumerable.call(s10, p4[i4]))
+        t8[p4[i4]] = s10[p4[i4]];
     }
-  return t4;
+  return t8;
 }
 function __decorate(decorators, target, key, desc) {
-  var c3 = arguments.length, r3 = c3 < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d3;
+  var c7 = arguments.length, r3 = c7 < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d5;
   if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r3 = Reflect.decorate(decorators, target, key, desc);
-  else for (var i3 = decorators.length - 1; i3 >= 0; i3--) if (d3 = decorators[i3]) r3 = (c3 < 3 ? d3(r3) : c3 > 3 ? d3(target, key, r3) : d3(target, key)) || r3;
-  return c3 > 3 && r3 && Object.defineProperty(target, key, r3), r3;
+  else for (var i4 = decorators.length - 1; i4 >= 0; i4--) if (d5 = decorators[i4]) r3 = (c7 < 3 ? d5(r3) : c7 > 3 ? d5(target, key, r3) : d5(target, key)) || r3;
+  return c7 > 3 && r3 && Object.defineProperty(target, key, r3), r3;
 }
 function __param(paramIndex, decorator) {
   return function(target, key) {
@@ -25214,23 +25214,23 @@ function __param(paramIndex, decorator) {
   };
 }
 function __esDecorate(ctor, descriptorIn, decorators, contextIn, initializers, extraInitializers) {
-  function accept(f2) {
-    if (f2 !== void 0 && typeof f2 !== "function") throw new TypeError("Function expected");
-    return f2;
+  function accept(f5) {
+    if (f5 !== void 0 && typeof f5 !== "function") throw new TypeError("Function expected");
+    return f5;
   }
   var kind = contextIn.kind, key = kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
   var target = !descriptorIn && ctor ? contextIn["static"] ? ctor : ctor.prototype : null;
   var descriptor = descriptorIn || (target ? Object.getOwnPropertyDescriptor(target, contextIn.name) : {});
   var _2, done = false;
-  for (var i3 = decorators.length - 1; i3 >= 0; i3--) {
+  for (var i4 = decorators.length - 1; i4 >= 0; i4--) {
     var context = {};
-    for (var p2 in contextIn) context[p2] = p2 === "access" ? {} : contextIn[p2];
-    for (var p2 in contextIn.access) context.access[p2] = contextIn.access[p2];
-    context.addInitializer = function(f2) {
+    for (var p4 in contextIn) context[p4] = p4 === "access" ? {} : contextIn[p4];
+    for (var p4 in contextIn.access) context.access[p4] = contextIn.access[p4];
+    context.addInitializer = function(f5) {
       if (done) throw new TypeError("Cannot add initializers after decoration has completed");
-      extraInitializers.push(accept(f2 || null));
+      extraInitializers.push(accept(f5 || null));
     };
-    var result = (0, decorators[i3])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
+    var result = (0, decorators[i4])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
     if (kind === "accessor") {
       if (result === void 0) continue;
       if (result === null || typeof result !== "object") throw new TypeError("Object expected");
@@ -25247,40 +25247,40 @@ function __esDecorate(ctor, descriptorIn, decorators, contextIn, initializers, e
 }
 function __runInitializers(thisArg, initializers, value) {
   var useValue = arguments.length > 2;
-  for (var i3 = 0; i3 < initializers.length; i3++) {
-    value = useValue ? initializers[i3].call(thisArg, value) : initializers[i3].call(thisArg);
+  for (var i4 = 0; i4 < initializers.length; i4++) {
+    value = useValue ? initializers[i4].call(thisArg, value) : initializers[i4].call(thisArg);
   }
   return useValue ? value : void 0;
 }
 function __propKey(x) {
   return typeof x === "symbol" ? x : "".concat(x);
 }
-function __setFunctionName(f2, name, prefix) {
+function __setFunctionName(f5, name, prefix) {
   if (typeof name === "symbol") name = name.description ? "[".concat(name.description, "]") : "";
-  return Object.defineProperty(f2, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
+  return Object.defineProperty(f5, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
 }
 function __metadata(metadataKey, metadataValue) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
 }
-function __awaiter(thisArg, _arguments, P, generator) {
+function __awaiter(thisArg, _arguments, P2, generator) {
   function adopt(value) {
-    return value instanceof P ? value : new P(function(resolve) {
+    return value instanceof P2 ? value : new P2(function(resolve) {
       resolve(value);
     });
   }
-  return new (P || (P = Promise))(function(resolve, reject) {
+  return new (P2 || (P2 = Promise))(function(resolve, reject) {
     function fulfilled(value) {
       try {
         step(generator.next(value));
-      } catch (e3) {
-        reject(e3);
+      } catch (e4) {
+        reject(e4);
       }
     }
     function rejected(value) {
       try {
         step(generator["throw"](value));
-      } catch (e3) {
-        reject(e3);
+      } catch (e4) {
+        reject(e4);
       }
     }
     function step(result) {
@@ -25291,33 +25291,33 @@ function __awaiter(thisArg, _arguments, P, generator) {
 }
 function __generator(thisArg, body) {
   var _2 = { label: 0, sent: function() {
-    if (t4[0] & 1) throw t4[1];
-    return t4[1];
-  }, trys: [], ops: [] }, f2, y2, t4, g2 = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
-  return g2.next = verb(0), g2["throw"] = verb(1), g2["return"] = verb(2), typeof Symbol === "function" && (g2[Symbol.iterator] = function() {
+    if (t8[0] & 1) throw t8[1];
+    return t8[1];
+  }, trys: [], ops: [] }, f5, y3, t8, g3 = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+  return g3.next = verb(0), g3["throw"] = verb(1), g3["return"] = verb(2), typeof Symbol === "function" && (g3[Symbol.iterator] = function() {
     return this;
-  }), g2;
-  function verb(n2) {
+  }), g3;
+  function verb(n3) {
     return function(v2) {
-      return step([n2, v2]);
+      return step([n3, v2]);
     };
   }
   function step(op) {
-    if (f2) throw new TypeError("Generator is already executing.");
-    while (g2 && (g2 = 0, op[0] && (_2 = 0)), _2) try {
-      if (f2 = 1, y2 && (t4 = op[0] & 2 ? y2["return"] : op[0] ? y2["throw"] || ((t4 = y2["return"]) && t4.call(y2), 0) : y2.next) && !(t4 = t4.call(y2, op[1])).done) return t4;
-      if (y2 = 0, t4) op = [op[0] & 2, t4.value];
+    if (f5) throw new TypeError("Generator is already executing.");
+    while (g3 && (g3 = 0, op[0] && (_2 = 0)), _2) try {
+      if (f5 = 1, y3 && (t8 = op[0] & 2 ? y3["return"] : op[0] ? y3["throw"] || ((t8 = y3["return"]) && t8.call(y3), 0) : y3.next) && !(t8 = t8.call(y3, op[1])).done) return t8;
+      if (y3 = 0, t8) op = [op[0] & 2, t8.value];
       switch (op[0]) {
         case 0:
         case 1:
-          t4 = op;
+          t8 = op;
           break;
         case 4:
           _2.label++;
           return { value: op[1], done: false };
         case 5:
           _2.label++;
-          y2 = op[1];
+          y3 = op[1];
           op = [0];
           continue;
         case 7:
@@ -25325,87 +25325,87 @@ function __generator(thisArg, body) {
           _2.trys.pop();
           continue;
         default:
-          if (!(t4 = _2.trys, t4 = t4.length > 0 && t4[t4.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+          if (!(t8 = _2.trys, t8 = t8.length > 0 && t8[t8.length - 1]) && (op[0] === 6 || op[0] === 2)) {
             _2 = 0;
             continue;
           }
-          if (op[0] === 3 && (!t4 || op[1] > t4[0] && op[1] < t4[3])) {
+          if (op[0] === 3 && (!t8 || op[1] > t8[0] && op[1] < t8[3])) {
             _2.label = op[1];
             break;
           }
-          if (op[0] === 6 && _2.label < t4[1]) {
-            _2.label = t4[1];
-            t4 = op;
+          if (op[0] === 6 && _2.label < t8[1]) {
+            _2.label = t8[1];
+            t8 = op;
             break;
           }
-          if (t4 && _2.label < t4[2]) {
-            _2.label = t4[2];
+          if (t8 && _2.label < t8[2]) {
+            _2.label = t8[2];
             _2.ops.push(op);
             break;
           }
-          if (t4[2]) _2.ops.pop();
+          if (t8[2]) _2.ops.pop();
           _2.trys.pop();
           continue;
       }
       op = body.call(thisArg, _2);
-    } catch (e3) {
-      op = [6, e3];
-      y2 = 0;
+    } catch (e4) {
+      op = [6, e4];
+      y3 = 0;
     } finally {
-      f2 = t4 = 0;
+      f5 = t8 = 0;
     }
     if (op[0] & 5) throw op[1];
     return { value: op[0] ? op[1] : void 0, done: true };
   }
 }
-function __exportStar(m3, o2) {
-  for (var p2 in m3) if (p2 !== "default" && !Object.prototype.hasOwnProperty.call(o2, p2)) __createBinding(o2, m3, p2);
+function __exportStar(m5, o4) {
+  for (var p4 in m5) if (p4 !== "default" && !Object.prototype.hasOwnProperty.call(o4, p4)) __createBinding(o4, m5, p4);
 }
-function __values(o2) {
-  var s5 = typeof Symbol === "function" && Symbol.iterator, m3 = s5 && o2[s5], i3 = 0;
-  if (m3) return m3.call(o2);
-  if (o2 && typeof o2.length === "number") return {
+function __values(o4) {
+  var s10 = typeof Symbol === "function" && Symbol.iterator, m5 = s10 && o4[s10], i4 = 0;
+  if (m5) return m5.call(o4);
+  if (o4 && typeof o4.length === "number") return {
     next: function() {
-      if (o2 && i3 >= o2.length) o2 = void 0;
-      return { value: o2 && o2[i3++], done: !o2 };
+      if (o4 && i4 >= o4.length) o4 = void 0;
+      return { value: o4 && o4[i4++], done: !o4 };
     }
   };
-  throw new TypeError(s5 ? "Object is not iterable." : "Symbol.iterator is not defined.");
+  throw new TypeError(s10 ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
-function __read(o2, n2) {
-  var m3 = typeof Symbol === "function" && o2[Symbol.iterator];
-  if (!m3) return o2;
-  var i3 = m3.call(o2), r3, ar = [], e3;
+function __read(o4, n3) {
+  var m5 = typeof Symbol === "function" && o4[Symbol.iterator];
+  if (!m5) return o4;
+  var i4 = m5.call(o4), r3, ar = [], e4;
   try {
-    while ((n2 === void 0 || n2-- > 0) && !(r3 = i3.next()).done) ar.push(r3.value);
+    while ((n3 === void 0 || n3-- > 0) && !(r3 = i4.next()).done) ar.push(r3.value);
   } catch (error) {
-    e3 = { error };
+    e4 = { error };
   } finally {
     try {
-      if (r3 && !r3.done && (m3 = i3["return"])) m3.call(i3);
+      if (r3 && !r3.done && (m5 = i4["return"])) m5.call(i4);
     } finally {
-      if (e3) throw e3.error;
+      if (e4) throw e4.error;
     }
   }
   return ar;
 }
 function __spread() {
-  for (var ar = [], i3 = 0; i3 < arguments.length; i3++)
-    ar = ar.concat(__read(arguments[i3]));
+  for (var ar = [], i4 = 0; i4 < arguments.length; i4++)
+    ar = ar.concat(__read(arguments[i4]));
   return ar;
 }
 function __spreadArrays() {
-  for (var s5 = 0, i3 = 0, il = arguments.length; i3 < il; i3++) s5 += arguments[i3].length;
-  for (var r3 = Array(s5), k = 0, i3 = 0; i3 < il; i3++)
-    for (var a3 = arguments[i3], j = 0, jl = a3.length; j < jl; j++, k++)
-      r3[k] = a3[j];
+  for (var s10 = 0, i4 = 0, il = arguments.length; i4 < il; i4++) s10 += arguments[i4].length;
+  for (var r3 = Array(s10), k = 0, i4 = 0; i4 < il; i4++)
+    for (var a4 = arguments[i4], j = 0, jl = a4.length; j < jl; j++, k++)
+      r3[k] = a4[j];
   return r3;
 }
 function __spreadArray(to, from, pack) {
-  if (pack || arguments.length === 2) for (var i3 = 0, l3 = from.length, ar; i3 < l3; i3++) {
-    if (ar || !(i3 in from)) {
-      if (!ar) ar = Array.prototype.slice.call(from, 0, i3);
-      ar[i3] = from[i3];
+  if (pack || arguments.length === 2) for (var i4 = 0, l5 = from.length, ar; i4 < l5; i4++) {
+    if (ar || !(i4 in from)) {
+      if (!ar) ar = Array.prototype.slice.call(from, 0, i4);
+      ar[i4] = from[i4];
     }
   }
   return to.concat(ar || Array.prototype.slice.call(from));
@@ -25415,30 +25415,30 @@ function __await(v2) {
 }
 function __asyncGenerator(thisArg, _arguments, generator) {
   if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-  var g2 = generator.apply(thisArg, _arguments || []), i3, q2 = [];
-  return i3 = Object.create((typeof AsyncIterator === "function" ? AsyncIterator : Object).prototype), verb("next"), verb("throw"), verb("return", awaitReturn), i3[Symbol.asyncIterator] = function() {
+  var g3 = generator.apply(thisArg, _arguments || []), i4, q2 = [];
+  return i4 = Object.create((typeof AsyncIterator === "function" ? AsyncIterator : Object).prototype), verb("next"), verb("throw"), verb("return", awaitReturn), i4[Symbol.asyncIterator] = function() {
     return this;
-  }, i3;
-  function awaitReturn(f2) {
+  }, i4;
+  function awaitReturn(f5) {
     return function(v2) {
-      return Promise.resolve(v2).then(f2, reject);
+      return Promise.resolve(v2).then(f5, reject);
     };
   }
-  function verb(n2, f2) {
-    if (g2[n2]) {
-      i3[n2] = function(v2) {
-        return new Promise(function(a3, b2) {
-          q2.push([n2, v2, a3, b2]) > 1 || resume(n2, v2);
+  function verb(n3, f5) {
+    if (g3[n3]) {
+      i4[n3] = function(v2) {
+        return new Promise(function(a4, b2) {
+          q2.push([n3, v2, a4, b2]) > 1 || resume(n3, v2);
         });
       };
-      if (f2) i3[n2] = f2(i3[n2]);
+      if (f5) i4[n3] = f5(i4[n3]);
     }
   }
-  function resume(n2, v2) {
+  function resume(n3, v2) {
     try {
-      step(g2[n2](v2));
-    } catch (e3) {
-      settle(q2[0][3], e3);
+      step(g3[n3](v2));
+    } catch (e4) {
+      settle(q2[0][3], e4);
     }
   }
   function step(r3) {
@@ -25450,39 +25450,39 @@ function __asyncGenerator(thisArg, _arguments, generator) {
   function reject(value) {
     resume("throw", value);
   }
-  function settle(f2, v2) {
-    if (f2(v2), q2.shift(), q2.length) resume(q2[0][0], q2[0][1]);
+  function settle(f5, v2) {
+    if (f5(v2), q2.shift(), q2.length) resume(q2[0][0], q2[0][1]);
   }
 }
-function __asyncDelegator(o2) {
-  var i3, p2;
-  return i3 = {}, verb("next"), verb("throw", function(e3) {
-    throw e3;
-  }), verb("return"), i3[Symbol.iterator] = function() {
+function __asyncDelegator(o4) {
+  var i4, p4;
+  return i4 = {}, verb("next"), verb("throw", function(e4) {
+    throw e4;
+  }), verb("return"), i4[Symbol.iterator] = function() {
     return this;
-  }, i3;
-  function verb(n2, f2) {
-    i3[n2] = o2[n2] ? function(v2) {
-      return (p2 = !p2) ? { value: __await(o2[n2](v2)), done: false } : f2 ? f2(v2) : v2;
-    } : f2;
+  }, i4;
+  function verb(n3, f5) {
+    i4[n3] = o4[n3] ? function(v2) {
+      return (p4 = !p4) ? { value: __await(o4[n3](v2)), done: false } : f5 ? f5(v2) : v2;
+    } : f5;
   }
 }
-function __asyncValues(o2) {
+function __asyncValues(o4) {
   if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-  var m3 = o2[Symbol.asyncIterator], i3;
-  return m3 ? m3.call(o2) : (o2 = typeof __values === "function" ? __values(o2) : o2[Symbol.iterator](), i3 = {}, verb("next"), verb("throw"), verb("return"), i3[Symbol.asyncIterator] = function() {
+  var m5 = o4[Symbol.asyncIterator], i4;
+  return m5 ? m5.call(o4) : (o4 = typeof __values === "function" ? __values(o4) : o4[Symbol.iterator](), i4 = {}, verb("next"), verb("throw"), verb("return"), i4[Symbol.asyncIterator] = function() {
     return this;
-  }, i3);
-  function verb(n2) {
-    i3[n2] = o2[n2] && function(v2) {
+  }, i4);
+  function verb(n3) {
+    i4[n3] = o4[n3] && function(v2) {
       return new Promise(function(resolve, reject) {
-        v2 = o2[n2](v2), settle(resolve, reject, v2.done, v2.value);
+        v2 = o4[n3](v2), settle(resolve, reject, v2.done, v2.value);
       });
     };
   }
-  function settle(resolve, reject, d3, v2) {
+  function settle(resolve, reject, d5, v2) {
     Promise.resolve(v2).then(function(v3) {
-      resolve({ value: v3, done: d3 });
+      resolve({ value: v3, done: d5 });
     }, reject);
   }
 }
@@ -25498,7 +25498,7 @@ function __importStar(mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
   if (mod != null) {
-    for (var k = ownKeys(mod), i3 = 0; i3 < k.length; i3++) if (k[i3] !== "default") __createBinding(result, mod, k[i3]);
+    for (var k = ownKeys(mod), i4 = 0; i4 < k.length; i4++) if (k[i4] !== "default") __createBinding(result, mod, k[i4]);
   }
   __setModuleDefault(result, mod);
   return result;
@@ -25506,16 +25506,16 @@ function __importStar(mod) {
 function __importDefault(mod) {
   return mod && mod.__esModule ? mod : { default: mod };
 }
-function __classPrivateFieldGet(receiver, state2, kind, f2) {
-  if (kind === "a" && !f2) throw new TypeError("Private accessor was defined without a getter");
-  if (typeof state2 === "function" ? receiver !== state2 || !f2 : !state2.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-  return kind === "m" ? f2 : kind === "a" ? f2.call(receiver) : f2 ? f2.value : state2.get(receiver);
+function __classPrivateFieldGet(receiver, state2, kind, f5) {
+  if (kind === "a" && !f5) throw new TypeError("Private accessor was defined without a getter");
+  if (typeof state2 === "function" ? receiver !== state2 || !f5 : !state2.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+  return kind === "m" ? f5 : kind === "a" ? f5.call(receiver) : f5 ? f5.value : state2.get(receiver);
 }
-function __classPrivateFieldSet(receiver, state2, value, kind, f2) {
+function __classPrivateFieldSet(receiver, state2, value, kind, f5) {
   if (kind === "m") throw new TypeError("Private method is not writable");
-  if (kind === "a" && !f2) throw new TypeError("Private accessor was defined without a setter");
-  if (typeof state2 === "function" ? receiver !== state2 || !f2 : !state2.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-  return kind === "a" ? f2.call(receiver, value) : f2 ? f2.value = value : state2.set(receiver, value), value;
+  if (kind === "a" && !f5) throw new TypeError("Private accessor was defined without a setter");
+  if (typeof state2 === "function" ? receiver !== state2 || !f5 : !state2.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+  return kind === "a" ? f5.call(receiver, value) : f5 ? f5.value = value : state2.set(receiver, value), value;
 }
 function __classPrivateFieldIn(state2, receiver) {
   if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function") throw new TypeError("Cannot use 'in' operator on non-object");
@@ -25538,8 +25538,8 @@ function __addDisposableResource(env, value, async) {
     if (inner) dispose = function() {
       try {
         inner.call(this);
-      } catch (e3) {
-        return Promise.reject(e3);
+      } catch (e4) {
+        return Promise.reject(e4);
       }
     };
     env.stack.push({ value, dispose, async });
@@ -25549,35 +25549,35 @@ function __addDisposableResource(env, value, async) {
   return value;
 }
 function __disposeResources(env) {
-  function fail(e3) {
-    env.error = env.hasError ? new _SuppressedError(e3, env.error, "An error was suppressed during disposal.") : e3;
+  function fail(e4) {
+    env.error = env.hasError ? new _SuppressedError(e4, env.error, "An error was suppressed during disposal.") : e4;
     env.hasError = true;
   }
-  var r3, s5 = 0;
+  var r3, s10 = 0;
   function next() {
     while (r3 = env.stack.pop()) {
       try {
-        if (!r3.async && s5 === 1) return s5 = 0, env.stack.push(r3), Promise.resolve().then(next);
+        if (!r3.async && s10 === 1) return s10 = 0, env.stack.push(r3), Promise.resolve().then(next);
         if (r3.dispose) {
           var result = r3.dispose.call(r3.value);
-          if (r3.async) return s5 |= 2, Promise.resolve(result).then(next, function(e3) {
-            fail(e3);
+          if (r3.async) return s10 |= 2, Promise.resolve(result).then(next, function(e4) {
+            fail(e4);
             return next();
           });
-        } else s5 |= 1;
-      } catch (e3) {
-        fail(e3);
+        } else s10 |= 1;
+      } catch (e4) {
+        fail(e4);
       }
     }
-    if (s5 === 1) return env.hasError ? Promise.reject(env.error) : Promise.resolve();
+    if (s10 === 1) return env.hasError ? Promise.reject(env.error) : Promise.resolve();
     if (env.hasError) throw env.error;
   }
   return next();
 }
 function __rewriteRelativeImportExtension(path, preserveJsx) {
   if (typeof path === "string" && /^\.\.?\//.test(path)) {
-    return path.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, function(m3, tsx, d3, ext, cm) {
-      return tsx ? preserveJsx ? ".jsx" : ".js" : d3 && (!ext || !cm) ? m3 : d3 + ext + "." + cm.toLowerCase() + "js";
+    return path.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, function(m5, tsx, d5, ext, cm) {
+      return tsx ? preserveJsx ? ".jsx" : ".js" : d5 && (!ext || !cm) ? m5 : d5 + ext + "." + cm.toLowerCase() + "js";
     });
   }
   return path;
@@ -25585,53 +25585,53 @@ function __rewriteRelativeImportExtension(path, preserveJsx) {
 var extendStatics, __assign, __createBinding, __setModuleDefault, ownKeys, _SuppressedError, tslib_es6_default;
 var init_tslib_es6 = __esm({
   "node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs"() {
-    extendStatics = function(d3, b2) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d4, b3) {
-        d4.__proto__ = b3;
-      } || function(d4, b3) {
-        for (var p2 in b3) if (Object.prototype.hasOwnProperty.call(b3, p2)) d4[p2] = b3[p2];
+    extendStatics = function(d5, b2) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d6, b3) {
+        d6.__proto__ = b3;
+      } || function(d6, b3) {
+        for (var p4 in b3) if (Object.prototype.hasOwnProperty.call(b3, p4)) d6[p4] = b3[p4];
       };
-      return extendStatics(d3, b2);
+      return extendStatics(d5, b2);
     };
     __assign = function() {
-      __assign = Object.assign || function __assign2(t4) {
-        for (var s5, i3 = 1, n2 = arguments.length; i3 < n2; i3++) {
-          s5 = arguments[i3];
-          for (var p2 in s5) if (Object.prototype.hasOwnProperty.call(s5, p2)) t4[p2] = s5[p2];
+      __assign = Object.assign || function __assign2(t8) {
+        for (var s10, i4 = 1, n3 = arguments.length; i4 < n3; i4++) {
+          s10 = arguments[i4];
+          for (var p4 in s10) if (Object.prototype.hasOwnProperty.call(s10, p4)) t8[p4] = s10[p4];
         }
-        return t4;
+        return t8;
       };
       return __assign.apply(this, arguments);
     };
-    __createBinding = Object.create ? function(o2, m3, k, k2) {
+    __createBinding = Object.create ? function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m3, k);
-      if (!desc || ("get" in desc ? !m3.__esModule : desc.writable || desc.configurable)) {
+      var desc = Object.getOwnPropertyDescriptor(m5, k);
+      if (!desc || ("get" in desc ? !m5.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m3[k];
+          return m5[k];
         } };
       }
-      Object.defineProperty(o2, k2, desc);
-    } : function(o2, m3, k, k2) {
+      Object.defineProperty(o4, k2, desc);
+    } : function(o4, m5, k, k2) {
       if (k2 === void 0) k2 = k;
-      o2[k2] = m3[k];
+      o4[k2] = m5[k];
     };
-    __setModuleDefault = Object.create ? function(o2, v2) {
-      Object.defineProperty(o2, "default", { enumerable: true, value: v2 });
-    } : function(o2, v2) {
-      o2["default"] = v2;
+    __setModuleDefault = Object.create ? function(o4, v2) {
+      Object.defineProperty(o4, "default", { enumerable: true, value: v2 });
+    } : function(o4, v2) {
+      o4["default"] = v2;
     };
-    ownKeys = function(o2) {
-      ownKeys = Object.getOwnPropertyNames || function(o3) {
+    ownKeys = function(o4) {
+      ownKeys = Object.getOwnPropertyNames || function(o5) {
         var ar = [];
-        for (var k in o3) if (Object.prototype.hasOwnProperty.call(o3, k)) ar[ar.length] = k;
+        for (var k in o5) if (Object.prototype.hasOwnProperty.call(o5, k)) ar[ar.length] = k;
         return ar;
       };
-      return ownKeys(o2);
+      return ownKeys(o4);
     };
     _SuppressedError = typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
-      var e3 = new Error(message);
-      return e3.name = "SuppressedError", e3.error = error, e3.suppressed = suppressed, e3;
+      var e4 = new Error(message);
+      return e4.name = "SuppressedError", e4.error = error, e4.suppressed = suppressed, e4;
     };
     tslib_es6_default = {
       __extends,
@@ -25788,10 +25788,10 @@ var require_useMergeRef = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.useMergeRefs = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var assignRef_1 = require_assignRef();
     var useRef_1 = require_useRef();
-    var useIsomorphicLayoutEffect = typeof window !== "undefined" ? React5.useLayoutEffect : React5.useEffect;
+    var useIsomorphicLayoutEffect = typeof window !== "undefined" ? React7.useLayoutEffect : React7.useEffect;
     var currentValues = /* @__PURE__ */ new WeakMap();
     function useMergeRefs(refs, defaultValue2) {
       var callbackRef = (0, useRef_1.useCallbackRef)(defaultValue2 || null, function(newValue) {
@@ -26007,9 +26007,9 @@ var require_hook = __commonJS({
             setCar(function() {
               return resolved;
             });
-          }, function(e3) {
+          }, function(e4) {
             return setError(function() {
-              return e3;
+              return e4;
             });
           });
         }
@@ -26026,7 +26026,7 @@ var require_hoc = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.sidecar = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var hook_1 = require_hook();
     function sidecar(importer, errorComponent) {
       var ErrorCase = function() {
@@ -26037,7 +26037,7 @@ var require_hoc = __commonJS({
         if (error && errorComponent) {
           return ErrorCase;
         }
-        return Car ? React5.createElement(Car, tslib_1.__assign({}, props)) : null;
+        return Car ? React7.createElement(Car, tslib_1.__assign({}, props)) : null;
       };
     }
     exports.sidecar = sidecar;
@@ -26051,8 +26051,8 @@ var require_config = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.setConfig = exports.config = void 0;
     exports.config = {
-      onError: function(e3) {
-        return console.error(e3);
+      onError: function(e4) {
+        return console.error(e4);
       }
     };
     var setConfig = function(conf) {
@@ -26069,8 +26069,8 @@ var require_medium = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.createSidecarMedium = exports.createMedium = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    function ItoI(a3) {
-      return a3;
+    function ItoI(a4) {
+      return a4;
     }
     function innerCreateMedium(defaults, middleware) {
       if (middleware === void 0) {
@@ -26171,7 +26171,7 @@ var require_renderProp = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.renderCar = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var react_1 = require_react();
     function renderCar(WrappedComponent, defaults) {
       function State(_a) {
@@ -26186,9 +26186,9 @@ var require_renderProp = __commonJS({
           });
           return null;
         }, []);
-        return React5.createElement(WrappedComponent, tslib_1.__assign({}, props, { children: renderTarget }));
+        return React7.createElement(WrappedComponent, tslib_1.__assign({}, props, { children: renderTarget }));
       }
-      var Children = React5.memo(function(_a) {
+      var Children2 = React7.memo(function(_a) {
         var stateRef = _a.stateRef, defaultState = _a.defaultState, children = _a.children;
         var _b = (0, react_1.useState)(defaultState.current), state2 = _b[0], setState = _b[1];
         (0, react_1.useEffect)(function() {
@@ -26199,15 +26199,15 @@ var require_renderProp = __commonJS({
         return true;
       });
       return function Combiner(props) {
-        var defaultState = React5.useRef(defaults(props));
-        var ref = React5.useRef(function(state2) {
+        var defaultState = React7.useRef(defaults(props));
+        var ref = React7.useRef(function(state2) {
           return defaultState.current = state2;
         });
-        return React5.createElement(
-          React5.Fragment,
+        return React7.createElement(
+          React7.Fragment,
           null,
-          React5.createElement(State, { stateRef: ref, props }),
-          React5.createElement(Children, { stateRef: ref, defaultState, children: props.children })
+          React7.createElement(State, { stateRef: ref, props }),
+          React7.createElement(Children2, { stateRef: ref, defaultState, children: props.children })
         );
       };
     }
@@ -26222,7 +26222,7 @@ var require_exports = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.exportSidecar = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var SideCar = function(_a) {
       var sideCar = _a.sideCar, rest = tslib_1.__rest(_a, ["sideCar"]);
       if (!sideCar) {
@@ -26232,7 +26232,7 @@ var require_exports = __commonJS({
       if (!Target) {
         throw new Error("Sidecar medium not found");
       }
-      return React5.createElement(Target, tslib_1.__assign({}, rest));
+      return React7.createElement(Target, tslib_1.__assign({}, rest));
     };
     SideCar.isSideCarExport = true;
     function exportSidecar(medium, exported) {
@@ -26297,16 +26297,16 @@ var require_UI = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.RemoveScroll = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var constants_1 = require_constants();
     var use_callback_ref_1 = require_es5();
     var medium_1 = require_medium2();
     var nothing = function() {
       return;
     };
-    var RemoveScroll2 = React5.forwardRef(function(props, parentRef) {
-      var ref = React5.useRef(null);
-      var _a = React5.useState({
+    var RemoveScroll3 = React7.forwardRef(function(props, parentRef) {
+      var ref = React7.useRef(null);
+      var _a = React7.useState({
         onScrollCapture: nothing,
         onWheelCapture: nothing,
         onTouchMoveCapture: nothing
@@ -26315,20 +26315,20 @@ var require_UI = __commonJS({
       var SideCar = sideCar;
       var containerRef = (0, use_callback_ref_1.useMergeRefs)([ref, parentRef]);
       var containerProps = tslib_1.__assign(tslib_1.__assign({}, rest), callbacks);
-      return React5.createElement(
-        React5.Fragment,
+      return React7.createElement(
+        React7.Fragment,
         null,
-        enabled && React5.createElement(SideCar, { sideCar: medium_1.effectCar, removeScrollBar, shards, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref, gapMode }),
-        forwardProps ? React5.cloneElement(React5.Children.only(children), tslib_1.__assign(tslib_1.__assign({}, containerProps), { ref: containerRef })) : React5.createElement(Container2, tslib_1.__assign({}, containerProps, { className, ref: containerRef }), children)
+        enabled && React7.createElement(SideCar, { sideCar: medium_1.effectCar, removeScrollBar, shards, noIsolation, inert, setCallbacks, allowPinchZoom: !!allowPinchZoom, lockRef: ref, gapMode }),
+        forwardProps ? React7.cloneElement(React7.Children.only(children), tslib_1.__assign(tslib_1.__assign({}, containerProps), { ref: containerRef })) : React7.createElement(Container2, tslib_1.__assign({}, containerProps, { className, ref: containerRef }), children)
       );
     });
-    exports.RemoveScroll = RemoveScroll2;
-    RemoveScroll2.defaultProps = {
+    exports.RemoveScroll = RemoveScroll3;
+    RemoveScroll3.defaultProps = {
       enabled: true,
       removeScrollBar: true,
       inert: false
     };
-    RemoveScroll2.classNames = {
+    RemoveScroll3.classNames = {
       fullWidth: constants_1.fullWidthClassName,
       zeroRight: constants_1.zeroRightClassName
     };
@@ -26418,12 +26418,12 @@ var require_hook2 = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.styleHookSingleton = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var singleton_1 = require_singleton();
     var styleHookSingleton = function() {
       var sheet = (0, singleton_1.stylesheetSingleton)();
       return function(styles, isDynamic) {
-        React5.useEffect(function() {
+        React7.useEffect(function() {
           sheet.add(styles);
           return function() {
             sheet.remove();
@@ -26526,7 +26526,7 @@ var require_component2 = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.RemoveScrollBar = exports.useLockAttribute = exports.lockAttribute = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var react_style_singleton_1 = require_es54();
     var constants_1 = require_constants();
     var utils_1 = require_utils5();
@@ -26548,7 +26548,7 @@ var require_component2 = __commonJS({
       return isFinite(counter) ? counter : 0;
     };
     var useLockAttribute = function() {
-      React5.useEffect(function() {
+      React7.useEffect(function() {
         document.body.setAttribute(exports.lockAttribute, (getCurrentUseCounter() + 1).toString());
         return function() {
           var newCounter = getCurrentUseCounter() - 1;
@@ -26564,10 +26564,10 @@ var require_component2 = __commonJS({
     var RemoveScrollBar = function(_a) {
       var noRelative = _a.noRelative, noImportant = _a.noImportant, _b = _a.gapMode, gapMode = _b === void 0 ? "margin" : _b;
       (0, exports.useLockAttribute)();
-      var gap = React5.useMemo(function() {
+      var gap = React7.useMemo(function() {
         return (0, utils_1.getGapWidth)(gapMode);
       }, [gapMode]);
-      return React5.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
+      return React7.createElement(Style, { styles: getStyles(gap, !noRelative, gapMode, !noImportant ? "!important" : "") });
     };
     exports.RemoveScrollBar = RemoveScrollBar;
   }
@@ -26745,7 +26745,7 @@ var require_SideEffect = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.RemoveScrollSideCar = exports.getDeltaXY = exports.getTouchXY = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var react_remove_scroll_bar_1 = require_es55();
     var react_style_singleton_1 = require_es54();
     var aggresiveCapture_1 = require_aggresiveCapture();
@@ -26761,8 +26761,8 @@ var require_SideEffect = __commonJS({
     var extractRef = function(ref) {
       return ref && "current" in ref ? ref.current : ref;
     };
-    var deltaCompare = function(x, y2) {
-      return x[0] === y2[0] && x[1] === y2[1];
+    var deltaCompare = function(x, y3) {
+      return x[0] === y3[0] && x[1] === y3[1];
     };
     var generateStyle = function(id) {
       return "\n  .block-interactivity-".concat(id, " {pointer-events: none;}\n  .allow-interactivity-").concat(id, " {pointer-events: all;}\n");
@@ -26770,16 +26770,16 @@ var require_SideEffect = __commonJS({
     var idCounter = 0;
     var lockStack = [];
     function RemoveScrollSideCar(props) {
-      var shouldPreventQueue = React5.useRef([]);
-      var touchStartRef = React5.useRef([0, 0]);
-      var activeAxis = React5.useRef();
-      var id = React5.useState(idCounter++)[0];
-      var Style = React5.useState(react_style_singleton_1.styleSingleton)[0];
-      var lastProps = React5.useRef(props);
-      React5.useEffect(function() {
+      var shouldPreventQueue = React7.useRef([]);
+      var touchStartRef = React7.useRef([0, 0]);
+      var activeAxis = React7.useRef();
+      var id = React7.useState(idCounter++)[0];
+      var Style = React7.useState(react_style_singleton_1.styleSingleton)[0];
+      var lastProps = React7.useRef(props);
+      React7.useEffect(function() {
         lastProps.current = props;
       }, [props]);
-      React5.useEffect(function() {
+      React7.useEffect(function() {
         if (props.inert) {
           document.body.classList.add("block-interactivity-".concat(id));
           var allow_1 = tslib_1.__spreadArray([props.lockRef.current], (props.shards || []).map(extractRef), true).filter(Boolean);
@@ -26795,7 +26795,7 @@ var require_SideEffect = __commonJS({
         }
         return;
       }, [props.inert, props.lockRef.current, props.shards]);
-      var shouldCancelEvent = React5.useCallback(function(event, parent) {
+      var shouldCancelEvent = React7.useCallback(function(event, parent) {
         if ("touches" in event && event.touches.length === 2 || event.type === "wheel" && event.ctrlKey) {
           return !lastProps.current.allowPinchZoom;
         }
@@ -26831,14 +26831,14 @@ var require_SideEffect = __commonJS({
         var cancelingAxis = activeAxis.current || currentAxis;
         return (0, handleScroll_1.handleScroll)(cancelingAxis, parent, event, cancelingAxis === "h" ? deltaX : deltaY, true);
       }, []);
-      var shouldPrevent = React5.useCallback(function(_event) {
+      var shouldPrevent = React7.useCallback(function(_event) {
         var event = _event;
         if (!lockStack.length || lockStack[lockStack.length - 1] !== Style) {
           return;
         }
         var delta = "deltaY" in event ? (0, exports.getDeltaXY)(event) : (0, exports.getTouchXY)(event);
-        var sourceEvent = shouldPreventQueue.current.filter(function(e3) {
-          return e3.name === event.type && (e3.target === event.target || event.target === e3.shadowParent) && deltaCompare(e3.delta, delta);
+        var sourceEvent = shouldPreventQueue.current.filter(function(e4) {
+          return e4.name === event.type && (e4.target === event.target || event.target === e4.shadowParent) && deltaCompare(e4.delta, delta);
         })[0];
         if (sourceEvent && sourceEvent.should) {
           if (event.cancelable) {
@@ -26858,26 +26858,26 @@ var require_SideEffect = __commonJS({
           }
         }
       }, []);
-      var shouldCancel = React5.useCallback(function(name, delta, target, should) {
+      var shouldCancel = React7.useCallback(function(name, delta, target, should) {
         var event = { name, delta, target, should, shadowParent: getOutermostShadowParent(target) };
         shouldPreventQueue.current.push(event);
         setTimeout(function() {
-          shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e3) {
-            return e3 !== event;
+          shouldPreventQueue.current = shouldPreventQueue.current.filter(function(e4) {
+            return e4 !== event;
           });
         }, 1);
       }, []);
-      var scrollTouchStart = React5.useCallback(function(event) {
+      var scrollTouchStart = React7.useCallback(function(event) {
         touchStartRef.current = (0, exports.getTouchXY)(event);
         activeAxis.current = void 0;
       }, []);
-      var scrollWheel = React5.useCallback(function(event) {
+      var scrollWheel = React7.useCallback(function(event) {
         shouldCancel(event.type, (0, exports.getDeltaXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
       }, []);
-      var scrollTouchMove = React5.useCallback(function(event) {
+      var scrollTouchMove = React7.useCallback(function(event) {
         shouldCancel(event.type, (0, exports.getTouchXY)(event), event.target, shouldCancelEvent(event, props.lockRef.current));
       }, []);
-      React5.useEffect(function() {
+      React7.useEffect(function() {
         lockStack.push(Style);
         props.setCallbacks({
           onScrollCapture: scrollWheel,
@@ -26897,11 +26897,11 @@ var require_SideEffect = __commonJS({
         };
       }, []);
       var removeScrollBar = props.removeScrollBar, inert = props.inert;
-      return React5.createElement(
-        React5.Fragment,
+      return React7.createElement(
+        React7.Fragment,
         null,
-        inert ? React5.createElement(Style, { styles: generateStyle(id) }) : null,
-        removeScrollBar ? React5.createElement(react_remove_scroll_bar_1.RemoveScrollBar, { gapMode: props.gapMode }) : null
+        inert ? React7.createElement(Style, { styles: generateStyle(id) }) : null,
+        removeScrollBar ? React7.createElement(react_remove_scroll_bar_1.RemoveScrollBar, { gapMode: props.gapMode }) : null
       );
     }
     exports.RemoveScrollSideCar = RemoveScrollSideCar;
@@ -26937,11 +26937,11 @@ var require_Combination = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var React5 = tslib_1.__importStar(require_react());
+    var React7 = tslib_1.__importStar(require_react());
     var UI_1 = require_UI();
     var sidecar_1 = tslib_1.__importDefault(require_sidecar());
-    var ReactRemoveScroll = React5.forwardRef(function(props, ref) {
-      return React5.createElement(UI_1.RemoveScroll, tslib_1.__assign({}, props, { ref, sideCar: sidecar_1.default }));
+    var ReactRemoveScroll = React7.forwardRef(function(props, ref) {
+      return React7.createElement(UI_1.RemoveScroll, tslib_1.__assign({}, props, { ref, sideCar: sidecar_1.default }));
     });
     ReactRemoveScroll.classNames = UI_1.RemoveScroll.classNames;
     exports.default = ReactRemoveScroll;
@@ -27127,11 +27127,32 @@ var init_is_number_like = __esm({
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/is-element/is-element.mjs
+function isElement(value) {
+  if (Array.isArray(value) || value === null) {
+    return false;
+  }
+  if (typeof value === "object") {
+    if (value.type === import_react6.Fragment) {
+      return false;
+    }
+    return true;
+  }
+  return false;
+}
+var import_react6;
+var init_is_element = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/is-element/is-element.mjs"() {
+    "use client";
+    import_react6 = __toESM(require_react(), 1);
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/create-safe-context/create-safe-context.mjs
 function createSafeContext(errorMessage) {
-  const Context = (0, import_react6.createContext)(null);
+  const Context = (0, import_react7.createContext)(null);
   const useSafeContext = () => {
-    const ctx = (0, import_react6.useContext)(Context);
+    const ctx = (0, import_react7.useContext)(Context);
     if (ctx === null) {
       throw new Error(errorMessage);
     }
@@ -27140,12 +27161,28 @@ function createSafeContext(errorMessage) {
   const Provider = ({ children, value }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Context.Provider, { value, children });
   return [Provider, useSafeContext];
 }
-var import_jsx_runtime, import_react6;
+var import_jsx_runtime, import_react7;
 var init_create_safe_context = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/create-safe-context/create-safe-context.mjs"() {
     "use client";
     import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
-    import_react6 = __toESM(require_react(), 1);
+    import_react7 = __toESM(require_react(), 1);
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/create-optional-context/create-optional-context.mjs
+function createOptionalContext(initialValue = null) {
+  const Context = (0, import_react8.createContext)(initialValue);
+  const useOptionalContext = () => (0, import_react8.useContext)(Context);
+  const Provider = ({ children, value }) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Context.Provider, { value, children });
+  return [Provider, useOptionalContext];
+}
+var import_jsx_runtime2, import_react8;
+var init_create_optional_context = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/create-optional-context/create-optional-context.mjs"() {
+    "use client";
+    import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
+    import_react8 = __toESM(require_react(), 1);
   }
 });
 
@@ -27174,6 +27211,9 @@ function getSize(size, prefix = "size", convertToRem = true) {
   }
   return isNumberLike(size) ? convertToRem ? rem(size) : size : `var(--${prefix}-${size})`;
 }
+function getSpacing(size) {
+  return getSize(size, "mantine-spacing");
+}
 function getRadius(size) {
   if (size === void 0) {
     return "var(--mantine-radius-default)";
@@ -27182,6 +27222,12 @@ function getRadius(size) {
 }
 function getFontSize(size) {
   return getSize(size, "mantine-font-size");
+}
+function getShadow(size) {
+  if (!size) {
+    return void 0;
+  }
+  return getSize(size, "mantine-shadow", false);
 }
 var init_get_size = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/utils/get-size/get-size.mjs"() {
@@ -27225,7 +27271,7 @@ function attachMediaListener(query2, callback) {
   try {
     query2.addEventListener("change", callback);
     return () => query2.removeEventListener("change", callback);
-  } catch (e3) {
+  } catch (e4) {
     query2.addListener(callback);
     return () => query2.removeListener(callback);
   }
@@ -27239,11 +27285,11 @@ function getInitialValue(query2, initialValue) {
 function useMediaQuery(query2, initialValue, { getInitialValueInEffect } = {
   getInitialValueInEffect: true
 }) {
-  const [matches, setMatches] = (0, import_react7.useState)(
+  const [matches, setMatches] = (0, import_react9.useState)(
     getInitialValueInEffect ? initialValue : getInitialValue(query2)
   );
-  const queryRef = (0, import_react7.useRef)(null);
-  (0, import_react7.useEffect)(() => {
+  const queryRef = (0, import_react9.useRef)(null);
+  (0, import_react9.useEffect)(() => {
     if ("matchMedia" in window) {
       queryRef.current = window.matchMedia(query2);
       setMatches(queryRef.current.matches);
@@ -27253,34 +27299,34 @@ function useMediaQuery(query2, initialValue, { getInitialValueInEffect } = {
   }, [query2]);
   return matches;
 }
-var import_react7;
+var import_react9;
 var init_use_media_query = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-media-query/use-media-query.mjs"() {
     "use client";
-    import_react7 = __toESM(require_react(), 1);
+    import_react9 = __toESM(require_react(), 1);
   }
 });
 
 // node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-isomorphic-effect/use-isomorphic-effect.mjs
-var import_react8, useIsomorphicEffect;
+var import_react10, useIsomorphicEffect;
 var init_use_isomorphic_effect = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-isomorphic-effect/use-isomorphic-effect.mjs"() {
     "use client";
-    import_react8 = __toESM(require_react(), 1);
-    useIsomorphicEffect = typeof document !== "undefined" ? import_react8.useLayoutEffect : import_react8.useEffect;
+    import_react10 = __toESM(require_react(), 1);
+    useIsomorphicEffect = typeof document !== "undefined" ? import_react10.useLayoutEffect : import_react10.useEffect;
   }
 });
 
 // node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-did-update/use-did-update.mjs
 function useDidUpdate(fn, dependencies) {
-  const mounted = (0, import_react9.useRef)(false);
-  (0, import_react9.useEffect)(
+  const mounted = (0, import_react11.useRef)(false);
+  (0, import_react11.useEffect)(
     () => () => {
       mounted.current = false;
     },
     []
   );
-  (0, import_react9.useEffect)(() => {
+  (0, import_react11.useEffect)(() => {
     if (mounted.current) {
       return fn();
     }
@@ -27288,25 +27334,280 @@ function useDidUpdate(fn, dependencies) {
     return void 0;
   }, dependencies);
 }
-var import_react9;
+var import_react11;
 var init_use_did_update = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-did-update/use-did-update.mjs"() {
     "use client";
-    import_react9 = __toESM(require_react(), 1);
+    import_react11 = __toESM(require_react(), 1);
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.mjs
+function useFocusReturn({ opened, shouldReturnFocus = true }) {
+  const lastActiveElement = (0, import_react12.useRef)(null);
+  const returnFocus = () => {
+    if (lastActiveElement.current && "focus" in lastActiveElement.current && typeof lastActiveElement.current.focus === "function") {
+      lastActiveElement.current?.focus({ preventScroll: true });
+    }
+  };
+  useDidUpdate(() => {
+    let timeout = -1;
+    const clearFocusTimeout = (event) => {
+      if (event.key === "Tab") {
+        window.clearTimeout(timeout);
+      }
+    };
+    document.addEventListener("keydown", clearFocusTimeout);
+    if (opened) {
+      lastActiveElement.current = document.activeElement;
+    } else if (shouldReturnFocus) {
+      timeout = window.setTimeout(returnFocus, 10);
+    }
+    return () => {
+      window.clearTimeout(timeout);
+      document.removeEventListener("keydown", clearFocusTimeout);
+    };
+  }, [opened, shouldReturnFocus]);
+  return returnFocus;
+}
+var import_react12;
+var init_use_focus_return = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.mjs"() {
+    "use client";
+    import_react12 = __toESM(require_react(), 1);
+    init_use_did_update();
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.mjs
+function hidden(element) {
+  if (false) {
+    return false;
+  }
+  return element.style.display === "none";
+}
+function visible(element) {
+  const isHidden = element.getAttribute("aria-hidden") || element.getAttribute("hidden") || element.getAttribute("type") === "hidden";
+  if (isHidden) {
+    return false;
+  }
+  let parentElement = element;
+  while (parentElement) {
+    if (parentElement === document.body || parentElement.nodeType === 11) {
+      break;
+    }
+    if (hidden(parentElement)) {
+      return false;
+    }
+    parentElement = parentElement.parentNode;
+  }
+  return true;
+}
+function getElementTabIndex(element) {
+  let tabIndex = element.getAttribute("tabindex");
+  if (tabIndex === null) {
+    tabIndex = void 0;
+  }
+  return parseInt(tabIndex, 10);
+}
+function focusable(element) {
+  const nodeName = element.nodeName.toLowerCase();
+  const isTabIndexNotNaN = !Number.isNaN(getElementTabIndex(element));
+  const res = (
+    // @ts-expect-error function accepts any html element but if it is a button, it should not be disabled to trigger the condition
+    TABBABLE_NODES.test(nodeName) && !element.disabled || (element instanceof HTMLAnchorElement ? element.href || isTabIndexNotNaN : isTabIndexNotNaN)
+  );
+  return res && visible(element);
+}
+function tabbable(element) {
+  const tabIndex = getElementTabIndex(element);
+  const isTabIndexNaN = Number.isNaN(tabIndex);
+  return (isTabIndexNaN || tabIndex >= 0) && focusable(element);
+}
+function findTabbableDescendants(element) {
+  return Array.from(element.querySelectorAll(FOCUS_SELECTOR)).filter(tabbable);
+}
+var TABBABLE_NODES, FOCUS_SELECTOR;
+var init_tabbable = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.mjs"() {
+    "use client";
+    TABBABLE_NODES = /input|select|textarea|button|object/;
+    FOCUS_SELECTOR = "a, input, select, textarea, button, object, [tabindex]";
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/scope-tab.mjs
+function scopeTab(node, event) {
+  const tabbable2 = findTabbableDescendants(node);
+  if (!tabbable2.length) {
+    event.preventDefault();
+    return;
+  }
+  const finalTabbable = tabbable2[event.shiftKey ? 0 : tabbable2.length - 1];
+  const root = node.getRootNode();
+  let leavingFinalTabbable = finalTabbable === root.activeElement || node === root.activeElement;
+  const activeElement = root.activeElement;
+  const activeElementIsRadio = activeElement.tagName === "INPUT" && activeElement.getAttribute("type") === "radio";
+  if (activeElementIsRadio) {
+    const activeRadioGroup = tabbable2.filter(
+      (element) => element.getAttribute("type") === "radio" && element.getAttribute("name") === activeElement.getAttribute("name")
+    );
+    leavingFinalTabbable = activeRadioGroup.includes(finalTabbable);
+  }
+  if (!leavingFinalTabbable) {
+    return;
+  }
+  event.preventDefault();
+  const target = tabbable2[event.shiftKey ? tabbable2.length - 1 : 0];
+  if (target) {
+    target.focus();
+  }
+}
+var init_scope_tab = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/scope-tab.mjs"() {
+    "use client";
+    init_tabbable();
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.mjs
+function useFocusTrap(active = true) {
+  const ref = (0, import_react13.useRef)(null);
+  const focusNode = (node) => {
+    let focusElement = node.querySelector("[data-autofocus]");
+    if (!focusElement) {
+      const children = Array.from(node.querySelectorAll(FOCUS_SELECTOR));
+      focusElement = children.find(tabbable) || children.find(focusable) || null;
+      if (!focusElement && focusable(node)) {
+        focusElement = node;
+      }
+    }
+    if (focusElement) {
+      focusElement.focus({ preventScroll: true });
+    } else if (false) {
+      console.warn(
+        "[@mantine/hooks/use-focus-trap] Failed to find focusable element within provided node",
+        node
+      );
+    }
+  };
+  const setRef = (0, import_react13.useCallback)(
+    (node) => {
+      if (!active) {
+        return;
+      }
+      if (node === null) {
+        return;
+      }
+      if (ref.current === node) {
+        return;
+      }
+      if (node) {
+        setTimeout(() => {
+          if (node.getRootNode()) {
+            focusNode(node);
+          } else if (false) {
+            console.warn("[@mantine/hooks/use-focus-trap] Ref node is not part of the dom", node);
+          }
+        });
+        ref.current = node;
+      } else {
+        ref.current = null;
+      }
+    },
+    [active]
+  );
+  (0, import_react13.useEffect)(() => {
+    if (!active) {
+      return void 0;
+    }
+    ref.current && setTimeout(() => focusNode(ref.current));
+    const handleKeyDown = (event) => {
+      if (event.key === "Tab" && ref.current) {
+        scopeTab(ref.current, event);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [active]);
+  return setRef;
+}
+var import_react13;
+var init_use_focus_trap = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.mjs"() {
+    "use client";
+    import_react13 = __toESM(require_react(), 1);
+    init_scope_tab();
+    init_tabbable();
   }
 });
 
 // node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-force-update/use-force-update.mjs
 function useForceUpdate() {
-  const [, update] = (0, import_react10.useReducer)(reducer, 0);
+  const [, update] = (0, import_react14.useReducer)(reducer, 0);
   return update;
 }
-var import_react10, reducer;
+var import_react14, reducer;
 var init_use_force_update = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-force-update/use-force-update.mjs"() {
     "use client";
-    import_react10 = __toESM(require_react(), 1);
+    import_react14 = __toESM(require_react(), 1);
     reducer = (value) => (value + 1) % 1e6;
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-id/use-react-id.mjs
+function useReactId() {
+  const id = __useId();
+  return id ? `mantine-${id.replace(/:/g, "")}` : "";
+}
+var import_react15, __useId;
+var init_use_react_id = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-id/use-react-id.mjs"() {
+    "use client";
+    import_react15 = __toESM(require_react(), 1);
+    __useId = import_react15.default["useId".toString()] || (() => void 0);
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-id/use-id.mjs
+function useId(staticId) {
+  const reactId = useReactId();
+  const [uuid, setUuid] = (0, import_react16.useState)(reactId);
+  useIsomorphicEffect(() => {
+    setUuid(randomId());
+  }, []);
+  if (typeof staticId === "string") {
+    return staticId;
+  }
+  if (typeof window === "undefined") {
+    return reactId;
+  }
+  return uuid;
+}
+var import_react16;
+var init_use_id = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-id/use-id.mjs"() {
+    "use client";
+    import_react16 = __toESM(require_react(), 1);
+    init_use_isomorphic_effect();
+    init_random_id();
+    init_use_react_id();
+  }
+});
+
+// node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-window-event/use-window-event.mjs
+function useWindowEvent(type, listener, options) {
+  (0, import_react17.useEffect)(() => {
+    window.addEventListener(type, listener, options);
+    return () => window.removeEventListener(type, listener, options);
+  }, [type, listener]);
+}
+var import_react17;
+var init_use_window_event = __esm({
+  "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-window-event/use-window-event.mjs"() {
+    "use client";
+    import_react17 = __toESM(require_react(), 1);
   }
 });
 
@@ -27318,11 +27619,38 @@ function assignRef(ref, value) {
     ref.current = value;
   }
 }
-var import_react11;
+function mergeRefs(...refs) {
+  const cleanupMap = /* @__PURE__ */ new Map();
+  return (node) => {
+    refs.forEach((ref) => {
+      const cleanup = assignRef(ref, node);
+      if (cleanup) {
+        cleanupMap.set(ref, cleanup);
+      }
+    });
+    if (cleanupMap.size > 0) {
+      return () => {
+        refs.forEach((ref) => {
+          const cleanup = cleanupMap.get(ref);
+          if (cleanup) {
+            cleanup();
+          } else {
+            assignRef(ref, null);
+          }
+        });
+        cleanupMap.clear();
+      };
+    }
+  };
+}
+function useMergedRef(...refs) {
+  return (0, import_react18.useCallback)(mergeRefs(...refs), refs);
+}
+var import_react18;
 var init_use_merged_ref = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.mjs"() {
     "use client";
-    import_react11 = __toESM(require_react(), 1);
+    import_react18 = __toESM(require_react(), 1);
   }
 });
 
@@ -27342,11 +27670,15 @@ var init_esm = __esm({
   "node_modules/.pnpm/@mantine+hooks@7.16.2_react@19.0.0/node_modules/@mantine/hooks/esm/index.mjs"() {
     init_clamp();
     init_random_id();
+    init_use_focus_return();
     init_use_did_update();
+    init_use_focus_trap();
     init_use_force_update();
+    init_use_id();
     init_use_isomorphic_effect();
     init_use_merged_ref();
     init_use_reduced_motion();
+    init_use_window_event();
   }
 });
 
@@ -27361,18 +27693,18 @@ var init_create_vars_resolver = __esm({
 });
 
 // node_modules/.pnpm/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs
-function r(e3) {
-  var t4, f2, n2 = "";
-  if ("string" == typeof e3 || "number" == typeof e3) n2 += e3;
-  else if ("object" == typeof e3) if (Array.isArray(e3)) {
-    var o2 = e3.length;
-    for (t4 = 0; t4 < o2; t4++) e3[t4] && (f2 = r(e3[t4])) && (n2 && (n2 += " "), n2 += f2);
-  } else for (f2 in e3) e3[f2] && (n2 && (n2 += " "), n2 += f2);
-  return n2;
+function r(e4) {
+  var t8, f5, n3 = "";
+  if ("string" == typeof e4 || "number" == typeof e4) n3 += e4;
+  else if ("object" == typeof e4) if (Array.isArray(e4)) {
+    var o4 = e4.length;
+    for (t8 = 0; t8 < o4; t8++) e4[t8] && (f5 = r(e4[t8])) && (n3 && (n3 += " "), n3 += f5);
+  } else for (f5 in e4) e4[f5] && (n3 && (n3 += " "), n3 += f5);
+  return n3;
 }
 function clsx() {
-  for (var e3, t4, f2 = 0, n2 = "", o2 = arguments.length; f2 < o2; f2++) (e3 = arguments[f2]) && (t4 = r(e3)) && (n2 && (n2 += " "), n2 += t4);
-  return n2;
+  for (var e4, t8, f5 = 0, n3 = "", o4 = arguments.length; f5 < o4; f5++) (e4 = arguments[f5]) && (t8 = r(e4)) && (n3 && (n3 += " "), n3 += t8);
+  return n3;
 }
 var clsx_default;
 var init_clsx = __esm({
@@ -27429,7 +27761,7 @@ var init_resolve_styles = __esm({
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/Mantine.context.mjs
 function useMantineContext() {
-  const ctx = (0, import_react12.useContext)(MantineContext);
+  const ctx = (0, import_react19.useContext)(MantineContext);
   if (!ctx) {
     throw new Error("[@mantine/core] MantineProvider was not found in tree");
   }
@@ -27456,12 +27788,12 @@ function useMantineSxTransform() {
 function useMantineStylesTransform() {
   return useMantineContext().stylesTransform?.styles;
 }
-var import_react12, MantineContext;
+var import_react19, MantineContext;
 var init_Mantine_context = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/Mantine.context.mjs"() {
     "use client";
-    import_react12 = __toESM(require_react(), 1);
-    MantineContext = (0, import_react12.createContext)(null);
+    import_react19 = __toESM(require_react(), 1);
+    MantineContext = (0, import_react19.createContext)(null);
   }
 });
 
@@ -27494,18 +27826,18 @@ function hexToRgba(color) {
   }
   const parsed = parseInt(hexString, 16);
   const r3 = parsed >> 16 & 255;
-  const g2 = parsed >> 8 & 255;
+  const g3 = parsed >> 8 & 255;
   const b2 = parsed & 255;
   return {
     r: r3,
-    g: g2,
+    g: g3,
     b: b2,
     a: 1
   };
 }
 function rgbStringToRgba(color) {
-  const [r3, g2, b2, a3] = color.replace(/[^0-9,./]/g, "").split(/[/,]/).map(Number);
-  return { r: r3, g: g2, b: b2, a: a3 || 1 };
+  const [r3, g3, b2, a4] = color.replace(/[^0-9,./]/g, "").split(/[/,]/).map(Number);
+  return { r: r3, g: g3, b: b2, a: a4 || 1 };
 }
 function hslStringToRgba(hslaString) {
   const hslaRegex = /^hsla?\(\s*(\d+)\s*,\s*(\d+%)\s*,\s*(\d+%)\s*(,\s*(0?\.\d+|\d+(\.\d+)?))?\s*\)$/i;
@@ -27518,47 +27850,47 @@ function hslStringToRgba(hslaString) {
       a: 1
     };
   }
-  const h2 = parseInt(matches[1], 10);
-  const s5 = parseInt(matches[2], 10) / 100;
-  const l3 = parseInt(matches[3], 10) / 100;
-  const a3 = matches[5] ? parseFloat(matches[5]) : void 0;
-  const chroma = (1 - Math.abs(2 * l3 - 1)) * s5;
-  const huePrime = h2 / 60;
+  const h4 = parseInt(matches[1], 10);
+  const s10 = parseInt(matches[2], 10) / 100;
+  const l5 = parseInt(matches[3], 10) / 100;
+  const a4 = matches[5] ? parseFloat(matches[5]) : void 0;
+  const chroma = (1 - Math.abs(2 * l5 - 1)) * s10;
+  const huePrime = h4 / 60;
   const x = chroma * (1 - Math.abs(huePrime % 2 - 1));
-  const m3 = l3 - chroma / 2;
+  const m5 = l5 - chroma / 2;
   let r3;
-  let g2;
+  let g3;
   let b2;
   if (huePrime >= 0 && huePrime < 1) {
     r3 = chroma;
-    g2 = x;
+    g3 = x;
     b2 = 0;
   } else if (huePrime >= 1 && huePrime < 2) {
     r3 = x;
-    g2 = chroma;
+    g3 = chroma;
     b2 = 0;
   } else if (huePrime >= 2 && huePrime < 3) {
     r3 = 0;
-    g2 = chroma;
+    g3 = chroma;
     b2 = x;
   } else if (huePrime >= 3 && huePrime < 4) {
     r3 = 0;
-    g2 = x;
+    g3 = x;
     b2 = chroma;
   } else if (huePrime >= 4 && huePrime < 5) {
     r3 = x;
-    g2 = 0;
+    g3 = 0;
     b2 = chroma;
   } else {
     r3 = chroma;
-    g2 = 0;
+    g3 = 0;
     b2 = x;
   }
   return {
-    r: Math.round((r3 + m3) * 255),
-    g: Math.round((g2 + m3) * 255),
-    b: Math.round((b2 + m3) * 255),
-    a: a3 || 1
+    r: Math.round((r3 + m5) * 255),
+    g: Math.round((g3 + m5) * 255),
+    b: Math.round((b2 + m5) * 255),
+    a: a4 || 1
   };
 }
 function toRgba(color) {
@@ -27588,10 +27920,10 @@ function darken(color, alpha2) {
   if (color.startsWith("var(")) {
     return `color-mix(in srgb, ${color}, black ${alpha2 * 100}%)`;
   }
-  const { r: r3, g: g2, b: b2, a: a3 } = toRgba(color);
-  const f2 = 1 - alpha2;
-  const dark = (input) => Math.round(input * f2);
-  return `rgba(${dark(r3)}, ${dark(g2)}, ${dark(b2)}, ${a3})`;
+  const { r: r3, g: g3, b: b2, a: a4 } = toRgba(color);
+  const f5 = 1 - alpha2;
+  const dark = (input) => Math.round(input * f5);
+  return `rgba(${dark(r3)}, ${dark(g3)}, ${dark(b2)}, ${a4})`;
 }
 var init_darken = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/darken/darken.mjs"() {
@@ -27616,8 +27948,8 @@ var init_get_primary_shade = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/luminance/luminance.mjs
-function gammaCorrect(c3) {
-  return c3 <= 0.03928 ? c3 / 12.92 : ((c3 + 0.055) / 1.055) ** 2.4;
+function gammaCorrect(c7) {
+  return c7 <= 0.03928 ? c7 / 12.92 : ((c7 + 0.055) / 1.055) ** 2.4;
 }
 function getLightnessFromOklch(oklchColor) {
   const match = oklchColor.match(/oklch\((.*?)%\s/);
@@ -27627,9 +27959,9 @@ function luminance(color) {
   if (color.startsWith("oklch(")) {
     return (getLightnessFromOklch(color) || 0) / 100;
   }
-  const { r: r3, g: g2, b: b2 } = toRgba(color);
+  const { r: r3, g: g3, b: b2 } = toRgba(color);
   const sR = r3 / 255;
-  const sG = g2 / 255;
+  const sG = g3 / 255;
   const sB = b2 / 255;
   const rLinear = gammaCorrect(sR);
   const gLinear = gammaCorrect(sG);
@@ -27775,8 +28107,8 @@ function rgba(color, alpha2) {
     }
     return color.replace(")", ` / ${alpha2})`);
   }
-  const { r: r3, g: g2, b: b2 } = toRgba(color);
-  return `rgba(${r3}, ${g2}, ${b2}, ${alpha2})`;
+  const { r: r3, g: g3, b: b2 } = toRgba(color);
+  return `rgba(${r3}, ${g3}, ${b2}, ${alpha2})`;
 }
 var alpha;
 var init_rgba = __esm({
@@ -27787,13 +28119,13 @@ var init_rgba = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/default-variant-colors-resolver/default-variant-colors-resolver.mjs
-var import_react13, import_jsx_runtime2, defaultVariantColorsResolver;
+var import_react20, import_jsx_runtime3, defaultVariantColorsResolver;
 var init_default_variant_colors_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/default-variant-colors-resolver/default-variant-colors-resolver.mjs"() {
     "use client";
     init_rem();
-    import_react13 = __toESM(require_react(), 1);
-    import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
+    import_react20 = __toESM(require_react(), 1);
+    import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
     init_darken();
     init_get_gradient();
     init_parse_theme_color();
@@ -28153,12 +28485,12 @@ var init_default_colors = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/default-theme.mjs
-var import_react14, import_jsx_runtime3, DEFAULT_FONT_FAMILY, DEFAULT_THEME;
+var import_react21, import_jsx_runtime4, DEFAULT_FONT_FAMILY, DEFAULT_THEME;
 var init_default_theme = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/default-theme.mjs"() {
     init_rem();
-    import_react14 = __toESM(require_react(), 1);
-    import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
+    import_react21 = __toESM(require_react(), 1);
+    import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
     init_default_variant_colors_resolver();
     init_default_colors();
     DEFAULT_FONT_FAMILY = "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji";
@@ -28343,12 +28675,12 @@ function mergeMantineTheme(currentTheme, themeOverride) {
   validateMantineTheme(result);
   return result;
 }
-var import_react15, import_jsx_runtime4, INVALID_PRIMARY_COLOR_ERROR, INVALID_PRIMARY_SHADE_ERROR;
+var import_react22, import_jsx_runtime5, INVALID_PRIMARY_COLOR_ERROR, INVALID_PRIMARY_SHADE_ERROR;
 var init_merge_mantine_theme = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/merge-mantine-theme/merge-mantine-theme.mjs"() {
     init_deep_merge();
-    import_react15 = __toESM(require_react(), 1);
-    import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
+    import_react22 = __toESM(require_react(), 1);
+    import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
     INVALID_PRIMARY_COLOR_ERROR = "[@mantine/core] MantineProvider: Invalid theme.primaryColor, it accepts only key of theme.colors, learn more \u2013 https://mantine.dev/theming/colors/#primary-color";
     INVALID_PRIMARY_SHADE_ERROR = "[@mantine/core] MantineProvider: Invalid theme.primaryShade, it accepts only 0-9 integers or an object { light: 0-9, dark: 0-9 }";
   }
@@ -28356,7 +28688,7 @@ var init_merge_mantine_theme = __esm({
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineThemeProvider/MantineThemeProvider.mjs
 function useMantineTheme() {
-  const ctx = (0, import_react16.useContext)(MantineThemeContext);
+  const ctx = (0, import_react23.useContext)(MantineThemeContext);
   if (!ctx) {
     throw new Error(
       "@mantine/core: MantineProvider was not found in component tree, make sure you have it in your app"
@@ -28370,22 +28702,22 @@ function MantineThemeProvider({
   inherit = true
 }) {
   const parentTheme = useSafeMantineTheme();
-  const mergedTheme = (0, import_react16.useMemo)(
+  const mergedTheme = (0, import_react23.useMemo)(
     () => mergeMantineTheme(inherit ? parentTheme : DEFAULT_THEME, theme2),
     [theme2, parentTheme, inherit]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(MantineThemeContext.Provider, { value: mergedTheme, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(MantineThemeContext.Provider, { value: mergedTheme, children });
 }
-var import_jsx_runtime5, import_react16, MantineThemeContext, useSafeMantineTheme;
+var import_jsx_runtime6, import_react23, MantineThemeContext, useSafeMantineTheme;
 var init_MantineThemeProvider = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineThemeProvider/MantineThemeProvider.mjs"() {
     "use client";
-    import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
-    import_react16 = __toESM(require_react(), 1);
+    import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+    import_react23 = __toESM(require_react(), 1);
     init_default_theme();
     init_merge_mantine_theme();
-    MantineThemeContext = (0, import_react16.createContext)(null);
-    useSafeMantineTheme = () => (0, import_react16.useContext)(MantineThemeContext) || DEFAULT_THEME;
+    MantineThemeContext = (0, import_react23.createContext)(null);
+    useSafeMantineTheme = () => (0, import_react23.useContext)(MantineThemeContext) || DEFAULT_THEME;
     MantineThemeProvider.displayName = "@mantine/core/MantineThemeProvider";
   }
 });
@@ -28394,31 +28726,31 @@ var init_MantineThemeProvider = __esm({
 function MantineClasses() {
   const theme2 = useMantineTheme();
   const nonce = useMantineStyleNonce();
-  const classes10 = keys(theme2.breakpoints).reduce((acc, breakpoint) => {
+  const classes18 = keys(theme2.breakpoints).reduce((acc, breakpoint) => {
     const isPxBreakpoint = theme2.breakpoints[breakpoint].includes("px");
     const pxValue = px(theme2.breakpoints[breakpoint]);
     const maxWidthBreakpoint = isPxBreakpoint ? `${pxValue - 0.1}px` : em(pxValue - 0.1);
     const minWidthBreakpoint = isPxBreakpoint ? `${pxValue}px` : em(pxValue);
     return `${acc}@media (max-width: ${maxWidthBreakpoint}) {.mantine-visible-from-${breakpoint} {display: none !important;}}@media (min-width: ${minWidthBreakpoint}) {.mantine-hidden-from-${breakpoint} {display: none !important;}}`;
   }, "");
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
     "style",
     {
       "data-mantine-styles": "classes",
       nonce: nonce?.(),
-      dangerouslySetInnerHTML: { __html: classes10 }
+      dangerouslySetInnerHTML: { __html: classes18 }
     }
   );
 }
-var import_jsx_runtime6, import_react17;
+var import_jsx_runtime7, import_react24;
 var init_MantineClasses = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineClasses/MantineClasses.mjs"() {
     "use client";
-    import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
     init_keys();
     init_px();
     init_rem();
-    import_react17 = __toESM(require_react(), 1);
+    import_react24 = __toESM(require_react(), 1);
     init_Mantine_context();
     init_MantineThemeProvider();
   }
@@ -28564,13 +28896,13 @@ function getCSSColorVariables({
     ...dynamicVariables
   };
 }
-var import_react18, import_jsx_runtime7;
+var import_react25, import_jsx_runtime8;
 var init_get_css_color_variables = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/get-css-color-variables.mjs"() {
     "use client";
     init_get_primary_shade();
-    import_react18 = __toESM(require_react(), 1);
-    import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
+    import_react25 = __toESM(require_react(), 1);
+    import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
     init_rgba();
   }
 });
@@ -28579,11 +28911,11 @@ var init_get_css_color_variables = __esm({
 function isVirtualColor(value) {
   return !!value && typeof value === "object" && "mantine-virtual-color" in value;
 }
-var import_react19, import_jsx_runtime8;
+var import_react26, import_jsx_runtime9;
 var init_virtual_color = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/virtual-color/virtual-color.mjs"() {
-    import_react19 = __toESM(require_react(), 1);
-    import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+    import_react26 = __toESM(require_react(), 1);
+    import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -28593,14 +28925,14 @@ function assignSizeVariables(variables, sizes, name) {
     (size) => Object.assign(variables, { [`--mantine-${name}-${size}`]: sizes[size] })
   );
 }
-var import_react20, import_jsx_runtime9, defaultCssVariablesResolver;
+var import_react27, import_jsx_runtime10, defaultCssVariablesResolver;
 var init_default_css_variables_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/default-css-variables-resolver.mjs"() {
     "use client";
     init_keys();
     init_rem();
-    import_react20 = __toESM(require_react(), 1);
-    import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
+    import_react27 = __toESM(require_react(), 1);
+    import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
     init_get_primary_shade();
     init_get_contrast_color();
     init_get_css_color_variables();
@@ -28733,13 +29065,13 @@ function getMergedVariables({ theme: theme2, generator }) {
   const providerGenerator = generator?.(theme2);
   return providerGenerator ? deepMerge(defaultResolver, providerGenerator) : defaultResolver;
 }
-var import_react21, import_jsx_runtime10;
+var import_react28, import_jsx_runtime11;
 var init_get_merged_variables = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/get-merged-variables.mjs"() {
     "use client";
     init_deep_merge();
-    import_react21 = __toESM(require_react(), 1);
-    import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
+    import_react28 = __toESM(require_react(), 1);
+    import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
     init_default_css_variables_resolver();
   }
 });
@@ -28768,13 +29100,13 @@ function removeDefaultVariables(input) {
   });
   return cleaned;
 }
-var import_react22, import_jsx_runtime11, defaultCssVariables;
+var import_react29, import_jsx_runtime12, defaultCssVariables;
 var init_remove_default_variables = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/remove-default-variables.mjs"() {
     "use client";
     init_keys();
-    import_react22 = __toESM(require_react(), 1);
-    import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
+    import_react29 = __toESM(require_react(), 1);
+    import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
     init_default_theme();
     init_default_css_variables_resolver();
     defaultCssVariables = defaultCssVariablesResolver(DEFAULT_THEME);
@@ -28800,7 +29132,7 @@ function MantineCssVariables({
   const cleanedVariables = shouldCleanVariables ? removeDefaultVariables(mergedVariables) : mergedVariables;
   const css = convertCssVariables(cleanedVariables, cssVariablesSelector);
   if (css) {
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       "style",
       {
         "data-mantine-styles": true,
@@ -28813,11 +29145,11 @@ function MantineCssVariables({
   }
   return null;
 }
-var import_jsx_runtime12;
+var import_jsx_runtime13;
 var init_MantineCssVariables = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/MantineCssVariables.mjs"() {
     "use client";
-    import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
     init_convert_css_variables();
     init_Mantine_context();
     init_MantineThemeProvider();
@@ -28855,10 +29187,10 @@ function useProviderColorScheme({
   getRootElement,
   forceColorScheme
 }) {
-  const media = (0, import_react23.useRef)(null);
-  const [value, setValue] = (0, import_react23.useState)(() => manager.get(defaultColorScheme));
+  const media = (0, import_react30.useRef)(null);
+  const [value, setValue] = (0, import_react30.useState)(() => manager.get(defaultColorScheme));
   const colorSchemeValue = forceColorScheme || value;
-  const setColorScheme = (0, import_react23.useCallback)(
+  const setColorScheme = (0, import_react30.useCallback)(
     (colorScheme) => {
       if (!forceColorScheme) {
         setColorSchemeAttribute(colorScheme, getRootElement);
@@ -28868,19 +29200,19 @@ function useProviderColorScheme({
     },
     [manager.set, colorSchemeValue, forceColorScheme]
   );
-  const clearColorScheme = (0, import_react23.useCallback)(() => {
+  const clearColorScheme = (0, import_react30.useCallback)(() => {
     setValue(defaultColorScheme);
     setColorSchemeAttribute(defaultColorScheme, getRootElement);
     manager.clear();
   }, [manager.clear, defaultColorScheme]);
-  (0, import_react23.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     manager.subscribe(setColorScheme);
     return manager.unsubscribe;
   }, [manager.subscribe, manager.unsubscribe]);
   useIsomorphicEffect(() => {
     setColorSchemeAttribute(manager.get(defaultColorScheme), getRootElement);
   }, []);
-  (0, import_react23.useEffect)(() => {
+  (0, import_react30.useEffect)(() => {
     if (forceColorScheme) {
       setColorSchemeAttribute(forceColorScheme, getRootElement);
       return () => {
@@ -28902,11 +29234,11 @@ function useProviderColorScheme({
   }, [value, forceColorScheme]);
   return { colorScheme: colorSchemeValue, setColorScheme, clearColorScheme };
 }
-var import_react23;
+var import_react30;
 var init_use_provider_color_scheme = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/use-mantine-color-scheme/use-provider-color-scheme.mjs"() {
     "use client";
-    import_react23 = __toESM(require_react(), 1);
+    import_react30 = __toESM(require_react(), 1);
     init_esm();
   }
 });
@@ -28957,7 +29289,7 @@ function MantineProvider({
     respectReducedMotion: theme2?.respectReducedMotion || false,
     getRootElement
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
     MantineContext.Provider,
     {
       value: {
@@ -28972,22 +29304,22 @@ function MantineProvider({
         withStaticClasses,
         stylesTransform
       },
-      children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(MantineThemeProvider, { theme: theme2, children: [
-        withCssVariables && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(MantineThemeProvider, { theme: theme2, children: [
+        withCssVariables && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
           MantineCssVariables,
           {
             cssVariablesSelector,
             deduplicateCssVariables
           }
         ),
-        withGlobalClasses && /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(MantineClasses, {}),
+        withGlobalClasses && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(MantineClasses, {}),
         children
       ] })
     }
   );
 }
 function HeadlessMantineProvider({ children, theme: theme2 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
     MantineContext.Provider,
     {
       value: {
@@ -29002,20 +29334,20 @@ function HeadlessMantineProvider({ children, theme: theme2 }) {
         withStaticClasses: false,
         headless: true
       },
-      children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(MantineThemeProvider, { theme: theme2, children })
+      children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(MantineThemeProvider, { theme: theme2, children })
     }
   );
 }
-var import_jsx_runtime13, import_react24;
+var import_jsx_runtime14, import_react31;
 var init_MantineProvider = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/MantineProvider.mjs"() {
     "use client";
-    import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
     init_local_storage_manager();
     init_Mantine_context();
     init_MantineClasses();
     init_MantineCssVariables();
-    import_react24 = __toESM(require_react(), 1);
+    import_react31 = __toESM(require_react(), 1);
     init_MantineThemeProvider();
     init_suppress_nextjs_warning();
     init_use_provider_color_scheme();
@@ -29049,12 +29381,12 @@ function useResolvedStylesApi({
     })
   };
 }
-var import_react25, import_jsx_runtime14;
+var import_react32, import_jsx_runtime15;
 var init_use_resolved_styles_api = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-resolved-styles-api/use-resolved-styles-api.mjs"() {
     "use client";
-    import_react25 = __toESM(require_react(), 1);
-    import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
+    import_react32 = __toESM(require_react(), 1);
+    import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
     init_MantineThemeProvider();
     init_resolve_class_names();
     init_resolve_styles();
@@ -29131,8 +29463,8 @@ var init_get_root_class_name = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-selector-class-name/get-selector-class-name.mjs
-function getSelectorClassName({ selector, classes: classes10, unstyled }) {
-  return unstyled ? void 0 : classes10[selector];
+function getSelectorClassName({ selector, classes: classes18, unstyled }) {
+  return unstyled ? void 0 : classes18[selector];
 }
 var init_get_selector_class_name = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-selector-class-name/get-selector-class-name.mjs"() {
@@ -29150,7 +29482,7 @@ function getStaticClassNames({
   if (withStaticClass === false) {
     return [];
   }
-  return themeName.map((n2) => `${classNamesPrefix}-${n2}-${selector}`);
+  return themeName.map((n3) => `${classNamesPrefix}-${n3}-${selector}`);
 }
 var init_get_static_class_names = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-static-class-names/get-static-class-names.mjs"() {
@@ -29167,9 +29499,9 @@ function getThemeClassNames({
   stylesCtx
 }) {
   return themeName.map(
-    (n2) => resolveClassNames({
+    (n3) => resolveClassNames({
       theme: theme2,
-      classNames: theme2.components[n2]?.classNames,
+      classNames: theme2.components[n3]?.classNames,
       props,
       stylesCtx
     })?.[selector]
@@ -29185,11 +29517,11 @@ var init_get_theme_class_names = __esm({
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-variant-class-name/get-variant-class-name.mjs
 function getVariantClassName({
   options,
-  classes: classes10,
+  classes: classes18,
   selector,
   unstyled
 }) {
-  return options?.variant && !unstyled ? classes10[`${selector}--${options.variant}`] : void 0;
+  return options?.variant && !unstyled ? classes18[`${selector}--${options.variant}`] : void 0;
 }
 var init_get_variant_class_name = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-variant-class-name/get-variant-class-name.mjs"() {
@@ -29205,7 +29537,7 @@ function getClassName({
   selector,
   classNamesPrefix,
   classNames,
-  classes: classes10,
+  classes: classes18,
   unstyled,
   className,
   rootSelector,
@@ -29218,12 +29550,12 @@ function getClassName({
   return clsx_default(
     getGlobalClassNames({ theme: theme2, options, unstyled: unstyled || headless }),
     getThemeClassNames({ theme: theme2, themeName, selector, props, stylesCtx }),
-    getVariantClassName({ options, classes: classes10, selector, unstyled }),
+    getVariantClassName({ options, classes: classes18, selector, unstyled }),
     getResolvedClassNames({ selector, stylesCtx, theme: theme2, classNames, props }),
     getResolvedClassNames({ selector, stylesCtx, theme: theme2, classNames: transformedStyles, props }),
     getOptionsClassNames({ selector, stylesCtx, options, props, theme: theme2 }),
     getRootClassName({ rootSelector, selector, className }),
-    getSelectorClassName({ selector, classes: classes10, unstyled: unstyled || headless }),
+    getSelectorClassName({ selector, classes: classes18, unstyled: unstyled || headless }),
     withStaticClasses && !headless && getStaticClassNames({
       themeName,
       classNamesPrefix,
@@ -29257,9 +29589,9 @@ function getThemeStyles({
   selector
 }) {
   return themeName.map(
-    (n2) => resolveStyles({
+    (n3) => resolveStyles({
       theme: theme2,
-      styles: theme2.components[n2]?.styles,
+      styles: theme2.components[n3]?.styles,
       props,
       stylesCtx
     })[selector]
@@ -29305,20 +29637,20 @@ function mergeVars(vars) {
     return acc;
   }, {});
 }
-var import_react26, import_jsx_runtime15;
+var import_react33, import_jsx_runtime16;
 var init_merge_vars = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/resolve-vars/merge-vars.mjs"() {
     "use client";
     init_filter_props();
-    import_react26 = __toESM(require_react(), 1);
-    import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
+    import_react33 = __toESM(require_react(), 1);
+    import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/resolve-vars/resolve-vars.mjs
 function resolveVars({
   vars,
-  varsResolver: varsResolver10,
+  varsResolver: varsResolver16,
   theme: theme2,
   props,
   stylesCtx,
@@ -29327,7 +29659,7 @@ function resolveVars({
   headless
 }) {
   return mergeVars([
-    headless ? {} : varsResolver10?.(theme2, props, stylesCtx),
+    headless ? {} : varsResolver16?.(theme2, props, stylesCtx),
     ...themeName.map((name) => theme2.components?.[name]?.vars?.(theme2, props, stylesCtx)),
     vars?.(theme2, props, stylesCtx)
   ])?.[selector];
@@ -29351,7 +29683,7 @@ function getStyle({
   styles,
   style,
   vars,
-  varsResolver: varsResolver10,
+  varsResolver: varsResolver16,
   headless,
   withStylesTransform
 }) {
@@ -29359,7 +29691,7 @@ function getStyle({
     ...!withStylesTransform && getThemeStyles({ theme: theme2, themeName, props, stylesCtx, selector }),
     ...!withStylesTransform && resolveStyles({ theme: theme2, styles, props, stylesCtx })[selector],
     ...!withStylesTransform && resolveStyles({ theme: theme2, styles: options?.styles, props: options?.props || props, stylesCtx })[selector],
-    ...resolveVars({ theme: theme2, props, stylesCtx, vars, varsResolver: varsResolver10, selector, themeName, headless }),
+    ...resolveVars({ theme: theme2, props, stylesCtx, vars, varsResolver: varsResolver16, selector, themeName, headless }),
     ...rootSelector === selector ? resolveStyle({ style, theme: theme2 }) : null,
     ...resolveStyle({ style: options?.style, theme: theme2 })
   };
@@ -29388,7 +29720,7 @@ function useStylesTransform({ props, stylesCtx, themeName }) {
     return [
       ...transformedStyles,
       ...themeName.map(
-        (n2) => stylesTransform(theme2.components[n2]?.styles, { props, theme: theme2, ctx: stylesCtx })
+        (n3) => stylesTransform(theme2.components[n3]?.styles, { props, theme: theme2, ctx: stylesCtx })
       )
     ].filter(Boolean);
   };
@@ -29397,12 +29729,12 @@ function useStylesTransform({ props, stylesCtx, themeName }) {
     withStylesTransform: !!stylesTransform
   };
 }
-var import_react27, import_jsx_runtime16;
+var import_react34, import_jsx_runtime17;
 var init_use_transformed_styles = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/use-transformed-styles.mjs"() {
     "use client";
-    import_react27 = __toESM(require_react(), 1);
-    import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
+    import_react34 = __toESM(require_react(), 1);
+    import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
     init_Mantine_context();
     init_MantineThemeProvider();
   }
@@ -29411,7 +29743,7 @@ var init_use_transformed_styles = __esm({
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/use-styles.mjs
 function useStyles({
   name,
-  classes: classes10,
+  classes: classes18,
   props,
   stylesCtx,
   className,
@@ -29421,13 +29753,13 @@ function useStyles({
   classNames,
   styles,
   vars,
-  varsResolver: varsResolver10
+  varsResolver: varsResolver16
 }) {
   const theme2 = useMantineTheme();
   const classNamesPrefix = useMantineClassNamesPrefix();
   const withStaticClasses = useMantineWithStaticClasses();
   const headless = useMantineIsHeadless();
-  const themeName = (Array.isArray(name) ? name : [name]).filter((n2) => n2);
+  const themeName = (Array.isArray(name) ? name : [name]).filter((n3) => n3);
   const { withStylesTransform, getTransformedStyles } = useStylesTransform({
     props,
     stylesCtx,
@@ -29441,7 +29773,7 @@ function useStyles({
       selector,
       classNamesPrefix,
       classNames,
-      classes: classes10,
+      classes: classes18,
       unstyled,
       className,
       rootSelector,
@@ -29462,18 +29794,18 @@ function useStyles({
       styles,
       style,
       vars,
-      varsResolver: varsResolver10,
+      varsResolver: varsResolver16,
       headless,
       withStylesTransform
     })
   });
 }
-var import_react28, import_jsx_runtime17;
+var import_react35, import_jsx_runtime18;
 var init_use_styles = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/styles-api/use-styles/use-styles.mjs"() {
     "use client";
-    import_react28 = __toESM(require_react(), 1);
-    import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
+    import_react35 = __toESM(require_react(), 1);
+    import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
     init_Mantine_context();
     init_MantineThemeProvider();
     init_get_class_name();
@@ -29500,7 +29832,7 @@ function ColorSchemeScript({
   ...others
 }) {
   const _defaultColorScheme = ["light", "dark", "auto"].includes(defaultColorScheme) ? defaultColorScheme : "light";
-  return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
     "script",
     {
       ...others,
@@ -29515,11 +29847,11 @@ function ColorSchemeScript({
     }
   );
 }
-var import_jsx_runtime18, getScript;
+var import_jsx_runtime19, getScript;
 var init_ColorSchemeScript = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/ColorSchemeScript/ColorSchemeScript.mjs"() {
     "use client";
-    import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
     getScript = ({
       defaultColorScheme,
       localStorageKey,
@@ -29535,19 +29867,19 @@ var init_ColorSchemeScript = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/use-props/use-props.mjs
-function useProps(component, defaultProps15, props) {
+function useProps(component, defaultProps29, props) {
   const theme2 = useMantineTheme();
   const contextPropsPayload = theme2.components[component]?.defaultProps;
   const contextProps = typeof contextPropsPayload === "function" ? contextPropsPayload(theme2) : contextPropsPayload;
-  return { ...defaultProps15, ...contextProps, ...filterProps(props) };
+  return { ...defaultProps29, ...contextProps, ...filterProps(props) };
 }
-var import_react29, import_jsx_runtime19;
+var import_react36, import_jsx_runtime20;
 var init_use_props = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/MantineProvider/use-props/use-props.mjs"() {
     "use client";
     init_filter_props();
-    import_react29 = __toESM(require_react(), 1);
-    import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
+    import_react36 = __toESM(require_react(), 1);
+    import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
     init_MantineThemeProvider();
   }
 });
@@ -29568,14 +29900,14 @@ function cssObjectToString(css) {
     ""
   ).trim();
 }
-var import_react30, import_jsx_runtime20;
+var import_react37, import_jsx_runtime21;
 var init_css_object_to_string = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/InlineStyles/css-object-to-string/css-object-to-string.mjs"() {
     "use client";
     init_keys();
     init_camel_to_kebab_case();
-    import_react30 = __toESM(require_react(), 1);
-    import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
+    import_react37 = __toESM(require_react(), 1);
+    import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -29598,7 +29930,7 @@ var init_styles_to_string = __esm({
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/InlineStyles/InlineStyles.mjs
 function InlineStyles(props) {
   const nonce = useMantineStyleNonce();
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
     "style",
     {
       "data-mantine-styles": "inline",
@@ -29607,12 +29939,12 @@ function InlineStyles(props) {
     }
   );
 }
-var import_jsx_runtime21, import_react31;
+var import_jsx_runtime22, import_react38;
 var init_InlineStyles = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/InlineStyles/InlineStyles.mjs"() {
     "use client";
-    import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
-    import_react31 = __toESM(require_react(), 1);
+    import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
+    import_react38 = __toESM(require_react(), 1);
     init_Mantine_context();
     init_styles_to_string();
   }
@@ -29621,7 +29953,7 @@ var init_InlineStyles = __esm({
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/extract-style-props/extract-style-props.mjs
 function extractStyleProps(others) {
   const {
-    m: m3,
+    m: m5,
     mx,
     my,
     mt: mt2,
@@ -29630,7 +29962,7 @@ function extractStyleProps(others) {
     mr,
     me: me2,
     ms,
-    p: p2,
+    p: p4,
     px: px2,
     py,
     pt: pt2,
@@ -29641,7 +29973,7 @@ function extractStyleProps(others) {
     ps,
     bd,
     bg,
-    c: c3,
+    c: c7,
     opacity,
     ff,
     fz,
@@ -29655,7 +29987,7 @@ function extractStyleProps(others) {
     w: w4,
     miw,
     maw,
-    h: h2,
+    h: h4,
     mih,
     mah,
     bgsz,
@@ -29678,7 +30010,7 @@ function extractStyleProps(others) {
     ...rest
   } = others;
   const styleProps = filterProps({
-    m: m3,
+    m: m5,
     mx,
     my,
     mt: mt2,
@@ -29687,7 +30019,7 @@ function extractStyleProps(others) {
     mr,
     me: me2,
     ms,
-    p: p2,
+    p: p4,
     px: px2,
     py,
     pt: pt2,
@@ -29698,7 +30030,7 @@ function extractStyleProps(others) {
     ps,
     bd,
     bg,
-    c: c3,
+    c: c7,
     opacity,
     ff,
     fz,
@@ -29712,7 +30044,7 @@ function extractStyleProps(others) {
     w: w4,
     miw,
     maw,
-    h: h2,
+    h: h4,
     mih,
     mah,
     bgsz,
@@ -29735,13 +30067,13 @@ function extractStyleProps(others) {
   });
   return { styleProps, rest };
 }
-var import_react32, import_jsx_runtime22;
+var import_react39, import_jsx_runtime23;
 var init_extract_style_props = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/extract-style-props/extract-style-props.mjs"() {
     "use client";
     init_filter_props();
-    import_react32 = __toESM(require_react(), 1);
-    import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
+    import_react39 = __toESM(require_react(), 1);
+    import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -29822,13 +30154,13 @@ function textColorResolver(color, theme2) {
   }
   return colorResolver(color, theme2);
 }
-var import_react33, import_jsx_runtime23;
+var import_react40, import_jsx_runtime24;
 var init_color_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/color-resolver/color-resolver.mjs"() {
     "use client";
     init_parse_theme_color();
-    import_react33 = __toESM(require_react(), 1);
-    import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
+    import_react40 = __toESM(require_react(), 1);
+    import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -29846,13 +30178,13 @@ function borderResolver(value, theme2) {
   }
   return value;
 }
-var import_react34, import_jsx_runtime24;
+var import_react41, import_jsx_runtime25;
 var init_border_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/border-resolver/border-resolver.mjs"() {
     "use client";
     init_rem();
-    import_react34 = __toESM(require_react(), 1);
-    import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
+    import_react41 = __toESM(require_react(), 1);
+    import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
     init_color_resolver();
   }
 });
@@ -29894,13 +30226,13 @@ function fontSizeResolver(value, theme2) {
   }
   return value;
 }
-var import_react35, import_jsx_runtime25, headings;
+var import_react42, import_jsx_runtime26, headings;
 var init_font_size_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver.mjs"() {
     "use client";
     init_rem();
-    import_react35 = __toESM(require_react(), 1);
-    import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
+    import_react42 = __toESM(require_react(), 1);
+    import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
     headings = ["h1", "h2", "h3", "h4", "h5", "h6"];
   }
 });
@@ -29940,13 +30272,13 @@ function sizeResolver(value) {
   }
   return value;
 }
-var import_react36, import_jsx_runtime26;
+var import_react43, import_jsx_runtime27;
 var init_size_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/size-resolver/size-resolver.mjs"() {
     "use client";
     init_rem();
-    import_react36 = __toESM(require_react(), 1);
-    import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
+    import_react43 = __toESM(require_react(), 1);
+    import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -29965,13 +30297,13 @@ function spacingResolver(value, theme2) {
   }
   return value;
 }
-var import_react37, import_jsx_runtime27;
+var import_react44, import_jsx_runtime28;
 var init_spacing_resolver = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/spacing-resolver/spacing-resolver.mjs"() {
     "use client";
     init_rem();
-    import_react37 = __toESM(require_react(), 1);
-    import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
+    import_react44 = __toESM(require_react(), 1);
+    import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
   }
 });
 
@@ -30011,7 +30343,7 @@ function sortMediaQueries({
   ...props
 }) {
   const breakpoints = Object.keys(media);
-  const sortedMedia = breakpoints.sort((a3, b2) => Number(replaceMediaQuery(a3)) - Number(replaceMediaQuery(b2))).map((query2) => ({ query: query2, styles: media[query2] }));
+  const sortedMedia = breakpoints.sort((a4, b2) => Number(replaceMediaQuery(a4)) - Number(replaceMediaQuery(b2))).map((query2) => ({ query: query2, styles: media[query2] }));
   return { ...props, media: sortedMedia };
 }
 var init_sort_media_queries = __esm({
@@ -30100,13 +30432,13 @@ function parseStyleProps({
     )
   );
 }
-var import_react38, import_jsx_runtime28;
+var import_react45, import_jsx_runtime29;
 var init_parse_style_props = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/style-props/parse-style-props/parse-style-props.mjs"() {
     "use client";
     init_keys();
-    import_react38 = __toESM(require_react(), 1);
-    import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
+    import_react45 = __toESM(require_react(), 1);
+    import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
     init_resolvers();
     init_sort_media_queries();
   }
@@ -30114,14 +30446,14 @@ var init_parse_style_props = __esm({
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/use-random-classname/use-random-classname.mjs
 function useRandomClassName() {
-  const id = (0, import_react39.useId)().replace(/:/g, "");
+  const id = (0, import_react46.useId)().replace(/:/g, "");
   return `__m__-${id}`;
 }
-var import_react39;
+var import_react46;
 var init_use_random_classname = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/use-random-classname/use-random-classname.mjs"() {
     "use client";
-    import_react39 = __toESM(require_react(), 1);
+    import_react46 = __toESM(require_react(), 1);
   }
 });
 
@@ -30202,12 +30534,12 @@ var init_get_box_style = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/Box.mjs
-var import_jsx_runtime29, import_react40, _Box, Box;
+var import_jsx_runtime30, import_react47, _Box, Box;
 var init_Box = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/Box/Box.mjs"() {
     "use client";
-    import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
-    import_react40 = __toESM(require_react(), 1);
+    import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
+    import_react47 = __toESM(require_react(), 1);
     init_clsx();
     init_create_polymorphic_component();
     init_InlineStyles();
@@ -30220,7 +30552,7 @@ var init_Box = __esm({
     init_style_props_data();
     init_parse_style_props();
     init_use_random_classname();
-    _Box = (0, import_react40.forwardRef)(
+    _Box = (0, import_react47.forwardRef)(
       ({
         component,
         style,
@@ -30269,8 +30601,8 @@ var init_Box = __esm({
           ...getBoxMod(mod),
           ...rest
         };
-        return /* @__PURE__ */ (0, import_jsx_runtime29.jsxs)(import_jsx_runtime29.Fragment, { children: [
-          parsedStyleProps.hasResponsiveStyles && /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime30.jsxs)(import_jsx_runtime30.Fragment, { children: [
+          parsedStyleProps.hasResponsiveStyles && /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(
             InlineStyles,
             {
               selector: `.${responsiveClassName}`,
@@ -30278,7 +30610,7 @@ var init_Box = __esm({
               media: parsedStyleProps.media
             }
           ),
-          typeof renderRoot === "function" ? renderRoot(props) : /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(Element2, { ...props })
+          typeof renderRoot === "function" ? renderRoot(props) : /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(Element2, { ...props })
         ] });
       }
     );
@@ -30292,30 +30624,30 @@ function identity(value) {
   return value;
 }
 function factory(ui) {
-  const Component = (0, import_react41.forwardRef)(ui);
+  const Component = (0, import_react48.forwardRef)(ui);
   Component.extend = identity;
   Component.withProps = (fixedProps) => {
-    const Extended = (0, import_react41.forwardRef)((props, ref) => /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(Component, { ...fixedProps, ...props, ref }));
+    const Extended = (0, import_react48.forwardRef)((props, ref) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Component, { ...fixedProps, ...props, ref }));
     Extended.extend = Component.extend;
     Extended.displayName = `WithProps(${Component.displayName})`;
     return Extended;
   };
   return Component;
 }
-var import_jsx_runtime30, import_react41;
+var import_jsx_runtime31, import_react48;
 var init_factory = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/factory/factory.mjs"() {
     "use client";
-    import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
-    import_react41 = __toESM(require_react(), 1);
+    import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
+    import_react48 = __toESM(require_react(), 1);
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/factory/polymorphic-factory.mjs
 function polymorphicFactory(ui) {
-  const Component = (0, import_react42.forwardRef)(ui);
+  const Component = (0, import_react49.forwardRef)(ui);
   Component.withProps = (fixedProps) => {
-    const Extended = (0, import_react42.forwardRef)((props, ref) => /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(Component, { ...fixedProps, ...props, ref }));
+    const Extended = (0, import_react49.forwardRef)((props, ref) => /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(Component, { ...fixedProps, ...props, ref }));
     Extended.extend = Component.extend;
     Extended.displayName = `WithProps(${Component.displayName})`;
     return Extended;
@@ -30323,13 +30655,33 @@ function polymorphicFactory(ui) {
   Component.extend = identity;
   return Component;
 }
-var import_jsx_runtime31, import_react42;
+var import_jsx_runtime32, import_react49;
 var init_polymorphic_factory = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/factory/polymorphic-factory.mjs"() {
     "use client";
-    import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
-    import_react42 = __toESM(require_react(), 1);
+    import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
+    import_react49 = __toESM(require_react(), 1);
     init_factory();
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/DirectionProvider/DirectionProvider.mjs
+function useDirection() {
+  return (0, import_react50.useContext)(DirectionContext);
+}
+var import_jsx_runtime33, import_react50, DirectionContext;
+var init_DirectionProvider = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/core/DirectionProvider/DirectionProvider.mjs"() {
+    "use client";
+    import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
+    import_react50 = __toESM(require_react(), 1);
+    DirectionContext = (0, import_react50.createContext)({
+      dir: "ltr",
+      toggleDirection: () => {
+      },
+      setDirection: () => {
+      }
+    });
   }
 });
 
@@ -30343,12 +30695,12 @@ var init_UnstyledButton_module_css = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/UnstyledButton/UnstyledButton.mjs
-var import_jsx_runtime32, import_react43, defaultProps, UnstyledButton;
+var import_jsx_runtime34, import_react51, defaultProps, UnstyledButton;
 var init_UnstyledButton = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/UnstyledButton/UnstyledButton.mjs"() {
     "use client";
-    import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
-    import_react43 = __toESM(require_react(), 1);
+    import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
+    import_react51 = __toESM(require_react(), 1);
     init_clsx();
     init_use_props();
     init_use_styles();
@@ -30381,7 +30733,7 @@ var init_UnstyledButton = __esm({
           styles,
           unstyled
         });
-        return /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(
           Box,
           {
             ...getStyles("root", { focusable: true }),
@@ -30398,6 +30750,204 @@ var init_UnstyledButton = __esm({
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.module.css.mjs
+var classes2;
+var init_VisuallyHidden_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.module.css.mjs"() {
+    "use client";
+    classes2 = { "root": "m_515a97f8" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.mjs
+var import_jsx_runtime35, import_react52, defaultProps2, VisuallyHidden;
+var init_VisuallyHidden = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.mjs"() {
+    "use client";
+    import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
+    import_react52 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_factory();
+    init_VisuallyHidden_module_css();
+    defaultProps2 = {};
+    VisuallyHidden = factory((_props, ref) => {
+      const props = useProps("VisuallyHidden", defaultProps2, _props);
+      const { classNames, className, style, styles, unstyled, vars, ...others } = props;
+      const getStyles = useStyles({
+        name: "VisuallyHidden",
+        classes: classes2,
+        props,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(Box, { component: "span", ref, ...getStyles("root"), ...others });
+    });
+    VisuallyHidden.classes = classes2;
+    VisuallyHidden.displayName = "@mantine/core/VisuallyHidden";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Paper/Paper.module.css.mjs
+var classes3;
+var init_Paper_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Paper/Paper.module.css.mjs"() {
+    "use client";
+    classes3 = { "root": "m_1b7284a3" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Paper/Paper.mjs
+var import_jsx_runtime36, import_react53, defaultProps3, varsResolver, Paper;
+var init_Paper = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Paper/Paper.mjs"() {
+    "use client";
+    import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
+    import_react53 = __toESM(require_react(), 1);
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_polymorphic_factory();
+    init_Paper_module_css();
+    defaultProps3 = {};
+    varsResolver = createVarsResolver((_2, { radius, shadow }) => ({
+      root: {
+        "--paper-radius": radius === void 0 ? void 0 : getRadius(radius),
+        "--paper-shadow": getShadow(shadow)
+      }
+    }));
+    Paper = polymorphicFactory((_props, ref) => {
+      const props = useProps("Paper", defaultProps3, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        withBorder,
+        vars,
+        radius,
+        shadow,
+        variant,
+        mod,
+        ...others
+      } = props;
+      const getStyles = useStyles({
+        name: "Paper",
+        props,
+        classes: classes3,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
+        Box,
+        {
+          ref,
+          mod: [{ "data-with-border": withBorder }, mod],
+          ...getStyles("root"),
+          variant,
+          ...others
+        }
+      );
+    });
+    Paper.classes = classes3;
+    Paper.displayName = "@mantine/core/Paper";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Overlay/Overlay.module.css.mjs
+var classes4;
+var init_Overlay_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Overlay/Overlay.module.css.mjs"() {
+    "use client";
+    classes4 = { "root": "m_9814e45f" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Overlay/Overlay.mjs
+var import_jsx_runtime37, import_react54, defaultProps4, varsResolver2, Overlay;
+var init_Overlay = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Overlay/Overlay.mjs"() {
+    "use client";
+    import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
+    init_rem();
+    import_react54 = __toESM(require_react(), 1);
+    init_get_default_z_index();
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_rgba();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_polymorphic_factory();
+    init_Overlay_module_css();
+    defaultProps4 = {
+      zIndex: getDefaultZIndex("modal")
+    };
+    varsResolver2 = createVarsResolver(
+      (_2, { gradient, color, backgroundOpacity, blur, radius, zIndex }) => ({
+        root: {
+          "--overlay-bg": gradient || (color !== void 0 || backgroundOpacity !== void 0) && rgba(color || "#000", backgroundOpacity ?? 0.6) || void 0,
+          "--overlay-filter": blur ? `blur(${rem(blur)})` : void 0,
+          "--overlay-radius": radius === void 0 ? void 0 : getRadius(radius),
+          "--overlay-z-index": zIndex?.toString()
+        }
+      })
+    );
+    Overlay = polymorphicFactory((_props, ref) => {
+      const props = useProps("Overlay", defaultProps4, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        vars,
+        fixed,
+        center,
+        children,
+        radius,
+        zIndex,
+        gradient,
+        blur,
+        color,
+        backgroundOpacity,
+        mod,
+        ...others
+      } = props;
+      const getStyles = useStyles({
+        name: "Overlay",
+        props,
+        classes: classes4,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver: varsResolver2
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(Box, { ref, ...getStyles("root"), mod: [{ center, fixed }, mod], ...others, children });
+    });
+    Overlay.classes = classes4;
+    Overlay.displayName = "@mantine/core/Overlay";
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Portal/Portal.mjs
 function createPortalNode(props) {
   const node = document.createElement("div");
@@ -30407,21 +30957,21 @@ function createPortalNode(props) {
   typeof props.id === "string" && node.setAttribute("id", props.id);
   return node;
 }
-var import_jsx_runtime33, import_react44, import_react_dom, defaultProps2, Portal;
+var import_jsx_runtime38, import_react55, import_react_dom, defaultProps5, Portal;
 var init_Portal = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Portal/Portal.mjs"() {
     "use client";
-    import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
-    import_react44 = __toESM(require_react(), 1);
+    import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
+    import_react55 = __toESM(require_react(), 1);
     import_react_dom = __toESM(require_react_dom(), 1);
     init_esm();
     init_clsx();
     init_use_props();
-    defaultProps2 = {};
-    Portal = (0, import_react44.forwardRef)((props, ref) => {
-      const { children, target, ...others } = useProps("Portal", defaultProps2, props);
-      const [mounted, setMounted] = (0, import_react44.useState)(false);
-      const nodeRef = (0, import_react44.useRef)(null);
+    defaultProps5 = {};
+    Portal = (0, import_react55.forwardRef)((props, ref) => {
+      const { children, target, ...others } = useProps("Portal", defaultProps5, props);
+      const [mounted, setMounted] = (0, import_react55.useState)(false);
+      const nodeRef = (0, import_react55.useRef)(null);
       useIsomorphicEffect(() => {
         setMounted(true);
         nodeRef.current = !target ? createPortalNode(others) : typeof target === "string" ? document.querySelector(target) : target;
@@ -30438,7 +30988,7 @@ var init_Portal = __esm({
       if (!mounted || !nodeRef.current) {
         return null;
       }
-      return (0, import_react_dom.createPortal)(/* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_jsx_runtime33.Fragment, { children }), nodeRef.current);
+      return (0, import_react_dom.createPortal)(/* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_jsx_runtime38.Fragment, { children }), nodeRef.current);
     });
     Portal.displayName = "@mantine/core/Portal";
   }
@@ -30447,15 +30997,15 @@ var init_Portal = __esm({
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Portal/OptionalPortal.mjs
 function OptionalPortal({ withinPortal = true, children, ...others }) {
   if (withinPortal) {
-    return /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(Portal, { ...others, children });
+    return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Portal, { ...others, children });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_jsx_runtime34.Fragment, { children });
+  return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(import_jsx_runtime39.Fragment, { children });
 }
-var import_jsx_runtime34;
+var import_jsx_runtime39;
 var init_OptionalPortal = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Portal/OptionalPortal.mjs"() {
     "use client";
-    import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
     init_Portal();
     OptionalPortal.displayName = "@mantine/core/OptionalPortal";
   }
@@ -30648,11 +31198,11 @@ function useTransition({
   const theme2 = useMantineTheme();
   const shouldReduceMotion = useReducedMotion();
   const reduceMotion = theme2.respectReducedMotion ? shouldReduceMotion : false;
-  const [transitionDuration, setTransitionDuration] = (0, import_react45.useState)(reduceMotion ? 0 : duration);
-  const [transitionStatus, setStatus] = (0, import_react45.useState)(mounted ? "entered" : "exited");
-  const transitionTimeoutRef = (0, import_react45.useRef)(-1);
-  const delayTimeoutRef = (0, import_react45.useRef)(-1);
-  const rafRef = (0, import_react45.useRef)(-1);
+  const [transitionDuration, setTransitionDuration] = (0, import_react56.useState)(reduceMotion ? 0 : duration);
+  const [transitionStatus, setStatus] = (0, import_react56.useState)(mounted ? "entered" : "exited");
+  const transitionTimeoutRef = (0, import_react56.useRef)(-1);
+  const delayTimeoutRef = (0, import_react56.useRef)(-1);
+  const rafRef = (0, import_react56.useRef)(-1);
   const handleStateChange = (shouldMount) => {
     const preHandler = shouldMount ? onEnter : onExit;
     const handler2 = shouldMount ? onEntered : onExited;
@@ -30696,7 +31246,7 @@ function useTransition({
   useDidUpdate(() => {
     handleTransitionWithDelay(mounted);
   }, [mounted]);
-  (0, import_react45.useEffect)(
+  (0, import_react56.useEffect)(
     () => () => {
       window.clearTimeout(transitionTimeoutRef.current);
       cancelAnimationFrame(rafRef.current);
@@ -30709,14 +31259,14 @@ function useTransition({
     transitionTimingFunction: timingFunction || "ease"
   };
 }
-var import_react45, import_react_dom2, import_jsx_runtime35;
+var import_react56, import_react_dom2, import_jsx_runtime40;
 var init_use_transition = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Transition/use-transition.mjs"() {
     "use client";
-    import_react45 = __toESM(require_react(), 1);
+    import_react56 = __toESM(require_react(), 1);
     import_react_dom2 = __toESM(require_react_dom(), 1);
     init_esm();
-    import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
     init_clsx();
     init_MantineThemeProvider();
   }
@@ -30751,9 +31301,9 @@ function Transition({
     exitDelay
   });
   if (transitionDuration === 0) {
-    return mounted ? /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_jsx_runtime36.Fragment, { children: children({}) }) : keepMounted ? children({ display: "none" }) : null;
+    return mounted ? /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(import_jsx_runtime41.Fragment, { children: children({}) }) : keepMounted ? children({ display: "none" }) : null;
   }
-  return transitionStatus === "exited" ? keepMounted ? children({ display: "none" }) : null : /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_jsx_runtime36.Fragment, { children: children(
+  return transitionStatus === "exited" ? keepMounted ? children({ display: "none" }) : null : /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(import_jsx_runtime41.Fragment, { children: children(
     getTransitionStyles({
       transition,
       duration: transitionDuration,
@@ -30762,86 +31312,119 @@ function Transition({
     })
   ) });
 }
-var import_jsx_runtime36;
+var import_jsx_runtime41;
 var init_Transition = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Transition/Transition.mjs"() {
     "use client";
-    import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
     init_get_transition_styles();
     init_use_transition();
     Transition.displayName = "@mantine/core/Transition";
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/FocusTrap/FocusTrap.mjs
+function FocusTrap({
+  children,
+  active = true,
+  refProp = "ref",
+  innerRef
+}) {
+  const focusTrapRef = useFocusTrap(active);
+  const ref = useMergedRef(focusTrapRef, innerRef);
+  if (!isElement(children)) {
+    return children;
+  }
+  return (0, import_react57.cloneElement)(children, { [refProp]: ref });
+}
+function FocusTrapInitialFocus(props) {
+  return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(VisuallyHidden, { tabIndex: -1, "data-autofocus": true, ...props });
+}
+var import_jsx_runtime42, import_react57;
+var init_FocusTrap = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/FocusTrap/FocusTrap.mjs"() {
+    "use client";
+    import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+    import_react57 = __toESM(require_react(), 1);
+    init_esm();
+    init_is_element();
+    init_clsx();
+    init_VisuallyHidden();
+    FocusTrap.displayName = "@mantine/core/FocusTrap";
+    FocusTrapInitialFocus.displayName = "@mantine/core/FocusTrapInitialFocus";
+    FocusTrap.InitialFocus = FocusTrapInitialFocus;
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/Loader.module.css.mjs
-var classes2;
+var classes5;
 var init_Loader_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/Loader.module.css.mjs"() {
     "use client";
-    classes2 = { "root": "m_5ae2e3c", "barsLoader": "m_7a2bd4cd", "bar": "m_870bb79", "bars-loader-animation": "m_5d2b3b9d", "dotsLoader": "m_4e3f22d7", "dot": "m_870c4af", "loader-dots-animation": "m_aac34a1", "ovalLoader": "m_b34414df", "oval-loader-animation": "m_f8e89c4b" };
+    classes5 = { "root": "m_5ae2e3c", "barsLoader": "m_7a2bd4cd", "bar": "m_870bb79", "bars-loader-animation": "m_5d2b3b9d", "dotsLoader": "m_4e3f22d7", "dot": "m_870c4af", "loader-dots-animation": "m_aac34a1", "ovalLoader": "m_b34414df", "oval-loader-animation": "m_f8e89c4b" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Bars.mjs
-var import_jsx_runtime37, import_react46, Bars;
+var import_jsx_runtime43, import_react58, Bars;
 var init_Bars = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Bars.mjs"() {
     "use client";
-    import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
-    import_react46 = __toESM(require_react(), 1);
+    import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+    import_react58 = __toESM(require_react(), 1);
     init_clsx();
     init_Box();
     init_Loader_module_css();
-    Bars = (0, import_react46.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)(Box, { component: "span", className: clsx_default(classes2.barsLoader, className), ...others, ref, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: classes2.bar }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: classes2.bar }),
-      /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: classes2.bar })
+    Bars = (0, import_react58.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Box, { component: "span", className: clsx_default(classes5.barsLoader, className), ...others, ref, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("span", { className: classes5.bar }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("span", { className: classes5.bar }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("span", { className: classes5.bar })
     ] }));
     Bars.displayName = "@mantine/core/Bars";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Dots.mjs
-var import_jsx_runtime38, import_react47, Dots;
+var import_jsx_runtime44, import_react59, Dots;
 var init_Dots = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Dots.mjs"() {
     "use client";
-    import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
-    import_react47 = __toESM(require_react(), 1);
+    import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
+    import_react59 = __toESM(require_react(), 1);
     init_clsx();
     init_Box();
     init_Loader_module_css();
-    Dots = (0, import_react47.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime38.jsxs)(Box, { component: "span", className: clsx_default(classes2.dotsLoader, className), ...others, ref, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: classes2.dot }),
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: classes2.dot }),
-      /* @__PURE__ */ (0, import_jsx_runtime38.jsx)("span", { className: classes2.dot })
+    Dots = (0, import_react59.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Box, { component: "span", className: clsx_default(classes5.dotsLoader, className), ...others, ref, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: classes5.dot }),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: classes5.dot }),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: classes5.dot })
     ] }));
     Dots.displayName = "@mantine/core/Dots";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Oval.mjs
-var import_jsx_runtime39, import_react48, Oval;
+var import_jsx_runtime45, import_react60, Oval;
 var init_Oval = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/loaders/Oval.mjs"() {
     "use client";
-    import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
-    import_react48 = __toESM(require_react(), 1);
+    import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+    import_react60 = __toESM(require_react(), 1);
     init_clsx();
     init_Box();
     init_Loader_module_css();
-    Oval = (0, import_react48.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(Box, { component: "span", className: clsx_default(classes2.ovalLoader, className), ...others, ref }));
+    Oval = (0, import_react60.forwardRef)(({ className, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Box, { component: "span", className: clsx_default(classes5.ovalLoader, className), ...others, ref }));
     Oval.displayName = "@mantine/core/Oval";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/Loader.mjs
-var import_jsx_runtime40, import_react49, defaultLoaders, defaultProps3, varsResolver, Loader;
+var import_jsx_runtime46, import_react61, defaultLoaders, defaultProps6, varsResolver3, Loader;
 var init_Loader = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Loader/Loader.mjs"() {
     "use client";
-    import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
-    import_react49 = __toESM(require_react(), 1);
+    import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
+    import_react61 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -30859,18 +31442,18 @@ var init_Loader = __esm({
       oval: Oval,
       dots: Dots
     };
-    defaultProps3 = {
+    defaultProps6 = {
       loaders: defaultLoaders,
       type: "oval"
     };
-    varsResolver = createVarsResolver((theme2, { size, color }) => ({
+    varsResolver3 = createVarsResolver((theme2, { size, color }) => ({
       root: {
         "--loader-size": getSize(size, "loader-size"),
         "--loader-color": color ? getThemeColor(color, theme2) : void 0
       }
     }));
     Loader = factory((_props, ref) => {
-      const props = useProps("Loader", defaultProps3, _props);
+      const props = useProps("Loader", defaultProps6, _props);
       const {
         size,
         color,
@@ -30889,19 +31472,19 @@ var init_Loader = __esm({
       const getStyles = useStyles({
         name: "Loader",
         props,
-        classes: classes2,
+        classes: classes5,
         className,
         style,
         classNames,
         styles,
         unstyled,
         vars,
-        varsResolver
+        varsResolver: varsResolver3
       });
       if (children) {
-        return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Box, { ...getStyles("root"), ref, ...others, children });
+        return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Box, { ...getStyles("root"), ref, ...others, children });
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
         Box,
         {
           ...getStyles("root"),
@@ -30914,20 +31497,20 @@ var init_Loader = __esm({
       );
     });
     Loader.defaultLoaders = defaultLoaders;
-    Loader.classes = classes2;
+    Loader.classes = classes5;
     Loader.displayName = "@mantine/core/Loader";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseIcon.mjs
-var import_jsx_runtime41, import_react50, CloseIcon;
+var import_jsx_runtime47, import_react62, CloseIcon;
 var init_CloseIcon = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseIcon.mjs"() {
     "use client";
-    import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
-    import_react50 = __toESM(require_react(), 1);
-    CloseIcon = (0, import_react50.forwardRef)(
-      ({ size = "var(--cb-icon-size, 70%)", style, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
+    import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
+    import_react62 = __toESM(require_react(), 1);
+    CloseIcon = (0, import_react62.forwardRef)(
+      ({ size = "var(--cb-icon-size, 70%)", style, ...others }, ref) => /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
         "svg",
         {
           viewBox: "0 0 15 15",
@@ -30936,7 +31519,7 @@ var init_CloseIcon = __esm({
           style: { ...style, width: size, height: size },
           ref,
           ...others,
-          children: /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
             "path",
             {
               d: "M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z",
@@ -30953,22 +31536,22 @@ var init_CloseIcon = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.module.css.mjs
-var classes3;
+var classes6;
 var init_CloseButton_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.module.css.mjs"() {
     "use client";
-    classes3 = { "root": "m_86a44da5", "root--subtle": "m_220c80f2" };
+    classes6 = { "root": "m_86a44da5", "root--subtle": "m_220c80f2" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.mjs
-var import_jsx_runtime42, import_react51, defaultProps4, varsResolver2, CloseButton;
+var import_jsx_runtime48, import_react63, defaultProps7, varsResolver4, CloseButton;
 var init_CloseButton = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.mjs"() {
     "use client";
-    import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
     init_rem();
-    import_react51 = __toESM(require_react(), 1);
+    import_react63 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -30978,10 +31561,10 @@ var init_CloseButton = __esm({
     init_UnstyledButton();
     init_CloseIcon();
     init_CloseButton_module_css();
-    defaultProps4 = {
+    defaultProps7 = {
       variant: "subtle"
     };
-    varsResolver2 = createVarsResolver((_2, { size, radius, iconSize }) => ({
+    varsResolver4 = createVarsResolver((_2, { size, radius, iconSize }) => ({
       root: {
         "--cb-size": getSize(size, "cb-size"),
         "--cb-radius": radius === void 0 ? void 0 : getRadius(radius),
@@ -30989,7 +31572,7 @@ var init_CloseButton = __esm({
       }
     }));
     CloseButton = polymorphicFactory((_props, ref) => {
-      const props = useProps("CloseButton", defaultProps4, _props);
+      const props = useProps("CloseButton", defaultProps7, _props);
       const {
         iconSize,
         children,
@@ -31013,14 +31596,14 @@ var init_CloseButton = __esm({
         props,
         className,
         style,
-        classes: classes3,
+        classes: classes6,
         classNames,
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver2
+        varsResolver: varsResolver4
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(
+      return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(
         UnstyledButton,
         {
           ref,
@@ -31031,34 +31614,710 @@ var init_CloseButton = __esm({
           mod: [{ disabled: disabled || dataDisabled }, mod],
           ...getStyles("root", { variant, active: !disabled && !dataDisabled }),
           children: [
-            icon || /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CloseIcon, {}),
+            icon || /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(CloseIcon, {}),
             children
           ]
         }
       );
     });
-    CloseButton.classes = classes3;
+    CloseButton.classes = classes6;
     CloseButton.displayName = "@mantine/core/CloseButton";
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/filter-falsy-children/filter-falsy-children.mjs
+function filterFalsyChildren(children) {
+  return import_react64.Children.toArray(children).filter(Boolean);
+}
+var import_react64;
+var init_filter_falsy_children = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/filter-falsy-children/filter-falsy-children.mjs"() {
+    "use client";
+    import_react64 = __toESM(require_react(), 1);
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/Group.module.css.mjs
+var classes7;
+var init_Group_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/Group.module.css.mjs"() {
+    "use client";
+    classes7 = { "root": "m_4081bf90" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/Group.mjs
+var import_jsx_runtime49, import_react65, defaultProps8, varsResolver5, Group;
+var init_Group = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Group/Group.mjs"() {
+    "use client";
+    import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
+    import_react65 = __toESM(require_react(), 1);
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_factory();
+    init_filter_falsy_children();
+    init_Group_module_css();
+    defaultProps8 = {
+      preventGrowOverflow: true,
+      gap: "md",
+      align: "center",
+      justify: "flex-start",
+      wrap: "wrap"
+    };
+    varsResolver5 = createVarsResolver(
+      (_2, { grow, preventGrowOverflow, gap, align, justify, wrap }, { childWidth }) => ({
+        root: {
+          "--group-child-width": grow && preventGrowOverflow ? childWidth : void 0,
+          "--group-gap": getSpacing(gap),
+          "--group-align": align,
+          "--group-justify": justify,
+          "--group-wrap": wrap
+        }
+      })
+    );
+    Group = factory((_props, ref) => {
+      const props = useProps("Group", defaultProps8, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        children,
+        gap,
+        align,
+        justify,
+        wrap,
+        grow,
+        preventGrowOverflow,
+        vars,
+        variant,
+        __size,
+        mod,
+        ...others
+      } = props;
+      const filteredChildren = filterFalsyChildren(children);
+      const childrenCount = filteredChildren.length;
+      const resolvedGap = getSpacing(gap ?? "md");
+      const childWidth = `calc(${100 / childrenCount}% - (${resolvedGap} - ${resolvedGap} / ${childrenCount}))`;
+      const stylesCtx = { childWidth };
+      const getStyles = useStyles({
+        name: "Group",
+        props,
+        stylesCtx,
+        className,
+        style,
+        classes: classes7,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver: varsResolver5
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+        Box,
+        {
+          ...getStyles("root"),
+          ref,
+          variant,
+          mod: [{ grow }, mod],
+          size: __size,
+          ...others,
+          children: filteredChildren
+        }
+      );
+    });
+    Group.classes = classes7;
+    Group.displayName = "@mantine/core/Group";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.context.mjs
+var import_react66, import_jsx_runtime50, ModalBaseProvider, useModalBaseContext;
+var init_ModalBase_context = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.context.mjs"() {
+    "use client";
+    import_react66 = __toESM(require_react(), 1);
+    init_create_safe_context();
+    import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
+    init_clsx();
+    [ModalBaseProvider, useModalBaseContext] = createSafeContext(
+      "ModalBase component was not found in tree"
+    );
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-lock-scroll.mjs
+function useLockScroll({ opened, transitionDuration }) {
+  const [shouldLockScroll, setShouldLockScroll] = (0, import_react67.useState)(opened);
+  const timeout = (0, import_react67.useRef)(-1);
+  const reduceMotion = useReducedMotion();
+  const _transitionDuration = reduceMotion ? 0 : transitionDuration;
+  (0, import_react67.useEffect)(() => {
+    if (opened) {
+      setShouldLockScroll(true);
+      window.clearTimeout(timeout.current);
+    } else if (_transitionDuration === 0) {
+      setShouldLockScroll(false);
+    } else {
+      timeout.current = window.setTimeout(() => setShouldLockScroll(false), _transitionDuration);
+    }
+    return () => window.clearTimeout(timeout.current);
+  }, [opened, _transitionDuration]);
+  return shouldLockScroll;
+}
+var import_react67;
+var init_use_lock_scroll = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-lock-scroll.mjs"() {
+    "use client";
+    import_react67 = __toESM(require_react(), 1);
+    init_esm();
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal.mjs
+function useModal({
+  id,
+  transitionProps,
+  opened,
+  trapFocus,
+  closeOnEscape,
+  onClose,
+  returnFocus
+}) {
+  const _id = useId(id);
+  const [titleMounted, setTitleMounted] = (0, import_react68.useState)(false);
+  const [bodyMounted, setBodyMounted] = (0, import_react68.useState)(false);
+  const transitionDuration = typeof transitionProps?.duration === "number" ? transitionProps?.duration : 200;
+  const shouldLockScroll = useLockScroll({ opened, transitionDuration });
+  useWindowEvent(
+    "keydown",
+    (event) => {
+      if (event.key === "Escape" && closeOnEscape && opened) {
+        const shouldTrigger = event.target?.getAttribute("data-mantine-stop-propagation") !== "true";
+        shouldTrigger && onClose();
+      }
+    },
+    { capture: true }
+  );
+  useFocusReturn({ opened, shouldReturnFocus: trapFocus && returnFocus });
+  return {
+    _id,
+    titleMounted,
+    bodyMounted,
+    shouldLockScroll,
+    setTitleMounted,
+    setBodyMounted
+  };
+}
+var import_react68;
+var init_use_modal = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal.mjs"() {
+    "use client";
+    import_react68 = __toESM(require_react(), 1);
+    init_esm();
+    init_use_lock_scroll();
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.mjs
+var import_jsx_runtime51, import_react69, import_react_remove_scroll, ModalBase;
+var init_ModalBase = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.mjs"() {
+    "use client";
+    import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
+    import_react69 = __toESM(require_react(), 1);
+    import_react_remove_scroll = __toESM(require_es56(), 1);
+    init_get_default_z_index();
+    init_get_size();
+    init_clsx();
+    init_Box();
+    init_OptionalPortal();
+    init_ModalBase_context();
+    init_use_modal();
+    ModalBase = (0, import_react69.forwardRef)(
+      ({
+        keepMounted,
+        opened,
+        onClose,
+        id,
+        transitionProps,
+        onExitTransitionEnd,
+        onEnterTransitionEnd,
+        trapFocus,
+        closeOnEscape,
+        returnFocus,
+        closeOnClickOutside,
+        withinPortal,
+        portalProps,
+        lockScroll,
+        children,
+        zIndex,
+        shadow,
+        padding,
+        __vars,
+        unstyled,
+        removeScrollProps,
+        ...others
+      }, ref) => {
+        const { _id, titleMounted, bodyMounted, shouldLockScroll, setTitleMounted, setBodyMounted } = useModal({ id, transitionProps, opened, trapFocus, closeOnEscape, onClose, returnFocus });
+        const { key: removeScrollKey, ...otherRemoveScrollProps } = removeScrollProps || {};
+        return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(OptionalPortal, { ...portalProps, withinPortal, children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+          ModalBaseProvider,
+          {
+            value: {
+              opened,
+              onClose,
+              closeOnClickOutside,
+              onExitTransitionEnd,
+              onEnterTransitionEnd,
+              transitionProps: { ...transitionProps, keepMounted },
+              getTitleId: () => `${_id}-title`,
+              getBodyId: () => `${_id}-body`,
+              titleMounted,
+              bodyMounted,
+              setTitleMounted,
+              setBodyMounted,
+              trapFocus,
+              closeOnEscape,
+              zIndex,
+              unstyled
+            },
+            children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+              import_react_remove_scroll.RemoveScroll,
+              {
+                enabled: shouldLockScroll && lockScroll,
+                ...otherRemoveScrollProps,
+                children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+                  Box,
+                  {
+                    ref,
+                    ...others,
+                    __vars: {
+                      ...__vars,
+                      "--mb-z-index": (zIndex || getDefaultZIndex("modal")).toString(),
+                      "--mb-shadow": getShadow(shadow),
+                      "--mb-padding": getSpacing(padding)
+                    },
+                    children
+                  }
+                )
+              },
+              removeScrollKey
+            )
+          }
+        ) });
+      }
+    );
+    ModalBase.displayName = "@mantine/core/ModalBase";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-body-id.mjs
+function useModalBodyId() {
+  const ctx = useModalBaseContext();
+  (0, import_react70.useEffect)(() => {
+    ctx.setBodyMounted(true);
+    return () => ctx.setBodyMounted(false);
+  }, []);
+  return ctx.getBodyId();
+}
+var import_react70;
+var init_use_modal_body_id = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-body-id.mjs"() {
+    "use client";
+    import_react70 = __toESM(require_react(), 1);
+    init_ModalBase_context();
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.module.css.mjs
+var classes8;
+var init_ModalBase_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.module.css.mjs"() {
+    "use client";
+    classes8 = { "title": "m_615af6c9", "header": "m_b5489c3c", "inner": "m_60c222c7", "content": "m_fd1ab0aa", "close": "m_606cb269", "body": "m_5df29311" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseBody.mjs
+var import_jsx_runtime52, import_react71, ModalBaseBody;
+var init_ModalBaseBody = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseBody.mjs"() {
+    "use client";
+    import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
+    import_react71 = __toESM(require_react(), 1);
+    init_clsx();
+    init_Box();
+    init_ModalBase_context();
+    init_use_modal_body_id();
+    init_ModalBase_module_css();
+    ModalBaseBody = (0, import_react71.forwardRef)(
+      ({ className, ...others }, ref) => {
+        const bodyId = useModalBodyId();
+        const ctx = useModalBaseContext();
+        return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          Box,
+          {
+            ref,
+            ...others,
+            id: bodyId,
+            className: clsx_default({ [classes8.body]: !ctx.unstyled }, className)
+          }
+        );
+      }
+    );
+    ModalBaseBody.displayName = "@mantine/core/ModalBaseBody";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseCloseButton.mjs
+var import_jsx_runtime53, import_react72, ModalBaseCloseButton;
+var init_ModalBaseCloseButton = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseCloseButton.mjs"() {
+    "use client";
+    import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
+    import_react72 = __toESM(require_react(), 1);
+    init_clsx();
+    init_CloseButton();
+    init_ModalBase_context();
+    init_ModalBase_module_css();
+    ModalBaseCloseButton = (0, import_react72.forwardRef)(
+      ({ className, onClick, ...others }, ref) => {
+        const ctx = useModalBaseContext();
+        return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
+          CloseButton,
+          {
+            ref,
+            ...others,
+            onClick: (event) => {
+              ctx.onClose();
+              onClick?.(event);
+            },
+            className: clsx_default({ [classes8.close]: !ctx.unstyled }, className),
+            unstyled: ctx.unstyled
+          }
+        );
+      }
+    );
+    ModalBaseCloseButton.displayName = "@mantine/core/ModalBaseCloseButton";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseContent.mjs
+var import_jsx_runtime54, import_react73, ModalBaseContent;
+var init_ModalBaseContent = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseContent.mjs"() {
+    "use client";
+    import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
+    import_react73 = __toESM(require_react(), 1);
+    init_clsx();
+    init_FocusTrap();
+    init_Paper();
+    init_Transition();
+    init_ModalBase_context();
+    init_ModalBase_module_css();
+    ModalBaseContent = (0, import_react73.forwardRef)(
+      ({ transitionProps, className, innerProps, onKeyDown, style, ...others }, ref) => {
+        const ctx = useModalBaseContext();
+        return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+          Transition,
+          {
+            mounted: ctx.opened,
+            transition: "pop",
+            ...ctx.transitionProps,
+            onExited: () => {
+              ctx.onExitTransitionEnd?.();
+              ctx.transitionProps?.onExited?.();
+            },
+            onEntered: () => {
+              ctx.onEnterTransitionEnd?.();
+              ctx.transitionProps?.onEntered?.();
+            },
+            ...transitionProps,
+            children: (transitionStyles) => /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+              "div",
+              {
+                ...innerProps,
+                className: clsx_default({ [classes8.inner]: !ctx.unstyled }, innerProps.className),
+                children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(FocusTrap, { active: ctx.opened && ctx.trapFocus, innerRef: ref, children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+                  Paper,
+                  {
+                    ...others,
+                    component: "section",
+                    role: "dialog",
+                    tabIndex: -1,
+                    "aria-modal": true,
+                    "aria-describedby": ctx.bodyMounted ? ctx.getBodyId() : void 0,
+                    "aria-labelledby": ctx.titleMounted ? ctx.getTitleId() : void 0,
+                    style: [style, transitionStyles],
+                    className: clsx_default({ [classes8.content]: !ctx.unstyled }, className),
+                    unstyled: ctx.unstyled,
+                    children: others.children
+                  }
+                ) })
+              }
+            )
+          }
+        );
+      }
+    );
+    ModalBaseContent.displayName = "@mantine/core/ModalBaseContent";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseHeader.mjs
+var import_jsx_runtime55, import_react74, ModalBaseHeader;
+var init_ModalBaseHeader = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseHeader.mjs"() {
+    "use client";
+    import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
+    import_react74 = __toESM(require_react(), 1);
+    init_clsx();
+    init_Box();
+    init_ModalBase_context();
+    init_ModalBase_module_css();
+    ModalBaseHeader = (0, import_react74.forwardRef)(
+      ({ className, ...others }, ref) => {
+        const ctx = useModalBaseContext();
+        return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          Box,
+          {
+            component: "header",
+            ref,
+            className: clsx_default({ [classes8.header]: !ctx.unstyled }, className),
+            ...others
+          }
+        );
+      }
+    );
+    ModalBaseHeader.displayName = "@mantine/core/ModalBaseHeader";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-transition.mjs
+function useModalTransition(transitionOverride) {
+  const ctx = useModalBaseContext();
+  return { ...DEFAULT_TRANSITION, ...ctx.transitionProps, ...transitionOverride };
+}
+var DEFAULT_TRANSITION;
+var init_use_modal_transition = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-transition.mjs"() {
+    "use client";
+    init_ModalBase_context();
+    DEFAULT_TRANSITION = {
+      duration: 200,
+      timingFunction: "ease",
+      transition: "fade"
+    };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseOverlay.mjs
+var import_jsx_runtime56, import_react75, ModalBaseOverlay;
+var init_ModalBaseOverlay = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseOverlay.mjs"() {
+    "use client";
+    import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
+    import_react75 = __toESM(require_react(), 1);
+    init_Overlay();
+    init_Transition();
+    init_ModalBase_context();
+    init_use_modal_transition();
+    ModalBaseOverlay = (0, import_react75.forwardRef)(
+      ({ onClick, transitionProps, style, visible: visible2, ...others }, ref) => {
+        const ctx = useModalBaseContext();
+        const transition = useModalTransition(transitionProps);
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          Transition,
+          {
+            mounted: visible2 !== void 0 ? visible2 : ctx.opened,
+            ...transition,
+            transition: "fade",
+            children: (transitionStyles) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              Overlay,
+              {
+                ref,
+                fixed: true,
+                style: [style, transitionStyles],
+                zIndex: ctx.zIndex,
+                unstyled: ctx.unstyled,
+                onClick: (event) => {
+                  onClick?.(event);
+                  ctx.closeOnClickOutside && ctx.onClose();
+                },
+                ...others
+              }
+            )
+          }
+        );
+      }
+    );
+    ModalBaseOverlay.displayName = "@mantine/core/ModalBaseOverlay";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-title-id.mjs
+function useModalTitle() {
+  const ctx = useModalBaseContext();
+  (0, import_react76.useEffect)(() => {
+    ctx.setTitleMounted(true);
+    return () => ctx.setTitleMounted(false);
+  }, []);
+  return ctx.getTitleId();
+}
+var import_react76;
+var init_use_modal_title_id = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/use-modal-title-id.mjs"() {
+    "use client";
+    import_react76 = __toESM(require_react(), 1);
+    init_ModalBase_context();
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseTitle.mjs
+var import_jsx_runtime57, import_react77, ModalBaseTitle;
+var init_ModalBaseTitle = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseTitle.mjs"() {
+    "use client";
+    import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
+    import_react77 = __toESM(require_react(), 1);
+    init_clsx();
+    init_Box();
+    init_ModalBase_context();
+    init_use_modal_title_id();
+    init_ModalBase_module_css();
+    ModalBaseTitle = (0, import_react77.forwardRef)(
+      ({ className, ...others }, ref) => {
+        const id = useModalTitle();
+        const ctx = useModalBaseContext();
+        return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+          Box,
+          {
+            component: "h2",
+            ref,
+            className: clsx_default({ [classes8.title]: !ctx.unstyled }, className),
+            ...others,
+            id
+          }
+        );
+      }
+    );
+    ModalBaseTitle.displayName = "@mantine/core/ModalBaseTitle";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/NativeScrollArea.mjs
+function NativeScrollArea({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(import_jsx_runtime58.Fragment, { children });
+}
+var import_jsx_runtime58;
+var init_NativeScrollArea = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/ModalBase/NativeScrollArea.mjs"() {
+    "use client";
+    import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Burger/Burger.module.css.mjs
+var classes9;
+var init_Burger_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Burger/Burger.module.css.mjs"() {
+    "use client";
+    classes9 = { "root": "m_fea6bf1a", "burger": "m_d4fb9cad" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Burger/Burger.mjs
+var import_jsx_runtime59, import_react78, defaultProps9, varsResolver6, Burger;
+var init_Burger = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Burger/Burger.mjs"() {
+    "use client";
+    import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
+    init_rem();
+    import_react78 = __toESM(require_react(), 1);
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_get_theme_color();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_factory();
+    init_UnstyledButton();
+    init_Burger_module_css();
+    defaultProps9 = {};
+    varsResolver6 = createVarsResolver(
+      (theme2, { color, size, lineSize, transitionDuration, transitionTimingFunction }) => ({
+        root: {
+          "--burger-color": color ? getThemeColor(color, theme2) : void 0,
+          "--burger-size": getSize(size, "burger-size"),
+          "--burger-line-size": lineSize ? rem(lineSize) : void 0,
+          "--burger-transition-duration": transitionDuration === void 0 ? void 0 : `${transitionDuration}ms`,
+          "--burger-transition-timing-function": transitionTimingFunction
+        }
+      })
+    );
+    Burger = factory((_props, ref) => {
+      const props = useProps("Burger", defaultProps9, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        vars,
+        opened,
+        children,
+        transitionDuration,
+        transitionTimingFunction,
+        lineSize,
+        ...others
+      } = props;
+      const getStyles = useStyles({
+        name: "Burger",
+        classes: classes9,
+        props,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver: varsResolver6
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(UnstyledButton, { ...getStyles("root"), ref, ...others, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Box, { mod: ["reduce-motion", { opened }], ...getStyles("burger") }),
+        children
+      ] });
+    });
+    Burger.classes = classes9;
+    Burger.displayName = "@mantine/core/Burger";
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/Button.module.css.mjs
-var classes4;
+var classes10;
 var init_Button_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/Button.module.css.mjs"() {
     "use client";
-    classes4 = { "root": "m_77c9d27d", "inner": "m_80f1301b", "label": "m_811560b9", "section": "m_a74036a", "loader": "m_a25b86ee", "group": "m_80d6d844", "groupSection": "m_70be2a01" };
+    classes10 = { "root": "m_77c9d27d", "inner": "m_80f1301b", "label": "m_811560b9", "section": "m_a74036a", "loader": "m_a25b86ee", "group": "m_80d6d844", "groupSection": "m_70be2a01" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/ButtonGroup/ButtonGroup.mjs
-var import_jsx_runtime43, import_react52, defaultProps5, varsResolver3, ButtonGroup;
+var import_jsx_runtime60, import_react79, defaultProps10, varsResolver7, ButtonGroup;
 var init_ButtonGroup = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/ButtonGroup/ButtonGroup.mjs"() {
     "use client";
-    import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
     init_rem();
-    import_react52 = __toESM(require_react(), 1);
+    import_react79 = __toESM(require_react(), 1);
     init_create_vars_resolver();
     init_clsx();
     init_use_props();
@@ -31066,14 +32325,14 @@ var init_ButtonGroup = __esm({
     init_Box();
     init_factory();
     init_Button_module_css();
-    defaultProps5 = {
+    defaultProps10 = {
       orientation: "horizontal"
     };
-    varsResolver3 = createVarsResolver((_2, { borderWidth }) => ({
+    varsResolver7 = createVarsResolver((_2, { borderWidth }) => ({
       group: { "--button-border-width": rem(borderWidth) }
     }));
     ButtonGroup = factory((_props, ref) => {
-      const props = useProps("ButtonGroup", defaultProps5, _props);
+      const props = useProps("ButtonGroup", defaultProps10, _props);
       const {
         className,
         style,
@@ -31086,21 +32345,21 @@ var init_ButtonGroup = __esm({
         variant,
         mod,
         ...others
-      } = useProps("ButtonGroup", defaultProps5, _props);
+      } = useProps("ButtonGroup", defaultProps10, _props);
       const getStyles = useStyles({
         name: "ButtonGroup",
         props,
-        classes: classes4,
+        classes: classes10,
         className,
         style,
         classNames,
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver3,
+        varsResolver: varsResolver7,
         rootSelector: "group"
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
         Box,
         {
           ...getStyles("group"),
@@ -31112,18 +32371,18 @@ var init_ButtonGroup = __esm({
         }
       );
     });
-    ButtonGroup.classes = classes4;
+    ButtonGroup.classes = classes10;
     ButtonGroup.displayName = "@mantine/core/ButtonGroup";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/ButtonGroupSection/ButtonGroupSection.mjs
-var import_jsx_runtime44, import_react53, defaultProps6, varsResolver4, ButtonGroupSection;
+var import_jsx_runtime61, import_react80, defaultProps11, varsResolver8, ButtonGroupSection;
 var init_ButtonGroupSection = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/ButtonGroupSection/ButtonGroupSection.mjs"() {
     "use client";
-    import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
-    import_react53 = __toESM(require_react(), 1);
+    import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
+    import_react80 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -31132,8 +32391,8 @@ var init_ButtonGroupSection = __esm({
     init_Box();
     init_factory();
     init_Button_module_css();
-    defaultProps6 = {};
-    varsResolver4 = createVarsResolver(
+    defaultProps11 = {};
+    varsResolver8 = createVarsResolver(
       (theme2, { radius, color, gradient, variant, autoContrast, size }) => {
         const colors = theme2.variantColorResolver({
           color: color || theme2.primaryColor,
@@ -31156,7 +32415,7 @@ var init_ButtonGroupSection = __esm({
       }
     );
     ButtonGroupSection = factory((_props, ref) => {
-      const props = useProps("ButtonGroupSection", defaultProps6, _props);
+      const props = useProps("ButtonGroupSection", defaultProps11, _props);
       const {
         className,
         style,
@@ -31169,35 +32428,35 @@ var init_ButtonGroupSection = __esm({
         radius,
         autoContrast,
         ...others
-      } = useProps("ButtonGroupSection", defaultProps6, _props);
+      } = useProps("ButtonGroupSection", defaultProps11, _props);
       const getStyles = useStyles({
         name: "ButtonGroupSection",
         props,
-        classes: classes4,
+        classes: classes10,
         className,
         style,
         classNames,
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver4,
+        varsResolver: varsResolver8,
         rootSelector: "groupSection"
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Box, { ...getStyles("groupSection"), ref, variant, ...others });
+      return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Box, { ...getStyles("groupSection"), ref, variant, ...others });
     });
-    ButtonGroupSection.classes = classes4;
+    ButtonGroupSection.classes = classes10;
     ButtonGroupSection.displayName = "@mantine/core/ButtonGroupSection";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/Button.mjs
-var import_jsx_runtime45, import_react54, loaderTransition, defaultProps7, varsResolver5, Button;
+var import_jsx_runtime62, import_react81, loaderTransition, defaultProps12, varsResolver9, Button;
 var init_Button = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Button/Button.mjs"() {
     "use client";
-    import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
     init_rem();
-    import_react54 = __toESM(require_react(), 1);
+    import_react81 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -31217,8 +32476,8 @@ var init_Button = __esm({
       common: { transformOrigin: "center" },
       transitionProperty: "transform, opacity"
     };
-    defaultProps7 = {};
-    varsResolver5 = createVarsResolver(
+    defaultProps12 = {};
+    varsResolver9 = createVarsResolver(
       (theme2, { radius, color, gradient, variant, size, justify, autoContrast }) => {
         const colors = theme2.variantColorResolver({
           color: color || theme2.primaryColor,
@@ -31244,7 +32503,7 @@ var init_Button = __esm({
       }
     );
     Button = polymorphicFactory((_props, ref) => {
-      const props = useProps("Button", defaultProps7, _props);
+      const props = useProps("Button", defaultProps12, _props);
       const {
         style,
         vars,
@@ -31271,18 +32530,18 @@ var init_Button = __esm({
       const getStyles = useStyles({
         name: "Button",
         props,
-        classes: classes4,
+        classes: classes10,
         className,
         style,
         classNames,
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver5
+        varsResolver: varsResolver9
       });
       const hasLeftSection = !!leftSection;
       const hasRightSection = !!rightSection;
-      return /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)(
+      return /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(
         UnstyledButton,
         {
           ref,
@@ -31302,7 +32561,7 @@ var init_Button = __esm({
           ],
           ...others,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Transition, { mounted: !!loading, transition: loaderTransition, duration: 150, children: (transitionStyles) => /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Box, { component: "span", ...getStyles("loader", { style: transitionStyles }), "aria-hidden": true, children: /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Transition, { mounted: !!loading, transition: loaderTransition, duration: 150, children: (transitionStyles) => /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Box, { component: "span", ...getStyles("loader", { style: transitionStyles }), "aria-hidden": true, children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
               Loader,
               {
                 color: "var(--button-color)",
@@ -31310,16 +32569,16 @@ var init_Button = __esm({
                 ...loaderProps
               }
             ) }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)("span", { ...getStyles("inner"), children: [
-              leftSection && /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Box, { component: "span", ...getStyles("section"), mod: { position: "left" }, children: leftSection }),
-              /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Box, { component: "span", mod: { loading }, ...getStyles("label"), children }),
-              rightSection && /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(Box, { component: "span", ...getStyles("section"), mod: { position: "right" }, children: rightSection })
+            /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)("span", { ...getStyles("inner"), children: [
+              leftSection && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Box, { component: "span", ...getStyles("section"), mod: { position: "left" }, children: leftSection }),
+              /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Box, { component: "span", mod: { loading }, ...getStyles("label"), children }),
+              rightSection && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Box, { component: "span", ...getStyles("section"), mod: { position: "right" }, children: rightSection })
             ] })
           ]
         }
       );
     });
-    Button.classes = classes4;
+    Button.classes = classes10;
     Button.displayName = "@mantine/core/Button";
     Button.Group = ButtonGroup;
     Button.GroupSection = ButtonGroupSection;
@@ -31327,21 +32586,21 @@ var init_Button = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Container/Container.module.css.mjs
-var classes5;
+var classes11;
 var init_Container_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Container/Container.module.css.mjs"() {
     "use client";
-    classes5 = { "root": "m_7485cace" };
+    classes11 = { "root": "m_7485cace" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Container/Container.mjs
-var import_jsx_runtime46, import_react55, defaultProps8, varsResolver6, Container;
+var import_jsx_runtime63, import_react82, defaultProps13, varsResolver10, Container;
 var init_Container = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Container/Container.mjs"() {
     "use client";
-    import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
-    import_react55 = __toESM(require_react(), 1);
+    import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
+    import_react82 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -31350,18 +32609,18 @@ var init_Container = __esm({
     init_Box();
     init_factory();
     init_Container_module_css();
-    defaultProps8 = {};
-    varsResolver6 = createVarsResolver((_2, { size, fluid }) => ({
+    defaultProps13 = {};
+    varsResolver10 = createVarsResolver((_2, { size, fluid }) => ({
       root: {
         "--container-size": fluid ? void 0 : getSize(size, "container-size")
       }
     }));
     Container = factory((_props, ref) => {
-      const props = useProps("Container", defaultProps8, _props);
+      const props = useProps("Container", defaultProps13, _props);
       const { classNames, className, style, styles, unstyled, vars, fluid, mod, ...others } = props;
       const getStyles = useStyles({
         name: "Container",
-        classes: classes5,
+        classes: classes11,
         props,
         className,
         style,
@@ -31369,31 +32628,503 @@ var init_Container = __esm({
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver6
+        varsResolver: varsResolver10
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Box, { ref, mod: [{ fluid }, mod], ...getStyles("root"), ...others });
+      return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(Box, { ref, mod: [{ fluid }, mod], ...getStyles("root"), ...others });
     });
-    Container.classes = classes5;
+    Container.classes = classes11;
     Container.displayName = "@mantine/core/Container";
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.context.mjs
+var import_react83, import_jsx_runtime64, DrawerProvider, useDrawerContext;
+var init_Drawer_context = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.context.mjs"() {
+    "use client";
+    import_react83 = __toESM(require_react(), 1);
+    init_create_safe_context();
+    import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
+    init_clsx();
+    [DrawerProvider, useDrawerContext] = createSafeContext(
+      "Drawer component was not found in tree"
+    );
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.module.css.mjs
+var classes12;
+var init_Drawer_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.module.css.mjs"() {
+    "use client";
+    classes12 = { "root": "m_f11b401e", "header": "m_5a7c2c9", "content": "m_b8a05bbd", "inner": "m_31cd769a" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerBody.mjs
+var import_jsx_runtime65, import_react84, defaultProps14, DrawerBody;
+var init_DrawerBody = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerBody.mjs"() {
+    "use client";
+    import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
+    import_react84 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseBody();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps14 = {};
+    DrawerBody = factory((_props, ref) => {
+      const props = useProps("DrawerBody", defaultProps14, _props);
+      const { classNames, className, style, styles, vars, ...others } = props;
+      const ctx = useDrawerContext();
+      return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+        ModalBaseBody,
+        {
+          ref,
+          ...ctx.getStyles("body", { classNames, style, styles, className }),
+          ...others
+        }
+      );
+    });
+    DrawerBody.classes = classes12;
+    DrawerBody.displayName = "@mantine/core/DrawerBody";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerCloseButton.mjs
+var import_jsx_runtime66, import_react85, defaultProps15, DrawerCloseButton;
+var init_DrawerCloseButton = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerCloseButton.mjs"() {
+    "use client";
+    import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
+    import_react85 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseCloseButton();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps15 = {};
+    DrawerCloseButton = factory((_props, ref) => {
+      const props = useProps("DrawerCloseButton", defaultProps15, _props);
+      const { classNames, className, style, styles, vars, ...others } = props;
+      const ctx = useDrawerContext();
+      return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+        ModalBaseCloseButton,
+        {
+          ref,
+          ...ctx.getStyles("close", { classNames, style, styles, className }),
+          ...others
+        }
+      );
+    });
+    DrawerCloseButton.classes = classes12;
+    DrawerCloseButton.displayName = "@mantine/core/DrawerCloseButton";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerContent.mjs
+var import_jsx_runtime67, import_react86, defaultProps16, DrawerContent;
+var init_DrawerContent = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerContent.mjs"() {
+    "use client";
+    import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
+    import_react86 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseContent();
+    init_NativeScrollArea();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps16 = {};
+    DrawerContent = factory((_props, ref) => {
+      const props = useProps("DrawerContent", defaultProps16, _props);
+      const { classNames, className, style, styles, vars, children, radius, __hidden, ...others } = props;
+      const ctx = useDrawerContext();
+      const Scroll = ctx.scrollAreaComponent || NativeScrollArea;
+      return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+        ModalBaseContent,
+        {
+          ...ctx.getStyles("content", { className, style, styles, classNames }),
+          innerProps: ctx.getStyles("inner", { className, style, styles, classNames }),
+          ref,
+          ...others,
+          radius: radius || ctx.radius || 0,
+          "data-hidden": __hidden || void 0,
+          children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(Scroll, { style: { height: "calc(100vh - var(--drawer-offset) * 2)" }, children })
+        }
+      );
+    });
+    DrawerContent.classes = classes12;
+    DrawerContent.displayName = "@mantine/core/DrawerContent";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerHeader.mjs
+var import_jsx_runtime68, import_react87, defaultProps17, DrawerHeader;
+var init_DrawerHeader = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerHeader.mjs"() {
+    "use client";
+    import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
+    import_react87 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseHeader();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps17 = {};
+    DrawerHeader = factory((_props, ref) => {
+      const props = useProps("DrawerHeader", defaultProps17, _props);
+      const { classNames, className, style, styles, vars, ...others } = props;
+      const ctx = useDrawerContext();
+      return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
+        ModalBaseHeader,
+        {
+          ref,
+          ...ctx.getStyles("header", { classNames, style, styles, className }),
+          ...others
+        }
+      );
+    });
+    DrawerHeader.classes = classes12;
+    DrawerHeader.displayName = "@mantine/core/DrawerHeader";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerOverlay.mjs
+var import_jsx_runtime69, import_react88, defaultProps18, DrawerOverlay;
+var init_DrawerOverlay = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerOverlay.mjs"() {
+    "use client";
+    import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
+    import_react88 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseOverlay();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps18 = {};
+    DrawerOverlay = factory((_props, ref) => {
+      const props = useProps("DrawerOverlay", defaultProps18, _props);
+      const { classNames, className, style, styles, vars, ...others } = props;
+      const ctx = useDrawerContext();
+      return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        ModalBaseOverlay,
+        {
+          ref,
+          ...ctx.getStyles("overlay", { classNames, style, styles, className }),
+          ...others
+        }
+      );
+    });
+    DrawerOverlay.classes = classes12;
+    DrawerOverlay.displayName = "@mantine/core/DrawerOverlay";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerRoot.mjs
+function getDrawerAlign(position) {
+  switch (position) {
+    case "top":
+      return "flex-start";
+    case "bottom":
+      return "flex-end";
+    default:
+      return void 0;
+  }
+}
+function getDrawerFlex(position) {
+  if (position === "top" || position === "bottom") {
+    return "0 0 calc(100% - var(--drawer-offset, 0rem) * 2)";
+  }
+  return void 0;
+}
+var import_jsx_runtime70, import_react89, transitions2, rtlTransitions, defaultProps19, varsResolver11, DrawerRoot;
+var init_DrawerRoot = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerRoot.mjs"() {
+    "use client";
+    import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
+    init_rem();
+    import_react89 = __toESM(require_react(), 1);
+    init_get_default_z_index();
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_use_props();
+    init_use_styles();
+    init_factory();
+    init_DirectionProvider();
+    init_ModalBase();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    transitions2 = {
+      top: "slide-down",
+      bottom: "slide-up",
+      left: "slide-right",
+      right: "slide-left"
+    };
+    rtlTransitions = {
+      top: "slide-down",
+      bottom: "slide-up",
+      right: "slide-right",
+      left: "slide-left"
+    };
+    defaultProps19 = {
+      closeOnClickOutside: true,
+      withinPortal: true,
+      lockScroll: true,
+      trapFocus: true,
+      returnFocus: true,
+      closeOnEscape: true,
+      keepMounted: false,
+      zIndex: getDefaultZIndex("modal"),
+      position: "left"
+    };
+    varsResolver11 = createVarsResolver((_2, { position, size, offset }) => ({
+      root: {
+        "--drawer-size": getSize(size, "drawer-size"),
+        "--drawer-flex": getDrawerFlex(position),
+        "--drawer-height": position === "left" || position === "right" ? void 0 : "var(--drawer-size)",
+        "--drawer-align": getDrawerAlign(position),
+        "--drawer-justify": position === "right" ? "flex-end" : void 0,
+        "--drawer-offset": rem(offset)
+      }
+    }));
+    DrawerRoot = factory((_props, ref) => {
+      const props = useProps("DrawerRoot", defaultProps19, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        vars,
+        scrollAreaComponent,
+        position,
+        transitionProps,
+        radius,
+        ...others
+      } = props;
+      const { dir } = useDirection();
+      const getStyles = useStyles({
+        name: "Drawer",
+        classes: classes12,
+        props,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver: varsResolver11
+      });
+      const drawerTransition = (dir === "rtl" ? rtlTransitions : transitions2)[position];
+      return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(DrawerProvider, { value: { scrollAreaComponent, getStyles, radius }, children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+        ModalBase,
+        {
+          ref,
+          ...getStyles("root"),
+          transitionProps: { transition: drawerTransition, ...transitionProps },
+          unstyled,
+          ...others
+        }
+      ) });
+    });
+    DrawerRoot.classes = classes12;
+    DrawerRoot.displayName = "@mantine/core/DrawerRoot";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerStack.mjs
+function DrawerStack({ children }) {
+  const [stack, setStack] = (0, import_react90.useState)([]);
+  const [maxZIndex, setMaxZIndex] = (0, import_react90.useState)(getDefaultZIndex("modal"));
+  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+    DrawerStackProvider,
+    {
+      value: {
+        stack,
+        addModal: (id, zIndex) => {
+          setStack((current) => [.../* @__PURE__ */ new Set([...current, id])]);
+          setMaxZIndex(
+            (current) => typeof zIndex === "number" && typeof current === "number" ? Math.max(current, zIndex) : current
+          );
+        },
+        removeModal: (id) => setStack((current) => current.filter((currentId) => currentId !== id)),
+        getZIndex: (id) => `calc(${maxZIndex} + ${stack.indexOf(id)} + 1)`,
+        currentId: stack[stack.length - 1],
+        maxZIndex
+      },
+      children
+    }
+  );
+}
+var import_jsx_runtime71, import_react90, DrawerStackProvider, useDrawerStackContext;
+var init_DrawerStack = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerStack.mjs"() {
+    "use client";
+    import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
+    import_react90 = __toESM(require_react(), 1);
+    init_create_optional_context();
+    init_get_default_z_index();
+    init_clsx();
+    [DrawerStackProvider, useDrawerStackContext] = createOptionalContext();
+    DrawerStack.displayName = "@mantine/core/DrawerStack";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerTitle.mjs
+var import_jsx_runtime72, import_react91, defaultProps20, DrawerTitle;
+var init_DrawerTitle = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/DrawerTitle.mjs"() {
+    "use client";
+    import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
+    import_react91 = __toESM(require_react(), 1);
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_ModalBaseTitle();
+    init_Drawer_context();
+    init_Drawer_module_css();
+    defaultProps20 = {};
+    DrawerTitle = factory((_props, ref) => {
+      const props = useProps("DrawerTitle", defaultProps20, _props);
+      const { classNames, className, style, styles, vars, ...others } = props;
+      const ctx = useDrawerContext();
+      return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
+        ModalBaseTitle,
+        {
+          ref,
+          ...ctx.getStyles("title", { classNames, style, styles, className }),
+          ...others
+        }
+      );
+    });
+    DrawerTitle.classes = classes12;
+    DrawerTitle.displayName = "@mantine/core/DrawerTitle";
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.mjs
+var import_jsx_runtime73, import_react92, defaultProps21, Drawer;
+var init_Drawer = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Drawer/Drawer.mjs"() {
+    "use client";
+    import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
+    import_react92 = __toESM(require_react(), 1);
+    init_get_default_z_index();
+    init_clsx();
+    init_use_props();
+    init_factory();
+    init_DrawerBody();
+    init_DrawerCloseButton();
+    init_DrawerContent();
+    init_DrawerHeader();
+    init_DrawerOverlay();
+    init_DrawerRoot();
+    init_DrawerStack();
+    init_DrawerTitle();
+    init_Drawer_module_css();
+    defaultProps21 = {
+      closeOnClickOutside: true,
+      withinPortal: true,
+      lockScroll: true,
+      trapFocus: true,
+      returnFocus: true,
+      closeOnEscape: true,
+      keepMounted: false,
+      zIndex: getDefaultZIndex("modal"),
+      withOverlay: true,
+      withCloseButton: true
+    };
+    Drawer = factory((_props, ref) => {
+      const {
+        title,
+        withOverlay,
+        overlayProps,
+        withCloseButton,
+        closeButtonProps,
+        children,
+        opened,
+        stackId,
+        zIndex,
+        ...others
+      } = useProps("Drawer", defaultProps21, _props);
+      const ctx = useDrawerStackContext();
+      const hasHeader = !!title || withCloseButton;
+      const stackProps = ctx && stackId ? {
+        closeOnEscape: ctx.currentId === stackId,
+        trapFocus: ctx.currentId === stackId,
+        zIndex: ctx.getZIndex(stackId)
+      } : {};
+      const overlayVisible = withOverlay === false ? false : stackId && ctx ? ctx.currentId === stackId : opened;
+      (0, import_react92.useEffect)(() => {
+        if (ctx && stackId) {
+          opened ? ctx.addModal(stackId, zIndex || getDefaultZIndex("modal")) : ctx.removeModal(stackId);
+        }
+      }, [opened, stackId, zIndex]);
+      return /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)(
+        DrawerRoot,
+        {
+          ref,
+          opened,
+          zIndex: ctx && stackId ? ctx.getZIndex(stackId) : zIndex,
+          ...others,
+          ...stackProps,
+          children: [
+            withOverlay && /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(
+              DrawerOverlay,
+              {
+                visible: overlayVisible,
+                transitionProps: ctx && stackId ? { duration: 0 } : void 0,
+                ...overlayProps
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)(DrawerContent, { __hidden: ctx && stackId && opened ? stackId !== ctx.currentId : false, children: [
+              hasHeader && /* @__PURE__ */ (0, import_jsx_runtime73.jsxs)(DrawerHeader, { children: [
+                title && /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(DrawerTitle, { children: title }),
+                withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(DrawerCloseButton, { ...closeButtonProps })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(DrawerBody, { children })
+            ] })
+          ]
+        }
+      );
+    });
+    Drawer.classes = classes12;
+    Drawer.displayName = "@mantine/core/Drawer";
+    Drawer.Root = DrawerRoot;
+    Drawer.Overlay = DrawerOverlay;
+    Drawer.Content = DrawerContent;
+    Drawer.Body = DrawerBody;
+    Drawer.Header = DrawerHeader;
+    Drawer.Title = DrawerTitle;
+    Drawer.CloseButton = DrawerCloseButton;
+    Drawer.Stack = DrawerStack;
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Notification/Notification.module.css.mjs
-var classes6;
+var classes13;
 var init_Notification_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Notification/Notification.module.css.mjs"() {
     "use client";
-    classes6 = { "root": "m_a513464", "icon": "m_a4ceffb", "loader": "m_b0920b15", "body": "m_a49ed24", "title": "m_3feedf16", "description": "m_3d733a3a", "closeButton": "m_919a4d88" };
+    classes13 = { "root": "m_a513464", "icon": "m_a4ceffb", "loader": "m_b0920b15", "body": "m_a49ed24", "title": "m_3feedf16", "description": "m_3d733a3a", "closeButton": "m_919a4d88" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Notification/Notification.mjs
-var import_jsx_runtime47, import_react56, defaultProps9, varsResolver7, Notification;
+var import_jsx_runtime74, import_react93, defaultProps22, varsResolver12, Notification;
 var init_Notification = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Notification/Notification.mjs"() {
     "use client";
-    import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
-    import_react56 = __toESM(require_react(), 1);
+    import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
+    import_react93 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -31405,17 +33136,17 @@ var init_Notification = __esm({
     init_CloseButton();
     init_Loader();
     init_Notification_module_css();
-    defaultProps9 = {
+    defaultProps22 = {
       withCloseButton: true
     };
-    varsResolver7 = createVarsResolver((theme2, { radius, color }) => ({
+    varsResolver12 = createVarsResolver((theme2, { radius, color }) => ({
       root: {
         "--notification-radius": radius === void 0 ? void 0 : getRadius(radius),
         "--notification-color": color ? getThemeColor(color, theme2) : void 0
       }
     }));
     Notification = factory((_props, ref) => {
-      const props = useProps("Notification", defaultProps9, _props);
+      const props = useProps("Notification", defaultProps22, _props);
       const {
         className,
         color,
@@ -31439,7 +33170,7 @@ var init_Notification = __esm({
       } = props;
       const getStyles = useStyles({
         name: "Notification",
-        classes: classes6,
+        classes: classes13,
         props,
         className,
         style,
@@ -31447,9 +33178,9 @@ var init_Notification = __esm({
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver7
+        varsResolver: varsResolver12
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(
+      return /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)(
         Box,
         {
           ...getStyles("root"),
@@ -31459,13 +33190,13 @@ var init_Notification = __esm({
           ...others,
           role: "alert",
           children: [
-            icon && !loading && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { ...getStyles("icon"), children: icon }),
-            loading && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(Loader, { size: 28, color, ...getStyles("loader") }),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("div", { ...getStyles("body"), children: [
-              title && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { ...getStyles("title"), children: title }),
-              /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(Box, { ...getStyles("description"), mod: { "data-with-title": !!title }, children })
+            icon && !loading && /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { ...getStyles("icon"), children: icon }),
+            loading && /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Loader, { size: 28, color, ...getStyles("loader") }),
+            /* @__PURE__ */ (0, import_jsx_runtime74.jsxs)("div", { ...getStyles("body"), children: [
+              title && /* @__PURE__ */ (0, import_jsx_runtime74.jsx)("div", { ...getStyles("title"), children: title }),
+              /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(Box, { ...getStyles("description"), mod: { "data-with-title": !!title }, children })
             ] }),
-            withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+            withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
               CloseButton,
               {
                 iconSize: 16,
@@ -31480,19 +33211,19 @@ var init_Notification = __esm({
         }
       );
     });
-    Notification.classes = classes6;
+    Notification.classes = classes13;
     Notification.displayName = "@mantine/core/Notification";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.context.mjs
-var import_react57, import_jsx_runtime48, ProgressProvider, useProgressContext;
+var import_react94, import_jsx_runtime75, ProgressProvider, useProgressContext;
 var init_Progress_context = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.context.mjs"() {
     "use client";
-    import_react57 = __toESM(require_react(), 1);
+    import_react94 = __toESM(require_react(), 1);
     init_create_safe_context();
-    import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
     init_clsx();
     [ProgressProvider, useProgressContext] = createSafeContext(
       "Progress.Root component was not found in tree"
@@ -31501,36 +33232,36 @@ var init_Progress_context = __esm({
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.module.css.mjs
-var classes7;
+var classes14;
 var init_Progress_module_css = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.module.css.mjs"() {
     "use client";
-    classes7 = { "root": "m_db6d6462", "section": "m_2242eb65", "stripes-animation": "m_81a374bd", "label": "m_91e40b74" };
+    classes14 = { "root": "m_db6d6462", "section": "m_2242eb65", "stripes-animation": "m_81a374bd", "label": "m_91e40b74" };
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressLabel/ProgressLabel.mjs
-var import_jsx_runtime49, import_react58, defaultProps10, ProgressLabel;
+var import_jsx_runtime76, import_react95, defaultProps23, ProgressLabel;
 var init_ProgressLabel = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressLabel/ProgressLabel.mjs"() {
     "use client";
-    import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
-    import_react58 = __toESM(require_react(), 1);
+    import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
+    import_react95 = __toESM(require_react(), 1);
     init_clsx();
     init_use_props();
     init_Box();
     init_factory();
     init_Progress_context();
     init_Progress_module_css();
-    defaultProps10 = {};
+    defaultProps23 = {};
     ProgressLabel = factory((props, ref) => {
       const { classNames, className, style, styles, vars, ...others } = useProps(
         "ProgressLabel",
-        defaultProps10,
+        defaultProps23,
         props
       );
       const ctx = useProgressContext();
-      return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
         Box,
         {
           ref,
@@ -31539,18 +33270,18 @@ var init_ProgressLabel = __esm({
         }
       );
     });
-    ProgressLabel.classes = classes7;
+    ProgressLabel.classes = classes14;
     ProgressLabel.displayName = "@mantine/core/ProgressLabel";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressRoot/ProgressRoot.mjs
-var import_jsx_runtime50, import_react59, defaultProps11, varsResolver8, ProgressRoot;
+var import_jsx_runtime77, import_react96, defaultProps24, varsResolver13, ProgressRoot;
 var init_ProgressRoot = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressRoot/ProgressRoot.mjs"() {
     "use client";
-    import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
-    import_react59 = __toESM(require_react(), 1);
+    import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
+    import_react96 = __toESM(require_react(), 1);
     init_get_size();
     init_create_vars_resolver();
     init_clsx();
@@ -31560,8 +33291,8 @@ var init_ProgressRoot = __esm({
     init_factory();
     init_Progress_context();
     init_Progress_module_css();
-    defaultProps11 = {};
-    varsResolver8 = createVarsResolver(
+    defaultProps24 = {};
+    varsResolver13 = createVarsResolver(
       (_2, { size, radius, transitionDuration }) => ({
         root: {
           "--progress-size": getSize(size, "progress-size"),
@@ -31571,7 +33302,7 @@ var init_ProgressRoot = __esm({
       })
     );
     ProgressRoot = factory((_props, ref) => {
-      const props = useProps("ProgressRoot", defaultProps11, _props);
+      const props = useProps("ProgressRoot", defaultProps24, _props);
       const {
         classNames,
         className,
@@ -31585,7 +33316,7 @@ var init_ProgressRoot = __esm({
       } = props;
       const getStyles = useStyles({
         name: "Progress",
-        classes: classes7,
+        classes: classes14,
         props,
         className,
         style,
@@ -31593,22 +33324,22 @@ var init_ProgressRoot = __esm({
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver8
+        varsResolver: varsResolver13
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(ProgressProvider, { value: { getStyles, autoContrast }, children: /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(Box, { ref, ...getStyles("root"), ...others }) });
+      return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(ProgressProvider, { value: { getStyles, autoContrast }, children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Box, { ref, ...getStyles("root"), ...others }) });
     });
-    ProgressRoot.classes = classes7;
+    ProgressRoot.classes = classes14;
     ProgressRoot.displayName = "@mantine/core/ProgressRoot";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressSection/ProgressSection.mjs
-var import_jsx_runtime51, import_react60, defaultProps12, ProgressSection;
+var import_jsx_runtime78, import_react97, defaultProps25, ProgressSection;
 var init_ProgressSection = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/ProgressSection/ProgressSection.mjs"() {
     "use client";
-    import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
-    import_react60 = __toESM(require_react(), 1);
+    import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
+    import_react97 = __toESM(require_react(), 1);
     init_clsx();
     init_get_theme_color();
     init_get_contrast_color();
@@ -31619,7 +33350,7 @@ var init_ProgressSection = __esm({
     init_factory();
     init_Progress_context();
     init_Progress_module_css();
-    defaultProps12 = {
+    defaultProps25 = {
       withAria: true
     };
     ProgressSection = factory((props, ref) => {
@@ -31636,7 +33367,7 @@ var init_ProgressSection = __esm({
         animated,
         mod,
         ...others
-      } = useProps("ProgressSection", defaultProps12, props);
+      } = useProps("ProgressSection", defaultProps25, props);
       const ctx = useProgressContext();
       const theme2 = useMantineTheme();
       const ariaAttributes = withAria ? {
@@ -31646,7 +33377,7 @@ var init_ProgressSection = __esm({
         "aria-valuenow": value,
         "aria-valuetext": `${value}%`
       } : {};
-      return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         Box,
         {
           ref,
@@ -31662,18 +33393,18 @@ var init_ProgressSection = __esm({
         }
       );
     });
-    ProgressSection.classes = classes7;
+    ProgressSection.classes = classes14;
     ProgressSection.displayName = "@mantine/core/ProgressSection";
   }
 });
 
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.mjs
-var import_jsx_runtime52, import_react61, defaultProps13, Progress;
+var import_jsx_runtime79, import_react98, defaultProps26, Progress;
 var init_Progress = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Progress/Progress.mjs"() {
     "use client";
-    import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
-    import_react61 = __toESM(require_react(), 1);
+    import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
+    import_react98 = __toESM(require_react(), 1);
     init_clsx();
     init_use_resolved_styles_api();
     init_use_props();
@@ -31682,9 +33413,9 @@ var init_Progress = __esm({
     init_ProgressRoot();
     init_ProgressSection();
     init_Progress_module_css();
-    defaultProps13 = {};
+    defaultProps26 = {};
     Progress = factory((_props, ref) => {
-      const props = useProps("Progress", defaultProps13, _props);
+      const props = useProps("Progress", defaultProps26, _props);
       const {
         value,
         classNames,
@@ -31701,7 +33432,7 @@ var init_Progress = __esm({
         styles,
         props
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
         ProgressRoot,
         {
           ref,
@@ -31709,7 +33440,7 @@ var init_Progress = __esm({
           styles: resolvedStyles,
           vars,
           ...others,
-          children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
             ProgressSection,
             {
               value,
@@ -31722,7 +33453,7 @@ var init_Progress = __esm({
         }
       );
     });
-    Progress.classes = classes7;
+    Progress.classes = classes14;
     Progress.displayName = "@mantine/core/Progress";
     Progress.Section = ProgressSection;
     Progress.Root = ProgressRoot;
@@ -31730,11 +33461,81 @@ var init_Progress = __esm({
   }
 });
 
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Stack/Stack.module.css.mjs
+var classes15;
+var init_Stack_module_css = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Stack/Stack.module.css.mjs"() {
+    "use client";
+    classes15 = { "root": "m_6d731127" };
+  }
+});
+
+// node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Stack/Stack.mjs
+var import_jsx_runtime80, import_react99, defaultProps27, varsResolver14, Stack;
+var init_Stack = __esm({
+  "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/components/Stack/Stack.mjs"() {
+    "use client";
+    import_jsx_runtime80 = __toESM(require_jsx_runtime(), 1);
+    import_react99 = __toESM(require_react(), 1);
+    init_get_size();
+    init_create_vars_resolver();
+    init_clsx();
+    init_use_props();
+    init_use_styles();
+    init_Box();
+    init_factory();
+    init_Stack_module_css();
+    defaultProps27 = {
+      gap: "md",
+      align: "stretch",
+      justify: "flex-start"
+    };
+    varsResolver14 = createVarsResolver((_2, { gap, align, justify }) => ({
+      root: {
+        "--stack-gap": getSpacing(gap),
+        "--stack-align": align,
+        "--stack-justify": justify
+      }
+    }));
+    Stack = factory((_props, ref) => {
+      const props = useProps("Stack", defaultProps27, _props);
+      const {
+        classNames,
+        className,
+        style,
+        styles,
+        unstyled,
+        vars,
+        align,
+        justify,
+        gap,
+        variant,
+        ...others
+      } = props;
+      const getStyles = useStyles({
+        name: "Stack",
+        props,
+        classes: classes15,
+        className,
+        style,
+        classNames,
+        styles,
+        unstyled,
+        vars,
+        varsResolver: varsResolver14
+      });
+      return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(Box, { ref, ...getStyles("root"), variant, ...others });
+    });
+    Stack.classes = classes15;
+    Stack.displayName = "@mantine/core/Stack";
+  }
+});
+
 // node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/index.mjs
-var import_react_remove_scroll;
+var import_react_remove_scroll2;
 var init_esm2 = __esm({
   "node_modules/.pnpm/@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+react@19.0.8_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@mantine/core/esm/index.mjs"() {
-    import_react_remove_scroll = __toESM(require_es56(), 1);
+    import_react_remove_scroll2 = __toESM(require_es56(), 1);
     init_rem();
     init_get_default_z_index();
     init_create_vars_resolver();
@@ -31746,11 +33547,15 @@ var init_esm2 = __esm({
     init_create_theme();
     init_Box();
     init_factory();
+    init_Group();
+    init_Burger();
     init_Button();
     init_Container();
+    init_Drawer();
     init_Notification();
     init_OptionalPortal();
     init_Progress();
+    init_Stack();
   }
 });
 
@@ -31783,17 +33588,17 @@ function createStore(initialState) {
   };
 }
 function useStore(store) {
-  return (0, import_react62.useSyncExternalStore)(
+  return (0, import_react100.useSyncExternalStore)(
     store.subscribe,
     () => store.getState(),
     () => store.getState()
   );
 }
-var import_react62;
+var import_react100;
 var init_store = __esm({
   "node_modules/.pnpm/@mantine+store@7.16.2_react@19.0.0/node_modules/@mantine/store/esm/store.mjs"() {
     "use client";
-    import_react62 = __toESM(require_react(), 1);
+    import_react100 = __toESM(require_react(), 1);
   }
 });
 
@@ -31857,14 +33662,14 @@ function completeNavigationProgressAction(store) {
 }
 function startNavigationProgressAction(store) {
   updateNavigationProgressStateAction(
-    (s5) => ({ progress: getIntervalProgressValue(s5.progress), mounted: true }),
+    (s10) => ({ progress: getIntervalProgressValue(s10.progress), mounted: true }),
     store
   );
   updateNavigationProgressStateAction((state2) => {
     window.clearInterval(state2.interval);
     const interval = window.setInterval(() => {
       updateNavigationProgressStateAction(
-        (s5) => ({ progress: getIntervalProgressValue(s5.progress), mounted: true }),
+        (s10) => ({ progress: getIntervalProgressValue(s10.progress), mounted: true }),
         store
       );
     }, state2.stepInterval);
@@ -31947,11 +33752,11 @@ var init_nprogress_store = __esm({
 });
 
 // node_modules/.pnpm/@mantine+nprogress@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+rea_zg5h55mwc7njg5aanbzeaxy67q/node_modules/@mantine/nprogress/esm/NavigationProgress.module.css.mjs
-var classes8;
+var classes16;
 var init_NavigationProgress_module_css = __esm({
   "node_modules/.pnpm/@mantine+nprogress@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+rea_zg5h55mwc7njg5aanbzeaxy67q/node_modules/@mantine/nprogress/esm/NavigationProgress.module.css.mjs"() {
     "use client";
-    classes8 = { "root": "m_8f2832ae", "section": "m_7a0fe999" };
+    classes16 = { "root": "m_8f2832ae", "section": "m_7a0fe999" };
   }
 });
 
@@ -31976,27 +33781,27 @@ function NavigationProgress({
     timeouts: []
   });
   const state2 = useNprogress(store);
-  (0, import_react63.useEffect)(() => () => resetNavigationProgressAction(store), [store]);
-  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(OptionalPortal, { ...portalProps, withinPortal, children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
+  (0, import_react101.useEffect)(() => () => resetNavigationProgressAction(store), [store]);
+  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(OptionalPortal, { ...portalProps, withinPortal, children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
     Progress,
     {
       radius: 0,
       value: state2.progress,
       size,
       color,
-      classNames: classes8,
+      classNames: classes16,
       "data-mounted": state2.mounted || void 0,
       __vars: { "--nprogress-z-index": zIndex?.toString() },
       ...others
     }
   ) });
 }
-var import_jsx_runtime53, import_react63;
+var import_jsx_runtime81, import_react101;
 var init_NavigationProgress = __esm({
   "node_modules/.pnpm/@mantine+nprogress@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types+rea_zg5h55mwc7njg5aanbzeaxy67q/node_modules/@mantine/nprogress/esm/NavigationProgress.mjs"() {
     "use client";
-    import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
-    import_react63 = __toESM(require_react(), 1);
+    import_jsx_runtime81 = __toESM(require_jsx_runtime(), 1);
+    import_react101 = __toESM(require_react(), 1);
     init_esm2();
     init_nprogress_store();
     init_NavigationProgress_module_css();
@@ -32042,7 +33847,7 @@ function updateNotificationsState(store, update) {
 function showNotification(notification, store = notificationsStore) {
   const id = notification.id || randomId();
   updateNotificationsState(store, (notifications2) => {
-    if (notification.id && notifications2.some((n2) => n2.id === notification.id)) {
+    if (notification.id && notifications2.some((n3) => n3.id === notification.id)) {
       return notifications2;
     }
     return [...notifications2, { ...notification, id }];
@@ -32191,9 +33996,9 @@ var require_prop_types = __commonJS({
 // node_modules/.pnpm/@babel+runtime@7.26.7/node_modules/@babel/runtime/helpers/interopRequireDefault.js
 var require_interopRequireDefault = __commonJS({
   "node_modules/.pnpm/@babel+runtime@7.26.7/node_modules/@babel/runtime/helpers/interopRequireDefault.js"(exports, module) {
-    function _interopRequireDefault(e3) {
-      return e3 && e3.__esModule ? e3 : {
-        "default": e3
+    function _interopRequireDefault(e4) {
+      return e4 && e4.__esModule ? e4 : {
+        "default": e4
       };
     }
     module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -32348,9 +34153,9 @@ var require_Transition = __commonJS({
       if (source == null) return {};
       var target = {};
       var sourceKeys = Object.keys(source);
-      var key, i3;
-      for (i3 = 0; i3 < sourceKeys.length; i3++) {
-        key = sourceKeys[i3];
+      var key, i4;
+      for (i4 = 0; i4 < sourceKeys.length; i4++) {
+        key = sourceKeys[i4];
         if (excluded.indexOf(key) >= 0) continue;
         target[key] = source[key];
       }
@@ -32795,8 +34600,8 @@ var require_CSSTransition = __commonJS({
     }
     function _extends() {
       _extends = Object.assign || function(target) {
-        for (var i3 = 1; i3 < arguments.length; i3++) {
-          var source = arguments[i3];
+        for (var i4 = 1; i4 < arguments.length; i4++) {
+          var source = arguments[i4];
           for (var key in source) {
             if (Object.prototype.hasOwnProperty.call(source, key)) {
               target[key] = source[key];
@@ -32811,9 +34616,9 @@ var require_CSSTransition = __commonJS({
       if (source == null) return {};
       var target = {};
       var sourceKeys = Object.keys(source);
-      var key, i3;
-      for (i3 = 0; i3 < sourceKeys.length; i3++) {
-        key = sourceKeys[i3];
+      var key, i4;
+      for (i4 = 0; i4 < sourceKeys.length; i4++) {
+        key = sourceKeys[i4];
         if (excluded.indexOf(key) >= 0) continue;
         target[key] = source[key];
       }
@@ -32824,14 +34629,14 @@ var require_CSSTransition = __commonJS({
       subClass.prototype.constructor = subClass;
       subClass.__proto__ = superClass;
     }
-    var _addClass = function addClass(node, classes10) {
-      return node && classes10 && classes10.split(" ").forEach(function(c3) {
-        return (0, _addClass2.default)(node, c3);
+    var _addClass = function addClass(node, classes18) {
+      return node && classes18 && classes18.split(" ").forEach(function(c7) {
+        return (0, _addClass2.default)(node, c7);
       });
     };
-    var removeClass = function removeClass2(node, classes10) {
-      return node && classes10 && classes10.split(" ").forEach(function(c3) {
-        return (0, _removeClass.default)(node, c3);
+    var removeClass = function removeClass2(node, classes18) {
+      return node && classes18 && classes18.split(" ").forEach(function(c7) {
+        return (0, _removeClass.default)(node, c7);
       });
     };
     var CSSTransition = /* @__PURE__ */ function(_React$Component) {
@@ -33103,8 +34908,8 @@ var require_ChildMapping = __commonJS({
         return mapFn && (0, _react.isValidElement)(child) ? mapFn(child) : child;
       };
       var result = /* @__PURE__ */ Object.create(null);
-      if (children) _react.Children.map(children, function(c3) {
-        return c3;
+      if (children) _react.Children.map(children, function(c7) {
+        return c7;
       }).forEach(function(child) {
         result[child.key] = mapper(child);
       });
@@ -33128,19 +34933,19 @@ var require_ChildMapping = __commonJS({
           pendingKeys.push(prevKey);
         }
       }
-      var i3;
+      var i4;
       var childMapping = {};
       for (var nextKey in next) {
         if (nextKeysPending[nextKey]) {
-          for (i3 = 0; i3 < nextKeysPending[nextKey].length; i3++) {
-            var pendingNextKey = nextKeysPending[nextKey][i3];
-            childMapping[nextKeysPending[nextKey][i3]] = getValueForKey(pendingNextKey);
+          for (i4 = 0; i4 < nextKeysPending[nextKey].length; i4++) {
+            var pendingNextKey = nextKeysPending[nextKey][i4];
+            childMapping[nextKeysPending[nextKey][i4]] = getValueForKey(pendingNextKey);
           }
         }
         childMapping[nextKey] = getValueForKey(nextKey);
       }
-      for (i3 = 0; i3 < pendingKeys.length; i3++) {
-        childMapping[pendingKeys[i3]] = getValueForKey(pendingKeys[i3]);
+      for (i4 = 0; i4 < pendingKeys.length; i4++) {
+        childMapping[pendingKeys[i4]] = getValueForKey(pendingKeys[i4]);
       }
       return childMapping;
     }
@@ -33210,9 +35015,9 @@ var require_TransitionGroup = __commonJS({
       if (source == null) return {};
       var target = {};
       var sourceKeys = Object.keys(source);
-      var key, i3;
-      for (i3 = 0; i3 < sourceKeys.length; i3++) {
-        key = sourceKeys[i3];
+      var key, i4;
+      for (i4 = 0; i4 < sourceKeys.length; i4++) {
+        key = sourceKeys[i4];
         if (excluded.indexOf(key) >= 0) continue;
         target[key] = source[key];
       }
@@ -33220,8 +35025,8 @@ var require_TransitionGroup = __commonJS({
     }
     function _extends() {
       _extends = Object.assign || function(target) {
-        for (var i3 = 1; i3 < arguments.length; i3++) {
-          var source = arguments[i3];
+        for (var i4 = 1; i4 < arguments.length; i4++) {
+          var source = arguments[i4];
           for (var key in source) {
             if (Object.prototype.hasOwnProperty.call(source, key)) {
               target[key] = source[key];
@@ -33248,7 +35053,7 @@ var require_TransitionGroup = __commonJS({
         return obj[k];
       });
     };
-    var defaultProps15 = {
+    var defaultProps29 = {
       component: "div",
       childFactory: function childFactory(child) {
         return child;
@@ -33375,7 +35180,7 @@ var require_TransitionGroup = __commonJS({
        */
       childFactory: _propTypes.default.func
     } : {};
-    TransitionGroup2.defaultProps = defaultProps15;
+    TransitionGroup2.defaultProps = defaultProps29;
     var _default = TransitionGroup2;
     exports.default = _default;
     module.exports = exports.default;
@@ -33399,9 +35204,9 @@ var require_ReplaceTransition = __commonJS({
       if (source == null) return {};
       var target = {};
       var sourceKeys = Object.keys(source);
-      var key, i3;
-      for (i3 = 0; i3 < sourceKeys.length; i3++) {
-        key = sourceKeys[i3];
+      var key, i4;
+      for (i4 = 0; i4 < sourceKeys.length; i4++) {
+        key = sourceKeys[i4];
         if (excluded.indexOf(key) >= 0) continue;
         target[key] = source[key];
       }
@@ -33805,19 +35610,19 @@ var init_get_auto_close = __esm({
 });
 
 // node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/NotificationContainer.mjs
-var import_jsx_runtime54, import_react64, NotificationContainer;
+var import_jsx_runtime82, import_react102, NotificationContainer;
 var init_NotificationContainer = __esm({
   "node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/NotificationContainer.mjs"() {
     "use client";
-    import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
-    import_react64 = __toESM(require_react(), 1);
+    import_jsx_runtime82 = __toESM(require_jsx_runtime(), 1);
+    import_react102 = __toESM(require_react(), 1);
     init_esm2();
     init_get_auto_close();
-    NotificationContainer = (0, import_react64.forwardRef)(
+    NotificationContainer = (0, import_react102.forwardRef)(
       ({ data, onHide, autoClose, ...others }, ref) => {
         const { autoClose: _autoClose, message, ...notificationProps } = data;
         const autoCloseDuration = getAutoClose(autoClose, data.autoClose);
-        const autoCloseTimeout = (0, import_react64.useRef)(-1);
+        const autoCloseTimeout = (0, import_react102.useRef)(-1);
         const cancelAutoClose = () => window.clearTimeout(autoCloseTimeout.current);
         const handleHide = () => {
           onHide(data.id);
@@ -33828,14 +35633,14 @@ var init_NotificationContainer = __esm({
             autoCloseTimeout.current = window.setTimeout(handleHide, autoCloseDuration);
           }
         };
-        (0, import_react64.useEffect)(() => {
+        (0, import_react102.useEffect)(() => {
           data.onOpen?.(data);
         }, []);
-        (0, import_react64.useEffect)(() => {
+        (0, import_react102.useEffect)(() => {
           handleAutoClose();
           return cancelAutoClose;
         }, [autoCloseDuration]);
-        return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
           Notification,
           {
             ...others,
@@ -33854,21 +35659,21 @@ var init_NotificationContainer = __esm({
 });
 
 // node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/Notifications.module.css.mjs
-var classes9;
+var classes17;
 var init_Notifications_module_css = __esm({
   "node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/Notifications.module.css.mjs"() {
     "use client";
-    classes9 = { "root": "m_b37d9ac7", "notification": "m_5ed0edd0" };
+    classes17 = { "root": "m_b37d9ac7", "notification": "m_5ed0edd0" };
   }
 });
 
 // node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/Notifications.mjs
-var import_jsx_runtime55, import_react65, import_react_transition_group, Transition2, defaultProps14, varsResolver9, Notifications;
+var import_jsx_runtime83, import_react103, import_react_transition_group, Transition2, defaultProps28, varsResolver15, Notifications;
 var init_Notifications = __esm({
   "node_modules/.pnpm/@mantine+notifications@7.16.2_@mantine+core@7.16.2_@mantine+hooks@7.16.2_react@19.0.0__@types_vi2hqa6jwd27q2tny4jzt3hqp4/node_modules/@mantine/notifications/esm/Notifications.mjs"() {
     "use client";
-    import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
-    import_react65 = __toESM(require_react(), 1);
+    import_jsx_runtime83 = __toESM(require_jsx_runtime(), 1);
+    import_react103 = __toESM(require_react(), 1);
     import_react_transition_group = __toESM(require_cjs(), 1);
     init_esm2();
     init_esm();
@@ -33878,7 +35683,7 @@ var init_Notifications = __esm({
     init_notifications_store();
     init_Notifications_module_css();
     Transition2 = import_react_transition_group.Transition;
-    defaultProps14 = {
+    defaultProps28 = {
       position: "bottom-right",
       autoClose: 4e3,
       transitionDuration: 250,
@@ -33889,14 +35694,14 @@ var init_Notifications = __esm({
       store: notificationsStore,
       withinPortal: true
     };
-    varsResolver9 = createVarsResolver((_2, { zIndex, containerWidth }) => ({
+    varsResolver15 = createVarsResolver((_2, { zIndex, containerWidth }) => ({
       root: {
         "--notifications-z-index": zIndex?.toString(),
         "--notifications-container-width": rem(containerWidth)
       }
     }));
     Notifications = factory((_props, ref) => {
-      const props = useProps("Notifications", defaultProps14, _props);
+      const props = useProps("Notifications", defaultProps28, _props);
       const {
         classNames,
         className,
@@ -33920,13 +35725,13 @@ var init_Notifications = __esm({
       const data = useNotifications(store);
       const forceUpdate = useForceUpdate();
       const shouldReduceMotion = useReducedMotion();
-      const refs = (0, import_react65.useRef)({});
-      const previousLength = (0, import_react65.useRef)(0);
+      const refs = (0, import_react103.useRef)({});
+      const previousLength = (0, import_react103.useRef)(0);
       const reduceMotion = theme2.respectReducedMotion ? shouldReduceMotion : false;
       const duration = reduceMotion ? 1 : transitionDuration;
       const getStyles = useStyles({
         name: "Notifications",
-        classes: classes9,
+        classes: classes17,
         props,
         className,
         style,
@@ -33934,9 +35739,9 @@ var init_Notifications = __esm({
         styles,
         unstyled,
         vars,
-        varsResolver: varsResolver9
+        varsResolver: varsResolver15
       });
-      (0, import_react65.useEffect)(() => {
+      (0, import_react103.useEffect)(() => {
         store?.updateState((current) => ({
           ...current,
           limit: limit || 5,
@@ -33952,13 +35757,13 @@ var init_Notifications = __esm({
       const grouped = getGroupedNotifications(data.notifications, position);
       const groupedComponents = positions.reduce(
         (acc, pos) => {
-          acc[pos] = grouped[pos].map(({ style: notificationStyle, ...notification }) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          acc[pos] = grouped[pos].map(({ style: notificationStyle, ...notification }) => /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
             Transition2,
             {
               timeout: duration,
               onEnter: () => refs.current[notification.id].offsetHeight,
               nodeRef: { current: refs.current[notification.id] },
-              children: (state2) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+              children: (state2) => /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
                 NotificationContainer,
                 {
                   ref: (node) => {
@@ -33987,32 +35792,32 @@ var init_Notifications = __esm({
         },
         {}
       );
-      return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(OptionalPortal, { withinPortal, ...portalProps, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Box, { ...getStyles("root"), "data-position": "top-center", ref, ...others, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-center"] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Box, { ...getStyles("root"), "data-position": "top-left", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-left"] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime83.jsxs)(OptionalPortal, { withinPortal, ...portalProps, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(Box, { ...getStyles("root"), "data-position": "top-center", ref, ...others, children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-center"] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(Box, { ...getStyles("root"), "data-position": "top-left", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-left"] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
           Box,
           {
-            ...getStyles("root", { className: import_react_remove_scroll.RemoveScroll.classNames.fullWidth }),
+            ...getStyles("root", { className: import_react_remove_scroll2.RemoveScroll.classNames.fullWidth }),
             "data-position": "top-right",
             ...others,
-            children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-right"] })
+            children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["top-right"] })
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
           Box,
           {
-            ...getStyles("root", { className: import_react_remove_scroll.RemoveScroll.classNames.fullWidth }),
+            ...getStyles("root", { className: import_react_remove_scroll2.RemoveScroll.classNames.fullWidth }),
             "data-position": "bottom-right",
             ...others,
-            children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-right"] })
+            children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-right"] })
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Box, { ...getStyles("root"), "data-position": "bottom-left", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-left"] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Box, { ...getStyles("root"), "data-position": "bottom-center", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-center"] }) })
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(Box, { ...getStyles("root"), "data-position": "bottom-left", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-left"] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(Box, { ...getStyles("root"), "data-position": "bottom-center", ...others, children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_react_transition_group.TransitionGroup, { children: groupedComponents["bottom-center"] }) })
       ] });
     });
-    Notifications.classes = classes9;
+    Notifications.classes = classes17;
     Notifications.displayName = "@mantine/notifications/Notifications";
     Notifications.show = notifications.show;
     Notifications.hide = notifications.hide;
@@ -34031,303 +35836,521 @@ var init_esm5 = __esm({
 });
 
 // node_modules/.pnpm/effector@23.3.0/node_modules/effector/effector.mjs
-function e(e3, t4) {
-  for (const r3 in e3) t4(e3[r3], r3);
+function e(e4, t8) {
+  for (const r3 in e4) t8(e4[r3], r3);
 }
-function t(e3, t4) {
-  e3.forEach(t4);
+function t(e4, t8) {
+  e4.forEach(t8);
 }
-function r2(e3, t4, r3) {
-  if (!e3) throw Error(`${r3 ? r3 + ": " : ""}${t4}`);
+function r2(e4, t8, r3) {
+  if (!e4) throw Error(`${r3 ? r3 + ": " : ""}${t8}`);
 }
-function a({ node: e3 = [], from: r3, source: n2, parent: a3 = r3 || n2, to: o2, target: s5, child: i3 = o2 || s5, scope: c3 = {}, meta: l3 = {}, family: d3 = { type: "regular" }, regional: u } = {}) {
-  const f2 = $e(a3), p2 = $e(d3.links), m3 = $e(d3.owners), g2 = [];
-  t(e3, (e4) => e4 && ie(g2, e4));
-  const h2 = { id: pe(), seq: g2, next: $e(i3), meta: l3, scope: c3, family: { triggers: f2.length, type: d3.type || "crosslink", links: p2, owners: m3 } };
-  return t(p2, (e4) => ie(V(e4), h2)), t(m3, (e4) => ie(L(e4), h2)), t(f2, (e4) => ie(e4.next, h2)), u && ye && Se(W(ye), [h2]), h2;
+function n(e4, t8) {
+  const r3 = _(e4), n3 = r3.meta || {};
+  re(e4) || (n3.isRegion = 1), ye = { id: r3.id, parent: ye, value: e4, template: n3.template || be(), sidRoot: n3.sidRoot || ye && ye.sidRoot, meta: n3 };
+  try {
+    return t8();
+  } finally {
+    ve("region"), ye = H(ye);
+  }
 }
-function o(e3, r3, n2) {
-  let a3, o2 = ot, s5 = null, i3 = tt;
-  if (e3.target && (r3 = e3.params, n2 = e3.defer, a3 = e3.meta, o2 = "page" in e3 ? e3.page : o2, e3.stack && (s5 = e3.stack), i3 = U(e3) || i3, e3 = e3.target), i3 && tt && i3 !== tt && (tt = null), Array.isArray(e3)) for (let t4 = 0; t4 < e3.length; t4++) Xe("pure", o2, _(e3[t4]), s5, r3[t4], i3, a3);
-  else Xe("pure", o2, _(e3), s5, r3, i3, a3);
-  if (n2 && !rt) return;
-  const c3 = { isRoot: rt, currentPage: ot, scope: tt, isWatch: nt, isPure: at };
-  let l3, d3, u, f2, p2, m3;
+function a({ node: e4 = [], from: r3, source: n3, parent: a4 = r3 || n3, to: o4, target: s10, child: i4 = o4 || s10, scope: c7 = {}, meta: l5 = {}, family: d5 = { type: "regular" }, regional: u3 } = {}) {
+  const f5 = $e(a4), p4 = $e(d5.links), m5 = $e(d5.owners), g3 = [];
+  t(e4, (e5) => e5 && ie(g3, e5));
+  const h4 = { id: pe(), seq: g3, next: $e(i4), meta: l5, scope: c7, family: { triggers: f5.length, type: d5.type || "crosslink", links: p4, owners: m5 } };
+  return t(p4, (e5) => ie(V(e5), h4)), t(m5, (e5) => ie(L(e5), h4)), t(f5, (e5) => ie(e5.next, h4)), u3 && ye && Se(W(ye), [h4]), h4;
+}
+function o(e4, r3, n3) {
+  let a4, o4 = ot, s10 = null, i4 = tt;
+  if (e4.target && (r3 = e4.params, n3 = e4.defer, a4 = e4.meta, o4 = "page" in e4 ? e4.page : o4, e4.stack && (s10 = e4.stack), i4 = U(e4) || i4, e4 = e4.target), i4 && tt && i4 !== tt && (tt = null), Array.isArray(e4)) for (let t8 = 0; t8 < e4.length; t8++) Xe("pure", o4, _(e4[t8]), s10, r3[t8], i4, a4);
+  else Xe("pure", o4, _(e4), s10, r3, i4, a4);
+  if (n3 && !rt) return;
+  const c7 = { isRoot: rt, currentPage: ot, scope: tt, isWatch: nt, isPure: at };
+  let l5, d5, u3, f5, p4, m5;
   rt = 0;
-  e: for (; f2 = Qe(); ) {
-    const { idx: e4, stack: r4, type: n3 } = f2;
-    u = r4.node, ot = p2 = r4.page, tt = U(r4), p2 ? m3 = p2.reg : tt && (m3 = tt.reg);
-    const a4 = !!p2, o3 = !!tt, s6 = { fail: 0, scope: u.scope };
-    l3 = d3 = 0;
-    for (let t4 = e4; t4 < u.seq.length && !l3; t4++) {
-      const i4 = u.seq[t4];
-      if (i4.order) {
-        const { priority: a5, barrierID: o4 } = i4.order, s7 = o4 ? p2 ? `${p2.fullID}_${o4}` : o4 : 0;
-        if (t4 !== e4 || n3 !== a5) {
-          o4 ? et.has(s7) || (et.add(s7), Ye(t4, r4, a5, o4)) : Ye(t4, r4, a5, 0);
+  e: for (; f5 = Qe(); ) {
+    const { idx: e5, stack: r4, type: n4 } = f5;
+    u3 = r4.node, ot = p4 = r4.page, tt = U(r4), p4 ? m5 = p4.reg : tt && (m5 = tt.reg);
+    const a5 = !!p4, o5 = !!tt, s11 = { fail: 0, scope: u3.scope };
+    l5 = d5 = 0;
+    for (let t8 = e5; t8 < u3.seq.length && !l5; t8++) {
+      const i5 = u3.seq[t8];
+      if (i5.order) {
+        const { priority: a6, barrierID: o6 } = i5.order, s12 = o6 ? p4 ? `${p4.fullID}_${o6}` : o6 : 0;
+        if (t8 !== e5 || n4 !== a6) {
+          o6 ? et.has(s12) || (et.add(s12), Ye(t8, r4, a6, o6)) : Ye(t8, r4, a6, 0);
           continue e;
         }
-        o4 && et.delete(s7);
+        o6 && et.delete(s12);
       }
-      switch (i4.type) {
+      switch (i5.type) {
         case "mov": {
-          const e6 = i4.data;
-          let t5;
-          switch (e6.from) {
+          const e7 = i5.data;
+          let t9;
+          switch (e7.from) {
             case "stack":
-              t5 = W(r4);
+              t9 = W(r4);
               break;
             case "a":
             case "b":
-              t5 = r4[e6.from];
+              t9 = r4[e7.from];
               break;
             case "value":
-              t5 = e6.store;
+              t9 = e7.store;
               break;
             case "store":
-              if (m3 && !m3[e6.store.id]) if (a4) {
-                const t6 = lt(p2, e6.store.id);
-                r4.page = p2 = t6, t6 ? m3 = t6.reg : o3 ? (mt(tt, e6.store, 0, 1, e6.softRead), m3 = tt.reg) : m3 = void 0;
-              } else o3 && mt(tt, e6.store, 0, 1, e6.softRead);
-              t5 = We(m3 && m3[e6.store.id] || e6.store);
+              if (m5 && !m5[e7.store.id]) if (a5) {
+                const t10 = lt(p4, e7.store.id);
+                r4.page = p4 = t10, t10 ? m5 = t10.reg : o5 ? (mt(tt, e7.store, 0, 1, e7.softRead), m5 = tt.reg) : m5 = void 0;
+              } else o5 && mt(tt, e7.store, 0, 1, e7.softRead);
+              t9 = We(m5 && m5[e7.store.id] || e7.store);
           }
-          switch (e6.to) {
+          switch (e7.to) {
             case "stack":
-              r4.value = t5;
+              r4.value = t9;
               break;
             case "a":
             case "b":
-              r4[e6.to] = t5;
+              r4[e7.to] = t9;
               break;
             case "store":
-              dt(p2, tt, e6.target, 0).current = t5;
+              dt(p4, tt, e7.target, 0).current = t9;
           }
           break;
         }
         case "compute":
-          const e5 = i4.data;
-          if (e5.fn) {
-            nt = "watch" === u.meta.op, at = e5.pure;
-            const t5 = e5.safe ? (0, e5.fn)(W(r4), s6.scope, r4) : gt(s6, e5.fn, r4);
-            e5.filter ? d3 = !t5 : r4.value = t5, nt = c3.isWatch, at = c3.isPure;
+          const e6 = i5.data;
+          if (e6.fn) {
+            nt = "watch" === u3.meta.op, at = e6.pure;
+            const t9 = e6.safe ? (0, e6.fn)(W(r4), s11.scope, r4) : gt(s11, e6.fn, r4);
+            e6.filter ? d5 = !t9 : r4.value = t9, nt = c7.isWatch, at = c7.isPure;
           }
       }
-      l3 = s6.fail || d3;
+      l5 = s11.fail || d5;
     }
-    if (ut && ut(r4, s6), !l3) {
-      const e5 = W(r4), n4 = U(r4);
-      if (t(u.next, (t4) => {
-        Xe("child", p2, t4, r4, e5, n4);
-      }), n4) {
-        u.meta.needFxCounter && Xe("child", p2, n4.fxCount, r4, e5, n4), u.meta.storeChange && Xe("child", p2, n4.storeChange, r4, e5, n4), u.meta.warnSerialize && Xe("child", p2, n4.warnSerializeNode, r4, e5, n4);
-        const a5 = n4.additionalLinks[u.id];
-        a5 && t(a5, (t4) => {
-          Xe("child", p2, t4, r4, e5, n4);
+    if (ut && ut(r4, s11), !l5) {
+      const e6 = W(r4), n5 = U(r4);
+      if (t(u3.next, (t8) => {
+        Xe("child", p4, t8, r4, e6, n5);
+      }), n5) {
+        u3.meta.needFxCounter && Xe("child", p4, n5.fxCount, r4, e6, n5), u3.meta.storeChange && Xe("child", p4, n5.storeChange, r4, e6, n5), u3.meta.warnSerialize && Xe("child", p4, n5.warnSerializeNode, r4, e6, n5);
+        const a6 = n5.additionalLinks[u3.id];
+        a6 && t(a6, (t8) => {
+          Xe("child", p4, t8, r4, e6, n5);
         });
       }
     }
   }
-  rt = c3.isRoot, ot = c3.currentPage, tt = U(c3);
+  rt = c7.isRoot, ot = c7.currentPage, tt = U(c7);
 }
-function l(e3, t4) {
-  if (!t4) return e3;
-  if (!t4.name && !t4.named && !t4.loc) return e3;
-  let r3 = `[${e3}]`;
-  const n2 = t4.named || t4.name;
-  n2 && (r3 += ` unit '${n2}'`);
-  const a3 = t4.loc;
-  return !n2 && a3 && (r3 += ` (${a3.file}:${a3.line}:${a3.column})`), r3;
+function s(t8, r3 = "combine") {
+  let n3 = r3 + "(", a4 = "", o4 = 0;
+  return e(t8, (e4) => {
+    o4 < 25 && (null != e4 && (n3 += a4, n3 += Q(e4) ? K(e4).fullName : e4.toString()), o4 += 1, a4 = ", ");
+  }), n3 + ")";
+}
+function c(e4, t8) {
+  let r3, n3;
+  const a4 = e4;
+  if (t8) {
+    const a5 = K(t8);
+    0 === e4.length ? (r3 = a5.path, n3 = a5.fullName) : (r3 = a5.path.concat([e4]), n3 = 0 === a5.fullName.length ? e4 : a5.fullName + "/" + e4);
+  } else r3 = 0 === e4.length ? [] : [e4], n3 = e4;
+  return { shortName: a4, fullName: n3, path: r3 };
+}
+function l(e4, t8) {
+  if (!t8) return e4;
+  if (!t8.name && !t8.named && !t8.loc) return e4;
+  let r3 = `[${e4}]`;
+  const n3 = t8.named || t8.name;
+  n3 && (r3 += ` unit '${n3}'`);
+  const a4 = t8.loc;
+  return !n3 && a4 && (r3 += ` (${a4.file}:${a4.line}:${a4.column})`), r3;
+}
+function d(e4, t8) {
+  const r3 = t8 ? e4 : e4[0];
+  Ae(r3);
+  let n3 = r3.or;
+  const a4 = r3.and;
+  if (a4) {
+    const r4 = t8 ? a4 : a4[0];
+    if (Me(r4) && "and" in r4) {
+      const r5 = d(a4, t8);
+      e4 = r5[0], n3 = { ...n3, ...r5[1] };
+    } else e4 = a4;
+  }
+  return [e4, n3];
+}
+function u(e4) {
+  const t8 = () => e4();
+  return t8.unsubscribe = () => e4(), t8;
+}
+function f(e4, ...t8) {
+  const r3 = be();
+  if (r3) {
+    const n3 = r3.handlers[e4];
+    if (n3) return n3(r3, ...t8);
+  }
+}
+function p(e4, t8) {
+  const n3 = ht({ or: t8, and: "string" == typeof e4 ? { name: e4 } : e4 }), s10 = l("event", n3), i4 = (e5, ...t9) => (r2(!G(i4, "derived"), "call of derived event is not supported, use createEvent instead", s10), r2(!at, "unit call from pure function is not supported, use operators like sample instead", s10), ot ? ((e6, t10, r3, n4) => {
+    const a4 = ot;
+    let o4 = null;
+    if (t10) for (o4 = ot; o4 && o4.template !== t10; ) o4 = H(o4);
+    ct(o4);
+    const s11 = e6.create(r3, n4);
+    return ct(a4), s11;
+  })(i4, c7, e5, t9) : i4.create(e5, t9)), c7 = be(), d5 = Object.assign(i4, { graphite: a({ meta: At(n3.actualOp || "event", i4, n3), regional: 1 }), create: (e5) => (o({ target: i4, params: e5, scope: tt }), e5), watch: (e5) => xt(i4, e5), map: (e5) => jt(i4, P, e5, [Ve()]), filter: (e5) => jt(i4, "filter", e5.fn ? e5 : e5.fn, [Ve(Oe, 1)]), filterMap: (e5) => jt(i4, "filterMap", e5, [Ve(), Pe((e6) => !ze(e6), 1)]), prepend(e5) {
+    r2(i4.targetable, ".prepend of derived event is not supported, call source event instead", s10);
+    const t9 = p("* \u2192 " + i4.shortName, { parent: H(i4) });
+    return f("eventPrepend", _(t9)), $t(t9, i4, [Ve()], "prepend", e5), zt(i4, t9), t9;
+  } });
+  return null != n3 && n3.domain && n3.domain.hooks.event(d5), J(d5, "id", d5.graphite.id), ve(d5.graphite), d5;
+}
+function m(e4, n3, a4, o4, s10) {
+  return Ce(a4, `${s10} ${n3}`, "first argument"), r2(xe(o4), "second argument should be a function", s10), ce(!G(e4, "derived"), `${n3} in derived store`, `${n3} in store created via createStore`, s10), t(Array.isArray(a4) ? a4 : [a4], (t8) => {
+    e4.off(t8), Nt(t8, e4, "on", Ie, o4);
+  }), e4;
+}
+function g(e4, n3) {
+  const s10 = ht(n3), i4 = Be(e4), c7 = l("store", s10), d5 = Error();
+  Error.captureStackTrace && Error.captureStackTrace(d5, g);
+  const u3 = d5.stack, h4 = p({ named: "updates", derived: 1 });
+  f("storeBase", i4);
+  const y3 = i4.id, v2 = "skipVoid" in s10, b2 = v2 && !s10.skipVoid;
+  ce(!(v2 && s10.skipVoid), "{skipVoid: true}", "updateFilter", c7);
+  const k = { updates: h4, defaultState: e4, stateRef: i4, getState() {
+    let e5, t8 = i4;
+    if (ot) {
+      let t9 = ot;
+      for (; t9 && !t9.reg[y3]; ) t9 = H(t9);
+      t9 && (e5 = t9);
+    }
+    return !e5 && tt && (mt(tt, i4, 1), e5 = tt), e5 && (t8 = e5.reg[y3]), We(t8);
+  }, setState: (e5) => o({ target: k, params: e5, defer: 1, scope: tt }), reset: (...e5) => (r2(k.targetable, ".reset of derived store is not supported", c7), t(e5, (e6) => m(k, ".reset", e6, () => k.defaultState, c7)), k), on: (e5, t8) => (r2(k.targetable, ".on of derived store is not supported", c7), m(k, ".on", e5, t8, c7)), off(e5) {
+    const t8 = _(e5).id, r3 = _(k).family.links.find((e6) => e6.meta.onTrigger === t8);
+    return r3 && wt(r3), k;
+  }, map(e5, t8) {
+    let r3, n4;
+    Me(e5) && (r3 = e5, e5 = e5.fn);
+    const a4 = k.getState(), o4 = ze(a4);
+    be() ? n4 = null : (!o4 || o4 && b2) && (n4 = e5(a4));
+    const s11 = g(n4, { name: `${k.shortName} \u2192 *`, derived: 1, ...t8, and: r3 }), c8 = Nt(k, s11, P, Oe, e5);
+    return He(B(s11), { type: P, fn: e5, from: i4 }), B(s11).noInit = 1, f("storeMap", i4, c8), s11;
+  }, watch(e5, t8) {
+    if (ce(!t8, "watch second argument", "sample", c7), !t8 || !Q(e5)) {
+      const t9 = xt(k, e5);
+      return f("storeWatch", i4, e5) || e5(k.getState()), t9;
+    }
+    return r2(xe(t8), "second argument should be a function", c7), e5.watch((e6) => t8(k.getState(), e6));
+  } }, w4 = At("store", k, s10), S2 = k.defaultConfig.updateFilter;
+  k.graphite = a({ scope: { state: i4, fn: S2 }, node: [Pe((e5, t8, r3) => (r3.scope && !r3.scope.reg[i4.id] && (r3.b = 1), e5)), _e(i4), Pe((e5, t8, { a: r3, b: n4 }) => {
+    const a4 = ze(e5);
+    return a4 && !v2 && le(`${c7}: ${Ct}`, u3), (a4 && b2 || !a4) && (e5 !== r3 || n4);
+  }, 1), S2 && Ve(Re, 1), De({ from: "stack", target: i4 })], child: h4, meta: { ...w4, defaultState: e4, storeTrace: u3 }, regional: 1 }), J(k, "id", k.graphite.id), J(k, "rootStateRefId", y3);
+  const $2 = G(k, "serialize"), M3 = G(k, "derived"), x = "ignore" === $2, z = G(k, "sid");
+  z && (J(k, "storeChange", 1), i4.sid = z), z || x || M3 || J(k, "warnSerialize", 1);
+  const A3 = ze(e4);
+  return r2(M3 || !A3 || A3 && b2, Ct, c7), M3 && A3 && !v2 && console.error(`${c7}: ${Ct}`), Se(k, [h4]), null != s10 && s10.domain && s10.domain.hooks.store(k), M3 || (k.reinit = p({ named: "reinit" }), k.reset(k.reinit)), i4.meta = k.graphite.meta, ve(k.graphite), k;
+}
+function h(...e4) {
+  let t8, n3, a4;
+  [e4, a4] = d(e4);
+  const o4 = l("combine", a4), s10 = e4[e4.length - 1], i4 = e4.length > 1 && !Y(s10) && Me(s10), c7 = i4 && s10, u3 = i4 ? e4[e4.length - 2] : s10;
+  let f5, p4, m5;
+  if (xe(u3) ? (n3 = e4.slice(0, i4 ? -2 : -1), t8 = u3) : n3 = e4, 1 === n3.length) {
+    const e5 = n3[0];
+    Y(e5) || (f5 = e5, p4 = 1);
+  }
+  if (!p4 && (f5 = n3, t8)) {
+    m5 = 1;
+    const e5 = t8;
+    t8 = (t9) => e5(...t9);
+  }
+  return r2(Me(f5), `${o4}: shape should be an object`), Rt(Array.isArray(f5), !m5, f5, a4, t8, c7);
 }
 function y() {
-  const e3 = {};
-  return e3.req = new Promise((t4, r3) => {
-    e3.rs = t4, e3.rj = r3;
-  }), e3.req.catch(() => {
-  }), e3;
+  const e4 = {};
+  return e4.req = new Promise((t8, r3) => {
+    e4.rs = t8, e4.rj = r3;
+  }), e4.req.catch(() => {
+  }), e4;
 }
-function C(e3, { scope: t4, params: r3 } = {}) {
-  if (!Q(e3)) return Promise.reject(new Error("first argument should be unit"));
-  if (!(ee(e3) || Z(e3) || Y(e3) || ne(e3))) return Promise.reject(new Error("first argument accepts only effects, events, stores or scopes"));
-  if (ne(e3)) t4 = e3;
-  else if (!te(e3)) {
-    const t5 = l("allSettled", _(e3).meta);
-    return Promise.reject(Error(`${t5}: unit should be targetable`));
+function $(e4, n3) {
+  let a4 = 0;
+  return t(qt, (t8) => {
+    t8 in e4 && (r2(null != e4[t8], Dt(n3, t8)), a4 = 1);
+  }), a4;
+}
+function M(...e4) {
+  let t8, r3, n3, a4, [[o4, s10, i4], c7] = d(e4), u3 = 1;
+  const f5 = l("sample", c7);
+  return ze(s10) && Me(o4) && $(o4, f5) && (s10 = o4.clock, i4 = o4.fn, "batch" in o4 ? u3 = o4.batch : (ce(!("greedy" in o4), "greedy in sample", "batch", f5), u3 = !o4.greedy), a4 = o4.filter, t8 = o4.target, r3 = o4.name, n3 = o4.sid, o4 = o4.source), Et("sample", s10, o4, a4, t8, i4, r3, c7, u3, 1, 0, n3);
+}
+function C(e4, { scope: t8, params: r3 } = {}) {
+  if (!Q(e4)) return Promise.reject(new Error("first argument should be unit"));
+  if (!(ee(e4) || Z(e4) || Y(e4) || ne(e4))) return Promise.reject(new Error("first argument accepts only effects, events, stores or scopes"));
+  if (ne(e4)) t8 = e4;
+  else if (!te(e4)) {
+    const t9 = l("allSettled", _(e4).meta);
+    return Promise.reject(Error(`${t9}: unit should be targetable`));
   }
-  const n2 = y();
-  n2.parentFork = tt;
-  const { fxCount: a3 } = t4;
-  ie(a3.scope.defers, n2);
-  const s5 = [], i3 = [];
-  return ne(e3) || (ie(s5, e3), ie(i3, ee(e3) ? { params: r3, req: { rs(e4) {
-    n2.value = { status: "done", value: e4 };
-  }, rj(e4) {
-    n2.value = { status: "fail", value: e4 };
-  } } } : r3)), ie(s5, a3), ie(i3, null), o({ target: s5, params: i3, scope: t4 }), n2.req;
+  const n3 = y();
+  n3.parentFork = tt;
+  const { fxCount: a4 } = t8;
+  ie(a4.scope.defers, n3);
+  const s10 = [], i4 = [];
+  return ne(e4) || (ie(s10, e4), ie(i4, ee(e4) ? { params: r3, req: { rs(e5) {
+    n3.value = { status: "done", value: e5 };
+  }, rj(e5) {
+    n3.value = { status: "fail", value: e5 };
+  } } } : r3)), ie(s10, a4), ie(i4, null), o({ target: s10, params: i4, scope: t8 }), n3.req;
 }
-function N(e3, r3, n2) {
-  const a3 = [];
-  (function e4(o2) {
-    oe(a3, o2) || (ie(a3, o2), "store" === G(o2, "op") && (n2 || G(o2, "sid")) && r3(o2, G(o2, "sid")), t(o2.next, e4), t(V(o2), e4), t(L(o2), e4));
-  })(e3);
+function N(e4, r3, n3) {
+  const a4 = [];
+  (function e5(o4) {
+    oe(a4, o4) || (ie(a4, o4), "store" === G(o4, "op") && (n3 || G(o4, "sid")) && r3(o4, G(o4, "sid")), t(o4.next, e5), t(V(o4), e5), t(L(o4), e5));
+  })(e4);
 }
-function R(e3, n2) {
-  const a3 = Array.isArray(e3) ? new Map(e3) : e3, o2 = /* @__PURE__ */ new Map();
-  let s5 = 0;
-  if (a3 instanceof Map) {
-    const e4 = {};
-    return t(a3, (t4, a4) => {
-      r2(Q(a4), "Map key should be a unit"), n2 && n2(a4, t4), a4.sid && (a4.sid in e4 && (s5 = 1), e4[a4.sid] = t4), o2.set(a4, t4);
-    }), { sidMap: e4, unitMap: o2, hasSidDoubles: s5 };
+function R(e4, n3) {
+  const a4 = Array.isArray(e4) ? new Map(e4) : e4, o4 = /* @__PURE__ */ new Map();
+  let s10 = 0;
+  if (a4 instanceof Map) {
+    const e5 = {};
+    return t(a4, (t8, a5) => {
+      r2(Q(a5), "Map key should be a unit"), n3 && n3(a5, t8), a5.sid && (a5.sid in e5 && (s10 = 1), e5[a5.sid] = t8), o4.set(a5, t8);
+    }), { sidMap: e5, unitMap: o4, hasSidDoubles: s10 };
   }
-  return { sidMap: a3, unitMap: o2 };
+  return { sidMap: a4, unitMap: o4 };
 }
-function I(e3, n2) {
-  let o2, s5 = e3;
-  re(e3) && (ce(0, "fork(domain)", "fork()"), o2 = e3, s5 = n2);
-  const i3 = ((e4) => {
-    const r3 = a({ scope: { defers: [], inFlight: 0, fxID: 0 }, node: [Pe((e5, t4, r4) => {
-      r4.parent ? "dec" === r4.parent.node.meta.needFxCounter ? t4.inFlight -= 1 : (t4.inFlight += 1, t4.fxID += 1) : t4.fxID += 1;
-    }), Ee({ priority: "sampler", batch: 1 }), Pe((e5, r4) => {
-      const { defers: n4, fxID: a3 } = r4;
-      r4.inFlight > 0 || 0 === n4.length || Promise.resolve().then(() => {
-        r4.fxID === a3 && t(n4.splice(0, n4.length), (e6) => {
-          st(e6.parentFork), e6.rs(e6.value);
+function I(e4, n3) {
+  let o4, s10 = e4;
+  re(e4) && (ce(0, "fork(domain)", "fork()"), o4 = e4, s10 = n3);
+  const i4 = ((e5) => {
+    const r3 = a({ scope: { defers: [], inFlight: 0, fxID: 0 }, node: [Pe((e6, t8, r4) => {
+      r4.parent ? "dec" === r4.parent.node.meta.needFxCounter ? t8.inFlight -= 1 : (t8.inFlight += 1, t8.fxID += 1) : t8.fxID += 1;
+    }), Ee({ priority: "sampler", batch: 1 }), Pe((e6, r4) => {
+      const { defers: n5, fxID: a4 } = r4;
+      r4.inFlight > 0 || 0 === n5.length || Promise.resolve().then(() => {
+        r4.fxID === a4 && t(n5.splice(0, n5.length), (e7) => {
+          st(e7.parentFork), e7.rs(e7.value);
         });
       });
-    }, 0, 1)] }), n3 = a({ node: [Pe((e5, t4, r4) => {
-      const n4 = r4.parent;
-      if (n4) {
-        const t5 = n4.node;
-        if (Lt(n4)) {
-          const n5 = U(r4), a3 = t5.meta.sid;
-          n5.sidIdMap[a3] = t5.scope.state.id, n5.values.sidMap[a3] = e5;
-          const o4 = t5.meta.serialize;
-          o4 && n5.sidSerializeSettings.set(a3, "ignore" === o4 ? { ignore: 1 } : { ignore: 0, write: o4.write });
+    }, 0, 1)] }), n4 = a({ node: [Pe((e6, t8, r4) => {
+      const n5 = r4.parent;
+      if (n5) {
+        const t9 = n5.node;
+        if (Lt(n5)) {
+          const n6 = U(r4), a4 = t9.meta.sid;
+          n6.sidIdMap[a4] = t9.scope.state.id, n6.values.sidMap[a4] = e6;
+          const o6 = t9.meta.serialize;
+          o6 && n6.sidSerializeSettings.set(a4, "ignore" === o6 ? { ignore: 1 } : { ignore: 0, write: o6.write });
         }
       }
-    })] }), o3 = a({ node: [Pe((e5, t4, r4) => {
-      const n4 = U(r4), a3 = r4.parent;
-      n4 && a3 && Lt(a3) && n4.warnSerializeTraces.add(G(a3.node, "storeTrace"));
-    })] }), s6 = { cloneOf: e4, reg: {}, values: { sidMap: {}, idMap: {} }, sidIdMap: {}, sidSerializeSettings: /* @__PURE__ */ new Map(), getState(e5) {
-      if ("current" in e5) return dt(ot, s6, e5, 0).current;
-      const t4 = _(e5);
-      return dt(ot, s6, t4.scope.state, 1).current;
-    }, kind: "scope", graphite: a({ family: { type: "domain", links: [r3, n3, o3] }, meta: { unit: "fork" }, scope: { forkInFlightCounter: r3 } }), additionalLinks: {}, handlers: { sidMap: {}, unitMap: /* @__PURE__ */ new Map() }, fxCount: r3, storeChange: n3, warnSerializeTraces: /* @__PURE__ */ new Set(), warnSerializeNode: o3 };
-    return s6;
-  })(o2);
-  if (s5) {
-    if (s5.values) {
-      const { sidMap: e4, unitMap: n3, hasSidDoubles: a3 } = R(s5.values, (e5) => r2(Y(e5) && te(e5), "Values map can contain only writable stores as keys"));
-      Object.assign(i3.values.sidMap, e4), t(n3, (e5, t4) => {
-        if (i3.values.idMap[t4.stateRef.id] = e5, i3.sidIdMap[G(t4, "sid")] = t4.stateRef.id, "ignore" === G(t4, "serialize")) {
-          const e6 = G(t4, "sid");
-          i3.sidSerializeSettings.set(e6, { ignore: 1 });
+    })] }), o5 = a({ node: [Pe((e6, t8, r4) => {
+      const n5 = U(r4), a4 = r4.parent;
+      n5 && a4 && Lt(a4) && n5.warnSerializeTraces.add(G(a4.node, "storeTrace"));
+    })] }), s11 = { cloneOf: e5, reg: {}, values: { sidMap: {}, idMap: {} }, sidIdMap: {}, sidSerializeSettings: /* @__PURE__ */ new Map(), getState(e6) {
+      if ("current" in e6) return dt(ot, s11, e6, 0).current;
+      const t8 = _(e6);
+      return dt(ot, s11, t8.scope.state, 1).current;
+    }, kind: "scope", graphite: a({ family: { type: "domain", links: [r3, n4, o5] }, meta: { unit: "fork" }, scope: { forkInFlightCounter: r3 } }), additionalLinks: {}, handlers: { sidMap: {}, unitMap: /* @__PURE__ */ new Map() }, fxCount: r3, storeChange: n4, warnSerializeTraces: /* @__PURE__ */ new Set(), warnSerializeNode: o5 };
+    return s11;
+  })(o4);
+  if (s10) {
+    if (s10.values) {
+      const { sidMap: e5, unitMap: n4, hasSidDoubles: a4 } = R(s10.values, (e6) => r2(Y(e6) && te(e6), "Values map can contain only writable stores as keys"));
+      Object.assign(i4.values.sidMap, e5), t(n4, (e6, t8) => {
+        if (i4.values.idMap[t8.stateRef.id] = e6, i4.sidIdMap[G(t8, "sid")] = t8.stateRef.id, "ignore" === G(t8, "serialize")) {
+          const e7 = G(t8, "sid");
+          i4.sidSerializeSettings.set(e7, { ignore: 1 });
         }
-      }), i3.fromSerialize = !(Array.isArray(s5.values) || s5.values instanceof Map), i3.hasSidDoubles = a3;
+      }), i4.fromSerialize = !(Array.isArray(s10.values) || s10.values instanceof Map), i4.hasSidDoubles = a4;
     }
-    s5.handlers && (ce(s5.handlers instanceof Map || Array.isArray(s5.handlers), "object with handlers", "array"), i3.handlers = R(s5.handlers, (e4) => r2(ee(e4), "Handlers map can contain only effects as keys")));
+    s10.handlers && (ce(s10.handlers instanceof Map || Array.isArray(s10.handlers), "object with handlers", "array"), i4.handlers = R(s10.handlers, (e5) => r2(ee(e5), "Handlers map can contain only effects as keys")));
   }
-  return i3;
+  return i4;
 }
-function q(n2, a3 = {}) {
-  n2.warnSerializeTraces.size && (console.error("serialize: One or more stores dont have sids, their values are omitted"), t(n2.warnSerializeTraces, (e3) => {
-    le("store should have sid or `serialize: ignore`", e3);
-  })), r2(!n2.hasSidDoubles, "duplicate sid found in this scope");
-  const o2 = a3.ignore ? a3.ignore.map(({ sid: e3 }) => e3) : [], s5 = {};
-  return e(n2.values.sidMap, (e3, t4) => {
+function F(e4, { scope: t8, safe: n3 } = {}) {
+  r2(t8 || tt || n3, "scopeBind: scope not found");
+  const a4 = t8 || tt;
+  return (...t9) => {
+    function r3() {
+      st(s10);
+    }
+    let n4, o4 = 0;
+    const s10 = tt;
+    st(a4);
+    try {
+      n4 = e4(...t9);
+    } catch (e5) {
+      n4 = e5, o4 = 1;
+    }
+    if (r3(), o4) throw n4;
+    return n4 instanceof Promise && n4.then(r3, r3), n4;
+  };
+}
+function q(n3, a4 = {}) {
+  n3.warnSerializeTraces.size && (console.error("serialize: One or more stores dont have sids, their values are omitted"), t(n3.warnSerializeTraces, (e4) => {
+    le("store should have sid or `serialize: ignore`", e4);
+  })), r2(!n3.hasSidDoubles, "duplicate sid found in this scope");
+  const o4 = a4.ignore ? a4.ignore.map(({ sid: e4 }) => e4) : [], s10 = {};
+  return e(n3.values.sidMap, (e4, t8) => {
     var r3;
-    if (oe(o2, t4)) return;
-    const a4 = n2.sidIdMap[t4], i3 = null !== (r3 = n2.sidSerializeSettings.get(t4)) && void 0 !== r3 ? r3 : { ignore: 0, write: Bt };
-    i3.ignore || (s5[t4] = (0, i3.write)(a4 && a4 in n2.reg ? n2.reg[a4].current : e3));
-  }), "onlyChanges" in a3 && (ce(0, "onlyChanges"), a3.onlyChanges || (r2(n2.cloneOf, "scope should be created from domain"), N(_(n2.cloneOf), (e3, t4) => {
-    t4 in s5 || oe(o2, t4) || G(e3, "isCombine") || "ignore" === G(e3, "serialize") || (s5[t4] = n2.getState(e3));
-  }))), s5;
+    if (oe(o4, t8)) return;
+    const a5 = n3.sidIdMap[t8], i4 = null !== (r3 = n3.sidSerializeSettings.get(t8)) && void 0 !== r3 ? r3 : { ignore: 0, write: Bt };
+    i4.ignore || (s10[t8] = (0, i4.write)(a5 && a5 in n3.reg ? n3.reg[a5].current : e4));
+  }), "onlyChanges" in a4 && (ce(0, "onlyChanges"), a4.onlyChanges || (r2(n3.cloneOf, "scope should be created from domain"), N(_(n3.cloneOf), (e4, t8) => {
+    t8 in s10 || oe(o4, t8) || G(e4, "isCombine") || "ignore" === G(e4, "serialize") || (s10[t8] = n3.getState(e4));
+  }))), s10;
 }
-var T, _, V, L, W, U, G, Q, X, Y, Z, ee, te, re, ne, oe, ie, ce, le, de, ue, fe, pe, me, ye, Se, $e, Me, xe, Fe, qe, Ee, Te, Pe, We, Ue, Ge, Je, Ke, Qe, Xe, Ye, Ze, et, tt, rt, nt, at, ot, st, lt, dt, ut, pt, mt, gt, Ft, Lt, Bt;
+function D({ unit: e4, fn: t8, scope: r3, batch: n3 }) {
+  const o4 = [Le.run({ fn: (e5) => t8(e5) })];
+  n3 && o4.unshift(Le.compute({ priority: "sampler", batch: 1 })), Y(e4) && o4.unshift(Le.mov({ store: e4.stateRef, to: "stack" }));
+  const s10 = Array.isArray(e4) ? e4 : [e4];
+  if (r3) {
+    const e5 = [], t9 = r3.additionalLinks;
+    return s10.forEach((r4) => {
+      const n4 = t9[r4.graphite.id] || [];
+      t9[r4.graphite.id] = n4;
+      const s11 = a({ node: E(o4, r4), meta: { watchOp: r4.kind } });
+      n4.push(s11), e5.push(() => {
+        const e6 = n4.indexOf(s11);
+        -1 !== e6 && n4.splice(e6, 1), wt(s11);
+      });
+    }), u(() => {
+      e5.forEach((e6) => e6());
+    });
+  }
+  {
+    const e5 = a({ node: o4, parent: s10, family: { owners: s10 } });
+    return u(() => {
+      wt(e5);
+    });
+  }
+}
+function E(e4, t8) {
+  return Y(t8) ? [Le.mov({ store: t8.stateRef, to: "stack" }), ...e4] : e4;
+}
+var T, P, _, V, L, B, W, H, U, G, J, K, Q, X, Y, Z, ee, te, re, ne, ae, oe, se, ie, ce, le, de, ue, fe, pe, me, ge, ye, ve, be, ke, we, Se, $e, Me, xe, ze, Ae, je, Ce, Ne, Re, Ie, Oe, Fe, qe, De, Ee, Te, Pe, _e, Ve, Le, Be, We, He, Ue, Ge, Je, Ke, Qe, Xe, Ye, Ze, et, tt, rt, nt, at, ot, st, ct, lt, dt, ut, pt, mt, gt, ht, yt, vt, bt, kt, wt, St, $t, xt, zt, At, jt, Ct, Nt, Rt, Ft, qt, Dt, Et, Tt, Pt, Lt, Bt;
 var init_effector = __esm({
   "node_modules/.pnpm/effector@23.3.0/node_modules/effector/effector.mjs"() {
     T = "undefined" != typeof Symbol && Symbol.observable || "@@observable";
-    _ = (e3) => e3.graphite || e3;
-    V = (e3) => e3.family.owners;
-    L = (e3) => e3.family.links;
-    W = (e3) => e3.value;
-    U = (e3) => e3.scope;
-    G = (e3, t4) => _(e3).meta[t4];
-    Q = (e3) => (xe(e3) || Me(e3)) && "kind" in e3;
-    X = (e3) => (t4) => Q(t4) && t4.kind === e3;
+    P = "map";
+    _ = (e4) => e4.graphite || e4;
+    V = (e4) => e4.family.owners;
+    L = (e4) => e4.family.links;
+    B = (e4) => e4.stateRef;
+    W = (e4) => e4.value;
+    H = (e4) => e4.parent;
+    U = (e4) => e4.scope;
+    G = (e4, t8) => _(e4).meta[t8];
+    J = (e4, t8, r3) => _(e4).meta[t8] = r3;
+    K = (e4) => e4.compositeName;
+    Q = (e4) => (xe(e4) || Me(e4)) && "kind" in e4;
+    X = (e4) => (t8) => Q(t8) && t8.kind === e4;
     Y = X("store");
     Z = X("event");
     ee = X("effect");
-    te = (e3) => Q(e3) && !!e3.targetable;
+    te = (e4) => Q(e4) && !!e4.targetable;
     re = X("domain");
     ne = X("scope");
-    oe = (e3, t4) => e3.includes(t4);
-    ie = (e3, t4) => e3.push(t4);
-    ce = (e3, t4, r3, n2) => !e3 && console.error(`${n2 ? n2 + ": " : ""}${t4} is deprecated${r3 ? `, use ${r3} instead` : ""}`);
-    le = (e3, t4) => {
-      const r3 = Error(e3);
-      r3.stack = t4, console.error(r3);
+    ae = { __proto__: null, unit: Q, store: Y, event: Z, effect: ee, targetable: te, domain: re, scope: ne, attached: (e4) => ee(e4) && 1 == G(e4, "attached") };
+    oe = (e4, t8) => e4.includes(t8);
+    se = (e4, t8) => {
+      const r3 = e4.indexOf(t8);
+      -1 !== r3 && e4.splice(r3, 1);
+    };
+    ie = (e4, t8) => e4.push(t8);
+    ce = (e4, t8, r3, n3) => !e4 && console.error(`${n3 ? n3 + ": " : ""}${t8} is deprecated${r3 ? `, use ${r3} instead` : ""}`);
+    le = (e4, t8) => {
+      const r3 = Error(e4);
+      r3.stack = t8, console.error(r3);
     };
     de = () => {
-      let e3 = 0;
-      return () => "" + ++e3;
+      let e4 = 0;
+      return () => "" + ++e4;
     };
     ue = de();
     fe = de();
     pe = de();
     me = de();
     ye = null;
-    Se = (e3, r3) => {
-      const n2 = _(e3);
-      t(r3, (e4) => {
-        const t4 = _(e4);
-        "domain" !== n2.family.type && (t4.family.type = "crosslink"), ie(V(t4), n2), ie(L(n2), t4);
+    ve = (e4) => {
+      ge && ge(e4, ye);
+    };
+    be = () => ye && ye.template;
+    ke = (e4) => (e4 && ye && ye.sidRoot && (e4 = `${ye.sidRoot}|${e4}`), e4);
+    we = ({ sid: e4, name: t8, loc: r3, method: o4, fn: s10 }) => n(a({ meta: { sidRoot: ke(e4), sid: e4, name: t8, loc: r3, method: o4, type: "factory" }, regional: 1 }), s10);
+    Se = (e4, r3) => {
+      const n3 = _(e4);
+      t(r3, (e5) => {
+        const t8 = _(e5);
+        "domain" !== n3.family.type && (t8.family.type = "crosslink"), ie(V(t8), n3), ie(L(n3), t8);
       });
     };
-    $e = (e3 = []) => (Array.isArray(e3) ? e3 : [e3]).flat().map(_);
-    Me = (e3) => "object" == typeof e3 && null !== e3;
-    xe = (e3) => "function" == typeof e3;
-    Fe = (e3, t4, r3, n2) => {
-      const a3 = { id: fe(), type: e3, data: t4 };
-      return r3 && (a3.order = { priority: r3 }, n2 && (a3.order.barrierID = ++qe)), a3;
+    $e = (e4 = []) => (Array.isArray(e4) ? e4 : [e4]).flat().map(_);
+    Me = (e4) => "object" == typeof e4 && null !== e4;
+    xe = (e4) => "function" == typeof e4;
+    ze = (e4) => void 0 === e4;
+    Ae = (e4) => r2(Me(e4) || xe(e4), "expect first argument be an object");
+    je = (e4, t8, n3, a4) => r2(!(!Me(e4) && !xe(e4) || !("family" in e4) && !("graphite" in e4)), `${t8}: expect ${n3} to be a unit (store, event or effect)${a4}`);
+    Ce = (e4, r3, n3) => {
+      Array.isArray(e4) ? t(e4, (e5, t8) => je(e5, r3, `${t8} item of ${n3}`, "")) : je(e4, r3, n3, " or array of units");
+    };
+    Ne = (e4, n3, a4 = "target") => t($e(n3), (t8) => r2(!G(t8, "derived"), `${e4}: derived unit in "${a4}" is not supported, use createStore/createEvent instead"`));
+    Re = (e4, { fn: t8 }, { a: r3 }) => t8(e4, r3);
+    Ie = (e4, { fn: t8 }, { a: r3 }) => t8(r3, e4);
+    Oe = (e4, { fn: t8 }) => t8(e4);
+    Fe = (e4, t8, r3, n3) => {
+      const a4 = { id: fe(), type: e4, data: t8 };
+      return r3 && (a4.order = { priority: r3 }, n3 && (a4.order.barrierID = ++qe)), a4;
     };
     qe = 0;
-    Ee = ({ fn: e3, batch: t4, priority: r3, safe: n2 = 0, filter: a3 = 0, pure: o2 = 0 }) => Fe("compute", { fn: e3, safe: n2, filter: a3, pure: o2 }, r3, t4);
-    Te = ({ fn: e3 }) => Ee({ fn: e3, priority: "effect" });
-    Pe = (e3, t4, r3) => Ee({ fn: e3, safe: 1, filter: t4, priority: r3 && "effect" });
-    We = ({ current: e3 }) => e3;
+    De = ({ from: e4 = "store", store: t8, target: r3, to: n3 = r3 ? "store" : "stack", batch: a4, priority: o4 }) => Fe("mov", { from: e4, store: t8, to: n3, target: r3 }, o4, a4);
+    Ee = ({ fn: e4, batch: t8, priority: r3, safe: n3 = 0, filter: a4 = 0, pure: o4 = 0 }) => Fe("compute", { fn: e4, safe: n3, filter: a4, pure: o4 }, r3, t8);
+    Te = ({ fn: e4 }) => Ee({ fn: e4, priority: "effect" });
+    Pe = (e4, t8, r3) => Ee({ fn: e4, safe: 1, filter: t8, priority: r3 && "effect" });
+    _e = (e4, t8, r3) => De({ store: e4, to: t8 ? "stack" : "a", priority: r3 && "sampler", batch: 1 });
+    Ve = (e4 = Oe, t8) => Ee({ fn: e4, pure: 1, filter: t8 });
+    Le = { mov: De, compute: Ee, filter: ({ fn: e4, pure: t8 }) => Ee({ fn: e4, filter: 1, pure: t8 }), run: Te };
+    Be = (e4) => ({ id: fe(), current: e4, initial: e4 });
+    We = ({ current: e4 }) => e4;
+    He = (e4, t8) => {
+      e4.before || (e4.before = []), ie(e4.before, t8);
+    };
     Ue = null;
-    Ge = (e3, t4) => {
-      if (!e3) return t4;
-      if (!t4) return e3;
+    Ge = (e4, t8) => {
+      if (!e4) return t8;
+      if (!t8) return e4;
       let r3;
-      return (e3.v.type === t4.v.type && e3.v.id > t4.v.id || Ze(e3.v.type) > Ze(t4.v.type)) && (r3 = e3, e3 = t4, t4 = r3), r3 = Ge(e3.r, t4), e3.r = e3.l, e3.l = r3, e3;
+      return (e4.v.type === t8.v.type && e4.v.id > t8.v.id || Ze(e4.v.type) > Ze(t8.v.type)) && (r3 = e4, e4 = t8, t8 = r3), r3 = Ge(e4.r, t8), e4.r = e4.l, e4.l = r3, e4;
     };
     Je = [];
     Ke = 0;
     for (; Ke < 6; ) ie(Je, { first: null, last: null, size: 0 }), Ke += 1;
     Qe = () => {
-      for (let e3 = 0; e3 < 6; e3++) {
-        const t4 = Je[e3];
-        if (t4.size > 0) {
-          if (3 === e3 || 4 === e3) {
-            t4.size -= 1;
-            const e4 = Ue.v;
-            return Ue = Ge(Ue.l, Ue.r), e4;
+      for (let e4 = 0; e4 < 6; e4++) {
+        const t8 = Je[e4];
+        if (t8.size > 0) {
+          if (3 === e4 || 4 === e4) {
+            t8.size -= 1;
+            const e5 = Ue.v;
+            return Ue = Ge(Ue.l, Ue.r), e5;
           }
-          1 === t4.size && (t4.last = null);
-          const r3 = t4.first;
-          return t4.first = r3.r, t4.size -= 1, r3.v;
+          1 === t8.size && (t8.last = null);
+          const r3 = t8.first;
+          return t8.first = r3.r, t8.size -= 1, r3.v;
         }
       }
     };
-    Xe = (e3, t4, r3, n2, a3, o2, s5) => Ye(0, { a: null, b: null, node: r3, parent: n2, value: a3, page: t4, scope: o2, meta: s5 }, e3, 0);
-    Ye = (e3, t4, r3, n2) => {
-      const a3 = Ze(r3), o2 = Je[a3], s5 = { v: { idx: e3, stack: t4, type: r3, id: n2 }, l: null, r: null };
-      3 === a3 || 4 === a3 ? Ue = Ge(Ue, s5) : (0 === o2.size ? o2.first = s5 : o2.last.r = s5, o2.last = s5), o2.size += 1;
+    Xe = (e4, t8, r3, n3, a4, o4, s10) => Ye(0, { a: null, b: null, node: r3, parent: n3, value: a4, page: t8, scope: o4, meta: s10 }, e4, 0);
+    Ye = (e4, t8, r3, n3) => {
+      const a4 = Ze(r3), o4 = Je[a4], s10 = { v: { idx: e4, stack: t8, type: r3, id: n3 }, l: null, r: null };
+      3 === a4 || 4 === a4 ? Ue = Ge(Ue, s10) : (0 === o4.size ? o4.first = s10 : o4.last.r = s10, o4.last = s10), o4.size += 1;
     };
-    Ze = (e3) => {
-      switch (e3) {
+    Ze = (e4) => {
+      switch (e4) {
         case "child":
           return 0;
         case "pure":
@@ -34349,60 +36372,178 @@ var init_effector = __esm({
     nt = 0;
     at = 0;
     ot = null;
-    st = (e3) => {
-      tt = e3;
+    st = (e4) => {
+      tt = e4;
     };
-    lt = (e3, t4) => {
-      if (e3) {
-        for (; e3 && !e3.reg[t4]; ) e3 = e3.parent;
-        if (e3) return e3;
+    ct = (e4) => {
+      ot = e4;
+    };
+    lt = (e4, t8) => {
+      if (e4) {
+        for (; e4 && !e4.reg[t8]; ) e4 = e4.parent;
+        if (e4) return e4;
       }
       return null;
     };
-    dt = (e3, t4, r3, n2) => {
-      const a3 = lt(e3, r3.id);
-      return a3 ? a3.reg[r3.id] : t4 ? (mt(t4, r3, n2), t4.reg[r3.id]) : r3;
+    dt = (e4, t8, r3, n3) => {
+      const a4 = lt(e4, r3.id);
+      return a4 ? a4.reg[r3.id] : t8 ? (mt(t8, r3, n3), t8.reg[r3.id]) : r3;
     };
-    pt = (e3) => e3;
-    mt = (e3, r3, n2, a3, o2) => {
-      const s5 = e3.reg;
-      if (s5[r3.id]) return;
-      const i3 = r3.sid, c3 = { id: r3.id, current: r3.initial, meta: r3.meta };
-      if (c3.id in e3.values.idMap) c3.current = e3.values.idMap[c3.id];
-      else if (i3 && i3 in e3.values.sidMap && !(i3 in e3.sidIdMap)) {
-        var l3;
-        const t4 = null == r3 || null === (l3 = r3.meta) || void 0 === l3 ? void 0 : l3.serialize;
-        c3.current = (e3.fromSerialize && "ignore" !== t4 && (null == t4 ? void 0 : t4.read) || pt)(e3.values.sidMap[i3]);
-      } else if (r3.before && !o2) {
-        let o3 = 0;
-        const i4 = n2 || !r3.noInit || a3;
-        t(r3.before, (t4) => {
-          switch (t4.type) {
+    pt = (e4) => e4;
+    mt = (e4, r3, n3, a4, o4) => {
+      const s10 = e4.reg;
+      if (s10[r3.id]) return;
+      const i4 = r3.sid, c7 = { id: r3.id, current: r3.initial, meta: r3.meta };
+      if (c7.id in e4.values.idMap) c7.current = e4.values.idMap[c7.id];
+      else if (i4 && i4 in e4.values.sidMap && !(i4 in e4.sidIdMap)) {
+        var l5;
+        const t8 = null == r3 || null === (l5 = r3.meta) || void 0 === l5 ? void 0 : l5.serialize;
+        c7.current = (e4.fromSerialize && "ignore" !== t8 && (null == t8 ? void 0 : t8.read) || pt)(e4.values.sidMap[i4]);
+      } else if (r3.before && !o4) {
+        let o5 = 0;
+        const i5 = n3 || !r3.noInit || a4;
+        t(r3.before, (t8) => {
+          switch (t8.type) {
             case "map": {
-              const r4 = t4.from;
-              if ((r4 || t4.fn) && (r4 && mt(e3, r4, n2, a3), i4)) {
-                const e4 = r4 && s5[r4.id].current;
-                c3.current = t4.fn ? t4.fn(e4) : e4;
+              const r4 = t8.from;
+              if ((r4 || t8.fn) && (r4 && mt(e4, r4, n3, a4), i5)) {
+                const e5 = r4 && s10[r4.id].current;
+                c7.current = t8.fn ? t8.fn(e5) : e5;
               }
               break;
             }
             case "field":
-              mt(e3, t4.from, n2, a3), o3 || (o3 = 1, c3.current = Array.isArray(c3.current) ? [...c3.current] : { ...c3.current }), i4 && (c3.current[t4.field] = s5[s5[t4.from.id].id].current);
+              mt(e4, t8.from, n3, a4), o5 || (o5 = 1, c7.current = Array.isArray(c7.current) ? [...c7.current] : { ...c7.current }), i5 && (c7.current[t8.field] = s10[s10[t8.from.id].id].current);
           }
         });
       }
-      i3 && (e3.sidIdMap[i3] = r3.id), s5[r3.id] = c3;
+      i4 && (e4.sidIdMap[i4] = r3.id), s10[r3.id] = c7;
     };
-    gt = (e3, t4, r3) => {
+    gt = (e4, t8, r3) => {
       try {
-        return t4(W(r3), e3.scope, r3);
-      } catch (t5) {
-        console.error(t5), e3.fail = 1, e3.failReason = t5;
+        return t8(W(r3), e4.scope, r3);
+      } catch (t9) {
+        console.error(t9), e4.fail = 1, e4.failReason = t9;
       }
     };
-    Ft = a({ node: [Te({ fn: ({ fn: e3, value: t4 }) => e3(t4) })], meta: { op: "fx", fx: "sidechain" } });
-    Lt = (e3) => !e3.node.meta.isCombine || e3.parent && "combine" !== e3.parent.node.meta.op;
-    Bt = (e3) => e3;
+    ht = (t8, r3 = {}) => (Me(t8) && (ht(t8.or, r3), e(t8, (e4, t9) => {
+      ze(e4) || "or" === t9 || "and" === t9 || (r3[t9] = e4);
+    }), ht(t8.and, r3)), r3);
+    yt = (e4, t8) => {
+      se(e4.next, t8), se(V(e4), t8), se(L(e4), t8);
+    };
+    vt = ["on", "reset", "sample", "split", "merge", "guard", "forward"];
+    bt = (e4, t8, r3, n3, a4) => {
+      let o4;
+      e4.next.length = 0, e4.seq.length = 0, e4.scope = null;
+      let s10 = L(e4);
+      const i4 = e4.meta.isRegion, c7 = i4 ? e4 : n3;
+      if (s10.length > 0) {
+        const n4 = oe(vt, e4.meta.op), l5 = !i4 && !a4, d5 = l5 && r3 && !n4;
+        for (; o4 = s10.pop(); ) {
+          const s11 = oe(o4.next, e4);
+          yt(o4, e4), i4 && bt(o4, 0, 0, e4, 1), s11 || (o4.family.triggers -= 1), (t8 || d5 || l5 && "crosslink" === o4.family.type && !n4 || a4 && oe(vt, o4.meta.op) && (s11 && 0 === o4.next.length || !s11 && o4.family.triggers <= 0)) && bt(o4, t8, r3 && "on" !== o4.meta.op, c7, a4);
+        }
+      }
+      for (s10 = V(e4); o4 = s10.pop(); ) yt(o4, e4), r3 && "crosslink" === o4.family.type && bt(o4, t8, "on" !== o4.meta.op, c7, a4);
+    };
+    kt = (e4) => e4.clear();
+    wt = (e4, { deep: t8 } = {}) => {
+      let r3 = 0;
+      if (e4.ownerSet && e4.ownerSet.delete(e4), re(e4)) {
+        r3 = 1;
+        const t9 = e4.history;
+        kt(t9.events), kt(t9.effects), kt(t9.stores), kt(t9.domains);
+      }
+      bt(_(e4), !!t8, r3, null, 0);
+    };
+    St = (e4) => u(() => wt(e4));
+    $t = (e4, t8, r3, n3, o4) => a({ node: r3, parent: e4, child: t8, scope: { fn: o4 }, meta: { op: n3 }, family: { owners: [e4, t8], links: t8 }, regional: 1 });
+    xt = (e4, t8) => (r2(xe(t8), ".watch argument should be a function"), St(a({ scope: { fn: t8 }, node: [Te({ fn: Oe })], parent: e4, meta: { op: "watch" }, family: { owners: e4 }, regional: 1 })));
+    zt = (e4, t8, r3 = "event") => {
+      H(e4) && H(e4).hooks[r3](t8);
+    };
+    At = (e4, t8, r3) => {
+      const n3 = ht(r3), a4 = "domain" === e4, o4 = ue(), { sid: s10 = null, named: i4 = null, domain: l5 = null, parent: d5 = l5 } = n3, u3 = i4 || n3.name || (a4 ? "" : o4), f5 = c(u3, d5), p4 = { op: t8.kind = e4, name: t8.shortName = u3, sid: t8.sid = ke(s10), named: i4, unitId: t8.id = o4, serialize: n3.serialize, derived: n3.derived, config: n3 };
+      if (t8.targetable = !n3.derived, t8.parent = d5, t8.compositeName = f5, t8.defaultConfig = n3, t8.getType = () => (ce(0, "getType", "compositeName.fullName"), f5.fullName), !a4) {
+        t8.subscribe = (e6) => (Ae(e6), t8.watch(xe(e6) ? e6 : (t9) => e6.next && e6.next(t9))), t8[T] = () => t8;
+        const e5 = be();
+        e5 && (p4.nativeTemplate = e5);
+      }
+      return p4;
+    };
+    jt = (e4, t8, r3, n3) => {
+      let a4;
+      Me(r3) && (a4 = r3, r3 = r3.fn);
+      const o4 = p({ name: `${e4.shortName} \u2192 *`, derived: 1, and: a4 });
+      return $t(e4, o4, n3, t8, r3), o4;
+    };
+    Ct = "undefined is used to skip updates. To allow undefined as a value provide explicit { skipVoid: false } option";
+    Nt = (e4, t8, r3, n3, a4) => {
+      const o4 = B(t8), s10 = De({ store: o4, to: "a", priority: "read" });
+      r3 === P && (s10.data.softRead = 1);
+      const i4 = [s10, Ve(n3)];
+      f("storeOnMap", o4, i4, Y(e4) && B(e4));
+      const c7 = $t(e4, t8, i4, r3, a4);
+      return r3 !== P && J(c7, "onTrigger", _(e4).id), c7;
+    };
+    Rt = (t8, n3, a4, o4, i4, c7) => {
+      const d5 = l("combine", o4), u3 = t8 ? (e4) => [...e4] : (e4) => ({ ...e4 }), p4 = t8 ? [] : {}, m5 = u3(p4), h4 = Be(m5), y3 = Be(1);
+      h4.type = t8 ? "list" : "shape", h4.noInit = 1, f("combineBase", h4, y3);
+      const v2 = g(m5, { name: s(a4), derived: 1, ...c7, and: o4 }), b2 = B(v2);
+      b2.noInit = 1, J(v2, "isCombine", 1);
+      const k = _e(h4);
+      k.order = { priority: "barrier" };
+      const w4 = De({ store: b2, to: "b", priority: "read" });
+      w4.data.softRead = 1;
+      const S2 = [Pe((e4, t9, r3) => (r3.scope && !r3.scope.reg[h4.id] && (r3.c = 1), e4)), k, De({ store: y3, to: "b" }), Pe((e4, { key: t9 }, r3) => {
+        if (r3.c || e4 !== r3.a[t9]) return n3 && r3.b && (r3.a = u3(r3.a)), r3.a[t9] = e4, 1;
+      }, 1), De({ from: "a", target: h4 }), De({ from: "value", store: 0, target: y3 }), De({ from: "value", store: 1, target: y3, priority: "barrier", batch: 1 }), _e(h4, 1, 1), i4 && Ve(), w4];
+      if (e(a4, (e4, t9) => {
+        if (!Y(e4)) return r2(!Q(e4) && !ze(e4), `combine expects a store in a field ${t9}`, d5), void (m5[t9] = p4[t9] = e4);
+        p4[t9] = e4.defaultState, m5[t9] = e4.getState();
+        const n4 = $t(e4, v2, S2, "combine", i4);
+        n4.scope.key = t9;
+        const a5 = B(e4);
+        He(h4, { type: "field", field: t9, from: a5 }), f("combineField", a5, n4);
+      }), v2.defaultShape = a4, He(b2, { type: P, from: h4, fn: i4 }), !be()) if (i4) {
+        const e4 = i4(m5);
+        !ze(e4) || c7 && "skipVoid" in c7 || console.error(`${d5}: ${Ct}`), b2.current = e4, b2.initial = e4, v2.defaultState = e4;
+      } else v2.defaultState = p4;
+      return v2;
+    };
+    Ft = a({ node: [Te({ fn: ({ fn: e4, value: t8 }) => e4(t8) })], meta: { op: "fx", fx: "sidechain" } });
+    qt = ["source", "clock", "target"];
+    Dt = (e4, t8) => e4 + `: ${t8} should be defined`;
+    Et = (e4, t8, n3, a4, o4, s10, i4, c7, d5, u3, m5, y3) => {
+      const v2 = l(e4, c7), b2 = !!o4;
+      r2(!ze(n3) || !ze(t8), Dt(v2, "either source or clock"));
+      let k = 0;
+      ze(n3) ? k = 1 : Q(n3) || (n3 = h(n3)), ze(t8) ? t8 = n3 : (Ce(t8, v2, "clock"), Array.isArray(t8) && (t8 = $t(t8, [], [], e4))), k && (n3 = t8), c7 || i4 || (i4 = n3.shortName);
+      let w4 = "none";
+      (m5 || a4) && (Q(a4) ? w4 = "unit" : (r2(xe(a4), "`filter` should be function or unit"), w4 = "fn")), o4 ? (Ce(o4, v2, "target"), Ne(v2, o4)) : "none" === w4 && u3 && Y(n3) && Y(t8) ? o4 = g(s10 ? s10(We(B(n3)), We(B(t8))) : We(B(n3)), { name: i4, sid: y3, or: c7 }) : (o4 = p({ name: i4, derived: 1, or: c7 }), f("sampleTarget", _(o4)));
+      const S2 = Be();
+      let $2 = [];
+      if ("unit" === w4) {
+        const [r3, n4, s11] = Pt(a4, o4, t8, S2, e4);
+        s11 || $2.push(...Tt(n4)), $2.push(...Tt(r3));
+      }
+      const M3 = [];
+      if (k) d5 && M3.push(_e(S2, 1, 1));
+      else {
+        const [r3, a5, s11] = Pt(n3, o4, t8, S2, e4);
+        s11 || M3.push(...Tt(a5)), M3.push(_e(r3, 1, d5));
+      }
+      const x = $t(t8, o4, [f("sampleSourceLoader"), De({ from: "stack", target: S2 }), ...M3, ...$2, _e(S2), "fn" === w4 && Ve((e5, t9, { a: r3 }) => a4(e5, r3), 1), s10 && Ve(Re), f("sampleSourceUpward", b2)], e4, s10);
+      return Se(n3, [x]), Object.assign(x.meta, c7, { joint: 1 }), o4;
+    };
+    Tt = (e4) => [_e(e4), Pe((e5, t8, { a: r3 }) => r3, 1)];
+    Pt = (e4, t8, r3, n3, o4) => {
+      const s10 = Y(e4), i4 = s10 ? B(e4) : Be(), c7 = Be(s10);
+      return s10 || a({ parent: e4, node: [De({ from: "stack", target: i4 }), De({ from: "value", store: 1, target: c7 })], family: { owners: [...new Set([e4, t8, r3].flat())], links: t8 }, meta: { op: o4 }, regional: 1 }), f("sampleSource", c7, i4, n3), [i4, c7, s10];
+    };
+    Lt = (e4) => !e4.node.meta.isCombine || e4.parent && "combine" !== e4.parent.node.meta.op;
+    Bt = (e4) => e4;
   }
 });
 
@@ -34410,17 +36551,17 @@ var init_effector = __esm({
 var require_use_sync_external_store_shim_production = __commonJS({
   "node_modules/.pnpm/use-sync-external-store@1.4.0_react@19.0.0/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    var React7 = require_react();
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
-    var useState6 = React5.useState;
-    var useEffect11 = React5.useEffect;
-    var useLayoutEffect2 = React5.useLayoutEffect;
-    var useDebugValue = React5.useDebugValue;
+    var useState11 = React7.useState;
+    var useEffect17 = React7.useEffect;
+    var useLayoutEffect2 = React7.useLayoutEffect;
+    var useDebugValue = React7.useDebugValue;
     function useSyncExternalStore$2(subscribe, getSnapshot) {
-      var value = getSnapshot(), _useState = useState6({ inst: { value, getSnapshot } }), inst = _useState[0].inst, forceUpdate = _useState[1];
+      var value = getSnapshot(), _useState = useState11({ inst: { value, getSnapshot } }), inst = _useState[0].inst, forceUpdate = _useState[1];
       useLayoutEffect2(
         function() {
           inst.value = value;
@@ -34429,7 +36570,7 @@ var require_use_sync_external_store_shim_production = __commonJS({
         },
         [subscribe, value, getSnapshot]
       );
-      useEffect11(
+      useEffect17(
         function() {
           checkIfSnapshotChanged(inst) && forceUpdate({ inst });
           return subscribe(function() {
@@ -34455,7 +36596,7 @@ var require_use_sync_external_store_shim_production = __commonJS({
       return getSnapshot();
     }
     var shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
-    exports.useSyncExternalStore = void 0 !== React5.useSyncExternalStore ? React5.useSyncExternalStore : shim;
+    exports.useSyncExternalStore = void 0 !== React7.useSyncExternalStore ? React7.useSyncExternalStore : shim;
   }
 });
 
@@ -34475,19 +36616,19 @@ var require_shim = __commonJS({
 var require_with_selector_production = __commonJS({
   "node_modules/.pnpm/use-sync-external-store@1.4.0_react@19.0.0/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.production.js"(exports) {
     "use strict";
-    var React5 = require_react();
+    var React7 = require_react();
     var shim = require_shim();
-    function is(x, y2) {
-      return x === y2 && (0 !== x || 1 / x === 1 / y2) || x !== x && y2 !== y2;
+    function is(x, y3) {
+      return x === y3 && (0 !== x || 1 / x === 1 / y3) || x !== x && y3 !== y3;
     }
     var objectIs = "function" === typeof Object.is ? Object.is : is;
     var useSyncExternalStore2 = shim.useSyncExternalStore;
-    var useRef8 = React5.useRef;
-    var useEffect11 = React5.useEffect;
-    var useMemo2 = React5.useMemo;
-    var useDebugValue = React5.useDebugValue;
+    var useRef11 = React7.useRef;
+    var useEffect17 = React7.useEffect;
+    var useMemo2 = React7.useMemo;
+    var useDebugValue = React7.useDebugValue;
     exports.useSyncExternalStoreWithSelector = function(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
-      var instRef = useRef8(null);
+      var instRef = useRef11(null);
       if (null === instRef.current) {
         var inst = { hasValue: false, value: null };
         instRef.current = inst;
@@ -34527,7 +36668,7 @@ var require_with_selector_production = __commonJS({
         [getSnapshot, getServerSnapshot, selector, isEqual]
       );
       var value = useSyncExternalStore2(subscribe, instRef[0], instRef[1]);
-      useEffect11(
+      useEffect17(
         function() {
           inst.hasValue = true;
           inst.value = value;
@@ -34553,40 +36694,371 @@ var require_with_selector = __commonJS({
 });
 
 // node_modules/.pnpm/effector-react@23.3.0_effector@23.3.0_react@19.0.0/node_modules/effector-react/effector-react.mjs
-var import_react66, import_with_selector, import_shim, M, O, R2, V2, L2;
+function t2(e4, t8) {
+  const n3 = ae.unit(e4);
+  let r3 = {};
+  n3 ? r3 = { unit: e4 } : "@@unitShape" in e4 ? "function" == typeof e4["@@unitShape"] ? r3 = e4["@@unitShape"]() : E2("expect @@unitShape to be a function") : r3 = e4;
+  const o4 = Array.isArray(r3), s10 = import_react104.default.useRef({ stale: 1, justSubscribed: 0, scope: t8 }), [u3, c7, a4, i4, l5] = import_react104.default.useMemo(() => {
+    s10.current.stale = 1;
+    const e5 = Array.isArray(r3) ? [] : {}, o5 = [], u4 = [], c8 = [], a5 = [];
+    for (const s11 in r3) {
+      if (!{}.hasOwnProperty.call(r3, s11)) continue;
+      const i5 = r3[s11];
+      ae.unit(i5) || E2(`expect useUnit ${n3 ? "argument" : `value in key "${s11}"`} to be a unit`), ae.event(i5) || ae.effect(i5) ? (e5[s11] = t8 ? F(i5, { scope: t8 }) : i5, c8.push(s11), a5.push(i5)) : (e5[s11] = null, o5.push(s11), u4.push(i5));
+    }
+    return [e5, o5, u4, c8, a5];
+  }, [s10, t8, ...Object.keys(r3), ...Object.values(r3)]), f5 = import_react104.default.useRef({ value: u3, storeKeys: c7, eventKeys: i4, eventValues: l5 }), p4 = import_react104.default.useCallback((e5) => {
+    const n4 = s10.current;
+    return n4.justSubscribed = 1, D({ unit: a4, fn: () => {
+      n4.stale || (n4.stale = 1, e5());
+    }, scope: t8, batch: 1 });
+  }, [a4, t8, f5, s10]), d5 = import_react104.default.useCallback(() => {
+    const e5 = f5.current, r4 = s10.current;
+    let p5, d6 = 0;
+    const y3 = e5.value, m5 = e5.storeKeys, v2 = e5.eventKeys, b2 = e5.eventValues, h4 = t8 !== r4.scope;
+    if (r4.stale || r4.justSubscribed || h4) {
+      d6 = !r4.justSubscribed || h4, p5 = o4 ? [...u3] : { ...u3 }, m5.length === c7.length && v2.length === i4.length || (d6 = 1);
+      for (let e6 = 0; e6 < c7.length; e6++) {
+        const n4 = U2(a4[e6], t8), r5 = c7[e6];
+        d6 || (d6 = m5.includes(r5) ? y3[r5] !== n4 : 1), p5[r5] = n4;
+      }
+      for (let e6 = 0; e6 < i4.length; e6++) {
+        const t9 = l5[e6], n4 = i4[e6];
+        d6 || (d6 = v2.includes(n4) ? b2[v2.indexOf(n4)] !== t9 : 1);
+      }
+    }
+    return d6 && (e5.value = p5), e5.storeKeys = c7, e5.eventKeys = i4, e5.eventValues = l5, r4.stale = 0, r4.justSubscribed = !d6, r4.scope = t8, n3 ? e5.value.unit : e5.value;
+  }, [p4, a4, l5, t8, f5, s10]);
+  return O(p4, d5, d5);
+}
+function o2(e4) {
+  const t8 = import_react104.default.useContext(V2);
+  return e4 && !t8 && E2("No scope found, consider adding <Provider> to app root"), t8;
+}
+function c2(e4, n3) {
+  return t2(e4, o2(null == n3 ? void 0 : n3.forceScope));
+}
+var import_react104, import_with_selector, import_shim, E2, M2, O, R2, U2, V2, L2;
 var init_effector_react = __esm({
   "node_modules/.pnpm/effector-react@23.3.0_effector@23.3.0_react@19.0.0/node_modules/effector-react/effector-react.mjs"() {
-    import_react66 = __toESM(require_react(), 1);
+    import_react104 = __toESM(require_react(), 1);
+    init_effector();
     import_with_selector = __toESM(require_with_selector(), 1);
     import_shim = __toESM(require_shim(), 1);
-    M = "undefined" != typeof window ? import_react66.default.useLayoutEffect : import_react66.default.useEffect;
+    E2 = (e4) => {
+      throw Error(e4);
+    };
+    M2 = "undefined" != typeof window ? import_react104.default.useLayoutEffect : import_react104.default.useEffect;
     ({ useSyncExternalStore: O } = import_shim.default);
     ({ useSyncExternalStoreWithSelector: R2 } = import_with_selector.default);
-    V2 = import_react66.default.createContext(null);
+    U2 = (e4, t8) => t8 ? t8.getState(e4) : e4.getState();
+    V2 = import_react104.default.createContext(null);
     ({ Provider: L2 } = V2);
   }
 });
 
-// dist/server/chunks/chunk-CBhq-Aio.js
-var app, main, s;
-var init_chunk_CBhq_Aio = __esm({
-  "dist/server/chunks/chunk-CBhq-Aio.js"() {
+// dist/server/chunks/chunk-DGi7rtqd.js
+var app, header, main, s2;
+var init_chunk_DGi7rtqd = __esm({
+  "dist/server/chunks/chunk-DGi7rtqd.js"() {
     "use strict";
     app = "KZX-2";
+    header = "MAUPk";
     main = "EprN3";
-    s = {
+    s2 = {
       app,
+      header,
       main
     };
   }
 });
 
-// dist/server/chunks/chunk-CIEwBVDW.js
+// node_modules/.pnpm/@withease+factories@1.0.5/node_modules/@withease/factories/dist/factories.js
+function u2() {
+  return new Error(
+    "Do not call factory directly, pass it to invoke function instead"
+  );
+}
+function l2() {
+  return new Error("Function passed to invoke is not created by createFactory");
+}
+function s3() {
+  return new Error(
+    "createFactory does not support functions with more than 1 argument"
+  );
+}
+function f2() {
+  o3 += 1;
+}
+function y2(e4, a4) {
+  t3 += 1, c3 += 1;
+  const r3 = e4(a4);
+  t3 -= 1;
+  const n3 = o3 === 0;
+  let i4 = false;
+  if (t3 === 0 && (i4 = o3 !== c3, o3 = 0, c3 = 0), n3)
+    throw l2();
+  if (i4)
+    throw u2();
+  return r3;
+}
+function h3(e4) {
+  if (e4.length > 1)
+    throw s3();
+  return (r3) => {
+    if (t3 === 0)
+      throw u2();
+    const n3 = e4(r3);
+    return f2(), n3;
+  };
+}
+var t3, c3, o3;
+var init_factories = __esm({
+  "node_modules/.pnpm/@withease+factories@1.0.5/node_modules/@withease/factories/dist/factories.js"() {
+    t3 = 0;
+    c3 = 0;
+    o3 = 0;
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/SSRBase.mjs
+var import_react105, R3, l3, n2, c4, i, m2, w2, d2, E3;
+var init_SSRBase = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/SSRBase.mjs"() {
+    import_react105 = __toESM(require_react(), 1);
+    R3 = Object.defineProperty;
+    l3 = Object.getOwnPropertySymbols;
+    n2 = Object.prototype.hasOwnProperty;
+    c4 = Object.prototype.propertyIsEnumerable;
+    i = (e4, r3, t8) => r3 in e4 ? R3(e4, r3, { enumerable: true, configurable: true, writable: true, value: t8 }) : e4[r3] = t8;
+    m2 = (e4, r3) => {
+      for (var t8 in r3 || (r3 = {}))
+        n2.call(r3, t8) && i(e4, t8, r3[t8]);
+      if (l3)
+        for (var t8 of l3(r3))
+          c4.call(r3, t8) && i(e4, t8, r3[t8]);
+      return e4;
+    };
+    w2 = (e4, r3) => {
+      var t8 = {};
+      for (var s10 in e4)
+        n2.call(e4, s10) && r3.indexOf(s10) < 0 && (t8[s10] = e4[s10]);
+      if (e4 != null && l3)
+        for (var s10 of l3(e4))
+          r3.indexOf(s10) < 0 && c4.call(e4, s10) && (t8[s10] = e4[s10]);
+      return t8;
+    };
+    d2 = (0, import_react105.forwardRef)((e4, r3) => {
+      const a4 = e4, {
+        alt: t8,
+        color: s10 = "currentColor",
+        size: o4 = "1em",
+        weight: f5 = "regular",
+        mirrored: h4 = false,
+        children: S2,
+        weights: p4
+      } = a4, u3 = w2(a4, [
+        "alt",
+        "color",
+        "size",
+        "weight",
+        "mirrored",
+        "children",
+        "weights"
+      ]);
+      return /* @__PURE__ */ import_react105.default.createElement(
+        "svg",
+        m2({
+          ref: r3,
+          xmlns: "http://www.w3.org/2000/svg",
+          width: o4,
+          height: o4,
+          fill: s10,
+          viewBox: "0 0 256 256",
+          transform: h4 ? "scale(-1, 1)" : void 0
+        }, u3),
+        !!t8 && /* @__PURE__ */ import_react105.default.createElement("title", null, t8),
+        S2,
+        p4.get(f5)
+      );
+    });
+    d2.displayName = "SSRBase";
+    E3 = d2;
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/ArrowLeft.mjs
+var import_react106, t4;
+var init_ArrowLeft = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/ArrowLeft.mjs"() {
+    import_react106 = __toESM(require_react(), 1);
+    t4 = /* @__PURE__ */ new Map([
+      [
+        "bold",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z" }))
+      ],
+      [
+        "duotone",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M112,56V200L40,128Z", opacity: "0.2" }), /* @__PURE__ */ import_react106.default.createElement("path", { d: "M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z" }))
+      ],
+      [
+        "fill",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M224,128a8,8,0,0,1-8,8H120v64a8,8,0,0,1-13.66,5.66l-72-72a8,8,0,0,1,0-11.32l72-72A8,8,0,0,1,120,56v64h96A8,8,0,0,1,224,128Z" }))
+      ],
+      [
+        "light",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M222,128a6,6,0,0,1-6,6H54.49l61.75,61.76a6,6,0,1,1-8.48,8.48l-72-72a6,6,0,0,1,0-8.48l72-72a6,6,0,0,1,8.48,8.48L54.49,122H216A6,6,0,0,1,222,128Z" }))
+      ],
+      [
+        "regular",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z" }))
+      ],
+      [
+        "thin",
+        /* @__PURE__ */ import_react106.default.createElement(import_react106.default.Fragment, null, /* @__PURE__ */ import_react106.default.createElement("path", { d: "M220,128a4,4,0,0,1-4,4H49.66l65.17,65.17a4,4,0,0,1-5.66,5.66l-72-72a4,4,0,0,1,0-5.66l72-72a4,4,0,0,1,5.66,5.66L49.66,124H216A4,4,0,0,1,220,128Z" }))
+      ]
+    ]);
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/ArrowLeft.mjs
+var import_react107, i2, p2, s4, t5, w3, c5, m3, a2, f3, A2;
+var init_ArrowLeft2 = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/ArrowLeft.mjs"() {
+    import_react107 = __toESM(require_react(), 1);
+    init_SSRBase();
+    init_ArrowLeft();
+    i2 = Object.defineProperty;
+    p2 = Object.defineProperties;
+    s4 = Object.getOwnPropertyDescriptors;
+    t5 = Object.getOwnPropertySymbols;
+    w3 = Object.prototype.hasOwnProperty;
+    c5 = Object.prototype.propertyIsEnumerable;
+    m3 = (e4, r3, o4) => r3 in e4 ? i2(e4, r3, { enumerable: true, configurable: true, writable: true, value: o4 }) : e4[r3] = o4;
+    a2 = (e4, r3) => {
+      for (var o4 in r3 || (r3 = {}))
+        w3.call(r3, o4) && m3(e4, o4, r3[o4]);
+      if (t5)
+        for (var o4 of t5(r3))
+          c5.call(r3, o4) && m3(e4, o4, r3[o4]);
+      return e4;
+    };
+    f3 = (e4, r3) => p2(e4, s4(r3));
+    A2 = (0, import_react107.forwardRef)((e4, r3) => /* @__PURE__ */ import_react107.default.createElement(E3, f3(a2({ ref: r3 }, e4), { weights: t4 })));
+    A2.displayName = "ArrowLeft";
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/X.mjs
+var import_react108, t6;
+var init_X = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/X.mjs"() {
+    import_react108 = __toESM(require_react(), 1);
+    t6 = /* @__PURE__ */ new Map([
+      [
+        "bold",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement("path", { d: "M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z" }))
+      ],
+      [
+        "duotone",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement(
+          "path",
+          {
+            d: "M216,56V200a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V56A16,16,0,0,1,56,40H200A16,16,0,0,1,216,56Z",
+            opacity: "0.2"
+          }
+        ), /* @__PURE__ */ import_react108.default.createElement("path", { d: "M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" }))
+      ],
+      [
+        "fill",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement("path", { d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM181.66,170.34a8,8,0,0,1-11.32,11.32L128,139.31,85.66,181.66a8,8,0,0,1-11.32-11.32L116.69,128,74.34,85.66A8,8,0,0,1,85.66,74.34L128,116.69l42.34-42.35a8,8,0,0,1,11.32,11.32L139.31,128Z" }))
+      ],
+      [
+        "light",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement("path", { d: "M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z" }))
+      ],
+      [
+        "regular",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement("path", { d: "M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" }))
+      ],
+      [
+        "thin",
+        /* @__PURE__ */ import_react108.default.createElement(import_react108.default.Fragment, null, /* @__PURE__ */ import_react108.default.createElement("path", { d: "M202.83,197.17a4,4,0,0,1-5.66,5.66L128,133.66,58.83,202.83a4,4,0,0,1-5.66-5.66L122.34,128,53.17,58.83a4,4,0,0,1,5.66-5.66L128,122.34l69.17-69.17a4,4,0,1,1,5.66,5.66L133.66,128Z" }))
+      ]
+    ]);
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/X.mjs
+var import_react109, i3, p3, s5, t7, c6, R5, m4, a3, f4, S;
+var init_X2 = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/X.mjs"() {
+    import_react109 = __toESM(require_react(), 1);
+    init_SSRBase();
+    init_X();
+    i3 = Object.defineProperty;
+    p3 = Object.defineProperties;
+    s5 = Object.getOwnPropertyDescriptors;
+    t7 = Object.getOwnPropertySymbols;
+    c6 = Object.prototype.hasOwnProperty;
+    R5 = Object.prototype.propertyIsEnumerable;
+    m4 = (r3, e4, o4) => e4 in r3 ? i3(r3, e4, { enumerable: true, configurable: true, writable: true, value: o4 }) : r3[e4] = o4;
+    a3 = (r3, e4) => {
+      for (var o4 in e4 || (e4 = {}))
+        c6.call(e4, o4) && m4(r3, o4, e4[o4]);
+      if (t7)
+        for (var o4 of t7(e4))
+          R5.call(e4, o4) && m4(r3, o4, e4[o4]);
+      return r3;
+    };
+    f4 = (r3, e4) => p3(r3, s5(e4));
+    S = (0, import_react109.forwardRef)((r3, e4) => /* @__PURE__ */ import_react109.default.createElement(E3, f4(a3({ ref: e4 }, r3), { weights: t6 })));
+    S.displayName = "X";
+  }
+});
+
+// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/index.mjs
+var init_ssr = __esm({
+  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/index.mjs"() {
+    init_ArrowLeft2();
+    init_X2();
+  }
+});
+
+// dist/server/chunks/chunk-BLwlP6ZU.js
+var drawer, s6;
+var init_chunk_BLwlP6ZU = __esm({
+  "dist/server/chunks/chunk-BLwlP6ZU.js"() {
+    "use strict";
+    drawer = "BLn5B";
+    s6 = {
+      drawer
+    };
+  }
+});
+
+// dist/server/chunks/chunk-D7DA3cwL.js
+var header2, logoLink, burger, s7;
+var init_chunk_D7DA3cwL = __esm({
+  "dist/server/chunks/chunk-D7DA3cwL.js"() {
+    "use strict";
+    header2 = "_--APr";
+    logoLink = "YG38Q";
+    burger = "CpYnV";
+    s7 = {
+      header: header2,
+      logoLink,
+      burger
+    };
+  }
+});
+
+// dist/server/chunks/chunk-C69B94H0.js
 function MantineProvider2({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(MantineProvider, { theme, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Notifications, {}),
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(MantineProvider, { theme, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Notifications, {}),
     children
   ] });
 }
@@ -34617,7 +37089,7 @@ function HACK_runScopeWatchers(scope, linksToRun) {
   }
 }
 function HACK_updateScopeRefs(tscope, values2) {
-  var _a, _b, _c, _d, _e;
+  var _a, _b, _c, _d, _e2;
   const scope = tscope;
   const linksToRun = [];
   for (const id in scope.reg) {
@@ -34632,7 +37104,7 @@ function HACK_updateScopeRefs(tscope, values2) {
       } else {
         const sid = (_d = ref == null ? void 0 : ref.meta) == null ? void 0 : _d.sid;
         if (sid && sid in values2) {
-          const serialize2 = (_e = ref == null ? void 0 : ref.meta) == null ? void 0 : _e.serialize;
+          const serialize2 = (_e2 = ref == null ? void 0 : ref.meta) == null ? void 0 : _e2.serialize;
           const read = serialize2 && serialize2 !== "ignore" ? serialize2 == null ? void 0 : serialize2.read : null;
           ref.current = read ? read(values2[sid]) : values2[sid];
         }
@@ -34653,24 +37125,30 @@ function INTERNAL_getClientScope(values2) {
 function Wrapper({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(MantineProvider2, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(NavigationProgress, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(ScopeProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(EffectorProvider, { children }) })
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(MantineProvider2, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(NavigationProgress, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(ScopeProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(EffectorProvider, { children }) })
   ] });
 }
-var import_jsx_runtime56, import_react67, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, import3, onBeforeRender, import4, HeadDefault, RootLayout;
-var init_chunk_CIEwBVDW = __esm({
-  "dist/server/chunks/chunk-CIEwBVDW.js"() {
+var import_jsx_runtime84, React6, import_react110, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, import3, onBeforeRender, import4, HeadDefault, SvgCognitiveLogo, disclosureFactory, $open, toggle, RootModel, RedirectToTestPage, NAV_CONFIG, Item, Navigation, Header, RootLayout;
+var init_chunk_C69B94H0 = __esm({
+  "dist/server/chunks/chunk-C69B94H0.js"() {
     "use strict";
-    import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
     init_esm4();
     init_esm2();
     init_esm5();
     init_effector();
-    import_react67 = __toESM(require_react(), 1);
+    React6 = __toESM(require_react(), 1);
+    import_react110 = __toESM(require_react(), 1);
     init_usePageContext();
     init_effector_react();
-    init_chunk_CBhq_Aio();
+    init_chunk_DGi7rtqd();
+    init_clsx();
+    init_factories();
+    init_ssr();
+    init_chunk_BLwlP6ZU();
+    init_chunk_D7DA3cwL();
     theme = createTheme({
       fontFamily: "Raleway, sans-serif",
       fontFamilyMonospace: "Monaco, Courier, monospace",
@@ -34715,31 +37193,31 @@ var init_chunk_CIEwBVDW = __esm({
     isClient = typeof document !== "undefined";
     currentScope = I();
     getScope = isClient ? INTERNAL_getClientScope : getServerScope;
-    ScopeContext = (0, import_react67.createContext)(void 0);
-    ScopeUpdateContext = (0, import_react67.createContext)(() => {
+    ScopeContext = (0, import_react110.createContext)(void 0);
+    ScopeUpdateContext = (0, import_react110.createContext)(() => {
     });
     ScopeProvider = ({
       children
     }) => {
       const pageContext = usePageContext();
-      const [scope, setScope] = (0, import_react67.useState)("scope" in pageContext ? pageContext.scope : getScope());
-      const update = (0, import_react67.useCallback)((values2) => {
+      const [scope, setScope] = (0, import_react110.useState)("scope" in pageContext ? pageContext.scope : getScope());
+      const update = (0, import_react110.useCallback)((values2) => {
         setScope(getScope(values2));
       }, []);
-      (0, import_react67.useEffect)(() => {
+      (0, import_react110.useEffect)(() => {
         if (!pageContext.isHydration) {
           setScope(getScope());
         }
       }, [pageContext]);
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(ScopeContext.Provider, { value: scope, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(ScopeUpdateContext.Provider, { value: update, children }) });
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(ScopeContext.Provider, { value: scope, children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(ScopeUpdateContext.Provider, { value: update, children }) });
     };
-    useScope = () => (0, import_react67.useContext)(ScopeContext);
+    useScope = () => (0, import_react110.useContext)(ScopeContext);
     EffectorProvider = ({
       children
     }) => {
       const pageContext = usePageContext();
       const scope = useScope();
-      (0, import_react67.useEffect)(() => {
+      (0, import_react110.useEffect)(() => {
         const firePageStarted = async () => {
           const {
             pageStarted
@@ -34755,7 +37233,7 @@ var init_chunk_CIEwBVDW = __esm({
           throw new Error("Page start failed");
         });
       }, [pageContext]);
-      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(L2, { value: scope, children });
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(L2, { value: scope, children });
     };
     import3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
@@ -34783,150 +37261,130 @@ var init_chunk_CIEwBVDW = __esm({
       __proto__: null,
       onBeforeRender
     }, Symbol.toStringTag, { value: "Module" }));
-    HeadDefault = () => /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_jsx_runtime56.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("meta", { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("meta", { name: "description", content: "Cognitive Lab" }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("link", { rel: "icon", href: "/logo.svg" }),
-      /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(ColorSchemeScript, {})
+    HeadDefault = () => /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(import_jsx_runtime84.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("meta", { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" }),
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("meta", { name: "description", content: "Cognitive Lab" }),
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("link", { rel: "icon", href: "/logo.svg" }),
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(ColorSchemeScript, {})
     ] });
+    SvgCognitiveLogo = (props) => /* @__PURE__ */ React6.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 220 36", ...props }, /* @__PURE__ */ React6.createElement("rect", { width: 162, height: 35.91, y: 0.045, fill: "#F3F0FF", rx: 7 }), /* @__PURE__ */ React6.createElement("path", { fill: "#7950F2", d: "M67.498 27.77c-.006-.328-.017-.656-.017-.985V8.157h1.533c.686 0 1.371.017 2.056-.008.337-.012.547.106.756.382 2.35 3.092 4.712 6.173 7.072 9.257.059.078.12.153.246.315V8.18h5.22c0 6.523 0 13.03-.063 19.565-1.404.026-2.743.025-4.083.025l-7.45-9.54c-.03.015-.062.029-.093.043 0 3.136 0 6.271-.053 9.453-1.743.045-3.434.044-5.124.044ZM60.616 27.772v-1.544c-.089.018-.141.013-.171.038-2.207 1.798-4.69 2.026-7.279 1.226-3.676-1.135-5.658-3.857-6.312-7.656-.431-2.504-.148-4.94 1.222-7.115 2.194-3.482 5.38-4.94 9.341-4.637 2.15.165 4.045 1.007 5.578 2.601.453.47.815 1.034 1.234 1.576l-3.93 3.105c-.563-1.098-1.409-1.809-2.478-2.248-2.008-.825-4.134-.034-5.142 1.934-.791 1.544-.907 3.177-.429 4.833.971 3.364 4.107 3.853 6.357 2.69.612-.316 1.142-.8 1.71-1.206l-.07-.164h-3.143v-3.858h7.8c0 3.453 0 6.887-.045 10.371-1.444.052-2.843.053-4.243.054ZM43.665 12.186c3.879 5.914 1.21 13.571-5.346 15.423-5.428 1.534-11.056-2.2-11.953-7.932-.88-5.627 2.727-10.77 8.185-11.521 3.755-.518 6.808.86 9.114 4.03Zm-11.49 2.877c-.853 1.745-.888 3.544-.228 5.341.658 1.793 2.103 2.753 3.96 2.745 1.81-.008 3.199-.985 3.848-2.748.518-1.405.613-2.849.192-4.299-.514-1.773-1.624-2.943-3.425-3.215-1.853-.28-3.347.381-4.347 2.176ZM151.375 15.628v4.326h-6.85v3.115h8.258c0 1.59 0 3.13-.079 4.687-1.017.018-1.955.018-2.893.017l-10.54-.015V8.188h13.274c0 1.535 0 3.06-.056 4.627-2.695.044-5.332.044-7.968.044v2.77h6.854ZM14.893 13.845c-2.037 2.016-2.1 5.888-.22 8.016 1.794 2.03 5.707 1.662 6.776-1.093l4.32 2.663c-.42.59-.766 1.204-1.23 1.698-1.59 1.693-3.614 2.46-5.832 2.737-6.342.793-10.804-4.848-10.705-10.294.083-4.566 3.515-8.683 7.895-9.362 2.82-.436 5.456-.016 7.762 1.851a6.774 6.774 0 0 1 1.832 2.277l-3.962 2.911c-.599-1.428-1.683-2.164-3.12-2.361-1.277-.175-2.479.017-3.516.957ZM126.514 27.764l-7.037-19.558h5.503l3.658 12.624.089.023 3.621-12.672h5.483c-2.335 6.547-4.653 13.05-7.042 19.572-1.471.018-2.873.014-4.275.011ZM100.311 27.782c-.025-.023-.049-.046-.077-.136-.003-4.96-.003-9.852-.003-14.8h-5.47V8.188c.148-.012.27-.03.394-.03 5.157-.002 10.314-.001 15.47 0 .08 0 .159.008.267.083.024 1.584.02 3.098.016 4.61 0 0 .009.003-.035.004l-5.407.001c0 1.966-.002 3.873 0 5.779.004 3.011.011 6.023.016 9.034 0 0-.016.045-.063.073a313.69 313.69 0 0 1-5.108.04ZM112.836 27.768c-.004-2.697-.011-5.394-.013-8.091-.002-3.635 0-7.27 0-10.905v-.578h5.195c0 6.504 0 12.997-.056 19.534-1.746.043-3.436.042-5.126.04ZM87.681 27.777c-.013-.162-.037-.324-.037-.486-.003-6.202-.002-12.405-.002-18.607v-.503h5.204c0 6.51 0 13.001-.048 19.542-1.738.05-3.427.052-5.117.054Z" }), /* @__PURE__ */ React6.createElement("path", { fill: "#101113", d: "M170 27.787V8.21h2.382v17.364h10.591c0 .757 0 1.472-.079 2.206-4.351.014-8.622.01-12.894.007ZM189.7 22.286c-.666 1.701-1.343 3.398-1.991 5.106-.125.33-.276.45-.619.435-.683-.03-1.368-.01-2.117-.01.264-.676.507-1.31.758-1.94 2.279-5.738 4.563-11.473 6.831-17.215.135-.341.281-.499.648-.467.518.046 1.155-.139 1.528.112.353.239.439.909.631 1.394 2.322 5.86 4.642 11.723 6.962 17.585.064.163.115.333.179.52h-2.541c-.727-1.849-1.455-3.702-2.217-5.625-2.622-.079-5.21-.09-7.798-.089-.084 0-.169.127-.254.194Zm3.885-10.756-3.332 8.57h6.919l-3.39-8.97c-.067.139-.116.238-.197.4ZM204.566 27.822c-.019-.126-.054-.252-.054-.379-.003-6.268-.003-12.537-.001-18.806 0-.128.014-.255.024-.415.179-.008.333-.023.488-.023 2.82-.001 5.642.06 8.46-.019 2.585-.073 4.106 1.67 4.643 3.72.584 2.23-.359 4.584-2.28 5.718-.053.031-.106.064-.22.134.121.055.192.09.266.12 2.033.813 3.24 2.697 3.202 5-.033 2.03-1.331 3.823-3.324 4.537-.507.181-1.048.26-1.655.393-3.238.01-6.393.015-9.549.02Zm9.376-8.89h-6.99v6.688c2.34 0 4.661 0 7.055.007.123-.031.248-.056.369-.093 1.445-.445 2.382-1.906 2.257-3.518-.124-1.607-1.192-2.864-2.691-3.084Zm-6.713-2.027c1.865 0 3.729-.009 5.594.004.935.007 1.725-.306 2.309-1.066.884-1.15 1.014-2.422.451-3.752-.544-1.285-1.551-1.78-2.88-1.748-1.466.035-2.932.008-4.398.008h-1.304c-.036.077-.06.106-.06.134-.005 2.04-.011 4.08-.002 6.12.001.1.133.199.29.3Z" }));
+    disclosureFactory = we({
+      sid: "-8zc20a",
+      fn: () => h3(({
+        open
+      }) => {
+        const $open2 = g(open, {
+          name: "$open",
+          sid: "4dnspr"
+        });
+        const toggle2 = p({
+          name: "toggle",
+          sid: "a3bdr6"
+        });
+        const opened = p({
+          name: "opened",
+          sid: "-ymylpm"
+        });
+        const closed = p({
+          name: "closed",
+          sid: "-hqlgzs"
+        });
+        M({
+          and: [{
+            clock: toggle2,
+            source: $open2,
+            fn: (isOpen) => !isOpen,
+            target: $open2
+          }],
+          or: {
+            sid: "2bhvq9"
+          }
+        });
+        M({
+          and: [{
+            clock: [opened, closed],
+            target: $open2
+          }],
+          or: {
+            sid: "2fcfvs"
+          }
+        });
+        return {
+          $open: $open2,
+          toggle: toggle2,
+          opened,
+          closed
+        };
+      }),
+      name: "disclosureFactory",
+      method: "createFactory"
+    });
+    ({
+      $open,
+      toggle
+    } = we({
+      sid: "-e1mgyj",
+      fn: () => y2(disclosureFactory, {
+        open: false
+      }),
+      name: "none",
+      method: "invoke"
+    }));
+    RootModel = {
+      $isMenuOpened: $open,
+      toggleMenu: toggle
+    };
+    RedirectToTestPage = () => {
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Button, { fullWidth: true, size: "lg", radius: "md", bg: "dark.6", children: "\u041F\u0440\u043E\u0439\u0442\u0438 \u0442\u0435\u0441\u0442" });
+    };
+    NAV_CONFIG = [{
+      id: 0,
+      label: "\u0422\u0438\u043F\u044B \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438",
+      link: "/types",
+      children: []
+    }, {
+      id: 1,
+      label: "\u0411\u043B\u043E\u0433",
+      link: "/blog"
+    }];
+    Item = ({
+      id,
+      link,
+      label,
+      children
+    }) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Box, { children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("a", { href: link, children: label }) }, id);
+    };
+    Navigation = () => {
+      const isOpened = c2(RootModel.$isMenuOpened);
+      const [toggleMenu] = c2([RootModel.toggleMenu]);
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Drawer, { className: s6.drawer, closeButtonProps: {
+        size: 32,
+        icon: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(S, { size: 32 })
+      }, size: "100%", opened: isOpened, onClose: toggleMenu, title: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(RedirectToTestPage, {}), children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Stack, { children: NAV_CONFIG.map((item) => /* @__PURE__ */ (0, import_react110.createElement)(Item, { ...item, key: item.id })) }) });
+    };
+    Header = ({
+      className
+    }) => {
+      const {
+        url
+      } = usePageContext();
+      const isOpened = c2(RootModel.$isMenuOpened);
+      const [toggleMenu] = c2([RootModel.toggleMenu]);
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("header", { className: clsx_default(s7.header, className), children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Container, { children: /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(Group, { align: "center", justify: "space-between", w: "100%", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("a", { className: s7.logoLink, ...url === "/" ? {} : {
+          href: url
+        }, children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(SvgCognitiveLogo, { width: 220, height: 36 }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Burger, { hiddenFrom: "sm", lineSize: 2, opened: isOpened, onClick: toggleMenu, className: s7.burger, "aria-label": "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0435 \u043C\u0435\u043D\u044E \u0441\u0430\u0439\u0442\u0430" }),
+        /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Navigation, {})
+      ] }) }) });
+    };
     RootLayout = ({
       children
-    }) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: s.app, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("main", { className: s.main, id: "page-content", children }) });
-  }
-});
-
-// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/SSRBase.mjs
-var import_react68, R3, l2, n, c, i, m, w2, d, E;
-var init_SSRBase = __esm({
-  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/SSRBase.mjs"() {
-    import_react68 = __toESM(require_react(), 1);
-    R3 = Object.defineProperty;
-    l2 = Object.getOwnPropertySymbols;
-    n = Object.prototype.hasOwnProperty;
-    c = Object.prototype.propertyIsEnumerable;
-    i = (e3, r3, t4) => r3 in e3 ? R3(e3, r3, { enumerable: true, configurable: true, writable: true, value: t4 }) : e3[r3] = t4;
-    m = (e3, r3) => {
-      for (var t4 in r3 || (r3 = {}))
-        n.call(r3, t4) && i(e3, t4, r3[t4]);
-      if (l2)
-        for (var t4 of l2(r3))
-          c.call(r3, t4) && i(e3, t4, r3[t4]);
-      return e3;
-    };
-    w2 = (e3, r3) => {
-      var t4 = {};
-      for (var s5 in e3)
-        n.call(e3, s5) && r3.indexOf(s5) < 0 && (t4[s5] = e3[s5]);
-      if (e3 != null && l2)
-        for (var s5 of l2(e3))
-          r3.indexOf(s5) < 0 && c.call(e3, s5) && (t4[s5] = e3[s5]);
-      return t4;
-    };
-    d = (0, import_react68.forwardRef)((e3, r3) => {
-      const a3 = e3, {
-        alt: t4,
-        color: s5 = "currentColor",
-        size: o2 = "1em",
-        weight: f2 = "regular",
-        mirrored: h2 = false,
-        children: S,
-        weights: p2
-      } = a3, u = w2(a3, [
-        "alt",
-        "color",
-        "size",
-        "weight",
-        "mirrored",
-        "children",
-        "weights"
-      ]);
-      return /* @__PURE__ */ import_react68.default.createElement(
-        "svg",
-        m({
-          ref: r3,
-          xmlns: "http://www.w3.org/2000/svg",
-          width: o2,
-          height: o2,
-          fill: s5,
-          viewBox: "0 0 256 256",
-          transform: h2 ? "scale(-1, 1)" : void 0
-        }, u),
-        !!t4 && /* @__PURE__ */ import_react68.default.createElement("title", null, t4),
-        S,
-        p2.get(f2)
-      );
-    });
-    d.displayName = "SSRBase";
-    E = d;
-  }
-});
-
-// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/ArrowLeft.mjs
-var import_react69, t2;
-var init_ArrowLeft = __esm({
-  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/defs/ArrowLeft.mjs"() {
-    import_react69 = __toESM(require_react(), 1);
-    t2 = /* @__PURE__ */ new Map([
-      [
-        "bold",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z" }))
-      ],
-      [
-        "duotone",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M112,56V200L40,128Z", opacity: "0.2" }), /* @__PURE__ */ import_react69.default.createElement("path", { d: "M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z" }))
-      ],
-      [
-        "fill",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M224,128a8,8,0,0,1-8,8H120v64a8,8,0,0,1-13.66,5.66l-72-72a8,8,0,0,1,0-11.32l72-72A8,8,0,0,1,120,56v64h96A8,8,0,0,1,224,128Z" }))
-      ],
-      [
-        "light",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M222,128a6,6,0,0,1-6,6H54.49l61.75,61.76a6,6,0,1,1-8.48,8.48l-72-72a6,6,0,0,1,0-8.48l72-72a6,6,0,0,1,8.48,8.48L54.49,122H216A6,6,0,0,1,222,128Z" }))
-      ],
-      [
-        "regular",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z" }))
-      ],
-      [
-        "thin",
-        /* @__PURE__ */ import_react69.default.createElement(import_react69.default.Fragment, null, /* @__PURE__ */ import_react69.default.createElement("path", { d: "M220,128a4,4,0,0,1-4,4H49.66l65.17,65.17a4,4,0,0,1-5.66,5.66l-72-72a4,4,0,0,1,0-5.66l72-72a4,4,0,0,1,5.66,5.66L49.66,124H216A4,4,0,0,1,220,128Z" }))
-      ]
-    ]);
-  }
-});
-
-// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/ArrowLeft.mjs
-var import_react70, i2, p, s2, t3, w3, c2, m2, a2, f, A2;
-var init_ArrowLeft2 = __esm({
-  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/ArrowLeft.mjs"() {
-    import_react70 = __toESM(require_react(), 1);
-    init_SSRBase();
-    init_ArrowLeft();
-    i2 = Object.defineProperty;
-    p = Object.defineProperties;
-    s2 = Object.getOwnPropertyDescriptors;
-    t3 = Object.getOwnPropertySymbols;
-    w3 = Object.prototype.hasOwnProperty;
-    c2 = Object.prototype.propertyIsEnumerable;
-    m2 = (e3, r3, o2) => r3 in e3 ? i2(e3, r3, { enumerable: true, configurable: true, writable: true, value: o2 }) : e3[r3] = o2;
-    a2 = (e3, r3) => {
-      for (var o2 in r3 || (r3 = {}))
-        w3.call(r3, o2) && m2(e3, o2, r3[o2]);
-      if (t3)
-        for (var o2 of t3(r3))
-          c2.call(r3, o2) && m2(e3, o2, r3[o2]);
-      return e3;
-    };
-    f = (e3, r3) => p(e3, s2(r3));
-    A2 = (0, import_react70.forwardRef)((e3, r3) => /* @__PURE__ */ import_react70.default.createElement(E, f(a2({ ref: r3 }, e3), { weights: t2 })));
-    A2.displayName = "ArrowLeft";
-  }
-});
-
-// node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/index.mjs
-var init_ssr = __esm({
-  "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/ssr/index.mjs"() {
-    init_ArrowLeft2();
+    }) => /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)("div", { className: s2.app, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Header, { className: s2.header }),
+      /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("main", { className: s2.main, id: "page-content", children })
+    ] });
   }
 });
 
@@ -34946,24 +37404,24 @@ var init_router = __esm({
 });
 
 // dist/server/chunks/chunk-CBONTDBC.js
-var back, s3;
+var back, s8;
 var init_chunk_CBONTDBC = __esm({
   "dist/server/chunks/chunk-CBONTDBC.js"() {
     "use strict";
     back = "XspBo";
-    s3 = {
+    s8 = {
       back
     };
   }
 });
 
 // dist/server/chunks/chunk-BZe_aqzT.js
-var container, s4;
+var container, s9;
 var init_chunk_BZe_aqzT = __esm({
   "dist/server/chunks/chunk-BZe_aqzT.js"() {
     "use strict";
     container = "P-LCS";
-    s4 = {
+    s9 = {
       container
     };
   }
@@ -34979,26 +37437,26 @@ function Page() {
     is404
   } = usePageContext();
   if (is404) {
-    return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(InnerContainer, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(BackButton, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("h1", { children: "404 Page Not Found" }),
-      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { children: "This page could not be found." })
+    return /* @__PURE__ */ (0, import_jsx_runtime85.jsxs)(InnerContainer, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(BackButton, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("h1", { children: "404 Page Not Found" }),
+      /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("p", { children: "This page could not be found." })
     ] });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(InnerContainer, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(BackButton, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("h1", { children: "500 Internal Server Error" }),
-    /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { children: "Something went wrong." })
+  return /* @__PURE__ */ (0, import_jsx_runtime85.jsxs)(InnerContainer, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(BackButton, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("h1", { children: "500 Internal Server Error" }),
+    /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("p", { children: "Something went wrong." })
   ] });
 }
-var import_jsx_runtime57, import_react71, navigate2, BackButton, InnerContainer, import7, configValuesSerialized;
+var import_jsx_runtime85, import_react111, navigate2, BackButton, InnerContainer, import7, configValuesSerialized;
 var init_pages_error = __esm({
   "dist/server/entries/pages_error.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_CIEwBVDW();
-    import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_C69B94H0();
+    import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
     init_usePageContext();
     init_esm2();
     init_ssr();
@@ -35006,8 +37464,11 @@ var init_pages_error = __esm({
     init_router();
     init_chunk_CBONTDBC();
     init_chunk_BZe_aqzT();
-    import_react71 = __toESM(require_react(), 1);
-    init_chunk_CBhq_Aio();
+    import_react111 = __toESM(require_react(), 1);
+    init_chunk_DGi7rtqd();
+    init_factories();
+    init_chunk_BLwlP6ZU();
+    init_chunk_D7DA3cwL();
     navigate2 = {
       back: () => window.history.back()
     };
@@ -35017,14 +37478,14 @@ var init_pages_error = __esm({
       text = "\u041D\u0430\u0437\u0430\u0434",
       ...rest
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Button, { c: "dark.7", component: "a", variant: "subtle", leftSection: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(A2, {}), className: clsx_default(s3.back, className), onClick: () => to ? navigate(to) : navigate2.back(), ...rest, children: text });
+      return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(Button, { c: "dark.7", component: "a", variant: "subtle", leftSection: /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(A2, {}), className: clsx_default(s8.back, className), onClick: () => to ? navigate(to) : navigate2.back(), ...rest, children: text });
     };
     InnerContainer = ({
       children,
       className,
       ...rest
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Container, { className: clsx_default(s4.container, className), ...rest, children });
+      return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(Container, { className: clsx_default(s9.container, className), ...rest, children });
     };
     import7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
@@ -35148,22 +37609,26 @@ __export(pages_index_exports, {
   configValuesSerialized: () => configValuesSerialized2
 });
 function Page2() {
-  return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(IndexPage, {});
+  return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(IndexPage, {});
 }
-var import_jsx_runtime58, import_react72, IndexPage, import72, configValuesSerialized2;
+var import_jsx_runtime86, import_react112, IndexPage, import72, configValuesSerialized2;
 var init_pages_index = __esm({
   "dist/server/entries/pages_index.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_CIEwBVDW();
-    import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_C69B94H0();
+    import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
-    import_react72 = __toESM(require_react(), 1);
+    import_react112 = __toESM(require_react(), 1);
     init_usePageContext();
-    init_chunk_CBhq_Aio();
+    init_chunk_DGi7rtqd();
+    init_clsx();
+    init_factories();
+    init_chunk_BLwlP6ZU();
+    init_chunk_D7DA3cwL();
     IndexPage = () => {
-      return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Container, { children: "Index" });
+      return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(Container, { children: "Index" });
     };
     import72 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
@@ -35378,12 +37843,14 @@ var init_entry = __esm({
     }, Symbol.toStringTag, { value: "Module" }));
     {
       const assetsManifest = {
-        "_chunk-BEBuccJD.js": {
-          "file": "assets/chunks/chunk-BEBuccJD.js",
+        "_chunk-BFpLPWe8.js": {
+          "file": "assets/chunks/chunk-BFpLPWe8.js",
           "name": "index",
           "imports": [
             "_chunk-B_HiiXkG.js",
-            "_chunk-Br6v_Ifg.js"
+            "_chunk-DgntpvRd.js",
+            "_chunk-DGQYawcX.js",
+            "_chunk-DNvTZ-Ub.js"
           ],
           "css": [
             "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
@@ -35401,13 +37868,6 @@ var init_entry = __esm({
           "file": "assets/chunks/chunk-B_HiiXkG.js",
           "name": "executeHook"
         },
-        "_chunk-Br6v_Ifg.js": {
-          "file": "assets/chunks/chunk-Br6v_Ifg.js",
-          "name": "src_widgets_RootLayout_RootLayout.module-eccb6268",
-          "css": [
-            "assets/static/src_widgets_RootLayout_RootLayout.CPSSIh1G.css"
-          ]
-        },
         "_chunk-C04oBjrl.js": {
           "file": "assets/chunks/chunk-C04oBjrl.js",
           "name": "src_shared_ui_InnerContainer_InnerContainer.module-2f16f634",
@@ -35415,8 +37875,36 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_InnerContainer_InnerContainer.jWvMHVOy.css"
           ]
         },
-        "_chunk-CWtUCFd9.js": {
-          "file": "assets/chunks/chunk-CWtUCFd9.js",
+        "_chunk-Cxg4_e5S.js": {
+          "file": "assets/chunks/chunk-Cxg4_e5S.js",
+          "name": "src_shared_ui_BackButton_BackButton.module-b9460a9f",
+          "css": [
+            "assets/static/src_shared_ui_BackButton_BackButton.oPBF5_RC.css"
+          ]
+        },
+        "_chunk-DGQYawcX.js": {
+          "file": "assets/chunks/chunk-DGQYawcX.js",
+          "name": "src_widgets_RootLayout_ui_Navigation_Navigation.module-75629a95",
+          "css": [
+            "assets/static/src_widgets_RootLayout_ui_Navigation_Navigation.CRP-oThw.css"
+          ]
+        },
+        "_chunk-DNvTZ-Ub.js": {
+          "file": "assets/chunks/chunk-DNvTZ-Ub.js",
+          "name": "src_widgets_RootLayout_ui_Header_Header.module-2c07e7f4",
+          "css": [
+            "assets/static/src_widgets_RootLayout_ui_Header_Header.vgpoVisd.css"
+          ]
+        },
+        "_chunk-DgntpvRd.js": {
+          "file": "assets/chunks/chunk-DgntpvRd.js",
+          "name": "src_widgets_RootLayout_RootLayout.module-eccb6268",
+          "css": [
+            "assets/static/src_widgets_RootLayout_RootLayout.CPSSIh1G.css"
+          ]
+        },
+        "_chunk-Kr8rBNXZ.js": {
+          "file": "assets/chunks/chunk-Kr8rBNXZ.js",
           "name": "initOnPopState",
           "imports": [
             "_chunk-B_HiiXkG.js"
@@ -35424,13 +37912,6 @@ var init_entry = __esm({
           "dynamicImports": [
             "virtual:vike:pageConfigValuesAll:client:/pages/_error",
             "virtual:vike:pageConfigValuesAll:client:/pages/index"
-          ]
-        },
-        "_chunk-Cxg4_e5S.js": {
-          "file": "assets/chunks/chunk-Cxg4_e5S.js",
-          "name": "src_shared_ui_BackButton_BackButton.module-b9460a9f",
-          "css": [
-            "assets/static/src_shared_ui_BackButton_BackButton.oPBF5_RC.css"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css": {
@@ -35449,17 +37930,25 @@ var init_entry = __esm({
           "file": "assets/static/src_widgets_RootLayout_RootLayout.CPSSIh1G.css",
           "src": "_src_widgets_RootLayout_RootLayout.CPSSIh1G.css"
         },
+        "_src_widgets_RootLayout_ui_Header_Header.vgpoVisd.css": {
+          "file": "assets/static/src_widgets_RootLayout_ui_Header_Header.vgpoVisd.css",
+          "src": "_src_widgets_RootLayout_ui_Header_Header.vgpoVisd.css"
+        },
+        "_src_widgets_RootLayout_ui_Navigation_Navigation.CRP-oThw.css": {
+          "file": "assets/static/src_widgets_RootLayout_ui_Navigation_Navigation.CRP-oThw.css",
+          "src": "_src_widgets_RootLayout_ui_Navigation_Navigation.CRP-oThw.css"
+        },
         "_vike-react-d3bef9eb.BcWtY8Ol.css": {
           "file": "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
           "src": "_vike-react-d3bef9eb.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.6lTPEQJR.js",
+          "file": "assets/entries/entry-client-routing.BCXG3Odc.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
           "imports": [
-            "_chunk-CWtUCFd9.js",
+            "_chunk-Kr8rBNXZ.js",
             "_chunk-B_HiiXkG.js"
           ]
         },
@@ -35484,18 +37973,20 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/_error": {
-          "file": "assets/entries/pages_error.DmqmWdIW.js",
+          "file": "assets/entries/pages_error._w-co0Sj.js",
           "name": "entries/pages/_error",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/_error",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BEBuccJD.js",
+            "_chunk-BFpLPWe8.js",
             "_chunk-B_HiiXkG.js",
-            "_chunk-CWtUCFd9.js",
+            "_chunk-Kr8rBNXZ.js",
             "_chunk-Cxg4_e5S.js",
             "_chunk-C04oBjrl.js",
-            "_chunk-Br6v_Ifg.js"
+            "_chunk-DgntpvRd.js",
+            "_chunk-DGQYawcX.js",
+            "_chunk-DNvTZ-Ub.js"
           ],
           "css": [
             "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
@@ -35510,15 +38001,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.Dpkcc0DY.js",
+          "file": "assets/entries/pages_index.BNaMFKen.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BEBuccJD.js",
+            "_chunk-BFpLPWe8.js",
             "_chunk-B_HiiXkG.js",
-            "_chunk-Br6v_Ifg.js"
+            "_chunk-DgntpvRd.js",
+            "_chunk-DGQYawcX.js",
+            "_chunk-DNvTZ-Ub.js"
           ],
           "css": [
             "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
@@ -35916,7 +38409,7 @@ var init_getHook = __esm({
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/route/loadPageRoutes.js
 async function loadPageRoutes(pageFilesAll, pageConfigs, pageConfigGlobal, allPageIds) {
-  await Promise.all(pageFilesAll.filter((p2) => p2.fileType === ".page.route").map((p2) => p2.loadFile?.()));
+  await Promise.all(pageFilesAll.filter((p4) => p4.fileType === ".page.route").map((p4) => p4.loadFile?.()));
   const { onBeforeRouteHook, filesystemRoots } = getGlobalHooks(pageFilesAll, pageConfigs, pageConfigGlobal);
   const pageRoutes = getPageRoutes(filesystemRoots, pageFilesAll, pageConfigs, allPageIds);
   return { pageRoutes, onBeforeRouteHook };
@@ -35926,7 +38419,7 @@ function getPageRoutes(filesystemRoots, pageFilesAll, pageConfigs, allPageIds) {
   if (pageConfigs.length > 0) {
     assert(filesystemRoots === null);
     const comesFromV1PageConfig = true;
-    pageConfigs.filter((p2) => !p2.isErrorPage).forEach((pageConfig) => {
+    pageConfigs.filter((p4) => !p4.isErrorPage).forEach((pageConfig) => {
       const pageId = pageConfig.pageId;
       let pageRoute = null;
       {
@@ -35980,7 +38473,7 @@ function getPageRoutes(filesystemRoots, pageFilesAll, pageConfigs, allPageIds) {
     assert(filesystemRoots);
     const comesFromV1PageConfig = false;
     allPageIds.filter((pageId) => !isErrorPageId(pageId, false)).forEach((pageId) => {
-      const pageRouteFile = pageFilesAll.find((p2) => p2.pageId === pageId && p2.fileType === ".page.route");
+      const pageRouteFile = pageFilesAll.find((p4) => p4.pageId === pageId && p4.fileType === ".page.route");
       if (!pageRouteFile || !("default" in pageRouteFile.fileExports)) {
         const routeString = deduceRouteStringFromFilesystemPath(pageId, filesystemRoots);
         assert(routeString.startsWith("/"));
@@ -36038,7 +38531,7 @@ function getGlobalHooks(pageFilesAll, pageConfigs, pageConfigGlobal) {
   }
   let onBeforeRouteHook = null;
   const filesystemRoots = [];
-  pageFilesAll.filter((p2) => p2.fileType === ".page.route" && p2.isDefaultPageFile).forEach(({ filePath, fileExports }) => {
+  pageFilesAll.filter((p4) => p4.fileType === ".page.route" && p4.isDefaultPageFile).forEach(({ filePath, fileExports }) => {
     assert(fileExports);
     if ("onBeforeRoute" in fileExports) {
       assertUsage2(hasProp(fileExports, "onBeforeRoute", "function"), `\`export { onBeforeRoute }\` of ${filePath} should be a function.`);
@@ -36093,12 +38586,12 @@ function assertV1Design(pageConfigs, pageFilesAll) {
     const indent = "- ";
     if (typeof pageConfigs !== "boolean") {
       assert(pageConfigs.length > 0);
-      const filesV1 = unique(pageConfigs.map((p2) => Object.values(p2.configValueSources).map((sources) => sources.map((c3) => c3.definedAtFilePath.filePathAbsoluteUserRootDir).filter(isNotNullish).map((filePathToShowToUser) => indent + filePathToShowToUser))).flat(2));
+      const filesV1 = unique(pageConfigs.map((p4) => Object.values(p4.configValueSources).map((sources) => sources.map((c7) => c7.definedAtFilePath.filePathAbsoluteUserRootDir).filter(isNotNullish).map((filePathToShowToUser) => indent + filePathToShowToUser))).flat(2));
       lines.push(...["V1 design files:", ...filesV1]);
     }
     if (typeof pageFilesAll !== "boolean") {
       assert(pageFilesAll.length > 0);
-      const filesOld = pageFilesAll.map((p2) => indent + p2.filePath);
+      const filesOld = pageFilesAll.map((p4) => indent + p4.filePath);
       lines.push(...["Old design files:", ...filesOld]);
     }
     assertUsage2(false, lines.join("\n"));
@@ -36421,10 +38914,10 @@ function assertInjectFilterUsage(injectFilterEntries) {
   checkForWarnings(injectFilterEntries);
 }
 function checkForWrongUsage(injectFilterEntries) {
-  injectFilterEntries.forEach((entry, i3) => {
-    assertUsage2(isObject(entry), `[injectFilter()] Entry ${i3} isn't an object`);
-    assertUsage2(typeof entry.src === "string", `[injectFilter()] Entry ${i3} is missing property ${import_picocolors26.default.cyan("src")}`);
-    assertUsage2(entry[stamp] === true, `[injectFilter()] Entry ${i3} (${entry.src}) isn't the original object, see https://vike.dev/injectFilter`);
+  injectFilterEntries.forEach((entry, i4) => {
+    assertUsage2(isObject(entry), `[injectFilter()] Entry ${i4} isn't an object`);
+    assertUsage2(typeof entry.src === "string", `[injectFilter()] Entry ${i4} is missing property ${import_picocolors26.default.cyan("src")}`);
+    assertUsage2(entry[stamp] === true, `[injectFilter()] Entry ${i4} (${entry.src}) isn't the original object, see https://vike.dev/injectFilter`);
     assert([false, "HTML_BEGIN", "HTML_END"].includes(entry.inject));
     assert(entry.assetType === null || typeof entry.assetType === "string");
     assert(entry.mediaType === null || typeof entry.mediaType === "string");
@@ -36433,14 +38926,14 @@ function checkForWrongUsage(injectFilterEntries) {
   });
 }
 function checkForWarnings(injectFilterEntries) {
-  injectFilterEntries.forEach((a3) => {
-    if (a3.assetType === "style" && a3.isEntry) {
-      assertWarning2(a3.inject, `[injectFilter()] We recommend against not injecting ${a3.src}`, {
+  injectFilterEntries.forEach((a4) => {
+    if (a4.assetType === "style" && a4.isEntry) {
+      assertWarning2(a4.inject, `[injectFilter()] We recommend against not injecting ${a4.src}`, {
         onlyOnce: true
       });
     }
-    if (a3.assetType === "script") {
-      assertWarning2(a3.inject, `[injectFilter()] We recommend against not preloading JavaScript (${a3.src})`, {
+    if (a4.assetType === "script") {
+      assertWarning2(a4.inject, `[injectFilter()] We recommend against not preloading JavaScript (${a4.src})`, {
         onlyOnce: true
       });
     }
@@ -36538,7 +39031,7 @@ function injectHtmlTagsToStream(pageContext, streamFromReactStreamingPackage, in
     if (streamFromReactStreamingPackage)
       return null;
     assert(htmlTags);
-    const tags = htmlTags.filter((h2) => h2.position === "HTML_STREAM");
+    const tags = htmlTags.filter((h4) => h4.position === "HTML_STREAM");
     if (tags.length === 0)
       return null;
     const htmlFragment = joinHtmlTags(tags);
@@ -36580,8 +39073,8 @@ async function resolvePageContextPromise(pageContext) {
 }
 function htmlPartsToString(htmlParts, pageAssets) {
   let htmlString = "";
-  htmlParts.forEach((p2) => {
-    htmlString += typeof p2 === "string" ? p2 : p2(pageAssets);
+  htmlParts.forEach((p4) => {
+    htmlString += typeof p4 === "string" ? p4 : p4(pageAssets);
   });
   return htmlString;
 }
@@ -36709,9 +39202,9 @@ async function streamPipeNodeToString(streamPipeNode) {
   const { Writable } = await loadStreamNodeModule();
   const writable = new Writable({
     write(chunk2, _encoding, callback) {
-      const s5 = chunk2.toString();
-      assert(typeof s5 === "string");
-      str += s5;
+      const s10 = chunk2.toString();
+      assert(typeof s10 === "string");
+      str += s10;
       callback();
     },
     final(callback) {
@@ -37018,7 +39511,7 @@ async function createStreamWrapper({ streamOriginal, onError, onData, onEnd, onF
       (async () => {
         try {
           await writerOriginal.ready;
-        } catch (e3) {
+        } catch (e4) {
         }
         onReadyToWrite();
         if (hasEnded) {
@@ -37479,9 +39972,9 @@ async function renderTemplate(templateContent, pageContext) {
     htmlStream = stream;
   };
   const { templateStrings, templateVariables } = templateContent;
-  for (let i3 = 0; i3 < templateVariables.length; i3++) {
-    addHtmlPart(templateStrings[i3]);
-    let templateVar = templateVariables[i3];
+  for (let i4 = 0; i4 < templateVariables.length; i4++) {
+    addHtmlPart(templateStrings[i4]);
+    let templateVar = templateVariables[i4];
     if (isEscapedString(templateVar)) {
       const htmlString = getEscapedString(templateVar);
       addHtmlPart(htmlString);
@@ -37505,7 +39998,7 @@ async function renderTemplate(templateContent, pageContext) {
     }
     const getErrMsg2 = (msg) => {
       const { hookName, hookFilePath } = pageContext._renderHook;
-      const nth = i3 === 0 && "1st" || i3 === 1 && "2nd" || i3 === 2 && "3rd" || `${i3}-th`;
+      const nth = i4 === 0 && "1st" || i4 === 1 && "2nd" || i4 === 2 && "3rd" || `${i4}-th`;
       return [
         `The ${nth} HTML variable is ${msg}`,
         `The HTML was provided by the ${hookName}() hook at ${hookFilePath}.`
@@ -37661,7 +40154,7 @@ function getHttpResponseBodyStreamHandlers(htmlRender, renderHook) {
   };
   function getFixMsg(kind, type) {
     const streamName = getStreamName(kind, type);
-    assert(["a ", "an ", "the "].some((s5) => streamName.startsWith(s5)));
+    assert(["a ", "an ", "the "].some((s10) => streamName.startsWith(s10)));
     assert(renderHook);
     const { hookFilePath, hookName } = renderHook;
     return `Make sure the ${hookName}() defined by ${hookFilePath} hook provides ${streamName} instead`;
@@ -37676,7 +40169,7 @@ function getErrMsgBody(htmlRender, renderHook) {
   assert(renderHook);
   const { hookFilePath, hookName } = renderHook;
   const hookReturnType = getHookReturnType(htmlRender);
-  assert(["a ", "an ", "the "].some((s5) => hookReturnType.startsWith(s5)));
+  assert(["a ", "an ", "the "].some((s10) => hookReturnType.startsWith(s10)));
   const errMsgBody = `${hookName}() hook defined by ${hookFilePath} provides ${hookReturnType}`;
   assert(!errMsgBody.endsWith(" "));
   return errMsgBody;
@@ -37784,14 +40277,14 @@ function copy(G2) {
   return Object.fromEntries(Object.entries(G2).map(([key, val]) => [key, new Set(val)]));
 }
 function validate(G2) {
-  Object.keys(G2).forEach((n2) => check(G2, n2, []));
+  Object.keys(G2).forEach((n3) => check(G2, n3, []));
 }
-function check(G2, n2, path) {
-  if (path.includes(n2)) {
-    const cycle = path.slice(path.indexOf(n2)).concat(n2);
+function check(G2, n3, path) {
+  if (path.includes(n3)) {
+    const cycle = path.slice(path.indexOf(n3)).concat(n3);
     assertUsage2(false, `Infinite loop of HTTP URL redirects: ${cycle.map(import_picocolors31.default.cyan).join(" -> ")}`);
   }
-  G2[n2]?.forEach((node) => check(G2, node, [...path, n2]));
+  G2[n3]?.forEach((node) => check(G2, node, [...path, n3]));
 }
 var import_picocolors31, globalObject8;
 var init_assertNoInfiniteHttpRedirect = __esm({
@@ -37905,20 +40398,20 @@ function getPageFilesServerSide(pageFilesAll, pageId) {
 }
 function determine(pageFilesAll, pageId, envIsClient) {
   const env = envIsClient ? "CLIENT_ONLY" : "SERVER_ONLY";
-  const pageFilesRelevant = pageFilesAll.filter((p2) => p2.isRelevant(pageId) && p2.fileType !== ".page.route").sort(getPageFilesSorter(envIsClient, pageId));
+  const pageFilesRelevant = pageFilesAll.filter((p4) => p4.isRelevant(pageId) && p4.fileType !== ".page.route").sort(getPageFilesSorter(envIsClient, pageId));
   const getPageIdFile = (iso) => {
-    const files = pageFilesRelevant.filter((p2) => p2.pageId === pageId && p2.isEnv(iso ? "CLIENT_AND_SERVER" : env));
-    assertUsage2(files.length <= 1, `Merge the following files into a single file: ${files.map((p2) => p2.filePath).join(" ")}`);
+    const files = pageFilesRelevant.filter((p4) => p4.pageId === pageId && p4.isEnv(iso ? "CLIENT_AND_SERVER" : env));
+    assertUsage2(files.length <= 1, `Merge the following files into a single file: ${files.map((p4) => p4.filePath).join(" ")}`);
     const pageIdFile = files[0];
     assert(pageIdFile === void 0 || !pageIdFile.isDefaultPageFile);
     return pageIdFile;
   };
   const pageIdFileEnv = getPageIdFile(false);
   const pageIdFileIso = getPageIdFile(true);
-  const getRendererFile = (iso) => pageFilesRelevant.filter((p2) => p2.isRendererPageFile && p2.isEnv(iso ? "CLIENT_AND_SERVER" : env))[0];
+  const getRendererFile = (iso) => pageFilesRelevant.filter((p4) => p4.isRendererPageFile && p4.isEnv(iso ? "CLIENT_AND_SERVER" : env))[0];
   const rendererFileEnv = getRendererFile(false);
   const rendererFileIso = getRendererFile(true);
-  const defaultFilesNonRenderer = pageFilesRelevant.filter((p2) => p2.isDefaultPageFile && !p2.isRendererPageFile && (p2.isEnv(env) || p2.isEnv("CLIENT_AND_SERVER")));
+  const defaultFilesNonRenderer = pageFilesRelevant.filter((p4) => p4.isDefaultPageFile && !p4.isRendererPageFile && (p4.isEnv(env) || p4.isEnv("CLIENT_AND_SERVER")));
   const pageFiles2 = [pageIdFileEnv, pageIdFileIso, ...defaultFilesNonRenderer, rendererFileEnv, rendererFileIso].filter(isNotNullish);
   return pageFiles2;
 }
@@ -37999,15 +40492,15 @@ var init_getPageFiles2 = __esm({
 });
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/getPageFiles/analyzePageClientSide/getExportNames.js
-function getExportNames(p2) {
-  if (p2.fileType === ".css") {
+function getExportNames(p4) {
+  if (p4.fileType === ".css") {
     return [];
   }
-  if (p2.exportNames) {
-    return p2.exportNames;
+  if (p4.exportNames) {
+    return p4.exportNames;
   }
-  assert(p2.fileExports, p2.filePath);
-  const exportNames = Object.keys(p2.fileExports);
+  assert(p4.fileExports, p4.filePath);
+  const exportNames = Object.keys(p4.fileExports);
   return exportNames;
 }
 var init_getExportNames = __esm({
@@ -38021,20 +40514,20 @@ function analyzeExports({ pageFilesClientSide, pageFilesServerSide, pageId }) {
   return { isHtmlOnly: isHtmlOnly(), isClientRouting: isClientRouting() };
   function isHtmlOnly() {
     {
-      const hasPageIdIsmrphFile = pageFilesServerSide.some((p2) => p2.pageId === pageId && p2.fileType === ".page");
+      const hasPageIdIsmrphFile = pageFilesServerSide.some((p4) => p4.pageId === pageId && p4.fileType === ".page");
       if (hasPageIdIsmrphFile) {
         assertClientSideRenderHook();
         return false;
       }
     }
     {
-      const hasPageIdServerFile = pageFilesServerSide.some((p2) => p2.pageId === pageId && p2.fileType === ".page.server");
+      const hasPageIdServerFile = pageFilesServerSide.some((p4) => p4.pageId === pageId && p4.fileType === ".page.server");
       if (!hasPageIdServerFile) {
         return false;
       }
     }
     {
-      const definesClientRenderer = pageFilesClientSide.some((p2) => p2.pageId === pageId && p2.fileType === ".page.client" && getExportNames(p2).includes("render"));
+      const definesClientRenderer = pageFilesClientSide.some((p4) => p4.pageId === pageId && p4.fileType === ".page.client" && getExportNames(p4).includes("render"));
       if (definesClientRenderer) {
         return false;
       }
@@ -38042,21 +40535,21 @@ function analyzeExports({ pageFilesClientSide, pageFilesServerSide, pageId }) {
     return true;
   }
   function assertClientSideRenderHook() {
-    const hasClientSideRenderHook = pageFilesClientSide.some((p2) => {
-      return getExportNames(p2).includes("render");
+    const hasClientSideRenderHook = pageFilesClientSide.some((p4) => {
+      return getExportNames(p4).includes("render");
     });
     assertUsage2(hasClientSideRenderHook, [
       "No client-side `render()` hook found.",
       "See https://vike.dev/render-modes for more information.",
       [
         "Loaded client-side page files (none of them `export { render }`):",
-        ...pageFilesClientSide.map((p2, i3) => ` (${i3 + 1}): ${p2.filePath}`)
+        ...pageFilesClientSide.map((p4, i4) => ` (${i4 + 1}): ${p4.filePath}`)
       ].join("\n")
     ].join(" "));
   }
   function isClientRouting() {
-    const hasClientRoutingExport = pageFilesClientSide.some((p2) => {
-      return getExportNames(p2).includes("clientRouting");
+    const hasClientRoutingExport = pageFilesClientSide.some((p4) => {
+      return getExportNames(p4).includes("clientRouting");
     });
     return hasClientRoutingExport;
   }
@@ -38071,12 +40564,12 @@ var init_analyzeExports = __esm({
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/getPageFiles/analyzePageClientSide/determineClientEntry.js
 function determineClientEntry({ pageFilesClientSide, pageFilesServerSide, isHtmlOnly, isClientRouting }) {
   let clientEntries = [];
-  const pageFilesServerSideOnly = pageFilesServerSide.filter((p2) => !pageFilesClientSide.includes(p2));
+  const pageFilesServerSideOnly = pageFilesServerSide.filter((p4) => !pageFilesClientSide.includes(p4));
   const clientDependencies = [];
-  clientDependencies.push(...pageFilesClientSide.map((p2) => ({ id: p2.filePath, onlyAssets: false, eagerlyImported: false })));
-  clientDependencies.push(...pageFilesServerSideOnly.map((p2) => ({ id: p2.filePath, onlyAssets: true, eagerlyImported: false })));
+  clientDependencies.push(...pageFilesClientSide.map((p4) => ({ id: p4.filePath, onlyAssets: false, eagerlyImported: false })));
+  clientDependencies.push(...pageFilesServerSideOnly.map((p4) => ({ id: p4.filePath, onlyAssets: true, eagerlyImported: false })));
   if (isHtmlOnly) {
-    clientEntries = pageFilesClientSide.map((p2) => p2.filePath);
+    clientEntries = pageFilesClientSide.map((p4) => p4.filePath);
   } else {
     const clientEntry = getVikeClientEntry(isClientRouting);
     clientDependencies.push({ id: clientEntry, onlyAssets: false, eagerlyImported: false });
@@ -38098,7 +40591,7 @@ function analyzePageClientSide(pageFilesAll, pageId) {
   const pageFilesServerSide = getPageFilesServerSide(pageFilesAll, pageId);
   const { isHtmlOnly, isClientRouting } = analyzeExports({ pageFilesClientSide, pageFilesServerSide, pageId });
   if (isHtmlOnly) {
-    pageFilesClientSide = pageFilesClientSide.filter((p2) => p2.isEnv("CLIENT_ONLY") && !getExportNames(p2).includes("render"));
+    pageFilesClientSide = pageFilesClientSide.filter((p4) => p4.isEnv("CLIENT_ONLY") && !getExportNames(p4).includes("render"));
     pageFilesClientSide = removeOverridenPageFiles(pageFilesClientSide);
   }
   const { clientEntries, clientDependencies } = determineClientEntry({
@@ -38111,19 +40604,19 @@ function analyzePageClientSide(pageFilesAll, pageId) {
 }
 async function analyzePageClientSideInit(pageFilesAll, pageId, { sharedPageFilesAlreadyLoaded }) {
   const pageFilesClientSide = getPageFilesClientSide(pageFilesAll, pageId);
-  await Promise.all(pageFilesClientSide.map(async (p2) => {
-    assert(p2.isEnv("CLIENT_ONLY") || p2.isEnv("CLIENT_AND_SERVER"));
-    if (sharedPageFilesAlreadyLoaded && p2.isEnv("CLIENT_AND_SERVER")) {
+  await Promise.all(pageFilesClientSide.map(async (p4) => {
+    assert(p4.isEnv("CLIENT_ONLY") || p4.isEnv("CLIENT_AND_SERVER"));
+    if (sharedPageFilesAlreadyLoaded && p4.isEnv("CLIENT_AND_SERVER")) {
       return;
     }
-    await p2.loadExportNames?.();
+    await p4.loadExportNames?.();
   }));
 }
 function removeOverridenPageFiles(pageFilesClientSide) {
   const pageFilesClientSide_ = [];
-  for (const p2 of pageFilesClientSide) {
-    pageFilesClientSide_.push(p2);
-    if (getExportNames(p2).includes("overrideDefaultPages")) {
+  for (const p4 of pageFilesClientSide) {
+    pageFilesClientSide_.push(p4);
+    if (getExportNames(p4).includes("overrideDefaultPages")) {
       break;
     }
   }
@@ -38309,7 +40802,7 @@ function getManifestEntry(id, assetsManifest) {
     return { manifestEntry: manifestEntry2, manifestKey: manifestKey2 };
   }
   assertIsNpmPackageImport(id);
-  const found = Object.entries(assetsManifest).find(([, e3]) => e3.name === prependEntriesDir(id));
+  const found = Object.entries(assetsManifest).find(([, e4]) => e4.name === prependEntriesDir(id));
   assert(found);
   const [manifestKey, manifestEntry] = found;
   return { manifestEntry, manifestKey };
@@ -38571,7 +41064,7 @@ async function getPageAssets(pageContext, clientDependencies, clientEntries) {
     });
   });
   pageAssets.forEach(({ src }) => {
-    assert(1 === pageAssets.filter((p2) => p2.src === src).length);
+    assert(1 === pageAssets.filter((p4) => p4.src === src).length);
   });
   pageAssets = pageAssets.map((pageAsset) => {
     const baseServerAssets = pageContext._baseAssets || pageContext._baseServer;
@@ -38633,11 +41126,11 @@ function debugPageFiles({ pageContext, isHtmlOnly, isClientRouting, pageFilesLoa
     if (pageFiles2.length === 0) {
       return "None";
     }
-    return "\n" + pageFiles2.sort((p1, p2) => p1.filePath.localeCompare(p2.filePath)).sort(makeFirst((p2) => p2.isRendererPageFile ? !genericPageFilesLast : null)).sort(makeFirst((p2) => p2.isDefaultPageFile ? !genericPageFilesLast : null)).map((p2) => p2.filePath).map((s5) => s5.split("_default.page.").join(`${import_picocolors32.default.blue("_default")}.page.`)).map((s5) => s5.split("/renderer/").join(`/${import_picocolors32.default.red("renderer")}/`)).map((s5) => padding + s5).join("\n");
+    return "\n" + pageFiles2.sort((p1, p22) => p1.filePath.localeCompare(p22.filePath)).sort(makeFirst((p4) => p4.isRendererPageFile ? !genericPageFilesLast : null)).sort(makeFirst((p4) => p4.isDefaultPageFile ? !genericPageFilesLast : null)).map((p4) => p4.filePath).map((s10) => s10.split("_default.page.").join(`${import_picocolors32.default.blue("_default")}.page.`)).map((s10) => s10.split("/renderer/").join(`/${import_picocolors32.default.red("renderer")}/`)).map((s10) => padding + s10).join("\n");
   }
 }
 function samePageFiles(pageFiles1, pageFiles2) {
-  return pageFiles1.every((p1) => pageFiles2.some((p2) => p2.filePath === p1.filePath)) && pageFiles2.every((p2) => pageFiles1.some((p1) => p1.filePath === p2.filePath));
+  return pageFiles1.every((p1) => pageFiles2.some((p22) => p22.filePath === p1.filePath)) && pageFiles2.every((p22) => pageFiles1.some((p1) => p1.filePath === p22.filePath));
 }
 var import_picocolors32;
 var init_debugPageFiles = __esm({
@@ -38649,7 +41142,7 @@ var init_debugPageFiles = __esm({
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/shared/page-configs/findPageConfig.js
 function findPageConfig(pageConfigs, pageId) {
-  const result = pageConfigs.filter((p2) => p2.pageId === pageId);
+  const result = pageConfigs.filter((p4) => p4.pageId === pageId);
   assert(result.length <= 1);
   const pageConfig = result[0] ?? null;
   return pageConfig;
@@ -38763,16 +41256,16 @@ async function loadUserFilesServerSide(pageContext) {
   const passToClient = [];
   const errMsg = " should be an array of strings.";
   if (!isV1Design) {
-    pageContextExports.exportsAll.passToClient?.forEach((e3) => {
-      assertUsage2(hasProp(e3, "exportValue", "string[]"), `${e3.exportSource}${errMsg}`);
-      passToClient.push(...e3.exportValue);
+    pageContextExports.exportsAll.passToClient?.forEach((e4) => {
+      assertUsage2(hasProp(e4, "exportValue", "string[]"), `${e4.exportSource}${errMsg}`);
+      passToClient.push(...e4.exportValue);
     });
   } else {
-    pageContextExports.configEntries.passToClient?.forEach((e3) => {
-      const { configValue } = e3;
+    pageContextExports.configEntries.passToClient?.forEach((e4) => {
+      const { configValue } = e4;
       assert(isArray(configValue));
       const vals = configValue.flat(1);
-      assertUsage2(isArrayOfStrings(vals), `${e3.configDefinedAt}${errMsg}`);
+      assertUsage2(isArrayOfStrings(vals), `${e4.configDefinedAt}${errMsg}`);
       passToClient.push(...vals);
     });
   }
@@ -38782,7 +41275,7 @@ async function loadUserFilesServerSide(pageContext) {
     Page: pageContextExports.exports.Page,
     _isHtmlOnly: isHtmlOnly,
     _passToClient: passToClient,
-    _pageFilePathsLoaded: pageFilesLoaded.map((p2) => p2.filePath)
+    _pageFilePathsLoaded: pageFilesLoaded.map((p4) => p4.filePath)
   });
   objectAssign(pageContextAddendum, {
     __getPageAssets: async () => {
@@ -38802,20 +41295,20 @@ async function loadUserFilesServerSide(pageContext) {
         showStackTrace: true
       });
       const pageAssetsOldFormat = [];
-      (await pageContextAddendum.__getPageAssets()).forEach((p2) => {
-        if (p2.assetType === "script" && p2.isEntry) {
+      (await pageContextAddendum.__getPageAssets()).forEach((p4) => {
+        if (p4.assetType === "script" && p4.isEntry) {
           pageAssetsOldFormat.push({
-            src: p2.src,
+            src: p4.src,
             preloadType: null,
             assetType: "script",
-            mediaType: p2.mediaType
+            mediaType: p4.mediaType
           });
         }
         pageAssetsOldFormat.push({
-          src: p2.src,
-          preloadType: p2.assetType,
-          assetType: p2.assetType === "style" ? "style" : "preload",
-          mediaType: p2.mediaType
+          src: p4.src,
+          preloadType: p4.assetType,
+          assetType: p4.assetType === "style" ? "style" : "preload",
+          mediaType: p4.mediaType
         });
       });
       return pageAssetsOldFormat;
@@ -38838,7 +41331,7 @@ async function loadUserFilesServerSide(pageContext) {
 async function loadPageUserFiles(pageFilesAll, pageConfig, pageId, isDev) {
   const pageFilesServerSide = getPageFilesServerSide(pageFilesAll, pageId);
   const pageConfigLoaded = !pageConfig ? null : await loadConfigValues(pageConfig, isDev);
-  await Promise.all(pageFilesServerSide.map((p2) => p2.loadFile?.()));
+  await Promise.all(pageFilesServerSide.map((p4) => p4.loadFile?.()));
   const pageContextExports = getPageConfigUserFriendly(pageFilesServerSide, pageConfigLoaded);
   return {
     pageContextExports,
@@ -39427,7 +41920,7 @@ async function executeGuardHook(pageContext, prepareForUserConsumption) {
   assertUsage2(hookResult === void 0, `${errIntro} ${hook.hookFilePath} returns a value, but guard() shouldn't return any value`);
 }
 function findPageGuard(pageId, pageFilesAll) {
-  const pageRouteFile = pageFilesAll.find((p2) => p2.pageId === pageId && p2.fileType === ".page.route");
+  const pageRouteFile = pageFilesAll.find((p4) => p4.pageId === pageId && p4.fileType === ".page.route");
   if (!pageRouteFile)
     return null;
   const { filePath, fileExports } = pageRouteFile;
@@ -39722,11 +42215,11 @@ function getRoutesInfo(pageRoutes) {
   let width1 = Math.max(...linesContent.map(({ routeStr }) => stripAnsi(routeStr).length));
   if (width1 > width1_max)
     return null;
-  let lines = linesContent.map(({ routeStr, routeTypeSrc, routeDefinedBy }, i3) => {
+  let lines = linesContent.map(({ routeStr, routeTypeSrc, routeDefinedBy }, i4) => {
     let cell1 = padEnd(routeStr, width1 + (stripAnsi(routeStr).length - stripAnsi(routeStr).length));
     let cell2 = padEnd(routeTypeSrc, width2);
     let cell3 = padEnd(routeDefinedBy, width3);
-    const isHeader = i3 === 0;
+    const isHeader = i4 === 0;
     if (isHeader) {
       cell1 = import_picocolors40.default.dim(cell1);
       cell2 = import_picocolors40.default.dim(cell2);
@@ -39852,15 +42345,15 @@ function resolveUrlPathname(routeString, routeParams) {
       if (part.type === "URL") {
         return part;
       } else {
-        return part.val.split(key).map((rest, i3) => {
+        return part.val.split(key).map((rest, i4) => {
           const partURL = { val, type: "URL" };
           const partRouteString = { val: rest, type: "ROUTE_STRING" };
-          return i3 === 0 ? [partRouteString] : [partURL, partRouteString];
+          return i4 === 0 ? [partRouteString] : [partURL, partRouteString];
         }).flat();
       }
     }).flat();
   });
-  const urlPathname = parts.map((p2) => p2.val).join("");
+  const urlPathname = parts.map((p4) => p4.val).join("");
   return urlPathname;
 }
 var init_resolveUrlPathname = __esm({
@@ -39905,8 +42398,8 @@ function assertParams(urlSource, urlTarget) {
 }
 function merge(objs) {
   const obj = {};
-  objs.forEach((e3) => {
-    Object.assign(obj, e3);
+  objs.forEach((e4) => {
+    Object.assign(obj, e4);
   });
   return obj;
 }
@@ -40081,12 +42574,12 @@ function logHttpResponse(urlOriginalPretty, httpRequestId, pageContextReturn) {
     } else {
       const isSuccess = statusCode !== null && statusCode >= 200 && statusCode <= 399;
       isNominal = isSuccess || statusCode === 404;
-      const color = (s5) => import_picocolors43.default.bold(isSuccess ? import_picocolors43.default.green(String(s5)) : import_picocolors43.default.red(String(s5)));
+      const color = (s10) => import_picocolors43.default.bold(isSuccess ? import_picocolors43.default.green(String(s10)) : import_picocolors43.default.red(String(s10)));
       const isRedirect = statusCode && 300 <= statusCode && statusCode <= 399;
       const type = isRedirect ? "redirect" : "response";
       if (isRedirect) {
         assert(pageContextReturn.httpResponse);
-        const headerRedirect = pageContextReturn.httpResponse.headers.slice().reverse().find((header) => header[0] === "Location");
+        const headerRedirect = pageContextReturn.httpResponse.headers.slice().reverse().find((header3) => header3[0] === "Location");
         assert(headerRedirect);
         const urlRedirect = headerRedirect[1];
         urlOriginalPretty = urlRedirect;
@@ -40552,18 +43045,18 @@ var require_object_inspect = __commonJS({
         var symString = hasShammedSymbols ? $replace.call(String(obj), /^(Symbol\(.*\))_[^)]*$/, "$1") : symToString.call(obj);
         return typeof obj === "object" && !hasShammedSymbols ? markBoxed(symString) : symString;
       }
-      if (isElement(obj)) {
-        var s5 = "<" + $toLowerCase.call(String(obj.nodeName));
+      if (isElement2(obj)) {
+        var s10 = "<" + $toLowerCase.call(String(obj.nodeName));
         var attrs = obj.attributes || [];
-        for (var i3 = 0; i3 < attrs.length; i3++) {
-          s5 += " " + attrs[i3].name + "=" + wrapQuotes(quote(attrs[i3].value), "double", opts);
+        for (var i4 = 0; i4 < attrs.length; i4++) {
+          s10 += " " + attrs[i4].name + "=" + wrapQuotes(quote(attrs[i4].value), "double", opts);
         }
-        s5 += ">";
+        s10 += ">";
         if (obj.childNodes && obj.childNodes.length) {
-          s5 += "...";
+          s10 += "...";
         }
-        s5 += "</" + $toLowerCase.call(String(obj.nodeName)) + ">";
-        return s5;
+        s10 += "</" + $toLowerCase.call(String(obj.nodeName)) + ">";
+        return s10;
       }
       if (isArray2(obj)) {
         if (obj.length === 0) {
@@ -40654,13 +43147,13 @@ var require_object_inspect = __commonJS({
       }
       return String(obj);
     };
-    function wrapQuotes(s5, defaultStyle, opts) {
+    function wrapQuotes(s10, defaultStyle, opts) {
       var style = opts.quoteStyle || defaultStyle;
       var quoteChar = quotes[style];
-      return quoteChar + s5 + quoteChar;
+      return quoteChar + s10 + quoteChar;
     }
-    function quote(s5) {
-      return $replace.call(String(s5), /"/g, "&quot;");
+    function quote(s10) {
+      return $replace.call(String(s10), /"/g, "&quot;");
     }
     function canTrustToString(obj) {
       return !toStringTag || !(typeof obj === "object" && (toStringTag in obj || typeof obj[toStringTag] !== "undefined"));
@@ -40699,7 +43192,7 @@ var require_object_inspect = __commonJS({
       try {
         symToString.call(obj);
         return true;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40710,7 +43203,7 @@ var require_object_inspect = __commonJS({
       try {
         bigIntValueOf.call(obj);
         return true;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40723,13 +43216,13 @@ var require_object_inspect = __commonJS({
     function toStr(obj) {
       return objectToString.call(obj);
     }
-    function nameOf(f2) {
-      if (f2.name) {
-        return f2.name;
+    function nameOf(f5) {
+      if (f5.name) {
+        return f5.name;
       }
-      var m3 = $match.call(functionToString.call(f2), /^function\s*([\w$]+)/);
-      if (m3) {
-        return m3[1];
+      var m5 = $match.call(functionToString.call(f5), /^function\s*([\w$]+)/);
+      if (m5) {
+        return m5[1];
       }
       return null;
     }
@@ -40737,9 +43230,9 @@ var require_object_inspect = __commonJS({
       if (xs.indexOf) {
         return xs.indexOf(x);
       }
-      for (var i3 = 0, l3 = xs.length; i3 < l3; i3++) {
-        if (xs[i3] === x) {
-          return i3;
+      for (var i4 = 0, l5 = xs.length; i4 < l5; i4++) {
+        if (xs[i4] === x) {
+          return i4;
         }
       }
       return -1;
@@ -40752,11 +43245,11 @@ var require_object_inspect = __commonJS({
         mapSize.call(x);
         try {
           setSize.call(x);
-        } catch (s5) {
+        } catch (s10) {
           return true;
         }
         return x instanceof Map;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40768,11 +43261,11 @@ var require_object_inspect = __commonJS({
         weakMapHas.call(x, weakMapHas);
         try {
           weakSetHas.call(x, weakSetHas);
-        } catch (s5) {
+        } catch (s10) {
           return true;
         }
         return x instanceof WeakMap;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40783,7 +43276,7 @@ var require_object_inspect = __commonJS({
       try {
         weakRefDeref.call(x);
         return true;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40795,11 +43288,11 @@ var require_object_inspect = __commonJS({
         setSize.call(x);
         try {
           mapSize.call(x);
-        } catch (m3) {
+        } catch (m5) {
           return true;
         }
         return x instanceof Set;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
@@ -40811,15 +43304,15 @@ var require_object_inspect = __commonJS({
         weakSetHas.call(x, weakSetHas);
         try {
           weakMapHas.call(x, weakMapHas);
-        } catch (s5) {
+        } catch (s10) {
           return true;
         }
         return x instanceof WeakSet;
-      } catch (e3) {
+      } catch (e4) {
       }
       return false;
     }
-    function isElement(x) {
+    function isElement2(x) {
       if (!x || typeof x !== "object") {
         return false;
       }
@@ -40836,22 +43329,22 @@ var require_object_inspect = __commonJS({
       }
       var quoteRE = quoteREs[opts.quoteStyle || "single"];
       quoteRE.lastIndex = 0;
-      var s5 = $replace.call($replace.call(str, quoteRE, "\\$1"), /[\x00-\x1f]/g, lowbyte);
-      return wrapQuotes(s5, "single", opts);
+      var s10 = $replace.call($replace.call(str, quoteRE, "\\$1"), /[\x00-\x1f]/g, lowbyte);
+      return wrapQuotes(s10, "single", opts);
     }
-    function lowbyte(c3) {
-      var n2 = c3.charCodeAt(0);
+    function lowbyte(c7) {
+      var n3 = c7.charCodeAt(0);
       var x = {
         8: "b",
         9: "t",
         10: "n",
         12: "f",
         13: "r"
-      }[n2];
+      }[n3];
       if (x) {
         return "\\" + x;
       }
-      return "\\x" + (n2 < 16 ? "0" : "") + $toUpperCase.call(n2.toString(16));
+      return "\\x" + (n3 < 16 ? "0" : "") + $toUpperCase.call(n3.toString(16));
     }
     function markBoxed(str) {
       return "Object(" + str + ")";
@@ -40864,8 +43357,8 @@ var require_object_inspect = __commonJS({
       return type + " (" + size + ") {" + joinedEntries + "}";
     }
     function singleLineValues(xs) {
-      for (var i3 = 0; i3 < xs.length; i3++) {
-        if (indexOf(xs[i3], "\n") >= 0) {
+      for (var i4 = 0; i4 < xs.length; i4++) {
+        if (indexOf(xs[i4], "\n") >= 0) {
           return false;
         }
       }
@@ -40897,8 +43390,8 @@ var require_object_inspect = __commonJS({
       var xs = [];
       if (isArr) {
         xs.length = obj.length;
-        for (var i3 = 0; i3 < obj.length; i3++) {
-          xs[i3] = has(obj, i3) ? inspect(obj[i3], obj) : "";
+        for (var i4 = 0; i4 < obj.length; i4++) {
+          xs[i4] = has(obj, i4) ? inspect(obj[i4], obj) : "";
         }
       }
       var syms = typeof gOPS === "function" ? gOPS(obj) : [];
@@ -41138,8 +43631,8 @@ var require_round = __commonJS({
 var require_isNaN = __commonJS({
   "node_modules/.pnpm/math-intrinsics@1.1.0/node_modules/math-intrinsics/isNaN.js"(exports, module) {
     "use strict";
-    module.exports = Number.isNaN || function isNaN2(a3) {
-      return a3 !== a3;
+    module.exports = Number.isNaN || function isNaN2(a4) {
+      return a4 !== a4;
     };
   }
 });
@@ -41174,7 +43667,7 @@ var require_gopd = __commonJS({
     if ($gOPD) {
       try {
         $gOPD([], "length");
-      } catch (e3) {
+      } catch (e4) {
         $gOPD = null;
       }
     }
@@ -41190,7 +43683,7 @@ var require_es_define_property = __commonJS({
     if ($defineProperty) {
       try {
         $defineProperty({}, "a", { value: 1 });
-      } catch (e3) {
+      } catch (e4) {
         $defineProperty = false;
       }
     }
@@ -41302,28 +43795,28 @@ var require_implementation = __commonJS({
     var toStr = Object.prototype.toString;
     var max = Math.max;
     var funcType = "[object Function]";
-    var concatty = function concatty2(a3, b2) {
+    var concatty = function concatty2(a4, b2) {
       var arr = [];
-      for (var i3 = 0; i3 < a3.length; i3 += 1) {
-        arr[i3] = a3[i3];
+      for (var i4 = 0; i4 < a4.length; i4 += 1) {
+        arr[i4] = a4[i4];
       }
       for (var j = 0; j < b2.length; j += 1) {
-        arr[j + a3.length] = b2[j];
+        arr[j + a4.length] = b2[j];
       }
       return arr;
     };
     var slicy = function slicy2(arrLike, offset) {
       var arr = [];
-      for (var i3 = offset || 0, j = 0; i3 < arrLike.length; i3 += 1, j += 1) {
-        arr[j] = arrLike[i3];
+      for (var i4 = offset || 0, j = 0; i4 < arrLike.length; i4 += 1, j += 1) {
+        arr[j] = arrLike[i4];
       }
       return arr;
     };
     var joiny = function(arr, joiner) {
       var str = "";
-      for (var i3 = 0; i3 < arr.length; i3 += 1) {
-        str += arr[i3];
-        if (i3 + 1 < arr.length) {
+      for (var i4 = 0; i4 < arr.length; i4 += 1) {
+        str += arr[i4];
+        if (i4 + 1 < arr.length) {
           str += joiner;
         }
       }
@@ -41354,8 +43847,8 @@ var require_implementation = __commonJS({
       };
       var boundLength = max(0, target.length - args.length);
       var boundArgs = [];
-      for (var i3 = 0; i3 < boundLength; i3++) {
-        boundArgs[i3] = "$" + i3;
+      for (var i4 = 0; i4 < boundLength; i4++) {
+        boundArgs[i4] = "$" + i4;
       }
       bound = Function("binder", "return function (" + joiny(boundArgs, ",") + "){ return binder.apply(this,arguments); }")(binder);
       if (target.prototype) {
@@ -41442,9 +43935,9 @@ var require_get = __commonJS({
     try {
       hasProtoAccessor = /** @type {{ __proto__?: typeof Array.prototype }} */
       [].__proto__ === Array.prototype;
-    } catch (e3) {
-      if (!e3 || typeof e3 !== "object" || !("code" in e3) || e3.code !== "ERR_PROTO_ACCESS") {
-        throw e3;
+    } catch (e4) {
+      if (!e4 || typeof e4 !== "object" || !("code" in e4) || e4.code !== "ERR_PROTO_ACCESS") {
+        throw e4;
       }
     }
     var desc = !!hasProtoAccessor && gOPD && gOPD(
@@ -41518,7 +44011,7 @@ var require_get_intrinsic = __commonJS({
     var getEvalledConstructor = function(expressionSyntax) {
       try {
         return $Function('"use strict"; return (' + expressionSyntax + ").constructor;")();
-      } catch (e3) {
+      } catch (e4) {
       }
     };
     var $gOPD = require_gopd();
@@ -41632,8 +44125,8 @@ var require_get_intrinsic = __commonJS({
     if (getProto) {
       try {
         null.error;
-      } catch (e3) {
-        errorProto = getProto(getProto(e3));
+      } catch (e4) {
+        errorProto = getProto(getProto(e4));
         INTRINSICS["%Error.prototype%"] = errorProto;
       }
     }
@@ -41781,8 +44274,8 @@ var require_get_intrinsic = __commonJS({
         intrinsicBaseName = alias[0];
         $spliceApply(parts, $concat([0, 1], alias));
       }
-      for (var i3 = 1, isOwn = true; i3 < parts.length; i3 += 1) {
-        var part = parts[i3];
+      for (var i4 = 1, isOwn = true; i4 < parts.length; i4 += 1) {
+        var part = parts[i4];
         var first = $strSlice(part, 0, 1);
         var last = $strSlice(part, -1);
         if ((first === '"' || first === "'" || first === "`" || (last === '"' || last === "'" || last === "`")) && first !== last) {
@@ -41802,7 +44295,7 @@ var require_get_intrinsic = __commonJS({
             }
             return void 0;
           }
-          if ($gOPD && i3 + 1 >= parts.length) {
+          if ($gOPD && i4 + 1 >= parts.length) {
             var desc = $gOPD(value, part);
             isOwn = !!desc;
             if (isOwn && "get" in desc && !("originalValue" in desc.get)) {
@@ -42047,8 +44540,8 @@ var require_utils6 = __commonJS({
     var isArray2 = Array.isArray;
     var hexTable = function() {
       var array = [];
-      for (var i3 = 0; i3 < 256; ++i3) {
-        array.push("%" + ((i3 < 16 ? "0" : "") + i3.toString(16)).toUpperCase());
+      for (var i4 = 0; i4 < 256; ++i4) {
+        array.push("%" + ((i4 < 16 ? "0" : "") + i4.toString(16)).toUpperCase());
       }
       return array;
     }();
@@ -42069,9 +44562,9 @@ var require_utils6 = __commonJS({
     };
     var arrayToObject = function arrayToObject2(source, options) {
       var obj = options && options.plainObjects ? { __proto__: null } : {};
-      for (var i3 = 0; i3 < source.length; ++i3) {
-        if (typeof source[i3] !== "undefined") {
-          obj[i3] = source[i3];
+      for (var i4 = 0; i4 < source.length; ++i4) {
+        if (typeof source[i4] !== "undefined") {
+          obj[i4] = source[i4];
         }
       }
       return obj;
@@ -42100,16 +44593,16 @@ var require_utils6 = __commonJS({
         mergeTarget = arrayToObject(target, options);
       }
       if (isArray2(target) && isArray2(source)) {
-        source.forEach(function(item, i3) {
-          if (has.call(target, i3)) {
-            var targetItem = target[i3];
+        source.forEach(function(item, i4) {
+          if (has.call(target, i4)) {
+            var targetItem = target[i4];
             if (targetItem && typeof targetItem === "object" && item && typeof item === "object") {
-              target[i3] = merge3(targetItem, item, options);
+              target[i4] = merge3(targetItem, item, options);
             } else {
               target.push(item);
             }
           } else {
-            target[i3] = item;
+            target[i4] = item;
           }
         });
         return target;
@@ -42137,7 +44630,7 @@ var require_utils6 = __commonJS({
       }
       try {
         return decodeURIComponent(strWithoutPlus);
-      } catch (e3) {
+      } catch (e4) {
         return strWithoutPlus;
       }
     };
@@ -42161,27 +44654,27 @@ var require_utils6 = __commonJS({
       for (var j = 0; j < string.length; j += limit) {
         var segment = string.length >= limit ? string.slice(j, j + limit) : string;
         var arr = [];
-        for (var i3 = 0; i3 < segment.length; ++i3) {
-          var c3 = segment.charCodeAt(i3);
-          if (c3 === 45 || c3 === 46 || c3 === 95 || c3 === 126 || c3 >= 48 && c3 <= 57 || c3 >= 65 && c3 <= 90 || c3 >= 97 && c3 <= 122 || format === formats.RFC1738 && (c3 === 40 || c3 === 41)) {
-            arr[arr.length] = segment.charAt(i3);
+        for (var i4 = 0; i4 < segment.length; ++i4) {
+          var c7 = segment.charCodeAt(i4);
+          if (c7 === 45 || c7 === 46 || c7 === 95 || c7 === 126 || c7 >= 48 && c7 <= 57 || c7 >= 65 && c7 <= 90 || c7 >= 97 && c7 <= 122 || format === formats.RFC1738 && (c7 === 40 || c7 === 41)) {
+            arr[arr.length] = segment.charAt(i4);
             continue;
           }
-          if (c3 < 128) {
-            arr[arr.length] = hexTable[c3];
+          if (c7 < 128) {
+            arr[arr.length] = hexTable[c7];
             continue;
           }
-          if (c3 < 2048) {
-            arr[arr.length] = hexTable[192 | c3 >> 6] + hexTable[128 | c3 & 63];
+          if (c7 < 2048) {
+            arr[arr.length] = hexTable[192 | c7 >> 6] + hexTable[128 | c7 & 63];
             continue;
           }
-          if (c3 < 55296 || c3 >= 57344) {
-            arr[arr.length] = hexTable[224 | c3 >> 12] + hexTable[128 | c3 >> 6 & 63] + hexTable[128 | c3 & 63];
+          if (c7 < 55296 || c7 >= 57344) {
+            arr[arr.length] = hexTable[224 | c7 >> 12] + hexTable[128 | c7 >> 6 & 63] + hexTable[128 | c7 & 63];
             continue;
           }
-          i3 += 1;
-          c3 = 65536 + ((c3 & 1023) << 10 | segment.charCodeAt(i3) & 1023);
-          arr[arr.length] = hexTable[240 | c3 >> 18] + hexTable[128 | c3 >> 12 & 63] + hexTable[128 | c3 >> 6 & 63] + hexTable[128 | c3 & 63];
+          i4 += 1;
+          c7 = 65536 + ((c7 & 1023) << 10 | segment.charCodeAt(i4) & 1023);
+          arr[arr.length] = hexTable[240 | c7 >> 18] + hexTable[128 | c7 >> 12 & 63] + hexTable[128 | c7 >> 6 & 63] + hexTable[128 | c7 & 63];
         }
         out += arr.join("");
       }
@@ -42190,8 +44683,8 @@ var require_utils6 = __commonJS({
     var compact = function compact2(value) {
       var queue = [{ obj: { o: value }, prop: "o" }];
       var refs = [];
-      for (var i3 = 0; i3 < queue.length; ++i3) {
-        var item = queue[i3];
+      for (var i4 = 0; i4 < queue.length; ++i4) {
+        var item = queue[i4];
         var obj = item.obj[item.prop];
         var keys2 = Object.keys(obj);
         for (var j = 0; j < keys2.length; ++j) {
@@ -42215,14 +44708,14 @@ var require_utils6 = __commonJS({
       }
       return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
     };
-    var combine = function combine2(a3, b2) {
-      return [].concat(a3, b2);
+    var combine = function combine2(a4, b2) {
+      return [].concat(a4, b2);
     };
     var maybeMap = function maybeMap2(val, fn) {
       if (isArray2(val)) {
         var mapped = [];
-        for (var i3 = 0; i3 < val.length; i3 += 1) {
-          mapped.push(fn(val[i3]));
+        for (var i4 = 0; i4 < val.length; i4 += 1) {
+          mapped.push(fn(val[i4]));
         }
         return mapped;
       }
@@ -42485,8 +44978,8 @@ var require_stringify2 = __commonJS({
         objKeys.sort(options.sort);
       }
       var sideChannel = getSideChannel();
-      for (var i3 = 0; i3 < objKeys.length; ++i3) {
-        var key = objKeys[i3];
+      for (var i4 = 0; i4 < objKeys.length; ++i4) {
+        var key = objKeys[i4];
         var value = obj[key];
         if (options.skipNulls && value === null) {
           continue;
@@ -42585,26 +45078,26 @@ var require_parse2 = __commonJS({
         throw new RangeError("Parameter limit exceeded. Only " + limit + " parameter" + (limit === 1 ? "" : "s") + " allowed.");
       }
       var skipIndex = -1;
-      var i3;
+      var i4;
       var charset = options.charset;
       if (options.charsetSentinel) {
-        for (i3 = 0; i3 < parts.length; ++i3) {
-          if (parts[i3].indexOf("utf8=") === 0) {
-            if (parts[i3] === charsetSentinel) {
+        for (i4 = 0; i4 < parts.length; ++i4) {
+          if (parts[i4].indexOf("utf8=") === 0) {
+            if (parts[i4] === charsetSentinel) {
               charset = "utf-8";
-            } else if (parts[i3] === isoSentinel) {
+            } else if (parts[i4] === isoSentinel) {
               charset = "iso-8859-1";
             }
-            skipIndex = i3;
-            i3 = parts.length;
+            skipIndex = i4;
+            i4 = parts.length;
           }
         }
       }
-      for (i3 = 0; i3 < parts.length; ++i3) {
-        if (i3 === skipIndex) {
+      for (i4 = 0; i4 < parts.length; ++i4) {
+        if (i4 === skipIndex) {
           continue;
         }
-        var part = parts[i3];
+        var part = parts[i4];
         var bracketEqualsPos = part.indexOf("]=");
         var pos = bracketEqualsPos === -1 ? part.indexOf("=") : bracketEqualsPos + 1;
         var key;
@@ -42647,9 +45140,9 @@ var require_parse2 = __commonJS({
         currentArrayLength = Array.isArray(val) && val[parentKey] ? val[parentKey].length : 0;
       }
       var leaf = valuesParsed ? val : parseArrayValue(val, options, currentArrayLength);
-      for (var i3 = chain.length - 1; i3 >= 0; --i3) {
+      for (var i4 = chain.length - 1; i4 >= 0; --i4) {
         var obj;
-        var root = chain[i3];
+        var root = chain[i4];
         if (root === "[]" && options.parseArrays) {
           obj = options.allowEmptyArrays && (leaf === "" || options.strictNullHandling && leaf === null) ? [] : utils.combine([], leaf);
         } else {
@@ -42688,9 +45181,9 @@ var require_parse2 = __commonJS({
         }
         keys2.push(parent);
       }
-      var i3 = 0;
-      while (options.depth > 0 && (segment = child.exec(key)) !== null && i3 < options.depth) {
-        i3 += 1;
+      var i4 = 0;
+      while (options.depth > 0 && (segment = child.exec(key)) !== null && i4 < options.depth) {
+        i4 += 1;
         if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
           if (!options.allowPrototypes) {
             return;
@@ -42764,8 +45257,8 @@ var require_parse2 = __commonJS({
       var tempObj = typeof str === "string" ? parseValues(str, options) : str;
       var obj = options.plainObjects ? { __proto__: null } : {};
       var keys2 = Object.keys(tempObj);
-      for (var i3 = 0; i3 < keys2.length; ++i3) {
-        var key = keys2[i3];
+      for (var i4 = 0; i4 < keys2.length; ++i4) {
+        var key = keys2[i4];
         var newObj = parseKeys(key, tempObj[key], options, typeof str === "string");
         obj = utils.merge(obj, newObj, options);
       }

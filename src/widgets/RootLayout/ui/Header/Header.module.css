@@ -1,0 +1,19 @@
+.header {
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  width: 100%;
+  padding-block: var(--mantine-spacing-xl);
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.burger > div {
+  border-radius: var(--mantine-spacing-xl);
+
+  &::after,
+  &::before {
+    border-radius: var(--mantine-spacing-xl);
+  }
+}
