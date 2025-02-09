@@ -37053,7 +37053,7 @@ var init_chunk_D7DA3cwL = __esm({
   }
 });
 
-// dist/server/chunks/chunk-C69B94H0.js
+// dist/server/chunks/chunk-BalEeo3N.js
 function MantineProvider2({
   children
 }) {
@@ -37131,8 +37131,8 @@ function Wrapper({
   ] });
 }
 var import_jsx_runtime84, React6, import_react110, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, import3, onBeforeRender, import4, HeadDefault, SvgCognitiveLogo, disclosureFactory, $open, toggle, RootModel, RedirectToTestPage, NAV_CONFIG, Item, Navigation, Header, RootLayout;
-var init_chunk_C69B94H0 = __esm({
-  "dist/server/chunks/chunk-C69B94H0.js"() {
+var init_chunk_BalEeo3N = __esm({
+  "dist/server/chunks/chunk-BalEeo3N.js"() {
     "use strict";
     import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
     init_esm4();
@@ -37350,8 +37350,7 @@ var init_chunk_C69B94H0 = __esm({
     Item = ({
       id,
       link,
-      label,
-      children
+      label
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Box, { children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("a", { href: link, children: label }) }, id);
     };
@@ -37455,7 +37454,7 @@ var init_pages_error = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_C69B94H0();
+    init_chunk_BalEeo3N();
     import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
     init_usePageContext();
     init_esm2();
@@ -37617,7 +37616,7 @@ var init_pages_index = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_C69B94H0();
+    init_chunk_BalEeo3N();
     import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     import_react112 = __toESM(require_react(), 1);
@@ -37843,25 +37842,15 @@ var init_entry = __esm({
     }, Symbol.toStringTag, { value: "Module" }));
     {
       const assetsManifest = {
-        "_chunk-BFpLPWe8.js": {
-          "file": "assets/chunks/chunk-BFpLPWe8.js",
-          "name": "index",
+        "_chunk-BW3no1pl.js": {
+          "file": "assets/chunks/chunk-BW3no1pl.js",
+          "name": "initOnPopState",
           "imports": [
-            "_chunk-B_HiiXkG.js",
-            "_chunk-DgntpvRd.js",
-            "_chunk-DGQYawcX.js",
-            "_chunk-DNvTZ-Ub.js"
+            "_chunk-B_HiiXkG.js"
           ],
-          "css": [
-            "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
-            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
-          ],
-          "assets": [
-            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          "dynamicImports": [
+            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
+            "virtual:vike:pageConfigValuesAll:client:/pages/index"
           ]
         },
         "_chunk-B_HiiXkG.js": {
@@ -37896,22 +37885,32 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Header_Header.vgpoVisd.css"
           ]
         },
+        "_chunk-DROJXHLi.js": {
+          "file": "assets/chunks/chunk-DROJXHLi.js",
+          "name": "index",
+          "imports": [
+            "_chunk-B_HiiXkG.js",
+            "_chunk-DgntpvRd.js",
+            "_chunk-DGQYawcX.js",
+            "_chunk-DNvTZ-Ub.js"
+          ],
+          "css": [
+            "assets/static/vike-react-d3bef9eb.BcWtY8Ol.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          ]
+        },
         "_chunk-DgntpvRd.js": {
           "file": "assets/chunks/chunk-DgntpvRd.js",
           "name": "src_widgets_RootLayout_RootLayout.module-eccb6268",
           "css": [
             "assets/static/src_widgets_RootLayout_RootLayout.CPSSIh1G.css"
-          ]
-        },
-        "_chunk-Kr8rBNXZ.js": {
-          "file": "assets/chunks/chunk-Kr8rBNXZ.js",
-          "name": "initOnPopState",
-          "imports": [
-            "_chunk-B_HiiXkG.js"
-          ],
-          "dynamicImports": [
-            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
-            "virtual:vike:pageConfigValuesAll:client:/pages/index"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css": {
@@ -37943,12 +37942,12 @@ var init_entry = __esm({
           "src": "_vike-react-d3bef9eb.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.BCXG3Odc.js",
+          "file": "assets/entries/entry-client-routing.BERFSCbf.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6.1.0_@_loiterypfyt37we7aa5kbiiity/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
           "imports": [
-            "_chunk-Kr8rBNXZ.js",
+            "_chunk-BW3no1pl.js",
             "_chunk-B_HiiXkG.js"
           ]
         },
@@ -37973,15 +37972,15 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/_error": {
-          "file": "assets/entries/pages_error._w-co0Sj.js",
+          "file": "assets/entries/pages_error.Cmy3Pu42.js",
           "name": "entries/pages/_error",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/_error",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BFpLPWe8.js",
+            "_chunk-DROJXHLi.js",
             "_chunk-B_HiiXkG.js",
-            "_chunk-Kr8rBNXZ.js",
+            "_chunk-BW3no1pl.js",
             "_chunk-Cxg4_e5S.js",
             "_chunk-C04oBjrl.js",
             "_chunk-DgntpvRd.js",
@@ -38001,13 +38000,13 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.BNaMFKen.js",
+          "file": "assets/entries/pages_index.BipV_xHh.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BFpLPWe8.js",
+            "_chunk-DROJXHLi.js",
             "_chunk-B_HiiXkG.js",
             "_chunk-DgntpvRd.js",
             "_chunk-DGQYawcX.js",

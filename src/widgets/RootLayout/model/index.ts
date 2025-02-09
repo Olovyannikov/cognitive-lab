@@ -1,12 +1,35 @@
 import { invoke } from '@withease/factories';
+import { createEvent, createStore, sample } from 'effector';
 
 import { disclosureFactory } from '@/shared/factories/disclosure';
 
-const { $open, toggle } = invoke(disclosureFactory, {
+const $submenuCurrentTitle = createStore<string | null>(null);
+const setCurrentSubmenuTitle = createEvent<string>();
+sample({
+    clock: setCurrentSubmenuTitle,
+    target: $submenuCurrentTitle,
+});
+
+const MainMenu = invoke(disclosureFactory, {
     open: false,
 });
 
+const Submenu = invoke(disclosureFactory, {
+    open: false,
+});
+
+const allMenusClosed = createEvent<false>();
+
+sample({
+    clock: allMenusClosed,
+    target: [MainMenu.closed, Submenu.closed],
+});
+
 export const RootModel = {
-    $isMenuOpened: $open,
-    toggleMenu: toggle,
+    $isMenuOpened: MainMenu.$open,
+    toggleMenu: MainMenu.toggle,
+    $isSubmenuOpened: Submenu.$open,
+    toggleSubmenu: Submenu.toggle,
+    allMenusClosed,
+    setCurrentSubmenuTitle,
 };

@@ -11,7 +11,7 @@ import { Navigation } from '../Navigation';
 import s from './Header.module.css';
 
 export const Header = ({ className }: ComponentProps<'header'>) => {
-    const { url } = usePageContext();
+    const { urlPathname } = usePageContext();
     const isOpened = useUnit(RootModel.$isMenuOpened);
     const [toggleMenu] = useUnit([RootModel.toggleMenu]);
 
@@ -19,7 +19,7 @@ export const Header = ({ className }: ComponentProps<'header'>) => {
         <header className={clsx(s.header, className)}>
             <Container>
                 <Group align='center' justify='space-between' w='100%'>
-                    <a className={s.logoLink} {...(url === '/' ? {} : { href: url })}>
+                    <a className={s.logoLink} {...(urlPathname === '/' ? {} : { href: urlPathname })}>
                         <CognitiveLogo width={220} height={36} />
                     </a>
                     <Burger
