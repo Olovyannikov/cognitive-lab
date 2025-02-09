@@ -1,0 +1,21 @@
+.top {
+  font-size: 16px;
+  color: var(--mantine-color-dark-3);
+
+  p {
+    margin: 4px 0 32px;
+  }
+
+  @mixin larger-than 1200px {
+    min-width: 314px;
+  }
+}
+
+.owner {
+  margin-bottom: 60px;
+  gap: var(--mantine-spacing-sm);
+
+  @mixin larger-than 1200px {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,5 @@
-import { ComponentProps } from 'react';
-import { Burger, Container, Group } from '@mantine/core';
+import type { ComponentProps } from 'react';
+import { Box, Burger, Group } from '@mantine/core';
 import clsx from 'clsx';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
@@ -12,27 +12,27 @@ import s from './Header.module.css';
 
 export const Header = ({ className }: ComponentProps<'header'>) => {
     const { urlPathname } = usePageContext();
-    const isOpened = useUnit(RootModel.$isMenuOpened);
-    const [toggleMenu] = useUnit([RootModel.toggleMenu]);
+    const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);
+    const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);
 
     return (
         <header className={clsx(s.header, className)}>
-            <Container>
+            <Box className={s.container}>
                 <Group align='center' justify='space-between' w='100%'>
-                    <a className={s.logoLink} {...(urlPathname === '/' ? {} : { href: urlPathname })}>
+                    <a className={s.logoLink} {...(urlPathname === '/' ? {} : { href: '/' })}>
                         <CognitiveLogo width={220} height={36} />
                     </a>
                     <Burger
-                        hiddenFrom='sm'
                         lineSize={2}
+                        hiddenFrom='sm'
                         opened={isOpened}
-                        onClick={toggleMenu}
                         className={s.burger}
                         aria-label='Открыть мобильное меню сайта'
+                        onClick={isSubmenuOpened ? () => allMenusClose(false) : toggleMenu}
                     />
                     <Navigation />
                 </Group>
-            </Container>
+            </Box>
         </header>
     );
 };

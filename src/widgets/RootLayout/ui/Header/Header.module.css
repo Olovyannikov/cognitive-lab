@@ -17,3 +17,14 @@
     border-radius: var(--mantine-spacing-xl);
   }
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--mantine-spacing-md);
+
+  @mixin larger-than 768px {
+    padding-inline: 64px;
+  }
+}

@@ -1,0 +1,56 @@
+.footer {
+  margin: 0 auto;
+  padding: var(--mantine-spacing-xl);
+  padding-inline: var(--mantine-spacing-md);
+
+  a {
+    text-decoration: none;
+    color: currentcolor;
+
+    &:is(:hover, :focus-visible) {
+      color: var(--mantine-color-gray-9);
+    }
+  }
+
+  @mixin larger-than 1200px {
+    padding-inline: 64px;
+  }
+}
+
+.topWrapper {
+  @mixin larger-than 1200px {
+    display: flex;
+    gap: 168px;
+  }
+}
+
+.contacts,
+.menu,
+.docs {
+  gap: var(--mantine-spacing-lg);
+}
+
+.docs {
+  margin-bottom: var(--mantine-spacing-xs);
+}
+
+.divider {
+  margin-block: 32px;
+}
+
+.items {
+  flex-direction: column;
+
+  section:not(:last-child) {
+    margin-bottom: 60px;
+
+    @mixin larger-than 768px {
+      margin-bottom: 0;
+    }
+  }
+
+  @mixin larger-than 768px {
+    flex-direction: row;
+    gap: 168px;
+  }
+}

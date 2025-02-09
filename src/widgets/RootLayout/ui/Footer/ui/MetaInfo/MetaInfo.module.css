@@ -1,0 +1,28 @@
+.root {
+  flex-direction: column;
+  gap: 32px;
+
+  @mixin larger-than 1200px {
+    flex-direction: row;
+    gap: 168px;
+  }
+}
+
+.docs {
+  @mixin larger-than 1200px {
+    min-width: 314px;
+  }
+}
+
+.meta {
+  @mixin larger-than 1200px {
+    flex: 1 0 310px;
+  }
+}
+
+.text {
+  @mixin larger-than 1200px {
+    display: flex;
+    gap: 110px;
+  }
+}

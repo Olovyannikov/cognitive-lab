@@ -1,0 +1,10 @@
+.section {
+  h2 {
+    margin: 0 0 var(--mantine-spacing-lg);
+    font-size: 24px;
+
+    @mixin larger-than 1200px {
+      margin-bottom: var(--mantine-spacing-lg);
+    }
+  }
+}

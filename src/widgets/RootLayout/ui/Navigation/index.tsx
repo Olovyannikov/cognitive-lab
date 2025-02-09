@@ -1,49 +1,39 @@
-import { Drawer, Menu } from '@mantine/core';
+import { Drawer, Group } from '@mantine/core';
 import { X } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 
 import { RedirectToTestPage } from '@/features/RedirectToTestPage';
-import { desktop } from '@/shared/media';
 
 import { RootModel } from '../../model';
-import { NAV_CONFIG } from './config';
-import { Item } from './Item';
+import { NAV_ITEMS } from './const';
 import s from './Navigation.module.css';
 
+const items = NAV_ITEMS.map((Component, idx) => <Component key={idx} />);
+
 export const Navigation = () => {
-    const [isOpened, isSubmenuOpened, isDesktop] = useUnit([
-        RootModel.$isMenuOpened,
-        RootModel.$isSubmenuOpened,
-        desktop.$matches,
-    ]);
-    const [toggleMenu] = useUnit([RootModel.toggleMenu]);
+    const [isOpen] = useUnit([RootModel.$isMenuOpened]);
+    const [onClose] = useUnit([RootModel.closeMenu]);
 
     return (
-        <Menu
-            offset={0}
-            closeOnItemClick={false}
-            opened={isSubmenuOpened}
-            position='bottom-start'
-            width={isDesktop ? 1084 : '100%'}
-            trigger={isDesktop ? 'hover' : 'click'}
-        >
+        <>
             <Drawer
-                className={s.drawer}
                 closeButtonProps={{
                     size: 32,
-                    icon: <X size={32} />,
+                    icon: <X size='32px' />,
                 }}
                 size='100%'
-                opened={isOpened}
-                onClose={toggleMenu}
-                title={<RedirectToTestPage />}
+                hiddenFrom='sm'
+                opened={isOpen}
+                className={s.drawer}
+                onClose={() => onClose(false)}
+                title={<RedirectToTestPage w='100%' />}
             >
-                <nav>
-                    {NAV_CONFIG.map((item) => (
-                        <Item {...item} key={item.id} />
-                    ))}
-                </nav>
+                {items}
             </Drawer>
-        </Menu>
+            <Group wrap='nowrap' component='nav' visibleFrom='sm'>
+                {items}
+                <RedirectToTestPage maw={144} w='100%' px={22} mih={45} fz={16} />
+            </Group>
+        </>
     );
 };
