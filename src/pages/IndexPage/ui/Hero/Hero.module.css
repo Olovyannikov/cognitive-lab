@@ -1,0 +1,167 @@
+.box {
+  text-align: center;
+  padding-block: 80px;
+
+  @mixin larger-than 768px {
+    padding-block: 160px;
+  }
+}
+
+.text {
+  margin: 0 auto 16px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 65px;
+}
+
+.test {
+  border-radius: 20px;
+  padding: 7px 56px;
+  background-color: var(--mantine-color-lime-4);
+}
+
+.ai {
+  position: relative;
+  margin-left: 8px;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 93px;
+    height: 85px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.description {
+  margin-bottom: 67px;
+  max-width: 1438px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.rainbow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  padding: 8px 32px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background-image: linear-gradient(#121213, #121213),
+    linear-gradient(#121213 50%, rgb(18 18 19 / 60%) 80%, rgb(18 18 19 / 0%)),
+    linear-gradient(
+      90deg,
+      hsl(var(--color-1)),
+      hsl(var(--color-5)),
+      hsl(var(--color-3)),
+      hsl(var(--color-4)),
+      hsl(var(--color-2))
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-color: #121213;
+  transition: all 0.3s ease;
+  animation: rainbow-bg 5s linear infinite;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    z-index: -1;
+    width: 60%;
+    height: 20%;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--color-1)),
+      hsl(var(--color-5)),
+      hsl(var(--color-3)),
+      hsl(var(--color-4)),
+      hsl(var(--color-2))
+    );
+    filter: blur(13px);
+    transform: translateX(-50%);
+    animation: rainbow-glow 5s linear infinite;
+  }
+}
+
+@keyframes rainbow-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes rainbow-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Shadow */
+.shadow {
+  --color-1: 0deg 100% 63%;
+  --color-2: 270deg 100% 63%;
+  --color-3: 210deg 100% 63%;
+  --color-4: 195deg 100% 63%;
+  --color-5: 90deg 100% 63%;
+
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(0deg, #000, #262626) !important;
+}
+
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(
+    90deg,
+    hsl(var(--color-1)),
+    hsl(var(--color-5)),
+    hsl(var(--color-3)),
+    hsl(var(--color-4)),
+    hsl(var(--color-2))
+  );
+  background-size: 200%;
+  animation: animate 10s linear infinite;
+}
+
+.shadow::after {
+  filter: blur(20px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 300% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
