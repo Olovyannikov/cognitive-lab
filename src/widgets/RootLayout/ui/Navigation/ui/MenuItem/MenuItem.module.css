@@ -1,0 +1,28 @@
+.item {
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.paper {
+  color: var(--mantine-color-dark-9);
+  transition: background-color 0.3s;
+
+  &:is(:hover, :focus-visible) {
+    @mixin data-color 3;
+  }
+
+  @mixin data-color 2;
+
+  @mixin larger-than 768px {
+    width: 100%;
+  }
+}
+
+.items {
+  flex-direction: column;
+
+  @mixin larger-than 768px {
+    flex-direction: row;
+  }
+}

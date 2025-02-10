@@ -1,0 +1,33 @@
+.title {
+  margin-bottom: var(--mantine-spacing-md);
+  border-radius: var(--mantine-spacing-2xl);
+  font-size: 20px;
+  text-align: center;
+  background-color: var(--mantine-color-violet-1);
+  padding-block: var(--mantine-spacing-sm);
+  padding-inline: var(--mantine-spacing-md);
+
+  &[data-color="violet"] {
+    background-color: var(--mantine-color-violet-2);
+  }
+
+  &[data-color="green"] {
+    background-color: var(--mantine-color-green-2);
+  }
+
+  &[data-color="indigo"] {
+    background-color: var(--mantine-color-indigo-2);
+  }
+
+  &[data-color="yellow"] {
+    background-color: var(--mantine-color-yellow-2);
+  }
+
+  @mixin larger-than 992px {
+    margin-bottom: 40px;
+    border-radius: 62px;
+    font-size: 48px;
+    line-height: 1;
+    padding-block: var(--mantine-spacing-md);
+  }
+}

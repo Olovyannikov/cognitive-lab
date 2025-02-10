@@ -1,6 +1,6 @@
 import { Container } from '@mantine/core';
 
-import { Hero } from '@/pages/IndexPage/ui/Hero';
+import { Hero } from './ui';
 
 export const IndexPage = () => {
     return (

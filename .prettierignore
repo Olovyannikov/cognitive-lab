@@ -56,6 +56,7 @@ firebase
 .stylelintignore
 .stylelintrc
 .gitignore
+*.png
 *.webp
 *.svg
 *.woff2
