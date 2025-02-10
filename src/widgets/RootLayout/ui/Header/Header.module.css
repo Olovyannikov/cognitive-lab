@@ -1,7 +1,12 @@
 .header {
+  margin-bottom: var(--mantine-spacing-xs);
   border-bottom: 1px solid var(--mantine-color-gray-3);
   width: 100%;
   padding-block: var(--mantine-spacing-xl);
+
+  @mixin larger-than 768px {
+    margin-bottom: var(--mantine-spacing-3xl);
+  }
 }
 
 .logoLink {
