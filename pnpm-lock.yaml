@@ -55,6 +55,9 @@ importers:
             lodash-es:
                 specifier: ^4.17.21
                 version: 4.17.21
+            markdown-to-jsx:
+                specifier: ^7.7.3
+                version: 7.7.3(react@19.0.0)
             ofetch:
                 specifier: ^1.4.1
                 version: 1.4.1
@@ -4183,6 +4186,15 @@ packages:
             {
                 integrity: sha512-L0WhttDl+2BOsybvEOLK7fW3UA0OQ0IQ2d6Zl2x/a6vVRs3bAY0ECOSHHeL5jD+SbOpOCUEi0y1DgHEn9Qn1AQ==,
             }
+
+    markdown-to-jsx@7.7.3:
+        resolution:
+            {
+                integrity: sha512-o35IhJDFP6Fv60zPy+hbvZSQMmgvSGdK5j8NRZ7FeZMY+Bgqw+dSg7SC1ZEzC26++CiOUCqkbq96/c3j/FfTEQ==,
+            }
+        engines: { node: '>= 10' }
+        peerDependencies:
+            react: '>= 0.14.0'
 
     math-intrinsics@1.1.0:
         resolution:
@@ -8507,6 +8519,10 @@ snapshots:
             '@babel/parser': 7.26.7
             '@babel/types': 7.26.7
             source-map-js: 1.2.1
+
+    markdown-to-jsx@7.7.3(react@19.0.0):
+        dependencies:
+            react: 19.0.0
 
     math-intrinsics@1.1.0: {}
 

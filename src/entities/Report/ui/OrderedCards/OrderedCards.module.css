@@ -1,0 +1,27 @@
+.paper {
+  padding-block: var(--mantine-spacing-lg);
+  padding-inline: var(--mantine-spacing-3xl);
+}
+
+.stack {
+  gap: var(--mantine-spacing-xs);
+}
+
+.title {
+  font-size: 16px;
+
+  @mixin larger-than 1024px {
+    font-size: 24px;
+  }
+}
+
+.box {
+  padding-top: 44px;
+  width: 100%;
+
+  @mixin larger-than 1366px {
+    margin-left: -153px;
+    padding-top: 64px;
+    width: calc(100% + 153px * 2);
+  }
+}

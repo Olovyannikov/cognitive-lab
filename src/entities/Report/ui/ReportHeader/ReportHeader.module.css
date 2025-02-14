@@ -9,6 +9,7 @@
   @mixin data-color 2;
 
   @mixin larger-than 1200px {
+    margin-bottom: 80px;
     border-radius: 80px;
     padding-top: 88px;
     padding-bottom: 88px;

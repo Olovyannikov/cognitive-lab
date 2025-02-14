@@ -14,16 +14,16 @@ interface MenuItemProps {
 export const MenuItem = ({ types, category, description, onClose }: MenuItemProps) => {
     return (
         <Menu.Item className={s.item} component='div'>
-            <Title mb='xs' fz={20} order={3}>
+            <Title mb='xxs' fz={20} order={3}>
                 {category}
             </Title>
-            <Text mb='xl' fz={18}>
+            <Text mb='xs' fz={18} lh='21px'>
                 {description}
             </Text>
             <Flex className={s.items} gap='md'>
                 {types.map((type) => (
                     <Paper
-                        py='md'
+                        py='sm'
                         px={32}
                         radius='md'
                         component='a'
@@ -33,11 +33,13 @@ export const MenuItem = ({ types, category, description, onClose }: MenuItemProp
                         href={`/types/${type.code}`}
                         data-color={`${titleColorMap[category]}`}
                     >
-                        <Stack gap='xs' align='center'>
-                            <Text fw={500} fz={20}>
+                        <Stack gap={6} align='center'>
+                            <Text lh='20px' fw={600} fz={18}>
                                 {type.name}
                             </Text>
-                            <Text fz={16}>{type.code}</Text>
+                            <Text fz={16} lh='18px'>
+                                {type.code}
+                            </Text>
                         </Stack>
                     </Paper>
                 ))}

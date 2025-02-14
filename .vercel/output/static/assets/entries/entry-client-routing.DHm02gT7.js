@@ -1,0 +1,1 @@
+import{d as i,e as n,m as e,g as a,s,h as r,j as o,k as l,l as c,r as g,c as u,n as d}from"../chunks/chunk-km4LdgZ6.js";async function S(){C();const t=P();i(),n(),await t}async function P(){l(c()===0),await g({scrollTarget:{preserveScroll:!0},isBackwardNavigation:null,isClientSideNavigation:!1})}function C(){e(),a(),s(),r(),o()}u();d();S();

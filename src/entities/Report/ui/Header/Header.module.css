@@ -1,0 +1,18 @@
+h5 + h5 {
+  margin-top: 0 !important;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 26px;
+  line-height: 1.1;
+  text-align: center;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+  @mixin larger-than 768px {
+    font-size: 32px;
+  }
+}

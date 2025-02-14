@@ -1,0 +1,68 @@
+.paper {
+  position: relative;
+  margin-bottom: 60px;
+  padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);
+
+  @mixin data-color 1;
+
+  @mixin larger-than 998px {
+    padding: calc(32px + 4px * 2) 32px;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mantine-spacing-md);
+  font-size: 20px;
+  line-height: 23px;
+  gap: var(--mantine-spacing-xs);
+  text-wrap: balance;
+
+  .emoji {
+    width: 24px;
+    height: 24px;
+
+    @mixin larger-than 998px {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @mixin larger-than 998px {
+    margin-bottom: var(--mantine-spacing-lg);
+    font-size: 32px;
+    line-height: 37px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: var(--mantine-spacing-md);
+
+    @mixin larger-than 998px {
+      margin-bottom: 72px;
+    }
+  }
+
+  @mixin larger-than 998px {
+    max-width: 872px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+
+.image {
+  display: none;
+  object-fit: contain;
+
+  @mixin larger-than 1200px {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: block;
+  }
+}
