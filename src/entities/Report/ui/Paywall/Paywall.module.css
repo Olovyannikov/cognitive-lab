@@ -1,0 +1,55 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "top man"
+    "points points"
+    "actions actions";
+  grid-template-columns: 1fr 126px;
+  gap: var(--mantine-spacing-lg);
+
+  @mixin larger-than 768px {
+    grid-template-areas:
+      "man top"
+      "man points"
+      "man actions";
+    grid-template-columns: 351px 1fr;
+  }
+}
+
+.top {
+  grid-area: top;
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 23px;
+
+    @mixin larger-than 768px {
+      font-size: 32px;
+      line-height: 37px;
+    }
+  }
+}
+
+.paywallMan {
+  grid-area: man;
+  width: 126px;
+  height: 126px;
+
+  @mixin larger-than 768px {
+    width: 351px;
+    height: 351px;
+  }
+}
+
+.points {
+  grid-area: points;
+}
+
+.actions {
+  grid-area: actions;
+
+  @mixin larger-than 768px {
+    margin-left: 36px;
+  }
+}

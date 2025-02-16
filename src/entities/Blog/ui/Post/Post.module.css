@@ -1,0 +1,10 @@
+.image {
+  margin-bottom: var(--mantine-spacing-md);
+  border-radius: var(--mantine-spacing-lg);
+  max-height: 399px;
+
+  @mixin larger-than 768px {
+    margin-bottom: 80px;
+    border-radius: 80px;
+  }
+}

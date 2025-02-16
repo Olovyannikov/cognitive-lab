@@ -1,13 +1,13 @@
-import { Container } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 
 import { Hero } from './ui';
 
 export const IndexPage = () => {
     return (
-        <section>
+        <Box component='section'>
             <Container>
                 <Hero />
             </Container>
-        </section>
+        </Box>
     );
 };

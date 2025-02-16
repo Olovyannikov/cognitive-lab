@@ -3,12 +3,12 @@
   padding-block: 80px;
 
   @mixin larger-than 768px {
-    padding-block: 160px;
+    padding-block: 80px;
   }
 }
 
 .text {
-  margin: 0 auto 16px;
+  margin: 0 auto var(--mantine-spacing-md);
   width: fit-content;
   font-weight: 700;
   font-size: 56px;
@@ -23,7 +23,7 @@
 
 .ai {
   position: relative;
-  margin-left: 8px;
+  margin-left: var(--mantine-spacing-xs);
 
   svg {
     position: absolute;

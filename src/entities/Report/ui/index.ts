@@ -8,3 +8,5 @@ export * from './OrderedList';
 export * from './BlockQuoteLine';
 export * from './FilledBulletList';
 export * from './Banner';
+export * from './Preheader';
+export * from './Paywall';

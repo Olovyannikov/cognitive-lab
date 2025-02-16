@@ -1,0 +1,5 @@
+.backButton {
+  @mixin larger-than 768px {
+    display: none;
+  }
+}

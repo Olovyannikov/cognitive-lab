@@ -1,11 +1,10 @@
-import { Box, Container, Flex } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
 
 import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
-import { BuyNowButton } from '@/features/BuyNowButton';
-import { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer } from '@/shared/ui';
+import { CALL_TO_ACTION } from '@/widgets/CTA';
 import { ShowFullStructure } from '@/widgets/ShowFullStructure';
 
 import s from './TypePage.module.css';
@@ -56,14 +55,15 @@ export const TypePage = () => {
                 </InnerContainer>
                 <Banner
                     color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
-                    actionSlot={
-                        <Flex className={s.actions}>
-                            <BuyNowButton mbti={data?.mbti_type} />
-                            <NavigateToFullStructureTemplate className={s.fullStructureButton} />
-                        </Flex>
-                    }
+                    actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}
                 />
                 <InnerContainer>{afterBannerContent}</InnerContainer>
+                <Banner
+                    title='Узнайте свой тип личности'
+                    description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'
+                    color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
+                    actionSlot={CALL_TO_ACTION['redirectToTestPageAndNavigateToFullStructure']}
+                />
             </Container>
         </Box>
     );

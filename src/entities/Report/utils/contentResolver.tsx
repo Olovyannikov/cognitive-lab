@@ -1,5 +1,15 @@
 import type { Content } from '../types';
-import { BlockquoteLine, Cards, FilledBulletList, Header, OrderedCards, OrderedList, Paragraph, Subtitle } from '../ui';
+import {
+    BlockquoteLine,
+    Cards,
+    FilledBulletList,
+    Header,
+    OrderedCards,
+    OrderedList,
+    Paragraph,
+    Paywall,
+    Subtitle,
+} from '../ui';
 import { isListItemArray } from './guards';
 
 export const contentResolver = (content: Content, color: string) => {
@@ -26,5 +36,7 @@ export const contentResolver = (content: Content, color: string) => {
             return <BlockquoteLine text={content.text} color={color} />;
         case 'filled_bullet_list':
             return <FilledBulletList data-color={color} items={isListItemArray(content.items) ? content.items : []} />;
+        case 'paywall':
+            return <Paywall {...content} />;
     }
 };

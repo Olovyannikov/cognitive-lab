@@ -31,6 +31,9 @@ importers:
             '@phosphor-icons/react':
                 specifier: ^2.1.7
                 version: 2.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+            '@siberiacancode/reactuse':
+                specifier: ^0.0.88
+                version: 0.0.88(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
             '@withease/factories':
                 specifier: ^1.0.5
                 version: 1.0.5
@@ -1516,6 +1519,20 @@ packages:
             {
                 integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==,
             }
+
+    '@siberiacancode/reactuse@0.0.88':
+        resolution:
+            {
+                integrity: sha512-WdSqaxQ+eesq4sZSKeInHK0tzu45jmYyav7VZc7agYw9FO3MGiCu2/rFnURn2LbTtq8zZmGSnKcS1I+jpvjJMQ==,
+            }
+        engines: { node: '>=14' }
+        peerDependencies:
+            '@types/react': ^18.0.0
+            react: ^17.0.2 || ^18.0.0
+            react-dom: ^17.0.2 || ^18.0.0
+        peerDependenciesMeta:
+            '@types/react':
+                optional: true
 
     '@svgr/babel-plugin-add-jsx-attribute@8.0.0':
         resolution:
@@ -5086,6 +5103,13 @@ packages:
                 integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==,
             }
 
+    screenfull@6.0.2:
+        resolution:
+            {
+                integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==,
+            }
+        engines: { node: ^14.13.1 || >=16.0.0 }
+
     semver@6.3.1:
         resolution:
             {
@@ -6715,6 +6739,14 @@ snapshots:
         optional: true
 
     '@rtsao/scc@1.1.0': {}
+
+    '@siberiacancode/reactuse@0.0.88(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+        dependencies:
+            react: 19.0.0
+            react-dom: 19.0.0(react@19.0.0)
+            screenfull: 6.0.2
+        optionalDependencies:
+            '@types/react': 19.0.8
 
     '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.26.7)':
         dependencies:
@@ -9018,6 +9050,8 @@ snapshots:
     safer-buffer@2.1.2: {}
 
     scheduler@0.25.0: {}
+
+    screenfull@6.0.2: {}
 
     semver@6.3.1: {}
 

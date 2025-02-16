@@ -7,7 +7,7 @@ import s from './Hero.module.css';
 
 export const Hero = () => {
     return (
-        <Box className={s.box}>
+        <Box component='section' className={s.box}>
             <Text className={clsx(s.text, s.test)}>Тест на тип личности</Text>
             <Text className={s.text}>
                 и выбор профессии с{' '}

@@ -32,7 +32,7 @@ export const Navigation = () => {
             </Drawer>
             <Group wrap='nowrap' component='nav' visibleFrom='sm'>
                 {items}
-                <RedirectToTestPage maw={144} w='100%' px={22} mih={45} fz={16} />
+                <RedirectToTestPage className={s.testLink} maw={144} w='100%' px={22} mih={45} fz={16} />
             </Group>
         </>
     );

@@ -1,0 +1,10 @@
+.title {
+  margin-bottom: 32px;
+  font-size: 26px;
+  text-align: center;
+
+  @mixin larger-than 768px {
+    margin-bottom: 60px;
+    font-size: 56px;
+  }
+}

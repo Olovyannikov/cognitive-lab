@@ -1,12 +1,14 @@
 .paper {
   position: relative;
+  display: flex;
   margin-bottom: 60px;
   padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);
 
   @mixin data-color 1;
 
   @mixin larger-than 998px {
-    padding: calc(32px + 4px * 2) 32px;
+    padding: calc(var(--mantine-spacing-3xl) + var(--mantine-spacing-xxs) * 2) var(--mantine-spacing-3xl);
+    min-height: 336px;
   }
 }
 
@@ -42,10 +44,6 @@
 
   &:not(:last-child) {
     margin-bottom: var(--mantine-spacing-md);
-
-    @mixin larger-than 998px {
-      margin-bottom: 72px;
-    }
   }
 
   @mixin larger-than 998px {
@@ -65,4 +63,10 @@
     bottom: 0;
     display: block;
   }
+}
+
+.inner {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
 }

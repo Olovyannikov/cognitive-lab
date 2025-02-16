@@ -7,6 +7,10 @@
   @mixin larger-than 768px {
     margin-bottom: var(--mantine-spacing-3xl);
   }
+
+  @mixin larger-than 1024px {
+    margin-bottom: 80px;
+  }
 }
 
 .logoLink {
