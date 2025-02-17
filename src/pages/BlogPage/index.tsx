@@ -1,18 +1,31 @@
-import { Grid } from '@mantine/core';
-import { useList } from 'effector-react';
+import { Grid, isNumberLike, Pagination } from '@mantine/core';
+import { useList, useUnit } from 'effector-react';
 
-import { BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';
+import { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';
+import { PageLoader } from '@/shared/ui';
 import { PageLayout } from '@/widgets/PageLayout';
 
 export const BlogPage = () => {
+    const { data, pending } = useUnit(getBlogPostsQuery);
+    const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);
+    const totalPages = useUnit(BlogModel.$totalPages);
     const blogPosts = useList(
         getBlogPostsQuery.$data.map((el) => el.payload),
         (post) => post.id && <BlogPostCard post={post} />
     );
 
+    if (!data) return <PageLoader />;
+
     return (
         <PageLayout title='Блог'>
-            <Grid>{blogPosts}</Grid>
+            {!pending && <Grid>{blogPosts}</Grid>}
+            <Pagination
+                mt='sm'
+                value={page}
+                hideWithOnePage
+                onChange={onPageChange}
+                total={isNumberLike(totalPages) ? totalPages : 1}
+            />
         </PageLayout>
     );
 };

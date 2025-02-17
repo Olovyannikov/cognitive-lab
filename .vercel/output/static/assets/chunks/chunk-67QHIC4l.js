@@ -1,0 +1,1 @@
+import{j as t,m as c,n as r,l as i,p as e}from"./chunk-Ds8tviu7.js";import"./chunk-DR0XcVXy.js";import{s as m}from"./chunk-Cxg4_e5S.js";const k={back:()=>window.history.back()},b=({to:a,className:s,text:n="Назад",...o})=>t.jsx(c,{c:"dark.7",component:"a",variant:"subtle",leftSection:t.jsx(e,{}),className:i(m.back,s),onClick:()=>a?r(a):k.back(),...o,children:n});export{b as B};

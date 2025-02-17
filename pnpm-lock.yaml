@@ -64,6 +64,9 @@ importers:
             ofetch:
                 specifier: ^1.4.1
                 version: 1.4.1
+            patronum:
+                specifier: ^2.3.0
+                version: 2.3.0(effector@23.3.0)
             react:
                 specifier: ^19.0.0
                 version: 19.0.0
@@ -4658,6 +4661,14 @@ packages:
             }
         engines: { node: '>=8' }
 
+    patronum@2.3.0:
+        resolution:
+            {
+                integrity: sha512-BfKIOpoymVz6XnkOn8Fi5QZ1a3r/3lXdd8BcdHmYDbIXPTIRnD1EPFBFev/DheWnOge6/ZswEqgNF2ANLGOxLw==,
+            }
+        peerDependencies:
+            effector: ^23
+
     picocolors@1.1.1:
         resolution:
             {
@@ -8768,6 +8779,10 @@ snapshots:
     path-to-regexp@6.1.0: {}
 
     path-type@4.0.0: {}
+
+    patronum@2.3.0(effector@23.3.0):
+        dependencies:
+            effector: 23.3.0
 
     picocolors@1.1.1: {}
 

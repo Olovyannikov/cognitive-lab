@@ -1,15 +1,17 @@
-import { createQuery } from '@farfetched/core';
+import { cache, createQuery } from '@farfetched/core';
 
 import { API, createCommonRequestFx } from '@/shared/api';
 
-import type { BlogPostByIdRequest, BlogPostsResponse } from './dto';
+import type { BlogPostByIdRequest, BlogPostsRequest, BlogPostsResponse } from './dto';
 
 export const getBlogPostsQuery = createQuery({
     initialData: {} as BlogPostsResponse,
-    effect: createCommonRequestFx<void, BlogPostsResponse>(() => ({
+    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({
         url: API.BLOG_POSTS,
         params: {
             post_type: 'post',
+            page_size: Number(params.page_size),
+            ...params,
         },
     })),
     mapData: (data) => {
@@ -18,7 +20,7 @@ export const getBlogPostsQuery = createQuery({
 
         return {
             ...data.result,
-            payload,
+            payload: payload,
         };
     },
 });
@@ -28,3 +30,5 @@ export const getBlogPostByIdQuery = createQuery({
         url: API.BLOG_POST_BY_ID(id),
     })),
 });
+
+cache(getBlogPostsQuery);

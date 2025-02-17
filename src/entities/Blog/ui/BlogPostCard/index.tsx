@@ -14,14 +14,13 @@ interface BlogPostCardProps {
 export const BlogPostCard = memo(({ post }: BlogPostCardProps) => {
     return (
         <Grid.Col
-            hidden={!post.show_on_main}
             span={{
                 base: 12,
                 lg: post.pinned ? 12 : 4,
             }}
             className={clsx(post.pinned && s.pinned)}
         >
-            <Card h='100%' withBorder component='a' href={`/blog/${post.id}`}>
+            <Card withBorder component='a' href={`/blog/${post.id}`}>
                 <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>
                     <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />
                     <Stack className={s.preview} justify='center'>

@@ -1,11 +1,11 @@
 import { sample } from 'effector';
 
-import { getReportStructureQuery } from '@/entities/Report';
+import { getFAQQuery } from '@/entities/FAQ';
 import { createPageInit } from '@/shared/utils/effector';
 
 export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,
-    target: getReportStructureQuery.start,
+    target: getFAQQuery.start,
 });

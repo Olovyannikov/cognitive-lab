@@ -1,0 +1,23 @@
+.chevron {
+  width: 24px;
+  height: 24px;
+}
+
+.item {
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+
+  &:is(:first-child) {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+  }
+
+  &:last-child[data-active="true"] {
+    border-bottom: 0;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+  }
+}
+
+.label {
+  padding-block: var(--mantine-radius-3xl);
+}

@@ -25,7 +25,14 @@ export const Paywall = ({ points, button_text, title = 'Больше о Вас �
             <Image className={s.paywallMan} src={`/images/paywall-man${isLarge ? '_large' : ''}.webp`} />
             <PointsList className={s.points} points={points} />
             <Box className={s.actions}>
-                <Button size='lg' radius='md' color='dark.6' component='a' href='/purchase'>
+                <Button
+                    size='lg'
+                    radius='md'
+                    color='dark.6'
+                    component='a'
+                    href='/purchase'
+                    leftSection={<Image w={20} h={20} src='/images/key.webp' aria-hidden={true} alt='' />}
+                >
                     {button_text}
                 </Button>
             </Box>

@@ -86,6 +86,7 @@
     "lodash-es": "^4.17.21",
     "markdown-to-jsx": "^7.7.3",
     "ofetch": "^1.4.1",
+    "patronum": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.2"
