@@ -2,3 +2,7 @@ export * from './BackButton';
 export * from './InnerContainer';
 export * from './PointsList';
 export * from './PageLoader';
+export * from './MainButton';
+export * from './Form';
+export * from './FormInput';
+export * from './FormSuccessScreen';

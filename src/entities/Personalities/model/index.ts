@@ -7,5 +7,5 @@ export const PersonalitiesInitialGate = createGate();
 
 sample({
     clock: PersonalitiesInitialGate.open,
-    target: getPersonalityTypesWithCategoriesQuery.start,
+    target: getPersonalityTypesWithCategoriesQuery.refresh,
 });

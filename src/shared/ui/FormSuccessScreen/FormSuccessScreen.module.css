@@ -1,0 +1,46 @@
+.box {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "title"
+    "text"
+    "action";
+
+  @mixin larger-than 998px {
+    grid-template-areas:
+      "title image"
+      "text  image"
+      "action image";
+  }
+}
+
+.image {
+  grid-area: image;
+  margin-bottom: var(--mantine-spacing-sm);
+
+  @mixin larger-than 998px {
+    margin-bottom: var(--mantine-spacing-md);
+  }
+}
+
+.title {
+  grid-area: title;
+  margin-bottom: var(--mantine-spacing-sm);
+
+  @mixin larger-than 998px {
+    margin-bottom: var(--mantine-spacing-md);
+  }
+}
+
+.text {
+  grid-area: text;
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.action {
+  grid-area: action;
+
+  &:empty {
+    display: none;
+  }
+}
