@@ -52,3 +52,12 @@ export interface ContentResult {
         content: ContentBlock[];
     }[];
 }
+
+export type OrderStatus = 'pending' | 'paid' | 'canceled_by_user' | 'cancelled';
+
+export interface Order {
+    id: string;
+    payment: null;
+    status: OrderStatus;
+    user_report: string;
+}

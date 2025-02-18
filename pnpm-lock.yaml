@@ -76,6 +76,9 @@ importers:
             react-scroll:
                 specifier: ^1.9.2
                 version: 1.9.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+            uuid:
+                specifier: ^11.0.5
+                version: 11.0.5
         devDependencies:
             '@commitlint/cli':
                 specifier: ^19.7.1
@@ -5792,6 +5795,13 @@ packages:
             }
         engines: { node: '>= 0.4.0' }
 
+    uuid@11.0.5:
+        resolution:
+            {
+                integrity: sha512-508e6IcKLrhxKdBbcA2b4KQZlLVp2+J5UwQ6F7Drckkc5N9ZJwFa4TgWtsww9UG8fGHbm6gbV19TdM5pQ4GaIA==,
+            }
+        hasBin: true
+
     vary@1.1.2:
         resolution:
             {
@@ -9549,6 +9559,8 @@ snapshots:
     util-deprecate@1.0.2: {}
 
     utils-merge@1.0.1: {}
+
+    uuid@11.0.5: {}
 
     vary@1.1.2: {}
 

@@ -8,13 +8,7 @@ interface BuyNowButtonProps {
 
 export const BuyNowButton = ({ mbti }: BuyNowButtonProps) => {
     return (
-        <Button
-            component='a'
-            color='dark.6'
-            variant='filled'
-            className={s.button}
-            href={`/purchase-report?mbti=${mbti}`}
-        >
+        <Button component='a' color='dark.6' variant='filled' className={s.button} href={`/purchase/${mbti}`}>
             Купить сейчас
         </Button>
     );

@@ -32,7 +32,7 @@ const createRequestInstance = <P = CreateRequestParams, R = void>({
         const newHeaders = new Headers(headers);
 
         if (withTokenInHeaders) {
-            newHeaders.append('Authorization', `Token ${localStorage.getItem('$uuid')?.replaceAll('"', '')}`);
+            newHeaders.append('Authorization', `Token ${localStorage.getItem('$userId')?.replaceAll('"', '')}`);
         }
 
         return ofetch(url, {

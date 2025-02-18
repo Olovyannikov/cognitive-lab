@@ -89,6 +89,7 @@
     "patronum": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scroll": "^1.9.2"
+    "react-scroll": "^1.9.2",
+    "uuid": "^11.0.5"
   }
 }
