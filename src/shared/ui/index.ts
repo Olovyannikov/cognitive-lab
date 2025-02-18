@@ -6,3 +6,4 @@ export * from './MainButton';
 export * from './Form';
 export * from './FormInput';
 export * from './FormSuccessScreen';
+export * from './IconCheck';

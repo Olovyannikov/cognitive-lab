@@ -1,0 +1,14 @@
+.progress {
+  width: 100%;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  @mixin larger-than 1200px {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

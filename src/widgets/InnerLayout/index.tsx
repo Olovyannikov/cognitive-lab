@@ -26,7 +26,7 @@ export const InnerLayout = ({
             <Container pb='5xl'>
                 <BackButton to={navigateTo} text={backButtonText} />
                 <InnerContainer className={s.wrapper}>
-                    <Image src={image} width={185} height={178} flex='auto' />
+                    <Image draggable={false} src={image} width={185} height={178} flex='auto' />
                     <Stack w='100%'>
                         <Title order={2} className={s.title} hidden={!title}>
                             {title}
