@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useList } from 'effector-react';
-import { useUnit } from 'effector-react';
 
 import { contentResolver, getReportStructureQuery, Preheader } from '@/entities/Report';
 import { BackButton, InnerContainer } from '@/shared/ui';
@@ -9,12 +8,6 @@ import { BackButton, InnerContainer } from '@/shared/ui';
 import s from './FullReportExamplePage.module.css';
 
 export const FullReportExamplePage = () => {
-    const { data } = useUnit(getReportStructureQuery);
-
-    console.log({
-        data,
-    });
-
     const renderContent = useList(getReportStructureQuery.$data, (data) => {
         return (
             <Stack className={s.block} mb={80}>

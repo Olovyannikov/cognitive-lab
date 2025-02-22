@@ -12,7 +12,7 @@ export const getQuestionsQuery = createQuery({
     // TODO: @test only multiple
     // mapData: ({ result }) => result.filter((el) => el.type === 'multiple_choice'),
     // TODO: @test only single
-    // mapData: ({ result }) => result.filter((el) => el.type === 'single_choice'),
+    mapData: ({ result }) => result.filter((el) => el.type === 'single_choice'),
     // TODO: @test only scale
     // mapData: ({ result }) => result.filter((el) => el.type === 'scale'),
 });

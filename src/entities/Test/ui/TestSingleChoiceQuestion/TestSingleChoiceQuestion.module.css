@@ -1,0 +1,18 @@
+.wrapper [data-label-position] {
+  display: flex;
+
+  > div {
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    border-color: var(--mantine-color-dark-2);
+  }
+}
+
+.stack {
+  @mixin larger-than 1200px {
+    margin: 0 auto;
+    max-width: 860px;
+  }
+}

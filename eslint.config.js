@@ -108,4 +108,10 @@ export default tseslint.config([
     {
         ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js'],
     },
+    {
+        files: ['express-entry.ts'],
+        rules: {
+            'no-console': 'off',
+        },
+    },
 ]);
