@@ -1,15 +1,18 @@
 import type { ReactNode } from 'react';
 import { useUnit } from 'effector-react';
+import { isArray } from 'lodash-es';
 
 import {
     getQuestionsQuery,
     type SingleChoiceAnswer,
     TestContainer,
     TestModel,
+    TestMultipleQuestion,
     TestProgress,
     TestScaleQuestion,
     TestSingleChoiceQuestion,
 } from '@/entities/Test';
+import { RephrasingModel } from '@/features/Rephrasing/model';
 import { Controls } from '@/widgets/Test';
 
 export const TestPage = () => {
@@ -23,21 +26,36 @@ export const TestPage = () => {
 
     const onChange = useUnit(TestModel.scaleFormFieldChanged);
 
+    const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
+
     if (!data || !question) return null;
 
     const Map: Record<string, ReactNode> = {
-        scale: <TestScaleQuestion {...question} value={String(value)} page={page} onChange={onChange} />,
-        // multiple_choice: question.options && (
-        //     <MultipleQuestion
-        //         {...question}
-        //         page={page}
-        //         onChange={onChange}
-        //         value={isArray(currentValue) ? currentValue : null}
-        //     />
-        // ),
+        scale: (
+            <TestScaleQuestion
+                {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex]}
+                value={String(value)}
+                page={page}
+                onChange={onChange}
+            />
+        ),
+        multiple_choice: question.options && (
+            <TestMultipleQuestion
+                {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex]}
+                page={page}
+                onChange={onChange}
+                value={isArray(value) ? value : null}
+            />
+        ),
         single_choice: question.options && (
             <TestSingleChoiceQuestion
                 {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex]}
                 page={page}
                 onChange={onChange}
                 showInput={Boolean(

@@ -114,4 +114,10 @@ export default tseslint.config([
             'no-console': 'off',
         },
     },
+    {
+        files: ['pages/types.ts'],
+        rules: {
+            '@typescript-eslint/no-namespace': 'off',
+        },
+    },
 ]);

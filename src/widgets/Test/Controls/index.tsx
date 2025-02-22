@@ -7,6 +7,7 @@ import { isArray } from 'lodash-es';
 import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
+import { Rephrasing } from '@/features/Rephrasing';
 
 import s from './Controls.module.css';
 
@@ -31,6 +32,7 @@ export const Controls = () => {
 
     return (
         <Pagination.Root total={questions.length} mt='auto' value={page} onChange={onChange}>
+            <Rephrasing />
             <Group justify='space-between' pb={20}>
                 {!isFirst && (
                     <Pagination.Previous

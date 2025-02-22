@@ -1,0 +1,5 @@
+.root {
+  @mixin larger-than 768px {
+    top: 38px;
+  }
+}
