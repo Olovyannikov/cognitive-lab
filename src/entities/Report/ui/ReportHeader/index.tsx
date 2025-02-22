@@ -1,4 +1,4 @@
-import { Paper, Stack, Text, Title } from '@mantine/core';
+import { Image, Paper, Stack, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 
 import CircleImage from '@/app/assets/images/circle.svg?react';
@@ -25,6 +25,7 @@ export const ReportHeader = ({ type, name }: ReportHeaderProps) => {
                 <Title className={s.name}>{name}</Title>
                 <Text className={s.type}>{type}</Text>
             </Stack>
+            <Image className={s.character} src={`/images/types/${type}.png`} width={400} height={400} />
             <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />
             <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />
         </Paper>

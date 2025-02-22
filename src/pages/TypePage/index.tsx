@@ -23,7 +23,9 @@ export const TypePage = () => {
             return content.slice(0, end).map((el, idx) => (
                 <div key={el.type + idx} className={s.block}>
                     {el.content.map((currentContent, idx) => (
-                        <div key={currentContent.type + idx}>{contentResolver(currentContent, currentColor)}</div>
+                        <div key={currentContent.type + idx}>
+                            {contentResolver({ content: currentContent, color: currentColor })}
+                        </div>
                     ))}
                 </div>
             ));
@@ -38,7 +40,9 @@ export const TypePage = () => {
             return content.slice(end).map((el, idx) => (
                 <div key={el.type + idx} className={s.block}>
                     {el.content.map((currentContent, idx) => (
-                        <div key={currentContent.type + idx}>{contentResolver(currentContent, currentColor)}</div>
+                        <div key={currentContent.type + idx}>
+                            {contentResolver({ content: currentContent, color: currentColor })}
+                        </div>
                     ))}
                 </div>
             ));

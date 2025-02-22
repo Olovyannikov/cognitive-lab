@@ -11,3 +11,6 @@ export * from './Banner';
 export * from './Preheader';
 export * from './Paywall';
 export * from './PriceInfo';
+export * from './ConclusionPaywall';
+export * from './IconList';
+export * from './Subscription';

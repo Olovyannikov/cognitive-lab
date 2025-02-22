@@ -11,8 +11,8 @@
   @mixin larger-than 1200px {
     margin-bottom: 80px;
     border-radius: 80px;
-    padding-top: 88px;
-    padding-bottom: 88px;
+    padding-top: 140px;
+    padding-bottom: 140px;
     padding-left: 123px;
   }
 }
@@ -27,6 +27,7 @@
   @mixin larger-than 1200px {
     justify-content: flex-start;
     text-align: left;
+    gap: calc(var(--mantine-spacing-lg) / 2);
   }
 }
 
@@ -43,6 +44,7 @@
 
   @mixin larger-than 1200px {
     font-size: 56px;
+    line-height: 65px;
   }
 }
 
@@ -51,6 +53,7 @@
 
   @mixin larger-than 1200px {
     font-size: 36px;
+    line-height: 42px;
   }
 }
 
@@ -67,7 +70,7 @@
   }
 
   @mixin larger-than 1200px {
-    right: -40px;
+    right: 0;
     top: -144px;
     width: 680px;
     height: 680px;
@@ -82,4 +85,13 @@
   }
 
   @mixin banner-circle-color 4;
+}
+
+.character {
+  position: absolute;
+  right: 89px;
+  bottom: -20px;
+  z-index: 1;
+  width: 400px;
+  height: 400px;
 }

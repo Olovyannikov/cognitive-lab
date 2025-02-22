@@ -14,7 +14,7 @@ export const FullReportExamplePage = () => {
                 <Title c='violet'>{data.title}</Title>
                 {data.content?.map((el, idx) => (
                     <Fragment key={el.type + data?.title + idx}>
-                        {el.content.map((currentEl) => contentResolver(currentEl, 'violet'))}
+                        {el.content.map((currentEl) => contentResolver({ content: currentEl, color: 'violet' }))}
                     </Fragment>
                 ))}
             </Stack>

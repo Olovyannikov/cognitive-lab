@@ -4,7 +4,7 @@
     "top man"
     "points points"
     "actions actions";
-  grid-template-columns: 1fr 126px;
+  grid-template-columns: 1fr 100px;
   gap: var(--mantine-spacing-lg);
 
   @mixin larger-than 768px {
@@ -12,7 +12,7 @@
       "man top"
       "man points"
       "man actions";
-    grid-template-columns: 351px 1fr;
+    grid-template-columns: 260px 1fr;
   }
 }
 
@@ -33,12 +33,12 @@
 
 .paywallMan {
   grid-area: man;
-  width: 126px;
-  height: 126px;
+  width: 100px;
+  height: 100px;
 
   @mixin larger-than 768px {
-    width: 351px;
-    height: 351px;
+    width: 260px;
+    height: 260px;
   }
 }
 

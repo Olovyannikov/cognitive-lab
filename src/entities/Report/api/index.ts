@@ -57,3 +57,10 @@ export const getSurveysInfoQuery = createQuery({
         params,
     })),
 });
+
+export const getFreeResultQuery = createQuery({
+    effect: createInternalRequestFx<void, ContentResult>(() => ({
+        url: API.GET_FREE_REPORT,
+    })),
+    initialData: {} as ContentResult,
+});

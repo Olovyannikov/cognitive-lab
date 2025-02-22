@@ -1,4 +1,4 @@
-type ContentType =
+export type ContentType =
     | 'paragraph'
     | 'blockquote_line'
     | 'bar_chart'
@@ -60,4 +60,14 @@ export interface Order {
     payment: null;
     status: OrderStatus;
     user_report: string;
+}
+
+export interface Mark {
+    value: number;
+    label: string;
+    data: {
+        text: string;
+        type: 'paragraph' | 'header';
+    }[];
+    mbti_type: string[];
 }

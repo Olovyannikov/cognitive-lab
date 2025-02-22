@@ -19,7 +19,9 @@ export const OrderedList = ({ items, color }: OrderedListProps) => {
                             {item.title}
                         </Title>
                         {item.content?.map((content, idx) => (
-                            <Stack key={content.type + idx}>{contentResolver(content, color ?? 'violet')}</Stack>
+                            <Stack key={content.type + idx}>
+                                {contentResolver({ content, color: color ?? 'violet' })}
+                            </Stack>
                         ))}
                     </List.Item>
                 );

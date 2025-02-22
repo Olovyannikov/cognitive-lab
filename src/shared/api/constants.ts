@@ -13,4 +13,5 @@ export const API = {
     BLOG_POSTS: '/posts',
     BLOG_POST_BY_ID: (id: string) => `/posts/${id}`,
     SEND_REPORT: '/support/issues',
+    GET_FREE_REPORT: '/surveys/free-report',
 };

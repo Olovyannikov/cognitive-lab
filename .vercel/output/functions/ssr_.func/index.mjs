@@ -4654,8 +4654,8 @@ var init_assertPlusFileExport = __esm({
 });
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/shared/page-configs/serialize/parsePageConfigs.js
-function parseConfigValuesSerialized(configValuesSerialized14) {
-  const configValues = parseConfigValuesSerialized_tmp(configValuesSerialized14);
+function parseConfigValuesSerialized(configValuesSerialized15) {
+  const configValues = parseConfigValuesSerialized_tmp(configValuesSerialized15);
   return configValues;
 }
 function parsePageConfigs(pageConfigsSerialized2, pageConfigGlobalSerialized2) {
@@ -4689,9 +4689,9 @@ function assertRouteConfigValue(configValues) {
   const configDefinedAt = getConfigDefinedAt("Config", configName, definedAtData);
   assertUsage2(configValueType === "string" || isCallable(value), `${configDefinedAt} has an invalid type '${configValueType}': it should be a string or a function instead, see https://vike.dev/route`);
 }
-function parseConfigValuesSerialized_tmp(configValuesSerialized14) {
+function parseConfigValuesSerialized_tmp(configValuesSerialized15) {
   const configValues = {};
-  Object.entries(configValuesSerialized14).forEach(([configName, configValueSeriliazed]) => {
+  Object.entries(configValuesSerialized15).forEach(([configName, configValueSeriliazed]) => {
     let configValue;
     if (configValueSeriliazed.type === "cumulative") {
       const { valueSerialized, ...common } = configValueSeriliazed;
@@ -24866,8 +24866,8 @@ var init_getHeadSetting = __esm({
 
 // node_modules/.pnpm/vike-react@0.5.12_react-dom@19.0.0_react@19.0.0__react@19.0.0_vike@0.4.220_react-stream_fdcc1d6e38d5aeb6d9c6dcffee7843a5/node_modules/vike-react/dist/integration/getPageElement.js
 function getPageElement(pageContext) {
-  const { Page: Page14, config: { Loading } } = pageContext;
-  let page = Page14 ? import_react3.default.createElement(Page14, null) : null;
+  const { Page: Page15, config: { Loading } } = pageContext;
+  let page = Page15 ? import_react3.default.createElement(Page15, null) : null;
   const addSuspense = (el) => {
     if (!Loading?.layout)
       return el;
@@ -53861,7 +53861,7 @@ var init_chunk_C425Vkts = __esm({
   }
 });
 
-// dist/server/chunks/chunk-8CZG8Mod.js
+// dist/server/chunks/chunk-GAq1GnvE.js
 function MantineProvider2({
   children
 }) {
@@ -53942,8 +53942,8 @@ function getConfig(payload, params) {
   return typeof payload === "function" ? payload(params) : payload;
 }
 var import_jsx_runtime170, React11, import_react227, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, createPageInit, import3, onBeforeRender, import4, API, createRequestInstance, createRequestFx, createInternalRequestFx, createCommonRequestFx, getPersonalityTypesWithCategoriesQuery, titleColorMap, MainButton, FormInput, IconCheck, PersonalitiesInitialGate, appStarted, appService, HeadDefault, $userId, UserGate, UserModel, OWNER_INFO, CONTACTS, MENU, DOCS, SvgCognitiveLogo, List2, Top, Section, MetaInfo, Footer, disclosureFactory, mobile, desktop, huge, large, $submenuCurrentTitle, setCurrentSubmenuTitle, MainMenu, Submenu, allMenusClosed, RootModel, RedirectToTestPage, useIsMedium, useIsLarge, MenuItem2, Types, Blog, Faq, NAV_ITEMS, items3, Navigation, Header, RootLayout;
-var init_chunk_8CZG8Mod = __esm({
-  "dist/server/chunks/chunk-8CZG8Mod.js"() {
+var init_chunk_GAq1GnvE = __esm({
+  "dist/server/chunks/chunk-GAq1GnvE.js"() {
     "use strict";
     init_effector();
     import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
@@ -54108,7 +54108,8 @@ var init_chunk_8CZG8Mod = __esm({
       FAQ_LIST: "/posts",
       BLOG_POSTS: "/posts",
       BLOG_POST_BY_ID: (id) => `/posts/${id}`,
-      SEND_REPORT: "/support/issues"
+      SEND_REPORT: "/support/issues",
+      GET_FREE_REPORT: "/surveys/free-report"
     };
     createRequestInstance = ({
       baseURL,
@@ -54558,13 +54559,13 @@ var init_chunk_8CZG8Mod = __esm({
   }
 });
 
-// dist/server/chunks/chunk-CSB3qWqJ.js
+// dist/server/chunks/chunk-B21gtgR2.js
 var import_jsx_runtime171, import_react228, pageInitiated, import5;
-var init_chunk_CSB3qWqJ = __esm({
-  "dist/server/chunks/chunk-CSB3qWqJ.js"() {
+var init_chunk_B21gtgR2 = __esm({
+  "dist/server/chunks/chunk-B21gtgR2.js"() {
     "use strict";
     init_effector();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     import_jsx_runtime171 = __toESM(require_jsx_runtime(), 1);
     init_clsx();
     init_router();
@@ -54683,8 +54684,8 @@ var init_pages_error = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
     import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
     init_usePageContext();
     init_chunk_Df7n3hil();
@@ -55316,15 +55317,15 @@ var init_chunk_BcDq_zge = __esm({
   }
 });
 
-// dist/server/chunks/chunk-CqYLlzfm.js
+// dist/server/chunks/chunk-DZQKtI21.js
 var import_jsx_runtime175, import_react230, getBlogPostsQuery, getBlogPostByIdQuery, BlogPostCard, $currentPage, pageChanged, $pageSize, $totalPages, redirectToMainBlogPostPageFx, BlogModel;
-var init_chunk_CqYLlzfm = __esm({
-  "dist/server/chunks/chunk-CqYLlzfm.js"() {
+var init_chunk_DZQKtI21 = __esm({
+  "dist/server/chunks/chunk-DZQKtI21.js"() {
     "use strict";
     init_effector();
     init_router();
     init_core();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
     import_react230 = __toESM(require_react(), 1);
     init_esm2();
@@ -55518,11 +55519,11 @@ var init_pages_blog = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_CqYLlzfm();
+    init_chunk_DZQKtI21();
     init_clsx();
     init_router();
     init_chunk_L3VcMs93();
@@ -55773,14 +55774,14 @@ var init_chunk_7RLfvI5v = __esm({
   }
 });
 
-// dist/server/chunks/chunk-D0W3snA4.js
+// dist/server/chunks/chunk-CYeT6u1L.js
 var getPersonalityTypeQuery, getReportStructureQuery, getRegularPriceQuery, getPriceWithPromocodeQuery, purchaseReportMutation, getSurveysInfoQuery, $userOrder, $userOrderStatus, ReportModel;
-var init_chunk_D0W3snA4 = __esm({
-  "dist/server/chunks/chunk-D0W3snA4.js"() {
+var init_chunk_CYeT6u1L = __esm({
+  "dist/server/chunks/chunk-CYeT6u1L.js"() {
     "use strict";
     init_effector();
     init_core();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     init_chunk_7RLfvI5v();
     getPersonalityTypeQuery = we({
       sid: "gbbryw",
@@ -55847,6 +55848,16 @@ var init_chunk_D0W3snA4 = __esm({
       name: "getSurveysInfoQuery",
       method: "createQuery"
     });
+    we({
+      sid: "-365nta",
+      fn: () => Or({
+        effect: createInternalRequestFx(() => ({
+          url: API.GET_FREE_REPORT
+        }))
+      }),
+      name: "getFreeResultQuery",
+      method: "createQuery"
+    });
     $userOrder = g(null, {
       name: "$userOrder",
       sid: "dtj8u"
@@ -55897,21 +55908,21 @@ var init_chunk_BzA47RGI = __esm({
   }
 });
 
-// dist/server/chunks/chunk-DCTVWgT1.js
+// dist/server/chunks/chunk-CKVvB9gj.js
 var import_jsx_runtime179, import_react232, BANNER_CONFIG, Banner, BuyNowButton, NavigateToFullStructureTemplate, BuyNowAndNavigateToFullStructureAction, RedirectToTestPageAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, CALL_TO_ACTION;
-var init_chunk_DCTVWgT1 = __esm({
-  "dist/server/chunks/chunk-DCTVWgT1.js"() {
+var init_chunk_CKVvB9gj = __esm({
+  "dist/server/chunks/chunk-CKVvB9gj.js"() {
     "use strict";
     import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_clsx();
     init_router();
     init_chunk_fjYs4Fsw();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     init_chunk_CEK6IE34();
     init_effector_react();
     import_react232 = __toESM(require_react(), 1);
-    init_chunk_D0W3snA4();
+    init_chunk_CYeT6u1L();
     init_chunk_C9cLxO8P();
     init_ssr();
     init_chunk_DXisQ4_q();
@@ -55996,19 +56007,19 @@ var init_pages_blog_id = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_CqYLlzfm();
+    init_chunk_DZQKtI21();
     init_index_module();
     init_clsx();
     init_router();
     init_chunk_fjYs4Fsw();
     init_chunk_CzFhGnwf();
     import_react233 = __toESM(require_react(), 1);
-    init_chunk_DCTVWgT1();
-    init_chunk_D0W3snA4();
+    init_chunk_CKVvB9gj();
+    init_chunk_CYeT6u1L();
     init_chunk_DsbrYIda();
     init_effector();
     init_usePageContext();
@@ -56244,7 +56255,7 @@ var init_pages_faq = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
@@ -56453,6 +56464,167 @@ var init_pages_faq = __esm({
   }
 });
 
+// dist/server/entries/pages_free-report.mjs
+var pages_free_report_exports = {};
+__export(pages_free_report_exports, {
+  configValuesSerialized: () => configValuesSerialized5
+});
+function Page5() {
+  return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_jsx_runtime182.Fragment, { children: "Free report" });
+}
+var import_jsx_runtime182, import_react235, import85, configValuesSerialized5;
+var init_pages_free_report = __esm({
+  "dist/server/entries/pages_free-report.mjs"() {
+    "use strict";
+    init_Loading();
+    init_onRenderHtml();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+    import_react235 = __toESM(require_react(), 1);
+    init_usePageContext();
+    init_core();
+    init_clsx();
+    init_router();
+    init_chunk_BuupiibZ();
+    init_chunk_BSwk3_CR();
+    init_chunk_aODxNfUi();
+    init_chunk_Dbc_orkj();
+    init_chunk_C7PrGYQz();
+    init_chunk_DTXnyPJO();
+    init_chunk_DkndjKdT();
+    init_factories();
+    init_web_api();
+    init_chunk_B8YOMuL2();
+    init_chunk_CbkIWS2T();
+    init_chunk_smUEvs4e();
+    init_chunk_CmbnYLw1();
+    init_chunk_ChwR_51s();
+    init_chunk_C425Vkts();
+    import85 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+      __proto__: null,
+      default: Page5
+    }, Symbol.toStringTag, { value: "Module" }));
+    configValuesSerialized5 = {
+      ["isClientRuntimeLoaded"]: {
+        type: "computed",
+        definedAtData: null,
+        valueSerialized: {
+          type: "js-serialized",
+          value: true
+        }
+      },
+      ["Loading"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/Loading", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: Loading_default
+        }
+      },
+      ["onRenderHtml"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/onRenderHtml", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: onRenderHtml
+        }
+      },
+      ["Wrapper"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+Wrapper.tsx", "fileExportPathToShowToUser": [] }],
+        valueSerialized: [{
+          type: "plus-file",
+          exportValues: import3
+        }]
+      },
+      ["passToClient"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "passToClient"] }, { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "passToClient"] }],
+        valueSerialized: [{
+          type: "js-serialized",
+          value: ["scopeValues"]
+        }, {
+          type: "js-serialized",
+          value: ["_configFromHook"]
+        }]
+      },
+      ["cacheControl"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "cacheControl"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "public, max-age=604800"
+        }
+      },
+      ["title"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "title"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "Cognitive Lab"
+        }
+      },
+      ["lang"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "lang"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "ru"
+        }
+      },
+      ["reactStrictMode"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "reactStrictMode"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: false
+        }
+      },
+      ["onBeforeRender"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+onBeforeRender.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import4
+        }
+      },
+      ["pageInitiated"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import5
+        }
+      },
+      ["Head"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/HeadDefault/index.tsx", "fileExportPathToShowToUser": ["HeadDefault"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: HeadDefault
+        }]
+      },
+      ["Layout"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/RootLayout/index.tsx", "fileExportPathToShowToUser": ["RootLayout"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: RootLayout
+        }]
+      },
+      ["Page"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/free-report/+Page.tsx", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import85
+        }
+      }
+    };
+  }
+});
+
 // dist/server/chunks/chunk-CqfjVQQ_.js
 var title4, s38;
 var init_chunk_CqfjVQQ = __esm({
@@ -56575,25 +56747,25 @@ var init_chunk_Cbg5WVo5 = __esm({
   }
 });
 
-// dist/server/chunks/chunk-bbMDDbQ1.js
+// dist/server/chunks/chunk-DMtd3jT1.js
 function isListItemArray(value) {
   return Array.isArray(value);
 }
-var import_jsx_runtime182, import_react235, PointsList, Header2, Paragraph, Cards, OrderedCards, Subtitle, contentResolver, OrderedList, BlockquoteLine, FilledBulletList, Paywall;
-var init_chunk_bbMDDbQ1 = __esm({
-  "dist/server/chunks/chunk-bbMDDbQ1.js"() {
+var import_jsx_runtime183, import_react236, PointsList, Header2, Paragraph, Cards, OrderedCards, Subtitle, contentResolver, OrderedList, BlockquoteLine, FilledBulletList, Paywall;
+var init_chunk_DMtd3jT1 = __esm({
+  "dist/server/chunks/chunk-DMtd3jT1.js"() {
     "use strict";
-    import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_clsx();
-    import_react235 = __toESM(require_react(), 1);
+    import_react236 = __toESM(require_react(), 1);
     init_chunk_CqfjVQQ();
     init_chunk_BW51Qjtd();
     init_chunk_C_Pybyhg();
     init_chunk_B6bFdn_t();
     init_chunk_BQ40LeIW();
     init_router();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     init_effector_react();
     init_chunk_rhSxqIIs();
     init_index_module();
@@ -56606,9 +56778,9 @@ var init_chunk_bbMDDbQ1 = __esm({
       ...props
     }) => {
       if (!points2 || !points2.length) return null;
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Stack, { className: clsx_default(s45.stack, props.className), children: points2.map((item3, index4) => /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(Group, { className: s45.point, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(n9, { className: s45.check, weight: "bold", color: `var(--mantine-color-${color}-9)` }),
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { className: s45.text, children: item3 })
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Stack, { className: clsx_default(s45.stack, props.className), children: points2.map((item3, index4) => /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Group, { className: s45.point, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(n9, { className: s45.check, weight: "bold", color: `var(--mantine-color-${color}-9)` }),
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { className: s45.text, children: item3 })
       ] }, `${item3}_${index4}`)) });
     };
     Header2 = ({
@@ -56616,19 +56788,19 @@ var init_chunk_bbMDDbQ1 = __esm({
       c: c19 = "violet.9",
       ...props
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Title, { className: s38.title, order: 5, c: c19, ...props, children: text12 });
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { className: s38.title, order: 5, c: c19, ...props, children: text12 });
     };
     Paragraph = ({
       text: text12,
       className,
       ...rest
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(index_module_default, { options: {
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(index_module_default, { options: {
         overrides: {
-          p: (props) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { className: clsx_default(s44.text, className), ...rest, children: props.children }),
-          span: (props) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { span: true, className: clsx_default(s44.text, className), ...rest, children: props.children }),
-          pre: (props) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { className: clsx_default(s44.text, className), ...rest, children: props.children }),
-          code: (props) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(index_module_default, { className: s44.text, children: props.children })
+          p: (props) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { className: clsx_default(s44.text, className), ...rest, children: props.children }),
+          span: (props) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { span: true, className: clsx_default(s44.text, className), ...rest, children: props.children }),
+          pre: (props) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { className: clsx_default(s44.text, className), ...rest, children: props.children }),
+          code: (props) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(index_module_default, { className: s44.text, children: props.children })
         }
       }, children: text12 });
     };
@@ -56636,16 +56808,16 @@ var init_chunk_bbMDDbQ1 = __esm({
       items: items4,
       color
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Grid, { grow: true, children: items4.map((item3, index4) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Grid.Col, { span: 6, children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Paper, { h: "100%", radius: 30, px: "3xl", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(Stack, { gap: "xs", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Title, { c: `${color}.9`, fz: 24, order: 4, children: item3.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { fz: 20, children: item3.text })
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Grid, { grow: true, children: items4.map((item3, index4) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Grid.Col, { span: 6, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Paper, { h: "100%", radius: 30, px: "3xl", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Stack, { gap: "xs", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { c: `${color}.9`, fz: 24, order: 4, children: item3.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { fz: 20, children: item3.text })
       ] }) }) }, index4)) });
     };
     OrderedCards = ({
       items: items4,
       color
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Stack, { children: items4.map((item3) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Paper, { className: s39.paper, bg: color === "positive" ? "green.0" : "pink.0", children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Stack, { className: s39.stack, children: /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(Title, { className: s39.title, c: color === "positive" ? "green.9" : "pink.9", order: 5, children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Stack, { children: items4.map((item3) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Paper, { className: s39.paper, bg: color === "positive" ? "green.0" : "pink.0", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Stack, { className: s39.stack, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Title, { className: s39.title, c: color === "positive" ? "green.9" : "pink.9", order: 5, children: [
         item3.order,
         ". ",
         item3.title
@@ -56655,39 +56827,39 @@ var init_chunk_bbMDDbQ1 = __esm({
       type: type2,
       text: text12
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Title, { "data-type": type2, className: s40.subtitle, order: 3, mb: "md", children: text12 });
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { "data-type": type2, className: s40.subtitle, order: 3, mb: "md", children: text12 });
     };
     contentResolver = (content, color) => {
       switch (content.type) {
         case "header":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Header2, { ...content });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Header2, { ...content });
         case "paragraph":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Paragraph, { ...content });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Paragraph, { ...content });
         case "cards":
-          return isListItemArray(content.items) && /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Cards, { items: content.items, color });
+          return isListItemArray(content.items) && /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Cards, { items: content.items, color });
         case "ordered_cards":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(OrderedCards, { color: content.color, items: isListItemArray(content.items) ? content.items : [] });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(OrderedCards, { color: content.color, items: isListItemArray(content.items) ? content.items : [] });
         case "subtitle":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Subtitle, { ...content });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Subtitle, { ...content });
         case "ordered_list":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(OrderedList, { color, "data-type": content.type, items: isListItemArray(content.items) ? content.items : [] });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(OrderedList, { color, "data-type": content.type, items: isListItemArray(content.items) ? content.items : [] });
         case "blockquote_line":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(BlockquoteLine, { text: content.text, color });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(BlockquoteLine, { text: content.text, color });
         case "filled_bullet_list":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(FilledBulletList, { "data-color": color, items: isListItemArray(content.items) ? content.items : [] });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(FilledBulletList, { "data-color": color, items: isListItemArray(content.items) ? content.items : [] });
         case "paywall":
-          return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Paywall, { ...content });
+          return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Paywall, { ...content });
       }
     };
     OrderedList = ({
       items: items4,
       color
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(List, { "data-type": "Ordered List", type: "ordered", className: s41.list, "data-color": color, children: items4 == null ? void 0 : items4.map((item3, index4) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(List, { "data-type": "Ordered List", type: "ordered", className: s41.list, "data-color": color, children: items4 == null ? void 0 : items4.map((item3, index4) => {
         var _a;
-        return /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(List.Item, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Title, { "data-color": color, mb: "md", className: s41.title, children: item3.title }),
-          (_a = item3.content) == null ? void 0 : _a.map((content, idx) => /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Stack, { children: contentResolver(content, color ?? "violet") }, content.type + idx))
+        return /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(List.Item, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { "data-color": color, mb: "md", className: s41.title, children: item3.title }),
+          (_a = item3.content) == null ? void 0 : _a.map((content, idx) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Stack, { children: contentResolver(content, color ?? "violet") }, content.type + idx))
         ] }, index4);
       }) });
     };
@@ -56695,17 +56867,17 @@ var init_chunk_bbMDDbQ1 = __esm({
       text: text12,
       color
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Blockquote, { mb: "md", py: "sm", px: "md", color: `${color}.9`, bg: "transparent", icon: null, children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Paragraph, { text: text12 ?? "" }) });
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Blockquote, { mb: "md", py: "sm", px: "md", color: `${color}.9`, bg: "transparent", icon: null, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Paragraph, { text: text12 ?? "" }) });
     };
     FilledBulletList = ({
       items: items4,
       ...props
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(List, { "data-type": "Filled Bullet List", classNames: s42, ...props, children: items4 == null ? void 0 : items4.map((item3) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(List, { "data-type": "Filled Bullet List", classNames: s42, ...props, children: items4 == null ? void 0 : items4.map((item3) => {
         var _a, _b;
-        return /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(List.Item, { hidden: !item3.text && !item3.title, mb: "md", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { lh: "21px", className: s42.text, span: ((_a = item3.text) == null ? void 0 : _a.startsWith(" \u2014 ")) || ((_b = item3.title) == null ? void 0 : _b.endsWith(": ")), children: item3.title }),
-          /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Text, { className: s42.text, span: true, c: "dark.7", lh: "21px", children: item3.text })
+        return /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(List.Item, { hidden: !item3.text && !item3.title, mb: "md", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { lh: "21px", className: s42.text, span: ((_a = item3.text) == null ? void 0 : _a.startsWith(" \u2014 ")) || ((_b = item3.title) == null ? void 0 : _b.endsWith(": ")), children: item3.title }),
+          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Text, { className: s42.text, span: true, c: "dark.7", lh: "21px", children: item3.text })
         ] }, `${item3.type}_${item3.title}`);
       }) });
     };
@@ -56715,14 +56887,14 @@ var init_chunk_bbMDDbQ1 = __esm({
       title: title12 = "\u0411\u043E\u043B\u044C\u0448\u0435 \u043E \u0412\u0430\u0441 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435"
     }) => {
       const [isLarge] = c2([desktop.$matches]);
-      return /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(Box, { className: s43.wrapper, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(Group, { wrap: "nowrap", gap: "xs", className: s43.top, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Image, { w: "3xl", h: "3xl", src: "/images/lock.webp" }),
-          /* @__PURE__ */ (0, import_jsx_runtime182.jsx)("h3", { children: title12 })
+      return /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Box, { className: s43.wrapper, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Group, { wrap: "nowrap", gap: "xs", className: s43.top, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Image, { w: "3xl", h: "3xl", src: "/images/lock.webp" }),
+          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)("h3", { children: title12 })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Image, { className: s43.paywallMan, src: `/images/paywall-man${isLarge ? "_large" : ""}.webp` }),
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(PointsList, { className: s43.points, points: points2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Box, { className: s43.actions, children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Button, { size: "lg", radius: "md", color: "dark.6", component: "a", href: "/purchase", leftSection: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(Image, { w: 20, h: 20, src: "/images/key.webp", "aria-hidden": true, alt: "" }), children: button_text }) })
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Image, { className: s43.paywallMan, src: `/images/paywall-man${isLarge ? "_large" : ""}.webp` }),
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(PointsList, { className: s43.points, points: points2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Box, { className: s43.actions, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Button, { size: "lg", radius: "md", color: "dark.6", component: "a", href: "/purchase", leftSection: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Image, { w: 20, h: 20, src: "/images/key.webp", "aria-hidden": true, alt: "" }), children: button_text }) })
       ] });
     };
   }
@@ -56759,29 +56931,29 @@ var init_chunk_CMmF7pqi = __esm({
 // dist/server/entries/pages_full-report_example.mjs
 var pages_full_report_example_exports = {};
 __export(pages_full_report_example_exports, {
-  configValuesSerialized: () => configValuesSerialized5
+  configValuesSerialized: () => configValuesSerialized6
 });
-function Page5() {
-  return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(FullReportExamplePage, {});
+function Page6() {
+  return /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(FullReportExamplePage, {});
 }
-var import_jsx_runtime183, React12, import_react236, SvgCloud, SvgSemiCircle, Preheader, FullReportExamplePage, import74, pageInitiated5, import85, configValuesSerialized5;
+var import_jsx_runtime184, React12, import_react237, SvgCloud, SvgSemiCircle, Preheader, FullReportExamplePage, import74, pageInitiated5, import86, configValuesSerialized6;
 var init_pages_full_report_example = __esm({
   "dist/server/entries/pages_full-report_example.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_GAq1GnvE();
+    import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
     React12 = __toESM(require_react(), 1);
-    import_react236 = __toESM(require_react(), 1);
+    import_react237 = __toESM(require_react(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
-    init_chunk_bbMDDbQ1();
+    init_chunk_DMtd3jT1();
     init_chunk_Df7n3hil();
     init_chunk_fjYs4Fsw();
     init_chunk_DdQguQuW();
-    init_chunk_D0W3snA4();
+    init_chunk_CYeT6u1L();
     init_chunk_CMmF7pqi();
     init_effector();
     init_router();
@@ -56819,29 +56991,29 @@ var init_pages_full_report_example = __esm({
       color = "violet",
       title: title12
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Paper, { className: s46.paper, "data-color": color, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { className: s46.title, children: title12 }),
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Box, { visibleFrom: "sm", className: s46.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(SvgCloud, { width: 474, height: "100%" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Box, { visibleFrom: "xs", className: s46.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(SvgSemiCircle, { width: 150, height: "100%" }) })
+      return /* @__PURE__ */ (0, import_jsx_runtime184.jsxs)(Paper, { className: s46.paper, "data-color": color, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Title, { className: s46.title, children: title12 }),
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Box, { visibleFrom: "sm", className: s46.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(SvgCloud, { width: 474, height: "100%" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Box, { visibleFrom: "xs", className: s46.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(SvgSemiCircle, { width: 150, height: "100%" }) })
       ] });
     };
     FullReportExamplePage = () => {
       const renderContent = i(getReportStructureQuery.$data, (data) => {
         var _a;
-        return /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Stack, { className: s47.block, mb: 80, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Title, { c: "violet", children: data.title }),
-          (_a = data.content) == null ? void 0 : _a.map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_react236.Fragment, { children: el.content.map((currentEl) => contentResolver(currentEl, "violet")) }, el.type + (data == null ? void 0 : data.title) + idx))
+        return /* @__PURE__ */ (0, import_jsx_runtime184.jsxs)(Stack, { className: s47.block, mb: 80, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Title, { c: "violet", children: data.title }),
+          (_a = data.content) == null ? void 0 : _a.map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_react237.Fragment, { children: el.content.map((currentEl) => contentResolver(currentEl, "violet")) }, el.type + (data == null ? void 0 : data.title) + idx))
         ] });
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(Container, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(BackButton, { className: s47.backButton }),
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(Preheader, { title: "\u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043F\u043E\u043B\u043D\u043E\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043E\u0442\u0447\u0435\u0442\u0430" }),
-        /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(InnerContainer, { children: renderContent })
+      return /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsxs)(Container, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(BackButton, { className: s47.backButton }),
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Preheader, { title: "\u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043F\u043E\u043B\u043D\u043E\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u043E\u0442\u0447\u0435\u0442\u0430" }),
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(InnerContainer, { children: renderContent })
       ] }) });
     };
     import74 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
-      default: Page5
+      default: Page6
     }, Symbol.toStringTag, { value: "Module" }));
     pageInitiated5 = createPageInit();
     M({
@@ -56853,11 +57025,11 @@ var init_pages_full_report_example = __esm({
         sid: "-5r8nnm"
       }
     });
-    import85 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+    import86 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
       pageInitiated: pageInitiated5
     }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized5 = {
+    configValuesSerialized6 = {
       ["isClientRuntimeLoaded"]: {
         type: "computed",
         definedAtData: null,
@@ -56970,7 +57142,7 @@ var init_pages_full_report_example = __esm({
         definedAtData: { "filePathToShowToUser": "/pages/full-report/example/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
-          exportValues: import85
+          exportValues: import86
         }
       }
     };
@@ -56990,18 +57162,18 @@ var init_chunk_CoqZiLJg = __esm({
 });
 
 // dist/server/chunks/chunk-DKUCTWb6.js
-var import_jsx_runtime184, FormWrapper;
+var import_jsx_runtime185, FormWrapper;
 var init_chunk_DKUCTWb6 = __esm({
   "dist/server/chunks/chunk-DKUCTWb6.js"() {
     "use strict";
-    import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_chunk_CoqZiLJg();
     FormWrapper = ({
       onSubmit,
       children
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime184.jsx)("form", { onSubmit, children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Stack, { className: s48.stackWrapper, children }) });
+      return /* @__PURE__ */ (0, import_jsx_runtime185.jsx)("form", { onSubmit, children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(Stack, { className: s48.stackWrapper, children }) });
     };
   }
 });
@@ -57084,12 +57256,12 @@ function useFormActions(name2, form) {
   );
   useFormEvent(`mantine-form:${name2}:reset-touched`, form.resetTouched);
 }
-var import_react237, useIsomorphicEffect2;
+var import_react238, useIsomorphicEffect2;
 var init_actions = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/actions/actions.mjs"() {
     "use client";
-    import_react237 = __toESM(require_react(), 1);
-    useIsomorphicEffect2 = typeof window !== "undefined" ? import_react237.useLayoutEffect : import_react237.useEffect;
+    import_react238 = __toESM(require_react(), 1);
+    useIsomorphicEffect2 = typeof window !== "undefined" ? import_react238.useLayoutEffect : import_react238.useEffect;
   }
 });
 
@@ -57143,17 +57315,17 @@ var init_filter_errors = __esm({
 
 // node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-errors/use-form-errors.mjs
 function useFormErrors(initialErrors) {
-  const [errorsState, setErrorsState] = (0, import_react238.useState)(filterErrors(initialErrors));
-  const errorsRef = (0, import_react238.useRef)(errorsState);
-  const setErrors = (0, import_react238.useCallback)((errors) => {
+  const [errorsState, setErrorsState] = (0, import_react239.useState)(filterErrors(initialErrors));
+  const errorsRef = (0, import_react239.useRef)(errorsState);
+  const setErrors = (0, import_react239.useCallback)((errors) => {
     setErrorsState((current) => {
       const newErrors = filterErrors(typeof errors === "function" ? errors(current) : errors);
       errorsRef.current = newErrors;
       return newErrors;
     });
   }, []);
-  const clearErrors = (0, import_react238.useCallback)(() => setErrors({}), []);
-  const clearFieldError = (0, import_react238.useCallback)(
+  const clearErrors = (0, import_react239.useCallback)(() => setErrors({}), []);
+  const clearFieldError = (0, import_react239.useCallback)(
     (path) => {
       if (errorsRef.current[path] === void 0) {
         return;
@@ -57166,7 +57338,7 @@ function useFormErrors(initialErrors) {
     },
     [errorsState]
   );
-  const setFieldError = (0, import_react238.useCallback)(
+  const setFieldError = (0, import_react239.useCallback)(
     (path, error) => {
       if (error == null || error === false) {
         clearFieldError(path);
@@ -57184,11 +57356,11 @@ function useFormErrors(initialErrors) {
     clearFieldError
   };
 }
-var import_react238;
+var import_react239;
 var init_use_form_errors = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-errors/use-form-errors.mjs"() {
     "use client";
-    import_react238 = __toESM(require_react(), 1);
+    import_react239 = __toESM(require_react(), 1);
     init_filter_errors();
   }
 });
@@ -57491,7 +57663,7 @@ function useFormList({
   $errors,
   $status
 }) {
-  const reorderListItem = (0, import_react239.useCallback)((path, payload) => {
+  const reorderListItem = (0, import_react240.useCallback)((path, payload) => {
     $status.clearFieldDirty(path);
     $errors.setErrors((errs) => reorderErrors(path, payload, errs));
     $values.setValues({
@@ -57499,7 +57671,7 @@ function useFormList({
       updateState: true
     });
   }, []);
-  const removeListItem = (0, import_react239.useCallback)((path, index4) => {
+  const removeListItem = (0, import_react240.useCallback)((path, index4) => {
     $status.clearFieldDirty(path);
     $errors.setErrors((errs) => changeErrorIndices(path, index4, errs, -1));
     $values.setValues({
@@ -57507,7 +57679,7 @@ function useFormList({
       updateState: true
     });
   }, []);
-  const insertListItem = (0, import_react239.useCallback)((path, item3, index4) => {
+  const insertListItem = (0, import_react240.useCallback)((path, item3, index4) => {
     $status.clearFieldDirty(path);
     $errors.setErrors((errs) => changeErrorIndices(path, index4, errs, 1));
     $values.setValues({
@@ -57515,7 +57687,7 @@ function useFormList({
       updateState: true
     });
   }, []);
-  const replaceListItem = (0, import_react239.useCallback)((path, index4, item3) => {
+  const replaceListItem = (0, import_react240.useCallback)((path, index4, item3) => {
     $status.clearFieldDirty(path);
     $values.setValues({
       values: replacePath(path, item3, index4, $values.refValues.current),
@@ -57524,11 +57696,11 @@ function useFormList({
   }, []);
   return { reorderListItem, removeListItem, insertListItem, replaceListItem };
 }
-var import_react239;
+var import_react240;
 var init_use_form_list = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-list/use-form-list.mjs"() {
     "use client";
-    import_react239 = __toESM(require_react(), 1);
+    import_react240 = __toESM(require_react(), 1);
     init_change_error_indices();
     init_reorder_errors();
     init_full();
@@ -57596,18 +57768,18 @@ function useFormStatus({
   mode,
   $values
 }) {
-  const [touchedState, setTouchedState] = (0, import_react240.useState)(initialTouched);
-  const [dirtyState, setDirtyState] = (0, import_react240.useState)(initialDirty);
-  const touchedRef = (0, import_react240.useRef)(initialTouched);
-  const dirtyRef = (0, import_react240.useRef)(initialDirty);
-  const setTouched = (0, import_react240.useCallback)((values2) => {
+  const [touchedState, setTouchedState] = (0, import_react241.useState)(initialTouched);
+  const [dirtyState, setDirtyState] = (0, import_react241.useState)(initialDirty);
+  const touchedRef = (0, import_react241.useRef)(initialTouched);
+  const dirtyRef = (0, import_react241.useRef)(initialDirty);
+  const setTouched = (0, import_react241.useCallback)((values2) => {
     const resolvedValues = typeof values2 === "function" ? values2(touchedRef.current) : values2;
     touchedRef.current = resolvedValues;
     if (mode === "controlled") {
       setTouchedState(resolvedValues);
     }
   }, []);
-  const setDirty = (0, import_react240.useCallback)(
+  const setDirty = (0, import_react241.useCallback)(
     (values2, forceUpdate = false) => {
       const resolvedValues = typeof values2 === "function" ? values2(dirtyRef.current) : values2;
       dirtyRef.current = resolvedValues;
@@ -57617,13 +57789,13 @@ function useFormStatus({
     },
     []
   );
-  const resetTouched = (0, import_react240.useCallback)(() => setTouched({}), []);
-  const resetDirty = (0, import_react240.useCallback)((values2) => {
+  const resetTouched = (0, import_react241.useCallback)(() => setTouched({}), []);
+  const resetDirty = (0, import_react241.useCallback)((values2) => {
     const newSnapshot = values2 ? { ...$values.refValues.current, ...values2 } : $values.refValues.current;
     $values.setValuesSnapshot(newSnapshot);
     setDirty({});
   }, []);
-  const setFieldTouched = (0, import_react240.useCallback)((path, touched) => {
+  const setFieldTouched = (0, import_react241.useCallback)((path, touched) => {
     setTouched((currentTouched) => {
       if (getStatus(currentTouched, path) === touched) {
         return currentTouched;
@@ -57631,7 +57803,7 @@ function useFormStatus({
       return { ...currentTouched, [path]: touched };
     });
   }, []);
-  const setFieldDirty = (0, import_react240.useCallback)((path, dirty, forceUpdate) => {
+  const setFieldDirty = (0, import_react241.useCallback)((path, dirty, forceUpdate) => {
     setDirty((currentDirty) => {
       if (getStatus(currentDirty, path) === dirty) {
         return currentDirty;
@@ -57639,18 +57811,18 @@ function useFormStatus({
       return { ...currentDirty, [path]: dirty };
     }, forceUpdate);
   }, []);
-  const setCalculatedFieldDirty = (0, import_react240.useCallback)((path, value) => {
+  const setCalculatedFieldDirty = (0, import_react241.useCallback)((path, value) => {
     const currentDirty = getStatus(dirtyRef.current, path);
     const dirty = !(0, import_fast_deep_equal.default)(getPath(path, $values.getValuesSnapshot()), value);
     const clearedState = clearListState(path, dirtyRef.current);
     clearedState[path] = dirty;
     setDirty(clearedState, currentDirty !== dirty);
   }, []);
-  const isTouched = (0, import_react240.useCallback)(
+  const isTouched = (0, import_react241.useCallback)(
     (path) => getStatus(touchedRef.current, path),
     []
   );
-  const clearFieldDirty = (0, import_react240.useCallback)(
+  const clearFieldDirty = (0, import_react241.useCallback)(
     (path) => setDirty((current) => {
       if (typeof path !== "string") {
         return current;
@@ -57664,7 +57836,7 @@ function useFormStatus({
     }),
     []
   );
-  const isDirty = (0, import_react240.useCallback)((path) => {
+  const isDirty = (0, import_react241.useCallback)((path) => {
     if (path) {
       const overriddenValue = getPath(path, dirtyRef.current);
       if (typeof overriddenValue === "boolean") {
@@ -57680,8 +57852,8 @@ function useFormStatus({
     }
     return !(0, import_fast_deep_equal.default)($values.refValues.current, $values.valuesSnapshot.current);
   }, []);
-  const getDirty = (0, import_react240.useCallback)(() => dirtyRef.current, []);
-  const getTouched = (0, import_react240.useCallback)(() => touchedRef.current, []);
+  const getDirty = (0, import_react241.useCallback)(() => dirtyRef.current, []);
+  const getTouched = (0, import_react241.useCallback)(() => touchedRef.current, []);
   return {
     touchedState,
     dirtyState,
@@ -57703,11 +57875,11 @@ function useFormStatus({
     setCalculatedFieldDirty
   };
 }
-var import_react240, import_fast_deep_equal;
+var import_react241, import_fast_deep_equal;
 var init_use_form_status = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-status/use-form-status.mjs"() {
     "use client";
-    import_react240 = __toESM(require_react(), 1);
+    import_react241 = __toESM(require_react(), 1);
     import_fast_deep_equal = __toESM(require_fast_deep_equal(), 1);
     init_get_status();
     init_clear_list_state();
@@ -57722,11 +57894,11 @@ function useFormValues({
   onValuesChange,
   mode
 }) {
-  const initialized = (0, import_react241.useRef)(false);
-  const [stateValues, setStateValues] = (0, import_react241.useState)(initialValues || {});
-  const refValues = (0, import_react241.useRef)(stateValues);
-  const valuesSnapshot = (0, import_react241.useRef)(stateValues);
-  const setValues = (0, import_react241.useCallback)(
+  const initialized = (0, import_react242.useRef)(false);
+  const [stateValues, setStateValues] = (0, import_react242.useState)(initialValues || {});
+  const refValues = (0, import_react242.useRef)(stateValues);
+  const valuesSnapshot = (0, import_react242.useRef)(stateValues);
+  const setValues = (0, import_react242.useCallback)(
     ({
       values: values2,
       subscribers,
@@ -57743,7 +57915,7 @@ function useFormValues({
     },
     [onValuesChange]
   );
-  const setFieldValue = (0, import_react241.useCallback)(
+  const setFieldValue = (0, import_react242.useCallback)(
     (payload) => {
       const currentValue = getPath(payload.path, refValues.current);
       const updatedValue = payload.value instanceof Function ? payload.value(currentValue) : payload.value;
@@ -57758,10 +57930,10 @@ function useFormValues({
     },
     [setValues]
   );
-  const setValuesSnapshot = (0, import_react241.useCallback)((payload) => {
+  const setValuesSnapshot = (0, import_react242.useCallback)((payload) => {
     valuesSnapshot.current = payload;
   }, []);
-  const initialize = (0, import_react241.useCallback)(
+  const initialize = (0, import_react242.useCallback)(
     (values2, onInitialize) => {
       if (!initialized.current) {
         initialized.current = true;
@@ -57772,15 +57944,15 @@ function useFormValues({
     },
     [setValues]
   );
-  const resetValues = (0, import_react241.useCallback)(() => {
+  const resetValues = (0, import_react242.useCallback)(() => {
     setValues({
       values: valuesSnapshot.current,
       updateState: true,
       mergeWithPreviousValues: false
     });
   }, [setValues]);
-  const getValues = (0, import_react241.useCallback)(() => refValues.current, []);
-  const getValuesSnapshot = (0, import_react241.useCallback)(() => valuesSnapshot.current, []);
+  const getValues = (0, import_react242.useCallback)(() => refValues.current, []);
+  const getValuesSnapshot = (0, import_react242.useCallback)(() => valuesSnapshot.current, []);
   return {
     initialized,
     stateValues,
@@ -57795,11 +57967,11 @@ function useFormValues({
     getValuesSnapshot
   };
 }
-var import_react241;
+var import_react242;
 var init_use_form_values = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-values/use-form-values.mjs"() {
     "use client";
-    import_react241 = __toESM(require_react(), 1);
+    import_react242 = __toESM(require_react(), 1);
     init_get_path();
     init_set_path();
   }
@@ -57809,11 +57981,11 @@ var init_use_form_values = __esm({
 function useFormWatch({
   $status
 }) {
-  const subscribers = (0, import_react242.useRef)(
+  const subscribers = (0, import_react243.useRef)(
     {}
   );
-  const watch2 = (0, import_react242.useCallback)((path, callback) => {
-    (0, import_react242.useEffect)(() => {
+  const watch2 = (0, import_react243.useCallback)((path, callback) => {
+    (0, import_react243.useEffect)(() => {
       subscribers.current[path] = subscribers.current[path] || [];
       subscribers.current[path].push(callback);
       return () => {
@@ -57821,7 +57993,7 @@ function useFormWatch({
       };
     }, [callback]);
   }, []);
-  const getFieldSubscribers = (0, import_react242.useCallback)((path) => {
+  const getFieldSubscribers = (0, import_react243.useCallback)((path) => {
     if (!subscribers.current[path]) {
       return [];
     }
@@ -57840,11 +58012,11 @@ function useFormWatch({
     getFieldSubscribers
   };
 }
-var import_react242;
+var import_react243;
 var init_use_form_watch = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/hooks/use-form-watch/use-form-watch.mjs"() {
     "use client";
-    import_react242 = __toESM(require_react(), 1);
+    import_react243 = __toESM(require_react(), 1);
     init_get_path();
     init_full();
   }
@@ -57976,17 +58148,17 @@ function useForm({
   const $status = useFormStatus({ initialDirty, initialTouched, $values, mode });
   const $list = useFormList({ $values, $errors, $status });
   const $watch = useFormWatch({ $status });
-  const [formKey, setFormKey] = (0, import_react243.useState)(0);
-  const [fieldKeys, setFieldKeys] = (0, import_react243.useState)({});
-  const [submitting, setSubmitting] = (0, import_react243.useState)(false);
-  const reset2 = (0, import_react243.useCallback)(() => {
+  const [formKey, setFormKey] = (0, import_react244.useState)(0);
+  const [fieldKeys, setFieldKeys] = (0, import_react244.useState)({});
+  const [submitting, setSubmitting] = (0, import_react244.useState)(false);
+  const reset2 = (0, import_react244.useCallback)(() => {
     $values.resetValues();
     $errors.clearErrors();
     $status.resetDirty();
     $status.resetTouched();
     mode === "uncontrolled" && setFormKey((key2) => key2 + 1);
   }, []);
-  const handleValuesChanges = (0, import_react243.useCallback)(
+  const handleValuesChanges = (0, import_react244.useCallback)(
     (previousValues) => {
       clearInputErrorOnChange && $errors.clearErrors();
       mode === "uncontrolled" && setFormKey((key2) => key2 + 1);
@@ -58000,7 +58172,7 @@ function useForm({
     },
     [clearInputErrorOnChange]
   );
-  const initialize = (0, import_react243.useCallback)(
+  const initialize = (0, import_react244.useCallback)(
     (values2) => {
       const previousValues = $values.refValues.current;
       $values.initialize(values2, () => mode === "uncontrolled" && setFormKey((key2) => key2 + 1));
@@ -58008,7 +58180,7 @@ function useForm({
     },
     [handleValuesChanges]
   );
-  const setFieldValue = (0, import_react243.useCallback)(
+  const setFieldValue = (0, import_react244.useCallback)(
     (path, value, options) => {
       const shouldValidate = shouldValidateOnChange(path, validateInputOnChange);
       const resolvedValue = value instanceof Function ? value(getPath(path, $values.refValues.current)) : value;
@@ -58034,7 +58206,7 @@ function useForm({
     },
     [onValuesChange, rules]
   );
-  const setValues = (0, import_react243.useCallback)(
+  const setValues = (0, import_react244.useCallback)(
     (values2) => {
       const previousValues = $values.refValues.current;
       $values.setValues({ values: values2, updateState: mode === "controlled" });
@@ -58042,12 +58214,12 @@ function useForm({
     },
     [onValuesChange, handleValuesChanges]
   );
-  const validate2 = (0, import_react243.useCallback)(() => {
+  const validate2 = (0, import_react244.useCallback)(() => {
     const results = validateValues(rules, $values.refValues.current);
     $errors.setErrors(results.errors);
     return results;
   }, [rules]);
-  const validateField = (0, import_react243.useCallback)(
+  const validateField = (0, import_react244.useCallback)(
     (path) => {
       const results = validateFieldValue(path, rules, $values.refValues.current);
       results.hasError ? $errors.setFieldError(path, results.error) : $errors.clearFieldError(path);
@@ -58115,16 +58287,16 @@ function useForm({
     }
   };
   const getTransformedValues = (input2) => transformValues(input2 || $values.refValues.current);
-  const onReset = (0, import_react243.useCallback)((event) => {
+  const onReset = (0, import_react244.useCallback)((event) => {
     event.preventDefault();
     reset2();
   }, []);
-  const isValid = (0, import_react243.useCallback)(
+  const isValid = (0, import_react244.useCallback)(
     (path) => path ? !validateFieldValue(path, rules, $values.refValues.current).hasError : !validateValues(rules, $values.refValues.current).hasErrors,
     [rules]
   );
   const key = (path) => `${formKey}-${path}-${fieldKeys[path] || 0}`;
-  const getInputNode = (0, import_react243.useCallback)(
+  const getInputNode = (0, import_react244.useCallback)(
     (path) => document.querySelector(`[data-path="${getDataPath(name2, path)}"]`),
     []
   );
@@ -58170,11 +58342,11 @@ function useForm({
   useFormActions(name2, form);
   return form;
 }
-var import_react243;
+var import_react244;
 var init_use_form = __esm({
   "node_modules/.pnpm/@mantine+form@7.16.2_react@19.0.0/node_modules/@mantine/form/esm/use-form.mjs"() {
     "use client";
-    import_react243 = __toESM(require_react(), 1);
+    import_react244 = __toESM(require_react(), 1);
     init_actions();
     init_get_input_on_change();
     init_use_form_errors();
@@ -58214,17 +58386,17 @@ var init_chunk_Dmn5kb6y = __esm({
   }
 });
 
-// dist/server/chunks/chunk-Dj2nlb0H.js
-var import_jsx_runtime185, InnerLayout;
-var init_chunk_Dj2nlb0H = __esm({
-  "dist/server/chunks/chunk-Dj2nlb0H.js"() {
+// dist/server/chunks/chunk-CYsUm0nd.js
+var import_jsx_runtime186, InnerLayout;
+var init_chunk_CYsUm0nd = __esm({
+  "dist/server/chunks/chunk-CYsUm0nd.js"() {
     "use strict";
-    import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_chunk_Df7n3hil();
     init_chunk_fjYs4Fsw();
     init_clsx();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     init_chunk_Dmn5kb6y();
     InnerLayout = ({
       navigateTo,
@@ -58234,13 +58406,13 @@ var init_chunk_Dj2nlb0H = __esm({
       image: image6,
       children
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsxs)(Container, { pb: "5xl", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(BackButton, { to: navigateTo, text: backButtonText }),
-        /* @__PURE__ */ (0, import_jsx_runtime185.jsxs)(InnerContainer, { className: s49.wrapper, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(Image, { draggable: false, src: image6, width: 185, height: 178, flex: "auto" }),
-          /* @__PURE__ */ (0, import_jsx_runtime185.jsxs)(Stack, { w: "100%", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(Title, { order: 2, className: s49.title, hidden: !title12, children: title12 }),
-            /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(Text, { className: s49.text, hidden: !text12, children: text12 }),
+      return /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(Container, { pb: "5xl", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(BackButton, { to: navigateTo, text: backButtonText }),
+        /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(InnerContainer, { className: s49.wrapper, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Image, { draggable: false, src: image6, width: 185, height: 178, flex: "auto" }),
+          /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(Stack, { w: "100%", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Title, { order: 2, className: s49.title, hidden: !title12, children: title12 }),
+            /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Text, { className: s49.text, hidden: !text12, children: text12 }),
             children
           ] })
         ] })
@@ -58252,20 +58424,20 @@ var init_chunk_Dj2nlb0H = __esm({
 // dist/server/entries/pages_help.mjs
 var pages_help_exports = {};
 __export(pages_help_exports, {
-  configValuesSerialized: () => configValuesSerialized6
+  configValuesSerialized: () => configValuesSerialized7
 });
-function Page6() {
-  return /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(HelpPage, {});
+function Page7() {
+  return /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(HelpPage, {});
 }
-var import_jsx_runtime186, import_react244, sendIssueMutation, $isFormSent, HelpFormGate, sentFormChanged, sendHelpForm, submitHelpForm, useHelpFormViewModel, HelpForm, HelpPage, import86, configValuesSerialized6;
+var import_jsx_runtime187, import_react245, sendIssueMutation, $isFormSent, HelpFormGate, sentFormChanged, sendHelpForm, submitHelpForm, useHelpFormViewModel, HelpForm, HelpPage, import87, configValuesSerialized7;
 var init_pages_help = __esm({
   "dist/server/entries/pages_help.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
-    import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
@@ -58276,8 +58448,8 @@ var init_pages_help = __esm({
     init_chunk_7RLfvI5v();
     init_esm7();
     init_esm5();
-    init_chunk_Dj2nlb0H();
-    import_react244 = __toESM(require_react(), 1);
+    init_chunk_CYsUm0nd();
+    import_react245 = __toESM(require_react(), 1);
     init_usePageContext();
     init_chunk_BuupiibZ();
     init_chunk_BSwk3_CR();
@@ -58447,234 +58619,30 @@ var init_pages_help = __esm({
         questionProps,
         onSubmit
       } = useHelpFormViewModel();
-      return /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(FormWrapper, { onSubmit, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(FormInput, { ...nameProps, disabled: pending2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(FormInput, { ...themeProps, disabled: pending2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(FormInput, { ...emailProps, disabled: pending2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Textarea, { ...questionProps, disabled: pending2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(MainButton, { disabled: pending2, loading: pending2, type: "submit", fullWidth: true, children: "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
+      return /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(FormWrapper, { onSubmit, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(FormInput, { ...nameProps, disabled: pending2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(FormInput, { ...themeProps, disabled: pending2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(FormInput, { ...emailProps, disabled: pending2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Textarea, { ...questionProps, disabled: pending2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(MainButton, { disabled: pending2, loading: pending2, type: "submit", fullWidth: true, children: "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C" })
       ] });
     };
     HelpPage = () => {
       l2(HelpFormGate);
       const [isFormSent, onSendNewFormHandler] = c2([$isFormSent, sentFormChanged]);
-      return /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(InnerLayout, { title: isFormSent ? "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0432\u0430\u0448 \u043E\u0442\u0437\u044B\u0432!" : "\u0421\u043B\u0443\u0436\u0431\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438", text: isFormSent ? "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441 \u0437\u0430 \u0442\u043E, \u0447\u0442\u043E \u043F\u043E\u0434\u0435\u043B\u0438\u043B\u0438\u0441\u044C \u0441\u0432\u043E\u0438\u043C \u043C\u043D\u0435\u043D\u0438\u0435\u043C! \u041C\u044B \u0432\u044B\u0441\u043E\u043A\u043E \u0446\u0435\u043D\u0438\u043C \u043B\u044E\u0431\u0443\u044E \u043E\u0431\u0440\u0430\u0442\u043D\u0443\u044E \u0441\u0432\u044F\u0437\u044C \u0438 \u0441\u0442\u0430\u0440\u0430\u0435\u043C\u0441\u044F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0435\u0451 \u0434\u043B\u044F \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F \u043D\u0430\u0448\u0435\u0433\u043E \u0441\u0435\u0440\u0432\u0438\u0441\u0430." : /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(import_jsx_runtime186.Fragment, { children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(InnerLayout, { title: isFormSent ? "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0432\u0430\u0448 \u043E\u0442\u0437\u044B\u0432!" : "\u0421\u043B\u0443\u0436\u0431\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438", text: isFormSent ? "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441 \u0437\u0430 \u0442\u043E, \u0447\u0442\u043E \u043F\u043E\u0434\u0435\u043B\u0438\u043B\u0438\u0441\u044C \u0441\u0432\u043E\u0438\u043C \u043C\u043D\u0435\u043D\u0438\u0435\u043C! \u041C\u044B \u0432\u044B\u0441\u043E\u043A\u043E \u0446\u0435\u043D\u0438\u043C \u043B\u044E\u0431\u0443\u044E \u043E\u0431\u0440\u0430\u0442\u043D\u0443\u044E \u0441\u0432\u044F\u0437\u044C \u0438 \u0441\u0442\u0430\u0440\u0430\u0435\u043C\u0441\u044F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0435\u0451 \u0434\u043B\u044F \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F \u043D\u0430\u0448\u0435\u0433\u043E \u0441\u0435\u0440\u0432\u0438\u0441\u0430." : /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(import_jsx_runtime187.Fragment, { children: [
         "\u0427\u0442\u043E\u0431\u044B \u0441\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F \u0441 \u043D\u0430\u043C\u0438, \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u0444\u043E\u0440\u043C\u0443. \u041C\u044B \u0441\u0442\u0430\u0440\u0430\u0435\u043C\u0441\u044F \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u0447\u0430\u0441\u0430, \u043E\u0434\u043D\u0430\u043A\u043E \u0432 \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0441\u043B\u0443\u0447\u0430\u044F\u0445 \u044D\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0437\u0430\u043D\u044F\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435 \u0432\u0440\u0435\u043C\u0435\u043D\u0438. \u0421\u0430\u043C\u044B\u0439 \u0431\u044B\u0441\u0442\u0440\u044B\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u043E\u0442\u0432\u0435\u0442 \u2014 \u0447\u0435\u0440\u0435\u0437",
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Text, { component: "a", c: "blue.7", td: "underline", target: "_blank", href: "https://t.me/cognitivelab_ru", children: "Telegram" }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Text, { component: "a", c: "blue.7", td: "underline", target: "_blank", href: "https://t.me/cognitivelab_ru", children: "Telegram" }),
         " ",
         "\u0438\u043B\u0438",
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(Text, { td: "underline", component: "a", c: "blue.7", target: "_blank", href: "https://api.whatsapp.com/send/?phone=79043330809", children: "WhatsApp" }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Text, { td: "underline", component: "a", c: "blue.7", target: "_blank", href: "https://api.whatsapp.com/send/?phone=79043330809", children: "WhatsApp" }),
         "."
-      ] }), image: isFormSent ? "/images/success-base-man.webp" : "/images/paywall-man_large.webp", children: isFormSent ? /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(Stack, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(MainButton, { component: "a", href: "/", children: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E" }),
-        /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(MainButton, { bg: "white", c: "black", onClick: onSendNewFormHandler, children: "\u041D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u0432 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443" })
-      ] }) : /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(HelpForm, {}) }) });
-    };
-    import86 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-      __proto__: null,
-      default: Page6
-    }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized6 = {
-      ["isClientRuntimeLoaded"]: {
-        type: "computed",
-        definedAtData: null,
-        valueSerialized: {
-          type: "js-serialized",
-          value: true
-        }
-      },
-      ["Loading"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/Loading", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "pointer-import",
-          value: Loading_default
-        }
-      },
-      ["onRenderHtml"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/onRenderHtml", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "pointer-import",
-          value: onRenderHtml
-        }
-      },
-      ["Wrapper"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/pages/+Wrapper.tsx", "fileExportPathToShowToUser": [] }],
-        valueSerialized: [{
-          type: "plus-file",
-          exportValues: import3
-        }]
-      },
-      ["passToClient"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "passToClient"] }, { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "passToClient"] }],
-        valueSerialized: [{
-          type: "js-serialized",
-          value: ["scopeValues"]
-        }, {
-          type: "js-serialized",
-          value: ["_configFromHook"]
-        }]
-      },
-      ["cacheControl"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "cacheControl"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "public, max-age=604800"
-        }
-      },
-      ["title"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "title"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "Cognitive Lab"
-        }
-      },
-      ["lang"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "lang"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "ru"
-        }
-      },
-      ["reactStrictMode"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "reactStrictMode"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: false
-        }
-      },
-      ["onBeforeRender"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+onBeforeRender.ts", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import4
-        }
-      },
-      ["pageInitiated"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import5
-        }
-      },
-      ["Head"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/src/widgets/HeadDefault/index.tsx", "fileExportPathToShowToUser": ["HeadDefault"] }],
-        valueSerialized: [{
-          type: "pointer-import",
-          value: HeadDefault
-        }]
-      },
-      ["Layout"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/src/widgets/RootLayout/index.tsx", "fileExportPathToShowToUser": ["RootLayout"] }],
-        valueSerialized: [{
-          type: "pointer-import",
-          value: RootLayout
-        }]
-      },
-      ["Page"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/help/+Page.tsx", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import86
-        }
-      }
-    };
-  }
-});
-
-// dist/server/chunks/chunk-BXNwwO4k.js
-var box2, text7, test, ai, description2, shadow, s50;
-var init_chunk_BXNwwO4k = __esm({
-  "dist/server/chunks/chunk-BXNwwO4k.js"() {
-    "use strict";
-    box2 = "Xu6G1";
-    text7 = "Y1d0N";
-    test = "SWzQQ";
-    ai = "glSwv";
-    description2 = "gBt8H";
-    shadow = "aWpNv";
-    s50 = {
-      box: box2,
-      text: text7,
-      test,
-      ai,
-      description: description2,
-      shadow
-    };
-  }
-});
-
-// dist/server/entries/pages_index.mjs
-var pages_index_exports = {};
-__export(pages_index_exports, {
-  configValuesSerialized: () => configValuesSerialized7
-});
-function Page7() {
-  return /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(IndexPage, {});
-}
-var import_jsx_runtime187, React13, SvgUnion, Hero, IndexPage, import87, configValuesSerialized7;
-var init_pages_index = __esm({
-  "dist/server/entries/pages_index.mjs"() {
-    "use strict";
-    init_Loading();
-    init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
-    import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
-    init_esm2();
-    init_clsx();
-    React13 = __toESM(require_react(), 1);
-    init_chunk_BXNwwO4k();
-    init_usePageContext();
-    init_core();
-    init_router();
-    init_chunk_BuupiibZ();
-    init_chunk_BSwk3_CR();
-    init_chunk_aODxNfUi();
-    init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
-    init_chunk_DTXnyPJO();
-    init_chunk_DkndjKdT();
-    init_factories();
-    init_web_api();
-    init_chunk_B8YOMuL2();
-    init_chunk_CbkIWS2T();
-    init_chunk_smUEvs4e();
-    init_chunk_CmbnYLw1();
-    init_chunk_ChwR_51s();
-    init_chunk_C425Vkts();
-    SvgUnion = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 93 85", ...props }, /* @__PURE__ */ React13.createElement("path", { fill: "#D0BFFF", fillRule: "evenodd", d: "M46.623 13.64C28.18 1.2 10.728-3.617 3.525 2.916c-7.203 6.533-2.067 22.52 11.403 39.471C1.314 59.245-3.958 75.197 3.19 81.782c7.148 6.584 24.642 1.888 43.19-10.425C64.825 83.8 82.279 88.617 89.483 82.084c7.203-6.534 2.066-22.523-11.407-39.476C91.688 25.752 96.957 9.802 89.81 3.218 82.662-3.365 65.17 1.33 46.623 13.64Z", clipRule: "evenodd" }));
-    Hero = () => {
-      return /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(Box, { component: "section", className: s50.box, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Text, { className: clsx_default(s50.text, s50.test), children: "\u0422\u0435\u0441\u0442 \u043D\u0430 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438" }),
-        /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(Text, { className: s50.text, children: [
-          "\u0438 \u0432\u044B\u0431\u043E\u0440 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u0438 \u0441",
-          " ",
-          /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)("span", { className: s50.ai, children: [
-            "AI ",
-            /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(SvgUnion, {})
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Text, { className: s50.description, children: "\u0421 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E \u0438\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442\u0430 \u0438 \u043D\u0430\u0443\u0447\u043D\u043E-\u043E\u0431\u043E\u0441\u043D\u043E\u0432\u0430\u043D\u043D\u043E\u0439 \u043C\u0435\u0442\u043E\u0434\u0438\u043A\u0438 MBTI, \u043C\u044B \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u043C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438 \u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0433\u043E \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u043E\u0433\u043E \u0440\u043E\u0441\u0442\u0430 \u0438 \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F." }),
-        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Button, { size: "xl", bg: "dark.9", radius: "md", className: s50.shadow, children: "\u041F\u0440\u043E\u0439\u0442\u0438 \u0442\u0435\u0441\u0442" })
-      ] });
-    };
-    IndexPage = () => {
-      return /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Container, { children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Hero, {}) }) });
+      ] }), image: isFormSent ? "/images/success-base-man.webp" : "/images/paywall-man_large.webp", children: isFormSent ? /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(Stack, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(MainButton, { component: "a", href: "/", children: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E" }),
+        /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(MainButton, { bg: "white", c: "black", onClick: onSendNewFormHandler, children: "\u041D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u0432 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443" })
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(HelpForm, {}) }) });
     };
     import87 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
@@ -58790,7 +58758,7 @@ var init_pages_index = __esm({
       },
       ["Page"]: {
         type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/index/+Page.tsx", "fileExportPathToShowToUser": [] },
+        definedAtData: { "filePathToShowToUser": "/pages/help/+Page.tsx", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
           exportValues: import87
@@ -58800,44 +58768,52 @@ var init_pages_index = __esm({
   }
 });
 
-// dist/server/chunks/chunk-BYm16E_b.js
-var import_jsx_runtime188, NavigateToHelpPage;
-var init_chunk_BYm16E_b = __esm({
-  "dist/server/chunks/chunk-BYm16E_b.js"() {
+// dist/server/chunks/chunk-BXNwwO4k.js
+var box2, text7, test, ai, description2, shadow, s50;
+var init_chunk_BXNwwO4k = __esm({
+  "dist/server/chunks/chunk-BXNwwO4k.js"() {
     "use strict";
-    import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
-    init_esm2();
-    NavigateToHelpPage = () => /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Button, { fullWidth: true, variant: "transparent", c: "dark.7", component: "a", href: "/help", children: "\u0421\u043B\u0443\u0436\u0431\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438" });
+    box2 = "Xu6G1";
+    text7 = "Y1d0N";
+    test = "SWzQQ";
+    ai = "glSwv";
+    description2 = "gBt8H";
+    shadow = "aWpNv";
+    s50 = {
+      box: box2,
+      text: text7,
+      test,
+      ai,
+      description: description2,
+      shadow
+    };
   }
 });
 
-// dist/server/entries/pages_payment-check.mjs
-var pages_payment_check_exports = {};
-__export(pages_payment_check_exports, {
+// dist/server/entries/pages_index.mjs
+var pages_index_exports = {};
+__export(pages_index_exports, {
   configValuesSerialized: () => configValuesSerialized8
 });
 function Page8() {
-  return /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(PaymentCheckPage, {});
+  return /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(IndexPage, {});
 }
-var import_jsx_runtime189, import_react245, getStatusInfo, PaymentCheckPage, import88, configValuesSerialized8;
-var init_pages_payment_check = __esm({
-  "dist/server/entries/pages_payment-check.mjs"() {
+var import_jsx_runtime188, React13, SvgUnion, Hero, IndexPage, import88, configValuesSerialized8;
+var init_pages_index = __esm({
+  "dist/server/entries/pages_index.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
-    import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
-    init_effector_react();
-    init_router();
-    init_usePageContext();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
+    init_esm2();
     init_clsx();
-    import_react245 = __toESM(require_react(), 1);
-    init_chunk_L3VcMs93();
-    init_chunk_D0W3snA4();
-    init_chunk_BYm16E_b();
-    init_chunk_Dj2nlb0H();
+    React13 = __toESM(require_react(), 1);
+    init_chunk_BXNwwO4k();
+    init_usePageContext();
     init_core();
+    init_router();
     init_chunk_BuupiibZ();
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
@@ -58853,56 +58829,24 @@ var init_pages_payment_check = __esm({
     init_chunk_CmbnYLw1();
     init_chunk_ChwR_51s();
     init_chunk_C425Vkts();
-    init_chunk_7RLfvI5v();
-    init_chunk_Df7n3hil();
-    init_chunk_CBONTDBC();
-    init_chunk_fjYs4Fsw();
-    init_chunk_B8IPFbsA();
-    init_chunk_Dmn5kb6y();
-    getStatusInfo = (status2) => {
-      let result = {
-        title: "\u041D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C \u043F\u0440\u043E\u0432\u0435\u0441\u0442\u0438 \u043E\u043F\u043B\u0430\u0442\u0443.",
-        text: "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u0430\u0448\u0430 \u043E\u043F\u043B\u0430\u0442\u0430 \u043D\u0435 \u043F\u0440\u043E\u0448\u043B\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u043E. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430 \u0438\u043B\u0438 \u043E\u0431\u0440\u0430\u0442\u0438\u0442\u0435\u0441\u044C \u0432 \u043D\u0430\u0448\u0443 \u0441\u043B\u0443\u0436\u0431\u0443 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438 \u0434\u043B\u044F \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u044D\u0442\u043E\u0433\u043E \u0432\u043E\u043F\u0440\u043E\u0441\u0430. \u041C\u044B \u0432\u0441\u0435\u0433\u0434\u0430 \u0433\u043E\u0442\u043E\u0432\u044B \u043F\u043E\u043C\u043E\u0447\u044C \u0432\u0430\u043C \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0446\u0435\u0441\u0441 \u0438 \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0434\u043E\u0441\u0442\u0443\u043F \u043A \u0432\u0430\u0448\u0438\u043C \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u043C.",
-        buttonText: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u043E\u043F\u043B\u0430\u0442\u044B"
-      };
-      if (status2 === "paid") {
-        result = {
-          title: "\u041E\u043F\u043B\u0430\u0442\u0430 \u043F\u0440\u043E\u0448\u043B\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u043E!",
-          text: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u0441\u0432\u043E\u0435\u043C\u0443 \u043E\u0442\u0447\u0435\u0442\u0443, \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0436\u0430\u0432 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443 \u043D\u0438\u0436\u0435, \u043B\u0438\u0431\u043E \u0432\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0441\u0441\u044B\u043B\u043A\u043E\u0439,\u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0431\u044B\u043B\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 \u0432\u0430\u0448 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441. \u0415\u0441\u043B\u0438 \u0443 \u0432\u0430\u0441 \u043F\u043E\u044F\u0432\u044F\u0442\u0441\u044F \u0432\u043E\u043F\u0440\u043E\u0441\u044B \u0438\u043B\u0438 \u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u0442\u0441\u044F \u043F\u043E\u043C\u043E\u0449\u044C, \u043D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430 \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0430 \u0441\u0432\u044F\u0437\u0438.",
-          buttonText: "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043F\u043E\u043B\u043D\u044B\u0439 \u043E\u0442\u0447\u0435\u0442"
-        };
-      }
-      return result;
-    };
-    PaymentCheckPage = () => {
-      const {
-        urlParsed: {
-          search: {
-            order_id
-          }
-        }
-      } = usePageContext();
-      const {
-        pending: pending2
-      } = c2(getSurveysInfoQuery);
-      const {
-        status: status2,
-        order
-      } = c2({
-        order: ReportModel.$userOrder,
-        status: ReportModel.$userOrderStatus
-      });
-      const {
-        title: title12,
-        buttonText,
-        text: text12
-      } = getStatusInfo(status2);
-      if (!order_id) navigate("/");
-      if (pending2 || !order) return /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(PageLoader, {});
-      return /* @__PURE__ */ (0, import_jsx_runtime189.jsxs)(InnerLayout, { title: title12, text: text12, image: "/images/paywall-man_large.webp", navigateTo: "/", backButtonText: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(MainButton, { component: "a", href: status2 === "paid" ? `/report/${order == null ? void 0 : order.user_report}` : `/`, children: buttonText }),
-        /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(NavigateToHelpPage, {})
+    SvgUnion = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 93 85", ...props }, /* @__PURE__ */ React13.createElement("path", { fill: "#D0BFFF", fillRule: "evenodd", d: "M46.623 13.64C28.18 1.2 10.728-3.617 3.525 2.916c-7.203 6.533-2.067 22.52 11.403 39.471C1.314 59.245-3.958 75.197 3.19 81.782c7.148 6.584 24.642 1.888 43.19-10.425C64.825 83.8 82.279 88.617 89.483 82.084c7.203-6.534 2.066-22.523-11.407-39.476C91.688 25.752 96.957 9.802 89.81 3.218 82.662-3.365 65.17 1.33 46.623 13.64Z", clipRule: "evenodd" }));
+    Hero = () => {
+      return /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)(Box, { component: "section", className: s50.box, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Text, { className: clsx_default(s50.text, s50.test), children: "\u0422\u0435\u0441\u0442 \u043D\u0430 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438" }),
+        /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)(Text, { className: s50.text, children: [
+          "\u0438 \u0432\u044B\u0431\u043E\u0440 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u0438 \u0441",
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)("span", { className: s50.ai, children: [
+            "AI ",
+            /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(SvgUnion, {})
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Text, { className: s50.description, children: "\u0421 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0433\u043E \u0438\u043D\u0442\u0435\u043B\u043B\u0435\u043A\u0442\u0430 \u0438 \u043D\u0430\u0443\u0447\u043D\u043E-\u043E\u0431\u043E\u0441\u043D\u043E\u0432\u0430\u043D\u043D\u043E\u0439 \u043C\u0435\u0442\u043E\u0434\u0438\u043A\u0438 MBTI, \u043C\u044B \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u043C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438 \u0434\u043B\u044F \u0432\u0430\u0448\u0435\u0433\u043E \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u043E\u0433\u043E \u0440\u043E\u0441\u0442\u0430 \u0438 \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F." }),
+        /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Button, { size: "xl", bg: "dark.9", radius: "md", className: s50.shadow, children: "\u041F\u0440\u043E\u0439\u0442\u0438 \u0442\u0435\u0441\u0442" })
       ] });
+    };
+    IndexPage = () => {
+      return /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Container, { children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(Hero, {}) }) });
     };
     import88 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
@@ -59018,10 +58962,238 @@ var init_pages_payment_check = __esm({
       },
       ["Page"]: {
         type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/payment-check/+Page.tsx", "fileExportPathToShowToUser": [] },
+        definedAtData: { "filePathToShowToUser": "/pages/index/+Page.tsx", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
           exportValues: import88
+        }
+      }
+    };
+  }
+});
+
+// dist/server/chunks/chunk-BYm16E_b.js
+var import_jsx_runtime189, NavigateToHelpPage;
+var init_chunk_BYm16E_b = __esm({
+  "dist/server/chunks/chunk-BYm16E_b.js"() {
+    "use strict";
+    import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+    init_esm2();
+    NavigateToHelpPage = () => /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(Button, { fullWidth: true, variant: "transparent", c: "dark.7", component: "a", href: "/help", children: "\u0421\u043B\u0443\u0436\u0431\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438" });
+  }
+});
+
+// dist/server/entries/pages_payment-check.mjs
+var pages_payment_check_exports = {};
+__export(pages_payment_check_exports, {
+  configValuesSerialized: () => configValuesSerialized9
+});
+function Page9() {
+  return /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(PaymentCheckPage, {});
+}
+var import_jsx_runtime190, import_react246, getStatusInfo, PaymentCheckPage, import89, configValuesSerialized9;
+var init_pages_payment_check = __esm({
+  "dist/server/entries/pages_payment-check.mjs"() {
+    "use strict";
+    init_Loading();
+    init_onRenderHtml();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+    init_effector_react();
+    init_router();
+    init_usePageContext();
+    init_clsx();
+    import_react246 = __toESM(require_react(), 1);
+    init_chunk_L3VcMs93();
+    init_chunk_CYeT6u1L();
+    init_chunk_BYm16E_b();
+    init_chunk_CYsUm0nd();
+    init_core();
+    init_chunk_BuupiibZ();
+    init_chunk_BSwk3_CR();
+    init_chunk_aODxNfUi();
+    init_chunk_Dbc_orkj();
+    init_chunk_C7PrGYQz();
+    init_chunk_DTXnyPJO();
+    init_chunk_DkndjKdT();
+    init_factories();
+    init_web_api();
+    init_chunk_B8YOMuL2();
+    init_chunk_CbkIWS2T();
+    init_chunk_smUEvs4e();
+    init_chunk_CmbnYLw1();
+    init_chunk_ChwR_51s();
+    init_chunk_C425Vkts();
+    init_chunk_7RLfvI5v();
+    init_chunk_Df7n3hil();
+    init_chunk_CBONTDBC();
+    init_chunk_fjYs4Fsw();
+    init_chunk_B8IPFbsA();
+    init_chunk_Dmn5kb6y();
+    getStatusInfo = (status2) => {
+      let result = {
+        title: "\u041D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C \u043F\u0440\u043E\u0432\u0435\u0441\u0442\u0438 \u043E\u043F\u043B\u0430\u0442\u0443.",
+        text: "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0432\u0430\u0448\u0430 \u043E\u043F\u043B\u0430\u0442\u0430 \u043D\u0435 \u043F\u0440\u043E\u0448\u043B\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u043E. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0441\u043D\u043E\u0432\u0430 \u0438\u043B\u0438 \u043E\u0431\u0440\u0430\u0442\u0438\u0442\u0435\u0441\u044C \u0432 \u043D\u0430\u0448\u0443 \u0441\u043B\u0443\u0436\u0431\u0443 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438 \u0434\u043B\u044F \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u044D\u0442\u043E\u0433\u043E \u0432\u043E\u043F\u0440\u043E\u0441\u0430. \u041C\u044B \u0432\u0441\u0435\u0433\u0434\u0430 \u0433\u043E\u0442\u043E\u0432\u044B \u043F\u043E\u043C\u043E\u0447\u044C \u0432\u0430\u043C \u0437\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0446\u0435\u0441\u0441 \u0438 \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0434\u043E\u0441\u0442\u0443\u043F \u043A \u0432\u0430\u0448\u0438\u043C \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u043C.",
+        buttonText: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u043E\u043F\u043B\u0430\u0442\u044B"
+      };
+      if (status2 === "paid") {
+        result = {
+          title: "\u041E\u043F\u043B\u0430\u0442\u0430 \u043F\u0440\u043E\u0448\u043B\u0430 \u0443\u0441\u043F\u0435\u0448\u043D\u043E!",
+          text: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u0441\u0432\u043E\u0435\u043C\u0443 \u043E\u0442\u0447\u0435\u0442\u0443, \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0436\u0430\u0432 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443 \u043D\u0438\u0436\u0435, \u043B\u0438\u0431\u043E \u0432\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0441\u0441\u044B\u043B\u043A\u043E\u0439,\u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0431\u044B\u043B\u0430 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 \u0432\u0430\u0448 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441. \u0415\u0441\u043B\u0438 \u0443 \u0432\u0430\u0441 \u043F\u043E\u044F\u0432\u044F\u0442\u0441\u044F \u0432\u043E\u043F\u0440\u043E\u0441\u044B \u0438\u043B\u0438 \u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u0442\u0441\u044F \u043F\u043E\u043C\u043E\u0449\u044C, \u043D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430 \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0430 \u0441\u0432\u044F\u0437\u0438.",
+          buttonText: "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043F\u043E\u043B\u043D\u044B\u0439 \u043E\u0442\u0447\u0435\u0442"
+        };
+      }
+      return result;
+    };
+    PaymentCheckPage = () => {
+      const {
+        urlParsed: {
+          search: {
+            order_id
+          }
+        }
+      } = usePageContext();
+      const {
+        pending: pending2
+      } = c2(getSurveysInfoQuery);
+      const {
+        status: status2,
+        order
+      } = c2({
+        order: ReportModel.$userOrder,
+        status: ReportModel.$userOrderStatus
+      });
+      const {
+        title: title12,
+        buttonText,
+        text: text12
+      } = getStatusInfo(status2);
+      if (!order_id) navigate("/");
+      if (pending2 || !order) return /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(PageLoader, {});
+      return /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(InnerLayout, { title: title12, text: text12, image: "/images/paywall-man_large.webp", navigateTo: "/", backButtonText: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(MainButton, { component: "a", href: status2 === "paid" ? `/report/${order == null ? void 0 : order.user_report}` : `/`, children: buttonText }),
+        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(NavigateToHelpPage, {})
+      ] });
+    };
+    import89 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+      __proto__: null,
+      default: Page9
+    }, Symbol.toStringTag, { value: "Module" }));
+    configValuesSerialized9 = {
+      ["isClientRuntimeLoaded"]: {
+        type: "computed",
+        definedAtData: null,
+        valueSerialized: {
+          type: "js-serialized",
+          value: true
+        }
+      },
+      ["Loading"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/Loading", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: Loading_default
+        }
+      },
+      ["onRenderHtml"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/onRenderHtml", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: onRenderHtml
+        }
+      },
+      ["Wrapper"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+Wrapper.tsx", "fileExportPathToShowToUser": [] }],
+        valueSerialized: [{
+          type: "plus-file",
+          exportValues: import3
+        }]
+      },
+      ["passToClient"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "passToClient"] }, { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "passToClient"] }],
+        valueSerialized: [{
+          type: "js-serialized",
+          value: ["scopeValues"]
+        }, {
+          type: "js-serialized",
+          value: ["_configFromHook"]
+        }]
+      },
+      ["cacheControl"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "cacheControl"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "public, max-age=604800"
+        }
+      },
+      ["title"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "title"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "Cognitive Lab"
+        }
+      },
+      ["lang"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "lang"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "ru"
+        }
+      },
+      ["reactStrictMode"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "reactStrictMode"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: false
+        }
+      },
+      ["onBeforeRender"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+onBeforeRender.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import4
+        }
+      },
+      ["pageInitiated"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import5
+        }
+      },
+      ["Head"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/HeadDefault/index.tsx", "fileExportPathToShowToUser": ["HeadDefault"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: HeadDefault
+        }]
+      },
+      ["Layout"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/RootLayout/index.tsx", "fileExportPathToShowToUser": ["RootLayout"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: RootLayout
+        }]
+      },
+      ["Page"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/payment-check/+Page.tsx", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import89
         }
       }
     };
@@ -59208,25 +59380,25 @@ var init_lodash = __esm({
   }
 });
 
-// dist/server/chunks/chunk-43tKCsCg.js
+// dist/server/chunks/chunk-5658gbD1.js
 function isErrorWithMessage(value) {
   return isObject_default(value) && "data" in value && "message" in value;
 }
-var import_jsx_runtime190, import_react246, PriceInfo, toInputUppercase, applyPromocodeClicked, $promocodeErrorMessage, $showSuccessPromoMessage, reportPurchased, openTransactionPaywallFx, useReportBuyFormViewModel, BuyReportForm, PurchasePage;
-var init_chunk_43tKCsCg = __esm({
-  "dist/server/chunks/chunk-43tKCsCg.js"() {
+var import_jsx_runtime191, import_react247, PriceInfo, toInputUppercase, applyPromocodeClicked, $promocodeErrorMessage, $showSuccessPromoMessage, reportPurchased, openTransactionPaywallFx, useReportBuyFormViewModel, BuyReportForm, PurchasePage;
+var init_chunk_5658gbD1 = __esm({
+  "dist/server/chunks/chunk-5658gbD1.js"() {
     "use strict";
-    import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+    import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
     init_effector_react();
     init_usePageContext();
     init_clsx();
-    import_react246 = __toESM(require_react(), 1);
+    import_react247 = __toESM(require_react(), 1);
     init_router();
     init_chunk_L3VcMs93();
-    init_chunk_8CZG8Mod();
+    init_chunk_GAq1GnvE();
     init_esm2();
     init_chunk_CnxrCl4R();
-    init_chunk_D0W3snA4();
+    init_chunk_CYeT6u1L();
     init_chunk_BYm16E_b();
     init_chunk_DKUCTWb6();
     init_chunk_DUsR_E9C();
@@ -59234,24 +59406,24 @@ var init_chunk_43tKCsCg = __esm({
     init_patronum();
     init_lodash();
     init_esm7();
-    init_chunk_Dj2nlb0H();
+    init_chunk_CYsUm0nd();
     PriceInfo = ({
       regularPrice,
       promocodePrice
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Stack, { className: s51.wrapper, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Title, { className: s51.title, order: 2, children: "\u041F\u043E\u043B\u043D\u044B\u0439 \u043E\u0442\u0447\u0435\u0442 \u043F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0442\u0438\u043F\u0443 \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438" }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Skeleton, { className: s51.skeleton, hidden: Boolean(regularPrice), radius: "sm" }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Group, { gap: "lg", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Text, { hidden: !regularPrice, className: s51.price, td: promocodePrice ? "line-through" : "", c: promocodePrice ? "dark.0" : "dark.7", children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Stack, { className: s51.wrapper, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Title, { className: s51.title, order: 2, children: "\u041F\u043E\u043B\u043D\u044B\u0439 \u043E\u0442\u0447\u0435\u0442 \u043F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0442\u0438\u043F\u0443 \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438" }),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Skeleton, { className: s51.skeleton, hidden: Boolean(regularPrice), radius: "sm" }),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Group, { gap: "lg", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Text, { hidden: !regularPrice, className: s51.price, td: promocodePrice ? "line-through" : "", c: promocodePrice ? "dark.0" : "dark.7", children: [
             regularPrice,
             " ",
-            /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Text, { className: s51.price, span: true, ff: "system-ui", children: "\u20BD" })
+            /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Text, { className: s51.price, span: true, ff: "system-ui", children: "\u20BD" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Text, { hidden: !promocodePrice, className: s51.price, c: "violet.8", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Text, { hidden: !promocodePrice, className: s51.price, c: "violet.8", children: [
             promocodePrice,
             " ",
-            /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Text, { className: s51.price, span: true, ff: "system-ui", children: "\u20BD" })
+            /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Text, { className: s51.price, span: true, ff: "system-ui", children: "\u20BD" })
           ] })
         ] })
       ] });
@@ -59430,24 +59602,24 @@ var init_chunk_43tKCsCg = __esm({
         promocodeError: $promocodeErrorMessage,
         showSuccessMessage: $showSuccessPromoMessage
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(FormWrapper, { onSubmit, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(FormInput, { ...emailProps }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Paper, { bg: "gray.0", radius: "xs", p: "md", px: "sm", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Text, { className: s52.promocodeLabel, children: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434" }),
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Flex, { className: s52.promocodeWrapper, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(TextInput, { ...promocodeProps, disabled: pending2, error: promocodeError, onInput: toInputUppercase, "data-success": showSuccessMessage, description: showSuccessMessage ? "\u041F\u0440\u043E\u043C\u043E\u043A\u043E\u0434 \u043F\u0440\u0438\u043C\u0435\u043D\u0435\u043D" : "", inputWrapperOrder: ["label", "input", "description", "error"] }),
-            /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Button, { fullWidth: true, c: "dark.7", radius: "xs", color: "dark.7", variant: "outline", disabled: pending2, loading: pending2, onClick: () => applyPromoHandler(form.values.promo_code.toUpperCase()), children: "\u041F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C" })
+      return /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(FormWrapper, { onSubmit, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(FormInput, { ...emailProps }),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Paper, { bg: "gray.0", radius: "xs", p: "md", px: "sm", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Text, { className: s52.promocodeLabel, children: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434" }),
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Flex, { className: s52.promocodeWrapper, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(TextInput, { ...promocodeProps, disabled: pending2, error: promocodeError, onInput: toInputUppercase, "data-success": showSuccessMessage, description: showSuccessMessage ? "\u041F\u0440\u043E\u043C\u043E\u043A\u043E\u0434 \u043F\u0440\u0438\u043C\u0435\u043D\u0435\u043D" : "", inputWrapperOrder: ["label", "input", "description", "error"] }),
+            /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Button, { fullWidth: true, c: "dark.7", radius: "xs", color: "dark.7", variant: "outline", disabled: pending2, loading: pending2, onClick: () => applyPromoHandler(form.values.promo_code.toUpperCase()), children: "\u041F\u0440\u0438\u043C\u0435\u043D\u0438\u0442\u044C" })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(MainButton, { disabled: pending2, radius: "xs", size: "md", type: "submit", children: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u043E\u043F\u043B\u0430\u0442\u0435" }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(Text, { fz: 12, ta: "center", mb: 12, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(MainButton, { disabled: pending2, radius: "xs", size: "md", type: "submit", children: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A \u043E\u043F\u043B\u0430\u0442\u0435" }),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(Text, { fz: 12, ta: "center", mb: 12, children: [
           "\u041D\u0430\u0436\u0438\u043C\u0430\u044F \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443, \u0432\u044B \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0435\u0442\u0435 \u0441\u0432\u043E\u0435 \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 \u0441\u0431\u043E\u0440, \u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0435 \u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0432\u0430\u0448\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445 \u0441\u043E\u0433\u043B\u0430\u0441\u043D\u043E",
           " ",
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Text, { fz: 12, c: "blue.7", component: "a", href: "https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf", children: "\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0435 \u043A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438" }),
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Text, { fz: 12, c: "blue.7", component: "a", href: "https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf", children: "\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0435 \u043A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438" }),
           " ",
           "\u0438 \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u0442\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F",
           " ",
-          /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(Text, { fz: 12, c: "blue.7", component: "a", href: "https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf", children: "\u041F\u0443\u0431\u043B\u0438\u0447\u043D\u043E\u0439 \u043E\u0444\u0435\u0440\u0442\u044B" })
+          /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(Text, { fz: 12, c: "blue.7", component: "a", href: "https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf", children: "\u041F\u0443\u0431\u043B\u0438\u0447\u043D\u043E\u0439 \u043E\u0444\u0435\u0440\u0442\u044B" })
         ] })
       ] });
     };
@@ -59464,14 +59636,14 @@ var init_chunk_43tKCsCg = __esm({
           surveyId
         }
       } = usePageContext();
-      if (!data && pending2) return /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(PageLoader, {});
+      if (!data && pending2) return /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(PageLoader, {});
       if (!data) return null;
       const currentRegularPrice = surveyId ? data.regular_price : data.skip_survey_price;
       const currentPromoPrice = surveyId ? dataWithPromocode == null ? void 0 : dataWithPromocode.regular_price.final : dataWithPromocode == null ? void 0 : dataWithPromocode.skip_survey_price.final;
-      return /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(InnerLayout, { image: "/images/paywall-man_large.webp", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(PriceInfo, { regularPrice: currentRegularPrice, promocodePrice: currentPromoPrice }),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(BuyReportForm, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(NavigateToHelpPage, {})
+      return /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(InnerLayout, { image: "/images/paywall-man_large.webp", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(PriceInfo, { regularPrice: currentRegularPrice, promocodePrice: currentPromoPrice }),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(BuyReportForm, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(NavigateToHelpPage, {})
       ] });
     };
   }
@@ -59480,197 +59652,21 @@ var init_chunk_43tKCsCg = __esm({
 // dist/server/entries/pages_purchase_-type.mjs
 var pages_purchase_type_exports = {};
 __export(pages_purchase_type_exports, {
-  configValuesSerialized: () => configValuesSerialized9
-});
-function Page9() {
-  return /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(PurchasePage, {});
-}
-var import_jsx_runtime191, import_react247, import89, configValuesSerialized9;
-var init_pages_purchase_type = __esm({
-  "dist/server/entries/pages_purchase_-type.mjs"() {
-    "use strict";
-    init_Loading();
-    init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
-    import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
-    init_chunk_43tKCsCg();
-    import_react247 = __toESM(require_react(), 1);
-    init_usePageContext();
-    init_core();
-    init_clsx();
-    init_router();
-    init_chunk_BuupiibZ();
-    init_chunk_BSwk3_CR();
-    init_chunk_aODxNfUi();
-    init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
-    init_chunk_DTXnyPJO();
-    init_chunk_DkndjKdT();
-    init_factories();
-    init_web_api();
-    init_chunk_B8YOMuL2();
-    init_chunk_CbkIWS2T();
-    init_chunk_smUEvs4e();
-    init_chunk_CmbnYLw1();
-    init_chunk_ChwR_51s();
-    init_chunk_C425Vkts();
-    init_chunk_L3VcMs93();
-    init_chunk_CnxrCl4R();
-    init_chunk_D0W3snA4();
-    init_chunk_7RLfvI5v();
-    init_chunk_BYm16E_b();
-    init_chunk_DKUCTWb6();
-    init_chunk_CoqZiLJg();
-    init_chunk_DUsR_E9C();
-    init_chunk_Dj2nlb0H();
-    init_chunk_Df7n3hil();
-    init_chunk_CBONTDBC();
-    init_chunk_fjYs4Fsw();
-    init_chunk_B8IPFbsA();
-    init_chunk_Dmn5kb6y();
-    import89 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-      __proto__: null,
-      default: Page9
-    }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized9 = {
-      ["isClientRuntimeLoaded"]: {
-        type: "computed",
-        definedAtData: null,
-        valueSerialized: {
-          type: "js-serialized",
-          value: true
-        }
-      },
-      ["Loading"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/Loading", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "pointer-import",
-          value: Loading_default
-        }
-      },
-      ["onRenderHtml"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/onRenderHtml", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "pointer-import",
-          value: onRenderHtml
-        }
-      },
-      ["Wrapper"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/pages/+Wrapper.tsx", "fileExportPathToShowToUser": [] }],
-        valueSerialized: [{
-          type: "plus-file",
-          exportValues: import3
-        }]
-      },
-      ["passToClient"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "passToClient"] }, { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "passToClient"] }],
-        valueSerialized: [{
-          type: "js-serialized",
-          value: ["scopeValues"]
-        }, {
-          type: "js-serialized",
-          value: ["_configFromHook"]
-        }]
-      },
-      ["cacheControl"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "cacheControl"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "public, max-age=604800"
-        }
-      },
-      ["title"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "title"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "Cognitive Lab"
-        }
-      },
-      ["lang"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "lang"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: "ru"
-        }
-      },
-      ["reactStrictMode"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "reactStrictMode"] },
-        valueSerialized: {
-          type: "js-serialized",
-          value: false
-        }
-      },
-      ["onBeforeRender"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+onBeforeRender.ts", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import4
-        }
-      },
-      ["pageInitiated"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import5
-        }
-      },
-      ["Head"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/src/widgets/HeadDefault/index.tsx", "fileExportPathToShowToUser": ["HeadDefault"] }],
-        valueSerialized: [{
-          type: "pointer-import",
-          value: HeadDefault
-        }]
-      },
-      ["Layout"]: {
-        type: "cumulative",
-        definedAtData: [{ "filePathToShowToUser": "/src/widgets/RootLayout/index.tsx", "fileExportPathToShowToUser": ["RootLayout"] }],
-        valueSerialized: [{
-          type: "pointer-import",
-          value: RootLayout
-        }]
-      },
-      ["Page"]: {
-        type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/purchase/@type/+Page.tsx", "fileExportPathToShowToUser": [] },
-        valueSerialized: {
-          type: "plus-file",
-          exportValues: import89
-        }
-      }
-    };
-  }
-});
-
-// dist/server/entries/pages_purchase_personal_-surveyId.mjs
-var pages_purchase_personal_surveyId_exports = {};
-__export(pages_purchase_personal_surveyId_exports, {
   configValuesSerialized: () => configValuesSerialized10
 });
 function Page10() {
   return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(PurchasePage, {});
 }
 var import_jsx_runtime192, import_react248, import810, configValuesSerialized10;
-var init_pages_purchase_personal_surveyId = __esm({
-  "dist/server/entries/pages_purchase_personal_-surveyId.mjs"() {
+var init_pages_purchase_type = __esm({
+  "dist/server/entries/pages_purchase_-type.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
     import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
-    init_chunk_43tKCsCg();
+    init_chunk_5658gbD1();
     import_react248 = __toESM(require_react(), 1);
     init_usePageContext();
     init_core();
@@ -59693,13 +59689,13 @@ var init_pages_purchase_personal_surveyId = __esm({
     init_chunk_C425Vkts();
     init_chunk_L3VcMs93();
     init_chunk_CnxrCl4R();
-    init_chunk_D0W3snA4();
+    init_chunk_CYeT6u1L();
     init_chunk_7RLfvI5v();
     init_chunk_BYm16E_b();
     init_chunk_DKUCTWb6();
     init_chunk_CoqZiLJg();
     init_chunk_DUsR_E9C();
-    init_chunk_Dj2nlb0H();
+    init_chunk_CYsUm0nd();
     init_chunk_Df7n3hil();
     init_chunk_CBONTDBC();
     init_chunk_fjYs4Fsw();
@@ -59819,10 +59815,186 @@ var init_pages_purchase_personal_surveyId = __esm({
       },
       ["Page"]: {
         type: "standard",
-        definedAtData: { "filePathToShowToUser": "/pages/purchase/personal/@surveyId/+Page.tsx", "fileExportPathToShowToUser": [] },
+        definedAtData: { "filePathToShowToUser": "/pages/purchase/@type/+Page.tsx", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
           exportValues: import810
+        }
+      }
+    };
+  }
+});
+
+// dist/server/entries/pages_purchase_personal_-surveyId.mjs
+var pages_purchase_personal_surveyId_exports = {};
+__export(pages_purchase_personal_surveyId_exports, {
+  configValuesSerialized: () => configValuesSerialized11
+});
+function Page11() {
+  return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(PurchasePage, {});
+}
+var import_jsx_runtime193, import_react249, import811, configValuesSerialized11;
+var init_pages_purchase_personal_surveyId = __esm({
+  "dist/server/entries/pages_purchase_personal_-surveyId.mjs"() {
+    "use strict";
+    init_Loading();
+    init_onRenderHtml();
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_5658gbD1();
+    import_react249 = __toESM(require_react(), 1);
+    init_usePageContext();
+    init_core();
+    init_clsx();
+    init_router();
+    init_chunk_BuupiibZ();
+    init_chunk_BSwk3_CR();
+    init_chunk_aODxNfUi();
+    init_chunk_Dbc_orkj();
+    init_chunk_C7PrGYQz();
+    init_chunk_DTXnyPJO();
+    init_chunk_DkndjKdT();
+    init_factories();
+    init_web_api();
+    init_chunk_B8YOMuL2();
+    init_chunk_CbkIWS2T();
+    init_chunk_smUEvs4e();
+    init_chunk_CmbnYLw1();
+    init_chunk_ChwR_51s();
+    init_chunk_C425Vkts();
+    init_chunk_L3VcMs93();
+    init_chunk_CnxrCl4R();
+    init_chunk_CYeT6u1L();
+    init_chunk_7RLfvI5v();
+    init_chunk_BYm16E_b();
+    init_chunk_DKUCTWb6();
+    init_chunk_CoqZiLJg();
+    init_chunk_DUsR_E9C();
+    init_chunk_CYsUm0nd();
+    init_chunk_Df7n3hil();
+    init_chunk_CBONTDBC();
+    init_chunk_fjYs4Fsw();
+    init_chunk_B8IPFbsA();
+    init_chunk_Dmn5kb6y();
+    import811 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+      __proto__: null,
+      default: Page11
+    }, Symbol.toStringTag, { value: "Module" }));
+    configValuesSerialized11 = {
+      ["isClientRuntimeLoaded"]: {
+        type: "computed",
+        definedAtData: null,
+        valueSerialized: {
+          type: "js-serialized",
+          value: true
+        }
+      },
+      ["Loading"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/Loading", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: Loading_default
+        }
+      },
+      ["onRenderHtml"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "vike-react/__internal/integration/onRenderHtml", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "pointer-import",
+          value: onRenderHtml
+        }
+      },
+      ["Wrapper"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+Wrapper.tsx", "fileExportPathToShowToUser": [] }],
+        valueSerialized: [{
+          type: "plus-file",
+          exportValues: import3
+        }]
+      },
+      ["passToClient"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "passToClient"] }, { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "passToClient"] }],
+        valueSerialized: [{
+          type: "js-serialized",
+          value: ["scopeValues"]
+        }, {
+          type: "js-serialized",
+          value: ["_configFromHook"]
+        }]
+      },
+      ["cacheControl"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "cacheControl"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "public, max-age=604800"
+        }
+      },
+      ["title"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "title"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "Cognitive Lab"
+        }
+      },
+      ["lang"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "lang"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: "ru"
+        }
+      },
+      ["reactStrictMode"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+config.ts", "fileExportPathToShowToUser": ["default", "reactStrictMode"] },
+        valueSerialized: {
+          type: "js-serialized",
+          value: false
+        }
+      },
+      ["onBeforeRender"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+onBeforeRender.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import4
+        }
+      },
+      ["pageInitiated"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import5
+        }
+      },
+      ["Head"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/HeadDefault/index.tsx", "fileExportPathToShowToUser": ["HeadDefault"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: HeadDefault
+        }]
+      },
+      ["Layout"]: {
+        type: "cumulative",
+        definedAtData: [{ "filePathToShowToUser": "/src/widgets/RootLayout/index.tsx", "fileExportPathToShowToUser": ["RootLayout"] }],
+        valueSerialized: [{
+          type: "pointer-import",
+          value: RootLayout
+        }]
+      },
+      ["Page"]: {
+        type: "standard",
+        definedAtData: { "filePathToShowToUser": "/pages/purchase/personal/@surveyId/+Page.tsx", "fileExportPathToShowToUser": [] },
+        valueSerialized: {
+          type: "plus-file",
+          exportValues: import811
         }
       }
     };
@@ -60088,11 +60260,11 @@ var require_lodash = __commonJS({
 
 // node_modules/.pnpm/usehooks-ts@3.1.1_react@19.0.0/node_modules/usehooks-ts/dist/index.js
 function useTimeout(callback, delay2) {
-  const savedCallback = (0, import_react249.useRef)(callback);
+  const savedCallback = (0, import_react250.useRef)(callback);
   useIsomorphicLayoutEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
-  (0, import_react249.useEffect)(() => {
+  (0, import_react250.useEffect)(() => {
     if (!delay2 && delay2 !== 0) {
       return;
     }
@@ -60104,21 +60276,21 @@ function useTimeout(callback, delay2) {
     };
   }, [delay2]);
 }
-var import_react249, import_lodash, useIsomorphicLayoutEffect;
+var import_react250, import_lodash, useIsomorphicLayoutEffect;
 var init_dist4 = __esm({
   "node_modules/.pnpm/usehooks-ts@3.1.1_react@19.0.0/node_modules/usehooks-ts/dist/index.js"() {
-    import_react249 = __toESM(require_react(), 1);
+    import_react250 = __toESM(require_react(), 1);
     import_lodash = __toESM(require_lodash(), 1);
-    useIsomorphicLayoutEffect = typeof window !== "undefined" ? import_react249.useLayoutEffect : import_react249.useEffect;
+    useIsomorphicLayoutEffect = typeof window !== "undefined" ? import_react250.useLayoutEffect : import_react250.useEffect;
   }
 });
 
 // node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/context.mjs
-var import_react250, o9;
+var import_react251, o9;
 var init_context = __esm({
   "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/context.mjs"() {
-    import_react250 = __toESM(require_react(), 1);
-    o9 = (0, import_react250.createContext)({
+    import_react251 = __toESM(require_react(), 1);
+    o9 = (0, import_react251.createContext)({
       color: "currentColor",
       size: "1em",
       weight: "regular",
@@ -60128,10 +60300,10 @@ var init_context = __esm({
 });
 
 // node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/IconBase.mjs
-var import_react251, y6, c17, f15, g9, d8, l15, a17, h8, b4;
+var import_react252, y6, c17, f15, g9, d8, l15, a17, h8, b4;
 var init_IconBase = __esm({
   "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/lib/IconBase.mjs"() {
-    import_react251 = __toESM(require_react(), 1);
+    import_react252 = __toESM(require_react(), 1);
     init_context();
     y6 = Object.defineProperty;
     c17 = Object.getOwnPropertySymbols;
@@ -60155,7 +60327,7 @@ var init_IconBase = __esm({
           o10.indexOf(r9) < 0 && g9.call(t22, r9) && (e17[r9] = t22[r9]);
       return e17;
     };
-    h8 = (0, import_react251.forwardRef)((t22, o10) => {
+    h8 = (0, import_react252.forwardRef)((t22, o10) => {
       const m16 = t22, {
         alt: e17,
         color: r9,
@@ -60172,7 +60344,7 @@ var init_IconBase = __esm({
         "mirrored",
         "children",
         "weights"
-      ]), x5 = (0, import_react251.useContext)(o9), {
+      ]), x5 = (0, import_react252.useContext)(o9), {
         color: B4 = "currentColor",
         size: i15,
         weight: I6 = "regular",
@@ -60183,7 +60355,7 @@ var init_IconBase = __esm({
         "weight",
         "mirrored"
       ]);
-      return /* @__PURE__ */ import_react251.default.createElement(
+      return /* @__PURE__ */ import_react252.default.createElement(
         "svg",
         l15(l15({
           ref: o10,
@@ -60194,7 +60366,7 @@ var init_IconBase = __esm({
           viewBox: "0 0 256 256",
           transform: p16 || E8 ? "scale(-1, 1)" : void 0
         }, R16), v8),
-        !!e17 && /* @__PURE__ */ import_react251.default.createElement("title", null, e17),
+        !!e17 && /* @__PURE__ */ import_react252.default.createElement("title", null, e17),
         u6,
         C5.get(s70 != null ? s70 : I6)
       );
@@ -60205,10 +60377,10 @@ var init_IconBase = __esm({
 });
 
 // node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/csr/ArrowsClockwise.mjs
-var import_react252, i14, c18, w10, s62, f16, p15, t21, m15, a18, A5;
+var import_react253, i14, c18, w10, s62, f16, p15, t21, m15, a18, A5;
 var init_ArrowsClockwise2 = __esm({
   "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/csr/ArrowsClockwise.mjs"() {
-    import_react252 = __toESM(require_react(), 1);
+    import_react253 = __toESM(require_react(), 1);
     init_IconBase();
     init_ArrowsClockwise();
     i14 = Object.defineProperty;
@@ -60227,7 +60399,7 @@ var init_ArrowsClockwise2 = __esm({
       return r9;
     };
     a18 = (r9, o10) => c18(r9, w10(o10));
-    A5 = (0, import_react252.forwardRef)((r9, o10) => /* @__PURE__ */ import_react252.default.createElement(b4, a18(m15({ ref: o10 }, r9), { weights: t7 })));
+    A5 = (0, import_react253.forwardRef)((r9, o10) => /* @__PURE__ */ import_react253.default.createElement(b4, a18(m15({ ref: o10 }, r9), { weights: t7 })));
     A5.displayName = "ArrowsClockwise";
   }
 });
@@ -60272,19 +60444,19 @@ var init_chunk_Cksb66Fg = __esm({
 // dist/server/entries/pages_test.mjs
 var pages_test_exports = {};
 __export(pages_test_exports, {
-  configValuesSerialized: () => configValuesSerialized11
+  configValuesSerialized: () => configValuesSerialized12
 });
-function Page11() {
-  return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TestPage, {});
+function Page12() {
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TestPage, {});
 }
-var import_jsx_runtime193, import_react253, InputBorderless, getQuestionsQuery, submitAnswersMutation, TestContainer, TestProgress, SCALE_RADIO_ITEMS, RadioElement, QuestionTitle, TestScaleQuestion, AnswerLabel, TestSingleChoiceQuestion, useMultipleQuestionViewModel, TestMultipleQuestion, $currentPage2, $currentProgress, $currentQuestion, $currentValue, $scaleForm, scaleFormFieldChanged, formPageChanged, delayedFormFieldChanged, TestModel, $currentPhrases, $currentPhraseIndex, changePhraseIndex, RephrasingModel, $isSubmitModalShown, submitScaleForm, submitModalStateChanged, redirectToFreeReportPageFx, showSubmitErrorFx, SubmitTestModel, SubmitTestModal, Rephrasing, Controls, TestPage, import75, pageInitiated6, import811, configValuesSerialized11;
+var import_jsx_runtime194, import_react254, InputBorderless, getQuestionsQuery, submitAnswersMutation, TestContainer, TestProgress, SCALE_RADIO_ITEMS, RadioElement, QuestionTitle, TestScaleQuestion, AnswerLabel, TestSingleChoiceQuestion, useMultipleQuestionViewModel, TestMultipleQuestion, $currentPage2, $currentProgress, $currentQuestion, $currentValue, $scaleForm, scaleFormFieldChanged, formPageChanged, delayedFormFieldChanged, TestModel, $currentPhrases, $currentPhraseIndex, changePhraseIndex, RephrasingModel, $isSubmitModalShown, submitScaleForm, submitModalStateChanged, redirectToFreeReportPageFx, showSubmitErrorFx, SubmitTestModel, SubmitTestModal, Rephrasing, Controls, TestPage, import75, pageInitiated6, import812, configValuesSerialized12;
 var init_pages_test = __esm({
   "dist/server/entries/pages_test.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_GAq1GnvE();
+    import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
     init_effector_react();
     init_lodash();
     init_effector();
@@ -60298,7 +60470,7 @@ var init_pages_test = __esm({
     init_chunk_D4y6bG9J();
     init_chunk_BEI6QqOV();
     init_chunk_CmnCT0Nl();
-    import_react253 = __toESM(require_react(), 1);
+    import_react254 = __toESM(require_react(), 1);
     init_chunk_B0ldWmG();
     init_chunk_B3xUaNw6();
     init_chunk_CVgMa5qs();
@@ -60330,7 +60502,7 @@ var init_pages_test = __esm({
     InputBorderless = ({
       value,
       onChange
-    }) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TextInput, { fz: 16, autoFocus: true, classNames: s58, value, onChange });
+    }) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextInput, { fz: 16, autoFocus: true, classNames: s58, value, onChange });
     getQuestionsQuery = we({
       sid: "-iugphm",
       fn: () => Or({
@@ -60361,16 +60533,16 @@ var init_pages_test = __esm({
     });
     TestContainer = ({
       children
-    }) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Container, { className: s53.container, children }) });
+    }) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Container, { className: s53.container, children }) });
     TestProgress = ({
       value,
       total,
       page
     }) => {
       const isLarge = c2(desktop.$matches);
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Flex, { gap: "xl", mb: "lg", align: "center", h: "fit-content", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Progress, { value, color: "violet.4", className: s54.progress, transitionDuration: 200, size: isLarge ? "xl" : "lg" }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Text, { c: "dark.2", className: s54.text, children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Flex, { gap: "xl", mb: "lg", align: "center", h: "fit-content", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Progress, { value, color: "violet.4", className: s54.progress, transitionDuration: 200, size: isLarge ? "xl" : "lg" }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Text, { c: "dark.2", className: s54.text, children: [
           page,
           "/",
           total
@@ -60403,15 +60575,15 @@ var init_pages_test = __esm({
       size: size4,
       value
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Radio, { className: s55.radioRoot, icon: IconCheck, size: size4, value });
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Radio, { className: s55.radioRoot, icon: IconCheck, size: size4, value });
     };
     QuestionTitle = ({
       text: text12,
       hint: hint2
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Group, { className: s56.wrapper, gap: 0, align: "start", wrap: "nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { classNames: s56, order: 4, children: text12 }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { className: s56.hint, children: hint2 })
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Group, { className: s56.wrapper, gap: 0, align: "start", wrap: "nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Stack, { gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Title, { classNames: s56, order: 4, children: text12 }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { className: s56.hint, children: hint2 })
       ] }) });
     };
     TestScaleQuestion = ({
@@ -60422,19 +60594,19 @@ var init_pages_test = __esm({
       id,
       onChange
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Paper, { className: s57.wrapper, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { pos: "relative", maw: 1145, m: "auto", gap: "xs", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Radio.Group, { className: s57.group, name: id, value, onChange: (val) => onChange({
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Paper, { className: s57.wrapper, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Stack, { pos: "relative", maw: 1145, m: "auto", gap: "xs", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Radio.Group, { className: s57.group, name: id, value, onChange: (val) => onChange({
             question: id,
             answer: {
               value: Number(val)
             },
             index: page - 1
-          }), children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Flex, { className: s57.radioWrapper, justify: "space-between", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Flex, { className: s57.agreedBlock, justify: "space-between", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { className: s57.agreed, c: "indigo.8", fw: 700, children: "\u041D\u0435 \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D" }),
-            /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { className: s57.agreed, c: "lime.8", fw: 700, children: "\u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D" })
+          }), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Flex, { className: s57.radioWrapper, justify: "space-between", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Flex, { className: s57.agreedBlock, justify: "space-between", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { className: s57.agreed, c: "indigo.8", fw: 700, children: "\u041D\u0435 \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D" }),
+            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { className: s57.agreed, c: "lime.8", fw: 700, children: "\u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D" })
           ] })
         ] })
       ] });
@@ -60442,7 +60614,7 @@ var init_pages_test = __esm({
     AnswerLabel = ({
       children
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { className: s59.text, children });
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { className: s59.text, children });
     };
     TestSingleChoiceQuestion = ({
       text: text12,
@@ -60455,7 +60627,7 @@ var init_pages_test = __esm({
       showInput
     }) => {
       const isLarge = useIsLarge();
-      (0, import_react253.useEffect)(() => {
+      (0, import_react254.useEffect)(() => {
         if (!showInput) {
           onChange({
             question: id,
@@ -60467,10 +60639,10 @@ var init_pages_test = __esm({
           });
         }
       }, [showInput]);
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Paper, { mb: "5xl", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { gap: "xs", className: s60.stack, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Radio.Group, { name: id, value: (value == null ? void 0 : value.value) ?? "", onChange: (localVal) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Paper, { mb: "5xl", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Stack, { gap: "xs", className: s60.stack, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Radio.Group, { name: id, value: (value == null ? void 0 : value.value) ?? "", onChange: (localVal) => {
             onChange({
               question: id,
               answer: {
@@ -60480,8 +60652,8 @@ var init_pages_test = __esm({
               index: page - 1,
               isSingle: true
             });
-          }, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Stack, { gap: "lg", className: s60.wrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Radio, { color: "lime.8", value: option.id, size: isLarge ? "xl" : "lg", label: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(AnswerLabel, { children: option.text }) }, option.id)) }) }),
-          showInput && /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(InputBorderless, { autoFocus: true, value: value == null ? void 0 : value.input, defaultValue: value == null ? void 0 : value.input, onChange: (e17) => {
+          }, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Stack, { gap: "lg", className: s60.wrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Radio, { color: "lime.8", value: option.id, size: isLarge ? "xl" : "lg", label: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(AnswerLabel, { children: option.text }) }, option.id)) }) }),
+          showInput && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(InputBorderless, { autoFocus: true, value: value == null ? void 0 : value.input, defaultValue: value == null ? void 0 : value.input, onChange: (e17) => {
             onChange({
               question: id,
               answer: {
@@ -60502,10 +60674,10 @@ var init_pages_test = __esm({
       id,
       value
     }) => {
-      const [input2, setInput] = (0, import_react253.useState)("");
-      const [localValues, setLocalValues] = (0, import_react253.useState)([]);
+      const [input2, setInput] = (0, import_react254.useState)("");
+      const [localValues, setLocalValues] = (0, import_react254.useState)([]);
       const [debounced] = useDebouncedValue(input2, 200);
-      (0, import_react253.useEffect)(() => {
+      (0, import_react254.useEffect)(() => {
         const obj = [];
         if (localValues.length < 1) {
           return;
@@ -60529,7 +60701,7 @@ var init_pages_test = __esm({
           isMultiple: true
         });
       }, [localValues, debounced]);
-      (0, import_react253.useEffect)(() => {
+      (0, import_react254.useEffect)(() => {
         var _a;
         setInput(((_a = value == null ? void 0 : value.find((el) => el.input)) == null ? void 0 : _a.input) ?? "");
         setLocalValues((value == null ? void 0 : value.map((el) => el.value)) ?? []);
@@ -60565,11 +60737,11 @@ var init_pages_test = __esm({
         id
       });
       const showInput = options && ((_a = value == null ? void 0 : value.map((el) => el.value)) == null ? void 0 : _a.includes(options[(options == null ? void 0 : options.length) - 1].id));
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Paper, { mb: "5xl", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { gap: "xs", className: s61.wrap, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Checkbox.Group, { value: localValues.length ? localValues : (value == null ? void 0 : value.map((v8) => v8.value)) ?? localValues, onChange: setLocalValues, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Stack, { gap: "lg", className: s61.checkboxWrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Checkbox, { size: isLarge ? "32px" : "lg", radius: "xs", color: "lime.8", label: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(AnswerLabel, { children: option.text }), value: option.id, icon: IconCheck }, option.id)) }) }),
-          showInput && /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(InputBorderless, { value: input2.length > 0 ? input2 : (_b = value == null ? void 0 : value.find((el) => el.input)) == null ? void 0 : _b.input, onChange: (e17) => setInput(e17.target.value) })
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Paper, { mb: "5xl", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(QuestionTitle, { text: text12, hint: hint2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Stack, { gap: "xs", className: s61.wrap, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Checkbox.Group, { value: localValues.length ? localValues : (value == null ? void 0 : value.map((v8) => v8.value)) ?? localValues, onChange: setLocalValues, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Stack, { gap: "lg", className: s61.checkboxWrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Checkbox, { size: isLarge ? "32px" : "lg", radius: "xs", color: "lime.8", label: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(AnswerLabel, { children: option.text }), value: option.id, icon: IconCheck }, option.id)) }) }),
+          showInput && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(InputBorderless, { value: input2.length > 0 ? input2 : (_b = value == null ? void 0 : value.find((el) => el.input)) == null ? void 0 : _b.input, onChange: (e17) => setInput(e17.target.value) })
         ] })
       ] });
     };
@@ -60886,16 +61058,16 @@ var init_pages_test = __esm({
     };
     SubmitTestModal = () => {
       const [opened, onClose, loading, onSubmit] = c2([SubmitTestModel.$isSubmitModalShown, SubmitTestModel.submitModalStateChanged, submitAnswersMutation.$pending, SubmitTestModel.submitScaleForm]);
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Modal, { opened, onClose, centered: true, title: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fz: 16, fw: "bold", children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435?" }), children: /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Group, { gap: "sm", justify: "end", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Button, { size: "sm", radius: "md", variant: "outline", c: "dark.7", bd: "1px solid var(--mantine-color-dark-7)", onClick: onClose, children: "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C" }),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(MainButton, { loading, size: "sm", radius: "md", onClick: onSubmit, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" })
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Modal, { opened, onClose, centered: true, title: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { fz: 16, fw: "bold", children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C \u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435?" }), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Group, { gap: "sm", justify: "end", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Button, { size: "sm", radius: "md", variant: "outline", c: "dark.7", bd: "1px solid var(--mantine-color-dark-7)", onClick: onClose, children: "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C" }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(MainButton, { loading, size: "sm", radius: "md", onClick: onSubmit, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" })
       ] }) });
     };
     Rephrasing = () => {
       const [onChangePhraseHandler] = c2([RephrasingModel.changePhraseIndex]);
       const [phrases] = c2([RephrasingModel.$currentPhrases]);
       if (phrases.hints.length <= 1 || phrases.texts.length <= 1) return null;
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Button, { m: "auto", c: "dark.9", color: "dark.9", display: "flex", variant: "subtle", className: s63.root, onClick: onChangePhraseHandler, leftSection: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(A5, { size: 18 }), children: "\u041F\u0435\u0440\u0435\u0444\u0440\u0430\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C" });
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Button, { m: "auto", c: "dark.9", color: "dark.9", display: "flex", variant: "subtle", className: s63.root, onClick: onChangePhraseHandler, leftSection: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(A5, { size: 18 }), children: "\u041F\u0435\u0440\u0435\u0444\u0440\u0430\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C" });
     };
     Controls = () => {
       const {
@@ -60913,18 +61085,18 @@ var init_pages_test = __esm({
         value: TestModel.$currentValue,
         form: TestModel.$scaleForm
       });
-      const [visible2, setVisible] = (0, import_react253.useState)(false);
+      const [visible2, setVisible] = (0, import_react254.useState)(false);
       const isExists = isArray_default(value) ? value.length > 0 : value !== null;
       useTimeout(() => isExists ? setVisible(true) : setVisible(false), isExists ? 250 : 0);
       if (!questions) return null;
       const isFirst = page === 1;
       const isLast = page === questions.length;
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Pagination.Root, { total: questions.length, mt: "auto", value: page, onChange, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Rephrasing, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Group, { justify: "space-between", pb: 20, children: [
-          !isFirst && /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Pagination.Previous, { disabled: false, className: clsx_default(s64.button, s64.prev), icon: () => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(A3, { weight: "bold" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Pagination.Next, { hidden: !visible2 || isLast, className: clsx_default(s64.button, s64.next), icon: () => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(l5, { weight: "bold" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Button, { fw: "700", fz: 16, c: "dark.6", variant: "subtle", hidden: !isLast, className: s64.end, onClick: controlModal, rightSection: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(l5, { weight: "bold" }), children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("span", { className: s64.endText, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" }) })
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Pagination.Root, { total: questions.length, mt: "auto", value: page, onChange, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Rephrasing, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Group, { justify: "space-between", pb: 20, children: [
+          !isFirst && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Pagination.Previous, { disabled: false, className: clsx_default(s64.button, s64.prev), icon: () => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(A3, { weight: "bold" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Pagination.Next, { hidden: !visible2 || isLast, className: clsx_default(s64.button, s64.next), icon: () => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(l5, { weight: "bold" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Button, { fw: "700", fz: 16, c: "dark.6", variant: "subtle", hidden: !isLast, className: s64.end, onClick: controlModal, rightSection: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(l5, { weight: "bold" }), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("span", { className: s64.endText, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" }) })
         ] })
       ] });
     };
@@ -60938,20 +61110,20 @@ var init_pages_test = __esm({
       const [phraseIndex, phrases] = c2([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
       if (!data || !question) return null;
       const Map2 = {
-        scale: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TestScaleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], value: String(value), page, onChange }),
-        multiple_choice: question.options && /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TestMultipleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], page, onChange, value: isArray_default(value) ? value : null }),
-        single_choice: question.options && /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TestSingleChoiceQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], page, onChange, showInput: Boolean((_a = question.options.find((el) => el.id === (value == null ? void 0 : value.value))) == null ? void 0 : _a.requires_input), value })
+        scale: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TestScaleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], value: String(value), page, onChange }),
+        multiple_choice: question.options && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TestMultipleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], page, onChange, value: isArray_default(value) ? value : null }),
+        single_choice: question.options && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TestSingleChoiceQuestion, { ...question, text: phrases.texts[phraseIndex] ?? "", hint: phrases.hints[phraseIndex], page, onChange, showInput: Boolean((_a = question.options.find((el) => el.id === (value == null ? void 0 : value.value))) == null ? void 0 : _a.requires_input), value })
       };
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(TestContainer, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TestProgress, { value: progress2, page, total: data.length }),
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(TestContainer, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TestProgress, { value: progress2, page, total: data.length }),
         Map2[question == null ? void 0 : question.type],
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Controls, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(SubmitTestModal, {})
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Controls, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(SubmitTestModal, {})
       ] });
     };
     import75 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
-      default: Page11
+      default: Page12
     }, Symbol.toStringTag, { value: "Module" }));
     pageInitiated6 = createPageInit();
     M({
@@ -60963,11 +61135,11 @@ var init_pages_test = __esm({
         sid: "-jknc63"
       }
     });
-    import811 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+    import812 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
       pageInitiated: pageInitiated6
     }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized11 = {
+    configValuesSerialized12 = {
       ["isClientRuntimeLoaded"]: {
         type: "computed",
         definedAtData: null,
@@ -61080,7 +61252,7 @@ var init_pages_test = __esm({
         definedAtData: { "filePathToShowToUser": "/pages/test/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
-          exportValues: import811
+          exportValues: import812
         }
       }
     };
@@ -61122,20 +61294,20 @@ var init_chunk_DYqfCq3E = __esm({
 // dist/server/entries/pages_types.mjs
 var pages_types_exports = {};
 __export(pages_types_exports, {
-  configValuesSerialized: () => configValuesSerialized12
+  configValuesSerialized: () => configValuesSerialized13
 });
-function Page12() {
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TypesPage, {});
+function Page13() {
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(TypesPage, {});
 }
-var import_jsx_runtime194, import_react255, PersonalityCard, PersonalityCategory, TypesPage, import812, configValuesSerialized12;
+var import_jsx_runtime195, import_react256, PersonalityCard, PersonalityCategory, TypesPage, import813, configValuesSerialized13;
 var init_pages_types = __esm({
   "dist/server/entries/pages_types.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    init_chunk_CSB3qWqJ();
-    import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_GAq1GnvE();
+    init_chunk_B21gtgR2();
+    import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
@@ -61144,7 +61316,7 @@ var init_pages_types = __esm({
     init_chunk_8LKHHJW0();
     init_chunk_DYqfCq3E();
     init_chunk_DdxgA4yV();
-    import_react255 = __toESM(require_react(), 1);
+    import_react256 = __toESM(require_react(), 1);
     init_usePageContext();
     init_core();
     init_chunk_BuupiibZ();
@@ -61170,43 +61342,43 @@ var init_pages_types = __esm({
       title: title12,
       category
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Card, { component: "a", href: `/types/${type2}`, className: s65.wrapper, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Box, { className: s65.imageWrapper, "data-color": titleColorMap[category], children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Image, { className: s65.image, src: "/images/types_temp.webp", alt: title12 }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Title, { className: s65.title, order: 3, children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Card, { component: "a", href: `/types/${type2}`, className: s65.wrapper, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Box, { className: s65.imageWrapper, "data-color": titleColorMap[category], children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Image, { className: s65.image, src: "/images/types_temp.webp", alt: title12 }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Title, { className: s65.title, order: 3, children: [
           title12,
           " (",
           type2,
           ")"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { className: s65.text, children: description3[0] })
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Text, { className: s65.text, children: description3[0] })
       ] });
     };
     PersonalityCategory = ({
       title: title12,
       types
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Box, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Title, { className: s66.title, "data-color": titleColorMap[title12], order: 3, children: title12 }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(InnerContainer, { maw: 1386, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Grid, { gutter: "5xl", children: types.map((type2) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Grid.Col, { span: {
+      return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Box, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Title, { className: s66.title, "data-color": titleColorMap[title12], order: 3, children: title12 }),
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(InnerContainer, { maw: 1386, children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Grid, { gutter: "5xl", children: types.map((type2) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Grid.Col, { span: {
           base: 12,
           sm: 6,
           lg: 4,
           xl: 3
-        }, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(PersonalityCard, { type: type2.code, category: title12, title: type2.name, description: type2.descriptions }) }, type2.code)) }) })
+        }, children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(PersonalityCard, { type: type2.code, category: title12, title: type2.name, description: type2.descriptions }) }, type2.code)) }) })
       ] });
     };
     TypesPage = () => {
       const categories = i(getPersonalityTypesWithCategoriesQuery.$data, ({
         category,
         types
-      }) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(PersonalityCategory, { title: category, types }));
-      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(PageLayout, { title: "\u0422\u0438\u043F\u044B \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Stack, { children: categories }) });
+      }) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(PersonalityCategory, { title: category, types }));
+      return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(PageLayout, { title: "\u0422\u0438\u043F\u044B \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Stack, { children: categories }) });
     };
-    import812 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+    import813 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
-      default: Page12
+      default: Page13
     }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized12 = {
+    configValuesSerialized13 = {
       ["isClientRuntimeLoaded"]: {
         type: "computed",
         definedAtData: null,
@@ -61319,7 +61491,7 @@ var init_pages_types = __esm({
         definedAtData: { "filePathToShowToUser": "/pages/types/+Page.tsx", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
-          exportValues: import812
+          exportValues: import813
         }
       }
     };
@@ -61379,29 +61551,29 @@ var init_chunk_DxD9ny13 = __esm({
 // dist/server/entries/pages_types_-type.mjs
 var pages_types_type_exports = {};
 __export(pages_types_type_exports, {
-  configValuesSerialized: () => configValuesSerialized13
+  configValuesSerialized: () => configValuesSerialized14
 });
-function Page13() {
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(TypePage, {});
+function Page14() {
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(TypePage, {});
 }
-var import_jsx_runtime195, React14, SvgCircle, SvgCircleSmall, TYPE_TO_COLOR_MAP, ReportHeader, findBannerIndex, ShowFullStructure, TypePage, import76, pageInitiated7, import813, configValuesSerialized13;
+var import_jsx_runtime196, React14, SvgCircle, SvgCircleSmall, TYPE_TO_COLOR_MAP, ReportHeader, findBannerIndex, ShowFullStructure, TypePage, import76, pageInitiated7, import814, configValuesSerialized14;
 var init_pages_types_type = __esm({
   "dist/server/entries/pages_types_-type.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_8CZG8Mod();
-    import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
+    init_chunk_GAq1GnvE();
+    import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
     React14 = __toESM(require_react(), 1);
     init_chunk_DNVHKo6P();
-    init_chunk_bbMDDbQ1();
-    init_chunk_DCTVWgT1();
+    init_chunk_DMtd3jT1();
+    init_chunk_CKVvB9gj();
     init_router();
     init_chunk_fjYs4Fsw();
-    init_chunk_D0W3snA4();
+    init_chunk_CYeT6u1L();
     init_chunk_ByGGifru();
     init_chunk_DxD9ny13();
     init_effector();
@@ -61461,21 +61633,21 @@ var init_pages_types_type = __esm({
       name: name2
     }) => {
       const currentColor = TYPE_TO_COLOR_MAP[type2];
-      return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Paper, { className: s67.paper, "data-color": currentColor, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Stack, { className: s67.stack, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Title, { className: s67.name, children: name2 }),
-          /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Text, { className: s67.type, children: type2 })
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Paper, { className: s67.paper, "data-color": currentColor, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Stack, { className: s67.stack, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Title, { className: s67.name, children: name2 }),
+          /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Text, { className: s67.type, children: type2 })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(SvgCircle, { "data-color": currentColor, className: clsx_default(s67.image, s67.desktop) }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(SvgCircleSmall, { "data-color": currentColor, className: clsx_default(s67.image, s67.mobile) })
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(SvgCircle, { "data-color": currentColor, className: clsx_default(s67.image, s67.desktop) }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(SvgCircleSmall, { "data-color": currentColor, className: clsx_default(s67.image, s67.mobile) })
       ] });
     };
     findBannerIndex = (content) => {
       return content.findIndex((el) => el.content.find((el2) => el2.type === "ordered_cards" && el2.color === "negative"));
     };
-    ShowFullStructure = () => /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Group, { className: s68.group, justify: "space-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Text, { className: s68.text, children: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435" }),
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(NavigateToFullStructureTemplate, {})
+    ShowFullStructure = () => /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Group, { className: s68.group, justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Text, { className: s68.text, children: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435" }),
+      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(NavigateToFullStructureTemplate, {})
     ] });
     TypePage = () => {
       const {
@@ -61487,28 +61659,28 @@ var init_pages_types_type = __esm({
         content
       }) => {
         const end = findBannerIndex(content);
-        return content.slice(0, end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("div", { className: s69.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("div", { children: contentResolver(currentContent, currentColor) }, currentContent.type + idx2)) }, el.type + idx));
+        return content.slice(0, end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { className: s69.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { children: contentResolver(currentContent, currentColor) }, currentContent.type + idx2)) }, el.type + idx));
       });
       const afterBannerContent = i(getPersonalityTypeQuery.$data.map((el) => el.content), ({
         content
       }) => {
         const end = findBannerIndex(content);
-        return content.slice(end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("div", { className: s69.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("div", { children: contentResolver(currentContent, currentColor) }, currentContent.type + idx2)) }, el.type + idx));
+        return content.slice(end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { className: s69.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { children: contentResolver(currentContent, currentColor) }, currentContent.type + idx2)) }, el.type + idx));
       });
-      return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Container, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(ReportHeader, { type: data.mbti_type, name: data.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(InnerContainer, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(ShowFullStructure, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Box, { children: beforeBannerContent })
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Container, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(ReportHeader, { type: data.mbti_type, name: data.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(InnerContainer, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(ShowFullStructure, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Box, { children: beforeBannerContent })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Banner, { color: TYPE_TO_COLOR_MAP[data == null ? void 0 : data.mbti_type], actionSlot: CALL_TO_ACTION["buyNowAndNavigateToFullStructure"] }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(InnerContainer, { children: afterBannerContent }),
-        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Banner, { title: "\u0423\u0437\u043D\u0430\u0439\u0442\u0435 \u0441\u0432\u043E\u0439 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438", description: "\u041D\u0430\u0448 \u0442\u0435\u0441\u0442 \u2014 \u044D\u0442\u043E \u043C\u043E\u0449\u043D\u044B\u0439 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442 \u0434\u043B\u044F \u0441\u0430\u043C\u043E\u043F\u043E\u0437\u043D\u0430\u043D\u0438\u044F \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043F\u043E\u0437\u0432\u043E\u043B\u0438\u0442 \u0432\u0430\u043C \u0433\u043B\u0443\u0431\u0436\u0435 \u043F\u043E\u043D\u044F\u0442\u044C \u0441\u0432\u043E\u0438 \u0441\u0438\u043B\u044C\u043D\u044B\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B, \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u0434\u043B\u044F \u0440\u043E\u0441\u0442\u0430 \u0438 \u043E\u0441\u043E\u0437\u043D\u0430\u043D\u043D\u043E \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u0432\u043F\u0435\u0440\u0451\u0434. \u0412\u044B \u0441\u0430\u043C\u0438 \u0440\u0435\u0448\u0430\u0435\u0442\u0435, \u043A\u0430\u043A \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u044B\u0435 \u0437\u043D\u0430\u043D\u0438\u044F \u0438 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043A\u0440\u044B\u0442\u044C \u0441\u0432\u043E\u0439 \u043F\u043E\u0442\u0435\u043D\u0446\u0438\u0430\u043B \u0438 \u0434\u043E\u0441\u0442\u0438\u0447\u044C \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0445 \u0446\u0435\u043B\u0435\u0439.", color: TYPE_TO_COLOR_MAP[data == null ? void 0 : data.mbti_type], actionSlot: CALL_TO_ACTION["redirectToTestPageAndNavigateToFullStructure"] })
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Banner, { color: TYPE_TO_COLOR_MAP[data == null ? void 0 : data.mbti_type], actionSlot: CALL_TO_ACTION["buyNowAndNavigateToFullStructure"] }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(InnerContainer, { children: afterBannerContent }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Banner, { title: "\u0423\u0437\u043D\u0430\u0439\u0442\u0435 \u0441\u0432\u043E\u0439 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438", description: "\u041D\u0430\u0448 \u0442\u0435\u0441\u0442 \u2014 \u044D\u0442\u043E \u043C\u043E\u0449\u043D\u044B\u0439 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442 \u0434\u043B\u044F \u0441\u0430\u043C\u043E\u043F\u043E\u0437\u043D\u0430\u043D\u0438\u044F \u0438 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043F\u043E\u0437\u0432\u043E\u043B\u0438\u0442 \u0432\u0430\u043C \u0433\u043B\u0443\u0431\u0436\u0435 \u043F\u043E\u043D\u044F\u0442\u044C \u0441\u0432\u043E\u0438 \u0441\u0438\u043B\u044C\u043D\u044B\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B, \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u0434\u043B\u044F \u0440\u043E\u0441\u0442\u0430 \u0438 \u043E\u0441\u043E\u0437\u043D\u0430\u043D\u043D\u043E \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F \u0432\u043F\u0435\u0440\u0451\u0434. \u0412\u044B \u0441\u0430\u043C\u0438 \u0440\u0435\u0448\u0430\u0435\u0442\u0435, \u043A\u0430\u043A \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u044B\u0435 \u0437\u043D\u0430\u043D\u0438\u044F \u0438 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438, \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043A\u0440\u044B\u0442\u044C \u0441\u0432\u043E\u0439 \u043F\u043E\u0442\u0435\u043D\u0446\u0438\u0430\u043B \u0438 \u0434\u043E\u0441\u0442\u0438\u0447\u044C \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0445 \u0446\u0435\u043B\u0435\u0439.", color: TYPE_TO_COLOR_MAP[data == null ? void 0 : data.mbti_type], actionSlot: CALL_TO_ACTION["redirectToTestPageAndNavigateToFullStructure"] })
       ] }) });
     };
     import76 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
-      default: Page13
+      default: Page14
     }, Symbol.toStringTag, { value: "Module" }));
     pageInitiated7 = createPageInit();
     M({
@@ -61523,11 +61695,11 @@ var init_pages_types_type = __esm({
         sid: "vduxc7"
       }
     });
-    import813 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+    import814 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
       __proto__: null,
       pageInitiated: pageInitiated7
     }, Symbol.toStringTag, { value: "Module" }));
-    configValuesSerialized13 = {
+    configValuesSerialized14 = {
       ["isClientRuntimeLoaded"]: {
         type: "computed",
         definedAtData: null,
@@ -61640,7 +61812,7 @@ var init_pages_types_type = __esm({
         definedAtData: { "filePathToShowToUser": "/pages/types/@type/+pageInitiated.ts", "fileExportPathToShowToUser": [] },
         valueSerialized: {
           type: "plus-file",
-          exportValues: import813
+          exportValues: import814
         }
       }
     };
@@ -61738,6 +61910,30 @@ var init_entry = __esm({
         isErrorPage: void 0,
         routeFilesystem: { "routeString": "/faq", "definedBy": "/pages/faq/" },
         loadConfigValuesAll: () => Promise.resolve().then(() => (init_pages_faq(), pages_faq_exports)),
+        configValuesSerialized: {
+          ["isClientRuntimeLoaded"]: {
+            type: "computed",
+            definedAtData: null,
+            valueSerialized: {
+              type: "js-serialized",
+              value: true
+            }
+          },
+          ["clientRouting"]: {
+            type: "standard",
+            definedAtData: { "filePathToShowToUser": "vike-react/config", "fileExportPathToShowToUser": ["default", "clientRouting"] },
+            valueSerialized: {
+              type: "js-serialized",
+              value: true
+            }
+          }
+        }
+      },
+      {
+        pageId: "/pages/free-report",
+        isErrorPage: void 0,
+        routeFilesystem: { "routeString": "/free-report", "definedBy": "/pages/free-report/" },
+        loadConfigValuesAll: () => Promise.resolve().then(() => (init_pages_free_report(), pages_free_report_exports)),
         configValuesSerialized: {
           ["isClientRuntimeLoaded"]: {
             type: "computed",
@@ -62008,6 +62204,13 @@ var init_entry = __esm({
     }, Symbol.toStringTag, { value: "Module" }));
     {
       const assetsManifest = {
+        "_chunk-2wI5OlJz.js": {
+          "file": "assets/chunks/chunk-2wI5OlJz.js",
+          "name": "events",
+          "imports": [
+            "_chunk-DKmr6RW8.js"
+          ]
+        },
         "_chunk-4ssmusCf.js": {
           "file": "assets/chunks/chunk-4ssmusCf.js",
           "name": "src_shared_ui_Form_FormWrapper.module-5f927e4e",
@@ -62022,11 +62225,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_OrderedCards_OrderedCards.BNeWG9EK.css"
           ]
         },
-        "_chunk-Aoo6iNgA.js": {
-          "file": "assets/chunks/chunk-Aoo6iNgA.js",
-          "name": "index.modern",
+        "_chunk-B1bcVYz3.js": {
+          "file": "assets/chunks/chunk-B1bcVYz3.js",
+          "name": "index",
           "imports": [
-            "_chunk-BIHnD_dC.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-B3_uMupp.js": {
@@ -62043,26 +62246,6 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Banner_Banner.co9e48pn.css"
           ]
         },
-        "_chunk-B6w7FAxF.js": {
-          "file": "assets/chunks/chunk-B6w7FAxF.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-C_kswpa0.js",
-            "_chunk-CmvGY2ia.js",
-            "_chunk-89JKNHqV.js",
-            "_chunk-CX66qPcq.js",
-            "_chunk-CA7xGImb.js",
-            "_chunk-B_RAAw9Z.js",
-            "_chunk-DZYA-Fcr.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-DHLn9X-S.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-Aoo6iNgA.js",
-            "_chunk-BPNsQ1As.js",
-            "_chunk-CG4tMHVA.js"
-          ]
-        },
         "_chunk-BD8qAbP9.js": {
           "file": "assets/chunks/chunk-BD8qAbP9.js",
           "name": "src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.module-0dc21ded",
@@ -62070,35 +62253,19 @@ var init_entry = __esm({
             "assets/static/src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.X2fMJfOa.css"
           ]
         },
-        "_chunk-BIHnD_dC.js": {
-          "file": "assets/chunks/chunk-BIHnD_dC.js",
+        "_chunk-BGn-BLWD.js": {
+          "file": "assets/chunks/chunk-BGn-BLWD.js",
           "name": "index",
           "imports": [
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-CzcYWzuz.js",
-            "_chunk-Cn-X2PZL.js",
-            "_chunk-SsiTcO1f.js",
-            "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
-            "_chunk-CEz9pelC.js",
-            "_chunk-BPA5pK2c.js",
-            "_chunk-CcRi4BOb.js",
-            "_chunk-DC4iVavn.js",
-            "_chunk-Y2FPcE4W.js",
-            "_chunk-CQyHp5_h.js",
-            "_chunk-_mzujixh.js",
-            "_chunk-D0Qt8njn.js"
-          ],
-          "css": [
-            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
-            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
-          ],
-          "assets": [
-            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-B1bcVYz3.js",
+            "_chunk-C1UfUYGV.js",
+            "_chunk-C7K0jfgO.js",
+            "_chunk-DHvz_cIq.js",
+            "_chunk-D9oXcVtE.js",
+            "_chunk-D_TSPZfq.js",
+            "_chunk-lUDZ4uzH.js"
           ]
         },
         "_chunk-BLKfBb6c.js": {
@@ -62108,12 +62275,11 @@ var init_entry = __esm({
             "assets/static/src_widgets_Test_Controls_Controls.DWZBJg9T.css"
           ]
         },
-        "_chunk-BLTVvkeK.js": {
-          "file": "assets/chunks/chunk-BLTVvkeK.js",
-          "name": "use-form",
+        "_chunk-BM9BT4B9.js": {
+          "file": "assets/chunks/chunk-BM9BT4B9.js",
+          "name": "Image",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-4ssmusCf.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-BPA5pK2c.js": {
@@ -62130,33 +62296,31 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Paragraph_Paragraph.DcF_8aq6.css"
           ]
         },
-        "_chunk-BQkNWY3T.js": {
-          "file": "assets/chunks/chunk-BQkNWY3T.js",
-          "name": "events",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
-          ]
-        },
-        "_chunk-BWhLfM-x.js": {
-          "file": "assets/chunks/chunk-BWhLfM-x.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
-          ]
-        },
-        "_chunk-BZ0Kby77.js": {
-          "file": "assets/chunks/chunk-BZ0Kby77.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-CGG52H9N.js"
-          ]
-        },
-        "_chunk-B_RAAw9Z.js": {
-          "file": "assets/chunks/chunk-B_RAAw9Z.js",
+        "_chunk-BQwpstbl.js": {
+          "file": "assets/chunks/chunk-BQwpstbl.js",
           "name": "List",
           "imports": [
-            "_chunk-BIHnD_dC.js"
+            "_chunk-DKmr6RW8.js"
+          ]
+        },
+        "_chunk-BTAsyqom.js": {
+          "file": "assets/chunks/chunk-BTAsyqom.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-C_kswpa0.js",
+            "_chunk-ZfMyumPt.js",
+            "_chunk-89JKNHqV.js",
+            "_chunk-CX66qPcq.js",
+            "_chunk-CA7xGImb.js",
+            "_chunk-BQwpstbl.js",
+            "_chunk-DZYA-Fcr.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-DHLn9X-S.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-amOvFEqn.js",
+            "_chunk-BPNsQ1As.js",
+            "_chunk-CG4tMHVA.js"
           ]
         },
         "_chunk-BeEKSsYB.js": {
@@ -62208,11 +62372,28 @@ var init_entry = __esm({
             "assets/static/src_widgets_ShowFullStructure_ShowFullStructure.MNSWQ2Cc.css"
           ]
         },
+        "_chunk-Byz6kmeu.js": {
+          "file": "assets/chunks/chunk-Byz6kmeu.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-Cxg4_e5S.js"
+          ]
+        },
         "_chunk-C1UfUYGV.js": {
           "file": "assets/chunks/chunk-C1UfUYGV.js",
           "name": "src_entities_Report_ui_PriceInfo_PriceInfo.module-fbe3381f",
           "css": [
             "assets/static/src_entities_Report_ui_PriceInfo_PriceInfo.BK_7I93q.css"
+          ]
+        },
+        "_chunk-C7K0jfgO.js": {
+          "file": "assets/chunks/chunk-C7K0jfgO.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-MlOg0Rm7.js"
           ]
         },
         "_chunk-CA7xGImb.js": {
@@ -62250,12 +62431,11 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_InnerContainer_InnerContainer.DXKcQBlk.css"
           ]
         },
-        "_chunk-CMNMYHFy.js": {
-          "file": "assets/chunks/chunk-CMNMYHFy.js",
-          "name": "index",
+        "_chunk-CLSEe1wh.js": {
+          "file": "assets/chunks/chunk-CLSEe1wh.js",
+          "name": "Pagination",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-Bptf38cR.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-CQgCXmz1.js": {
@@ -62314,11 +62494,34 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Header_Header.CoyS4bEm.css"
           ]
         },
+        "_chunk-CaLDNTS5.js": {
+          "file": "assets/chunks/chunk-CaLDNTS5.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-Bptf38cR.js"
+          ]
+        },
         "_chunk-CcRi4BOb.js": {
           "file": "assets/chunks/chunk-CcRi4BOb.js",
           "name": "src_features_RedirectToTestPage_ui_RedirectToTestPage.module-48e333d4",
           "css": [
             "assets/static/src_features_RedirectToTestPage_ui_RedirectToTestPage.V9LWORpb.css"
+          ]
+        },
+        "_chunk-Cd6vJiPi.js": {
+          "file": "assets/chunks/chunk-Cd6vJiPi.js",
+          "name": "_pageStarted",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-DYjpNhWU.js",
+            "_chunk-amOvFEqn.js",
+            "_chunk-BvjKq-Jn.js",
+            "_chunk-ZfMyumPt.js",
+            "_chunk-Dk3P50NK.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-2wI5OlJz.js"
           ]
         },
         "_chunk-ChL1fS8_.js": {
@@ -62335,13 +62538,6 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Footer_ui_Top_Top.CJ6OycV0.css"
           ]
         },
-        "_chunk-CmvGY2ia.js": {
-          "file": "assets/chunks/chunk-CmvGY2ia.js",
-          "name": "Grid",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
-          ]
-        },
         "_chunk-Cn-X2PZL.js": {
           "file": "assets/chunks/chunk-Cn-X2PZL.js",
           "name": "src_widgets_RootLayout_RootLayout.module-eccb6268",
@@ -62354,21 +62550,6 @@ var init_entry = __esm({
           "name": "src_entities_Test_ui_TestMultipleQuestion_TestMultipleQuestion.module-b4341ec7",
           "css": [
             "assets/static/src_entities_Test_ui_TestMultipleQuestion_TestMultipleQuestion.DU9xGbo9.css"
-          ]
-        },
-        "_chunk-CsGb9GOS.js": {
-          "file": "assets/chunks/chunk-CsGb9GOS.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BWhLfM-x.js",
-            "_chunk-C1UfUYGV.js",
-            "_chunk-DI0stdHd.js",
-            "_chunk-DitE1h9B.js",
-            "_chunk-BLTVvkeK.js",
-            "_chunk-D_TSPZfq.js",
-            "_chunk-D6Gb1his.js"
           ]
         },
         "_chunk-Cxg4_e5S.js": {
@@ -62399,15 +62580,20 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Header_Header.BX_kS-Vk.css"
           ]
         },
-        "_chunk-D6Gb1his.js": {
-          "file": "assets/chunks/chunk-D6Gb1his.js",
+        "_chunk-D7CNM--b.js": {
+          "file": "assets/chunks/chunk-D7CNM--b.js",
           "name": "index",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-PInf6rwT.js",
-            "_chunk-BZ0Kby77.js",
-            "_chunk-ChL1fS8_.js",
-            "_chunk-tBRI9IeR.js"
+            "_chunk-DKmr6RW8.js",
+            "_chunk-CGG52H9N.js"
+          ]
+        },
+        "_chunk-D9oXcVtE.js": {
+          "file": "assets/chunks/chunk-D9oXcVtE.js",
+          "name": "use-form",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-4ssmusCf.js"
           ]
         },
         "_chunk-DC4iVavn.js": {
@@ -62424,13 +62610,6 @@ var init_entry = __esm({
             "assets/static/src_pages_BlogPostPage_BlogPostPage.GNhdBGRY.css"
           ]
         },
-        "_chunk-DGUyeY0L.js": {
-          "file": "assets/chunks/chunk-DGUyeY0L.js",
-          "name": "Card",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
-          ]
-        },
         "_chunk-DHLn9X-S.js": {
           "file": "assets/chunks/chunk-DHLn9X-S.js",
           "name": "src_entities_Report_ui_Paywall_Paywall.module-e6ace5ac",
@@ -62438,12 +62617,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Paywall_Paywall.CEVz7k7v.css"
           ]
         },
-        "_chunk-DI0stdHd.js": {
-          "file": "assets/chunks/chunk-DI0stdHd.js",
+        "_chunk-DHvz_cIq.js": {
+          "file": "assets/chunks/chunk-DHvz_cIq.js",
           "name": "index",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-MlOg0Rm7.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-DKOn0uHf.js": {
@@ -62453,11 +62631,49 @@ var init_entry = __esm({
             "assets/static/src_widgets_CTA_CTA.BBAIc3Tb.css"
           ]
         },
+        "_chunk-DKmr6RW8.js": {
+          "file": "assets/chunks/chunk-DKmr6RW8.js",
+          "name": "index",
+          "imports": [
+            "_chunk-M6R-GMXp.js",
+            "_chunk-CzcYWzuz.js",
+            "_chunk-Cn-X2PZL.js",
+            "_chunk-SsiTcO1f.js",
+            "_chunk-CBWPs7ER.js",
+            "_chunk-CjMYPr3R.js",
+            "_chunk-CEz9pelC.js",
+            "_chunk-BPA5pK2c.js",
+            "_chunk-CcRi4BOb.js",
+            "_chunk-DC4iVavn.js",
+            "_chunk-Y2FPcE4W.js",
+            "_chunk-CQyHp5_h.js",
+            "_chunk-_mzujixh.js",
+            "_chunk-D0Qt8njn.js"
+          ],
+          "css": [
+            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          ]
+        },
         "_chunk-DSqobVnh.js": {
           "file": "assets/chunks/chunk-DSqobVnh.js",
           "name": "src_features_BuyNowButton_BuyNowButton.module-c1c1d690",
           "css": [
             "assets/static/src_features_BuyNowButton_BuyNowButton.DEl3WWHO.css"
+          ]
+        },
+        "_chunk-DYjpNhWU.js": {
+          "file": "assets/chunks/chunk-DYjpNhWU.js",
+          "name": "ArrowRight",
+          "imports": [
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-DZYA-Fcr.js": {
@@ -62474,25 +62690,6 @@ var init_entry = __esm({
             "assets/static/src_widgets_BuyReportForm_BuyReportForm.K8WjI7wY.css"
           ]
         },
-        "_chunk-DaZ0ww4G.js": {
-          "file": "assets/chunks/chunk-DaZ0ww4G.js",
-          "name": "initOnPopState",
-          "dynamicImports": [
-            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
-            "virtual:vike:pageConfigValuesAll:client:/pages/blog",
-            "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
-            "virtual:vike:pageConfigValuesAll:client:/pages/faq",
-            "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
-            "virtual:vike:pageConfigValuesAll:client:/pages/help",
-            "virtual:vike:pageConfigValuesAll:client:/pages/index",
-            "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
-            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
-            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
-            "virtual:vike:pageConfigValuesAll:client:/pages/test",
-            "virtual:vike:pageConfigValuesAll:client:/pages/types",
-            "virtual:vike:pageConfigValuesAll:client:/pages/types/@type"
-          ]
-        },
         "_chunk-Dc3F63Pp.js": {
           "file": "assets/chunks/chunk-Dc3F63Pp.js",
           "name": "src_entities_Test_ui_TestProgress_TestProgress.module-004b81d2",
@@ -62500,11 +62697,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestProgress_TestProgress.cz3ftnuH.css"
           ]
         },
-        "_chunk-DitE1h9B.js": {
-          "file": "assets/chunks/chunk-DitE1h9B.js",
-          "name": "index",
+        "_chunk-Dk3P50NK.js": {
+          "file": "assets/chunks/chunk-Dk3P50NK.js",
+          "name": "Card",
           "imports": [
-            "_chunk-BIHnD_dC.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-Dp1CbZSd.js": {
@@ -62514,25 +62711,11 @@ var init_entry = __esm({
             "assets/static/src_pages_IndexPage_ui_Hero_Hero.Br7MVOyQ.css"
           ]
         },
-        "_chunk-DuqGCDxj.js": {
-          "file": "assets/chunks/chunk-DuqGCDxj.js",
-          "name": "ArrowRight",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
-          ]
-        },
         "_chunk-DvMZj_d7.js": {
           "file": "assets/chunks/chunk-DvMZj_d7.js",
           "name": "src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.module-8250eceb",
           "css": [
             "assets/static/src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.BfDz1d0v.css"
-          ]
-        },
-        "_chunk-Dwi9yo8C.js": {
-          "file": "assets/chunks/chunk-Dwi9yo8C.js",
-          "name": "Pagination",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
           ]
         },
         "_chunk-DzMbMNOU.js": {
@@ -62549,18 +62732,29 @@ var init_entry = __esm({
             "assets/static/src_pages_TypePage_TypePage.C_kTnA5M.css"
           ]
         },
+        "_chunk-M6R-GMXp.js": {
+          "file": "assets/chunks/chunk-M6R-GMXp.js",
+          "name": "initOnPopState",
+          "dynamicImports": [
+            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
+            "virtual:vike:pageConfigValuesAll:client:/pages/blog",
+            "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
+            "virtual:vike:pageConfigValuesAll:client:/pages/faq",
+            "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
+            "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
+            "virtual:vike:pageConfigValuesAll:client:/pages/help",
+            "virtual:vike:pageConfigValuesAll:client:/pages/index",
+            "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
+            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
+            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
+            "virtual:vike:pageConfigValuesAll:client:/pages/test",
+            "virtual:vike:pageConfigValuesAll:client:/pages/types",
+            "virtual:vike:pageConfigValuesAll:client:/pages/types/@type"
+          ]
+        },
         "_chunk-MlOg0Rm7.js": {
           "file": "assets/chunks/chunk-MlOg0Rm7.js",
           "name": "methods"
-        },
-        "_chunk-PInf6rwT.js": {
-          "file": "assets/chunks/chunk-PInf6rwT.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-Cxg4_e5S.js"
-          ]
         },
         "_chunk-SsiTcO1f.js": {
           "file": "assets/chunks/chunk-SsiTcO1f.js",
@@ -62576,19 +62770,11 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Navigation_ui_MenuItem_MenuItem.DozsNXRV.css"
           ]
         },
-        "_chunk-ZZva1ER3.js": {
-          "file": "assets/chunks/chunk-ZZva1ER3.js",
-          "name": "_pageStarted",
+        "_chunk-ZfMyumPt.js": {
+          "file": "assets/chunks/chunk-ZfMyumPt.js",
+          "name": "Grid",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DuqGCDxj.js",
-            "_chunk-Aoo6iNgA.js",
-            "_chunk-BvjKq-Jn.js",
-            "_chunk-CmvGY2ia.js",
-            "_chunk-DGUyeY0L.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BQkNWY3T.js"
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-_mzujixh.js": {
@@ -62596,6 +62782,13 @@ var init_entry = __esm({
           "name": "src_widgets_RootLayout_ui_Navigation_Navigation.module-75629a95",
           "css": [
             "assets/static/src_widgets_RootLayout_ui_Navigation_Navigation.BBMIpptY.css"
+          ]
+        },
+        "_chunk-amOvFEqn.js": {
+          "file": "assets/chunks/chunk-amOvFEqn.js",
+          "name": "index.modern",
+          "imports": [
+            "_chunk-DKmr6RW8.js"
           ]
         },
         "_chunk-dKitA7zH.js": {
@@ -62612,16 +62805,27 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestContainer_TestContainer.CXxhWyHn.css"
           ]
         },
-        "_chunk-nRb_ZYuH.js": {
-          "file": "assets/chunks/chunk-nRb_ZYuH.js",
+        "_chunk-lUDZ4uzH.js": {
+          "file": "assets/chunks/chunk-lUDZ4uzH.js",
           "name": "index",
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-Byz6kmeu.js",
+            "_chunk-D7CNM--b.js",
+            "_chunk-ChL1fS8_.js",
+            "_chunk-BM9BT4B9.js"
+          ]
+        },
+        "_chunk-paanvLi1.js": {
+          "file": "assets/chunks/chunk-paanvLi1.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-B4DuaiMN.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-DI0stdHd.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-C7K0jfgO.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
             "_chunk-DKOn0uHf.js"
@@ -62639,13 +62843,6 @@ var init_entry = __esm({
           "name": "src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.module-45d96029",
           "css": [
             "assets/static/src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.CQ4t_wMW.css"
-          ]
-        },
-        "_chunk-tBRI9IeR.js": {
-          "file": "assets/chunks/chunk-tBRI9IeR.js",
-          "name": "Image",
-          "imports": [
-            "_chunk-BIHnD_dC.js"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css": {
@@ -62885,12 +63082,12 @@ var init_entry = __esm({
           "src": "_vike-react-78d3a85e.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.BoM7ORMf.js",
+          "file": "assets/entries/entry-client-routing.DAmKPcFv.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
           "imports": [
-            "_chunk-DaZ0ww4G.js"
+            "_chunk-M6R-GMXp.js"
           ]
         },
         "src/app/assets/fonts/raleway-v34-cyrillic_latin-500.woff2": {
@@ -62914,16 +63111,16 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/_error": {
-          "file": "assets/entries/pages_error.DHzMmP3f.js",
+          "file": "assets/entries/pages_error.CDBNd1MR.js",
           "name": "entries/pages/_error",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/_error",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-PInf6rwT.js",
-            "_chunk-BZ0Kby77.js",
-            "_chunk-DaZ0ww4G.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-Byz6kmeu.js",
+            "_chunk-D7CNM--b.js",
+            "_chunk-M6R-GMXp.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -62953,19 +63150,19 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog": {
-          "file": "assets/entries/pages_blog.CqJ5_ujw.js",
+          "file": "assets/entries/pages_blog.feSg4SDC.js",
           "name": "entries/pages/blog",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-ZZva1ER3.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BWhLfM-x.js",
-            "_chunk-CMNMYHFy.js",
-            "_chunk-CmvGY2ia.js",
-            "_chunk-Dwi9yo8C.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-Cd6vJiPi.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-B1bcVYz3.js",
+            "_chunk-CaLDNTS5.js",
+            "_chunk-ZfMyumPt.js",
+            "_chunk-CLSEe1wh.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -62979,12 +63176,12 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-DuqGCDxj.js",
-            "_chunk-Aoo6iNgA.js",
+            "_chunk-DYjpNhWU.js",
+            "_chunk-amOvFEqn.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-DGUyeY0L.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-BQkNWY3T.js",
+            "_chunk-Dk3P50NK.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-2wI5OlJz.js",
             "_chunk-Bptf38cR.js"
           ],
           "css": [
@@ -63000,22 +63197,22 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id": {
-          "file": "assets/entries/pages_blog_-id.BOxQE1m_.js",
+          "file": "assets/entries/pages_blog_-id.cQUteejR.js",
           "name": "entries/pages/blog/@id",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-ZZva1ER3.js",
-            "_chunk-Aoo6iNgA.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-Cd6vJiPi.js",
+            "_chunk-amOvFEqn.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-dKitA7zH.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-B_RAAw9Z.js",
-            "_chunk-nRb_ZYuH.js",
-            "_chunk-DI0stdHd.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-BQwpstbl.js",
+            "_chunk-paanvLi1.js",
+            "_chunk-C7K0jfgO.js",
             "_chunk-DCipUdXz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
@@ -63030,11 +63227,11 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-DuqGCDxj.js",
+            "_chunk-DYjpNhWU.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-CmvGY2ia.js",
-            "_chunk-DGUyeY0L.js",
-            "_chunk-BQkNWY3T.js",
+            "_chunk-ZfMyumPt.js",
+            "_chunk-Dk3P50NK.js",
+            "_chunk-2wI5OlJz.js",
             "_chunk-CGG52H9N.js",
             "_chunk-B4DuaiMN.js",
             "_chunk-DSqobVnh.js",
@@ -63055,17 +63252,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/faq": {
-          "file": "assets/entries/pages_faq.CeCikno0.js",
+          "file": "assets/entries/pages_faq.D2SnCnzm.js",
           "name": "entries/pages/faq",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/faq",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-Aoo6iNgA.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-amOvFEqn.js",
             "_chunk-CVRu9IVO.js",
-            "_chunk-CMNMYHFy.js",
-            "_chunk-DaZ0ww4G.js",
+            "_chunk-CaLDNTS5.js",
+            "_chunk-M6R-GMXp.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63093,21 +63290,59 @@ var init_entry = __esm({
             "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
           ]
         },
+        "virtual:vike:pageConfigValuesAll:client:/pages/free-report": {
+          "file": "assets/entries/pages_free-report.C-JR_Qvf.js",
+          "name": "entries/pages/free-report",
+          "src": "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
+          "isEntry": true,
+          "isDynamicEntry": true,
+          "imports": [
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-C7K0jfgO.js",
+            "_chunk-2wI5OlJz.js",
+            "_chunk-CzcYWzuz.js",
+            "_chunk-Cn-X2PZL.js",
+            "_chunk-SsiTcO1f.js",
+            "_chunk-CBWPs7ER.js",
+            "_chunk-CjMYPr3R.js",
+            "_chunk-CEz9pelC.js",
+            "_chunk-BPA5pK2c.js",
+            "_chunk-CcRi4BOb.js",
+            "_chunk-DC4iVavn.js",
+            "_chunk-Y2FPcE4W.js",
+            "_chunk-CQyHp5_h.js",
+            "_chunk-_mzujixh.js",
+            "_chunk-D0Qt8njn.js",
+            "_chunk-MlOg0Rm7.js"
+          ],
+          "css": [
+            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          ]
+        },
         "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example": {
-          "file": "assets/entries/pages_full-report_example.Cn65fLEH.js",
+          "file": "assets/entries/pages_full-report_example.6xfbJZtB.js",
           "name": "entries/pages/full-report/example",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-B6w7FAxF.js",
-            "_chunk-PInf6rwT.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-BTAsyqom.js",
+            "_chunk-Byz6kmeu.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-qiwuecAD.js",
-            "_chunk-DI0stdHd.js",
+            "_chunk-C7K0jfgO.js",
             "_chunk-DzMbMNOU.js",
-            "_chunk-DaZ0ww4G.js",
+            "_chunk-M6R-GMXp.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63122,15 +63357,15 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-C_kswpa0.js",
-            "_chunk-CmvGY2ia.js",
+            "_chunk-ZfMyumPt.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-B_RAAw9Z.js",
+            "_chunk-BQwpstbl.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-DHLn9X-S.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-Aoo6iNgA.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-amOvFEqn.js",
             "_chunk-BPNsQ1As.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-Cxg4_e5S.js",
@@ -63150,17 +63385,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/help": {
-          "file": "assets/entries/pages_help.HJGCenUx.js",
+          "file": "assets/entries/pages_help.Bw_i2oly.js",
           "name": "entries/pages/help",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/help",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BLTVvkeK.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-D9oXcVtE.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-D6Gb1his.js",
+            "_chunk-lUDZ4uzH.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63175,12 +63410,12 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-4ssmusCf.js",
-            "_chunk-PInf6rwT.js",
+            "_chunk-Byz6kmeu.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-tBRI9IeR.js"
+            "_chunk-BM9BT4B9.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -63195,15 +63430,15 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.CbeSncRj.js",
+          "file": "assets/entries/pages_index.BIBgKg86.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
+            "_chunk-DKmr6RW8.js",
             "_chunk-Dp1CbZSd.js",
-            "_chunk-DaZ0ww4G.js",
+            "_chunk-M6R-GMXp.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63231,19 +63466,19 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/payment-check": {
-          "file": "assets/entries/pages_payment-check.BSMSsMp1.js",
+          "file": "assets/entries/pages_payment-check.BPP0tQLn.js",
           "name": "entries/pages/payment-check",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BWhLfM-x.js",
-            "_chunk-DI0stdHd.js",
-            "_chunk-DitE1h9B.js",
-            "_chunk-D6Gb1his.js",
-            "_chunk-BQkNWY3T.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-B1bcVYz3.js",
+            "_chunk-C7K0jfgO.js",
+            "_chunk-DHvz_cIq.js",
+            "_chunk-lUDZ4uzH.js",
+            "_chunk-2wI5OlJz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63258,12 +63493,12 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-PInf6rwT.js",
+            "_chunk-Byz6kmeu.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-tBRI9IeR.js"
+            "_chunk-BM9BT4B9.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -63278,17 +63513,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type": {
-          "file": "assets/entries/pages_purchase_-type.CR2CPVXt.js",
+          "file": "assets/entries/pages_purchase_-type.BmLLsaG-.js",
           "name": "entries/pages/purchase/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-CsGb9GOS.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-DI0stdHd.js",
-            "_chunk-BQkNWY3T.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-BGn-BLWD.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-C7K0jfgO.js",
+            "_chunk-2wI5OlJz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63302,19 +63537,19 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-BWhLfM-x.js",
+            "_chunk-B1bcVYz3.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-DitE1h9B.js",
-            "_chunk-BLTVvkeK.js",
+            "_chunk-DHvz_cIq.js",
+            "_chunk-D9oXcVtE.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-D6Gb1his.js",
-            "_chunk-PInf6rwT.js",
+            "_chunk-lUDZ4uzH.js",
+            "_chunk-Byz6kmeu.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-tBRI9IeR.js",
+            "_chunk-BM9BT4B9.js",
             "_chunk-MlOg0Rm7.js"
           ],
           "css": [
@@ -63330,17 +63565,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId": {
-          "file": "assets/entries/pages_purchase_personal_-surveyId.BXFRrR5p.js",
+          "file": "assets/entries/pages_purchase_personal_-surveyId.Cv3BhKGR.js",
           "name": "entries/pages/purchase/personal/@surveyId",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-DI0stdHd.js",
-            "_chunk-BQkNWY3T.js",
-            "_chunk-CsGb9GOS.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-C7K0jfgO.js",
+            "_chunk-2wI5OlJz.js",
+            "_chunk-BGn-BLWD.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63355,19 +63590,19 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-BWhLfM-x.js",
+            "_chunk-B1bcVYz3.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-DitE1h9B.js",
-            "_chunk-BLTVvkeK.js",
+            "_chunk-DHvz_cIq.js",
+            "_chunk-D9oXcVtE.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-D6Gb1his.js",
-            "_chunk-PInf6rwT.js",
+            "_chunk-lUDZ4uzH.js",
+            "_chunk-Byz6kmeu.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-tBRI9IeR.js"
+            "_chunk-BM9BT4B9.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -63382,17 +63617,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/test": {
-          "file": "assets/entries/pages_test.86zjcnHc.js",
+          "file": "assets/entries/pages_test.BpESRNjJ.js",
           "name": "entries/pages/test",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/test",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
+            "_chunk-DKmr6RW8.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-foggiB1H.js",
             "_chunk-Dc3F63Pp.js",
-            "_chunk-DaZ0ww4G.js",
+            "_chunk-M6R-GMXp.js",
             "_chunk-BeEKSsYB.js",
             "_chunk-Bi-xDFJf.js",
             "_chunk-CzKcMQt_.js",
@@ -63400,11 +63635,11 @@ var init_entry = __esm({
             "_chunk-B3_uMupp.js",
             "_chunk-CYwzgwck.js",
             "_chunk-CqQOSLXS.js",
-            "_chunk-DuqGCDxj.js",
+            "_chunk-DYjpNhWU.js",
             "_chunk-CQgCXmz1.js",
             "_chunk-BLKfBb6c.js",
-            "_chunk-Dwi9yo8C.js",
-            "_chunk-BQkNWY3T.js",
+            "_chunk-CLSEe1wh.js",
+            "_chunk-2wI5OlJz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63432,21 +63667,21 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types": {
-          "file": "assets/entries/pages_types.CpBBWBfg.js",
+          "file": "assets/entries/pages_types.gaFtvvTk.js",
           "name": "entries/pages/types",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BZ0Kby77.js",
+            "_chunk-DKmr6RW8.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-D7CNM--b.js",
             "_chunk-BjHedDkv.js",
-            "_chunk-DGUyeY0L.js",
-            "_chunk-tBRI9IeR.js",
+            "_chunk-Dk3P50NK.js",
+            "_chunk-BM9BT4B9.js",
             "_chunk-DvMZj_d7.js",
-            "_chunk-CmvGY2ia.js",
-            "_chunk-CMNMYHFy.js",
+            "_chunk-ZfMyumPt.js",
+            "_chunk-CaLDNTS5.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
@@ -63476,19 +63711,19 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types/@type": {
-          "file": "assets/entries/pages_types_-type.BesvKB-V.js",
+          "file": "assets/entries/pages_types_-type.BdJRz2B3.js",
           "name": "entries/pages/types/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BIHnD_dC.js",
+            "_chunk-DKmr6RW8.js",
             "_chunk-Bx3PmJ9y.js",
-            "_chunk-B6w7FAxF.js",
-            "_chunk-nRb_ZYuH.js",
-            "_chunk-DaZ0ww4G.js",
-            "_chunk-BZ0Kby77.js",
-            "_chunk-DI0stdHd.js",
+            "_chunk-BTAsyqom.js",
+            "_chunk-paanvLi1.js",
+            "_chunk-M6R-GMXp.js",
+            "_chunk-D7CNM--b.js",
+            "_chunk-C7K0jfgO.js",
             "_chunk-ByaiJHsb.js",
             "_chunk-I7-GZjN6.js",
             "_chunk-CzcYWzuz.js",
@@ -63505,15 +63740,15 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-C_kswpa0.js",
-            "_chunk-CmvGY2ia.js",
+            "_chunk-ZfMyumPt.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-B_RAAw9Z.js",
+            "_chunk-BQwpstbl.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-DHLn9X-S.js",
-            "_chunk-tBRI9IeR.js",
-            "_chunk-Aoo6iNgA.js",
+            "_chunk-BM9BT4B9.js",
+            "_chunk-amOvFEqn.js",
             "_chunk-BPNsQ1As.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-B4DuaiMN.js",

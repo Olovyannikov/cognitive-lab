@@ -3,6 +3,7 @@ import { createEffect, createEvent, createStore, sample } from 'effector';
 import { navigate } from 'vike/client/router';
 
 import { submitAnswersMutation, TestModel } from '@/entities/Test';
+import { UserModel } from '@/entities/User';
 
 const $isSubmitModalShown = createStore<boolean>(false);
 const submitScaleForm = createEvent();
@@ -37,6 +38,12 @@ sample({
     clock: submitAnswersMutation.finished.success,
     fn: () => false,
     target: $isSubmitModalShown,
+});
+
+sample({
+    clock: submitAnswersMutation.finished.success,
+    fn: ({ result }) => result.id,
+    target: UserModel.$surveyId,
 });
 
 sample({
