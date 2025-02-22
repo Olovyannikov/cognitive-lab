@@ -9,7 +9,7 @@ export const Rephrasing = () => {
     const [onChangePhraseHandler] = useUnit([RephrasingModel.changePhraseIndex]);
     const [phrases] = useUnit([RephrasingModel.$currentPhrases]);
 
-    if (phrases.hints.length < 1 || phrases.texts.length < 1) return null;
+    if (phrases.hints.length <= 1 || phrases.texts.length <= 1) return null;
 
     return (
         <Button

@@ -13,6 +13,7 @@ import {
     TestSingleChoiceQuestion,
 } from '@/entities/Test';
 import { RephrasingModel } from '@/features/Rephrasing/model';
+import { SubmitTestModal } from '@/widgets/SubmitTestModal';
 import { Controls } from '@/widgets/Test';
 
 export const TestPage = () => {
@@ -71,6 +72,7 @@ export const TestPage = () => {
             <TestProgress value={progress} page={page} total={data.length} />
             {Map[question?.type]}
             <Controls />
+            <SubmitTestModal />
         </TestContainer>
     );
 };

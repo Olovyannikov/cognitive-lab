@@ -8,6 +8,7 @@ import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
 import { Rephrasing } from '@/features/Rephrasing';
+import { SubmitTestModel } from '@/widgets/SubmitTestModal/model';
 
 import s from './Controls.module.css';
 
@@ -16,7 +17,7 @@ export const Controls = () => {
     const { page, onChange, controlModal, value } = useUnit({
         page: TestModel.$currentPage,
         onChange: TestModel.formPageChanged,
-        controlModal: TestModel.submitModalStateChanged,
+        controlModal: SubmitTestModel.submitModalStateChanged,
         value: TestModel.$currentValue,
         form: TestModel.$scaleForm,
     });

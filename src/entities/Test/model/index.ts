@@ -20,8 +20,6 @@ const scaleFormFieldChanged = createEvent<PreparedAnswer>();
 const formPageChanged = createEvent<number>();
 const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
 
-const submitModalStateChanged = createEvent();
-
 sample({
     clock: [$currentPage, getQuestionsQuery.$data],
     source: {
@@ -127,5 +125,4 @@ export const TestModel = {
     $scaleForm,
     scaleFormFieldChanged,
     formPageChanged,
-    submitModalStateChanged,
 };
