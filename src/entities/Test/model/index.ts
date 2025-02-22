@@ -38,7 +38,6 @@ sample({
     source: $scaleForm,
     fn: (form, field) => {
         form.answers[field.index] = field;
-
         return { ...form };
     },
     target: $scaleForm,
@@ -63,12 +62,9 @@ sample({
         const currentPage = page - 1;
 
         if (form.answers && form.answers.length > 0 && 'value' in form.answers[currentPage].answer) {
-            if (form.answers[currentPage].answer.value) {
-                return form.answers[currentPage].answer.value as unknown as ScaleChoiceAnswer;
-            }
-            return null;
+            if (!form.answers[currentPage].answer.value) return null;
+            return form.answers[currentPage].answer.value as unknown as ScaleChoiceAnswer;
         }
-
         return null;
     },
     target: $currentValue,
