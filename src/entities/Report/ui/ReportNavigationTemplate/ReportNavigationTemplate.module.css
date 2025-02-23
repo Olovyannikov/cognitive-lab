@@ -5,7 +5,7 @@
   color: var(--mantine-color-dark-9);
 
   svg {
-    color: var(--mantine-color-violet-9);
+    @mixin text-data-color 9;
   }
 }
 
@@ -28,9 +28,12 @@
 }
 
 .dropdown {
+  overflow-y: auto;
   border-radius: var(--mantine-spacing-lg);
   padding: 12px 4px 0;
+  max-height: calc(100vh - 100px);
   box-shadow: var(--mantine-shadow-lg);
+  overscroll-behavior: contain;
 }
 
 .item {

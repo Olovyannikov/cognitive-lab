@@ -3,8 +3,8 @@ import { useUnit } from 'effector-react';
 
 import { getFullReportQuery, ReportHeader, ReportModel } from '@/entities/Report';
 import { PageLoader } from '@/shared/ui';
+import { FullReportNavigation } from '@/widgets/FullReportNavigation';
 import { FullReportSlice } from '@/widgets/FullReportSlice';
-import { ReportNavigation } from '@/widgets/ReportNavigation';
 
 export const FullReportPage = () => {
     const { data, pending, stale } = useUnit(getFullReportQuery);
@@ -18,7 +18,7 @@ export const FullReportPage = () => {
         <Box component='section'>
             <Container>
                 {isFirstPage && <ReportHeader showPreheader type={data.mbti_type} name={data.title} />}
-                <ReportNavigation />
+                <FullReportNavigation />
                 <FullReportSlice page={currentPage} />
             </Container>
         </Box>

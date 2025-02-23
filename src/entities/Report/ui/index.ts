@@ -17,3 +17,4 @@ export * from './Subscription';
 export * from './TextStrokeDash';
 export * from './ReportTitle';
 export * from './AdBanner';
+export * from './ReportNavigationTemplate';

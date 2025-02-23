@@ -1,24 +1,33 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import { Button, Center, Group, Menu, Paper, Text } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
-import { useStoreMap, useUnit } from 'effector-react';
 
-import { getFullReportQuery, getIconsMap, ReportModel } from '@/entities/Report';
+import { getIconsMap } from '@/entities/Report';
 import { useIsLarge } from '@/shared/hooks/useMedia';
 import { InnerContainer } from '@/shared/ui';
 
-import s from './ReportNavigation.module.css';
+import s from './ReportNavigationTemplate.module.css';
 
-export const ReportNavigation = () => {
+interface ReportNavigationTemplateProps {
+    content: string[];
+    page: number;
+    onPageChange(n: number): void;
+    color?: string;
+}
+
+export const ReportNavigationTemplate = ({
+    content,
+    page,
+    onPageChange,
+    color = 'violet',
+}: ReportNavigationTemplateProps) => {
     const isLarge = useIsLarge();
-    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);
-    const content = useStoreMap({
-        store: getFullReportQuery.$data,
-        keys: ['title', page],
-        fn: (content) => content?.content.map(({ title }) => title),
-    });
-    const [activeMenu, setActiveMenu] = useState(content?.[page] ?? 'Введение');
     const icons = getIconsMap(isLarge);
+    const [activeMenu, setActiveMenu] = useState(content?.[page] ?? 'Введение');
+
+    const [_, scrollTo] = useWindowScroll();
 
     return (
         <InnerContainer
@@ -36,6 +45,7 @@ export const ReportNavigation = () => {
                 keepMounted
                 width='target'
                 classNames={s}
+                data-color={color}
                 position='bottom'
                 key={activeMenu}
                 closeOnItemClick
@@ -66,7 +76,14 @@ export const ReportNavigation = () => {
                                 wrap='nowrap'
                                 style={{ overflow: 'hidden' }}
                             >
-                                <Paper p={isLarge ? 'lg' : 10} maw={72} mah={72} radius='sm' bg='violet.1' c='violet.9'>
+                                <Paper
+                                    p={isLarge ? 'lg' : 10}
+                                    maw={72}
+                                    mah={72}
+                                    radius='sm'
+                                    bg={`${color}.1`}
+                                    c={`${color}.9`}
+                                >
                                     {icons[activeMenu]}
                                 </Paper>
                                 <Text ta='start' truncate='end' fz={isLarge ? 32 : 20} fw='bold'>
@@ -85,9 +102,10 @@ export const ReportNavigation = () => {
                 <Menu.Dropdown w='auto'>
                     {content?.map((title, idx) => (
                         <Menu.Item
+                            key={title}
                             leftSection={
-                                <Paper p={isLarge ? 10 : 'xxs'} radius='xs' bg='violet.1'>
-                                    <Center c='violet.9' className={s.dropdownIcon}>
+                                <Paper p={isLarge ? 10 : 'xxs'} radius='xs' bg={`${color}.1`}>
+                                    <Center c={`${color}.9`} className={s.dropdownIcon}>
                                         {icons[title]}
                                     </Center>
                                 </Paper>
@@ -95,12 +113,22 @@ export const ReportNavigation = () => {
                             onClick={() => {
                                 setActiveMenu(title);
                                 onPageChange(idx + 1);
+                                scrollTo({
+                                    y: 0,
+                                });
                             }}
-                            key={title}
                         >
-                            <Text span inline fz={14} fw='bold'>
-                                {title}
-                            </Text>
+                            <Link
+                                spy
+                                to={title}
+                                offset={-100}
+                                onSetActive={setActiveMenu}
+                                onClick={() => setActiveMenu(title)}
+                            >
+                                <Text style={{ pointerEvents: 'none' }} span inline fz={14} fw='bold'>
+                                    {title}
+                                </Text>
+                            </Link>
                         </Menu.Item>
                     ))}
                 </Menu.Dropdown>
