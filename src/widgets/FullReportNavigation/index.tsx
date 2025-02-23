@@ -4,7 +4,11 @@ import { getFullReportQuery, ReportModel, ReportNavigationTemplate } from '@/ent
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 
 export const FullReportNavigation = () => {
-    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);
+    const [page, onPageChange] = useUnit([
+        ReportModel.$currentContentPage,
+        ReportModel.currentPageChanged,
+        ReportModel.$currentPage,
+    ]);
     const content = useStoreMap({
         store: getFullReportQuery.$data,
         keys: ['title', page],
@@ -14,5 +18,13 @@ export const FullReportNavigation = () => {
     const mbti = useUnit(getFullReportQuery.$data.map((el) => el.mbti_type));
     const color = TYPE_TO_COLOR_MAP[mbti];
 
-    return <ReportNavigationTemplate page={page} content={content} onPageChange={onPageChange} color={color} />;
+    return (
+        <ReportNavigationTemplate
+            page={page}
+            color={color}
+            content={content}
+            title={content[page]}
+            onPageChange={onPageChange}
+        />
+    );
 };

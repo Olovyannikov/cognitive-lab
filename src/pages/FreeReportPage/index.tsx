@@ -14,7 +14,6 @@ import s from './FreeReportPage.module.css';
 export const FreeReportPage = () => {
     const { data, pending, stale } = useUnit(getFreeResultQuery);
     const surveyId = useUnit(UserModel.$surveyId);
-    const color = TYPE_TO_COLOR_MAP[data.mbti_type];
 
     if (stale || pending) return <PageLoader />;
     if (!data) return null;
@@ -25,16 +24,11 @@ export const FreeReportPage = () => {
                 <ReportHeader type={data?.mbti_type} name={data?.title} />
                 <FreeReportNavigation />
                 <InnerContainer>
-                    <Title mb='2xl' c={color}>
-                        {data?.title}
-                    </Title>
                     {data.content?.map((el, index) => {
                         return (
                             <Stack id={el.title} data-block mb={100}>
                                 <Element name={el.title} id={el.title} key={data?.title + el.title + index}>
-                                    <Title mb='md' c={color}>
-                                        {el.title}
-                                    </Title>
+                                    <Title mb='md'>{el.title}</Title>
                                     {el.content.map((currentEl, idx) => (
                                         <Box className={s.block} key={currentEl.type + idx + 'content'}>
                                             {currentEl.content.map((currentContent) =>

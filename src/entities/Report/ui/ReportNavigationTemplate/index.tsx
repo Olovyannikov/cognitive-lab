@@ -13,6 +13,7 @@ import s from './ReportNavigationTemplate.module.css';
 interface ReportNavigationTemplateProps {
     content: string[];
     page: number;
+    title?: string;
     onPageChange(n: number): void;
     color?: string;
 }
@@ -21,25 +22,22 @@ export const ReportNavigationTemplate = ({
     content,
     page,
     onPageChange,
+    title,
     color = 'violet',
 }: ReportNavigationTemplateProps) => {
     const isLarge = useIsLarge();
     const icons = getIconsMap(isLarge);
-    const [activeMenu, setActiveMenu] = useState(content?.[page] ?? 'Введение');
-
+    const [activeMenu, setActiveMenu] = useState(title ?? content[page] ?? 'Введение');
     const [_, scrollTo] = useWindowScroll();
 
+    const onPageChangeHandler = ({ idx, title }: { idx: number; title: string }) => {
+        onPageChange(idx + 1);
+        setActiveMenu(title);
+        scrollTo({ y: 0 });
+    };
+
     return (
-        <InnerContainer
-            className={s.block}
-            style={{ zIndex: 1000 }}
-            pos='sticky'
-            top={0}
-            py='lg'
-            pb='md'
-            mb={32}
-            bg='white'
-        >
+        <InnerContainer className={s.block}>
             <Menu
                 offset={16}
                 keepMounted
@@ -62,14 +60,7 @@ export const ReportNavigationTemplate = ({
                         variant='transparent'
                         size={isLarge ? 'xl' : 'lg'}
                     >
-                        <Group
-                            gap={0}
-                            w='100%'
-                            wrap='nowrap'
-                            align='center'
-                            style={{ overflow: 'hidden' }}
-                            justify={isLarge ? 'flex-start' : 'space-between'}
-                        >
+                        <Group gap={0} className={s.group} justify={isLarge ? 'flex-start' : 'space-between'}>
                             <Group
                                 mr={isLarge ? 32 : 20}
                                 gap={isLarge ? 'lg' : 'xs'}
@@ -87,7 +78,7 @@ export const ReportNavigationTemplate = ({
                                     {icons[activeMenu]}
                                 </Paper>
                                 <Text ta='start' truncate='end' fz={isLarge ? 32 : 20} fw='bold'>
-                                    {activeMenu}
+                                    {title ?? activeMenu}
                                 </Text>
                             </Group>
                             <CaretDown
@@ -110,20 +101,14 @@ export const ReportNavigationTemplate = ({
                                     </Center>
                                 </Paper>
                             }
-                            onClick={() => {
-                                setActiveMenu(title);
-                                onPageChange(idx + 1);
-                                scrollTo({
-                                    y: 0,
-                                });
-                            }}
+                            onClick={() => onPageChangeHandler({ idx, title })}
                         >
                             <Link
                                 spy
                                 to={title}
                                 offset={-100}
                                 onSetActive={setActiveMenu}
-                                onClick={() => setActiveMenu(title)}
+                                onClick={() => onPageChangeHandler({ idx, title })}
                             >
                                 <Text style={{ pointerEvents: 'none' }} span inline fz={14} fw='bold'>
                                     {title}

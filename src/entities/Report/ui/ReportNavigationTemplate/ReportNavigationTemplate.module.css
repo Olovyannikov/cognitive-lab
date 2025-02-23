@@ -9,6 +9,16 @@
   }
 }
 
+.block {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: var(--mantine-spacing-3xl);
+  background-color: var(--mantine-color-white);
+  padding-block: var(--mantine-spacing-lg);
+  padding-inline: var(--mantine-spacing-md);
+}
+
 .block [data-block] {
   height: auto;
 }
@@ -38,4 +48,11 @@
 
 .item {
   margin-bottom: 10px;
+}
+
+.group {
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
 }

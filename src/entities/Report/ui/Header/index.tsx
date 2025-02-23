@@ -6,9 +6,9 @@ interface HeaderProps extends TitleProps {
     text: string;
 }
 
-export const Header = ({ text, c = 'violet', ...props }: HeaderProps) => {
+export const Header = ({ text, ...props }: HeaderProps) => {
     return (
-        <Title className={s.title} order={5} c={c + '.9'} {...props}>
+        <Title className={s.title} order={5} {...props}>
             {text}
         </Title>
     );

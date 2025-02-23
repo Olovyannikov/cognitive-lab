@@ -6,12 +6,6 @@
   }
 }
 
-strong {
-  @mixin larger-than 768px {
-    font-size: 22px;
-  }
-}
-
 h5 + strong {
   font-weight: 400;
 }

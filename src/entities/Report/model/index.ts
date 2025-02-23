@@ -1,5 +1,7 @@
-import { createEvent, createStore } from 'effector';
+import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
+
+import { getFullReportQuery } from '@/entities/Report';
 
 import { ContentResult, Order } from '../types';
 
@@ -11,6 +13,18 @@ const $currentPage = createStore(1);
 const currentPageChanged = createEvent<number>();
 
 const $currentContent = createStore<ContentResult>({} as ContentResult);
+
+const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);
+const $isLastPage = createStore<boolean>(false);
+
+sample({
+    clock: $currentPage,
+    source: getFullReportQuery.$data,
+    fn: (content, page) => {
+        return page >= content.content.map((el) => el.content).length;
+    },
+    target: $isLastPage,
+});
 
 createAction({
     clock: currentPageChanged,
@@ -30,4 +44,7 @@ export const ReportModel = {
     $currentContentPage,
     currentPageChanged,
     $currentContent,
+    $isFirstPage,
+    $isLastPage,
+    $currentPage,
 };
