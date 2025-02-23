@@ -26,7 +26,7 @@ export const Paywall = ({
     color,
     surveyId,
     index = 0,
-    mbti,
+    mbti = 'ENTJ',
 }: PaywallProps) => {
     return (
         <Box className={s.wrapper}>

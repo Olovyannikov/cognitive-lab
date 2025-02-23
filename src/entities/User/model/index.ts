@@ -33,15 +33,9 @@ sample({
     target: $userId,
 });
 
-sample({
-    clock: delay(UserGate.open, 500),
-    source: $surveyId,
-    filter: (surveyId) => !surveyId,
-    target: redirectToTestPageFx,
-});
-
 export const UserModel = {
     $userId,
     $surveyId,
     UserGate,
+    redirectToTestPageFx,
 };

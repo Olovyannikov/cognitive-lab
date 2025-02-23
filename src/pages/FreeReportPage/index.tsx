@@ -4,10 +4,11 @@ import { useUnit } from 'effector-react';
 
 import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
-import s from '@/pages/FullReportExamplePage/FullReportExamplePage.module.css';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer, PageLoader } from '@/shared/ui';
 import { CALL_TO_ACTION } from '@/widgets/CTA';
+
+import s from './FreeReportPage.module.css';
 
 export const FreeReportPage = () => {
     const { data, pending, stale } = useUnit(getFreeResultQuery);
@@ -25,10 +26,10 @@ export const FreeReportPage = () => {
                         {data?.title}
                     </Title>
                     {data.content?.map((el, index) => (
-                        <Stack className={s.block} mb={80}>
+                        <Stack data-block mb={100}>
                             <Fragment key={data?.title + index}>
                                 {el.content.map((currentEl, idx) => (
-                                    <Fragment key={currentEl.type + idx + 'content'}>
+                                    <Box className={s.block} key={currentEl.type + idx + 'content'}>
                                         {currentEl.content.map((currentContent) =>
                                             contentResolver({
                                                 content: currentContent,
@@ -41,7 +42,7 @@ export const FreeReportPage = () => {
                                                 mbti: data.mbti_type,
                                             })
                                         )}
-                                    </Fragment>
+                                    </Box>
                                 ))}
                             </Fragment>
                         </Stack>

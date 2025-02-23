@@ -37,8 +37,6 @@ export const BuyNowOrRedirectToTestPageAction = () => (
 export const TakeTestAgainOrBuyReportAction = () => {
     const surveyId = useUnit(UserModel.$surveyId);
 
-    console.log({ surveyId });
-
     return (
         <Flex className={s.actions}>
             <TakeTestAgain />

@@ -11,6 +11,7 @@ interface ParagraphProps extends TextProps {
 export const Paragraph = ({ text, className, ...rest }: ParagraphProps) => {
     return (
         <Markdown
+            className={s.text}
             options={{
                 overrides: {
                     p: (props) => (

@@ -1,4 +1,4 @@
-import { Button } from '@mantine/core';
+import { Button, Image } from '@mantine/core';
 
 import s from './BuyNowButton.module.css';
 
@@ -14,9 +14,10 @@ export const BuyNowButton = ({ mbti, survey }: BuyNowButtonProps) => {
             color='dark.6'
             variant='filled'
             className={s.button}
-            href={`/purchase/${survey ? `/personal/${survey}` : ''}${mbti ?? ''}`}
+            leftSection={survey ? <Image w={20} h={20} src='/images/key.webp' aria-hidden={true} alt='' /> : null}
+            href={`/purchase/${survey ? `personal/${survey}` : ''}${mbti ?? ''}`}
         >
-            Купить сейчас
+            {survey ? 'Купить полный отчет' : 'Купить сейчас'}
         </Button>
     );
 };

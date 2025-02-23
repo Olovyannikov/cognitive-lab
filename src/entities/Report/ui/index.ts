@@ -14,3 +14,5 @@ export * from './PriceInfo';
 export * from './ConclusionPaywall';
 export * from './IconList';
 export * from './Subscription';
+export * from './TextStrokeDash';
+export * from './ReportTitle';

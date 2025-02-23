@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import CircleImage from '@/app/assets/images/circle.svg?react';
 import CircleSmallImage from '@/app/assets/images/circle_small.svg?react';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
+import { useIsMedium } from '@/shared/hooks/useMedia';
 
 import s from './ReportHeader.module.css';
 
@@ -14,6 +15,7 @@ interface ReportHeaderProps {
 
 export const ReportHeader = ({ type, name }: ReportHeaderProps) => {
     const currentColor = TYPE_TO_COLOR_MAP[type];
+    const isLarge = useIsMedium();
     // const currentName = name.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
 
     return (
@@ -25,7 +27,13 @@ export const ReportHeader = ({ type, name }: ReportHeaderProps) => {
                 <Title className={s.name}>{name}</Title>
                 <Text className={s.type}>{type}</Text>
             </Stack>
-            <Image className={s.character} src={`/images/types/${type}.png`} width={400} height={400} />
+            <Image
+                draggable={false}
+                className={s.character}
+                src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`}
+                width={isLarge ? 400 : 343}
+                height={isLarge ? 400 : 247}
+            />
             <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />
             <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />
         </Paper>

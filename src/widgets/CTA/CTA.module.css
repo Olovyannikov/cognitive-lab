@@ -1,6 +1,7 @@
 .actions {
   flex-direction: column;
   margin-top: auto;
+  width: 100%;
   gap: var(--mantine-spacing-md);
 
   @mixin larger-than 598px {

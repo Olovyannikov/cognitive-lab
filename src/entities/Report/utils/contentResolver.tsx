@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { barChartPrepareData, IconList, Subscription } from '@/entities/Report';
+import { barChartPrepareData, IconList, ReportTitle, Subscription, TextStrokeDash } from '@/entities/Report';
 import { BarChart } from '@/entities/Report/ui/BarChart';
 import { SendReportEmail } from '@/features/SendReportEmail';
 import type { PartialRecord } from '@/shared/types/utility-types/PartialRecord';
@@ -39,6 +39,8 @@ export const contentResolver = ({ content, color, actions, surveyId, mbti, index
             return isListItemArray(content.items) && <Cards items={content.items} color={color} />;
         case 'ordered_cards':
             return <OrderedCards color={content.color} items={isListItemArray(content.items) ? content.items : []} />;
+        case 'title':
+            return <ReportTitle>{content.text}</ReportTitle>;
         case 'subtitle':
             return <Subtitle {...content} />;
         case 'ordered_list':
@@ -63,6 +65,8 @@ export const contentResolver = ({ content, color, actions, surveyId, mbti, index
             return <IconList items={isListItemArray(content.items) ? content.items : []} />;
         case 'subscription':
             return <Subscription {...content} subscriptionFormSlot={<SendReportEmail type='block' />} />;
+        case 'text_stroke_dash':
+            return <TextStrokeDash text={content.text ?? ''} />;
         default:
             return <>UNKNOWN</>;
     }

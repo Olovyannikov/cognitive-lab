@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
 
@@ -23,9 +24,9 @@ export const TypePage = () => {
             return content.slice(0, end).map((el, idx) => (
                 <div key={el.type + idx} className={s.block}>
                     {el.content.map((currentContent, idx) => (
-                        <div key={currentContent.type + idx}>
+                        <Fragment key={currentContent.type + idx}>
                             {contentResolver({ content: currentContent, color: currentColor })}
-                        </div>
+                        </Fragment>
                     ))}
                 </div>
             ));
@@ -37,12 +38,12 @@ export const TypePage = () => {
         ({ content }) => {
             const end = findBannerIndex(content);
 
-            return content.slice(end).map((el, idx) => (
-                <div key={el.type + idx} className={s.block}>
+            return content.slice(end).map((el, elIdx) => (
+                <div key={el.type + elIdx} className={s.block}>
                     {el.content.map((currentContent, idx) => (
-                        <div key={currentContent.type + idx}>
+                        <Fragment key={currentContent.type + idx}>
                             {contentResolver({ content: currentContent, color: currentColor })}
-                        </div>
+                        </Fragment>
                     ))}
                 </div>
             ));

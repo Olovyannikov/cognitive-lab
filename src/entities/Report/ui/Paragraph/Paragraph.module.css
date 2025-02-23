@@ -1,8 +1,11 @@
 .text {
   display: block;
-  margin-bottom: 16px;
   font-size: 18px;
   white-space: break-spaces;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
   @mixin larger-than 1024px {
     font-size: 22px;

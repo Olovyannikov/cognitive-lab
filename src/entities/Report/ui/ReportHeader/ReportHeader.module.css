@@ -8,7 +8,7 @@
 
   @mixin data-color 2;
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 1150px {
     margin-bottom: 80px;
     border-radius: 80px;
     padding-top: 140px;
@@ -24,7 +24,7 @@
   text-align: center;
   gap: var(--mantine-spacing-lg);
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 1150px {
     justify-content: flex-start;
     text-align: left;
     gap: calc(var(--mantine-spacing-lg) / 2);
@@ -34,7 +34,7 @@
 .personalityType {
   font-size: 18px;
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 998px {
     font-size: 36px;
   }
 }
@@ -42,7 +42,7 @@
 .name {
   font-size: 32px;
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 998px {
     font-size: 56px;
     line-height: 65px;
   }
@@ -51,7 +51,7 @@
 .type {
   font-size: 18px;
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 998px {
     font-size: 36px;
     line-height: 42px;
   }
@@ -69,7 +69,7 @@
     display: none;
   }
 
-  @mixin larger-than 1200px {
+  @mixin larger-than 768px {
     right: 0;
     top: -144px;
     width: 680px;
@@ -89,9 +89,19 @@
 
 .character {
   position: absolute;
-  right: 89px;
-  bottom: -20px;
+  left: 50%;
+  bottom: 0;
   z-index: 1;
-  width: 400px;
-  height: 400px;
+  width: 343px;
+  height: 247px;
+  transform: translateX(-50%);
+
+  @mixin larger-than 1150px {
+    left: unset;
+    right: -150px;
+    bottom: 0;
+    width: 400px;
+    height: 380px;
+    object-fit: contain;
+  }
 }

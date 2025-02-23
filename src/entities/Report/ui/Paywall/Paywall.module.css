@@ -5,9 +5,10 @@
     "points points"
     "actions actions";
   grid-template-columns: 1fr 100px;
+  margin-top: 60px;
   gap: var(--mantine-spacing-lg);
 
-  @mixin larger-than 768px {
+  @mixin larger-than 592px {
     grid-template-areas:
       "man top"
       "man points"
@@ -24,7 +25,7 @@
     font-size: 20px;
     line-height: 23px;
 
-    @mixin larger-than 768px {
+    @mixin larger-than 592px {
       font-size: 32px;
       line-height: 37px;
     }
@@ -36,7 +37,7 @@
   width: 100px;
   height: 100px;
 
-  @mixin larger-than 768px {
+  @mixin larger-than 592px {
     width: 260px;
     height: 260px;
   }
@@ -49,7 +50,7 @@
 .actions {
   grid-area: actions;
 
-  @mixin larger-than 768px {
+  @mixin larger-than 592px {
     margin-left: 36px;
   }
 }

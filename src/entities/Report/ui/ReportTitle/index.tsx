@@ -1,0 +1,13 @@
+import { Title, TitleProps } from '@mantine/core';
+
+import { useIsLarge } from '@/shared/hooks/useMedia';
+
+export const ReportTitle = ({ children }: TitleProps) => {
+    const isLarge = useIsLarge();
+
+    return (
+        <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>
+            {children}
+        </Title>
+    );
+};
