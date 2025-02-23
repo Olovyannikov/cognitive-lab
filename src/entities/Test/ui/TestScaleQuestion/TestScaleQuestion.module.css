@@ -48,7 +48,11 @@
     right: 0;
   }
 
-  @mixin larger-than 968px {
+  @mixin larger-than 920px {
+    font-size: 24px;
+  }
+
+  @mixin larger-than 1100px {
     position: absolute;
     left: 0;
     top: 50%;

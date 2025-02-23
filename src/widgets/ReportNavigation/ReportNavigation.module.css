@@ -1,0 +1,38 @@
+.inner,
+.label {
+  width: 100%;
+  height: auto;
+  color: var(--mantine-color-dark-9);
+
+  svg {
+    color: var(--mantine-color-violet-9);
+  }
+}
+
+.block [data-block] {
+  height: auto;
+}
+
+.dropdownIcon {
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  @mixin larger-than 768px {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.dropdown {
+  border-radius: var(--mantine-spacing-lg);
+  padding: 12px 4px 0;
+  box-shadow: var(--mantine-shadow-lg);
+}
+
+.item {
+  margin-bottom: 10px;
+}

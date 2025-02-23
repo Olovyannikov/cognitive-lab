@@ -4,3 +4,4 @@ export * from './api';
 export * from './api/dto';
 export * from './lib';
 export * from './model';
+export * from './const';

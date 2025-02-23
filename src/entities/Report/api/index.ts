@@ -2,7 +2,7 @@ import { createMutation, createQuery } from '@farfetched/core';
 
 import { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';
 
-import { ContentResult } from '../types';
+import type { ContentResult, FullContentResult } from '../types';
 import type {
     PromoPriceResponse,
     PurchasedReportRequest,
@@ -63,4 +63,11 @@ export const getFreeResultQuery = createQuery({
         url: API.GET_FREE_REPORT,
     })),
     initialData: {} as ContentResult,
+});
+
+export const getFullReportQuery = createQuery({
+    effect: createInternalRequestFx<{ id: string }, FullContentResult>((user) => ({
+        url: API.FULL_REPORT(user.id),
+    })),
+    initialData: {} as FullContentResult,
 });

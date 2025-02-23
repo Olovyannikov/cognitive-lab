@@ -29,7 +29,14 @@ interface ContentResolverProps {
     index?: number;
 }
 
-export const contentResolver = ({ content, color, actions, surveyId, mbti, index }: ContentResolverProps) => {
+export const contentResolver = ({
+    content,
+    color = 'violet',
+    actions,
+    surveyId,
+    mbti,
+    index,
+}: ContentResolverProps) => {
     switch (content.type) {
         case 'header':
             return <Header {...content} c={color} />;

@@ -11,9 +11,10 @@
   @mixin larger-than 1150px {
     margin-bottom: 80px;
     border-radius: 80px;
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 8%;
+    padding-bottom: 10%;
     padding-left: 123px;
+    max-height: 400px;
   }
 }
 

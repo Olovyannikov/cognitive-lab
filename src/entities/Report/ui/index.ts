@@ -16,3 +16,4 @@ export * from './IconList';
 export * from './Subscription';
 export * from './TextStrokeDash';
 export * from './ReportTitle';
+export * from './AdBanner';

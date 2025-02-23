@@ -71,3 +71,17 @@ export interface Mark {
     }[];
     mbti_type: string[];
 }
+
+export interface FullContentResult {
+    mbti_type: string;
+    title: string;
+    content: {
+        title: string;
+        content: {
+            content: {
+                type: 'block';
+                content: Content[];
+            }[];
+        };
+    }[];
+}
