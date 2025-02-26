@@ -143,9 +143,9 @@ var require_picocolors = __commonJS({
       const cyan = formatter("\x1B[36m", "\x1B[39m");
       return {
         isColorSupported: enabled,
-        code: enabled ? cyan : (s98) => `\`${s98}\``,
-        string: enabled ? cyan : (s98) => `'${s98}'`,
-        reset: enabled ? (s98) => `\x1B[0m${s98}\x1B[0m` : String,
+        code: enabled ? cyan : (s99) => `\`${s99}\``,
+        string: enabled ? cyan : (s99) => `'${s99}'`,
+        reset: enabled ? (s99) => `\x1B[0m${s99}\x1B[0m` : String,
         bold: enabled ? formatter("\x1B[1m", "\x1B[22m", "\x1B[22m\x1B[1m") : String,
         dim: enabled ? formatter("\x1B[2m", "\x1B[22m", "\x1B[22m\x1B[2m") : String,
         italic: enabled ? formatter("\x1B[3m", "\x1B[23m") : String,
@@ -1406,8 +1406,8 @@ function parseVersion(version) {
   let partsStr = version.split(".");
   partsStr = partsStr.slice(0, 3);
   assert(partsStr.length === 3);
-  assert(partsStr.every((s98) => s98.length > 0));
-  const parts = partsStr.map((s98) => parseInt(s98, 10));
+  assert(partsStr.every((s99) => s99.length > 0));
+  const parts = partsStr.map((s99) => parseInt(s99, 10));
   return parts;
 }
 var init_assertVersion = __esm({
@@ -1998,11 +1998,11 @@ function parse(str) {
     importPath
   };
 }
-function invalid(s98) {
-  const firstLetter = s98[0];
+function invalid(s99) {
+  const firstLetter = s99[0];
   if (!firstLetter || !/[a-z0-9]/.test(firstLetter))
     return true;
-  if (/[^a-z0-9_\-\.]/.test(s98))
+  if (/[^a-z0-9_\-\.]/.test(s99))
     return true;
   return false;
 }
@@ -2205,7 +2205,7 @@ var init_formatHintLog = __esm({
 });
 
 // node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/utils/joinEnglish.js
-function joinEnglish(arr, conjunction, colorizer = (s98) => s98) {
+function joinEnglish(arr, conjunction, colorizer = (s99) => s99) {
   assert(arr.length > 0);
   if (arr.length === 1)
     return colorizer(arr[0]);
@@ -2858,7 +2858,7 @@ function serializePageContextClientSide(pageContext) {
   try {
     pageContextSerialized = serialize(pageContextClient);
   } catch (err) {
-    const h16 = (s98) => import_picocolors12.default.cyan(s98);
+    const h16 = (s99) => import_picocolors12.default.cyan(s99);
     let hasWarned = false;
     const propsNonSerializable = [];
     passToClient.forEach((prop) => {
@@ -3182,12 +3182,12 @@ function getDefinedAtString(definedAtData, configName) {
   assert(files.length >= 1);
   const definedAtString = files.map((source) => {
     const { filePathToShowToUser, fileExportPathToShowToUser } = source;
-    let s98 = filePathToShowToUser;
+    let s99 = filePathToShowToUser;
     const exportPath = getExportPath(fileExportPathToShowToUser, configName);
     if (exportPath) {
-      s98 = `${s98} > ${import_picocolors13.default.cyan(exportPath)}`;
+      s99 = `${s99} > ${import_picocolors13.default.cyan(exportPath)}`;
     }
-    return s98;
+    return s99;
   }).join(" / ");
   return definedAtString;
 }
@@ -3916,7 +3916,7 @@ function resolveRouteString(routeString, urlPathname) {
       return ".*";
     }
     return escapeRegex(segment.static);
-  }).map((s98) => `(${s98})`).join("");
+  }).map((s99) => `(${s99})`).join("");
   const routeRegex = new RegExp(`^${routeRegexStrInner}/?$`);
   const routeRegexMatch = urlPathname.match(routeRegex);
   if (!routeRegexMatch)
@@ -3939,30 +3939,30 @@ function resolveRouteString(routeString, urlPathname) {
 }
 function parseRouteString(routeString) {
   const segments = [];
-  const pushStatic = (s98) => {
+  const pushStatic = (s99) => {
     const segmentLast = segments[segments.length - 1];
     if (segmentLast?.static) {
-      segmentLast.static += s98;
+      segmentLast.static += s99;
     } else {
-      segments.push({ static: s98 });
+      segments.push({ static: s99 });
     }
   };
   const parts = routeString.split("/");
-  parts.forEach((s98, i33) => {
+  parts.forEach((s99, i33) => {
     if (i33 !== 0)
       pushStatic("/");
-    if (isParam(s98)) {
-      assertWarning2(!s98.startsWith(PARAM_TOKEN_OLD), `Outdated Route String ${highlight(routeString)}, use ${highlight(routeString.split(PARAM_TOKEN_OLD).join(PARAM_TOKEN_NEW))} instead`, { onlyOnce: true });
-      segments.push({ param: s98.slice(1) });
+    if (isParam(s99)) {
+      assertWarning2(!s99.startsWith(PARAM_TOKEN_OLD), `Outdated Route String ${highlight(routeString)}, use ${highlight(routeString.split(PARAM_TOKEN_OLD).join(PARAM_TOKEN_NEW))} instead`, { onlyOnce: true });
+      segments.push({ param: s99.slice(1) });
     } else {
-      if (s98 === "*" && i33 === parts.length - 1 && routeString !== "*" && routeString !== "/*") {
+      if (s99 === "*" && i33 === parts.length - 1 && routeString !== "*" && routeString !== "/*") {
         segments.push({ glob: true });
       } else {
-        s98.split("*").forEach((s99, i34) => {
+        s99.split("*").forEach((s100, i34) => {
           if (i34 !== 0)
             segments.push({ glob: true });
-          if (s99 !== "") {
-            pushStatic(s99);
+          if (s100 !== "") {
+            pushStatic(s100);
           }
         });
       }
@@ -3972,16 +3972,16 @@ function parseRouteString(routeString) {
 }
 function analyzeRouteString(routeString) {
   const segments = parseRouteString(routeString);
-  const countStaticParts = (s98) => s98?.split("/").filter(Boolean).length || 0;
+  const countStaticParts = (s99) => s99?.split("/").filter(Boolean).length || 0;
   let numberOfStaticPartsBeginning = 0;
   for (const segment of segments) {
     if (!segment.static)
       break;
     numberOfStaticPartsBeginning += countStaticParts(segment.static);
   }
-  const numberOfStaticParts = segments.map((s98) => countStaticParts(s98.static)).reduce((sum, a45) => sum + a45, 0);
-  const numberOfParams = segments.filter((s98) => s98.param).length;
-  const numberOfGlobs = segments.filter((s98) => s98.glob).length;
+  const numberOfStaticParts = segments.map((s99) => countStaticParts(s99.static)).reduce((sum, a45) => sum + a45, 0);
+  const numberOfParams = segments.filter((s99) => s99.param).length;
+  const numberOfGlobs = segments.filter((s99) => s99.glob).length;
   return { numberOfStaticPartsBeginning, numberOfStaticParts, numberOfParams, numberOfGlobs };
 }
 function isParam(routeSegment) {
@@ -4268,7 +4268,7 @@ async function getPageContextFromHook(onBeforeRouteHook, pageContext) {
   if (hasProp(hookReturn.pageContext, "pageId") && !hasProp(hookReturn.pageContext, "pageId", "null")) {
     const errPrefix2 = `${errPrefix} returned ${import_picocolors18.default.cyan("{ pageContext: { pageId } }")} but ${import_picocolors18.default.cyan("pageId")} should be`;
     assertUsage2(hasProp(hookReturn.pageContext, "pageId", "string"), `${errPrefix2} a string or null`);
-    assertUsage2(pageContext._allPageIds.includes(hookReturn.pageContext.pageId), `${errPrefix2} ${joinEnglish(pageContext._allPageIds.map((s98) => import_picocolors18.default.cyan(s98)), "or")}`);
+    assertUsage2(pageContext._allPageIds.includes(hookReturn.pageContext.pageId), `${errPrefix2} ${joinEnglish(pageContext._allPageIds.map((s99) => import_picocolors18.default.cyan(s99)), "or")}`);
   }
   if (hasProp(hookReturn.pageContext, "routeParams")) {
     assertRouteParams(hookReturn.pageContext, `${errPrefix} returned ${import_picocolors18.default.cyan("{ pageContext: { routeParams } }")} but routeParams should`);
@@ -6012,8 +6012,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
     };
     var PRELOAD_NO_CREDS = [];
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\u0073" : "\\u0053") + suffix2;
     }
     function createResumableState(identifierPrefix, externalRuntimeConfig, bootstrapScriptContent, bootstrapScripts, bootstrapModules) {
       return {
@@ -6336,8 +6336,8 @@ var require_react_dom_server_legacy_node_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -10316,8 +10316,8 @@ var require_react_dom_server_node_production = __commonJS({
     var scriptCrossOrigin = stringToPrecomputedChunk('" crossorigin="');
     var endAsyncScript = stringToPrecomputedChunk('" async=""></script>');
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\u0073" : "\\u0053") + suffix2;
     }
     var importMapScriptStart = stringToPrecomputedChunk(
       '<script type="importmap">'
@@ -10848,8 +10848,8 @@ var require_react_dom_server_node_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -14726,20 +14726,20 @@ var require_server_node = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/server.node.js"(exports) {
     "use strict";
     var l27;
-    var s98;
+    var s99;
     if (true) {
       l27 = require_react_dom_server_legacy_node_production();
-      s98 = require_react_dom_server_node_production();
+      s99 = require_react_dom_server_node_production();
     } else {
       l27 = null;
-      s98 = null;
+      s99 = null;
     }
     exports.version = l27.version;
     exports.renderToString = l27.renderToString;
     exports.renderToStaticMarkup = l27.renderToStaticMarkup;
-    exports.renderToPipeableStream = s98.renderToPipeableStream;
-    if (s98.resumeToPipeableStream) {
-      exports.resumeToPipeableStream = s98.resumeToPipeableStream;
+    exports.renderToPipeableStream = s99.renderToPipeableStream;
+    if (s99.resumeToPipeableStream) {
+      exports.resumeToPipeableStream = s99.resumeToPipeableStream;
     }
   }
 });
@@ -16058,8 +16058,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
     };
     var PRELOAD_NO_CREDS = [];
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\u0073" : "\\u0053") + suffix2;
     }
     function createResumableState(identifierPrefix, externalRuntimeConfig, bootstrapScriptContent, bootstrapScripts, bootstrapModules) {
       return {
@@ -16369,8 +16369,8 @@ var require_react_dom_server_legacy_browser_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -20312,8 +20312,8 @@ var require_react_dom_server_browser_production = __commonJS({
     var scriptCrossOrigin = stringToPrecomputedChunk('" crossorigin="');
     var endAsyncScript = stringToPrecomputedChunk('" async=""></script>');
     var scriptRegex = /(<\/|<)(s)(cript)/gi;
-    function scriptReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\u0073" : "\\u0053") + suffix2;
+    function scriptReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\u0073" : "\\u0053") + suffix2;
     }
     var importMapScriptStart = stringToPrecomputedChunk(
       '<script type="importmap">'
@@ -20853,8 +20853,8 @@ var require_react_dom_server_browser_production = __commonJS({
       return null;
     }
     var styleRegex = /(<\/|<)(s)(tyle)/gi;
-    function styleReplacer(match, prefix2, s98, suffix2) {
-      return "" + prefix2 + ("s" === s98 ? "\\73 " : "\\53 ") + suffix2;
+    function styleReplacer(match, prefix2, s99, suffix2) {
+      return "" + prefix2 + ("s" === s99 ? "\\73 " : "\\53 ") + suffix2;
     }
     function pushSelfClosing(target, props, tag2) {
       target.push(startChunkForTag(tag2));
@@ -24664,20 +24664,20 @@ var require_server_browser = __commonJS({
   "node_modules/.pnpm/react-dom@19.0.0_react@19.0.0/node_modules/react-dom/server.browser.js"(exports) {
     "use strict";
     var l27;
-    var s98;
+    var s99;
     if (true) {
       l27 = require_react_dom_server_legacy_browser_production();
-      s98 = require_react_dom_server_browser_production();
+      s99 = require_react_dom_server_browser_production();
     } else {
       l27 = null;
-      s98 = null;
+      s99 = null;
     }
     exports.version = l27.version;
     exports.renderToString = l27.renderToString;
     exports.renderToStaticMarkup = l27.renderToStaticMarkup;
-    exports.renderToReadableStream = s98.renderToReadableStream;
-    if (s98.resume) {
-      exports.resume = s98.resume;
+    exports.renderToReadableStream = s99.renderToReadableStream;
+    if (s99.resume) {
+      exports.resume = s99.resume;
     }
   }
 });
@@ -24990,13 +24990,13 @@ async function getPageHtml(pageContext) {
 function getHeadHtml(pageContext) {
   pageContext._headAlreadySet = true;
   const favicon = getHeadSetting("favicon", pageContext);
-  const title13 = getHeadSetting("title", pageContext);
+  const title14 = getHeadSetting("title", pageContext);
   const description3 = getHeadSetting("description", pageContext);
-  const image7 = getHeadSetting("image", pageContext);
+  const image6 = getHeadSetting("image", pageContext);
   const faviconTag = !favicon ? "" : escapeInject`<link rel="icon" href="${favicon}" />`;
-  const titleTags = !title13 ? "" : escapeInject`<title>${title13}</title><meta property="og:title" content="${title13}" />`;
+  const titleTags = !title14 ? "" : escapeInject`<title>${title14}</title><meta property="og:title" content="${title14}" />`;
   const descriptionTags = !description3 ? "" : escapeInject`<meta name="description" content="${description3}" /><meta property="og:description" content="${description3}" />`;
-  const imageTags = !image7 ? "" : escapeInject`<meta property="og:image" content="${image7}"><meta name="twitter:card" content="summary_large_image">`;
+  const imageTags = !image6 ? "" : escapeInject`<meta property="og:image" content="${image6}"><meta name="twitter:card" content="summary_large_image">`;
   const viewportTag = dangerouslySkipEscape(getViewportTag(getHeadSetting("viewport", pageContext)));
   const headElementsHtml = dangerouslySkipEscape([
     // Added by +Head
@@ -25122,16 +25122,16 @@ function n(e23, t46) {
     ve("region"), ye = H(ye);
   }
 }
-function a({ node: e23 = [], from: r11, source: n25, parent: a45 = r11 || n25, to: o21, target: s98, child: i33 = o21 || s98, scope: c37 = {}, meta: l27 = {}, family: d16 = { type: "regular" }, regional: u6 } = {}) {
+function a({ node: e23 = [], from: r11, source: n25, parent: a45 = r11 || n25, to: o21, target: s99, child: i33 = o21 || s99, scope: c37 = {}, meta: l27 = {}, family: d16 = { type: "regular" }, regional: u6 } = {}) {
   const f35 = $e(a45), p34 = $e(d16.links), m32 = $e(d16.owners), g11 = [];
   t(e23, (e24) => e24 && ie(g11, e24));
   const h16 = { id: pe(), seq: g11, next: $e(i33), meta: l27, scope: c37, family: { triggers: f35.length, type: d16.type || "crosslink", links: p34, owners: m32 } };
   return t(p34, (e24) => ie(V(e24), h16)), t(m32, (e24) => ie(L(e24), h16)), t(f35, (e24) => ie(e24.next, h16)), u6 && ye && Se(W(ye), [h16]), h16;
 }
 function o(e23, r11, n25) {
-  let a45, o21 = ot, s98 = null, i33 = tt;
-  if (e23.target && (r11 = e23.params, n25 = e23.defer, a45 = e23.meta, o21 = "page" in e23 ? e23.page : o21, e23.stack && (s98 = e23.stack), i33 = U(e23) || i33, e23 = e23.target), i33 && tt && i33 !== tt && (tt = null), Array.isArray(e23)) for (let t46 = 0; t46 < e23.length; t46++) Xe("pure", o21, _(e23[t46]), s98, r11[t46], i33, a45);
-  else Xe("pure", o21, _(e23), s98, r11, i33, a45);
+  let a45, o21 = ot, s99 = null, i33 = tt;
+  if (e23.target && (r11 = e23.params, n25 = e23.defer, a45 = e23.meta, o21 = "page" in e23 ? e23.page : o21, e23.stack && (s99 = e23.stack), i33 = U(e23) || i33, e23 = e23.target), i33 && tt && i33 !== tt && (tt = null), Array.isArray(e23)) for (let t46 = 0; t46 < e23.length; t46++) Xe("pure", o21, _(e23[t46]), s99, r11[t46], i33, a45);
+  else Xe("pure", o21, _(e23), s99, r11, i33, a45);
   if (n25 && !rt) return;
   const c37 = { isRoot: rt, currentPage: ot, scope: tt, isWatch: nt, isPure: at };
   let l27, d16, u6, f35, p34, m32;
@@ -25139,17 +25139,17 @@ function o(e23, r11, n25) {
   e: for (; f35 = Qe(); ) {
     const { idx: e24, stack: r12, type: n26 } = f35;
     u6 = r12.node, ot = p34 = r12.page, tt = U(r12), p34 ? m32 = p34.reg : tt && (m32 = tt.reg);
-    const a46 = !!p34, o22 = !!tt, s99 = { fail: 0, scope: u6.scope };
+    const a46 = !!p34, o22 = !!tt, s100 = { fail: 0, scope: u6.scope };
     l27 = d16 = 0;
     for (let t46 = e24; t46 < u6.seq.length && !l27; t46++) {
       const i34 = u6.seq[t46];
       if (i34.order) {
-        const { priority: a47, barrierID: o23 } = i34.order, s100 = o23 ? p34 ? `${p34.fullID}_${o23}` : o23 : 0;
+        const { priority: a47, barrierID: o23 } = i34.order, s101 = o23 ? p34 ? `${p34.fullID}_${o23}` : o23 : 0;
         if (t46 !== e24 || n26 !== a47) {
-          o23 ? et.has(s100) || (et.add(s100), Ye(t46, r12, a47, o23)) : Ye(t46, r12, a47, 0);
+          o23 ? et.has(s101) || (et.add(s101), Ye(t46, r12, a47, o23)) : Ye(t46, r12, a47, 0);
           continue e;
         }
-        o23 && et.delete(s100);
+        o23 && et.delete(s101);
       }
       switch (i34.type) {
         case "mov": {
@@ -25190,13 +25190,13 @@ function o(e23, r11, n25) {
           const e25 = i34.data;
           if (e25.fn) {
             nt = "watch" === u6.meta.op, at = e25.pure;
-            const t47 = e25.safe ? (0, e25.fn)(W(r12), s99.scope, r12) : gt(s99, e25.fn, r12);
+            const t47 = e25.safe ? (0, e25.fn)(W(r12), s100.scope, r12) : gt(s100, e25.fn, r12);
             e25.filter ? d16 = !t47 : r12.value = t47, nt = c37.isWatch, at = c37.isPure;
           }
       }
-      l27 = s99.fail || d16;
+      l27 = s100.fail || d16;
     }
-    if (ut && ut(r12, s99), !l27) {
+    if (ut && ut(r12, s100), !l27) {
       const e25 = W(r12), n27 = U(r12);
       if (t(u6.next, (t46) => {
         Xe("child", p34, t46, r12, e25, n27);
@@ -25261,32 +25261,32 @@ function f(e23, ...t46) {
   }
 }
 function p(e23, t46) {
-  const n25 = ht({ or: t46, and: "string" == typeof e23 ? { name: e23 } : e23 }), s98 = l("event", n25), i33 = (e24, ...t47) => (r(!G(i33, "derived"), "call of derived event is not supported, use createEvent instead", s98), r(!at, "unit call from pure function is not supported, use operators like sample instead", s98), ot ? ((e25, t48, r11, n26) => {
+  const n25 = ht({ or: t46, and: "string" == typeof e23 ? { name: e23 } : e23 }), s99 = l("event", n25), i33 = (e24, ...t47) => (r(!G(i33, "derived"), "call of derived event is not supported, use createEvent instead", s99), r(!at, "unit call from pure function is not supported, use operators like sample instead", s99), ot ? ((e25, t48, r11, n26) => {
     const a45 = ot;
     let o21 = null;
     if (t48) for (o21 = ot; o21 && o21.template !== t48; ) o21 = H(o21);
     ct(o21);
-    const s99 = e25.create(r11, n26);
-    return ct(a45), s99;
+    const s100 = e25.create(r11, n26);
+    return ct(a45), s100;
   })(i33, c37, e24, t47) : i33.create(e24, t47)), c37 = be(), d16 = Object.assign(i33, { graphite: a({ meta: At(n25.actualOp || "event", i33, n25), regional: 1 }), create: (e24) => (o({ target: i33, params: e24, scope: tt }), e24), watch: (e24) => xt(i33, e24), map: (e24) => jt(i33, P, e24, [Ve()]), filter: (e24) => jt(i33, "filter", e24.fn ? e24 : e24.fn, [Ve(Oe, 1)]), filterMap: (e24) => jt(i33, "filterMap", e24, [Ve(), Pe((e25) => !ze(e25), 1)]), prepend(e24) {
-    r(i33.targetable, ".prepend of derived event is not supported, call source event instead", s98);
+    r(i33.targetable, ".prepend of derived event is not supported, call source event instead", s99);
     const t47 = p("* \u2192 " + i33.shortName, { parent: H(i33) });
     return f("eventPrepend", _(t47)), $t(t47, i33, [Ve()], "prepend", e24), zt(i33, t47), t47;
   } });
   return null != n25 && n25.domain && n25.domain.hooks.event(d16), J(d16, "id", d16.graphite.id), ve(d16.graphite), d16;
 }
-function m(e23, n25, a45, o21, s98) {
-  return Ce(a45, `${s98} ${n25}`, "first argument"), r(xe(o21), "second argument should be a function", s98), ce(!G(e23, "derived"), `${n25} in derived store`, `${n25} in store created via createStore`, s98), t(Array.isArray(a45) ? a45 : [a45], (t46) => {
+function m(e23, n25, a45, o21, s99) {
+  return Ce(a45, `${s99} ${n25}`, "first argument"), r(xe(o21), "second argument should be a function", s99), ce(!G(e23, "derived"), `${n25} in derived store`, `${n25} in store created via createStore`, s99), t(Array.isArray(a45) ? a45 : [a45], (t46) => {
     e23.off(t46), Nt(t46, e23, "on", Ie, o21);
   }), e23;
 }
 function g(e23, n25) {
-  const s98 = ht(n25), i33 = Be(e23), c37 = l("store", s98), d16 = Error();
+  const s99 = ht(n25), i33 = Be(e23), c37 = l("store", s99), d16 = Error();
   Error.captureStackTrace && Error.captureStackTrace(d16, g);
   const u6 = d16.stack, h16 = p({ named: "updates", derived: 1 });
   f("storeBase", i33);
-  const y8 = i33.id, v9 = "skipVoid" in s98, b7 = v9 && !s98.skipVoid;
-  ce(!(v9 && s98.skipVoid), "{skipVoid: true}", "updateFilter", c37);
+  const y8 = i33.id, v9 = "skipVoid" in s99, b7 = v9 && !s99.skipVoid;
+  ce(!(v9 && s99.skipVoid), "{skipVoid: true}", "updateFilter", c37);
   const k8 = { updates: h16, defaultState: e23, stateRef: i33, getState() {
     let e24, t46 = i33;
     if (ot) {
@@ -25303,15 +25303,15 @@ function g(e23, n25) {
     Me(e24) && (r11 = e24, e24 = e24.fn);
     const a45 = k8.getState(), o21 = ze(a45);
     be() ? n26 = null : (!o21 || o21 && b7) && (n26 = e24(a45));
-    const s99 = g(n26, { name: `${k8.shortName} \u2192 *`, derived: 1, ...t46, and: r11 }), c38 = Nt(k8, s99, P, Oe, e24);
-    return He(B(s99), { type: P, fn: e24, from: i33 }), B(s99).noInit = 1, f("storeMap", i33, c38), s99;
+    const s100 = g(n26, { name: `${k8.shortName} \u2192 *`, derived: 1, ...t46, and: r11 }), c38 = Nt(k8, s100, P, Oe, e24);
+    return He(B(s100), { type: P, fn: e24, from: i33 }), B(s100).noInit = 1, f("storeMap", i33, c38), s100;
   }, watch(e24, t46) {
     if (ce(!t46, "watch second argument", "sample", c37), !t46 || !Q(e24)) {
       const t47 = xt(k8, e24);
       return f("storeWatch", i33, e24) || e24(k8.getState()), t47;
     }
     return r(xe(t46), "second argument should be a function", c37), e24.watch((e25) => t46(k8.getState(), e25));
-  } }, w20 = At("store", k8, s98), S10 = k8.defaultConfig.updateFilter;
+  } }, w20 = At("store", k8, s99), S10 = k8.defaultConfig.updateFilter;
   k8.graphite = a({ scope: { state: i33, fn: S10 }, node: [Pe((e24, t46, r11) => (r11.scope && !r11.scope.reg[i33.id] && (r11.b = 1), e24)), _e(i33), Pe((e24, t46, { a: r11, b: n26 }) => {
     const a45 = ze(e24);
     return a45 && !v9 && le(`${c37}: ${Ct}`, u6), (a45 && b7 || !a45) && (e24 !== r11 || n26);
@@ -25319,12 +25319,12 @@ function g(e23, n25) {
   const $4 = G(k8, "serialize"), M6 = G(k8, "derived"), x6 = "ignore" === $4, z6 = G(k8, "sid");
   z6 && (J(k8, "storeChange", 1), i33.sid = z6), z6 || x6 || M6 || J(k8, "warnSerialize", 1);
   const A8 = ze(e23);
-  return r(M6 || !A8 || A8 && b7, Ct, c37), M6 && A8 && !v9 && console.error(`${c37}: ${Ct}`), Se(k8, [h16]), null != s98 && s98.domain && s98.domain.hooks.store(k8), M6 || (k8.reinit = p({ named: "reinit" }), k8.reset(k8.reinit)), i33.meta = k8.graphite.meta, ve(k8.graphite), k8;
+  return r(M6 || !A8 || A8 && b7, Ct, c37), M6 && A8 && !v9 && console.error(`${c37}: ${Ct}`), Se(k8, [h16]), null != s99 && s99.domain && s99.domain.hooks.store(k8), M6 || (k8.reinit = p({ named: "reinit" }), k8.reset(k8.reinit)), i33.meta = k8.graphite.meta, ve(k8.graphite), k8;
 }
 function h(...e23) {
   let t46, n25, a45;
   [e23, a45] = d(e23);
-  const o21 = l("combine", a45), s98 = e23[e23.length - 1], i33 = e23.length > 1 && !Y(s98) && Me(s98), c37 = i33 && s98, u6 = i33 ? e23[e23.length - 2] : s98;
+  const o21 = l("combine", a45), s99 = e23[e23.length - 1], i33 = e23.length > 1 && !Y(s99) && Me(s99), c37 = i33 && s99, u6 = i33 ? e23[e23.length - 2] : s99;
   let f35, p34, m32;
   if (xe(u6) ? (n25 = e23.slice(0, i33 ? -2 : -1), t46 = u6) : n25 = e23, 1 === n25.length) {
     const e24 = n25[0];
@@ -25345,8 +25345,8 @@ function y() {
   }), e23;
 }
 function v(e23, t46 = {}) {
-  const n25 = ht(xe(e23) ? { handler: e23 } : e23, t46), s98 = l("effect", n25), i33 = p(xe(e23) ? { handler: e23 } : e23, { ...t46, actualOp: "effect" }), c37 = _(i33);
-  J(c37, "op", i33.kind = "effect"), i33.use = (e24) => (r(xe(e24), ".use argument should be a function", s98), v9.scope.handler = e24, i33), i33.use.getCurrent = () => v9.scope.handler;
+  const n25 = ht(xe(e23) ? { handler: e23 } : e23, t46), s99 = l("effect", n25), i33 = p(xe(e23) ? { handler: e23 } : e23, { ...t46, actualOp: "effect" }), c37 = _(i33);
+  J(c37, "op", i33.kind = "effect"), i33.use = (e24) => (r(xe(e24), ".use argument should be a function", s99), v9.scope.handler = e24, i33), i33.use.getCurrent = () => v9.scope.handler;
   const d16 = i33.finally = p({ named: "finally", derived: 1 }), u6 = i33.done = d16.filterMap({ named: "done", fn({ status: e24, params: t47, result: r11 }) {
     if ("done" === e24) return { params: t47, result: r11 };
   } }), f35 = i33.fail = d16.filterMap({ named: "fail", fn({ status: e24, params: t47, error: r11 }) {
@@ -25361,7 +25361,7 @@ function v(e23, t46 = {}) {
     return e24.handler = n26, e24;
   }, 0, 1), Pe((e24, t47, r11) => {
     if (t47.runnerFn && !t47.runnerFn(e24, null, r11)) return;
-    const { params: n26, req: a45, handler: o21, args: s99 = [n26] } = e24, i34 = Ot(n26, a45, 1, d16, r11), c38 = Ot(n26, a45, 0, d16, r11), [l27, u7] = It(o21, c38, s99);
+    const { params: n26, req: a45, handler: o21, args: s100 = [n26] } = e24, i34 = Ot(n26, a45, 1, d16, r11), c38 = Ot(n26, a45, 0, d16, r11), [l27, u7] = It(o21, c38, s100);
     l27 && (Me(u7) && xe(u7.then) ? u7.then(i34, c38) : i34(u7));
   }, 0, 1)], meta: { op: "fx", fx: "runner" }, regional: 1 });
   c37.scope.runner = v9, ie(c37.seq, Pe((e24, { runner: t47 }, r11) => {
@@ -25389,27 +25389,27 @@ function b(e23) {
   let t46;
   [e23, t46] = d(e23, 1);
   const n25 = l("attach", t46);
-  let { source: a45, effect: s98, mapParams: i33, domain: u6 } = e23;
-  ee(s98) && r(ze(u6), "`domain` can only be used with a plain function", n25);
+  let { source: a45, effect: s99, mapParams: i33, domain: u6 } = e23;
+  ee(s99) && r(ze(u6), "`domain` can only be used with a plain function", n25);
   const f35 = v(e23, t46);
   J(f35, "attached", 1);
   const { runner: p34 } = _(f35).scope;
   let m32;
   const g11 = (e24, t47, r11) => {
-    const { params: n26, req: s99, handler: c37 } = e24, l27 = f35.finally, d16 = Ot(n26, s99, 0, l27, r11), u7 = r11.a, p35 = ee(c37);
+    const { params: n26, req: s100, handler: c37 } = e24, l27 = f35.finally, d16 = Ot(n26, s100, 0, l27, r11), u7 = r11.a, p35 = ee(c37);
     let m33, g12 = 1;
     if (i33 ? [g12, m33] = It(i33, d16, [n26, u7]) : m33 = a45 && p35 ? u7 : n26, g12) {
       if (!p35) return e24.args = [u7, m33], 1;
-      o({ target: c37, params: { params: m33, req: { rs: Ot(n26, s99, 1, l27, r11), rj: d16 } }, page: r11.page, defer: 1, meta: r11.meta });
+      o({ target: c37, params: { params: m33, req: { rs: Ot(n26, s100, 1, l27, r11), rj: d16 } }, page: r11.page, defer: 1, meta: r11.meta });
     }
   };
   if (a45) {
     let e24;
     p34.scope.runnerFn = g11, Y(a45) ? (e24 = a45, Se(e24, [f35])) : (e24 = h(a45), Se(f35, [e24])), m32 = [Pe((e25) => e25, 0, 1), _e(B(e24))], delete p34.seq[1].order;
   } else m32 = [Pe(g11, 1, 1)];
-  p34.seq.splice(1, 0, ...m32), f35.use(s98);
-  const y8 = H(s98);
-  return y8 && (Object.assign(K(f35), c(f35.shortName, y8)), f35.defaultConfig.parent = y8), zt(s98, f35, "effect"), f35;
+  p34.seq.splice(1, 0, ...m32), f35.use(s99);
+  const y8 = H(s99);
+  return y8 && (Object.assign(K(f35), c(f35.shortName, y8)), f35.defaultConfig.parent = y8), zt(s99, f35, "effect"), f35;
 }
 function $(e23, n25) {
   let a45 = 0;
@@ -25418,9 +25418,9 @@ function $(e23, n25) {
   }), a45;
 }
 function M(...e23) {
-  let t46, r11, n25, a45, [[o21, s98, i33], c37] = d(e23), u6 = 1;
+  let t46, r11, n25, a45, [[o21, s99, i33], c37] = d(e23), u6 = 1;
   const f35 = l("sample", c37);
-  return ze(s98) && Me(o21) && $(o21, f35) && (s98 = o21.clock, i33 = o21.fn, "batch" in o21 ? u6 = o21.batch : (ce(!("greedy" in o21), "greedy in sample", "batch", f35), u6 = !o21.greedy), a45 = o21.filter, t46 = o21.target, r11 = o21.name, n25 = o21.sid, o21 = o21.source), Et("sample", s98, o21, a45, t46, i33, r11, c37, u6, 1, 0, n25);
+  return ze(s99) && Me(o21) && $(o21, f35) && (s99 = o21.clock, i33 = o21.fn, "batch" in o21 ? u6 = o21.batch : (ce(!("greedy" in o21), "greedy in sample", "batch", f35), u6 = !o21.greedy), a45 = o21.filter, t46 = o21.target, r11 = o21.name, n25 = o21.sid, o21 = o21.source), Et("sample", s99, o21, a45, t46, i33, r11, c37, u6, 1, 0, n25);
 }
 function A(t46, n25, a45) {
   const o21 = l("restore", a45);
@@ -25428,17 +25428,17 @@ function A(t46, n25, a45) {
     const e23 = H(t46), r11 = g(n25, { parent: e23, name: t46.shortName, and: a45 });
     return $t(ee(t46) ? t46.doneData : t46, r11), e23 && e23.hooks.store(r11), r11;
   }
-  const s98 = Array.isArray(t46) ? [] : {};
-  return e(t46, (e23, t47) => s98[t47] = Y(e23) ? e23 : g(e23, { name: t47 })), s98;
+  const s99 = Array.isArray(t46) ? [] : {};
+  return e(t46, (e23, t47) => s99[t47] = Y(e23) ? e23 : g(e23, { name: t47 })), s99;
 }
 function j(...t46) {
   const n25 = "split";
-  let o21, s98, [[i33, c37], u6] = d(t46);
+  let o21, s99, [[i33, c37], u6] = d(t46);
   const m32 = l(n25, u6), g11 = !c37;
-  g11 && (o21 = i33.cases, c37 = i33.match, s98 = i33.clock, i33 = i33.source);
+  g11 && (o21 = i33.cases, c37 = i33.match, s99 = i33.clock, i33 = i33.source);
   const h16 = Y(c37), y8 = !Q(c37) && xe(c37), v9 = !h16 && !y8 && Me(c37);
   r(Q(i33), "source must be a unit", m32), o21 || (o21 = {}), g11 ? e(o21, (e23, t47) => Ne(m32, e23, `cases.${t47}`)) : (r(v9, "match should be an object", m32), e(c37, (e23, t47) => o21[t47] = p({ derived: 1, named: `cases.${t47}`, and: u6 })), o21.__ = p({ derived: 1, named: "cases.__", and: u6 }));
-  const b7 = new Set([].concat(i33, s98 || [], Object.values(o21))), k8 = Object.keys(h16 || y8 ? o21 : c37);
+  const b7 = new Set([].concat(i33, s99 || [], Object.values(o21))), k8 = Object.keys(h16 || y8 ? o21 : c37);
   let w20;
   if (h16 || y8) h16 && b7.add(c37), w20 = [h16 && _e(B(c37), 0, 1), Ee({ safe: h16, filter: 1, pure: !h16, fn(e23, t47, r11) {
     const n26 = String(h16 ? r11.a : c37(e23));
@@ -25467,8 +25467,8 @@ function j(...t46) {
       _t(t48, "__", e23, n27);
     }, 1)];
   } else r(0, "expect match to be unit, function or object");
-  const S10 = a({ meta: { op: n25 }, parent: s98 ? [] : i33, scope: o21, node: w20, family: { owners: Array.from(b7) }, regional: 1 });
-  if (s98 && Et(n25, s98, i33, null, S10, null, n25, u6, 0, 0, 0), !g11) return o21;
+  const S10 = a({ meta: { op: n25 }, parent: s99 ? [] : i33, scope: o21, node: w20, family: { owners: Array.from(b7) }, regional: 1 });
+  if (s99 && Et(n25, s99, i33, null, S10, null, n25, u6, 0, 0, 0), !g11) return o21;
 }
 function C(e23, { scope: t46, params: r11 } = {}) {
   if (!Q(e23)) return Promise.reject(new Error("first argument should be unit"));
@@ -25482,12 +25482,12 @@ function C(e23, { scope: t46, params: r11 } = {}) {
   n25.parentFork = tt;
   const { fxCount: a45 } = t46;
   ie(a45.scope.defers, n25);
-  const s98 = [], i33 = [];
-  return ne(e23) || (ie(s98, e23), ie(i33, ee(e23) ? { params: r11, req: { rs(e24) {
+  const s99 = [], i33 = [];
+  return ne(e23) || (ie(s99, e23), ie(i33, ee(e23) ? { params: r11, req: { rs(e24) {
     n25.value = { status: "done", value: e24 };
   }, rj(e24) {
     n25.value = { status: "fail", value: e24 };
-  } } } : r11)), ie(s98, a45), ie(i33, null), o({ target: s98, params: i33, scope: t46 }), n25.req;
+  } } } : r11)), ie(s99, a45), ie(i33, null), o({ target: s99, params: i33, scope: t46 }), n25.req;
 }
 function N(e23, r11, n25) {
   const a45 = [];
@@ -25497,18 +25497,18 @@ function N(e23, r11, n25) {
 }
 function R(e23, n25) {
   const a45 = Array.isArray(e23) ? new Map(e23) : e23, o21 = /* @__PURE__ */ new Map();
-  let s98 = 0;
+  let s99 = 0;
   if (a45 instanceof Map) {
     const e24 = {};
     return t(a45, (t46, a46) => {
-      r(Q(a46), "Map key should be a unit"), n25 && n25(a46, t46), a46.sid && (a46.sid in e24 && (s98 = 1), e24[a46.sid] = t46), o21.set(a46, t46);
-    }), { sidMap: e24, unitMap: o21, hasSidDoubles: s98 };
+      r(Q(a46), "Map key should be a unit"), n25 && n25(a46, t46), a46.sid && (a46.sid in e24 && (s99 = 1), e24[a46.sid] = t46), o21.set(a46, t46);
+    }), { sidMap: e24, unitMap: o21, hasSidDoubles: s99 };
   }
   return { sidMap: a45, unitMap: o21 };
 }
 function I(e23, n25) {
-  let o21, s98 = e23;
-  re(e23) && (ce(0, "fork(domain)", "fork()"), o21 = e23, s98 = n25);
+  let o21, s99 = e23;
+  re(e23) && (ce(0, "fork(domain)", "fork()"), o21 = e23, s99 = n25);
   const i33 = ((e24) => {
     const r11 = a({ scope: { defers: [], inFlight: 0, fxID: 0 }, node: [Pe((e25, t46, r12) => {
       r12.parent ? "dec" === r12.parent.node.meta.needFxCounter ? t46.inFlight -= 1 : (t46.inFlight += 1, t46.fxID += 1) : t46.fxID += 1;
@@ -25533,24 +25533,24 @@ function I(e23, n25) {
     })] }), o22 = a({ node: [Pe((e25, t46, r12) => {
       const n27 = U(r12), a45 = r12.parent;
       n27 && a45 && Lt(a45) && n27.warnSerializeTraces.add(G(a45.node, "storeTrace"));
-    })] }), s99 = { cloneOf: e24, reg: {}, values: { sidMap: {}, idMap: {} }, sidIdMap: {}, sidSerializeSettings: /* @__PURE__ */ new Map(), getState(e25) {
-      if ("current" in e25) return dt(ot, s99, e25, 0).current;
+    })] }), s100 = { cloneOf: e24, reg: {}, values: { sidMap: {}, idMap: {} }, sidIdMap: {}, sidSerializeSettings: /* @__PURE__ */ new Map(), getState(e25) {
+      if ("current" in e25) return dt(ot, s100, e25, 0).current;
       const t46 = _(e25);
-      return dt(ot, s99, t46.scope.state, 1).current;
+      return dt(ot, s100, t46.scope.state, 1).current;
     }, kind: "scope", graphite: a({ family: { type: "domain", links: [r11, n26, o22] }, meta: { unit: "fork" }, scope: { forkInFlightCounter: r11 } }), additionalLinks: {}, handlers: { sidMap: {}, unitMap: /* @__PURE__ */ new Map() }, fxCount: r11, storeChange: n26, warnSerializeTraces: /* @__PURE__ */ new Set(), warnSerializeNode: o22 };
-    return s99;
+    return s100;
   })(o21);
-  if (s98) {
-    if (s98.values) {
-      const { sidMap: e24, unitMap: n26, hasSidDoubles: a45 } = R(s98.values, (e25) => r(Y(e25) && te(e25), "Values map can contain only writable stores as keys"));
+  if (s99) {
+    if (s99.values) {
+      const { sidMap: e24, unitMap: n26, hasSidDoubles: a45 } = R(s99.values, (e25) => r(Y(e25) && te(e25), "Values map can contain only writable stores as keys"));
       Object.assign(i33.values.sidMap, e24), t(n26, (e25, t46) => {
         if (i33.values.idMap[t46.stateRef.id] = e25, i33.sidIdMap[G(t46, "sid")] = t46.stateRef.id, "ignore" === G(t46, "serialize")) {
           const e26 = G(t46, "sid");
           i33.sidSerializeSettings.set(e26, { ignore: 1 });
         }
-      }), i33.fromSerialize = !(Array.isArray(s98.values) || s98.values instanceof Map), i33.hasSidDoubles = a45;
+      }), i33.fromSerialize = !(Array.isArray(s99.values) || s99.values instanceof Map), i33.hasSidDoubles = a45;
     }
-    s98.handlers && (ce(s98.handlers instanceof Map || Array.isArray(s98.handlers), "object with handlers", "array"), i33.handlers = R(s98.handlers, (e24) => r(ee(e24), "Handlers map can contain only effects as keys")));
+    s99.handlers && (ce(s99.handlers instanceof Map || Array.isArray(s99.handlers), "object with handlers", "array"), i33.handlers = R(s99.handlers, (e24) => r(ee(e24), "Handlers map can contain only effects as keys")));
   }
   return i33;
 }
@@ -25559,10 +25559,10 @@ function F(e23, { scope: t46, safe: n25 } = {}) {
   const a45 = t46 || tt;
   return (...t47) => {
     function r11() {
-      st(s98);
+      st(s99);
     }
     let n26, o21 = 0;
-    const s98 = tt;
+    const s99 = tt;
     st(a45);
     try {
       n26 = e23(...t47);
@@ -25577,36 +25577,36 @@ function q(n25, a45 = {}) {
   n25.warnSerializeTraces.size && (console.error("serialize: One or more stores dont have sids, their values are omitted"), t(n25.warnSerializeTraces, (e23) => {
     le("store should have sid or `serialize: ignore`", e23);
   })), r(!n25.hasSidDoubles, "duplicate sid found in this scope");
-  const o21 = a45.ignore ? a45.ignore.map(({ sid: e23 }) => e23) : [], s98 = {};
+  const o21 = a45.ignore ? a45.ignore.map(({ sid: e23 }) => e23) : [], s99 = {};
   return e(n25.values.sidMap, (e23, t46) => {
     var r11;
     if (oe(o21, t46)) return;
     const a46 = n25.sidIdMap[t46], i33 = null !== (r11 = n25.sidSerializeSettings.get(t46)) && void 0 !== r11 ? r11 : { ignore: 0, write: Bt };
-    i33.ignore || (s98[t46] = (0, i33.write)(a46 && a46 in n25.reg ? n25.reg[a46].current : e23));
+    i33.ignore || (s99[t46] = (0, i33.write)(a46 && a46 in n25.reg ? n25.reg[a46].current : e23));
   }), "onlyChanges" in a45 && (ce(0, "onlyChanges"), a45.onlyChanges || (r(n25.cloneOf, "scope should be created from domain"), N(_(n25.cloneOf), (e23, t46) => {
-    t46 in s98 || oe(o21, t46) || G(e23, "isCombine") || "ignore" === G(e23, "serialize") || (s98[t46] = n25.getState(e23));
-  }))), s98;
+    t46 in s99 || oe(o21, t46) || G(e23, "isCombine") || "ignore" === G(e23, "serialize") || (s99[t46] = n25.getState(e23));
+  }))), s99;
 }
 function D({ unit: e23, fn: t46, scope: r11, batch: n25 }) {
   const o21 = [Le.run({ fn: (e24) => t46(e24) })];
   n25 && o21.unshift(Le.compute({ priority: "sampler", batch: 1 })), Y(e23) && o21.unshift(Le.mov({ store: e23.stateRef, to: "stack" }));
-  const s98 = Array.isArray(e23) ? e23 : [e23];
+  const s99 = Array.isArray(e23) ? e23 : [e23];
   if (r11) {
     const e24 = [], t47 = r11.additionalLinks;
-    return s98.forEach((r12) => {
+    return s99.forEach((r12) => {
       const n26 = t47[r12.graphite.id] || [];
       t47[r12.graphite.id] = n26;
-      const s99 = a({ node: E(o21, r12), meta: { watchOp: r12.kind } });
-      n26.push(s99), e24.push(() => {
-        const e25 = n26.indexOf(s99);
-        -1 !== e25 && n26.splice(e25, 1), wt(s99);
+      const s100 = a({ node: E(o21, r12), meta: { watchOp: r12.kind } });
+      n26.push(s100), e24.push(() => {
+        const e25 = n26.indexOf(s100);
+        -1 !== e25 && n26.splice(e25, 1), wt(s100);
       });
     }), u(() => {
       e24.forEach((e25) => e25());
     });
   }
   {
-    const e24 = a({ node: o21, parent: s98, family: { owners: s98 } });
+    const e24 = a({ node: o21, parent: s99, family: { owners: s99 } });
     return u(() => {
       wt(e24);
     });
@@ -25664,7 +25664,7 @@ var init_effector = __esm({
     };
     be = () => ye && ye.template;
     ke = (e23) => (e23 && ye && ye.sidRoot && (e23 = `${ye.sidRoot}|${e23}`), e23);
-    we = ({ sid: e23, name: t46, loc: r11, method: o21, fn: s98 }) => n(a({ meta: { sidRoot: ke(e23), sid: e23, name: t46, loc: r11, method: o21, type: "factory" }, regional: 1 }), s98);
+    we = ({ sid: e23, name: t46, loc: r11, method: o21, fn: s99 }) => n(a({ meta: { sidRoot: ke(e23), sid: e23, name: t46, loc: r11, method: o21, type: "factory" }, regional: 1 }), s99);
     Se = (e23, r11) => {
       const n25 = _(e23);
       t(r11, (e24) => {
@@ -25727,10 +25727,10 @@ var init_effector = __esm({
         }
       }
     };
-    Xe = (e23, t46, r11, n25, a45, o21, s98) => Ye(0, { a: null, b: null, node: r11, parent: n25, value: a45, page: t46, scope: o21, meta: s98 }, e23, 0);
+    Xe = (e23, t46, r11, n25, a45, o21, s99) => Ye(0, { a: null, b: null, node: r11, parent: n25, value: a45, page: t46, scope: o21, meta: s99 }, e23, 0);
     Ye = (e23, t46, r11, n25) => {
-      const a45 = Ze(r11), o21 = Je[a45], s98 = { v: { idx: e23, stack: t46, type: r11, id: n25 }, l: null, r: null };
-      3 === a45 || 4 === a45 ? Ue = Ge(Ue, s98) : (0 === o21.size ? o21.first = s98 : o21.last.r = s98, o21.last = s98), o21.size += 1;
+      const a45 = Ze(r11), o21 = Je[a45], s99 = { v: { idx: e23, stack: t46, type: r11, id: n25 }, l: null, r: null };
+      3 === a45 || 4 === a45 ? Ue = Ge(Ue, s99) : (0 === o21.size ? o21.first = s99 : o21.last.r = s99, o21.last = s99), o21.size += 1;
     };
     Ze = (e23) => {
       switch (e23) {
@@ -25774,8 +25774,8 @@ var init_effector = __esm({
     };
     pt = (e23) => e23;
     mt = (e23, r11, n25, a45, o21) => {
-      const s98 = e23.reg;
-      if (s98[r11.id]) return;
+      const s99 = e23.reg;
+      if (s99[r11.id]) return;
       const i33 = r11.sid, c37 = { id: r11.id, current: r11.initial, meta: r11.meta };
       if (c37.id in e23.values.idMap) c37.current = e23.values.idMap[c37.id];
       else if (i33 && i33 in e23.values.sidMap && !(i33 in e23.sidIdMap)) {
@@ -25790,17 +25790,17 @@ var init_effector = __esm({
             case "map": {
               const r12 = t46.from;
               if ((r12 || t46.fn) && (r12 && mt(e23, r12, n25, a45), i34)) {
-                const e24 = r12 && s98[r12.id].current;
+                const e24 = r12 && s99[r12.id].current;
                 c37.current = t46.fn ? t46.fn(e24) : e24;
               }
               break;
             }
             case "field":
-              mt(e23, t46.from, n25, a45), o22 || (o22 = 1, c37.current = Array.isArray(c37.current) ? [...c37.current] : { ...c37.current }), i34 && (c37.current[t46.field] = s98[s98[t46.from.id].id].current);
+              mt(e23, t46.from, n25, a45), o22 || (o22 = 1, c37.current = Array.isArray(c37.current) ? [...c37.current] : { ...c37.current }), i34 && (c37.current[t46.field] = s99[s99[t46.from.id].id].current);
           }
         });
       }
-      i33 && (e23.sidIdMap[i33] = r11.id), s98[r11.id] = c37;
+      i33 && (e23.sidIdMap[i33] = r11.id), s99[r11.id] = c37;
     };
     gt = (e23, t46, r11) => {
       try {
@@ -25819,16 +25819,16 @@ var init_effector = __esm({
     bt = (e23, t46, r11, n25, a45) => {
       let o21;
       e23.next.length = 0, e23.seq.length = 0, e23.scope = null;
-      let s98 = L(e23);
+      let s99 = L(e23);
       const i33 = e23.meta.isRegion, c37 = i33 ? e23 : n25;
-      if (s98.length > 0) {
+      if (s99.length > 0) {
         const n26 = oe(vt, e23.meta.op), l27 = !i33 && !a45, d16 = l27 && r11 && !n26;
-        for (; o21 = s98.pop(); ) {
-          const s99 = oe(o21.next, e23);
-          yt(o21, e23), i33 && bt(o21, 0, 0, e23, 1), s99 || (o21.family.triggers -= 1), (t46 || d16 || l27 && "crosslink" === o21.family.type && !n26 || a45 && oe(vt, o21.meta.op) && (s99 && 0 === o21.next.length || !s99 && o21.family.triggers <= 0)) && bt(o21, t46, r11 && "on" !== o21.meta.op, c37, a45);
+        for (; o21 = s99.pop(); ) {
+          const s100 = oe(o21.next, e23);
+          yt(o21, e23), i33 && bt(o21, 0, 0, e23, 1), s100 || (o21.family.triggers -= 1), (t46 || d16 || l27 && "crosslink" === o21.family.type && !n26 || a45 && oe(vt, o21.meta.op) && (s100 && 0 === o21.next.length || !s100 && o21.family.triggers <= 0)) && bt(o21, t46, r11 && "on" !== o21.meta.op, c37, a45);
         }
       }
-      for (s98 = V(e23); o21 = s98.pop(); ) yt(o21, e23), r11 && "crosslink" === o21.family.type && bt(o21, t46, "on" !== o21.meta.op, c37, a45);
+      for (s99 = V(e23); o21 = s99.pop(); ) yt(o21, e23), r11 && "crosslink" === o21.family.type && bt(o21, t46, "on" !== o21.meta.op, c37, a45);
     };
     kt = (e23) => e23.clear();
     wt = (e23, { deep: t46 } = {}) => {
@@ -25847,7 +25847,7 @@ var init_effector = __esm({
       H(e23) && H(e23).hooks[r11](t46);
     };
     At = (e23, t46, r11) => {
-      const n25 = ht(r11), a45 = "domain" === e23, o21 = ue(), { sid: s98 = null, named: i33 = null, domain: l27 = null, parent: d16 = l27 } = n25, u6 = i33 || n25.name || (a45 ? "" : o21), f35 = c(u6, d16), p34 = { op: t46.kind = e23, name: t46.shortName = u6, sid: t46.sid = ke(s98), named: i33, unitId: t46.id = o21, serialize: n25.serialize, derived: n25.derived, config: n25 };
+      const n25 = ht(r11), a45 = "domain" === e23, o21 = ue(), { sid: s99 = null, named: i33 = null, domain: l27 = null, parent: d16 = l27 } = n25, u6 = i33 || n25.name || (a45 ? "" : o21), f35 = c(u6, d16), p34 = { op: t46.kind = e23, name: t46.shortName = u6, sid: t46.sid = ke(s99), named: i33, unitId: t46.id = o21, serialize: n25.serialize, derived: n25.derived, config: n25 };
       if (t46.targetable = !n25.derived, t46.parent = d16, t46.compositeName = f35, t46.defaultConfig = n25, t46.getType = () => (ce(0, "getType", "compositeName.fullName"), f35.fullName), !a45) {
         t46.subscribe = (e25) => (Ae(e25), t46.watch(xe(e25) ? e25 : (t47) => e25.next && e25.next(t47))), t46[T] = () => t46;
         const e24 = be();
@@ -25863,9 +25863,9 @@ var init_effector = __esm({
     };
     Ct = "undefined is used to skip updates. To allow undefined as a value provide explicit { skipVoid: false } option";
     Nt = (e23, t46, r11, n25, a45) => {
-      const o21 = B(t46), s98 = De({ store: o21, to: "a", priority: "read" });
-      r11 === P && (s98.data.softRead = 1);
-      const i33 = [s98, Ve(n25)];
+      const o21 = B(t46), s99 = De({ store: o21, to: "a", priority: "read" });
+      r11 === P && (s99.data.softRead = 1);
+      const i33 = [s99, Ve(n25)];
       f("storeOnMap", o21, i33, Y(e23) && B(e23));
       const c37 = $t(e23, t46, i33, r11, a45);
       return r11 !== P && J(c37, "onTrigger", _(e23).id), c37;
@@ -25902,38 +25902,38 @@ var init_effector = __esm({
         return t46(e24), [0, null];
       }
     };
-    Ot = (e23, t46, r11, n25, a45) => (s98) => {
-      o({ target: [n25, Ft], params: [r11 ? { status: "done", params: e23, result: s98 } : { status: "fail", params: e23, error: s98 }, { value: s98, fn: r11 ? t46.rs : t46.rj }], defer: 1, page: a45.page, scope: a45.scope, meta: a45.meta });
+    Ot = (e23, t46, r11, n25, a45) => (s99) => {
+      o({ target: [n25, Ft], params: [r11 ? { status: "done", params: e23, result: s99 } : { status: "fail", params: e23, error: s99 }, { value: s99, fn: r11 ? t46.rs : t46.rj }], defer: 1, page: a45.page, scope: a45.scope, meta: a45.meta });
     };
     Ft = a({ node: [Te({ fn: ({ fn: e23, value: t46 }) => e23(t46) })], meta: { op: "fx", fx: "sidechain" } });
     qt = ["source", "clock", "target"];
     Dt = (e23, t46) => e23 + `: ${t46} should be defined`;
-    Et = (e23, t46, n25, a45, o21, s98, i33, c37, d16, u6, m32, y8) => {
+    Et = (e23, t46, n25, a45, o21, s99, i33, c37, d16, u6, m32, y8) => {
       const v9 = l(e23, c37), b7 = !!o21;
       r(!ze(n25) || !ze(t46), Dt(v9, "either source or clock"));
       let k8 = 0;
       ze(n25) ? k8 = 1 : Q(n25) || (n25 = h(n25)), ze(t46) ? t46 = n25 : (Ce(t46, v9, "clock"), Array.isArray(t46) && (t46 = $t(t46, [], [], e23))), k8 && (n25 = t46), c37 || i33 || (i33 = n25.shortName);
       let w20 = "none";
-      (m32 || a45) && (Q(a45) ? w20 = "unit" : (r(xe(a45), "`filter` should be function or unit"), w20 = "fn")), o21 ? (Ce(o21, v9, "target"), Ne(v9, o21)) : "none" === w20 && u6 && Y(n25) && Y(t46) ? o21 = g(s98 ? s98(We(B(n25)), We(B(t46))) : We(B(n25)), { name: i33, sid: y8, or: c37 }) : (o21 = p({ name: i33, derived: 1, or: c37 }), f("sampleTarget", _(o21)));
+      (m32 || a45) && (Q(a45) ? w20 = "unit" : (r(xe(a45), "`filter` should be function or unit"), w20 = "fn")), o21 ? (Ce(o21, v9, "target"), Ne(v9, o21)) : "none" === w20 && u6 && Y(n25) && Y(t46) ? o21 = g(s99 ? s99(We(B(n25)), We(B(t46))) : We(B(n25)), { name: i33, sid: y8, or: c37 }) : (o21 = p({ name: i33, derived: 1, or: c37 }), f("sampleTarget", _(o21)));
       const S10 = Be();
       let $4 = [];
       if ("unit" === w20) {
-        const [r11, n26, s99] = Pt(a45, o21, t46, S10, e23);
-        s99 || $4.push(...Tt(n26)), $4.push(...Tt(r11));
+        const [r11, n26, s100] = Pt(a45, o21, t46, S10, e23);
+        s100 || $4.push(...Tt(n26)), $4.push(...Tt(r11));
       }
       const M6 = [];
       if (k8) d16 && M6.push(_e(S10, 1, 1));
       else {
-        const [r11, a46, s99] = Pt(n25, o21, t46, S10, e23);
-        s99 || M6.push(...Tt(a46)), M6.push(_e(r11, 1, d16));
+        const [r11, a46, s100] = Pt(n25, o21, t46, S10, e23);
+        s100 || M6.push(...Tt(a46)), M6.push(_e(r11, 1, d16));
       }
-      const x6 = $t(t46, o21, [f("sampleSourceLoader"), De({ from: "stack", target: S10 }), ...M6, ...$4, _e(S10), "fn" === w20 && Ve((e24, t47, { a: r11 }) => a45(e24, r11), 1), s98 && Ve(Re), f("sampleSourceUpward", b7)], e23, s98);
+      const x6 = $t(t46, o21, [f("sampleSourceLoader"), De({ from: "stack", target: S10 }), ...M6, ...$4, _e(S10), "fn" === w20 && Ve((e24, t47, { a: r11 }) => a45(e24, r11), 1), s99 && Ve(Re), f("sampleSourceUpward", b7)], e23, s99);
       return Se(n25, [x6]), Object.assign(x6.meta, c37, { joint: 1 }), o21;
     };
     Tt = (e23) => [_e(e23), Pe((e24, t46, { a: r11 }) => r11, 1)];
     Pt = (e23, t46, r11, n25, o21) => {
-      const s98 = Y(e23), i33 = s98 ? B(e23) : Be(), c37 = Be(s98);
-      return s98 || a({ parent: e23, node: [De({ from: "stack", target: i33 }), De({ from: "value", store: 1, target: c37 })], family: { owners: [...new Set([e23, t46, r11].flat())], links: t46 }, meta: { op: o21 }, regional: 1 }), f("sampleSource", c37, i33, n25), [i33, c37, s98];
+      const s99 = Y(e23), i33 = s99 ? B(e23) : Be(), c37 = Be(s99);
+      return s99 || a({ parent: e23, node: [De({ from: "stack", target: i33 }), De({ from: "value", store: 1, target: c37 })], family: { owners: [...new Set([e23, t46, r11].flat())], links: t46 }, meta: { op: o21 }, regional: 1 }), f("sampleSource", c37, i33, n25), [i33, c37, s99];
     };
     _t = (e23, t46, r11, n25) => {
       const a45 = e23[t46];
@@ -26032,14 +26032,14 @@ function __extends(d16, b7) {
   }
   d16.prototype = b7 === null ? Object.create(b7) : (__.prototype = b7.prototype, new __());
 }
-function __rest(s98, e23) {
+function __rest(s99, e23) {
   var t46 = {};
-  for (var p34 in s98) if (Object.prototype.hasOwnProperty.call(s98, p34) && e23.indexOf(p34) < 0)
-    t46[p34] = s98[p34];
-  if (s98 != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i33 = 0, p34 = Object.getOwnPropertySymbols(s98); i33 < p34.length; i33++) {
-      if (e23.indexOf(p34[i33]) < 0 && Object.prototype.propertyIsEnumerable.call(s98, p34[i33]))
-        t46[p34[i33]] = s98[p34[i33]];
+  for (var p34 in s99) if (Object.prototype.hasOwnProperty.call(s99, p34) && e23.indexOf(p34) < 0)
+    t46[p34] = s99[p34];
+  if (s99 != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i33 = 0, p34 = Object.getOwnPropertySymbols(s99); i33 < p34.length; i33++) {
+      if (e23.indexOf(p34[i33]) < 0 && Object.prototype.propertyIsEnumerable.call(s99, p34[i33]))
+        t46[p34[i33]] = s99[p34[i33]];
     }
   return t46;
 }
@@ -26203,7 +26203,7 @@ function __exportStar(m32, o21) {
   for (var p34 in m32) if (p34 !== "default" && !Object.prototype.hasOwnProperty.call(o21, p34)) __createBinding(o21, m32, p34);
 }
 function __values(o21) {
-  var s98 = typeof Symbol === "function" && Symbol.iterator, m32 = s98 && o21[s98], i33 = 0;
+  var s99 = typeof Symbol === "function" && Symbol.iterator, m32 = s99 && o21[s99], i33 = 0;
   if (m32) return m32.call(o21);
   if (o21 && typeof o21.length === "number") return {
     next: function() {
@@ -26211,7 +26211,7 @@ function __values(o21) {
       return { value: o21 && o21[i33++], done: !o21 };
     }
   };
-  throw new TypeError(s98 ? "Object is not iterable." : "Symbol.iterator is not defined.");
+  throw new TypeError(s99 ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 function __read(o21, n25) {
   var m32 = typeof Symbol === "function" && o21[Symbol.iterator];
@@ -26236,8 +26236,8 @@ function __spread() {
   return ar2;
 }
 function __spreadArrays() {
-  for (var s98 = 0, i33 = 0, il = arguments.length; i33 < il; i33++) s98 += arguments[i33].length;
-  for (var r11 = Array(s98), k8 = 0, i33 = 0; i33 < il; i33++)
+  for (var s99 = 0, i33 = 0, il = arguments.length; i33 < il; i33++) s99 += arguments[i33].length;
+  for (var r11 = Array(s99), k8 = 0, i33 = 0; i33 < il; i33++)
     for (var a45 = arguments[i33], j5 = 0, jl = a45.length; j5 < jl; j5++, k8++)
       r11[k8] = a45[j5];
   return r11;
@@ -26394,23 +26394,23 @@ function __disposeResources(env) {
     env.error = env.hasError ? new _SuppressedError(e23, env.error, "An error was suppressed during disposal.") : e23;
     env.hasError = true;
   }
-  var r11, s98 = 0;
+  var r11, s99 = 0;
   function next3() {
     while (r11 = env.stack.pop()) {
       try {
-        if (!r11.async && s98 === 1) return s98 = 0, env.stack.push(r11), Promise.resolve().then(next3);
+        if (!r11.async && s99 === 1) return s99 = 0, env.stack.push(r11), Promise.resolve().then(next3);
         if (r11.dispose) {
           var result = r11.dispose.call(r11.value);
-          if (r11.async) return s98 |= 2, Promise.resolve(result).then(next3, function(e23) {
+          if (r11.async) return s99 |= 2, Promise.resolve(result).then(next3, function(e23) {
             fail(e23);
             return next3();
           });
-        } else s98 |= 1;
+        } else s99 |= 1;
       } catch (e23) {
         fail(e23);
       }
     }
-    if (s98 === 1) return env.hasError ? Promise.reject(env.error) : Promise.resolve();
+    if (s99 === 1) return env.hasError ? Promise.reject(env.error) : Promise.resolve();
     if (env.hasError) throw env.error;
   }
   return next3();
@@ -26436,9 +26436,9 @@ var init_tslib_es6 = __esm({
     };
     __assign = function() {
       __assign = Object.assign || function __assign2(t46) {
-        for (var s98, i33 = 1, n25 = arguments.length; i33 < n25; i33++) {
-          s98 = arguments[i33];
-          for (var p34 in s98) if (Object.prototype.hasOwnProperty.call(s98, p34)) t46[p34] = s98[p34];
+        for (var s99, i33 = 1, n25 = arguments.length; i33 < n25; i33++) {
+          s99 = arguments[i33];
+          for (var p34 in s99) if (Object.prototype.hasOwnProperty.call(s99, p34)) t46[p34] = s99[p34];
         }
         return t46;
       };
@@ -29312,10 +29312,10 @@ function hslStringToRgba(hslaString) {
     };
   }
   const h16 = parseInt(matches[1], 10);
-  const s98 = parseInt(matches[2], 10) / 100;
+  const s99 = parseInt(matches[2], 10) / 100;
   const l27 = parseInt(matches[3], 10) / 100;
   const a45 = matches[5] ? parseFloat(matches[5]) : void 0;
-  const chroma = (1 - Math.abs(2 * l27 - 1)) * s98;
+  const chroma = (1 - Math.abs(2 * l27 - 1)) * s99;
   const huePrime = h16 / 60;
   const x6 = chroma * (1 - Math.abs(huePrime % 2 - 1));
   const m32 = l27 - chroma / 2;
@@ -40006,7 +40006,7 @@ var init_Drawer = __esm({
     };
     Drawer = factory((_props, ref) => {
       const {
-        title: title13,
+        title: title14,
         withOverlay,
         overlayProps,
         withCloseButton,
@@ -40018,7 +40018,7 @@ var init_Drawer = __esm({
         ...others
       } = useProps("Drawer", defaultProps48, _props);
       const ctx = useDrawerStackContext();
-      const hasHeader = !!title13 || withCloseButton;
+      const hasHeader = !!title14 || withCloseButton;
       const stackProps = ctx && stackId ? {
         closeOnEscape: ctx.currentId === stackId,
         trapFocus: ctx.currentId === stackId,
@@ -40049,7 +40049,7 @@ var init_Drawer = __esm({
             ),
             /* @__PURE__ */ (0, import_jsx_runtime113.jsxs)(DrawerContent, { __hidden: ctx && stackId && opened ? stackId !== ctx.currentId : false, children: [
               hasHeader && /* @__PURE__ */ (0, import_jsx_runtime113.jsxs)(DrawerHeader, { children: [
-                title13 && /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(DrawerTitle, { children: title13 }),
+                title14 && /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(DrawerTitle, { children: title14 }),
                 withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(DrawerCloseButton, { ...closeButtonProps })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(DrawerBody, { children })
@@ -41662,7 +41662,7 @@ var init_Modal = __esm({
     };
     Modal = factory((_props, ref) => {
       const {
-        title: title13,
+        title: title14,
         withOverlay,
         overlayProps,
         withCloseButton,
@@ -41675,7 +41675,7 @@ var init_Modal = __esm({
         ...others
       } = useProps("Modal", defaultProps68, _props);
       const ctx = useModalStackContext();
-      const hasHeader = !!title13 || withCloseButton;
+      const hasHeader = !!title14 || withCloseButton;
       const stackProps = ctx && stackId ? {
         closeOnEscape: ctx.currentId === stackId,
         trapFocus: ctx.currentId === stackId,
@@ -41712,7 +41712,7 @@ var init_Modal = __esm({
                 __hidden: ctx && stackId && opened ? stackId !== ctx.currentId : false,
                 children: [
                   hasHeader && /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(ModalHeader, { children: [
-                    title13 && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(ModalTitle, { children: title13 }),
+                    title14 && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(ModalTitle, { children: title14 }),
                     withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(ModalCloseButton, { ...closeButtonProps })
                   ] }),
                   /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(ModalBody, { children })
@@ -41781,7 +41781,7 @@ var init_Notification = __esm({
         loading,
         withCloseButton,
         withBorder,
-        title: title13,
+        title: title14,
         icon: icon2,
         children,
         onClose,
@@ -41820,8 +41820,8 @@ var init_Notification = __esm({
             icon2 && !loading && /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { ...getStyles("icon"), children: icon2 }),
             loading && /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(Loader, { size: 28, color, ...getStyles("loader") }),
             /* @__PURE__ */ (0, import_jsx_runtime141.jsxs)("div", { ...getStyles("body"), children: [
-              title13 && /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { ...getStyles("title"), children: title13 }),
-              /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(Box, { ...getStyles("description"), mod: { "data-with-title": !!title13 }, children })
+              title14 && /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { ...getStyles("title"), children: title14 }),
+              /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(Box, { ...getStyles("description"), mod: { "data-with-title": !!title14 }, children })
             ] }),
             withCloseButton && /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
               CloseButton,
@@ -44139,14 +44139,14 @@ function completeNavigationProgressAction(store) {
 }
 function startNavigationProgressAction(store) {
   updateNavigationProgressStateAction(
-    (s98) => ({ progress: getIntervalProgressValue(s98.progress), mounted: true }),
+    (s99) => ({ progress: getIntervalProgressValue(s99.progress), mounted: true }),
     store
   );
   updateNavigationProgressStateAction((state2) => {
     window.clearInterval(state2.interval);
     const interval2 = window.setInterval(() => {
       updateNavigationProgressStateAction(
-        (s98) => ({ progress: getIntervalProgressValue(s98.progress), mounted: true }),
+        (s99) => ({ progress: getIntervalProgressValue(s99.progress), mounted: true }),
         store
       );
     }, state2.stepInterval);
@@ -46467,22 +46467,22 @@ function t2(e23, t46) {
   const n25 = ae.unit(e23);
   let r11 = {};
   n25 ? r11 = { unit: e23 } : "@@unitShape" in e23 ? "function" == typeof e23["@@unitShape"] ? r11 = e23["@@unitShape"]() : E2("expect @@unitShape to be a function") : r11 = e23;
-  const o21 = Array.isArray(r11), s98 = import_react213.default.useRef({ stale: 1, justSubscribed: 0, scope: t46 }), [u6, c37, a45, i33, l27] = import_react213.default.useMemo(() => {
-    s98.current.stale = 1;
+  const o21 = Array.isArray(r11), s99 = import_react213.default.useRef({ stale: 1, justSubscribed: 0, scope: t46 }), [u6, c37, a45, i33, l27] = import_react213.default.useMemo(() => {
+    s99.current.stale = 1;
     const e24 = Array.isArray(r11) ? [] : {}, o22 = [], u7 = [], c38 = [], a46 = [];
-    for (const s99 in r11) {
-      if (!{}.hasOwnProperty.call(r11, s99)) continue;
-      const i34 = r11[s99];
-      ae.unit(i34) || E2(`expect useUnit ${n25 ? "argument" : `value in key "${s99}"`} to be a unit`), ae.event(i34) || ae.effect(i34) ? (e24[s99] = t46 ? F(i34, { scope: t46 }) : i34, c38.push(s99), a46.push(i34)) : (e24[s99] = null, o22.push(s99), u7.push(i34));
+    for (const s100 in r11) {
+      if (!{}.hasOwnProperty.call(r11, s100)) continue;
+      const i34 = r11[s100];
+      ae.unit(i34) || E2(`expect useUnit ${n25 ? "argument" : `value in key "${s100}"`} to be a unit`), ae.event(i34) || ae.effect(i34) ? (e24[s100] = t46 ? F(i34, { scope: t46 }) : i34, c38.push(s100), a46.push(i34)) : (e24[s100] = null, o22.push(s100), u7.push(i34));
     }
     return [e24, o22, u7, c38, a46];
-  }, [s98, t46, ...Object.keys(r11), ...Object.values(r11)]), f35 = import_react213.default.useRef({ value: u6, storeKeys: c37, eventKeys: i33, eventValues: l27 }), p34 = import_react213.default.useCallback((e24) => {
-    const n26 = s98.current;
+  }, [s99, t46, ...Object.keys(r11), ...Object.values(r11)]), f35 = import_react213.default.useRef({ value: u6, storeKeys: c37, eventKeys: i33, eventValues: l27 }), p34 = import_react213.default.useCallback((e24) => {
+    const n26 = s99.current;
     return n26.justSubscribed = 1, D({ unit: a45, fn: () => {
       n26.stale || (n26.stale = 1, e24());
     }, scope: t46, batch: 1 });
-  }, [a45, t46, f35, s98]), d16 = import_react213.default.useCallback(() => {
-    const e24 = f35.current, r12 = s98.current;
+  }, [a45, t46, f35, s99]), d16 = import_react213.default.useCallback(() => {
+    const e24 = f35.current, r12 = s99.current;
     let p35, d17 = 0;
     const y8 = e24.value, m32 = e24.storeKeys, v9 = e24.eventKeys, b7 = e24.eventValues, h16 = t46 !== r12.scope;
     if (r12.stale || r12.justSubscribed || h16) {
@@ -46497,13 +46497,13 @@ function t2(e23, t46) {
       }
     }
     return d17 && (e24.value = p35), e24.storeKeys = c37, e24.eventKeys = i33, e24.eventValues = l27, r12.stale = 0, r12.justSubscribed = !d17, r12.scope = t46, n25 ? e24.value.unit : e24.value;
-  }, [p34, a45, l27, t46, f35, s98]);
+  }, [p34, a45, l27, t46, f35, s99]);
   return O(p34, d16, d16);
 }
 function n2([e23, t46], n25) {
-  let r11, o21, s98, u6, c37 = K2;
-  t46 ? (r11 = t46, s98 = e23, u6 = []) : { fn: r11, store: s98, keys: u6, defaultValue: o21, updateFilter: c37 = K2 } = e23, ae.store(s98) || E2("useStoreMap expects a store"), Array.isArray(u6) || E2("useStoreMap expects an array as keys"), "function" != typeof r11 && E2("useStoreMap expects a function");
-  const a45 = import_react213.default.useCallback((e24) => D({ unit: s98, fn: e24, scope: n25 }), [s98, n25]), i33 = import_react213.default.useCallback(() => U2(s98, n25), [s98, n25]), l27 = import_react213.default.useRef(), f35 = import_react213.default.useRef(), p34 = import_react213.default.useRef(u6);
+  let r11, o21, s99, u6, c37 = K2;
+  t46 ? (r11 = t46, s99 = e23, u6 = []) : { fn: r11, store: s99, keys: u6, defaultValue: o21, updateFilter: c37 = K2 } = e23, ae.store(s99) || E2("useStoreMap expects a store"), Array.isArray(u6) || E2("useStoreMap expects an array as keys"), "function" != typeof r11 && E2("useStoreMap expects a function");
+  const a45 = import_react213.default.useCallback((e24) => D({ unit: s99, fn: e24, scope: n25 }), [s99, n25]), i33 = import_react213.default.useCallback(() => U2(s99, n25), [s99, n25]), l27 = import_react213.default.useRef(), f35 = import_react213.default.useRef(), p34 = import_react213.default.useRef(u6);
   return R2(a45, i33, i33, (e24) => {
     if (l27.current !== e24 || !((e25, t47) => {
       if (!e25 || !t47 || e25.length !== t47.length) return 0;
@@ -46521,7 +46521,7 @@ function n2([e23, t46], n25) {
   }, (e24, t47) => !c37(t47, e24));
 }
 function r3(e23, n25 = {}, r11) {
-  const { open: o21, close: s98, set: u6 } = t2({ open: e23.open, close: e23.close, set: e23.set }, r11), c37 = import_react213.default.useMemo(() => ({ open: o21, close: s98, set: u6 }), [e23, o21]), a45 = import_react213.default.useRef({ value: null, count: 0 });
+  const { open: o21, close: s99, set: u6 } = t2({ open: e23.open, close: e23.close, set: e23.set }, r11), c37 = import_react213.default.useMemo(() => ({ open: o21, close: s99, set: u6 }), [e23, o21]), a45 = import_react213.default.useRef({ value: null, count: 0 });
   M2(() => (c37.open(a45.current.value), () => c37.close(a45.current.value)), [c37]), ((e24, t46) => {
     if (e24 === t46) return 1;
     if ("object" == typeof e24 && null !== e24 && "object" == typeof t46 && null !== t46) {
@@ -46548,33 +46548,33 @@ function c2(e23, n25) {
 function a2(e23, t46) {
   return n2([e23, t46], o2(null == e23 ? void 0 : e23.forceScope));
 }
-function i(r11, s98, u6) {
-  return ((r12, o21, s99) => {
+function i(r11, s99, u6) {
+  return ((r12, o21, s100) => {
     let u7, c37, a45, i33 = [];
     "object" == typeof o21 && null !== o21 ? (o21.keys && (i33 = o21.keys), { fn: u7, getKey: c37, placeholder: a45 } = o21) : u7 = o21, ae.store(r12) || E2("expect useList first argument to be a store"), "function" != typeof u7 && E2("expect useList's renderItem to be a function"), Array.isArray(i33) || E2("expect useList's keys to be an array");
     const l27 = import_react213.default.useMemo(() => {
       const t46 = e2(`${r12.shortName || "Unknown"}.Item`, (e23) => {
         const { index: t47, keys: o22, keyVal: u8, value: c38 } = e23;
         if (f35.current[1]) return f35.current[0](c38, u8);
-        const a46 = n2([{ store: r12, keys: [t47, ...o22], fn: (e24, t48) => e24[t48[0]] }], s99);
+        const a46 = n2([{ store: r12, keys: [t47, ...o22], fn: (e24, t48) => e24[t48[0]] }], s100);
         return f35.current[0](a46, t47);
       });
       return import_react213.default.memo(t46);
-    }, [r12, s99, !!c37]), f35 = import_react213.default.useRef([u7, c37]);
+    }, [r12, s100, !!c37]), f35 = import_react213.default.useRef([u7, c37]);
     f35.current = [u7, c37];
     const p34 = import_react213.default.useMemo(() => i33, i33);
     if (c37) {
-      const e23 = t2(r12, s99);
+      const e23 = t2(r12, s100);
       return 0 === e23.length && a45 ? a45 : e23.map((e24) => {
         const t46 = f35.current[1](e24);
         return import_react213.default.createElement(l27, { keyVal: t46, key: t46, keys: p34, value: e24 });
       });
     }
     {
-      const e23 = n2([{ store: r12, keys: [r12], fn: (e24) => e24.length }], s99);
+      const e23 = n2([{ store: r12, keys: [r12], fn: (e24) => e24.length }], s100);
       return 0 === e23 && a45 ? a45 : Array.from({ length: e23 }, (e24, t46) => import_react213.default.createElement(l27, { index: t46, key: t46, keys: p34 }));
     }
-  })(r11, s98, o2(null == u6 ? void 0 : u6.forceScope));
+  })(r11, s99, o2(null == u6 ? void 0 : u6.forceScope));
 }
 function l2(e23, t46 = {}, n25) {
   return r3(e23, t46, o2(null == n25 ? void 0 : n25.forceScope));
@@ -46586,30 +46586,30 @@ function y2(e23, t46) {
     if (!e24) throw Error("expect first argument be an object");
   })(I2(r11 = n25) || /* @__PURE__ */ ((e24) => "function" == typeof e24)(r11));
   let o21 = n25.or;
-  const s98 = n25.and;
-  if (s98) {
-    const n26 = t46 ? s98 : s98[0];
+  const s99 = n25.and;
+  if (s99) {
+    const n26 = t46 ? s99 : s99[0];
     if (I2(n26) && "and" in n26) {
-      const n27 = y2(s98, t46);
+      const n27 = y2(s99, t46);
       e23 = n27[0], o21 = { ...o21, ...n27[1] };
-    } else e23 = s98;
+    } else e23 = s99;
   }
   return [e23, o21];
 }
 function m2(e23, t46) {
   const n25 = t46 && I2(r11 = t46[0]) && (r11.and || r11.or) ? t46 : [{ and: t46 }];
   var r11;
-  const [[o21, s98], u6] = y2(n25);
+  const [[o21, s99], u6] = y2(n25);
   let c37, a45 = {}, i33 = {}, l27 = u6;
   var f35;
-  return "string" == typeof o21 ? (i33 = { name: o21 }, I2(f35 = s98) && "sid" in f35 || (a45 = s98 || {})) : ((e24) => I2(e24) && ("domain" in e24 || "defaultState" in e24 || "name" in e24))(o21) && (i33 = o21, a45 = o21.defaultState || {}, c37 = o21.domain), { hook: e23, domain: c37, defaultState: a45, mainConfig: i33, maybeConfig: l27 };
+  return "string" == typeof o21 ? (i33 = { name: o21 }, I2(f35 = s99) && "sid" in f35 || (a45 = s99 || {})) : ((e24) => I2(e24) && ("domain" in e24 || "defaultState" in e24 || "name" in e24))(o21) && (i33 = o21, a45 = o21.defaultState || {}, c37 = o21.domain), { hook: e23, domain: c37, defaultState: a45, mainConfig: i33, maybeConfig: l27 };
 }
 function v2(...t46) {
-  return (({ domain: t47, defaultState: n25, hook: r11, mainConfig: s98, maybeConfig: u6 }) => {
+  return (({ domain: t47, defaultState: n25, hook: r11, mainConfig: s99, maybeConfig: u6 }) => {
     function c37(e23) {
       return r11(c37, e23, o2()), null;
     }
-    const a45 = z({ or: u6, and: s98 }), i33 = `${t47 ? `${t47.compositeName.fullName}/` : ""}${a45.name || "gate"}`, l27 = p({ name: `${i33}.set`, sid: a45.sid ? `${a45.sid}|set` : void 0 }), f35 = p({ name: `${i33}.open`, sid: a45.sid ? `${a45.sid}|open` : void 0 }), p34 = p({ name: `${i33}.close`, sid: a45.sid ? `${a45.sid}|close` : void 0 }), d16 = g(Boolean(0), { name: `${i33}.status`, serialize: "ignore" }).on(f35, () => Boolean(1)).on(p34, () => Boolean(0)), y8 = g(n25, { name: `${i33}.state`, sid: a45.sid }).on(l27, (e23, t48) => t48).on(f35, (e23, t48) => t48).reset(p34);
+    const a45 = z({ or: u6, and: s99 }), i33 = `${t47 ? `${t47.compositeName.fullName}/` : ""}${a45.name || "gate"}`, l27 = p({ name: `${i33}.set`, sid: a45.sid ? `${a45.sid}|set` : void 0 }), f35 = p({ name: `${i33}.open`, sid: a45.sid ? `${a45.sid}|open` : void 0 }), p34 = p({ name: `${i33}.close`, sid: a45.sid ? `${a45.sid}|close` : void 0 }), d16 = g(Boolean(0), { name: `${i33}.status`, serialize: "ignore" }).on(f35, () => Boolean(1)).on(p34, () => Boolean(0)), y8 = g(n25, { name: `${i33}.state`, sid: a45.sid }).on(l27, (e23, t48) => t48).on(f35, (e23, t48) => t48).reset(p34);
     if (t47) {
       const { hooks: e23 } = t47;
       o({ target: [e23.store, e23.store, e23.event, e23.event, e23.event], params: [d16, y8, f35, p34, l27] });
@@ -46806,9 +46806,9 @@ function Z2(e23, t46) {
       const a45 = Object.keys(e23), o21 = Object.keys(t46).length;
       if (a45.length !== o21)
         return false;
-      for (let s98 = 0, i33 = a45.length; s98 < i33; s98++) {
-        const l27 = a45[s98];
-        if (!Object.prototype.hasOwnProperty.call(t46, a45[s98]))
+      for (let s99 = 0, i33 = a45.length; s99 < i33; s99++) {
+        const l27 = a45[s99];
+        if (!Object.prototype.hasOwnProperty.call(t46, a45[s99]))
           return false;
         const y8 = e23[l27], g11 = t46[l27];
         if (y8 === e23 || g11 === t46 || y8 === t46 || g11 === e23)
@@ -46820,10 +46820,10 @@ function Z2(e23, t46) {
     } else if (r11 === "array") {
       if (e23.length === t46.length)
         for (let a45 = 0; a45 < e23.length; a45++) {
-          const o21 = e23[a45], s98 = t46[a45];
-          if (o21 === e23 || s98 === t46 || o21 === t46 || s98 === e23)
-            return o21 === s98;
-          if (!Z2(o21, s98))
+          const o21 = e23[a45], s99 = t46[a45];
+          if (o21 === e23 || s99 === t46 || o21 === t46 || s99 === e23)
+            return o21 === s99;
+          if (!Z2(o21, s99))
             return false;
         }
       else
@@ -46915,8 +46915,8 @@ function Lt2() {
 function Mt(e23) {
   const t46 = p(e23.shortName + ".internalCall"), r11 = Le.compute({
     fn: (a45) => {
-      const o21 = a45.handler, s98 = zt2(o21, t46);
-      return a45.handler = s98, a45;
+      const o21 = a45.handler, s99 = zt2(o21, t46);
+      return a45.handler = s99, a45;
     }
   });
   return Ct2(e23).seq.splice(1, 0, r11), t46;
@@ -46925,11 +46925,11 @@ function zt2(e23, t46) {
   function r11(...n25) {
     const { result: a45, abortCallback: o21 } = Ut(e23, ...n25);
     if (a45 instanceof Promise) {
-      const s98 = vt2(), i33 = Ee2(s98, o21);
-      return t46(i33), a45.then(s98.resolve, s98.reject), s98.promise;
+      const s99 = vt2(), i33 = Ee2(s99, o21);
+      return t46(i33), a45.then(s99.resolve, s99.reject), s99.promise;
     } else {
-      const s98 = Ee2(void 0, o21);
-      return t46(s98), a45;
+      const s99 = Ee2(void 0, o21);
+      return t46(s99), a45;
     }
   }
   return r11;
@@ -46994,7 +46994,7 @@ function Je2({
   serialize: n25,
   enabled: a45,
   contract: o21,
-  validate: s98,
+  validate: s99,
   mapData: i33,
   sourced: l27,
   paramsAreMeaningless: y8
@@ -47148,7 +47148,7 @@ function Je2({
       clock: p34.done,
       source: {
         partialValidator: D2({
-          field: s98 ?? Ot2
+          field: s99 ?? Ot2
         })
       },
       fn: ({ partialValidator: h16 }, {
@@ -47316,9 +47316,9 @@ function Je2({
 function Qt(e23) {
   const t46 = v({
     handler: async ({ params: a45, skipStale: o21 }) => {
-      for (const s98 of e23)
+      for (const s99 of e23)
         try {
-          const i33 = await s98.get({ params: a45 });
+          const i33 = await s99.get({ params: a45 });
           if (o21 && (i33 != null && i33.stale))
             continue;
           if (i33)
@@ -47337,7 +47337,7 @@ function Qt(e23) {
   }), r11 = v({
     handler: async ({ params: a45, result: o21 }) => {
       await Promise.all(
-        e23.map(U3("set")).filter(Boolean).map((s98) => s98({ params: a45, result: o21 }))
+        e23.map(U3("set")).filter(Boolean).map((s99) => s99({ params: a45, result: o21 }))
       );
     }
   }), n25 = v({
@@ -47369,12 +47369,12 @@ function de2(e23) {
     mapData: n25,
     enabled: a45,
     validate: o21,
-    name: s98,
+    name: s99,
     serialize: i33,
     sourced: l27,
     paramsAreMeaningless: y8
   } = e23, g11 = t46 ?? null, f35 = Je2({
-    name: s98 ?? Oe2(),
+    name: s99 ?? Oe2(),
     kind: We2,
     serialize: se2(i33),
     enabled: a45,
@@ -47537,7 +47537,7 @@ function Or(e23) {
   return t46.__.executeFx.use(Ye2(e23)), t46;
 }
 function me2(e23) {
-  const { name: t46, enabled: r11, contract: n25, validate: a45, mapData: o21 } = e23, s98 = Je2({
+  const { name: t46, enabled: r11, contract: n25, validate: a45, mapData: o21 } = e23, s99 = Je2({
     name: t46 ?? Oe2(),
     serialize: "ignore",
     enabled: r11,
@@ -47547,9 +47547,9 @@ function me2(e23) {
     validate: a45,
     mapData: o21
   }), i33 = {
-    pending: s98.$pending,
-    start: s98.start,
-    reset: s98.reset
+    pending: s99.$pending,
+    start: s99.start,
+    reset: s99.reset
   }, l27 = () => i33, y8 = ({
     source: g11,
     mapParams: f35
@@ -47562,29 +47562,29 @@ function me2(e23) {
           params: f35 ? f35(u6, m32) : u6,
           ...p34
         }),
-        effect: s98.__.lowLevelAPI.dataSourceRetrieverFx
+        effect: s99.__.lowLevelAPI.dataSourceRetrieverFx
       })
     ), _4;
   };
   return {
-    start: s98.start,
-    reset: s98.reset,
-    started: E3(s98.started),
-    aborted: E3(s98.aborted),
-    $status: E3(s98.$status),
-    $idle: E3(s98.$idle),
-    $pending: E3(s98.$pending),
-    $succeeded: E3(s98.$succeeded),
-    $failed: E3(s98.$failed),
-    $finished: E3(s98.$finished),
-    $enabled: E3(s98.$enabled),
+    start: s99.start,
+    reset: s99.reset,
+    started: E3(s99.started),
+    aborted: E3(s99.aborted),
+    $status: E3(s99.$status),
+    $idle: E3(s99.$idle),
+    $pending: E3(s99.$pending),
+    $succeeded: E3(s99.$succeeded),
+    $failed: E3(s99.$failed),
+    $finished: E3(s99.$finished),
+    $enabled: E3(s99.$enabled),
     finished: {
-      success: E3(s98.finished.success),
-      failure: E3(s98.finished.failure),
-      finally: E3(s98.finished.finally),
-      skip: E3(s98.finished.skip)
+      success: E3(s99.finished.success),
+      failure: E3(s99.finished.failure),
+      finally: E3(s99.finished.finally),
+      skip: E3(s99.finished.skip)
     },
-    __: { ...s98.__, experimentalAPI: { attach: y8 } },
+    __: { ...s99.__, experimentalAPI: { attach: y8 } },
     "@@unitShape": l27
   };
 }
@@ -47662,7 +47662,7 @@ function at2({
 function mr(e23) {
   const { maxEntries: t46, maxAge: r11, observability: n25 } = e23 ?? {};
   let a45 = {};
-  const o21 = p(), s98 = p(), i33 = p(), l27 = p(), y8 = p();
+  const o21 = p(), s99 = p(), i33 = p(), l27 = p(), y8 = p();
   y8.watch(() => {
     a45 = {};
   });
@@ -47682,7 +47682,7 @@ function mr(e23) {
     filter: ({ evicted: u6 }) => !!u6,
     fn: ({ evicted: u6 }) => ({ key: u6 }),
     target: l27
-  }), s98.watch(({ key: u6 }) => {
+  }), s99.watch(({ key: u6 }) => {
     const { [u6]: p34, ...m32 } = a45;
     a45 = m32;
   }), r11) {
@@ -47693,7 +47693,7 @@ function mr(e23) {
     }), M({
       clock: i33,
       fn: ({ key: p34 }) => ({ key: p34 }),
-      target: s98
+      target: s99
     });
   }
   const _4 = {
@@ -47704,12 +47704,12 @@ function mr(e23) {
       if (r11) {
         const m32 = (p34 == null ? void 0 : p34.cachedAt) + W2(r11);
         if (Date.now() >= m32)
-          return s98({ key: u6 }), null;
+          return s99({ key: u6 }), null;
       }
       return p34;
     }),
     set: v(o21),
-    unset: v(s98),
+    unset: v(s99),
     purge: y8
   };
   return at2({
@@ -47724,7 +47724,7 @@ function hr(e23, { key: t46, entry: r11 }, n25) {
   const a45 = Object.keys(e23);
   if (a45.length < n25)
     return { next: { ...e23, [t46]: r11 }, evicted: null };
-  const [o21] = a45, { [o21]: s98, ...i33 } = e23;
+  const [o21] = a45, { [o21]: s99, ...i33 } = e23;
   return { next: { ...i33, [t46]: r11 }, evicted: o21 };
 }
 function yr(e23) {
@@ -47749,12 +47749,12 @@ function st2(e23) {
     if (t46.has(n25))
       throw new TypeError("Can't serialize cyclic structure");
     if (t46.add(n25), Array.isArray(n25)) {
-      const o21 = n25.map((s98) => r11(s98) || "null").join(",");
+      const o21 = n25.map((s99) => r11(s99) || "null").join(",");
       return t46.delete(n25), `[${o21}]`;
     }
     const a45 = Object.keys(n25).sort().map((o21) => {
-      const s98 = r11(n25[o21]);
-      return s98 ? `${r11(o21)}:${s98}` : "";
+      const s99 = r11(n25[o21]);
+      return s99 ? `${r11(o21)}:${s99}` : "";
     }).filter(Boolean).join(",");
     return t46.delete(n25), `{${a45}}`;
   }
@@ -47811,22 +47811,22 @@ function Vr(e23, t46) {
     adapter: (t46 == null ? void 0 : t46.adapter) ?? mr(),
     humanReadableKeys: false,
     ...t46
-  }, s98 = o21 ? gr : $r, i33 = _r(e23), l27 = e23.__.lowLevelAPI.sourced.map(ht2), y8 = v(async (p34) => Promise.all(l27.map((m32) => m32(p34)))), g11 = v(async ({ instance: p34, params: m32 }) => {
-    const d16 = await y8(m32), w20 = s98({
+  }, s99 = o21 ? gr : $r, i33 = _r(e23), l27 = e23.__.lowLevelAPI.sourced.map(ht2), y8 = v(async (p34) => Promise.all(l27.map((m32) => m32(p34)))), g11 = v(async ({ instance: p34, params: m32 }) => {
+    const d16 = await y8(m32), w20 = s99({
       sid: i33,
       params: e23.__.lowLevelAPI.paramsAreMeaningless ? null : m32,
       sources: d16
     });
     w20 && await p34.unset({ key: w20 });
   }), f35 = v(async ({ instance: p34, params: m32, result: d16 }) => {
-    const w20 = await y8(m32), P5 = s98({
+    const w20 = await y8(m32), P5 = s99({
       sid: i33,
       params: e23.__.lowLevelAPI.paramsAreMeaningless ? null : m32,
       sources: w20
     });
     P5 && await p34.set({ key: P5, value: d16 });
   }), _4 = v(async ({ params: p34, instance: m32 }) => {
-    const d16 = await y8(p34), w20 = s98({
+    const d16 = await y8(p34), w20 = s99({
       sid: i33,
       params: e23.__.lowLevelAPI.paramsAreMeaningless ? null : p34,
       sources: d16
@@ -47979,30 +47979,30 @@ async function v3(_4, o21) {
   if (!n25) throw new TypeError("no or bad content-type header, no multipart boundary");
   const r11 = new M3(n25[1] || n25[2]);
   let d16, l27, c37, m32, e23, i33;
-  const A8 = [], H6 = new Zt2(), O3 = E4((s98) => {
-    c37 += f35.decode(s98, { stream: true });
-  }, "onPartData"), y8 = E4((s98) => {
-    A8.push(s98);
+  const A8 = [], H6 = new Zt2(), O3 = E4((s99) => {
+    c37 += f35.decode(s99, { stream: true });
+  }, "onPartData"), y8 = E4((s99) => {
+    A8.push(s99);
   }, "appendToFile"), a45 = E4(() => {
-    const s98 = new Yr(A8, i33, { type: e23 });
-    H6.append(m32, s98);
+    const s99 = new Yr(A8, i33, { type: e23 });
+    H6.append(m32, s99);
   }, "appendFileToFormData"), L5 = E4(() => {
     H6.append(m32, c37);
   }, "appendEntryToFormData"), f35 = new TextDecoder("utf-8");
   f35.decode(), r11.onPartBegin = function() {
     r11.onPartData = O3, r11.onPartEnd = L5, d16 = "", l27 = "", c37 = "", m32 = "", e23 = "", i33 = null, A8.length = 0;
-  }, r11.onHeaderField = function(s98) {
-    d16 += f35.decode(s98, { stream: true });
-  }, r11.onHeaderValue = function(s98) {
-    l27 += f35.decode(s98, { stream: true });
+  }, r11.onHeaderField = function(s99) {
+    d16 += f35.decode(s99, { stream: true });
+  }, r11.onHeaderValue = function(s99) {
+    l27 += f35.decode(s99, { stream: true });
   }, r11.onHeaderEnd = function() {
     if (l27 += f35.decode(), d16 = d16.toLowerCase(), d16 === "content-disposition") {
-      const s98 = l27.match(/\bname=("([^"]*)"|([^()<>@,;:\\"/[\]?={}\s\t]+))/i);
-      s98 && (m32 = s98[2] || s98[3] || ""), i33 = $2(l27), i33 && (r11.onPartData = y8, r11.onPartEnd = a45);
+      const s99 = l27.match(/\bname=("([^"]*)"|([^()<>@,;:\\"/[\]?={}\s\t]+))/i);
+      s99 && (m32 = s99[2] || s99[3] || ""), i33 = $2(l27), i33 && (r11.onPartData = y8, r11.onPartEnd = a45);
     } else d16 === "content-type" && (e23 = l27);
     l27 = "", d16 = "";
   };
-  for await (const s98 of _4) r11.write(s98);
+  for await (const s99 of _4) r11.write(s99);
   return r11.end(), H6;
 }
 var U4, E4, D3, t4, F2, u2, g2, N2, V3, S, Y3, x, C2, I3, p2, M3;
@@ -48045,7 +48045,7 @@ var init_multipart_parser = __esm({
         let a45, L5;
         const f35 = E4((h16) => {
           this[h16 + "Mark"] = n25;
-        }, "mark"), s98 = E4((h16) => {
+        }, "mark"), s99 = E4((h16) => {
           delete this[h16 + "Mark"];
         }, "clear"), T6 = E4((h16, P5, R29, k8) => {
           (P5 === void 0 || P5 !== R29) && this[h16](k8 && k8.subarray(P5, R29));
@@ -48072,7 +48072,7 @@ var init_multipart_parser = __esm({
             i33 = t4.HEADER_FIELD, f35("onHeaderField"), e23 = 0;
           case t4.HEADER_FIELD:
             if (a45 === N2) {
-              s98("onHeaderField"), i33 = t4.HEADERS_ALMOST_DONE;
+              s99("onHeaderField"), i33 = t4.HEADERS_ALMOST_DONE;
               break;
             }
             if (e23++, a45 === S) break;
@@ -48233,8 +48233,8 @@ function ns() {
       function z6(e23, t46, r11) {
         try {
           return T6(O3(e23, t46, r11));
-        } catch (s98) {
-          return b7(s98);
+        } catch (s99) {
+          return b7(s99);
         }
       }
       n4(z6, "promiseCall");
@@ -48251,20 +48251,20 @@ function ns() {
         }
         push(t46) {
           const r11 = this._back;
-          let s98 = r11;
-          r11._elements.length === $4 - 1 && (s98 = { _elements: [], _next: void 0 }), r11._elements.push(t46), s98 !== r11 && (this._back = s98, r11._next = s98), ++this._size;
+          let s99 = r11;
+          r11._elements.length === $4 - 1 && (s99 = { _elements: [], _next: void 0 }), r11._elements.push(t46), s99 !== r11 && (this._back = s99, r11._next = s99), ++this._size;
         }
         shift() {
           const t46 = this._front;
           let r11 = t46;
-          const s98 = this._cursor;
-          let f35 = s98 + 1;
-          const c37 = t46._elements, d16 = c37[s98];
-          return f35 === $4 && (r11 = t46._next, f35 = 0), --this._size, this._cursor = f35, t46 !== r11 && (this._front = r11), c37[s98] = void 0, d16;
+          const s99 = this._cursor;
+          let f35 = s99 + 1;
+          const c37 = t46._elements, d16 = c37[s99];
+          return f35 === $4 && (r11 = t46._next, f35 = 0), --this._size, this._cursor = f35, t46 !== r11 && (this._front = r11), c37[s99] = void 0, d16;
         }
         forEach(t46) {
-          let r11 = this._cursor, s98 = this._front, f35 = s98._elements;
-          for (; (r11 !== f35.length || s98._next !== void 0) && !(r11 === f35.length && (s98 = s98._next, f35 = s98._elements, r11 = 0, f35.length === 0)); ) t46(f35[r11]), ++r11;
+          let r11 = this._cursor, s99 = this._front, f35 = s99._elements;
+          for (; (r11 !== f35.length || s99._next !== void 0) && !(r11 === f35.length && (s99 = s99._next, f35 = s99._elements, r11 = 0, f35.length === 0)); ) t46(f35[r11]), ++r11;
         }
         peek() {
           const t46 = this._front, r11 = this._cursor;
@@ -48362,10 +48362,10 @@ function ns() {
       }
       n4(si, "integerPart");
       function mr2(e23, t46) {
-        const s98 = Number.MAX_SAFE_INTEGER;
+        const s99 = Number.MAX_SAFE_INTEGER;
         let f35 = Number(e23);
         if (f35 = dn(f35), !fn(f35)) throw new TypeError(`${t46} is not a finite number`);
-        if (f35 = si(f35), f35 < 0 || f35 > s98) throw new TypeError(`${t46} is outside the accepted range of 0 to ${s98}, inclusive`);
+        if (f35 = si(f35), f35 < 0 || f35 > s99) throw new TypeError(`${t46} is outside the accepted range of 0 to ${s99}, inclusive`);
         return !fn(f35) || f35 === 0 ? 0 : f35;
       }
       n4(mr2, "convertUnsignedLongLongWithEnforceRange");
@@ -48413,10 +48413,10 @@ function ns() {
           if (!ge3(this)) return b7(_t2("read"));
           if (this._ownerReadableStream === void 0) return b7(yt2("read from"));
           let t46, r11;
-          const s98 = A8((c37, d16) => {
+          const s99 = A8((c37, d16) => {
             t46 = c37, r11 = d16;
           });
-          return et2(this, { _chunkSteps: n4((c37) => t46({ value: c37, done: false }), "_chunkSteps"), _closeSteps: n4(() => t46({ value: void 0, done: true }), "_closeSteps"), _errorSteps: n4((c37) => r11(c37), "_errorSteps") }), s98;
+          return et2(this, { _chunkSteps: n4((c37) => t46({ value: c37, done: false }), "_chunkSteps"), _closeSteps: n4(() => t46({ value: void 0, done: true }), "_closeSteps"), _errorSteps: n4((c37) => r11(c37), "_errorSteps") }), s99;
         }
         releaseLock() {
           if (!ge3(this)) throw _t2("releaseLock");
@@ -48441,8 +48441,8 @@ function ns() {
       n4(ui, "ReadableStreamDefaultReaderRelease");
       function bn(e23, t46) {
         const r11 = e23._readRequests;
-        e23._readRequests = new M6(), r11.forEach((s98) => {
-          s98._errorSteps(t46);
+        e23._readRequests = new M6(), r11.forEach((s99) => {
+          s99._errorSteps(t46);
         });
       }
       n4(bn, "ReadableStreamDefaultReaderErrorReadRequests");
@@ -48470,16 +48470,16 @@ function ns() {
         _nextSteps() {
           if (this._isFinished) return Promise.resolve({ value: void 0, done: true });
           const t46 = this._reader;
-          let r11, s98;
+          let r11, s99;
           const f35 = A8((d16, p34) => {
-            r11 = d16, s98 = p34;
+            r11 = d16, s99 = p34;
           });
           return et2(t46, { _chunkSteps: n4((d16) => {
             this._ongoingPromise = void 0, se4(() => r11({ value: d16, done: false }));
           }, "_chunkSteps"), _closeSteps: n4(() => {
             this._ongoingPromise = void 0, this._isFinished = true, ue4(t46), r11({ value: void 0, done: true });
           }, "_closeSteps"), _errorSteps: n4((d16) => {
-            this._ongoingPromise = void 0, this._isFinished = true, ue4(t46), s98(d16);
+            this._ongoingPromise = void 0, this._isFinished = true, ue4(t46), s99(d16);
           }, "_errorSteps") }), f35;
         }
         _returnSteps(t46) {
@@ -48487,8 +48487,8 @@ function ns() {
           this._isFinished = true;
           const r11 = this._reader;
           if (!this._preventCancel) {
-            const s98 = lr2(r11, t46);
-            return ue4(r11), F6(s98, () => ({ value: t46, done: true }));
+            const s99 = lr2(r11, t46);
+            return ue4(r11), F6(s99, () => ({ value: t46, done: true }));
           }
           return ue4(r11), T6({ value: t46, done: true });
         }
@@ -48500,8 +48500,8 @@ function ns() {
       } };
       Object.setPrototypeOf(yn, li);
       function fi(e23, t46) {
-        const r11 = ze4(e23), s98 = new pn(r11, t46), f35 = Object.create(yn);
-        return f35._asyncIteratorImpl = s98, f35;
+        const r11 = ze4(e23), s99 = new pn(r11, t46), f35 = Object.create(yn);
+        return f35._asyncIteratorImpl = s99, f35;
       }
       n4(fi, "AcquireReadableStreamAsyncIterator");
       function gn(e23) {
@@ -48525,15 +48525,15 @@ function ns() {
         return e23.slice();
       }
       n4(tt3, "CreateArrayFromList");
-      function wn(e23, t46, r11, s98, f35) {
-        new Uint8Array(e23).set(new Uint8Array(r11, s98, f35), t46);
+      function wn(e23, t46, r11, s99, f35) {
+        new Uint8Array(e23).set(new Uint8Array(r11, s99, f35), t46);
       }
       n4(wn, "CopyDataBlockBytes");
       let fe4 = n4((e23) => (typeof e23.transfer == "function" ? fe4 = n4((t46) => t46.transfer(), "TransferArrayBuffer") : typeof structuredClone == "function" ? fe4 = n4((t46) => structuredClone(t46, { transfer: [t46] }), "TransferArrayBuffer") : fe4 = n4((t46) => t46, "TransferArrayBuffer"), fe4(e23)), "TransferArrayBuffer"), _e3 = n4((e23) => (typeof e23.detached == "boolean" ? _e3 = n4((t46) => t46.detached, "IsDetachedBuffer") : _e3 = n4((t46) => t46.byteLength === 0, "IsDetachedBuffer"), _e3(e23)), "IsDetachedBuffer");
       function Rn(e23, t46, r11) {
         if (e23.slice) return e23.slice(t46, r11);
-        const s98 = r11 - t46, f35 = new ArrayBuffer(s98);
-        return wn(f35, 0, e23, t46, s98), f35;
+        const s99 = r11 - t46, f35 = new ArrayBuffer(s99);
+        return wn(f35, 0, e23, t46, s99), f35;
       }
       n4(Rn, "ArrayBufferSlice");
       function St2(e23, t46) {
@@ -48547,8 +48547,8 @@ function ns() {
       function ci(e23) {
         const t46 = { [Symbol.iterator]: () => e23.iterator }, r11 = async function* () {
           return yield* t46;
-        }(), s98 = r11.next;
-        return { iterator: r11, nextMethod: s98, done: false };
+        }(), s99 = r11.next;
+        return { iterator: r11, nextMethod: s99, done: false };
       }
       n4(ci, "CreateAsyncFromSyncIterator");
       const Sr = (_r2 = (yr2 = Symbol.asyncIterator) !== null && yr2 !== void 0 ? yr2 : (gr2 = Symbol.for) === null || gr2 === void 0 ? void 0 : gr2.call(Symbol, "Symbol.asyncIterator")) !== null && _r2 !== void 0 ? _r2 : "@@asyncIterator";
@@ -48560,10 +48560,10 @@ function ns() {
           }
         } else r11 = St2(e23, Symbol.iterator);
         if (r11 === void 0) throw new TypeError("The object is not iterable");
-        const s98 = O3(r11, e23, []);
-        if (!u6(s98)) throw new TypeError("The iterator method must return an object");
-        const f35 = s98.next;
-        return { iterator: s98, nextMethod: f35, done: false };
+        const s99 = O3(r11, e23, []);
+        if (!u6(s99)) throw new TypeError("The iterator method must return an object");
+        const f35 = s99.next;
+        return { iterator: s99, nextMethod: f35, done: false };
       }
       n4(Tn, "GetIterator");
       function di(e23) {
@@ -48692,16 +48692,16 @@ function ns() {
             In(this, t46);
             return;
           }
-          const s98 = this._autoAllocateChunkSize;
-          if (s98 !== void 0) {
+          const s99 = this._autoAllocateChunkSize;
+          if (s99 !== void 0) {
             let f35;
             try {
-              f35 = new ArrayBuffer(s98);
+              f35 = new ArrayBuffer(s99);
             } catch (d16) {
               t46._errorSteps(d16);
               return;
             }
-            const c37 = { buffer: f35, bufferByteLength: s98, byteOffset: 0, byteLength: s98, bytesFilled: 0, minimumFill: 1, elementSize: 1, viewConstructor: Uint8Array, readerType: "default" };
+            const c37 = { buffer: f35, bufferByteLength: s99, byteOffset: 0, byteLength: s99, bytesFilled: 0, minimumFill: 1, elementSize: 1, viewConstructor: Uint8Array, readerType: "default" };
             this._pendingPullIntos.push(c37);
           }
           hn(r11, t46), Be4(this);
@@ -48730,7 +48730,7 @@ function ns() {
         }
         e23._pulling = true;
         const r11 = e23._pullAlgorithm();
-        g11(r11, () => (e23._pulling = false, e23._pullAgain && (e23._pullAgain = false, Be4(e23)), null), (s98) => (Z4(e23, s98), null));
+        g11(r11, () => (e23._pulling = false, e23._pullAgain && (e23._pullAgain = false, Be4(e23)), null), (s99) => (Z4(e23, s99), null));
       }
       n4(Be4, "ReadableByteStreamControllerCallPullIfNeeded");
       function En(e23) {
@@ -48740,8 +48740,8 @@ function ns() {
       function Cr(e23, t46) {
         let r11 = false;
         e23._state === "closed" && (r11 = true);
-        const s98 = vn(t46);
-        t46.readerType === "default" ? pr(e23, s98, r11) : Bi(e23, s98, r11);
+        const s99 = vn(t46);
+        t46.readerType === "default" ? pr(e23, s99, r11) : Bi(e23, s99, r11);
       }
       n4(Cr, "ReadableByteStreamControllerCommitPullIntoDescriptor");
       function vn(e23) {
@@ -48749,18 +48749,18 @@ function ns() {
         return new e23.viewConstructor(e23.buffer, e23.byteOffset, t46 / r11);
       }
       n4(vn, "ReadableByteStreamControllerConvertPullIntoDescriptor");
-      function wt3(e23, t46, r11, s98) {
-        e23._queue.push({ buffer: t46, byteOffset: r11, byteLength: s98 }), e23._queueTotalSize += s98;
+      function wt3(e23, t46, r11, s99) {
+        e23._queue.push({ buffer: t46, byteOffset: r11, byteLength: s99 }), e23._queueTotalSize += s99;
       }
       n4(wt3, "ReadableByteStreamControllerEnqueueChunkToQueue");
-      function An(e23, t46, r11, s98) {
+      function An(e23, t46, r11, s99) {
         let f35;
         try {
-          f35 = Rn(t46, r11, r11 + s98);
+          f35 = Rn(t46, r11, r11 + s99);
         } catch (c37) {
           throw Z4(e23, c37), c37;
         }
-        wt3(e23, f35, 0, s98);
+        wt3(e23, f35, 0, s99);
       }
       n4(An, "ReadableByteStreamControllerEnqueueClonedChunkToQueue");
       function Bn(e23, t46) {
@@ -48768,9 +48768,9 @@ function ns() {
       }
       n4(Bn, "ReadableByteStreamControllerEnqueueDetachedPullIntoToQueue");
       function Wn(e23, t46) {
-        const r11 = Math.min(e23._queueTotalSize, t46.byteLength - t46.bytesFilled), s98 = t46.bytesFilled + r11;
+        const r11 = Math.min(e23._queueTotalSize, t46.byteLength - t46.bytesFilled), s99 = t46.bytesFilled + r11;
         let f35 = r11, c37 = false;
-        const d16 = s98 % t46.elementSize, p34 = s98 - d16;
+        const d16 = s99 % t46.elementSize, p34 = s99 - d16;
         p34 >= t46.minimumFill && (f35 = p34 - t46.bytesFilled, c37 = true);
         const R29 = e23._queue;
         for (; f35 > 0; ) {
@@ -48809,46 +48809,46 @@ function ns() {
         }
       }
       n4(_i, "ReadableByteStreamControllerProcessReadRequestsUsingQueue");
-      function Si(e23, t46, r11, s98) {
+      function Si(e23, t46, r11, s99) {
         const f35 = e23._controlledReadableByteStream, c37 = t46.constructor, d16 = gi(c37), { byteOffset: p34, byteLength: R29 } = t46, y8 = r11 * d16;
         let C6;
         try {
           C6 = fe4(t46.buffer);
         } catch (B6) {
-          s98._errorSteps(B6);
+          s99._errorSteps(B6);
           return;
         }
         const P5 = { buffer: C6, bufferByteLength: C6.byteLength, byteOffset: p34, byteLength: R29, bytesFilled: 0, minimumFill: y8, elementSize: d16, viewConstructor: c37, readerType: "byob" };
         if (e23._pendingPullIntos.length > 0) {
-          e23._pendingPullIntos.push(P5), Ln(f35, s98);
+          e23._pendingPullIntos.push(P5), Ln(f35, s99);
           return;
         }
         if (f35._state === "closed") {
           const B6 = new c37(P5.buffer, P5.byteOffset, 0);
-          s98._closeSteps(B6);
+          s99._closeSteps(B6);
           return;
         }
         if (e23._queueTotalSize > 0) {
           if (Wn(e23, P5)) {
             const B6 = vn(P5);
-            qn(e23), s98._chunkSteps(B6);
+            qn(e23), s99._chunkSteps(B6);
             return;
           }
           if (e23._closeRequested) {
             const B6 = new TypeError("Insufficient bytes to fill elements in the given buffer");
-            Z4(e23, B6), s98._errorSteps(B6);
+            Z4(e23, B6), s99._errorSteps(B6);
             return;
           }
         }
-        e23._pendingPullIntos.push(P5), Ln(f35, s98), Be4(e23);
+        e23._pendingPullIntos.push(P5), Ln(f35, s99), Be4(e23);
       }
       n4(Si, "ReadableByteStreamControllerPullInto");
       function wi(e23, t46) {
         t46.readerType === "none" && je4(e23);
         const r11 = e23._controlledReadableByteStream;
         if (Br(r11)) for (; Dn(r11) > 0; ) {
-          const s98 = je4(e23);
-          Cr(r11, s98);
+          const s99 = je4(e23);
+          Cr(r11, s99);
         }
       }
       n4(wi, "ReadableByteStreamControllerRespondInClosedState");
@@ -48859,12 +48859,12 @@ function ns() {
         }
         if (r11.bytesFilled < r11.minimumFill) return;
         je4(e23);
-        const s98 = r11.bytesFilled % r11.elementSize;
-        if (s98 > 0) {
+        const s99 = r11.bytesFilled % r11.elementSize;
+        if (s99 > 0) {
           const f35 = r11.byteOffset + r11.bytesFilled;
-          An(e23, r11.buffer, f35 - s98, s98);
+          An(e23, r11.buffer, f35 - s99, s99);
         }
-        r11.bytesFilled -= s98, Cr(e23._controlledReadableByteStream, r11), Er(e23);
+        r11.bytesFilled -= s99, Cr(e23._controlledReadableByteStream, r11), Er(e23);
       }
       n4(Ri, "ReadableByteStreamControllerRespondInReadableState");
       function On(e23, t46) {
@@ -48895,8 +48895,8 @@ function ns() {
           if (e23._pendingPullIntos.length > 0) {
             const r11 = e23._pendingPullIntos.peek();
             if (r11.bytesFilled % r11.elementSize !== 0) {
-              const s98 = new TypeError("Insufficient bytes to fill elements in the given buffer");
-              throw Z4(e23, s98), s98;
+              const s99 = new TypeError("Insufficient bytes to fill elements in the given buffer");
+              throw Z4(e23, s99), s99;
             }
           }
           Rt3(e23), lt2(t46);
@@ -48906,9 +48906,9 @@ function ns() {
       function Tt3(e23, t46) {
         const r11 = e23._controlledReadableByteStream;
         if (e23._closeRequested || r11._state !== "readable") return;
-        const { buffer: s98, byteOffset: f35, byteLength: c37 } = t46;
-        if (_e3(s98)) throw new TypeError("chunk's buffer is detached and so cannot be enqueued");
-        const d16 = fe4(s98);
+        const { buffer: s99, byteOffset: f35, byteLength: c37 } = t46;
+        if (_e3(s99)) throw new TypeError("chunk's buffer is detached and so cannot be enqueued");
+        const d16 = fe4(s99);
         if (e23._pendingPullIntos.length > 0) {
           const p34 = e23._pendingPullIntos.peek();
           if (_e3(p34.buffer)) throw new TypeError("The BYOB request's buffer has been detached and so cannot be filled with an enqueued chunk");
@@ -48932,14 +48932,14 @@ function ns() {
       function In(e23, t46) {
         const r11 = e23._queue.shift();
         e23._queueTotalSize -= r11.byteLength, qn(e23);
-        const s98 = new Uint8Array(r11.buffer, r11.byteOffset, r11.byteLength);
-        t46._chunkSteps(s98);
+        const s99 = new Uint8Array(r11.buffer, r11.byteOffset, r11.byteLength);
+        t46._chunkSteps(s99);
       }
       n4(In, "ReadableByteStreamControllerFillReadRequestFromQueue");
       function vr2(e23) {
         if (e23._byobRequest === null && e23._pendingPullIntos.length > 0) {
-          const t46 = e23._pendingPullIntos.peek(), r11 = new Uint8Array(t46.buffer, t46.byteOffset + t46.bytesFilled, t46.byteLength - t46.bytesFilled), s98 = Object.create(ve3.prototype);
-          Pi(s98, e23, r11), e23._byobRequest = s98;
+          const t46 = e23._pendingPullIntos.peek(), r11 = new Uint8Array(t46.buffer, t46.byteOffset + t46.bytesFilled, t46.byteLength - t46.bytesFilled), s99 = Object.create(ve3.prototype);
+          Pi(s99, e23, r11), e23._byobRequest = s99;
         }
         return e23._byobRequest;
       }
@@ -48972,20 +48972,20 @@ function ns() {
         r11.buffer = fe4(t46.buffer), On(e23, f35);
       }
       n4(Pt2, "ReadableByteStreamControllerRespondWithNewView");
-      function zn(e23, t46, r11, s98, f35, c37, d16) {
-        t46._controlledReadableByteStream = e23, t46._pullAgain = false, t46._pulling = false, t46._byobRequest = null, t46._queue = t46._queueTotalSize = void 0, Se3(t46), t46._closeRequested = false, t46._started = false, t46._strategyHWM = c37, t46._pullAlgorithm = s98, t46._cancelAlgorithm = f35, t46._autoAllocateChunkSize = d16, t46._pendingPullIntos = new M6(), e23._readableStreamController = t46;
+      function zn(e23, t46, r11, s99, f35, c37, d16) {
+        t46._controlledReadableByteStream = e23, t46._pullAgain = false, t46._pulling = false, t46._byobRequest = null, t46._queue = t46._queueTotalSize = void 0, Se3(t46), t46._closeRequested = false, t46._started = false, t46._strategyHWM = c37, t46._pullAlgorithm = s99, t46._cancelAlgorithm = f35, t46._autoAllocateChunkSize = d16, t46._pendingPullIntos = new M6(), e23._readableStreamController = t46;
         const p34 = r11();
         g11(T6(p34), () => (t46._started = true, Be4(t46), null), (R29) => (Z4(t46, R29), null));
       }
       n4(zn, "SetUpReadableByteStreamController");
       function Ci(e23, t46, r11) {
-        const s98 = Object.create(ce3.prototype);
+        const s99 = Object.create(ce3.prototype);
         let f35, c37, d16;
-        t46.start !== void 0 ? f35 = n4(() => t46.start(s98), "startAlgorithm") : f35 = n4(() => {
-        }, "startAlgorithm"), t46.pull !== void 0 ? c37 = n4(() => t46.pull(s98), "pullAlgorithm") : c37 = n4(() => T6(void 0), "pullAlgorithm"), t46.cancel !== void 0 ? d16 = n4((R29) => t46.cancel(R29), "cancelAlgorithm") : d16 = n4(() => T6(void 0), "cancelAlgorithm");
+        t46.start !== void 0 ? f35 = n4(() => t46.start(s99), "startAlgorithm") : f35 = n4(() => {
+        }, "startAlgorithm"), t46.pull !== void 0 ? c37 = n4(() => t46.pull(s99), "pullAlgorithm") : c37 = n4(() => T6(void 0), "pullAlgorithm"), t46.cancel !== void 0 ? d16 = n4((R29) => t46.cancel(R29), "cancelAlgorithm") : d16 = n4(() => T6(void 0), "cancelAlgorithm");
         const p34 = t46.autoAllocateChunkSize;
         if (p34 === 0) throw new TypeError("autoAllocateChunkSize must be greater than 0");
-        zn(e23, s98, f35, c37, d16, r11, p34);
+        zn(e23, s99, f35, c37, d16, r11, p34);
       }
       n4(Ci, "SetUpReadableByteStreamControllerFromUnderlyingSource");
       function Pi(e23, t46, r11) {
@@ -49014,8 +49014,8 @@ function ns() {
       function Ai(e23, t46) {
         var r11;
         ne4(e23, t46);
-        const s98 = (r11 = e23?.min) !== null && r11 !== void 0 ? r11 : 1;
-        return { min: mr2(s98, `${t46} has member 'min' that`) };
+        const s99 = (r11 = e23?.min) !== null && r11 !== void 0 ? r11 : 1;
+        return { min: mr2(s99, `${t46} has member 'min' that`) };
       }
       n4(Ai, "convertByobReadOptions");
       function jn(e23) {
@@ -49061,13 +49061,13 @@ function ns() {
           if (t46.byteLength === 0) return b7(new TypeError("view must have non-zero byteLength"));
           if (t46.buffer.byteLength === 0) return b7(new TypeError("view's buffer must have non-zero byteLength"));
           if (_e3(t46.buffer)) return b7(new TypeError("view's buffer has been detached"));
-          let s98;
+          let s99;
           try {
-            s98 = Ai(r11, "options");
+            s99 = Ai(r11, "options");
           } catch (y8) {
             return b7(y8);
           }
-          const f35 = s98.min;
+          const f35 = s99.min;
           if (f35 === 0) return b7(new TypeError("options.min must be greater than 0"));
           if (yi(t46)) {
             if (f35 > t46.byteLength) return b7(new RangeError("options.min must be less than or equal to view's byteLength"));
@@ -49089,9 +49089,9 @@ function ns() {
         return !u6(e23) || !Object.prototype.hasOwnProperty.call(e23, "_readIntoRequests") ? false : e23 instanceof we3;
       }
       n4(We4, "IsReadableStreamBYOBReader");
-      function $n(e23, t46, r11, s98) {
+      function $n(e23, t46, r11, s99) {
         const f35 = e23._ownerReadableStream;
-        f35._disturbed = true, f35._state === "errored" ? s98._errorSteps(f35._storedError) : Si(f35._readableStreamController, t46, r11, s98);
+        f35._disturbed = true, f35._state === "errored" ? s99._errorSteps(f35._storedError) : Si(f35._readableStreamController, t46, r11, s99);
       }
       n4($n, "ReadableStreamBYOBReaderRead");
       function Wi(e23) {
@@ -49102,8 +49102,8 @@ function ns() {
       n4(Wi, "ReadableStreamBYOBReaderRelease");
       function Mn(e23, t46) {
         const r11 = e23._readIntoRequests;
-        e23._readIntoRequests = new M6(), r11.forEach((s98) => {
-          s98._errorSteps(t46);
+        e23._readIntoRequests = new M6(), r11.forEach((s99) => {
+          s99._errorSteps(t46);
         });
       }
       n4(Mn, "ReadableStreamBYOBReaderErrorReadIntoRequests");
@@ -49125,8 +49125,8 @@ function ns() {
       n4(vt3, "ExtractSizeAlgorithm");
       function At2(e23, t46) {
         ne4(e23, t46);
-        const r11 = e23?.highWaterMark, s98 = e23?.size;
-        return { highWaterMark: r11 === void 0 ? void 0 : hr2(r11), size: s98 === void 0 ? void 0 : ki(s98, `${t46} has member 'size' that`) };
+        const r11 = e23?.highWaterMark, s99 = e23?.size;
+        return { highWaterMark: r11 === void 0 ? void 0 : hr2(r11), size: s99 === void 0 ? void 0 : ki(s99, `${t46} has member 'size' that`) };
       }
       n4(At2, "convertQueuingStrategy");
       function ki(e23, t46) {
@@ -49135,12 +49135,12 @@ function ns() {
       n4(ki, "convertQueuingStrategySize");
       function qi(e23, t46) {
         ne4(e23, t46);
-        const r11 = e23?.abort, s98 = e23?.close, f35 = e23?.start, c37 = e23?.type, d16 = e23?.write;
-        return { abort: r11 === void 0 ? void 0 : Oi(r11, e23, `${t46} has member 'abort' that`), close: s98 === void 0 ? void 0 : Ii(s98, e23, `${t46} has member 'close' that`), start: f35 === void 0 ? void 0 : Fi(f35, e23, `${t46} has member 'start' that`), write: d16 === void 0 ? void 0 : zi(d16, e23, `${t46} has member 'write' that`), type: c37 };
+        const r11 = e23?.abort, s99 = e23?.close, f35 = e23?.start, c37 = e23?.type, d16 = e23?.write;
+        return { abort: r11 === void 0 ? void 0 : Oi(r11, e23, `${t46} has member 'abort' that`), close: s99 === void 0 ? void 0 : Ii(s99, e23, `${t46} has member 'close' that`), start: f35 === void 0 ? void 0 : Fi(f35, e23, `${t46} has member 'start' that`), write: d16 === void 0 ? void 0 : zi(d16, e23, `${t46} has member 'write' that`), type: c37 };
       }
       n4(qi, "convertUnderlyingSink");
       function Oi(e23, t46, r11) {
-        return G4(e23, r11), (s98) => z6(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => z6(e23, t46, [s99]);
       }
       n4(Oi, "convertUnderlyingSinkAbortCallback");
       function Ii(e23, t46, r11) {
@@ -49148,11 +49148,11 @@ function ns() {
       }
       n4(Ii, "convertUnderlyingSinkCloseCallback");
       function Fi(e23, t46, r11) {
-        return G4(e23, r11), (s98) => O3(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => O3(e23, t46, [s99]);
       }
       n4(Fi, "convertUnderlyingSinkStartCallback");
       function zi(e23, t46, r11) {
-        return G4(e23, r11), (s98, f35) => z6(e23, t46, [s98, f35]);
+        return G4(e23, r11), (s99, f35) => z6(e23, t46, [s99, f35]);
       }
       n4(zi, "convertUnderlyingSinkWriteCallback");
       function Un(e23, t46) {
@@ -49179,9 +49179,9 @@ function ns() {
         }
         constructor(t46 = {}, r11 = {}) {
           t46 === void 0 ? t46 = null : cn(t46, "First parameter");
-          const s98 = At2(r11, "Second parameter"), f35 = qi(t46, "First parameter");
+          const s99 = At2(r11, "Second parameter"), f35 = qi(t46, "First parameter");
           if (Nn(this), f35.type !== void 0) throw new RangeError("Invalid type is specified");
-          const d16 = vt3(s98), p34 = ot2(s98, 1);
+          const d16 = vt3(s99), p34 = ot2(s99, 1);
           Xi(this, f35, p34, d16);
         }
         get locked() {
@@ -49204,11 +49204,11 @@ function ns() {
         return new de4(e23);
       }
       n4(xn, "AcquireWritableStreamDefaultWriter");
-      function $i(e23, t46, r11, s98, f35 = 1, c37 = () => 1) {
+      function $i(e23, t46, r11, s99, f35 = 1, c37 = () => 1) {
         const d16 = Object.create(Re4.prototype);
         Nn(d16);
         const p34 = Object.create($e3.prototype);
-        return Kn(d16, p34, e23, t46, r11, s98, f35, c37), d16;
+        return Kn(d16, p34, e23, t46, r11, s99, f35, c37), d16;
       }
       n4($i, "CreateWritableStream");
       function Nn(e23) {
@@ -49227,11 +49227,11 @@ function ns() {
         var r11;
         if (e23._state === "closed" || e23._state === "errored") return T6(void 0);
         e23._writableStreamController._abortReason = t46, (r11 = e23._writableStreamController._abortController) === null || r11 === void 0 || r11.abort(t46);
-        const s98 = e23._state;
-        if (s98 === "closed" || s98 === "errored") return T6(void 0);
+        const s99 = e23._state;
+        if (s99 === "closed" || s99 === "errored") return T6(void 0);
         if (e23._pendingAbortRequest !== void 0) return e23._pendingAbortRequest._promise;
         let f35 = false;
-        s98 === "erroring" && (f35 = true, t46 = void 0);
+        s99 === "erroring" && (f35 = true, t46 = void 0);
         const c37 = A8((d16, p34) => {
           e23._pendingAbortRequest = { _promise: void 0, _resolve: d16, _reject: p34, _reason: t46, _wasAlreadyErroring: f35 };
         });
@@ -49244,13 +49244,13 @@ function ns() {
         const r11 = A8((f35, c37) => {
           const d16 = { _resolve: f35, _reject: c37 };
           e23._closeRequest = d16;
-        }), s98 = e23._writer;
-        return s98 !== void 0 && e23._backpressure && t46 === "writable" && Dr(s98), ea(e23._writableStreamController), r11;
+        }), s99 = e23._writer;
+        return s99 !== void 0 && e23._backpressure && t46 === "writable" && Dr(s99), ea(e23._writableStreamController), r11;
       }
       n4(Hn, "WritableStreamClose");
       function Mi(e23) {
-        return A8((r11, s98) => {
-          const f35 = { _resolve: r11, _reject: s98 };
+        return A8((r11, s99) => {
+          const f35 = { _resolve: r11, _reject: s99 };
           e23._writeRequests.push(f35);
         });
       }
@@ -49266,8 +49266,8 @@ function ns() {
       function kr2(e23, t46) {
         const r11 = e23._writableStreamController;
         e23._state = "erroring", e23._storedError = t46;
-        const s98 = e23._writer;
-        s98 !== void 0 && Qn(s98, t46), !Vi(e23) && r11._started && qr(e23);
+        const s99 = e23._writer;
+        s99 !== void 0 && Qn(s99, t46), !Vi(e23) && r11._started && qr(e23);
       }
       n4(kr2, "WritableStreamStartErroring");
       function qr(e23) {
@@ -49284,8 +49284,8 @@ function ns() {
           r11._reject(t46), Wt2(e23);
           return;
         }
-        const s98 = e23._writableStreamController[pt2](r11._reason);
-        g11(s98, () => (r11._resolve(), Wt2(e23), null), (f35) => (r11._reject(f35), Wt2(e23), null));
+        const s99 = e23._writableStreamController[pt2](r11._reason);
+        g11(s99, () => (r11._resolve(), Wt2(e23), null), (f35) => (r11._reject(f35), Wt2(e23), null));
       }
       n4(qr, "WritableStreamFinishErroring");
       function Ui(e23) {
@@ -49345,8 +49345,8 @@ function ns() {
           else if (r11 === "erroring") Lr(this, t46._storedError), It2(this);
           else if (r11 === "closed") ro(this), ia(this);
           else {
-            const s98 = t46._storedError;
-            Lr(this, s98), eo(this, s98);
+            const s99 = t46._storedError;
+            Lr(this, s99), eo(this, s99);
           }
         }
         get closed() {
@@ -49415,14 +49415,14 @@ function ns() {
       }
       n4(Yn, "WritableStreamDefaultWriterRelease");
       function Gn(e23, t46) {
-        const r11 = e23._ownerWritableStream, s98 = r11._writableStreamController, f35 = ta(s98, t46);
+        const r11 = e23._ownerWritableStream, s99 = r11._writableStreamController, f35 = ta(s99, t46);
         if (r11 !== e23._ownerWritableStream) return b7(at3("write to"));
         const c37 = r11._state;
         if (c37 === "errored") return b7(r11._storedError);
         if (oe3(r11) || c37 === "closed") return b7(new TypeError("The stream is closing or closed and cannot be written to"));
         if (c37 === "erroring") return b7(r11._storedError);
         const d16 = Mi(r11);
-        return ra(s98, t46, f35), d16;
+        return ra(s99, t46, f35), d16;
       }
       n4(Gn, "WritableStreamDefaultWriterWrite");
       const Zn = {};
@@ -49459,19 +49459,19 @@ function ns() {
         return !u6(e23) || !Object.prototype.hasOwnProperty.call(e23, "_controlledWritableStream") ? false : e23 instanceof $e3;
       }
       n4(Ir, "IsWritableStreamDefaultController");
-      function Kn(e23, t46, r11, s98, f35, c37, d16, p34) {
-        t46._controlledWritableStream = e23, e23._writableStreamController = t46, t46._queue = void 0, t46._queueTotalSize = void 0, Se3(t46), t46._abortReason = void 0, t46._abortController = Di(), t46._started = false, t46._strategySizeAlgorithm = p34, t46._strategyHWM = d16, t46._writeAlgorithm = s98, t46._closeAlgorithm = f35, t46._abortAlgorithm = c37;
+      function Kn(e23, t46, r11, s99, f35, c37, d16, p34) {
+        t46._controlledWritableStream = e23, e23._writableStreamController = t46, t46._queue = void 0, t46._queueTotalSize = void 0, Se3(t46), t46._abortReason = void 0, t46._abortController = Di(), t46._started = false, t46._strategySizeAlgorithm = p34, t46._strategyHWM = d16, t46._writeAlgorithm = s99, t46._closeAlgorithm = f35, t46._abortAlgorithm = c37;
         const R29 = Fr(t46);
         Or2(e23, R29);
         const y8 = r11(), C6 = T6(y8);
         g11(C6, () => (t46._started = true, qt3(t46), null), (P5) => (t46._started = true, Wr(e23, P5), null));
       }
       n4(Kn, "SetUpWritableStreamDefaultController");
-      function Xi(e23, t46, r11, s98) {
+      function Xi(e23, t46, r11, s99) {
         const f35 = Object.create($e3.prototype);
         let c37, d16, p34, R29;
         t46.start !== void 0 ? c37 = n4(() => t46.start(f35), "startAlgorithm") : c37 = n4(() => {
-        }, "startAlgorithm"), t46.write !== void 0 ? d16 = n4((y8) => t46.write(y8, f35), "writeAlgorithm") : d16 = n4(() => T6(void 0), "writeAlgorithm"), t46.close !== void 0 ? p34 = n4(() => t46.close(), "closeAlgorithm") : p34 = n4(() => T6(void 0), "closeAlgorithm"), t46.abort !== void 0 ? R29 = n4((y8) => t46.abort(y8), "abortAlgorithm") : R29 = n4(() => T6(void 0), "abortAlgorithm"), Kn(e23, f35, c37, d16, p34, R29, r11, s98);
+        }, "startAlgorithm"), t46.write !== void 0 ? d16 = n4((y8) => t46.write(y8, f35), "writeAlgorithm") : d16 = n4(() => T6(void 0), "writeAlgorithm"), t46.close !== void 0 ? p34 = n4(() => t46.close(), "closeAlgorithm") : p34 = n4(() => T6(void 0), "closeAlgorithm"), t46.abort !== void 0 ? R29 = n4((y8) => t46.abort(y8), "abortAlgorithm") : R29 = n4(() => T6(void 0), "abortAlgorithm"), Kn(e23, f35, c37, d16, p34, R29, r11, s99);
       }
       n4(Xi, "SetUpWritableStreamDefaultControllerFromUnderlyingSink");
       function kt2(e23) {
@@ -49501,10 +49501,10 @@ function ns() {
           it(e23, f35);
           return;
         }
-        const s98 = e23._controlledWritableStream;
-        if (!oe3(s98) && s98._state === "writable") {
+        const s99 = e23._controlledWritableStream;
+        if (!oe3(s99) && s99._state === "writable") {
           const f35 = Fr(e23);
-          Or2(s98, f35);
+          Or2(s99, f35);
         }
         qt3(e23);
       }
@@ -49517,8 +49517,8 @@ function ns() {
           return;
         }
         if (e23._queue.length === 0) return;
-        const s98 = pi(e23);
-        s98 === Zn ? na(e23) : oa(e23, s98);
+        const s99 = pi(e23);
+        s99 === Zn ? na(e23) : oa(e23, s99);
       }
       n4(qt3, "WritableStreamDefaultControllerAdvanceQueueIfNeeded");
       function it(e23, t46) {
@@ -49529,14 +49529,14 @@ function ns() {
         const t46 = e23._controlledWritableStream;
         Qi(t46), wr(e23);
         const r11 = e23._closeAlgorithm();
-        kt2(e23), g11(r11, () => (Ni(t46), null), (s98) => (Hi(t46, s98), null));
+        kt2(e23), g11(r11, () => (Ni(t46), null), (s99) => (Hi(t46, s99), null));
       }
       n4(na, "WritableStreamDefaultControllerProcessClose");
       function oa(e23, t46) {
         const r11 = e23._controlledWritableStream;
         Yi(r11);
-        const s98 = e23._writeAlgorithm(t46);
-        g11(s98, () => {
+        const s99 = e23._writeAlgorithm(t46);
+        g11(s99, () => {
           Ui(r11);
           const f35 = r11._state;
           if (wr(e23), !oe3(r11) && f35 === "writable") {
@@ -49650,14 +49650,14 @@ function ns() {
       }
       n4(ca, "getFromGlobal");
       function da() {
-        const e23 = n4(function(r11, s98) {
-          this.message = r11 || "", this.name = s98 || "Error", Error.captureStackTrace && Error.captureStackTrace(this, this.constructor);
+        const e23 = n4(function(r11, s99) {
+          this.message = r11 || "", this.name = s99 || "Error", Error.captureStackTrace && Error.captureStackTrace(this, this.constructor);
         }, "DOMException");
         return h16(e23, "DOMException"), e23.prototype = Object.create(Error.prototype), Object.defineProperty(e23.prototype, "constructor", { value: e23, writable: true, configurable: true }), e23;
       }
       n4(da, "createPolyfill");
       const ha = ca() || da();
-      function oo(e23, t46, r11, s98, f35, c37) {
+      function oo(e23, t46, r11, s99, f35, c37) {
         const d16 = ze4(e23), p34 = xn(t46);
         e23._disturbed = true;
         let R29 = false, y8 = T6(void 0);
@@ -49666,7 +49666,7 @@ function ns() {
           if (c37 !== void 0) {
             if (B6 = n4(() => {
               const _4 = c37.reason !== void 0 ? c37.reason : new ha("Aborted", "AbortError"), v9 = [];
-              s98 || v9.push(() => t46._state === "writable" ? Bt3(t46, _4) : T6(void 0)), f35 || v9.push(() => e23._state === "readable" ? X4(e23, _4) : T6(void 0)), x6(() => Promise.all(v9.map((W5) => W5())), true, _4);
+              s99 || v9.push(() => t46._state === "writable" ? Bt3(t46, _4) : T6(void 0)), f35 || v9.push(() => e23._state === "readable" ? X4(e23, _4) : T6(void 0)), x6(() => Promise.all(v9.map((W5) => W5())), true, _4);
             }, "abortAlgorithm"), c37.aborted) {
               B6();
               return;
@@ -49689,7 +49689,7 @@ function ns() {
               }, "_chunkSteps"), _closeSteps: n4(() => _4(true), "_closeSteps"), _errorSteps: v9 });
             }));
           }
-          if (n4(Ne4, "pipeStep"), me4(e23, d16._closedPromise, (_4) => (s98 ? K4(true, _4) : x6(() => Bt3(t46, _4), true, _4), null)), me4(t46, p34._closedPromise, (_4) => (f35 ? K4(true, _4) : x6(() => X4(e23, _4), true, _4), null)), U8(e23, d16._closedPromise, () => (r11 ? K4() : x6(() => Zi(p34)), null)), oe3(t46) || t46._state === "closed") {
+          if (n4(Ne4, "pipeStep"), me4(e23, d16._closedPromise, (_4) => (s99 ? K4(true, _4) : x6(() => Bt3(t46, _4), true, _4), null)), me4(t46, p34._closedPromise, (_4) => (f35 ? K4(true, _4) : x6(() => X4(e23, _4), true, _4), null)), U8(e23, d16._closedPromise, () => (r11 ? K4() : x6(() => Zi(p34)), null)), oe3(t46) || t46._state === "closed") {
             const _4 = new TypeError("the destination writable stream closed before all data could be piped to it");
             f35 ? K4(true, _4) : x6(() => X4(e23, _4), true, _4);
           }
@@ -49760,8 +49760,8 @@ function ns() {
         [sr](t46) {
           const r11 = this._controlledReadableStream;
           if (this._queue.length > 0) {
-            const s98 = wr(this);
-            this._closeRequested && this._queue.length === 0 ? (jt3(this), lt2(r11)) : st3(this), t46._chunkSteps(s98);
+            const s99 = wr(this);
+            this._closeRequested && this._queue.length === 0 ? (jt3(this), lt2(r11)) : st3(this), t46._chunkSteps(s99);
           } else hn(r11, t46), st3(this);
         }
         [ur2]() {
@@ -49780,7 +49780,7 @@ function ns() {
         }
         e23._pulling = true;
         const r11 = e23._pullAlgorithm();
-        g11(r11, () => (e23._pulling = false, e23._pullAgain && (e23._pullAgain = false, st3(e23)), null), (s98) => (J4(e23, s98), null));
+        g11(r11, () => (e23._pulling = false, e23._pullAgain && (e23._pullAgain = false, st3(e23)), null), (s99) => (J4(e23, s99), null));
       }
       n4(st3, "ReadableStreamDefaultControllerCallPullIfNeeded");
       function io(e23) {
@@ -49803,14 +49803,14 @@ function ns() {
         const r11 = e23._controlledReadableStream;
         if (Ce4(r11) && gt3(r11) > 0) pr(r11, t46, false);
         else {
-          let s98;
+          let s99;
           try {
-            s98 = e23._strategySizeAlgorithm(t46);
+            s99 = e23._strategySizeAlgorithm(t46);
           } catch (f35) {
             throw J4(e23, f35), f35;
           }
           try {
-            Rr(e23, t46, s98);
+            Rr(e23, t46, s99);
           } catch (f35) {
             throw J4(e23, f35), f35;
           }
@@ -49837,17 +49837,17 @@ function ns() {
         return !e23._closeRequested && t46 === "readable";
       }
       n4(Ue3, "ReadableStreamDefaultControllerCanCloseOrEnqueue");
-      function ao(e23, t46, r11, s98, f35, c37, d16) {
-        t46._controlledReadableStream = e23, t46._queue = void 0, t46._queueTotalSize = void 0, Se3(t46), t46._started = false, t46._closeRequested = false, t46._pullAgain = false, t46._pulling = false, t46._strategySizeAlgorithm = d16, t46._strategyHWM = c37, t46._pullAlgorithm = s98, t46._cancelAlgorithm = f35, e23._readableStreamController = t46;
+      function ao(e23, t46, r11, s99, f35, c37, d16) {
+        t46._controlledReadableStream = e23, t46._queue = void 0, t46._queueTotalSize = void 0, Se3(t46), t46._started = false, t46._closeRequested = false, t46._pullAgain = false, t46._pulling = false, t46._strategySizeAlgorithm = d16, t46._strategyHWM = c37, t46._pullAlgorithm = s99, t46._cancelAlgorithm = f35, e23._readableStreamController = t46;
         const p34 = r11();
         g11(T6(p34), () => (t46._started = true, st3(t46), null), (R29) => (J4(t46, R29), null));
       }
       n4(ao, "SetUpReadableStreamDefaultController");
-      function ba(e23, t46, r11, s98) {
+      function ba(e23, t46, r11, s99) {
         const f35 = Object.create(he3.prototype);
         let c37, d16, p34;
         t46.start !== void 0 ? c37 = n4(() => t46.start(f35), "startAlgorithm") : c37 = n4(() => {
-        }, "startAlgorithm"), t46.pull !== void 0 ? d16 = n4(() => t46.pull(f35), "pullAlgorithm") : d16 = n4(() => T6(void 0), "pullAlgorithm"), t46.cancel !== void 0 ? p34 = n4((R29) => t46.cancel(R29), "cancelAlgorithm") : p34 = n4(() => T6(void 0), "cancelAlgorithm"), ao(e23, f35, c37, d16, p34, r11, s98);
+        }, "startAlgorithm"), t46.pull !== void 0 ? d16 = n4(() => t46.pull(f35), "pullAlgorithm") : d16 = n4(() => T6(void 0), "pullAlgorithm"), t46.cancel !== void 0 ? p34 = n4((R29) => t46.cancel(R29), "cancelAlgorithm") : p34 = n4(() => T6(void 0), "cancelAlgorithm"), ao(e23, f35, c37, d16, p34, r11, s99);
       }
       n4(ba, "SetUpReadableStreamDefaultControllerFromUnderlyingSource");
       function Lt3(e23) {
@@ -49860,21 +49860,21 @@ function ns() {
       n4(pa, "ReadableStreamTee");
       function ya(e23, t46) {
         const r11 = ze4(e23);
-        let s98 = false, f35 = false, c37 = false, d16 = false, p34, R29, y8, C6, P5;
+        let s99 = false, f35 = false, c37 = false, d16 = false, p34, R29, y8, C6, P5;
         const B6 = A8((U8) => {
           P5 = U8;
         });
         function ee4() {
-          return s98 ? (f35 = true, T6(void 0)) : (s98 = true, et2(r11, { _chunkSteps: n4((x6) => {
+          return s99 ? (f35 = true, T6(void 0)) : (s99 = true, et2(r11, { _chunkSteps: n4((x6) => {
             se4(() => {
               f35 = false;
               const K4 = x6, be3 = x6;
-              c37 || Me4(y8._readableStreamController, K4), d16 || Me4(C6._readableStreamController, be3), s98 = false, f35 && ee4();
+              c37 || Me4(y8._readableStreamController, K4), d16 || Me4(C6._readableStreamController, be3), s99 = false, f35 && ee4();
             });
           }, "_chunkSteps"), _closeSteps: n4(() => {
-            s98 = false, c37 || Oe4(y8._readableStreamController), d16 || Oe4(C6._readableStreamController), (!c37 || !d16) && P5(void 0);
+            s99 = false, c37 || Oe4(y8._readableStreamController), d16 || Oe4(C6._readableStreamController), (!c37 || !d16) && P5(void 0);
           }, "_closeSteps"), _errorSteps: n4(() => {
-            s98 = false;
+            s99 = false;
           }, "_errorSteps") }), T6(void 0));
         }
         n4(ee4, "pullAlgorithm");
@@ -49900,7 +49900,7 @@ function ns() {
       }
       n4(ya, "ReadableStreamDefaultTee");
       function ga(e23) {
-        let t46 = ze4(e23), r11 = false, s98 = false, f35 = false, c37 = false, d16 = false, p34, R29, y8, C6, P5;
+        let t46 = ze4(e23), r11 = false, s99 = false, f35 = false, c37 = false, d16 = false, p34, R29, y8, C6, P5;
         const B6 = A8((_4) => {
           P5 = _4;
         });
@@ -49911,7 +49911,7 @@ function ns() {
         function Ne4() {
           We4(t46) && (ue4(t46), t46 = ze4(e23), ee4(t46)), et2(t46, { _chunkSteps: n4((v9) => {
             se4(() => {
-              s98 = false, f35 = false;
+              s99 = false, f35 = false;
               const W5 = v9;
               let Y5 = v9;
               if (!c37 && !d16) try {
@@ -49920,7 +49920,7 @@ function ns() {
                 Z4(y8._readableStreamController, He3), Z4(C6._readableStreamController, He3), P5(X4(e23, He3));
                 return;
               }
-              c37 || Tt3(y8._readableStreamController, W5), d16 || Tt3(C6._readableStreamController, Y5), r11 = false, s98 ? me4() : f35 && U8();
+              c37 || Tt3(y8._readableStreamController, W5), d16 || Tt3(C6._readableStreamController, Y5), r11 = false, s99 ? me4() : f35 && U8();
             });
           }, "_chunkSteps"), _closeSteps: n4(() => {
             r11 = false, c37 || rt2(y8._readableStreamController), d16 || rt2(C6._readableStreamController), y8._readableStreamController._pendingPullIntos.length > 0 && Ct3(y8._readableStreamController, 0), C6._readableStreamController._pendingPullIntos.length > 0 && Ct3(C6._readableStreamController, 0), (!c37 || !d16) && P5(void 0);
@@ -49934,7 +49934,7 @@ function ns() {
           const W5 = v9 ? C6 : y8, Y5 = v9 ? y8 : C6;
           $n(t46, _4, 1, { _chunkSteps: n4((Ve2) => {
             se4(() => {
-              s98 = false, f35 = false;
+              s99 = false, f35 = false;
               const Qe3 = v9 ? d16 : c37;
               if (v9 ? c37 : d16) Qe3 || Pt2(W5._readableStreamController, Ve2);
               else {
@@ -49947,7 +49947,7 @@ function ns() {
                 }
                 Qe3 || Pt2(W5._readableStreamController, Ve2), Tt3(Y5._readableStreamController, To);
               }
-              r11 = false, s98 ? me4() : f35 && U8();
+              r11 = false, s99 ? me4() : f35 && U8();
             });
           }, "_chunkSteps"), _closeSteps: n4((Ve2) => {
             r11 = false;
@@ -49959,7 +49959,7 @@ function ns() {
         }
         n4(Ee4, "pullWithBYOBReader");
         function me4() {
-          if (r11) return s98 = true, T6(void 0);
+          if (r11) return s99 = true, T6(void 0);
           r11 = true;
           const _4 = vr2(y8._readableStreamController);
           return _4 === null ? Ne4() : Ee4(_4._view, false), T6(void 0);
@@ -50003,7 +50003,7 @@ function ns() {
       n4(Sa, "ReadableStreamFrom");
       function wa(e23) {
         let t46;
-        const r11 = Tn(e23, "async"), s98 = l27;
+        const r11 = Tn(e23, "async"), s99 = l27;
         function f35() {
           let d16;
           try {
@@ -50042,13 +50042,13 @@ function ns() {
             if (!u6(P5)) throw new TypeError("The promise returned by the iterator.return() method must fulfill with an object");
           });
         }
-        return n4(c37, "cancelAlgorithm"), t46 = ut2(s98, f35, c37, 0), t46;
+        return n4(c37, "cancelAlgorithm"), t46 = ut2(s99, f35, c37, 0), t46;
       }
       n4(wa, "ReadableStreamFromIterable");
       function Ra(e23) {
         let t46;
         const r11 = l27;
-        function s98() {
+        function s99() {
           let c37;
           try {
             c37 = e23.read();
@@ -50064,7 +50064,7 @@ function ns() {
             }
           });
         }
-        n4(s98, "pullAlgorithm");
+        n4(s99, "pullAlgorithm");
         function f35(c37) {
           try {
             return T6(e23.cancel(c37));
@@ -50072,25 +50072,25 @@ function ns() {
             return b7(d16);
           }
         }
-        return n4(f35, "cancelAlgorithm"), t46 = ut2(r11, s98, f35, 0), t46;
+        return n4(f35, "cancelAlgorithm"), t46 = ut2(r11, s99, f35, 0), t46;
       }
       n4(Ra, "ReadableStreamFromDefaultReader");
       function Ta(e23, t46) {
         ne4(e23, t46);
-        const r11 = e23, s98 = r11?.autoAllocateChunkSize, f35 = r11?.cancel, c37 = r11?.pull, d16 = r11?.start, p34 = r11?.type;
-        return { autoAllocateChunkSize: s98 === void 0 ? void 0 : mr2(s98, `${t46} has member 'autoAllocateChunkSize' that`), cancel: f35 === void 0 ? void 0 : Ca(f35, r11, `${t46} has member 'cancel' that`), pull: c37 === void 0 ? void 0 : Pa(c37, r11, `${t46} has member 'pull' that`), start: d16 === void 0 ? void 0 : Ea(d16, r11, `${t46} has member 'start' that`), type: p34 === void 0 ? void 0 : va(p34, `${t46} has member 'type' that`) };
+        const r11 = e23, s99 = r11?.autoAllocateChunkSize, f35 = r11?.cancel, c37 = r11?.pull, d16 = r11?.start, p34 = r11?.type;
+        return { autoAllocateChunkSize: s99 === void 0 ? void 0 : mr2(s99, `${t46} has member 'autoAllocateChunkSize' that`), cancel: f35 === void 0 ? void 0 : Ca(f35, r11, `${t46} has member 'cancel' that`), pull: c37 === void 0 ? void 0 : Pa(c37, r11, `${t46} has member 'pull' that`), start: d16 === void 0 ? void 0 : Ea(d16, r11, `${t46} has member 'start' that`), type: p34 === void 0 ? void 0 : va(p34, `${t46} has member 'type' that`) };
       }
       n4(Ta, "convertUnderlyingDefaultOrByteSource");
       function Ca(e23, t46, r11) {
-        return G4(e23, r11), (s98) => z6(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => z6(e23, t46, [s99]);
       }
       n4(Ca, "convertUnderlyingSourceCancelCallback");
       function Pa(e23, t46, r11) {
-        return G4(e23, r11), (s98) => z6(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => z6(e23, t46, [s99]);
       }
       n4(Pa, "convertUnderlyingSourcePullCallback");
       function Ea(e23, t46, r11) {
-        return G4(e23, r11), (s98) => O3(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => O3(e23, t46, [s99]);
       }
       n4(Ea, "convertUnderlyingSourceStartCallback");
       function va(e23, t46) {
@@ -50104,8 +50104,8 @@ function ns() {
       n4(Aa, "convertIteratorOptions");
       function so(e23, t46) {
         ne4(e23, t46);
-        const r11 = e23?.preventAbort, s98 = e23?.preventCancel, f35 = e23?.preventClose, c37 = e23?.signal;
-        return c37 !== void 0 && Ba(c37, `${t46} has member 'signal' that`), { preventAbort: !!r11, preventCancel: !!s98, preventClose: !!f35, signal: c37 };
+        const r11 = e23?.preventAbort, s99 = e23?.preventCancel, f35 = e23?.preventClose, c37 = e23?.signal;
+        return c37 !== void 0 && Ba(c37, `${t46} has member 'signal' that`), { preventAbort: !!r11, preventCancel: !!s99, preventClose: !!f35, signal: c37 };
       }
       n4(so, "convertPipeOptions");
       function Ba(e23, t46) {
@@ -50116,8 +50116,8 @@ function ns() {
         ne4(e23, t46);
         const r11 = e23?.readable;
         dr2(r11, "readable", "ReadableWritablePair"), br(r11, `${t46} has member 'readable' that`);
-        const s98 = e23?.writable;
-        return dr2(s98, "writable", "ReadableWritablePair"), Un(s98, `${t46} has member 'writable' that`), { readable: r11, writable: s98 };
+        const s99 = e23?.writable;
+        return dr2(s99, "writable", "ReadableWritablePair"), Un(s99, `${t46} has member 'writable' that`), { readable: r11, writable: s99 };
       }
       n4(Wa, "convertReadableWritablePair");
       class L5 {
@@ -50126,13 +50126,13 @@ function ns() {
         }
         constructor(t46 = {}, r11 = {}) {
           t46 === void 0 ? t46 = null : cn(t46, "First parameter");
-          const s98 = At2(r11, "Second parameter"), f35 = Ta(t46, "First parameter");
+          const s99 = At2(r11, "Second parameter"), f35 = Ta(t46, "First parameter");
           if (Ur(this), f35.type === "bytes") {
-            if (s98.size !== void 0) throw new RangeError("The strategy for a byte stream cannot have a size function");
-            const c37 = ot2(s98, 0);
+            if (s99.size !== void 0) throw new RangeError("The strategy for a byte stream cannot have a size function");
+            const c37 = ot2(s99, 0);
             Ci(this, f35, c37);
           } else {
-            const c37 = vt3(s98), d16 = ot2(s98, 1);
+            const c37 = vt3(s99), d16 = ot2(s99, 1);
             ba(this, f35, d16, c37);
           }
         }
@@ -50150,23 +50150,23 @@ function ns() {
         pipeThrough(t46, r11 = {}) {
           if (!Te3(this)) throw Ie3("pipeThrough");
           le4(t46, 1, "pipeThrough");
-          const s98 = Wa(t46, "First parameter"), f35 = so(r11, "Second parameter");
+          const s99 = Wa(t46, "First parameter"), f35 = so(r11, "Second parameter");
           if (Ce4(this)) throw new TypeError("ReadableStream.prototype.pipeThrough cannot be used on a locked ReadableStream");
-          if (De4(s98.writable)) throw new TypeError("ReadableStream.prototype.pipeThrough cannot be used on a locked WritableStream");
-          const c37 = oo(this, s98.writable, f35.preventClose, f35.preventAbort, f35.preventCancel, f35.signal);
-          return Q4(c37), s98.readable;
+          if (De4(s99.writable)) throw new TypeError("ReadableStream.prototype.pipeThrough cannot be used on a locked WritableStream");
+          const c37 = oo(this, s99.writable, f35.preventClose, f35.preventAbort, f35.preventCancel, f35.signal);
+          return Q4(c37), s99.readable;
         }
         pipeTo(t46, r11 = {}) {
           if (!Te3(this)) return b7(Ie3("pipeTo"));
           if (t46 === void 0) return b7("Parameter 1 is required in 'pipeTo'.");
           if (!Le3(t46)) return b7(new TypeError("ReadableStream.prototype.pipeTo's first argument must be a WritableStream"));
-          let s98;
+          let s99;
           try {
-            s98 = so(r11, "Second parameter");
+            s99 = so(r11, "Second parameter");
           } catch (f35) {
             return b7(f35);
           }
-          return Ce4(this) ? b7(new TypeError("ReadableStream.prototype.pipeTo cannot be used on a locked ReadableStream")) : De4(t46) ? b7(new TypeError("ReadableStream.prototype.pipeTo cannot be used on a locked WritableStream")) : oo(this, t46, s98.preventClose, s98.preventAbort, s98.preventCancel, s98.signal);
+          return Ce4(this) ? b7(new TypeError("ReadableStream.prototype.pipeTo cannot be used on a locked ReadableStream")) : De4(t46) ? b7(new TypeError("ReadableStream.prototype.pipeTo cannot be used on a locked WritableStream")) : oo(this, t46, s99.preventClose, s99.preventAbort, s99.preventCancel, s99.signal);
         }
         tee() {
           if (!Te3(this)) throw Ie3("tee");
@@ -50186,18 +50186,18 @@ function ns() {
         }
       }
       Object.defineProperties(L5, { from: { enumerable: true } }), Object.defineProperties(L5.prototype, { cancel: { enumerable: true }, getReader: { enumerable: true }, pipeThrough: { enumerable: true }, pipeTo: { enumerable: true }, tee: { enumerable: true }, values: { enumerable: true }, locked: { enumerable: true } }), h16(L5.from, "from"), h16(L5.prototype.cancel, "cancel"), h16(L5.prototype.getReader, "getReader"), h16(L5.prototype.pipeThrough, "pipeThrough"), h16(L5.prototype.pipeTo, "pipeTo"), h16(L5.prototype.tee, "tee"), h16(L5.prototype.values, "values"), typeof Symbol.toStringTag == "symbol" && Object.defineProperty(L5.prototype, Symbol.toStringTag, { value: "ReadableStream", configurable: true }), Object.defineProperty(L5.prototype, Sr, { value: L5.prototype.values, writable: true, configurable: true });
-      function ut2(e23, t46, r11, s98 = 1, f35 = () => 1) {
+      function ut2(e23, t46, r11, s99 = 1, f35 = () => 1) {
         const c37 = Object.create(L5.prototype);
         Ur(c37);
         const d16 = Object.create(he3.prototype);
-        return ao(c37, d16, e23, t46, r11, s98, f35), c37;
+        return ao(c37, d16, e23, t46, r11, s99, f35), c37;
       }
       n4(ut2, "CreateReadableStream");
       function uo(e23, t46, r11) {
-        const s98 = Object.create(L5.prototype);
-        Ur(s98);
+        const s99 = Object.create(L5.prototype);
+        Ur(s99);
         const f35 = Object.create(ce3.prototype);
-        return zn(s98, f35, e23, t46, r11, 0, void 0), s98;
+        return zn(s99, f35, e23, t46, r11, 0, void 0), s99;
       }
       n4(uo, "CreateReadableByteStream");
       function Ur(e23) {
@@ -50223,8 +50223,8 @@ function ns() {
             c37._closeSteps(void 0);
           });
         }
-        const s98 = e23._readableStreamController[ar2](t46);
-        return F6(s98, l27);
+        const s99 = e23._readableStreamController[ar2](t46);
+        return F6(s99, l27);
       }
       n4(X4, "ReadableStreamCancel");
       function lt2(e23) {
@@ -50232,8 +50232,8 @@ function ns() {
         const t46 = e23._reader;
         if (t46 !== void 0 && (ln(t46), ge3(t46))) {
           const r11 = t46._readRequests;
-          t46._readRequests = new M6(), r11.forEach((s98) => {
-            s98._closeSteps();
+          t46._readRequests = new M6(), r11.forEach((s99) => {
+            s99._closeSteps();
           });
         }
       }
@@ -50310,33 +50310,33 @@ function ns() {
       n4(yo, "IsCountQueuingStrategy");
       function ka(e23, t46) {
         ne4(e23, t46);
-        const r11 = e23?.cancel, s98 = e23?.flush, f35 = e23?.readableType, c37 = e23?.start, d16 = e23?.transform, p34 = e23?.writableType;
-        return { cancel: r11 === void 0 ? void 0 : Fa(r11, e23, `${t46} has member 'cancel' that`), flush: s98 === void 0 ? void 0 : qa(s98, e23, `${t46} has member 'flush' that`), readableType: f35, start: c37 === void 0 ? void 0 : Oa(c37, e23, `${t46} has member 'start' that`), transform: d16 === void 0 ? void 0 : Ia(d16, e23, `${t46} has member 'transform' that`), writableType: p34 };
+        const r11 = e23?.cancel, s99 = e23?.flush, f35 = e23?.readableType, c37 = e23?.start, d16 = e23?.transform, p34 = e23?.writableType;
+        return { cancel: r11 === void 0 ? void 0 : Fa(r11, e23, `${t46} has member 'cancel' that`), flush: s99 === void 0 ? void 0 : qa(s99, e23, `${t46} has member 'flush' that`), readableType: f35, start: c37 === void 0 ? void 0 : Oa(c37, e23, `${t46} has member 'start' that`), transform: d16 === void 0 ? void 0 : Ia(d16, e23, `${t46} has member 'transform' that`), writableType: p34 };
       }
       n4(ka, "convertTransformer");
       function qa(e23, t46, r11) {
-        return G4(e23, r11), (s98) => z6(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => z6(e23, t46, [s99]);
       }
       n4(qa, "convertTransformerFlushCallback");
       function Oa(e23, t46, r11) {
-        return G4(e23, r11), (s98) => O3(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => O3(e23, t46, [s99]);
       }
       n4(Oa, "convertTransformerStartCallback");
       function Ia(e23, t46, r11) {
-        return G4(e23, r11), (s98, f35) => z6(e23, t46, [s98, f35]);
+        return G4(e23, r11), (s99, f35) => z6(e23, t46, [s99, f35]);
       }
       n4(Ia, "convertTransformerTransformCallback");
       function Fa(e23, t46, r11) {
-        return G4(e23, r11), (s98) => z6(e23, t46, [s98]);
+        return G4(e23, r11), (s99) => z6(e23, t46, [s99]);
       }
       n4(Fa, "convertTransformerCancelCallback");
       class Mt2 {
         static {
           n4(this, "TransformStream");
         }
-        constructor(t46 = {}, r11 = {}, s98 = {}) {
+        constructor(t46 = {}, r11 = {}, s99 = {}) {
           t46 === void 0 && (t46 = null);
-          const f35 = At2(r11, "Second parameter"), c37 = At2(s98, "Third parameter"), d16 = ka(t46, "First parameter");
+          const f35 = At2(r11, "Second parameter"), c37 = At2(s99, "Third parameter"), d16 = ka(t46, "First parameter");
           if (d16.readableType !== void 0) throw new RangeError("Invalid readableType specified");
           if (d16.writableType !== void 0) throw new RangeError("Invalid writableType specified");
           const p34 = ot2(c37, 0), R29 = vt3(c37), y8 = ot2(f35, 1), C6 = vt3(f35);
@@ -50356,7 +50356,7 @@ function ns() {
         }
       }
       Object.defineProperties(Mt2.prototype, { readable: { enumerable: true }, writable: { enumerable: true } }), typeof Symbol.toStringTag == "symbol" && Object.defineProperty(Mt2.prototype, Symbol.toStringTag, { value: "TransformStream", configurable: true });
-      function za(e23, t46, r11, s98, f35, c37) {
+      function za(e23, t46, r11, s99, f35, c37) {
         function d16() {
           return t46;
         }
@@ -50372,7 +50372,7 @@ function ns() {
         function y8() {
           return xa(e23);
         }
-        n4(y8, "closeAlgorithm"), e23._writable = $i(d16, p34, y8, R29, r11, s98);
+        n4(y8, "closeAlgorithm"), e23._writable = $i(d16, p34, y8, R29, r11, s99);
         function C6() {
           return Na(e23);
         }
@@ -50435,20 +50435,20 @@ function ns() {
         return !u6(e23) || !Object.prototype.hasOwnProperty.call(e23, "_controlledTransformStream") ? false : e23 instanceof Pe4;
       }
       n4(xt2, "IsTransformStreamDefaultController");
-      function ja(e23, t46, r11, s98, f35) {
-        t46._controlledTransformStream = e23, e23._transformStreamController = t46, t46._transformAlgorithm = r11, t46._flushAlgorithm = s98, t46._cancelAlgorithm = f35, t46._finishPromise = void 0, t46._finishPromise_resolve = void 0, t46._finishPromise_reject = void 0;
+      function ja(e23, t46, r11, s99, f35) {
+        t46._controlledTransformStream = e23, e23._transformStreamController = t46, t46._transformAlgorithm = r11, t46._flushAlgorithm = s99, t46._cancelAlgorithm = f35, t46._finishPromise = void 0, t46._finishPromise_resolve = void 0, t46._finishPromise_reject = void 0;
       }
       n4(ja, "SetUpTransformStreamDefaultController");
       function La(e23, t46) {
         const r11 = Object.create(Pe4.prototype);
-        let s98, f35, c37;
-        t46.transform !== void 0 ? s98 = n4((d16) => t46.transform(d16, r11), "transformAlgorithm") : s98 = n4((d16) => {
+        let s99, f35, c37;
+        t46.transform !== void 0 ? s99 = n4((d16) => t46.transform(d16, r11), "transformAlgorithm") : s99 = n4((d16) => {
           try {
             return So(r11, d16), T6(void 0);
           } catch (p34) {
             return b7(p34);
           }
-        }, "transformAlgorithm"), t46.flush !== void 0 ? f35 = n4(() => t46.flush(r11), "flushAlgorithm") : f35 = n4(() => T6(void 0), "flushAlgorithm"), t46.cancel !== void 0 ? c37 = n4((d16) => t46.cancel(d16), "cancelAlgorithm") : c37 = n4(() => T6(void 0), "cancelAlgorithm"), ja(e23, r11, s98, f35, c37);
+        }, "transformAlgorithm"), t46.flush !== void 0 ? f35 = n4(() => t46.flush(r11), "flushAlgorithm") : f35 = n4(() => T6(void 0), "flushAlgorithm"), t46.cancel !== void 0 ? c37 = n4((d16) => t46.cancel(d16), "cancelAlgorithm") : c37 = n4(() => T6(void 0), "cancelAlgorithm"), ja(e23, r11, s99, f35, c37);
       }
       n4(La, "SetUpTransformStreamDefaultControllerFromTransformer");
       function Nt3(e23) {
@@ -50456,14 +50456,14 @@ function ns() {
       }
       n4(Nt3, "TransformStreamDefaultControllerClearAlgorithms");
       function So(e23, t46) {
-        const r11 = e23._controlledTransformStream, s98 = r11._readable._readableStreamController;
-        if (!Ue3(s98)) throw new TypeError("Readable side is not in a state that permits enqueue");
+        const r11 = e23._controlledTransformStream, s99 = r11._readable._readableStreamController;
+        if (!Ue3(s99)) throw new TypeError("Readable side is not in a state that permits enqueue");
         try {
-          Me4(s98, t46);
+          Me4(s99, t46);
         } catch (c37) {
           throw xr(r11, c37), r11._readable._storedError;
         }
-        ma(s98) !== r11._backpressure && Ut2(r11, true);
+        ma(s99) !== r11._backpressure && Ut2(r11, true);
       }
       n4(So, "TransformStreamDefaultControllerEnqueue");
       function Da(e23, t46) {
@@ -50472,23 +50472,23 @@ function ns() {
       n4(Da, "TransformStreamDefaultControllerError");
       function wo(e23, t46) {
         const r11 = e23._transformAlgorithm(t46);
-        return F6(r11, void 0, (s98) => {
-          throw _o(e23._controlledTransformStream, s98), s98;
+        return F6(r11, void 0, (s99) => {
+          throw _o(e23._controlledTransformStream, s99), s99;
         });
       }
       n4(wo, "TransformStreamDefaultControllerPerformTransform");
       function $a(e23) {
         const t46 = e23._controlledTransformStream, r11 = t46._readable._readableStreamController;
         Oe4(r11);
-        const s98 = new TypeError("TransformStream terminated");
-        xr(t46, s98);
+        const s99 = new TypeError("TransformStream terminated");
+        xr(t46, s99);
       }
       n4($a, "TransformStreamDefaultControllerTerminate");
       function Ma(e23, t46) {
         const r11 = e23._transformStreamController;
         if (e23._backpressure) {
-          const s98 = e23._backpressureChangePromise;
-          return F6(s98, () => {
+          const s99 = e23._backpressureChangePromise;
+          return F6(s99, () => {
             const f35 = e23._writable;
             if (f35._state === "erroring") throw f35._storedError;
             return wo(r11, t46);
@@ -50500,12 +50500,12 @@ function ns() {
       function Ua(e23, t46) {
         const r11 = e23._transformStreamController;
         if (r11._finishPromise !== void 0) return r11._finishPromise;
-        const s98 = e23._readable;
+        const s99 = e23._readable;
         r11._finishPromise = A8((c37, d16) => {
           r11._finishPromise_resolve = c37, r11._finishPromise_reject = d16;
         });
         const f35 = r11._cancelAlgorithm(t46);
-        return Nt3(r11), g11(f35, () => (s98._state === "errored" ? xe4(r11, s98._storedError) : (J4(s98._readableStreamController, t46), Hr(r11)), null), (c37) => (J4(s98._readableStreamController, c37), xe4(r11, c37), null)), r11._finishPromise;
+        return Nt3(r11), g11(f35, () => (s99._state === "errored" ? xe4(r11, s99._storedError) : (J4(s99._readableStreamController, t46), Hr(r11)), null), (c37) => (J4(s99._readableStreamController, c37), xe4(r11, c37), null)), r11._finishPromise;
       }
       n4(Ua, "TransformStreamDefaultSinkAbortAlgorithm");
       function xa(e23) {
@@ -50515,8 +50515,8 @@ function ns() {
         t46._finishPromise = A8((f35, c37) => {
           t46._finishPromise_resolve = f35, t46._finishPromise_reject = c37;
         });
-        const s98 = t46._flushAlgorithm();
-        return Nt3(t46), g11(s98, () => (r11._state === "errored" ? xe4(t46, r11._storedError) : (Oe4(r11._readableStreamController), Hr(t46)), null), (f35) => (J4(r11._readableStreamController, f35), xe4(t46, f35), null)), t46._finishPromise;
+        const s99 = t46._flushAlgorithm();
+        return Nt3(t46), g11(s99, () => (r11._state === "errored" ? xe4(t46, r11._storedError) : (Oe4(r11._readableStreamController), Hr(t46)), null), (f35) => (J4(r11._readableStreamController, f35), xe4(t46, f35), null)), t46._finishPromise;
       }
       n4(xa, "TransformStreamDefaultSinkCloseAlgorithm");
       function Na(e23) {
@@ -50526,12 +50526,12 @@ function ns() {
       function Ha(e23, t46) {
         const r11 = e23._transformStreamController;
         if (r11._finishPromise !== void 0) return r11._finishPromise;
-        const s98 = e23._writable;
+        const s99 = e23._writable;
         r11._finishPromise = A8((c37, d16) => {
           r11._finishPromise_resolve = c37, r11._finishPromise_reject = d16;
         });
         const f35 = r11._cancelAlgorithm(t46);
-        return Nt3(r11), g11(f35, () => (s98._state === "errored" ? xe4(r11, s98._storedError) : (it(s98._writableStreamController, t46), Nr2(e23), Hr(r11)), null), (c37) => (it(s98._writableStreamController, c37), Nr2(e23), xe4(r11, c37), null)), r11._finishPromise;
+        return Nt3(r11), g11(f35, () => (s99._state === "errored" ? xe4(r11, s99._storedError) : (it(s99._writableStreamController, t46), Nr2(e23), Hr(r11)), null), (c37) => (it(s99._writableStreamController, c37), Nr2(e23), xe4(r11, c37), null)), r11._finishPromise;
       }
       n4(Ha, "TransformStreamDefaultSourceCancelAlgorithm");
       function Ht2(e23) {
@@ -51838,15 +51838,15 @@ function parseQuery(parametersString = "") {
     parametersString = parametersString.slice(1);
   }
   for (const parameter of parametersString.split("&")) {
-    const s98 = parameter.match(/([^=]+)=?(.*)/) || [];
-    if (s98.length < 2) {
+    const s99 = parameter.match(/([^=]+)=?(.*)/) || [];
+    if (s99.length < 2) {
       continue;
     }
-    const key = decodeQueryKey(s98[1]);
+    const key = decodeQueryKey(s99[1]);
     if (key === "__proto__" || key === "constructor") {
       continue;
     }
-    const value = decodeQueryValue(s98[2] || "");
+    const value = decodeQueryValue(s99[2] || "");
     if (object[key] === void 0) {
       object[key] = value;
     } else if (Array.isArray(object[key])) {
@@ -51901,9 +51901,9 @@ function withoutTrailingSlash(input2 = "", respectQueryAndFragment) {
     path = input2.slice(0, fragmentIndex);
     fragment = input2.slice(fragmentIndex);
   }
-  const [s0, ...s98] = path.split("?");
+  const [s0, ...s99] = path.split("?");
   const cleanPath = s0.endsWith("/") ? s0.slice(0, -1) : s0;
-  return (cleanPath || "/") + (s98.length > 0 ? `?${s98.join("?")}` : "") + fragment;
+  return (cleanPath || "/") + (s99.length > 0 ? `?${s99.join("?")}` : "") + fragment;
 }
 function withTrailingSlash(input2 = "", respectQueryAndFragment) {
   if (!respectQueryAndFragment) {
@@ -51922,8 +51922,8 @@ function withTrailingSlash(input2 = "", respectQueryAndFragment) {
       return fragment;
     }
   }
-  const [s0, ...s98] = path.split("?");
-  return s0 + "/" + (s98.length > 0 ? `?${s98.join("?")}` : "") + fragment;
+  const [s0, ...s99] = path.split("?");
+  return s0 + "/" + (s99.length > 0 ? `?${s99.join("?")}` : "") + fragment;
 }
 function withBase(input2, base) {
   if (isEmptyURL(base) || hasProtocol(input2)) {
@@ -52484,8 +52484,8 @@ var init_nil = __esm({
 // node_modules/.pnpm/effector-storage@7.1.0_effector@23.3.0/node_modules/effector-storage/storage/index.js
 function e4({ storage: e23, sync: t46 = false, serialize: r11 = JSON.stringify, deserialize: n25 = JSON.parse, timeout: i33, def: o21 }) {
   var d16 = (d17, a45) => {
-    var s98, u6, v9, f35 = () => v9.setItem(d17, r11(u6)), l27 = (e24) => {
-      s98 = clearTimeout(s98), e24 && f35(), "undefined" != typeof removeEventListener && removeEventListener("beforeunload", l27);
+    var s99, u6, v9, f35 = () => v9.setItem(d17, r11(u6)), l27 = (e24) => {
+      s99 = clearTimeout(s99), e24 && f35(), "undefined" != typeof removeEventListener && removeEventListener("beforeunload", l27);
     };
     return t46 && "undefined" != typeof addEventListener && addEventListener("storage", (r12) => {
       r12.storageArea === e23() && (r12.key === d17 && a45("force" === t46 ? void 0 : r12.newValue), null === r12.key && a45(null));
@@ -52494,7 +52494,7 @@ function e4({ storage: e23, sync: t46 = false, serialize: r11 = JSON.stringify, 
       var r12 = void 0 !== t47 ? t47 : e23().getItem(d17);
       return null === r12 ? void 0 !== o21 ? o21 : t47 : n25(r12);
     }, set(t47) {
-      u6 = t47, v9 = e23(), void 0 === i33 ? f35() : s98 || (s98 = setTimeout(l27, i33, 1), "undefined" != typeof addEventListener && addEventListener("beforeunload", l27));
+      u6 = t47, v9 = e23(), void 0 === i33 ? f35() : s99 || (s99 = setTimeout(l27, i33, 1), "undefined" != typeof addEventListener && addEventListener("beforeunload", l27));
     } };
   };
   try {
@@ -53454,17 +53454,17 @@ var init_SSRBase = __esm({
     };
     w2 = (e23, r11) => {
       var t46 = {};
-      for (var s98 in e23)
-        n7.call(e23, s98) && r11.indexOf(s98) < 0 && (t46[s98] = e23[s98]);
+      for (var s99 in e23)
+        n7.call(e23, s99) && r11.indexOf(s99) < 0 && (t46[s99] = e23[s99]);
       if (e23 != null && l4)
-        for (var s98 of l4(e23))
-          r11.indexOf(s98) < 0 && c4.call(e23, s98) && (t46[s98] = e23[s98]);
+        for (var s99 of l4(e23))
+          r11.indexOf(s99) < 0 && c4.call(e23, s99) && (t46[s99] = e23[s99]);
       return t46;
     };
     d3 = (0, import_react214.forwardRef)((e23, r11) => {
       const a45 = e23, {
         alt: t46,
-        color: s98 = "currentColor",
+        color: s99 = "currentColor",
         size: o21 = "1em",
         weight: f35 = "regular",
         mirrored: h16 = false,
@@ -53486,7 +53486,7 @@ var init_SSRBase = __esm({
           xmlns: "http://www.w3.org/2000/svg",
           width: o21,
           height: o21,
-          fill: s98,
+          fill: s99,
           viewBox: "0 0 256 256",
           transform: h16 ? "scale(-1, 1)" : void 0
         }, u6),
@@ -55436,10 +55436,10 @@ var init_chunk_Dbc_orkj = __esm({
   }
 });
 
-// dist/server/chunks/chunk-C7PrGYQz.js
+// dist/server/chunks/chunk-CpAW3-CN.js
 var top, owner, s34;
-var init_chunk_C7PrGYQz = __esm({
-  "dist/server/chunks/chunk-C7PrGYQz.js"() {
+var init_chunk_CpAW3_CN = __esm({
+  "dist/server/chunks/chunk-CpAW3-CN.js"() {
     "use strict";
     top = "FDeHl";
     owner = "y4S-3";
@@ -55610,31 +55610,31 @@ function J2(e23) {
   ae.store(t46) ? n25 = t46 : n25 = g(t46 ?? [W3]);
   const r11 = b({
     source: n25,
-    effect(s98) {
-      return s98.map((f35) => R27(f35, e23)).filter(Boolean);
+    effect(s99) {
+      return s99.map((f35) => R27(f35, e23)).filter(Boolean);
     }
   }), a45 = g(
     null,
     { serialize: "ignore" }
-  ).on(r11.doneData, (s98, f35) => f35), o21 = g(null), i33 = h(
+  ).on(r11.doneData, (s99, f35) => f35), o21 = g(null), i33 = h(
     o21,
-    (s98) => (s98 == null ? void 0 : s98.longitude) ?? null
+    (s99) => (s99 == null ? void 0 : s99.longitude) ?? null
   ), l27 = h(
     o21,
-    (s98) => (s98 == null ? void 0 : s98.latitude) ?? null
+    (s99) => (s99 == null ? void 0 : s99.latitude) ?? null
   ), v9 = p(), h16 = p(), z6 = p(), O3 = g(false), L5 = p(), S10 = p();
   M({
     clock: S10,
-    fn: (s98) => ({ latitude: s98.coords.latitude, longitude: s98.coords.longitude }),
+    fn: (s99) => ({ latitude: s99.coords.latitude, longitude: s99.coords.longitude }),
     target: o21
   });
   const C6 = b({
     source: a45,
-    async effect(s98) {
+    async effect(s99) {
       let f35 = null;
       const $4 = F(L5, { safe: true });
       let w20;
-      s98 ? w20 = s98 : w20 = await r11();
+      s99 ? w20 = s99 : w20 = await r11();
       for (const p34 of w20)
         try {
           N4(p34) ? f35 = await new Promise(
@@ -55657,10 +55657,10 @@ function J2(e23) {
   }), M({ clock: C6.failData, target: L5 });
   const F6 = g(null), I7 = b({
     source: a45,
-    async effect(s98) {
+    async effect(s99) {
       const f35 = F(S10, { safe: true }), $4 = F(L5, { safe: true });
       let w20;
-      s98 ? w20 = s98 : w20 = await r11();
+      s99 ? w20 = s99 : w20 = await r11();
       const p34 = /* @__PURE__ */ new Map(), m32 = /* @__PURE__ */ new Set();
       for (const g11 of w20)
         try {
@@ -55693,8 +55693,8 @@ function J2(e23) {
     }
   }), M6 = b({
     source: F6,
-    effect(s98) {
-      s98 == null || s98();
+    effect(s99) {
+      s99 == null || s99();
     }
   });
   return M({ clock: h16, target: I7 }), M({ clock: I7.doneData, target: F6 }), M({ clock: z6, target: M6 }), M({ clock: M6.finally, target: F6.reinit }), O3.on(h16, () => true).on(z6, () => false), {
@@ -55934,7 +55934,7 @@ var init_chunk_C425Vkts = __esm({
   }
 });
 
-// dist/server/chunks/chunk-BicdRwZo.js
+// dist/server/chunks/chunk-DrwYvZO-.js
 function MantineProvider2({
   children
 }) {
@@ -56015,8 +56015,8 @@ function getConfig(payload, params) {
   return typeof payload === "function" ? payload(params) : payload;
 }
 var import_jsx_runtime177, React11, import_react272, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, createPageInit, import3, onBeforeRender, import4, API, createRequestInstance, createRequestFx, createInternalRequestFx, createCommonRequestFx, getPersonalityTypesWithCategoriesQuery, titleColorMap, MainButton, FormInput, IconCheck, PersonalitiesInitialGate, appStarted, appService, HeadDefault, $userId, $surveyId, UserGate, redirectToTestPageFx, UserModel, OWNER_INFO, CONTACTS, MENU, DOCS, SvgCognitiveLogo, List2, Top, Section, MetaInfo, Footer, disclosureFactory, mobile, desktop, huge, large, $submenuCurrentTitle, setCurrentSubmenuTitle, MainMenu, Submenu, allMenusClosed, RootModel, RedirectToTestPage, useIsMedium, useIsLarge, useIsHuge, MenuItem2, Types, Blog, Faq, NAV_ITEMS, items3, Navigation, Header, RootLayout;
-var init_chunk_BicdRwZo = __esm({
-  "dist/server/chunks/chunk-BicdRwZo.js"() {
+var init_chunk_DrwYvZO = __esm({
+  "dist/server/chunks/chunk-DrwYvZO-.js"() {
     "use strict";
     init_effector();
     import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
@@ -56039,7 +56039,7 @@ var init_chunk_BicdRwZo = __esm({
     init_ssr();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -56376,7 +56376,7 @@ var init_chunk_BicdRwZo = __esm({
       id: 2,
       label: `\xA9 ${(/* @__PURE__ */ new Date()).getFullYear()}`
     }];
-    SvgCognitiveLogo = (props) => /* @__PURE__ */ React11.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 220 36", ...props }, /* @__PURE__ */ React11.createElement("rect", { width: 162, height: 35.91, y: 0.045, fill: "#F3F0FF", rx: 7 }), /* @__PURE__ */ React11.createElement("path", { fill: "#7950F2", d: "M67.498 27.77c-.006-.328-.017-.656-.017-.985V8.157h1.533c.686 0 1.371.017 2.056-.008.337-.012.547.106.756.382 2.35 3.092 4.712 6.173 7.072 9.257.059.078.12.153.246.315V8.18h5.22c0 6.523 0 13.03-.063 19.565-1.404.026-2.743.025-4.083.025l-7.45-9.54c-.03.015-.062.029-.093.043 0 3.136 0 6.271-.053 9.453-1.743.045-3.434.044-5.124.044ZM60.616 27.772v-1.544c-.089.018-.141.013-.171.038-2.207 1.798-4.69 2.026-7.279 1.226-3.676-1.135-5.658-3.857-6.312-7.656-.431-2.504-.148-4.94 1.222-7.115 2.194-3.482 5.38-4.94 9.341-4.637 2.15.165 4.045 1.007 5.578 2.601.453.47.815 1.034 1.234 1.576l-3.93 3.105c-.563-1.098-1.409-1.809-2.478-2.248-2.008-.825-4.134-.034-5.142 1.934-.791 1.544-.907 3.177-.429 4.833.971 3.364 4.107 3.853 6.357 2.69.612-.316 1.142-.8 1.71-1.206l-.07-.164h-3.143v-3.858h7.8c0 3.453 0 6.887-.045 10.371-1.444.052-2.843.053-4.243.054ZM43.665 12.186c3.879 5.914 1.21 13.571-5.346 15.423-5.428 1.534-11.056-2.2-11.953-7.932-.88-5.627 2.727-10.77 8.185-11.521 3.755-.518 6.808.86 9.114 4.03Zm-11.49 2.877c-.853 1.745-.888 3.544-.228 5.341.658 1.793 2.103 2.753 3.96 2.745 1.81-.008 3.199-.985 3.848-2.748.518-1.405.613-2.849.192-4.299-.514-1.773-1.624-2.943-3.425-3.215-1.853-.28-3.347.381-4.347 2.176ZM151.375 15.628v4.326h-6.85v3.115h8.258c0 1.59 0 3.13-.079 4.687-1.017.018-1.955.018-2.893.017l-10.54-.015V8.188h13.274c0 1.535 0 3.06-.056 4.627-2.695.044-5.332.044-7.968.044v2.77h6.854ZM14.893 13.845c-2.037 2.016-2.1 5.888-.22 8.016 1.794 2.03 5.707 1.662 6.776-1.093l4.32 2.663c-.42.59-.766 1.204-1.23 1.698-1.59 1.693-3.614 2.46-5.832 2.737-6.342.793-10.804-4.848-10.705-10.294.083-4.566 3.515-8.683 7.895-9.362 2.82-.436 5.456-.016 7.762 1.851a6.774 6.774 0 0 1 1.832 2.277l-3.962 2.911c-.599-1.428-1.683-2.164-3.12-2.361-1.277-.175-2.479.017-3.516.957ZM126.514 27.764l-7.037-19.558h5.503l3.658 12.624.089.023 3.621-12.672h5.483c-2.335 6.547-4.653 13.05-7.042 19.572-1.471.018-2.873.014-4.275.011ZM100.311 27.782c-.025-.023-.049-.046-.077-.136-.003-4.96-.003-9.852-.003-14.8h-5.47V8.188c.148-.012.27-.03.394-.03 5.157-.002 10.314-.001 15.47 0 .08 0 .159.008.267.083.024 1.584.02 3.098.016 4.61 0 0 .009.003-.035.004l-5.407.001c0 1.966-.002 3.873 0 5.779.004 3.011.011 6.023.016 9.034 0 0-.016.045-.063.073a313.69 313.69 0 0 1-5.108.04ZM112.836 27.768c-.004-2.697-.011-5.394-.013-8.091-.002-3.635 0-7.27 0-10.905v-.578h5.195c0 6.504 0 12.997-.056 19.534-1.746.043-3.436.042-5.126.04ZM87.681 27.777c-.013-.162-.037-.324-.037-.486-.003-6.202-.002-12.405-.002-18.607v-.503h5.204c0 6.51 0 13.001-.048 19.542-1.738.05-3.427.052-5.117.054Z" }), /* @__PURE__ */ React11.createElement("path", { fill: "#101113", d: "M170 27.787V8.21h2.382v17.364h10.591c0 .757 0 1.472-.079 2.206-4.351.014-8.622.01-12.894.007ZM189.7 22.286c-.666 1.701-1.343 3.398-1.991 5.106-.125.33-.276.45-.619.435-.683-.03-1.368-.01-2.117-.01.264-.676.507-1.31.758-1.94 2.279-5.738 4.563-11.473 6.831-17.215.135-.341.281-.499.648-.467.518.046 1.155-.139 1.528.112.353.239.439.909.631 1.394 2.322 5.86 4.642 11.723 6.962 17.585.064.163.115.333.179.52h-2.541c-.727-1.849-1.455-3.702-2.217-5.625-2.622-.079-5.21-.09-7.798-.089-.084 0-.169.127-.254.194Zm3.885-10.756-3.332 8.57h6.919l-3.39-8.97c-.067.139-.116.238-.197.4ZM204.566 27.822c-.019-.126-.054-.252-.054-.379-.003-6.268-.003-12.537-.001-18.806 0-.128.014-.255.024-.415.179-.008.333-.023.488-.023 2.82-.001 5.642.06 8.46-.019 2.585-.073 4.106 1.67 4.643 3.72.584 2.23-.359 4.584-2.28 5.718-.053.031-.106.064-.22.134.121.055.192.09.266.12 2.033.813 3.24 2.697 3.202 5-.033 2.03-1.331 3.823-3.324 4.537-.507.181-1.048.26-1.655.393-3.238.01-6.393.015-9.549.02Zm9.376-8.89h-6.99v6.688c2.34 0 4.661 0 7.055.007.123-.031.248-.056.369-.093 1.445-.445 2.382-1.906 2.257-3.518-.124-1.607-1.192-2.864-2.691-3.084Zm-6.713-2.027c1.865 0 3.729-.009 5.594.004.935.007 1.725-.306 2.309-1.066.884-1.15 1.014-2.422.451-3.752-.544-1.285-1.551-1.78-2.88-1.748-1.466.035-2.932.008-4.398.008h-1.304c-.036.077-.06.106-.06.134-.005 2.04-.011 4.08-.002 6.12.001.1.133.199.29.3Z" }));
+    SvgCognitiveLogo = (props) => /* @__PURE__ */ React11.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 260 46", ...props }, /* @__PURE__ */ React11.createElement("g", { clipPath: "url(#a)" }, /* @__PURE__ */ React11.createElement("path", { fill: "#F3F0FF", d: "M0 8.98A8.922 8.922 0 0 1 8.922.06h242.773a8.921 8.921 0 0 1 8.922 8.921v28.04a8.921 8.921 0 0 1-8.922 8.921H8.922A8.922 8.922 0 0 1 0 37.02V8.98Z" }), /* @__PURE__ */ React11.createElement("path", { fill: "#7950F2", d: "M7.127 22.78c0-1.49.267-2.947.8-4.37a12.676 12.676 0 0 1 2.401-3.922c1.045-1.17 2.313-2.1 3.802-2.788 1.512-.711 3.213-1.067 5.103-1.067 2.267 0 4.246.494 5.936 1.48 1.69.964 2.945 2.248 3.768 3.854l-4.969 3.648c-.289-.803-.711-1.422-1.267-1.858a4.478 4.478 0 0 0-1.768-.895 6.466 6.466 0 0 0-1.834-.275c-.934 0-1.745.195-2.434.585a4.989 4.989 0 0 0-1.668 1.48 7.28 7.28 0 0 0-.967 2.064c-.2.757-.3 1.514-.3 2.271 0 .849.122 1.664.367 2.444.244.78.6 1.48 1.067 2.099a5.116 5.116 0 0 0 1.7 1.41c.69.345 1.457.517 2.302.517.6 0 1.212-.092 1.834-.276a5.052 5.052 0 0 0 1.7-.963c.512-.436.901-1.021 1.168-1.755l5.303 3.269c-.467 1.193-1.245 2.214-2.335 3.063a12.277 12.277 0 0 1-3.702 1.961 13.547 13.547 0 0 1-4.102.654c-1.756 0-3.368-.356-4.835-1.067a12.767 12.767 0 0 1-3.769-2.89 13.888 13.888 0 0 1-2.434-4.061 12.835 12.835 0 0 1-.867-4.611ZM41.799 35.41c-1.801 0-3.435-.344-4.903-1.032a12.422 12.422 0 0 1-3.801-2.822 13.547 13.547 0 0 1-2.435-3.992 13.1 13.1 0 0 1-.834-4.611c0-1.629.3-3.177.9-4.646a12.845 12.845 0 0 1 2.502-3.923 11.902 11.902 0 0 1 3.835-2.753c1.49-.665 3.113-.998 4.87-.998 1.8 0 3.434.356 4.901 1.067a11.365 11.365 0 0 1 3.769 2.822 12.898 12.898 0 0 1 2.401 4.026c.578 1.468.867 2.983.867 4.543 0 1.605-.3 3.142-.9 4.61a12.46 12.46 0 0 1-2.502 3.958 12.225 12.225 0 0 1-3.801 2.753c-1.468.665-3.09.998-4.87.998Zm-5.37-12.388c0 .826.112 1.629.334 2.409a6.793 6.793 0 0 0 1 2.064 5.15 5.15 0 0 0 1.668 1.445c.69.345 1.5.517 2.434.517.934 0 1.746-.184 2.435-.551a4.597 4.597 0 0 0 1.667-1.48 6.643 6.643 0 0 0 .968-2.099 8.626 8.626 0 0 0 0-4.749 6.365 6.365 0 0 0-1.001-2.03 4.58 4.58 0 0 0-1.7-1.445c-.69-.344-1.49-.516-2.402-.516-.934 0-1.745.183-2.434.55a4.99 4.99 0 0 0-1.668 1.48 6.315 6.315 0 0 0-1 2.065c-.2.757-.3 1.537-.3 2.34ZM66.865 35.376c-1.533 0-3-.276-4.401-.826a11.135 11.135 0 0 1-3.669-2.478c-1.067-1.101-1.912-2.42-2.534-3.957-.6-1.56-.9-3.338-.9-5.334 0-1.72.31-3.315.933-4.783a12.189 12.189 0 0 1 2.568-3.855 11.89 11.89 0 0 1 3.868-2.615c1.468-.62 3.057-.929 4.77-.929 2.133 0 4.068.482 5.802 1.445 1.734.94 3.024 2.237 3.868 3.889l-4.835 3.82a5.449 5.449 0 0 0-2.101-2.306c-.934-.596-1.923-.895-2.968-.895-.778 0-1.49.16-2.135.482a5.367 5.367 0 0 0-1.7 1.342c-.467.574-.834 1.262-1.101 2.065-.244.78-.367 1.64-.367 2.58 0 .964.133 1.836.4 2.616s.634 1.457 1.101 2.03a5.47 5.47 0 0 0 1.734 1.308c.667.298 1.412.447 2.234.447a6.127 6.127 0 0 0 3.002-.791c.956-.55 1.823-1.32 2.601-2.306v6.538c-1.779 1.675-3.835 2.513-6.17 2.513Zm5.837-8.363h-4.37v-4.817h9.74v13.007h-5.37v-8.19ZM87.784 23.194v12.01h-6.503V10.77h5.07l9.504 12.423V10.77h6.502v24.432h-5.168l-9.405-12.01ZM106.423 35.203V10.771h6.504v24.432h-6.504ZM135.45 16.621h-6.804v18.582h-6.503V16.621h-6.837v-5.85h20.144v5.85ZM137.818 35.203V10.771h6.504v24.432h-6.504ZM152.972 10.771l4.635 16.69 4.569-16.69h6.837l-8.171 24.432h-6.47l-8.271-24.432h6.871ZM187.684 29.353v5.85h-16.875V10.771h16.575v5.85h-10.072v3.441h8.605V25.5h-8.605v3.854h10.372ZM193.265 35.203V10.771h3.002v21.68h13.206v2.752h-16.208ZM219.945 10.771h2.533l9.673 24.432h-3.202l-2.801-7.157h-9.939l-2.768 7.157h-3.202l9.706-24.432Zm5.535 14.866-4.268-11.287-4.403 11.287h8.671ZM253.486 28.906c0 1.262-.312 2.363-.934 3.304-.622.94-1.467 1.674-2.535 2.202-1.044.528-2.201.791-3.468.791H235.31V10.771h11.773c1.111 0 2.067.31 2.868.93a5.617 5.617 0 0 1 1.867 2.34c.444.94.668 1.926.668 2.959a6.708 6.708 0 0 1-.902 3.372 5.378 5.378 0 0 1-2.5 2.305c1.356.413 2.423 1.182 3.201 2.306.801 1.101 1.201 2.409 1.201 3.923Zm-3.035-.55c0-.758-.167-1.457-.5-2.1a3.968 3.968 0 0 0-1.3-1.548c-.534-.39-1.158-.585-1.869-.585h-8.47v8.396h8.237a3.44 3.44 0 0 0 1.968-.585c.6-.39 1.066-.894 1.4-1.514.356-.642.534-1.33.534-2.065Zm-12.139-14.9v8.155h7.537c.711 0 1.333-.184 1.867-.55.556-.368.989-.861 1.3-1.48a4.21 4.21 0 0 0 .501-2.03c0-.78-.155-1.47-.466-2.065a3.612 3.612 0 0 0-1.235-1.48 2.95 2.95 0 0 0-1.767-.55h-7.737Z" })), /* @__PURE__ */ React11.createElement("defs", null, /* @__PURE__ */ React11.createElement("clipPath", { id: "a" }, /* @__PURE__ */ React11.createElement("path", { fill: "#fff", d: "M0 .059h260V45.94H0z" }))));
     List2 = ({
       data,
       className
@@ -56388,17 +56388,17 @@ var init_chunk_BicdRwZo = __esm({
     };
     Top = () => {
       return /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)(Box, { className: s34.top, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(SvgCognitiveLogo, { width: 220, height: 36 }),
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("p", { children: "\u0417\u043D\u0430\u043D\u0438\u0435 \u043E \u0441\u0435\u0431\u0435 - \u043F\u0435\u0440\u0432\u044B\u0439 \u0448\u0430\u0433 \u043A \u0443\u0441\u043F\u0435\u0445\u0443" }),
+        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(SvgCognitiveLogo, { width: 200, height: 35 }),
+        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("p", { children: "\u0422\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u0441\u0430\u043C\u043E\u043F\u043E\u0437\u043D\u0430\u043D\u0438\u044F" }),
         /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(List2, { className: s34.owner, data: OWNER_INFO })
       ] });
     };
     Section = ({
-      title: title13,
+      title: title14,
       children
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("section", { className: s35.section, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("h2", { children: title13 }),
+        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("h2", { children: title14 }),
         children
       ] });
     };
@@ -56649,13 +56649,13 @@ var init_chunk_BicdRwZo = __esm({
   }
 });
 
-// dist/server/chunks/chunk-DDXQJFMl.js
+// dist/server/chunks/chunk-BTSTuEDn.js
 var import_jsx_runtime178, import_react273, pageInitiated, import5;
-var init_chunk_DDXQJFMl = __esm({
-  "dist/server/chunks/chunk-DDXQJFMl.js"() {
+var init_chunk_BTSTuEDn = __esm({
+  "dist/server/chunks/chunk-BTSTuEDn.js"() {
     "use strict";
     init_effector();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
     init_clsx();
     init_router();
@@ -56774,8 +56774,8 @@ var init_pages_error = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
     init_usePageContext();
     init_chunk_Df7n3hil();
@@ -56788,7 +56788,7 @@ var init_pages_error = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -56956,7 +56956,7 @@ function be2(e23, r11) {
   }, order: 1, parse: function(e24, r12, t47) {
     var i33 = n25 ? +e24[2] : void 0, l27 = e24[0].replace(s46, "\n").match(a45), c37 = false;
     return { items: l27.map(function(e25, n26) {
-      var i34 = o21.exec(e25)[0].length, a46 = new RegExp("^ {1," + i34 + "}", "gm"), u6 = e25.replace(a46, "").replace(o21, ""), s98 = n26 === l27.length - 1, d16 = -1 !== u6.indexOf("\n\n") || s98 && c37;
+      var i34 = o21.exec(e25)[0].length, a46 = new RegExp("^ {1," + i34 + "}", "gm"), u6 = e25.replace(a46, "").replace(o21, ""), s99 = n26 === l27.length - 1, d16 = -1 !== u6.indexOf("\n\n") || s99 && c37;
       c37 = d16;
       var f35, p34 = t47.inline, h16 = t47.list;
       t47.list = true, d16 ? (t47.inline = false, f35 = u6.replace(ae4, "\n\n")) : (t47.inline = true, f35 = u6.replace(ae4, ""));
@@ -57079,7 +57079,7 @@ function Ze3(e23, r11) {
   return n25 ? "function" == typeof n25 || "object" == typeof n25 && "render" in n25 ? n25 : We3(r11, e23 + ".component", e23) : e23;
 }
 function qe2(n25, t46) {
-  var s98;
+  var s99;
   function W5(e23, n26) {
     var i33, a45 = We3(t46.overrides, e23 + ".props", {});
     return (i33 = t46).createElement.apply(i33, [Ze3(e23, t46.overrides), r9({}, n26, a45, { className: Ge3(null == n26 ? void 0 : n26.className, a45.className) || void 0 })].concat([].slice.call(arguments, 2)));
@@ -57126,88 +57126,88 @@ function qe2(n25, t46) {
     }, {}) : null;
   }
   void 0 === n25 && (n25 = ""), void 0 === t46 && (t46 = {}), t46.overrides = t46.overrides || {}, t46.sanitizer = t46.sanitizer || Ue2, t46.slugify = t46.slugify || ze3, t46.namedCodesToUnicode = t46.namedCodesToUnicode ? r9({}, o19, t46.namedCodesToUnicode) : o19, t46.createElement = t46.createElement || e22.createElement;
-  var Q4 = [], V7 = {}, ie4 = ((s98 = {})[i31.blockQuote] = { match: Me3(d14), order: 1, parse: function(e23, r11, n26) {
+  var Q4 = [], V7 = {}, ie4 = ((s99 = {})[i31.blockQuote] = { match: Me3(d14), order: 1, parse: function(e23, r11, n26) {
     var t47 = e23[0].replace(f32, "").match(p32);
     return { alert: t47[1], children: r11(t47[2], n26) };
   }, render: function(e23, r11, n26) {
     var a45 = { key: n26.key };
     return e23.alert && (a45.className = "markdown-alert-" + t46.slugify(e23.alert.toLowerCase(), ze3), e23.children.unshift({ attrs: {}, children: [{ type: i31.text, text: e23.alert }], noInnerParse: true, type: i31.htmlBlock, tag: "header" })), W5("blockquote", a45, r11(e23.children, n26));
-  } }, s98[i31.breakLine] = { match: Re3(h14), order: 1, parse: Fe3, render: function(e23, r11, n26) {
+  } }, s99[i31.breakLine] = { match: Re3(h14), order: 1, parse: Fe3, render: function(e23, r11, n26) {
     return W5("br", { key: n26.key });
-  } }, s98[i31.breakThematic] = { match: Me3(m30), order: 1, parse: Fe3, render: function(e23, r11, n26) {
+  } }, s99[i31.breakThematic] = { match: Me3(m30), order: 1, parse: Fe3, render: function(e23, r11, n26) {
     return W5("hr", { key: n26.key });
-  } }, s98[i31.codeBlock] = { match: Me3(y6), order: 0, parse: function(e23) {
+  } }, s99[i31.codeBlock] = { match: Me3(y6), order: 0, parse: function(e23) {
     return { lang: void 0, text: e23[0].replace(/^ {4}/gm, "").replace(/\n+$/, "") };
   }, render: function(e23, n26, t47) {
     return W5("pre", { key: t47.key }, W5("code", r9({}, e23.attrs, { className: e23.lang ? "lang-" + e23.lang : "" }), e23.text));
-  } }, s98[i31.codeFenced] = { match: Me3(g9), order: 0, parse: function(e23) {
+  } }, s99[i31.codeFenced] = { match: Me3(g9), order: 0, parse: function(e23) {
     return { attrs: q4("code", e23[3] || ""), lang: e23[2] || void 0, text: e23[4], type: i31.codeBlock };
-  } }, s98[i31.codeInline] = { match: Oe3(k7), order: 3, parse: function(e23) {
+  } }, s99[i31.codeInline] = { match: Oe3(k7), order: 3, parse: function(e23) {
     return { text: e23[2] };
   }, render: function(e23, r11, n26) {
     return W5("code", { key: n26.key }, e23.text);
-  } }, s98[i31.footnote] = { match: Me3(b5), order: 0, parse: function(e23) {
+  } }, s99[i31.footnote] = { match: Me3(b5), order: 0, parse: function(e23) {
     return Q4.push({ footnote: e23[2], identifier: e23[1] }), {};
-  }, render: _e2 }, s98[i31.footnoteReference] = { match: Be3(C5), order: 1, parse: function(e23) {
+  }, render: _e2 }, s99[i31.footnoteReference] = { match: Be3(C5), order: 1, parse: function(e23) {
     return { target: "#" + t46.slugify(e23[1], ze3), text: e23[1] };
   }, render: function(e23, r11, n26) {
     return W5("a", { key: n26.key, href: t46.sanitizer(e23.target, "a", "href") }, W5("sup", { key: n26.key }, e23.text));
-  } }, s98[i31.gfmTask] = { match: Be3(E7), order: 1, parse: function(e23) {
+  } }, s99[i31.gfmTask] = { match: Be3(E7), order: 1, parse: function(e23) {
     return { completed: "x" === e23[1].toLowerCase() };
   }, render: function(e23, r11, n26) {
     return W5("input", { checked: e23.completed, key: n26.key, readOnly: true, type: "checkbox" });
-  } }, s98[i31.heading] = { match: Me3(t46.enforceAtxHeadings ? L4 : z4), order: 1, parse: function(e23, r11, n26) {
+  } }, s99[i31.heading] = { match: Me3(t46.enforceAtxHeadings ? L4 : z4), order: 1, parse: function(e23, r11, n26) {
     return { children: Ne3(r11, e23[2], n26), id: t46.slugify(e23[2], ze3), level: e23[1].length };
   }, render: function(e23, r11, n26) {
     return W5("h" + e23.level, { id: e23.id, key: n26.key }, r11(e23.children, n26));
-  } }, s98[i31.headingSetext] = { match: Me3(A5), order: 0, parse: function(e23, r11, n26) {
+  } }, s99[i31.headingSetext] = { match: Me3(A5), order: 0, parse: function(e23, r11, n26) {
     return { children: Ne3(r11, e23[1], n26), level: "=" === e23[2] ? 1 : 2, type: i31.heading };
-  } }, s98[i31.htmlBlock] = { match: Re3(T4), order: 1, parse: function(e23, r11, n26) {
+  } }, s99[i31.htmlBlock] = { match: Re3(T4), order: 1, parse: function(e23, r11, n26) {
     var t47, i33 = e23[3].match(te4), a45 = new RegExp("^" + i33[1], "gm"), o21 = e23[3].replace(a45, ""), c37 = (t47 = o21, Ee3.some(function(e24) {
       return e24.test(t47);
-    }) ? He2 : Ne3), u6 = e23[1].toLowerCase(), s99 = -1 !== l24.indexOf(u6), d16 = (s99 ? u6 : e23[1]).trim(), f35 = { attrs: q4(d16, e23[2]), noInnerParse: s99, tag: d16 };
-    return n26.inAnchor = n26.inAnchor || "a" === u6, s99 ? f35.text = e23[3] : f35.children = c37(r11, o21, n26), n26.inAnchor = false, f35;
+    }) ? He2 : Ne3), u6 = e23[1].toLowerCase(), s100 = -1 !== l24.indexOf(u6), d16 = (s100 ? u6 : e23[1]).trim(), f35 = { attrs: q4(d16, e23[2]), noInnerParse: s100, tag: d16 };
+    return n26.inAnchor = n26.inAnchor || "a" === u6, s100 ? f35.text = e23[3] : f35.children = c37(r11, o21, n26), n26.inAnchor = false, f35;
   }, render: function(e23, n26, t47) {
     return W5(e23.tag, r9({ key: t47.key }, e23.attrs), e23.text || (e23.children ? n26(e23.children, t47) : ""));
-  } }, s98[i31.htmlSelfClosing] = { match: Re3(M4), order: 1, parse: function(e23) {
+  } }, s99[i31.htmlSelfClosing] = { match: Re3(M4), order: 1, parse: function(e23) {
     var r11 = e23[1].trim();
     return { attrs: q4(r11, e23[2] || ""), tag: r11 };
   }, render: function(e23, n26, t47) {
     return W5(e23.tag, r9({}, e23.attrs, { key: t47.key }));
-  } }, s98[i31.htmlComment] = { match: Re3(B5), order: 1, parse: function() {
+  } }, s99[i31.htmlComment] = { match: Re3(B5), order: 1, parse: function() {
     return {};
-  }, render: _e2 }, s98[i31.image] = { match: Oe3(Se2), order: 1, parse: function(e23) {
+  }, render: _e2 }, s99[i31.image] = { match: Oe3(Se2), order: 1, parse: function(e23) {
     return { alt: e23[1], target: De3(e23[2]), title: e23[3] };
   }, render: function(e23, r11, n26) {
     return W5("img", { key: n26.key, alt: e23.alt || void 0, title: e23.title || void 0, src: t46.sanitizer(e23.target, "img", "src") });
-  } }, s98[i31.link] = { match: Be3(Ce3), order: 3, parse: function(e23, r11, n26) {
+  } }, s99[i31.link] = { match: Be3(Ce3), order: 3, parse: function(e23, r11, n26) {
     return { children: je3(r11, e23[1], n26), target: De3(e23[2]), title: e23[3] };
   }, render: function(e23, r11, n26) {
     return W5("a", { key: n26.key, href: t46.sanitizer(e23.target, "a", "href"), title: e23.title }, r11(e23.children, n26));
-  } }, s98[i31.linkAngleBraceStyleDetector] = { match: Be3(D6), order: 0, parse: function(e23) {
+  } }, s99[i31.linkAngleBraceStyleDetector] = { match: Be3(D6), order: 0, parse: function(e23) {
     return { children: [{ text: e23[1], type: i31.text }], target: e23[1], type: i31.link };
-  } }, s98[i31.linkBareUrlDetector] = { match: function(e23, r11) {
+  } }, s99[i31.linkBareUrlDetector] = { match: function(e23, r11) {
     return r11.inAnchor || t46.disableAutoLink ? null : Be3(I6)(e23, r11);
   }, order: 0, parse: function(e23) {
     return { children: [{ text: e23[1], type: i31.text }], target: e23[1], title: void 0, type: i31.link };
-  } }, s98[i31.linkMailtoDetector] = { match: Be3(U6), order: 0, parse: function(e23) {
+  } }, s99[i31.linkMailtoDetector] = { match: Be3(U6), order: 0, parse: function(e23) {
     var r11 = e23[1], n26 = e23[1];
     return u5.test(n26) || (n26 = "mailto:" + n26), { children: [{ text: r11.replace("mailto:", ""), type: i31.text }], target: n26, type: i31.link };
-  } }, s98[i31.orderedList] = be2(W5, 1), s98[i31.unorderedList] = be2(W5, 2), s98[i31.newlineCoalescer] = { match: Me3(v7), order: 3, parse: Fe3, render: function() {
+  } }, s99[i31.orderedList] = be2(W5, 1), s99[i31.unorderedList] = be2(W5, 2), s99[i31.newlineCoalescer] = { match: Me3(v7), order: 3, parse: Fe3, render: function() {
     return "\n";
-  } }, s98[i31.paragraph] = { match: Ie2, order: 3, parse: Pe3, render: function(e23, r11, n26) {
+  } }, s99[i31.paragraph] = { match: Ie2, order: 3, parse: Pe3, render: function(e23, r11, n26) {
     return W5("p", { key: n26.key }, r11(e23.children, n26));
-  } }, s98[i31.ref] = { match: Be3(H5), order: 0, parse: function(e23) {
+  } }, s99[i31.ref] = { match: Be3(H5), order: 0, parse: function(e23) {
     return V7[e23[1]] = { target: e23[2], title: e23[4] }, {};
-  }, render: _e2 }, s98[i31.refImage] = { match: Oe3(P3), order: 0, parse: function(e23) {
+  }, render: _e2 }, s99[i31.refImage] = { match: Oe3(P3), order: 0, parse: function(e23) {
     return { alt: e23[1] || void 0, ref: e23[2] };
   }, render: function(e23, r11, n26) {
     return V7[e23.ref] ? W5("img", { key: n26.key, alt: e23.alt, src: t46.sanitizer(V7[e23.ref].target, "img", "src"), title: V7[e23.ref].title }) : null;
-  } }, s98[i31.refLink] = { match: Be3(F4), order: 0, parse: function(e23, r11, n26) {
+  } }, s99[i31.refLink] = { match: Be3(F4), order: 0, parse: function(e23, r11, n26) {
     return { children: r11(e23[1], n26), fallbackChildren: e23[0], ref: e23[2] };
   }, render: function(e23, r11, n26) {
     return V7[e23.ref] ? W5("a", { key: n26.key, href: t46.sanitizer(V7[e23.ref].target, "a", "href"), title: V7[e23.ref].title }, r11(e23.children, n26)) : W5("span", { key: n26.key }, e23.fallbackChildren);
-  } }, s98[i31.table] = { match: Me3(j3), order: 1, parse: Te2, render: function(e23, r11, n26) {
+  } }, s99[i31.table] = { match: Me3(j3), order: 1, parse: Te2, render: function(e23, r11, n26) {
     var t47 = e23;
     return W5("table", { key: n26.key }, W5("thead", null, W5("tr", null, t47.header.map(function(e24, i33) {
       return W5("th", { key: i33, style: $e2(t47, i33) }, r11(e24, n26));
@@ -57216,27 +57216,27 @@ function qe2(n25, t46) {
         return W5("td", { key: i34, style: $e2(t47, i34) }, r11(e25, n26));
       }));
     })));
-  } }, s98[i31.text] = { match: Re3(re4), order: 4, parse: function(e23) {
+  } }, s99[i31.text] = { match: Re3(re4), order: 4, parse: function(e23) {
     return { text: e23[0].replace($3, function(e24, r11) {
       return t46.namedCodesToUnicode[r11] ? t46.namedCodesToUnicode[r11] : e24;
     }) };
   }, render: function(e23) {
     return e23.text;
-  } }, s98[i31.textBolded] = { match: Oe3(X3), order: 2, parse: function(e23, r11, n26) {
+  } }, s99[i31.textBolded] = { match: Oe3(X3), order: 2, parse: function(e23, r11, n26) {
     return { children: r11(e23[2], n26) };
   }, render: function(e23, r11, n26) {
     return W5("strong", { key: n26.key }, r11(e23.children, n26));
-  } }, s98[i31.textEmphasized] = { match: Oe3(J3), order: 3, parse: function(e23, r11, n26) {
+  } }, s99[i31.textEmphasized] = { match: Oe3(J3), order: 3, parse: function(e23, r11, n26) {
     return { children: r11(e23[2], n26) };
   }, render: function(e23, r11, n26) {
     return W5("em", { key: n26.key }, r11(e23.children, n26));
-  } }, s98[i31.textEscaped] = { match: Oe3(ee3), order: 1, parse: function(e23) {
+  } }, s99[i31.textEscaped] = { match: Oe3(ee3), order: 1, parse: function(e23) {
     return { text: e23[1], type: i31.text };
-  } }, s98[i31.textMarked] = { match: Oe3(K3), order: 3, parse: Pe3, render: function(e23, r11, n26) {
+  } }, s99[i31.textMarked] = { match: Oe3(K3), order: 3, parse: Pe3, render: function(e23, r11, n26) {
     return W5("mark", { key: n26.key }, r11(e23.children, n26));
-  } }, s98[i31.textStrikethroughed] = { match: Oe3(Y4), order: 3, parse: Pe3, render: function(e23, r11, n26) {
+  } }, s99[i31.textStrikethroughed] = { match: Oe3(Y4), order: 3, parse: Pe3, render: function(e23, r11, n26) {
     return W5("del", { key: n26.key }, r11(e23.children, n26));
-  } }, s98);
+  } }, s99);
   true === t46.disableParsingRawHTML && (delete ie4[i31.htmlBlock], delete ie4[i31.htmlSelfClosing]);
   var ae5, oe3 = function(e23) {
     var r11 = Object.keys(e23);
@@ -57245,8 +57245,8 @@ function qe2(n25, t46) {
       for (i33.prevCapture = i33.prevCapture || ""; t47; ) for (var o21 = 0; o21 < r11.length; ) {
         var l27 = r11[o21], c37 = e23[l27], u6 = c37.match(t47, i33);
         if (u6) {
-          var s99 = u6[0];
-          i33.prevCapture += s99, t47 = t47.substring(s99.length);
+          var s100 = u6[0];
+          i33.prevCapture += s100, t47 = t47.substring(s100.length);
           var d16 = c37.parse(u6, n26, i33);
           null == d16.type && (d16.type = l27), a45.push(d16);
           break;
@@ -57407,15 +57407,15 @@ var init_chunk_BcDq_zge = __esm({
   }
 });
 
-// dist/server/chunks/chunk-Bizv-_1N.js
+// dist/server/chunks/chunk-BLYqhgPA.js
 var import_jsx_runtime182, import_react275, getBlogPostsQuery, getBlogPostByIdQuery, BlogPostCard, $currentPage, pageChanged, $pageSize, $totalPages, redirectToMainBlogPostPageFx, BlogModel;
-var init_chunk_Bizv_1N = __esm({
-  "dist/server/chunks/chunk-Bizv-_1N.js"() {
+var init_chunk_BLYqhgPA = __esm({
+  "dist/server/chunks/chunk-BLYqhgPA.js"() {
     "use strict";
     init_effector();
     init_router();
     init_core();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
     import_react275 = __toESM(require_react(), 1);
     init_esm2();
@@ -57584,11 +57584,11 @@ var init_chunk_DdxgA4yV = __esm({
     init_esm2();
     init_chunk_DDC3LuBI();
     PageLayout = ({
-      title: title13,
+      title: title14,
       children
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Box, { component: "section", pb: 32, children: /* @__PURE__ */ (0, import_jsx_runtime184.jsxs)(Container, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Title, { order: 2, className: s48.title, children: title13 }),
+        /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(Title, { order: 2, className: s48.title, children: title14 }),
         children
       ] }) });
     };
@@ -57609,11 +57609,11 @@ var init_pages_blog = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_Bizv_1N();
+    init_chunk_BLYqhgPA();
     init_clsx();
     init_router();
     init_chunk_L3VcMs93();
@@ -57626,7 +57626,7 @@ var init_pages_blog = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -58539,12 +58539,12 @@ var init_lib = __esm({
       }
       static mergeArray(status2, results) {
         const arrayValue = [];
-        for (const s98 of results) {
-          if (s98.status === "aborted")
+        for (const s99 of results) {
+          if (s99.status === "aborted")
             return INVALID;
-          if (s98.status === "dirty")
+          if (s99.status === "dirty")
             status2.dirty();
-          arrayValue.push(s98.value);
+          arrayValue.push(s99.value);
         }
         return { status: status2.value, value: arrayValue };
       }
@@ -62247,8 +62247,8 @@ var require_scroll_spy = __commonJS({
         container5.spyCallbacks.push(handler2);
       },
       updateStates: function updateStates() {
-        scrollSpy.spySetState.forEach(function(s98) {
-          return s98();
+        scrollSpy.spySetState.forEach(function(s99) {
+          return s99();
         });
       },
       unmount: function unmount(stateHandler, spyHandler) {
@@ -63787,10 +63787,10 @@ var require_modules = __commonJS({
   }
 });
 
-// dist/server/chunks/chunk-DwcthD8S.js
-var import_jsx_runtime186, import_react277, import_react_scroll, sendFreeReportOnEmailMutation, submitForm, showUserEmailNotificationFx, SendReportEmailModel, SendReportSchema, getPersonalityTypeQuery, getReportStructureQuery, getRegularPriceQuery, getPriceWithPromocodeQuery, purchaseReportMutation, getSurveysInfoQuery, getFreeResultQuery, getFullReportQuery, $userOrder, $userOrderStatus, $currentContentPage, $currentPage2, currentPageChanged, $isFirstPage, $isLastPage, ReportModel;
-var init_chunk_DwcthD8S = __esm({
-  "dist/server/chunks/chunk-DwcthD8S.js"() {
+// dist/server/chunks/chunk-CHVBxp_z.js
+var import_jsx_runtime186, import_react277, import_react_scroll, sendFreeReportOnEmailMutation, submitForm, showUserEmailNotificationFx, SendReportEmailModel, SendReportSchema, getPersonalityTypeQuery, getReportStructureQuery, getRegularPriceQuery, getPriceWithPromocodeQuery, purchaseReportMutation, getSurveysInfoQuery, getFreeResultQuery, getFullReportQuery, $userOrder, $userOrderStatus, $currentContentPage, $currentPage2, currentPageChanged, $currentContent, $isFirstPage, $isLastPage, ReportModel;
+var init_chunk_CHVBxp_z = __esm({
+  "dist/server/chunks/chunk-CHVBxp_z.js"() {
     "use strict";
     init_effector();
     init_dist4();
@@ -63799,7 +63799,7 @@ var init_chunk_DwcthD8S = __esm({
     import_react277 = __toESM(require_react(), 1);
     init_esm7();
     init_router();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_core();
     init_chunk_7RLfvI5v();
     init_esm5();
@@ -63968,7 +63968,7 @@ var init_chunk_DwcthD8S = __esm({
       name: "currentPageChanged",
       sid: "71yqnn"
     });
-    g({}, {
+    $currentContent = g({}, {
       name: "$currentContent",
       sid: "-6gijl0"
     });
@@ -64006,6 +64006,7 @@ var init_chunk_DwcthD8S = __esm({
       $userOrderStatus,
       $currentContentPage,
       currentPageChanged,
+      $currentContent,
       $isFirstPage,
       $isLastPage,
       $currentPage: $currentPage2
@@ -64035,17 +64036,17 @@ var init_chunk_CEK6IE34 = __esm({
   }
 });
 
-// dist/server/chunks/chunk-D-8KSk9B.js
+// dist/server/chunks/chunk-DCPqLWXU.js
 var import_jsx_runtime187, BANNER_CONFIG, Banner;
-var init_chunk_D_8KSk9B = __esm({
-  "dist/server/chunks/chunk-D-8KSk9B.js"() {
+var init_chunk_DCPqLWXU = __esm({
+  "dist/server/chunks/chunk-DCPqLWXU.js"() {
     "use strict";
     import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_clsx();
     init_router();
     init_chunk_fjYs4Fsw();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_chunk_CEK6IE34();
     BANNER_CONFIG = {
       title: "\u041A\u0443\u043F\u0438\u0442\u044C \u043E\u0442\u0447\u0435\u0442 \u0431\u0435\u0437 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u0442\u0435\u0441\u0442\u0430",
@@ -64054,13 +64055,13 @@ var init_chunk_D_8KSk9B = __esm({
     Banner = ({
       color = "violet",
       actionSlot,
-      title: title13 = BANNER_CONFIG.title,
+      title: title14 = BANNER_CONFIG.title,
       description: description3 = BANNER_CONFIG.description
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Paper, { "data-color": color, className: s50.paper, children: /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(InnerContainer, { className: s50.inner, children: [
         /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(Title, { order: 3, className: s50.title, children: [
           /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Image, { "aria-hidden": true, className: s50.emoji, src: "/images/sparkles.png" }),
-          title13
+          title14
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Text, { className: s50.description, children: description3 }),
         /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(Image, { className: s50.image, "aria-hidden": true, src: "/images/man_book.webp", w: 341, h: 305 }),
@@ -64242,16 +64243,16 @@ var init_lodash = __esm({
   }
 });
 
-// dist/server/chunks/chunk-Da9ti-xu.js
+// dist/server/chunks/chunk-Bq9IhTGl.js
 var import_jsx_runtime188, import_react278, getQuestionsQuery, submitAnswersMutation, $currentPage3, $currentProgress, $currentQuestion, $currentValue, $scaleForm, scaleFormFieldChanged, formPageChanged, delayedFormFieldChanged, TestModel;
-var init_chunk_Da9ti_xu = __esm({
-  "dist/server/chunks/chunk-Da9ti-xu.js"() {
+var init_chunk_Bq9IhTGl = __esm({
+  "dist/server/chunks/chunk-Bq9IhTGl.js"() {
     "use strict";
     init_effector();
     init_lodash();
     init_patronum();
     init_core();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_chunk_7RLfvI5v();
     import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
     init_clsx();
@@ -64497,10 +64498,10 @@ var init_chunk_bri36olt = __esm({
   }
 });
 
-// dist/server/chunks/chunk-BCcTdrjG.js
+// dist/server/chunks/chunk-B8RnwET-.js
 var import_jsx_runtime189, import_react279, import_react_scroll2, BuyNowButton, NavigateToFullStructureTemplate, takeTestAgainClicked, TakeTestAgainModel, TakeTestAgain, BuyNowAndNavigateToFullStructureAction, RedirectToTestPageAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, TakeTestAgainOrBuyReportAction, CALL_TO_ACTION;
-var init_chunk_BCcTdrjG = __esm({
-  "dist/server/chunks/chunk-BCcTdrjG.js"() {
+var init_chunk_B8RnwET = __esm({
+  "dist/server/chunks/chunk-B8RnwET-.js"() {
     "use strict";
     import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
@@ -64509,14 +64510,14 @@ var init_chunk_BCcTdrjG = __esm({
     import_react279 = __toESM(require_react(), 1);
     init_esm7();
     init_router();
-    init_chunk_BicdRwZo();
-    init_chunk_DwcthD8S();
+    init_chunk_DrwYvZO();
+    init_chunk_CHVBxp_z();
     import_react_scroll2 = __toESM(require_modules(), 1);
     init_chunk_C9cLxO8P();
     init_ssr();
     init_chunk_DXisQ4_q();
     init_dist4();
-    init_chunk_Da9ti_xu();
+    init_chunk_Bq9IhTGl();
     init_chunk_BkCevXlW();
     init_chunk_bri36olt();
     BuyNowButton = ({
@@ -64611,11 +64612,11 @@ var init_pages_blog_id = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_Bizv_1N();
+    init_chunk_BLYqhgPA();
     init_index_module();
     init_clsx();
     init_router();
@@ -64623,10 +64624,10 @@ var init_pages_blog_id = __esm({
     init_chunk_CzFhGnwf();
     import_react280 = __toESM(require_react(), 1);
     init_esm7();
-    init_chunk_DwcthD8S();
-    init_chunk_D_8KSk9B();
+    init_chunk_CHVBxp_z();
+    init_chunk_DCPqLWXU();
     import_react_scroll3 = __toESM(require_modules(), 1);
-    init_chunk_BCcTdrjG();
+    init_chunk_B8RnwET();
     init_chunk_DsbrYIda();
     init_effector();
     init_usePageContext();
@@ -64635,7 +64636,7 @@ var init_pages_blog_id = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -64653,7 +64654,7 @@ var init_pages_blog_id = __esm({
     init_chunk_CEK6IE34();
     init_chunk_C9cLxO8P();
     init_chunk_DXisQ4_q();
-    init_chunk_Da9ti_xu();
+    init_chunk_Bq9IhTGl();
     init_chunk_BkCevXlW();
     init_chunk_bri36olt();
     Post = ({
@@ -64865,7 +64866,7 @@ var init_pages_faq = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
@@ -64883,7 +64884,7 @@ var init_pages_faq = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -65102,16 +65103,16 @@ var init_chunk_DimxDOU7 = __esm({
   }
 });
 
-// dist/server/chunks/chunk-B7r2EqTP.js
+// dist/server/chunks/chunk-BkR-0iDB.js
 var import_jsx_runtime192, React12, SvgCircle, SvgCircleSmall, TYPE_TO_COLOR_MAP, ReportHeader;
-var init_chunk_B7r2EqTP = __esm({
-  "dist/server/chunks/chunk-B7r2EqTP.js"() {
+var init_chunk_BkR_0iDB = __esm({
+  "dist/server/chunks/chunk-BkR-0iDB.js"() {
     "use strict";
     import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_clsx();
     React12 = __toESM(require_react(), 1);
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_chunk_DimxDOU7();
     SvgCircle = (props) => /* @__PURE__ */ React12.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 656 399", ...props }, /* @__PURE__ */ React12.createElement("rect", { width: 739, height: 739, y: -118, fill: "var(--stroke-banner-color)", rx: 369.5 }), /* @__PURE__ */ React12.createElement("rect", { width: 483, height: 483, x: 203, y: 84, fill: "var(--inner-circle-banner)", rx: 241.5 }));
     SvgCircleSmall = (props) => /* @__PURE__ */ React12.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 315 211", ...props }, /* @__PURE__ */ React12.createElement("rect", { width: 364, height: 364, fill: "var(--stroke-banner-color)", rx: 182 }), /* @__PURE__ */ React12.createElement("rect", { width: 192, height: 192, x: 86, y: 86, fill: "var(--inner-circle-banner)", rx: 96 }));
@@ -66530,7 +66531,7 @@ var init_chunk_CUSdcW9D = __esm({
   }
 });
 
-// dist/server/chunks/chunk-MQRSCQry.js
+// dist/server/chunks/chunk-xAg09in8.js
 function isListItemArray(value) {
   return Array.isArray(value);
 }
@@ -66548,9 +66549,9 @@ function barChartPrepareData(item4) {
 function isOdd(num) {
   return num % 2;
 }
-var import_jsx_runtime193, import_react289, import_react_scroll4, PointsList, Header2, Paragraph, Cards, OrderedCards, Subtitle, useBarChartViewModel, TypeToColorMap, BarChart, SendReportEmail, contentResolver, OrderedList, BlockquoteLine, FilledBulletList, Paywall, ConclusionPaywall, IconList, Subscription, TextStrokeDash, ReportTitle;
-var init_chunk_MQRSCQry = __esm({
-  "dist/server/chunks/chunk-MQRSCQry.js"() {
+var import_jsx_runtime193, import_react289, import_react_scroll4, PointsList, Header2, Paragraph, Cards, OrderedCards, Subtitle, useBarChartViewModel, TypeToColorMap, BarChart, SendReportEmail, contentResolver, OrderedList, BlockquoteLine, FilledBulletList, Paywall, ConclusionPaywall, IconList, Subscription, TextStrokeDash, ReportTitle, BlockQuoteFilled;
+var init_chunk_xAg09in8 = __esm({
+  "dist/server/chunks/chunk-xAg09in8.js"() {
     "use strict";
     import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
@@ -66562,21 +66563,21 @@ var init_chunk_MQRSCQry = __esm({
     init_chunk_B6bFdn_t();
     init_chunk_BQ40LeIW();
     init_router();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_chunk_DBrM71w7();
     init_ssr();
     init_chunk_DjIL_CpX();
     init_esm7();
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     init_chunk_BNM_ZDVM();
     import_react_scroll4 = __toESM(require_modules(), 1);
+    init_index_module();
     init_chunk_BFk2M7eD();
     init_esm8();
     init_effector_react();
     init_chunk_fjYs4Fsw();
     init_chunk_Csk_sxl4();
     init_chunk_Cbg5WVo5();
-    init_index_module();
     init_chunk_CUSdcW9D();
     PointsList = ({
       points: points2,
@@ -66591,7 +66592,6 @@ var init_chunk_MQRSCQry = __esm({
     };
     Header2 = ({
       text: text14,
-      c: c37 = "violet",
       ...props
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { className: s58.title, order: 5, ...props, children: text14 });
@@ -66739,8 +66739,10 @@ var init_chunk_MQRSCQry = __esm({
       index: index4
     }) => {
       switch (content2.type) {
+        case "blockquote_filled":
+          return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(BlockQuoteFilled, { color, text: content2.text ?? "" });
         case "header":
-          return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Header2, { ...content2, c: color });
+          return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Header2, { ...content2 });
         case "paragraph":
           return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Paragraph, { ...content2 });
         case "cards":
@@ -66809,7 +66811,7 @@ var init_chunk_MQRSCQry = __esm({
     Paywall = ({
       points: points2,
       button_text,
-      title: title13 = "\u0411\u043E\u043B\u044C\u0448\u0435 \u043E \u0412\u0430\u0441 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435",
+      title: title14 = "\u0411\u043E\u043B\u044C\u0448\u0435 \u043E \u0412\u0430\u0441 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435",
       color,
       surveyId,
       index: index4 = 0,
@@ -66818,7 +66820,7 @@ var init_chunk_MQRSCQry = __esm({
       return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Box, { className: s63.wrapper, children: [
         /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Group, { wrap: "nowrap", gap: "xs", className: s63.top, children: [
           /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Image, { w: "3xl", h: "3xl", src: "/images/lock.webp" }),
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("h3", { children: title13 })
+          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("h3", { children: title14 })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Image, { className: s63.paywallMan, src: `/images/circles/${mbti}_${isOdd(index4) ? 0 : 2}.png` }),
         /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(PointsList, { className: s63.points, points: points2, color }),
@@ -66827,7 +66829,7 @@ var init_chunk_MQRSCQry = __esm({
     };
     ConclusionPaywall = ({
       text: text14,
-      title: title13,
+      title: title14,
       points: points2,
       actionsSlot,
       color = "violet"
@@ -66838,7 +66840,7 @@ var init_chunk_MQRSCQry = __esm({
         /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { gap: isLarge ? "lg" : "md", children: [
           /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: "balance", maw: isLarge ? "100%" : "60%", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Group, { gap: "xs", children: [
             /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Image, { visibleFrom: "md", src: "/images/sparkles.png", w: 48, h: 48 }),
-            title13
+            title14
           ] }) }),
           /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { maw: isLarge ? 820 : "100%", fz: isLarge ? 24 : 16, children: text14 }),
           /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(PointsList, { position: "static", points: points2 }),
@@ -66853,7 +66855,7 @@ var init_chunk_MQRSCQry = __esm({
       return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(List, { classNames: s64, children: items4.map((item4) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(List.Item, { icon: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(ThemeIcon, { color: "transparent", c: "violet.9", size: isLarge ? 32 : 24, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(k4, { size: isLarge ? 32 : 24 }) }), mb: "md", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fz: isLarge ? 22 : 18, lh: "21px", children: item4.text }) }, `${item4.type}_${item4.text}`)) });
     };
     Subscription = ({
-      title: title13,
+      title: title14,
       text: text14,
       subscriptionFormSlot
     }) => {
@@ -66862,7 +66864,7 @@ var init_chunk_MQRSCQry = __esm({
       return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Paper, { radius: "lg", bg: "violet.0", pos: "relative", mt: isLarge ? 100 : 0, mx: isHuge ? -157 : 0, px: isLarge ? 153 : "md", py: isLarge ? "3xl" : "xl", children: [
         /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Image, { pos: "absolute", top: isLarge ? 32 : 5, right: isLarge ? 153 : 33, w: isLarge ? 261 : 90, h: isLarge ? 232 : 90, fit: "contain", src: "/images/mail.png" }),
         /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)(Stack, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: "balance", maw: "50%", children: title13 }),
+          /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: "balance", maw: "50%", children: title14 }),
           /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fz: isLarge ? 24 : 18, children: text14 }),
           subscriptionFormSlot
         ] })
@@ -66879,13 +66881,26 @@ var init_chunk_MQRSCQry = __esm({
       const isLarge = useIsLarge();
       return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Title, { mb: "md", "data-type": "title", fz: isLarge ? 24 : 20, children });
     };
+    BlockQuoteFilled = ({
+      text: text14,
+      color = "violet"
+    }) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Paper, { bg: `${color}.0`, py: "lg", px: "3xl", my: "md", c: `${color}.9`, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(index_module_default, { options: {
+        overrides: {
+          p: (props) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fw: 500, children: props.children }),
+          span: (props) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fw: 500, span: true, children: props.children }),
+          pre: (props) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(Text, { fw: 500, children: props.children }),
+          code: (props) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(index_module_default, { children: props.children })
+        }
+      }, children: text14 }) });
+    };
   }
 });
 
-// dist/server/chunks/chunk-BYZJ6g5n.js
-var inner2, label5, block, dropdownIcon, dropdown2, item3, s70;
-var init_chunk_BYZJ6g5n = __esm({
-  "dist/server/chunks/chunk-BYZJ6g5n.js"() {
+// dist/server/chunks/chunk-DkaxDYKf.js
+var inner2, label5, block, dropdownIcon, dropdown2, item3, group, s70;
+var init_chunk_DkaxDYKf = __esm({
+  "dist/server/chunks/chunk-DkaxDYKf.js"() {
     "use strict";
     inner2 = "Vb-SK";
     label5 = "-dRHh";
@@ -66893,21 +66908,23 @@ var init_chunk_BYZJ6g5n = __esm({
     dropdownIcon = "oZRps";
     dropdown2 = "qbrO-";
     item3 = "AMb2M";
+    group = "DA0oe";
     s70 = {
       inner: inner2,
       label: label5,
       block,
       dropdownIcon,
       dropdown: dropdown2,
-      item: item3
+      item: item3,
+      group
     };
   }
 });
 
-// dist/server/chunks/chunk-Bj84ZO0Z.js
+// dist/server/chunks/chunk-DY4V5bJs.js
 var import_jsx_runtime194, import_react290, import_react_scroll5, ReportNavigationTemplate, getIconsMap;
-var init_chunk_Bj84ZO0Z = __esm({
-  "dist/server/chunks/chunk-Bj84ZO0Z.js"() {
+var init_chunk_DY4V5bJs = __esm({
+  "dist/server/chunks/chunk-DY4V5bJs.js"() {
     "use strict";
     import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
     import_react290 = __toESM(require_react(), 1);
@@ -66916,51 +66933,54 @@ var init_chunk_Bj84ZO0Z = __esm({
     init_esm();
     init_ssr();
     init_clsx();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_esm7();
     init_router();
     init_chunk_fjYs4Fsw();
-    init_chunk_DwcthD8S();
-    init_chunk_BYZJ6g5n();
+    init_chunk_CHVBxp_z();
+    init_chunk_DkaxDYKf();
     ReportNavigationTemplate = ({
       content: content2,
       page,
       onPageChange,
-      title: title13,
+      title: title14,
       color = "violet"
     }) => {
       const isLarge = useIsLarge();
       const icons = getIconsMap(isLarge);
-      const [activeMenu, setActiveMenu] = (0, import_react290.useState)(title13 ?? content2[page] ?? "\u0412\u0432\u0435\u0434\u0435\u043D\u0438\u0435");
+      const [activeMenu, setActiveMenu] = (0, import_react290.useState)(title14 ?? content2[page] ?? "\u0412\u0432\u0435\u0434\u0435\u043D\u0438\u0435");
       const [_4, scrollTo2] = useWindowScroll();
-      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(InnerContainer, { className: s70.block, style: {
-        zIndex: 1e3
-      }, pos: "sticky", top: 0, py: "lg", pb: "md", mb: 32, bg: "white", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Menu, { offset: 16, keepMounted: true, width: "target", classNames: s70, "data-color": color, position: "bottom", closeOnItemClick: true, middlewares: {
+      const onPageChangeHandler = ({
+        idx,
+        title: title22
+      }) => {
+        onPageChange(idx + 1);
+        setActiveMenu(title22);
+        scrollTo2({
+          y: 0
+        });
+      };
+      return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(InnerContainer, { className: s70.block, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Menu, { offset: 16, keepMounted: true, width: "target", classNames: s70, "data-color": color, position: "bottom", closeOnItemClick: true, middlewares: {
         flip: false
       }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Target, { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Button, { px: 0, fullWidth: true, classNames: s70, justify: "flex-start", variant: "transparent", size: isLarge ? "xl" : "lg", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Group, { gap: 0, w: "100%", wrap: "nowrap", align: "center", style: {
-          overflow: "hidden"
-        }, justify: isLarge ? "flex-start" : "space-between", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Target, { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Button, { px: 0, fullWidth: true, classNames: s70, justify: "flex-start", variant: "transparent", size: isLarge ? "xl" : "lg", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Group, { gap: 0, className: s70.group, justify: isLarge ? "flex-start" : "space-between", children: [
           /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(Group, { mr: isLarge ? 32 : 20, gap: isLarge ? "lg" : "xs", wrap: "nowrap", style: {
             overflow: "hidden"
           }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Paper, { p: isLarge ? "lg" : 10, maw: 72, mah: 72, radius: "sm", bg: `${color}.1`, c: `${color}.9`, children: icons[activeMenu] }),
-            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { ta: "start", truncate: "end", fz: isLarge ? 32 : 20, fw: "bold", children: title13 ?? activeMenu })
+            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { ta: "start", truncate: "end", fz: isLarge ? 32 : 20, fw: "bold", children: title14 ?? activeMenu })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(C3, { style: {
             flex: "0 1 32px"
           }, color: "var(--mantine-color-dark-9)", size: isLarge ? 32 : 20 })
         ] }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Dropdown, { w: "auto", children: content2 == null ? void 0 : content2.map((title22, idx) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Item, { leftSection: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Paper, { p: isLarge ? 10 : "xxs", radius: "xs", bg: `${color}.1`, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Center, { c: `${color}.9`, className: s70.dropdownIcon, children: icons[title22] }) }), onClick: () => {
-          setActiveMenu(title22);
-          onPageChange(idx + 1);
-          scrollTo2({
-            y: 0
-          });
-        }, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_react_scroll5.Link, { spy: true, to: title22, offset: -100, onSetActive: setActiveMenu, onClick: () => {
-          onPageChange(idx + 1);
-          setActiveMenu(title22);
-        }, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { style: {
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Dropdown, { w: "auto", children: content2 == null ? void 0 : content2.map((title22, idx) => /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Menu.Item, { leftSection: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Paper, { p: isLarge ? 10 : "xxs", radius: "xs", bg: `${color}.1`, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Center, { c: `${color}.9`, className: s70.dropdownIcon, children: icons[title22] }) }), onClick: () => onPageChangeHandler({
+          idx,
+          title: title22
+        }), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_react_scroll5.Link, { spy: true, to: title22, offset: -100, onSetActive: setActiveMenu, onClick: () => onPageChangeHandler({
+          idx,
+          title: title22
+        }), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(Text, { style: {
           pointerEvents: "none"
         }, span: true, inline: true, fz: 14, fw: "bold", children: title22 }) }) }, title22)) })
       ] }, activeMenu) });
@@ -66974,6 +66994,7 @@ var init_chunk_Bj84ZO0Z = __esm({
       "\u0421\u0438\u043B\u044C\u043D\u044B\u0435 \u0438 \u0441\u043B\u0430\u0431\u044B\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(n20, { size: isLarge ? 32 : 20 }),
       "\u0412\u0430\u0448 \u0441\u0442\u0438\u043B\u044C \u043E\u0431\u0449\u0435\u043D\u0438\u044F \u0438 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u0441 \u0434\u0440\u0443\u0433\u0438\u043C\u0438": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(n19, { size: isLarge ? 32 : 20 }),
       "\u041B\u043E\u0432\u0443\u0448\u043A\u0438 \u0432\u0430\u0448\u0435\u0433\u043E \u0440\u0430\u0437\u0443\u043C\u0430 \u2014 \u043A\u0430\u043A \u0438\u0445 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0442\u044C \u0438 \u043F\u0440\u0435\u043E\u0434\u043E\u043B\u0435\u0442\u044C": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(n18, { size: isLarge ? 32 : 20 }),
+      "\u041B\u043E\u0432\u0443\u0448\u043A\u0438 \u0432\u0430\u0448\u0435\u0433\u043E \u0440\u0430\u0437\u0443\u043C\u0430 - \u043A\u0430\u043A \u0438\u0445 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0442\u044C \u0438 \u043F\u0440\u0435\u043E\u0434\u043E\u043B\u0435\u0442\u044C": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(n18, { size: isLarge ? 32 : 20 }),
       "\u041A\u0430\u043A \u0441\u0442\u0440\u0435\u0441\u0441 \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u0432\u0430\u0448\u0438 \u0440\u0435\u0448\u0435\u043D\u0438\u044F": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(w15, { size: isLarge ? 32 : 20 }),
       "\u041A\u0430\u043A \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0431\u0430\u043B\u0430\u043D\u0441 \u0438 \u044D\u043D\u0435\u0440\u0433\u0438\u044E": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(w12, { size: isLarge ? 32 : 20 }),
       "\u0417\u043D\u0430\u043C\u0435\u043D\u0438\u0442\u043E\u0441\u0442\u0438, \u043F\u043E\u0445\u043E\u0436\u0438\u0435 \u043D\u0430 \u0432\u0430\u0441": /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(w13, { size: isLarge ? 32 : 20 }),
@@ -67010,23 +67031,23 @@ var init_pages_free_report = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
     import_react_scroll6 = __toESM(require_modules(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_B7r2EqTP();
+    init_chunk_BkR_0iDB();
     init_clsx();
-    init_chunk_MQRSCQry();
+    init_chunk_xAg09in8();
     init_router();
     init_chunk_fjYs4Fsw();
     init_chunk_L3VcMs93();
     import_react291 = __toESM(require_react(), 1);
-    init_chunk_DwcthD8S();
-    init_chunk_BCcTdrjG();
+    init_chunk_CHVBxp_z();
+    init_chunk_B8RnwET();
     init_esm7();
-    init_chunk_Bj84ZO0Z();
+    init_chunk_DY4V5bJs();
     init_chunk_CCVMUFFq();
     init_usePageContext();
     init_core();
@@ -67034,7 +67055,7 @@ var init_pages_free_report = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -67063,18 +67084,18 @@ var init_pages_free_report = __esm({
     init_chunk_7RLfvI5v();
     init_chunk_C9cLxO8P();
     init_chunk_DXisQ4_q();
-    init_chunk_Da9ti_xu();
+    init_chunk_Bq9IhTGl();
     init_chunk_BkCevXlW();
     init_chunk_bri36olt();
-    init_chunk_BYZJ6g5n();
+    init_chunk_DkaxDYKf();
     FreeReportNavigation = () => {
       const [page, onPageChange] = c2([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);
       const content2 = a2({
         store: getFreeResultQuery.$data,
         keys: ["title", page],
         fn: (content22) => content22 == null ? void 0 : content22.content.map(({
-          title: title13
-        }) => title13)
+          title: title14
+        }) => title14)
       });
       const mbti = c2(getFreeResultQuery.$data.map((el) => el.mbti_type));
       const color = TYPE_TO_COLOR_MAP[mbti];
@@ -67088,7 +67109,6 @@ var init_pages_free_report = __esm({
         stale
       } = c2(getFreeResultQuery);
       const surveyId = c2(UserModel.$surveyId);
-      TYPE_TO_COLOR_MAP[data.mbti_type];
       if (stale || pending2) return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(PageLoader, {});
       if (!data) return null;
       return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(Container, { children: [
@@ -67235,6 +67255,17 @@ var init_pages_free_report = __esm({
   }
 });
 
+// dist/server/chunks/chunk-BYt6uuHd.js
+var React13, SvgCloud, SvgSemiCircle;
+var init_chunk_BYt6uuHd = __esm({
+  "dist/server/chunks/chunk-BYt6uuHd.js"() {
+    "use strict";
+    React13 = __toESM(require_react(), 1);
+    SvgCloud = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 474 150", ...props }, /* @__PURE__ */ React13.createElement("rect", { width: 213, height: 213, x: 86, y: 121, fill: "currentColor", rx: 106.934 }), /* @__PURE__ */ React13.createElement("rect", { width: 214, height: 214, x: 192, y: 38, fill: "currentColor", rx: 107 }), /* @__PURE__ */ React13.createElement("rect", { width: 188, height: 188, x: 348, y: 45, fill: "currentColor", rx: 94.232 }));
+    SvgSemiCircle = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 108 150", ...props }, /* @__PURE__ */ React13.createElement("rect", { width: 252, height: 252, x: -144, y: -24, fill: "currentColor", rx: 126 }));
+  }
+});
+
 // dist/server/chunks/chunk-DdQguQuW.js
 var paper6, title7, box, s72;
 var init_chunk_DdQguQuW = __esm({
@@ -67271,25 +67302,25 @@ __export(pages_full_report_example_exports, {
 function Page6() {
   return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(FullReportExamplePage, {});
 }
-var import_jsx_runtime196, React13, import_react292, import_react_scroll7, SvgCloud, SvgSemiCircle, Preheader, FullReportExamplePage, import74, pageInitiated5, import86, configValuesSerialized6;
+var import_jsx_runtime196, import_react292, import_react_scroll7, Preheader, FullReportExamplePage, import74, pageInitiated5, import86, configValuesSerialized6;
 var init_pages_full_report_example = __esm({
   "dist/server/entries/pages_full-report_example.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
-    React13 = __toESM(require_react(), 1);
     import_react292 = __toESM(require_react(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
-    init_chunk_MQRSCQry();
+    init_chunk_xAg09in8();
     init_chunk_Df7n3hil();
     init_chunk_fjYs4Fsw();
+    init_chunk_BYt6uuHd();
     init_chunk_DdQguQuW();
     import_react_scroll7 = __toESM(require_modules(), 1);
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     init_chunk_CMmF7pqi();
     init_effector();
     init_esm7();
@@ -67300,7 +67331,7 @@ var init_pages_full_report_example = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -67327,14 +67358,12 @@ var init_pages_full_report_example = __esm({
     init_chunk_B8IPFbsA();
     init_dist4();
     init_chunk_7RLfvI5v();
-    SvgCloud = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 474 150", ...props }, /* @__PURE__ */ React13.createElement("rect", { width: 213, height: 213, x: 86, y: 121, fill: "currentColor", rx: 106.934 }), /* @__PURE__ */ React13.createElement("rect", { width: 214, height: 214, x: 192, y: 38, fill: "currentColor", rx: 107 }), /* @__PURE__ */ React13.createElement("rect", { width: 188, height: 188, x: 348, y: 45, fill: "currentColor", rx: 94.232 }));
-    SvgSemiCircle = (props) => /* @__PURE__ */ React13.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 108 150", ...props }, /* @__PURE__ */ React13.createElement("rect", { width: 252, height: 252, x: -144, y: -24, fill: "currentColor", rx: 126 }));
     Preheader = ({
       color = "violet",
-      title: title13
+      title: title14
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Paper, { className: s72.paper, "data-color": color, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Title, { className: s72.title, children: title13 }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Title, { className: s72.title, children: title14 }),
         /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Box, { visibleFrom: "sm", className: s72.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(SvgCloud, { width: 474, height: "100%" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Box, { visibleFrom: "xs", className: s72.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(SvgSemiCircle, { width: 150, height: "100%" }) })
       ] });
@@ -67540,32 +67569,32 @@ var init_chunk_Dmn5kb6y = __esm({
   }
 });
 
-// dist/server/chunks/chunk-fYP-lJd6.js
+// dist/server/chunks/chunk-CS5PrdXh.js
 var import_jsx_runtime198, InnerLayout;
-var init_chunk_fYP_lJd6 = __esm({
-  "dist/server/chunks/chunk-fYP-lJd6.js"() {
+var init_chunk_CS5PrdXh = __esm({
+  "dist/server/chunks/chunk-CS5PrdXh.js"() {
     "use strict";
     import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_chunk_Df7n3hil();
     init_chunk_fjYs4Fsw();
     init_clsx();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     init_chunk_Dmn5kb6y();
     InnerLayout = ({
       navigateTo,
       backButtonText,
       text: text14,
-      title: title13,
-      image: image7,
+      title: title14,
+      image: image6,
       children
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(Container, { pb: "5xl", children: [
         /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(BackButton, { to: navigateTo, text: backButtonText }),
         /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(InnerContainer, { className: s75.wrapper, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Image, { draggable: false, src: image7, width: 185, height: 178, flex: "auto" }),
+          /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Image, { draggable: false, src: image6, width: 185, height: 178, flex: "auto" }),
           /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(Stack, { w: "100%", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Title, { order: 2, className: s75.title, hidden: !title13, children: title13 }),
+            /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Title, { order: 2, className: s75.title, hidden: !title14, children: title14 }),
             /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Text, { className: s75.text, hidden: !text14, children: text14 }),
             children
           ] })
@@ -67589,8 +67618,8 @@ var init_pages_help = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime199 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
@@ -67602,14 +67631,14 @@ var init_pages_help = __esm({
     init_chunk_7RLfvI5v();
     init_esm8();
     init_esm5();
-    init_chunk_fYP_lJd6();
+    init_chunk_CS5PrdXh();
     import_react293 = __toESM(require_react(), 1);
     init_usePageContext();
     init_chunk_BuupiibZ();
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -67958,8 +67987,8 @@ var init_pages_index = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime200 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_clsx();
@@ -67972,7 +68001,7 @@ var init_pages_index = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -68151,8 +68180,8 @@ var init_pages_payment_check = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime202 = __toESM(require_jsx_runtime(), 1);
     init_effector_react();
     init_router();
@@ -68161,16 +68190,16 @@ var init_pages_payment_check = __esm({
     import_react294 = __toESM(require_react(), 1);
     init_esm7();
     init_chunk_L3VcMs93();
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     import_react_scroll8 = __toESM(require_modules(), 1);
     init_chunk_BYm16E_b();
-    init_chunk_fYP_lJd6();
+    init_chunk_CS5PrdXh();
     init_core();
     init_chunk_BuupiibZ();
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -68222,13 +68251,13 @@ var init_pages_payment_check = __esm({
         status: ReportModel.$userOrderStatus
       });
       const {
-        title: title13,
+        title: title14,
         buttonText,
         text: text14
       } = getStatusInfo(status2);
       if (!order_id) navigate("/");
       if (pending2 || !order) return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(PageLoader, {});
-      return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(InnerLayout, { title: title13, text: text14, image: "/images/paywall-man_large.webp", navigateTo: "/", backButtonText: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E", children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(InnerLayout, { title: title14, text: text14, image: "/images/paywall-man_large.webp", navigateTo: "/", backButtonText: "\u041D\u0430 \u0433\u043B\u0430\u0432\u043D\u0443\u044E", children: [
         /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(MainButton, { component: "a", href: status2 === "paid" ? `/report/${order == null ? void 0 : order.user_report}` : `/`, children: buttonText }),
         /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(NavigateToHelpPage, {})
       ] });
@@ -68389,13 +68418,13 @@ var init_chunk_DUsR_E9C = __esm({
   }
 });
 
-// dist/server/chunks/chunk-BmxPcFT5.js
+// dist/server/chunks/chunk-DOhGnJ-h.js
 function isErrorWithMessage(value) {
   return isObject_default(value) && "data" in value && "message" in value;
 }
 var import_jsx_runtime203, import_react295, import_react_scroll9, PriceInfo, toInputUppercase, applyPromocodeClicked, $promocodeErrorMessage, $showSuccessPromoMessage, reportPurchased, openTransactionPaywallFx, useReportBuyFormViewModel, BuyReportForm, PurchasePage;
-var init_chunk_BmxPcFT5 = __esm({
-  "dist/server/chunks/chunk-BmxPcFT5.js"() {
+var init_chunk_DOhGnJ_h = __esm({
+  "dist/server/chunks/chunk-DOhGnJ-h.js"() {
     "use strict";
     import_jsx_runtime203 = __toESM(require_jsx_runtime(), 1);
     init_effector_react();
@@ -68405,8 +68434,8 @@ var init_chunk_BmxPcFT5 = __esm({
     init_esm7();
     init_router();
     init_chunk_L3VcMs93();
-    init_chunk_BicdRwZo();
-    init_chunk_DwcthD8S();
+    init_chunk_DrwYvZO();
+    init_chunk_CHVBxp_z();
     init_esm2();
     init_chunk_CnxrCl4R();
     import_react_scroll9 = __toESM(require_modules(), 1);
@@ -68417,7 +68446,7 @@ var init_chunk_BmxPcFT5 = __esm({
     init_patronum();
     init_lodash();
     init_esm8();
-    init_chunk_fYP_lJd6();
+    init_chunk_CS5PrdXh();
     PriceInfo = ({
       regularPrice,
       promocodePrice
@@ -68674,10 +68703,10 @@ var init_pages_purchase_type = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime204 = __toESM(require_jsx_runtime(), 1);
-    init_chunk_BmxPcFT5();
+    init_chunk_DOhGnJ_h();
     import_react296 = __toESM(require_react(), 1);
     init_usePageContext();
     init_core();
@@ -68687,7 +68716,7 @@ var init_pages_purchase_type = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -68700,7 +68729,7 @@ var init_pages_purchase_type = __esm({
     init_chunk_C425Vkts();
     init_esm7();
     init_chunk_L3VcMs93();
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     init_dist4();
     init_chunk_7RLfvI5v();
     import_react_scroll10 = __toESM(require_modules(), 1);
@@ -68709,7 +68738,7 @@ var init_pages_purchase_type = __esm({
     init_chunk_DKUCTWb6();
     init_chunk_CoqZiLJg();
     init_chunk_DUsR_E9C();
-    init_chunk_fYP_lJd6();
+    init_chunk_CS5PrdXh();
     init_chunk_Df7n3hil();
     init_chunk_CBONTDBC();
     init_chunk_fjYs4Fsw();
@@ -68853,10 +68882,10 @@ var init_pages_purchase_personal_surveyId = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime205 = __toESM(require_jsx_runtime(), 1);
-    init_chunk_BmxPcFT5();
+    init_chunk_DOhGnJ_h();
     import_react297 = __toESM(require_react(), 1);
     init_usePageContext();
     init_core();
@@ -68866,7 +68895,7 @@ var init_pages_purchase_personal_surveyId = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -68879,7 +68908,7 @@ var init_pages_purchase_personal_surveyId = __esm({
     init_chunk_C425Vkts();
     init_esm7();
     init_chunk_L3VcMs93();
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     init_dist4();
     init_chunk_7RLfvI5v();
     import_react_scroll11 = __toESM(require_modules(), 1);
@@ -68888,7 +68917,7 @@ var init_pages_purchase_personal_surveyId = __esm({
     init_chunk_DKUCTWb6();
     init_chunk_CoqZiLJg();
     init_chunk_DUsR_E9C();
-    init_chunk_fYP_lJd6();
+    init_chunk_CS5PrdXh();
     init_chunk_Df7n3hil();
     init_chunk_CBONTDBC();
     init_chunk_fjYs4Fsw();
@@ -69018,24 +69047,40 @@ var init_pages_purchase_personal_surveyId = __esm({
   }
 });
 
+// dist/server/chunks/chunk-DnGw-Ivs.js
+var paper7, title10, box3, s79;
+var init_chunk_DnGw_Ivs = __esm({
+  "dist/server/chunks/chunk-DnGw-Ivs.js"() {
+    "use strict";
+    paper7 = "laKEK";
+    title10 = "I8TD7";
+    box3 = "NZtOu";
+    s79 = {
+      paper: paper7,
+      title: title10,
+      box: box3
+    };
+  }
+});
+
 // dist/server/chunks/chunk-CX6FDDHQ.js
-var paper7, root5, group, image5, title10, text8, controls, s79;
+var paper8, root5, group2, image5, title11, text8, controls, s80;
 var init_chunk_CX6FDDHQ = __esm({
   "dist/server/chunks/chunk-CX6FDDHQ.js"() {
     "use strict";
-    paper7 = "S5fPF";
+    paper8 = "S5fPF";
     root5 = "SihDo";
-    group = "Wrp5Q";
+    group2 = "Wrp5Q";
     image5 = "SXuXk";
-    title10 = "F6iOT";
+    title11 = "F6iOT";
     text8 = "rOSqy";
     controls = "-d8D6";
-    s79 = {
-      paper: paper7,
+    s80 = {
+      paper: paper8,
       root: root5,
-      group,
+      group: group2,
       image: image5,
-      title: title10,
+      title: title11,
       text: text8,
       controls
     };
@@ -69043,19 +69088,19 @@ var init_chunk_CX6FDDHQ = __esm({
 });
 
 // dist/server/chunks/chunk-Dyton84m.js
-var content, s80;
+var content, s81;
 var init_chunk_Dyton84m = __esm({
   "dist/server/chunks/chunk-Dyton84m.js"() {
     "use strict";
     content = "PeZdW";
-    s80 = {
+    s81 = {
       content
     };
   }
 });
 
 // dist/server/chunks/chunk-B48VFyY7.js
-var root6, grid, prev, next, text9, paper8, s81;
+var root6, grid, prev, next, text9, paper9, s82;
 var init_chunk_B48VFyY7 = __esm({
   "dist/server/chunks/chunk-B48VFyY7.js"() {
     "use strict";
@@ -69064,14 +69109,14 @@ var init_chunk_B48VFyY7 = __esm({
     prev = "EH0sS";
     next = "t-fgb";
     text9 = "o-X-I";
-    paper8 = "zqIWn";
-    s81 = {
+    paper9 = "zqIWn";
+    s82 = {
       root: root6,
       grid,
       prev,
       next,
       text: text9,
-      paper: paper8
+      paper: paper9
     };
   }
 });
@@ -69087,28 +69132,30 @@ function normalizeData(data) {
 function Page12() {
   return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(FullReportPage, {});
 }
-var import_jsx_runtime206, import_react298, import_react_scroll12, INITIAL_CONTENT, AdBanner, FullReportNavigation, FullReportSlice, ReportPagination, FullReportPage, import812, configValuesSerialized12;
+var import_jsx_runtime206, import_react298, import_react_scroll12, INITIAL_CONTENT, AdBanner, CategoryBanner, FullReportNavigation, FullReportSlice, ReportPagination, FullReportPage, import812, configValuesSerialized12;
 var init_pages_report_reportId = __esm({
   "dist/server/entries/pages_report_-reportId.mjs"() {
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime206 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_B7r2EqTP();
+    init_chunk_BkR_0iDB();
     init_clsx();
     import_react298 = __toESM(require_react(), 1);
     init_esm7();
     init_router();
     init_chunk_L3VcMs93();
-    init_chunk_DwcthD8S();
+    init_chunk_CHVBxp_z();
     import_react_scroll12 = __toESM(require_modules(), 1);
-    init_chunk_Bj84ZO0Z();
+    init_chunk_BYt6uuHd();
+    init_chunk_DnGw_Ivs();
+    init_chunk_DY4V5bJs();
     init_usePageContext();
-    init_chunk_MQRSCQry();
+    init_chunk_xAg09in8();
     init_chunk_fjYs4Fsw();
     init_chunk_CX6FDDHQ();
     init_chunk_Dyton84m();
@@ -69120,7 +69167,7 @@ var init_pages_report_reportId = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -69134,7 +69181,7 @@ var init_pages_report_reportId = __esm({
     init_chunk_DimxDOU7();
     init_dist4();
     init_chunk_7RLfvI5v();
-    init_chunk_BYZJ6g5n();
+    init_chunk_DkaxDYKf();
     init_chunk_C1_oOVAN();
     init_chunk_BW51Qjtd();
     init_chunk_C_Pybyhg();
@@ -69152,19 +69199,29 @@ var init_pages_report_reportId = __esm({
     AdBanner = ({
       children,
       content: content2 = INITIAL_CONTENT,
-      title: title13 = "\u0423\u0437\u043D\u0430\u0439\u0442\u0435 \u0441\u0432\u043E\u0439 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438",
+      title: title14 = "\u0423\u0437\u043D\u0430\u0439\u0442\u0435 \u0441\u0432\u043E\u0439 \u0442\u0438\u043F \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438",
       type: type2 = "ESFJ"
     }) => {
       const isLarge = useIsLarge();
-      return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s79.paper, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Stack, { className: s79.root, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { className: s79.group, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Image, { className: s79.image, src: "/images/sparkles.webp" }),
-          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Title, { className: s79.title, fz: 20, children: title13 })
+      return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s80.paper, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Stack, { className: s80.root, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { className: s80.group, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Image, { className: s80.image, src: "/images/sparkles.webp" }),
+          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Title, { className: s80.title, fz: 20, children: title14 })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { className: s79.text, children: content2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Image, { w: 300, h: 340, right: 0, bottom: 0, pos: "absolute", visibleFrom: "xl", className: s79.image, src: `/images/types/${isLarge ? "" : "mobile/"}${type2}.png` }),
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Flex, { className: s79.controls, children })
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { className: s80.text, children: content2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Image, { w: 300, h: 340, right: 0, bottom: 0, pos: "absolute", visibleFrom: "xl", className: s80.image, src: `/images/types/${isLarge ? "" : "mobile/"}${type2}.png` }),
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Flex, { className: s80.controls, children })
       ] }) });
+    };
+    CategoryBanner = ({
+      color,
+      title: title14
+    }) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Paper, { className: s79.paper, "data-color": color, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Title, { className: s79.title, children: title14 }),
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { visibleFrom: "sm", className: s79.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(SvgCloud, { width: 474, height: "100%" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { visibleFrom: "xs", className: s79.box, "data-color": color, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(SvgSemiCircle, { width: 150, height: "100%" }) })
+      ] });
     };
     FullReportNavigation = () => {
       const [page, onPageChange] = c2([ReportModel.$currentContentPage, ReportModel.currentPageChanged, ReportModel.$currentPage]);
@@ -69172,8 +69229,8 @@ var init_pages_report_reportId = __esm({
         store: getFullReportQuery.$data,
         keys: ["title", page],
         fn: (content22) => content22 == null ? void 0 : content22.content.map(({
-          title: title13
-        }) => title13)
+          title: title14
+        }) => title14)
       });
       const mbti = c2(getFullReportQuery.$data.map((el) => el.mbti_type));
       const color = TYPE_TO_COLOR_MAP[mbti];
@@ -69198,7 +69255,7 @@ var init_pages_report_reportId = __esm({
       } = data.content[page];
       const renderContent = normalizeData(content2);
       return /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(import_jsx_runtime206.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(InnerContainer, { children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { className: s80.content, children: renderContent.map((c37, idx) => /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { mb: 60, children: c37.map((el, index4) => /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(import_react298.Fragment, { children: contentResolver({
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(InnerContainer, { children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { className: s81.content, children: renderContent.map((c37, idx) => /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { mb: 60, children: c37.map((el, index4) => /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(import_react298.Fragment, { children: contentResolver({
           color,
           content: el
         }) }, el.type + index4 + idx)) }, idx)) }) }),
@@ -69216,9 +69273,9 @@ var init_pages_report_reportId = __esm({
         store: getFullReportQuery.$data,
         keys: ["title", "content", page],
         fn: (content22) => content22 == null ? void 0 : content22.content.map(({
-          title: title13
+          title: title14
         }) => ({
-          title: title13,
+          title: title14,
           mbti: content22.mbti_type
         }))
       });
@@ -69227,25 +69284,25 @@ var init_pages_report_reportId = __esm({
       const titleNext = content2[page].title;
       const color = TYPE_TO_COLOR_MAP[content2[page].mbti];
       const [_4, scrollTo2] = useWindowScroll();
-      return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Root, { className: s81.root, mb: 60, value: page, onChange: (page2) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Root, { className: s82.root, mb: 60, value: page, onChange: (page2) => {
         scrollTo2({
           y: 0
         });
         onChangePage(page2);
-      }, total: content2.length, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { className: s81.grid, children: [
-        !isFirstPage && /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Previous, { className: s81.prev, icon: () => /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { align: "center", wrap: "nowrap", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(A3, { color: `var(--mantine-color-${color}-9)`, weight: "bold", size: isLarge ? 32 : 28 }) }),
+      }, total: content2.length, children: /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { className: s82.grid, children: [
+        !isFirstPage && /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Previous, { className: s82.prev, icon: () => /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { align: "center", wrap: "nowrap", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(A3, { color: `var(--mantine-color-${color}-9)`, weight: "bold", size: isLarge ? 32 : 28 }),
           /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { wrap: "nowrap", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s81.paper, p: isLarge ? "lg" : "xs", py: isLarge ? 18.5 : 6, bg: `${color}.0`, c: `${color}.9`, children: icons[titlePrev] }),
-            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { hidden: !isLarge, className: s81.text, children: content2[page - 1].title ?? "" })
+            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s82.paper, p: isLarge ? "lg" : "xs", py: isLarge ? 18.5 : 6, bg: `${color}.0`, c: `${color}.9`, children: icons[titlePrev] }),
+            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { hidden: !isLarge, className: s82.text, children: content2[page - 1].title ?? "" })
           ] })
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Next, { className: s81.next, hidden: isLastPage, icon: () => /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { align: "center", wrap: "nowrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Pagination.Next, { className: s82.next, hidden: isLastPage, icon: () => /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { align: "center", wrap: "nowrap", children: [
           /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Group, { wrap: "nowrap", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s81.paper, p: isLarge ? "lg" : "xs", py: isLarge ? 18.5 : 6, bg: `${color}.0`, c: `${color}.9`, children: icons[titleNext] }),
-            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { hidden: !isLarge, className: s81.text, children: content2[page].title ?? "" })
+            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Paper, { className: s82.paper, p: isLarge ? "lg" : "xs", py: isLarge ? 18.5 : 6, bg: `${color}.0`, c: `${color}.9`, children: icons[titleNext] }),
+            /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Text, { hidden: !isLarge, className: s82.text, children: content2[page].title ?? "" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { children: /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(l6, { color: `var(--mantine-color-${color}-9)`, weight: "bold", size: isLarge ? 32 : 28 }) })
+          /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(l6, { color: `var(--mantine-color-${color}-9)`, weight: "bold", size: isLarge ? 32 : 28 })
         ] }) })
       ] }) });
     };
@@ -69255,12 +69312,27 @@ var init_pages_report_reportId = __esm({
         pending: pending2,
         stale
       } = c2(getFullReportQuery);
-      const [isFirstPage] = c2([ReportModel.$currentContentPage.map((page) => page === 0)]);
-      const [currentPage] = c2([ReportModel.$currentContentPage]);
+      const [isFirstPage] = c2([ReportModel.$currentContentPage.map((page2) => page2 === 0)]);
+      const [currentPage, content2, page] = c2([ReportModel.$currentContentPage, ReportModel.$currentContent, ReportModel.$currentContentPage]);
+      const titleMap = a2({
+        store: getFullReportQuery.$data,
+        keys: ["title", page],
+        fn: (content22) => {
+          var _a;
+          return (_a = content22 == null ? void 0 : content22.content) == null ? void 0 : _a.map(({
+            title: title14
+          }) => title14);
+        }
+      });
       if (stale || pending2) return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(PageLoader, {});
       if (!data) return;
+      console.log({
+        isFirstPage,
+        content: content2
+      });
       return /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime206.jsxs)(Container, { children: [
         isFirstPage && /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(ReportHeader, { showPreheader: true, type: data.mbti_type, name: data.title }),
+        !isFirstPage && /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(CategoryBanner, { title: titleMap[page], color: TYPE_TO_COLOR_MAP[data.mbti_type] }),
         /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(FullReportNavigation, {}),
         /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(FullReportSlice, { page: currentPage }),
         /* @__PURE__ */ (0, import_jsx_runtime206.jsx)(ReportPagination, {})
@@ -69391,25 +69463,25 @@ var init_pages_report_reportId = __esm({
 });
 
 // dist/server/chunks/chunk-4OYTof-k.js
-var container4, s82;
+var container4, s83;
 var init_chunk_4OYTof_k = __esm({
   "dist/server/chunks/chunk-4OYTof-k.js"() {
     "use strict";
     container4 = "_8A6vQ";
-    s82 = {
+    s83 = {
       container: container4
     };
   }
 });
 
 // dist/server/chunks/chunk-CWCmATIl.js
-var progress, text10, s83;
+var progress, text10, s84;
 var init_chunk_CWCmATIl = __esm({
   "dist/server/chunks/chunk-CWCmATIl.js"() {
     "use strict";
     progress = "fY-vn";
     text10 = "ucSMo";
-    s83 = {
+    s84 = {
       progress,
       text: text10
     };
@@ -69417,26 +69489,26 @@ var init_chunk_CWCmATIl = __esm({
 });
 
 // dist/server/chunks/chunk-D4y6bG9J.js
-var radioRoot, s84;
+var radioRoot, s85;
 var init_chunk_D4y6bG9J = __esm({
   "dist/server/chunks/chunk-D4y6bG9J.js"() {
     "use strict";
     radioRoot = "I6Vfq";
-    s84 = {
+    s85 = {
       radioRoot
     };
   }
 });
 
 // dist/server/chunks/chunk-BEI6QqOV.js
-var wrapper5, root7, hint, s85;
+var wrapper5, root7, hint, s86;
 var init_chunk_BEI6QqOV = __esm({
   "dist/server/chunks/chunk-BEI6QqOV.js"() {
     "use strict";
     wrapper5 = "I0-YK";
     root7 = "sxtZr";
     hint = "ULaeM";
-    s85 = {
+    s86 = {
       wrapper: wrapper5,
       root: root7,
       hint
@@ -69445,55 +69517,55 @@ var init_chunk_BEI6QqOV = __esm({
 });
 
 // dist/server/chunks/chunk-Cm_g39Ur.js
-var wrapper6, radioWrapper, agreed, group2, s86;
+var wrapper6, radioWrapper, agreed, group3, s87;
 var init_chunk_Cm_g39Ur = __esm({
   "dist/server/chunks/chunk-Cm_g39Ur.js"() {
     "use strict";
     wrapper6 = "zrbBT";
     radioWrapper = "ZWRtO";
     agreed = "vKukv";
-    group2 = "_8pLNV";
-    s86 = {
+    group3 = "_8pLNV";
+    s87 = {
       wrapper: wrapper6,
       radioWrapper,
       agreed,
-      group: group2
+      group: group3
     };
   }
 });
 
 // dist/server/chunks/chunk-B0ldWmG-.js
-var input, s87;
+var input, s88;
 var init_chunk_B0ldWmG = __esm({
   "dist/server/chunks/chunk-B0ldWmG-.js"() {
     "use strict";
     input = "UD1Sb";
-    s87 = {
+    s88 = {
       input
     };
   }
 });
 
 // dist/server/chunks/chunk-B3xUaNw6.js
-var text11, s88;
+var text11, s89;
 var init_chunk_B3xUaNw6 = __esm({
   "dist/server/chunks/chunk-B3xUaNw6.js"() {
     "use strict";
     text11 = "bqzkM";
-    s88 = {
+    s89 = {
       text: text11
     };
   }
 });
 
 // dist/server/chunks/chunk-CVgMa5qs.js
-var wrapper7, stack5, s89;
+var wrapper7, stack5, s90;
 var init_chunk_CVgMa5qs = __esm({
   "dist/server/chunks/chunk-CVgMa5qs.js"() {
     "use strict";
     wrapper7 = "ngvkm";
     stack5 = "C6hAq";
-    s89 = {
+    s90 = {
       wrapper: wrapper7,
       stack: stack5
     };
@@ -69501,13 +69573,13 @@ var init_chunk_CVgMa5qs = __esm({
 });
 
 // dist/server/chunks/chunk-BTCfCNaN.js
-var wrap, checkboxWrapper, s90;
+var wrap, checkboxWrapper, s91;
 var init_chunk_BTCfCNaN = __esm({
   "dist/server/chunks/chunk-BTCfCNaN.js"() {
     "use strict";
     wrap = "_55tXB";
     checkboxWrapper = "BP5ZV";
-    s90 = {
+    s91 = {
       wrap,
       checkboxWrapper
     };
@@ -69721,7 +69793,7 @@ var init_IconBase = __esm({
         alt: e23,
         color: r11,
         size: n25,
-        weight: s98,
+        weight: s99,
         mirrored: p34,
         children: u6,
         weights: C6
@@ -69757,7 +69829,7 @@ var init_IconBase = __esm({
         }, R29), v9),
         !!e23 && /* @__PURE__ */ import_react301.default.createElement("title", null, e23),
         u6,
-        C6.get(s98 != null ? s98 : I7)
+        C6.get(s99 != null ? s99 : I7)
       );
     });
     h15.displayName = "IconBase";
@@ -69766,7 +69838,7 @@ var init_IconBase = __esm({
 });
 
 // node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/csr/ArrowsClockwise.mjs
-var import_react302, i32, c36, w19, s91, f34, p33, t45, m31, a44, A7;
+var import_react302, i32, c36, w19, s92, f34, p33, t45, m31, a44, A7;
 var init_ArrowsClockwise2 = __esm({
   "node_modules/.pnpm/@phosphor-icons+react@2.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/@phosphor-icons/react/dist/csr/ArrowsClockwise.mjs"() {
     import_react302 = __toESM(require_react(), 1);
@@ -69775,15 +69847,15 @@ var init_ArrowsClockwise2 = __esm({
     i32 = Object.defineProperty;
     c36 = Object.defineProperties;
     w19 = Object.getOwnPropertyDescriptors;
-    s91 = Object.getOwnPropertySymbols;
+    s92 = Object.getOwnPropertySymbols;
     f34 = Object.prototype.hasOwnProperty;
     p33 = Object.prototype.propertyIsEnumerable;
     t45 = (r11, o21, e23) => o21 in r11 ? i32(r11, o21, { enumerable: true, configurable: true, writable: true, value: e23 }) : r11[o21] = e23;
     m31 = (r11, o21) => {
       for (var e23 in o21 || (o21 = {}))
         f34.call(o21, e23) && t45(r11, e23, o21[e23]);
-      if (s91)
-        for (var e23 of s91(o21))
+      if (s92)
+        for (var e23 of s92(o21))
           p33.call(o21, e23) && t45(r11, e23, o21[e23]);
       return r11;
     };
@@ -69801,19 +69873,19 @@ var init_dist6 = __esm({
 });
 
 // dist/server/chunks/chunk-BMvUdB92.js
-var root8, s92;
+var root8, s93;
 var init_chunk_BMvUdB92 = __esm({
   "dist/server/chunks/chunk-BMvUdB92.js"() {
     "use strict";
     root8 = "iJglL";
-    s92 = {
+    s93 = {
       root: root8
     };
   }
 });
 
 // dist/server/chunks/chunk-Cksb66Fg.js
-var button4, prev2, next2, endText, s93;
+var button4, prev2, next2, endText, s94;
 var init_chunk_Cksb66Fg = __esm({
   "dist/server/chunks/chunk-Cksb66Fg.js"() {
     "use strict";
@@ -69821,7 +69893,7 @@ var init_chunk_Cksb66Fg = __esm({
     prev2 = "xFEp4";
     next2 = "o-Nhc";
     endText = "_1JrmF";
-    s93 = {
+    s94 = {
       button: button4,
       prev: prev2,
       next: next2,
@@ -69844,11 +69916,11 @@ var init_pages_test = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime207 = __toESM(require_jsx_runtime(), 1);
     init_effector_react();
     init_lodash();
-    init_chunk_Da9ti_xu();
+    init_chunk_Bq9IhTGl();
     init_esm2();
     init_chunk_4OYTof_k();
     init_chunk_CWCmATIl();
@@ -69876,7 +69948,7 @@ var init_pages_test = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -69891,10 +69963,10 @@ var init_pages_test = __esm({
     InputBorderless = ({
       value,
       onChange
-    }) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(TextInput, { fz: 16, autoFocus: true, classNames: s87, value, onChange });
+    }) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(TextInput, { fz: 16, autoFocus: true, classNames: s88, value, onChange });
     TestContainer = ({
       children
-    }) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Container, { className: s82.container, children }) });
+    }) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Box, { component: "section", children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Container, { className: s83.container, children }) });
     TestProgress = ({
       value,
       total,
@@ -69902,8 +69974,8 @@ var init_pages_test = __esm({
     }) => {
       const isLarge = c2(desktop.$matches);
       return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Flex, { gap: "xl", mb: "lg", align: "center", h: "fit-content", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Progress, { value, color: "violet.4", className: s83.progress, transitionDuration: 200, size: isLarge ? "xl" : "lg" }),
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Text, { c: "dark.2", className: s83.text, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Progress, { value, color: "violet.4", className: s84.progress, transitionDuration: 200, size: isLarge ? "xl" : "lg" }),
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Text, { c: "dark.2", className: s84.text, children: [
           page,
           "/",
           total
@@ -69936,15 +70008,15 @@ var init_pages_test = __esm({
       size: size4,
       value
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio, { className: s84.radioRoot, icon: IconCheck, size: size4, value });
+      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio, { className: s85.radioRoot, icon: IconCheck, size: size4, value });
     };
     QuestionTitle = ({
       text: text14,
       hint: hint2
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Group, { className: s85.wrapper, gap: 0, align: "start", wrap: "nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Title, { classNames: s85, order: 4, children: text14 }),
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s85.hint, children: hint2 })
+      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Group, { className: s86.wrapper, gap: 0, align: "start", wrap: "nowrap", children: /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Title, { classNames: s86, order: 4, children: text14 }),
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s86.hint, children: hint2 })
       ] }) });
     };
     TestScaleQuestion = ({
@@ -69955,19 +70027,19 @@ var init_pages_test = __esm({
       id,
       onChange
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Paper, { className: s86.wrapper, children: [
+      return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Paper, { className: s87.wrapper, children: [
         /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(QuestionTitle, { text: text14, hint: hint2 }),
         /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { pos: "relative", maw: 1145, m: "auto", gap: "xs", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio.Group, { className: s86.group, name: id, value, onChange: (val) => onChange({
+          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio.Group, { className: s87.group, name: id, value, onChange: (val) => onChange({
             question: id,
             answer: {
               value: Number(val)
             },
             index: page - 1
-          }), children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Flex, { className: s86.radioWrapper, justify: "space-between", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Flex, { className: s86.agreedBlock, justify: "space-between", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s86.agreed, c: "indigo.8", fw: 700, children: "\u041D\u0435 \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D" }),
-            /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s86.agreed, c: "lime.8", fw: 700, children: "\u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D" })
+          }), children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Flex, { className: s87.radioWrapper, justify: "space-between", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Flex, { className: s87.agreedBlock, justify: "space-between", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s87.agreed, c: "indigo.8", fw: 700, children: "\u041D\u0435 \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D" }),
+            /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s87.agreed, c: "lime.8", fw: 700, children: "\u0421\u043E\u0433\u043B\u0430\u0441\u0435\u043D" })
           ] })
         ] })
       ] });
@@ -69975,7 +70047,7 @@ var init_pages_test = __esm({
     AnswerLabel = ({
       children
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s88.text, children });
+      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Text, { className: s89.text, children });
     };
     TestSingleChoiceQuestion = ({
       text: text14,
@@ -70002,7 +70074,7 @@ var init_pages_test = __esm({
       }, [showInput]);
       return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Paper, { mb: "5xl", children: [
         /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(QuestionTitle, { text: text14, hint: hint2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "xs", className: s89.stack, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "xs", className: s90.stack, children: [
           /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio.Group, { name: id, value: (value == null ? void 0 : value.value) ?? "", onChange: (localVal) => {
             onChange({
               question: id,
@@ -70013,7 +70085,7 @@ var init_pages_test = __esm({
               index: page - 1,
               isSingle: true
             });
-          }, children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Stack, { gap: "lg", className: s89.wrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio, { color: "lime.8", value: option.id, size: isLarge ? "xl" : "lg", label: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(AnswerLabel, { children: option.text }) }, option.id)) }) }),
+          }, children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Stack, { gap: "lg", className: s90.wrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Radio, { color: "lime.8", value: option.id, size: isLarge ? "xl" : "lg", label: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(AnswerLabel, { children: option.text }) }, option.id)) }) }),
           showInput && /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(InputBorderless, { autoFocus: true, value: value == null ? void 0 : value.input, defaultValue: value == null ? void 0 : value.input, onChange: (e23) => {
             onChange({
               question: id,
@@ -70100,8 +70172,8 @@ var init_pages_test = __esm({
       const showInput = options && ((_a = value == null ? void 0 : value.map((el) => el.value)) == null ? void 0 : _a.includes(options[(options == null ? void 0 : options.length) - 1].id));
       return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Paper, { mb: "5xl", children: [
         /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(QuestionTitle, { text: text14, hint: hint2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "xs", className: s90.wrap, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Checkbox.Group, { value: localValues.length ? localValues : (value == null ? void 0 : value.map((v9) => v9.value)) ?? localValues, onChange: setLocalValues, children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Stack, { gap: "lg", className: s90.checkboxWrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Checkbox, { size: isLarge ? "32px" : "lg", radius: "xs", color: "lime.8", label: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(AnswerLabel, { children: option.text }), value: option.id, icon: IconCheck }, option.id)) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Stack, { gap: "xs", className: s91.wrap, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Checkbox.Group, { value: localValues.length ? localValues : (value == null ? void 0 : value.map((v9) => v9.value)) ?? localValues, onChange: setLocalValues, children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Stack, { gap: "lg", className: s91.checkboxWrapper, children: options == null ? void 0 : options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Checkbox, { size: isLarge ? "32px" : "lg", radius: "xs", color: "lime.8", label: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(AnswerLabel, { children: option.text }), value: option.id, icon: IconCheck }, option.id)) }) }),
           showInput && /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(InputBorderless, { value: input2.length > 0 ? input2 : (_b = value == null ? void 0 : value.find((el) => el.input)) == null ? void 0 : _b.input, onChange: (e23) => setInput(e23.target.value) })
         ] })
       ] });
@@ -70257,7 +70329,7 @@ var init_pages_test = __esm({
       const [onChangePhraseHandler] = c2([RephrasingModel.changePhraseIndex]);
       const [phrases] = c2([RephrasingModel.$currentPhrases]);
       if (phrases.hints.length <= 1 || phrases.texts.length <= 1) return null;
-      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Button, { m: "auto", c: "dark.9", color: "dark.9", display: "flex", variant: "subtle", className: s92.root, onClick: onChangePhraseHandler, leftSection: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(A7, { size: 18 }), children: "\u041F\u0435\u0440\u0435\u0444\u0440\u0430\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C" });
+      return /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Button, { m: "auto", c: "dark.9", color: "dark.9", display: "flex", variant: "subtle", className: s93.root, onClick: onChangePhraseHandler, leftSection: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(A7, { size: 18 }), children: "\u041F\u0435\u0440\u0435\u0444\u0440\u0430\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C" });
     };
     Controls = () => {
       const {
@@ -70284,9 +70356,9 @@ var init_pages_test = __esm({
       return /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Pagination.Root, { total: questions.length, mt: "auto", value: page, onChange, children: [
         /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Rephrasing, {}),
         /* @__PURE__ */ (0, import_jsx_runtime207.jsxs)(Group, { justify: "space-between", pb: 20, children: [
-          !isFirst && /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Pagination.Previous, { disabled: false, className: clsx_default(s93.button, s93.prev), icon: () => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(A3, { weight: "bold" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Pagination.Next, { hidden: !visible2 || isLast, className: clsx_default(s93.button, s93.next), icon: () => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(l6, { weight: "bold" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Button, { fw: "700", fz: 16, c: "dark.6", variant: "subtle", hidden: !isLast, className: s93.end, onClick: controlModal, rightSection: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(l6, { weight: "bold" }), children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)("span", { className: s93.endText, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" }) })
+          !isFirst && /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Pagination.Previous, { disabled: false, className: clsx_default(s94.button, s94.prev), icon: () => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(A3, { weight: "bold" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Pagination.Next, { hidden: !visible2 || isLast, className: clsx_default(s94.button, s94.next), icon: () => /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(l6, { weight: "bold" }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(Button, { fw: "700", fz: 16, c: "dark.6", variant: "subtle", hidden: !isLast, className: s94.end, onClick: controlModal, rightSection: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)(l6, { weight: "bold" }), children: /* @__PURE__ */ (0, import_jsx_runtime207.jsx)("span", { className: s94.endText, children: "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C" }) })
         ] })
       ] });
     };
@@ -70449,34 +70521,32 @@ var init_pages_test = __esm({
   }
 });
 
-// dist/server/chunks/chunk-8LKHHJW0.js
-var wrapper8, imageWrapper, image6, title11, text12, s94;
-var init_chunk_8LKHHJW0 = __esm({
-  "dist/server/chunks/chunk-8LKHHJW0.js"() {
+// dist/server/chunks/chunk-_xeIBlIz.js
+var wrapper8, imageWrapper, title12, text12, s95;
+var init_chunk_xeIBlIz = __esm({
+  "dist/server/chunks/chunk-_xeIBlIz.js"() {
     "use strict";
     wrapper8 = "NYpDC";
     imageWrapper = "_4Nbl8";
-    image6 = "_51ogz";
-    title11 = "uL8kI";
+    title12 = "uL8kI";
     text12 = "Q5KwG";
-    s94 = {
+    s95 = {
       wrapper: wrapper8,
       imageWrapper,
-      image: image6,
-      title: title11,
+      title: title12,
       text: text12
     };
   }
 });
 
 // dist/server/chunks/chunk-DYqfCq3E.js
-var title12, s95;
+var title13, s96;
 var init_chunk_DYqfCq3E = __esm({
   "dist/server/chunks/chunk-DYqfCq3E.js"() {
     "use strict";
-    title12 = "Dwm6Z";
-    s95 = {
-      title: title12
+    title13 = "Dwm6Z";
+    s96 = {
+      title: title13
     };
   }
 });
@@ -70495,15 +70565,15 @@ var init_pages_types = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
-    init_chunk_DDXQJFMl();
+    init_chunk_DrwYvZO();
+    init_chunk_BTSTuEDn();
     import_jsx_runtime208 = __toESM(require_jsx_runtime(), 1);
     init_esm2();
     init_effector_react();
     init_clsx();
     init_router();
     init_chunk_fjYs4Fsw();
-    init_chunk_8LKHHJW0();
+    init_chunk_xeIBlIz();
     init_chunk_DYqfCq3E();
     init_chunk_DdxgA4yV();
     import_react305 = __toESM(require_react(), 1);
@@ -70513,7 +70583,7 @@ var init_pages_types = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -70529,32 +70599,32 @@ var init_pages_types = __esm({
     PersonalityCard = ({
       type: type2,
       description: description3,
-      title: title13,
+      title: title14,
       category
     }) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime208.jsxs)(Card, { component: "a", href: `/types/${type2}`, className: s94.wrapper, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Box, { className: s94.imageWrapper, "data-color": titleColorMap[category], children: /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Image, { className: s94.image, src: "/images/types_temp.webp", alt: title13 }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime208.jsxs)(Title, { className: s94.title, order: 3, children: [
-          title13,
+      return /* @__PURE__ */ (0, import_jsx_runtime208.jsxs)(Card, { component: "a", href: `/types/${type2}`, className: s95.wrapper, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Box, { "data-type": type2, className: s95.imageWrapper, "data-color": titleColorMap[category] }),
+        /* @__PURE__ */ (0, import_jsx_runtime208.jsxs)(Title, { className: s95.title, order: 3, children: [
+          title14,
           " (",
           type2,
           ")"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Text, { className: s94.text, children: description3[0] })
+        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Text, { className: s95.text, children: description3[0] })
       ] });
     };
     PersonalityCategory = ({
-      title: title13,
+      title: title14,
       types
     }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime208.jsxs)(Box, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Title, { className: s95.title, "data-color": titleColorMap[title13], order: 3, children: title13 }),
+        /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Title, { className: s96.title, "data-color": titleColorMap[title14], order: 3, children: title14 }),
         /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(InnerContainer, { maw: 1386, children: /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Grid, { gutter: "5xl", children: types.map((type2) => /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(Grid.Col, { span: {
           base: 12,
           sm: 6,
           lg: 4,
           xl: 3
-        }, children: /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(PersonalityCard, { type: type2.code, category: title13, title: type2.name, description: type2.descriptions }) }, type2.code)) }) })
+        }, children: /* @__PURE__ */ (0, import_jsx_runtime208.jsx)(PersonalityCard, { type: type2.code, category: title14, title: type2.name, description: type2.descriptions }) }, type2.code)) }) })
       ] });
     };
     TypesPage = () => {
@@ -70689,26 +70759,26 @@ var init_pages_types = __esm({
 });
 
 // dist/server/chunks/chunk-ByGGifru.js
-var group3, text13, s96;
+var group4, text13, s97;
 var init_chunk_ByGGifru = __esm({
   "dist/server/chunks/chunk-ByGGifru.js"() {
     "use strict";
-    group3 = "kAKt5";
+    group4 = "kAKt5";
     text13 = "MsVaV";
-    s96 = {
-      group: group3,
+    s97 = {
+      group: group4,
       text: text13
     };
   }
 });
 
 // dist/server/chunks/chunk-DxD9ny13.js
-var block3, s97;
+var block3, s98;
 var init_chunk_DxD9ny13 = __esm({
   "dist/server/chunks/chunk-DxD9ny13.js"() {
     "use strict";
     block3 = "-V3hd";
-    s97 = {
+    s98 = {
       block: block3
     };
   }
@@ -70728,20 +70798,20 @@ var init_pages_types_type = __esm({
     "use strict";
     init_Loading();
     init_onRenderHtml();
-    init_chunk_BicdRwZo();
+    init_chunk_DrwYvZO();
     import_jsx_runtime209 = __toESM(require_jsx_runtime(), 1);
     import_react306 = __toESM(require_react(), 1);
     init_esm2();
     init_effector_react();
-    init_chunk_B7r2EqTP();
+    init_chunk_BkR_0iDB();
     init_clsx();
-    init_chunk_MQRSCQry();
-    init_chunk_D_8KSk9B();
+    init_chunk_xAg09in8();
+    init_chunk_DCPqLWXU();
     init_router();
     init_chunk_fjYs4Fsw();
     import_react_scroll13 = __toESM(require_modules(), 1);
-    init_chunk_DwcthD8S();
-    init_chunk_BCcTdrjG();
+    init_chunk_CHVBxp_z();
+    init_chunk_B8RnwET();
     init_chunk_ByGGifru();
     init_chunk_DxD9ny13();
     init_effector();
@@ -70752,7 +70822,7 @@ var init_pages_types_type = __esm({
     init_chunk_BSwk3_CR();
     init_chunk_aODxNfUi();
     init_chunk_Dbc_orkj();
-    init_chunk_C7PrGYQz();
+    init_chunk_CpAW3_CN();
     init_chunk_DTXnyPJO();
     init_chunk_DkndjKdT();
     init_factories();
@@ -70782,14 +70852,14 @@ var init_pages_types_type = __esm({
     init_chunk_7RLfvI5v();
     init_chunk_C9cLxO8P();
     init_chunk_DXisQ4_q();
-    init_chunk_Da9ti_xu();
+    init_chunk_Bq9IhTGl();
     init_chunk_BkCevXlW();
     init_chunk_bri36olt();
     findBannerIndex = (content2) => {
       return content2.findIndex((el) => el.content.find((el2) => el2.type === "ordered_cards" && el2.color === "negative"));
     };
-    ShowFullStructure = () => /* @__PURE__ */ (0, import_jsx_runtime209.jsxs)(Group, { className: s96.group, justify: "space-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(Text, { className: s96.text, children: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435" }),
+    ShowFullStructure = () => /* @__PURE__ */ (0, import_jsx_runtime209.jsxs)(Group, { className: s97.group, justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(Text, { className: s97.text, children: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u0432 \u043F\u043E\u043B\u043D\u043E\u043C \u043E\u0442\u0447\u0435\u0442\u0435" }),
       /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(NavigateToFullStructureTemplate, {})
     ] });
     TypePage = () => {
@@ -70802,7 +70872,7 @@ var init_pages_types_type = __esm({
         content: content2
       }) => {
         const end = findBannerIndex(content2);
-        return content2.slice(0, end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)("div", { className: s97.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(import_react306.Fragment, { children: contentResolver({
+        return content2.slice(0, end).map((el, idx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)("div", { className: s98.block, children: el.content.map((currentContent, idx2) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(import_react306.Fragment, { children: contentResolver({
           content: currentContent,
           color: currentColor
         }) }, currentContent.type + idx2)) }, el.type + idx));
@@ -70811,7 +70881,7 @@ var init_pages_types_type = __esm({
         content: content2
       }) => {
         const end = findBannerIndex(content2);
-        return content2.slice(end).map((el, elIdx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)("div", { className: s97.block, children: el.content.map((currentContent, idx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(import_react306.Fragment, { children: contentResolver({
+        return content2.slice(end).map((el, elIdx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)("div", { className: s98.block, children: el.content.map((currentContent, idx) => /* @__PURE__ */ (0, import_jsx_runtime209.jsx)(import_react306.Fragment, { children: contentResolver({
           content: currentContent,
           color: currentColor
         }) }, currentContent.type + idx)) }, el.type + elIdx));
@@ -71391,218 +71461,27 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_OrderedCards_OrderedCards.BNeWG9EK.css"
           ]
         },
-        "_chunk-B3_uMupp.js": {
-          "file": "assets/chunks/chunk-B3_uMupp.js",
-          "name": "src_entities_Test_ui_AnswerLabel_AnswerLabel.module-2d5e1b7e",
-          "css": [
-            "assets/static/src_entities_Test_ui_AnswerLabel_AnswerLabel.C2yjomgr.css"
-          ]
-        },
-        "_chunk-B4DuaiMN.js": {
-          "file": "assets/chunks/chunk-B4DuaiMN.js",
-          "name": "src_entities_Report_ui_Banner_Banner.module-8e457ad3",
-          "css": [
-            "assets/static/src_entities_Report_ui_Banner_Banner.co9e48pn.css"
-          ]
-        },
-        "_chunk-B5KPxQg6.js": {
-          "file": "assets/chunks/chunk-B5KPxQg6.js",
+        "_chunk-8sj1mahd.js": {
+          "file": "assets/chunks/chunk-8sj1mahd.js",
           "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-ClVpMXy6.js",
-            "_chunk-BTJKs_i_.js",
-            "_chunk-89JKNHqV.js",
-            "_chunk-CX66qPcq.js",
-            "_chunk-CA7xGImb.js",
-            "_chunk-DY3ysccp.js",
-            "_chunk-DZYA-Fcr.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-D4Czjb9x.js",
-            "_chunk-CYRnzIC0.js",
-            "_chunk-DgFUPrcm.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-BnWrU3lN.js",
-            "_chunk-f-6t9rSA.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-Cwmt49qL.js",
-            "_chunk-Cu-EtuGu.js",
-            "_chunk-CG4tMHVA.js",
-            "_chunk-B8rNtbKD.js",
-            "_chunk-Czg_fm5u.js"
-          ]
-        },
-        "_chunk-B8rNtbKD.js": {
-          "file": "assets/chunks/chunk-B8rNtbKD.js",
-          "name": "index.modern",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
-        "_chunk-BD8qAbP9.js": {
-          "file": "assets/chunks/chunk-BD8qAbP9.js",
-          "name": "src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.module-0dc21ded",
-          "css": [
-            "assets/static/src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.X2fMJfOa.css"
-          ]
-        },
-        "_chunk-BDizESrC.js": {
-          "file": "assets/chunks/chunk-BDizESrC.js",
-          "name": "src_entities_Report_ui_AdBanner_AdBanner.module-aa730ce9",
-          "css": [
-            "assets/static/src_entities_Report_ui_AdBanner_AdBanner._zbs4Qw-.css"
-          ]
-        },
-        "_chunk-BLKfBb6c.js": {
-          "file": "assets/chunks/chunk-BLKfBb6c.js",
-          "name": "src_widgets_Test_Controls_Controls.module-0573b381",
-          "css": [
-            "assets/static/src_widgets_Test_Controls_Controls.DWZBJg9T.css"
-          ]
-        },
-        "_chunk-BPA5pK2c.js": {
-          "file": "assets/chunks/chunk-BPA5pK2c.js",
-          "name": "src_widgets_RootLayout_ui_Footer_ui_MetaInfo_MetaInfo.module-0294491e",
-          "css": [
-            "assets/static/src_widgets_RootLayout_ui_Footer_ui_MetaInfo_MetaInfo.CpFu_kUh.css"
-          ]
-        },
-        "_chunk-BQIOzcEH.js": {
-          "file": "assets/chunks/chunk-BQIOzcEH.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-DSqobVnh.js",
-            "_chunk-CYRnzIC0.js",
-            "_chunk-BD8qAbP9.js",
-            "_chunk-SR5jtIEZ.js",
-            "_chunk-_fQoNsH-.js",
-            "_chunk-DWHhlHOl.js"
-          ]
-        },
-        "_chunk-BTJKs_i_.js": {
-          "file": "assets/chunks/chunk-BTJKs_i_.js",
-          "name": "Grid",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
-        "_chunk-Bcx1OCc6.js": {
-          "file": "assets/chunks/chunk-Bcx1OCc6.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
+            "_chunk-Dyra5A0a.js",
             "_chunk-CGG52H9N.js"
           ]
         },
-        "_chunk-Bddh1PFT.js": {
-          "file": "assets/chunks/chunk-Bddh1PFT.js",
+        "_chunk-9tRELQrv.js": {
+          "file": "assets/chunks/chunk-9tRELQrv.js",
           "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-MlOg0Rm7.js"
+            "_chunk-Dyra5A0a.js",
+            "_chunk-un-v1Q-x.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-ChL1fS8_.js",
+            "_chunk-BD79VC_w.js"
           ]
         },
-        "_chunk-BeEKSsYB.js": {
-          "file": "assets/chunks/chunk-BeEKSsYB.js",
-          "name": "src_entities_Test_ui_RadioElement_RadioElement.module-bea969b5",
-          "css": [
-            "assets/static/src_entities_Test_ui_RadioElement_RadioElement.COpdu8wn.css"
-          ]
-        },
-        "_chunk-Bi-xDFJf.js": {
-          "file": "assets/chunks/chunk-Bi-xDFJf.js",
-          "name": "src_entities_Test_ui_TestQuestionTitle_TestQuestionTitle.module-968eb95a",
-          "css": [
-            "assets/static/src_entities_Test_ui_TestQuestionTitle_TestQuestionTitle.2N6ckT7h.css"
-          ]
-        },
-        "_chunk-BjHedDkv.js": {
-          "file": "assets/chunks/chunk-BjHedDkv.js",
-          "name": "src_entities_Personalities_ui_PersonalityCard_PersonalityCard.module-4ab1e91d",
-          "css": [
-            "assets/static/src_entities_Personalities_ui_PersonalityCard_PersonalityCard.D_WHW-hK.css"
-          ]
-        },
-        "_chunk-BkWJ2vZv.js": {
-          "file": "assets/chunks/chunk-BkWJ2vZv.js",
-          "name": "index",
-          "imports": [
-            "_chunk-C-3o4xSG.js",
-            "_chunk-CzcYWzuz.js",
-            "_chunk-Cn-X2PZL.js",
-            "_chunk-SsiTcO1f.js",
-            "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
-            "_chunk-CEz9pelC.js",
-            "_chunk-BPA5pK2c.js",
-            "_chunk-CcRi4BOb.js",
-            "_chunk-DC4iVavn.js",
-            "_chunk-Y2FPcE4W.js",
-            "_chunk-CQyHp5_h.js",
-            "_chunk-_mzujixh.js",
-            "_chunk-D0Qt8njn.js"
-          ],
-          "css": [
-            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
-            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
-          ],
-          "assets": [
-            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
-          ]
-        },
-        "_chunk-BnWrU3lN.js": {
-          "file": "assets/chunks/chunk-BnWrU3lN.js",
-          "name": "src_entities_Report_ui_TextStrokeDash_TextStrokeDash.module-c5b7c645",
-          "css": [
-            "assets/static/src_entities_Report_ui_TextStrokeDash_TextStrokeDash.CM0AzeSk.css"
-          ]
-        },
-        "_chunk-Bptf38cR.js": {
-          "file": "assets/chunks/chunk-Bptf38cR.js",
-          "name": "src_widgets_PageLayout_PageLayout.module-07932407",
-          "css": [
-            "assets/static/src_widgets_PageLayout_PageLayout.BTi5kh3T.css"
-          ]
-        },
-        "_chunk-BvPr2fSB.js": {
-          "file": "assets/chunks/chunk-BvPr2fSB.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
-        "_chunk-BvjKq-Jn.js": {
-          "file": "assets/chunks/chunk-BvjKq-Jn.js",
-          "name": "src_entities_Blog_ui_BlogPostCard_BlogPostCard.module-4c147b86",
-          "css": [
-            "assets/static/src_entities_Blog_ui_BlogPostCard_BlogPostCard.mH1l5qHR.css"
-          ]
-        },
-        "_chunk-BxfmKKbt.js": {
-          "file": "assets/chunks/chunk-BxfmKKbt.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-4ssmusCf.js"
-          ]
-        },
-        "_chunk-ByaiJHsb.js": {
-          "file": "assets/chunks/chunk-ByaiJHsb.js",
-          "name": "src_widgets_ShowFullStructure_ShowFullStructure.module-caed6455",
-          "css": [
-            "assets/static/src_widgets_ShowFullStructure_ShowFullStructure.MNSWQ2Cc.css"
-          ]
-        },
-        "_chunk-C-3o4xSG.js": {
-          "file": "assets/chunks/chunk-C-3o4xSG.js",
+        "_chunk-B1wGYcIn.js": {
+          "file": "assets/chunks/chunk-B1wGYcIn.js",
           "name": "initOnPopState",
           "dynamicImports": [
             "virtual:vike:pageConfigValuesAll:client:/pages/_error",
@@ -71622,6 +71501,166 @@ var init_entry = __esm({
             "virtual:vike:pageConfigValuesAll:client:/pages/types/@type"
           ]
         },
+        "_chunk-B3_uMupp.js": {
+          "file": "assets/chunks/chunk-B3_uMupp.js",
+          "name": "src_entities_Test_ui_AnswerLabel_AnswerLabel.module-2d5e1b7e",
+          "css": [
+            "assets/static/src_entities_Test_ui_AnswerLabel_AnswerLabel.C2yjomgr.css"
+          ]
+        },
+        "_chunk-B4DuaiMN.js": {
+          "file": "assets/chunks/chunk-B4DuaiMN.js",
+          "name": "src_entities_Report_ui_Banner_Banner.module-8e457ad3",
+          "css": [
+            "assets/static/src_entities_Report_ui_Banner_Banner.co9e48pn.css"
+          ]
+        },
+        "_chunk-BD79VC_w.js": {
+          "file": "assets/chunks/chunk-BD79VC_w.js",
+          "name": "Image",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-BD8qAbP9.js": {
+          "file": "assets/chunks/chunk-BD8qAbP9.js",
+          "name": "src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.module-0dc21ded",
+          "css": [
+            "assets/static/src_features_NavigateToFullStructureTemplate_ui_NavigateToFullStructureTemplate.X2fMJfOa.css"
+          ]
+        },
+        "_chunk-BDizESrC.js": {
+          "file": "assets/chunks/chunk-BDizESrC.js",
+          "name": "src_entities_Report_ui_AdBanner_AdBanner.module-aa730ce9",
+          "css": [
+            "assets/static/src_entities_Report_ui_AdBanner_AdBanner._zbs4Qw-.css"
+          ]
+        },
+        "_chunk-BIFt5bA0.js": {
+          "file": "assets/chunks/chunk-BIFt5bA0.js",
+          "name": "use-form",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-BKyOtWcb.js": {
+          "file": "assets/chunks/chunk-BKyOtWcb.js",
+          "name": "Card",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-BLKfBb6c.js": {
+          "file": "assets/chunks/chunk-BLKfBb6c.js",
+          "name": "src_widgets_Test_Controls_Controls.module-0573b381",
+          "css": [
+            "assets/static/src_widgets_Test_Controls_Controls.DWZBJg9T.css"
+          ]
+        },
+        "_chunk-BMjOyu7c.js": {
+          "file": "assets/chunks/chunk-BMjOyu7c.js",
+          "name": "src_entities_Report_ui_CategoryBanner_CategoryBanner.module-fbc259e9",
+          "css": [
+            "assets/static/src_entities_Report_ui_CategoryBanner_CategoryBanner.0S3XIrD1.css"
+          ]
+        },
+        "_chunk-BO8E46WQ.js": {
+          "file": "assets/chunks/chunk-BO8E46WQ.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-ClVpMXy6.js",
+            "_chunk-D6LYJuAq.js",
+            "_chunk-89JKNHqV.js",
+            "_chunk-CX66qPcq.js",
+            "_chunk-CA7xGImb.js",
+            "_chunk-Dp-jXqM1.js",
+            "_chunk-DZYA-Fcr.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-D4Czjb9x.js",
+            "_chunk-BD79VC_w.js",
+            "_chunk-DgFUPrcm.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-BnWrU3lN.js",
+            "_chunk-DPk9N604.js",
+            "_chunk-f-6t9rSA.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-Cwmt49qL.js",
+            "_chunk-BIFt5bA0.js",
+            "_chunk-CG4tMHVA.js",
+            "_chunk-Czg_fm5u.js"
+          ]
+        },
+        "_chunk-BP2QB7Xc.js": {
+          "file": "assets/chunks/chunk-BP2QB7Xc.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-DwSl5KEI.js",
+            "_chunk-C9NHQr0a.js"
+          ]
+        },
+        "_chunk-BPA5pK2c.js": {
+          "file": "assets/chunks/chunk-BPA5pK2c.js",
+          "name": "src_widgets_RootLayout_ui_Footer_ui_MetaInfo_MetaInfo.module-0294491e",
+          "css": [
+            "assets/static/src_widgets_RootLayout_ui_Footer_ui_MetaInfo_MetaInfo.CpFu_kUh.css"
+          ]
+        },
+        "_chunk-BeEKSsYB.js": {
+          "file": "assets/chunks/chunk-BeEKSsYB.js",
+          "name": "src_entities_Test_ui_RadioElement_RadioElement.module-bea969b5",
+          "css": [
+            "assets/static/src_entities_Test_ui_RadioElement_RadioElement.COpdu8wn.css"
+          ]
+        },
+        "_chunk-Bi-xDFJf.js": {
+          "file": "assets/chunks/chunk-Bi-xDFJf.js",
+          "name": "src_entities_Test_ui_TestQuestionTitle_TestQuestionTitle.module-968eb95a",
+          "css": [
+            "assets/static/src_entities_Test_ui_TestQuestionTitle_TestQuestionTitle.2N6ckT7h.css"
+          ]
+        },
+        "_chunk-BnWrU3lN.js": {
+          "file": "assets/chunks/chunk-BnWrU3lN.js",
+          "name": "src_entities_Report_ui_TextStrokeDash_TextStrokeDash.module-c5b7c645",
+          "css": [
+            "assets/static/src_entities_Report_ui_TextStrokeDash_TextStrokeDash.CM0AzeSk.css"
+          ]
+        },
+        "_chunk-Bptf38cR.js": {
+          "file": "assets/chunks/chunk-Bptf38cR.js",
+          "name": "src_widgets_PageLayout_PageLayout.module-07932407",
+          "css": [
+            "assets/static/src_widgets_PageLayout_PageLayout.BTi5kh3T.css"
+          ]
+        },
+        "_chunk-BvjKq-Jn.js": {
+          "file": "assets/chunks/chunk-BvjKq-Jn.js",
+          "name": "src_entities_Blog_ui_BlogPostCard_BlogPostCard.module-4c147b86",
+          "css": [
+            "assets/static/src_entities_Blog_ui_BlogPostCard_BlogPostCard.mH1l5qHR.css"
+          ]
+        },
+        "_chunk-ByaiJHsb.js": {
+          "file": "assets/chunks/chunk-ByaiJHsb.js",
+          "name": "src_widgets_ShowFullStructure_ShowFullStructure.module-caed6455",
+          "css": [
+            "assets/static/src_widgets_ShowFullStructure_ShowFullStructure.MNSWQ2Cc.css"
+          ]
+        },
+        "_chunk-C-Ch_zfH.js": {
+          "file": "assets/chunks/chunk-C-Ch_zfH.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-MlOg0Rm7.js"
+          ]
+        },
         "_chunk-C1UfUYGV.js": {
           "file": "assets/chunks/chunk-C1UfUYGV.js",
           "name": "src_entities_Report_ui_PriceInfo_PriceInfo.module-fbe3381f",
@@ -71629,11 +71668,18 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_PriceInfo_PriceInfo.BK_7I93q.css"
           ]
         },
-        "_chunk-C5QXUWU-.js": {
-          "file": "assets/chunks/chunk-C5QXUWU-.js",
-          "name": "src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.module-64f2ec5c",
-          "css": [
-            "assets/static/src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.BeXNx5Tl.css"
+        "_chunk-C5jk2UFd.js": {
+          "file": "assets/chunks/chunk-C5jk2UFd.js",
+          "name": "semi-circle",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-C9NHQr0a.js": {
+          "file": "assets/chunks/chunk-C9NHQr0a.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
           ]
         },
         "_chunk-CA7xGImb.js": {
@@ -71671,16 +71717,22 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_InnerContainer_InnerContainer.DXKcQBlk.css"
           ]
         },
-        "_chunk-CIzEDb4l.js": {
-          "file": "assets/chunks/chunk-CIzEDb4l.js",
+        "_chunk-CKZ-LFw9.js": {
+          "file": "assets/chunks/chunk-CKZ-LFw9.js",
           "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-C5QXUWU-.js",
-            "_chunk-BvPr2fSB.js"
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-B4DuaiMN.js",
+            "_chunk-BD79VC_w.js"
+          ]
+        },
+        "_chunk-CPXN8Iab.js": {
+          "file": "assets/chunks/chunk-CPXN8Iab.js",
+          "name": "src_entities_Personalities_ui_PersonalityCard_PersonalityCard.module-4ab1e91d",
+          "css": [
+            "assets/static/src_entities_Personalities_ui_PersonalityCard_PersonalityCard.eRxJXkfI.css"
           ]
         },
         "_chunk-CQgCXmz1.js": {
@@ -71695,6 +71747,13 @@ var init_entry = __esm({
           "name": "src_widgets_RootLayout_ui_Navigation_ui_Types_Types.module-f6ec7ff3",
           "css": [
             "assets/static/src_widgets_RootLayout_ui_Navigation_ui_Types_Types.DdppzL8A.css"
+          ]
+        },
+        "_chunk-CRbxnH0z.js": {
+          "file": "assets/chunks/chunk-CRbxnH0z.js",
+          "name": "src_widgets_RootLayout_ui_Footer_ui_Top_Top.module-f7d79cac",
+          "css": [
+            "assets/static/src_widgets_RootLayout_ui_Footer_ui_Top_Top.CQ5XoFu7.css"
           ]
         },
         "_chunk-CU3QLmZW.js": {
@@ -71725,18 +71784,20 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Subtitle_Subtitle.JmeqVvaX.css"
           ]
         },
-        "_chunk-CYRnzIC0.js": {
-          "file": "assets/chunks/chunk-CYRnzIC0.js",
-          "name": "Image",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
         "_chunk-CYwzgwck.js": {
           "file": "assets/chunks/chunk-CYwzgwck.js",
           "name": "src_entities_Test_ui_TestSingleChoiceQuestion_TestSingleChoiceQuestion.module-54b4ae86",
           "css": [
             "assets/static/src_entities_Test_ui_TestSingleChoiceQuestion_TestSingleChoiceQuestion.0TeP41wr.css"
+          ]
+        },
+        "_chunk-C_Si0TIZ.js": {
+          "file": "assets/chunks/chunk-C_Si0TIZ.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-MlOg0Rm7.js",
+            "_chunk-B1wGYcIn.js"
           ]
         },
         "_chunk-CcRi4BOb.js": {
@@ -71746,26 +71807,11 @@ var init_entry = __esm({
             "assets/static/src_features_RedirectToTestPage_ui_RedirectToTestPage.V9LWORpb.css"
           ]
         },
-        "_chunk-Cccxy_lm.js": {
-          "file": "assets/chunks/chunk-Cccxy_lm.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-Bptf38cR.js"
-          ]
-        },
         "_chunk-ChL1fS8_.js": {
           "file": "assets/chunks/chunk-ChL1fS8_.js",
           "name": "src_widgets_InnerLayout_InnerLayout.module-9e9409d0",
           "css": [
             "assets/static/src_widgets_InnerLayout_InnerLayout.Df9N0SmV.css"
-          ]
-        },
-        "_chunk-CjMYPr3R.js": {
-          "file": "assets/chunks/chunk-CjMYPr3R.js",
-          "name": "src_widgets_RootLayout_ui_Footer_ui_Top_Top.module-f7d79cac",
-          "css": [
-            "assets/static/src_widgets_RootLayout_ui_Footer_ui_Top_Top.CJ6OycV0.css"
           ]
         },
         "_chunk-ClVpMXy6.js": {
@@ -71789,18 +71835,18 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestMultipleQuestion_TestMultipleQuestion.DU9xGbo9.css"
           ]
         },
-        "_chunk-Cu-EtuGu.js": {
-          "file": "assets/chunks/chunk-Cu-EtuGu.js",
-          "name": "use-form",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
         "_chunk-Cu1jJxiW.js": {
           "file": "assets/chunks/chunk-Cu1jJxiW.js",
           "name": "src_entities_Test_ui_TestScaleQuestion_TestScaleQuestion.module-b69f3125",
           "css": [
             "assets/static/src_entities_Test_ui_TestScaleQuestion_TestScaleQuestion.CN_wfL2J.css"
+          ]
+        },
+        "_chunk-Cu5iHzAn.js": {
+          "file": "assets/chunks/chunk-Cu5iHzAn.js",
+          "name": "Pagination",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
           ]
         },
         "_chunk-Cwmt49qL.js": {
@@ -71838,11 +71884,12 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Header_Header.BX_kS-Vk.css"
           ]
         },
-        "_chunk-D3HhD4pv.js": {
-          "file": "assets/chunks/chunk-D3HhD4pv.js",
-          "name": "Card",
+        "_chunk-D2vS91lO.js": {
+          "file": "assets/chunks/chunk-D2vS91lO.js",
+          "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js"
+            "_chunk-Dyra5A0a.js",
+            "_chunk-Bptf38cR.js"
           ]
         },
         "_chunk-D4Czjb9x.js": {
@@ -71850,6 +71897,44 @@ var init_entry = __esm({
           "name": "src_entities_Report_ui_Paywall_Paywall.module-e6ace5ac",
           "css": [
             "assets/static/src_entities_Report_ui_Paywall_Paywall.SE_CDuvf.css"
+          ]
+        },
+        "_chunk-D6LYJuAq.js": {
+          "file": "assets/chunks/chunk-D6LYJuAq.js",
+          "name": "Grid",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-D9ZLW4le.js": {
+          "file": "assets/chunks/chunk-D9ZLW4le.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-DSqobVnh.js",
+            "_chunk-BD79VC_w.js",
+            "_chunk-BD8qAbP9.js",
+            "_chunk-C_Si0TIZ.js",
+            "_chunk-_fQoNsH-.js",
+            "_chunk-DWHhlHOl.js"
+          ]
+        },
+        "_chunk-D9h_e1mh.js": {
+          "file": "assets/chunks/chunk-D9h_e1mh.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C9NHQr0a.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-C1UfUYGV.js",
+            "_chunk-Dyvjw1FD.js",
+            "_chunk-I2E64Ice.js",
+            "_chunk-D_TSPZfq.js",
+            "_chunk-BIFt5bA0.js",
+            "_chunk-9tRELQrv.js"
           ]
         },
         "_chunk-DC4iVavn.js": {
@@ -71873,6 +71958,13 @@ var init_entry = __esm({
             "assets/static/src_widgets_FullReportSlice_FullReportSlice.DQgv-Qd-.css"
           ]
         },
+        "_chunk-DPk9N604.js": {
+          "file": "assets/chunks/chunk-DPk9N604.js",
+          "name": "index.modern",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
         "_chunk-DSqobVnh.js": {
           "file": "assets/chunks/chunk-DSqobVnh.js",
           "name": "src_features_BuyNowButton_BuyNowButton.module-c1c1d690",
@@ -71880,18 +71972,26 @@ var init_entry = __esm({
             "assets/static/src_features_BuyNowButton_BuyNowButton.DEl3WWHO.css"
           ]
         },
+        "_chunk-DVkRKGiq.js": {
+          "file": "assets/chunks/chunk-DVkRKGiq.js",
+          "name": "_pageStarted",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-Dz3YQ2PB.js",
+            "_chunk-DPk9N604.js",
+            "_chunk-BvjKq-Jn.js",
+            "_chunk-D6LYJuAq.js",
+            "_chunk-BKyOtWcb.js",
+            "_chunk-BD79VC_w.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-NVSCS89x.js"
+          ]
+        },
         "_chunk-DWHhlHOl.js": {
           "file": "assets/chunks/chunk-DWHhlHOl.js",
           "name": "src_widgets_CTA_CTA.module-950488e3",
           "css": [
             "assets/static/src_widgets_CTA_CTA.B6-uWVLE.css"
-          ]
-        },
-        "_chunk-DY3ysccp.js": {
-          "file": "assets/chunks/chunk-DY3ysccp.js",
-          "name": "List",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
           ]
         },
         "_chunk-DZYA-Fcr.js": {
@@ -71922,6 +72022,15 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestProgress_TestProgress.cz3ftnuH.css"
           ]
         },
+        "_chunk-Ddz3aZYD.js": {
+          "file": "assets/chunks/chunk-Ddz3aZYD.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js",
+            "_chunk-kcfGQPfX.js",
+            "_chunk-BD79VC_w.js"
+          ]
+        },
         "_chunk-DgFUPrcm.js": {
           "file": "assets/chunks/chunk-DgFUPrcm.js",
           "name": "src_entities_Report_ui_IconList_IconList.module-eada0e91",
@@ -71929,20 +72038,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_IconList_IconList.zphe7Dte.css"
           ]
         },
-        "_chunk-DjCU0lxN.js": {
-          "file": "assets/chunks/chunk-DjCU0lxN.js",
-          "name": "index",
+        "_chunk-Dp-jXqM1.js": {
+          "file": "assets/chunks/chunk-Dp-jXqM1.js",
+          "name": "List",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-BvPr2fSB.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-C1UfUYGV.js",
-            "_chunk-h3RNVpH9.js",
-            "_chunk-BxfmKKbt.js",
-            "_chunk-D_TSPZfq.js",
-            "_chunk-Cu-EtuGu.js",
-            "_chunk-EDfbMhkW.js"
+            "_chunk-Dyra5A0a.js"
           ]
         },
         "_chunk-Dp1CbZSd.js": {
@@ -71952,13 +72052,6 @@ var init_entry = __esm({
             "assets/static/src_pages_IndexPage_ui_Hero_Hero.Br7MVOyQ.css"
           ]
         },
-        "_chunk-DpCuXaDO.js": {
-          "file": "assets/chunks/chunk-DpCuXaDO.js",
-          "name": "events",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
         "_chunk-DvMZj_d7.js": {
           "file": "assets/chunks/chunk-DvMZj_d7.js",
           "name": "src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.module-8250eceb",
@@ -71966,11 +72059,56 @@ var init_entry = __esm({
             "assets/static/src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.BfDz1d0v.css"
           ]
         },
-        "_chunk-Dw3Lx9wJ.js": {
-          "file": "assets/chunks/chunk-Dw3Lx9wJ.js",
+        "_chunk-DwSl5KEI.js": {
+          "file": "assets/chunks/chunk-DwSl5KEI.js",
+          "name": "src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.module-64f2ec5c",
+          "css": [
+            "assets/static/src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.3mqw71w7.css"
+          ]
+        },
+        "_chunk-Dyra5A0a.js": {
+          "file": "assets/chunks/chunk-Dyra5A0a.js",
+          "name": "index",
+          "imports": [
+            "_chunk-B1wGYcIn.js",
+            "_chunk-CzcYWzuz.js",
+            "_chunk-Cn-X2PZL.js",
+            "_chunk-SsiTcO1f.js",
+            "_chunk-CBWPs7ER.js",
+            "_chunk-CRbxnH0z.js",
+            "_chunk-CEz9pelC.js",
+            "_chunk-BPA5pK2c.js",
+            "_chunk-CcRi4BOb.js",
+            "_chunk-DC4iVavn.js",
+            "_chunk-Y2FPcE4W.js",
+            "_chunk-CQyHp5_h.js",
+            "_chunk-_mzujixh.js",
+            "_chunk-D0Qt8njn.js"
+          ],
+          "css": [
+            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          ]
+        },
+        "_chunk-Dyvjw1FD.js": {
+          "file": "assets/chunks/chunk-Dyvjw1FD.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Dyra5A0a.js"
+          ]
+        },
+        "_chunk-Dz3YQ2PB.js": {
+          "file": "assets/chunks/chunk-Dz3YQ2PB.js",
           "name": "ArrowRight",
           "imports": [
-            "_chunk-BkWJ2vZv.js"
+            "_chunk-Dyra5A0a.js"
           ]
         },
         "_chunk-DzMbMNOU.js": {
@@ -71980,15 +72118,12 @@ var init_entry = __esm({
             "assets/static/src_pages_FullReportExamplePage_FullReportExamplePage.C2_KcrzQ.css"
           ]
         },
-        "_chunk-EDfbMhkW.js": {
-          "file": "assets/chunks/chunk-EDfbMhkW.js",
+        "_chunk-I2E64Ice.js": {
+          "file": "assets/chunks/chunk-I2E64Ice.js",
           "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-n-7RzgD9.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-ChL1fS8_.js",
-            "_chunk-CYRnzIC0.js"
+            "_chunk-Dyra5A0a.js",
+            "_chunk-4ssmusCf.js"
           ]
         },
         "_chunk-I7-GZjN6.js": {
@@ -71998,28 +72133,15 @@ var init_entry = __esm({
             "assets/static/src_pages_TypePage_TypePage.C_kTnA5M.css"
           ]
         },
-        "_chunk-IQa4_Duh.js": {
-          "file": "assets/chunks/chunk-IQa4_Duh.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-B4DuaiMN.js",
-            "_chunk-CYRnzIC0.js"
-          ]
-        },
         "_chunk-MlOg0Rm7.js": {
           "file": "assets/chunks/chunk-MlOg0Rm7.js",
           "name": "methods"
         },
-        "_chunk-SR5jtIEZ.js": {
-          "file": "assets/chunks/chunk-SR5jtIEZ.js",
-          "name": "index",
+        "_chunk-NVSCS89x.js": {
+          "file": "assets/chunks/chunk-NVSCS89x.js",
+          "name": "events",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-MlOg0Rm7.js",
-            "_chunk-C-3o4xSG.js"
+            "_chunk-Dyra5A0a.js"
           ]
         },
         "_chunk-SsiTcO1f.js": {
@@ -72078,42 +72200,11 @@ var init_entry = __esm({
             "assets/static/src_pages_FreeReportPage_FreeReportPage.CpTkx8zr.css"
           ]
         },
-        "_chunk-h3RNVpH9.js": {
-          "file": "assets/chunks/chunk-h3RNVpH9.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
         "_chunk-kcfGQPfX.js": {
           "file": "assets/chunks/chunk-kcfGQPfX.js",
           "name": "src_entities_Report_ui_ReportHeader_ReportHeader.module-018bb688",
           "css": [
             "assets/static/src_entities_Report_ui_ReportHeader_ReportHeader.CaMgP_F1.css"
-          ]
-        },
-        "_chunk-n-7RzgD9.js": {
-          "file": "assets/chunks/chunk-n-7RzgD9.js",
-          "name": "index",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Cxg4_e5S.js"
-          ]
-        },
-        "_chunk-qBPvIGxL.js": {
-          "file": "assets/chunks/chunk-qBPvIGxL.js",
-          "name": "_pageStarted",
-          "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-Dw3Lx9wJ.js",
-            "_chunk-B8rNtbKD.js",
-            "_chunk-BvjKq-Jn.js",
-            "_chunk-BTJKs_i_.js",
-            "_chunk-D3HhD4pv.js",
-            "_chunk-CYRnzIC0.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-DpCuXaDO.js"
           ]
         },
         "_chunk-qiwuecAD.js": {
@@ -72123,13 +72214,6 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_Preheader_Preheader.EgQqUP3H.css"
           ]
         },
-        "_chunk-r8h6VCMx.js": {
-          "file": "assets/chunks/chunk-r8h6VCMx.js",
-          "name": "Pagination",
-          "imports": [
-            "_chunk-BkWJ2vZv.js"
-          ]
-        },
         "_chunk-t2Mwp5JK.js": {
           "file": "assets/chunks/chunk-t2Mwp5JK.js",
           "name": "src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.module-45d96029",
@@ -72137,13 +72221,13 @@ var init_entry = __esm({
             "assets/static/src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.CQ4t_wMW.css"
           ]
         },
-        "_chunk-zzIWQBfK.js": {
-          "file": "assets/chunks/chunk-zzIWQBfK.js",
+        "_chunk-un-v1Q-x.js": {
+          "file": "assets/chunks/chunk-un-v1Q-x.js",
           "name": "index",
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-kcfGQPfX.js",
-            "_chunk-CYRnzIC0.js"
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-Cxg4_e5S.js"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css": {
@@ -72162,9 +72246,9 @@ var init_entry = __esm({
           "file": "assets/static/src_entities_FAQ_ui_List_FAQList.Cs0pBl19.css",
           "src": "_src_entities_FAQ_ui_List_FAQList.Cs0pBl19.css"
         },
-        "_src_entities_Personalities_ui_PersonalityCard_PersonalityCard.D_WHW-hK.css": {
-          "file": "assets/static/src_entities_Personalities_ui_PersonalityCard_PersonalityCard.D_WHW-hK.css",
-          "src": "_src_entities_Personalities_ui_PersonalityCard_PersonalityCard.D_WHW-hK.css"
+        "_src_entities_Personalities_ui_PersonalityCard_PersonalityCard.eRxJXkfI.css": {
+          "file": "assets/static/src_entities_Personalities_ui_PersonalityCard_PersonalityCard.eRxJXkfI.css",
+          "src": "_src_entities_Personalities_ui_PersonalityCard_PersonalityCard.eRxJXkfI.css"
         },
         "_src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.BfDz1d0v.css": {
           "file": "assets/static/src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.BfDz1d0v.css",
@@ -72185,6 +72269,10 @@ var init_entry = __esm({
         "_src_entities_Report_ui_BarChart_BarChart.DHjunXHx.css": {
           "file": "assets/static/src_entities_Report_ui_BarChart_BarChart.DHjunXHx.css",
           "src": "_src_entities_Report_ui_BarChart_BarChart.DHjunXHx.css"
+        },
+        "_src_entities_Report_ui_CategoryBanner_CategoryBanner.0S3XIrD1.css": {
+          "file": "assets/static/src_entities_Report_ui_CategoryBanner_CategoryBanner.0S3XIrD1.css",
+          "src": "_src_entities_Report_ui_CategoryBanner_CategoryBanner.0S3XIrD1.css"
         },
         "_src_entities_Report_ui_FilledBulletList_FilledBulletList.BgKBr2s8.css": {
           "file": "assets/static/src_entities_Report_ui_FilledBulletList_FilledBulletList.BgKBr2s8.css",
@@ -72226,9 +72314,9 @@ var init_entry = __esm({
           "file": "assets/static/src_entities_Report_ui_ReportHeader_ReportHeader.CaMgP_F1.css",
           "src": "_src_entities_Report_ui_ReportHeader_ReportHeader.CaMgP_F1.css"
         },
-        "_src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.BeXNx5Tl.css": {
-          "file": "assets/static/src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.BeXNx5Tl.css",
-          "src": "_src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.BeXNx5Tl.css"
+        "_src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.3mqw71w7.css": {
+          "file": "assets/static/src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.3mqw71w7.css",
+          "src": "_src_entities_Report_ui_ReportNavigationTemplate_ReportNavigationTemplate.3mqw71w7.css"
         },
         "_src_entities_Report_ui_Subtitle_Subtitle.JmeqVvaX.css": {
           "file": "assets/static/src_entities_Report_ui_Subtitle_Subtitle.JmeqVvaX.css",
@@ -72386,9 +72474,9 @@ var init_entry = __esm({
           "file": "assets/static/src_widgets_RootLayout_ui_Footer_ui_Section_Section.grYKK0iI.css",
           "src": "_src_widgets_RootLayout_ui_Footer_ui_Section_Section.grYKK0iI.css"
         },
-        "_src_widgets_RootLayout_ui_Footer_ui_Top_Top.CJ6OycV0.css": {
-          "file": "assets/static/src_widgets_RootLayout_ui_Footer_ui_Top_Top.CJ6OycV0.css",
-          "src": "_src_widgets_RootLayout_ui_Footer_ui_Top_Top.CJ6OycV0.css"
+        "_src_widgets_RootLayout_ui_Footer_ui_Top_Top.CQ5XoFu7.css": {
+          "file": "assets/static/src_widgets_RootLayout_ui_Footer_ui_Top_Top.CQ5XoFu7.css",
+          "src": "_src_widgets_RootLayout_ui_Footer_ui_Top_Top.CQ5XoFu7.css"
         },
         "_src_widgets_RootLayout_ui_Header_Header.BX_kS-Vk.css": {
           "file": "assets/static/src_widgets_RootLayout_ui_Header_Header.BX_kS-Vk.css",
@@ -72423,12 +72511,12 @@ var init_entry = __esm({
           "src": "_vike-react-78d3a85e.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.Bx7eb1bX.js",
+          "file": "assets/entries/entry-client-routing.icLZBSr9.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
           "imports": [
-            "_chunk-C-3o4xSG.js"
+            "_chunk-B1wGYcIn.js"
           ]
         },
         "src/app/assets/fonts/raleway-v34-cyrillic_latin-500.woff2": {
@@ -72452,21 +72540,21 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/_error": {
-          "file": "assets/entries/pages_error.CQ7v48Xw.js",
+          "file": "assets/entries/pages_error.DSsBx1sv.js",
           "name": "entries/pages/_error",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/_error",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-n-7RzgD9.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-C-3o4xSG.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-un-v1Q-x.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-B1wGYcIn.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72491,24 +72579,24 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog": {
-          "file": "assets/entries/pages_blog.8DYvdHof.js",
+          "file": "assets/entries/pages_blog.Bulf8aa7.js",
           "name": "entries/pages/blog",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-qBPvIGxL.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-BvPr2fSB.js",
-            "_chunk-Cccxy_lm.js",
-            "_chunk-BTJKs_i_.js",
-            "_chunk-r8h6VCMx.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-DVkRKGiq.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C9NHQr0a.js",
+            "_chunk-D2vS91lO.js",
+            "_chunk-D6LYJuAq.js",
+            "_chunk-Cu5iHzAn.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72517,12 +72605,12 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-Dw3Lx9wJ.js",
-            "_chunk-B8rNtbKD.js",
+            "_chunk-Dz3YQ2PB.js",
+            "_chunk-DPk9N604.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-D3HhD4pv.js",
-            "_chunk-CYRnzIC0.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-BKyOtWcb.js",
+            "_chunk-BD79VC_w.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-Bptf38cR.js"
           ],
           "css": [
@@ -72538,29 +72626,29 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id": {
-          "file": "assets/entries/pages_blog_-id.BEEAiC0U.js",
+          "file": "assets/entries/pages_blog_-id.DI_oHdAC.js",
           "name": "entries/pages/blog/@id",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-qBPvIGxL.js",
-            "_chunk-B8rNtbKD.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-DVkRKGiq.js",
+            "_chunk-DPk9N604.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-dKitA7zH.js",
-            "_chunk-CYRnzIC0.js",
-            "_chunk-DY3ysccp.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-IQa4_Duh.js",
-            "_chunk-BQIOzcEH.js",
+            "_chunk-BD79VC_w.js",
+            "_chunk-Dp-jXqM1.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-CKZ-LFw9.js",
+            "_chunk-D9ZLW4le.js",
             "_chunk-DCipUdXz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72569,17 +72657,17 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-Dw3Lx9wJ.js",
+            "_chunk-Dz3YQ2PB.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-BTJKs_i_.js",
-            "_chunk-D3HhD4pv.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-D6LYJuAq.js",
+            "_chunk-BKyOtWcb.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CGG52H9N.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-B4DuaiMN.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-SR5jtIEZ.js",
+            "_chunk-C_Si0TIZ.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js"
           ],
@@ -72596,22 +72684,22 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/faq": {
-          "file": "assets/entries/pages_faq.DurY6IKb.js",
+          "file": "assets/entries/pages_faq.CVNvjNpG.js",
           "name": "entries/pages/faq",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/faq",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-B8rNtbKD.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-DPk9N604.js",
             "_chunk-CVRu9IVO.js",
-            "_chunk-Cccxy_lm.js",
-            "_chunk-C-3o4xSG.js",
+            "_chunk-D2vS91lO.js",
+            "_chunk-B1wGYcIn.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72635,28 +72723,28 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/free-report": {
-          "file": "assets/entries/pages_free-report.BO6am-ha.js",
+          "file": "assets/entries/pages_free-report.BYkkk8tr.js",
           "name": "entries/pages/free-report",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-zzIWQBfK.js",
-            "_chunk-B5KPxQg6.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-BvPr2fSB.js",
-            "_chunk-BQIOzcEH.js",
-            "_chunk-CIzEDb4l.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-Ddz3aZYD.js",
+            "_chunk-BO8E46WQ.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-C9NHQr0a.js",
+            "_chunk-D9ZLW4le.js",
+            "_chunk-BP2QB7Xc.js",
             "_chunk-gSKk1dU1.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72667,30 +72755,30 @@ var init_entry = __esm({
             "_chunk-D0Qt8njn.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-kcfGQPfX.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-BD79VC_w.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-BTJKs_i_.js",
+            "_chunk-D6LYJuAq.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-DY3ysccp.js",
+            "_chunk-Dp-jXqM1.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
+            "_chunk-DPk9N604.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-Cu-EtuGu.js",
+            "_chunk-BIFt5bA0.js",
             "_chunk-CG4tMHVA.js",
-            "_chunk-B8rNtbKD.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-CGG52H9N.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-SR5jtIEZ.js",
+            "_chunk-C_Si0TIZ.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js",
-            "_chunk-C5QXUWU-.js"
+            "_chunk-DwSl5KEI.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -72705,25 +72793,26 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example": {
-          "file": "assets/entries/pages_full-report_example.DbliehD-.js",
+          "file": "assets/entries/pages_full-report_example.Dl9vdXI-.js",
           "name": "entries/pages/full-report/example",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-B5KPxQg6.js",
-            "_chunk-n-7RzgD9.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-BO8E46WQ.js",
+            "_chunk-un-v1Q-x.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-C5jk2UFd.js",
             "_chunk-qiwuecAD.js",
-            "_chunk-Bddh1PFT.js",
+            "_chunk-C-Ch_zfH.js",
             "_chunk-DzMbMNOU.js",
-            "_chunk-C-3o4xSG.js",
+            "_chunk-B1wGYcIn.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72733,21 +72822,21 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-BTJKs_i_.js",
+            "_chunk-D6LYJuAq.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-DY3ysccp.js",
+            "_chunk-Dp-jXqM1.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-BD79VC_w.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
+            "_chunk-DPk9N604.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-Cu-EtuGu.js",
+            "_chunk-BIFt5bA0.js",
             "_chunk-CG4tMHVA.js",
-            "_chunk-B8rNtbKD.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-Cxg4_e5S.js",
             "_chunk-CGG52H9N.js",
@@ -72766,23 +72855,23 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/help": {
-          "file": "assets/entries/pages_help.VzQzce8q.js",
+          "file": "assets/entries/pages_help.3vy0siWm.js",
           "name": "entries/pages/help",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/help",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-BxfmKKbt.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-I2E64Ice.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-Cu-EtuGu.js",
-            "_chunk-EDfbMhkW.js",
+            "_chunk-BIFt5bA0.js",
+            "_chunk-9tRELQrv.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72792,12 +72881,12 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-4ssmusCf.js",
-            "_chunk-n-7RzgD9.js",
+            "_chunk-un-v1Q-x.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-CYRnzIC0.js"
+            "_chunk-BD79VC_w.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -72812,20 +72901,20 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.DRkOLa8O.js",
+          "file": "assets/entries/pages_index.DERT00LO.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
+            "_chunk-Dyra5A0a.js",
             "_chunk-Dp1CbZSd.js",
-            "_chunk-C-3o4xSG.js",
+            "_chunk-B1wGYcIn.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72848,24 +72937,24 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/payment-check": {
-          "file": "assets/entries/pages_payment-check.DNG3PYOb.js",
+          "file": "assets/entries/pages_payment-check.ChgQ9LzB.js",
           "name": "entries/pages/payment-check",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-BvPr2fSB.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-h3RNVpH9.js",
-            "_chunk-EDfbMhkW.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C9NHQr0a.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-Dyvjw1FD.js",
+            "_chunk-9tRELQrv.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72875,12 +72964,12 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-n-7RzgD9.js",
+            "_chunk-un-v1Q-x.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-CYRnzIC0.js"
+            "_chunk-BD79VC_w.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -72895,22 +72984,22 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type": {
-          "file": "assets/entries/pages_purchase_-type.CO-m-drH.js",
+          "file": "assets/entries/pages_purchase_-type.DFx8lUNJ.js",
           "name": "entries/pages/purchase/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-DjCU0lxN.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-D9h_e1mh.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72919,20 +73008,20 @@ var init_entry = __esm({
             "_chunk-CQyHp5_h.js",
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
-            "_chunk-BvPr2fSB.js",
+            "_chunk-C9NHQr0a.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-h3RNVpH9.js",
-            "_chunk-BxfmKKbt.js",
+            "_chunk-Dyvjw1FD.js",
+            "_chunk-I2E64Ice.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-Cu-EtuGu.js",
-            "_chunk-EDfbMhkW.js",
-            "_chunk-n-7RzgD9.js",
+            "_chunk-BIFt5bA0.js",
+            "_chunk-9tRELQrv.js",
+            "_chunk-un-v1Q-x.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-BD79VC_w.js",
             "_chunk-MlOg0Rm7.js"
           ],
           "css": [
@@ -72948,22 +73037,22 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId": {
-          "file": "assets/entries/pages_purchase_personal_-surveyId.B8RawL_F.js",
+          "file": "assets/entries/pages_purchase_personal_-surveyId.siCRIDt7.js",
           "name": "entries/pages/purchase/personal/@surveyId",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-DpCuXaDO.js",
-            "_chunk-DjCU0lxN.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-NVSCS89x.js",
+            "_chunk-D9h_e1mh.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -72973,20 +73062,20 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-BvPr2fSB.js",
+            "_chunk-C9NHQr0a.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-h3RNVpH9.js",
-            "_chunk-BxfmKKbt.js",
+            "_chunk-Dyvjw1FD.js",
+            "_chunk-I2E64Ice.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-Cu-EtuGu.js",
-            "_chunk-EDfbMhkW.js",
-            "_chunk-n-7RzgD9.js",
+            "_chunk-BIFt5bA0.js",
+            "_chunk-9tRELQrv.js",
+            "_chunk-un-v1Q-x.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-CYRnzIC0.js"
+            "_chunk-BD79VC_w.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -73001,32 +73090,34 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId": {
-          "file": "assets/entries/pages_report_-reportId.6tc4mele.js",
+          "file": "assets/entries/pages_report_-reportId.BdpWIvQK.js",
           "name": "entries/pages/report/@reportId",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-zzIWQBfK.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-BvPr2fSB.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-CIzEDb4l.js",
-            "_chunk-B5KPxQg6.js",
-            "_chunk-Bcx1OCc6.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-Ddz3aZYD.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-C9NHQr0a.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-C5jk2UFd.js",
+            "_chunk-BMjOyu7c.js",
+            "_chunk-BP2QB7Xc.js",
+            "_chunk-BO8E46WQ.js",
+            "_chunk-8sj1mahd.js",
             "_chunk-BDizESrC.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-BD79VC_w.js",
             "_chunk-DIKNkNCb.js",
-            "_chunk-Dw3Lx9wJ.js",
+            "_chunk-Dz3YQ2PB.js",
             "_chunk-acv2IrBc.js",
-            "_chunk-r8h6VCMx.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-Cu5iHzAn.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -73037,22 +73128,22 @@ var init_entry = __esm({
             "_chunk-D0Qt8njn.js",
             "_chunk-kcfGQPfX.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-C5QXUWU-.js",
+            "_chunk-DwSl5KEI.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-BTJKs_i_.js",
+            "_chunk-D6LYJuAq.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-DY3ysccp.js",
+            "_chunk-Dp-jXqM1.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
+            "_chunk-DPk9N604.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-Cu-EtuGu.js",
+            "_chunk-BIFt5bA0.js",
             "_chunk-CG4tMHVA.js",
-            "_chunk-B8rNtbKD.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-CGG52H9N.js"
           ],
@@ -73069,17 +73160,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/test": {
-          "file": "assets/entries/pages_test.DO1o-IA0.js",
+          "file": "assets/entries/pages_test.CPmsfc2Y.js",
           "name": "entries/pages/test",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/test",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-SR5jtIEZ.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-C_Si0TIZ.js",
             "_chunk-DaRxFVcl.js",
             "_chunk-Dc3F63Pp.js",
-            "_chunk-C-3o4xSG.js",
+            "_chunk-B1wGYcIn.js",
             "_chunk-BeEKSsYB.js",
             "_chunk-Bi-xDFJf.js",
             "_chunk-Cu1jJxiW.js",
@@ -73087,16 +73178,16 @@ var init_entry = __esm({
             "_chunk-B3_uMupp.js",
             "_chunk-CYwzgwck.js",
             "_chunk-CqQOSLXS.js",
-            "_chunk-Dw3Lx9wJ.js",
+            "_chunk-Dz3YQ2PB.js",
             "_chunk-CQgCXmz1.js",
             "_chunk-BLKfBb6c.js",
-            "_chunk-r8h6VCMx.js",
-            "_chunk-DpCuXaDO.js",
+            "_chunk-Cu5iHzAn.js",
+            "_chunk-NVSCS89x.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -73120,26 +73211,25 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types": {
-          "file": "assets/entries/pages_types.MgcfF3K0.js",
+          "file": "assets/entries/pages_types.BTvzswsv.js",
           "name": "entries/pages/types",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-BjHedDkv.js",
-            "_chunk-D3HhD4pv.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-CPXN8Iab.js",
+            "_chunk-BKyOtWcb.js",
             "_chunk-DvMZj_d7.js",
-            "_chunk-BTJKs_i_.js",
-            "_chunk-Cccxy_lm.js",
+            "_chunk-D6LYJuAq.js",
+            "_chunk-D2vS91lO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -73164,27 +73254,27 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types/@type": {
-          "file": "assets/entries/pages_types_-type.BndxAfR1.js",
+          "file": "assets/entries/pages_types_-type.BBbgEJvp.js",
           "name": "entries/pages/types/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-BkWJ2vZv.js",
-            "_chunk-zzIWQBfK.js",
-            "_chunk-B5KPxQg6.js",
-            "_chunk-IQa4_Duh.js",
-            "_chunk-C-3o4xSG.js",
-            "_chunk-Bcx1OCc6.js",
-            "_chunk-Bddh1PFT.js",
-            "_chunk-BQIOzcEH.js",
+            "_chunk-Dyra5A0a.js",
+            "_chunk-Ddz3aZYD.js",
+            "_chunk-BO8E46WQ.js",
+            "_chunk-CKZ-LFw9.js",
+            "_chunk-B1wGYcIn.js",
+            "_chunk-8sj1mahd.js",
+            "_chunk-C-Ch_zfH.js",
+            "_chunk-D9ZLW4le.js",
             "_chunk-ByaiJHsb.js",
             "_chunk-I7-GZjN6.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-Cn-X2PZL.js",
             "_chunk-SsiTcO1f.js",
             "_chunk-CBWPs7ER.js",
-            "_chunk-CjMYPr3R.js",
+            "_chunk-CRbxnH0z.js",
             "_chunk-CEz9pelC.js",
             "_chunk-BPA5pK2c.js",
             "_chunk-CcRi4BOb.js",
@@ -73194,29 +73284,29 @@ var init_entry = __esm({
             "_chunk-_mzujixh.js",
             "_chunk-D0Qt8njn.js",
             "_chunk-kcfGQPfX.js",
-            "_chunk-CYRnzIC0.js",
+            "_chunk-BD79VC_w.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-BTJKs_i_.js",
+            "_chunk-D6LYJuAq.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-DY3ysccp.js",
+            "_chunk-Dp-jXqM1.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
+            "_chunk-DPk9N604.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-Cu-EtuGu.js",
+            "_chunk-BIFt5bA0.js",
             "_chunk-CG4tMHVA.js",
-            "_chunk-B8rNtbKD.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-B4DuaiMN.js",
             "_chunk-CGG52H9N.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-SR5jtIEZ.js",
+            "_chunk-C_Si0TIZ.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js"
           ],
@@ -74409,9 +74499,9 @@ async function streamPipeNodeToString(streamPipeNode) {
   const { Writable } = await loadStreamNodeModule();
   const writable = new Writable({
     write(chunk2, _encoding, callback) {
-      const s98 = chunk2.toString();
-      assert(typeof s98 === "string");
-      str += s98;
+      const s99 = chunk2.toString();
+      assert(typeof s99 === "string");
+      str += s99;
       callback();
     },
     final(callback) {
@@ -75361,7 +75451,7 @@ function getHttpResponseBodyStreamHandlers(htmlRender, renderHook) {
   };
   function getFixMsg(kind, type2) {
     const streamName = getStreamName(kind, type2);
-    assert(["a ", "an ", "the "].some((s98) => streamName.startsWith(s98)));
+    assert(["a ", "an ", "the "].some((s99) => streamName.startsWith(s99)));
     assert(renderHook);
     const { hookFilePath, hookName } = renderHook;
     return `Make sure the ${hookName}() defined by ${hookFilePath} hook provides ${streamName} instead`;
@@ -75376,7 +75466,7 @@ function getErrMsgBody(htmlRender, renderHook) {
   assert(renderHook);
   const { hookFilePath, hookName } = renderHook;
   const hookReturnType = getHookReturnType(htmlRender);
-  assert(["a ", "an ", "the "].some((s98) => hookReturnType.startsWith(s98)));
+  assert(["a ", "an ", "the "].some((s99) => hookReturnType.startsWith(s99)));
   const errMsgBody = `${hookName}() hook defined by ${hookFilePath} provides ${hookReturnType}`;
   assert(!errMsgBody.endsWith(" "));
   return errMsgBody;
@@ -76333,7 +76423,7 @@ function debugPageFiles({ pageContext, isHtmlOnly, isClientRouting, pageFilesLoa
     if (pageFiles2.length === 0) {
       return "None";
     }
-    return "\n" + pageFiles2.sort((p1, p210) => p1.filePath.localeCompare(p210.filePath)).sort(makeFirst((p34) => p34.isRendererPageFile ? !genericPageFilesLast : null)).sort(makeFirst((p34) => p34.isDefaultPageFile ? !genericPageFilesLast : null)).map((p34) => p34.filePath).map((s98) => s98.split("_default.page.").join(`${import_picocolors32.default.blue("_default")}.page.`)).map((s98) => s98.split("/renderer/").join(`/${import_picocolors32.default.red("renderer")}/`)).map((s98) => padding + s98).join("\n");
+    return "\n" + pageFiles2.sort((p1, p210) => p1.filePath.localeCompare(p210.filePath)).sort(makeFirst((p34) => p34.isRendererPageFile ? !genericPageFilesLast : null)).sort(makeFirst((p34) => p34.isDefaultPageFile ? !genericPageFilesLast : null)).map((p34) => p34.filePath).map((s99) => s99.split("_default.page.").join(`${import_picocolors32.default.blue("_default")}.page.`)).map((s99) => s99.split("/renderer/").join(`/${import_picocolors32.default.red("renderer")}/`)).map((s99) => padding + s99).join("\n");
   }
 }
 function samePageFiles(pageFiles1, pageFiles2) {
@@ -77781,7 +77871,7 @@ function logHttpResponse(urlOriginalPretty, httpRequestId, pageContextReturn) {
     } else {
       const isSuccess = statusCode !== null && statusCode >= 200 && statusCode <= 399;
       isNominal = isSuccess || statusCode === 404;
-      const color = (s98) => import_picocolors43.default.bold(isSuccess ? import_picocolors43.default.green(String(s98)) : import_picocolors43.default.red(String(s98)));
+      const color = (s99) => import_picocolors43.default.bold(isSuccess ? import_picocolors43.default.green(String(s99)) : import_picocolors43.default.red(String(s99)));
       const isRedirect = statusCode && 300 <= statusCode && statusCode <= 399;
       const type2 = isRedirect ? "redirect" : "response";
       if (isRedirect) {
@@ -78253,17 +78343,17 @@ var require_object_inspect = __commonJS({
         return typeof obj === "object" && !hasShammedSymbols ? markBoxed(symString) : symString;
       }
       if (isElement3(obj)) {
-        var s98 = "<" + $toLowerCase.call(String(obj.nodeName));
+        var s99 = "<" + $toLowerCase.call(String(obj.nodeName));
         var attrs = obj.attributes || [];
         for (var i33 = 0; i33 < attrs.length; i33++) {
-          s98 += " " + attrs[i33].name + "=" + wrapQuotes(quote(attrs[i33].value), "double", opts);
+          s99 += " " + attrs[i33].name + "=" + wrapQuotes(quote(attrs[i33].value), "double", opts);
         }
-        s98 += ">";
+        s99 += ">";
         if (obj.childNodes && obj.childNodes.length) {
-          s98 += "...";
+          s99 += "...";
         }
-        s98 += "</" + $toLowerCase.call(String(obj.nodeName)) + ">";
-        return s98;
+        s99 += "</" + $toLowerCase.call(String(obj.nodeName)) + ">";
+        return s99;
       }
       if (isArray3(obj)) {
         if (obj.length === 0) {
@@ -78354,13 +78444,13 @@ var require_object_inspect = __commonJS({
       }
       return String(obj);
     };
-    function wrapQuotes(s98, defaultStyle, opts) {
+    function wrapQuotes(s99, defaultStyle, opts) {
       var style = opts.quoteStyle || defaultStyle;
       var quoteChar = quotes[style];
-      return quoteChar + s98 + quoteChar;
+      return quoteChar + s99 + quoteChar;
     }
-    function quote(s98) {
-      return $replace.call(String(s98), /"/g, "&quot;");
+    function quote(s99) {
+      return $replace.call(String(s99), /"/g, "&quot;");
     }
     function canTrustToString(obj) {
       return !toStringTag || !(typeof obj === "object" && (toStringTag in obj || typeof obj[toStringTag] !== "undefined"));
@@ -78452,7 +78542,7 @@ var require_object_inspect = __commonJS({
         mapSize.call(x6);
         try {
           setSize.call(x6);
-        } catch (s98) {
+        } catch (s99) {
           return true;
         }
         return x6 instanceof Map;
@@ -78468,7 +78558,7 @@ var require_object_inspect = __commonJS({
         weakMapHas.call(x6, weakMapHas);
         try {
           weakSetHas.call(x6, weakSetHas);
-        } catch (s98) {
+        } catch (s99) {
           return true;
         }
         return x6 instanceof WeakMap;
@@ -78511,7 +78601,7 @@ var require_object_inspect = __commonJS({
         weakSetHas.call(x6, weakSetHas);
         try {
           weakMapHas.call(x6, weakMapHas);
-        } catch (s98) {
+        } catch (s99) {
           return true;
         }
         return x6 instanceof WeakSet;
@@ -78536,8 +78626,8 @@ var require_object_inspect = __commonJS({
       }
       var quoteRE = quoteREs[opts.quoteStyle || "single"];
       quoteRE.lastIndex = 0;
-      var s98 = $replace.call($replace.call(str, quoteRE, "\\$1"), /[\x00-\x1f]/g, lowbyte);
-      return wrapQuotes(s98, "single", opts);
+      var s99 = $replace.call($replace.call(str, quoteRE, "\\$1"), /[\x00-\x1f]/g, lowbyte);
+      return wrapQuotes(s99, "single", opts);
     }
     function lowbyte(c37) {
       var n25 = c37.charCodeAt(0);

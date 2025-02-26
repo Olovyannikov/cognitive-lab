@@ -18,3 +18,5 @@ export * from './TextStrokeDash';
 export * from './ReportTitle';
 export * from './AdBanner';
 export * from './ReportNavigationTemplate';
+export * from './BlockQuoteFilled';
+export * from './CategoryBanner';

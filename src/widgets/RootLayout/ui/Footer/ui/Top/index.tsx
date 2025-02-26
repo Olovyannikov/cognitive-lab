@@ -9,9 +9,9 @@ import s from './Top.module.css';
 export const Top = () => {
     return (
         <Box className={s.top}>
-            <CognitiveLogo width={220} height={36} />
+            <CognitiveLogo width={200} height={35} />
 
-            <p>Знание о себе - первый шаг к успеху</p>
+            <p>Технологии самопознания</p>
             <List className={s.owner} data={OWNER_INFO} />
         </Box>
     );

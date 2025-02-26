@@ -13,6 +13,7 @@ export type ContentType =
     | 'subtitle'
     | 'cards'
     | 'ordered_list'
+    | 'blockquote_filled'
     | 'title';
 
 export interface ListItem {

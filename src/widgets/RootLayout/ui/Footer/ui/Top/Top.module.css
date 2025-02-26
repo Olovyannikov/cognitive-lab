@@ -4,6 +4,7 @@
 
   p {
     margin: 4px 0 32px;
+    line-height: 18px;
   }
 
   @mixin larger-than 1200px {

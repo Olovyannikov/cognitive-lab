@@ -1,6 +1,13 @@
 import type { ReactNode } from 'react';
 
-import { barChartPrepareData, IconList, ReportTitle, Subscription, TextStrokeDash } from '@/entities/Report';
+import {
+    barChartPrepareData,
+    BlockQuoteFilled,
+    IconList,
+    ReportTitle,
+    Subscription,
+    TextStrokeDash,
+} from '@/entities/Report';
 import { BarChart } from '@/entities/Report/ui/BarChart';
 import { SendReportEmail } from '@/features/SendReportEmail';
 import type { PartialRecord } from '@/shared/types/utility-types/PartialRecord';
@@ -38,8 +45,10 @@ export const contentResolver = ({
     index,
 }: ContentResolverProps) => {
     switch (content.type) {
+        case 'blockquote_filled':
+            return <BlockQuoteFilled color={color} text={content.text ?? ''} />;
         case 'header':
-            return <Header {...content} c={color} />;
+            return <Header {...content} />;
         case 'paragraph':
             return <Paragraph {...content} />;
         case 'cards':

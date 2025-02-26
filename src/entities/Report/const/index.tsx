@@ -25,6 +25,7 @@ export const getIconsMap = (isLarge?: boolean): Record<string, ReactNode> => ({
     'Сильные и слабые стороны': <ThumbsUp size={isLarge ? 32 : 20} />,
     'Ваш стиль общения и взаимодействия с другими': <Shapes size={isLarge ? 32 : 20} />,
     'Ловушки вашего разума — как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 32 : 20} />,
+    'Ловушки вашего разума - как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 32 : 20} />,
     'Как стресс влияет на ваши решения': <Vibrate size={isLarge ? 32 : 20} />,
     'Как сохранить внутренний баланс и энергию': <Scales size={isLarge ? 32 : 20} />,
     'Знаменитости, похожие на вас': <Star size={isLarge ? 32 : 20} />,

@@ -1,4 +1,4 @@
-import { Box, Group, Pagination, Paper, Text } from '@mantine/core';
+import { Group, Pagination, Paper, Text } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { useStoreMap, useUnit } from 'effector-react';
@@ -46,13 +46,11 @@ export const ReportPagination = () => {
                         className={s.prev}
                         icon={() => (
                             <Group align='center' wrap='nowrap'>
-                                <Box>
-                                    <ArrowLeft
-                                        color={`var(--mantine-color-${color}-9)`}
-                                        weight='bold'
-                                        size={isLarge ? 32 : 28}
-                                    />
-                                </Box>
+                                <ArrowLeft
+                                    color={`var(--mantine-color-${color}-9)`}
+                                    weight='bold'
+                                    size={isLarge ? 32 : 28}
+                                />
                                 <Group wrap='nowrap'>
                                     <Paper
                                         className={s.paper}
@@ -90,13 +88,11 @@ export const ReportPagination = () => {
                                     {content[page].title ?? ''}
                                 </Text>
                             </Group>
-                            <Box>
-                                <ArrowRight
-                                    color={`var(--mantine-color-${color}-9)`}
-                                    weight='bold'
-                                    size={isLarge ? 32 : 28}
-                                />
-                            </Box>
+                            <ArrowRight
+                                color={`var(--mantine-color-${color}-9)`}
+                                weight='bold'
+                                size={isLarge ? 32 : 28}
+                            />
                         </Group>
                     )}
                 />
