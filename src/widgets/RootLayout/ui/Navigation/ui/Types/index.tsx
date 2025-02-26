@@ -36,6 +36,7 @@ export const Types = () => {
             trigger={isDesktop ? 'hover' : 'click'}
             onOpen={() => onOpenSubmenu(true)}
             onClose={() => onCloseSubmenu(false)}
+            withinPortal={false}
         >
             <Menu.Target>
                 <a className={c.link} {...(isDesktop ? { href: '/types' } : {})}>
@@ -43,7 +44,7 @@ export const Types = () => {
                     <CaretDown size={16} weight='bold' />
                 </a>
             </Menu.Target>
-            <Menu.Dropdown>
+            <Menu.Dropdown style={{ zIndex: 1200 }}>
                 <Button
                     mb='lg'
                     fz={20}
