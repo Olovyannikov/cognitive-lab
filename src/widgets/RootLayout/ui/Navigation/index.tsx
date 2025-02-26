@@ -22,7 +22,7 @@ export const Navigation = () => {
                     icon: <X size='32px' />,
                 }}
                 size='100%'
-                hiddenFrom='sm'
+                hiddenFrom='lg'
                 opened={isOpen}
                 className={s.drawer}
                 onClose={() => onClose(false)}
@@ -30,7 +30,7 @@ export const Navigation = () => {
             >
                 {items}
             </Drawer>
-            <Group wrap='nowrap' component='nav' visibleFrom='sm'>
+            <Group wrap='nowrap' component='nav' visibleFrom='lg'>
                 {items}
                 <RedirectToTestPage className={s.testLink} maw={144} w='100%' px={22} mih={45} fz={16} />
             </Group>

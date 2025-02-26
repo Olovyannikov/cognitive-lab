@@ -10,6 +10,10 @@
 
 .main {
   grid-area: m;
+
+  @mixin larger-than 1200px {
+    margin-top: 170px;
+  }
 }
 
 .footer {

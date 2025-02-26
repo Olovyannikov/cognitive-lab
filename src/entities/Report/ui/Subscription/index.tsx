@@ -18,7 +18,7 @@ export const Subscription = ({ title, text, subscriptionFormSlot }: Subscription
             bg='violet.0'
             pos='relative'
             mt={isLarge ? 100 : 0}
-            mx={isHuge ? -157 : 0}
+            mx={isHuge ? -153 : 0}
             px={isLarge ? 153 : 'md'}
             py={isLarge ? '3xl' : 'xl'}
         >

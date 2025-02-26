@@ -9,10 +9,14 @@
   }
 }
 
-.block {
+.wrapper {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: var(--mantine-color-white);
+}
+
+.block {
   margin-bottom: var(--mantine-spacing-3xl);
   background-color: var(--mantine-color-white);
   padding-block: var(--mantine-spacing-lg);
