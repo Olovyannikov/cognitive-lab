@@ -1,4 +1,7 @@
 .drawer {
+  position: relative;
+  z-index: 1010;
+
   header {
     margin-bottom: var(--mantine-spacing-sm);
     border-bottom: 1px solid var(--mantine-color-dark-0);
