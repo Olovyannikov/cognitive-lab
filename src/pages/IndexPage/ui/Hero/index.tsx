@@ -1,4 +1,4 @@
-import { Box, Button, Text } from '@mantine/core';
+import { Box, Button, Image, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 
 import UnionImage from '@/app/assets/images/union.svg?react';
@@ -8,18 +8,21 @@ import s from './Hero.module.css';
 export const Hero = () => {
     return (
         <Box component='section' className={s.box}>
-            <Text className={clsx(s.text, s.test)}>Тест на тип личности</Text>
-            <Text className={s.text}>
-                и выбор профессии с{' '}
-                <span className={s.ai}>
-                    AI <UnionImage />
+            <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>
+            <Text className={clsx(s.text, s.subtitle)}>
+                и выбор профессии <br />
+                <span>
+                    с&nbsp;
+                    <span className={s.ai}>
+                        AI <UnionImage />
+                    </span>
                 </span>
             </Text>
             <Text className={s.description}>
-                С использованием искусственного интеллекта и научно-обоснованной методики MBTI, мы предоставляем
-                персонализированные рекомендации для вашего карьерного роста и личностного развития.
+                Узнайте свой тип личности и получите персональные советы для вашего развития
             </Text>
-            <Button size='xl' bg='dark.9' radius='md' className={s.shadow}>
+            <Image draggable={false} className={s.image} src='/images/main-hero-char.png' />
+            <Button size='sm' bg='dark.9' radius='md' className={s.shadow}>
                 Пройти тест
             </Button>
         </Box>

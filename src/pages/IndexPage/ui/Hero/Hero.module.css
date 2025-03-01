@@ -1,46 +1,132 @@
 .box {
+  margin-bottom: 80px;
   text-align: center;
-  padding-block: 80px;
+  padding-block: 20px;
+
+  * {
+    height: fit-content;
+  }
 
   @mixin larger-than 768px {
+    margin-bottom: 0;
+    text-align: left;
     padding-block: 80px;
+  }
+
+  @mixin larger-than 992px {
+    display: grid;
+    grid-auto-rows: 0fr;
+    grid-template-areas:
+      "t i"
+      "s i"
+      "d i"
+      "b i";
   }
 }
 
 .text {
-  margin: 0 auto var(--mantine-spacing-md);
+  margin: 0 auto 6px;
   width: fit-content;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 65px;
+  font-size: 30px;
+  line-height: 32px;
+
+  @mixin larger-than 768px {
+    margin-left: 0;
+    font-size: 56px;
+    line-height: 65px;
+  }
 }
 
-.test {
-  border-radius: 20px;
-  padding: 7px 56px;
+.title {
+  grid-area: t;
+  border-radius: 16px;
+  padding: 5px 15px;
   background-color: var(--mantine-color-lime-4);
+
+  @mixin larger-than 768px {
+    padding: 7px 20px;
+  }
+
+  @mixin larger-than 1200px {
+    margin-top: 105px;
+  }
+}
+
+.subtitle {
+  grid-area: s;
+  margin-bottom: var(--mantine-spacing-lg);
+
+  > span {
+    display: block;
+    margin-top: 8px;
+  }
+
+  @mixin larger-than 576px {
+    > span {
+      display: inline-block;
+    }
+  }
+
+  @mixin larger-than 768px {
+    margin-bottom: 28px;
+  }
+
+  @mixin larger-than 1390px {
+    br {
+      display: none;
+    }
+  }
 }
 
 .ai {
   position: relative;
   margin-left: var(--mantine-spacing-xs);
+  width: 100%;
 
   svg {
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: -1;
-    width: 93px;
-    height: 85px;
+    width: 46px;
+    height: 42px;
     transform: translate(-50%, -50%);
+
+    @mixin larger-than 768px {
+      width: 93px;
+      height: 85px;
+    }
   }
 }
 
 .description {
-  margin-bottom: 67px;
-  max-width: 1438px;
-  font-size: 24px;
-  line-height: 28px;
+  grid-area: d;
+  margin-bottom: 16px;
+  max-width: 559px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  @mixin larger-than 768px {
+    margin-bottom: 64px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+
+.image {
+  grid-area: i;
+  margin: 0 auto 40px;
+  max-width: 673px;
+  max-height: 673px;
+
+  @mixin larger-than 992px {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
 }
 
 /* Shadow */
@@ -53,7 +139,23 @@
 
   position: relative;
   overflow: visible;
+  width: 100%;
+  min-height: 45px;
+  font-size: 16px;
+  line-height: 25px;
   background: linear-gradient(0deg, #000, #262626) !important;
+
+  @mixin larger-than 768px {
+    border-radius: 16px;
+    min-height: 64px;
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @mixin larger-than 992px {
+    margin-bottom: 194px;
+  }
 }
 
 .shadow::before,

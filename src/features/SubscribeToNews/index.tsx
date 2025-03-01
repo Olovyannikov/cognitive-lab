@@ -20,7 +20,7 @@ export const SubscribeToNews = () => {
     const onSubmit = form.onSubmit((data) => {
         onFormSubmit(data);
 
-        // if form was submitted successfully
+        // TODO: if form was submitted successfully
         form.reset();
     });
 
@@ -36,7 +36,7 @@ export const SubscribeToNews = () => {
                     />
                 </FocusTrap>
                 <Button color='dark.6' fullWidth type='submit'>
-                    Подписаться на новости
+                    Подписаться
                 </Button>
             </Flex>
         </form>
