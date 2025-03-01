@@ -2,6 +2,8 @@ import type { ComponentProps } from 'react';
 import { Box, Divider, Flex } from '@mantine/core';
 import clsx from 'clsx';
 
+import { SubscribeToNews } from '@/features/SubscribeToNews';
+
 import { CONTACTS, MENU } from './const';
 import s from './Footer.module.css';
 import { List, MetaInfo, Section, Top } from './ui';
@@ -17,6 +19,7 @@ export const Footer = ({ className }: ComponentProps<'footer'>) => {
                     </Section>
                     <Section title='Меню'>
                         <List className={s.menu} data={MENU} />
+                        <SubscribeToNews />
                     </Section>
                 </Flex>
             </Box>

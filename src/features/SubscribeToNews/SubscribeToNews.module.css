@@ -1,0 +1,9 @@
+.flex {
+  flex-direction: column;
+  margin-top: var(--mantine-spacing-lg);
+
+  @mixin larger-than 992px {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

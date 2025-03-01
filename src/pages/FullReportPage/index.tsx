@@ -10,10 +10,8 @@ import { ReportPagination } from '@/widgets/ReportPagination';
 
 export const FullReportPage = () => {
     const { data, pending, stale } = useUnit(getFullReportQuery);
-    const [isFirstPage] = useUnit([ReportModel.$currentContentPage.map((page) => page === 0)]);
-    const [currentPage, content, page] = useUnit([
-        ReportModel.$currentContentPage,
-        ReportModel.$currentContent,
+    const [isFirstPage, page] = useUnit([
+        ReportModel.$currentContentPage.map((page) => page === 0),
         ReportModel.$currentContentPage,
     ]);
 
@@ -26,18 +24,13 @@ export const FullReportPage = () => {
     if (stale || pending) return <PageLoader />;
     if (!data) return;
 
-    console.log({
-        isFirstPage,
-        content,
-    });
-
     return (
         <Box component='section'>
             <Container>
                 {isFirstPage && <ReportHeader showPreheader type={data.mbti_type} name={data.title} />}
                 {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}
                 <FullReportNavigation />
-                <FullReportSlice page={currentPage} />
+                <FullReportSlice page={page} />
                 <ReportPagination />
             </Container>
         </Box>
