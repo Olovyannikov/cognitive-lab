@@ -146,6 +146,7 @@
 
 .wrapper {
   margin-bottom: var(--mantine-spacing-5xl);
+  padding: 0;
   text-align: center;
 }
 

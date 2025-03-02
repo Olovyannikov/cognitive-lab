@@ -61,13 +61,15 @@ export const TypePage = () => {
                 <Banner
                     color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
                     actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}
+                    image={`/images/circles/${data?.mbti_type}_2.png`}
                 />
                 <InnerContainer>{afterBannerContent}</InnerContainer>
                 <Banner
                     title='Узнайте свой тип личности'
                     description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'
                     color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
-                    actionSlot={CALL_TO_ACTION['redirectToTestPageAndNavigateToFullStructure']}
+                    actionSlot={CALL_TO_ACTION['redirectToTest']}
+                    image={`/images/circles/${data?.mbti_type}_1.png`}
                 />
             </Container>
         </Box>

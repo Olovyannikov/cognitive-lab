@@ -10,12 +10,14 @@ interface BannerProps {
     actionSlot?: ReactNode;
     title?: string;
     description?: string;
+    image?: string;
 }
 
 const BANNER_CONFIG = {
     title: 'Купить отчет без прохождения теста',
     description:
         'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',
+    image: '/images/man_book.webp',
 };
 
 export const Banner = ({
@@ -23,6 +25,7 @@ export const Banner = ({
     actionSlot,
     title = BANNER_CONFIG.title,
     description = BANNER_CONFIG.description,
+    image = BANNER_CONFIG.image,
 }: BannerProps) => {
     return (
         <Paper data-color={color} className={s.paper}>
@@ -32,7 +35,7 @@ export const Banner = ({
                     {title}
                 </Title>
                 <Text className={s.description}>{description}</Text>
-                <Image className={s.image} aria-hidden src='/images/man_book.webp' w={341} h={305} />
+                <Image className={s.image} aria-hidden src={image} w={260} h={260} />
                 {actionSlot}
             </InnerContainer>
         </Paper>

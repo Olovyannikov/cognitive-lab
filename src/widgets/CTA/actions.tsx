@@ -1,5 +1,6 @@
 import { Flex } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { getPersonalityTypeQuery } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
@@ -28,11 +29,16 @@ export const RedirectToTestPageAndNavigateToFullStructureAction = () => (
     </Flex>
 );
 
-export const BuyNowOrRedirectToTestPageAction = () => (
-    <Flex className={s.actions}>
-        <RedirectToTestPage />
-    </Flex>
-);
+export const BuyNowOrRedirectToTestPageAction = () => {
+    const { routeParams } = usePageContext();
+
+    return (
+        <Flex className={s.actions}>
+            <RedirectToTestPage />
+            <BuyNowButton mbti={routeParams?.type} variant='outline' bg='transparent' />
+        </Flex>
+    );
+};
 
 export const TakeTestAgainOrBuyReportAction = () => {
     const surveyId = useUnit(UserModel.$surveyId);

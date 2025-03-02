@@ -59,8 +59,7 @@
 
   @mixin larger-than 1200px {
     position: absolute;
-    right: 20px;
-    bottom: 0;
+    right: 60px;
     display: block;
   }
 }
