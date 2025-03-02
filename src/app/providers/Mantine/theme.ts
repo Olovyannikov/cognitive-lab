@@ -33,7 +33,7 @@ export const theme = createTheme({
         Container: Container.extend({
             vars: () => ({
                 root: {
-                    '--container-size': '1418px',
+                    '--container-size': '1470px',
                 },
             }),
         }),

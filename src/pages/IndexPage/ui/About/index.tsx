@@ -1,13 +1,11 @@
-import { Box, Image, Text, Title } from '@mantine/core';
+import { Box, Image, Text } from '@mantine/core';
 
+import { Section } from '../Section';
 import s from './About.module.css';
 
 export const About = () => {
     return (
-        <Box className={s.box} component='section'>
-            <Title className={s.title} order={2}>
-                О платформе <span>CognitiveLab</span>
-            </Title>
+        <Section title='О платформе ' filledText='CognitiveLab'>
             <Box className={s.grid}>
                 <Text className={s.description}>
                     Это инновационный онлайн-сервис психологического тестирования, где классическая методика 16 типов
@@ -26,6 +24,6 @@ export const About = () => {
                     alt=''
                 />
             </Box>
-        </Box>
+        </Section>
     );
 };

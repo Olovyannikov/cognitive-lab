@@ -8,3 +8,4 @@ export * from './FormInput';
 export * from './FormSuccessScreen';
 export * from './IconCheck';
 export * from './InputBorderless';
+export * from './SpinningText';

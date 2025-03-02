@@ -1,0 +1,8 @@
+.flex {
+  flex-direction: column;
+
+  @mixin larger-than 992px {
+    flex-direction: row;
+    gap: 32px;
+  }
+}

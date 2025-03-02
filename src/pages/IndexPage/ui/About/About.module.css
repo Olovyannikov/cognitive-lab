@@ -1,37 +1,3 @@
-.box {
-  padding-top: 60px;
-  padding-bottom: 40px;
-
-  @mixin larger-than 1200px {
-    padding-top: 160px;
-    padding-bottom: 160px;
-  }
-}
-
-.title {
-  margin-bottom: 40px;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center;
-
-  span {
-    display: block;
-    color: var(--mantine-color-violet-7);
-  }
-
-  @mixin larger-than 768px {
-    span {
-      display: inline-block;
-    }
-  }
-
-  @mixin larger-than 992px {
-    margin-bottom: 80px;
-    font-size: 64px;
-    line-height: 75px;
-  }
-}
-
 .grid {
   @mixin larger-than 992px {
     display: grid;

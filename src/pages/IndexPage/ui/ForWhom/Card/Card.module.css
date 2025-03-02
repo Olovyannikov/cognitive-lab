@@ -1,0 +1,125 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+
+  &:nth-child(odd) {
+    @mixin larger-than 1024px {
+      .description {
+        color: var(--mantine-color-white);
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    @mixin larger-than 1024px {
+      .cardTop {
+        color: var(--mantine-color-dark-9);
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .cardTop {
+      background-color: var(--mantine-color-lime-5);
+    }
+  }
+
+  &:nth-child(3) {
+    .cardTop {
+      background-color: var(--mantine-color-pink-6);
+    }
+  }
+
+  &:nth-child(4) {
+    .cardTop {
+      background-color: var(--mantine-color-yellow-6);
+    }
+  }
+
+  @mixin larger-than 1024px {
+    &:hover {
+      img {
+        opacity: 0;
+      }
+
+      .description {
+        transform: translateY(-320px);
+      }
+    }
+  }
+}
+
+.cardTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  color: var(--mantine-color-white);
+  background-color: var(--mantine-color-violet-6);
+
+  img {
+    transition: 0.3s ease-in-out opacity;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  h4 {
+    z-index: 1;
+    padding: 22px 18px;
+    max-width: 210px;
+    font-size: 22px;
+    line-height: 25px;
+
+    @mixin larger-than 1024px {
+      padding: 32px 20px;
+      max-width: max-content;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  img {
+    z-index: 1;
+    margin-left: auto;
+
+    @mixin larger-than 1024px {
+      margin-top: auto;
+      width: 352px;
+      height: 284px;
+    }
+  }
+
+  @mixin larger-than 1024px {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: 400px;
+  }
+}
+
+.description {
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 21px;
+  transition: 0.3s ease-in-out transform;
+
+  @mixin larger-than 768px {
+    padding-left: 0;
+  }
+
+  @mixin larger-than 1024px {
+    padding: 20px;
+    max-height: 312px;
+    font-size: 20px;
+    line-height: 24px;
+    transform: translateY(0);
+  }
+}

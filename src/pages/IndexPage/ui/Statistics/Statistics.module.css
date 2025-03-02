@@ -1,0 +1,43 @@
+.section {
+  position: relative;
+
+  span {
+    display: block;
+  }
+
+  @mixin larger-than 1024px {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.flex {
+  flex-direction: column;
+  gap: var(--mantine-spacing-sm);
+
+  @mixin larger-than 768px {
+    flex-direction: row;
+  }
+
+  @mixin larger-than 992px {
+    gap: 32px;
+  }
+}
+
+.spinning {
+  margin: 60px auto 0;
+  width: 175px;
+  height: 175px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--mantine-color-violet-7);
+
+  @mixin larger-than 1200px {
+    position: absolute;
+    right: 0;
+    top: -40px;
+  }
+}

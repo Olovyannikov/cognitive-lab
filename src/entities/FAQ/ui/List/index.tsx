@@ -15,7 +15,7 @@ export const FAQList = ({ items }: FAQListProps) => {
             {items?.map((item) => (
                 <Accordion.Item key={item.id} value={item.title}>
                     <Accordion.Control>
-                        <Title fz={24}>{item.title}</Title>
+                        <Title className={s.title}>{item.title}</Title>
                     </Accordion.Control>
                     <Accordion.Panel>
                         <Markdown>{item.body.data}</Markdown>
