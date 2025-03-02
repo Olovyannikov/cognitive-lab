@@ -18,7 +18,7 @@
     margin-bottom: var(--mantine-spacing-3xl);
   }
 
-  @mixin larger-than 1024px {
+  @mixin larger-than 1200px {
     left: 16px;
     right: 16px;
     top: 0;
@@ -26,6 +26,7 @@
     border-bottom: none;
     border-radius: 20px;
     max-width: calc(100% - 32px);
+    padding-block: 0;
   }
 
   @mixin larger-than 1418px {

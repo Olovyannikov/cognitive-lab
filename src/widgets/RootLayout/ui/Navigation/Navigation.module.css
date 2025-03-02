@@ -1,6 +1,6 @@
 .drawer {
   position: relative;
-  z-index: 1010;
+  z-index: 1200;
 
   header {
     margin-bottom: var(--mantine-spacing-sm);

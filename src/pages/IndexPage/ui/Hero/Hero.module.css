@@ -138,12 +138,19 @@
   --color-5: 90deg 100% 63%;
 
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: visible;
   width: 100%;
   min-height: 45px;
   font-size: 16px;
   line-height: 25px;
   background: linear-gradient(0deg, #000, #262626) !important;
+
+  &:active {
+    transform: none;
+  }
 
   @mixin larger-than 768px {
     border-radius: 16px;

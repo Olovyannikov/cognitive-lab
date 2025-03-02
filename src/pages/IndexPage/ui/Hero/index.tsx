@@ -22,7 +22,7 @@ export const Hero = () => {
                 Узнайте свой тип личности и получите персональные советы для вашего развития
             </Text>
             <Image draggable={false} className={s.image} src='/images/main-hero-char.png' />
-            <Button size='sm' bg='dark.9' radius='md' className={s.shadow}>
+            <Button component='a' href='/test' size='sm' bg='dark.9' radius='md' className={s.shadow}>
                 Пройти тест
             </Button>
         </Box>

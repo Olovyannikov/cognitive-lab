@@ -11,6 +11,7 @@
   color: var(--mantine-color-dark-9);
   cursor: pointer;
   gap: var(--mantine-spacing-xs);
+  padding-block: var(--mantine-spacing-3xl);
 
   @mixin larger-than 768px {
     width: fit-content;

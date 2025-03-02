@@ -28,8 +28,8 @@ export const Types = () => {
             classNames={s}
             trapFocus={true}
             closeOnEscape={true}
-            opened={isSubmenuOpen}
             position='bottom-end'
+            opened={isSubmenuOpen}
             closeOnItemClick={false}
             closeOnClickOutside={false}
             width={isDesktop ? 1084 : '100%'}
