@@ -29,7 +29,7 @@
   }
 
   @mixin larger-than 1418px {
-    max-width: 1386px;
+    max-width: 1682px;
   }
 }
 

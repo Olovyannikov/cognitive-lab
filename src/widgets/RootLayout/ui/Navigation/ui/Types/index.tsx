@@ -29,7 +29,7 @@ export const Types = () => {
             trapFocus={true}
             closeOnEscape={true}
             opened={isSubmenuOpen}
-            position='bottom-start'
+            position='bottom-end'
             closeOnItemClick={false}
             closeOnClickOutside={false}
             width={isDesktop ? 1084 : '100%'}
@@ -37,6 +37,7 @@ export const Types = () => {
             onOpen={() => onOpenSubmenu(true)}
             onClose={() => onCloseSubmenu(false)}
             withinPortal={false}
+            openDelay={300}
         >
             <Menu.Target>
                 <a className={c.link} {...(isDesktop ? { href: '/types' } : {})}>

@@ -15,4 +15,12 @@
   @mixin larger-than 768px {
     width: fit-content;
   }
+
+  @media (hover: hover) {
+    transition: 0.15s ease-in-out color;
+
+    &:hover {
+      color: var(--mantine-color-violet-6);
+    }
+  }
 }

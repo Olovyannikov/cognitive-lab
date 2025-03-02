@@ -1,7 +1,7 @@
 .box {
   margin-bottom: 80px;
+  padding: 20px 0;
   text-align: center;
-  padding-block: 20px;
 
   * {
     height: fit-content;
@@ -9,8 +9,8 @@
 
   @mixin larger-than 768px {
     margin-bottom: 0;
+    padding-bottom: 80px;
     text-align: left;
-    padding-block: 80px;
   }
 
   @mixin larger-than 992px {

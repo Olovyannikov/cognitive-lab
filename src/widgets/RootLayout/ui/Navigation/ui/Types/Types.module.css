@@ -13,8 +13,4 @@
     max-width: 1084px;
     box-shadow: var(--mantine-shadow-lg);
   }
-
-  @mixin larger-than 1200px {
-    left: 475px !important;
-  }
 }
