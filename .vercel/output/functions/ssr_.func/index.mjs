@@ -68139,10 +68139,10 @@ var init_pages_help = __esm({
   }
 });
 
-// dist/server/chunks/chunk-Cp8zMePZ.js
+// dist/server/chunks/chunk-nCZv8AmO.js
 var box2, text7, title10, subtitle2, ai, description2, image5, shadow, s77;
-var init_chunk_Cp8zMePZ = __esm({
-  "dist/server/chunks/chunk-Cp8zMePZ.js"() {
+var init_chunk_nCZv8AmO = __esm({
+  "dist/server/chunks/chunk-nCZv8AmO.js"() {
     "use strict";
     box2 = "Xu6G1";
     text7 = "Y1d0N";
@@ -77844,7 +77844,7 @@ var init_pages_index = __esm({
     init_esm2();
     init_clsx();
     React14 = __toESM(require_react(), 1);
-    init_chunk_Cp8zMePZ();
+    init_chunk_nCZv8AmO();
     init_chunk_DckwkveJ();
     init_chunk_IE15aqLD();
     init_router();
@@ -78005,7 +78005,7 @@ var init_pages_index = __esm({
           /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Card$2, { title: "92%", text: "\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0435\u0439 \u0441\u043E\u0433\u043B\u0430\u0441\u043D\u044B \u0441\xA0\u0442\u043E\u0447\u043D\u043E\u0441\u0442\u044C\u044E \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u043E\u0432" }),
           /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Card$2, { title: "8 \u0438\u0437 10", text: "\u043D\u0430\u0448\u043B\u0438 \u0432 \u043E\u0442\u0447\u0451\u0442\u0435 \u0446\u0435\u043D\u043D\u044B\u0435 \u0438\u043D\u0441\u0430\u0439\u0442\u044B \u0434\u043B\u044F \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(SpinningText, { reverse: true, radius: 7, className: s82.spinning, children: "Cognitive Lab \u2726 Cognitive Lab \u2726" })
+        /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(SpinningText, { radius: 7, className: s82.spinning, children: "Cognitive Lab \u2726 Cognitive Lab \u2726" })
       ] });
     };
     Card$1 = ({
@@ -81567,6 +81567,15 @@ var init_entry = __esm({
     }, Symbol.toStringTag, { value: "Module" }));
     {
       const assetsManifest = {
+        "_chunk-4moCJlO8.js": {
+          "file": "assets/chunks/chunk-4moCJlO8.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-Cxg4_e5S.js"
+          ]
+        },
         "_chunk-4ssmusCf.js": {
           "file": "assets/chunks/chunk-4ssmusCf.js",
           "name": "src_shared_ui_Form_FormWrapper.module-5f927e4e",
@@ -81579,6 +81588,17 @@ var init_entry = __esm({
           "name": "src_entities_Report_ui_OrderedCards_OrderedCards.module-1f76868a",
           "css": [
             "assets/static/src_entities_Report_ui_OrderedCards_OrderedCards.BNeWG9EK.css"
+          ]
+        },
+        "_chunk-8cAT6Iy4.js": {
+          "file": "assets/chunks/chunk-8cAT6Iy4.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-4moCJlO8.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-ChL1fS8_.js",
+            "_chunk-BeU5l-5v.js"
           ]
         },
         "_chunk-A2AluIPU.js": {
@@ -81609,11 +81629,38 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_AnswerLabel_AnswerLabel.C2yjomgr.css"
           ]
         },
+        "_chunk-B839xpBX.js": {
+          "file": "assets/chunks/chunk-B839xpBX.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
+          ]
+        },
+        "_chunk-B8_pGcPM.js": {
+          "file": "assets/chunks/chunk-B8_pGcPM.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-Bptf38cR.js"
+          ]
+        },
         "_chunk-B9G1-5zH.js": {
           "file": "assets/chunks/chunk-B9G1-5zH.js",
           "name": "src_pages_IndexPage_ui_Section_Section.module-f67266a6",
           "css": [
             "assets/static/src_pages_IndexPage_ui_Section_Section.Cl6F0vap.css"
+          ]
+        },
+        "_chunk-BBmSCGa8.js": {
+          "file": "assets/chunks/chunk-BBmSCGa8.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-C9TQilq0.js",
+            "_chunk-CYkVqX5C.js"
           ]
         },
         "_chunk-BD8qAbP9.js": {
@@ -81672,18 +81719,18 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_SpinningText_SpinningText.DqhQpHd_.css"
           ]
         },
-        "_chunk-BXK_9qWv.js": {
-          "file": "assets/chunks/chunk-BXK_9qWv.js",
-          "name": "Card",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
         "_chunk-BeEKSsYB.js": {
           "file": "assets/chunks/chunk-BeEKSsYB.js",
           "name": "src_entities_Test_ui_RadioElement_RadioElement.module-bea969b5",
           "css": [
             "assets/static/src_entities_Test_ui_RadioElement_RadioElement.COpdu8wn.css"
+          ]
+        },
+        "_chunk-BeU5l-5v.js": {
+          "file": "assets/chunks/chunk-BeU5l-5v.js",
+          "name": "Image",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-Bi-xDFJf.js": {
@@ -81718,11 +81765,43 @@ var init_entry = __esm({
             "assets/static/src_widgets_PageLayout_PageLayout.BTi5kh3T.css"
           ]
         },
-        "_chunk-Bt-Ax343.js": {
-          "file": "assets/chunks/chunk-Bt-Ax343.js",
-          "name": "events",
+        "_chunk-Bqylx6Q5.js": {
+          "file": "assets/chunks/chunk-Bqylx6Q5.js",
+          "name": "List",
           "imports": [
-            "_chunk-DHnVzrqr.js"
+            "_chunk-Bsskp9sk.js"
+          ]
+        },
+        "_chunk-Bsskp9sk.js": {
+          "file": "assets/chunks/chunk-Bsskp9sk.js",
+          "name": "index",
+          "imports": [
+            "_chunk-DobUZgFW.js",
+            "_chunk-CzcYWzuz.js",
+            "_chunk-rkAEyc-z.js",
+            "_chunk-A2AluIPU.js",
+            "_chunk-SsiTcO1f.js",
+            "_chunk-CBWPs7ER.js",
+            "_chunk-CRbxnH0z.js",
+            "_chunk-CEz9pelC.js",
+            "_chunk-BPA5pK2c.js",
+            "_chunk-CcRi4BOb.js",
+            "_chunk-DngEOuP2.js",
+            "_chunk-Y2FPcE4W.js",
+            "_chunk-CQcR5K5L.js",
+            "_chunk-CIPurJQt.js",
+            "_chunk-B250Ej4N.js"
+          ],
+          "css": [
+            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
           ]
         },
         "_chunk-BvjKq-Jn.js": {
@@ -81732,60 +81811,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Blog_ui_BlogPostCard_BlogPostCard.mH1l5qHR.css"
           ]
         },
-        "_chunk-BxDGtNQi.js": {
-          "file": "assets/chunks/chunk-BxDGtNQi.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-ClVpMXy6.js",
-            "_chunk-CEyDu0CI.js",
-            "_chunk-89JKNHqV.js",
-            "_chunk-CX66qPcq.js",
-            "_chunk-CA7xGImb.js",
-            "_chunk-D4BGp-3l.js",
-            "_chunk-DZYA-Fcr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-D4Czjb9x.js",
-            "_chunk-DLyMlQeb.js",
-            "_chunk-DgFUPrcm.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-BnWrU3lN.js",
-            "_chunk-DSJSN1Ho.js",
-            "_chunk-f-6t9rSA.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-Cwmt49qL.js",
-            "_chunk-MG4IdgN_.js",
-            "_chunk-CG4tMHVA.js",
-            "_chunk-Czg_fm5u.js"
-          ]
-        },
         "_chunk-ByaiJHsb.js": {
           "file": "assets/chunks/chunk-ByaiJHsb.js",
           "name": "src_widgets_ShowFullStructure_ShowFullStructure.module-caed6455",
           "css": [
             "assets/static/src_widgets_ShowFullStructure_ShowFullStructure.MNSWQ2Cc.css"
-          ]
-        },
-        "_chunk-BzmqFXlv.js": {
-          "file": "assets/chunks/chunk-BzmqFXlv.js",
-          "name": "semi-circle",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
-        "_chunk-BznoyDZB.js": {
-          "file": "assets/chunks/chunk-BznoyDZB.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-DdAWnioa.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-C1UfUYGV.js",
-            "_chunk-ctJrkkB3.js",
-            "_chunk-qAYPJE50.js",
-            "_chunk-D_TSPZfq.js",
-            "_chunk-CxIckfMi.js"
           ]
         },
         "_chunk-C05CDQ35.js": {
@@ -81802,13 +81832,30 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_PriceInfo_PriceInfo.BK_7I93q.css"
           ]
         },
-        "_chunk-C5vuc-Ge.js": {
-          "file": "assets/chunks/chunk-C5vuc-Ge.js",
+        "_chunk-C6D5-1W0.js": {
+          "file": "assets/chunks/chunk-C6D5-1W0.js",
+          "name": "_pageStarted",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-yh3p-Qfr.js",
+            "_chunk-PFGHSo9G.js",
+            "_chunk-BvjKq-Jn.js",
+            "_chunk-tY0Lj0C_.js",
+            "_chunk-evFVr1mH.js",
+            "_chunk-BeU5l-5v.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-f-hK9_mO.js"
+          ]
+        },
+        "_chunk-C8glxQvq.js": {
+          "file": "assets/chunks/chunk-C8glxQvq.js",
           "name": "index",
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-D2fAsmi7.js",
-            "_chunk-DLyMlQeb.js"
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-BFIf5h8k.js",
+            "_chunk-BeU5l-5v.js"
           ]
         },
         "_chunk-C9TQilq0.js": {
@@ -81832,13 +81879,6 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Footer_ui_List_List.D3M6ojmi.css"
           ]
         },
-        "_chunk-CEyDu0CI.js": {
-          "file": "assets/chunks/chunk-CEyDu0CI.js",
-          "name": "Grid",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
         "_chunk-CEz9pelC.js": {
           "file": "assets/chunks/chunk-CEz9pelC.js",
           "name": "src_widgets_RootLayout_ui_Footer_ui_Section_Section.module-51c49afd",
@@ -81853,6 +81893,15 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_PointsList_PointsList.DF2ozAC9.css"
           ]
         },
+        "_chunk-CGDM5NpY.js": {
+          "file": "assets/chunks/chunk-CGDM5NpY.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-MlOg0Rm7.js"
+          ]
+        },
         "_chunk-CGG52H9N.js": {
           "file": "assets/chunks/chunk-CGG52H9N.js",
           "name": "src_shared_ui_InnerContainer_InnerContainer.module-2f16f634",
@@ -81860,19 +81909,18 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_InnerContainer_InnerContainer.DXKcQBlk.css"
           ]
         },
-        "_chunk-CGNoHYa6.js": {
-          "file": "assets/chunks/chunk-CGNoHYa6.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-CGG52H9N.js"
-          ]
-        },
         "_chunk-CIPurJQt.js": {
           "file": "assets/chunks/chunk-CIPurJQt.js",
           "name": "src_widgets_RootLayout_ui_Navigation_Navigation.module-75629a95",
           "css": [
             "assets/static/src_widgets_RootLayout_ui_Navigation_Navigation.DnQrrM89.css"
+          ]
+        },
+        "_chunk-COSiR0TZ.js": {
+          "file": "assets/chunks/chunk-COSiR0TZ.js",
+          "name": "semi-circle",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-CQcR5K5L.js": {
@@ -81910,6 +81958,14 @@ var init_entry = __esm({
             "assets/static/src_pages_IndexPage_ui_Tariffs_Tariff_Tariff.D4eVG0M_.css"
           ]
         },
+        "_chunk-CVF6l70b.js": {
+          "file": "assets/chunks/chunk-CVF6l70b.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-CGG52H9N.js"
+          ]
+        },
         "_chunk-CVlyecuP.js": {
           "file": "assets/chunks/chunk-CVlyecuP.js",
           "name": "src_shared_ui_InputBorderless_InputBorderless.module-fc01daf5",
@@ -81922,6 +81978,13 @@ var init_entry = __esm({
           "name": "src_entities_Report_ui_Subtitle_Subtitle.module-97e7d3dd",
           "css": [
             "assets/static/src_entities_Report_ui_Subtitle_Subtitle.JmeqVvaX.css"
+          ]
+        },
+        "_chunk-CYkVqX5C.js": {
+          "file": "assets/chunks/chunk-CYkVqX5C.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-CYwzgwck.js": {
@@ -81938,24 +82001,6 @@ var init_entry = __esm({
             "assets/static/src_features_RedirectToTestPage_ui_RedirectToTestPage.V9LWORpb.css"
           ]
         },
-        "_chunk-Ccr1vv3L.js": {
-          "file": "assets/chunks/chunk-Ccr1vv3L.js",
-          "name": "Pagination",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
-        "_chunk-Cf3JYteC.js": {
-          "file": "assets/chunks/chunk-Cf3JYteC.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-BFIf5h8k.js",
-            "_chunk-DLyMlQeb.js"
-          ]
-        },
         "_chunk-ChL1fS8_.js": {
           "file": "assets/chunks/chunk-ChL1fS8_.js",
           "name": "src_widgets_InnerLayout_InnerLayout.module-9e9409d0",
@@ -81963,14 +82008,11 @@ var init_entry = __esm({
             "assets/static/src_widgets_InnerLayout_InnerLayout.Df9N0SmV.css"
           ]
         },
-        "_chunk-CkOxGBa4.js": {
-          "file": "assets/chunks/chunk-CkOxGBa4.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-MlOg0Rm7.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-BkeKN5IP.js"
+        "_chunk-CkYLlruH.js": {
+          "file": "assets/chunks/chunk-CkYLlruH.js",
+          "name": "src_pages_IndexPage_ui_Hero_Hero.module-aa2bde3d",
+          "css": [
+            "assets/static/src_pages_IndexPage_ui_Hero_Hero.2YRbS6ap.css"
           ]
         },
         "_chunk-ClVpMXy6.js": {
@@ -81987,26 +82029,26 @@ var init_entry = __esm({
             "assets/static/src_pages_IndexPage_ui_HowItHelps_Card_Card.C_Xr4hY0.css"
           ]
         },
-        "_chunk-CpGiqoqe.js": {
-          "file": "assets/chunks/chunk-CpGiqoqe.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-DSqobVnh.js",
-            "_chunk-DLyMlQeb.js",
-            "_chunk-BD8qAbP9.js",
-            "_chunk-CkOxGBa4.js",
-            "_chunk-_fQoNsH-.js",
-            "_chunk-DWHhlHOl.js"
-          ]
-        },
         "_chunk-CqQOSLXS.js": {
           "file": "assets/chunks/chunk-CqQOSLXS.js",
           "name": "src_entities_Test_ui_TestMultipleQuestion_TestMultipleQuestion.module-b4341ec7",
           "css": [
             "assets/static/src_entities_Test_ui_TestMultipleQuestion_TestMultipleQuestion.DU9xGbo9.css"
+          ]
+        },
+        "_chunk-CsUDE88y.js": {
+          "file": "assets/chunks/chunk-CsUDE88y.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CYkVqX5C.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-C1UfUYGV.js",
+            "_chunk-B839xpBX.js",
+            "_chunk-CyntzTsJ.js",
+            "_chunk-D_TSPZfq.js",
+            "_chunk-8cAT6Iy4.js"
           ]
         },
         "_chunk-Cu1jJxiW.js": {
@@ -82023,22 +82065,19 @@ var init_entry = __esm({
             "assets/static/src_features_SendReportEmail_SendReportEmail.BzdmEjjO.css"
           ]
         },
-        "_chunk-CxIckfMi.js": {
-          "file": "assets/chunks/chunk-CxIckfMi.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-DpKx7qAa.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-ChL1fS8_.js",
-            "_chunk-DLyMlQeb.js"
-          ]
-        },
         "_chunk-Cxg4_e5S.js": {
           "file": "assets/chunks/chunk-Cxg4_e5S.js",
           "name": "src_shared_ui_BackButton_BackButton.module-b9460a9f",
           "css": [
             "assets/static/src_shared_ui_BackButton_BackButton.oPBF5_RC.css"
+          ]
+        },
+        "_chunk-CyntzTsJ.js": {
+          "file": "assets/chunks/chunk-CyntzTsJ.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-4ssmusCf.js"
           ]
         },
         "_chunk-CzcYWzuz.js": {
@@ -82062,33 +82101,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_ReportHeader_ReportHeader.i8_o2OLa.css"
           ]
         },
-        "_chunk-D4BGp-3l.js": {
-          "file": "assets/chunks/chunk-D4BGp-3l.js",
-          "name": "List",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
         "_chunk-D4Czjb9x.js": {
           "file": "assets/chunks/chunk-D4Czjb9x.js",
           "name": "src_entities_Report_ui_Paywall_Paywall.module-e6ace5ac",
           "css": [
             "assets/static/src_entities_Report_ui_Paywall_Paywall.SE_CDuvf.css"
-          ]
-        },
-        "_chunk-D7ked66p.js": {
-          "file": "assets/chunks/chunk-D7ked66p.js",
-          "name": "_pageStarted",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-Dgq_oY5Z.js",
-            "_chunk-DSJSN1Ho.js",
-            "_chunk-BvjKq-Jn.js",
-            "_chunk-CEyDu0CI.js",
-            "_chunk-BXK_9qWv.js",
-            "_chunk-DLyMlQeb.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-Bt-Ax343.js"
           ]
         },
         "_chunk-DCipUdXz.js": {
@@ -82098,36 +82115,11 @@ var init_entry = __esm({
             "assets/static/src_pages_BlogPostPage_BlogPostPage.GNhdBGRY.css"
           ]
         },
-        "_chunk-DHnVzrqr.js": {
-          "file": "assets/chunks/chunk-DHnVzrqr.js",
-          "name": "index",
+        "_chunk-DIJcGwhI.js": {
+          "file": "assets/chunks/chunk-DIJcGwhI.js",
+          "name": "Check",
           "imports": [
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CzcYWzuz.js",
-            "_chunk-rkAEyc-z.js",
-            "_chunk-A2AluIPU.js",
-            "_chunk-SsiTcO1f.js",
-            "_chunk-CBWPs7ER.js",
-            "_chunk-CRbxnH0z.js",
-            "_chunk-CEz9pelC.js",
-            "_chunk-BPA5pK2c.js",
-            "_chunk-CcRi4BOb.js",
-            "_chunk-DngEOuP2.js",
-            "_chunk-Y2FPcE4W.js",
-            "_chunk-CQcR5K5L.js",
-            "_chunk-CIPurJQt.js",
-            "_chunk-B250Ej4N.js"
-          ],
-          "css": [
-            "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
-            "assets/static/src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css"
-          ],
-          "assets": [
-            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-DIKNkNCb.js": {
@@ -82137,11 +82129,14 @@ var init_entry = __esm({
             "assets/static/src_widgets_FullReportSlice_FullReportSlice.DQgv-Qd-.css"
           ]
         },
-        "_chunk-DLyMlQeb.js": {
-          "file": "assets/chunks/chunk-DLyMlQeb.js",
-          "name": "Image",
+        "_chunk-DN37pWxE.js": {
+          "file": "assets/chunks/chunk-DN37pWxE.js",
+          "name": "index",
           "imports": [
-            "_chunk-DHnVzrqr.js"
+            "_chunk-Bsskp9sk.js",
+            "_chunk-MlOg0Rm7.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-BkeKN5IP.js"
           ]
         },
         "_chunk-DNdxCFyP.js": {
@@ -82149,13 +82144,6 @@ var init_entry = __esm({
           "name": "src_pages_IndexPage_ui_Tariffs_Tariffs.module-1dcd8f5b",
           "css": [
             "assets/static/src_pages_IndexPage_ui_Tariffs_Tariffs.DOXpc-3G.css"
-          ]
-        },
-        "_chunk-DSJSN1Ho.js": {
-          "file": "assets/chunks/chunk-DSJSN1Ho.js",
-          "name": "index.modern",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
           ]
         },
         "_chunk-DSqobVnh.js": {
@@ -82193,13 +82181,6 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestContainer_TestContainer.B5hlQ-0e.css"
           ]
         },
-        "_chunk-DbnWoOUl.js": {
-          "file": "assets/chunks/chunk-DbnWoOUl.js",
-          "name": "src_pages_IndexPage_ui_Hero_Hero.module-aa2bde3d",
-          "css": [
-            "assets/static/src_pages_IndexPage_ui_Hero_Hero.B2dWg9S8.css"
-          ]
-        },
         "_chunk-Dc3F63Pp.js": {
           "file": "assets/chunks/chunk-Dc3F63Pp.js",
           "name": "src_entities_Test_ui_TestProgress_TestProgress.module-004b81d2",
@@ -82207,11 +82188,11 @@ var init_entry = __esm({
             "assets/static/src_entities_Test_ui_TestProgress_TestProgress.cz3ftnuH.css"
           ]
         },
-        "_chunk-DdAWnioa.js": {
-          "file": "assets/chunks/chunk-DdAWnioa.js",
-          "name": "index",
+        "_chunk-DfA97Oik.js": {
+          "file": "assets/chunks/chunk-DfA97Oik.js",
+          "name": "Pagination",
           "imports": [
-            "_chunk-DHnVzrqr.js"
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-DfMiO4RZ.js": {
@@ -82228,11 +82209,13 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_IconList_IconList.zphe7Dte.css"
           ]
         },
-        "_chunk-Dgq_oY5Z.js": {
-          "file": "assets/chunks/chunk-Dgq_oY5Z.js",
-          "name": "ArrowRight",
+        "_chunk-DhTyBtkl.js": {
+          "file": "assets/chunks/chunk-DhTyBtkl.js",
+          "name": "index",
           "imports": [
-            "_chunk-DHnVzrqr.js"
+            "_chunk-Bsskp9sk.js",
+            "_chunk-D2fAsmi7.js",
+            "_chunk-BeU5l-5v.js"
           ]
         },
         "_chunk-DhlMmVOU.js": {
@@ -82249,13 +82232,25 @@ var init_entry = __esm({
             "assets/static/src_widgets_RootLayout_ui_Navigation_ui_common.DVprrycm.css"
           ]
         },
-        "_chunk-DpKx7qAa.js": {
-          "file": "assets/chunks/chunk-DpKx7qAa.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-Cxg4_e5S.js"
+        "_chunk-DobUZgFW.js": {
+          "file": "assets/chunks/chunk-DobUZgFW.js",
+          "name": "initOnPopState",
+          "dynamicImports": [
+            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
+            "virtual:vike:pageConfigValuesAll:client:/pages/blog",
+            "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
+            "virtual:vike:pageConfigValuesAll:client:/pages/faq",
+            "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
+            "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
+            "virtual:vike:pageConfigValuesAll:client:/pages/help",
+            "virtual:vike:pageConfigValuesAll:client:/pages/index",
+            "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
+            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
+            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
+            "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId",
+            "virtual:vike:pageConfigValuesAll:client:/pages/test",
+            "virtual:vike:pageConfigValuesAll:client:/pages/types",
+            "virtual:vike:pageConfigValuesAll:client:/pages/types/@type"
           ]
         },
         "_chunk-DvMZj_d7.js": {
@@ -82265,6 +82260,21 @@ var init_entry = __esm({
             "assets/static/src_entities_Personalities_ui_PersonalityCategory_PersonalityCategory.BfDz1d0v.css"
           ]
         },
+        "_chunk-DxdlX_2Y.js": {
+          "file": "assets/chunks/chunk-DxdlX_2Y.js",
+          "name": "index",
+          "imports": [
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-DSqobVnh.js",
+            "_chunk-BeU5l-5v.js",
+            "_chunk-BD8qAbP9.js",
+            "_chunk-DN37pWxE.js",
+            "_chunk-_fQoNsH-.js",
+            "_chunk-DWHhlHOl.js"
+          ]
+        },
         "_chunk-DzMbMNOU.js": {
           "file": "assets/chunks/chunk-DzMbMNOU.js",
           "name": "src_pages_FullReportExamplePage_FullReportExamplePage.module-5e2e7d02",
@@ -82272,13 +82282,31 @@ var init_entry = __esm({
             "assets/static/src_pages_FullReportExamplePage_FullReportExamplePage.C2_KcrzQ.css"
           ]
         },
-        "_chunk-FVrsdJ4A.js": {
-          "file": "assets/chunks/chunk-FVrsdJ4A.js",
+        "_chunk-FWzTx-7D.js": {
+          "file": "assets/chunks/chunk-FWzTx-7D.js",
           "name": "index",
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-MlOg0Rm7.js"
+            "_chunk-Bsskp9sk.js",
+            "_chunk-ClVpMXy6.js",
+            "_chunk-tY0Lj0C_.js",
+            "_chunk-89JKNHqV.js",
+            "_chunk-CX66qPcq.js",
+            "_chunk-CA7xGImb.js",
+            "_chunk-Bqylx6Q5.js",
+            "_chunk-DZYA-Fcr.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-D4Czjb9x.js",
+            "_chunk-BeU5l-5v.js",
+            "_chunk-DgFUPrcm.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-BnWrU3lN.js",
+            "_chunk-PFGHSo9G.js",
+            "_chunk-f-6t9rSA.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-Cwmt49qL.js",
+            "_chunk-DIJcGwhI.js",
+            "_chunk-CG4tMHVA.js",
+            "_chunk-Czg_fm5u.js"
           ]
         },
         "_chunk-I7-GZjN6.js": {
@@ -82288,28 +82316,16 @@ var init_entry = __esm({
             "assets/static/src_pages_TypePage_TypePage.C_kTnA5M.css"
           ]
         },
-        "_chunk-LjeN10cp.js": {
-          "file": "assets/chunks/chunk-LjeN10cp.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-C9TQilq0.js",
-            "_chunk-DdAWnioa.js"
-          ]
-        },
-        "_chunk-MG4IdgN_.js": {
-          "file": "assets/chunks/chunk-MG4IdgN_.js",
-          "name": "Check",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
         "_chunk-MlOg0Rm7.js": {
           "file": "assets/chunks/chunk-MlOg0Rm7.js",
           "name": "methods"
+        },
+        "_chunk-PFGHSo9G.js": {
+          "file": "assets/chunks/chunk-PFGHSo9G.js",
+          "name": "index.modern",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
+          ]
         },
         "_chunk-Quw3nsMx.js": {
           "file": "assets/chunks/chunk-Quw3nsMx.js",
@@ -82323,14 +82339,6 @@ var init_entry = __esm({
           "name": "src_widgets_RootLayout_ui_Footer_Footer.module-1af6fa7a",
           "css": [
             "assets/static/src_widgets_RootLayout_ui_Footer_Footer.THQixq7J.css"
-          ]
-        },
-        "_chunk-TTCfNrW9.js": {
-          "file": "assets/chunks/chunk-TTCfNrW9.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-Bptf38cR.js"
           ]
         },
         "_chunk-Y2FPcE4W.js": {
@@ -82361,18 +82369,18 @@ var init_entry = __esm({
             "assets/static/src_widgets_ReportPagination_ReportPagination.aM6VTReF.css"
           ]
         },
-        "_chunk-ctJrkkB3.js": {
-          "file": "assets/chunks/chunk-ctJrkkB3.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js"
-          ]
-        },
         "_chunk-dKitA7zH.js": {
           "file": "assets/chunks/chunk-dKitA7zH.js",
           "name": "src_entities_Blog_ui_Post_Post.module-000603f6",
           "css": [
             "assets/static/src_entities_Blog_ui_Post_Post.BUaiD1ht.css"
+          ]
+        },
+        "_chunk-evFVr1mH.js": {
+          "file": "assets/chunks/chunk-evFVr1mH.js",
+          "name": "Card",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_chunk-f-6t9rSA.js": {
@@ -82382,40 +82390,18 @@ var init_entry = __esm({
             "assets/static/src_entities_Report_ui_BarChart_BarChart.DHjunXHx.css"
           ]
         },
+        "_chunk-f-hK9_mO.js": {
+          "file": "assets/chunks/chunk-f-hK9_mO.js",
+          "name": "events",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
+          ]
+        },
         "_chunk-gSKk1dU1.js": {
           "file": "assets/chunks/chunk-gSKk1dU1.js",
           "name": "src_pages_FreeReportPage_FreeReportPage.module-e8c4a46d",
           "css": [
             "assets/static/src_pages_FreeReportPage_FreeReportPage.CpTkx8zr.css"
-          ]
-        },
-        "_chunk-iFLoAJPP.js": {
-          "file": "assets/chunks/chunk-iFLoAJPP.js",
-          "name": "initOnPopState",
-          "dynamicImports": [
-            "virtual:vike:pageConfigValuesAll:client:/pages/_error",
-            "virtual:vike:pageConfigValuesAll:client:/pages/blog",
-            "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
-            "virtual:vike:pageConfigValuesAll:client:/pages/faq",
-            "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
-            "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
-            "virtual:vike:pageConfigValuesAll:client:/pages/help",
-            "virtual:vike:pageConfigValuesAll:client:/pages/index",
-            "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
-            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
-            "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
-            "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId",
-            "virtual:vike:pageConfigValuesAll:client:/pages/test",
-            "virtual:vike:pageConfigValuesAll:client:/pages/types",
-            "virtual:vike:pageConfigValuesAll:client:/pages/types/@type"
-          ]
-        },
-        "_chunk-qAYPJE50.js": {
-          "file": "assets/chunks/chunk-qAYPJE50.js",
-          "name": "index",
-          "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-4ssmusCf.js"
           ]
         },
         "_chunk-qiwuecAD.js": {
@@ -82437,6 +82423,20 @@ var init_entry = __esm({
           "name": "src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.module-45d96029",
           "css": [
             "assets/static/src_entities_Personalities_ui_PersonalityLinks_PersonalityLinks.CQ4t_wMW.css"
+          ]
+        },
+        "_chunk-tY0Lj0C_.js": {
+          "file": "assets/chunks/chunk-tY0Lj0C_.js",
+          "name": "Grid",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
+          ]
+        },
+        "_chunk-yh3p-Qfr.js": {
+          "file": "assets/chunks/chunk-yh3p-Qfr.js",
+          "name": "ArrowRight",
+          "imports": [
+            "_chunk-Bsskp9sk.js"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DtU8IGMB.css": {
@@ -82619,9 +82619,9 @@ var init_entry = __esm({
           "file": "assets/static/src_pages_IndexPage_ui_ForWhom_ForWhom.CKtFbMOG.css",
           "src": "_src_pages_IndexPage_ui_ForWhom_ForWhom.CKtFbMOG.css"
         },
-        "_src_pages_IndexPage_ui_Hero_Hero.B2dWg9S8.css": {
-          "file": "assets/static/src_pages_IndexPage_ui_Hero_Hero.B2dWg9S8.css",
-          "src": "_src_pages_IndexPage_ui_Hero_Hero.B2dWg9S8.css"
+        "_src_pages_IndexPage_ui_Hero_Hero.2YRbS6ap.css": {
+          "file": "assets/static/src_pages_IndexPage_ui_Hero_Hero.2YRbS6ap.css",
+          "src": "_src_pages_IndexPage_ui_Hero_Hero.2YRbS6ap.css"
         },
         "_src_pages_IndexPage_ui_HowItHelps_Card_Card.C_Xr4hY0.css": {
           "file": "assets/static/src_pages_IndexPage_ui_HowItHelps_Card_Card.C_Xr4hY0.css",
@@ -82768,12 +82768,12 @@ var init_entry = __esm({
           "src": "_vike-react-78d3a85e.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.CCYTsERW.js",
+          "file": "assets/entries/entry-client-routing.yuRnLKcH.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.220_react-streaming@0.3.47_react-dom@19.0.0_react@19.0.0__react@19.0.0__vite@6_8a6fe8a649b07896174b0a89e3876410/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
           "imports": [
-            "_chunk-iFLoAJPP.js"
+            "_chunk-DobUZgFW.js"
           ]
         },
         "src/app/assets/fonts/raleway-v34-cyrillic_latin-500.woff2": {
@@ -82797,16 +82797,16 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/_error": {
-          "file": "assets/entries/pages_error.CfVl0233.js",
+          "file": "assets/entries/pages_error.8aWY20mQ.js",
           "name": "entries/pages/_error",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/_error",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-DpKx7qAa.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-iFLoAJPP.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-4moCJlO8.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-DobUZgFW.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -82837,19 +82837,19 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog": {
-          "file": "assets/entries/pages_blog.Cq72necg.js",
+          "file": "assets/entries/pages_blog.9SHzO80e.js",
           "name": "entries/pages/blog",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-D7ked66p.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-DdAWnioa.js",
-            "_chunk-TTCfNrW9.js",
-            "_chunk-CEyDu0CI.js",
-            "_chunk-Ccr1vv3L.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-C6D5-1W0.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CYkVqX5C.js",
+            "_chunk-B8_pGcPM.js",
+            "_chunk-tY0Lj0C_.js",
+            "_chunk-DfA97Oik.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -82864,12 +82864,12 @@ var init_entry = __esm({
             "_chunk-CQcR5K5L.js",
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
-            "_chunk-Dgq_oY5Z.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-yh3p-Qfr.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-BXK_9qWv.js",
-            "_chunk-DLyMlQeb.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-evFVr1mH.js",
+            "_chunk-BeU5l-5v.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-Bptf38cR.js"
           ],
           "css": [
@@ -82885,23 +82885,23 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id": {
-          "file": "assets/entries/pages_blog_-id.CSs-0m1R.js",
+          "file": "assets/entries/pages_blog_-id.6Q2UaPBr.js",
           "name": "entries/pages/blog/@id",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/blog/@id",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-D7ked66p.js",
-            "_chunk-DSJSN1Ho.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-C6D5-1W0.js",
+            "_chunk-PFGHSo9G.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-dKitA7zH.js",
-            "_chunk-DLyMlQeb.js",
-            "_chunk-D4BGp-3l.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-Cf3JYteC.js",
-            "_chunk-CpGiqoqe.js",
+            "_chunk-BeU5l-5v.js",
+            "_chunk-Bqylx6Q5.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-C8glxQvq.js",
+            "_chunk-DxdlX_2Y.js",
             "_chunk-DCipUdXz.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
@@ -82917,17 +82917,17 @@ var init_entry = __esm({
             "_chunk-CQcR5K5L.js",
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
-            "_chunk-Dgq_oY5Z.js",
+            "_chunk-yh3p-Qfr.js",
             "_chunk-BvjKq-Jn.js",
-            "_chunk-CEyDu0CI.js",
-            "_chunk-BXK_9qWv.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-tY0Lj0C_.js",
+            "_chunk-evFVr1mH.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CGG52H9N.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-BFIf5h8k.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-CkOxGBa4.js",
+            "_chunk-DN37pWxE.js",
             "_chunk-BkeKN5IP.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js"
@@ -82945,17 +82945,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/faq": {
-          "file": "assets/entries/pages_faq.DOI_2vJO.js",
+          "file": "assets/entries/pages_faq.BZAt73Ka.js",
           "name": "entries/pages/faq",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/faq",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-C05CDQ35.js",
-            "_chunk-TTCfNrW9.js",
-            "_chunk-iFLoAJPP.js",
+            "_chunk-B8_pGcPM.js",
+            "_chunk-DobUZgFW.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -82985,23 +82985,23 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/free-report": {
-          "file": "assets/entries/pages_free-report.dMwlLknW.js",
+          "file": "assets/entries/pages_free-report.LlETaIQL.js",
           "name": "entries/pages/free-report",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/free-report",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-C5vuc-Ge.js",
-            "_chunk-BxDGtNQi.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-DdAWnioa.js",
-            "_chunk-CpGiqoqe.js",
-            "_chunk-LjeN10cp.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-DhTyBtkl.js",
+            "_chunk-FWzTx-7D.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-CYkVqX5C.js",
+            "_chunk-DxdlX_2Y.js",
+            "_chunk-BBmSCGa8.js",
             "_chunk-gSKk1dU1.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83018,27 +83018,27 @@ var init_entry = __esm({
             "_chunk-B250Ej4N.js",
             "_chunk-MlOg0Rm7.js",
             "_chunk-D2fAsmi7.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-CEyDu0CI.js",
+            "_chunk-tY0Lj0C_.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-D4BGp-3l.js",
+            "_chunk-Bqylx6Q5.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-MG4IdgN_.js",
+            "_chunk-DIJcGwhI.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-CGG52H9N.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-CkOxGBa4.js",
+            "_chunk-DN37pWxE.js",
             "_chunk-BkeKN5IP.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js",
@@ -83057,21 +83057,21 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example": {
-          "file": "assets/entries/pages_full-report_example.DF-09YYS.js",
+          "file": "assets/entries/pages_full-report_example.DcxEE3no.js",
           "name": "entries/pages/full-report/example",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/full-report/example",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-BxDGtNQi.js",
-            "_chunk-DpKx7qAa.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-BzmqFXlv.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-FWzTx-7D.js",
+            "_chunk-4moCJlO8.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-COSiR0TZ.js",
             "_chunk-qiwuecAD.js",
-            "_chunk-FVrsdJ4A.js",
+            "_chunk-CGDM5NpY.js",
             "_chunk-DzMbMNOU.js",
-            "_chunk-iFLoAJPP.js",
+            "_chunk-DobUZgFW.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83087,20 +83087,20 @@ var init_entry = __esm({
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-CEyDu0CI.js",
+            "_chunk-tY0Lj0C_.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-D4BGp-3l.js",
+            "_chunk-Bqylx6Q5.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-MG4IdgN_.js",
+            "_chunk-DIJcGwhI.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-Cxg4_e5S.js",
@@ -83120,17 +83120,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/help": {
-          "file": "assets/entries/pages_help.TCKgnk4o.js",
+          "file": "assets/entries/pages_help.C6qJYZFK.js",
           "name": "entries/pages/help",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/help",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-qAYPJE50.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CyntzTsJ.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-CxIckfMi.js",
+            "_chunk-8cAT6Iy4.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83146,12 +83146,12 @@ var init_entry = __esm({
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
             "_chunk-4ssmusCf.js",
-            "_chunk-DpKx7qAa.js",
+            "_chunk-4moCJlO8.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-DLyMlQeb.js"
+            "_chunk-BeU5l-5v.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -83166,18 +83166,18 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.D1xsjOZ_.js",
+          "file": "assets/entries/pages_index.7Io47rUt.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-DbnWoOUl.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-CkYLlruH.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-B9G1-5zH.js",
             "_chunk-_bvIr9GS.js",
-            "_chunk-iFLoAJPP.js",
+            "_chunk-DobUZgFW.js",
             "_chunk-BSo9L9IG.js",
             "_chunk-Quw3nsMx.js",
             "_chunk-B1KwAQsY.js",
@@ -83185,10 +83185,10 @@ var init_entry = __esm({
             "_chunk-BMD_WdRm.js",
             "_chunk-CnnJ27DQ.js",
             "_chunk-BlM92sXC.js",
-            "_chunk-MG4IdgN_.js",
+            "_chunk-DIJcGwhI.js",
             "_chunk-CUjYeTJQ.js",
             "_chunk-BkeKN5IP.js",
-            "_chunk-D4BGp-3l.js",
+            "_chunk-Bqylx6Q5.js",
             "_chunk-DNdxCFyP.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
@@ -83218,19 +83218,19 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/payment-check": {
-          "file": "assets/entries/pages_payment-check.CcjNGpdl.js",
+          "file": "assets/entries/pages_payment-check.doBluubD.js",
           "name": "entries/pages/payment-check",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/payment-check",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-DdAWnioa.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-ctJrkkB3.js",
-            "_chunk-CxIckfMi.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CYkVqX5C.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-B839xpBX.js",
+            "_chunk-8cAT6Iy4.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83246,12 +83246,12 @@ var init_entry = __esm({
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-DpKx7qAa.js",
+            "_chunk-4moCJlO8.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-DLyMlQeb.js"
+            "_chunk-BeU5l-5v.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -83266,17 +83266,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type": {
-          "file": "assets/entries/pages_purchase_-type.BWgfRJoW.js",
+          "file": "assets/entries/pages_purchase_-type.DbAkBeG-.js",
           "name": "entries/pages/purchase/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-BznoyDZB.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-CsUDE88y.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83291,19 +83291,19 @@ var init_entry = __esm({
             "_chunk-CQcR5K5L.js",
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
-            "_chunk-DdAWnioa.js",
+            "_chunk-CYkVqX5C.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-ctJrkkB3.js",
-            "_chunk-qAYPJE50.js",
+            "_chunk-B839xpBX.js",
+            "_chunk-CyntzTsJ.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-CxIckfMi.js",
-            "_chunk-DpKx7qAa.js",
+            "_chunk-8cAT6Iy4.js",
+            "_chunk-4moCJlO8.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-MlOg0Rm7.js"
           ],
           "css": [
@@ -83319,17 +83319,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId": {
-          "file": "assets/entries/pages_purchase_personal_-surveyId.DxOiABEU.js",
+          "file": "assets/entries/pages_purchase_personal_-surveyId.CVqm0eET.js",
           "name": "entries/pages/purchase/personal/@surveyId",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/purchase/personal/@surveyId",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-Bt-Ax343.js",
-            "_chunk-BznoyDZB.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-f-hK9_mO.js",
+            "_chunk-CsUDE88y.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83345,19 +83345,19 @@ var init_entry = __esm({
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
             "_chunk-MlOg0Rm7.js",
-            "_chunk-DdAWnioa.js",
+            "_chunk-CYkVqX5C.js",
             "_chunk-C1UfUYGV.js",
-            "_chunk-ctJrkkB3.js",
-            "_chunk-qAYPJE50.js",
+            "_chunk-B839xpBX.js",
+            "_chunk-CyntzTsJ.js",
             "_chunk-4ssmusCf.js",
             "_chunk-D_TSPZfq.js",
-            "_chunk-CxIckfMi.js",
-            "_chunk-DpKx7qAa.js",
+            "_chunk-8cAT6Iy4.js",
+            "_chunk-4moCJlO8.js",
             "_chunk-Cxg4_e5S.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-CGG52H9N.js",
             "_chunk-ChL1fS8_.js",
-            "_chunk-DLyMlQeb.js"
+            "_chunk-BeU5l-5v.js"
           ],
           "css": [
             "assets/static/vike-react-78d3a85e.BcWtY8Ol.css",
@@ -83372,29 +83372,29 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId": {
-          "file": "assets/entries/pages_report_-reportId.zJGc-IJi.js",
+          "file": "assets/entries/pages_report_-reportId.BmHiCjqB.js",
           "name": "entries/pages/report/@reportId",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/report/@reportId",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-C5vuc-Ge.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-DdAWnioa.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-BzmqFXlv.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DhTyBtkl.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CYkVqX5C.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-COSiR0TZ.js",
             "_chunk-BMjOyu7c.js",
-            "_chunk-LjeN10cp.js",
-            "_chunk-BxDGtNQi.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-BBmSCGa8.js",
+            "_chunk-FWzTx-7D.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-BDizESrC.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-DIKNkNCb.js",
-            "_chunk-Dgq_oY5Z.js",
+            "_chunk-yh3p-Qfr.js",
             "_chunk-acv2IrBc.js",
-            "_chunk-Ccr1vv3L.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-DfA97Oik.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83413,19 +83413,19 @@ var init_entry = __esm({
             "_chunk-MlOg0Rm7.js",
             "_chunk-C9TQilq0.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-CEyDu0CI.js",
+            "_chunk-tY0Lj0C_.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-D4BGp-3l.js",
+            "_chunk-Bqylx6Q5.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-MG4IdgN_.js",
+            "_chunk-DIJcGwhI.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-CGG52H9N.js"
@@ -83443,17 +83443,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/test": {
-          "file": "assets/entries/pages_test.j2ORiCU4.js",
+          "file": "assets/entries/pages_test.DXCGsB3e.js",
           "name": "entries/pages/test",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/test",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-CkOxGBa4.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DN37pWxE.js",
             "_chunk-DaRxFVcl.js",
             "_chunk-Dc3F63Pp.js",
-            "_chunk-iFLoAJPP.js",
+            "_chunk-DobUZgFW.js",
             "_chunk-BeEKSsYB.js",
             "_chunk-Bi-xDFJf.js",
             "_chunk-Cu1jJxiW.js",
@@ -83461,11 +83461,11 @@ var init_entry = __esm({
             "_chunk-B3_uMupp.js",
             "_chunk-CYwzgwck.js",
             "_chunk-CqQOSLXS.js",
-            "_chunk-Dgq_oY5Z.js",
+            "_chunk-yh3p-Qfr.js",
             "_chunk-CQgCXmz1.js",
             "_chunk-BLKfBb6c.js",
-            "_chunk-Ccr1vv3L.js",
-            "_chunk-Bt-Ax343.js",
+            "_chunk-DfA97Oik.js",
+            "_chunk-f-hK9_mO.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83496,20 +83496,20 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types": {
-          "file": "assets/entries/pages_types.OEXJ4qBy.js",
+          "file": "assets/entries/pages_types.NawDB57O.js",
           "name": "entries/pages/types",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
             "_chunk-DhlMmVOU.js",
-            "_chunk-BXK_9qWv.js",
+            "_chunk-evFVr1mH.js",
             "_chunk-DvMZj_d7.js",
-            "_chunk-CEyDu0CI.js",
-            "_chunk-TTCfNrW9.js",
+            "_chunk-tY0Lj0C_.js",
+            "_chunk-B8_pGcPM.js",
             "_chunk-CzcYWzuz.js",
             "_chunk-rkAEyc-z.js",
             "_chunk-A2AluIPU.js",
@@ -83540,20 +83540,20 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/types/@type": {
-          "file": "assets/entries/pages_types_-type.BB61Xi_1.js",
+          "file": "assets/entries/pages_types_-type.CeUrWliw.js",
           "name": "entries/pages/types/@type",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/types/@type",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-DHnVzrqr.js",
-            "_chunk-C5vuc-Ge.js",
-            "_chunk-BxDGtNQi.js",
-            "_chunk-Cf3JYteC.js",
-            "_chunk-iFLoAJPP.js",
-            "_chunk-CGNoHYa6.js",
-            "_chunk-FVrsdJ4A.js",
-            "_chunk-CpGiqoqe.js",
+            "_chunk-Bsskp9sk.js",
+            "_chunk-DhTyBtkl.js",
+            "_chunk-FWzTx-7D.js",
+            "_chunk-C8glxQvq.js",
+            "_chunk-DobUZgFW.js",
+            "_chunk-CVF6l70b.js",
+            "_chunk-CGDM5NpY.js",
+            "_chunk-DxdlX_2Y.js",
             "_chunk-ByaiJHsb.js",
             "_chunk-I7-GZjN6.js",
             "_chunk-CzcYWzuz.js",
@@ -83571,21 +83571,21 @@ var init_entry = __esm({
             "_chunk-CIPurJQt.js",
             "_chunk-B250Ej4N.js",
             "_chunk-D2fAsmi7.js",
-            "_chunk-DLyMlQeb.js",
+            "_chunk-BeU5l-5v.js",
             "_chunk-ClVpMXy6.js",
-            "_chunk-CEyDu0CI.js",
+            "_chunk-tY0Lj0C_.js",
             "_chunk-89JKNHqV.js",
             "_chunk-CX66qPcq.js",
             "_chunk-CA7xGImb.js",
-            "_chunk-D4BGp-3l.js",
+            "_chunk-Bqylx6Q5.js",
             "_chunk-DZYA-Fcr.js",
             "_chunk-D4Czjb9x.js",
             "_chunk-DgFUPrcm.js",
             "_chunk-BnWrU3lN.js",
-            "_chunk-DSJSN1Ho.js",
+            "_chunk-PFGHSo9G.js",
             "_chunk-f-6t9rSA.js",
             "_chunk-Cwmt49qL.js",
-            "_chunk-MG4IdgN_.js",
+            "_chunk-DIJcGwhI.js",
             "_chunk-CG4tMHVA.js",
             "_chunk-Czg_fm5u.js",
             "_chunk-BFIf5h8k.js",
@@ -83593,7 +83593,7 @@ var init_entry = __esm({
             "_chunk-MlOg0Rm7.js",
             "_chunk-DSqobVnh.js",
             "_chunk-BD8qAbP9.js",
-            "_chunk-CkOxGBa4.js",
+            "_chunk-DN37pWxE.js",
             "_chunk-BkeKN5IP.js",
             "_chunk-_fQoNsH-.js",
             "_chunk-DWHhlHOl.js"
