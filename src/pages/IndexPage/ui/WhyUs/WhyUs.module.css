@@ -1,0 +1,138 @@
+.root {
+  min-height: 1200px;
+}
+
+.title,
+.title span {
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+
+  @mixin larger-than 1024px {
+    margin-bottom: 80px;
+    font-size: 64px;
+    line-height: 75px;
+  }
+}
+
+.container {
+  position: relative;
+  padding-bottom: 120px;
+  min-height: 150vh;
+
+  @mixin larger-than 1024px {
+    padding-bottom: 0;
+  }
+}
+
+.content {
+  position: sticky;
+  top: 11ch;
+  min-height: 514px;
+
+  @mixin larger-than 1024px {
+    top: 20ch;
+  }
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  @mixin larger-than 1024px {
+    display: grid;
+    column-gap: 240px;
+    align-items: center;
+    grid-template-areas:
+      "t i"
+      "d i";
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+.cardTitle {
+  grid-area: t;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+
+  &.0 {
+    color: var(--mantine-color-lime-8);
+  }
+
+  &.1 {
+    color: var(--mantine-color-violet-7);
+  }
+
+  &.2 {
+    color: var(--mantine-color-pink-7);
+  }
+
+  @mixin larger-than 1024px {
+    margin-bottom: 32px;
+    height: fit-content;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: left;
+  }
+}
+
+.cardDescription {
+  grid-area: d;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+
+  @mixin larger-than 1024px {
+    align-items: center;
+    grid-row-end: 1;
+    margin-top: 8em;
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+
+.cardImage {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+
+  @mixin larger-than 1024px {
+    height: auto;
+    max-width: 400px;
+  }
+}
+
+a.control {
+  position: absolute;
+  left: 16px;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  min-height: 45px;
+  max-width: 697px;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--mantine-color-white);
+  background-color: var(--mantine-color-dark-9);
+
+  &:hover {
+    color: var(--mantine-color-white);
+    background-color: var(--mantine-color-dark-9);
+  }
+
+  @mixin larger-than 1024px {
+    margin-right: auto;
+    min-height: 64px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

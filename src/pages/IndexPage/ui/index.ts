@@ -4,3 +4,6 @@ export * from './Statistics';
 export * from './ForWhom';
 export * from './HowItHelps';
 export * from './Tariffs';
+export * from './HowItWorks';
+export * from './WhyUs';
+export * from './PeopleTalk';

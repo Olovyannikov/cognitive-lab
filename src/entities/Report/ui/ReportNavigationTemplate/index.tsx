@@ -90,7 +90,6 @@ export const ReportNavigationTemplate = ({
                             </Group>
                         </Button>
                     </Menu.Target>
-
                     <Menu.Dropdown w='auto'>
                         {content?.map((title, idx) => (
                             <Menu.Item

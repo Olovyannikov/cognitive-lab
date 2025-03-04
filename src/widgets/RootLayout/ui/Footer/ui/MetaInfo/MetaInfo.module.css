@@ -21,6 +21,10 @@
 }
 
 .text {
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+
   @mixin larger-than 1200px {
     display: flex;
     gap: 110px;

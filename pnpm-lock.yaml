@@ -22,6 +22,9 @@ importers:
             '@farfetched/core':
                 specifier: ^0.13.1
                 version: 0.13.1(effector@23.3.0)
+            '@mantine/carousel':
+                specifier: ^7.17.1
+                version: 7.17.1(@mantine/core@7.16.2(@mantine/hooks@7.16.2(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.16.2(react@19.0.0))(embla-carousel-react@8.5.2(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
             '@mantine/core':
                 specifier: ^7.16.2
                 version: 7.16.2(@mantine/hooks@7.16.2(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -64,6 +67,12 @@ importers:
             effector-storage:
                 specifier: ^7.1.0
                 version: 7.1.0(effector@23.3.0)
+            embla-carousel-auto-scroll:
+                specifier: '8'
+                version: 8.5.2(embla-carousel@8.5.2)
+            embla-carousel-react:
+                specifier: ^8.5.2
+                version: 8.5.2(react@19.0.0)
             express:
                 specifier: ^4.21.2
                 version: 4.21.2
@@ -1363,6 +1372,18 @@ packages:
             {
                 integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==,
             }
+
+    '@mantine/carousel@7.17.1':
+        resolution:
+            {
+                integrity: sha512-hk8/TPEOHUynn9J6QPEsT32x3ImxSXv/0U7iwDJropGsRmb6BIIDx4MjZj8yf4KTySGVPTBKee2HQ4v4yMwiLA==,
+            }
+        peerDependencies:
+            '@mantine/core': 7.17.1
+            '@mantine/hooks': 7.17.1
+            embla-carousel-react: '>=7.0.0'
+            react: ^18.x || ^19.x
+            react-dom: ^18.x || ^19.x
 
     '@mantine/core@7.16.2':
         resolution:
@@ -3075,6 +3096,36 @@ packages:
         resolution:
             {
                 integrity: sha512-8AJUW6dh75Fm/ny8+kZKJzI1pgoE8bKLZlzDU2W1ENd+DXKJrx7I7l9hb8UWR4ojlnb5OlixMt00QWiYJoVw1w==,
+            }
+
+    embla-carousel-auto-scroll@8.5.2:
+        resolution:
+            {
+                integrity: sha512-B0QF4vcHRLu7DJwDpgTq5q8qsX4185hOuXfpWPtOlZW+a+QG7ZIN3zTSUTI3Xt0MTWkAB5ZJ0gsFj2zUMKL3ig==,
+            }
+        peerDependencies:
+            embla-carousel: 8.5.2
+
+    embla-carousel-react@8.5.2:
+        resolution:
+            {
+                integrity: sha512-Tmx+uY3MqseIGdwp0ScyUuxpBgx5jX1f7od4Cm5mDwg/dptEiTKf9xp6tw0lZN2VA9JbnVMl/aikmbc53c6QFA==,
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+
+    embla-carousel-reactive-utils@8.5.2:
+        resolution:
+            {
+                integrity: sha512-QC8/hYSK/pEmqEdU1IO5O+XNc/Ptmmq7uCB44vKplgLKhB/l0+yvYx0+Cv0sF6Ena8Srld5vUErZkT+yTahtDg==,
+            }
+        peerDependencies:
+            embla-carousel: 8.5.2
+
+    embla-carousel@8.5.2:
+        resolution:
+            {
+                integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==,
             }
 
     emoji-regex@8.0.0:
@@ -7190,6 +7241,14 @@ snapshots:
             '@jridgewell/resolve-uri': 3.1.2
             '@jridgewell/sourcemap-codec': 1.5.0
 
+    '@mantine/carousel@7.17.1(@mantine/core@7.16.2(@mantine/hooks@7.16.2(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@mantine/hooks@7.16.2(react@19.0.0))(embla-carousel-react@8.5.2(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+        dependencies:
+            '@mantine/core': 7.16.2(@mantine/hooks@7.16.2(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+            '@mantine/hooks': 7.16.2(react@19.0.0)
+            embla-carousel-react: 8.5.2(react@19.0.0)
+            react: 19.0.0
+            react-dom: 19.0.0(react@19.0.0)
+
     '@mantine/core@7.16.2(@mantine/hooks@7.16.2(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
         dependencies:
             '@floating-ui/react': 0.26.28(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -8257,6 +8316,22 @@ snapshots:
     effector@23.3.0: {}
 
     electron-to-chromium@1.5.96: {}
+
+    embla-carousel-auto-scroll@8.5.2(embla-carousel@8.5.2):
+        dependencies:
+            embla-carousel: 8.5.2
+
+    embla-carousel-react@8.5.2(react@19.0.0):
+        dependencies:
+            embla-carousel: 8.5.2
+            embla-carousel-reactive-utils: 8.5.2(embla-carousel@8.5.2)
+            react: 19.0.0
+
+    embla-carousel-reactive-utils@8.5.2(embla-carousel@8.5.2):
+        dependencies:
+            embla-carousel: 8.5.2
+
+    embla-carousel@8.5.2: {}
 
     emoji-regex@8.0.0: {}
 

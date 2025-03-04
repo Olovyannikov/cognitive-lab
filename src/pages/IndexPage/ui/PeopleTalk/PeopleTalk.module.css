@@ -1,0 +1,70 @@
+.container {
+  padding: 0;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+
+  span {
+    color: var(--mantine-color-violet-7);
+  }
+
+  @mixin larger-than 992px {
+    margin-bottom: 80px;
+    font-size: 64px;
+    line-height: 75px;
+  }
+}
+
+.paper {
+  border-width: 2px;
+  border-color: var(--mantine-color-violet-5);
+  padding: 24px;
+}
+
+.name {
+  margin-bottom: var(--mantine-spacing-xxs);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  @mixin larger-than 992px {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--mantine-color-dark-2);
+
+  @mixin larger-than 992px {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+
+  @mixin larger-than 992px {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.reviewText {
+  font-size: 18px;
+  line-height: 21px;
+
+  @mixin larger-than 992px {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

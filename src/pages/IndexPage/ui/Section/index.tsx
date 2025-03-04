@@ -1,4 +1,4 @@
-import type { PropsWithChildren, ReactNode } from 'react';
+import type { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Box, Container, Title } from '@mantine/core';
 import clsx from 'clsx';
 
@@ -9,6 +9,7 @@ interface SectionProps {
     filledText?: string;
     className?: string;
     containerClassName?: string;
+    ref?: Ref<HTMLDivElement>;
 }
 
 export const Section = ({
@@ -17,14 +18,17 @@ export const Section = ({
     title,
     className,
     containerClassName,
+    ref,
 }: PropsWithChildren<SectionProps>) => {
     return (
-        <Box className={clsx(s.box, className)} component='section'>
+        <Box ref={ref} className={clsx(s.box, className)} component='section'>
             <Container className={containerClassName}>
-                <Title className={s.title} order={2}>
-                    {title}
-                    <span>{filledText}</span>
-                </Title>
+                {(title || filledText) && (
+                    <Title className={s.title} order={2}>
+                        {title}
+                        <span>{filledText}</span>
+                    </Title>
+                )}
                 {children}
             </Container>
         </Box>
