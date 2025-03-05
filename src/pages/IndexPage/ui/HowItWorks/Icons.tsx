@@ -37,9 +37,9 @@ export const Decor = () => {
         <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 355 363'>
             <path
                 fill='#5F3DC4'
-                fill-rule='evenodd'
+                fillRule='evenodd'
                 d='M354.286 0C305.636 172.838 171.286 309.779 0 362.059V0h354.286Z'
-                clip-rule='evenodd'
+                clipRule='evenodd'
             />
         </svg>
     );

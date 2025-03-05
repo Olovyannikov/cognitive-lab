@@ -7,3 +7,4 @@ export * from './Tariffs';
 export * from './HowItWorks';
 export * from './WhyUs';
 export * from './PeopleTalk';
+export * from './FAQ';
