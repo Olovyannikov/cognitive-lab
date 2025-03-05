@@ -8,3 +8,5 @@ export * from './HowItWorks';
 export * from './WhyUs';
 export * from './PeopleTalk';
 export * from './FAQ';
+export * from './MoreInBlog';
+export * from './LetsContinue';

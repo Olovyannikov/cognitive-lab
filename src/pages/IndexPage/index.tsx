@@ -1,4 +1,17 @@
-import { About, FAQ, ForWhom, Hero, HowItHelps, HowItWorks, PeopleTalk, Statistics, Tariffs, WhyUs } from './ui';
+import {
+    About,
+    FAQ,
+    ForWhom,
+    Hero,
+    HowItHelps,
+    HowItWorks,
+    LetsContinue,
+    MoreInBlog,
+    PeopleTalk,
+    Statistics,
+    Tariffs,
+    WhyUs,
+} from './ui';
 
 export const IndexPage = () => {
     return (
@@ -13,6 +26,8 @@ export const IndexPage = () => {
             <WhyUs />
             <PeopleTalk />
             <FAQ />
+            <MoreInBlog />
+            <LetsContinue />
         </>
     );
 };

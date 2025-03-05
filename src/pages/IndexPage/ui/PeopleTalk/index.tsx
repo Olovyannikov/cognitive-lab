@@ -31,7 +31,7 @@ export const PeopleTalk = () => {
         label: string;
         rating: number;
         review: string;
-    }>([]);
+    } | null>(null);
 
     return (
         <Section containerClassName={s.container}>
@@ -45,7 +45,7 @@ export const PeopleTalk = () => {
                 withControls={false}
                 plugins={[autoplay.current]}
                 slideSize={isLarge ? 624 : '70%'}
-                onMouseLeave={autoplay.current.play}
+                onMouseLeave={() => autoplay.current.play()}
                 onPointerLeave={autoplay.current.reset}
             >
                 {[...REVIEWS_MOCK, ...REVIEWS_MOCK, ...REVIEWS_MOCK].map((review, index) => (
@@ -85,31 +85,41 @@ export const PeopleTalk = () => {
                 <>
                     <Group justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
                         <Box>
-                            <Rating size={isLarge ? 'lg' : 'md'} readOnly defaultValue={currentReview.rating} mb='xs' />
+                            <Rating
+                                size={isLarge ? 'lg' : 'md'}
+                                readOnly
+                                defaultValue={currentReview?.rating}
+                                mb='xs'
+                            />
                             <Text mb='xxs' className={s.name}>
-                                {currentReview.username}
+                                {currentReview?.username}
                             </Text>
-                            <Text className={s.label}>{currentReview.label}</Text>
+                            <Text className={s.label}>{currentReview?.label}</Text>
                         </Box>
-                        <Image src={currentReview.image} className={s.image} w={60} h={60} />
+                        <Image src={currentReview?.image} className={s.image} w={60} h={60} />
                     </Group>
-                    <Text className={s.reviewText}>{currentReview.review}</Text>
+                    <Text className={s.reviewText}>{currentReview?.review}</Text>
                 </>
             </Drawer>
             <Modal size='lg' centered opened={isLarge && opened} onClose={close}>
                 <>
                     <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
                         <Box>
-                            <Rating size={isLarge ? 'lg' : 'md'} readOnly defaultValue={currentReview.rating} mb='xs' />
+                            <Rating
+                                size={isLarge ? 'lg' : 'md'}
+                                readOnly
+                                defaultValue={currentReview?.rating}
+                                mb='xs'
+                            />
                             <Text mb='xxs' className={s.name}>
-                                {currentReview.username}
+                                {currentReview?.username}
                             </Text>
-                            <Text className={s.label}>{currentReview.label}</Text>
+                            <Text className={s.label}>{currentReview?.label}</Text>
                         </Box>
-                        <Image src={currentReview.image} className={s.image} w={60} h={60} />
+                        <Image src={currentReview?.image} className={s.image} w={60} h={60} />
                     </Group>
                     <Text pb={40} px={40} className={s.reviewText}>
-                        {currentReview.review}
+                        {currentReview?.review}
                     </Text>
                 </>
             </Modal>

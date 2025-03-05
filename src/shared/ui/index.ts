@@ -10,3 +10,4 @@ export * from './IconCheck';
 export * from './InputBorderless';
 export * from './SpinningText';
 export * from './Marquee';
+export * from './RainbowButton';

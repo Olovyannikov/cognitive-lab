@@ -1,0 +1,74 @@
+/* Shadow */
+.shadow {
+  --color-1: 0deg 100% 63%;
+  --color-2: 270deg 100% 63%;
+  --color-3: 210deg 100% 63%;
+  --color-4: 195deg 100% 63%;
+  --color-5: 90deg 100% 63%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  width: 100%;
+  min-height: 45px;
+  font-size: 16px;
+  line-height: 25px;
+  background: linear-gradient(0deg, #000, #262626) !important;
+
+  &:active {
+    transform: none;
+  }
+
+  @mixin larger-than 768px {
+    border-radius: 16px;
+    min-height: 64px;
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @mixin larger-than 992px {
+    margin-bottom: 194px;
+  }
+}
+
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  z-index: -1;
+  width: calc(100% - 24px);
+  height: calc(100%);
+  background: linear-gradient(
+    90deg,
+    hsl(var(--color-1)),
+    hsl(var(--color-5)),
+    hsl(var(--color-3)),
+    hsl(var(--color-4)),
+    hsl(var(--color-2))
+  );
+  background-size: 200%;
+  animation: animate 10s linear infinite;
+}
+
+.shadow::after {
+  filter: blur(20px);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 300% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
