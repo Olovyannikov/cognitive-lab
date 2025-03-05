@@ -1,0 +1,7 @@
+{
+  "runtime": "nodejs22.x",
+  "handler": "index.mjs",
+  "supportsResponseStreaming": true,
+  "launcherType": "Nodejs",
+  "shouldAddHelpers": true
+}
