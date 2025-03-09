@@ -12,7 +12,7 @@
   }
 }
 
-.flex {
+div.flex {
   flex-direction: column;
   gap: var(--mantine-spacing-sm);
 

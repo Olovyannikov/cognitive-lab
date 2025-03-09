@@ -1,5 +1,5 @@
 /* Shadow */
-.shadow {
+:is(button, a).shadow {
   --color-1: 0deg 100% 63%;
   --color-2: 270deg 100% 63%;
   --color-3: 210deg 100% 63%;

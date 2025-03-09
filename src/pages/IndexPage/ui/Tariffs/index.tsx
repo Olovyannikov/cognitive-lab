@@ -7,7 +7,7 @@ import s from './Tariffs.module.css';
 
 export const Tariffs = () => {
     return (
-        <Section filledText='Тарифы'>
+        <Section id='tariffs' filledText='Тарифы'>
             <Flex className={s.flex}>
                 <Tariff
                     title='Базовый'

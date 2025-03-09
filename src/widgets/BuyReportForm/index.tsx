@@ -1,15 +1,16 @@
 import { Button, Flex, Paper, Text, TextInput } from '@mantine/core';
-import { useUnit } from 'effector-react';
+import { useGate, useUnit } from 'effector-react';
 
 import { getPriceWithPromocodeQuery } from '@/entities/Report';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
 import { toInputUppercase } from '@/shared/utils/toInputUppercase';
 
 import s from './BuyReportForm.module.css';
-import { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked } from './model';
+import { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked, BuyReportGate } from './model';
 import { useReportBuyFormViewModel } from './view-model';
 
 export const BuyReportForm = () => {
+    useGate(BuyReportGate);
     const { pending } = useUnit(getPriceWithPromocodeQuery);
     const { onSubmit, promocodeProps, emailProps, form } = useReportBuyFormViewModel();
 

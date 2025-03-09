@@ -8,7 +8,7 @@
   }
 }
 
-.description {
+p.description {
   grid-area: t;
   font-weight: 500;
   font-size: 19px;
@@ -29,7 +29,7 @@
   }
 }
 
-.image {
+img.image {
   grid-area: l;
   margin: 0 auto;
   width: 210px;

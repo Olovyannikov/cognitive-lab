@@ -1,4 +1,4 @@
-.paper {
+div.paper {
   display: grid;
   flex: 1;
   place-content: center;
@@ -14,7 +14,7 @@
   }
 }
 
-.paperTitle {
+h3.paperTitle {
   margin-bottom: var(--mantine-spacing-xs);
   font-size: 32px;
   line-height: 38px;
@@ -26,7 +26,7 @@
   }
 }
 
-.paperText {
+p.paperText {
   font-weight: 500;
   font-size: 18px;
 

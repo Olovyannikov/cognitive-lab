@@ -25,7 +25,7 @@
   }
 }
 
-.text {
+:is(h1, p).text {
   margin: 0 auto 6px;
   width: fit-content;
   font-weight: 700;
@@ -39,7 +39,7 @@
   }
 }
 
-.title {
+h1.title {
   grid-area: t;
   border-radius: 16px;
   padding: 5px 15px;
@@ -54,7 +54,7 @@
   }
 }
 
-.subtitle {
+p.subtitle {
   grid-area: s;
   margin-bottom: var(--mantine-spacing-lg);
 
@@ -80,7 +80,7 @@
   }
 }
 
-.ai {
+span.ai {
   position: relative;
   margin-left: var(--mantine-spacing-xs);
   width: 100%;
@@ -101,7 +101,7 @@
   }
 }
 
-.description {
+p.description {
   grid-area: d;
   margin-bottom: 16px;
   max-width: 559px;
@@ -117,7 +117,7 @@
   }
 }
 
-.image {
+img.image {
   grid-area: i;
   margin: 0 auto 40px;
   max-width: 280px;

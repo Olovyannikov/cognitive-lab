@@ -29,7 +29,7 @@
     padding-block: 0;
   }
 
-  @mixin larger-than 1418px {
+  @mixin larger-than 1682px {
     max-width: 1682px;
   }
 }

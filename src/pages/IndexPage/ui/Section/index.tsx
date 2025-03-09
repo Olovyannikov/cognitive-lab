@@ -10,6 +10,7 @@ interface SectionProps {
     className?: string;
     containerClassName?: string;
     ref?: Ref<HTMLDivElement>;
+    id?: string;
 }
 
 export const Section = ({
@@ -19,9 +20,10 @@ export const Section = ({
     className,
     containerClassName,
     ref,
+    id,
 }: PropsWithChildren<SectionProps>) => {
     return (
-        <Box ref={ref} className={clsx(s.box, className)} component='section'>
+        <Box id={id} ref={ref} className={clsx(s.box, className)} component='section'>
             <Container className={containerClassName}>
                 {(title || filledText) && (
                     <Title className={s.title} order={2}>

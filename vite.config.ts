@@ -10,9 +10,7 @@ export default defineConfig(({ mode }) => {
 
     return {
         plugins: [
-            vike({
-                prerender: true,
-            }),
+            vike(),
             react({
                 babel: {
                     plugins: ['effector/babel-plugin'],

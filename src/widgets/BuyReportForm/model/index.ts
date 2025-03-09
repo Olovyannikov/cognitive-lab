@@ -1,8 +1,11 @@
 import { createEffect, createEvent, createStore, sample } from 'effector';
+import { createGate } from 'effector-react';
 import { once } from 'patronum';
 
 import { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';
 import { isErrorWithMessage } from '@/shared/types/type-guards';
+
+export const BuyReportGate = createGate();
 
 export const applyPromocodeClicked = createEvent<string>();
 
@@ -11,6 +14,14 @@ export const $promocodeErrorMessage = createStore('').on(applyPromocodeClicked, 
 });
 export const $showSuccessPromoMessage = createStore(false);
 export const reportPurchased = createEvent<PurchasedReportRequest>({});
+
+$showSuccessPromoMessage.reset(BuyReportGate.close);
+$promocodeErrorMessage.reset(BuyReportGate.close);
+
+sample({
+    clock: BuyReportGate.close,
+    target: getPriceWithPromocodeQuery.reset,
+});
 
 const openTransactionPaywallFx = createEffect(async (page: string) => {
     window.open(page, '_self');
