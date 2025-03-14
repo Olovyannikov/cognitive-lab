@@ -52,15 +52,16 @@ export const purchaseReportMutation = createMutation({
 });
 
 export const getSurveysInfoQuery = createQuery({
-    effect: createInternalRequestFx<{ id: string }, SurveysInfoResponse>((params) => ({
+    effect: createInternalRequestFx<{ id?: string } | void, SurveysInfoResponse>((params) => ({
         url: API.SURVEYS_INFO,
-        params,
+        params: params ?? {},
     })),
+    initialData: {} as SurveysInfoResponse,
 });
 
 export const getFreeResultQuery = createQuery({
-    effect: createInternalRequestFx<void, ContentResult>(() => ({
-        url: API.GET_FREE_REPORT,
+    effect: createInternalRequestFx<{ id: string } | void, ContentResult>((id) => ({
+        url: id ? API.GET_FREE_REPORT_BY_ID(id.id) : API.GET_FREE_REPORT,
     })),
     initialData: {} as ContentResult,
 });

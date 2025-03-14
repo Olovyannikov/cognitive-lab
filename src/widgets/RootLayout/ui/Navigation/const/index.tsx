@@ -1,3 +1,3 @@
-import { Blog, Faq, Main, Tariffs, Types } from '../ui';
+import { Blog, Faq, Main, Reports, Tariffs, Types } from '../ui';
 
-export const NAV_ITEMS = [Main, Tariffs, Types, Blog, Faq];
+export const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];

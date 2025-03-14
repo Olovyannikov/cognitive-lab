@@ -34,15 +34,15 @@ export const Types = () => {
             closeOnClickOutside={false}
             width={isDesktop ? 1084 : '100%'}
             trigger={isDesktop ? 'hover' : 'click'}
-            onOpen={() => onOpenSubmenu(true)}
+            onOpen={() => isDesktop && onOpenSubmenu(true)}
             onClose={() => onCloseSubmenu(false)}
             withinPortal={false}
             openDelay={300}
         >
             <Menu.Target>
-                <a className={c.link} {...(isDesktop ? { href: '/types' } : {})}>
+                <a onClick={() => onCloseAllMenus(false)} className={c.link} href='/types'>
                     Типы личности
-                    <CaretDown size={16} weight='bold' />
+                    {isDesktop && <CaretDown size={16} weight='bold' />}
                 </a>
             </Menu.Target>
             <Menu.Dropdown style={{ zIndex: 1200 }}>

@@ -17,7 +17,7 @@ interface ReportHeaderProps {
 export const ReportHeader = ({ type, name, showPreheader = false }: ReportHeaderProps) => {
     const currentColor = TYPE_TO_COLOR_MAP[type];
     const isLarge = useIsMedium();
-    const currentName = name.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
+    const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
 
     return (
         <Paper className={s.paper} data-color={currentColor}>

@@ -5,6 +5,8 @@ import { delay } from 'patronum';
 import { v4 as uuidv4 } from 'uuid';
 import { navigate } from 'vike/client/router';
 
+import { getSurveysInfoQuery } from '@/entities/Report';
+
 const $userId = createStore('');
 const $surveyId = createStore<string | null>(null);
 const UserGate = createGate();
@@ -31,6 +33,12 @@ sample({
         return uuidv4();
     },
     target: $userId,
+});
+
+sample({
+    clock: delay(UserGate.open, 500),
+    fn: () => undefined,
+    target: getSurveysInfoQuery.start,
 });
 
 export const UserModel = {

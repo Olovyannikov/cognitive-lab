@@ -12,11 +12,13 @@ export const FullReportNavigation = () => {
     const content = useStoreMap({
         store: getFullReportQuery.$data,
         keys: ['title', page],
-        fn: (content) => content?.content.map(({ title }) => title),
+        fn: (content) => content?.content?.map(({ title }) => title),
     });
 
     const mbti = useUnit(getFullReportQuery.$data.map((el) => el.mbti_type));
     const color = TYPE_TO_COLOR_MAP[mbti];
+
+    if (!content) return null;
 
     return (
         <ReportNavigationTemplate

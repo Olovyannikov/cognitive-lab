@@ -1,7 +1,7 @@
 import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 
-import { getFullReportQuery } from '@/entities/Report';
+import { getFullReportQuery, getSurveysInfoQuery } from '@/entities/Report';
 
 import { ContentResult, Order } from '../types';
 
@@ -16,6 +16,11 @@ const $currentContent = createStore<ContentResult>({} as ContentResult);
 
 const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);
 const $isLastPage = createStore<boolean>(false);
+
+const $allUserReports = getSurveysInfoQuery.$data.map((el) => el.reports);
+const $freeUserReports = getSurveysInfoQuery.$data.map((el) =>
+    el.reports?.filter((report) => report.report_kind === 'free')
+);
 
 sample({
     clock: $currentPage,
@@ -47,4 +52,6 @@ export const ReportModel = {
     $isFirstPage,
     $isLastPage,
     $currentPage,
+    $freeUserReports,
+    $allUserReports,
 };

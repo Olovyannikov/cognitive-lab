@@ -6,7 +6,13 @@ import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
 import { toInputUppercase } from '@/shared/utils/toInputUppercase';
 
 import s from './BuyReportForm.module.css';
-import { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked, BuyReportGate } from './model';
+import {
+    $promocodeErrorMessage,
+    $showSuccessPromoMessage,
+    applyPromocodeClicked,
+    BuyReportGate,
+    openTransactionPaywallFx,
+} from './model';
 import { useReportBuyFormViewModel } from './view-model';
 
 export const BuyReportForm = () => {
@@ -14,10 +20,11 @@ export const BuyReportForm = () => {
     const { pending } = useUnit(getPriceWithPromocodeQuery);
     const { onSubmit, promocodeProps, emailProps, form } = useReportBuyFormViewModel();
 
-    const { applyPromoHandler, promocodeError, showSuccessMessage } = useUnit({
+    const { applyPromoHandler, promocodeError, showSuccessMessage, isLoading } = useUnit({
         applyPromoHandler: applyPromocodeClicked,
         promocodeError: $promocodeErrorMessage,
         showSuccessMessage: $showSuccessPromoMessage,
+        isLoading: openTransactionPaywallFx.pending,
     });
 
     return (
@@ -28,7 +35,7 @@ export const BuyReportForm = () => {
                 <Flex className={s.promocodeWrapper}>
                     <TextInput
                         {...promocodeProps}
-                        disabled={pending}
+                        disabled={pending || isLoading}
                         error={promocodeError}
                         onInput={toInputUppercase}
                         data-success={showSuccessMessage}
@@ -41,15 +48,15 @@ export const BuyReportForm = () => {
                         radius='xs'
                         color='dark.7'
                         variant='outline'
-                        disabled={pending}
-                        loading={pending}
+                        disabled={pending || isLoading}
+                        loading={pending || isLoading}
                         onClick={() => applyPromoHandler(form.values.promo_code.toUpperCase())}
                     >
                         Применить
                     </Button>
                 </Flex>
             </Paper>
-            <MainButton disabled={pending} radius='xs' size='md' type='submit'>
+            <MainButton disabled={pending || isLoading} radius='xs' size='md' type='submit'>
                 Перейти к оплате
             </MainButton>
             <Text fz={12} ta='center' mb={12}>

@@ -1,0 +1,1 @@
+import{j as e,l as i}from"./chunk-h5mJagRN.js";import{s as o}from"./chunk-B1fqpAqW.js";const u=({src:s,width:r,height:t,alt:p="",draggable:x=!1,className:c})=>e.jsxs("picture",{className:i(o.picture,c),children:[e.jsx("source",{srcSet:`${s}.webp, ${s}@2x.webp 2x`}),e.jsx("img",{draggable:x,width:r,height:t,src:`${s}.png`,alt:p})]});export{u as P};

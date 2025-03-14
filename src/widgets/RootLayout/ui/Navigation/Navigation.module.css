@@ -20,4 +20,8 @@
   &:hover {
     background-color: var(--mantine-color-violet-6) !important;
   }
+
+  @mixin larger-than 992px {
+    order: 2;
+  }
 }

@@ -23,7 +23,7 @@ sample({
     target: getPriceWithPromocodeQuery.reset,
 });
 
-const openTransactionPaywallFx = createEffect(async (page: string) => {
+export const openTransactionPaywallFx = createEffect(async (page: string) => {
     window.open(page, '_self');
 });
 

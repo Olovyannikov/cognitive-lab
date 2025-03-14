@@ -29,4 +29,10 @@ export interface PurchasedReportRequest {
 
 export interface SurveysInfoResponse {
     user_orders: Order[];
+    reports: {
+        mbti_type: string;
+        user_report: string;
+        created_at: string;
+        report_kind: string;
+    }[];
 }

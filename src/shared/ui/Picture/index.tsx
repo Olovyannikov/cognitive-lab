@@ -10,11 +10,11 @@ interface PictureProps extends ComponentProps<'picture'> {
     alt?: string;
 }
 
-export const Picture = ({ src, width, height, alt = '', className }: PictureProps) => {
+export const Picture = ({ src, width, height, alt = '', draggable = false, className }: PictureProps) => {
     return (
         <picture className={clsx(s.picture, className)}>
             <source srcSet={`${src}.webp, ${src}@2x.webp 2x`} />
-            <img width={width} height={height} src={`${src}.png`} alt={alt} />
+            <img draggable={draggable} width={width} height={height} src={`${src}.png`} alt={alt} />
         </picture>
     );
 };

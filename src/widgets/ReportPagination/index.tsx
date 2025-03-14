@@ -18,7 +18,7 @@ export const ReportPagination = () => {
     const content = useStoreMap({
         store: getFullReportQuery.$data,
         keys: ['title', 'content', page],
-        fn: (content) => content?.content.map(({ title }) => ({ title, mbti: content.mbti_type })),
+        fn: (content) => content?.content?.map(({ title }) => ({ title, mbti: content.mbti_type })),
     });
 
     const icons = getIconsMap(isLarge);

@@ -1,8 +1,9 @@
-import { Box, Container, Image, Text, Title } from '@mantine/core';
+import { Box, Container, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 
 import UnionImage from '@/app/assets/images/union.svg?react';
 import { RainbowButton } from '@/shared/ui';
+import { Picture } from '@/shared/ui/Picture';
 
 import s from './Hero.module.css';
 
@@ -23,7 +24,7 @@ export const Hero = () => {
                 <Text className={s.description}>
                     Узнайте свой тип личности и получите персональные советы для вашего развития
                 </Text>
-                <Image draggable={false} className={s.image} src='/images/main-hero-char.png' />
+                <Picture className={s.image} src='/landing/main-hero-char' />
                 <RainbowButton href='/test'>Пройти тест</RainbowButton>
             </Container>
         </Box>
