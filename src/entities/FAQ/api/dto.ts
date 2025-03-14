@@ -1,5 +1,5 @@
 import type { FaqItem } from '../types';
 
-export type FaqItemResponse = {
+export interface FaqItemResponse {
     payload: FaqItem[];
-};
+}

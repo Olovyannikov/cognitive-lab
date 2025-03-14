@@ -7,8 +7,6 @@ export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,
-    fn: (ctx) => {
-        return ctx.routeParams.id;
-    },
+    fn: ({ routeParams }) => routeParams.id,
     target: getBlogPostByIdQuery.start,
 });

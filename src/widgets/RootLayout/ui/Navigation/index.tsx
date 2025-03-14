@@ -6,6 +6,7 @@ import { RedirectToTestPage } from '@/features/RedirectToTestPage';
 
 import { RootModel } from '../../model';
 import { NAV_ITEMS } from './const';
+
 import s from './Navigation.module.css';
 
 const items = NAV_ITEMS.map((Component, idx) => <Component key={idx} />);

@@ -31,10 +31,6 @@ createAction({
     },
     fn: (target, { isDesktop, isMobile }) => {
         target.$currentPage(1);
-        console.log({
-            isDesktop,
-            isMobile,
-        });
         if (isDesktop) {
             target.$pageSize(10);
         }

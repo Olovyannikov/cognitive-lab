@@ -6,8 +6,9 @@ import { useIsLarge } from '@/shared/hooks/useMedia';
 import type { Mark } from '../../types';
 import { Header } from '../Header';
 import { Paragraph } from '../Paragraph';
-import s from './BarChart.module.css';
 import { useBarChartViewModel } from './view-model';
+
+import s from './BarChart.module.css';
 
 interface BarChartProps {
     marks?: Mark[];
@@ -55,6 +56,8 @@ export const BarChart = ({ marks }: BarChartProps) => {
                                                     c={`${TypeToColorMap[mark.mbti_type[i]]}.9`}
                                                 />
                                             );
+                                        default:
+                                            return null;
                                     }
                                 })}
                             </Popover.Dropdown>
@@ -88,6 +91,8 @@ export const BarChart = ({ marks }: BarChartProps) => {
                                                     c={`${TypeToColorMap[selectedItem.label]}.9`}
                                                 />
                                             );
+                                        default:
+                                            return null;
                                     }
                                 })}
                             </Paper>

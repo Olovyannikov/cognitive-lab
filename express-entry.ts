@@ -11,8 +11,6 @@ const __dirname = dirname(__filename);
 const root = __dirname;
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
-export default (await startServer()) as unknown;
-
 async function startServer() {
     const app = express();
 
@@ -39,3 +37,5 @@ async function startServer() {
 
     return app;
 }
+
+export default (await startServer()) as unknown;

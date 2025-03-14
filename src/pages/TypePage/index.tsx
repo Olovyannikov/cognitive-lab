@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
 import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
+import { Fragment } from 'react';
 
 import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
@@ -13,8 +13,6 @@ import s from './TypePage.module.css';
 export const TypePage = () => {
     const { data } = useUnit(getPersonalityTypeQuery);
     const currentColor = TYPE_TO_COLOR_MAP[data?.mbti_type];
-
-    if (!data) return null;
 
     const beforeBannerContent = useList(
         getPersonalityTypeQuery.$data.map((el) => el.content),
@@ -49,6 +47,8 @@ export const TypePage = () => {
             ));
         }
     );
+
+    if (!data) return null;
 
     return (
         <Box component='section'>

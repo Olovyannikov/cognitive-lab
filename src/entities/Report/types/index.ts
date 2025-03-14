@@ -16,6 +16,21 @@ export type ContentType =
     | 'blockquote_filled'
     | 'title';
 
+export interface Content {
+    color: string;
+    text: string;
+    type: ContentType;
+    points: string[];
+    title: string;
+    button_text: string;
+    // eslint-disable-next-line no-use-before-define
+    items: ListItem | ListItem[];
+    mbti_percentages: Record<string, { negative: number; positive: number }>;
+    mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;
+    primary_button_text: string;
+    secondary_button_text: string;
+}
+
 export interface ListItem {
     text?: string;
     type?: 'paragraph' | 'title_paragraph';
@@ -24,20 +39,6 @@ export interface ListItem {
     order?: number;
     highlight?: null;
     content?: Content[];
-}
-
-export interface Content {
-    color: string;
-    text: string;
-    type: ContentType;
-    points: string[];
-    title: string;
-    button_text: string;
-    items: ListItem | ListItem[];
-    mbti_percentages: Record<string, { negative: number; positive: number }>;
-    mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;
-    primary_button_text: string;
-    secondary_button_text: string;
 }
 
 export interface ContentBlock {

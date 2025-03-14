@@ -54,9 +54,7 @@ sample({
 
 sample({
     clock: submitAnswersMutation.finished.failure,
-    fn: (params) => {
-        return params.error.message;
-    },
+    fn: ({ error }) => error.message,
     target: showSubmitErrorFx,
 });
 

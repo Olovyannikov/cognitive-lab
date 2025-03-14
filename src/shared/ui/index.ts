@@ -11,3 +11,4 @@ export * from './InputBorderless';
 export * from './SpinningText';
 export * from './Marquee';
 export * from './RainbowButton';
+export * from './Picture';

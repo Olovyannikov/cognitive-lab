@@ -4,18 +4,23 @@ import { SendReportEmail } from '@/features/SendReportEmail';
 import type { PartialRecord } from '@/shared/types/utility-types/PartialRecord';
 
 import type { Content, ContentType } from '../types';
-import { BarChart, BlockQuoteFilled, IconList, ReportTitle, Subscription, TextStrokeDash } from '../ui';
 import {
+    BarChart,
+    BlockQuoteFilled,
     BlockquoteLine,
     Cards,
     ConclusionPaywall,
     FilledBulletList,
     Header,
+    IconList,
     OrderedCards,
     OrderedList,
     Paragraph,
     Paywall,
+    ReportTitle,
+    Subscription,
     Subtitle,
+    TextStrokeDash,
 } from '../ui';
 import { barChartPrepareData } from './barChartPreparedData';
 import { isListItemArray } from './guards';

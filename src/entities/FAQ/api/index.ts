@@ -1,7 +1,6 @@
 import { cache, createQuery } from '@farfetched/core';
 
-import { createCommonRequestFx } from '@/shared/api';
-import { API } from '@/shared/api';
+import { API, createCommonRequestFx } from '@/shared/api';
 
 import type { FaqItemResponse } from './dto';
 
