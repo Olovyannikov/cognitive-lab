@@ -1,4 +1,6 @@
-import { Box, Image, Text } from '@mantine/core';
+import { Box, Text } from '@mantine/core';
+
+import { Picture } from '@/shared/ui/Picture';
 
 import { Section } from '../Section';
 import s from './About.module.css';
@@ -15,9 +17,9 @@ export const About = () => {
                     Узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для личностного роста
                     и&nbsp;карьерного развития.
                 </Text>
-                <Image
+                <Picture
                     className={s.image}
-                    src='/images/letter-main.jpg'
+                    src='/landing/letter-main'
                     width={210}
                     height={223}
                     aria-hidden={true}

@@ -20,7 +20,7 @@ export const BlogPostCard = memo(({ post }: BlogPostCardProps) => {
             }}
             className={clsx(post.pinned && s.pinned)}
         >
-            <Card withBorder component='a' href={`/blog/${post.id}`}>
+            <Card h='100%' withBorder component='a' href={`/blog/${post.id}`}>
                 <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>
                     <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />
                     <Stack className={s.preview} justify='center'>

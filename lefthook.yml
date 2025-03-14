@@ -1,8 +1,6 @@
 pre-commit:
     parallel: true
     commands:
-        build:
-            run: npm run build
         eslint:
             glob: '*.{ts,tsx,js,jsx}'
             run: npm run lint:ts

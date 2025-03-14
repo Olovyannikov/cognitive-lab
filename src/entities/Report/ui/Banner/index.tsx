@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Image, Paper, Text, Title } from '@mantine/core';
 
 import { InnerContainer } from '@/shared/ui';
+import { Picture } from '@/shared/ui/Picture';
 
 import s from './Banner.module.css';
 
@@ -31,7 +32,7 @@ export const Banner = ({
         <Paper data-color={color} className={s.paper}>
             <InnerContainer className={s.inner}>
                 <Title order={3} className={s.title}>
-                    <Image aria-hidden className={s.emoji} src='/images/sparkles.png' />
+                    <Picture className={s.emoji} src='/emoji/star' />
                     {title}
                 </Title>
                 <Text className={s.description}>{description}</Text>

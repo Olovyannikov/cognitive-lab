@@ -1,18 +1,10 @@
 import type { ReactNode } from 'react';
 
-import {
-    barChartPrepareData,
-    BlockQuoteFilled,
-    IconList,
-    ReportTitle,
-    Subscription,
-    TextStrokeDash,
-} from '@/entities/Report';
-import { BarChart } from '@/entities/Report/ui/BarChart';
 import { SendReportEmail } from '@/features/SendReportEmail';
 import type { PartialRecord } from '@/shared/types/utility-types/PartialRecord';
 
 import type { Content, ContentType } from '../types';
+import { BarChart, BlockQuoteFilled, IconList, ReportTitle, Subscription, TextStrokeDash } from '../ui';
 import {
     BlockquoteLine,
     Cards,
@@ -25,6 +17,7 @@ import {
     Paywall,
     Subtitle,
 } from '../ui';
+import { barChartPrepareData } from './barChartPreparedData';
 import { isListItemArray } from './guards';
 
 interface ContentResolverProps {

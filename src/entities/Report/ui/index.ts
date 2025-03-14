@@ -20,3 +20,4 @@ export * from './AdBanner';
 export * from './ReportNavigationTemplate';
 export * from './BlockQuoteFilled';
 export * from './CategoryBanner';
+export * from './BarChart';

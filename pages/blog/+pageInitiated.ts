@@ -13,13 +13,18 @@ const redirectToMainBlogPostPageFx = createEffect(async () => {
 sample({
     clock: pageInitiated,
     fn: (ctx) => {
+        const isMobile = ctx.isMobile;
+
         const ctxPage = ctx.urlParsed.search;
         let page = 1;
-        let page_size = 10;
+        let page_size = isMobile ? 5 : 10;
 
-        if (ctxPage.page_size && ctxPage.page) {
-            page = Number(ctxPage.page);
+        if (ctxPage.page_size) {
             page_size = Number(ctxPage.page_size);
+        }
+
+        if (ctxPage.page) {
+            page = Number(ctxPage.page);
         }
 
         return {

@@ -63,3 +63,4 @@ firebase
 .nvmrc
 .npmignore
 *.jpg
+*.avif
