@@ -60,7 +60,7 @@ export const TypePage = () => {
     return (
         <Box component='section'>
             <Container>
-                <ReportHeader type={data.mbti_type} name={data.title} />
+                <ReportHeader preTitle='Тип личности' type={data.mbti_type} name={data.title} />
                 <InnerContainer>
                     <ShowFullStructure />
                     <Box>{beforeBannerContent}</Box>

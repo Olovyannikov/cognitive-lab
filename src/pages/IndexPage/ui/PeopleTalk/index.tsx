@@ -9,6 +9,7 @@ import { desktop } from '@/shared/media';
 
 import { Section } from '../Section';
 import { REVIEWS_MOCK } from './const';
+
 import s from './PeopleTalk.module.css';
 
 export const PeopleTalk = () => {
@@ -20,6 +21,7 @@ export const PeopleTalk = () => {
             stopOnMouseEnter: true,
             stopOnInteraction: true,
             active: isActive,
+            speed: 0.5,
         })
     );
     const isLarge = useUnit(desktop.$matches);

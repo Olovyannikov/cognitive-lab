@@ -19,7 +19,6 @@
 .container {
   position: relative;
   padding-bottom: 120px;
-  min-height: 150vh;
 
   @mixin larger-than 1024px {
     padding-bottom: 0;
@@ -27,13 +26,7 @@
 }
 
 .content {
-  position: sticky;
-  top: 11ch;
-  min-height: 514px;
-
-  @mixin larger-than 1024px {
-    top: 20ch;
-  }
+  position: relative;
 }
 
 .card {
@@ -56,20 +49,20 @@
 
 .cardTitle {
   grid-area: t;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   font-size: 32px;
   line-height: 38px;
   text-align: center;
 
-  &.0 {
+  &[data-index="0"] {
     color: var(--mantine-color-lime-8);
   }
 
-  &.1 {
+  &[data-index="1"] {
     color: var(--mantine-color-violet-7);
   }
 
-  &.2 {
+  &[data-index="2"] {
     color: var(--mantine-color-pink-7);
   }
 
@@ -84,7 +77,7 @@
 
 .cardDescription {
   grid-area: d;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -92,7 +85,6 @@
   @mixin larger-than 1024px {
     align-items: center;
     grid-row-end: 1;
-    margin-top: 8em;
     margin-bottom: 0;
     font-size: 24px;
     line-height: 28px;
@@ -113,7 +105,6 @@
 }
 
 a.control {
-  position: absolute;
   left: 16px;
   bottom: 0;
   width: calc(100% - 2rem);
@@ -135,4 +126,9 @@ a.control {
     font-size: 20px;
     line-height: 24px;
   }
+}
+
+.images img {
+  max-width: 400px;
+  max-height: 400px;
 }

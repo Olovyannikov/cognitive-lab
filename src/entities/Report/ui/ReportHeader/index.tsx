@@ -11,10 +11,10 @@ import s from './ReportHeader.module.css';
 interface ReportHeaderProps {
     type: string;
     name: string;
-    showPreheader?: boolean;
+    preTitle?: string;
 }
 
-export const ReportHeader = ({ type, name, showPreheader = false }: ReportHeaderProps) => {
+export const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности' }: ReportHeaderProps) => {
     const currentColor = TYPE_TO_COLOR_MAP[type];
     const isLarge = useIsMedium();
     const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
@@ -22,9 +22,7 @@ export const ReportHeader = ({ type, name, showPreheader = false }: ReportHeader
     return (
         <Paper className={s.paper} data-color={currentColor}>
             <Stack className={s.stack}>
-                <Text hidden={!showPreheader} className={s.personalityType}>
-                    Ваш тип личности
-                </Text>
+                <Text className={s.personalityType}>{preTitle}</Text>
                 <Title className={s.name}>{currentName ?? name}</Title>
             </Stack>
             <Image

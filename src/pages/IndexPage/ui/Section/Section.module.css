@@ -5,6 +5,7 @@
   @mixin larger-than 1200px {
     padding-top: 160px;
     padding-bottom: 160px;
+    scroll-margin-top: 20px;
   }
 }
 

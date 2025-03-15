@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.items {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 42rem;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15rem;
+}
+
+.item:last-child {
+  margin-bottom: 60px;
+}
+
+.mobile {
+  transition: 0.3s ease-in-out;
+
+  img {
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+  }
+
+  @mixin larger-than 1024px {
+    display: none;
+  }
+}
+
+.content {
+  position: sticky;
+  top: 15%;
+  display: none;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  margin-inline: 2.5rem;
+
+  @mixin larger-than 1024px {
+    display: block;
+  }
+}

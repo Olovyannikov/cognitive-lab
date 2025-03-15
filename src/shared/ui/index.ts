@@ -12,3 +12,4 @@ export * from './SpinningText';
 export * from './Marquee';
 export * from './RainbowButton';
 export * from './Picture';
+export * from './StickyScrollReveal';
