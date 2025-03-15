@@ -9,9 +9,11 @@ import { REVIEWS_MOCK } from '@/pages/IndexPage/ui/PeopleTalk/const';
 import { desktop } from '@/shared/media';
 
 import { Section } from '../Section';
+
 import s from './MoreInBlog.module.css';
 
 export const MoreInBlog = () => {
+    const isLarge = useUnit(desktop.$matches);
     const autoplay = useRef(
         AutoScroll({
             playOnInit: true,
@@ -19,9 +21,10 @@ export const MoreInBlog = () => {
             stopOnMouseEnter: true,
             stopOnInteraction: true,
             active: true,
+            speed: 0.5,
+            direction: 'backward',
         })
     );
-    const isLarge = useUnit(desktop.$matches);
     return (
         <Section containerClassName={s.container}>
             <Title className={s.mainTitle} order={2}>

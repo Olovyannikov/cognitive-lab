@@ -1,145 +1,545 @@
 @define-mixin get-type-image {
   /* INTJ */
   &[data-type="INTJ"] {
-    background-image: url("/images/circles/INTJ_0.png");
+    background-image: image-set(
+      url("/types/circles/INTJ/INTJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/INTJ/INTJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/INTJ/INTJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/INTJ/INTJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/INTJ_0@2x.png") 2x,
+      url("/types/circles/INTJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/INTJ/INTJ_1@2x.avif") url("/types/circles/INTJ/INTJ_1.avif")
+        url("/types/circles/INTJ/INTJ_1@2x.webp") url("/types/circles/INTJ/INTJ_1.webp")
+        url("/types/circles/INTJ_1@2x.png") url("/types/circles/INTJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/INTJ_1.png");
+      background-image: image-set(
+        url("/types/circles/INTJ/INTJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/INTJ/INTJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/INTJ/INTJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/INTJ/INTJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/INTJ_1@2x.png") 2x,
+        url("/types/circles/INTJ_1.png") 1x
+      );
     }
   }
 
   /* INTP */
   &[data-type="INTP"] {
-    background-image: url("/images/circles/INTP_0.png");
+    background-image: image-set(
+      url("/types/circles/INTP/INTP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/INTP/INTP_0.avif") type("image/avif") 1x,
+      url("/types/circles/INTP/INTP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/INTP/INTP_0.webp") type("image/webp") 1x,
+      url("/types/circles/INTP_0@2x.png") 2x,
+      url("/types/circles/INTP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/INTP/INTP_1@2x.avif") url("/types/circles/INTP/INTP_1.avif")
+        url("/types/circles/INTP/INTP_1@2x.webp") url("/types/circles/INTP/INTP_1.webp")
+        url("/types/circles/INTP_1@2x.png") url("/types/circles/INTP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/INTP_1.png");
+      background-image: image-set(
+        url("/types/circles/INTP/INTP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/INTP/INTP_1.avif") type("image/avif") 1x,
+        url("/types/circles/INTP/INTP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/INTP/INTP_1.webp") type("image/webp") 1x,
+        url("/types/circles/INTP_1@2x.png") 2x,
+        url("/types/circles/INTP_1.png") 1x
+      );
     }
   }
 
   /* ENTJ */
   &[data-type="ENTJ"] {
-    background-image: url("/images/circles/ENTJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ENTJ/ENTJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ENTJ/ENTJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ENTJ/ENTJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ENTJ/ENTJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ENTJ_0@2x.png") 2x,
+      url("/types/circles/ENTJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ENTJ/ENTJ_1@2x.avif") url("/types/circles/ENTJ/ENTJ_1.avif")
+        url("/types/circles/ENTJ/ENTJ_1@2x.webp") url("/types/circles/ENTJ/ENTJ_1.webp")
+        url("/types/circles/ENTJ_1@2x.png") url("/types/circles/ENTJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ENTJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ENTJ/ENTJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ENTJ/ENTJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ENTJ/ENTJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ENTJ/ENTJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ENTJ_1@2x.png") 2x,
+        url("/types/circles/ENTJ_1.png") 1x
+      );
     }
   }
 
   /* ENTP */
   &[data-type="ENTP"] {
-    background-image: url("/images/circles/ENTP_0.png");
+    background-image: image-set(
+      url("/types/circles/ENTP/ENTP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ENTP/ENTP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ENTP/ENTP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ENTP/ENTP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ENTP_0@2x.png") 2x,
+      url("/types/circles/ENTP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ENTP/ENTP_1@2x.avif") url("/types/circles/ENTP/ENTP_1.avif")
+        url("/types/circles/ENTP/ENTP_1@2x.webp") url("/types/circles/ENTP/ENTP_1.webp")
+        url("/types/circles/ENTP_1@2x.png") url("/types/circles/ENTP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ENTP_1.png");
+      background-image: image-set(
+        url("/types/circles/ENTP/ENTP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ENTP/ENTP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ENTP/ENTP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ENTP/ENTP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ENTP_1@2x.png") 2x,
+        url("/types/circles/ENTP_1.png") 1x
+      );
     }
   }
 
   /* INFJ */
   &[data-type="INFJ"] {
-    background-image: url("/images/circles/INFJ_0.png");
+    background-image: image-set(
+      url("/types/circles/INFJ/INFJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/INFJ/INFJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/INFJ/INFJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/INFJ/INFJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/INFJ_0@2x.png") 2x,
+      url("/types/circles/INFJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/INFJ/INFJ_1@2x.avif") url("/types/circles/INFJ/INFJ_1.avif")
+        url("/types/circles/INFJ/INFJ_1@2x.webp") url("/types/circles/INFJ/INFJ_1.webp")
+        url("/types/circles/INFJ_1@2x.png") url("/types/circles/INFJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/INFJ_1.png");
+      background-image: image-set(
+        url("/types/circles/INFJ/INFJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/INFJ/INFJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/INFJ/INFJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/INFJ/INFJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/INFJ_1@2x.png") 2x,
+        url("/types/circles/INFJ_1.png") 1x
+      );
     }
   }
 
   /* INFP */
   &[data-type="INFP"] {
-    background-image: url("/images/circles/INFP_0.png");
+    background-image: image-set(
+      url("/types/circles/INFP/INFP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/INFP/INFP_0.avif") type("image/avif") 1x,
+      url("/types/circles/INFP/INFP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/INFP/INFP_0.webp") type("image/webp") 1x,
+      url("/types/circles/INFP_0@2x.png") 2x,
+      url("/types/circles/INFP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/INFP/INFP_1@2x.avif") url("/types/circles/INFP/INFP_1.avif")
+        url("/types/circles/INFP/INFP_1@2x.webp") url("/types/circles/INFP/INFP_1.webp")
+        url("/types/circles/INFP_1@2x.png") url("/types/circles/INFP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/INFP_1.png");
+      background-image: image-set(
+        url("/types/circles/INFP/INFP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/INFP/INFP_1.avif") type("image/avif") 1x,
+        url("/types/circles/INFP/INFP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/INFP/INFP_1.webp") type("image/webp") 1x,
+        url("/types/circles/INFP_1@2x.png") 2x,
+        url("/types/circles/INFP_1.png") 1x
+      );
     }
   }
 
   /* ENFJ */
   &[data-type="ENFJ"] {
-    background-image: url("/images/circles/ENFJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ENFJ/ENFJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ENFJ/ENFJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ENFJ/ENFJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ENFJ/ENFJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ENFJ_0@2x.png") 2x,
+      url("/types/circles/ENFJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ENFJ/ENFJ_1@2x.avif") url("/types/circles/ENFJ/ENFJ_1.avif")
+        url("/types/circles/ENFJ/ENFJ_1@2x.webp") url("/types/circles/ENFJ/ENFJ_1.webp")
+        url("/types/circles/ENFJ_1@2x.png") url("/types/circles/ENFJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ENFJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ENFJ/ENFJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ENFJ/ENFJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ENFJ/ENFJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ENFJ/ENFJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ENFJ_1@2x.png") 2x,
+        url("/types/circles/ENFJ_1.png") 1x
+      );
     }
   }
 
   /* ENFP */
   &[data-type="ENFP"] {
-    background-image: url("/images/circles/ENFP_0.png");
+    background-image: image-set(
+      url("/types/circles/ENFP/ENFP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ENFP/ENFP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ENFP/ENFP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ENFP/ENFP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ENFP_0@2x.png") 2x,
+      url("/types/circles/ENFP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ENFP/ENFP_1@2x.avif") url("/types/circles/ENFP/ENFP_1.avif")
+        url("/types/circles/ENFP/ENFP_1@2x.webp") url("/types/circles/ENFP/ENFP_1.webp")
+        url("/types/circles/ENFP_1@2x.png") url("/types/circles/ENFP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ENFP_1.png");
+      background-image: image-set(
+        url("/types/circles/ENFP/ENFP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ENFP/ENFP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ENFP/ENFP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ENFP/ENFP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ENFP_1@2x.png") 2x,
+        url("/types/circles/ENFP_1.png") 1x
+      );
     }
   }
 
   /* ISTJ */
   &[data-type="ISTJ"] {
-    background-image: url("/images/circles/ISTJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ISTJ/ISTJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ISTJ/ISTJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ISTJ/ISTJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ISTJ/ISTJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ISTJ_0@2x.png") 2x,
+      url("/types/circles/ISTJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ISTJ/ISTJ_1@2x.avif") url("/types/circles/ISTJ/ISTJ_1.avif")
+        url("/types/circles/ISTJ/ISTJ_1@2x.webp") url("/types/circles/ISTJ/ISTJ_1.webp")
+        url("/types/circles/ISTJ_1@2x.png") url("/types/circles/ISTJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ISTJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ISTJ/ISTJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ISTJ/ISTJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ISTJ/ISTJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ISTJ/ISTJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ISTJ_1@2x.png") 2x,
+        url("/types/circles/ISTJ_1.png") 1x
+      );
     }
   }
 
   /* ISFJ */
   &[data-type="ISFJ"] {
-    background-image: url("/images/circles/ISFJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ISFJ/ISFJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ISFJ/ISFJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ISFJ/ISFJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ISFJ/ISFJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ISFJ_0@2x.png") 2x,
+      url("/types/circles/ISFJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ISFJ/ISFJ_1@2x.avif") url("/types/circles/ISFJ/ISFJ_1.avif")
+        url("/types/circles/ISFJ/ISFJ_1@2x.webp") url("/types/circles/ISFJ/ISFJ_1.webp")
+        url("/types/circles/ISFJ_1@2x.png") url("/types/circles/ISFJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ISFJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ISFJ/ISFJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ISFJ/ISFJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ISFJ/ISFJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ISFJ/ISFJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ISFJ_1@2x.png") 2x,
+        url("/types/circles/ISFJ_1.png") 1x
+      );
     }
   }
 
   /* ESTJ */
   &[data-type="ESTJ"] {
-    background-image: url("/images/circles/ESTJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ESTJ/ESTJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ESTJ/ESTJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ESTJ/ESTJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ESTJ/ESTJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ESTJ_0@2x.png") 2x,
+      url("/types/circles/ESTJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ESTJ/ESTJ_1@2x.avif") url("/types/circles/ESTJ/ESTJ_1.avif")
+        url("/types/circles/ESTJ/ESTJ_1@2x.webp") url("/types/circles/ESTJ/ESTJ_1.webp")
+        url("/types/circles/ESTJ_1@2x.png") url("/types/circles/ESTJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ESTJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ESTJ/ESTJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ESTJ/ESTJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ESTJ/ESTJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ESTJ/ESTJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ESTJ_1@2x.png") 2x,
+        url("/types/circles/ESTJ_1.png") 1x
+      );
     }
   }
 
   /* ESFJ */
   &[data-type="ESFJ"] {
-    background-image: url("/images/circles/ESFJ_0.png");
+    background-image: image-set(
+      url("/types/circles/ESFJ/ESFJ_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ESFJ/ESFJ_0.avif") type("image/avif") 1x,
+      url("/types/circles/ESFJ/ESFJ_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ESFJ/ESFJ_0.webp") type("image/webp") 1x,
+      url("/types/circles/ESFJ_0@2x.png") 2x,
+      url("/types/circles/ESFJ_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ESFJ/ESFJ_1@2x.avif") url("/types/circles/ESFJ/ESFJ_1.avif")
+        url("/types/circles/ESFJ/ESFJ_1@2x.webp") url("/types/circles/ESFJ/ESFJ_1.webp")
+        url("/types/circles/ESFJ_1@2x.png") url("/types/circles/ESFJ_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ESFJ_1.png");
+      background-image: image-set(
+        url("/types/circles/ESFJ/ESFJ_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ESFJ/ESFJ_1.avif") type("image/avif") 1x,
+        url("/types/circles/ESFJ/ESFJ_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ESFJ/ESFJ_1.webp") type("image/webp") 1x,
+        url("/types/circles/ESFJ_1@2x.png") 2x,
+        url("/types/circles/ESFJ_1.png") 1x
+      );
     }
   }
 
   /* ISTP */
   &[data-type="ISTP"] {
-    background-image: url("/images/circles/ISTP_0.png");
+    background-image: image-set(
+      url("/types/circles/ISTP/ISTP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ISTP/ISTP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ISTP/ISTP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ISTP/ISTP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ISTP_0@2x.png") 2x,
+      url("/types/circles/ISTP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ISTP/ISTP_1@2x.avif") url("/types/circles/ISTP/ISTP_1.avif")
+        url("/types/circles/ISTP/ISTP_1@2x.webp") url("/types/circles/ISTP/ISTP_1.webp")
+        url("/types/circles/ISTP_1@2x.png") url("/types/circles/ISTP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ISTP_1.png");
+      background-image: image-set(
+        url("/types/circles/ISTP/ISTP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ISTP/ISTP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ISTP/ISTP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ISTP/ISTP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ISTP_1@2x.png") 2x,
+        url("/types/circles/ISTP_1.png") 1x
+      );
     }
   }
 
   /* ISFP */
   &[data-type="ISFP"] {
-    background-image: url("/images/circles/ISFP_0.png");
+    background-image: image-set(
+      url("/types/circles/ISFP/IFSP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ISFP/IFSP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ISFP/IFSP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ISFP/IFSP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ISFP_0@2x.png") 2x,
+      url("/types/circles/ISFP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ISFP/ISFP_1@2x.avif") url("/types/circles/ISFP/ISFP_1.avif")
+        url("/types/circles/ISFP/ISFP_1@2x.webp") url("/types/circles/ISFP/ISFP_1.webp")
+        url("/types/circles/ISFP_1@2x.png") url("/types/circles/ISFP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ISFP_1.png");
+      background-image: image-set(
+        url("/types/circles/ISFP/ISFP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ISFP/ISFP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ISFP/ISFP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ISFP/ISFP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ISFP_1@2x.png") 2x,
+        url("/types/circles/ISFP_1.png") 1x
+      );
     }
   }
 
   /* ESTP */
   &[data-type="ESTP"] {
-    background-image: url("/images/circles/ESTP_0.png");
+    background-image: image-set(
+      url("/types/circles/ESTP/ESTP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ESTP/ESTP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ESTP/ESTP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ESTP/ESTP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ESTP_0@2x.png") 2x,
+      url("/types/circles/ESTP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ESTP/ESTP_1@2x.avif") url("/types/circles/ESTP/ESTP_1.avif")
+        url("/types/circles/ESTP/ESTP_1@2x.webp") url("/types/circles/ESTP/ESTP_1.webp")
+        url("/types/circles/ESTP_1@2x.png") url("/types/circles/ESTP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ESTP_1.png");
+      background-image: image-set(
+        url("/types/circles/ESTP/ESTP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ESTP/ESTP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ESTP/ESTP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ESTP/ESTP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ESTP_1@2x.png") 2x,
+        url("/types/circles/ESTP_1.png") 1x
+      );
     }
   }
 
   /* ESFP */
   &[data-type="ESFP"] {
-    background-image: url("/images/circles/ESFP_0.png");
+    background-image: image-set(
+      url("/types/circles/ESFP/ESFP_0@2x.avif") type("image/avif") 2x,
+      url("/types/circles/ESFP/ESFP_0.avif") type("image/avif") 1x,
+      url("/types/circles/ESFP/ESFP_0@2x.webp") type("image/webp") 2x,
+      url("/types/circles/ESFP/ESFP_0.webp") type("image/webp") 1x,
+      url("/types/circles/ESFP_0@2x.png") 2x,
+      url("/types/circles/ESFP_0.png") 1x
+    );
+
+    &::after {
+      content: url("/types/circles/ESFP/ESFP_1@2x.avif") url("/types/circles/ESFP/ESFP_1.avif")
+        url("/types/circles/ESFP/ESFP_1@2x.webp") url("/types/circles/ESFP/ESFP_1.webp")
+        url("/types/circles/ESFP_1@2x.png") url("/types/circles/ESFP_1.png");
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
 
     &:hover {
-      background-image: url("/images/circles/ESFP_1.png");
+      background-image: image-set(
+        url("/types/circles/ESFP/ESFP_1@2x.avif") type("image/avif") 2x,
+        url("/types/circles/ESFP/ESFP_1.avif") type("image/avif") 1x,
+        url("/types/circles/ESFP/ESFP_1@2x.webp") type("image/webp") 2x,
+        url("/types/circles/ESFP/ESFP_1.webp") type("image/webp") 1x,
+        url("/types/circles/ESFP_1@2x.png") 2x,
+        url("/types/circles/ESFP_1.png") 1x
+      );
     }
   }
 }
