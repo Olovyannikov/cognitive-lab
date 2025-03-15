@@ -5,7 +5,7 @@ import { useWindowScroll } from '@mantine/hooks';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 
 import { getIconsMap } from '@/entities/Report';
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 import { InnerContainer } from '@/shared/ui';
 
 import s from './ReportNavigationTemplate.module.css';

@@ -1,12 +1,10 @@
 import { useForm } from '@mantine/form';
 import { useUnit } from 'effector-react';
 
-import { submitHelpForm } from '../model';
+import { HelpFormModel } from '../model';
 
 export const useHelpFormViewModel = () => {
-    const { submitFormHandler } = useUnit({
-        submitFormHandler: submitHelpForm,
-    });
+    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);
 
     const form = useForm({
         mode: 'controlled',

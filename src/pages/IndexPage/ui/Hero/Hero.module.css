@@ -119,12 +119,9 @@ p.description {
 
 .image {
   grid-area: i;
+  margin: 0 auto 40px;
   max-width: 280px;
   max-height: 280px;
-
-  img {
-    margin: 0 auto 40px;
-  }
 
   @mixin larger-than 992px {
     margin-right: 0;

@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { SendReportEmail } from '@/features/SendReportEmail';
-import type { PartialRecord } from '@/shared/types/utility-types/PartialRecord';
+import type { PartialRecord } from '@/shared/types';
 
 import type { Content, ContentType } from '../types';
 import {
@@ -32,6 +31,9 @@ interface ContentResolverProps {
     surveyId?: string;
     mbti?: string;
     index?: number;
+    slots?: {
+        subscribeEmail?: ReactNode;
+    };
 }
 
 export const contentResolver = ({
@@ -40,6 +42,7 @@ export const contentResolver = ({
     actions,
     surveyId,
     mbti,
+    slots,
     index,
 }: ContentResolverProps) => {
     switch (content.type) {
@@ -78,7 +81,7 @@ export const contentResolver = ({
         case 'icon_list':
             return <IconList items={isListItemArray(content.items) ? content.items : []} />;
         case 'subscription':
-            return <Subscription {...content} subscriptionFormSlot={<SendReportEmail type='block' />} />;
+            return <Subscription {...content} subscriptionFormSlot={slots?.subscribeEmail} />;
         case 'text_stroke_dash':
             return <TextStrokeDash text={content.text ?? ''} />;
         default:

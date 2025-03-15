@@ -1,6 +1,6 @@
-import { Title, TitleProps } from '@mantine/core';
+import { Title, type TitleProps } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 
 export const ReportTitle = ({ children }: TitleProps) => {
     const isLarge = useIsLarge();

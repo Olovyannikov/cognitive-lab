@@ -29,7 +29,7 @@ p.description {
   }
 }
 
-img.image {
+picture.image {
   grid-area: l;
   margin: 0 auto;
   width: 210px;

@@ -27,18 +27,16 @@ export const Banner = ({
     title = BANNER_CONFIG.title,
     description = BANNER_CONFIG.description,
     image = BANNER_CONFIG.image,
-}: BannerProps) => {
-    return (
-        <Paper data-color={color} className={s.paper}>
-            <InnerContainer className={s.inner}>
-                <Title order={3} className={s.title}>
-                    <Picture className={s.emoji} src='/emoji/star' />
-                    {title}
-                </Title>
-                <Text className={s.description}>{description}</Text>
-                <Image className={s.image} aria-hidden src={image} w={260} h={260} />
-                {actionSlot}
-            </InnerContainer>
-        </Paper>
-    );
-};
+}: BannerProps) => (
+    <Paper data-color={color} className={s.paper}>
+        <InnerContainer className={s.inner}>
+            <Title order={3} className={s.title}>
+                <Picture className={s.emoji} src='/emoji/star' />
+                {title}
+            </Title>
+            <Text className={s.description}>{description}</Text>
+            <Image className={s.image} aria-hidden src={image} w={260} h={260} />
+            {actionSlot}
+        </InnerContainer>
+    </Paper>
+);

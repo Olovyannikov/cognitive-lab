@@ -3,15 +3,13 @@ import { createGate } from 'effector-react';
 import { once } from 'patronum';
 
 import { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';
-import { isErrorWithMessage } from '@/shared/types/type-guards';
+import { isErrorWithMessage } from '@/shared/types';
 
 export const BuyReportGate = createGate();
 
 export const applyPromocodeClicked = createEvent<string>();
 
-export const $promocodeErrorMessage = createStore('').on(applyPromocodeClicked, () => {
-    return '';
-});
+export const $promocodeErrorMessage = createStore('').on(applyPromocodeClicked, () => '');
 export const $showSuccessPromoMessage = createStore(false);
 export const reportPurchased = createEvent<PurchasedReportRequest>({});
 

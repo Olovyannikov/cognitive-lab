@@ -1,6 +1,6 @@
 import { sample } from 'effector';
 
-import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personalities';
+import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
 import { appService } from '@/shared/services/app';
 import { createPageInit } from '@/shared/utils/effector';
 

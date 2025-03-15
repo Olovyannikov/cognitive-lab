@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import { Button, Group, Pagination } from '@mantine/core';
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
-import { useState } from 'react';
 import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';

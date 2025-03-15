@@ -3,10 +3,11 @@ import { Box, Button } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import type { PersonalityType } from '@/entities/Personalities';
 import { AdBanner, contentResolver, getFullReportQuery, normalizeData } from '@/entities/Report';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer, MainButton } from '@/shared/ui';
+
+import type { PersonalityType } from '../../entities/Personality';
 
 import s from './FullReportSlice.module.css';
 

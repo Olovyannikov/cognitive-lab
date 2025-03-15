@@ -3,9 +3,8 @@ import { useGate, useUnit } from 'effector-react';
 
 import { getPriceWithPromocodeQuery } from '@/entities/Report';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
-import { toInputUppercase } from '@/shared/utils/toInputUppercase';
+import { toInputUppercase } from '@/shared/utils';
 
-import s from './BuyReportForm.module.css';
 import {
     $promocodeErrorMessage,
     $showSuccessPromoMessage,
@@ -14,6 +13,8 @@ import {
     openTransactionPaywallFx,
 } from './model';
 import { useReportBuyFormViewModel } from './view-model';
+
+import s from './BuyReportForm.module.css';
 
 export const BuyReportForm = () => {
     useGate(BuyReportGate);

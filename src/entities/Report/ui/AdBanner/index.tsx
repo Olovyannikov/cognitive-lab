@@ -1,7 +1,8 @@
 import type { PropsWithChildren } from 'react';
 import { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
+import { Picture } from '@/shared/ui';
 
 import s from './AdBanner.module.css';
 
@@ -29,7 +30,7 @@ export const AdBanner = ({
         <Paper className={s.paper}>
             <Stack className={s.root}>
                 <Group className={s.group}>
-                    <Image className={s.image} src='/images/sparkles.webp' />
+                    <Picture className={s.image} src='/emoji/star' />
                     <Title className={s.title} fz={20}>
                         {title}
                     </Title>

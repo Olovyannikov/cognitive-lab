@@ -1,10 +1,9 @@
 import { Button, Flex } from '@mantine/core';
 
-import { useIsDesktop } from '@/shared/hooks/useMedia';
+import { useIsDesktop } from '@/shared/hooks';
 
 import { Section } from '../Section';
 import { Card } from './Card';
-import s from './ForWhom.module.css';
 import FirstCardImage from './img/image-card-1.svg?react';
 import SecondCardImage from './img/image-card-2.svg?react';
 import ThirdCardImage from './img/image-card-3.svg?react';
@@ -13,6 +12,8 @@ import FirstCardImageDesktop from './img/image-card-desktop-1.svg?react';
 import SecondCardImageDesktop from './img/image-card-desktop-2.svg?react';
 import ThirdCardImageDesktop from './img/image-card-desktop-3.svg?react';
 import FourthCardImageDesktop from './img/image-card-desktop-4.svg?react';
+
+import s from './ForWhom.module.css';
 
 export const ForWhom = () => {
     const isLarge = useIsDesktop();

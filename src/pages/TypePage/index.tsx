@@ -1,8 +1,9 @@
+import { Fragment } from 'react';
 import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
-import { Fragment } from 'react';
 
 import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
+import { SendReportEmail } from '@/features/SendReportEmail';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer } from '@/shared/ui';
 import { CALL_TO_ACTION } from '@/widgets/CTA';
@@ -40,7 +41,13 @@ export const TypePage = () => {
                 <div key={el.type + elIdx} className={s.block}>
                     {el.content.map((currentContent, idx) => (
                         <Fragment key={currentContent.type + idx}>
-                            {contentResolver({ content: currentContent, color: currentColor })}
+                            {contentResolver({
+                                content: currentContent,
+                                color: currentColor,
+                                slots: {
+                                    subscribeEmail: <SendReportEmail type='block' />,
+                                },
+                            })}
                         </Fragment>
                     ))}
                 </div>

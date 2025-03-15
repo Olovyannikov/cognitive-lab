@@ -12,6 +12,8 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import eslintTypescript from 'typescript-eslint';
+import { fixupPluginRules } from '@eslint/compat';
+import effector from 'eslint-plugin-effector';
 
 const nodeBuiltinModules = builtinModules.join('|');
 const ourOwnModules = [''].join('|');
@@ -56,8 +58,12 @@ export default eslintTypescript.config(
             'react-hooks': reactHooksPlugin,
             'simple-import-sort': simpleImportSortPlugin,
             'no-only-tests': noOnlyTests,
+            effector: fixupPluginRules(effector),
         },
         rules: {
+            // effector,
+            ...effector.configs.recommended.rules,
+            ...effector.configs.scope.rules,
             // Possible Errors
             'no-console': [2, { allow: ['warn', 'error', 'info'] }], // sometimes console warnings or console errors are helpful, but console.log probably shouldn't be checked into source control (?)
             'no-constant-condition': 2,

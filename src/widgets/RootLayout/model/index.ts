@@ -1,7 +1,7 @@
 import { invoke } from '@withease/factories';
 import { createEvent, createStore, sample } from 'effector';
 
-import { disclosureFactory } from '@/shared/factories/disclosure';
+import { disclosureFactory } from '@/shared/factories';
 import { desktop } from '@/shared/media';
 
 const $submenuCurrentTitle = createStore<string | null>(null);

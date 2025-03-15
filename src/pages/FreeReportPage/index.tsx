@@ -1,9 +1,10 @@
+import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
-import { Element } from 'react-scroll';
 
 import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
+import { SendReportEmail } from '@/features/SendReportEmail';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer, PageLoader } from '@/shared/ui';
 import { CALL_TO_ACTION } from '@/widgets/CTA';
@@ -40,6 +41,9 @@ export const FreeReportPage = () => {
                                                 surveyId: surveyId ?? '',
                                                 index: index,
                                                 mbti: data.mbti_type,
+                                                slots: {
+                                                    subscribeEmail: <SendReportEmail type='block' />,
+                                                },
                                             })
                                         )}
                                     </Box>

@@ -5,7 +5,7 @@ import { useStoreMap, useUnit } from 'effector-react';
 
 import { getFullReportQuery, getIconsMap, ReportModel } from '@/entities/Report';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 
 import s from './ReportPagination.module.css';
 

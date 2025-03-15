@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import CircleImage from '@/app/assets/images/circle.svg?react';
 import CircleSmallImage from '@/app/assets/images/circle_small.svg?react';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
-import { useIsMedium } from '@/shared/hooks/useMedia';
+import { useIsMedium } from '@/shared/hooks';
 
 import s from './ReportHeader.module.css';
 

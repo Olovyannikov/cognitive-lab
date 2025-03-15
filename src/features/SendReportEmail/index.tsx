@@ -4,12 +4,13 @@ import { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import { zodResolver } from 'mantine-form-zod-resolver';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 import { InnerContainer } from '@/shared/ui';
 
 import { sendFreeReportOnEmailMutation } from './api';
 import { SendReportEmailModel } from './model';
 import { SendReportSchema } from './schema';
+
 import s from './SendReportEmail.module.css';
 
 interface SendReportEmailProps {

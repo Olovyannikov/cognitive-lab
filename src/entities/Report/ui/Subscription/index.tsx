@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Image, Paper, Stack, Text, Title } from '@mantine/core';
 
-import { useIsHuge, useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsHuge, useIsLarge } from '@/shared/hooks';
 
 interface SubscriptionProps {
     title?: string;

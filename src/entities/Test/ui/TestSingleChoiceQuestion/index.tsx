@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import { Paper, Radio, Stack } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 import { InputBorderless } from '@/shared/ui';
 
 import type { QuestionsResponse } from '../../api/dto';
 import type { SingleChoiceAnswer } from '../../types';
 import { AnswerLabel } from '../AnswerLabel';
 import { QuestionTitle } from '../TestQuestionTitle';
+
 import s from './TestSingleChoiceQuestion.module.css';
 
 interface TestSingleChoiceQuestionProps extends QuestionsResponse {

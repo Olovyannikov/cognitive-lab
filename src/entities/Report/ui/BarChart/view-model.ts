@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 
 import type { Mark } from '../../types';
 
@@ -18,14 +18,14 @@ export const useBarChartViewModel = ({ marks }: { marks?: Mark[] }) => {
                 setMounted(true);
             }, 200);
         },
-        [selectedItem, mounted]
+        [selectedItem]
     );
 
     useEffect(() => {
         if (!isLarge) return;
         setMounted(true);
         setSelectedItem(marks?.[0] ?? null);
-    }, [isLarge]);
+    }, [isLarge, marks]);
 
     return {
         onSelectItemMouseOverHandler,

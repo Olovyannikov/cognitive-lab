@@ -1,14 +1,15 @@
 import { Checkbox, Paper, Stack } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks/useMedia';
+import { useIsLarge } from '@/shared/hooks';
 import { IconCheck, InputBorderless } from '@/shared/ui';
 
 import type { QuestionsResponse } from '../../api/dto';
 import type { MultiChoiceAnswer } from '../../types';
 import { AnswerLabel } from '../AnswerLabel';
 import { QuestionTitle } from '../TestQuestionTitle';
-import s from './TestMultipleQuestion.module.css';
 import { useMultipleQuestionViewModel } from './view-model';
+
+import s from './TestMultipleQuestion.module.css';
 
 interface TestMultipleQuestionProps extends QuestionsResponse {
     page: number;

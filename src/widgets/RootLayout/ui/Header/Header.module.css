@@ -54,7 +54,31 @@
   justify-content: space-between;
   padding-inline: var(--mantine-spacing-md);
 
-  @mixin larger-than 1024px {
+  @mixin larger-than 1421px {
     padding-inline: 40px;
+  }
+}
+
+.logoLarge {
+  display: none;
+
+  @mixin smaller-than 1200px {
+    display: block;
+  }
+
+  @mixin larger-than 1400px {
+    display: block;
+  }
+}
+
+.logoSmall {
+  display: none;
+
+  @mixin larger-than 1200px {
+    display: block;
+  }
+
+  @mixin larger-than 1400px {
+    display: none;
   }
 }

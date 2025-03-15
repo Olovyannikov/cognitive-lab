@@ -3,7 +3,7 @@ import {
     BuyNowOrRedirectToTestPageAction,
     RedirectToTestPageAndNavigateToFullStructureAction,
     TakeTestAgainOrBuyReportAction,
-} from './actions';
+} from './ui';
 
 export const CALL_TO_ACTION = {
     buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,

@@ -1,4 +1,4 @@
-import { ComponentProps, useCallback, useMemo } from 'react';
+import { type ComponentProps, useMemo } from 'react';
 import { Box, Burger, Group } from '@mantine/core';
 import { useHeadroom } from '@mantine/hooks';
 import clsx from 'clsx';
@@ -6,9 +6,11 @@ import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';
+import LogoSmall from '@/app/assets/images/logo.svg?react';
 
 import { RootModel } from '../../model';
 import { Navigation } from '../Navigation';
+
 import s from './Header.module.css';
 
 export const Header = ({ className }: ComponentProps<'header'>) => {
@@ -19,17 +21,15 @@ export const Header = ({ className }: ComponentProps<'header'>) => {
     const pinned = useHeadroom({ fixedAt: 120 });
 
     const logoLink = useMemo(() => ({ ...(urlPathname === '/' ? {} : { href: '/' }) }), [urlPathname]);
-
-    const onBurgerClickHandler = useCallback(isSubmenuOpened ? () => allMenusClose(false) : toggleMenu, [
-        isSubmenuOpened,
-    ]);
+    const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;
 
     return (
         <header className={clsx(s.header, pinned && s.pinned, className)}>
             <Box className={s.container}>
                 <Group align='center' justify='space-between' w='100%'>
                     <a className={s.logoLink} {...logoLink}>
-                        <CognitiveLogo width={220} height={36} />
+                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />
+                        <LogoSmall className={s.logoSmall} width={36} height={36} />
                     </a>
                     <Burger
                         lineSize={2}
