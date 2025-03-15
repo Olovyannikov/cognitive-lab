@@ -1,10 +1,28 @@
-.card {
-  --index: 1;
-
+.wrapper {
   position: sticky;
-  top: calc(100px * var(--index) * 0.7);
+  top: 90px;
+
+  &:nth-child(even) .card {
+    color: var(--mantine-color-dark-9);
+  }
+
+  &:nth-child(2) .card {
+    background-color: var(--mantine-color-lime-5);
+  }
+
+  &:nth-child(3) .card {
+    background-color: var(--mantine-color-pink-6);
+  }
+
+  &:nth-child(4) .card {
+    background-color: var(--mantine-color-yellow-6);
+  }
+}
+
+.card {
+  position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto -90px;
   border-radius: 20px;
   padding: 32px 20px;
   max-width: 840px;
@@ -22,6 +40,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 12px;
+    min-height: 56px;
     font-size: 24px;
     line-height: 28px;
   }
@@ -33,30 +52,9 @@
     line-height: 21px;
   }
 
-  &:nth-child(even) {
-    color: var(--mantine-color-dark-9);
-  }
-
-  &:nth-child(2) {
-    --index: 2;
-
-    background-color: var(--mantine-color-lime-5);
-  }
-
-  &:nth-child(3) {
-    --index: 3;
-
-    background-color: var(--mantine-color-pink-6);
-  }
-
-  &:nth-child(4) {
-    --index: 4;
-
-    background-color: var(--mantine-color-yellow-6);
-  }
-
   @mixin larger-than 768px {
     padding: 40px 60px;
+    min-height: 298px;
 
     h4 {
       font-size: 32px;

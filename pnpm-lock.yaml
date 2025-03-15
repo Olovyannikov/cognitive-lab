@@ -79,6 +79,9 @@ importers:
             framer-motion:
                 specifier: ^12.4.4
                 version: 12.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+            lenis:
+                specifier: ^1.2.3
+                version: 1.2.3(react@19.0.0)(vue@3.5.13(typescript@5.7.3))
             lodash-es:
                 specifier: ^4.17.21
                 version: 4.17.21
@@ -4999,6 +5002,23 @@ packages:
                 integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==,
             }
         engines: { node: '>=0.10' }
+
+    lenis@1.2.3:
+        resolution:
+            {
+                integrity: sha512-H3VUn62jvQPfyxGW2F0STJPhP1VzX5r05KtiZ0uxHYD9xtbfTvj2eX/Km26+x13zlaKfHacEe1DTC3ouFrxw+g==,
+            }
+        peerDependencies:
+            '@nuxt/kit': '>=3.0.0'
+            react: '>=17.0.0'
+            vue: '>=3.0.0'
+        peerDependenciesMeta:
+            '@nuxt/kit':
+                optional: true
+            react:
+                optional: true
+            vue:
+                optional: true
 
     levn@0.4.1:
         resolution:
@@ -10264,6 +10284,11 @@ snapshots:
     language-tags@1.0.9:
         dependencies:
             language-subtag-registry: 0.3.23
+
+    lenis@1.2.3(react@19.0.0)(vue@3.5.13(typescript@5.7.3)):
+        optionalDependencies:
+            react: 19.0.0
+            vue: 3.5.13(typescript@5.7.3)
 
     levn@0.4.1:
         dependencies:
