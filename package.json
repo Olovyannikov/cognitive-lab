@@ -10,7 +10,10 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:css": "npx stylelint \"**/*.{css}\" --allow-empty-input",
-    "lint:css:fix": "npx stylelint \"**/*.{css}\" --fix"
+    "lint:css:fix": "npx stylelint \"**/*.{css}\" --fix",
+    "lint:fsd": "npx steiger ./src",
+    "fsd:watch": "npx steiger ./src -w",
+    "fsd:fix": "npx steiger ./src -f"
   },
   "repository": {
     "type": "git",

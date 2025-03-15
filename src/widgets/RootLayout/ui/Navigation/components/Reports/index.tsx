@@ -1,4 +1,4 @@
-import { Box, Button, Collapse, Group, Pill, Text } from '@mantine/core';
+import { Box, Button, Collapse, Group, Pill } from '@mantine/core';
 import { useClickOutside, useDisclosure } from '@mantine/hooks';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
@@ -7,6 +7,7 @@ import { useList, useUnit } from 'effector-react';
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { desktop } from '@/shared/media';
 
+import { ReportGroupTemplate } from './ReportGroupTemplate';
 import { ReportTemplate } from './ReportTemplate';
 
 import c from '../common.module.css';
@@ -52,18 +53,13 @@ export const Reports = () => {
             </Button>
             <Collapse ref={ref} className={s.collapse} in={opened} transitionTimingFunction='linear'>
                 <Box className={s.category}>
-                    <Text hidden={!freeReports?.length} className={s.categoryTitle}>
-                        Бесплатные отчёты
-                    </Text>
-                    {renderFreeReports}
-                    <Text hidden={!paidReports?.length} className={s.categoryTitle}>
-                        Полные отчёты
-                    </Text>
-                    {renderPaidReports}
-                    <Text hidden={!expressReports?.length} className={s.categoryTitle}>
-                        Экспресс отчёты
-                    </Text>
-                    {renderExpressReports}
+                    <ReportGroupTemplate reports={freeReports} render={renderFreeReports} label='Бесплатные отчёты' />
+                    <ReportGroupTemplate reports={paidReports} render={renderPaidReports} label='Полные отчёты' />
+                    <ReportGroupTemplate
+                        reports={expressReports}
+                        render={renderExpressReports}
+                        label='Экспресс отчёты'
+                    />
                 </Box>
             </Collapse>
         </Box>

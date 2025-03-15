@@ -26,7 +26,6 @@ export const ReportHeader = ({ type, name, showPreheader = false }: ReportHeader
                     Ваш тип личности
                 </Text>
                 <Title className={s.name}>{currentName ?? name}</Title>
-                <Text className={s.type}>{type}</Text>
             </Stack>
             <Image
                 draggable={false}
