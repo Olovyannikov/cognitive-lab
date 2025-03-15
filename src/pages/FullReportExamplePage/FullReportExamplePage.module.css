@@ -3,3 +3,13 @@
     display: none;
   }
 }
+
+.block {
+  span:has(strong) {
+    font-size: 18px;
+
+    @mixin larger-than 1024px {
+      font-size: 22px;
+    }
+  }
+}

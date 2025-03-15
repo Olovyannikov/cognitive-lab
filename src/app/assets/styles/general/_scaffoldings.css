@@ -21,14 +21,6 @@ body.page-is-transitioning #page-content {
   display: none !important;
 }
 
-span:has(strong) {
-  font-size: 18px;
-
-  @mixin larger-than 1024px {
-    font-size: 22px;
-  }
-}
-
 pre {
   overflow: auto;
 }

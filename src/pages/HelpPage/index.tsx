@@ -2,8 +2,7 @@ import { Box, Stack, Text } from '@mantine/core';
 import { useGate, useUnit } from 'effector-react';
 
 import { MainButton } from '@/shared/ui';
-import { HelpForm } from '@/widgets/HelpForm';
-import { HelpFormModel } from '@/widgets/HelpForm/model';
+import { HelpForm, HelpFormModel } from '@/widgets/HelpForm';
 import { InnerLayout } from '@/widgets/InnerLayout';
 
 export const HelpPage = () => {

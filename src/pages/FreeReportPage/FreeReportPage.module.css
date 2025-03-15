@@ -2,4 +2,12 @@
   &:not(:last-child) {
     margin-bottom: 60px;
   }
+
+  span:has(strong) {
+    font-size: 18px;
+
+    @mixin larger-than 1024px {
+      font-size: 22px;
+    }
+  }
 }

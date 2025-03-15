@@ -3,8 +3,9 @@ import { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';
 
 import { Section } from '../Section';
 import { FAQ_CONFIG } from './const';
-import s from './FAQ.module.css';
 import UnionImage from './union.svg?react';
+
+import s from './FAQ.module.css';
 
 export const FAQ = () => {
     const items = FAQ_CONFIG.map((item) => (
