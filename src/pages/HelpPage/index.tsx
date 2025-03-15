@@ -3,12 +3,12 @@ import { useGate, useUnit } from 'effector-react';
 
 import { MainButton } from '@/shared/ui';
 import { HelpForm } from '@/widgets/HelpForm';
-import { $isFormSent, HelpFormGate, sentFormChanged } from '@/widgets/HelpForm/model';
+import { HelpFormModel } from '@/widgets/HelpForm/model';
 import { InnerLayout } from '@/widgets/InnerLayout';
 
 export const HelpPage = () => {
-    useGate(HelpFormGate);
-    const [isFormSent, onSendNewFormHandler] = useUnit([$isFormSent, sentFormChanged]);
+    useGate(HelpFormModel.HelpFormGate);
+    const [isFormSent, onSendNewFormHandler] = useUnit([HelpFormModel.$isFormSent, HelpFormModel.sentFormChanged]);
 
     return (
         <Box component='section'>
