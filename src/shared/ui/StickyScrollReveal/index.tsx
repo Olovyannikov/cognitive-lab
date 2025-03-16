@@ -2,8 +2,6 @@ import { type ReactNode, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 
-import { useIsLarge } from '@/shared/hooks';
-
 import s from './StickyScrollReveal.module.css';
 
 export const StickyScrollReveal = ({
@@ -21,7 +19,6 @@ export const StickyScrollReveal = ({
     titleClassName?: string;
     descriptionClassName?: string;
 }) => {
-    const isLarge = useIsLarge();
     const [activeCard, setActiveCard] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -33,7 +30,7 @@ export const StickyScrollReveal = ({
     const cardLength = content.length;
 
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-        const cardsBreakpoints = content.map((_, index) => index / cardLength / (isLarge ? 2 : 1));
+        const cardsBreakpoints = content.map((_, index) => (index * 2) / cardLength / 2);
         const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
             const distance = Math.abs(latest - breakpoint);
             if (distance <= Math.abs(latest - cardsBreakpoints[acc])) {

@@ -19,7 +19,7 @@ export default {
             env: { client: true, server: false },
         },
     },
-    passToClient: ['scopeValues'],
+    passToClient: ['scopeValues', 'isMobile'],
     prerender: false,
     title: 'Cognitive Lab',
     lang: 'ru',

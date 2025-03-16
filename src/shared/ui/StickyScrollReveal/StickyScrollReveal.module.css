@@ -3,6 +3,10 @@
 
   @mixin larger-than 1200px {
     display: flex;
+  }
+
+  @mixin larger-than 1400px {
+    display: flex;
     gap: 240px;
   }
 }
@@ -24,7 +28,7 @@
 .item:not(:last-child) {
   margin-bottom: 10rem;
 
-  @mixin larger-than 1024px {
+  @mixin larger-than 1200px {
     margin-bottom: 20rem;
   }
 }
@@ -42,7 +46,7 @@
     height: 280px;
   }
 
-  @mixin larger-than 1024px {
+  @mixin larger-than 1200px {
     display: none;
   }
 }
@@ -55,7 +59,21 @@
   width: fit-content;
   height: fit-content;
 
-  @mixin larger-than 1024px {
-    display: block;
+  @mixin larger-than 1200px {
+    display: flex;
+    flex: 1;
+    justify-self: flex-end;
+    width: max-content;
+
+    > * {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  @mixin larger-than 1400px {
+    flex: 0 1 auto;
+    justify-self: start;
+    width: fit-content;
   }
 }

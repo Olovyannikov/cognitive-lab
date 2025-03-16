@@ -18,15 +18,12 @@
 
 .container {
   position: relative;
-  padding-bottom: 120px;
-
-  @mixin larger-than 1024px {
-    padding-bottom: 0;
-  }
+  padding-bottom: 0;
 }
 
 .content {
   position: relative;
+  margin-bottom: 10rem;
 }
 
 .card {
@@ -106,8 +103,8 @@
 }
 
 a.control {
-  left: 16px;
-  bottom: 0;
+  display: block;
+  margin: 0 auto;
   width: calc(100% - 2rem);
   min-height: 45px;
   max-width: 697px;
@@ -122,8 +119,6 @@ a.control {
   }
 
   @mixin larger-than 1024px {
-    left: 0;
-    margin-right: auto;
     min-height: 64px;
     font-size: 20px;
     line-height: 24px;
