@@ -10,7 +10,7 @@
 }
 
 .image {
-  object-position: left;
+  object-position: center;
 
   @mixin larger-than 768px {
     flex: 0 1 auto;

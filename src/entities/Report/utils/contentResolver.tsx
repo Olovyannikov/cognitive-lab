@@ -79,11 +79,11 @@ export const contentResolver = ({
         case 'bar_chart':
             return <BarChart marks={barChartPrepareData(content)} />;
         case 'icon_list':
-            return <IconList items={isListItemArray(content.items) ? content.items : []} />;
+            return <IconList items={isListItemArray(content.items) ? content.items : []} color={color} />;
         case 'subscription':
             return <Subscription {...content} subscriptionFormSlot={slots?.subscribeEmail} />;
         case 'text_stroke_dash':
-            return <TextStrokeDash text={content.text ?? ''} />;
+            return <TextStrokeDash text={content.text ?? ''} color={color} />;
         default:
             return <>UNKNOWN</>;
     }

@@ -3,6 +3,7 @@ import { ArrowsClockwise } from '@phosphor-icons/react';
 import { useUnit } from 'effector-react';
 
 import { RephrasingModel } from './model';
+
 import s from './Rephrasing.module.css';
 
 export const Rephrasing = () => {

@@ -27,7 +27,7 @@ export const ReportNavigationTemplate = ({
 }: ReportNavigationTemplateProps) => {
     const isLarge = useIsLarge();
     const icons = getIconsMap(isLarge);
-    const [activeMenu, setActiveMenu] = useState(title ?? content[page] ?? 'Введение');
+    const [activeMenu, setActiveMenu] = useState(content[page] ?? title ?? 'Введение');
     const [_, scrollTo] = useWindowScroll();
 
     const onPageChangeHandler = ({ idx, title }: { idx: number; title: string }) => {
@@ -45,7 +45,7 @@ export const ReportNavigationTemplate = ({
                     width='target'
                     classNames={s}
                     data-color={color}
-                    position='bottom'
+                    position='bottom-end'
                     key={activeMenu}
                     closeOnItemClick
                     middlewares={{
@@ -76,7 +76,7 @@ export const ReportNavigationTemplate = ({
                                         bg={`${color}.1`}
                                         c={`${color}.9`}
                                     >
-                                        {icons[activeMenu]}
+                                        {icons[title ?? activeMenu]}
                                     </Paper>
                                     <Text ta='start' truncate='end' fz={isLarge ? 32 : 20} fw='bold'>
                                         {title ?? activeMenu}

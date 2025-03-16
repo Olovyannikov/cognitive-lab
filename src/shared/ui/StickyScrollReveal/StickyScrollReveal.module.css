@@ -1,8 +1,10 @@
 .wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 2.5rem;
+
+  @mixin larger-than 1200px {
+    display: flex;
+    gap: 240px;
+  }
 }
 
 .items {
@@ -12,11 +14,19 @@
 }
 
 .container {
-  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.item {
+  margin-top: 90px;
 }
 
 .item:not(:last-child) {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
+
+  @mixin larger-than 1024px {
+    margin-bottom: 20rem;
+  }
 }
 
 .item:last-child {
@@ -44,7 +54,6 @@
   overflow: hidden;
   width: fit-content;
   height: fit-content;
-  margin-inline: 2.5rem;
 
   @mixin larger-than 1024px {
     display: block;

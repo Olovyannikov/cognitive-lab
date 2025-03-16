@@ -36,7 +36,7 @@ export const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: Conten
                 <Box className={s.content}>
                     {renderContent.map((c, idx) => (
                         <Box mb={60} key={idx}>
-                            {c.map((el, index) => (
+                            {c?.map((el, index) => (
                                 <Fragment key={el.type + index + idx}>
                                     {contentResolver({ color, content: el })}
                                 </Fragment>

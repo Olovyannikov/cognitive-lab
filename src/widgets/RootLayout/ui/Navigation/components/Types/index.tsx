@@ -1,9 +1,10 @@
 import { Button, Menu, Stack } from '@mantine/core';
-import { ArrowLeft, CaretDown } from '@phosphor-icons/react/dist/ssr';
+import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
 import { useList, useUnit } from 'effector-react';
 
-import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
 import { useIsMedium } from '@/shared/hooks';
+
+import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
 
 import { RootModel } from '../../../../model';
 import { MenuItem } from '../MenuItem';
@@ -39,11 +40,13 @@ export const Types = () => {
             onClose={() => onCloseSubmenu(false)}
             withinPortal={false}
             openDelay={300}
+            // TODO: либо убираем совсем, либо подумать
+            disabled
         >
             <Menu.Target>
                 <a onClick={() => onCloseAllMenus(false)} className={c.link} href='/types'>
                     Типы личности
-                    {isDesktop && <CaretDown size={16} weight='bold' />}
+                    {/*{isDesktop && <CaretDown size={16} weight='bold' />}*/}
                 </a>
             </Menu.Target>
             <Menu.Dropdown style={{ zIndex: 1200 }}>

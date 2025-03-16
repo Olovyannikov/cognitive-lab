@@ -176,8 +176,16 @@ export default eslintTypescript.config(
                         [`^@?\\w`],
                         /* import ... from '@cloud-ru*' or import ... from '@snack-ui*' */
                         [`^(${ourOwnModules})`],
-                        /* import ... from '#foo*' */
-                        ['^#\\w'],
+                        /* import ... from '@foo*' */
+                        ['^@\\w'],
+                        /* import @/shared */
+                        ['@/shared?\\w'],
+                        /* import @/entities */
+                        ['@/entities?\\w'],
+                        /* import @/features */
+                        ['@/features?\\w'],
+                        /* import @/widgets */
+                        ['@/widgets?\\w'],
                         /* import ... from './foo*' or import ... from '../foo*' */
                         ['^\\.'],
                         /* import styles */

@@ -9,9 +9,10 @@ import s from './IconList.module.css';
 
 interface IconListProps {
     items: ListItem[];
+    color?: string;
 }
 
-export const IconList = ({ items }: IconListProps) => {
+export const IconList = ({ items, color }: IconListProps) => {
     const isLarge = useIsLarge();
 
     return (
@@ -19,7 +20,7 @@ export const IconList = ({ items }: IconListProps) => {
             {items.map((item) => (
                 <List.Item
                     icon={
-                        <ThemeIcon color='transparent' c='violet.9' size={isLarge ? 32 : 24}>
+                        <ThemeIcon color='transparent' c={`${color}.9`} size={isLarge ? 32 : 24}>
                             <CheckCircle size={isLarge ? 32 : 24} />
                         </ThemeIcon>
                     }

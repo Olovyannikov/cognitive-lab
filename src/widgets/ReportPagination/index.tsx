@@ -22,9 +22,9 @@ export const ReportPagination = () => {
     });
 
     const icons = getIconsMap(isLarge);
-    const titlePrev = content[page - 1].title;
-    const titleNext = content[page].title;
-    const color = TYPE_TO_COLOR_MAP[content[page].mbti];
+    const titlePrev = content[page - 2].title;
+    const titleNext = content[page]?.title;
+    const color = TYPE_TO_COLOR_MAP[content[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content[0]?.mbti];
     const [_, scrollTo] = useWindowScroll();
 
     return (
@@ -62,7 +62,7 @@ export const ReportPagination = () => {
                                         {icons[titlePrev]}
                                     </Paper>
                                     <Text hidden={!isLarge} className={s.text}>
-                                        {content[page - 1].title ?? ''}
+                                        {content[page - 2].title ?? ''}
                                     </Text>
                                 </Group>
                             </Group>
@@ -85,7 +85,7 @@ export const ReportPagination = () => {
                                     {icons[titleNext]}
                                 </Paper>
                                 <Text hidden={!isLarge} className={s.text}>
-                                    {content[page].title ?? ''}
+                                    {content[page]?.title ?? ''}
                                 </Text>
                             </Group>
                             <ArrowRight
