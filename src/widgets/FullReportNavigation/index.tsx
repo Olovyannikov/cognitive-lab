@@ -1,7 +1,8 @@
 import { useStoreMap, useUnit } from 'effector-react';
 
-import { getFullReportQuery, ReportModel, ReportNavigationTemplate } from '@/entities/Report';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
+
+import { getFullReportQuery, ReportModel, ReportNavigationTemplate } from '@/entities/Report';
 
 export const FullReportNavigation = () => {
     const [page, onPageChange] = useUnit([

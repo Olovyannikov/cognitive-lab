@@ -1,8 +1,9 @@
 import { sample } from 'effector';
 import { isObject } from 'lodash-es';
 
-import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { createPageStart } from '@/shared/utils';
+
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 
 export const pageStarted = createPageStart();
 
@@ -11,7 +12,7 @@ sample({
     fn: (ctx) => ({
         id: ctx.urlParsed.search.order_id,
     }),
-    target: getSurveysInfoQuery.start,
+    target: getSurveysInfoQuery.refresh,
 });
 
 sample({

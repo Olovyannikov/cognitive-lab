@@ -82,3 +82,18 @@
     display: block;
   }
 }
+
+.content {
+  font-size: 16px;
+  line-height: 18px;
+
+  @mixin larger-than 768px {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+}

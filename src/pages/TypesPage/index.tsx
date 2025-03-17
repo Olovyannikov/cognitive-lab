@@ -1,13 +1,13 @@
 import { Stack } from '@mantine/core';
 import { useList } from 'effector-react';
 
+import { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';
+
 import { PageLayout } from '@/widgets/PageLayout';
 
-import { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '../../entities/Personality';
-
 export const TypesPage = () => {
-    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types }) => (
-        <PersonalityCategory title={category} types={types} />
+    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => (
+        <PersonalityCategory description={description} title={category} types={types} />
     ));
 
     return (

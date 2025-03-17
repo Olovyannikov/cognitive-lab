@@ -12,21 +12,19 @@ export const NavigateToFullStructureTemplate = ({
     text = 'Посмотреть структуру отчета',
     link = '/full-report/example',
     ...props
-}: NavigateToFullStructureTemplateProps) => {
-    return (
-        <Button
-            mih={45}
-            size='md'
-            c='dark.7'
-            href={link}
-            component='a'
-            color='dark.7'
-            classNames={s}
-            variant='outline'
-            leftSection={<FileText size={24} />}
-            {...props}
-        >
-            {text}
-        </Button>
-    );
-};
+}: NavigateToFullStructureTemplateProps) => (
+    <Button
+        mih={45}
+        size='md'
+        c='dark.7'
+        href={link}
+        component='a'
+        color='dark.7'
+        classNames={s}
+        variant='outline'
+        leftSection={<FileText size={24} />}
+        {...props}
+    >
+        {text}
+    </Button>
+);

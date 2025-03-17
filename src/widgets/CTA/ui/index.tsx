@@ -4,6 +4,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 
 import { getPersonalityTypeQuery } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
+
 import { BuyNowButton } from '@/features/BuyNowButton';
 import { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';
 import { RedirectToTestPage } from '@/features/RedirectToTestPage';

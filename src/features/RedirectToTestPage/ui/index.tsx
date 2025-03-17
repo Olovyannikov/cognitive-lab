@@ -3,19 +3,17 @@ import clsx from 'clsx';
 
 import s from './RedirectToTestPage.module.css';
 
-export const RedirectToTestPage = ({ ...props }: ButtonProps) => {
-    return (
-        <Button
-            component='a'
-            href='/test'
-            fullWidth
-            size='lg'
-            radius='md'
-            bg='dark.6'
-            className={clsx(props.className, s.button)}
-            {...props}
-        >
-            Пройти тест
-        </Button>
-    );
-};
+export const RedirectToTestPage = ({ ...props }: ButtonProps) => (
+    <Button
+        component='a'
+        href='/test'
+        fullWidth
+        size='lg'
+        radius='md'
+        bg='dark.6'
+        className={clsx(props.className, s.button)}
+        {...props}
+    >
+        Пройти тест
+    </Button>
+);

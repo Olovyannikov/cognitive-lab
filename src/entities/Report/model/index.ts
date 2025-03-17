@@ -56,7 +56,7 @@ export const ReportModel = atom(() => {
     sample({
         clock: delay(ReportGate.open, 500),
         fn: () => undefined,
-        target: getSurveysInfoQuery.start,
+        target: getSurveysInfoQuery.refresh,
     });
 
     return {

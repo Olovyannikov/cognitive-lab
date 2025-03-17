@@ -5,6 +5,7 @@ import { zodResolver } from 'mantine-form-zod-resolver';
 
 import { SubscribeToNewsModel } from './model';
 import { SubscribeToNewsSchema } from './schema';
+
 import s from './SubscribeToNews.module.css';
 
 export const SubscribeToNews = () => {

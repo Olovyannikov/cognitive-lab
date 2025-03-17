@@ -7,7 +7,9 @@ import { isArray } from 'lodash-es';
 import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
+
 import { Rephrasing } from '@/features/Rephrasing';
+
 import { SubmitTestModel } from '@/widgets/Test';
 
 import s from './Controls.module.css';
