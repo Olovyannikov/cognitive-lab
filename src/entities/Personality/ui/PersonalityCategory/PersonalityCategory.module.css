@@ -40,7 +40,8 @@
   text-align: center;
 
   @mixin larger-than 992px {
-    margin-bottom: var(--mantine-spacing-5xl);
+    margin: 0 auto var(--mantine-spacing-5xl);
+    max-width: 1386px;
     font-size: 24px;
   }
 }
