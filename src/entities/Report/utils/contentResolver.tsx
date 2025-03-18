@@ -4,6 +4,7 @@ import type { PartialRecord } from '@/shared/types';
 
 import type { Content, ContentType } from '../types';
 import {
+    AccordionBlock,
     BarChart,
     BlockQuoteFilled,
     BlockquoteLine,
@@ -84,6 +85,8 @@ export const contentResolver = ({
             return <Subscription {...content} subscriptionFormSlot={slots?.subscribeEmail} />;
         case 'text_stroke_dash':
             return <TextStrokeDash text={content.text ?? ''} color={color} />;
+        case 'accordion':
+            return <AccordionBlock items={isListItemArray(content.items) ? content.items : []} />;
         default:
             return <>UNKNOWN</>;
     }

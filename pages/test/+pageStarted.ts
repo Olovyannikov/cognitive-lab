@@ -1,7 +1,8 @@
 import { persist } from 'effector-storage/local';
 
+import { createPageStart } from '@/shared/utils';
+
 import { TestModel } from '@/entities/Test';
-import { createPageStart } from '@/shared/utils/effector';
 
 export const pageStarted = createPageStart();
 

@@ -21,3 +21,4 @@ export * from './ReportNavigationTemplate';
 export * from './BlockQuoteFilled';
 export * from './CategoryBanner';
 export * from './BarChart';
+export * from './AccordionBlock';

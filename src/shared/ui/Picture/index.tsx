@@ -24,6 +24,8 @@ export const Picture = ({ src, width, height, alt = '', draggable = false, class
             <Image
                 loading='lazy'
                 draggable={draggable}
+                w={width}
+                h={height}
                 width={width}
                 height={height}
                 src={fullPath + '.png'}

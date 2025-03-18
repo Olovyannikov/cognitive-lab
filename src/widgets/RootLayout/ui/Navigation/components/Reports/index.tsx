@@ -4,8 +4,9 @@ import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { useList, useUnit } from 'effector-react';
 
-import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { desktop } from '@/shared/media';
+
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 
 import { ReportGroupTemplate } from './ReportGroupTemplate';
 import { ReportTemplate } from './ReportTemplate';
@@ -28,9 +29,15 @@ export const Reports = () => {
     ]);
 
     const isLoading = pending || stale;
-    const renderFreeReports = useList(ReportModel.$freeUserReports, (report) => <ReportTemplate {...report} />);
-    const renderPaidReports = useList(ReportModel.$paidUserReports, (report) => <ReportTemplate {...report} />);
-    const renderExpressReports = useList(ReportModel.$expressUserReports, (report) => <ReportTemplate {...report} />);
+    const renderFreeReports = useList(ReportModel.$freeUserReports, (report) => (
+        <ReportTemplate onClose={close} {...report} />
+    ));
+    const renderPaidReports = useList(ReportModel.$paidUserReports, (report) => (
+        <ReportTemplate onClose={close} {...report} />
+    ));
+    const renderExpressReports = useList(ReportModel.$expressUserReports, (report) => (
+        <ReportTemplate onClose={close} {...report} />
+    ));
 
     if (allReports?.length < 1) return null;
 

@@ -12,6 +12,7 @@ interface ReportTemplateProps {
     user_report: string;
     created_at: string;
     report_kind: string;
+    onClose(): void;
 }
 
 export const ReportTemplate = (report: ReportTemplateProps) => {
@@ -35,7 +36,10 @@ export const ReportTemplate = (report: ReportTemplateProps) => {
             gap='xl'
             component='a'
             href={getReportUrl()}
-            onClick={() => onClose(false)}
+            onClick={() => {
+                onClose(false);
+                report.onClose();
+            }}
         >
             <Text>
                 {types[report.mbti_type]} ({report.mbti_type})

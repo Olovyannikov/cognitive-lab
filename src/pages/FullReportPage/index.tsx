@@ -1,5 +1,5 @@
 import { Box, Container } from '@mantine/core';
-import { useStoreMap, useUnit } from 'effector-react';
+import { useGate, useStoreMap, useUnit } from 'effector-react';
 
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { PageLoader } from '@/shared/ui';
@@ -11,6 +11,7 @@ import { FullReportSlice } from '@/widgets/FullReportSlice';
 import { ReportPagination } from '@/widgets/ReportPagination';
 
 export const FullReportPage = () => {
+    useGate(ReportModel.ReportPageGate);
     const { data, pending, stale } = useUnit(getFullReportQuery);
     const [isFirstPage, page] = useUnit([
         ReportModel.$currentContentPage.map((page) => page === 0),

@@ -14,6 +14,7 @@ export type ContentType =
     | 'cards'
     | 'ordered_list'
     | 'blockquote_filled'
+    | 'accordion'
     | 'title';
 
 export interface Content {
@@ -35,6 +36,7 @@ export interface ListItem {
     text?: string;
     type?: 'paragraph' | 'title_paragraph';
     title?: string;
+    subtitle?: string;
     color?: 'primary' | 'secondary';
     order?: number;
     highlight?: null;
