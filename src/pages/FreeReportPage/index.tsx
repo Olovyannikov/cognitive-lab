@@ -8,6 +8,7 @@ import { InnerContainer, PageLoader } from '@/shared/ui';
 import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
 
+import { NavigateToReviewPage } from '@/features/NavigateToReviewPage';
 import { SendReportEmail } from '@/features/SendReportEmail';
 
 import { CALL_TO_ACTION } from '@/widgets/CTA';
@@ -55,6 +56,7 @@ export const FreeReportPage = () => {
                         </Stack>
                     ))}
                 </InnerContainer>
+                <NavigateToReviewPage />
             </Container>
         </Box>
     );

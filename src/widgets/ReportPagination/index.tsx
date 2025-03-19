@@ -31,7 +31,6 @@ export const ReportPagination = () => {
     return (
         <Pagination.Root
             className={s.root}
-            mb={60}
             value={page}
             onChange={(page) => {
                 scrollTo({

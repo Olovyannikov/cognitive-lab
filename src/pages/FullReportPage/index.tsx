@@ -6,6 +6,8 @@ import { PageLoader } from '@/shared/ui';
 
 import { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel } from '@/entities/Report';
 
+import { NavigateToReviewPage } from '@/features/NavigateToReviewPage';
+
 import { FullReportNavigation } from '@/widgets/FullReportNavigation';
 import { FullReportSlice } from '@/widgets/FullReportSlice';
 import { ReportPagination } from '@/widgets/ReportPagination';
@@ -34,6 +36,7 @@ export const FullReportPage = () => {
                 {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}
                 <FullReportNavigation />
                 <FullReportSlice page={page} />
+                <NavigateToReviewPage />
                 <ReportPagination />
             </Container>
         </Box>

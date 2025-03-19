@@ -4,9 +4,10 @@ import { Button, Center, Group, Menu, Paper, Text } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 
-import { getIconsMap } from '@/entities/Report';
 import { useIsLarge } from '@/shared/hooks';
 import { InnerContainer } from '@/shared/ui';
+
+import { getIconsMap } from '@/entities/Report';
 
 import s from './ReportNavigationTemplate.module.css';
 

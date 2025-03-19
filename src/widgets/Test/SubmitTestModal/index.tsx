@@ -1,8 +1,9 @@
 import { Button, Group, Modal, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { submitAnswersMutation } from '@/entities/Test';
 import { MainButton } from '@/shared/ui';
+
+import { submitAnswersMutation } from '@/entities/Test';
 
 import { SubmitTestModel } from './model';
 

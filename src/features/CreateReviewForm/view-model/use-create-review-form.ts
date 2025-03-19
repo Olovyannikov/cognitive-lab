@@ -9,13 +9,14 @@ import { CreateReviewFormSchema } from '../schema';
 
 export const useCreateReviewFormViewModel = () => {
     const {
-        urlParsed: { search },
+        routeParams: { userReport },
     } = usePageContext();
 
-    const [createReviewHandler] = useUnit([ReviewModel.reviewCreated]);
+    const [createReviewHandler, isSubmitted] = useUnit([
+        ReviewModel.reviewCreated,
+        ReviewModel.$isFormSubmittedSuccessfully,
+    ]);
     const isLoading = useUnit(createReviewMutation.$pending);
-
-    const userReport = search.user_report;
 
     const form = useForm({
         mode: 'controlled',
@@ -85,6 +86,9 @@ export const useCreateReviewFormViewModel = () => {
 
     const onSubmit = form.onSubmit((data) => {
         createReviewHandler(data);
+        if (isSubmitted) {
+            form.reset();
+        }
     });
 
     return {

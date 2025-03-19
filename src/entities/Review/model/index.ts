@@ -1,16 +1,19 @@
 import { notifications } from '@mantine/notifications';
 import { createEffect, createEvent, createStore, sample } from 'effector';
-import { debounce } from 'patronum';
+import { createGate } from 'effector-react';
+import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
+import { isErrorWithMessage } from '@/shared/types';
 
 import { createReviewMutation } from '../api';
 import type { CreateReviewRequest } from '../api/dto';
 
 export const ReviewModel = atom(() => {
+    const ReviewGate = createGate();
     const reviewCreated = createEvent<CreateReviewRequest>();
-    const $isFormSubmitterSuccessfully = createStore(false);
-    const $hasError = createStore(false);
+    const $isFormSubmittedSuccessfully = createStore(false);
+    const $hasError = createStore<string | false>(false);
 
     const showMessageFx = createEffect(({ message, isError }: { message: string; isError?: boolean }) => {
         notifications.show({
@@ -28,23 +31,23 @@ export const ReviewModel = atom(() => {
     sample({
         clock: createReviewMutation.finished.success,
         fn: () => true,
-        target: $isFormSubmitterSuccessfully,
+        target: $isFormSubmittedSuccessfully,
     });
 
     sample({
-        clock: debounce($isFormSubmitterSuccessfully, 500),
+        clock: ReviewGate.close,
         fn: () => false,
-        target: $isFormSubmitterSuccessfully,
+        target: $isFormSubmittedSuccessfully,
     });
 
     sample({
         clock: createReviewMutation.finished.failure,
-        fn: () => true,
+        fn: ({ error }) => (isErrorWithMessage(error) ? error.data.message : 'Произошла ошибка'),
         target: $hasError,
     });
 
     sample({
-        clock: $isFormSubmitterSuccessfully,
+        clock: $isFormSubmittedSuccessfully,
         filter: (success) => success === true,
         fn: () => ({
             message: 'Отзыв успешно отправлен!',
@@ -55,15 +58,22 @@ export const ReviewModel = atom(() => {
 
     sample({
         clock: $hasError,
-        filter: (hasError) => hasError === true,
-        fn: () => ({
-            message: 'Произошла ошибка',
+        filter: (hasError) => hasError !== false,
+        fn: (error) => ({
+            message: error === false ? 'Произошла ошибка' : error,
             isError: true,
         }),
         target: showMessageFx,
     });
 
+    sample({
+        clock: delay($hasError, 300),
+        target: $hasError.reinit,
+    });
+
     return {
         reviewCreated,
+        $isFormSubmittedSuccessfully,
+        ReviewGate,
     };
 });

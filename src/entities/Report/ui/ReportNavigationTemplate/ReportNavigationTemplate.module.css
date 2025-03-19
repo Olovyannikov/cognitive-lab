@@ -19,8 +19,13 @@
 .block {
   margin-bottom: var(--mantine-spacing-3xl);
   background-color: var(--mantine-color-white);
+  margin-inline: calc(-1 * var(--mantine-spacing-md));
   padding-block: var(--mantine-spacing-lg);
   padding-inline: var(--mantine-spacing-md);
+
+  @mixin larger-than 992px {
+    margin-inline: 0;
+  }
 }
 
 .block [data-block] {

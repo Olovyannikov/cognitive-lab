@@ -1,0 +1,8 @@
+.text {
+  font-weight: 600;
+  font-size: 22px;
+
+  @mixin larger-than 992px {
+    font-size: 32px;
+  }
+}

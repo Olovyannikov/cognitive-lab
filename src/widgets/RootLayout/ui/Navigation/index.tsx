@@ -27,13 +27,21 @@ export const Navigation = () => {
                 opened={isOpen}
                 className={s.drawer}
                 onClose={() => onClose(false)}
-                title={<RedirectToTestPage w='100%' />}
+                title={<RedirectToTestPage onClick={() => onClose(false)} w='100%' />}
             >
                 {items}
             </Drawer>
             <Group wrap='nowrap' component='nav' visibleFrom='lg'>
                 {items}
-                <RedirectToTestPage className={s.testLink} maw={144} w='100%' px={22} mih={45} fz={16} />
+                <RedirectToTestPage
+                    onClick={() => onClose(false)}
+                    className={s.testLink}
+                    maw={144}
+                    w='100%'
+                    px={22}
+                    mih={45}
+                    fz={16}
+                />
             </Group>
         </>
     );

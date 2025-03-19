@@ -1,12 +1,19 @@
 .root {
   position: sticky;
   bottom: 0;
+  box-shadow: 0 0 4px 1px #0d151a26;
   background-color: var(--mantine-color-white);
+  margin-inline: calc(var(--mantine-spacing-md) * -1);
   padding-block: var(--mantine-spacing-lg);
+  padding-inline: var(--mantine-spacing-md);
 
   @mixin larger-than 992px {
     position: static;
+    margin-bottom: 60px;
     padding: 0;
+    box-shadow: none;
+    margin-inline: 0;
+    padding-inline: 0;
   }
 }
 

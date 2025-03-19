@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Box, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from '@mantine/core';
 
 import { MainButton } from '@/shared/ui';
@@ -37,22 +37,47 @@ export const CreateReviewForm = ({ slots }: CreateReviewFormProps) => {
                         <Stack gap='xxs'>
                             <Text fw='bold'>{informativenessRateRatingProps.label}</Text>
                             <Rating size='xl' {...informativenessRateRatingProps} />
+                            {informativenessRateRatingProps.error && (
+                                <Text fz={14} c='red'>
+                                    Поле обязательно
+                                </Text>
+                            )}
                         </Stack>
                         <Stack gap='xxs'>
-                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>
+                            <Text fw='bold'>{convenienceRateProps.label}</Text>
                             <Rating size='xl' {...convenienceRateProps} />
+                            {convenienceRateProps.error && (
+                                <Text fz={14} c='red'>
+                                    Поле обязательно
+                                </Text>
+                            )}
                         </Stack>
                         <Stack gap='xxs'>
-                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>
+                            <Text fw='bold'>{accuracyRateProps.label}</Text>
                             <Rating size='xl' {...accuracyRateProps} />
+                            {accuracyRateProps.error && (
+                                <Text fz={14} c='red'>
+                                    Поле обязательно
+                                </Text>
+                            )}
                         </Stack>
                         <Stack gap='xxs'>
-                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>
+                            <Text fw='bold'>{recommendabilityRateProps.label}</Text>
                             <Rating size='xl' {...recommendabilityRateProps} />
+                            {recommendabilityRateProps.error && (
+                                <Text fz={14} c='red'>
+                                    Поле обязательно
+                                </Text>
+                            )}
                         </Stack>
                         <Stack gap='xxs'>
-                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>
+                            <Text fw='bold'>{satisfactionRateProps.label}</Text>
                             <Rating size='xl' {...satisfactionRateProps} />
+                            {satisfactionRateProps.error && (
+                                <Text fz={14} c='red'>
+                                    Поле обязательно
+                                </Text>
+                            )}
                         </Stack>
                     </Stack>
                 </Stack>
