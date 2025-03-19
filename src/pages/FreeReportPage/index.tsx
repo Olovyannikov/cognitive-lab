@@ -2,11 +2,14 @@ import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';
-import { UserModel } from '@/entities/User';
-import { SendReportEmail } from '@/features/SendReportEmail';
 import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer, PageLoader } from '@/shared/ui';
+
+import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';
+import { UserModel } from '@/entities/User';
+
+import { SendReportEmail } from '@/features/SendReportEmail';
+
 import { CALL_TO_ACTION } from '@/widgets/CTA';
 import { FreeReportNavigation } from '@/widgets/FreeReportNavigation';
 

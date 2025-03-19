@@ -4,19 +4,20 @@
   align-items: center;
   gap: var(--mantine-spacing-xs);
 
-  img {
-    flex: 1;
-    width: 185px;
-    height: auto;
+  :is(img) {
+    flex: 1 0 auto !important;
+    width: 140px;
+    height: 140px;
     object-position: top;
   }
 
   @mixin larger-than 976px {
     flex-direction: row-reverse;
+    align-items: flex-start;
 
-    img {
-      width: 468px;
-      height: auto;
+    :is(picture, img) {
+      width: 300px !important;
+      height: 300px !important;
     }
   }
 }

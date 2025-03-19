@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
 import { Image, Paper, Text, Title } from '@mantine/core';
 
-import { InnerContainer } from '@/shared/ui';
-import { Picture } from '@/shared/ui/Picture';
+import { InnerContainer, Picture } from '@/shared/ui';
 
 import s from './Banner.module.css';
 

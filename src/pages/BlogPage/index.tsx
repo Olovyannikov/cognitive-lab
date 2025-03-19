@@ -1,8 +1,10 @@
 import { Grid, isNumberLike, Pagination } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
 
-import { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';
 import { PageLoader } from '@/shared/ui';
+
+import { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';
+
 import { PageLayout } from '@/widgets/PageLayout';
 
 export const BlogPage = () => {

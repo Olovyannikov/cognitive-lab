@@ -3,6 +3,7 @@ import { useUnit } from 'effector-react';
 
 import { getBlogPostByIdQuery, Post } from '@/entities/Blog';
 import { Banner } from '@/entities/Report';
+
 import { CALL_TO_ACTION } from '@/widgets/CTA';
 
 import s from './BlogPostPage.module.css';
