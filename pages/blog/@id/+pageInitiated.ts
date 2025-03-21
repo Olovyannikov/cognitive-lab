@@ -1,7 +1,8 @@
 import { sample } from 'effector';
 
+import { createPageInit } from '@/shared/lib/effector';
+
 import { getBlogPostByIdQuery } from '@/entities/Blog';
-import { createPageInit } from '@/shared/utils/effector';
 
 export const pageInitiated = createPageInit();
 

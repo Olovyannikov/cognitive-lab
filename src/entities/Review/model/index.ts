@@ -4,8 +4,8 @@ import { createGate } from 'effector-react';
 import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
-import { isErrorWithMessage } from '@/shared/types';
 
+import { isErrorWithMessage } from '../../../shared/lib/types';
 import { createReviewMutation } from '../api';
 import type { CreateReviewRequest } from '../api/dto';
 
@@ -14,6 +14,7 @@ export const ReviewModel = atom(() => {
     const reviewCreated = createEvent<CreateReviewRequest>();
     const $isFormSubmittedSuccessfully = createStore(false);
     const $hasError = createStore<string | false>(false);
+    const $currentReviewId = createStore<string | null>(null);
 
     const showMessageFx = createEffect(({ message, isError }: { message: string; isError?: boolean }) => {
         notifications.show({
@@ -75,5 +76,6 @@ export const ReviewModel = atom(() => {
         reviewCreated,
         $isFormSubmittedSuccessfully,
         ReviewGate,
+        $currentReviewId,
     };
 });

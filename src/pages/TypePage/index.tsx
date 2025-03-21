@@ -2,12 +2,16 @@ import { Fragment } from 'react';
 import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
 
-import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
-import { SendReportEmail } from '@/features/SendReportEmail';
-import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
 import { InnerContainer } from '@/shared/ui';
+
+import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
+
+import { SendReportEmail } from '@/features/SendReportEmail';
+
 import { CALL_TO_ACTION } from '@/widgets/CTA';
 import { ShowFullStructure } from '@/widgets/ShowFullStructure';
+
+import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
 
 import s from './TypePage.module.css';
 

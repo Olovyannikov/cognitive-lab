@@ -7,10 +7,14 @@
     "action";
 
   @mixin larger-than 998px {
+    grid-auto-rows: 0fr;
     grid-template-areas:
       "title image"
       "text  image"
       "action image";
+    grid-template-rows: 0fr;
+    margin: 120px auto 0;
+    max-width: 883px;
   }
 }
 
@@ -20,15 +24,18 @@
 
   @mixin larger-than 998px {
     margin-bottom: var(--mantine-spacing-md);
+    margin-left: 60px;
   }
 }
 
 .title {
   grid-area: title;
   margin-bottom: var(--mantine-spacing-sm);
+  text-align: center;
 
   @mixin larger-than 998px {
-    margin-bottom: var(--mantine-spacing-md);
+    font-size: 40px;
+    text-align: left;
   }
 }
 

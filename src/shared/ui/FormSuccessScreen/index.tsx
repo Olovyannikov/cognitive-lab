@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
-import { Box, Image, Text, Title } from '@mantine/core';
+import { Box, Text, Title } from '@mantine/core';
+
+import { Picture } from '@/shared/ui';
 
 import s from './FormSuccessScreen.module.css';
 
@@ -25,7 +27,7 @@ export const FormSuccessScreen = ({
     slots,
 }: FormSuccessScreenProps) => (
     <Box className={s.box}>
-        <Image className={s.image} w={145} aria-hidden={true} src={image} alt={title} />
+        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />
         <Title className={s.title} order={3}>
             {title}
         </Title>

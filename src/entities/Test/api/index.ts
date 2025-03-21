@@ -2,8 +2,8 @@ import { createMutation, createQuery } from '@farfetched/core';
 
 import { createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';
 
-import type { Answers } from '../types';
 import type { QuestionsResponse } from './dto';
+import type { Answers } from './types';
 
 export const getQuestionsQuery = createQuery({
     effect: createCommonRequestFx<void, QuestionsResponse[]>(() => ({

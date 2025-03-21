@@ -1,8 +1,9 @@
 import type { PropsWithChildren } from 'react';
 import { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks';
 import { Picture } from '@/shared/ui';
+
+import { useIsLarge } from '../../../../shared/lib/hooks';
 
 import s from './AdBanner.module.css';
 

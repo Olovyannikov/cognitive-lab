@@ -3,7 +3,7 @@ import { NavigationProgress } from '@mantine/nprogress';
 
 import { MantineProvider } from '@/app/providers';
 
-import { EffectorProvider, ScopeProvider } from '@/shared/utils';
+import { EffectorProvider, ScopeProvider } from '../src/shared/lib';
 
 import '@/app/assets/styles/index.css';
 

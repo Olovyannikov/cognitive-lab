@@ -1,9 +1,10 @@
+import { cache } from '@farfetched/core';
 import { sample } from 'effector';
 import { isObject } from 'lodash-es';
 
-import { createPageStart } from '@/shared/utils';
-
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+
+import { createPageStart } from '../../src/shared/lib';
 
 export const pageStarted = createPageStart();
 
@@ -25,3 +26,5 @@ sample({
         }) ?? null,
     target: ReportModel.$userOrder,
 });
+
+cache(getSurveysInfoQuery);

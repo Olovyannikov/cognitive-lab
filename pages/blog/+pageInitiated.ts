@@ -1,8 +1,9 @@
 import { createEffect, sample } from 'effector';
 import { navigate } from 'vike/client/router';
 
+import { createPageInit } from '@/shared/lib/effector';
+
 import { getBlogPostsQuery } from '@/entities/Blog';
-import { createPageInit } from '@/shared/utils/effector';
 
 export const pageInitiated = createPageInit();
 

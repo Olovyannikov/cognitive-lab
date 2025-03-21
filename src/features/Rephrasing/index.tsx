@@ -3,8 +3,7 @@ import { variant } from '@effector/reflect';
 import { Button } from '@mantine/core';
 import { ArrowsClockwise } from '@phosphor-icons/react';
 
-import { isExists } from '@/shared/utils';
-
+import { isExists } from '../../shared/lib';
 import { RephrasingModel } from './model';
 
 import s from './Rephrasing.module.css';

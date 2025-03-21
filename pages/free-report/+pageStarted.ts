@@ -1,7 +1,8 @@
 import { sample } from 'effector';
 
+import { createPageStart } from '@/shared/lib/effector';
+
 import { getFreeResultQuery } from '@/entities/Report';
-import { createPageStart } from '@/shared/utils/effector';
 
 export const pageStarted = createPageStart();
 

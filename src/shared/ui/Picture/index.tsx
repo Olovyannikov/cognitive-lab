@@ -8,11 +8,21 @@ interface PictureProps extends ImageProps {
     height?: number;
     alt?: string;
     draggable?: boolean;
+    extraPath?: string;
 }
 
-export const Picture = ({ src, width, height, alt = '', draggable = false, className, ...props }: PictureProps) => {
+export const Picture = ({
+    src,
+    width,
+    height,
+    alt = '',
+    draggable = false,
+    className,
+    extraPath,
+    ...props
+}: PictureProps) => {
     const path = src?.split('/').at(-1);
-    const fullPath = `${src}/${path}`;
+    const fullPath = `${src}/${path}${extraPath ? `${extraPath}` : ''}`;
 
     return (
         <picture className={clsx(s.picture, className)}>

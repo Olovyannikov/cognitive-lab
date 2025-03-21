@@ -2,7 +2,7 @@ import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
+import { TYPE_TO_COLOR_MAP } from '@/shared/lib';
 import { InnerContainer, PageLoader } from '@/shared/ui';
 
 import { contentResolver, getFreeResultQuery, ReportHeader } from '@/entities/Report';

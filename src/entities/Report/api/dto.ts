@@ -35,4 +35,18 @@ export interface SurveysInfoResponse {
         created_at: string;
         report_kind: string;
     }[];
+    left_comments: {
+        accuracy_rate: number;
+        convenience_rate: number;
+        created_at: string;
+        id: string;
+        informativeness_rate: number;
+        mbti_type: string;
+        name: string;
+        overall_rate: number;
+        recommendability_rate: number;
+        satisfaction_rate: number;
+        text: string;
+        user_report: string;
+    }[];
 }

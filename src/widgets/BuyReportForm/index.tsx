@@ -1,10 +1,11 @@
 import { Button, Flex, Paper, Text, TextInput } from '@mantine/core';
 import { useGate, useUnit } from 'effector-react';
 
-import { getPriceWithPromocodeQuery } from '@/entities/Report';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
-import { toInputUppercase } from '@/shared/utils';
 
+import { getPriceWithPromocodeQuery } from '@/entities/Report';
+
+import { toInputUppercase } from '../../shared/lib';
 import {
     $promocodeErrorMessage,
     $showSuccessPromoMessage,

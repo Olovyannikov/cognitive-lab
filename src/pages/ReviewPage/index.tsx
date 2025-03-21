@@ -1,25 +1,27 @@
 import { useUnit } from 'effector-react';
 
-import { ReviewModel } from '@/entities/Review';
+import { FormSuccessScreen, PageLoader } from '@/shared/ui';
 
-import { CreateReviewForm } from '@/features/CreateReviewForm';
+import { getSurveysInfoQuery } from '@/entities/Report';
+
+import { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';
 import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
+import { NavigateToMainPage } from '@/features/NavigateToMainPage';
 
 import { InnerLayout } from '@/widgets/InnerLayout';
 
 export const ReviewPage = () => {
-    const [isSubmitted] = useUnit([ReviewModel.$isFormSubmittedSuccessfully]);
+    const { pending, stale } = useUnit(getSurveysInfoQuery);
+
+    const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);
+
+    if (pending || stale) return <PageLoader />;
 
     return (
         <InnerLayout
-            title={isSubmitted ? 'Спасибо за отзыв' : 'Оставьте отзыв'}
-            text={
-                isSubmitted
-                    ? 'Благодарим вас за то, что поделились своим мнением! \n' +
-                      'Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'
-                    : 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'
-            }
-            image={isSubmitted ? '/review/star' : '/review/question-bubble'}
+            title={!isSubmitted && 'Оставьте отзыв'}
+            text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}
+            image={!isSubmitted ? '/review/question-bubble' : undefined}
         >
             {!isSubmitted && (
                 <CreateReviewForm
@@ -28,7 +30,15 @@ export const ReviewPage = () => {
                     }}
                 />
             )}
-            {isSubmitted && <>Спасибо за отзыв!</>}
+            {isSubmitted && (
+                <FormSuccessScreen
+                    description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'
+                    image='/review/star'
+                    slots={{
+                        action: <NavigateToMainPage fullWidth />,
+                    }}
+                />
+            )}
         </InnerLayout>
     );
 };

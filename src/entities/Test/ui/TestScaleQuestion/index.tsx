@@ -1,8 +1,8 @@
 import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';
 
 import type { QuestionsResponse } from '../../api/dto';
-import { SCALE_RADIO_ITEMS } from '../../constants';
-import type { PreparedAnswer } from '../../types';
+import type { PreparedAnswer } from '../../api/types';
+import { SCALE_RADIO_ITEMS } from '../../lib/constants';
 import { RadioElement } from '../RadioElement';
 import { QuestionTitle } from '../TestQuestionTitle';
 

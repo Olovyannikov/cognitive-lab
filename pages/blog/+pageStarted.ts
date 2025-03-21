@@ -1,8 +1,8 @@
 import { persist } from 'effector-storage/query';
 
-import { createPageStart } from '@/shared/utils';
-
 import { BlogModel } from '@/entities/Blog';
+
+import { createPageStart } from '../../src/shared/lib';
 
 export const pageStarted = createPageStart();
 

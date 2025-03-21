@@ -1,7 +1,6 @@
 import { Button, Flex } from '@mantine/core';
 
-import { useIsDesktop } from '@/shared/hooks';
-
+import { useIsDesktop } from '../../../../shared/lib/hooks';
 import { Section } from '../Section';
 import { Card } from './Card';
 import FirstCardImage from './img/image-card-1.svg?react';

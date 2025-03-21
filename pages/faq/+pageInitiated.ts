@@ -1,7 +1,8 @@
 import { sample } from 'effector';
 
+import { createPageInit } from '@/shared/lib/effector';
+
 import { getFAQQuery } from '@/entities/FAQ';
-import { createPageInit } from '@/shared/utils/effector';
 
 export const pageInitiated = createPageInit();
 

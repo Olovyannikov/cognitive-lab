@@ -1,8 +1,7 @@
 import { Box, Group, Paper, Popover, Slider, Stack, Transition } from '@mantine/core';
 import { Info } from '@phosphor-icons/react/dist/ssr';
 
-import { useIsLarge } from '@/shared/hooks';
-
+import { useIsLarge } from '../../../../shared/lib/hooks';
 import type { Mark } from '../../types';
 import { Header } from '../Header';
 import { Paragraph } from '../Paragraph';

@@ -3,10 +3,10 @@ import { useWindowScroll } from '@mantine/hooks';
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { useStoreMap, useUnit } from 'effector-react';
 
-import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
-import { useIsLarge } from '@/shared/hooks';
-
 import { getFullReportQuery, getIconsMap, ReportModel } from '@/entities/Report';
+
+import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
+import { useIsLarge } from '../../shared/lib/hooks';
 
 import s from './ReportPagination.module.css';
 

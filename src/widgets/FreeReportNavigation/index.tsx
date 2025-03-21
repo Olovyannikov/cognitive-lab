@@ -1,8 +1,8 @@
 import { useStoreMap, useUnit } from 'effector-react';
 
-import { TYPE_TO_COLOR_MAP } from '@/shared/constants';
-
 import { getFreeResultQuery, ReportModel, ReportNavigationTemplate } from '@/entities/Report';
+
+import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
 
 export const FreeReportNavigation = () => {
     const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);

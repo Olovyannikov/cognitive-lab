@@ -1,8 +1,8 @@
 import { Checkbox, Paper, Stack } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks';
 import { IconCheck, InputBorderless } from '@/shared/ui';
 
+import { useIsLarge } from '../../../../shared/lib/hooks';
 import type { QuestionsResponse } from '../../api/dto';
 import type { MultiChoiceAnswer } from '../../types';
 import { AnswerLabel } from '../AnswerLabel';

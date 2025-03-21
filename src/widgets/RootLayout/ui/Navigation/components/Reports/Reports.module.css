@@ -16,7 +16,7 @@
   color: var(--mantine-color-gray-9);
   transition: 0.15s ease-in-out background-color;
 
-  @mixin larger-than 992px {
+  @mixin larger-than 1200px {
     border-radius: var(--mantine-radius-md);
     height: 45px;
     min-width: 205px;
@@ -68,7 +68,7 @@
   padding: 0;
   background: var(--mantine-color-white);
 
-  @mixin larger-than 992px {
+  @mixin larger-than 1200px {
     position: absolute;
     right: 0;
     top: calc(2.5rem + 8px);
@@ -88,7 +88,7 @@
   overflow: hidden;
   padding: 12px;
 
-  @mixin larger-than 992px {
+  @mixin larger-than 1200px {
     overflow: hidden;
     padding: 0;
   }

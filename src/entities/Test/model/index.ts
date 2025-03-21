@@ -2,11 +2,12 @@ import { createEvent, createStore, sample } from 'effector';
 import { isArray, isNumber } from 'lodash-es';
 import { delay } from 'patronum';
 
-import { getQuestionsQuery } from '@/entities/Test';
 import { atom } from '@/shared/factories';
 
+import { getQuestionsQuery } from '@/entities/Test';
+
 import type { QuestionsResponse } from '../api/dto';
-import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../types';
+import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
 
 export const TestModel = atom(() => {
     const $currentPage = createStore(1);

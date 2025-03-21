@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 import { Group, Image, Paper, Stack, Text, Title } from '@mantine/core';
 
-import { useIsLarge } from '@/shared/hooks';
 import { Picture, PointsList } from '@/shared/ui';
+
+import { useIsLarge } from '../../../../shared/lib/hooks';
 
 interface ConclusionPaywallProps {
     text?: string;

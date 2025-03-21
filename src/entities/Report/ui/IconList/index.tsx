@@ -1,8 +1,7 @@
 import { List, Text, ThemeIcon } from '@mantine/core';
 import { CheckCircle } from '@phosphor-icons/react/dist/ssr';
 
-import { useIsLarge } from '@/shared/hooks';
-
+import { useIsLarge } from '../../../../shared/lib/hooks';
 import type { ListItem } from '../../types';
 
 import s from './IconList.module.css';

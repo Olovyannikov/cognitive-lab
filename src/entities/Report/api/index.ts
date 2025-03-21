@@ -56,7 +56,6 @@ export const getSurveysInfoQuery = createQuery({
         url: API.SURVEYS_INFO,
         params: params ?? {},
     })),
-    initialData: {} as SurveysInfoResponse,
 });
 
 export const getFreeResultQuery = createQuery({

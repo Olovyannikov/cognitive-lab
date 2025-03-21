@@ -2,7 +2,7 @@ import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/query';
-import { delay } from 'patronum';
+import { delay, not } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
@@ -37,15 +37,15 @@ export const ReportModel = atom(() => {
     const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);
     const $isLastPage = createStore<boolean>(false);
 
-    const $allUserReports = getSurveysInfoQuery.$data.map((el) => el.reports ?? []);
+    const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);
     const $freeUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el.reports?.filter((report) => report.report_kind === 'free') ?? []
+        (el) => el?.reports?.filter((report) => report.report_kind === 'free') ?? []
     );
     const $paidUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el.reports?.filter((report) => report.report_kind === 'paid') ?? []
+        (el) => el?.reports?.filter((report) => report.report_kind === 'paid') ?? []
     );
     const $expressUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el.reports?.filter((report) => report.report_kind === 'express') ?? []
+        (el) => el?.reports?.filter((report) => report.report_kind === 'express') ?? []
     );
 
     sample({
@@ -69,6 +69,7 @@ export const ReportModel = atom(() => {
 
     sample({
         clock: delay(ReportGate.open, 500),
+        filter: not(getSurveysInfoQuery.$data),
         fn: () => undefined,
         target: getSurveysInfoQuery.refresh,
     });

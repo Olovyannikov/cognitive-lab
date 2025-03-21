@@ -1,8 +1,9 @@
 import { sample } from 'effector';
 
-import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
+import { createPageInit } from '@/shared/lib/effector';
 import { appService } from '@/shared/services/app';
-import { createPageInit } from '@/shared/utils/effector';
+
+import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
 
 export const pageInitiated = createPageInit();
 

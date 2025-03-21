@@ -42,7 +42,7 @@ export const Reports = () => {
     if (allReports?.length < 1) return null;
 
     return (
-        <Box className={s.root}>
+        <Box ref={ref} className={s.root}>
             <Button
                 onClick={toggle}
                 variant='transparent'
@@ -58,7 +58,7 @@ export const Reports = () => {
                     Ваши отчеты
                 </Group>
             </Button>
-            <Collapse ref={ref} className={s.collapse} in={opened} transitionTimingFunction='linear'>
+            <Collapse className={s.collapse} in={opened} transitionTimingFunction='linear'>
                 <Box className={s.category}>
                     <ReportGroupTemplate reports={freeReports} render={renderFreeReports} label='Бесплатные отчёты' />
                     <ReportGroupTemplate reports={paidReports} render={renderPaidReports} label='Полные отчёты' />
