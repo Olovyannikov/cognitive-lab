@@ -27,33 +27,6 @@
   "overrides": {
     "404.html": {
       "path": "404"
-    },
-    "blog/index.html": {
-      "path": "blog"
-    },
-    "faq/index.html": {
-      "path": "faq"
-    },
-    "free-report/index.html": {
-      "path": "free-report"
-    },
-    "full-report/example/index.html": {
-      "path": "full-report/example"
-    },
-    "help/index.html": {
-      "path": "help"
-    },
-    "index.html": {
-      "path": ""
-    },
-    "payment-check/index.html": {
-      "path": "payment-check"
-    },
-    "test/index.html": {
-      "path": "test"
-    },
-    "types/index.html": {
-      "path": "types"
     }
   }
 }

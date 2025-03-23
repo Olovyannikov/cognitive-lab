@@ -5,6 +5,7 @@ import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import Markdown from 'markdown-to-jsx';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { desktop } from '@/shared/media';
 
@@ -16,6 +17,7 @@ import s from './MoreInBlog.module.css';
 
 export const MoreInBlog = () => {
     const isLarge = useUnit(desktop.$matches);
+    const { isMobile } = usePageContext();
     const { data } = useUnit(getAllBlogPostsQuery);
     const autoplay = useRef(
         AutoScroll({
@@ -48,7 +50,7 @@ export const MoreInBlog = () => {
                 slideGap='lg'
                 withControls={false}
                 plugins={[autoplay.current]}
-                slideSize={isLarge ? 466 : '70%'}
+                slideSize={!isLarge || isMobile ? '70%' : 466}
                 onMouseLeave={() => autoplay.current.play()}
                 onPointerLeave={() => autoplay.current.play()}
                 onPointerEnter={() => autoplay.current.stop()}
@@ -62,7 +64,7 @@ export const MoreInBlog = () => {
                                     {review.title}
                                 </Title>
                                 <Text c='dark.2'>{new Date(review.updated_at).toLocaleDateString()}</Text>
-                                <Text lineClamp={isLarge ? 6 : 8} className={s.blogText}>
+                                <Text lineClamp={isMobile || !isLarge ? 8 : 6} className={s.blogText}>
                                     <Markdown
                                         options={{
                                             overrides: {
