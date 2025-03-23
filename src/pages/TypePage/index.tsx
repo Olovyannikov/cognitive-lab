@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Box, Container } from '@mantine/core';
 import { useList, useUnit } from 'effector-react';
 
+import { TYPE_TO_COLOR_MAP } from '@/shared/lib';
 import { InnerContainer } from '@/shared/ui';
 
 import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
@@ -10,8 +11,6 @@ import { SendReportEmail } from '@/features/SendReportEmail';
 
 import { CALL_TO_ACTION } from '@/widgets/CTA';
 import { ShowFullStructure } from '@/widgets/ShowFullStructure';
-
-import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
 
 import s from './TypePage.module.css';
 
@@ -72,7 +71,7 @@ export const TypePage = () => {
                 <Banner
                     color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
                     actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}
-                    image={`/images/circles/${data?.mbti_type}_2.png`}
+                    image={`/types/circles/${data?.mbti_type}`}
                 />
                 <InnerContainer>{afterBannerContent}</InnerContainer>
                 <Banner
@@ -80,7 +79,10 @@ export const TypePage = () => {
                     description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'
                     color={TYPE_TO_COLOR_MAP[data?.mbti_type]}
                     actionSlot={CALL_TO_ACTION['redirectToTest']}
-                    image={`/images/circles/${data?.mbti_type}_1.png`}
+                    image={{
+                        src: `/types/circles/${data?.mbti_type}`,
+                        extra: '_2',
+                    }}
                 />
             </Container>
         </Box>

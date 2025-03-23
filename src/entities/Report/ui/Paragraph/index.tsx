@@ -8,32 +8,30 @@ interface ParagraphProps extends TextProps {
     text: string;
 }
 
-export const Paragraph = ({ text, className, ...rest }: ParagraphProps) => {
-    return (
-        <Markdown
-            className={s.text}
-            options={{
-                overrides: {
-                    p: (props) => (
-                        <Text className={clsx(s.text, className)} {...rest}>
-                            {props.children}
-                        </Text>
-                    ),
-                    span: (props) => (
-                        <Text span className={clsx(s.text, className)} {...rest}>
-                            {props.children}
-                        </Text>
-                    ),
-                    pre: (props) => (
-                        <Text className={clsx(s.text, className)} {...rest}>
-                            {props.children}
-                        </Text>
-                    ),
-                    code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,
-                },
-            }}
-        >
-            {text}
-        </Markdown>
-    );
-};
+export const Paragraph = ({ text, className, ...rest }: ParagraphProps) => (
+    <Markdown
+        className={s.text}
+        options={{
+            overrides: {
+                p: (props) => (
+                    <Text className={clsx(s.text, className)} {...rest}>
+                        {props.children}
+                    </Text>
+                ),
+                span: (props) => (
+                    <Text span className={clsx(s.text, className)} {...rest}>
+                        {props.children}
+                    </Text>
+                ),
+                pre: (props) => (
+                    <Text className={clsx(s.text, className)} {...rest}>
+                        {props.children}
+                    </Text>
+                ),
+                code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,
+            },
+        }}
+    >
+        {text}
+    </Markdown>
+);

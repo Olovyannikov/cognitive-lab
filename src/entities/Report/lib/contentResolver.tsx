@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 
-import type { PartialRecord } from '../../../shared/lib/types';
+import type { PartialRecord } from '@/shared/lib/types';
+
 import type { Content, ContentType } from '../types';
 import {
     AccordionBlock,

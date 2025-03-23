@@ -1,9 +1,8 @@
 import type { ReactNode } from 'react';
-import { Group, Image, Paper, Stack, Text, Title } from '@mantine/core';
+import { Group, Paper, Stack, Text, Title } from '@mantine/core';
 
+import { useIsLarge } from '@/shared/lib';
 import { Picture, PointsList } from '@/shared/ui';
-
-import { useIsLarge } from '../../../../shared/lib/hooks';
 
 interface ConclusionPaywallProps {
     text?: string;
@@ -24,13 +23,14 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
             px={isLarge ? '3xl' : 'md'}
             radius={isLarge ? 'lg' : 'md'}
         >
-            <Image
-                src='/images/gem.png'
+            <Picture
+                src='/report/gem'
                 w={isLarge ? 250 : 108}
                 h={isLarge ? 250 : 108}
                 pos='absolute'
-                top={-7}
+                top={isLarge ? 0 : 20}
                 right={0}
+                opacity={isLarge ? 1 : 0.5}
             />
             <Stack gap={isLarge ? 'lg' : 'md'}>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>

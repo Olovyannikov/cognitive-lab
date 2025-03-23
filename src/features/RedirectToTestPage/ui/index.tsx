@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import s from './RedirectToTestPage.module.css';
 
-export const RedirectToTestPage = ({ ...props }: ButtonProps & { onClick: VoidFunction }) => (
+export const RedirectToTestPage = ({ ...props }: ButtonProps & { onClick?: VoidFunction }) => (
     <Button
         component='a'
         href='/test'

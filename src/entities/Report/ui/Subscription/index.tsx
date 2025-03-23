@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
-import { Image, Paper, Stack, Text, Title } from '@mantine/core';
+import { Paper, Stack, Text, Title } from '@mantine/core';
 
-import { useIsHuge, useIsLarge } from '../../../../shared/lib/hooks';
+import { useIsHuge, useIsLarge } from '@/shared/lib';
+import { Picture } from '@/shared/ui';
 
 interface SubscriptionProps {
     title?: string;
@@ -22,14 +23,14 @@ export const Subscription = ({ title, text, subscriptionFormSlot }: Subscription
             px={isLarge ? 153 : 'md'}
             py={isLarge ? '3xl' : 'xl'}
         >
-            <Image
+            <Picture
                 pos='absolute'
                 top={isLarge ? 32 : 5}
                 right={isLarge ? 153 : 33}
                 w={isLarge ? 261 : 90}
                 h={isLarge ? 232 : 90}
                 fit='contain'
-                src='/images/mail.png'
+                src='/report/mail'
             />
             <Stack>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='50%'>

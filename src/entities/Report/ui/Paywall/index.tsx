@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box, Button, Group, Image } from '@mantine/core';
+import { Box, Button, Group } from '@mantine/core';
 
 import { Picture, PointsList } from '@/shared/ui';
 
@@ -30,7 +30,7 @@ export const Paywall = ({
 }: PaywallProps) => (
     <Box className={s.wrapper}>
         <Group wrap='nowrap' gap='xs' className={s.top}>
-            <Image w='3xl' h='3xl' src='/images/lock.webp' />
+            <Picture w='3xl' h='3xl' src='/emoji/lock' />
             <h3>{title}</h3>
         </Group>
         <Picture className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />
@@ -42,7 +42,7 @@ export const Paywall = ({
                 color='dark.6'
                 component='a'
                 href={`/purchase${surveyId ? `/personal/${surveyId}` : ''}`}
-                leftSection={<Image w={20} h={20} src='/images/key.webp' aria-hidden={true} alt='' />}
+                leftSection={<Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' />}
             >
                 {button_text}
             </Button>

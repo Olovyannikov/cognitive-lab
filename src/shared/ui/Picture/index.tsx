@@ -21,7 +21,7 @@ export const Picture = ({
     extraPath,
     ...props
 }: PictureProps) => {
-    const path = src?.split('/').at(-1);
+    const path = src?.split('/')?.at(-1);
     const fullPath = `${src}/${path}${extraPath ? `${extraPath}` : ''}`;
 
     return (

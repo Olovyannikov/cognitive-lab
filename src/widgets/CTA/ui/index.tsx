@@ -2,6 +2,8 @@ import { Flex } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { desktop } from '@/shared/media';
+
 import { getPersonalityTypeQuery } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
 
@@ -43,11 +45,12 @@ export const BuyNowOrRedirectToTestPageAction = () => {
 
 export const TakeTestAgainOrBuyReportAction = () => {
     const surveyId = useUnit(UserModel.$surveyId);
+    const isLarge = useUnit(desktop.$matches);
 
     return (
         <Flex className={s.actions}>
             <TakeTestAgain />
-            {surveyId && <BuyNowButton survey={surveyId} />}
+            {surveyId && <BuyNowButton radius='md' h={isLarge ? undefined : 45} survey={surveyId} />}
         </Flex>
     );
 };

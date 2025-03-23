@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Image, Paper, Text, Title } from '@mantine/core';
+import { Paper, Text, Title } from '@mantine/core';
 
 import { InnerContainer, Picture } from '@/shared/ui';
 
@@ -10,7 +10,12 @@ interface BannerProps {
     actionSlot?: ReactNode;
     title?: string;
     description?: string;
-    image?: string;
+    image?:
+        | string
+        | {
+              src: string;
+              extra: string;
+          };
 }
 
 const BANNER_CONFIG = {
@@ -34,7 +39,14 @@ export const Banner = ({
                 {title}
             </Title>
             <Text className={s.description}>{description}</Text>
-            <Image className={s.image} aria-hidden src={image} w={260} h={260} />
+            <Picture
+                className={s.image}
+                aria-hidden
+                src={typeof image !== 'string' ? image.src : image}
+                extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''}
+                w={260}
+                h={260}
+            />
             {actionSlot}
         </InnerContainer>
     </Paper>
