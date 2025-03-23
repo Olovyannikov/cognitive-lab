@@ -1,13 +1,11 @@
 import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
-import { Image, Paper, Stack, Text, Title } from '@mantine/core';
+import { Box, Image, Paper, Stack, Text, Title } from '@mantine/core';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import Markdown from 'markdown-to-jsx';
 import { usePageContext } from 'vike-react/usePageContext';
-
-import { desktop } from '@/shared/media';
 
 import { getAllBlogPostsQuery } from '@/entities/Blog';
 
@@ -16,7 +14,6 @@ import { Section } from '../Section';
 import s from './MoreInBlog.module.css';
 
 export const MoreInBlog = () => {
-    const isLarge = useUnit(desktop.$matches);
     const { isMobile } = usePageContext();
     const { data } = useUnit(getAllBlogPostsQuery);
     const autoplay = useRef(
@@ -50,31 +47,38 @@ export const MoreInBlog = () => {
                 slideGap='lg'
                 withControls={false}
                 plugins={[autoplay.current]}
-                slideSize={!isLarge || isMobile ? '70%' : 466}
-                onMouseLeave={() => autoplay.current.play()}
-                onPointerLeave={() => autoplay.current.play()}
-                onPointerEnter={() => autoplay.current.stop()}
+                slideSize={isMobile ? '70%' : 466}
+                onMouseLeave={() => autoplay?.current?.play?.()}
+                onPointerLeave={() => autoplay?.current?.play?.()}
+                onPointerEnter={() => autoplay?.current?.stop?.()}
             >
                 {currentBlogPosts.map((review, index) => (
-                    <Carousel.Slide key={index}>
+                    <Carousel.Slide key={index} h='unset'>
                         <Paper component='a' href='/blog' withBorder className={s.paper}>
                             <Stack justify='space-between' align='flex-start' gap='md'>
                                 <Image src={review.image} className={s.image} width={304} height={304} />
                                 <Title order={5} className={s.cardTitle}>
                                     {review.title}
                                 </Title>
-                                <Text c='dark.2'>{new Date(review.updated_at).toLocaleDateString()}</Text>
-                                <Text lineClamp={isMobile || !isLarge ? 8 : 6} className={s.blogText}>
+                                <Text c='dark.2'>{review.updated_at}</Text>
+                                <Box mah={150} style={{ overflow: 'hidden' }}>
                                     <Markdown
                                         options={{
                                             overrides: {
-                                                p: (props) => <Text {...props} />,
+                                                p: (props) => (
+                                                    <Text
+                                                        lineClamp={isMobile ? 8 : 6}
+                                                        className={s.blogText}
+                                                        {...props}
+                                                    />
+                                                ),
+                                                a: (props) => <>{props.children}</>,
                                             },
                                         }}
                                     >
                                         {review.body.data}
                                     </Markdown>
-                                </Text>
+                                </Box>
                             </Stack>
                         </Paper>
                     </Carousel.Slide>

@@ -10,16 +10,14 @@ interface CategoryBannerProps {
     color?: string;
 }
 
-export const CategoryBanner = ({ color, title }: CategoryBannerProps) => {
-    return (
-        <Paper className={s.paper} data-color={color}>
-            <Title className={s.title}>{title}</Title>
-            <Box visibleFrom='sm' className={s.box} data-color={color}>
-                <CloudIcon width={474} height='100%' />
-            </Box>
-            <Box visibleFrom='xs' className={s.box} data-color={color}>
-                <SemiCircle width={150} height='100%' />
-            </Box>
-        </Paper>
-    );
-};
+export const CategoryBanner = ({ color, title }: CategoryBannerProps) => (
+    <Paper className={s.paper} data-color={color}>
+        <Title className={s.title}>{title}</Title>
+        <Box visibleFrom='sm' className={s.box} data-color={color}>
+            <CloudIcon width={474} height='100%' />
+        </Box>
+        <Box visibleFrom='xs' className={s.box} data-color={color}>
+            <SemiCircle width={150} height='100%' />
+        </Box>
+    </Paper>
+);

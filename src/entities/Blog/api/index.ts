@@ -38,11 +38,16 @@ export const getAllBlogPostsQuery = createQuery({
     })),
     mapData: (data) => {
         if (!data.result) return {} as BlogPostsResponse;
-        const payload = data.result?.payload.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));
+        const payload = data.result?.payload
+            .toSorted((a, b) => Number(b.pinned) - Number(a.pinned))
+            .map((data) => ({
+                ...data,
+                updated_at: new Date(data.updated_at).toLocaleDateString('ru-RU'),
+            }));
 
         return {
             ...data.result,
-            payload: payload,
+            payload,
         };
     },
 });

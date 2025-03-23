@@ -55,11 +55,13 @@ export const useMultipleQuestionViewModel = ({
             index: page - 1,
             isMultiple: true,
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [localValues, debounced]);
 
     useEffect(() => {
         setInput(value?.find((el) => el.input)?.input ?? '');
         setLocalValues(value?.map((el) => el.value) ?? []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id, page]);
 
     return {

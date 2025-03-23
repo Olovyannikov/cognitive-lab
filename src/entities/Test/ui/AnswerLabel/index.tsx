@@ -3,6 +3,4 @@ import { Text } from '@mantine/core';
 
 import s from './AnswerLabel.module.css';
 
-export const AnswerLabel = ({ children }: PropsWithChildren) => {
-    return <Text className={s.text}>{children}</Text>;
-};
+export const AnswerLabel = ({ children }: PropsWithChildren) => <Text className={s.text}>{children}</Text>;

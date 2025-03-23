@@ -7,10 +7,8 @@ interface BlockquoteLineProps {
     color?: string;
 }
 
-export const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => {
-    return (
-        <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>
-            <Paragraph text={text ?? ''} />
-        </Blockquote>
-    );
-};
+export const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (
+    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>
+        <Paragraph text={text ?? ''} />
+    </Blockquote>
+);

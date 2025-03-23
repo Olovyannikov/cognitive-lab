@@ -9,6 +9,6 @@ interface RadioElementProps {
     value: string;
 }
 
-export const RadioElement = ({ size, value }: RadioElementProps) => {
-    return <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />;
-};
+export const RadioElement = ({ size, value }: RadioElementProps) => (
+    <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />
+);

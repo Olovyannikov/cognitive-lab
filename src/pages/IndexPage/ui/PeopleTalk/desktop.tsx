@@ -1,5 +1,6 @@
 import { Box, Group, Modal, Rating, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { desktop } from '@/shared/media';
 import { Picture } from '@/shared/ui';
@@ -10,6 +11,8 @@ import s from './PeopleTalk.module.css';
 
 export const Desktop = () => {
     const isLarge = useUnit(desktop.$matches);
+    const { isMobile } = usePageContext();
+
     const [opened, setIsActive, currentReview, close] = useUnit([
         PeopleTalkModel.$isModalOpened,
         PeopleTalkModel.carouselActiveStateSettled,
@@ -20,7 +23,7 @@ export const Desktop = () => {
         <Modal
             size='lg'
             centered
-            opened={isLarge && opened}
+            opened={(!isMobile || isLarge) && opened}
             onClose={() => {
                 close(false);
                 setIsActive(true);
@@ -30,7 +33,7 @@ export const Desktop = () => {
                 <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
                     <Box>
                         <Rating
-                            size={isLarge ? 'lg' : 'md'}
+                            size={!isMobile || isLarge ? 'lg' : 'md'}
                             readOnly
                             defaultValue={currentReview?.overall_rate}
                             mb='xs'

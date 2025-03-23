@@ -23,7 +23,11 @@ sample({
 
 sample({
     clock: getReviewsQuery.finished.success,
-    fn: ({ result }) => result.payload,
+    fn: ({ result }) =>
+        result.payload.map((data) => ({
+            ...data,
+            created_at: new Date(data.created_at).toLocaleDateString('ru-RU'),
+        })),
     target: ReviewModel.$allReviews,
 });
 
