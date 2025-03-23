@@ -2,9 +2,9 @@ import { createEffect, createEvent, createStore, sample } from 'effector';
 import { createGate } from 'effector-react';
 import { once } from 'patronum';
 
-import { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';
+import { isErrorWithMessage } from '@/shared/lib/types';
 
-import { isErrorWithMessage } from '../../../shared/lib/types';
+import { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';
 
 export const BuyReportGate = createGate();
 

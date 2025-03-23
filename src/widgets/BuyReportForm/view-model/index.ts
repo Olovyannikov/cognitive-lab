@@ -1,21 +1,26 @@
+import { useEffect } from 'react';
 import { useForm } from '@mantine/form';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { type PurchasedReportRequest } from '@/entities/Report';
+import { getSurveysInfoQuery, type PurchasedReportRequest } from '@/entities/Report';
 
 import { reportPurchased } from '../model';
 
 export const useReportBuyFormViewModel = () => {
     const {
-        routeParams: { surveyId, type },
+        routeParams: { surveyId },
+        urlParsed: {
+            search: { type },
+        },
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
+    const user = useUnit(getSurveysInfoQuery.$data);
 
     const form = useForm({
         mode: 'controlled',
         initialValues: {
-            email: '',
+            email: user?.user?.email ?? '',
             mbti_type: surveyId ? '' : type,
             promo_code: '',
             survey_result: surveyId ?? '',
@@ -24,6 +29,22 @@ export const useReportBuyFormViewModel = () => {
             email: (value: string) => (/^\S+@\S+$/.test(value) ? null : 'Неправильный email'),
         },
     });
+
+    useEffect(() => {
+        if (!user) return;
+        form.setFieldValue('email', user?.user?.email ?? '');
+    }, [user]);
+
+    const selectProps = {
+        radius: 'xs',
+        size: 'md',
+        name: 'mbti_type',
+        withAsterisk: true,
+        key: form.key('mbti_type'),
+        label: 'Тип личности для отчёта',
+        placeholder: 'Выберите из списка',
+        ...form.getInputProps('mbti_type'),
+    };
 
     const emailProps = {
         radius: 'xs',
@@ -69,5 +90,6 @@ export const useReportBuyFormViewModel = () => {
         onSubmit,
         emailProps,
         promocodeProps,
+        selectProps,
     };
 };

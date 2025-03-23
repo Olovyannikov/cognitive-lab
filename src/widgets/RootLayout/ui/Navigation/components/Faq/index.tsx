@@ -1,13 +1,17 @@
-import { useUnit } from 'effector-react';
+import { reflect } from '@effector/reflect';
+import { Box } from '@mantine/core';
 
 import { RootModel } from '../../../../model';
+
 import s from '../common.module.css';
 
-export const Faq = () => {
-    const onClose = useUnit(RootModel.allMenusClosed);
-    return (
-        <a className={s.link} href='/faq' onClick={() => onClose(false)}>
-            Ответы на вопросы
-        </a>
-    );
-};
+export const Faq = reflect({
+    view: Box<'a'>,
+    bind: {
+        href: '/faq',
+        component: 'a',
+        className: s.link,
+        children: 'Ответы на вопросы',
+        onClick: () => RootModel.allMenusClosed(false),
+    },
+});

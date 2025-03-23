@@ -12,7 +12,7 @@
   cursor: pointer;
   gap: var(--mantine-spacing-xs);
 
-  @mixin larger-than 768px {
+  @mixin larger-than 1200px {
     width: fit-content;
     padding-block: var(--mantine-spacing-3xl);
   }

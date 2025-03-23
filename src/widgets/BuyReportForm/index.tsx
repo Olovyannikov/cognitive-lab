@@ -1,11 +1,13 @@
-import { Button, Flex, Paper, Text, TextInput } from '@mantine/core';
+import { Button, Flex, Paper, Select, Text, TextInput } from '@mantine/core';
 import { useGate, useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
+import { toInputUppercase } from '@/shared/lib';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
 
+import { PersonalityTypes } from '@/entities/Personality';
 import { getPriceWithPromocodeQuery } from '@/entities/Report';
 
-import { toInputUppercase } from '../../shared/lib';
 import {
     $promocodeErrorMessage,
     $showSuccessPromoMessage,
@@ -20,7 +22,12 @@ import s from './BuyReportForm.module.css';
 export const BuyReportForm = () => {
     useGate(BuyReportGate);
     const { pending } = useUnit(getPriceWithPromocodeQuery);
-    const { onSubmit, promocodeProps, emailProps, form } = useReportBuyFormViewModel();
+    const {
+        urlParsed: {
+            search: { type },
+        },
+    } = usePageContext();
+    const { onSubmit, promocodeProps, emailProps, form, selectProps } = useReportBuyFormViewModel();
 
     const { applyPromoHandler, promocodeError, showSuccessMessage, isLoading } = useUnit({
         applyPromoHandler: applyPromocodeClicked,
@@ -31,6 +38,13 @@ export const BuyReportForm = () => {
 
     return (
         <FormWrapper onSubmit={onSubmit}>
+            {type && (
+                <Select
+                    styles={{ label: { fontWeight: 'bold', marginBottom: 4 } }}
+                    {...selectProps}
+                    data={Object.keys(PersonalityTypes)}
+                />
+            )}
             <FormInput {...emailProps} />
             <Paper bg='gray.0' radius='xs' p='md' px='sm'>
                 <Text className={s.promocodeLabel}>У меня есть промокод</Text>

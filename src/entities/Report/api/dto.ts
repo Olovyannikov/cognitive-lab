@@ -49,4 +49,7 @@ export interface SurveysInfoResponse {
         text: string;
         user_report: string;
     }[];
+    user: {
+        email: string;
+    };
 }

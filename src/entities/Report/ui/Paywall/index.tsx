@@ -41,7 +41,7 @@ export const Paywall = ({
                 radius='md'
                 color='dark.6'
                 component='a'
-                href={`/purchase${surveyId ? `/personal/${surveyId}` : ''}`}
+                href={`/purchase${surveyId ? `/${surveyId}` : ''}`}
                 leftSection={<Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' />}
             >
                 {button_text}

@@ -1,5 +1,7 @@
-import { Button, ButtonProps, Image } from '@mantine/core';
+import { Button, type ButtonProps } from '@mantine/core';
 import { usePageContext } from 'vike-react/usePageContext';
+
+import { Picture } from '@/shared/ui';
 
 import s from './BuyNowButton.module.css';
 
@@ -16,11 +18,11 @@ export const BuyNowButton = ({ mbti, survey, h, radius, ...props }: BuyNowButton
     return (
         <Button
             component='a'
-            className={s.button}
             h={h ?? height}
+            className={s.button}
             radius={radius ?? 'md'}
-            leftSection={survey ? <Image w={20} h={20} src='/images/key.webp' aria-hidden={true} alt='' /> : null}
-            href={`/purchase/${survey ? `personal/${survey}` : ''}${mbti ?? ''}`}
+            href={`/purchase/${survey ? `${survey}` : ''}${mbti ? `?type=${mbti}` : ''}`}
+            leftSection={survey ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >
             {survey ? 'Купить полный отчет' : 'Купить сейчас'}

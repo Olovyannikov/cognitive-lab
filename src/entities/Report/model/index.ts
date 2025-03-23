@@ -69,7 +69,7 @@ export const ReportModel = atom(() => {
 
     sample({
         clock: delay(ReportGate.open, 500),
-        filter: () => !getSurveysInfoQuery.$data.map((el) => el?.reports),
+        filter: () => getSurveysInfoQuery.$data.map((el) => el === null).getState(),
         fn: () => {},
         target: getSurveysInfoQuery.refresh,
     });
