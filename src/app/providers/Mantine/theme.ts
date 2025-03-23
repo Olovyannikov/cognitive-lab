@@ -4,6 +4,7 @@ export const theme = createTheme({
     fontFamily: 'Raleway, sans-serif',
     fontFamilyMonospace: 'Monaco, Courier, monospace',
     headings: { fontFamily: 'Raleway, Montserrat, system-ui, sans-serif' },
+    primaryColor: 'violet',
     spacing: {
         xxs: '4px',
         xs: '8px',

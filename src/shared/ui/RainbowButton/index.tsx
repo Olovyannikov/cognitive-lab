@@ -7,18 +7,8 @@ interface RainbowButtonProps extends ButtonProps {
     href?: string;
 }
 
-export const RainbowButton = ({ children, href = '/test', className, ...props }: RainbowButtonProps) => {
-    return (
-        <Button
-            component='a'
-            href={href}
-            size='sm'
-            bg='dark.9'
-            radius='md'
-            className={clsx(s.shadow, className)}
-            {...props}
-        >
-            {children}
-        </Button>
-    );
-};
+export const RainbowButton = ({ children, href = '/test', className, ...props }: RainbowButtonProps) => (
+    <Button component='a' href={href} className={clsx(s.shadow, className)} {...props}>
+        {children}
+    </Button>
+);

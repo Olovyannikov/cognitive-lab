@@ -13,21 +13,19 @@ import {
     WhyUs,
 } from './ui';
 
-export const IndexPage = () => {
-    return (
-        <>
-            <Hero />
-            <About />
-            <Statistics />
-            <ForWhom />
-            <HowItHelps />
-            <Tariffs />
-            <HowItWorks />
-            <WhyUs />
-            <PeopleTalk />
-            <FAQ />
-            <MoreInBlog />
-            <LetsContinue />
-        </>
-    );
-};
+export const IndexPage = () => (
+    <>
+        <Hero />
+        <About />
+        <Statistics />
+        <ForWhom />
+        <HowItHelps />
+        <Tariffs />
+        <HowItWorks />
+        <WhyUs />
+        <PeopleTalk />
+        <FAQ />
+        <MoreInBlog />
+        <LetsContinue />
+    </>
+);

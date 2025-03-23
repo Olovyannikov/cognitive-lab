@@ -1,39 +1,43 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
-import { Box, Drawer, Group, Image, Modal, Paper, Rating, Text, Title } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { Box, Group, Paper, Rating, Text, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 
 import { desktop } from '@/shared/media';
+import { Picture } from '@/shared/ui';
+
+import { ReviewModel } from '@/entities/Review';
 
 import { Section } from '../Section';
-import { REVIEWS_MOCK } from './const';
+import { Desktop } from './desktop';
+import { Mobile } from './mobile';
+import { PeopleTalkModel } from './model';
 
 import s from './PeopleTalk.module.css';
 
 export const PeopleTalk = () => {
-    const [isActive, setIsActive] = useState<boolean>(true);
+    const [reviews] = useUnit([ReviewModel.$allReviews]);
+    const [isActive, setIsActive, setCurrentReview, open] = useUnit([
+        PeopleTalkModel.$isCarouselActive,
+        PeopleTalkModel.carouselActiveStateSettled,
+        PeopleTalkModel.currentReviewSettled,
+        PeopleTalkModel.modalActiveStateSettled,
+    ]);
     const autoplay = useRef(
         AutoScroll({
             playOnInit: true,
             startDelay: 200,
             stopOnMouseEnter: true,
-            stopOnInteraction: true,
             active: isActive,
+            stopOnInteraction: true,
             speed: 0.5,
         })
     );
+
     const isLarge = useUnit(desktop.$matches);
-    const [opened, { open, close }] = useDisclosure(false);
-    const [currentReview, setCurrentReview] = useState<{
-        id: number;
-        username: string;
-        image: string;
-        label: string;
-        rating: number;
-        review: string;
-    } | null>(null);
+
+    const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];
 
     return (
         <Section containerClassName={s.container}>
@@ -47,84 +51,54 @@ export const PeopleTalk = () => {
                 withControls={false}
                 plugins={[autoplay.current]}
                 slideSize={isLarge ? 624 : '70%'}
-                onMouseLeave={() => autoplay.current.play()}
-                onPointerLeave={autoplay.current.reset}
+                onMouseLeave={() => isActive && autoplay.current.play()}
+                onPointerLeave={() => isActive && autoplay.current.play()}
+                onPointerEnter={() => autoplay.current.stop()}
             >
-                {[...REVIEWS_MOCK, ...REVIEWS_MOCK, ...REVIEWS_MOCK].map((review, index) => (
+                {allReviewsList.map((review, index) => (
                     <Carousel.Slide key={index}>
                         <Paper
+                            component='button'
+                            display='flex'
+                            w='100%'
+                            ta='left'
+                            style={{ flexDirection: 'column' }}
                             onClick={() => {
                                 setCurrentReview(review);
-                                open();
+                                open(true);
                                 setIsActive(false);
                             }}
                             withBorder
                             className={s.paper}
                         >
-                            <Group justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
+                            <Group w='100%' justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
                                 <Box>
                                     <Rating
                                         size={isLarge ? 'lg' : 'md'}
                                         readOnly
-                                        defaultValue={review.rating}
+                                        defaultValue={review.overall_rate}
                                         mb='xs'
+                                        fractions={4}
                                     />
                                     <Text mb='xxs' className={s.name}>
-                                        {review.username}
+                                        {review.name}
                                     </Text>
-                                    <Text className={s.label}>{review.label}</Text>
+                                    <Text className={s.label}>{review.mbti_type}</Text>
                                 </Box>
-                                <Image src={review.image} className={s.image} w={60} h={60} />
+                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} w={60} h={60} />
                             </Group>
-                            <Text lineClamp={isLarge ? 6 : 8} className={s.reviewText}>
-                                {review.review}
+                            <Text mb='xs' lineClamp={isLarge ? 6 : 8} className={s.reviewText}>
+                                {review.text}
+                            </Text>
+                            <Text className={s.reviewText} c='dark.2' mt='auto'>
+                                {new Date(review.created_at).toLocaleDateString()}
                             </Text>
                         </Paper>
                     </Carousel.Slide>
                 ))}
             </Carousel>
-            <Drawer className={s.drawer} position='bottom' opened={!isLarge && opened} onClose={close}>
-                <>
-                    <Group justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
-                        <Box>
-                            <Rating
-                                size={isLarge ? 'lg' : 'md'}
-                                readOnly
-                                defaultValue={currentReview?.rating}
-                                mb='xs'
-                            />
-                            <Text mb='xxs' className={s.name}>
-                                {currentReview?.username}
-                            </Text>
-                            <Text className={s.label}>{currentReview?.label}</Text>
-                        </Box>
-                        <Image src={currentReview?.image} className={s.image} w={60} h={60} />
-                    </Group>
-                    <Text className={s.reviewText}>{currentReview?.review}</Text>
-                </>
-            </Drawer>
-            <Modal size='lg' centered opened={isLarge && opened} onClose={close}>
-                <>
-                    <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
-                        <Box>
-                            <Rating
-                                size={isLarge ? 'lg' : 'md'}
-                                readOnly
-                                defaultValue={currentReview?.rating}
-                                mb='xs'
-                            />
-                            <Text mb='xxs' className={s.name}>
-                                {currentReview?.username}
-                            </Text>
-                            <Text className={s.label}>{currentReview?.label}</Text>
-                        </Box>
-                        <Image src={currentReview?.image} className={s.image} w={60} h={60} />
-                    </Group>
-                    <Text pb={40} px={40} className={s.reviewText}>
-                        {currentReview?.review}
-                    </Text>
-                </>
-            </Modal>
+            <Mobile />
+            <Desktop />
         </Section>
     );
 };

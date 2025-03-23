@@ -5,10 +5,10 @@ import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 
-import { REVIEWS_MOCK } from '@/pages/IndexPage/ui/PeopleTalk/const';
 import { desktop } from '@/shared/media';
 
 import { Section } from '../Section';
+import { REVIEWS_MOCK } from './const';
 
 import s from './MoreInBlog.module.css';
 

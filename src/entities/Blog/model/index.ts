@@ -2,9 +2,10 @@ import { createEffect, createEvent, createStore, restore, sample } from 'effecto
 import { createAction } from 'effector-action';
 import { navigate } from 'vike/client/router';
 
-import { getBlogPostsQuery } from '@/entities/Blog';
 import { atom } from '@/shared/factories';
 import { desktop, mobile } from '@/shared/media';
+
+import { getBlogPostsQuery } from '@/entities/Blog';
 
 export const BlogModel = atom(() => {
     const $currentPage = createStore(1);

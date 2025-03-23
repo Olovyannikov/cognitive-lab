@@ -68,7 +68,6 @@
 
 .button {
   margin-top: auto;
-  border-color: var(--mantine-color-violet-7);
   border-radius: 16px;
   width: 100%;
   min-height: 45px;

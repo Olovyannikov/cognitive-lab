@@ -17,8 +17,8 @@ importers:
                 specifier: ^0.15.0
                 version: 0.15.0(@withease/contracts@1.1.0)(effector@23.3.0)(patronum@2.3.0(effector@23.3.0))
             '@effector/reflect':
-                specifier: ^9.2.0
-                version: 9.2.0(effector-react@23.3.0(effector@23.3.0)(react@19.0.0))(effector@23.3.0)(react@19.0.0)
+                specifier: ^10.0.0
+                version: 10.0.0(effector-react@23.3.0(effector@23.3.0)(react@19.0.0))(effector@23.3.0)(react@19.0.0)(vite@6.2.1(@types/node@22.13.1)(jiti@2.4.2)(sugarss@4.0.1(postcss@8.5.1))(tsx@4.19.2))
             '@farfetched/core':
                 specifier: ^0.13.1
                 version: 0.13.1(effector@23.3.0)
@@ -666,15 +666,15 @@ packages:
                 integrity: sha512-0xrJO5y0HYt8OxrnmSXmsm8gPw0Ze6aKDGQ1XPIyIaNcVi7jOg20oJvUyqLqY3syJwZjw1Xx2vcV5IEAftrc6w==,
             }
 
-    '@effector/reflect@9.2.0':
+    '@effector/reflect@10.0.0':
         resolution:
             {
-                integrity: sha512-jumgC1Ztl28gRmhLei2TX3bF0p1sD/LhAWHWggbmiNcZnpX4K6odTITrFLSu4wKkyP+AX9QpF/wiqLi0njDP1A==,
+                integrity: sha512-hx87u5k7C3z1SXyDxBAvEPtVZu0BlrXz02om/3RDwnTnOPvrvyvCxt/eIKjaHfmCn/n2pPS1evDETbZ8UfBAsw==,
             }
         peerDependencies:
             effector: ^23.1.0
             effector-react: ^23.1.0
-            react: '>=16.8.0 <19.0.0'
+            react: '>=16.8.0 <20.0.0'
 
     '@emotion/babel-plugin@11.13.5':
         resolution:
@@ -7601,11 +7601,15 @@ snapshots:
             - effector
             - patronum
 
-    '@effector/reflect@9.2.0(effector-react@23.3.0(effector@23.3.0)(react@19.0.0))(effector@23.3.0)(react@19.0.0)':
+    '@effector/reflect@10.0.0(effector-react@23.3.0(effector@23.3.0)(react@19.0.0))(effector@23.3.0)(react@19.0.0)(vite@6.2.1(@types/node@22.13.1)(jiti@2.4.2)(sugarss@4.0.1(postcss@8.5.1))(tsx@4.19.2))':
         dependencies:
+            '@vitejs/plugin-react': 4.3.4(vite@6.2.1(@types/node@22.13.1)(jiti@2.4.2)(sugarss@4.0.1(postcss@8.5.1))(tsx@4.19.2))
             effector: 23.3.0
             effector-react: 23.3.0(effector@23.3.0)(react@19.0.0)
             react: 19.0.0
+        transitivePeerDependencies:
+            - supports-color
+            - vite
 
     '@emotion/babel-plugin@11.13.5':
         dependencies:

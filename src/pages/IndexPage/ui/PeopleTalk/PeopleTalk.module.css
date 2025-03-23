@@ -28,6 +28,7 @@
   border-color: var(--mantine-color-violet-5);
   padding: 24px;
   height: 100%;
+  color: var(--mantine-color-dark-7);
 }
 
 .name {

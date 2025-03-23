@@ -15,5 +15,7 @@ export const API = {
     SEND_REPORT: '/support/issues',
     GET_FREE_REPORT: '/surveys/free-report',
     GET_FREE_REPORT_BY_ID: (id: string) => `/surveys/free-report/${id}`,
-    REVIEWS_LIST: '/surveys/comments',
+    surveys: {
+        comments: '/surveys/comments',
+    },
 };

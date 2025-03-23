@@ -2,6 +2,7 @@ import { Box, Container, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 
 import UnionImage from '@/app/assets/images/union.svg?react';
+
 import { Picture, RainbowButton } from '@/shared/ui';
 
 import s from './Hero.module.css';
