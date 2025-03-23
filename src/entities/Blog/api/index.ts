@@ -25,6 +25,28 @@ export const getBlogPostsQuery = createQuery({
     },
 });
 
+export const getAllBlogPostsQuery = createQuery({
+    initialData: {} as BlogPostsResponse,
+    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({
+        url: API.BLOG_POSTS,
+        params: {
+            post_type: 'post',
+            page_size: Number(params.page_size),
+            show_on_main: true,
+            ...params,
+        },
+    })),
+    mapData: (data) => {
+        if (!data.result) return {} as BlogPostsResponse;
+        const payload = data.result?.payload.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));
+
+        return {
+            ...data.result,
+            payload: payload,
+        };
+    },
+});
+
 export const getBlogPostByIdQuery = createQuery({
     effect: createCommonRequestFx<string, BlogPostByIdRequest>((id) => ({
         url: API.BLOG_POST_BY_ID(id),

@@ -10,18 +10,26 @@ import { getBlogPostsQuery } from '@/entities/Blog';
 export const BlogModel = atom(() => {
     const $currentPage = createStore(1);
     const pageChanged = createEvent<number>();
-
-    const $pageSize = createStore(5);
-
-    const $totalPages = restore(
-        getBlogPostsQuery.finished.success.map((res) => res.result.total_pages),
-        1
-    );
-
-    const redirectToMainBlogPostPageFx = createEffect(async () => {
-        await navigate('/blog?page=1');
+    sample({
+        clock: pageChanged,
+        target: $currentPage,
     });
 
+    const $pageSize = createStore(5);
+    sample({
+        clock: $pageSize,
+        filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),
+        fn: (pageSize) => ({ page: 1, page_size: pageSize }),
+        target: getBlogPostsQuery.refresh,
+    });
+    sample({
+        clock: $currentPage,
+        source: {
+            page_size: $pageSize,
+        },
+        fn: ({ page_size }, page) => ({ page, page_size }),
+        target: getBlogPostsQuery.refresh,
+    });
     createAction({
         clock: [desktop.matched, mobile.matched],
         source: {
@@ -43,24 +51,13 @@ export const BlogModel = atom(() => {
         },
     });
 
-    sample({
-        clock: pageChanged,
-        target: $currentPage,
-    });
+    const $totalPages = restore(
+        getBlogPostsQuery.finished.success.map((res) => res.result.total_pages),
+        1
+    );
 
-    sample({
-        clock: $pageSize,
-        fn: (pageSize) => ({ page: 1, page_size: pageSize }),
-        target: getBlogPostsQuery.refresh,
-    });
-
-    sample({
-        clock: $currentPage,
-        source: {
-            page_size: $pageSize,
-        },
-        fn: ({ page_size }, page) => ({ page, page_size }),
-        target: getBlogPostsQuery.refresh,
+    const redirectToMainBlogPostPageFx = createEffect(async () => {
+        await navigate('/blog?page=1');
     });
 
     sample({
@@ -73,5 +70,6 @@ export const BlogModel = atom(() => {
         $pageSize,
         pageChanged,
         $totalPages,
+        redirectToMainBlogPostPageFx,
     };
 });

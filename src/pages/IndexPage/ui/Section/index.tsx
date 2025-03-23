@@ -11,6 +11,7 @@ interface SectionProps {
     containerClassName?: string;
     ref?: Ref<HTMLDivElement>;
     id?: string;
+    hidden?: boolean;
 }
 
 export const Section = ({
@@ -21,18 +22,17 @@ export const Section = ({
     containerClassName,
     ref,
     id,
-}: PropsWithChildren<SectionProps>) => {
-    return (
-        <Box id={id} ref={ref} className={clsx(s.box, className)} component='section'>
-            <Container className={containerClassName}>
-                {(title || filledText) && (
-                    <Title className={s.title} order={2}>
-                        {title}
-                        <span>{filledText}</span>
-                    </Title>
-                )}
-                {children}
-            </Container>
-        </Box>
-    );
-};
+    hidden = false,
+}: PropsWithChildren<SectionProps>) => (
+    <Box id={id} ref={ref} className={clsx(s.box, className)} component='section' hidden={hidden}>
+        <Container className={containerClassName}>
+            {(title || filledText) && (
+                <Title className={s.title} order={2}>
+                    {title}
+                    <span>{filledText}</span>
+                </Title>
+            )}
+            {children}
+        </Container>
+    </Box>
+);

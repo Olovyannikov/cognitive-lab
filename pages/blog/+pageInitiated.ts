@@ -1,15 +1,10 @@
-import { createEffect, sample } from 'effector';
-import { navigate } from 'vike/client/router';
+import { sample } from 'effector';
 
 import { createPageInit } from '@/shared/lib/effector';
 
-import { getBlogPostsQuery } from '@/entities/Blog';
+import { BlogModel, getBlogPostsQuery } from '@/entities/Blog';
 
 export const pageInitiated = createPageInit();
-
-const redirectToMainBlogPostPageFx = createEffect(async () => {
-    await navigate('/blog?page=1');
-});
 
 sample({
     clock: pageInitiated,
@@ -38,5 +33,5 @@ sample({
 
 sample({
     clock: getBlogPostsQuery.finished.failure,
-    target: redirectToMainBlogPostPageFx,
+    target: BlogModel.redirectToMainBlogPostPageFx,
 });

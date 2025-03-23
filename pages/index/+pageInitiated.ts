@@ -2,6 +2,7 @@ import { sample } from 'effector';
 
 import { createPageInit } from '@/shared/lib';
 
+import { getAllBlogPostsQuery } from '@/entities/Blog';
 import { getReviewsQuery, ReviewModel } from '@/entities/Review';
 
 export const pageInitiated = createPageInit();
@@ -9,7 +10,7 @@ export const pageInitiated = createPageInit();
 sample({
     clock: pageInitiated,
     fn: () => undefined,
-    target: getReviewsQuery.refresh,
+    target: [getReviewsQuery.refresh],
 });
 
 sample({
@@ -24,4 +25,12 @@ sample({
     clock: getReviewsQuery.finished.success,
     fn: ({ result }) => result.payload,
     target: ReviewModel.$allReviews,
+});
+
+sample({
+    clock: pageInitiated,
+    fn: () => ({
+        page_size: 100,
+    }),
+    target: getAllBlogPostsQuery.refresh,
 });
