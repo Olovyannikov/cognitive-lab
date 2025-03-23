@@ -13,6 +13,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin: 0 auto;
   background-color: var(--mantine-color-white);
 }
 
@@ -24,7 +25,7 @@
   padding-inline: var(--mantine-spacing-md);
 
   @mixin larger-than 992px {
-    margin-inline: 0;
+    margin-inline: auto;
   }
 }
 

@@ -27,6 +27,7 @@ export const FreeReportPage = () => {
         <Box component='section'>
             <Container>
                 <ReportHeader type={data?.mbti_type} name={data?.title} />
+                <SendReportEmail type='text' />
                 <FreeReportNavigation />
                 <InnerContainer>
                     {data.content?.map((el, index) => (
