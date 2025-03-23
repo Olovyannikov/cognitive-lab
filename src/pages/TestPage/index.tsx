@@ -1,6 +1,6 @@
+import type { ReactNode } from 'react';
 import { useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
-import type { ReactNode } from 'react';
 
 import {
     getQuestionsQuery,
@@ -12,10 +12,10 @@ import {
     TestScaleQuestion,
     TestSingleChoiceQuestion,
 } from '@/entities/Test';
-import { RephrasingModel } from '@/features/Rephrasing/model';
-import { Controls } from '@/widgets/Test';
 
-import { SubmitTestModal } from '../../widgets/Test/SubmitTestModal';
+import { RephrasingModel } from '@/features/Rephrasing/model';
+
+import { Controls, SubmitTestModal } from '@/widgets/Test';
 
 export const TestPage = () => {
     const { data } = useUnit(getQuestionsQuery);

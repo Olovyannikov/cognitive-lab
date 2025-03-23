@@ -47,7 +47,7 @@ export const HelpPage = () => {
                         </>
                     )
                 }
-                image={isFormSent ? '/images/success-base-man.webp' : '/images/paywall-man_large.webp'}
+                image={isFormSent ? '/payment/success' : '/helpdesk'}
             >
                 {isFormSent ? (
                     <Stack>

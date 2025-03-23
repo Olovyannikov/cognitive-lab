@@ -1,6 +1,10 @@
 .container {
   display: grid;
   grid-template-rows: max-content;
-  overflow: auto;
   padding-bottom: var(--mantine-spacing-5xl);
+  min-height: calc(100vh - 4rem);
+
+  @mixin larger-than 992px {
+    min-height: 888px;
+  }
 }

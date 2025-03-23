@@ -1,10 +1,14 @@
+import { useEffect } from 'react';
 import { useForm } from '@mantine/form';
 import { useUnit } from 'effector-react';
+
+import { getSurveysInfoQuery } from '@/entities/Report';
 
 import { HelpFormModel } from '../model';
 
 export const useHelpFormViewModel = () => {
     const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);
+    const user = useUnit(getSurveysInfoQuery.$data);
 
     const form = useForm({
         mode: 'controlled',
@@ -19,6 +23,11 @@ export const useHelpFormViewModel = () => {
             text: (value: string) => (value.length > 0 ? null : 'Введите ваш вопрос'),
         },
     });
+
+    useEffect(() => {
+        if (!user) return;
+        form.setFieldValue('email', user?.user?.email ?? '');
+    }, [user]);
 
     const nameProps = {
         label: 'Имя',

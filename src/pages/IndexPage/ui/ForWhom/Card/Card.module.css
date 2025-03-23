@@ -90,11 +90,13 @@
   img {
     z-index: 1;
     margin-left: auto;
+    object-fit: cover;
 
     @mixin larger-than 1024px {
       margin-top: auto;
-      width: 352px;
-      height: 284px;
+      margin-left: 0;
+      width: 352px !important;
+      height: 284px !important;
     }
   }
 

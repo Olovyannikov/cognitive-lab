@@ -1,7 +1,14 @@
+.root {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--mantine-color-white);
+}
+
 .button {
+  z-index: 1;
   display: flex;
   border: 0;
-  padding: 20px 10px;
+  padding: 20px 10px var(--mantine-spacing-3xl);
   font-weight: 600;
   transition: opacity 5s;
   transition-delay: 5s;
@@ -36,19 +43,20 @@
   }
 }
 
-.endText {
-  display: flex;
+.next.end {
   align-items: center;
-  gap: var(--mantine-spacing-xs);
+
+  &::before {
+    display: none;
+  }
 
   &::after {
-    content: " тестирование";
-    display: none;
+    content: "Завершить";
   }
 
   @mixin larger-than 768px {
     &::after {
-      display: block;
+      content: "Завершить тестирование";
     }
   }
 }

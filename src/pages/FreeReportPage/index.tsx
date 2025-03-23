@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
@@ -35,22 +36,24 @@ export const FreeReportPage = () => {
                             <Element name={el.title} id={el.title} key={data?.title + el.title + index}>
                                 <Title mb='md'>{el.title}</Title>
                                 {el.content.map((currentEl, idx) => (
-                                    <Box className={s.block} key={currentEl.type + idx + 'content'}>
-                                        {currentEl.content.map((currentContent) =>
-                                            contentResolver({
-                                                content: currentContent,
-                                                color: TYPE_TO_COLOR_MAP[data.mbti_type],
-                                                actions: {
-                                                    conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport,
-                                                },
-                                                surveyId: surveyId ?? '',
-                                                index: index,
-                                                mbti: data.mbti_type,
-                                                slots: {
-                                                    subscribeEmail: <SendReportEmail type='block' />,
-                                                },
-                                            })
-                                        )}
+                                    <Box className={s.block} key={currentEl.type + idx + index + 'content'}>
+                                        {currentEl.content.map((currentContent) => (
+                                            <Fragment key={currentContent.type + index + idx + 'currentContent'}>
+                                                {contentResolver({
+                                                    content: currentContent,
+                                                    color: TYPE_TO_COLOR_MAP[data.mbti_type],
+                                                    actions: {
+                                                        conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport,
+                                                    },
+                                                    surveyId: surveyId ?? '',
+                                                    index: index,
+                                                    mbti: data.mbti_type,
+                                                    slots: {
+                                                        subscribeEmail: <SendReportEmail type='block' />,
+                                                    },
+                                                })}
+                                            </Fragment>
+                                        ))}
                                     </Box>
                                 ))}
                             </Element>

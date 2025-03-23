@@ -34,9 +34,9 @@ export const Controls = () => {
     const isLast = page === questions.length;
 
     return (
-        <Pagination.Root total={questions.length} mt='auto' value={page} onChange={onChange}>
+        <Pagination.Root className={s.root} total={questions.length} mt='auto' value={page} onChange={onChange}>
             <Rephrasing />
-            <Group justify='space-between' pb={20}>
+            <Group justify='space-between'>
                 {!isFirst && (
                     <Pagination.Previous
                         disabled={false}
@@ -55,12 +55,11 @@ export const Controls = () => {
                     c='dark.6'
                     variant='subtle'
                     hidden={!isLast}
-                    className={s.end}
+                    className={clsx(s.button, s.next, s.end)}
                     onClick={controlModal}
                     rightSection={<ArrowRight weight='bold' />}
-                >
-                    <span className={s.endText}>Завершить</span>
-                </Button>
+                    aria-label='Завершить тестирование'
+                />
             </Group>
         </Pagination.Root>
     );

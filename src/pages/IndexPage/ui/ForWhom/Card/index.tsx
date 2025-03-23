@@ -12,15 +12,13 @@ interface CardProps {
     image: `/${string}/${string}`;
 }
 
-export const Card = ({ bg, text, image, title }: CardProps) => {
-    return (
-        <Box className={s.card}>
-            <Box className={s.cardTop}>
-                {bg}
-                <Title order={4}>{title}</Title>
-                <Picture src={image} width={150} height={121} />
-            </Box>
-            <Text className={s.description}>{text}</Text>
+export const Card = ({ bg, text, image, title }: CardProps) => (
+    <Box className={s.card}>
+        <Box className={s.cardTop}>
+            {bg}
+            <Title order={4}>{title}</Title>
+            <Picture src={image} w={150} h={121} />
         </Box>
-    );
-};
+        <Text className={s.description}>{text}</Text>
+    </Box>
+);
