@@ -2,9 +2,9 @@ import { cache } from '@farfetched/core';
 import { sample } from 'effector';
 import { isObject } from 'lodash-es';
 
-import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+import { createPageStart } from '@/shared/lib';
 
-import { createPageStart } from '../../src/shared/lib';
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 
 export const pageStarted = createPageStart();
 

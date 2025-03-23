@@ -22,13 +22,13 @@ export const PaymentCheckPage = () => {
         status: ReportModel.$userOrderStatus,
     });
 
-    const { title, buttonText, text } = getStatusInfo(status);
+    const { title, buttonText, text, infoStatus } = getStatusInfo(status);
 
     if (!order_id) navigate('/');
     if (pending || !order) return <PageLoader />;
 
     return (
-        <InnerLayout title={title} text={text} image='/images/paywall-man_large.webp' navigateTo='/'>
+        <InnerLayout title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>
             <MainButton component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
                 {buttonText}
             </MainButton>

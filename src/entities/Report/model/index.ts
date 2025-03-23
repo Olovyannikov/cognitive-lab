@@ -2,7 +2,7 @@ import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/query';
-import { delay, not } from 'patronum';
+import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
@@ -69,8 +69,8 @@ export const ReportModel = atom(() => {
 
     sample({
         clock: delay(ReportGate.open, 500),
-        filter: not(getSurveysInfoQuery.$data),
-        fn: () => undefined,
+        filter: () => !getSurveysInfoQuery.$data.map((el) => el?.reports),
+        fn: () => {},
         target: getSurveysInfoQuery.refresh,
     });
 

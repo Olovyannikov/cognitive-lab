@@ -1,9 +1,12 @@
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';
-import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
 import { PageLoader } from '@/shared/ui';
+
+import { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';
+
+import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
+
 import { BuyReportForm } from '@/widgets/BuyReportForm';
 import { InnerLayout } from '@/widgets/InnerLayout';
 
@@ -24,7 +27,7 @@ export const PurchasePage = () => {
         : dataWithPromocode?.skip_survey_price.final;
 
     return (
-        <InnerLayout image='/images/paywall-man_large.webp'>
+        <InnerLayout image='/payment/logo'>
             <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />
             <BuyReportForm />
             <NavigateToHelpPage />
