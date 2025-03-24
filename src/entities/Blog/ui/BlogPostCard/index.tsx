@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Box, Button, Card, Flex, Grid, Image, Stack, Text, Title } from '@mantine/core';
+import { Blockquote, Box, Button, Card, Flex, Grid, Image, Stack, Text, Title } from '@mantine/core';
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import Markdown from 'markdown-to-jsx';
@@ -40,6 +40,18 @@ export const BlogPostCard = memo(({ post }: BlogPostCardProps) => (
                                         </Title>
                                     ),
                                     p: (props) => <Text className={s.text}>{props.children}</Text>,
+                                    blockquote: (props) => (
+                                        <Blockquote
+                                            mb='md'
+                                            py='sm'
+                                            px='md'
+                                            color={`violet.9`}
+                                            bg='transparent'
+                                            icon={null}
+                                        >
+                                            {props.children}
+                                        </Blockquote>
+                                    ),
                                 },
                             }}
                         >
