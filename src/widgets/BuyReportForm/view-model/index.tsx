@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import { useForm } from '@mantine/form';
+import { Lock } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { PersonalitiesModel } from '@/entities/Personality';
 import { getSurveysInfoQuery, type PurchasedReportRequest } from '@/entities/Report';
 
 import { reportPurchased } from '../model';
@@ -16,6 +18,9 @@ export const useReportBuyFormViewModel = () => {
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
     const user = useUnit(getSurveysInfoQuery.$data);
+    const { types } = useUnit({
+        types: PersonalitiesModel.$personalitiesMap,
+    });
 
     const form = useForm({
         mode: 'controlled',
@@ -30,20 +35,34 @@ export const useReportBuyFormViewModel = () => {
         },
     });
 
+    const dataValues = Object.keys(types).map((key) => ({
+        value: key,
+        label: `${types[key]} (${key})`,
+    }));
+
     useEffect(() => {
         if (!user) return;
         form.setFieldValue('email', user?.user?.email ?? '');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user]);
 
     const selectProps = {
-        radius: 'xs',
         size: 'md',
+        radius: 'xs',
+        disabled: !type,
+        data: dataValues,
         name: 'mbti_type',
         withAsterisk: true,
         key: form.key('mbti_type'),
+        rightSection: !type && <Lock />,
         label: 'Тип личности для отчёта',
         placeholder: 'Выберите из списка',
+        styles: { label: { fontWeight: 'bold', marginBottom: 4 } },
         ...form.getInputProps('mbti_type'),
+        onChange: (value: string | null) => {
+            form.setFieldValue('mbti_type', value ?? '');
+            window.history.pushState(null, '', `?type=${value}`);
+        },
     };
 
     const emailProps = {

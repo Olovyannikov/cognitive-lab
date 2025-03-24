@@ -11,9 +11,28 @@ interface BuyNowButtonProps extends ButtonProps {
 }
 
 export const BuyNowButton = ({ mbti, survey, h, radius, ...props }: BuyNowButtonProps) => {
-    const { isMobile } = usePageContext();
+    const {
+        isMobile,
+        routeParams: { reportId },
+    } = usePageContext();
 
     const height = isMobile ? 45 : 64;
+
+    const currentUrl = () => {
+        let href = `/purchase/`;
+
+        if (survey) {
+            href += `${survey}`;
+        }
+
+        if (mbti) {
+            href += `?type=${mbti}`;
+        } else {
+            href += `?reportId=${reportId}`;
+        }
+
+        return href;
+    };
 
     return (
         <Button
@@ -21,7 +40,7 @@ export const BuyNowButton = ({ mbti, survey, h, radius, ...props }: BuyNowButton
             h={h ?? height}
             className={s.button}
             radius={radius ?? 'md'}
-            href={`/purchase/${survey ? `${survey}` : ''}${mbti ? `?type=${mbti}` : ''}`}
+            href={currentUrl()}
             leftSection={survey ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >

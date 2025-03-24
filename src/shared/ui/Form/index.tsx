@@ -7,10 +7,8 @@ interface FormWrapperProps {
     onSubmit?: FormEventHandler<HTMLFormElement>;
 }
 
-export const FormWrapper = ({ onSubmit, children }: PropsWithChildren<FormWrapperProps>) => {
-    return (
-        <form onSubmit={onSubmit}>
-            <Stack className={s.stackWrapper}>{children}</Stack>
-        </form>
-    );
-};
+export const FormWrapper = ({ onSubmit, children }: PropsWithChildren<FormWrapperProps>) => (
+    <form onSubmit={onSubmit}>
+        <Stack className={s.stackWrapper}>{children}</Stack>
+    </form>
+);

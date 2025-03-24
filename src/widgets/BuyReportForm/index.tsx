@@ -5,8 +5,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { toInputUppercase } from '@/shared/lib';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
 
-import { PersonalityTypes } from '@/entities/Personality';
-import { getPriceWithPromocodeQuery } from '@/entities/Report';
+import { getPriceWithPromocodeQuery, getSurveysInfoQuery } from '@/entities/Report';
 
 import {
     $promocodeErrorMessage,
@@ -24,27 +23,24 @@ export const BuyReportForm = () => {
     const { pending } = useUnit(getPriceWithPromocodeQuery);
     const {
         urlParsed: {
-            search: { type },
+            search: { reportId },
         },
     } = usePageContext();
     const { onSubmit, promocodeProps, emailProps, form, selectProps } = useReportBuyFormViewModel();
 
-    const { applyPromoHandler, promocodeError, showSuccessMessage, isLoading } = useUnit({
+    const { applyPromoHandler, promocodeError, showSuccessMessage, isLoading, currentUserMbti } = useUnit({
         applyPromoHandler: applyPromocodeClicked,
         promocodeError: $promocodeErrorMessage,
         showSuccessMessage: $showSuccessPromoMessage,
         isLoading: openTransactionPaywallFx.pending,
+        currentUserMbti: getSurveysInfoQuery.$data.map(
+            (el) => el?.reports.find((el) => el.user_report === reportId)?.mbti_type
+        ),
     });
 
     return (
         <FormWrapper onSubmit={onSubmit}>
-            {type && (
-                <Select
-                    styles={{ label: { fontWeight: 'bold', marginBottom: 4 } }}
-                    {...selectProps}
-                    data={Object.keys(PersonalityTypes)}
-                />
-            )}
+            <Select {...selectProps} value={reportId ? currentUserMbti : selectProps.value} />
             <FormInput {...emailProps} />
             <Paper bg='gray.0' radius='xs' p='md' px='sm'>
                 <Text className={s.promocodeLabel}>У меня есть промокод</Text>
