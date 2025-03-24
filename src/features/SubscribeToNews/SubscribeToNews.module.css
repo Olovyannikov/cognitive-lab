@@ -1,19 +1,10 @@
 div.flex {
   flex-direction: column;
-  margin-top: var(--mantine-spacing-lg);
 
   button {
     span span::after {
-      @mixin larger-than 992px {
-        content: "\00a0на новости";
-      }
-
       @mixin larger-than 1200px {
         content: "";
-      }
-
-      @mixin larger-than 1460px {
-        content: "\00a0на новости";
       }
     }
   }
@@ -28,6 +19,13 @@ div.flex {
   }
 
   @mixin larger-than 1460px {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 280px 125px;
   }
+}
+
+.title {
+  margin-bottom: var(--mantine-spacing-sm);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
 }

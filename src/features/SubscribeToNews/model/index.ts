@@ -1,20 +1,31 @@
 import { notifications } from '@mantine/notifications';
 import { createEffect, createEvent, sample } from 'effector';
 
-const formSubmitted = createEvent<{ email: string }>();
+import { atom } from '@/shared/factories';
 
-const showSuccessToastFx = createEffect(() => {
-    notifications.show({
-        title: 'Успешно!',
-        message: 'Вы подписались на рассылку CognitiveLab',
+import { subscribeToNewsMutation } from '../api';
+
+export const SubscribeToNewsModel = atom(() => {
+    const formSubmitted = createEvent<{ email: string }>();
+
+    const showSuccessToastFx = createEffect(() => {
+        notifications.show({
+            title: 'Успешно!',
+            message: 'Вы подписались на рассылку CognitiveLab',
+        });
     });
-});
 
-sample({
-    clock: formSubmitted,
-    target: showSuccessToastFx,
-});
+    sample({
+        clock: formSubmitted,
+        target: subscribeToNewsMutation.start,
+    });
 
-export const SubscribeToNewsModel = {
-    formSubmitted,
-};
+    sample({
+        clock: subscribeToNewsMutation.finished.success,
+        target: showSuccessToastFx,
+    });
+
+    return {
+        formSubmitted,
+    };
+});

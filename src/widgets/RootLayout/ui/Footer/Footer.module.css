@@ -1,8 +1,6 @@
 .footer {
-  margin: 0 auto;
   border-top: 1px solid var(--mantine-color-gray-3);
-  padding: var(--mantine-spacing-xl);
-  padding-inline: var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-xl) 0;
 
   a {
     text-decoration: none;
@@ -11,10 +9,6 @@
     &:is(:hover, :focus-visible) {
       color: var(--mantine-color-gray-9);
     }
-  }
-
-  @mixin larger-than 1200px {
-    padding-inline: 64px;
   }
 }
 
@@ -54,4 +48,8 @@
     flex-direction: row;
     gap: 168px;
   }
+}
+
+.contacts {
+  margin-bottom: var(--mantine-spacing-lg);
 }

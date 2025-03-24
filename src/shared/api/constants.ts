@@ -18,4 +18,7 @@ export const API = {
         email: (reportId: string) => `/surveys/free-report/${reportId}/email`,
         comments: '/surveys/comments',
     },
+    news: {
+        subscribe: '/users/subscribe',
+    },
 };

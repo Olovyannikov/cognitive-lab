@@ -11,15 +11,13 @@ interface ListProps extends ComponentProps<'ul'> {
     }[];
 }
 
-export const List = ({ data, className }: ListProps) => {
-    return (
-        <ul className={clsx(s.list, className)}>
-            {data?.map((item) => (
-                <li key={item.id}>
-                    {item.icon}
-                    {item.label}
-                </li>
-            ))}
-        </ul>
-    );
-};
+export const List = ({ data, className }: ListProps) => (
+    <ul className={clsx(s.list, className)}>
+        {data?.map((item) => (
+            <li key={item.id}>
+                {item.icon}
+                {item.label}
+            </li>
+        ))}
+    </ul>
+);

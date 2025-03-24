@@ -55,6 +55,14 @@ export const CONTACTS = [
 
 export const MENU = [
     {
+        id: 4,
+        label: <a href='/'>Главная</a>,
+    },
+    {
+        id: 3,
+        label: <a href='/#tariffs'>Тарифы</a>,
+    },
+    {
         id: 0,
         label: <a href='/types'>Типы личности</a>,
     },
