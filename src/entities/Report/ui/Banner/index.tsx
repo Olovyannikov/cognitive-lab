@@ -22,7 +22,10 @@ const BANNER_CONFIG = {
     title: 'Купить отчет без прохождения теста',
     description:
         'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',
-    image: '/images/man_book.webp',
+    image: {
+        src: '/types/circles/ENTP',
+        extra: '_2',
+    },
 };
 
 export const Banner = ({

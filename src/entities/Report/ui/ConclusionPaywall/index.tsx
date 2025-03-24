@@ -30,7 +30,6 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
                 pos='absolute'
                 top={isLarge ? 0 : 20}
                 right={0}
-                opacity={isLarge ? 1 : 0.5}
             />
             <Stack gap={isLarge ? 'lg' : 'md'}>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>
@@ -39,7 +38,7 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
                         {title}
                     </Group>
                 </Title>
-                <Text maw={isLarge ? 820 : '100%'} fz={isLarge ? 24 : 16}>
+                <Text maw={isLarge ? 820 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>
                     {text}
                 </Text>
                 <PointsList position='static' points={points} />
