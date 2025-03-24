@@ -14,14 +14,21 @@ export const TestModel = atom(() => {
     const $currentProgress = createStore(0);
     const $currentQuestion = createStore<QuestionsResponse | null>(null);
     const $currentValue = createStore<PreparedAnswer['answer'] | null>(null);
+    const $isSplashScreenVisible = createStore<boolean>(true);
 
     const $scaleForm = createStore<Answers>({
         answers: [],
     });
 
+    const setSplashScreenVisibility = createEvent<boolean>();
     const scaleFormFieldChanged = createEvent<PreparedAnswer>();
     const formPageChanged = createEvent<number>();
     const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
+
+    sample({
+        clock: setSplashScreenVisibility,
+        target: $isSplashScreenVisible,
+    });
 
     sample({
         clock: [$currentPage, getQuestionsQuery.$data],
@@ -125,5 +132,7 @@ export const TestModel = atom(() => {
         $scaleForm,
         scaleFormFieldChanged,
         formPageChanged,
+        $isSplashScreenVisible,
+        setSplashScreenVisibility,
     };
 });

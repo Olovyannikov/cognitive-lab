@@ -15,15 +15,16 @@ import {
 
 import { RephrasingModel } from '@/features/Rephrasing/model';
 
-import { Controls, SubmitTestModal } from '@/widgets/Test';
+import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
     const { data } = useUnit(getQuestionsQuery);
-    const [page, progress, question, value] = useUnit([
+    const [page, progress, question, value, isSplashScreen] = useUnit([
         TestModel.$currentPage,
         TestModel.$currentProgress,
         TestModel.$currentQuestion,
         TestModel.$currentValue,
+        TestModel.$isSplashScreenVisible,
     ]);
 
     const onChange = useUnit(TestModel.scaleFormFieldChanged);
@@ -67,6 +68,8 @@ export const TestPage = () => {
             />
         ),
     };
+
+    if (isSplashScreen) return <TestSplashScreen />;
 
     return (
         <TestContainer>

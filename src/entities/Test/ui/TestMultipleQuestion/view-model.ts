@@ -30,9 +30,15 @@ export const useMultipleQuestionViewModel = ({
     useEffect(() => {
         const obj: { value: string; input?: string }[] = [];
 
-        if (localValues.length < 1) {
-            return;
-        }
+        // TODO: check and remove - ?
+        // if (localValues.length < 1) {
+        //     onChange({
+        //         question: id,
+        //         answer: obj,
+        //         index: page - 1,
+        //         isMultiple: true,
+        //     });
+        // }
 
         localValues?.forEach((v, idx) => {
             if (!options) return;
