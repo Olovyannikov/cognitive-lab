@@ -20,6 +20,7 @@ export const EffectorProvider = ({ children }: { children: ReactNode }) => {
         firePageStarted().catch(() => {
             throw new Error('Page start failed');
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pageContext]);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return <Provider value={scope!}>{children}</Provider>;

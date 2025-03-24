@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { Paper, Radio, Stack } from '@mantine/core';
 
+import { useIsLarge } from '@/shared/lib';
 import { InputBorderless } from '@/shared/ui';
 
-import { useIsLarge } from '../../../../shared/lib/hooks';
 import type { QuestionsResponse } from '../../api/dto';
-import type { SingleChoiceAnswer } from '../../types';
+import { SingleChoiceAnswer } from '../../api/types';
 import { AnswerLabel } from '../AnswerLabel';
 import { QuestionTitle } from '../TestQuestionTitle';
 
@@ -46,6 +46,7 @@ export const TestSingleChoiceQuestion = ({
                 isSingle: true,
             });
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showInput]);
 
     return (

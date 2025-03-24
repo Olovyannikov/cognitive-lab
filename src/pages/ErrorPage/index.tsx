@@ -1,8 +1,9 @@
 import { Box, Center, Container, Stack, Title } from '@mantine/core';
 
-import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
 import { MainButton } from '@/shared/ui';
 import { Picture } from '@/shared/ui/Picture';
+
+import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
 
 import s from './ErrorPage.module.css';
 

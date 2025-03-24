@@ -94,7 +94,6 @@ function HACK_updateScopeRefs(tscope: Scope, values: Values) {
             }
 
             if (!ref.meta || (!ref.meta?.named && ref.meta?.derived)) {
-                // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
                 delete scope.reg[id];
             } else {
                 const sid = ref?.meta?.sid;

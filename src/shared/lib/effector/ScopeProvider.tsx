@@ -1,5 +1,5 @@
-import type { Scope, SerializedState } from 'effector';
 import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';
+import type { Scope, SerializedState } from 'effector';
 import type { PageContextClient } from 'vike/types';
 import { usePageContext } from 'vike-react/usePageContext';
 

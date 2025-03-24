@@ -2,6 +2,7 @@ import { Box, Container, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
 import { FAQList, getFAQQuery } from '@/entities/FAQ';
+
 import { PageLayout } from '@/widgets/PageLayout';
 
 export const FaqPage = () => {
