@@ -24,4 +24,10 @@
   @mixin larger-than 992px {
     order: 2;
   }
+
+  @mixin larger-than 998px {
+    font-size: 16px;
+    line-height: 31px;
+    padding-inline: 22px;
+  }
 }

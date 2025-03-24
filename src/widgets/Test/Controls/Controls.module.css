@@ -33,6 +33,8 @@
   }
 
   &.next {
+    margin-left: auto;
+
     &::after {
       content: "Вперед";
       order: -1;

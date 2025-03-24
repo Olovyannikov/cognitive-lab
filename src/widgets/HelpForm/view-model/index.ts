@@ -27,6 +27,7 @@ export const useHelpFormViewModel = () => {
     useEffect(() => {
         if (!user) return;
         form.setFieldValue('email', user?.user?.email ?? '');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user]);
 
     const nameProps = {

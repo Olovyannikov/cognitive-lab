@@ -1,4 +1,5 @@
 import { Button, type ButtonProps } from '@mantine/core';
+import clsx from 'clsx';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { Picture } from '@/shared/ui';
@@ -8,9 +9,19 @@ import s from './BuyNowButton.module.css';
 interface BuyNowButtonProps extends ButtonProps {
     mbti?: string;
     survey?: string;
+    externalReportId?: string;
 }
 
-export const BuyNowButton = ({ mbti, survey, h, radius, ...props }: BuyNowButtonProps) => {
+export const BuyNowButton = ({
+    externalReportId,
+    mbti,
+    survey,
+    h,
+    radius,
+    className,
+    children,
+    ...props
+}: BuyNowButtonProps) => {
     const {
         isMobile,
         routeParams: { reportId },
@@ -27,24 +38,36 @@ export const BuyNowButton = ({ mbti, survey, h, radius, ...props }: BuyNowButton
 
         if (mbti) {
             href += `?type=${mbti}`;
-        } else {
-            href += `?reportId=${reportId}`;
+        } else if (reportId || externalReportId) {
+            href += `?reportId=${reportId || externalReportId}`;
         }
 
         return href;
+    };
+
+    const getChildren = () => {
+        if (children) {
+            return children;
+        }
+
+        if (survey) {
+            return 'Купить полный отчет';
+        }
+
+        return 'Купить сейчас';
     };
 
     return (
         <Button
             component='a'
             h={h ?? height}
-            className={s.button}
+            className={clsx(s.button, className)}
             radius={radius ?? 'md'}
             href={currentUrl()}
             leftSection={survey ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >
-            {survey ? 'Купить полный отчет' : 'Купить сейчас'}
+            {getChildren()}
         </Button>
     );
 };

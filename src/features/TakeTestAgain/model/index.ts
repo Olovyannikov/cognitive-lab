@@ -17,6 +17,10 @@ const takeTestAgainClicked = createAction({
         target.page.reinit();
         target.progress.reinit();
         target.redirect();
+        window.localStorage.removeItem('$currentPage');
+        window.localStorage.removeItem('$currentProgress');
+        window.localStorage.removeItem('$scaleForm');
+        window.localStorage.removeItem('$surveyId');
     },
 });
 

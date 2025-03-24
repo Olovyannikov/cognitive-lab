@@ -1,4 +1,4 @@
-import { Box, Button, Collapse, Group, Pill } from '@mantine/core';
+import { Box, Button, Collapse, Divider, Group, Pill } from '@mantine/core';
 import { useClickOutside, useDisclosure } from '@mantine/hooks';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
@@ -7,6 +7,8 @@ import { useList, useUnit } from 'effector-react';
 import { desktop } from '@/shared/media';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+
+import { TakeTestAgain } from '@/features/TakeTestAgain';
 
 import { ReportGroupTemplate } from './ReportGroupTemplate';
 import { ReportTemplate } from './ReportTemplate';
@@ -67,6 +69,8 @@ export const Reports = () => {
                         render={renderExpressReports}
                         label='Экспресс отчёты'
                     />
+                    <Divider />
+                    <TakeTestAgain w='100%' my='sm' fz={14} variant='subtle' className={s.takeTestAgain} size='md' />
                 </Box>
             </Collapse>
         </Box>
