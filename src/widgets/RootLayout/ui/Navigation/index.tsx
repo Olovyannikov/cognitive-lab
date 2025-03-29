@@ -20,7 +20,7 @@ export const Navigation = () => {
     const { urlParsed } = usePageContext();
     const [isOpen] = useUnit([RootModel.$isMenuOpened]);
     const [onClose] = useUnit([RootModel.closeMenu]);
-    const [isUserHasFreeReport, lastUserFreeReport, isPending, isStale, userId] = useUnit([
+    const [isUserHasFreeReport, lastUserFreeReport, isPending, isStale, surveyId] = useUnit([
         ReportModel.$isUserHasFreeReport,
         ReportModel.$lastUserFreeReport,
         getSurveysInfoQuery.$pending,
@@ -35,13 +35,14 @@ export const Navigation = () => {
         if (isFreeReportPage || isUserHasFreeReport) {
             return (
                 <BuyNowButton
-                    survey={userId}
+                    survey={surveyId}
                     loading={isLoading}
                     disabled={isLoading}
                     externalReportId={lastUserFreeReport?.user_report}
                     size='md'
                     className={s.testLink}
                     c='white'
+                    onClick={() => onClose(false)}
                 >
                     Купить полный отчёт
                 </BuyNowButton>

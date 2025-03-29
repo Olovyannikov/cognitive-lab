@@ -21,7 +21,7 @@
   margin: 0 auto;
 }
 
-.item {
+.item:not(:first-child) {
   margin-top: 90px;
 }
 

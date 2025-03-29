@@ -1,9 +1,10 @@
 .grid {
   @mixin larger-than 992px {
     display: grid;
+    place-items: center;
     grid-auto-rows: 0fr;
     grid-template-areas:
-      "l t"
+      "l t2"
       "l t2";
   }
 }

@@ -23,7 +23,10 @@
 
 .content {
   position: relative;
-  margin-bottom: 10rem;
+
+  @mixin larger-than 992px {
+    margin-bottom: 10rem;
+  }
 }
 
 .card {

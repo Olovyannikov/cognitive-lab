@@ -4,6 +4,7 @@ import { Box, Image, Paper, Stack, Text, Title } from '@mantine/core';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 import Markdown from 'markdown-to-jsx';
 import { usePageContext } from 'vike-react/usePageContext';
 
@@ -27,6 +28,7 @@ export const MoreInBlog = () => {
             direction: 'backward',
         })
     );
+    const wheel = useRef(WheelGesturesPlugin({}));
 
     const currentBlogPosts =
         data.payload?.length > 5
@@ -46,7 +48,7 @@ export const MoreInBlog = () => {
                 loop
                 slideGap='lg'
                 withControls={false}
-                plugins={[autoplay.current]}
+                plugins={[autoplay.current, wheel.current]}
                 slideSize={isMobile ? '70%' : 466}
                 onMouseLeave={() => autoplay?.current?.play?.()}
                 onPointerLeave={() => autoplay?.current?.play?.()}

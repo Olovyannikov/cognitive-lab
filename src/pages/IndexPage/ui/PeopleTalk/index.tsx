@@ -3,6 +3,7 @@ import { Carousel } from '@mantine/carousel';
 import { Box, Group, Paper, Rating, Text, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { desktop } from '@/shared/media';
@@ -35,6 +36,7 @@ export const PeopleTalk = () => {
             speed: 0.5,
         })
     );
+    const wheel = useRef(WheelGesturesPlugin({}));
 
     const isLarge = useUnit(desktop.$matches);
     const { isMobile } = usePageContext();
@@ -51,7 +53,7 @@ export const PeopleTalk = () => {
                 loop
                 slideGap='lg'
                 withControls={false}
-                plugins={[autoplay.current]}
+                plugins={[autoplay.current, wheel.current]}
                 slideSize={!isMobile || isLarge ? 624 : '70%'}
                 onMouseLeave={() => isActive && autoplay.current.play()}
                 onPointerLeave={() => isActive && autoplay.current.play()}

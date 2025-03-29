@@ -102,6 +102,7 @@
     "effector-storage": "^7.1.0",
     "embla-carousel-auto-scroll": "8",
     "embla-carousel-react": "^8.5.2",
+    "embla-carousel-wheel-gestures": "^8.0.1",
     "express": "^4.21.2",
     "framer-motion": "^12.4.4",
     "lenis": "^1.2.3",

@@ -10,10 +10,11 @@ interface InnerLayoutProps {
     text?: ReactNode;
     title?: ReactNode;
     navigateTo?: string;
+    className?: string;
 }
 
-export const InnerLayout = ({ text, title, image, children }: PropsWithChildren<InnerLayoutProps>) => (
-    <Box component='section'>
+export const InnerLayout = ({ text, title, image, children, className }: PropsWithChildren<InnerLayoutProps>) => (
+    <Box component='section' className={className}>
         <Container pb={80}>
             <InnerContainer className={s.wrapper}>
                 {image && <Picture src={image} w={140} h={140} flex='auto' />}

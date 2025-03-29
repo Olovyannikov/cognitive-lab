@@ -11,6 +11,7 @@ interface BuyNowButtonProps extends ButtonProps {
     survey?: string | null;
     externalReportId?: string;
     showIcon?: boolean;
+    onClick?: VoidFunction;
 }
 
 export const BuyNowButton = ({

@@ -10,6 +10,8 @@ import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
 
 import { InnerLayout } from '@/widgets/InnerLayout';
 
+import s from './PaymentCheckPage.module.css';
+
 export const PaymentCheckPage = () => {
     const {
         urlParsed: {
@@ -28,7 +30,7 @@ export const PaymentCheckPage = () => {
     if (pending || !order) return <PageLoader />;
 
     return (
-        <InnerLayout title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>
+        <InnerLayout className={s.root} title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>
             <MainButton component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
                 {buttonText}
             </MainButton>

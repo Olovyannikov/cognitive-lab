@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { useForm } from '@mantine/form';
 import { Lock } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
+import { navigate } from 'vike/client/router';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { PersonalitiesModel } from '@/entities/Personality';
-import { getSurveysInfoQuery, type PurchasedReportRequest } from '@/entities/Report';
+import { getSurveysInfoQuery, type PurchasedReportRequest, ReportModel } from '@/entities/Report';
 
 import { $promocodeErrorMessage, reportPurchased } from '../model';
 
@@ -13,14 +14,15 @@ export const useReportBuyFormViewModel = () => {
     const {
         routeParams: { surveyId },
         urlParsed: {
-            search: { type },
+            search: { type, reportId },
         },
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
     const user = useUnit(getSurveysInfoQuery.$data);
-    const { types, promocodeError } = useUnit({
+    const { types, promocodeError, currentUserMbti } = useUnit({
         types: PersonalitiesModel.$personalitiesMap,
         promocodeError: $promocodeErrorMessage,
+        currentUserMbti: ReportModel.$userMbtiTypes.map((el) => el.find((report) => report[reportId]) ?? null),
     });
 
     const form = useForm({
@@ -29,7 +31,7 @@ export const useReportBuyFormViewModel = () => {
             email: user?.user?.email ?? '',
             mbti_type: surveyId ? '' : type,
             promo_code: '',
-            survey_result: surveyId ?? '',
+            user_report: reportId ?? '',
         },
         validate: {
             email: (value: string) => (/^\S+@\S+$/.test(value) ? null : 'Неправильный email'),
@@ -95,7 +97,7 @@ export const useReportBuyFormViewModel = () => {
         }
 
         if (!surveyId) {
-            delete preparedData.survey_result;
+            delete preparedData.user_report;
         }
 
         if (!preparedData.promo_code || promocodeError) {
@@ -104,6 +106,10 @@ export const useReportBuyFormViewModel = () => {
 
         purchaseReportHandler(preparedData);
     });
+
+    useEffect(() => {
+        if (!type && !currentUserMbti?.[reportId]) navigate('/');
+    }, [type, currentUserMbti, reportId]);
 
     return {
         form,

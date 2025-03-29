@@ -1,6 +1,7 @@
 .box {
   padding-top: 60px;
   padding-bottom: 40px;
+  scroll-margin-top: -60px;
 
   @mixin larger-than 1200px {
     padding-top: 160px;

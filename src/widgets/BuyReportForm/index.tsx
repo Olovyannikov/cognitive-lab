@@ -38,7 +38,7 @@ export const BuyReportForm = () => {
 
     return (
         <FormWrapper onSubmit={onSubmit}>
-            <Select {...selectProps} value={reportId ? currentUserMbti : selectProps.value} />
+            <Select {...selectProps} value={reportId ? currentUserMbti?.[reportId] : selectProps.value} />
             <FormInput {...emailProps} />
             <Paper bg='gray.0' radius='xs' p='md' px='sm'>
                 <Text className={s.promocodeLabel}>У меня есть промокод</Text>

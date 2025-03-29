@@ -21,7 +21,7 @@ export const Card = ({ text, image, title }: CardProps) => {
             <CircleImage className={s.background} />
             <Flex className={s.flex} align='center' gap='xs' flex={1}>
                 <Picture className={s.picture} src={`/test/${isMobile ? 'mobile' : 'desktop'}/${image}`} />
-                <Stack gap='xs'>
+                <Stack gap='xs' flex={1}>
                     <Title className={s.title} order={4}>
                         {title}
                     </Title>

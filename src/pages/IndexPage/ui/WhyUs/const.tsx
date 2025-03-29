@@ -7,7 +7,7 @@ export const CARDS = [
         title: 'Уникальные\nAI-инсайты',
         description:
             'Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.',
-        content: <Picture width={400} height={400} src='/landing/why-us/ENFJ' />,
+        content: <Picture src='/landing/why-us/ENFJ' />,
     },
     {
         id: 1,
@@ -15,7 +15,7 @@ export const CARDS = [
         title: 'Подтверждённая эффективность',
         description:
             'Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.',
-        content: <Picture width={400} height={400} src='/landing/why-us/ENTJ' />,
+        content: <Picture src='/landing/why-us/ENTJ' />,
     },
     {
         id: 2,
@@ -23,6 +23,6 @@ export const CARDS = [
         title: 'Постоянное совершенствование',
         description:
             'Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.',
-        content: <Picture width={400} height={400} src='/landing/why-us/ESTP' />,
+        content: <Picture src='/landing/why-us/ESTP' />,
     },
 ];

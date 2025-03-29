@@ -36,6 +36,13 @@ export const UserModel = atom(() => {
         target: $userId,
     });
 
+    sample({
+        clock: delay(UserGate.open, 500),
+        source: $surveyId,
+        fn: (currentSurveyId) => (currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : ''),
+        target: $surveyId,
+    });
+
     return {
         $userId,
         $surveyId,
