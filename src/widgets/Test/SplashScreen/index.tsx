@@ -6,6 +6,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { useIsLarge } from '@/shared/lib';
 import { PageLoader, RainbowButton } from '@/shared/ui';
 
+import { ReportModel } from '@/entities/Report';
 import { TestModel } from '@/entities/Test';
 
 import { TakeTestAgainModel } from '@/features/TakeTestAgain';
@@ -21,6 +22,7 @@ export const TestSplashScreen = () => {
         TestModel.setSplashScreenVisibility,
         TakeTestAgainModel.takeTestAgainClicked,
     ]);
+    const [reportsLen] = useUnit([ReportModel.$allUserReports.map((reports) => reports?.length)]);
     const { isMobile } = usePageContext();
     const isLarge = useIsLarge();
 
@@ -57,17 +59,19 @@ export const TestSplashScreen = () => {
                     >
                         {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}
                     </RainbowButton>
-                    <Button
-                        fz={!isMobile || isLarge ? 'lg' : 'md'}
-                        variant='outline'
-                        size='xl'
-                        w='100%'
-                        maw={isLarge ? 350 : '100%'}
-                        mx='auto'
-                        onClick={onStartClickHandler}
-                    >
-                        Начать заново
-                    </Button>
+                    {reportsLen > 0 && (
+                        <Button
+                            fz={!isMobile || isLarge ? 'lg' : 'md'}
+                            variant='outline'
+                            size='xl'
+                            w='100%'
+                            maw={isLarge ? 350 : '100%'}
+                            mx='auto'
+                            onClick={onStartClickHandler}
+                        >
+                            Начать заново
+                        </Button>
+                    )}
                 </Stack>
             </Container>
         </Box>
