@@ -29,7 +29,8 @@ p.description {
   }
 }
 
-picture.image {
+picture.image,
+picture.image img {
   grid-area: l;
   margin: 0 auto;
   width: 210px;
@@ -37,7 +38,7 @@ picture.image {
 
   @mixin larger-than 992px {
     margin-right: 132px;
-    width: 366px;
-    height: 388px;
+    width: 366px !important;
+    height: 388px !important;
   }
 }

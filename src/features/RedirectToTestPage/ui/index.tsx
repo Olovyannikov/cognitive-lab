@@ -1,19 +1,23 @@
-import { Button, type ButtonProps } from '@mantine/core';
+import { Loader, NavLink, NavLinkProps } from '@mantine/core';
 import clsx from 'clsx';
 
 import s from './RedirectToTestPage.module.css';
 
-export const RedirectToTestPage = ({ ...props }: ButtonProps & { onClick?: VoidFunction }) => (
-    <Button
-        component='a'
+interface RedirectToTestPageProps {
+    loading: boolean;
+}
+
+export const RedirectToTestPage = ({ loading, ...props }: NavLinkProps & RedirectToTestPageProps) => (
+    <NavLink
+        label={loading ? <Loader size='sm' /> : 'Пройти тест'}
+        disabled={loading}
+        miw={144}
         href='/test'
-        fullWidth
-        size='lg'
-        radius='md'
         bg='dark.6'
-        className={clsx(props.className, s.button)}
         {...props}
-    >
-        Пройти тест
-    </Button>
+        className={clsx(props.className, s.button)}
+        classNames={{
+            body: s.body,
+        }}
+    />
 );

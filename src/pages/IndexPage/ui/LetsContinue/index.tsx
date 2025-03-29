@@ -15,7 +15,12 @@ export const LetsContinue = () => (
             <Title className={s.title} order={2}>
                 Готовы узнать ваш <span>тип личности?</span>
             </Title>
-            <RainbowButton mb={0} className={s.button}>
+            <RainbowButton
+                mb={0}
+                classNames={{
+                    root: s.button,
+                }}
+            >
                 Пройти тест
             </RainbowButton>
         </Container>

@@ -27,14 +27,16 @@ export interface PurchasedReportRequest {
     survey_result?: string;
 }
 
+export interface UserReportInfo {
+    mbti_type: string;
+    user_report: string;
+    created_at: string;
+    report_kind: string;
+}
+
 export interface SurveysInfoResponse {
     user_orders: Order[];
-    reports: {
-        mbti_type: string;
-        user_report: string;
-        created_at: string;
-        report_kind: string;
-    }[];
+    reports: UserReportInfo[];
     left_comments: {
         accuracy_rate: number;
         convenience_rate: number;

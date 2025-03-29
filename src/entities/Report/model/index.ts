@@ -7,6 +7,7 @@ import { delay } from 'patronum';
 import { atom } from '@/shared/factories';
 
 import { getFullReportQuery, getSurveysInfoQuery } from '../api';
+import type { UserReportInfo } from '../api/dto';
 import type { ContentResult, Order } from '../types';
 
 export const ReportModel = atom(() => {
@@ -19,6 +20,13 @@ export const ReportModel = atom(() => {
     const $currentContentPage = createStore(0);
     const $currentPage = createStore(1);
     const currentPageChanged = createEvent<number>();
+
+    const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>
+        Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))
+    );
+    const $lastUserFreeReport = getSurveysInfoQuery.$data.map(
+        (user) => user?.reports?.findLast?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
+    );
 
     persist({
         store: $currentPage,
@@ -90,5 +98,7 @@ export const ReportModel = atom(() => {
         $expressUserReports,
         ReportGate,
         ReportPageGate,
+        $isUserHasFreeReport,
+        $lastUserFreeReport,
     };
 });

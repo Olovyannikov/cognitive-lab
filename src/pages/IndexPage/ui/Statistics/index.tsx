@@ -1,31 +1,36 @@
 import { Flex } from '@mantine/core';
+import { useList } from 'effector-react';
 
 import { SpinningText } from '@/shared/ui';
+
+import { LandingModel } from '@/entities/Landing';
 
 import { Section } from '../Section';
 import { Card } from './Card';
 
 import s from './Statistics.module.css';
 
-export const Statistics = () => (
-    <Section
-        containerClassName={s.section}
-        title={
-            <>
-                Статистика{' '}
-                <span>
-                    и&nbsp;<span style={{ display: 'inline' }}>доверие</span>
-                </span>
-            </>
-        }
-    >
-        <Flex className={s.flex}>
-            <Card title='80+ тыс.' text='человек уже прошли тест в&nbsp;CognitiveLab' />
-            <Card title='92%' text='пользователей согласны с&nbsp;точностью результатов' />
-            <Card title='8 из 10' text='нашли в отчёте ценные инсайты для дальнейшего развития' />
-        </Flex>
-        <SpinningText radius={7} className={s.spinning}>
-            Cognitive Lab ✦ Cognitive Lab ✦
-        </SpinningText>
-    </Section>
-);
+export const Statistics = () => {
+    const data = useList(LandingModel.$statisticsAndTrust, (el) => (
+        <Card title={el.primary_text} text={el.secondary_text} />
+    ));
+
+    return (
+        <Section
+            containerClassName={s.section}
+            title={
+                <>
+                    Статистика{' '}
+                    <span>
+                        и&nbsp;<span style={{ display: 'inline' }}>доверие</span>
+                    </span>
+                </>
+            }
+        >
+            <Flex className={s.flex}>{data}</Flex>
+            <SpinningText radius={7} className={s.spinning}>
+                Cognitive Lab ✦ Cognitive Lab ✦
+            </SpinningText>
+        </Section>
+    );
+};

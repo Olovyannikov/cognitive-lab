@@ -3,6 +3,7 @@ import { sample } from 'effector';
 import { createPageInit } from '@/shared/lib';
 
 import { getAllBlogPostsQuery } from '@/entities/Blog';
+import { getMainPageInfoQuery } from '@/entities/Landing';
 import { getReviewsQuery, ReviewModel } from '@/entities/Review';
 
 export const pageInitiated = createPageInit();
@@ -37,4 +38,9 @@ sample({
         page_size: 100,
     }),
     target: getAllBlogPostsQuery.refresh,
+});
+
+sample({
+    clock: pageInitiated,
+    target: getMainPageInfoQuery.refresh,
 });

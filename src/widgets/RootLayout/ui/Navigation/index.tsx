@@ -3,7 +3,7 @@ import { X } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { getSurveysInfoQuery } from '@/entities/Report';
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 
 import { BuyNowButton } from '@/features/BuyNowButton';
 import { RedirectToTestPage } from '@/features/RedirectToTestPage';
@@ -19,16 +19,27 @@ export const Navigation = () => {
     const { urlParsed } = usePageContext();
     const [isOpen] = useUnit([RootModel.$isMenuOpened]);
     const [onClose] = useUnit([RootModel.closeMenu]);
-    const [isUserHasFreeReport, lastUserFreeReport] = useUnit([
-        getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports.find((report) => report.report_kind === 'free'))),
-        getSurveysInfoQuery.$data.map((user) => user?.reports.findLast((el) => el.report_kind === 'free')),
+    const [isUserHasFreeReport, lastUserFreeReport, isPending, isStale] = useUnit([
+        ReportModel.$isUserHasFreeReport,
+        ReportModel.$lastUserFreeReport,
+        getSurveysInfoQuery.$pending,
+        getSurveysInfoQuery.$stale,
     ]);
     const isFreeReportPage = urlParsed.href.includes('/free-report/');
+
+    const isLoading = isStale || isPending;
 
     const getCurrentChildren = () => {
         if (isFreeReportPage || isUserHasFreeReport) {
             return (
-                <BuyNowButton externalReportId={lastUserFreeReport?.user_report} size='md' className={s.testLink}>
+                <BuyNowButton
+                    loading={isLoading}
+                    disabled={isLoading}
+                    externalReportId={lastUserFreeReport?.user_report}
+                    size='md'
+                    className={s.testLink}
+                    c='white'
+                >
                     Купить полный отчёт
                 </BuyNowButton>
             );
@@ -37,7 +48,13 @@ export const Navigation = () => {
         if (!isFreeReportPage) {
             return (
                 <RedirectToTestPage
-                    onClick={() => onClose(false)}
+                    loading={isLoading}
+                    onClick={(e) => {
+                        if (isLoading) {
+                            e.preventDefault();
+                        }
+                        onClose(false);
+                    }}
                     className={s.testLink}
                     maw={144}
                     w='100%'
