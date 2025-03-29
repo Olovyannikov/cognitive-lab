@@ -7,14 +7,15 @@
         "binary": "pnpm",
         "semver": "^10.7.0",
         "version": "--version",
-        "error": "You have pnpm@{{installedVersion}}, and need pnpm@{{wantedVersion}}. Fix with `pnpm self-update`"
+        "error": "You have pnpm@{{installedVersion}}, and need pnpm@{{wantedVersion}}. Fix with `pnpm self-update`",
+        "fix": "pnpm self-update"
       }
     ],
     "Node": [
       {
         "rule": "cli",
         "binary": "node",
-        "semver": "^20.0.0",
+        "semver": "^22.0.0",
         "version": "--version",
         "error": "You have node@{{installedVersion}}, and need node@{{wantedVersion}}. Go to https://nodejs.org/ to update`"
       }
