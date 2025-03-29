@@ -64,3 +64,4 @@ firebase
 .npmignore
 *.jpg
 *.avif
+.solidarity
