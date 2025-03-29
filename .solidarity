@@ -15,7 +15,7 @@
       {
         "rule": "cli",
         "binary": "node",
-        "semver": "^22.0.0",
+        "semver": "^20.17.0",
         "version": "--version",
         "error": "You have node@{{installedVersion}}, and need node@{{wantedVersion}}. Go to https://nodejs.org/ to update`"
       }

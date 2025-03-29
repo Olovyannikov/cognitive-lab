@@ -9,6 +9,12 @@ export const PeopleTalkModel = atom(() => {
     const currentReviewSettled = createEvent<Review>();
     sample({
         clock: currentReviewSettled,
+        fn: (review) => ({
+            ...review,
+            created_at: review.created_at.includes('.')
+                ? review.created_at
+                : new Date(review.created_at).toLocaleDateString(),
+        }),
         target: $currentReview,
     });
 

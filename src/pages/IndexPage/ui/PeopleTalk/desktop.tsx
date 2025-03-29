@@ -19,6 +19,7 @@ export const Desktop = () => {
         PeopleTalkModel.$currentReview,
         PeopleTalkModel.modalActiveStateSettled,
     ]);
+
     return (
         <Modal
             size='lg'
@@ -50,7 +51,7 @@ export const Desktop = () => {
                     {currentReview?.text}
                 </Text>
                 <Text px={40} fz={24} c='dark.2' mt='auto'>
-                    {new Date(currentReview?.created_at ?? '').toLocaleDateString()}
+                    {currentReview?.created_at}
                 </Text>
             </>
         </Modal>

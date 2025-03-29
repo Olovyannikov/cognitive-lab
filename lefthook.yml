@@ -12,7 +12,7 @@ pre-commit:
         prettier:
             run: npx prettier --write {staged_files} && git add {staged_files}
         solidarity:
-            run: solidarity snapshot
+            run: solidarity
 
 commit-msg:
     parallel: true
