@@ -1,0 +1,1 @@
+import{j as r,C as a,w as t}from"./chunk-GUAQOeGq.js";import{s as e}from"./chunk-CGG52H9N.js";const x=({children:s,className:n,...o})=>r.jsx(a,{className:t(e.container,n),...o,children:s});export{x as I};
