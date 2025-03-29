@@ -52,15 +52,15 @@ export const MoreInBlog = () => {
                 onPointerLeave={() => autoplay?.current?.play?.()}
                 onPointerEnter={() => autoplay?.current?.stop?.()}
             >
-                {currentBlogPosts.map((review, index) => (
+                {currentBlogPosts.map((post, index) => (
                     <Carousel.Slide key={index} h='unset'>
-                        <Paper component='a' href='/blog' withBorder className={s.paper}>
+                        <Paper component='a' href={`/blog/${post.id}`} withBorder className={s.paper}>
                             <Stack justify='space-between' align='flex-start' gap='md'>
-                                <Image src={review.image} className={s.image} width={304} height={304} />
+                                <Image src={post.image} className={s.image} width={304} height={304} />
                                 <Title order={5} className={s.cardTitle}>
-                                    {review.title}
+                                    {post.title}
                                 </Title>
-                                <Text c='dark.2'>{review.updated_at}</Text>
+                                <Text c='dark.2'>{post.updated_at}</Text>
                                 <Box mah={150} style={{ overflow: 'hidden' }}>
                                     <Markdown
                                         options={{
@@ -76,7 +76,7 @@ export const MoreInBlog = () => {
                                             },
                                         }}
                                     >
-                                        {review.body.data}
+                                        {post.body.data}
                                     </Markdown>
                                 </Box>
                             </Stack>

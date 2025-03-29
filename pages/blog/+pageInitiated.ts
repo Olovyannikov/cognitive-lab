@@ -32,6 +32,18 @@ sample({
 });
 
 sample({
+    clock: pageInitiated,
+    fn: (ctx) => {
+        if (ctx.isMobile) {
+            return 5;
+        }
+
+        return 10;
+    },
+    target: BlogModel.$pageSize,
+});
+
+sample({
     clock: getBlogPostsQuery.finished.failure,
     target: BlogModel.redirectToMainBlogPostPageFx,
 });

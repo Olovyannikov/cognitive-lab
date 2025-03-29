@@ -10,7 +10,7 @@ export const BuyReportGate = createGate();
 
 export const applyPromocodeClicked = createEvent<string>();
 
-export const $promocodeErrorMessage = createStore('').on(applyPromocodeClicked, () => '');
+export const $promocodeErrorMessage = createStore('').reset(applyPromocodeClicked);
 export const $showSuccessPromoMessage = createStore(false);
 export const reportPurchased = createEvent<PurchasedReportRequest>({});
 

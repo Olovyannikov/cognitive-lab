@@ -1,17 +1,18 @@
 import { createEffect, createEvent, createStore, restore, sample } from 'effector';
-import { createAction } from 'effector-action';
 import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
-import { desktop, mobile } from '@/shared/media';
 
-import { getBlogPostsQuery } from '@/entities/Blog';
-import { BlogPost } from '@/entities/Blog/types';
+import { getBlogPostsQuery } from '../api';
+import type { BlogPost } from '../types';
 
 export const BlogModel = atom(() => {
+    const $pageSize = createStore(5);
     const $currentPage = createStore(1);
-    const pageChanged = createEvent<number>();
     const $blogPosts = createStore<BlogPost[]>([]);
+
+    const pageChanged = createEvent<number>();
+    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));
 
     sample({
         clock: getBlogPostsQuery.finished.success,
@@ -24,7 +25,11 @@ export const BlogModel = atom(() => {
         target: $currentPage,
     });
 
-    const $pageSize = createStore(5);
+    sample({
+        clock: pageChanged,
+        target: scrollToTopFx,
+    });
+
     sample({
         clock: $pageSize,
         filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),
@@ -39,26 +44,6 @@ export const BlogModel = atom(() => {
         fn: ({ page_size }, page) => ({ page, page_size }),
         target: getBlogPostsQuery.refresh,
     });
-    createAction({
-        clock: [desktop.matched, mobile.matched],
-        source: {
-            isDesktop: desktop.$matches,
-            isMobile: mobile.$matches,
-        },
-        target: {
-            $currentPage,
-            $pageSize,
-        },
-        fn: (target, { isDesktop, isMobile }) => {
-            target.$currentPage(1);
-            if (isDesktop) {
-                target.$pageSize(10);
-            }
-            if (isMobile) {
-                target.$pageSize(5);
-            }
-        },
-    });
 
     const $totalPages = restore(
         getBlogPostsQuery.finished.success.map((res) => res.result.total_pages),
@@ -66,7 +51,7 @@ export const BlogModel = atom(() => {
     );
 
     const redirectToMainBlogPostPageFx = createEffect(async () => {
-        await navigate('/blog?page=1');
+        await navigate('/blog');
     });
 
     sample({

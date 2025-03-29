@@ -7,7 +7,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { PersonalitiesModel } from '@/entities/Personality';
 import { getSurveysInfoQuery, type PurchasedReportRequest } from '@/entities/Report';
 
-import { reportPurchased } from '../model';
+import { $promocodeErrorMessage, reportPurchased } from '../model';
 
 export const useReportBuyFormViewModel = () => {
     const {
@@ -18,8 +18,9 @@ export const useReportBuyFormViewModel = () => {
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
     const user = useUnit(getSurveysInfoQuery.$data);
-    const { types } = useUnit({
+    const { types, promocodeError } = useUnit({
         types: PersonalitiesModel.$personalitiesMap,
+        promocodeError: $promocodeErrorMessage,
     });
 
     const form = useForm({
@@ -97,7 +98,7 @@ export const useReportBuyFormViewModel = () => {
             delete preparedData.survey_result;
         }
 
-        if (!preparedData.promo_code) {
+        if (!preparedData.promo_code || promocodeError) {
             delete preparedData.promo_code;
         }
 
