@@ -1,1 +1,0 @@
-import{j as r,S as o}from"./chunk-GUAQOeGq.js";import{s as m}from"./chunk-4ssmusCf.js";const e=({onSubmit:s,children:a})=>r.jsx("form",{onSubmit:s,children:r.jsx(o,{className:m.stackWrapper,children:a})});export{e as F};
