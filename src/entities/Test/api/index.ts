@@ -1,6 +1,6 @@
 import { createMutation, createQuery } from '@farfetched/core';
 
-import { createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';
+import { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';
 
 import type { QuestionsResponse } from './dto';
 import type { Answers } from './types';
@@ -18,9 +18,16 @@ export const getQuestionsQuery = createQuery({
 });
 
 export const submitAnswersMutation = createMutation({
-    effect: createInternalRequestFx<Answers, { id: string }>((body) => ({
+    effect: createInternalRequestFx<Answers, { id: string; user_free_report: string }>((body) => ({
         url: `/surveys/answers/submit`,
         method: HTTP_METHODS.POST,
         body,
+    })),
+});
+
+export const takeTestAgainMutation = createQuery({
+    effect: createInternalRequestFx<void, void>(() => ({
+        url: API.surveys.start,
+        method: HTTP_METHODS.POST,
     })),
 });

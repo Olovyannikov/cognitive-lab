@@ -6,10 +6,19 @@ import { atom } from '@/shared/factories';
 import { desktop, mobile } from '@/shared/media';
 
 import { getBlogPostsQuery } from '@/entities/Blog';
+import { BlogPost } from '@/entities/Blog/types';
 
 export const BlogModel = atom(() => {
     const $currentPage = createStore(1);
     const pageChanged = createEvent<number>();
+    const $blogPosts = createStore<BlogPost[]>([]);
+
+    sample({
+        clock: getBlogPostsQuery.finished.success,
+        fn: ({ result }) => result.payload,
+        target: $blogPosts,
+    });
+
     sample({
         clock: pageChanged,
         target: $currentPage,
@@ -71,5 +80,6 @@ export const BlogModel = atom(() => {
         pageChanged,
         $totalPages,
         redirectToMainBlogPostPageFx,
+        $blogPosts,
     };
 });

@@ -1,5 +1,6 @@
 import { useUnit } from 'effector-react';
 
+import { navigate } from '@/shared/lib';
 import { FormSuccessScreen, PageLoader } from '@/shared/ui';
 
 import { getSurveysInfoQuery } from '@/entities/Report';
@@ -35,7 +36,11 @@ export const ReviewPage = () => {
                     description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'
                     image='/review/star'
                     slots={{
-                        action: <NavigateToMainPage fullWidth />,
+                        action: (
+                            <NavigateToMainPage onClick={() => navigate.back()} fullWidth>
+                                Вернуться назад
+                            </NavigateToMainPage>
+                        ),
                     }}
                 />
             )}

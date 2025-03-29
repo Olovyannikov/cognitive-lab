@@ -33,13 +33,12 @@ export const RedirectToTestPageAndNavigateToFullStructureAction = () => (
 );
 
 export const BuyNowOrRedirectToTestPageAction = () => {
-    const { routeParams } = usePageContext();
-    const isLarge = useUnit(desktop.$matches);
+    const { routeParams, isMobile } = usePageContext();
 
     return (
         <Flex className={s.actions}>
             <RedirectToTestPage />
-            <BuyNowButton h={isLarge ? undefined : 45} mbti={routeParams?.type} variant='outline' bg='transparent' />
+            <BuyNowButton h={!isMobile ? undefined : 45} mbti={routeParams?.type} variant='outline' bg='transparent' />
         </Flex>
     );
 };

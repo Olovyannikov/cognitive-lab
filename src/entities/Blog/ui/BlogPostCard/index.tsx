@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { Fragment, memo } from 'react';
 import { Blockquote, Box, Button, Card, Flex, Grid, Image, Stack, Text, Title } from '@mantine/core';
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
@@ -52,6 +52,7 @@ export const BlogPostCard = memo(({ post }: BlogPostCardProps) => (
                                             {props.children}
                                         </Blockquote>
                                     ),
+                                    a: (props) => <>{props.children}</>,
                                 },
                             }}
                         >

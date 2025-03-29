@@ -8,6 +8,8 @@ export const pageStarted = createPageStart();
 
 sample({
     clock: pageStarted,
-    fn: () => undefined,
+    fn: (ctx) => ({
+        id: ctx.routeParams.reportId,
+    }),
     target: getFreeResultQuery.start,
 });

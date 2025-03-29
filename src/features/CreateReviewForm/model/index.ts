@@ -2,19 +2,31 @@ import { createStore, sample } from 'effector';
 
 import { atom } from '@/shared/factories';
 
-import { getSurveysInfoQuery } from '@/entities/Report';
-import { ReviewModel } from '@/entities/Review';
+import { getSurveysInfoQuery, UserReportComment } from '@/entities/Report';
+import { createReviewMutation, ReviewModel } from '@/entities/Review';
 
 export const CreateReviewFormModel = atom(() => {
     const $isSubmitted = createStore(false);
 
-    const $comments = getSurveysInfoQuery.$data.map((info) => info?.left_comments);
+    const $comments = createStore<UserReportComment[]>([]);
+
+    sample({
+        clock: getSurveysInfoQuery.finished.success,
+        fn: ({ result }) => result?.left_comments ?? [],
+        target: $comments,
+    });
 
     sample({
         clock: $comments,
         source: ReviewModel.$currentReviewId,
-        fn: (id, comments) => Boolean(comments?.find(({ user_report }) => user_report === id)),
+        fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),
         target: $isSubmitted,
+    });
+
+    sample({
+        clock: createReviewMutation.finished.success,
+        fn: () => {},
+        target: getSurveysInfoQuery.start,
     });
 
     return {

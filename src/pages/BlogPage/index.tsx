@@ -11,10 +11,7 @@ export const BlogPage = () => {
     const { data, pending } = useUnit(getBlogPostsQuery);
     const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);
     const totalPages = useUnit(BlogModel.$totalPages);
-    const blogPosts = useList(
-        getBlogPostsQuery.$data.map((el) => el.payload),
-        (post) => post.id && <BlogPostCard post={post} />
-    );
+    const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);
 
     if (!data) return <PageLoader />;
 

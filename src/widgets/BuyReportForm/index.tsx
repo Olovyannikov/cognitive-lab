@@ -5,7 +5,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { toInputUppercase } from '@/shared/lib';
 import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
 
-import { getPriceWithPromocodeQuery, getSurveysInfoQuery } from '@/entities/Report';
+import { getPriceWithPromocodeQuery, ReportModel } from '@/entities/Report';
 
 import {
     $promocodeErrorMessage,
@@ -33,9 +33,7 @@ export const BuyReportForm = () => {
         promocodeError: $promocodeErrorMessage,
         showSuccessMessage: $showSuccessPromoMessage,
         isLoading: openTransactionPaywallFx.pending,
-        currentUserMbti: getSurveysInfoQuery.$data.map(
-            (el) => el?.reports.find((el) => el.user_report === reportId)?.mbti_type
-        ),
+        currentUserMbti: ReportModel.$userMbtiTypes.map((el) => el.find((report) => report[reportId]) ?? null),
     });
 
     return (

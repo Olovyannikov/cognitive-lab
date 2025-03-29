@@ -4,6 +4,7 @@ import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+import { UserModel } from '@/entities/User';
 
 import { BuyNowButton } from '@/features/BuyNowButton';
 import { RedirectToTestPage } from '@/features/RedirectToTestPage';
@@ -19,11 +20,12 @@ export const Navigation = () => {
     const { urlParsed } = usePageContext();
     const [isOpen] = useUnit([RootModel.$isMenuOpened]);
     const [onClose] = useUnit([RootModel.closeMenu]);
-    const [isUserHasFreeReport, lastUserFreeReport, isPending, isStale] = useUnit([
+    const [isUserHasFreeReport, lastUserFreeReport, isPending, isStale, userId] = useUnit([
         ReportModel.$isUserHasFreeReport,
         ReportModel.$lastUserFreeReport,
         getSurveysInfoQuery.$pending,
         getSurveysInfoQuery.$stale,
+        UserModel.$surveyId,
     ]);
     const isFreeReportPage = urlParsed.href.includes('/free-report/');
 
@@ -33,6 +35,7 @@ export const Navigation = () => {
         if (isFreeReportPage || isUserHasFreeReport) {
             return (
                 <BuyNowButton
+                    survey={userId}
                     loading={isLoading}
                     disabled={isLoading}
                     externalReportId={lastUserFreeReport?.user_report}

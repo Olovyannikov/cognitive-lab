@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import s from './RedirectToTestPage.module.css';
 
 interface RedirectToTestPageProps {
-    loading: boolean;
+    loading?: boolean;
 }
 
 export const RedirectToTestPage = ({ loading, ...props }: NavLinkProps & RedirectToTestPageProps) => (

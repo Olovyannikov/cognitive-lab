@@ -5,7 +5,14 @@ import { useList, useUnit } from 'effector-react';
 import { TYPE_TO_COLOR_MAP } from '@/shared/lib';
 import { InnerContainer } from '@/shared/ui';
 
-import { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader } from '@/entities/Report';
+import {
+    Banner,
+    contentResolver,
+    findBannerIndex,
+    getPersonalityTypeQuery,
+    ReportHeader,
+    ReportModel,
+} from '@/entities/Report';
 
 import { SendReportEmail } from '@/features/SendReportEmail';
 
@@ -18,45 +25,39 @@ export const TypePage = () => {
     const { data } = useUnit(getPersonalityTypeQuery);
     const currentColor = TYPE_TO_COLOR_MAP[data?.mbti_type];
 
-    const beforeBannerContent = useList(
-        getPersonalityTypeQuery.$data.map((el) => el.content),
-        ({ content }) => {
-            const end = findBannerIndex(content);
+    const beforeBannerContent = useList(ReportModel.$reportContent, ({ content }) => {
+        const end = findBannerIndex(content);
 
-            return content.slice(0, end).map((el, idx) => (
-                <div key={el.type + idx} className={s.block}>
-                    {el.content.map((currentContent, idx) => (
-                        <Fragment key={currentContent.type + idx}>
-                            {contentResolver({ content: currentContent, color: currentColor })}
-                        </Fragment>
-                    ))}
-                </div>
-            ));
-        }
-    );
+        return content.slice(0, end).map((el, idx) => (
+            <div key={el.type + idx} className={s.block}>
+                {el.content.map((currentContent, idx) => (
+                    <Fragment key={currentContent.type + idx}>
+                        {contentResolver({ content: currentContent, color: currentColor })}
+                    </Fragment>
+                ))}
+            </div>
+        ));
+    });
 
-    const afterBannerContent = useList(
-        getPersonalityTypeQuery.$data.map((el) => el.content),
-        ({ content }) => {
-            const end = findBannerIndex(content);
+    const afterBannerContent = useList(ReportModel.$reportContent, ({ content }) => {
+        const end = findBannerIndex(content);
 
-            return content.slice(end).map((el, elIdx) => (
-                <div key={el.type + elIdx} className={s.block}>
-                    {el.content.map((currentContent, idx) => (
-                        <Fragment key={currentContent.type + idx}>
-                            {contentResolver({
-                                content: currentContent,
-                                color: currentColor,
-                                slots: {
-                                    subscribeEmail: <SendReportEmail type='block' />,
-                                },
-                            })}
-                        </Fragment>
-                    ))}
-                </div>
-            ));
-        }
-    );
+        return content.slice(end).map((el, elIdx) => (
+            <div key={el.type + elIdx} className={s.block}>
+                {el.content.map((currentContent, idx) => (
+                    <Fragment key={currentContent.type + idx}>
+                        {contentResolver({
+                            content: currentContent,
+                            color: currentColor,
+                            slots: {
+                                subscribeEmail: <SendReportEmail type='block' />,
+                            },
+                        })}
+                    </Fragment>
+                ))}
+            </div>
+        ));
+    });
 
     if (!data) return null;
 

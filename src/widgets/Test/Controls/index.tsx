@@ -25,7 +25,7 @@ export const Controls = () => {
     });
     const [visible, setVisible] = useState(false);
 
-    const isExists = isArray(value) ? value.length > 0 : value !== null;
+    const isExists = isArray(value) ? value.length > 0 : value?.value !== undefined && value !== null;
     useTimeout(() => (isExists ? setVisible(true) : setVisible(false)), isExists ? 250 : 0);
 
     if (!questions) return null;

@@ -6,9 +6,9 @@ import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
-import { getFullReportQuery, getSurveysInfoQuery } from '../api';
+import { getFullReportQuery, getPersonalityTypeQuery, getSurveysInfoQuery } from '../api';
 import type { UserReportInfo } from '../api/dto';
-import type { ContentResult, Order } from '../types';
+import type { ContentBlock, ContentResult, Order } from '../types';
 
 export const ReportModel = atom(() => {
     const ReportGate = createGate();
@@ -56,6 +56,24 @@ export const ReportModel = atom(() => {
         (el) => el?.reports?.filter((report) => report.report_kind === 'express') ?? []
     );
 
+    const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);
+    const $userMbtiTypes = createStore<Record<string, string>[]>([]);
+
+    sample({
+        clock: getSurveysInfoQuery.finished.success,
+        fn: ({ result }) =>
+            result?.reports.map((report) => ({
+                [report.user_report]: report.mbti_type,
+            })) ?? [],
+        target: $userMbtiTypes,
+    });
+
+    sample({
+        clock: getPersonalityTypeQuery.finished.success,
+        fn: ({ result }) => result.content,
+        target: $reportContent,
+    });
+
     sample({
         clock: $currentPage,
         source: getFullReportQuery.$data,
@@ -100,5 +118,7 @@ export const ReportModel = atom(() => {
         ReportPageGate,
         $isUserHasFreeReport,
         $lastUserFreeReport,
+        $reportContent,
+        $userMbtiTypes,
     };
 });

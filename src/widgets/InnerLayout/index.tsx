@@ -17,7 +17,7 @@ export const InnerLayout = ({ text, title, image, children }: PropsWithChildren<
         <Container pb={80}>
             <InnerContainer className={s.wrapper}>
                 {image && <Picture src={image} w={140} h={140} flex='auto' />}
-                <Stack maw={538} w='100%'>
+                <Stack w='100%'>
                     <Title order={2} className={s.title} hidden={!title}>
                         {title}
                     </Title>

@@ -60,10 +60,10 @@ export const getSurveysInfoQuery = createQuery({
 });
 
 export const getFreeResultQuery = createQuery({
-    effect: createInternalRequestFx<{ id: string } | void, ContentResult>((id) => ({
+    effect: createInternalRequestFx<{ id: string } | void, ContentResult | null>((id) => ({
         url: id ? API.GET_FREE_REPORT_BY_ID(id.id) : API.GET_FREE_REPORT,
     })),
-    initialData: {} as ContentResult,
+    initialData: null,
 });
 
 export const getFullReportQuery = createQuery({

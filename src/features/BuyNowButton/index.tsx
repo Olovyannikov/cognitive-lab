@@ -8,8 +8,9 @@ import s from './BuyNowButton.module.css';
 
 interface BuyNowButtonProps extends ButtonProps {
     mbti?: string;
-    survey?: string;
+    survey?: string | null;
     externalReportId?: string;
+    showIcon?: boolean;
 }
 
 export const BuyNowButton = ({
@@ -20,6 +21,7 @@ export const BuyNowButton = ({
     radius,
     className,
     children,
+    showIcon = false,
     ...props
 }: BuyNowButtonProps) => {
     const {
@@ -64,7 +66,7 @@ export const BuyNowButton = ({
             className={clsx(s.button, className)}
             radius={radius ?? 'md'}
             href={currentUrl()}
-            leftSection={survey ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
+            leftSection={showIcon ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >
             {getChildren()}
