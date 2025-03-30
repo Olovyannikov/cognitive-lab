@@ -1,1 +1,0 @@
-import{j as s,B as t,C as r,T as a}from"./chunk-BZ_jvO_S.js";import{s as i}from"./chunk-Bptf38cR.js";const m=({title:o,children:e})=>s.jsx(t,{component:"section",pb:32,children:s.jsxs(r,{children:[s.jsx(a,{order:2,className:i.title,children:o}),e]})});export{m as P};
