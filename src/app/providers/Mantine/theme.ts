@@ -40,10 +40,15 @@ export const theme = createTheme({
             }),
         }),
         Button: Button.extend({
-            defaultProps: {
-                bg: 'var(--mantine-color-dark-7)',
-            },
             vars: (theme, props) => {
+                if (props.variant !== 'outline' && props.variant !== 'transparent') {
+                    return {
+                        root: {
+                            '--button-bg': 'var(--mantine-color-dark-7)',
+                        },
+                    };
+                }
+
                 if (props.size === 'xs') {
                     return {
                         root: {

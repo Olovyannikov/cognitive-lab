@@ -35,6 +35,7 @@ export const useReportBuyFormViewModel = () => {
         },
         validate: {
             email: (value: string) => (/^\S+@\S+$/.test(value) ? null : 'Неправильный email'),
+            mbti_type: (value: string) => (value.replaceAll('"', '').length > 0 ? null : 'Выберите тип личности'),
         },
     });
 

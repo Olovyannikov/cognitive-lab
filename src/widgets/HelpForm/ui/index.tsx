@@ -1,7 +1,7 @@
-import { Textarea } from '@mantine/core';
+import { Button, Textarea } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
+import { FormInput, FormWrapper } from '@/shared/ui';
 
 import { sendIssueMutation } from '../api';
 import { useHelpFormViewModel } from '../view-model';
@@ -16,9 +16,9 @@ export const HelpForm = () => {
             <FormInput {...themeProps} disabled={pending} />
             <FormInput {...emailProps} disabled={pending} />
             <Textarea {...questionProps} disabled={pending} />
-            <MainButton disabled={pending} loading={pending} type='submit' fullWidth>
+            <Button disabled={pending} loading={pending} type='submit' fullWidth>
                 Отправить
-            </MainButton>
+            </Button>
         </FormWrapper>
     );
 };

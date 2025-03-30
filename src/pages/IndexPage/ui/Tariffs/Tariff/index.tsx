@@ -20,7 +20,7 @@ interface TariffProps {
 export const Tariff = ({ title, features, price, description, isFull = false, buyNow = false }: TariffProps) => (
     <Paper className={clsx(s.tariff, isFull && s.full)}>
         <Title order={5}>{title}</Title>
-        <Text>{description}</Text>
+        <Text mih={63}>{description}</Text>
         <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>
             {price}
         </Text>
@@ -35,7 +35,7 @@ export const Tariff = ({ title, features, price, description, isFull = false, bu
                 </List.Item>
             ))}
         </List>
-        <Button component='a' href={buyNow ? '/types' : '/test'} variant='outline' className={s.button}>
+        <Button component='a' href={buyNow ? '/purchase?type=""' : '/test'} variant='outline' className={s.button}>
             {buyNow ? 'Купить сейчас' : 'Пройти тест'}
         </Button>
     </Paper>

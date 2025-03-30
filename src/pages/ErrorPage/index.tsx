@@ -1,6 +1,5 @@
-import { Box, Center, Container, Stack, Title } from '@mantine/core';
+import { Box, Button, Center, Container, Stack, Title } from '@mantine/core';
 
-import { MainButton } from '@/shared/ui';
 import { Picture } from '@/shared/ui/Picture';
 
 import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
@@ -21,9 +20,9 @@ export const ErrorPage = ({ title = 'Страница не найдена', imag
                     <Title className={s.title} order={1}>
                         {title}
                     </Title>
-                    <MainButton component='a' href='/'>
+                    <Button component='a' href='/'>
                         Перейти на главную
-                    </MainButton>
+                    </Button>
                     <NavigateToHelpPage />
                 </Stack>
             </Center>

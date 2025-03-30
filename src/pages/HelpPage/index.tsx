@@ -1,7 +1,5 @@
-import { Box, Stack, Text } from '@mantine/core';
+import { Box, Button, Stack, Text } from '@mantine/core';
 import { useGate, useUnit } from 'effector-react';
-
-import { MainButton } from '@/shared/ui';
 
 import { NavigateToMainPage } from '@/features/NavigateToMainPage';
 
@@ -52,9 +50,9 @@ export const HelpPage = () => {
                 {isFormSent ? (
                     <Stack>
                         <NavigateToMainPage />
-                        <MainButton bg='white' c='black' onClick={onSendNewFormHandler}>
+                        <Button bg='white' c='black' onClick={onSendNewFormHandler}>
                             Написать в поддержку
-                        </MainButton>
+                        </Button>
                     </Stack>
                 ) : (
                     <HelpForm />

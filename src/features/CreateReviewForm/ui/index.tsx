@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react';
-import { Box, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from '@mantine/core';
-
-import { MainButton } from '@/shared/ui';
+import { Box, Button, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from '@mantine/core';
 
 import { useCreateReviewFormViewModel } from '../view-model';
 
@@ -82,9 +80,9 @@ export const CreateReviewForm = ({ slots }: CreateReviewFormProps) => {
                     </Stack>
                 </Stack>
                 <Box className={s.controls}>
-                    <MainButton disabled={isLoading} loading={isLoading} type='submit'>
+                    <Button disabled={isLoading} loading={isLoading} type='submit'>
                         Отправить
-                    </MainButton>
+                    </Button>
                     {slots?.action}
                 </Box>
             </form>

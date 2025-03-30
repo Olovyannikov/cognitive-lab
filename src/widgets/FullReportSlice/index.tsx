@@ -3,12 +3,11 @@ import { Box, Button } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { InnerContainer, MainButton } from '@/shared/ui';
+import { TYPE_TO_COLOR_MAP } from '@/shared/lib';
+import { InnerContainer } from '@/shared/ui';
 
+import type { PersonalityType } from '@/entities/Personality';
 import { AdBanner, contentResolver, getFullReportQuery, normalizeData } from '@/entities/Report';
-
-import type { PersonalityType } from '../../entities/Personality';
-import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
 
 import s from './FullReportSlice.module.css';
 
@@ -48,9 +47,9 @@ export const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: Conten
             </InnerContainer>
             {showPurchaseBanner && (
                 <AdBanner>
-                    <MainButton size='md' radius='sm' component='a' href='/test'>
+                    <Button size='md' radius='sm' component='a' href='/test'>
                         Пройти тест
-                    </MainButton>
+                    </Button>
                     <Button
                         size='md'
                         c='dark.7'

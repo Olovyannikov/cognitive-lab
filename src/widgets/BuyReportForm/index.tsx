@@ -3,7 +3,7 @@ import { useGate, useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { toInputUppercase } from '@/shared/lib';
-import { FormInput, FormWrapper, MainButton } from '@/shared/ui';
+import { FormInput, FormWrapper } from '@/shared/ui';
 
 import { getPriceWithPromocodeQuery, ReportModel } from '@/entities/Report';
 
@@ -66,9 +66,9 @@ export const BuyReportForm = () => {
                     </Button>
                 </Flex>
             </Paper>
-            <MainButton disabled={pending || isLoading} radius='xs' size='md' type='submit'>
+            <Button disabled={pending || isLoading} radius='xs' size='md' type='submit'>
                 Перейти к оплате
-            </MainButton>
+            </Button>
             <Text fz={12} ta='center' mb={12}>
                 Нажимая на кнопку, вы подтверждаете свое согласие на сбор, хранение и использование ваших персональных
                 данных согласно{' '}

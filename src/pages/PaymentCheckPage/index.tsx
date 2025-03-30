@@ -1,8 +1,9 @@
+import { Button } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { navigate } from 'vike/client/router';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { MainButton, PageLoader } from '@/shared/ui';
+import { PageLoader } from '@/shared/ui';
 
 import { getStatusInfo, getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 
@@ -31,9 +32,9 @@ export const PaymentCheckPage = () => {
 
     return (
         <InnerLayout className={s.root} title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>
-            <MainButton component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
+            <Button component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
                 {buttonText}
-            </MainButton>
+            </Button>
             <NavigateToHelpPage />
         </InnerLayout>
     );

@@ -1,8 +1,6 @@
 import { Button, Group, Modal, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { MainButton } from '@/shared/ui';
-
 import { submitAnswersMutation } from '@/entities/Test';
 
 import { SubmitTestModel } from './model';
@@ -37,9 +35,9 @@ export const SubmitTestModal = () => {
                 >
                     Отменить
                 </Button>
-                <MainButton loading={loading} size='sm' radius='md' onClick={onSubmit}>
+                <Button loading={loading} size='sm' radius='md' onClick={onSubmit}>
                     Завершить
-                </MainButton>
+                </Button>
             </Group>
         </Modal>
     );
