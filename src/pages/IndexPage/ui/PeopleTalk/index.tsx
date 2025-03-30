@@ -89,7 +89,7 @@ export const PeopleTalk = () => {
                                     </Text>
                                     <Text className={s.label}>{review.mbti_type}</Text>
                                 </Box>
-                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} w={60} h={60} />
+                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} />
                             </Group>
                             <Text mb='xs' lineClamp={!isMobile || isLarge ? 6 : 8} className={s.reviewText}>
                                 {review.text}
