@@ -24,5 +24,7 @@ pre-push:
     commands:
         build:
             run: pnpm build
+        add:
+            run: git add .
         commit:
-            run: git commit -m chore(build)\:\ update
+            run: pnpm run build:commit
