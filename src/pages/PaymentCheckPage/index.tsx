@@ -19,7 +19,7 @@ export const PaymentCheckPage = () => {
             search: { order_id },
         },
     } = usePageContext();
-    const { pending } = useUnit(getSurveysInfoQuery);
+    const { pending, stale } = useUnit(getSurveysInfoQuery);
     const { status, order } = useUnit({
         order: ReportModel.$userOrder,
         status: ReportModel.$userOrderStatus,
@@ -27,12 +27,19 @@ export const PaymentCheckPage = () => {
 
     const { title, buttonText, text, infoStatus } = getStatusInfo(status);
 
+    if (pending || stale) return <PageLoader />;
     if (!order_id) navigate('/');
-    if (pending || !order) return <PageLoader />;
 
     return (
-        <InnerLayout className={s.root} title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>
-            <Button component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
+        <InnerLayout
+            maw={638}
+            className={s.root}
+            title={title}
+            text={text}
+            image={`/payment/${infoStatus}`}
+            navigateTo='/'
+        >
+            <Button size='md' component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
                 {buttonText}
             </Button>
             <NavigateToHelpPage />

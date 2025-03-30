@@ -11,14 +11,22 @@ interface InnerLayoutProps {
     title?: ReactNode;
     navigateTo?: string;
     className?: string;
+    maw?: number;
 }
 
-export const InnerLayout = ({ text, title, image, children, className }: PropsWithChildren<InnerLayoutProps>) => (
+export const InnerLayout = ({
+    text,
+    title,
+    image,
+    children,
+    className,
+    maw = 538,
+}: PropsWithChildren<InnerLayoutProps>) => (
     <Box component='section' className={className}>
         <Container pb={80}>
             <InnerContainer className={s.wrapper}>
                 {image && <Picture src={image} w={140} h={140} flex='auto' />}
-                <Stack w='100%'>
+                <Stack w='100%' maw={maw} mx='auto'>
                     <Title order={2} className={s.title} hidden={!title}>
                         {title}
                     </Title>

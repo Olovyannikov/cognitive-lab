@@ -15,11 +15,11 @@ div.flex {
   }
 
   @mixin larger-than 1200px {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
   @mixin larger-than 1460px {
-    grid-template-columns: 280px 125px;
+    grid-template-columns: 280px 130px;
   }
 }
 
