@@ -34,10 +34,10 @@ export const Paywall = ({
     } = usePageContext();
 
     const currentUrl = () => {
-        let href = `/purchase/`;
+        let href = `/purchase`;
 
         if (surveyId) {
-            href += `${surveyId}`;
+            href += `/${surveyId}`;
         }
 
         if (mbti && !reportId) {

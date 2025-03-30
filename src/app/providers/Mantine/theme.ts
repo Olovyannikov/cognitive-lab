@@ -41,57 +41,36 @@ export const theme = createTheme({
         }),
         Button: Button.extend({
             vars: (theme, props) => {
-                if (props.variant !== 'outline' && props.variant !== 'transparent') {
-                    return {
-                        root: {
-                            '--button-bg': 'var(--mantine-color-dark-7)',
-                        },
-                    };
+                const root: Record<string, string> = {};
+
+                if (props.variant === undefined) {
+                    root['--button-bg'] = 'var(--mantine-color-dark-7)';
+                    root['--button-color'] = 'var(--mantine-color-white)';
                 }
 
                 if (props.size === 'xs') {
-                    return {
-                        root: {
-                            '--button-height': '32px',
-                        },
-                    };
+                    root['--button-height'] = '32px';
                 }
 
                 if (props.size === 'sm') {
-                    return {
-                        root: {
-                            '--button-height': '40px',
-                        },
-                    };
+                    root['--button-height'] = '40px';
                 }
 
                 if (props.size === 'md') {
-                    return {
-                        root: {
-                            '--button-height': '48px',
-                        },
-                    };
+                    root['--button-height'] = '48px';
                 }
 
                 if (props.size === 'lg') {
-                    return {
-                        root: {
-                            '--button-height': '56px',
-                            '--button-fz': 'var(--mantine-font-size-md)',
-                        },
-                    };
+                    root['--button-height'] = '56px';
+                    root['--button-fz'] = 'var(--mantine-font-size-md)';
                 }
 
                 if (props.size === 'xl') {
-                    return {
-                        root: {
-                            '--button-height': '64px',
-                        },
-                    };
+                    root['--button-height'] = '64px';
                 }
 
                 return {
-                    root: {},
+                    root,
                 };
             },
         }),
