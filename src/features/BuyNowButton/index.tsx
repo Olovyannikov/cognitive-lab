@@ -33,10 +33,10 @@ export const BuyNowButton = ({
     const height = isMobile ? 45 : 64;
 
     const currentUrl = () => {
-        let href = `/purchase/`;
+        let href = `/purchase`;
 
         if (survey) {
-            href += `${survey}`;
+            href += `/${survey}`;
         }
 
         if (mbti) {
