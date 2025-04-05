@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Container, Flex, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
-import { usePageContext } from 'vike-react/usePageContext';
 
 import { useIsLarge } from '@/shared/lib';
 import { PageLoader } from '@/shared/ui';
 
-import { ReportModel } from '@/entities/Report';
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { TestModel } from '@/entities/Test';
 
 import { TakeTestAgainModel } from '@/features/TakeTestAgain';
@@ -22,19 +21,22 @@ export const TestSplashScreen = () => {
         TestModel.setSplashScreenVisibility,
         TakeTestAgainModel.takeTestAgainClicked,
     ]);
-    const [reportsLen] = useUnit([ReportModel.$allUserReports.map((reports) => reports?.length)]);
-    const { isMobile } = usePageContext();
+    const [reportsLen, isLoading, isStale] = useUnit([
+        ReportModel.$allUserReports.map((reports) => reports?.length),
+        getSurveysInfoQuery.$pending,
+        getSurveysInfoQuery.$stale,
+    ]);
     const isLarge = useIsLarge();
 
     const [mounted, setMounted] = useState(false);
-    useEffect(() => setMounted(true), []);
 
     const onStartClickHandler = () => {
         testAgain();
         setSplashScreen(false);
     };
 
-    if (!mounted) return <PageLoader />;
+    useEffect(() => setMounted(true), []);
+    if (isStale || isLoading || !mounted) return <PageLoader />;
 
     return (
         <Box>
@@ -48,29 +50,29 @@ export const TestSplashScreen = () => {
                             <Card {...card} key={card.id} />
                         ))}
                     </Flex>
-                    <Button
-                        mb='xl'
-                        size='xl'
-                        mx='auto'
-                        maw={isLarge ? 350 : '100%'}
-                        fz={!isMobile || isLarge ? 'lg' : 'md'}
-                        onClick={() => setSplashScreen(false)}
-                    >
-                        {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}
-                    </Button>
-                    {reportsLen > 0 && (
-                        <Button
-                            fz={!isMobile || isLarge ? 'lg' : 'md'}
-                            variant='outline'
-                            size='xl'
-                            w='100%'
-                            maw={isLarge ? 350 : '100%'}
-                            mx='auto'
-                            onClick={onStartClickHandler}
-                        >
-                            Начать заново
-                        </Button>
-                    )}
+                    <Stack justify='center' align='center'>
+                        {(reportsLen < 1 || isStarted) && (
+                            <Button
+                                fullWidth
+                                maw={isLarge ? 350 : '100%'}
+                                size={isLarge ? 'xl' : 'lg'}
+                                onClick={() => setSplashScreen(false)}
+                            >
+                                {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}
+                            </Button>
+                        )}
+                        {reportsLen > 0 && (
+                            <Button
+                                fullWidth
+                                variant='outline'
+                                maw={isLarge ? 350 : '100%'}
+                                size={isLarge ? 'xl' : 'lg'}
+                                onClick={onStartClickHandler}
+                            >
+                                Начать заново
+                            </Button>
+                        )}
+                    </Stack>
                 </Stack>
             </Container>
         </Box>
