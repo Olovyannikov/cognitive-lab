@@ -11,14 +11,13 @@
   align-items: center;
   padding: 8px 10px;
   width: max-content;
-  height: 50px;
+  min-height: 48px;
   text-decoration: none;
   color: var(--mantine-color-gray-9);
   transition: 0.15s ease-in-out background-color;
 
   @mixin larger-than 1200px {
     border-radius: var(--mantine-radius-md);
-    height: 45px;
     min-width: 205px;
     font-size: 16px;
     color: var(--mantine-color-white);
@@ -36,7 +35,7 @@
   }
 }
 
-.link svg {
+.link.loaded svg {
   transition: rotate 0.3s ease-in-out;
   translate: 0 8%;
 

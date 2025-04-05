@@ -20,13 +20,3 @@
     }
   }
 }
-
-.fullStructureButton {
-  @mixin larger-than 998px {
-    border-radius: 16px;
-    height: 64px;
-    font-size: 20px;
-    line-height: 31px;
-    padding-inline: 22px;
-  }
-}

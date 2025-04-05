@@ -52,11 +52,12 @@ export const Reports = () => {
     return (
         <Box ref={ref} className={s.root}>
             <Button
+                size='md'
                 onClick={toggle}
                 variant='transparent'
                 loading={isLoading}
                 disabled={isLoading}
-                className={clsx(c.link, s.link)}
+                className={clsx(c.link, s.link, !isLoading && s.loaded)}
                 rightSection={<CaretDown className={clsx(opened && s.rotate)} weight='bold' size='16' />}
             >
                 <Group className={s.buttonGroup}>

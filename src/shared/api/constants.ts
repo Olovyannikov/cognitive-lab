@@ -5,7 +5,6 @@ export const API = {
     GET_REGULAR_PRICE: '/payments/regular-price',
     GET_STRUCTURE: '/surveys/structure',
     GET_PROMO_PRICE: (promocode: string) => `/payments/promo-code-price?promo_code=${promocode}`,
-    PURCHASE_REPORT: '/payments/purchase-report',
     SURVEYS_INFO: '/surveys/info',
     FULL_REPORT: (id: string) => `/surveys/full-reports/${id}`,
     FAQ_LIST: '/posts',
@@ -23,5 +22,8 @@ export const API = {
     },
     news: {
         subscribe: '/users/subscribe',
+    },
+    payments: {
+        purchase: '/payments/purchase-report',
     },
 };

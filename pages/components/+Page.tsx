@@ -120,6 +120,26 @@ export default function Page() {
                         Hello world
                     </Button>
                 </Group>
+                <Group bg='dark.7' p='sm'>
+                    <Title c='white' order={5}>
+                        White:
+                    </Title>
+                    <Button variant='white' size='xs'>
+                        Hello world
+                    </Button>
+                    <Button variant='white' size='sm'>
+                        Hello world
+                    </Button>
+                    <Button variant='white' size='md'>
+                        Hello world
+                    </Button>
+                    <Button variant='white' size='lg'>
+                        Hello world
+                    </Button>
+                    <Button variant='white' size='xl'>
+                        Hello world
+                    </Button>
+                </Group>
             </Group>
         </Container>
     );

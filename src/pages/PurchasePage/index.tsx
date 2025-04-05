@@ -15,16 +15,18 @@ export const PurchasePage = () => {
     const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);
 
     const {
-        routeParams: { surveyId },
+        urlParsed: {
+            search: { type },
+        },
     } = usePageContext();
 
     if (!data && pending) return <PageLoader />;
     if (!data) return null;
 
-    const currentRegularPrice = surveyId ? data.regular_price : data.skip_survey_price;
-    const currentPromoPrice = surveyId
-        ? dataWithPromocode?.regular_price.final
-        : dataWithPromocode?.skip_survey_price.final;
+    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;
+    const currentPromoPrice = type
+        ? dataWithPromocode?.skip_survey_price.final
+        : dataWithPromocode?.regular_price.final;
 
     return (
         <InnerLayout image='/payment/logo'>

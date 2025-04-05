@@ -1,10 +1,7 @@
 import { Button, type ButtonProps } from '@mantine/core';
-import clsx from 'clsx';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { Picture } from '@/shared/ui';
-
-import s from './BuyNowButton.module.css';
 
 interface BuyNowButtonProps extends ButtonProps {
     mbti?: string;
@@ -18,7 +15,6 @@ export const BuyNowButton = ({
     externalReportId,
     mbti,
     survey,
-    h,
     radius,
     className,
     children,
@@ -26,11 +22,8 @@ export const BuyNowButton = ({
     ...props
 }: BuyNowButtonProps) => {
     const {
-        isMobile,
         routeParams: { reportId },
     } = usePageContext();
-
-    const height = isMobile ? 45 : 64;
 
     const currentUrl = () => {
         let href = `/purchase`;
@@ -63,10 +56,10 @@ export const BuyNowButton = ({
     return (
         <Button
             component='a'
-            h={h ?? height}
-            className={clsx(s.button, className)}
-            radius={radius ?? 'md'}
+            size='md'
             href={currentUrl()}
+            radius={radius ?? 'md'}
+            className={className}
             leftSection={showIcon ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >

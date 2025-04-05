@@ -4,7 +4,7 @@ import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { useIsLarge } from '@/shared/lib';
-import { PageLoader, RainbowButton } from '@/shared/ui';
+import { PageLoader } from '@/shared/ui';
 
 import { ReportModel } from '@/entities/Report';
 import { TestModel } from '@/entities/Test';
@@ -48,17 +48,16 @@ export const TestSplashScreen = () => {
                             <Card {...card} key={card.id} />
                         ))}
                     </Flex>
-                    <RainbowButton
+                    <Button
                         mb='xl'
                         size='xl'
-                        component='button'
-                        fz={!isMobile || isLarge ? 'lg' : 'md'}
-                        onClick={() => setSplashScreen(false)}
                         mx='auto'
                         maw={isLarge ? 350 : '100%'}
+                        fz={!isMobile || isLarge ? 'lg' : 'md'}
+                        onClick={() => setSplashScreen(false)}
                     >
                         {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}
-                    </RainbowButton>
+                    </Button>
                     {reportsLen > 0 && (
                         <Button
                             fz={!isMobile || isLarge ? 'lg' : 'md'}

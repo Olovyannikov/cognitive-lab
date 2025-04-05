@@ -8,7 +8,6 @@ export * from './FormSuccessScreen';
 export * from './IconCheck';
 export * from './InputBorderless';
 export * from './SpinningText';
-export * from './RainbowButton';
 export * from './Picture';
 export * from './StickyScrollReveal';
 export * from './Accordion';

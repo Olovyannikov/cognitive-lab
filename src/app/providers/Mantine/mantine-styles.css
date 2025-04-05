@@ -1,5 +1,5 @@
 /* Shadow */
-:is(button, a).shadow {
+:is(button, a).mantine-button-rainbow {
   --color-1: 0deg 100% 63%;
   --color-2: 270deg 100% 63%;
   --color-3: 210deg 100% 63%;
@@ -34,8 +34,8 @@
   }
 }
 
-.shadow::before,
-.shadow::after {
+.mantine-button-rainbow::before,
+.mantine-button-rainbow::after {
   content: "";
   position: absolute;
   left: 12px;
@@ -55,7 +55,7 @@
   animation: animate 10s linear infinite;
 }
 
-.shadow::after {
+.mantine-button-rainbow::after {
   filter: blur(20px);
 }
 

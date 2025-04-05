@@ -45,7 +45,7 @@ export const purchaseReportMutation = createMutation({
             confirmation_url: string;
         }
     >((body) => ({
-        url: API.PURCHASE_REPORT,
+        url: API.payments.purchase,
         method: HTTP_METHODS.POST,
         body,
     })),

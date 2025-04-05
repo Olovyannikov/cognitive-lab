@@ -14,20 +14,7 @@
 }
 
 .testLink {
-  max-height: 45px;
-  transition: 0.15s ease-in-out background-color;
-
-  &:hover {
-    background-color: var(--mantine-color-violet-6) !important;
-  }
-
   @mixin larger-than 992px {
     order: 2;
-  }
-
-  @mixin larger-than 998px {
-    font-size: 16px;
-    line-height: 31px;
-    padding-inline: 22px;
   }
 }

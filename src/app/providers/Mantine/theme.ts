@@ -1,5 +1,7 @@
 import { Button, Container, createTheme } from '@mantine/core';
 
+import './mantine-styles.css';
+
 export const theme = createTheme({
     fontFamily: 'Raleway, sans-serif',
     fontFamilyMonospace: 'Monaco, Courier, monospace',
@@ -40,12 +42,29 @@ export const theme = createTheme({
             }),
         }),
         Button: Button.extend({
+            classNames: (theme, props) => {
+                if (props.variant === 'rainbow') {
+                    return {
+                        root: 'mantine-button-rainbow',
+                    };
+                }
+
+                return {};
+            },
             vars: (theme, props) => {
                 const root: Record<string, string> = {};
 
                 if (props.variant === undefined) {
                     root['--button-bg'] = 'var(--mantine-color-dark-7)';
                     root['--button-color'] = 'var(--mantine-color-white)';
+                }
+
+                if (props.variant === 'default') {
+                    root['--button-bd'] = '1px solid var(--mantine-color-dark-7)';
+                }
+
+                if (props.variant === 'white') {
+                    root['--button-bg'] = 'var(--mantine-color-white)';
                 }
 
                 if (props.size === 'xs') {

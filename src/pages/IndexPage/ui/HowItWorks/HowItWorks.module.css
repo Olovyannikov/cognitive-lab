@@ -122,28 +122,3 @@
     line-height: 26px;
   }
 }
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 45px;
-  max-width: 660px;
-  font-size: 16px;
-  line-height: 25px;
-  color: var(--mantine-color-violet-7);
-  background-color: var(--mantine-color-white);
-
-  &:hover {
-    color: var(--mantine-color-white);
-    background-color: var(--mantine-color-black);
-  }
-
-  @mixin larger-than 992px {
-    min-height: 64px;
-    font-size: 20px;
-    line-height: 31px;
-  }
-}

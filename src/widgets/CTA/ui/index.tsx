@@ -2,8 +2,6 @@ import { Flex } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { desktop } from '@/shared/media';
-
 import { getPersonalityTypeQuery } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
 
@@ -20,7 +18,7 @@ export const BuyNowAndNavigateToFullStructureAction = () => {
     return (
         <Flex className={s.actions}>
             <BuyNowButton mbti={data?.mbti_type} />
-            <NavigateToFullStructureTemplate className={s.fullStructureButton} />
+            <NavigateToFullStructureTemplate />
         </Flex>
     );
 };
@@ -28,29 +26,28 @@ export const BuyNowAndNavigateToFullStructureAction = () => {
 export const RedirectToTestPageAndNavigateToFullStructureAction = () => (
     <Flex className={s.actions}>
         <RedirectToTestPage />
-        <NavigateToFullStructureTemplate className={s.fullStructureButton} />
+        <NavigateToFullStructureTemplate />
     </Flex>
 );
 
 export const BuyNowOrRedirectToTestPageAction = () => {
-    const { routeParams, isMobile } = usePageContext();
+    const { routeParams } = usePageContext();
 
     return (
         <Flex className={s.actions}>
             <RedirectToTestPage />
-            <BuyNowButton h={!isMobile ? undefined : 45} mbti={routeParams?.type} variant='outline' bg='transparent' />
+            <BuyNowButton mbti={routeParams?.type} variant='outline' bg='transparent' />
         </Flex>
     );
 };
 
 export const TakeTestAgainOrBuyReportAction = () => {
     const surveyId = useUnit(UserModel.$surveyId);
-    const isLarge = useUnit(desktop.$matches);
 
     return (
         <Flex className={s.actions}>
             <TakeTestAgain />
-            {surveyId && <BuyNowButton radius='md' h={isLarge ? undefined : 45} survey={surveyId} />}
+            {surveyId && <BuyNowButton radius='md' survey={surveyId} />}
         </Flex>
     );
 };

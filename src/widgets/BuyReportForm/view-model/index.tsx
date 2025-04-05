@@ -12,13 +12,12 @@ import { $promocodeErrorMessage, reportPurchased } from '../model';
 
 export const useReportBuyFormViewModel = () => {
     const {
-        routeParams: { surveyId },
         urlParsed: {
             search: { type, reportId },
         },
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
-    const user = useUnit(getSurveysInfoQuery.$data);
+    const [user, isUserInfoLoading] = useUnit([getSurveysInfoQuery.$data, getSurveysInfoQuery.$pending]);
     const { types, promocodeError, currentUserMbti } = useUnit({
         types: PersonalitiesModel.$personalitiesMap,
         promocodeError: $promocodeErrorMessage,
@@ -29,13 +28,14 @@ export const useReportBuyFormViewModel = () => {
         mode: 'controlled',
         initialValues: {
             email: user?.user?.email ?? '',
-            mbti_type: surveyId ? '' : type,
+            mbti_type: reportId ? currentUserMbti?.[reportId] : type,
             promo_code: '',
             user_report: reportId ?? '',
         },
         validate: {
             email: (value: string) => (/^\S+@\S+$/.test(value) ? null : 'Неправильный email'),
-            mbti_type: (value: string) => (value.replaceAll('"', '').length > 0 ? null : 'Выберите тип личности'),
+            mbti_type: (value: string | undefined) =>
+                reportId || (value && value?.replaceAll('"', '').length > 0) ? null : 'Выберите тип личности',
         },
     });
 
@@ -93,11 +93,11 @@ export const useReportBuyFormViewModel = () => {
             preparedData.mbti_type = type;
         }
 
-        if (surveyId) {
+        if (reportId) {
             delete preparedData.mbti_type;
         }
 
-        if (!surveyId) {
+        if (!reportId) {
             delete preparedData.user_report;
         }
 
@@ -109,8 +109,8 @@ export const useReportBuyFormViewModel = () => {
     });
 
     useEffect(() => {
-        if (!type && !currentUserMbti?.[reportId]) navigate('/');
-    }, [type, currentUserMbti, reportId]);
+        if (!isUserInfoLoading && !type && !currentUserMbti?.[reportId]) navigate('/');
+    }, [type, currentUserMbti, reportId, isUserInfoLoading]);
 
     return {
         form,
