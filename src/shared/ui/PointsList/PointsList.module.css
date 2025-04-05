@@ -3,7 +3,7 @@
 
   @mixin larger-than 998px {
     position: relative;
-    max-width: 781px;
+    max-width: 900px;
   }
 }
 

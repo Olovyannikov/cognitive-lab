@@ -36,7 +36,7 @@ export const BuyNowOrRedirectToTestPageAction = () => {
     return (
         <Flex className={s.actions}>
             <RedirectToTestPage />
-            <BuyNowButton mbti={routeParams?.type} variant='outline' bg='transparent' />
+            <BuyNowButton mbti={routeParams?.type} variant='default' bg='transparent' />
         </Flex>
     );
 };

@@ -34,6 +34,7 @@ interface ContentResolverProps {
     index?: number;
     slots?: {
         subscribeEmail?: ReactNode;
+        paywallExtraAction?: ReactNode;
     };
 }
 
@@ -74,7 +75,16 @@ export const contentResolver = ({
         case 'filled_bullet_list':
             return <FilledBulletList data-color={color} items={isListItemArray(content.items) ? content.items : []} />;
         case 'paywall':
-            return <Paywall {...content} color={color} surveyId={surveyId} mbti={mbti} index={index} />;
+            return (
+                <Paywall
+                    {...content}
+                    color={color}
+                    surveyId={surveyId}
+                    mbti={mbti}
+                    index={index}
+                    action={slots?.paywallExtraAction}
+                />
+            );
         case 'conclusion_paywall':
             return <ConclusionPaywall {...content} color={color} actionsSlot={actions?.conclusion_paywall} />;
         case 'bar_chart':

@@ -15,7 +15,6 @@ export const BuyNowButton = ({
     externalReportId,
     mbti,
     survey,
-    radius,
     className,
     children,
     showIcon = false,
@@ -55,10 +54,9 @@ export const BuyNowButton = ({
 
     return (
         <Button
-            component='a'
             size='md'
+            component='a'
             href={currentUrl()}
-            radius={radius ?? 'md'}
             className={className}
             leftSection={showIcon ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}

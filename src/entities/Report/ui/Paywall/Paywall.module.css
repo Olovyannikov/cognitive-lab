@@ -8,7 +8,7 @@
   margin-top: 60px;
   gap: var(--mantine-spacing-lg);
 
-  @mixin larger-than 592px {
+  @mixin larger-than 720px {
     grid-template-areas:
       "man top"
       "man points"
@@ -25,7 +25,7 @@
     font-size: 20px;
     line-height: 23px;
 
-    @mixin larger-than 592px {
+    @mixin larger-than 720px {
       font-size: 32px;
       line-height: 37px;
     }
@@ -37,7 +37,7 @@
   width: 100px;
   height: 100px;
 
-  @mixin larger-than 592px {
+  @mixin larger-than 720px {
     width: 260px;
     height: 260px;
   }
@@ -48,9 +48,11 @@
 }
 
 .actions {
+  flex-direction: column;
   grid-area: actions;
 
-  @mixin larger-than 592px {
+  @mixin larger-than 865px {
+    flex-direction: row;
     margin-left: 36px;
   }
 }

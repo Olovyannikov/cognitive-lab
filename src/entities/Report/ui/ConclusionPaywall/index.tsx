@@ -38,7 +38,7 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
                         {title}
                     </Group>
                 </Title>
-                <Text maw={isLarge ? 820 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>
+                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>
                     {text}
                 </Text>
                 <PointsList position='static' points={points} />
