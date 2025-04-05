@@ -1,8 +1,8 @@
 import { useStoreMap, useUnit } from 'effector-react';
 
-import { getFreeResultQuery, ReportModel, ReportNavigationTemplate } from '@/entities/Report';
+import { TYPE_TO_COLOR_MAP } from '@/shared/lib';
 
-import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
+import { getFreeResultQuery, ReportModel, ReportNavigationTemplate } from '@/entities/Report';
 
 export const FreeReportNavigation = () => {
     const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);
@@ -12,8 +12,10 @@ export const FreeReportNavigation = () => {
         fn: (content) => content?.content.map(({ title }) => title),
     });
 
-    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el.mbti_type));
-    const color = TYPE_TO_COLOR_MAP[mbti];
+    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));
+    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];
+
+    if (!content) return;
 
     return <ReportNavigationTemplate color={color} page={page} content={content} onPageChange={onPageChange} />;
 };
