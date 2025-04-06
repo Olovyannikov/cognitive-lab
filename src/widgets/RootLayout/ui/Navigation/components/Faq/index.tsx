@@ -1,7 +1,7 @@
 import { reflect } from '@effector/reflect';
 import { Box } from '@mantine/core';
 
-import { RootModel } from '../../../../model';
+import { RootModel } from '@/entities/Root';
 
 import s from '../common.module.css';
 

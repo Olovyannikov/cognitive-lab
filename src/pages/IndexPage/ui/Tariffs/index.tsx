@@ -3,11 +3,13 @@ import { Flex } from '@mantine/core';
 import { Section } from '../Section';
 import { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from './const';
 import { Tariff } from './Tariff';
+import UnionImage from './union.svg?react';
 
 import s from './Tariffs.module.css';
 
 export const Tariffs = () => (
     <Section id='tariffs' filledText='Тарифы'>
+        <UnionImage width={228} height={208} className={s.union} />
         <Flex className={s.flex}>
             <Tariff
                 title='Базовый'
@@ -24,7 +26,7 @@ export const Tariffs = () => (
             />
             <Tariff
                 buyNow
-                price={590}
+                price={890}
                 title='Экспресс'
                 features={EXPRESS_TARIFF}
                 description='Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.'

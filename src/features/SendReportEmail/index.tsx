@@ -63,13 +63,12 @@ export const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {
                     </FocusTrap>
                     <Button
                         type='submit'
-                        color='dark.7'
                         loading={isLoading}
                         fullWidth={!isLarge}
                         disabled={isLoading}
                         size={type === 'block' ? 'lg' : 'md'}
                         leftSection={<EnvelopeSimple size={20} />}
-                        variant={type === 'block' ? 'filled' : 'outline'}
+                        variant={type === 'block' ? 'filled' : 'default'}
                         c={type === 'block' && !isLoading ? 'white' : 'dark.7'}
                     >
                         {isLarge ? 'Отправить' : 'Отправить отчет на почту'}

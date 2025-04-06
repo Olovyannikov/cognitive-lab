@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react';
 
-import { RootModel } from '../../../../model';
+import { RootModel } from '@/entities/Root';
 
 import s from '../common.module.css';
 

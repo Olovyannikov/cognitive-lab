@@ -1,5 +1,8 @@
 import { Button, Stack, Text } from '@mantine/core';
+import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
+
+import { getSurveysInfoQuery } from '@/entities/Report';
 
 import s from './NavigateToReviewPage.module.css';
 
@@ -8,6 +11,10 @@ export const NavigateToReviewPage = () => {
         routeParams: { reportId },
         isMobile,
     } = usePageContext();
+    const hasComment = useUnit(
+        getSurveysInfoQuery.$data.map((user) => user?.left_comments.find((comment) => comment.user_report === reportId))
+    );
+    if (hasComment) return;
 
     return (
         <Stack gap={40} mb={isMobile ? 40 : 60} justify='center' align='center' ta='center'>
@@ -15,13 +22,10 @@ export const NavigateToReviewPage = () => {
 
             <Button
                 maw={311}
-                w='100%'
-                variant='outline'
+                fullWidth
                 component='a'
-                c='dark.7'
-                color='dark.7'
+                variant='default'
                 href={`/review/${reportId}`}
-                fz={isMobile ? 16 : 20}
                 size={isMobile ? 'md' : 'xl'}
             >
                 Оставить отзыв

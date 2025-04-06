@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { useIsLarge } from '../../../../shared/lib/hooks';
+import { useIsLarge } from '@/shared/lib';
+
 import type { Mark } from '../../types';
 
 export const useBarChartViewModel = ({ marks }: { marks?: Mark[] }) => {

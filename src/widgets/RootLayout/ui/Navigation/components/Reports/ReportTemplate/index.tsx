@@ -1,9 +1,8 @@
 import { Flex, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
-import { RootModel } from '@/widgets/RootLayout/model';
-
-import { PersonalitiesModel } from '../../../../../../../entities/Personality';
+import { PersonalitiesModel } from '@/entities/Personality';
+import { RootModel } from '@/entities/Root';
 
 import s from './ReportTemplate.module.css';
 

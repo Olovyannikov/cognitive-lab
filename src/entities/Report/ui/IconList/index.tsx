@@ -1,7 +1,8 @@
 import { List, Text, ThemeIcon } from '@mantine/core';
 import { CheckCircle } from '@phosphor-icons/react/dist/ssr';
 
-import { useIsLarge } from '../../../../shared/lib/hooks';
+import { useIsLarge } from '@/shared/lib';
+
 import type { ListItem } from '../../types';
 
 import s from './IconList.module.css';
@@ -15,7 +16,7 @@ export const IconList = ({ items, color }: IconListProps) => {
     const isLarge = useIsLarge();
 
     return (
-        <List classNames={s}>
+        <List classNames={s} data-type='IconList'>
             {items.map((item) => (
                 <List.Item
                     icon={
@@ -26,7 +27,7 @@ export const IconList = ({ items, color }: IconListProps) => {
                     key={`${item.type}_${item.text}`}
                     mb='md'
                 >
-                    <Text fz={isLarge ? 22 : 18} lh='21px'>
+                    <Text fz={isLarge ? 22 : 18} lh={isLarge ? '28px' : '21px'}>
                         {item.text}
                     </Text>
                 </List.Item>

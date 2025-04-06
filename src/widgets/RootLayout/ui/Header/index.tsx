@@ -8,7 +8,8 @@ import { usePageContext } from 'vike-react/usePageContext';
 import CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';
 import LogoSmall from '@/app/assets/images/logo.svg?react';
 
-import { RootModel } from '../../model';
+import { RootModel } from '@/entities/Root';
+
 import { Navigation } from '../Navigation';
 
 import s from './Header.module.css';

@@ -1,5 +1,6 @@
 import { Box, Button, Text, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { desktop } from '@/shared/media';
 import { StickyScrollReveal } from '@/shared/ui';
@@ -11,6 +12,7 @@ import s from './WhyUs.module.css';
 
 export const WhyUs = () => {
     const [isDesktop] = useUnit([desktop.$matches]);
+    const { isMobile } = usePageContext();
     return (
         <Section className={s.root} containerClassName={s.container}>
             <Title order={2} className={s.title} ta='center'>
@@ -27,7 +29,7 @@ export const WhyUs = () => {
                     content={CARDS}
                 />
             </Box>
-            <Button size={isDesktop ? 'xl' : 'md'} fullWidth maw={604} component='a' href='/'>
+            <Button size={!isMobile || isDesktop ? 'xl' : 'md'} fullWidth maw={604} component='a' href='/'>
                 Пройти тест
             </Button>
         </Section>

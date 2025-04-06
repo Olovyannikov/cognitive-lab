@@ -1,6 +1,7 @@
 import { Box, Button, Container, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import UnionImage from '@/app/assets/images/union.svg?react';
 
@@ -11,6 +12,7 @@ import s from './Hero.module.css';
 
 export const Hero = () => {
     const [isDesktop] = useUnit([desktop.$matches]);
+    const { isMobile } = usePageContext();
 
     return (
         <Box component='section'>
@@ -29,7 +31,7 @@ export const Hero = () => {
                     Узнайте свой тип личности и получите персональные советы для вашего развития
                 </Text>
                 <Picture className={s.image} src='/landing/main-hero-char' />
-                <Button variant='rainbow' size={isDesktop ? 'xl' : 'md'} component='a' href='/test'>
+                <Button variant='rainbow' size={!isMobile || isDesktop ? 'xl' : 'md'} component='a' href='/test'>
                     Пройти тест
                 </Button>
             </Container>

@@ -24,7 +24,7 @@ export const Section = ({
     id,
     hidden = false,
 }: PropsWithChildren<SectionProps>) => (
-    <Box id={id} ref={ref} className={clsx(s.box, className)} component='section' hidden={hidden}>
+    <Box id={id} ref={ref} className={clsx(s.box, className)} pos='relative' component='section' hidden={hidden}>
         <Container className={containerClassName}>
             {(title || filledText) && (
                 <Title className={s.title} order={2}>

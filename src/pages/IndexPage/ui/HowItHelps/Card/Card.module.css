@@ -52,6 +52,7 @@
     z-index: 1;
     font-size: 18px;
     line-height: 21px;
+    white-space: pre-line;
   }
 
   @mixin larger-than 768px {

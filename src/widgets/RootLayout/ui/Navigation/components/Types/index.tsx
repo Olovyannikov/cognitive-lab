@@ -2,10 +2,11 @@ import { Button, Menu, Stack } from '@mantine/core';
 import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
 import { useList, useUnit } from 'effector-react';
 
-import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
+import { useIsMedium } from '@/shared/lib';
 
-import { useIsMedium } from '../../../../../../shared/lib/hooks';
-import { RootModel } from '../../../../model';
+import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
+import { RootModel } from '@/entities/Root';
+
 import { MenuItem } from '../MenuItem';
 
 import c from '../common.module.css';

@@ -1,6 +1,7 @@
 .root {
   position: sticky;
   bottom: 0;
+  padding-top: 20px;
   padding-bottom: 20px;
   background-color: var(--mantine-color-white);
 }
@@ -8,6 +9,7 @@
 .button {
   z-index: 1;
   display: flex;
+  margin: 0 -12px;
   border: 0;
   padding: var(--mantine-spacing-lg);
   font-weight: 600;
@@ -29,20 +31,29 @@
   }
 
   &.prev::after {
-    content: "Назад";
+    @mixin larger-than 768px {
+      content: "Назад";
+    }
   }
 
   &.next {
     margin-left: auto;
 
     &::after {
-      content: "Вперед";
       order: -1;
+
+      @mixin larger-than 768px {
+        content: "Вперед";
+      }
     }
 
     &:only-child::after {
       order: -1;
     }
+  }
+
+  @mixin larger-than 768px {
+    margin: 0;
   }
 }
 
@@ -61,5 +72,13 @@
     &::after {
       content: "Завершить тестирование";
     }
+  }
+}
+
+.group {
+  @mixin larger-than 1200px {
+    margin: auto;
+    width: 100%;
+    max-width: calc(100% - 738px);
   }
 }

@@ -20,6 +20,7 @@ export const ReviewPage = () => {
 
     return (
         <InnerLayout
+            maw={850}
             title={!isSubmitted && 'Оставьте отзыв'}
             text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}
             image={!isSubmitted ? '/review/question-bubble' : undefined}

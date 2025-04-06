@@ -33,7 +33,7 @@ export const Subscription = ({ title, text, subscriptionFormSlot }: Subscription
                 src='/report/mail'
             />
             <Stack>
-                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='50%'>
+                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>
                     {title}
                 </Title>
                 <Text fz={isLarge ? 24 : 18}>{text}</Text>

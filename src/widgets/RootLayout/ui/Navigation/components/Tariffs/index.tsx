@@ -1,7 +1,7 @@
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { RootModel } from '../../../../model';
+import { RootModel } from '@/entities/Root';
 
 import s from '../common.module.css';
 

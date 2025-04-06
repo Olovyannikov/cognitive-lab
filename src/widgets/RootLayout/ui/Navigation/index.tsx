@@ -4,12 +4,12 @@ import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+import { RootModel } from '@/entities/Root';
 import { UserModel } from '@/entities/User';
 
 import { BuyNowButton } from '@/features/BuyNowButton';
 import { RedirectToTestPage } from '@/features/RedirectToTestPage';
 
-import { RootModel } from '../../model';
 import { NAV_ITEMS } from './const';
 
 import s from './Navigation.module.css';

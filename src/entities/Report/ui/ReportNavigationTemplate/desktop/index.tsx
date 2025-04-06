@@ -80,6 +80,7 @@ export const Desktop = ({ content, activeMenu, toggle, setActiveMenu, color, tit
                 {content?.map((title, idx) => (
                     <Menu.Item
                         key={title}
+                        bg={activeMenu === title ? `${color}.0` : 'transparent'}
                         leftSection={
                             <Paper p={isLarge ? 10 : 'xxs'} radius='xs' bg={`${color}.1`}>
                                 <Center c={`${color}.9`} className={s.dropdownIcon}>

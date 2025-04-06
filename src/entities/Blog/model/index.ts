@@ -4,26 +4,20 @@ import { navigate } from 'vike/client/router';
 import { atom } from '@/shared/factories';
 
 import { getBlogPostsQuery } from '../api';
-import type { BlogPost } from '../types';
+import { BlogPost } from '../types';
 
 export const BlogModel = atom(() => {
     const $pageSize = createStore(5);
-    const $currentPage = createStore(1);
-    const $blogPosts = createStore<BlogPost[]>([]);
+
+    const $blogPosts = restore<BlogPost[]>(
+        getBlogPostsQuery.finished.success.map(({ result }) => result.payload),
+        []
+    );
 
     const pageChanged = createEvent<number>();
+    const $currentPage = restore(pageChanged, 1);
+
     const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));
-
-    sample({
-        clock: getBlogPostsQuery.finished.success,
-        fn: ({ result }) => result.payload,
-        target: $blogPosts,
-    });
-
-    sample({
-        clock: pageChanged,
-        target: $currentPage,
-    });
 
     sample({
         clock: pageChanged,

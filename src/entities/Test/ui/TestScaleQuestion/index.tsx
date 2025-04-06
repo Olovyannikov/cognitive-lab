@@ -16,7 +16,7 @@ interface TestScaleQuestionProps extends QuestionsResponse {
 
 export const TestScaleQuestion = ({ value, page, text, hint, id, onChange }: TestScaleQuestionProps) => (
     <Paper className={s.wrapper}>
-        <QuestionTitle text={text} hint={hint} />
+        <QuestionTitle fixed text={text} hint={hint} />
         <Stack pos='relative' maw={1145} m='auto' gap='xs'>
             <Radio.Group
                 className={s.group}

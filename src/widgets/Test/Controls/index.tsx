@@ -3,7 +3,7 @@ import { Button, Group, Pagination } from '@mantine/core';
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { useUnit } from 'effector-react';
-import { isArray } from 'lodash-es';
+import { isArray, isObject } from 'lodash-es';
 import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
@@ -25,8 +25,19 @@ export const Controls = () => {
     });
     const [visible, setVisible] = useState(false);
 
-    const isExists = isArray(value) ? value.length > 0 : value?.value !== undefined && value !== null;
-    useTimeout(() => (isExists ? setVisible(true) : setVisible(false)), isExists ? 250 : 0);
+    const isExists = () => {
+        if (isArray(value)) {
+            return value.length > 0;
+        }
+
+        if (isObject(value)) {
+            return value?.value !== undefined;
+        }
+
+        return value !== null;
+    };
+
+    useTimeout(() => (isExists() ? setVisible(true) : setVisible(false)), isExists() ? 250 : 0);
 
     if (!questions) return null;
 
@@ -36,7 +47,7 @@ export const Controls = () => {
     return (
         <Pagination.Root className={s.root} total={questions.length} mt='auto' value={page} onChange={onChange}>
             <Rephrasing />
-            <Group justify='space-between'>
+            <Group className={s.group} justify='space-between'>
                 {!isFirst && (
                     <Pagination.Previous
                         disabled={false}
@@ -54,7 +65,7 @@ export const Controls = () => {
                     fz={16}
                     c='dark.6'
                     variant='subtle'
-                    hidden={!isLast}
+                    hidden={!isLast || (isLast && !isExists())}
                     className={clsx(s.button, s.next, s.end)}
                     onClick={controlModal}
                     rightSection={<ArrowRight weight='bold' />}

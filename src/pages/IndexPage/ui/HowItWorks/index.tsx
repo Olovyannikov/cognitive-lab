@@ -1,5 +1,6 @@
 import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { desktop } from '@/shared/media';
 
@@ -10,6 +11,7 @@ import s from './HowItWorks.module.css';
 
 export const HowItWorks = () => {
     const [isDesktop] = useUnit([desktop.$matches]);
+    const { isMobile } = usePageContext();
     return (
         <Paper className={s.wrapper} radius={40} component='section'>
             <Decor />
@@ -28,7 +30,14 @@ export const HowItWorks = () => {
                 ))}
             </Flex>
             <Center>
-                <Button fullWidth component='a' href='/test' variant='white' maw={706} size={isDesktop ? 'xl' : 'md'}>
+                <Button
+                    fullWidth
+                    component='a'
+                    href='/test'
+                    variant='white'
+                    maw={706}
+                    size={!isMobile || isDesktop ? 'xl' : 'md'}
+                >
                     Пройти тест
                 </Button>
             </Center>

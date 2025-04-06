@@ -13,7 +13,7 @@ export const BlogPage = () => {
     const totalPages = useUnit(BlogModel.$totalPages);
     const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);
 
-    if (!data) return <PageLoader />;
+    if (!data || pending) return <PageLoader />;
 
     return (
         <PageLayout title='Блог'>
