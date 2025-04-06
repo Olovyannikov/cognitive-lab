@@ -51,6 +51,11 @@ export const theme = createTheme({
 
                 return {};
             },
+            styles: {
+                root: {
+                    transition: '0.1s ease-in',
+                },
+            },
             vars: (theme, props) => {
                 const root: Record<string, string> = {};
 
@@ -68,6 +73,12 @@ export const theme = createTheme({
 
                 if (props.variant === 'white') {
                     root['--button-bg'] = 'var(--mantine-color-white)';
+                    root['--button-hover'] = 'var(--mantine-color-dark-7)';
+                    root['--button-hover-color'] = 'var(--mantine-color-white)';
+                }
+
+                if (props.variant === 'subtle') {
+                    root['--button-color'] = 'var(--mantine-color-dark-7)';
                 }
 
                 if (props.size === 'xs') {

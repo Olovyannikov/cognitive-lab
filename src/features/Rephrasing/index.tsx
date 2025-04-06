@@ -14,7 +14,7 @@ export const Rephrasing = variant({
     then: Button as ComponentType,
     else: undefined,
     bind: {
-        m: 'auto',
+        fz: 16,
         c: 'dark.9',
         color: 'dark.9',
         display: 'flex',

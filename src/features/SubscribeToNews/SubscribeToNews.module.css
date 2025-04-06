@@ -1,14 +1,6 @@
 div.flex {
   flex-direction: column;
 
-  button {
-    span span::after {
-      @mixin larger-than 1200px {
-        content: "";
-      }
-    }
-  }
-
   @mixin larger-than 992px {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -3,10 +3,9 @@ import { useWindowScroll } from '@mantine/hooks';
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';
 import { useStoreMap, useUnit } from 'effector-react';
 
-import { getFullReportQuery, getIconsMap, ReportModel } from '@/entities/Report';
+import { TYPE_TO_COLOR_MAP, useIsLarge } from '@/shared/lib';
 
-import { TYPE_TO_COLOR_MAP } from '../../shared/lib/constants';
-import { useIsLarge } from '../../shared/lib/hooks';
+import { getFullReportQuery, getIconsMap, ReportModel } from '@/entities/Report';
 
 import s from './ReportPagination.module.css';
 
@@ -33,10 +32,15 @@ export const ReportPagination = () => {
             className={s.root}
             value={page}
             onChange={(page) => {
-                scrollTo({
-                    y: 0,
-                });
                 onChangePage(page);
+                setTimeout(
+                    () =>
+                        scrollTo({
+                            x: 0,
+                            y: 0,
+                        }),
+                    0
+                );
             }}
             total={content.length}
         >

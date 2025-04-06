@@ -18,10 +18,12 @@ sample({
 
 sample({
     clock: getSurveysInfoQuery.finished.success,
-    fn: ({ params, result }) =>
-        result.user_orders.find((el) => {
+    source: ReportModel.$userOrder,
+    filter: (data) => data === null,
+    fn: (_, { params, result }) =>
+        result?.user_orders.find((order) => {
             if (isObject(params)) {
-                return el.id === params.id;
+                return order.id === params.id;
             }
         }) ?? null,
     target: ReportModel.$userOrder,

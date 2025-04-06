@@ -15,8 +15,19 @@ export const HelpForm = () => {
             <FormInput {...nameProps} disabled={pending} />
             <FormInput {...themeProps} disabled={pending} />
             <FormInput {...emailProps} disabled={pending} />
-            <Textarea {...questionProps} disabled={pending} />
-            <Button disabled={pending} loading={pending} type='submit' fullWidth>
+            <Textarea
+                rows={5}
+                styles={{
+                    label: {
+                        fontSize: 16,
+                        fontWeight: '600',
+                        marginBottom: 4,
+                    },
+                }}
+                {...questionProps}
+                disabled={pending}
+            />
+            <Button disabled={pending} loading={pending} type='submit' fullWidth size='md'>
                 Отправить
             </Button>
         </FormWrapper>

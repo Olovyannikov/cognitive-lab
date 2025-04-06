@@ -10,7 +10,7 @@
   border-image: linear-gradient(#0000 calc(49% - var(--s) / 2), var(--c) 0 calc(50% + var(--s) / 2), #0000 0) 0 1/0
     var(--w) / 0 calc(var(--w) + var(--g));
   width: fit-content;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--mantine-color-gray-6);
   background-color: #fff;
 

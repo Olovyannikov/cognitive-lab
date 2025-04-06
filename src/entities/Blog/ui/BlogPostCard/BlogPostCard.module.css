@@ -9,6 +9,14 @@
   }
 }
 
+.cardMain {
+  transition: outline 0.15s ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    outline: 2px solid var(--mantine-color-violet-7);
+  }
+}
+
 .image {
   object-position: center;
 
@@ -60,23 +68,4 @@
 
 .text .title {
   font-size: 16px;
-}
-
-.more {
-  width: fit-content;
-  color: var(--mantine-color-dark-7);
-
-  .pinned & {
-    @mixin larger-than 768px {
-      display: block;
-    }
-  }
-
-  @mixin smaller-than 768px {
-    margin-top: auto;
-  }
-
-  @mixin larger-than 768px {
-    display: none;
-  }
 }

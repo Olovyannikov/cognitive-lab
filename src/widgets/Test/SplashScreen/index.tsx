@@ -56,6 +56,7 @@ export const TestSplashScreen = () => {
                                 fullWidth
                                 maw={isLarge ? 350 : '100%'}
                                 size={isLarge ? 'xl' : 'lg'}
+                                className='mantine-button-rainbow'
                                 onClick={() => setSplashScreen(false)}
                             >
                                 {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}
@@ -64,7 +65,7 @@ export const TestSplashScreen = () => {
                         {reportsLen > 0 && (
                             <Button
                                 fullWidth
-                                variant='outline'
+                                variant='default'
                                 maw={isLarge ? 350 : '100%'}
                                 size={isLarge ? 'xl' : 'lg'}
                                 onClick={onStartClickHandler}

@@ -53,7 +53,11 @@ export const Post = ({ post, bannerSlot }: PostProps) => (
                         ),
                         ul: (props) => <List mb={16}>{props.children}</List>,
                         li: (props) => <List.Item>{props.children}</List.Item>,
-                        p: (props) => <Text mb={16}>{props.children}</Text>,
+                        p: (props) => (
+                            <Text className={s.text} mb={16}>
+                                {props.children}
+                            </Text>
+                        ),
                         hr: () => <Divider />,
                     },
                 }}

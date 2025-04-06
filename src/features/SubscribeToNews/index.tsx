@@ -49,7 +49,7 @@ export const SubscribeToNews = () => {
                         key={form.key('email')}
                     />
                 </FocusTrap>
-                <Button loading={isLoading} disabled={isLoading} color='dark.6' fullWidth type='submit'>
+                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>
                     Подписаться
                 </Button>
             </Flex>

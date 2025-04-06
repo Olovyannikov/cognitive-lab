@@ -8,6 +8,8 @@ import { usePageContext } from 'vike-react/usePageContext';
 import { useIsLarge } from '@/shared/lib';
 import { InnerContainer } from '@/shared/ui';
 
+import { BuyNowButton } from '@/features/BuyNowButton';
+
 import { sendFreeReportOnEmailMutation } from './api';
 import { SendReportEmailModel } from './model';
 import { SendReportSchema } from './schema';
@@ -54,7 +56,7 @@ export const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {
                             disabled={isLoading}
                             placeholder='name@mail.ru'
                             key={form.key('email')}
-                            miw={isLarge ? 514 : '100%'}
+                            miw={isLarge ? 380 : '100%'}
                             ml={type === 'text' ? 'auto' : 0}
                             size={type === 'block' ? 'lg' : 'md'}
                             bg={type === 'block' ? 'violet.0' : 'white'}
@@ -70,9 +72,11 @@ export const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {
                         leftSection={<EnvelopeSimple size={20} />}
                         variant={type === 'block' ? undefined : 'default'}
                         c={type === 'block' && !isLoading ? 'white' : 'dark.7'}
+                        px='md'
                     >
                         {isLarge ? 'Отправить' : 'Отправить отчет на почту'}
                     </Button>
+                    <BuyNowButton px='md'>Купить полный отчёт</BuyNowButton>
                 </Flex>
             </form>
         </InnerContainer>

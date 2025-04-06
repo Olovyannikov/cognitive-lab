@@ -13,8 +13,6 @@
   border: 0;
   padding: var(--mantine-spacing-lg);
   font-weight: 600;
-  transition: opacity 5s;
-  transition-delay: 5s;
   gap: var(--mantine-spacing-sm);
 
   &:not(:disabled) {
@@ -37,8 +35,6 @@
   }
 
   &.next {
-    margin-left: auto;
-
     &::after {
       order: -1;
 
@@ -76,9 +72,12 @@
 }
 
 .group {
+  justify-content: space-between;
+
   @mixin larger-than 1200px {
+    justify-content: center;
     margin: auto;
     width: 100%;
-    max-width: calc(100% - 738px);
+    gap: var(--mantine-spacing-5xl);
   }
 }

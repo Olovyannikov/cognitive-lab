@@ -51,13 +51,13 @@ export const BuyReportForm = () => {
                         data-success={showSuccessMessage}
                         description={showSuccessMessage ? 'Промокод применен' : ''}
                         inputWrapperOrder={['label', 'input', 'description', 'error']}
+                        size='md'
+                        radius='sm'
                     />
                     <Button
                         fullWidth
-                        c='dark.7'
-                        radius='xs'
-                        color='dark.7'
-                        variant='outline'
+                        size='md'
+                        variant='default'
                         disabled={pending || isLoading}
                         loading={pending || isLoading}
                         onClick={() => applyPromoHandler(form.values.promo_code.toUpperCase())}
@@ -66,7 +66,7 @@ export const BuyReportForm = () => {
                     </Button>
                 </Flex>
             </Paper>
-            <Button disabled={pending || isLoading} radius='xs' size='md' type='submit'>
+            <Button disabled={pending || isLoading} size='md' type='submit'>
                 Перейти к оплате
             </Button>
             <Text fz={12} ta='center' mb={12}>

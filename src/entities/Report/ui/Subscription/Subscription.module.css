@@ -1,0 +1,11 @@
+.content {
+  a:last-child {
+    display: none;
+  }
+
+  input {
+    @mixin larger-than 1024px {
+      width: 500px;
+    }
+  }
+}

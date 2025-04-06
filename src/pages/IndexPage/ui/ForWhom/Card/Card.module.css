@@ -112,6 +112,7 @@
   padding-left: 20px;
   font-size: 18px;
   line-height: 21px;
+  white-space: pre-line;
   transition: 0.3s ease-in-out transform;
 
   @mixin larger-than 768px {

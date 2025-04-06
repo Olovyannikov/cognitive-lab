@@ -63,9 +63,3 @@
     display: block;
   }
 }
-
-.inner {
-  display: flex;
-  flex: 1 1 100%;
-  flex-direction: column;
-}

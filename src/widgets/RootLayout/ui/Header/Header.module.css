@@ -54,7 +54,7 @@
   justify-content: space-between;
   padding-inline: var(--mantine-spacing-md);
 
-  @mixin larger-than 1421px {
+  @mixin larger-than 1465px {
     padding-inline: 40px;
   }
 }

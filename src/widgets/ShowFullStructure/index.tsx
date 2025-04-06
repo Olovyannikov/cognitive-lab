@@ -15,7 +15,7 @@ export const ShowFullStructure = () => {
         <Group className={s.group} justify='space-between'>
             <Text className={s.text}>Больше информации в полном отчете</Text>
             <Group>
-                <BuyNowButton radius='sm' h={45} mbti={type} />
+                <BuyNowButton mbti={type} />
                 <NavigateToFullStructureTemplate />
             </Group>
         </Group>

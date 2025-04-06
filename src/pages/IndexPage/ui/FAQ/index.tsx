@@ -1,6 +1,7 @@
 import { Accordion, Title } from '@mantine/core';
 import { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';
 import { useList } from 'effector-react';
+import Markdown from 'markdown-to-jsx';
 
 import { FaqModel } from '@/entities/FAQ';
 
@@ -19,7 +20,9 @@ export const FAQ = () => {
                         {item.title}
                     </Title>
                 </Accordion.Control>
-                <Accordion.Panel>{item.body.data}</Accordion.Panel>
+                <Accordion.Panel>
+                    <Markdown>{item.body.data}</Markdown>
+                </Accordion.Panel>
             </Accordion.Item>
         )
     );

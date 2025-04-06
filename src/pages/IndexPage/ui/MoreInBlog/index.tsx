@@ -69,9 +69,9 @@ export const MoreInBlog = () => {
                                             overrides: {
                                                 p: (props) => (
                                                     <Text
-                                                        lineClamp={isMobile ? 8 : 6}
-                                                        className={s.blogText}
                                                         {...props}
+                                                        className={s.blogText}
+                                                        lineClamp={isMobile ? 8 : 6}
                                                     />
                                                 ),
                                                 a: (props) => <>{props.children}</>,

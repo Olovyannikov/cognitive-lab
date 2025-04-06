@@ -17,7 +17,7 @@ export const NavigateToReviewPage = () => {
     if (hasComment) return;
 
     return (
-        <Stack gap={40} mb={isMobile ? 40 : 60} justify='center' align='center' ta='center'>
+        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>
             <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>
 
             <Button
@@ -26,7 +26,7 @@ export const NavigateToReviewPage = () => {
                 component='a'
                 variant='default'
                 href={`/review/${reportId}`}
-                size={isMobile ? 'md' : 'xl'}
+                size={isMobile ? 'sm' : 'lg'}
             >
                 Оставить отзыв
             </Button>

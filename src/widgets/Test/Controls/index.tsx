@@ -46,17 +46,18 @@ export const Controls = () => {
 
     return (
         <Pagination.Root className={s.root} total={questions.length} mt='auto' value={page} onChange={onChange}>
-            <Rephrasing />
-            <Group className={s.group} justify='space-between'>
-                {!isFirst && (
-                    <Pagination.Previous
-                        disabled={false}
-                        className={clsx(s.button, s.prev)}
-                        icon={() => <ArrowLeft weight='bold' />}
-                    />
-                )}
+            <Group className={s.group}>
+                <Pagination.Previous
+                    disabled={isFirst}
+                    opacity={isFirst ? 0 : 1}
+                    className={clsx(s.button, s.prev)}
+                    icon={() => <ArrowLeft weight='bold' />}
+                />
+
+                <Rephrasing />
                 <Pagination.Next
-                    hidden={!visible || isLast}
+                    opacity={!visible || isLast ? 0 : 1}
+                    disabled={!visible || isLast}
                     className={clsx(s.button, s.next)}
                     icon={() => <ArrowRight weight='bold' />}
                 />

@@ -1,6 +1,7 @@
-import { Button, Flex } from '@mantine/core';
+import { Button, Center, Flex } from '@mantine/core';
 
-import { useIsDesktop } from '../../../../shared/lib/hooks';
+import { useIsDesktop } from '@/shared/lib';
+
 import { Section } from '../Section';
 import { Card } from './Card';
 import FirstCardImage from './img/image-card-1.svg?react';
@@ -37,18 +38,24 @@ export const ForWhom = () => {
                     bg={isLarge ? <ThirdCardImageDesktop /> : <ThirdCardImage />}
                     title={`Партнерам в\u00a0отношениях`}
                     image='/landing/image-card/3'
-                    text='Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами. Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.'
+                    text={
+                        'Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами.\n\n Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.'
+                    }
                 />
                 <Card
                     bg={isLarge ? <FourthCardImageDesktop /> : <FourthCardImage />}
                     title={'Людям, стремящимся к\u00a0саморазвитию'}
                     image='/landing/image-card/4'
-                    text='Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием. Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.'
+                    text={
+                        'Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием.\n\n Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.'
+                    }
                 />
             </Flex>
-            <Button component='a' href='/test'>
-                Пройти тест
-            </Button>
+            <Center>
+                <Button size='xl' fullWidth maw={706} component='a' href='/test'>
+                    Пройти тест
+                </Button>
+            </Center>
         </Section>
     );
 };

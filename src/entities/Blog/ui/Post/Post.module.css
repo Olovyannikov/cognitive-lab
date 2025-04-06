@@ -8,3 +8,13 @@
     border-radius: 80px;
   }
 }
+
+.text {
+  font-size: 18px;
+  line-height: 22px;
+
+  @mixin larger-than 768px {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

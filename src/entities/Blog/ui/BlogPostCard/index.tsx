@@ -1,6 +1,5 @@
-import { Fragment, memo } from 'react';
-import { Blockquote, Box, Button, Card, Flex, Grid, Image, Stack, Text, Title } from '@mantine/core';
-import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
+import { memo } from 'react';
+import { Blockquote, Box, Card, Flex, Grid, Image, Stack, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 import Markdown from 'markdown-to-jsx';
 
@@ -20,7 +19,7 @@ export const BlogPostCard = memo(({ post }: BlogPostCardProps) => (
         }}
         className={clsx(post.pinned && s.pinned)}
     >
-        <Card h='100%' withBorder component='a' href={`/blog/${post.id}`}>
+        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>
             <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>
                 <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />
                 <Stack className={s.preview} justify='center'>
@@ -59,9 +58,6 @@ export const BlogPostCard = memo(({ post }: BlogPostCardProps) => (
                             {post.body.data}
                         </Markdown>
                     </Box>
-                    <Button variant='subtle' rightSection={<ArrowRight />} className={s.more}>
-                        Читать
-                    </Button>
                 </Stack>
             </Flex>
         </Card>

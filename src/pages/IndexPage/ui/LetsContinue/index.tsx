@@ -14,7 +14,7 @@ export const LetsContinue = () => (
                 Готовы узнать ваш <span>тип личности?</span>
             </Title>
             <Center>
-                <Button variant='rainbow' mb={0} href='/test' component='a'>
+                <Button className='mantine-button-rainbow' href='/test' component='a'>
                     Пройти тест
                 </Button>
             </Center>

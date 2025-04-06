@@ -3,7 +3,7 @@
   margin: 0 auto 40px;
 
   &.fixed {
-    min-height: calc(112px + 72px + 16px);
+    min-height: calc(112px + 90px + 16px);
   }
 
   @mixin larger-than 1200px {

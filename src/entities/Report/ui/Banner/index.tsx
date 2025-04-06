@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
-import { Paper, Text, Title } from '@mantine/core';
+import { Paper, Stack, Text, Title } from '@mantine/core';
 
-import { InnerContainer, Picture } from '@/shared/ui';
+import { Picture } from '@/shared/ui';
 
 import s from './Banner.module.css';
 
@@ -36,7 +36,7 @@ export const Banner = ({
     image = BANNER_CONFIG.image,
 }: BannerProps) => (
     <Paper data-color={color} className={s.paper}>
-        <InnerContainer className={s.inner}>
+        <Stack className={s.inner}>
             <Title order={3} className={s.title}>
                 <Picture className={s.emoji} src='/emoji/star' />
                 {title}
@@ -51,6 +51,6 @@ export const Banner = ({
                 h={260}
             />
             {actionSlot}
-        </InnerContainer>
+        </Stack>
     </Paper>
 );

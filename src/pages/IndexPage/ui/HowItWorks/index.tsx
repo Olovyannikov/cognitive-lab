@@ -31,11 +31,11 @@ export const HowItWorks = () => {
             </Flex>
             <Center>
                 <Button
-                    fullWidth
-                    component='a'
-                    href='/test'
-                    variant='white'
                     maw={706}
+                    fullWidth
+                    href='/test'
+                    component='a'
+                    variant='white'
                     size={!isMobile || isDesktop ? 'xl' : 'md'}
                 >
                     Пройти тест
