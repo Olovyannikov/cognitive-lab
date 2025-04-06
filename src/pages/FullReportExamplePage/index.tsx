@@ -7,7 +7,7 @@ import { BackButton, InnerContainer } from '@/shared/ui';
 
 import { ConclusionPaywall, contentResolver, getReportStructureQuery, Preheader } from '@/entities/Report';
 
-import { RedirectToTestPage } from '@/features/RedirectToTestPage';
+import { BuyNowButton } from '@/features/BuyNowButton';
 
 import { BuyNowOrRedirectToTestPageAction } from '@/widgets/CTA/ui';
 
@@ -31,10 +31,11 @@ export const FullReportExamplePage = () => {
                                     index,
                                     slots: {
                                         paywallExtraAction: (
-                                            <RedirectToTestPage
+                                            <BuyNowButton
                                                 fullWidth
                                                 variant='default'
-                                                size={isLarge ? 'lg' : 'sm'}
+                                                href='/purchase?type=""'
+                                                size={isLarge ? 'md' : 'sm'}
                                                 maw={isLarge ? 'fit-content' : '100%'}
                                             />
                                         ),

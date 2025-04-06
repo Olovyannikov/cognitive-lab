@@ -46,8 +46,8 @@ export const TakeTestAgainOrBuyReportAction = () => {
 
     return (
         <Flex className={s.actions}>
+            {surveyId && <BuyNowButton showIcon survey={surveyId} />}
             <TakeTestAgain />
-            {surveyId && <BuyNowButton radius='md' survey={surveyId} />}
         </Flex>
     );
 };

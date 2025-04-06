@@ -68,7 +68,7 @@ export const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {
                         disabled={isLoading}
                         size={type === 'block' ? 'lg' : 'md'}
                         leftSection={<EnvelopeSimple size={20} />}
-                        variant={type === 'block' ? 'filled' : 'default'}
+                        variant={type === 'block' ? undefined : 'default'}
                         c={type === 'block' && !isLoading ? 'white' : 'dark.7'}
                     >
                         {isLarge ? 'Отправить' : 'Отправить отчет на почту'}

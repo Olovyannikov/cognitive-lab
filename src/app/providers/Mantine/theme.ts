@@ -60,7 +60,10 @@ export const theme = createTheme({
                 }
 
                 if (props.variant === 'default') {
-                    root['--button-bd'] = '1px solid var(--mantine-color-dark-7)';
+                    root['--button-bd'] = '1px solid currentColor';
+                    root['--button-hover-color'] = 'var(--mantine-color-violet-7)';
+                    root['--button-hover'] = 'transparent';
+                    root['--button-bg'] = 'transparent';
                 }
 
                 if (props.variant === 'white') {

@@ -15,7 +15,6 @@
   min-height: 45px;
   font-size: 16px;
   line-height: 25px;
-  background: linear-gradient(0deg, #000, #262626) !important;
 
   &:active {
     transform: none;

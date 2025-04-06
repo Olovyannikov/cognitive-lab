@@ -54,7 +54,7 @@ export const Reports = () => {
             <Button
                 size='md'
                 onClick={toggle}
-                variant='transparent'
+                variant='default'
                 loading={isLoading}
                 disabled={isLoading}
                 className={clsx(c.link, s.link, !isLoading && s.loaded)}

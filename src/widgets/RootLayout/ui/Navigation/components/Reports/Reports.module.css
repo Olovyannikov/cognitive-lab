@@ -17,20 +17,12 @@
   transition: 0.15s ease-in-out background-color;
 
   @mixin larger-than 1200px {
-    border-radius: var(--mantine-radius-md);
     min-width: 205px;
     font-size: 16px;
-    color: var(--mantine-color-white);
-    background-color: var(--mantine-color-dark-6);
     padding-inline: 22px;
 
     span {
       overflow: visible;
-    }
-
-    &:hover {
-      color: var(--mantine-color-white);
-      background-color: var(--mantine-color-violet-6);
     }
   }
 }
@@ -60,6 +52,10 @@
   span {
     font-weight: 700;
     line-height: 20px;
+  }
+
+  button:hover & {
+    background-color: var(--mantine-color-violet-7);
   }
 }
 

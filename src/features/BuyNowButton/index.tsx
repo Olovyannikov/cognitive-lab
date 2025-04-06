@@ -9,6 +9,7 @@ interface BuyNowButtonProps extends ButtonProps {
     externalReportId?: string;
     showIcon?: boolean;
     onClick?: VoidFunction;
+    href?: string;
 }
 
 export const BuyNowButton = ({
@@ -18,6 +19,7 @@ export const BuyNowButton = ({
     className,
     children,
     showIcon = false,
+    href,
     ...props
 }: BuyNowButtonProps) => {
     const {
@@ -56,7 +58,7 @@ export const BuyNowButton = ({
         <Button
             size='md'
             component='a'
-            href={currentUrl()}
+            href={href ?? currentUrl()}
             className={className}
             leftSection={showIcon ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}

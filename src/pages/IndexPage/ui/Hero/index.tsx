@@ -31,7 +31,12 @@ export const Hero = () => {
                     Узнайте свой тип личности и получите персональные советы для вашего развития
                 </Text>
                 <Picture className={s.image} src='/landing/main-hero-char' />
-                <Button variant='rainbow' size={!isMobile || isDesktop ? 'xl' : 'md'} component='a' href='/test'>
+                <Button
+                    href='/test'
+                    component='a'
+                    className='mantine-button-rainbow'
+                    size={!isMobile || isDesktop ? 'xl' : 'md'}
+                >
                     Пройти тест
                 </Button>
             </Container>

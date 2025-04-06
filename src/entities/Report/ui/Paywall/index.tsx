@@ -30,16 +30,24 @@ export const Paywall = ({
     color,
     surveyId,
     index = 0,
-    mbti = 'ENTJ',
+    mbti = 'ENTP',
     action = null,
 }: PaywallProps) => {
     const [isLarge] = useUnit([large.$matches]);
     const {
         routeParams: { reportId },
+        url,
     } = usePageContext();
+
+    const isExamplePage = url.includes('example');
 
     const currentUrl = () => {
         let href = `/purchase`;
+
+        if (isExamplePage) {
+            href = '/test';
+            return href;
+        }
 
         if (surveyId) {
             href += `/${surveyId}`;
@@ -68,11 +76,11 @@ export const Paywall = ({
                     fullWidth
                     miw={150}
                     href={currentUrl()}
-                    size={isLarge ? 'lg' : 'sm'}
+                    size={isLarge ? 'md' : 'sm'}
                     maw={isLarge ? 'fit-content' : '100%'}
                     leftSection={<Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' />}
                 >
-                    {button_text}
+                    {isExamplePage ? 'Пройти тест' : button_text}
                 </Button>
                 {action}
             </Flex>

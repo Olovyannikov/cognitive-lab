@@ -41,7 +41,6 @@ export const Navigation = () => {
                     externalReportId={lastUserFreeReport?.user_report}
                     size='md'
                     className={s.testLink}
-                    c='white'
                     onClick={() => onClose(false)}
                 >
                     Купить полный отчёт
