@@ -38,7 +38,7 @@ export const ReviewPage = () => {
                     image='/review/star'
                     slots={{
                         action: (
-                            <NavigateToMainPage onClick={() => navigate.back()} fullWidth>
+                            <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>
                                 Вернуться назад
                             </NavigateToMainPage>
                         ),

@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { Button, Center, Group, Menu, Paper, Text } from '@mantine/core';
+import { Button, Center, Flex, Group, Menu, Paper, Text } from '@mantine/core';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 
 import { useIsLarge } from '@/shared/lib';
@@ -54,17 +54,19 @@ export const Desktop = ({ content, activeMenu, toggle, setActiveMenu, color, tit
                             wrap='nowrap'
                             style={{ overflow: 'hidden' }}
                         >
-                            <Paper
-                                p={isLarge ? 'lg' : 10}
-                                maw={72}
-                                mah={72}
-                                radius='sm'
-                                bg={`${color}.1`}
+                            <Flex
+                                maw={48}
+                                mah={48}
+                                align='center'
+                                justify='center'
                                 c={`${color}.9`}
+                                bg={`${color}.1`}
+                                p={isLarge ? 'sm' : 10}
+                                className={s.iconWrapper}
                             >
                                 {icons[title ?? activeMenu]}
-                            </Paper>
-                            <Text ta='start' truncate='end' fz={isLarge ? 32 : 20} fw='bold'>
+                            </Flex>
+                            <Text ta='start' truncate='end' fz={isLarge ? 24 : 20} fw='bold'>
                                 {title ?? activeMenu}
                             </Text>
                         </Group>

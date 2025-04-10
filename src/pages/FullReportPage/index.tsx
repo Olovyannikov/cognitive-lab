@@ -38,8 +38,8 @@ export const FullReportPage = () => {
                 <FullReportNavigation />
                 <FullReportSlice page={page} />
                 <NavigateToReviewPage />
-                <ReportPagination />
             </Container>
+            <ReportPagination />
         </Box>
     );
 };

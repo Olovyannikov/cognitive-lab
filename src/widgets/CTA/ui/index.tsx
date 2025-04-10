@@ -43,10 +43,13 @@ export const BuyNowOrRedirectToTestPageAction = () => {
 
 export const TakeTestAgainOrBuyReportAction = () => {
     const surveyId = useUnit(UserModel.$surveyId);
+    const {
+        routeParams: { reportId },
+    } = usePageContext();
 
     return (
         <Flex className={s.actions}>
-            {surveyId && <BuyNowButton showIcon survey={surveyId} />}
+            {(reportId ?? surveyId) && <BuyNowButton showIcon survey={reportId ?? surveyId} />}
             <TakeTestAgain />
         </Flex>
     );

@@ -8,12 +8,7 @@
   padding-inline: var(--mantine-spacing-md);
 
   @mixin larger-than 992px {
-    position: static;
-    margin-bottom: 60px;
-    padding: 0;
-    box-shadow: none;
-    margin-inline: 0;
-    padding-inline: 0;
+    padding-block: 40px;
   }
 }
 
@@ -51,6 +46,8 @@
 }
 
 .paper {
+  border-radius: var(--mantine-radius-md);
+
   svg {
     width: 20px;
     height: 20px;
@@ -58,8 +55,21 @@
 
   @mixin larger-than 992px {
     svg {
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
     }
+  }
+}
+
+.nextGroup {
+  flex-direction: row-reverse;
+}
+
+.controlWrapper {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+
+  &[data-last] {
+    grid-template-columns: 1fr 28px;
   }
 }

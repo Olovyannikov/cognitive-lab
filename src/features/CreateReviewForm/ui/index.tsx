@@ -80,7 +80,7 @@ export const CreateReviewForm = ({ slots }: CreateReviewFormProps) => {
                     </Stack>
                 </Stack>
                 <Box className={s.controls}>
-                    <Button disabled={isLoading} loading={isLoading} type='submit'>
+                    <Button size='md' disabled={isLoading} loading={isLoading} type='submit'>
                         Отправить
                     </Button>
                     {slots?.action}
