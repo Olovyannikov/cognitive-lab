@@ -15,15 +15,17 @@ h5 + strong {
   margin-bottom: var(--mantine-spacing-5xl);
   padding-bottom: var(--mantine-spacing-sm);
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 240px;
-    height: 1px;
-    background-color: var(--mantine-color-gray-6);
-    translate: -50%;
+  &:has(+ div) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 240px;
+      height: 1px;
+      background-color: var(--mantine-color-gray-6);
+      translate: -50%;
+    }
   }
 
   span:has(strong) {

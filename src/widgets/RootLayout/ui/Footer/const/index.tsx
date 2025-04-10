@@ -1,4 +1,4 @@
-import { Envelope, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
+import { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 
 export const OWNER_INFO = [
     {
@@ -17,12 +17,8 @@ export const OWNER_INFO = [
 export const CONTACTS = [
     {
         id: 0,
-        label: (
-            <a rel='noopener noreferrer' target='_blank' href='mailto:info@cognitivelab.ru'>
-                Почта службы поддержки
-            </a>
-        ),
-        icon: <Envelope size={24} />,
+        label: <a href='/help'>Написать в службу поддержки</a>,
+        icon: <ChatDots size={24} />,
     },
     {
         id: 1,

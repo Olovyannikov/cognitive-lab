@@ -1,13 +1,22 @@
+import { createEvent, sample } from 'effector';
 import { createAction } from 'effector-action';
 
 import { atom } from '@/shared/factories';
 
 import { RootModel } from '@/entities/Root';
-import { takeTestAgainMutation, TestModel } from '@/entities/Test';
+import { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';
 import { UserModel } from '@/entities/User';
 
 export const TakeTestAgainModel = atom(() => {
-    const takeTestAgainClicked = createAction({
+    const takeTestAgainClicked = createEvent();
+    sample({
+        clock: takeTestAgainClicked,
+        fn: clearLocalStorageTestUnits,
+        target: takeTestAgainMutation.start,
+    });
+
+    createAction({
+        clock: takeTestAgainMutation.finished.success,
         target: {
             surveyId: UserModel.$surveyId,
             form: TestModel.$scaleForm,
@@ -18,17 +27,12 @@ export const TakeTestAgainModel = atom(() => {
             closeAllModals: RootModel.allMenusClosed,
         },
         fn: (target) => {
-            target.takeTestAgain();
             target.surveyId.reinit();
-            target.form.reinit();
             target.page.reinit();
             target.progress.reinit();
-            target.redirect();
+            target.form.reinit();
             target.closeAllModals(false);
-            window.localStorage.removeItem('$currentPage');
-            window.localStorage.removeItem('$currentProgress');
-            window.localStorage.removeItem('$scaleForm');
-            window.localStorage.removeItem('$surveyId');
+            target.redirect();
         },
     });
 

@@ -29,7 +29,7 @@ export const WhyUs = () => {
                     content={CARDS}
                 />
             </Box>
-            <Button size={!isMobile || isDesktop ? 'xl' : 'md'} fullWidth maw={604} component='a' href='/'>
+            <Button size={!isMobile || isDesktop ? 'xl' : 'md'} fullWidth maw={604} component='a' href='/test'>
                 Пройти тест
             </Button>
         </Section>
