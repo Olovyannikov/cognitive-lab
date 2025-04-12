@@ -56,7 +56,7 @@ export const MoreInBlog = () => {
             >
                 {currentBlogPosts.map((post, index) => (
                     <Carousel.Slide key={index} h='unset'>
-                        <Paper component='a' href={`/blog/${post.id}`} withBorder className={s.paper}>
+                        <Paper h='100%' component='a' href={`/blog/${post.id}`} withBorder className={s.paper}>
                             <Stack justify='space-between' align='flex-start' gap='md'>
                                 <Image src={post.image} className={s.image} width={304} height={304} />
                                 <Title order={5} className={s.cardTitle}>
@@ -70,15 +70,23 @@ export const MoreInBlog = () => {
                                                 p: (props) => (
                                                     <Text
                                                         {...props}
+                                                        mah={150}
+                                                        style={{
+                                                            overflow: 'hidden',
+                                                        }}
                                                         className={s.blogText}
-                                                        lineClamp={isMobile ? 8 : 6}
+                                                        lineClamp={6}
                                                     />
                                                 ),
                                                 a: (props) => <>{props.children}</>,
                                                 blockquote: (props) => (
                                                     <Blockquote
+                                                        mah={150}
+                                                        py={0}
+                                                        style={{
+                                                            overflow: 'hidden',
+                                                        }}
                                                         mb='md'
-                                                        py='sm'
                                                         px='md'
                                                         color={`violet.9`}
                                                         bg='transparent'
