@@ -1,0 +1,1 @@
+import"./chunk-Dtl4d8j4.js";import{c as t}from"./chunk-DVh-xG_6.js";const e=t(),a=Object.freeze(Object.defineProperty({__proto__:null,pageStarted:e},Symbol.toStringTag,{value:"Module"}));export{a as i};

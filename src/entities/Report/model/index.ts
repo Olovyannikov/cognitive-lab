@@ -2,7 +2,7 @@ import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/query';
-import { debug, delay } from 'patronum';
+import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
@@ -100,8 +100,6 @@ export const ReportModel = atom(() => {
         fn: () => {},
         target: getSurveysInfoQuery.refresh,
     });
-
-    debug({ trace: true }, $userOrder);
 
     return {
         $userOrder,

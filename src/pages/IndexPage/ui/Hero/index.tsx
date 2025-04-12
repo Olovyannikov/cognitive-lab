@@ -1,4 +1,4 @@
-import { Box, Button, Container, Text, Title } from '@mantine/core';
+import { Button, Container, Text, Title } from '@mantine/core';
 import clsx from 'clsx';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
@@ -8,6 +8,8 @@ import UnionImage from '@/app/assets/images/union.svg?react';
 import { desktop } from '@/shared/media';
 import { Picture } from '@/shared/ui';
 
+import { Section } from '../Section';
+
 import s from './Hero.module.css';
 
 export const Hero = () => {
@@ -15,7 +17,7 @@ export const Hero = () => {
     const { isMobile } = usePageContext();
 
     return (
-        <Box component='section'>
+        <Section pt={0} pb={isMobile ? 0 : 200}>
             <Container className={s.box}>
                 <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>
                 <Text className={clsx(s.text, s.subtitle)}>
@@ -40,6 +42,6 @@ export const Hero = () => {
                     Пройти тест
                 </Button>
             </Container>
-        </Box>
+        </Section>
     );
 };
