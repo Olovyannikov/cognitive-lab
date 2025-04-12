@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
-import { Box, Image, Paper, Stack, Text, Title } from '@mantine/core';
+import { Blockquote, Box, Image, Paper, Stack, Text, Title } from '@mantine/core';
 import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
@@ -75,6 +75,18 @@ export const MoreInBlog = () => {
                                                     />
                                                 ),
                                                 a: (props) => <>{props.children}</>,
+                                                blockquote: (props) => (
+                                                    <Blockquote
+                                                        mb='md'
+                                                        py='sm'
+                                                        px='md'
+                                                        color={`violet.9`}
+                                                        bg='transparent'
+                                                        icon={null}
+                                                    >
+                                                        {props.children}
+                                                    </Blockquote>
+                                                ),
                                             },
                                         }}
                                     >
