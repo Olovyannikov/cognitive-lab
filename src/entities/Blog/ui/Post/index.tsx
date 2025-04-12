@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Divider, Image, List, Stack, Text, Title } from '@mantine/core';
+import { Blockquote, Divider, Image, List, Stack, Text, Title } from '@mantine/core';
 import Markdown from 'markdown-to-jsx';
 
 import { InnerContainer } from '@/shared/ui';
@@ -59,6 +59,11 @@ export const Post = ({ post, bannerSlot }: PostProps) => (
                             </Text>
                         ),
                         hr: () => <Divider />,
+                        blockquote: (props) => (
+                            <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>
+                                {props.children}
+                            </Blockquote>
+                        ),
                     },
                 }}
             >
