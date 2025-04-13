@@ -54,14 +54,13 @@ export const PeopleTalk = () => {
                 slideGap='lg'
                 withControls={false}
                 plugins={[autoplay.current, wheel.current]}
-                // slideSize={!isMobile || isLarge ? 624 : '70%'}
-                slideSize={isMobile ? '70%' : 624}
+                slideSize={!isMobile || isLarge ? 624 : '70%'}
                 onMouseLeave={() => isActive && autoplay.current.play()}
                 onPointerLeave={() => isActive && autoplay.current.play()}
                 onPointerEnter={() => autoplay.current.stop()}
             >
                 {allReviewsList.map((review, index) => (
-                    <Carousel.Slide key={index}>
+                    <Carousel.Slide key={index} className={s.slide}>
                         <Paper
                             component='button'
                             display='flex'

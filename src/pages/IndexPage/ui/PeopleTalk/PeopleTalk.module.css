@@ -79,3 +79,11 @@
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+
+.slide {
+  --carousel-slide-size: 70%;
+
+  @mixin larger-than 992px {
+    --carousel-slide-size: 624px;
+  }
+}
