@@ -56,8 +56,8 @@ export const TestModel = atom(() => {
     sample({
         clock: delayedFormFieldChanged,
         source: $currentPage,
-        filter: (_, field) => !(field.isMultiple || field.isSingle),
-        fn: (page) => page + 1,
+        filter: (_, field) => !field.isMultiple,
+        fn: (page, answer) => ((answer?.answer as SingleChoiceAnswer).value ? page + 1 : page),
         target: formPageChanged,
     });
 

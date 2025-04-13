@@ -17,7 +17,7 @@ interface TestSingleChoiceQuestionProps extends QuestionsResponse {
         question: string;
         answer: { input?: string; value: string };
         index: number;
-        isSingle: boolean;
+        isSingle?: boolean;
     }) => void;
     page: number;
     showInput: boolean;

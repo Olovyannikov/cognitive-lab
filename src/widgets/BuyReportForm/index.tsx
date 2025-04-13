@@ -58,15 +58,14 @@ export const BuyReportForm = () => {
                         fullWidth
                         size='md'
                         variant='default'
-                        disabled={pending || isLoading}
                         loading={pending || isLoading}
-                        onClick={() => applyPromoHandler(form.values.promo_code.toUpperCase())}
+                        onClick={() => !pending && applyPromoHandler(form.values.promo_code.toUpperCase())}
                     >
                         Применить
                     </Button>
                 </Flex>
             </Paper>
-            <Button disabled={pending || isLoading} size='md' type='submit'>
+            <Button loading={pending || isLoading} size='md' type='submit'>
                 Перейти к оплате
             </Button>
             <Text fz={12} ta='center' mb={12}>
