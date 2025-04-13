@@ -1,0 +1,1 @@
+import{j as t}from"./chunk-Bk72g4MP.js";import{B as e,a as o,T as r}from"./chunk-Cmaq5yGv.js";const i={buyNowAndNavigateToFullStructure:t.jsx(o,{}),redirectToTest:t.jsx(e,{}),takeTestAgainOrBuyReport:t.jsx(r,{})};export{i as C};

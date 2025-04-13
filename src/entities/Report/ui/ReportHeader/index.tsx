@@ -32,8 +32,8 @@ export const ReportHeader = ({ type, name, preTitle = 'Ваш тип лично�
                 draggable={false}
                 className={s.character}
                 src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}
-                w={!isLarge || isMobile ? 343 : 400}
-                h={!isLarge || isMobile ? 247 : 400}
+                w={!isLarge || isMobile ? 247 : 400}
+                h={!isLarge || isMobile ? 247 : 380}
             />
             <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />
             <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />
