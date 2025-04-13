@@ -9,13 +9,17 @@ export const FreeReportNavigation = () => {
     const content = useStoreMap({
         store: getFreeResultQuery.$data,
         keys: ['title', page],
-        fn: (content) => content?.content.map(({ title }) => title),
+        fn: (content) => content?.content?.map(({ title }) => title),
     });
+
+    const activeMenu = content?.[page];
 
     const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));
     const color = TYPE_TO_COLOR_MAP[mbti ?? ''];
 
     if (!content) return;
 
-    return <ReportNavigationTemplate color={color} page={page} content={content} onPageChange={onPageChange} />;
+    return (
+        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />
+    );
 };

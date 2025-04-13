@@ -10,15 +10,17 @@ import type { QuestionsResponse } from '../api/dto';
 import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
 
 export const TestModel = atom(() => {
-    const $currentPage = createStore(1);
-    const $currentProgress = createStore(0);
+    const formReset = createEvent();
+
+    const $currentPage = createStore(1).reset(formReset);
+    const $currentProgress = createStore(0).reset(formReset);
     const $currentQuestion = createStore<QuestionsResponse | null>(null);
-    const $currentValue = createStore<PreparedAnswer['answer'] | null>(null);
+    const $currentValue = createStore<PreparedAnswer['answer'] | null>(null).reset(formReset);
     const $isSplashScreenVisible = createStore<boolean>(true);
 
     const $scaleForm = createStore<Answers>({
         answers: [],
-    });
+    }).reset(formReset);
 
     const setSplashScreenVisibility = createEvent<boolean>();
     const scaleFormFieldChanged = createEvent<PreparedAnswer>();
@@ -140,5 +142,6 @@ export const TestModel = atom(() => {
         formPageChanged,
         $isSplashScreenVisible,
         setSplashScreenVisibility,
+        formReset,
     };
 });

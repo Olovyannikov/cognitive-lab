@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { InnerContainer } from '@/shared/ui';
 
@@ -10,28 +10,31 @@ import s from './ReportNavigationTemplate.module.css';
 
 interface ReportNavigationTemplateProps {
     content: string[];
-    page: number;
     title?: string;
     onPageChange(n: number): void;
     color?: string;
+    activeMenu?: string;
 }
 
 export const ReportNavigationTemplate = ({
     content,
-    page,
     onPageChange,
     title,
     color = 'violet',
+    activeMenu = 'Введение',
 }: ReportNavigationTemplateProps) => {
-    const [activeMenu, setActiveMenu] = useState(content[page] ?? title ?? 'Введение');
     const [_, scrollTo] = useWindowScroll();
+    const {
+        urlParsed: { pathname },
+    } = usePageContext();
 
     const [opened, { close, toggle }] = useDisclosure();
 
-    const onPageChangeHandler = ({ idx, title }: { idx: number; title: string }) => {
+    const isFreeReport = pathname.includes('free');
+
+    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {
         onPageChange(idx + 1);
-        setActiveMenu(title);
-        setTimeout(() => scrollTo({ y: 0 }), 0);
+        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);
     };
 
     const props = {
@@ -40,7 +43,6 @@ export const ReportNavigationTemplate = ({
         activeMenu,
         opened,
         content,
-        setActiveMenu,
         onPageChange: onPageChangeHandler,
     };
 

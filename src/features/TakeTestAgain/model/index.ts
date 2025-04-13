@@ -9,11 +9,6 @@ import { UserModel } from '@/entities/User';
 
 export const TakeTestAgainModel = atom(() => {
     const takeTestAgainClicked = createEvent();
-    sample({
-        clock: takeTestAgainClicked,
-        fn: clearLocalStorageTestUnits,
-        target: takeTestAgainMutation.start,
-    });
 
     createAction({
         clock: takeTestAgainMutation.finished.success,
@@ -32,8 +27,18 @@ export const TakeTestAgainModel = atom(() => {
             target.progress.reinit();
             target.form.reinit();
             target.closeAllModals(false);
-            target.redirect();
         },
+    });
+
+    sample({
+        clock: takeTestAgainClicked,
+        fn: clearLocalStorageTestUnits,
+        target: takeTestAgainMutation.start,
+    });
+
+    sample({
+        clock: takeTestAgainMutation.finished.success,
+        target: TestModel.formReset,
     });
 
     return {

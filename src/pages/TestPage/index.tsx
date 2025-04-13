@@ -1,10 +1,13 @@
-import type { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
+
+import { PageLoader } from '@/shared/ui';
 
 import {
     getQuestionsQuery,
     type SingleChoiceAnswer,
+    takeTestAgainMutation,
     TestContainer,
     TestModel,
     TestMultipleQuestion,
@@ -13,18 +16,19 @@ import {
     TestSingleChoiceQuestion,
 } from '@/entities/Test';
 
-import { RephrasingModel } from '@/features/Rephrasing/model';
+import { RephrasingModel } from '@/features/Rephrasing';
 
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
     const { data } = useUnit(getQuestionsQuery);
-    const [page, progress, question, value, isSplashScreen] = useUnit([
+    const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
         TestModel.$currentPage,
         TestModel.$currentProgress,
         TestModel.$currentQuestion,
         TestModel.$currentValue,
         TestModel.$isSplashScreenVisible,
+        takeTestAgainMutation.$pending,
     ]);
 
     const onChange = useUnit(TestModel.scaleFormFieldChanged);
@@ -32,6 +36,7 @@ export const TestPage = () => {
     const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
 
     if (!data || !question) return null;
+    if (isLoading) return <PageLoader />;
 
     const Map: Record<string, ReactNode> = {
         scale: (

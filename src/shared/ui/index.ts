@@ -11,3 +11,4 @@ export * from './SpinningText';
 export * from './Picture';
 export * from './StickyScrollReveal';
 export * from './Accordion';
+export * from './Markdown';

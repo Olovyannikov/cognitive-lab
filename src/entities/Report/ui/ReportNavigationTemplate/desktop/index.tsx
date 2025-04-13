@@ -14,12 +14,11 @@ interface DesktopProps {
     content: string[];
     color: string;
     onPageChange({ idx, title }: { idx: number; title: string }): void;
-    setActiveMenu(s: string): void;
     activeMenu: string;
     title?: string;
 }
 
-export const Desktop = ({ content, activeMenu, toggle, setActiveMenu, color, title, onPageChange }: DesktopProps) => {
+export const Desktop = ({ content, activeMenu, toggle, color, title, onPageChange }: DesktopProps) => {
     const isLarge = useIsLarge();
     const icons = getIconsMap(isLarge);
 
@@ -92,13 +91,7 @@ export const Desktop = ({ content, activeMenu, toggle, setActiveMenu, color, tit
                         }
                         onClick={() => onPageChange({ idx, title })}
                     >
-                        <Link
-                            spy
-                            to={title}
-                            offset={-100}
-                            onSetActive={setActiveMenu}
-                            onClick={() => onPageChange({ idx, title })}
-                        >
+                        <Link spy to={title} offset={-100} onClick={() => onPageChange({ idx, title })}>
                             <Text style={{ pointerEvents: 'none' }} span inline fz={14} fw='bold'>
                                 {title}
                             </Text>

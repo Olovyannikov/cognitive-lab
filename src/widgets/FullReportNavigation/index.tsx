@@ -19,11 +19,13 @@ export const FullReportNavigation = () => {
     const mbti = useUnit(getFullReportQuery.$data.map((el) => el?.mbti_type));
     const color = TYPE_TO_COLOR_MAP[mbti];
 
+    const activeMenu = content?.[page];
+
     if (!content) return null;
 
     return (
         <ReportNavigationTemplate
-            page={page}
+            activeMenu={activeMenu}
             color={color}
             content={content}
             title={content[page]}

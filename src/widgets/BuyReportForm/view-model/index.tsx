@@ -15,6 +15,7 @@ export const useReportBuyFormViewModel = () => {
         urlParsed: {
             search: { type, reportId },
         },
+        routeParams: { surveyId },
     } = usePageContext();
     const purchaseReportHandler = useUnit(reportPurchased);
     const [user, isUserInfoLoading] = useUnit([getSurveysInfoQuery.$data, getSurveysInfoQuery.$pending]);
@@ -53,7 +54,7 @@ export const useReportBuyFormViewModel = () => {
     const selectProps = {
         size: 'md',
         radius: 'xs',
-        disabled: !type,
+        disabled: Boolean(surveyId) || Boolean(reportId),
         data: dataValues,
         name: 'mbti_type',
         withAsterisk: true,
@@ -109,8 +110,11 @@ export const useReportBuyFormViewModel = () => {
     });
 
     useEffect(() => {
-        if (!isUserInfoLoading && !type && !currentUserMbti?.[reportId]) navigate('/');
-    }, [type, currentUserMbti, reportId, isUserInfoLoading]);
+        if (surveyId) return;
+        if (!type) return form.setFieldValue('mbti_type', Object.keys(types)[0]);
+        if (!isUserInfoLoading && !currentUserMbti?.[reportId]) navigate('/');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [type, currentUserMbti, reportId, surveyId, isUserInfoLoading]);
 
     return {
         form,

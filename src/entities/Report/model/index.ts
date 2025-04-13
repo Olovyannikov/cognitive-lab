@@ -25,7 +25,7 @@ export const ReportModel = atom(() => {
         Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))
     );
     const $lastUserFreeReport = getSurveysInfoQuery.$data.map(
-        (user) => user?.reports?.findLast?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
+        (user) => user?.reports.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
     );
 
     persist({

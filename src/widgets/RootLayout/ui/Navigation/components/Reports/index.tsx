@@ -1,14 +1,14 @@
 import { Box, Button, Collapse, Divider, Group, Pill } from '@mantine/core';
 import { useClickOutside, useDisclosure } from '@mantine/hooks';
-import { CaretDown } from '@phosphor-icons/react/dist/ssr';
+import { ArrowClockwise, CaretDown } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { useList, useUnit } from 'effector-react';
 
 import { desktop } from '@/shared/media';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
-
-import { TakeTestAgain } from '@/features/TakeTestAgain';
+import { RootModel } from '@/entities/Root';
+import { TestModel } from '@/entities/Test';
 
 import { ReportGroupTemplate } from './ReportGroupTemplate';
 import { ReportTemplate } from './ReportTemplate';
@@ -23,11 +23,13 @@ export const Reports = () => {
     const ref = useClickOutside(() => isLarge && close());
 
     const { pending, stale } = useUnit(getSurveysInfoQuery);
-    const [allReports, freeReports, paidReports, expressReports] = useUnit([
+    const [allReports, freeReports, paidReports, expressReports, closeAllModals, setSplashScreenVisibility] = useUnit([
         ReportModel.$allUserReports,
         ReportModel.$freeUserReports,
         ReportModel.$paidUserReports,
         ReportModel.$expressUserReports,
+        RootModel.allMenusClosed,
+        TestModel.setSplashScreenVisibility,
     ]);
 
     const isLoading = pending || stale;
@@ -77,7 +79,24 @@ export const Reports = () => {
                         label='Экспресс отчёты'
                     />
                     <Divider />
-                    <TakeTestAgain w='100%' my='sm' fz={14} variant='subtle' className={s.takeTestAgain} size='md' />
+                    <Button
+                        component='a'
+                        href='/test'
+                        w='100%'
+                        my='sm'
+                        fz={14}
+                        size='md'
+                        variant='subtle'
+                        className={s.takeTestAgain}
+                        onClick={() => {
+                            setSplashScreenVisibility(true);
+                            closeAllModals(false);
+                            toggle();
+                        }}
+                        leftSection={<ArrowClockwise weight='bold' />}
+                    >
+                        Пройти тест заново
+                    </Button>
                 </Box>
             </Collapse>
         </Box>

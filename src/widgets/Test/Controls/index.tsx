@@ -8,7 +8,7 @@ import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
 
-import { Rephrasing } from '@/features/Rephrasing';
+import { Rephrasing } from '@/features/Rephrasing/ui';
 
 import { SubmitTestModel } from '@/widgets/Test';
 

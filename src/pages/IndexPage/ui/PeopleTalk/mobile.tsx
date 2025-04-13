@@ -2,7 +2,6 @@ import { Box, Drawer, Group, Rating, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { desktop } from '@/shared/media';
 import { Picture } from '@/shared/ui';
 
 import { PeopleTalkModel } from './model';
@@ -10,7 +9,6 @@ import { PeopleTalkModel } from './model';
 import s from './PeopleTalk.module.css';
 
 export const Mobile = () => {
-    const isLarge = useUnit(desktop.$matches);
     const { isMobile } = usePageContext();
 
     const [opened, setIsActive, currentReview, close] = useUnit([
@@ -24,7 +22,7 @@ export const Mobile = () => {
         <Drawer
             className={s.drawer}
             position='bottom'
-            opened={(isMobile || !isLarge) && opened}
+            opened={isMobile && opened}
             onClose={() => {
                 close(false);
                 setIsActive(true);
@@ -34,7 +32,7 @@ export const Mobile = () => {
                 <Group justify='space-between' align='flex-start' gap='md' wrap='nowrap'>
                     <Box>
                         <Rating
-                            size={!isMobile || isLarge ? 'lg' : 'md'}
+                            size={!isMobile ? 'lg' : 'md'}
                             readOnly
                             defaultValue={currentReview?.overall_rate}
                             mb='xs'
@@ -49,7 +47,7 @@ export const Mobile = () => {
                 </Group>
                 <Text className={s.reviewText}>{currentReview?.text}</Text>
                 <Text fz={18} c='dark.2' mt='auto'>
-                    {new Date(currentReview?.created_at ?? '').toLocaleDateString()}
+                    {currentReview?.created_at}
                 </Text>
             </>
         </Drawer>

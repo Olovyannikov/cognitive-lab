@@ -23,6 +23,9 @@ export const HelpForm = () => {
                         fontWeight: '600',
                         marginBottom: 4,
                     },
+                    input: {
+                        fontSize: 16,
+                    },
                 }}
                 {...questionProps}
                 disabled={pending}

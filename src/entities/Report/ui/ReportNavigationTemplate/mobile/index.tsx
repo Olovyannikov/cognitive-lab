@@ -15,10 +15,9 @@ interface MobileProps {
     color: string;
     activeMenu: string;
     onPageChange({ idx, title }: { idx: number; title: string }): void;
-    setActiveMenu(s: string): void;
 }
 
-export const Mobile = ({ opened, close, content, color, onPageChange, setActiveMenu, activeMenu }: MobileProps) => {
+export const Mobile = ({ opened, close, content, color, onPageChange, activeMenu }: MobileProps) => {
     const isLarge = useIsLarge();
     const icons = getIconsMap(isLarge);
 
@@ -85,7 +84,6 @@ export const Mobile = ({ opened, close, content, color, onPageChange, setActiveM
                                 spy
                                 to={title}
                                 offset={-100}
-                                onSetActive={setActiveMenu}
                                 onClick={() => {
                                     onPageChange({ idx, title });
                                     close();
