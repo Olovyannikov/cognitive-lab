@@ -17,7 +17,7 @@ export const Hero = () => {
     const { isMobile } = usePageContext();
 
     return (
-        <Section pt={0} pb={isMobile ? 0 : 200}>
+        <Section pt={0} pb={!isDesktop || isMobile ? 0 : 200}>
             <Container className={s.box}>
                 <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>
                 <Text className={clsx(s.text, s.subtitle)}>
