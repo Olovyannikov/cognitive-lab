@@ -54,7 +54,8 @@ export const PeopleTalk = () => {
                 slideGap='lg'
                 withControls={false}
                 plugins={[autoplay.current, wheel.current]}
-                slideSize={!isMobile || isLarge ? 624 : '70%'}
+                // slideSize={!isMobile || isLarge ? 624 : '70%'}
+                slideSize={isMobile ? '70%' : 624}
                 onMouseLeave={() => isActive && autoplay.current.play()}
                 onPointerLeave={() => isActive && autoplay.current.play()}
                 onPointerEnter={() => autoplay.current.stop()}
