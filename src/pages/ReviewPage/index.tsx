@@ -11,6 +11,8 @@ import { NavigateToMainPage } from '@/features/NavigateToMainPage';
 
 import { InnerLayout } from '@/widgets/InnerLayout';
 
+import s from './ReviewPage.module.css';
+
 export const ReviewPage = () => {
     const { pending, stale } = useUnit(getSurveysInfoQuery);
 
@@ -21,6 +23,7 @@ export const ReviewPage = () => {
     return (
         <InnerLayout
             maw={850}
+            className={isSubmitted ? s.root : ''}
             title={!isSubmitted && 'Оставьте отзыв'}
             text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}
             image={!isSubmitted ? '/review/question-bubble' : undefined}

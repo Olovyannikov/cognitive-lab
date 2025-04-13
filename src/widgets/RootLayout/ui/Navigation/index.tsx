@@ -3,6 +3,8 @@ import { X } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { useIsLargeMenu } from '@/shared/lib';
+
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { RootModel } from '@/entities/Root';
 import { UserModel } from '@/entities/User';
@@ -30,6 +32,7 @@ export const Navigation = () => {
     const isFreeReportPage = urlParsed.href.includes('/free-report/');
 
     const isLoading = isStale || isPending;
+    const isCompact = useIsLargeMenu();
 
     const getCurrentChildren = () => {
         if (isFreeReportPage || isUserHasFreeReport) {
@@ -80,7 +83,7 @@ export const Navigation = () => {
             >
                 {items}
             </Drawer>
-            <Group wrap='nowrap' component='nav' visibleFrom='lg'>
+            <Group gap={isCompact ? 'md' : 'xs'} wrap='nowrap' component='nav' visibleFrom='lg'>
                 {items}
                 {getCurrentChildren()}
             </Group>

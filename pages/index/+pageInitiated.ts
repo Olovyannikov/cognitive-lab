@@ -12,7 +12,15 @@ export const pageInitiated = createPageInit();
 sample({
     clock: pageInitiated,
     fn: () => undefined,
-    target: [getReviewsQuery.refresh, getFAQQuery.refresh],
+    target: getReviewsQuery.refresh,
+});
+
+sample({
+    clock: pageInitiated,
+    fn: () => ({
+        show_on_main: true,
+    }),
+    target: getFAQQuery.refresh,
 });
 
 sample({

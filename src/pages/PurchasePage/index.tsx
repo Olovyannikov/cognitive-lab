@@ -10,6 +10,8 @@ import { NavigateToHelpPage } from '@/features/NavigateToHelpPage';
 import { BuyReportForm } from '@/widgets/BuyReportForm';
 import { InnerLayout } from '@/widgets/InnerLayout';
 
+import s from './PurchasePage.module.css';
+
 export const PurchasePage = () => {
     const { data, pending } = useUnit(getRegularPriceQuery);
     const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);
@@ -29,7 +31,7 @@ export const PurchasePage = () => {
         : dataWithPromocode?.regular_price.final;
 
     return (
-        <InnerLayout image='/payment/logo'>
+        <InnerLayout className={s.root} image='/payment/logo'>
             <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />
             <BuyReportForm />
             <NavigateToHelpPage />

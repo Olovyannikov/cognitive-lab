@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Container, Flex, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { usePageContext } from 'vike-react/usePageContext';
 
 import { useIsLarge } from '@/shared/lib';
 import { PageLoader } from '@/shared/ui';
@@ -16,6 +17,7 @@ import { Card } from './ui';
 import s from './SplashScreen.module.css';
 
 export const TestSplashScreen = () => {
+    const { isMobile } = usePageContext();
     const [isStarted, setSplashScreen, testAgain] = useUnit([
         TestModel.$currentProgress.map((progress) => progress > 0),
         TestModel.setSplashScreenVisibility,
@@ -39,7 +41,7 @@ export const TestSplashScreen = () => {
     if (isStale || isLoading || !mounted) return <PageLoader />;
 
     return (
-        <Box>
+        <Box py={isMobile ? 0 : 120}>
             <Container mb='5xl'>
                 <Stack gap={0}>
                     <Title className={s.title} order={2}>

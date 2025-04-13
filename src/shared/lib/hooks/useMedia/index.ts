@@ -5,3 +5,4 @@ export const useIsLarge = () => useMediaQuery('(min-width: 1200px');
 export const useIsHuge = () => useMediaQuery('(min-width: 1440px)');
 
 export const useIsDesktop = () => useMediaQuery('(min-width: 1024px)');
+export const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');
