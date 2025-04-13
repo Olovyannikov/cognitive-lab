@@ -18,6 +18,7 @@ import s from './SplashScreen.module.css';
 
 export const TestSplashScreen = () => {
     const { isMobile } = usePageContext();
+    const isLarge = useIsLarge();
     const [isStarted, setSplashScreen, testAgain] = useUnit([
         TestModel.$currentProgress.map((progress) => progress > 0),
         TestModel.setSplashScreenVisibility,
@@ -28,7 +29,6 @@ export const TestSplashScreen = () => {
         getSurveysInfoQuery.$pending,
         getSurveysInfoQuery.$stale,
     ]);
-    const isLarge = useIsLarge();
 
     const [mounted, setMounted] = useState(false);
 
@@ -41,7 +41,7 @@ export const TestSplashScreen = () => {
     if (isStale || isLoading || !mounted) return <PageLoader />;
 
     return (
-        <Box py={isMobile ? 0 : 120}>
+        <Box py={!isLarge || isMobile ? 0 : 120}>
             <Container mb='5xl'>
                 <Stack gap={0}>
                     <Title className={s.title} order={2}>

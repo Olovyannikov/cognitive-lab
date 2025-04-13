@@ -20,7 +20,9 @@ export default {
         },
     },
     passToClient: ['scopeValues', 'isMobile'],
-    // prerender: true,
+    prerender: {
+        partial: true,
+    },
     title: 'Cognitive Lab',
     lang: 'ru',
     reactStrictMode: false,
