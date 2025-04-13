@@ -6,7 +6,7 @@ import AutoScroll from 'embla-carousel-auto-scroll';
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 import { usePageContext } from 'vike-react/usePageContext';
 
-import { desktop } from '@/shared/media';
+import { useIsLarge } from '@/shared/lib';
 import { Picture } from '@/shared/ui';
 
 import { ReviewModel } from '@/entities/Review';
@@ -38,7 +38,7 @@ export const PeopleTalk = () => {
     );
     const wheel = useRef(WheelGesturesPlugin({}));
 
-    const isLarge = useUnit(desktop.$matches);
+    const isLarge = useIsLarge();
     const { isMobile } = usePageContext();
 
     const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];
