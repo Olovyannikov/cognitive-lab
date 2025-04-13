@@ -55,9 +55,15 @@ export const TestModel = atom(() => {
 
     sample({
         clock: delayedFormFieldChanged,
-        source: $currentPage,
+        source: { page: $currentPage, progress: $currentProgress },
         filter: (_, field) => !field.isMultiple,
-        fn: (page, answer) => ((answer?.answer as SingleChoiceAnswer).value ? page + 1 : page),
+        fn: ({ page, progress }, answer) =>
+            (answer?.answer as SingleChoiceAnswer).value !== null &&
+            (answer?.answer as SingleChoiceAnswer).value !== '' &&
+            (answer?.answer as SingleChoiceAnswer).value !== undefined &&
+            progress < 100
+                ? page + 1
+                : page,
         target: formPageChanged,
     });
 

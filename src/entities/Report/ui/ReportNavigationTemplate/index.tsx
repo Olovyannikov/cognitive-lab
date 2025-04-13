@@ -31,7 +31,7 @@ export const ReportNavigationTemplate = ({
     const onPageChangeHandler = ({ idx, title }: { idx: number; title: string }) => {
         onPageChange(idx + 1);
         setActiveMenu(title);
-        scrollTo({ y: 0 });
+        setTimeout(() => scrollTo({ y: 0 }), 0);
     };
 
     const props = {

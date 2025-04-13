@@ -115,13 +115,18 @@
 
 .icon {
   position: absolute;
-  left: calc(var(--offset) + 28px);
+  left: calc(var(--offset) + 32px);
   top: -30px;
   color: var(--mantine-color-gray-6);
 
+  &:has(+ [data-value="95"]),
+  &:has(+ [data-value="96"]),
+  &:has(+ [data-value="97"]),
+  &:has(+ [data-value="98"]),
+  &:has(+ [data-value="99"]),
   &:has(+ [data-value="100"]) {
     left: unset;
-    right: 42px;
+    right: 32px;
   }
 
   @mixin larger-than 1200px {

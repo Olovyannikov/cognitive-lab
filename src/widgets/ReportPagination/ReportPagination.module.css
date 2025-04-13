@@ -4,9 +4,7 @@
   z-index: 100;
   box-shadow: 0 0 4px 1px #0d151a26;
   background-color: var(--mantine-color-white);
-  margin-inline: calc(var(--mantine-spacing-md) * -1);
   padding-block: var(--mantine-spacing-lg);
-  padding-inline: var(--mantine-spacing-md);
 
   @mixin larger-than 992px {
     padding-block: 40px;
