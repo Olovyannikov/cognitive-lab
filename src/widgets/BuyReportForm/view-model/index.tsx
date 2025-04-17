@@ -59,7 +59,7 @@ export const useReportBuyFormViewModel = () => {
         name: 'mbti_type',
         withAsterisk: true,
         key: form.key('mbti_type'),
-        rightSection: !type && <Lock />,
+        rightSection: (Boolean(surveyId) || Boolean(reportId)) && <Lock />,
         label: 'Тип личности для отчёта',
         placeholder: 'Выберите из списка',
         styles: { label: { fontWeight: 'bold', marginBottom: 4 } },
@@ -110,7 +110,7 @@ export const useReportBuyFormViewModel = () => {
     });
 
     useEffect(() => {
-        if (surveyId) return;
+        if (surveyId || type) return;
         if (!type) return form.setFieldValue('mbti_type', Object.keys(types)[0]);
         if (!isUserInfoLoading && !currentUserMbti?.[reportId]) navigate('/');
         // eslint-disable-next-line react-hooks/exhaustive-deps

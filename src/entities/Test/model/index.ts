@@ -18,6 +18,9 @@ export const TestModel = atom(() => {
     const $currentValue = createStore<PreparedAnswer['answer'] | null>(null).reset(formReset);
     const $isSplashScreenVisible = createStore<boolean>(true);
 
+    const directionChanged = createEvent<'forward' | 'backward'>();
+    const $direction = createStore<'forward' | 'backward'>('forward').on(directionChanged, (_, dir) => dir);
+
     const $scaleForm = createStore<Answers>({
         answers: [],
     }).reset(formReset);
@@ -57,8 +60,8 @@ export const TestModel = atom(() => {
 
     sample({
         clock: delayedFormFieldChanged,
-        source: { page: $currentPage, progress: $currentProgress },
-        filter: (_, field) => !field.isMultiple,
+        source: { page: $currentPage, progress: $currentProgress, direction: $direction },
+        filter: (params, field) => !field.isMultiple && params.direction === 'forward',
         fn: ({ page, progress }, answer) =>
             (answer?.answer as SingleChoiceAnswer).value !== null &&
             (answer?.answer as SingleChoiceAnswer).value !== '' &&
@@ -143,5 +146,6 @@ export const TestModel = atom(() => {
         $isSplashScreenVisible,
         setSplashScreenVisibility,
         formReset,
+        directionChanged,
     };
 });

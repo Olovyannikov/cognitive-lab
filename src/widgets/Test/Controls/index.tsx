@@ -16,12 +16,13 @@ import s from './Controls.module.css';
 
 export const Controls = () => {
     const { data: questions } = useUnit(getQuestionsQuery);
-    const { page, onChange, controlModal, value } = useUnit({
+    const { page, onChange, controlModal, value, onDirectionChange } = useUnit({
         page: TestModel.$currentPage,
         onChange: TestModel.formPageChanged,
         controlModal: SubmitTestModel.submitModalStateChanged,
         value: TestModel.$currentValue,
         form: TestModel.$scaleForm,
+        onDirectionChange: TestModel.directionChanged,
     });
     const [visible, setVisible] = useState(false);
 
@@ -45,7 +46,16 @@ export const Controls = () => {
     const isLast = page === questions.length;
 
     return (
-        <Pagination.Root className={s.root} total={questions.length} mt='auto' value={page} onChange={onChange}>
+        <Pagination.Root
+            className={s.root}
+            total={questions.length}
+            mt='auto'
+            value={page}
+            onChange={(payload) => {
+                onChange(payload);
+                onDirectionChange(payload > page ? 'forward' : 'backward');
+            }}
+        >
             <Group className={s.group}>
                 <Pagination.Previous
                     disabled={isFirst}
