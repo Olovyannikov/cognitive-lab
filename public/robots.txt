@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cognitivelab.ru/sitemap.xml

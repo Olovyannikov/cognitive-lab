@@ -65,3 +65,5 @@ firebase
 *.jpg
 *.avif
 .solidarity
+*.txt
+*.xml

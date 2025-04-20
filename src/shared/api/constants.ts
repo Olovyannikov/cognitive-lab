@@ -3,4 +3,8 @@ export const API = {
     surveys: {
         mainPage: '/surveys/main-page',
     },
+    blog: {
+        posts: '/posts',
+        postById: (id: string) => `/posts/${id}`,
+    },
 };

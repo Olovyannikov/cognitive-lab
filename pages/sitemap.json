@@ -1,0 +1,10 @@
+[
+  {
+    "url": "/",
+    "changefreq": "weekly"
+  },
+  {
+    "url": "/test",
+    "changefreq": "weekly"
+  }
+]
