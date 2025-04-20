@@ -1,0 +1,45 @@
+.grid {
+  @mixin larger-than 992px {
+    display: grid;
+    place-items: center;
+    grid-auto-rows: 0fr;
+    grid-template-areas:
+      "l t2"
+      "l t2";
+  }
+}
+
+p.description {
+  grid-area: t;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 24px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  &:last-of-type {
+    grid-area: t2;
+    margin-bottom: 40px;
+  }
+
+  @mixin larger-than 768px {
+    font-size: 32px;
+    line-height: 50px;
+  }
+}
+
+picture.image,
+picture.image img {
+  grid-area: l;
+  margin: 0 auto;
+  width: 210px;
+  height: 223px;
+
+  @mixin larger-than 992px {
+    margin-right: 132px;
+    width: 366px !important;
+    height: 388px !important;
+  }
+}
