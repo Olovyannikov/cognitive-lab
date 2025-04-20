@@ -1,0 +1,99 @@
+.tariff {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border: 2px solid var(--mantine-color-violet-7);
+  border-radius: 20px;
+  padding: 32px 20px;
+
+  h5 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .price {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    &.num::after {
+      content: " ₽";
+      font-family: system-ui;
+    }
+  }
+
+  &.full {
+    color: var(--mantine-color-white);
+    background-color: var(--mantine-color-violet-7);
+
+    svg {
+      color: var(--mantine-color-white);
+    }
+  }
+}
+
+.list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 30px;
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  li > div {
+    align-items: flex-start;
+
+    svg {
+      color: var(--mantine-color-violet-7);
+    }
+  }
+}
+
+.button {
+  margin-top: auto;
+  border-radius: 16px;
+  width: 100%;
+  min-height: 45px;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--mantine-color-violet-7);
+  background-color: transparent;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    border-color: transparent;
+    color: var(--mantine-color-white);
+    background-color: var(--mantine-color-dark-9);
+  }
+
+  .full & {
+    background-color: var(--mantine-color-white);
+
+    &:hover {
+      background-color: var(--mantine-color-dark-9);
+    }
+  }
+
+  @mixin larger-than 992px {
+    min-height: 64px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}

@@ -1,0 +1,21 @@
+.flex {
+  flex-direction: column;
+
+  @mixin larger-than 992px {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.union {
+  position: absolute;
+  left: 1.8rem;
+  top: 12%;
+  z-index: -1;
+  display: none;
+  height: 210px;
+
+  @mixin larger-than 992px {
+    display: block;
+  }
+}

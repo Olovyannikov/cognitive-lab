@@ -6,5 +6,7 @@ export const IndexPage = () => (
         <Index.About />
         <Index.Statistics />
         <Index.ForWhom />
+        <Index.HowItHelps />
+        <Index.Tariffs />
     </>
 );

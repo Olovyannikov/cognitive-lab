@@ -53,7 +53,7 @@ export const ForWhom = () => {
                 />
             </Flex>
             <Center>
-                <Button size='xl' fullWidth maw={706} component='a' href='/test'>
+                <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={706} component='a' href='/test'>
                     Пройти тест
                 </Button>
             </Center>
