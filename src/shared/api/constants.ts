@@ -8,4 +8,7 @@ export const API = {
         posts: '/posts',
         postById: (id: string) => `/posts/${id}`,
     },
+    faq: {
+        list: '/posts',
+    },
 };

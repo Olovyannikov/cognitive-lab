@@ -6,7 +6,7 @@ import type { FaqItemResponse, FaqRequest } from './dto';
 
 export const getFAQQuery = createQuery({
     effect: createCommonRequestFx<FaqRequest, FaqItemResponse>((params) => ({
-        url: API.FAQ_LIST,
+        url: API.faq.list,
         params: {
             post_type: 'faq',
             ...params,
