@@ -1,4 +1,5 @@
 import { createHandler } from '@universal-middleware/express';
+import compression from 'compression';
 import express from 'express';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,6 +19,7 @@ async function startServer() {
 
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(`${root}/dist/client`));
+        app.use(compression());
     } else {
         // Instantiate Vite's development server and integrate its middleware to our server.
         // ⚠️ We should instantiate it *only* in development. (It isn't needed in production

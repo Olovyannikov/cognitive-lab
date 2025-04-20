@@ -8,7 +8,7 @@ import { RootLayout } from '@/widgets/RootLayout';
 export default {
     Layout: RootLayout,
     Head: HeadDefault,
-    // cacheControl: 'public, max-age=604800',
+    cacheControl: 'public, max-age=604800',
     meta: {
         // Event - fires on server side when the page gets initiated
         pageInitiated: {
@@ -19,7 +19,7 @@ export default {
             env: { client: true, server: false },
         },
     },
-    passToClient: ['scopeValues', 'isMobile'],
+    passToClient: ['scopeValues', 'device', 'isMobile'],
     title: 'Cognitive Lab',
     lang: 'ru',
     reactStrictMode: false,
