@@ -1,5 +1,0 @@
-.root {
-  @mixin larger-than 992px {
-    padding-block: 160px;
-  }
-}

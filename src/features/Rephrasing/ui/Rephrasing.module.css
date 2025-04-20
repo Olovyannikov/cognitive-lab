@@ -1,7 +1,0 @@
-.root {
-  @mixin larger-than 768px {
-    &:has(+ div > button:not([hidden])) {
-      top: 37px;
-    }
-  }
-}
