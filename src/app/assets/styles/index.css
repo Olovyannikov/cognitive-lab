@@ -1,0 +1,8 @@
+@import url("@mantine/core/styles.layer.css");
+@import url("@mantine/nprogress/styles.layer.css");
+@import url("@mantine/notifications/styles.layer.css");
+@import url("@mantine/carousel/styles.layer.css");
+
+/* Components */
+@import url("./general/_fonts.css");
+@import url("./general/_scaffoldings.css");

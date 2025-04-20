@@ -1,0 +1,9 @@
+.picture {
+  z-index: 1;
+  display: flex;
+
+  img {
+    height: auto;
+    object-fit: contain;
+  }
+}

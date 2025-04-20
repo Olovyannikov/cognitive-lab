@@ -1,0 +1,12 @@
+export * from './Hero';
+// export * from './About';
+// export * from './Statistics';
+// export * from './ForWhom';
+// export * from './HowItHelps';
+// export * from './Tariffs';
+// export * from './HowItWorks';
+// export * from './WhyUs';
+// export * from './PeopleTalk';
+// export * from './FAQ';
+// export * from './MoreInBlog';
+// export * from './LetsContinue';

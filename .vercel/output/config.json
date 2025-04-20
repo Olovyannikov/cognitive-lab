@@ -24,9 +24,5 @@
       "check": true
     }
   ],
-  "overrides": {
-    "index.html": {
-      "path": ""
-    }
-  }
+  "overrides": {}
 }
