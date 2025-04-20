@@ -4,5 +4,7 @@ export const IndexPage = () => (
     <>
         <Index.Hero />
         <Index.About />
+        <Index.Statistics />
+        <Index.ForWhom />
     </>
 );

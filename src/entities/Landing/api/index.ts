@@ -8,5 +8,5 @@ export const getMainPageInfoQuery = createQuery({
     effect: createCommonRequestFx<void, MainPageResponse>(() => ({
         url: API.surveys.mainPage,
     })),
-    // initialData: [] as MainPageResponse,
+    initialData: [] as MainPageResponse,
 });

@@ -1,0 +1,15 @@
+.cards {
+  flex-direction: column;
+  margin-bottom: 40px;
+  gap: 80px;
+
+  @mixin larger-than 768px {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--mantine-spacing-sm);
+  }
+
+  @mixin larger-than 1024px {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
