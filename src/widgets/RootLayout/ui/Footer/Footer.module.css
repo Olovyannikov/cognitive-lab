@@ -1,0 +1,55 @@
+.footer {
+  border-top: 1px solid var(--mantine-color-gray-3);
+  padding: var(--mantine-spacing-xl) 0;
+
+  a {
+    text-decoration: none;
+    color: currentcolor;
+
+    &:is(:hover, :focus-visible) {
+      color: var(--mantine-color-gray-9);
+    }
+  }
+}
+
+.topWrapper {
+  @mixin larger-than 1200px {
+    display: flex;
+    gap: 168px;
+  }
+}
+
+.contacts,
+.menu,
+.docs {
+  gap: var(--mantine-spacing-lg);
+}
+
+.docs {
+  margin-bottom: var(--mantine-spacing-xs);
+}
+
+.divider {
+  margin-block: 32px;
+}
+
+.items {
+  flex-direction: column;
+
+  section:not(:last-child) {
+    margin-bottom: 60px;
+
+    @mixin larger-than 768px {
+      margin-bottom: 0;
+    }
+  }
+
+  @mixin larger-than 768px {
+    flex-direction: row;
+    gap: 168px;
+  }
+}
+
+.contacts {
+  margin-bottom: var(--mantine-spacing-lg);
+}

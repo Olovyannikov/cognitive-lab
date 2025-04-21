@@ -1,0 +1,38 @@
+.root {
+  flex-direction: column;
+  gap: 32px;
+
+  @mixin larger-than 1200px {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.docs {
+  @mixin larger-than 1200px {
+    min-width: 314px;
+  }
+}
+
+.meta {
+  max-width: 310px;
+
+  @mixin larger-than 1200px {
+    flex: 1 0 310px;
+  }
+}
+
+.text {
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+
+  @mixin larger-than 1200px {
+    display: flex;
+    gap: 110px;
+  }
+}
+
+.disclamer {
+  max-width: 386px;
+}

@@ -11,4 +11,7 @@ export const API = {
     faq: {
         list: '/posts',
     },
+    news: {
+        subscribe: '/users/subscribe',
+    },
 };

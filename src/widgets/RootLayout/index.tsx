@@ -1,6 +1,7 @@
 import type { PropsWithChildren } from 'react';
 
-// import { Footer, Header } from './ui';
+import { Footer } from './ui';
+
 import s from './RootLayout.module.css';
 
 export const RootLayout = ({ children }: PropsWithChildren) => (
@@ -9,6 +10,6 @@ export const RootLayout = ({ children }: PropsWithChildren) => (
         <main className={s.main} id='page-content'>
             {children}
         </main>
-        {/*<Footer className={s.footer} />*/}
+        <Footer className={s.footer} />
     </div>
 );
