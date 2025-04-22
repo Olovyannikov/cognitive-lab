@@ -15,7 +15,7 @@ export const ReportModel = atom(() => {
         source: getSurveysInfoQuery.$data,
         filter: (data) => data === null,
         fn: noop,
-        target: getSurveysInfoQuery.refresh,
+        target: getSurveysInfoQuery.start,
     });
 
     const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>
