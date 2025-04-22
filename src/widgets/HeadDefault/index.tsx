@@ -2,13 +2,33 @@ import { ColorSchemeScript } from '@mantine/core';
 
 export const HeadDefault = () => (
     <>
-        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
-        <meta name='description' content='Cognitive Lab' />
         <link rel='icon' href='/logo.svg' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         {import.meta.env.PROD && (
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
+            <>
+                <link rel='canonical' href='https://cognitivelab.ru/' />
+                <meta property='og:locale' content='ru_RU' />
+                <meta name='twitter:card' content='summary_large_image' />
+                <meta name='twitter:title' content='CognitiveLab — тест на тип личности и выбор профессии' />
+                <meta name='twitter:description' content='AI-ассистент для вашего карьерного пути' />
+                <meta property='og:type' content='website' />
+                <meta property='og:title' content='CognitiveLab — AI-тест на тип личности (КогнитивЛаб)' />
+                <meta
+                    property='og:description'
+                    content='Узнайте свой тип личности и получите советы по карьере с помощью ИИ.'
+                />
+                <meta property='og:url' content='https://cognitivelab.ru/' />
+                <meta property='og:image' content='https://cognitivelab.ru/static/og-image.jpg' />
+                <meta name='twitter:image' content='https://cognitivelab.ru/static/og-image.jpg' />
+                <meta
+                    name='keywords'
+                    content='CognitiveLab, тип личности, тест на личность, тест на тип личности, MBTI, 16 типов личности, выбор профессии, карьерное ориентирование, AI, искусственный интеллект, карьерные рекомендации'
+                />
+                <meta name='robots' content='index, follow' />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -21,8 +41,24 @@ export const HeadDefault = () => (
             webvisor:true
         })
             `,
-                }}
-            ></script>
+                    }}
+                ></script>
+                <script
+                    type='application/ld+json'
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        {
+                        "@context": "https://schema.org ",
+                        "@type": "Organization",
+                        "name": "CognitiveLab",
+                        "alternateName": ["Cognitive Lab","Cognitivelab","Когнитив Лаб","Когнитивлаб"],
+                        "url": "https://cognitivelab.ru/ ",
+                        "logo": "https://cognitivelab.ru/static/logo.png"
+                    }
+                        `,
+                    }}
+                ></script>
+            </>
         )}
         <ColorSchemeScript />
     </>

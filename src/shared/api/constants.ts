@@ -3,6 +3,15 @@ export const API = {
     surveys: {
         mainPage: '/surveys/main-page',
         comments: '/surveys/comments',
+        personalityType: (type: string) => `/surveys/personality-type/${type}`,
+        personalityTypes: '/surveys/personality-types',
+        structure: '/surveys/structure',
+        regularPrice: '/surveys/regular-price',
+        promoPrice: (code: string) => `/surveys/promo-code-price?promo_code=${code}`,
+        info: '/surveys/info',
+        freeReport: '/surveys/free-report',
+        freeReportById: (id: string) => `/surveys/free-report/${id}`,
+        fullReport: (id: string) => `/surveys/full-reports/${id}`,
     },
     blog: {
         posts: '/posts',
@@ -13,5 +22,8 @@ export const API = {
     },
     news: {
         subscribe: '/users/subscribe',
+    },
+    payments: {
+        purchase: '/payments/purchase-report',
     },
 };

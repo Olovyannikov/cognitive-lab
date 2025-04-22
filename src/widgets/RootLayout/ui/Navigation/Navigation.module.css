@@ -1,0 +1,20 @@
+.drawer {
+  position: relative;
+  z-index: 1200;
+
+  header {
+    margin-bottom: var(--mantine-spacing-sm);
+    border-bottom: 1px solid var(--mantine-color-dark-0);
+    gap: 2rem;
+  }
+
+  h2 {
+    flex: 1;
+  }
+}
+
+.testLink {
+  @mixin larger-than 992px {
+    order: 2;
+  }
+}

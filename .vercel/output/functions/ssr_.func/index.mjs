@@ -55853,16 +55853,16 @@ var init_chunk_DLmw_jEj = __esm({
   }
 });
 
-// dist/server/chunks/chunk-Cd53fCRH.js
+// dist/server/chunks/chunk-Bxs9cBFL.js
 var root, docs, meta, text, disclamer, s11;
-var init_chunk_Cd53fCRH = __esm({
-  "dist/server/chunks/chunk-Cd53fCRH.js"() {
+var init_chunk_Bxs9cBFL = __esm({
+  "dist/server/chunks/chunk-Bxs9cBFL.js"() {
     "use strict";
-    root = "ueHAx";
-    docs = "vr23o";
-    meta = "Scv3q";
-    text = "XYUQo";
-    disclamer = "FGthR";
+    root = "vDXJ4";
+    docs = "_2x-Gq";
+    meta = "CtELj";
+    text = "_7qTdS";
+    disclamer = "u74TF";
     s11 = {
       root,
       docs,
@@ -56146,7 +56146,7 @@ var init_esm8 = __esm({
   }
 });
 
-// dist/server/chunks/chunk-BjAwTcaL.js
+// dist/server/chunks/chunk-DeA7MPa2.js
 function getConfig(payload, params) {
   return typeof payload === "function" ? payload(params) : payload;
 }
@@ -56227,8 +56227,8 @@ function Wrapper({
   ] });
 }
 var import_jsx_runtime129, React5, import_react173, onBeforeRender, import2, API, createRequestInstance, createRequestFx, createCommonRequestFx, atom, SvgCognitiveLogo, HeadDefault, subscribeToNewsMutation, SubscribeToNewsModel, SubscribeToNewsSchema, SubscribeToNews, OWNER_INFO, CONTACTS, MENU, DOCS, List2, MetaInfo, Section, Top, Footer, RootLayout, theme, isClient, currentScope, prevValues, getScope, ScopeContext, ScopeUpdateContext, ScopeProvider, useScope, EffectorProvider, import6;
-var init_chunk_BjAwTcaL = __esm({
-  "dist/server/chunks/chunk-BjAwTcaL.js"() {
+var init_chunk_DeA7MPa2 = __esm({
+  "dist/server/chunks/chunk-DeA7MPa2.js"() {
     "use strict";
     init_effector();
     import_jsx_runtime129 = __toESM(require_jsx_runtime(), 1);
@@ -56246,7 +56246,7 @@ var init_chunk_BjAwTcaL = __esm({
     init_chunk_Dy3LQdoT();
     init_ssr();
     init_chunk_DLmw_jEj();
-    init_chunk_Cd53fCRH();
+    init_chunk_Bxs9cBFL();
     init_chunk_BmkqR2v();
     init_chunk_BDst9g7C();
     init_chunk_BxoQfonb();
@@ -79992,7 +79992,7 @@ var init_pages_index = __esm({
   "dist/server/entries/pages_index.mjs"() {
     "use strict";
     init_onRenderHtml();
-    init_chunk_BjAwTcaL();
+    init_chunk_DeA7MPa2();
     import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
     init_esm3();
     init_clsx();
@@ -80034,7 +80034,7 @@ var init_pages_index = __esm({
     init_esm5();
     init_chunk_Dy3LQdoT();
     init_chunk_DLmw_jEj();
-    init_chunk_Cd53fCRH();
+    init_chunk_Bxs9cBFL();
     init_chunk_BmkqR2v();
     init_chunk_BDst9g7C();
     init_chunk_BxoQfonb();
@@ -80972,7 +80972,7 @@ var init_pages_index = __esm({
           value: ["scopeValues", "device", "isMobile"]
         }, {
           type: "js-serialized",
-          value: ["_configFromHook"]
+          value: ["_configFromHook", "$$typeof"]
         }]
       },
       ["cacheControl"]: {
@@ -81064,7 +81064,7 @@ var init_pages_test = __esm({
   "dist/server/entries/pages_test.mjs"() {
     "use strict";
     init_onRenderHtml();
-    init_chunk_BjAwTcaL();
+    init_chunk_DeA7MPa2();
     import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
     init_Loading();
     init_clsx();
@@ -81073,7 +81073,7 @@ var init_pages_test = __esm({
     init_core();
     init_chunk_Dy3LQdoT();
     init_chunk_DLmw_jEj();
-    init_chunk_Cd53fCRH();
+    init_chunk_Bxs9cBFL();
     init_chunk_BmkqR2v();
     init_chunk_BDst9g7C();
     init_chunk_BxoQfonb();
@@ -81124,7 +81124,7 @@ var init_pages_test = __esm({
           value: ["scopeValues", "device", "isMobile"]
         }, {
           type: "js-serialized",
-          value: ["_configFromHook"]
+          value: ["_configFromHook", "$$typeof"]
         }]
       },
       ["cacheControl"]: {
@@ -81328,6 +81328,39 @@ var init_entry = __esm({
             "assets/static/src_shared_ui_StickyScrollReveal_StickyScrollReveal.BnoiLhfu.css"
           ]
         },
+        "_chunk-BEbw_0AC.js": {
+          "file": "assets/chunks/chunk-BEbw_0AC.js",
+          "name": "Loading",
+          "imports": [
+            "_chunk-Bs9liB0q.js",
+            "_chunk-DRY9zkUH.js",
+            "_chunk-B9aj60V7.js",
+            "_chunk-BFxkgyTb.js",
+            "_chunk-Bxk40HBS.js",
+            "_chunk-BYlX3Wk_.js",
+            "_chunk-Ctd1kwdX.js",
+            "_chunk-FjVmaxdv.js"
+          ],
+          "css": [
+            "assets/static/vike-react-50ee1291.BcWtY8Ol.css",
+            "assets/static/src_app_providers_Mantine_mantine-styles-15e70b9c.Gr6mvit1.css",
+            "assets/static/src_app_assets_styles_index-dbda4d7c.DKnFo9Kh.css"
+          ],
+          "assets": [
+            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
+            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
+          ]
+        },
+        "_chunk-BFxkgyTb.js": {
+          "file": "assets/chunks/chunk-BFxkgyTb.js",
+          "name": "src_widgets_RootLayout_ui_Metainfo_MetaInfo.module-eec991b5",
+          "css": [
+            "assets/static/src_widgets_RootLayout_ui_Metainfo_MetaInfo.BNYHSklj.css"
+          ]
+        },
         "_chunk-BMc1H3Un.js": {
           "file": "assets/chunks/chunk-BMc1H3Un.js",
           "name": "src_entities_Landing_ui_StatisticsCard_StatisticsCard.module-5d13c976",
@@ -81379,13 +81412,6 @@ var init_entry = __esm({
           "name": "src_pages_IndexPage_ui_ForWhom_ForWhom.module-88eda7a1",
           "css": [
             "assets/static/src_pages_IndexPage_ui_ForWhom_ForWhom.5DVDJB81.css"
-          ]
-        },
-        "_chunk-CO6PF8Gn.js": {
-          "file": "assets/chunks/chunk-CO6PF8Gn.js",
-          "name": "src_widgets_RootLayout_ui_Metainfo_Metainfo.module-da8cb035",
-          "css": [
-            "assets/static/src_widgets_RootLayout_ui_Metainfo_Metainfo.B9ziUW1j.css"
           ]
         },
         "_chunk-CTdPKw3K.js": {
@@ -81477,32 +81503,6 @@ var init_entry = __esm({
           "name": "src_entities_Landing_ui_ForWhomCard_ForWhomCard.module-03d70385",
           "css": [
             "assets/static/src_entities_Landing_ui_ForWhomCard_ForWhomCard.Dus_8iAe.css"
-          ]
-        },
-        "_chunk-oBDjxpex.js": {
-          "file": "assets/chunks/chunk-oBDjxpex.js",
-          "name": "Loading",
-          "imports": [
-            "_chunk-Bs9liB0q.js",
-            "_chunk-DRY9zkUH.js",
-            "_chunk-B9aj60V7.js",
-            "_chunk-CO6PF8Gn.js",
-            "_chunk-Bxk40HBS.js",
-            "_chunk-BYlX3Wk_.js",
-            "_chunk-Ctd1kwdX.js",
-            "_chunk-FjVmaxdv.js"
-          ],
-          "css": [
-            "assets/static/vike-react-50ee1291.BcWtY8Ol.css",
-            "assets/static/src_app_providers_Mantine_mantine-styles-15e70b9c.Gr6mvit1.css",
-            "assets/static/src_app_assets_styles_index-dbda4d7c.DKnFo9Kh.css"
-          ],
-          "assets": [
-            "assets/static/raleway-v34-cyrillic_latin-regular.B2J1s-V4.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-500.CgpFJeFS.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-600.DRu2qh9T.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-700.CV4g2AhU.woff2",
-            "assets/static/raleway-v34-cyrillic_latin-800.C2UAHJem.woff2"
           ]
         },
         "_src_app_assets_styles_index-dbda4d7c.DKnFo9Kh.css": {
@@ -81609,9 +81609,9 @@ var init_entry = __esm({
           "file": "assets/static/src_widgets_RootLayout_ui_List_List.rzI4jrUR.css",
           "src": "_src_widgets_RootLayout_ui_List_List.rzI4jrUR.css"
         },
-        "_src_widgets_RootLayout_ui_Metainfo_Metainfo.B9ziUW1j.css": {
-          "file": "assets/static/src_widgets_RootLayout_ui_Metainfo_Metainfo.B9ziUW1j.css",
-          "src": "_src_widgets_RootLayout_ui_Metainfo_Metainfo.B9ziUW1j.css"
+        "_src_widgets_RootLayout_ui_Metainfo_MetaInfo.BNYHSklj.css": {
+          "file": "assets/static/src_widgets_RootLayout_ui_Metainfo_MetaInfo.BNYHSklj.css",
+          "src": "_src_widgets_RootLayout_ui_Metainfo_MetaInfo.BNYHSklj.css"
         },
         "_src_widgets_RootLayout_ui_Section_Section.CsVR1-Ac.css": {
           "file": "assets/static/src_widgets_RootLayout_ui_Section_Section.CsVR1-Ac.css",
@@ -81626,7 +81626,7 @@ var init_entry = __esm({
           "src": "_vike-react-50ee1291.BcWtY8Ol.css"
         },
         "node_modules/.pnpm/vike@0.4.228_react-streaming@0.4.2_react-dom@19.1.0_react@19.1.0__react@19.1.0__vite@6._ccc88ec1d405b1fc4ca02828ddcdcfca/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js": {
-          "file": "assets/entries/entry-client-routing.DweSkNXd.js",
+          "file": "assets/entries/entry-client-routing.Cjfzbx9l.js",
           "name": "entries/entry-client-routing",
           "src": "node_modules/.pnpm/vike@0.4.228_react-streaming@0.4.2_react-dom@19.1.0_react@19.1.0__react@19.1.0__vite@6._ccc88ec1d405b1fc4ca02828ddcdcfca/node_modules/vike/dist/esm/client/client-routing-runtime/entry.js",
           "isEntry": true,
@@ -81659,13 +81659,13 @@ var init_entry = __esm({
           "src": "src/app/assets/fonts/raleway-v34-cyrillic_latin-regular.woff2"
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/index": {
-          "file": "assets/entries/pages_index.BzlWth2s.js",
+          "file": "assets/entries/pages_index.CVq_yQlp.js",
           "name": "entries/pages/index",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/index",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-oBDjxpex.js",
+            "_chunk-BEbw_0AC.js",
             "_chunk-B1W2AE3s.js",
             "_chunk-CcR76USu.js",
             "_chunk--Zd04aop.js",
@@ -81689,7 +81689,7 @@ var init_entry = __esm({
             "_chunk-Bs9liB0q.js",
             "_chunk-DRY9zkUH.js",
             "_chunk-B9aj60V7.js",
-            "_chunk-CO6PF8Gn.js",
+            "_chunk-BFxkgyTb.js",
             "_chunk-Bxk40HBS.js",
             "_chunk-BYlX3Wk_.js",
             "_chunk-Ctd1kwdX.js",
@@ -81709,17 +81709,17 @@ var init_entry = __esm({
           ]
         },
         "virtual:vike:pageConfigValuesAll:client:/pages/test": {
-          "file": "assets/entries/pages_test.DwQu132i.js",
+          "file": "assets/entries/pages_test.BUv8EInU.js",
           "name": "entries/pages/test",
           "src": "virtual:vike:pageConfigValuesAll:client:/pages/test",
           "isEntry": true,
           "isDynamicEntry": true,
           "imports": [
-            "_chunk-oBDjxpex.js",
+            "_chunk-BEbw_0AC.js",
             "_chunk-Bs9liB0q.js",
             "_chunk-DRY9zkUH.js",
             "_chunk-B9aj60V7.js",
-            "_chunk-CO6PF8Gn.js",
+            "_chunk-BFxkgyTb.js",
             "_chunk-Bxk40HBS.js",
             "_chunk-BYlX3Wk_.js",
             "_chunk-Ctd1kwdX.js",
@@ -85946,7 +85946,7 @@ export {
 };
 /*! src/features/SubscribeToNews/ui/SubscribeToNews.module.css [vike:pluginModuleBanner] */
 /*! src/widgets/RootLayout/ui/List/List.module.css [vike:pluginModuleBanner] */
-/*! src/widgets/RootLayout/ui/Metainfo/Metainfo.module.css [vike:pluginModuleBanner] */
+/*! src/widgets/RootLayout/ui/Metainfo/MetaInfo.module.css [vike:pluginModuleBanner] */
 /*! src/widgets/RootLayout/ui/Section/Section.module.css [vike:pluginModuleBanner] */
 /*! src/widgets/RootLayout/ui/Top/Top.module.css [vike:pluginModuleBanner] */
 /*! src/widgets/RootLayout/ui/Footer/Footer.module.css [vike:pluginModuleBanner] */

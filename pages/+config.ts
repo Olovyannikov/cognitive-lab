@@ -6,9 +6,12 @@ import { RootLayout } from '@/widgets/RootLayout';
 
 // Default config (can be overridden by pages)
 export default {
+    extends: vikeReact,
+    reactStrictMode: false,
+    cacheControl: 'public, max-age=604800',
     Layout: RootLayout,
     Head: HeadDefault,
-    cacheControl: 'public, max-age=604800',
+    prefetchStaticAssets: 'viewport',
     meta: {
         // Event - fires on server side when the page gets initiated
         pageInitiated: {
@@ -20,8 +23,8 @@ export default {
         },
     },
     passToClient: ['scopeValues', 'device', 'isMobile'],
-    title: 'Cognitive Lab',
+    // metainfo
     lang: 'ru',
-    reactStrictMode: false,
-    extends: vikeReact,
+    title: 'CognitiveLab — тест на тип личности и выбор профессии',
+    description: 'Cognitive Lab／КогнитивЛаб — AI-тест на тип личности за 10 минут и персональный подбор профессии',
 } satisfies Config;
