@@ -25,9 +25,24 @@ export const ReportModel = atom(() => {
         (user) => user?.reports.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
     );
 
+    const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);
+    const $freeUserReports = getSurveysInfoQuery.$data.map(
+        (el) => el?.reports?.filter((report) => report.report_kind === 'free') ?? []
+    );
+    const $paidUserReports = getSurveysInfoQuery.$data.map(
+        (el) => el?.reports?.filter((report) => report.report_kind === 'paid') ?? []
+    );
+    const $expressUserReports = getSurveysInfoQuery.$data.map(
+        (el) => el?.reports?.filter((report) => report.report_kind === 'express') ?? []
+    );
+
     return {
         ReportGate,
         $isUserHasFreeReport,
         $lastUserFreeReport,
+        $allUserReports,
+        $freeUserReports,
+        $paidUserReports,
+        $expressUserReports,
     };
 });

@@ -1,0 +1,90 @@
+.root {
+  position: relative;
+
+  @mixin larger-than 1200px {
+    order: 1;
+    max-height: 45px;
+  }
+}
+
+.link {
+  align-items: center;
+  padding: 8px 10px;
+  width: max-content;
+  min-height: 48px;
+  text-decoration: none;
+  color: var(--mantine-color-gray-9);
+  transition: 0.15s ease-in-out background-color;
+
+  @mixin larger-than 1200px {
+    min-width: 205px;
+    font-size: 16px;
+    padding-inline: 22px;
+
+    span {
+      overflow: visible;
+    }
+  }
+}
+
+.link.loaded svg {
+  transition: rotate 0.3s ease-in-out;
+  translate: 0 8%;
+
+  &.rotate {
+    rotate: -180deg;
+  }
+
+  @mixin larger-than 992px {
+    translate: 0;
+  }
+}
+
+.buttonGroup {
+  align-items: center;
+  gap: 10px;
+}
+
+.pill {
+  color: var(--mantine-color-white);
+  background-color: var(--mantine-color-gray-8);
+
+  span {
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  button:hover & {
+    background-color: var(--mantine-color-violet-7);
+  }
+}
+
+.collapse {
+  padding: 0;
+  background: var(--mantine-color-white);
+
+  @mixin larger-than 1200px {
+    position: absolute;
+    right: 0;
+    top: calc(2.5rem + 8px);
+    border: 1px solid var(--mantine-color-gray-4);
+    border-radius: 4px;
+    padding: 16px 16px 0;
+    min-width: 240px;
+    box-shadow:
+      0 1px 3px 0 #0000000d,
+      0 10px 15px -5px #0000000d,
+      0 7px 7px -5px #0000000a;
+    padding-inline: var(--mantine-spacing-md);
+  }
+}
+
+.category {
+  overflow: hidden;
+  padding: 12px;
+
+  @mixin larger-than 1200px {
+    overflow: hidden;
+    padding: 0;
+  }
+}

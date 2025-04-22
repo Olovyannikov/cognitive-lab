@@ -19,5 +19,7 @@ export const RootModel = atom(() => {
         toggleMenu: MainMenu.toggle,
         $isSubmenuOpened: Submenu.$open,
         allMenusClosed,
+        openSubmenu: Submenu.opened,
+        closeSubmenu: Submenu.closed,
     };
 });
