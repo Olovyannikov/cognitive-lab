@@ -1,12 +1,23 @@
 import { sample } from 'effector';
 import { createGate } from 'effector-react';
+import { persist } from 'effector-storage/local';
 import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 import { noop } from '@/shared/lib';
 
 import { getSurveysInfoQuery } from '../api';
-import type { UserReportInfo } from '../api/dto';
+import { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './content';
+import { $userOrder, $userOrderStatus } from './order';
+import { $reportContent } from './reportContent';
+import {
+    $allUserReports,
+    $expressUserReports,
+    $freeUserReports,
+    $isUserHasFreeReport,
+    $lastUserFreeReport,
+    $paidUserReports,
+} from './userReports';
 
 export const ReportModel = atom(() => {
     const ReportGate = createGate();
@@ -18,23 +29,17 @@ export const ReportModel = atom(() => {
         target: getSurveysInfoQuery.start,
     });
 
-    const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>
-        Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))
-    );
-    const $lastUserFreeReport = getSurveysInfoQuery.$data.map(
-        (user) => user?.reports.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
-    );
-
-    const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);
-    const $freeUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el?.reports?.filter((report) => report.report_kind === 'free') ?? []
-    );
-    const $paidUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el?.reports?.filter((report) => report.report_kind === 'paid') ?? []
-    );
-    const $expressUserReports = getSurveysInfoQuery.$data.map(
-        (el) => el?.reports?.filter((report) => report.report_kind === 'express') ?? []
-    );
+    const ReportPageGate = createGate();
+    persist({
+        store: $currentPage,
+        pickup: ReportPageGate.open,
+    });
+    persist({
+        store: $currentContentPage,
+        pickup: ReportPageGate.open,
+    });
+    $currentContentPage.reset(ReportPageGate.close);
+    $currentPage.reset(ReportPageGate.close);
 
     return {
         ReportGate,
@@ -44,5 +49,10 @@ export const ReportModel = atom(() => {
         $freeUserReports,
         $paidUserReports,
         $expressUserReports,
+        $reportContent,
+        $userOrder,
+        $userOrderStatus,
+        $isFirstPage,
+        $isLastPage,
     };
 });

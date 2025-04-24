@@ -1,6 +1,8 @@
 import { Image, type ImageProps } from '@mantine/core';
 import clsx from 'clsx';
 
+import { CDN_URL } from '@/shared/config';
+
 import s from './Picture.module.css';
 
 interface PictureProps extends ImageProps {
@@ -9,6 +11,7 @@ interface PictureProps extends ImageProps {
     alt?: string;
     draggable?: boolean;
     extraPath?: string;
+    cdn?: boolean;
 }
 
 export const Picture = ({
@@ -19,10 +22,15 @@ export const Picture = ({
     draggable = false,
     className,
     extraPath,
+    cdn = false,
     ...props
 }: PictureProps) => {
     const path = src?.split('/')?.at(-1);
-    const fullPath = `${src}/${path}${extraPath ? `${extraPath}` : ''}`;
+    let fullPath = `${src}/${path}${extraPath ? `${extraPath}` : ''}`;
+
+    if (cdn) {
+        fullPath = CDN_URL + fullPath;
+    }
 
     return (
         <picture className={clsx(s.picture, className)}>

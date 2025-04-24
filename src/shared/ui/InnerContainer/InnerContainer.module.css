@@ -1,0 +1,9 @@
+.container {
+  @mixin smaller-than 768px {
+    padding: 0;
+  }
+
+  @mixin larger-than 768px {
+    max-width: calc(1080px + 16px * 2);
+  }
+}

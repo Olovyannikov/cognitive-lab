@@ -1,4 +1,4 @@
-import { Drawer, Group } from '@mantine/core';
+import { Drawer, Group, Skeleton } from '@mantine/core';
 import { X } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
@@ -31,9 +31,10 @@ export const Navigation = () => {
     const isFreeReportPage = urlPathname.includes('/free-report/');
 
     const isLoading = isStale || isPending;
-    const isCompact = useIsLargeMenu();
+    const isLargeMenuSpace = useIsLargeMenu();
 
     const getCurrentChildren = () => {
+        if (isLoading) return <Skeleton width={144} height={48} />;
         if (isFreeReportPage || isUserHasFreeReport) {
             return (
                 <BuyNowButton
@@ -79,7 +80,7 @@ export const Navigation = () => {
             >
                 {items}
             </Drawer>
-            <Group gap={isCompact ? 'md' : 'xs'} wrap='nowrap' component='nav' visibleFrom='lg'>
+            <Group gap={isLargeMenuSpace ? 'md' : 'xs'} wrap='nowrap' component='nav' visibleFrom='lg'>
                 {items}
                 {getCurrentChildren()}
             </Group>

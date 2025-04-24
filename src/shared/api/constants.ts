@@ -12,6 +12,7 @@ export const API = {
         freeReport: '/surveys/free-report',
         freeReportById: (id: string) => `/surveys/free-report/${id}`,
         fullReport: (id: string) => `/surveys/full-reports/${id}`,
+        start: '/surveys/start',
     },
     blog: {
         posts: '/posts',

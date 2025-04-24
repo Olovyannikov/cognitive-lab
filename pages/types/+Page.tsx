@@ -1,3 +1,5 @@
+import { TypesPage } from '@/pages/TypesPage';
+
 export default function Page() {
-    return <>Types Page</>;
+    return <TypesPage />;
 }

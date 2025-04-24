@@ -2,3 +2,6 @@ export * from './Picture';
 export * from './Section';
 export * from './SpinningText';
 export * from './StickyScrollReveal';
+export * from './InnerContainer';
+export * from './Accordion';
+export * from './PointsList';

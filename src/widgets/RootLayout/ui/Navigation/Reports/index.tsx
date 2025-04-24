@@ -42,13 +42,7 @@ export const Reports = () => {
         <ReportTemplate onClose={close} {...report} />
     ));
 
-    if (isLoading)
-        return (
-            <Box ref={ref} className={s.root}>
-                <Button variant='transparent' miw={207} loading={isLoading} className={clsx(s.link)} />
-            </Box>
-        );
-    if (allReports?.length < 1) return null;
+    if (isLoading || allReports?.length < 1) return null;
 
     return (
         <Box ref={ref} className={s.root}>
