@@ -38,7 +38,7 @@ export const Banner = ({
     <Paper data-color={color} className={s.paper}>
         <Stack className={s.inner}>
             <Title order={3} className={s.title}>
-                <Picture className={s.emoji} src='/emoji/star' />
+                <Picture cdn className={s.emoji} src='/emoji/star' />
                 {title}
             </Title>
             <Text className={s.description}>{description}</Text>

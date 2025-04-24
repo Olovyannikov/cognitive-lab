@@ -4,6 +4,14 @@
     "changefreq": "weekly"
   },
   {
+    "url": "/types",
+    "changefreq": "weekly"
+  },
+  {
+    "url": "/full-report/example",
+    "changefreq": "weekly"
+  },
+  {
     "url": "/test",
     "changefreq": "weekly"
   }

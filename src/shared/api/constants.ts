@@ -3,7 +3,7 @@ export const API = {
     surveys: {
         mainPage: '/surveys/main-page',
         comments: '/surveys/comments',
-        personalityType: (type: string) => `/surveys/personality-type/${type}`,
+        personalityType: (type: string) => `/surveys/personality-types/${type}`,
         personalityTypes: '/surveys/personality-types',
         structure: '/surveys/structure',
         regularPrice: '/surveys/regular-price',

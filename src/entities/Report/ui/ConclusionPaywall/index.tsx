@@ -34,7 +34,7 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
             <Stack gap={isLarge ? 'lg' : 'md'}>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>
                     <Group gap='xs'>
-                        <Picture visibleFrom='md' src='/emoji/star' w={48} h={48} />
+                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />
                         {title}
                     </Group>
                 </Title>
