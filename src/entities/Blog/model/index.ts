@@ -54,11 +54,12 @@ export const BlogModel = atom(() => {
     });
 
     return {
-        $currentPage,
         $pageSize,
+        $blogPosts,
         pageChanged,
         $totalPages,
+        $currentPage,
+        scrollToTopFx,
         redirectToMainBlogPostPageFx,
-        $blogPosts,
     };
 });

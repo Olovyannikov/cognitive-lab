@@ -12,6 +12,10 @@
     "changefreq": "weekly"
   },
   {
+    "url": "/faq",
+    "changefreq": "weekly"
+  },
+  {
     "url": "/test",
     "changefreq": "weekly"
   }

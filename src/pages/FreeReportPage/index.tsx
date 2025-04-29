@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
+import { navigate } from 'vike/client/router';
 
 import { InnerContainer, PageLoader } from '@/shared/ui';
 
@@ -21,12 +22,12 @@ export const FreeReportPage = () => {
     const surveyId = useUnit(UserModel.$surveyId);
 
     if (stale || pending) return <PageLoader />;
-    if (!data) return null;
+    if (!data) return navigate('/');
 
     return (
         <Box component='section'>
             <Container>
-                <ReportHeader type={data?.mbti_type} name={data?.title} />
+                <ReportHeader type={data?.mbti_type} name={data?.title} typeToColorMapper={TYPE_TO_COLOR_MAP} />
                 <SendReportEmail type='text' />
                 <FreeReportNavigation />
                 <InnerContainer>

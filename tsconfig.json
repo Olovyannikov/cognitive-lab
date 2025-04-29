@@ -16,7 +16,7 @@
     },
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client", "vike-react"],
+    "types": ["vite/client", "vike-react", "vitest/globals"],
     "jsx": "preserve",
     "jsxImportSource": "react"
   },
