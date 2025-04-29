@@ -1,0 +1,52 @@
+.card {
+  flex-direction: column;
+  height: 100%;
+
+  @mixin larger-than 768px {
+    &.row {
+      flex-direction: row;
+    }
+  }
+}
+
+.cardMain {
+  transition: outline 0.15s ease-in-out;
+
+  &:is(:hover, :focus-visible) {
+    outline: 2px solid var(--mantine-color-violet-7);
+  }
+}
+
+.image {
+  object-position: center;
+
+  @mixin larger-than 768px {
+    flex: 0 1 auto;
+    height: 354px;
+
+    .pinned & {
+      width: calc(50% - 8px);
+      max-width: 791px;
+    }
+  }
+}
+
+.preview {
+  flex: 1;
+
+  .pinned & {
+    @mixin larger-than 768px {
+      max-width: calc(50% - 8px);
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+
+  .pinned & {
+    @mixin larger-than 768px {
+      font-size: 40px;
+    }
+  }
+}

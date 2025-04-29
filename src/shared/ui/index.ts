@@ -5,3 +5,5 @@ export * from './StickyScrollReveal';
 export * from './InnerContainer';
 export * from './Accordion';
 export * from './PointsList';
+export * from './PageLoader';
+export * from './Markdown';

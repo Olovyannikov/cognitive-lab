@@ -1,0 +1,20 @@
+.image {
+  margin-bottom: var(--mantine-spacing-md);
+  border-radius: var(--mantine-spacing-lg);
+  max-height: 399px;
+
+  @mixin larger-than 768px {
+    margin-bottom: 80px;
+    border-radius: 80px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 22px;
+
+  @mixin larger-than 768px {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

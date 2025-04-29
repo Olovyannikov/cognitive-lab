@@ -19,8 +19,14 @@ export const HeadDefault = () => (
                     content='Узнайте свой тип личности и получите советы по карьере с помощью ИИ.'
                 />
                 <meta property='og:url' content='https://cognitivelab.ru/' />
-                <meta property='og:image' content='https://cognitivelab.ru/static/og-image.jpg' />
-                <meta name='twitter:image' content='https://cognitivelab.ru/static/og-image.jpg' />
+                <meta
+                    property='og:image'
+                    content='https://storage.yandexcloud.net/cognitive-lab-public/assets/og_image.jpg'
+                />
+                <meta
+                    name='twitter:image'
+                    content='https://storage.yandexcloud.net/cognitive-lab-public/assets/og_image.jpg'
+                />
                 <meta
                     name='keywords'
                     content='CognitiveLab, тип личности, тест на личность, тест на тип личности, MBTI, 16 типов личности, выбор профессии, карьерное ориентирование, AI, искусственный интеллект, карьерные рекомендации'

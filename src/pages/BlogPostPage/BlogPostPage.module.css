@@ -1,0 +1,7 @@
+.stack {
+  gap: 32px;
+
+  @mixin larger-than 998px {
+    gap: 80px;
+  }
+}
