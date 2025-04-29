@@ -13,6 +13,8 @@ pre-commit:
             run: npx prettier --write {staged_files} && git add {staged_files}
         solidarity:
             run: solidarity
+        circular:
+            run: npx madge --circular --extensions ts,tsx src
 
 commit-msg:
     parallel: true

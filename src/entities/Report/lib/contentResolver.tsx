@@ -1,8 +1,4 @@
-import type { ReactNode } from 'react';
-
-import type { PartialRecord } from '@/shared/lib';
-
-import type { Content, ContentType } from '../types';
+import type { ContentResolverProps } from '../types';
 import {
     AccordionBlock,
     BarChart,
@@ -24,19 +20,6 @@ import {
 } from '../ui';
 import { barChartPrepareData } from './barChartPreparedData';
 import { isListItemArray } from './guards';
-
-interface ContentResolverProps {
-    content: Content;
-    color: string;
-    actions?: PartialRecord<ContentType, ReactNode>;
-    surveyId?: string;
-    mbti?: string;
-    index?: number;
-    slots?: {
-        subscribeEmail?: ReactNode;
-        paywallExtraAction?: ReactNode;
-    };
-}
 
 export const contentResolver = ({
     content,
@@ -67,6 +50,7 @@ export const contentResolver = ({
                 <OrderedList
                     color={color}
                     data-type={content.type}
+                    resolver={contentResolver}
                     items={isListItemArray(content.items) ? content.items : []}
                 />
             );

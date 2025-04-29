@@ -1,3 +1,7 @@
+import type { ReactNode } from 'react';
+
+import type { PartialRecord } from '@/shared/lib';
+
 export type ContentType =
     | 'paragraph'
     | 'blockquote_line'
@@ -30,6 +34,19 @@ export interface Content {
     mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;
     primary_button_text: string;
     secondary_button_text: string;
+}
+
+export interface ContentResolverProps {
+    content: Content;
+    color: string;
+    actions?: PartialRecord<ContentType, ReactNode>;
+    surveyId?: string;
+    mbti?: string;
+    index?: number;
+    slots?: {
+        subscribeEmail?: ReactNode;
+        paywallExtraAction?: ReactNode;
+    };
 }
 
 export interface ListItem {

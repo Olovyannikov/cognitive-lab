@@ -69,15 +69,20 @@ export const TypePage = () => {
     return (
         <Box component='section'>
             <Container>
-                <ReportHeader preTitle='Тип личности' type={type ?? data.mbti_type} name={data.title} />
+                <ReportHeader
+                    name={data.title}
+                    preTitle='Тип личности'
+                    type={type ?? data.mbti_type}
+                    typeToColorMapper={TYPE_TO_COLOR_MAP}
+                />
                 <InnerContainer>
                     <ShowFullStructure />
                     <Box>{beforeBannerContent}</Box>
                 </InnerContainer>
                 <Banner
                     color={TYPE_TO_COLOR_MAP[type ?? data?.mbti_type]}
-                    actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}
                     image={`/types/circles/${type ?? data?.mbti_type}`}
+                    actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}
                 />
                 <InnerContainer>{afterBannerContent}</InnerContainer>
                 <Banner

@@ -1,16 +1,17 @@
+import { ReactNode } from 'react';
 import { List, Stack, Title } from '@mantine/core';
 
-import { contentResolver } from '../../lib';
-import type { ListItem } from '../../types';
+import type { ContentResolverProps, ListItem } from '../../types';
 
 import s from './OrderedList.module.css';
 
 interface OrderedListProps {
     items: ListItem[];
     color?: string;
+    resolver: (p: ContentResolverProps) => ReactNode;
 }
 
-export const OrderedList = ({ items, color }: OrderedListProps) => (
+export const OrderedList = ({ items, color, resolver }: OrderedListProps) => (
     <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>
         {items?.map((item, index) => (
             <List.Item key={index}>
@@ -18,7 +19,7 @@ export const OrderedList = ({ items, color }: OrderedListProps) => (
                     {item.title}
                 </Title>
                 {item.content?.map((content, idx) => (
-                    <Stack key={content.type + idx}>{contentResolver({ content, color: color ?? 'violet' })}</Stack>
+                    <Stack key={content.type + idx}>{resolver({ content, color: color ?? 'violet' })}</Stack>
                 ))}
             </List.Item>
         ))}

@@ -7,18 +7,17 @@ import CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';
 import { useIsLarge } from '@/shared/lib';
 import { Picture } from '@/shared/ui';
 
-import { TYPE_TO_COLOR_MAP } from '../../lib';
-
 import s from './ReportHeader.module.css';
 
 interface ReportHeaderProps {
     type: string;
     name: string;
     preTitle?: string;
+    typeToColorMapper?: Record<string, string>;
 }
 
-export const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности' }: ReportHeaderProps) => {
-    const currentColor = TYPE_TO_COLOR_MAP[type];
+export const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper }: ReportHeaderProps) => {
+    const currentColor = typeToColorMapper?.[type];
     const { isMobile } = usePageContext();
     const isLarge = useIsLarge();
     const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
