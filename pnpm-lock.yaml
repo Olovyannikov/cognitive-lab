@@ -156,7 +156,7 @@ importers:
                 specifier: 0.5.5
                 version: 0.5.5(typescript@5.8.3)
             '@types/compression':
-                specifier: ^1.7.5
+                specifier: 1.7.5
                 version: 1.7.5
             '@types/express':
                 specifier: 5.0.1
@@ -177,10 +177,10 @@ importers:
                 specifier: 1.8.10
                 version: 1.8.10
             '@types/stream-json':
-                specifier: ^1.7.8
+                specifier: 1.7.8
                 version: 1.7.8
             '@types/through2-map':
-                specifier: ^3.0.4
+                specifier: 3.0.4
                 version: 3.0.4
             '@typescript-eslint/parser':
                 specifier: 8.30.1
