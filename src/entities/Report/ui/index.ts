@@ -18,3 +18,4 @@ export * from './Subtitle';
 export * from './TextStrokeDash';
 export * from './ReportHeader';
 export * from './Preheader';
+export * from './ReportNavigationTemplate';

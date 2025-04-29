@@ -1,4 +1,5 @@
-import { sample } from 'effector';
+import { createEvent, sample } from 'effector';
+import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/local';
 import { delay } from 'patronum';
@@ -41,6 +42,20 @@ export const ReportModel = atom(() => {
     $currentContentPage.reset(ReportPageGate.close);
     $currentPage.reset(ReportPageGate.close);
 
+    const currentPageChanged = createEvent<number>();
+
+    createAction({
+        clock: currentPageChanged,
+        target: {
+            $currentContentPage,
+            $currentPage,
+        },
+        fn: (target, clock) => {
+            target.$currentPage(clock);
+            target.$currentContentPage(clock - 1);
+        },
+    });
+
     return {
         ReportGate,
         $isUserHasFreeReport,
@@ -54,5 +69,7 @@ export const ReportModel = atom(() => {
         $userOrderStatus,
         $isFirstPage,
         $isLastPage,
+        $currentContentPage,
+        currentPageChanged,
     };
 });
