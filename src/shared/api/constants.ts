@@ -27,4 +27,7 @@ export const API = {
     payments: {
         purchase: '/payments/purchase-report',
     },
+    support: {
+        issues: '/support/issues',
+    },
 };

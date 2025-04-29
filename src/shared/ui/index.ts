@@ -7,3 +7,5 @@ export * from './Accordion';
 export * from './PointsList';
 export * from './PageLoader';
 export * from './Markdown';
+export * from './FormInput';
+export * from './FormWrapper';

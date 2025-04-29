@@ -15,7 +15,7 @@ export const $userMbtiTypes = createStore<Record<string, string>[]>([]);
 
 sample({
     clock: getPersonalityTypeQuery.finished.success,
-    fn: ({ result }) => result.content,
+    fn: ({ result: { content } }) => content,
     target: $reportContent,
 });
 

@@ -26,7 +26,7 @@ export const ReportModel = atom(() => {
         source: getSurveysInfoQuery.$data,
         filter: (data) => data === null,
         fn: noop,
-        target: getSurveysInfoQuery.start,
+        target: getSurveysInfoQuery.refresh,
     });
 
     const ReportPageGate = createGate();
