@@ -5,7 +5,6 @@ import { isArray } from 'lodash-es';
 import { PageLoader } from '@/shared/ui';
 
 import {
-    getQuestionsQuery,
     type SingleChoiceAnswer,
     takeTestAgainMutation,
     TestContainer,
@@ -21,7 +20,7 @@ import { RephrasingModel } from '@/features/Rephrasing';
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
-    const { data } = useUnit(getQuestionsQuery);
+    const data = useUnit(TestModel.$questions);
     const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
         TestModel.$currentPage,
         TestModel.$currentProgress,

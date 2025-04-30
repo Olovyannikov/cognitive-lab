@@ -4,8 +4,7 @@ import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
-import { getQuestionsQuery } from '@/entities/Test';
-
+import { getQuestionsQuery } from '../api';
 import type { QuestionsResponse } from '../api/dto';
 import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
 
@@ -152,5 +151,6 @@ export const TestModel = atom(() => {
         directionChanged,
         $isSplashScreenVisible,
         scaleFormFieldChanged,
+        $questions,
     };
 });

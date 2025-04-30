@@ -6,7 +6,7 @@ import { useUnit } from 'effector-react';
 import { isArray, isObject } from 'lodash-es';
 import { useTimeout } from 'usehooks-ts';
 
-import { getQuestionsQuery, TestModel } from '@/entities/Test';
+import { TestModel } from '@/entities/Test';
 
 import { Rephrasing } from '@/features/Rephrasing';
 
@@ -15,7 +15,7 @@ import { SubmitTestModel } from '@/widgets/Test';
 import s from './Controls.module.css';
 
 export const Controls = () => {
-    const questions = useUnit(getQuestionsQuery.$data);
+    const questions = useUnit(TestModel.$questions);
     const { page, onChange, controlModal, value, onDirectionChange } = useUnit({
         page: TestModel.$currentPage,
         onChange: TestModel.formPageChanged,
