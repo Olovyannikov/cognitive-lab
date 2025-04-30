@@ -43,7 +43,9 @@ export const Types = () => {
             disabled
         >
             <Menu.Target>
-                <Link href='/types'>Типы личности</Link>
+                <Link href='/types' onClick={() => onCloseAllMenus(false)}>
+                    Типы личности
+                </Link>
             </Menu.Target>
             <Menu.Dropdown style={{ zIndex: 1200 }}>
                 <Button
