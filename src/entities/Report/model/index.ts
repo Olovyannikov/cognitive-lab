@@ -70,13 +70,9 @@ export const ReportModel = atom(() => {
     });
 
     sample({
-        clock: FreeReportGate.open,
-        source: {
-            data: getFreeResultQuery.$data,
-            id: $currentReportId,
-        },
-        filter: Boolean,
-        fn: ({ id }) => ({ id: id ?? '' }),
+        clock: [$currentReportId, FreeReportGate.open],
+        source: $currentReportId,
+        fn: (id) => ({ id: id ?? '' }),
         target: getFreeResultQuery.refresh,
     });
 
