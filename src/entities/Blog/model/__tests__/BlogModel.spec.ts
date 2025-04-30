@@ -2,6 +2,12 @@ import { allSettled, fork } from 'effector';
 
 import { BlogModel } from '../../model';
 
+vi.mock('vike/client/router', () => ({
+    navigate: vi.fn(),
+}));
+
+vi.stubGlobal('scrollTo', vi.fn());
+
 describe('Blog Model', async () => {
     it('Check initial page size', async () => {
         const scope = fork();

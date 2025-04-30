@@ -17,7 +17,7 @@ import {
 // import { RephrasingModel } from '@/features/Rephrasing';
 import {
     // Controls,
-    // SubmitTestModal,
+    SubmitTestModal,
     TestSplashScreen,
 } from '@/widgets/Test';
 
@@ -89,7 +89,7 @@ export const TestPage = () => {
             {/*<TestProgress value={progress} page={page} total={data.length} />*/}
             {/*{Map[question?.type]}*/}
             {/*<Controls />*/}
-            {/*<SubmitTestModal />*/}
+            <SubmitTestModal />
         </TestContainer>
     );
 };
