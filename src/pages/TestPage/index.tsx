@@ -9,7 +9,7 @@ import {
     TestContainer,
     TestModel,
     //     TestMultipleQuestion,
-    //     TestProgress,
+    TestProgress,
     //     TestScaleQuestion,
     //     TestSingleChoiceQuestion,
 } from '@/entities/Test';
@@ -18,17 +18,17 @@ import {
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
-    // const data = useUnit(TestModel.$questions);
+    const data = useUnit(TestModel.$questions);
     const [
-        // page,
-        // progress,
+        page,
+        progress,
         // question,
         // value,
         isSplashScreen,
         // isLoading
     ] = useUnit([
-        //     TestModel.$currentPage,
-        //     TestModel.$currentProgress,
+        TestModel.$currentPage,
+        TestModel.$currentProgress,
         //     TestModel.$currentQuestion,
         //     TestModel.$currentValue,
         TestModel.$isSplashScreenVisible,
@@ -39,7 +39,12 @@ export const TestPage = () => {
     //
     // const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
     //
-    // if (!data || !question) return null;
+    if (
+        !data
+        // || !question
+    ) {
+        return null;
+    }
     // if (isLoading) return <PageLoader />;
 
     // const Map: Record<string, ReactNode> = {
@@ -82,7 +87,7 @@ export const TestPage = () => {
 
     return (
         <TestContainer>
-            {/*<TestProgress value={progress} page={page} total={data.length} />*/}
+            <TestProgress value={progress} page={page} total={data.length} />
             {/*{Map[question?.type]}*/}
             <Controls />
             <SubmitTestModal />
