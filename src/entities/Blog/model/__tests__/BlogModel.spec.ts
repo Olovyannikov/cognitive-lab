@@ -1,5 +1,6 @@
 import { allSettled, fork } from 'effector';
 
+import { getBlogPostsQuery } from '../../api';
 import { BlogModel } from '../../model';
 
 vi.mock('vike/client/router', () => ({
@@ -9,16 +10,23 @@ vi.mock('vike/client/router', () => ({
 vi.stubGlobal('scrollTo', vi.fn());
 
 describe('Blog Model', async () => {
-    it('Check initial page size', async () => {
-        const scope = fork();
+    const setup = () => BlogModel;
 
-        expect(scope.getState(BlogModel.$pageSize)).toEqual(5);
+    beforeEach(() => {
+        vi.clearAllMocks();
+        getBlogPostsQuery.reset(); // Assuming query has reset method
     });
 
-    it('Initial current blog page should be equal 1', async () => {
+    it('initial state', () => {
         const scope = fork();
-        expect(scope.getState(BlogModel.$currentPage)).toEqual(1);
+        const model = setup();
+
+        expect(scope.getState(model.$pageSize)).toBe(5);
+        expect(scope.getState(model.$currentPage)).toBe(1);
+        expect(scope.getState(model.$blogPosts)).toEqual([]);
+        expect(scope.getState(model.$totalPages)).toBe(1);
     });
+    // ======
     it('Should change blog page size', async () => {
         const scrollToTopMock = vi.fn();
         const scope = fork({

@@ -15,11 +15,7 @@ import {
 } from '@/entities/Test';
 
 // import { RephrasingModel } from '@/features/Rephrasing';
-import {
-    // Controls,
-    SubmitTestModal,
-    TestSplashScreen,
-} from '@/widgets/Test';
+import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
     // const data = useUnit(TestModel.$questions);
@@ -88,7 +84,7 @@ export const TestPage = () => {
         <TestContainer>
             {/*<TestProgress value={progress} page={page} total={data.length} />*/}
             {/*{Map[question?.type]}*/}
-            {/*<Controls />*/}
+            <Controls />
             <SubmitTestModal />
         </TestContainer>
     );
