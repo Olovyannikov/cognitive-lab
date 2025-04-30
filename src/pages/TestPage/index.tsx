@@ -1,18 +1,18 @@
 import type { ReactNode } from 'react';
 import { useUnit } from 'effector-react';
+import { isArray } from 'lodash-es';
 
-// import { isArray } from 'lodash-es';
 import { PageLoader } from '@/shared/ui';
 
 import {
-    //     type SingleChoiceAnswer,
+    type SingleChoiceAnswer,
     takeTestAgainMutation,
     TestContainer,
     TestModel,
-    //     TestMultipleQuestion,
+    TestMultipleQuestion,
     TestProgress,
     TestScaleQuestion,
-    //     TestSingleChoiceQuestion,
+    TestSingleChoiceQuestion,
 } from '@/entities/Test';
 
 import { RephrasingModel } from '@/features/Rephrasing';
@@ -48,29 +48,29 @@ export const TestPage = () => {
                 onChange={onChange}
             />
         ),
-        //     multiple_choice: question.options && (
-        //         <TestMultipleQuestion
-        //             {...question}
-        //             text={phrases.texts[phraseIndex] ?? ''}
-        //             hint={phrases.hints[phraseIndex]}
-        //             page={page}
-        //             onChange={onChange}
-        //             value={isArray(value) ? value : null}
-        //         />
-        //     ),
-        //     single_choice: question.options && (
-        //         <TestSingleChoiceQuestion
-        //             {...question}
-        //             text={phrases.texts[phraseIndex] ?? ''}
-        //             hint={phrases.hints[phraseIndex]}
-        //             page={page}
-        //             onChange={onChange}
-        //             showInput={Boolean(
-        //                 question.options.find((el) => el.id === (value as SingleChoiceAnswer)?.value)?.requires_input
-        //             )}
-        //             value={value as SingleChoiceAnswer}
-        //         />
-        //     ),
+        multiple_choice: question.options && (
+            <TestMultipleQuestion
+                {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex]}
+                page={page}
+                onChange={onChange}
+                value={isArray(value) ? value : null}
+            />
+        ),
+        single_choice: question.options && (
+            <TestSingleChoiceQuestion
+                {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex]}
+                page={page}
+                onChange={onChange}
+                showInput={Boolean(
+                    question.options.find((el) => el.id === (value as SingleChoiceAnswer)?.value)?.requires_input
+                )}
+                value={value as SingleChoiceAnswer}
+            />
+        ),
     };
 
     if (isSplashScreen) return <TestSplashScreen />;
