@@ -1,6 +1,6 @@
 import { allSettled, fork } from 'effector';
 
-import { BlogModel } from '@/entities/Blog';
+import { BlogModel } from '../../model';
 
 describe('Blog Model', async () => {
     it('Check initial page size', async () => {

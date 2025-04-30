@@ -1,4 +1,4 @@
-import { createEvent, sample } from 'effector';
+import { createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/local';
@@ -56,6 +56,17 @@ export const ReportModel = atom(() => {
         },
     });
 
+    const $userMbtiTypes = createStore<Record<string, string>[]>([]);
+
+    sample({
+        clock: getSurveysInfoQuery.finished.success,
+        fn: ({ result }) =>
+            result?.reports.map((report) => ({
+                [report.user_report]: report.mbti_type,
+            })) ?? [],
+        target: $userMbtiTypes,
+    });
+
     return {
         ReportGate,
         $isUserHasFreeReport,
@@ -71,5 +82,6 @@ export const ReportModel = atom(() => {
         $isLastPage,
         $currentContentPage,
         currentPageChanged,
+        $userMbtiTypes,
     };
 });

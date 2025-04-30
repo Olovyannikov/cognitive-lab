@@ -1,0 +1,34 @@
+input[data-success="true"] {
+  border-color: var(--mantine-color-green-8);
+}
+
+div:has(input[data-success="true"]) + p {
+  color: var(--mantine-color-green-8);
+}
+
+.promocodeLabel {
+  margin-bottom: var(--mantine-spacing-xxs);
+  font-weight: 600;
+  font-size: 14px;
+
+  @mixin larger-than 976px {
+    font-size: 16px;
+  }
+}
+
+.promocodeWrapper {
+  flex-direction: column;
+  gap: var(--mantine-spacing-xs);
+
+  @mixin larger-than 976px {
+    flex-direction: row;
+
+    div:has(input) {
+      flex: 1;
+    }
+
+    button {
+      max-width: 138px;
+    }
+  }
+}
