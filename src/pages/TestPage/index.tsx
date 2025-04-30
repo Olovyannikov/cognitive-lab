@@ -1,14 +1,13 @@
 // import type { ReactNode } from 'react';
-// import { useUnit } from 'effector-react';
+import { useUnit } from 'effector-react';
+
 // import { isArray } from 'lodash-es';
-//
 // import { PageLoader } from '@/shared/ui';
-//
 import {
     //     type SingleChoiceAnswer,
     //     takeTestAgainMutation,
     TestContainer,
-    //     TestModel,
+    TestModel,
     //     TestMultipleQuestion,
     //     TestProgress,
     //     TestScaleQuestion,
@@ -16,19 +15,29 @@ import {
 } from '@/entities/Test';
 
 // import { RephrasingModel } from '@/features/Rephrasing';
-//
-// import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
+import {
+    // Controls,
+    // SubmitTestModal,
+    TestSplashScreen,
+} from '@/widgets/Test';
 
-export const TestPage = () => (
+export const TestPage = () => {
     // const data = useUnit(TestModel.$questions);
-    // const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
-    //     TestModel.$currentPage,
-    //     TestModel.$currentProgress,
-    //     TestModel.$currentQuestion,
-    //     TestModel.$currentValue,
-    //     TestModel.$isSplashScreenVisible,
-    //     takeTestAgainMutation.$pending,
-    // ]);
+    const [
+        // page,
+        // progress,
+        // question,
+        // value,
+        isSplashScreen,
+        // isLoading
+    ] = useUnit([
+        //     TestModel.$currentPage,
+        //     TestModel.$currentProgress,
+        //     TestModel.$currentQuestion,
+        //     TestModel.$currentValue,
+        TestModel.$isSplashScreenVisible,
+        //     takeTestAgainMutation.$pending,
+    ]);
     //
     // const onChange = useUnit(TestModel.scaleFormFieldChanged);
     //
@@ -73,12 +82,14 @@ export const TestPage = () => (
     //     ),
     // };
 
-    // if (isSplashScreen) return <TestSplashScreen />;
+    if (isSplashScreen) return <TestSplashScreen />;
 
-    <TestContainer>
-        {/*<TestProgress value={progress} page={page} total={data.length} />*/}
-        {/*{Map[question?.type]}*/}
-        {/*<Controls />*/}
-        {/*<SubmitTestModal />*/}
-    </TestContainer>
-);
+    return (
+        <TestContainer>
+            {/*<TestProgress value={progress} page={page} total={data.length} />*/}
+            {/*{Map[question?.type]}*/}
+            {/*<Controls />*/}
+            {/*<SubmitTestModal />*/}
+        </TestContainer>
+    );
+};
