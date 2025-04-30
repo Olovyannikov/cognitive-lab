@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useUnit } from 'effector-react';
-import { navigate } from 'vike/client/router';
 
 import { InnerContainer, PageLoader } from '@/shared/ui';
 
@@ -18,11 +17,12 @@ import { FreeReportNavigation } from '@/widgets/FreeReportNavigation';
 import s from './FreeReportPage.module.css';
 
 export const FreeReportPage = () => {
-    const { data, pending, stale } = useUnit(getFreeResultQuery);
+    const data = useUnit(getFreeResultQuery.$data);
+    const pending = useUnit(getFreeResultQuery.$pending);
     const surveyId = useUnit(UserModel.$surveyId);
 
-    if (stale || pending) return <PageLoader />;
-    if (!data) return navigate('/');
+    if (pending) return <PageLoader />;
+    if (!data) return null;
 
     return (
         <Box component='section'>
