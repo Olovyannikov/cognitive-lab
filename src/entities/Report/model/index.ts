@@ -83,5 +83,7 @@ export const ReportModel = atom(() => {
         $currentContentPage,
         currentPageChanged,
         $userMbtiTypes,
+        ReportPageGate,
+        $currentPage,
     };
 });

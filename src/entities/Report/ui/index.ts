@@ -20,3 +20,5 @@ export * from './ReportHeader';
 export * from './Preheader';
 export * from './ReportNavigationTemplate';
 export * from './PriceInfo';
+export * from './CategoryBanner';
+export * from './AdBanner';
