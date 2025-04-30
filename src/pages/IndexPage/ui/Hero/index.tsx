@@ -4,6 +4,7 @@ import { usePageContext } from 'vike-react/usePageContext';
 
 import UnionImage from '@/app/assets/images/union.svg?react';
 
+import { ROUTES } from '@/shared/config';
 import { Picture, Section } from '@/shared/ui';
 
 import s from './Hero.module.css';
@@ -28,7 +29,12 @@ export const Hero = () => {
                     Узнайте свой тип личности и получите персональные советы для вашего развития
                 </Text>
                 <Picture className={s.image} src='/landing/main-hero-char' cdn />
-                <Button href='/test' component='a' className='mantine-button-rainbow' size={isMobile ? 'md' : 'xl'}>
+                <Button
+                    href={ROUTES.TEST}
+                    component='a'
+                    className='mantine-button-rainbow'
+                    size={isMobile ? 'md' : 'xl'}
+                >
                     Пройти тест
                 </Button>
             </Container>

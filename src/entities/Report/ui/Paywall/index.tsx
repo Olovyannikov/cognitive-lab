@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Box, Button, Flex, Group } from '@mantine/core';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { ROUTES } from '@/shared/config';
 import { useIsLarge } from '@/shared/lib';
 import { Picture, PointsList } from '@/shared/ui';
 
@@ -44,7 +45,7 @@ export const Paywall = ({
         let href = `/purchase`;
 
         if (isExamplePage) {
-            href = '/test';
+            href = ROUTES.TEST;
             return href;
         }
 

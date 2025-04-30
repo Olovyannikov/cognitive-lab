@@ -3,6 +3,7 @@ import { Box, Button } from '@mantine/core';
 import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { ROUTES } from '@/shared/config';
 import { InnerContainer } from '@/shared/ui';
 
 import type { PersonalityType } from '@/entities/Personality';
@@ -46,7 +47,7 @@ export const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: Conten
             </InnerContainer>
             {showPurchaseBanner && (
                 <AdBanner>
-                    <Button size='md' radius='sm' component='a' href='/test'>
+                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>
                         Пройти тест
                     </Button>
                     <Button

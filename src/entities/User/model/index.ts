@@ -5,6 +5,7 @@ import { delay } from 'patronum';
 import { v4 as uuidv4 } from 'uuid';
 import { navigate } from 'vike/client/router';
 
+import { ROUTES } from '@/shared/config';
 import { atom } from '@/shared/factories';
 
 export const UserModel = atom(() => {
@@ -12,7 +13,7 @@ export const UserModel = atom(() => {
     const $userId = createStore('');
     const $surveyId = createStore<string | null>(null);
 
-    const redirectToTestPageFx = createEffect(async () => await navigate('/test'));
+    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST));
 
     persist({
         store: $userId,

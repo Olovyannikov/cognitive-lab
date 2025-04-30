@@ -7,6 +7,8 @@ import { createGzip } from 'node:zlib';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { createDevMiddleware } from 'vike/server';
 
+import { ROUTES } from '@/shared/config';
+
 import { vikeHandler } from './server/vike-handler';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -48,7 +50,7 @@ async function startServer() {
 
             // pipe your entries or directly write them.
             smStream.write({ url: '/', changefreq: 'daily', priority: 0.3 });
-            smStream.write({ url: '/test', changefreq: 'weekly', priority: 0.7 });
+            smStream.write({ url: ROUTES.TEST, changefreq: 'weekly', priority: 0.7 });
             smStream.write({ url: '/types', changefreq: 'weekly', priority: 0.5 });
 
             // cache the response

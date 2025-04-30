@@ -1,6 +1,7 @@
 import { Button, Center, Flex } from '@mantine/core';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { ROUTES } from '@/shared/config';
 import { Section } from '@/shared/ui';
 
 import { ForWhomCard } from '@/entities/Landing';
@@ -53,7 +54,7 @@ export const ForWhom = () => {
                 />
             </Flex>
             <Center>
-                <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={706} component='a' href='/test'>
+                <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={706} component='a' href={ROUTES.TEST}>
                     Пройти тест
                 </Button>
             </Center>

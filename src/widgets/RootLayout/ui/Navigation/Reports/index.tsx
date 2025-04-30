@@ -4,6 +4,7 @@ import { ArrowClockwise, CaretDown } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { useList, useUnit } from 'effector-react';
 
+import { ROUTES } from '@/shared/config';
 import { useIsLarge } from '@/shared/lib';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
@@ -74,7 +75,7 @@ export const Reports = () => {
                     <Divider />
                     <Button
                         component='a'
-                        href='/test'
+                        href={ROUTES.TEST}
                         w='100%'
                         my='sm'
                         fz={14}
