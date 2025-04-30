@@ -8,14 +8,14 @@ import { useTimeout } from 'usehooks-ts';
 
 import { getQuestionsQuery, TestModel } from '@/entities/Test';
 
-import { Rephrasing } from '@/features/Rephrasing/ui';
+import { Rephrasing } from '@/features/Rephrasing';
 
 import { SubmitTestModel } from '@/widgets/Test';
 
 import s from './Controls.module.css';
 
 export const Controls = () => {
-    const { data: questions } = useUnit(getQuestionsQuery);
+    const questions = useUnit(getQuestionsQuery.$data);
     const { page, onChange, controlModal, value, onDirectionChange } = useUnit({
         page: TestModel.$currentPage,
         onChange: TestModel.formPageChanged,

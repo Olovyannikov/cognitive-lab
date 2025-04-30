@@ -21,7 +21,7 @@ import { RephrasingModel } from '@/features/Rephrasing';
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
-    const { data } = useUnit(getQuestionsQuery);
+    const data = useUnit(getQuestionsQuery.$data);
     const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
         TestModel.$currentPage,
         TestModel.$currentProgress,
