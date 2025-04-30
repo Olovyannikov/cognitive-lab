@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+    frontend:
+        build:
+            context: . # ~/dev/frontend
+            dockerfile: Dockerfile
+        container_name: frontend
+        env_file:
+            - .env # ~/dev/frontend/.env
+        ports:
+            - '3000:3000' # host:container → Nginx проксирует на 3000
+        restart: unless-stopped
+        healthcheck:
+            test: ['CMD', 'wget', '--spider', '-q', 'http://localhost:3000/']
+            interval: 30s
+            timeout: 5s
+            retries: 3
+        networks:
+            - frontend_net
+
+networks:
+    frontend_net:
+        driver: bridge

@@ -1,4 +1,4 @@
-import { createEvent, createStore, sample } from 'effector';
+import { createEvent, createStore, restore, sample } from 'effector';
 import { isArray, isNumber } from 'lodash-es';
 import { delay } from 'patronum';
 
@@ -30,16 +30,21 @@ export const TestModel = atom(() => {
     const scaleFormFieldChanged = createEvent<PreparedAnswer>();
     const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
 
+    const $questions = restore(
+        getQuestionsQuery.finished.success.map((el) => el.result),
+        []
+    );
+
     sample({
         clock: setSplashScreenVisibility,
         target: $isSplashScreenVisible,
     });
 
     sample({
-        clock: [$currentPage, getQuestionsQuery.$data],
+        clock: [$currentPage, $questions],
         source: {
             page: $currentPage,
-            questions: getQuestionsQuery.$data,
+            questions: $questions,
         },
         fn: ({ page, questions }) => {
             if (!questions) return null;
@@ -129,7 +134,7 @@ export const TestModel = atom(() => {
 
     sample({
         clock: $scaleForm,
-        source: { questions: getQuestionsQuery.$data, form: $scaleForm },
+        source: { questions: $questions, form: $scaleForm },
         fn: ({ questions, form: { answers } }) =>
             Number(((answers.length / (questions?.length ?? 0)) * 100).toFixed(0)),
         target: $currentProgress,

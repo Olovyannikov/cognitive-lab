@@ -67,3 +67,5 @@ firebase
 .solidarity
 *.txt
 *.xml
+Dockerfile
+*.yml
