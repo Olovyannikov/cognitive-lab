@@ -1,3 +1,5 @@
+import { TestPage } from '@/pages/TestPage';
+
 export default function Page() {
-    return <>Test Page</>;
+    return <TestPage />;
 }

@@ -1,0 +1,8 @@
+.input {
+  --input-bd: var(--mantine-color-dark-6);
+
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 0;
+}

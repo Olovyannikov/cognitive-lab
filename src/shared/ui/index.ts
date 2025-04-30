@@ -10,3 +10,5 @@ export * from './Markdown';
 export * from './FormInput';
 export * from './FormWrapper';
 export * from './FormSuccessScreen';
+export * from './IconCheck';
+export * from './InputBorderless';

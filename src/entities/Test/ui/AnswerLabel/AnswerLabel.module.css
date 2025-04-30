@@ -1,0 +1,11 @@
+.text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.878;
+  color: var(--mantine-color-dark-6);
+
+  @mixin larger-than 1200px {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

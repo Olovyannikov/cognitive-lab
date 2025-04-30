@@ -1,6 +1,6 @@
 import type { ChangeEvent } from 'react';
 
-import { toInputUppercase } from '@/shared/lib';
+import { toInputUppercase } from '../index';
 
 describe('toInputUppercase', () => {
     it('should convert input value to uppercase', () => {
@@ -8,7 +8,7 @@ describe('toInputUppercase', () => {
             target: {
                 value: 'test',
             },
-        } as unknown as ChangeEvent<HTMLInputElement>; // Приводим к нужному типу
+        } as unknown as ChangeEvent<HTMLInputElement>;
 
         toInputUppercase(event);
 

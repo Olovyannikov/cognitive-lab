@@ -2,7 +2,7 @@ import { reflect } from '@effector/reflect';
 import { Button } from '@mantine/core';
 import { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';
 
-import { TakeTestAgainModel } from './model';
+import { TakeTestAgainModel } from '../model';
 
 export const TakeTestAgain = reflect({
     view: Button<'button'>,
