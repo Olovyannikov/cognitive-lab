@@ -7,7 +7,7 @@ import { delay } from 'patronum';
 import { atom } from '@/shared/factories';
 import { noop } from '@/shared/lib';
 
-import { getSurveysInfoQuery } from '../api';
+import { getFreeResultQuery, getSurveysInfoQuery } from '../api';
 import { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './content';
 import { $userOrder, $userOrderStatus } from './order';
 import { $reportContent } from './reportContent';
@@ -22,6 +22,8 @@ import {
 
 export const ReportModel = atom(() => {
     const ReportGate = createGate();
+    const FreeReportGate = createGate();
+    const $currentReportId = createStore<string | null>(null);
     sample({
         clock: delay(ReportGate.open, 500),
         source: getSurveysInfoQuery.$data,
@@ -67,6 +69,17 @@ export const ReportModel = atom(() => {
         target: $userMbtiTypes,
     });
 
+    sample({
+        clock: FreeReportGate.open,
+        source: {
+            data: getFreeResultQuery.$data,
+            id: $currentReportId,
+        },
+        filter: Boolean,
+        fn: ({ id }) => ({ id: id ?? '' }),
+        target: getFreeResultQuery.refresh,
+    });
+
     return {
         ReportGate,
         $isUserHasFreeReport,
@@ -85,5 +98,7 @@ export const ReportModel = atom(() => {
         $userMbtiTypes,
         ReportPageGate,
         $currentPage,
+        FreeReportGate,
+        $currentReportId,
     };
 });

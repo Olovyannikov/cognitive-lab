@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
-import { useUnit } from 'effector-react';
+import { useGate, useUnit } from 'effector-react';
 
 import { InnerContainer, PageLoader } from '@/shared/ui';
 
-import { contentResolver, getFreeResultQuery, ReportHeader, TYPE_TO_COLOR_MAP } from '@/entities/Report';
+import { contentResolver, getFreeResultQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';
 import { UserModel } from '@/entities/User';
 
 import { NavigateToReviewPage } from '@/features/NavigateToReviewPage';
@@ -17,6 +17,7 @@ import { FreeReportNavigation } from '@/widgets/FreeReportNavigation';
 import s from './FreeReportPage.module.css';
 
 export const FreeReportPage = () => {
+    useGate(ReportModel.FreeReportGate);
     const data = useUnit(getFreeResultQuery.$data);
     const pending = useUnit(getFreeResultQuery.$pending);
     const surveyId = useUnit(UserModel.$surveyId);

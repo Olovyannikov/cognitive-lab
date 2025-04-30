@@ -4,12 +4,18 @@ import { navigate } from 'vike/client/router';
 
 import { createPageStart } from '@/shared/lib';
 
-import { getFreeResultQuery } from '@/entities/Report';
+import { getFreeResultQuery, ReportModel } from '@/entities/Report';
 
 export const pageStarted = createPageStart();
 
 const redirectToMainPageFx = createEffect(async () => {
     await navigate('/');
+});
+
+sample({
+    clock: pageStarted,
+    fn: ({ routeParams }) => routeParams.reportId,
+    target: ReportModel.$currentReportId,
 });
 
 sample({
