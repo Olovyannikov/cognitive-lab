@@ -27,13 +27,13 @@ export const getReportStructureQuery = createQuery({
 
 export const getRegularPriceQuery = createQuery({
     effect: createInternalRequestFx<void, RegularPriceResponse>({
-        url: API.surveys.regularPrice,
+        url: API.payments.regularPrice,
     }),
 });
 
 export const getPriceWithPromocodeQuery = createQuery({
     effect: createInternalRequestFx<string, PromoPriceResponse>((promocode) => ({
-        url: API.surveys.promoPrice(promocode),
+        url: API.payments.promoPrice(promocode),
     })),
 });
 
