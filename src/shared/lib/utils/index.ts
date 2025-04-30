@@ -1,1 +1,2 @@
-export * from './toInputUpperCase';
+export * from './toInputUpperCase/toInputUpperCase';
+export * from './navigate';

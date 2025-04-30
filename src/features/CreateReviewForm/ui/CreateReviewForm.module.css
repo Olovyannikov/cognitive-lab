@@ -1,0 +1,14 @@
+.stack {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  max-width: 523px;
+  gap: 16px;
+}
