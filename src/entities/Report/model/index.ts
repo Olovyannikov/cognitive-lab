@@ -70,7 +70,8 @@ export const ReportModel = atom(() => {
     });
 
     sample({
-        clock: $currentReportId,
+        clock: [FreeReportGate.open],
+        source: $currentReportId,
         fn: (id) => ({ id: id ?? '' }),
         target: getFreeResultQuery.refresh,
     });
