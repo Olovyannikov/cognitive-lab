@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react';
 
-import { index } from '@/shared/lib';
+import { navigate } from '@/shared/lib';
 import { FormSuccessScreen, PageLoader } from '@/shared/ui';
 
 import { getSurveysInfoQuery } from '@/entities/Report';
@@ -41,7 +41,7 @@ export const ReviewPage = () => {
                     image='/review/star'
                     slots={{
                         action: (
-                            <NavigateToMainPage size='md' onClick={() => index.back()} fullWidth>
+                            <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>
                                 Вернуться назад
                             </NavigateToMainPage>
                         ),
