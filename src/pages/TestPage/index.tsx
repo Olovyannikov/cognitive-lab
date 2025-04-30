@@ -2,10 +2,11 @@ import type { ReactNode } from 'react';
 import { useUnit } from 'effector-react';
 
 // import { isArray } from 'lodash-es';
-// import { PageLoader } from '@/shared/ui';
+import { PageLoader } from '@/shared/ui';
+
 import {
     //     type SingleChoiceAnswer,
-    //     takeTestAgainMutation,
+    takeTestAgainMutation,
     TestContainer,
     TestModel,
     //     TestMultipleQuestion,
@@ -20,20 +21,13 @@ import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
     const data = useUnit(TestModel.$questions);
-    const [
-        page,
-        progress,
-        question,
-        value,
-        isSplashScreen,
-        // isLoading
-    ] = useUnit([
+    const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
         TestModel.$currentPage,
         TestModel.$currentProgress,
         TestModel.$currentQuestion,
         TestModel.$currentValue,
         TestModel.$isSplashScreenVisible,
-        //     takeTestAgainMutation.$pending,
+        takeTestAgainMutation.$pending,
     ]);
 
     const onChange = useUnit(TestModel.scaleFormFieldChanged);
@@ -41,7 +35,7 @@ export const TestPage = () => {
     const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
 
     if (!data || !question) return null;
-    // if (isLoading) return <PageLoader />;
+    if (isLoading) return <PageLoader />;
 
     const Map: Record<string, ReactNode> = {
         scale: (
