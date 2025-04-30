@@ -98,7 +98,7 @@
   height: 247px;
   transform: translateX(-50%);
 
-  @mixin larger-than 1150px {
+  @mixin larger-than 1200px {
     left: unset;
     right: -150px;
     bottom: 0;

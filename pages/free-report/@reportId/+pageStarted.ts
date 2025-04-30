@@ -1,4 +1,5 @@
 import { createEffect, sample } from 'effector';
+import { delay } from 'patronum';
 import { navigate } from 'vike/client/router';
 
 import { createPageStart } from '@/shared/lib';
@@ -12,7 +13,7 @@ const redirectToMainPageFx = createEffect(async () => {
 });
 
 sample({
-    clock: pageStarted,
+    clock: delay(pageStarted, 200),
     fn: ({ routeParams }) => ({
         id: routeParams.reportId,
     }),
@@ -20,7 +21,7 @@ sample({
 });
 
 sample({
-    clock: getFreeResultQuery.$data,
-    filter: (data) => !data,
+    clock: delay(getFreeResultQuery.finished.success, 200),
+    filter: ({ result }) => !result,
     target: redirectToMainPageFx,
 });

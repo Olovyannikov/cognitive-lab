@@ -4,7 +4,6 @@ import { usePageContext } from 'vike-react/usePageContext';
 
 import CircleImage from '@/shared/assets/images/circle.svg?react';
 import CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';
-import { useIsLarge } from '@/shared/lib';
 import { Picture } from '@/shared/ui';
 
 import s from './ReportHeader.module.css';
@@ -19,7 +18,6 @@ interface ReportHeaderProps {
 export const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper }: ReportHeaderProps) => {
     const currentColor = typeToColorMapper?.[type];
     const { isMobile } = usePageContext();
-    const isLarge = useIsLarge();
     const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');
 
     return (
@@ -32,8 +30,6 @@ export const ReportHeader = ({ type, name, preTitle = 'Ваш тип лично�
                 draggable={false}
                 className={s.character}
                 src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}
-                w={!isLarge || isMobile ? 247 : 400}
-                h={!isLarge || isMobile ? 247 : 380}
             />
             <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />
             <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />
