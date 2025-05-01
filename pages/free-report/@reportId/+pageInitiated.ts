@@ -4,7 +4,7 @@ import { createPageInit } from '@/shared/lib';
 
 import { ReportModel } from '@/entities/Report';
 
-const pageInitiated = createPageInit();
+export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,
