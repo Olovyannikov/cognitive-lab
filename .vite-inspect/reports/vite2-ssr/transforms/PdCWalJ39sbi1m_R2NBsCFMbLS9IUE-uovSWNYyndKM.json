@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Progress, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { desktop } from '@/shared/media';\n\nimport s from './TestProgress.module.css';\n\ninterface TestProgressProps {\n    value: number;\n    page: number;\n    total: number;\n}\n\nexport const TestProgress = ({ value, total, page }: TestProgressProps) => {\n    const isLarge = useUnit(desktop.$matches);\n\n    return (\n        <Flex gap='xl' mb='lg' align='center' h='fit-content'>\n            <Progress\n                value={value}\n                color='violet.4'\n                className={s.progress}\n                transitionDuration={200}\n                size={isLarge ? 'xl' : 'lg'}\n            />\n            <Text c='dark.2' className={s.text}>\n                {page}/{total}\n            </Text>\n        </Flex>\n    );\n};\n",
-      "start": 1746125082061,
-      "end": 1746125082106,
+      "start": 1746125696517,
+      "end": 1746125696553,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex, Progress, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { desktop } from '@/shared/media';\nimport s from './TestProgress.module.css';\ninterface TestProgressProps {\n  value: number;\n  page: number;\n  total: number;\n}\nexport const TestProgress = ({\n  value,\n  total,\n  page\n}: TestProgressProps) => {\n  const isLarge = useUnit(desktop.$matches);\n  return <Flex gap='xl' mb='lg' align='center' h='fit-content'>\n            <Progress value={value} color='violet.4' className={s.progress} transitionDuration={200} size={isLarge ? 'xl' : 'lg'} />\n            <Text c='dark.2' className={s.text}>\n                {page}/{total}\n            </Text>\n        </Flex>;\n};",
-      "start": 1746125082106,
-      "end": 1746125082108,
+      "start": 1746125696553,
+      "end": 1746125696555,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -44,8 +44,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Progress, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { desktop } from \"@/shared/media\";\nimport s from \"./TestProgress.module.css\";\nexport const TestProgress = ({\n  value,\n  total,\n  page\n}) => {\n  const isLarge = useUnit(desktop.$matches);\n  return /* @__PURE__ */ jsxs(Flex, { gap: \"xl\", mb: \"lg\", align: \"center\", h: \"fit-content\", children: [\n    /* @__PURE__ */ jsx(Progress, { value, color: \"violet.4\", className: s.progress, transitionDuration: 200, size: isLarge ? \"xl\" : \"lg\" }),\n    /* @__PURE__ */ jsxs(Text, { c: \"dark.2\", className: s.text, children: [\n      page,\n      \"/\",\n      total\n    ] })\n  ] });\n};\n",
-      "start": 1746125082108,
-      "end": 1746125082396,
+      "start": 1746125696555,
+      "end": 1746125696817,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,75 +59,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082396,
-      "end": 1746125082396,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082397,
-      "end": 1746125082397,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082397,
-      "end": 1746125082397,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082397,
-      "end": 1746125082397,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestProgress/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Progress, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { desktop } from \"@/shared/media\";\nimport s from \"./TestProgress.module.css\";\nexport const TestProgress = ({\n  value,\n  total,\n  page\n}) => {\n  const isLarge = useUnit(desktop.$matches);\n  return /* @__PURE__ */ jsxs(Flex, { gap: \"xl\", mb: \"lg\", align: \"center\", h: \"fit-content\", children: [\n    /* @__PURE__ */ jsx(Progress, { value, color: \"violet.4\", className: s.progress, transitionDuration: 200, size: isLarge ? \"xl\" : \"lg\" }),\n    /* @__PURE__ */ jsxs(Text, { c: \"dark.2\", className: s.text, children: [\n      page,\n      \"/\",\n      total\n    ] })\n  ] });\n};\n",
-      "start": 1746125082397,
-      "end": 1746125082397,
+      "start": 1746125696817,
+      "end": 1746125696817,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

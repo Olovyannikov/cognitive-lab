@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Radio } from '@mantine/core';\n\nimport { IconCheck } from '@/shared/ui';\n\nimport s from './RadioElement.module.css';\n\ninterface RadioElementProps {\n    size: string;\n    value: string;\n}\n\nexport const RadioElement = ({ size, value }: RadioElementProps) => (\n    <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />\n);\n",
-      "start": 1746125082468,
-      "end": 1746125082499,
+      "start": 1746125696871,
+      "end": 1746125696887,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Radio } from '@mantine/core';\nimport { IconCheck } from '@/shared/ui';\nimport s from './RadioElement.module.css';\ninterface RadioElementProps {\n  size: string;\n  value: string;\n}\nexport const RadioElement = ({\n  size,\n  value\n}: RadioElementProps) => <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />;",
-      "start": 1746125082499,
-      "end": 1746125082500,
+      "start": 1746125696887,
+      "end": 1746125696887,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({\n  size,\n  value\n}) => /* @__PURE__ */ jsx(Radio, { className: s.radioRoot, icon: IconCheck, size, value });\n",
-      "start": 1746125082500,
-      "end": 1746125082526,
+      "start": 1746125696887,
+      "end": 1746125696974,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696974,
+      "end": 1746125696974,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/RadioElement/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({\n  size,\n  value\n}) => /* @__PURE__ */ jsx(Radio, { className: s.radioRoot, icon: IconCheck, size, value });\n",
-      "start": 1746125082526,
-      "end": 1746125082526,
+      "start": 1746125696975,
+      "end": 1746125696975,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

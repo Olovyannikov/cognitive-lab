@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { cache, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { FaqItemResponse, FaqRequest } from './dto';\n\nexport const getFAQQuery = createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>((params) => ({\n        url: API.faq.list,\n        params: {\n            post_type: 'faq',\n            ...params,\n        },\n    })),\n    initialData: {} as FaqItemResponse,\n});\n\ncache(getFAQQuery);\n",
-      "start": 1746125081671,
-      "end": 1746125081731,
+      "start": 1746125696188,
+      "end": 1746125696241,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { FaqItemResponse, FaqRequest } from './dto';\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>(params => ({\n      url: API.faq.list,\n      params: {\n        post_type: 'faq',\n        ...params\n      }\n    })),\n    initialData: {} as FaqItemResponse\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});",
-      "start": 1746125081731,
-      "end": 1746125081732,
+      "start": 1746125696241,
+      "end": 1746125696242,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -54,8 +54,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});\n",
-      "start": 1746125081732,
-      "end": 1746125081788,
+      "start": 1746125696243,
+      "end": 1746125696357,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -69,75 +69,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696357,
+      "end": 1746125696357,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696357,
+      "end": 1746125696357,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696357,
+      "end": 1746125696357,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});\n",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696358,
+      "end": 1746125696358,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

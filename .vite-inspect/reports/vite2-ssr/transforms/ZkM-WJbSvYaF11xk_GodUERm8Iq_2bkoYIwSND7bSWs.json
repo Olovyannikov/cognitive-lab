@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { SendIssueRequest } from './dto';\n\nexport const sendIssueMutation = createQuery({\n    effect: createCommonRequestFx<SendIssueRequest, { id: string }>((body) => ({\n        url: API.support.issues,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1746125082192,
-      "end": 1746125082280,
+      "start": 1746125696708,
+      "end": 1746125696722,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { SendIssueRequest } from './dto';\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<SendIssueRequest, {\n      id: string;\n    }>(body => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});",
-      "start": 1746125082280,
-      "end": 1746125082281,
+      "start": 1746125696722,
+      "end": 1746125696723,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -50,8 +50,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((body) => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125082281,
-      "end": 1746125082433,
+      "start": 1746125696723,
+      "end": 1746125696945,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -65,75 +65,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((body) => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125082434,
-      "end": 1746125082434,
+      "start": 1746125696945,
+      "end": 1746125696945,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

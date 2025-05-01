@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\n\nimport { isExists } from '@/shared/lib';\n\nimport { RephrasingModel } from '../model';\n\nimport s from './Rephrasing.module.css';\n\nexport const Rephrasing = variant({\n    if: RephrasingModel.$currentPhrases.map(({ texts, hints }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n        fz: 16,\n        c: 'dark.9',\n        color: 'dark.9',\n        display: 'flex',\n        variant: 'subtle',\n        className: s.root,\n        children: 'Перефразировать',\n        leftSection: <ArrowsClockwise size={18} />,\n        onClick: RephrasingModel.changePhraseIndex,\n    },\n});\n",
-      "start": 1746125082009,
-      "end": 1746125082052,
+      "start": 1746125696349,
+      "end": 1746125696411,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\nimport { isExists } from '@/shared/lib';\nimport { RephrasingModel } from '../model';\nimport s from './Rephrasing.module.css';\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n      fz: 16,\n      c: 'dark.9',\n      color: 'dark.9',\n      display: 'flex',\n      variant: 'subtle',\n      className: s.root,\n      children: 'Перефразировать',\n      leftSection: <ArrowsClockwise size={18} />,\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});",
-      "start": 1746125082052,
-      "end": 1746125082053,
+      "start": 1746125696411,
+      "end": 1746125696412,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -64,8 +64,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { variant } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowsClockwise } from \"@phosphor-icons/react\";\nimport { isExists } from \"@/shared/lib\";\nimport { RephrasingModel } from \"../model\";\nimport s from \"./Rephrasing.module.css\";\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button,\n    else: void 0,\n    bind: {\n      fz: 16,\n      c: \"dark.9\",\n      color: \"dark.9\",\n      display: \"flex\",\n      variant: \"subtle\",\n      className: s.root,\n      children: \"Перефразировать\",\n      leftSection: /* @__PURE__ */ jsx(ArrowsClockwise, { size: 18 }),\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});\n",
-      "start": 1746125082053,
-      "end": 1746125082354,
+      "start": 1746125696412,
+      "end": 1746125696681,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -79,75 +79,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/Rephrasing/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { variant } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowsClockwise } from \"@phosphor-icons/react\";\nimport { isExists } from \"@/shared/lib\";\nimport { RephrasingModel } from \"../model\";\nimport s from \"./Rephrasing.module.css\";\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button,\n    else: void 0,\n    bind: {\n      fz: 16,\n      c: \"dark.9\",\n      color: \"dark.9\",\n      display: \"flex\",\n      variant: \"subtle\",\n      className: s.root,\n      children: \"Перефразировать\",\n      leftSection: /* @__PURE__ */ jsx(ArrowsClockwise, { size: 18 }),\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});\n",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

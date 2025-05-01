@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { Personality, titleColorMap } from '@/entities/Personality';\n\nimport s from './MenuItem.module.css';\n\ninterface MenuItemProps {\n    category: string;\n    description: string;\n    types: Personality[];\n    onClose: VoidFunction;\n}\n\nexport const MenuItem = ({ types, category, description, onClose }: MenuItemProps) => (\n    <Menu.Item className={s.item} component='div'>\n        <Title mb='xxs' fz={20} order={3}>\n            {category}\n        </Title>\n        <Text mb='xs' fz={18} lh='21px'>\n            {description}\n        </Text>\n        <Flex className={s.items} gap='md'>\n            {types.map((type) => (\n                <Paper\n                    py='sm'\n                    px={32}\n                    radius='md'\n                    component='a'\n                    key={type.code}\n                    onClick={onClose}\n                    className={s.paper}\n                    href={`/types/${type.code}`}\n                    data-color={`${titleColorMap[category]}`}\n                >\n                    <Stack gap={6} align='center'>\n                        <Text lh='20px' fw={600} fz={18}>\n                            {type.name}\n                        </Text>\n                        <Text fz={16} lh='18px'>\n                            {type.code}\n                        </Text>\n                    </Stack>\n                </Paper>\n            ))}\n        </Flex>\n    </Menu.Item>\n);\n",
-      "start": 1746125082614,
-      "end": 1746125082628,
+      "start": 1746125697005,
+      "end": 1746125697021,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\nimport { Personality, titleColorMap } from '@/entities/Personality';\nimport s from './MenuItem.module.css';\ninterface MenuItemProps {\n  category: string;\n  description: string;\n  types: Personality[];\n  onClose: VoidFunction;\n}\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}: MenuItemProps) => <Menu.Item className={s.item} component='div'>\n        <Title mb='xxs' fz={20} order={3}>\n            {category}\n        </Title>\n        <Text mb='xs' fz={18} lh='21px'>\n            {description}\n        </Text>\n        <Flex className={s.items} gap='md'>\n            {types.map(type => <Paper py='sm' px={32} radius='md' component='a' key={type.code} onClick={onClose} className={s.paper} href={`/types/${type.code}`} data-color={`${titleColorMap[category]}`}>\n                    <Stack gap={6} align='center'>\n                        <Text lh='20px' fw={600} fz={18}>\n                            {type.name}\n                        </Text>\n                        <Text fz={16} lh='18px'>\n                            {type.code}\n                        </Text>\n                    </Stack>\n                </Paper>)}\n        </Flex>\n    </Menu.Item>;",
-      "start": 1746125082628,
-      "end": 1746125082629,
+      "start": 1746125697021,
+      "end": 1746125697023,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -54,8 +54,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}) => /* @__PURE__ */ jsxs(Menu.Item, { className: s.item, component: \"div\", children: [\n  /* @__PURE__ */ jsx(Title, { mb: \"xxs\", fz: 20, order: 3, children: category }),\n  /* @__PURE__ */ jsx(Text, { mb: \"xs\", fz: 18, lh: \"21px\", children: description }),\n  /* @__PURE__ */ jsx(Flex, { className: s.items, gap: \"md\", children: types.map((type) => /* @__PURE__ */ jsx(Paper, { py: \"sm\", px: 32, radius: \"md\", component: \"a\", onClick: onClose, className: s.paper, href: `/types/${type.code}`, \"data-color\": `${titleColorMap[category]}`, children: /* @__PURE__ */ jsxs(Stack, { gap: 6, align: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { lh: \"20px\", fw: 600, fz: 18, children: type.name }),\n    /* @__PURE__ */ jsx(Text, { fz: 16, lh: \"18px\", children: type.code })\n  ] }) }, type.code)) })\n] });\n",
-      "start": 1746125082629,
-      "end": 1746125082636,
+      "start": 1746125697023,
+      "end": 1746125697027,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -71,75 +71,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082636,
-      "end": 1746125082637,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}) => /* @__PURE__ */ jsxs(Menu.Item, { className: s.item, component: \"div\", children: [\n  /* @__PURE__ */ jsx(Title, { mb: \"xxs\", fz: 20, order: 3, children: category }),\n  /* @__PURE__ */ jsx(Text, { mb: \"xs\", fz: 18, lh: \"21px\", children: description }),\n  /* @__PURE__ */ jsx(Flex, { className: s.items, gap: \"md\", children: types.map((type) => /* @__PURE__ */ jsx(Paper, { py: \"sm\", px: 32, radius: \"md\", component: \"a\", onClick: onClose, className: s.paper, href: `/types/${type.code}`, \"data-color\": `${titleColorMap[category]}`, children: /* @__PURE__ */ jsxs(Stack, { gap: 6, align: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { lh: \"20px\", fw: 600, fz: 18, children: type.name }),\n    /* @__PURE__ */ jsx(Text, { fz: 16, lh: \"18px\", children: type.code })\n  ] }) }, type.code)) })\n] });\n",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697027,
+      "end": 1746125697027,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

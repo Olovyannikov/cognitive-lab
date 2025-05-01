@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n",
-      "start": 1746125081813,
-      "end": 1746125081854,
+      "start": 1746125696265,
+      "end": 1746125696307,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');",
-      "start": 1746125081854,
-      "end": 1746125081855,
+      "start": 1746125696307,
+      "end": 1746125696308,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1746125081855,
-      "end": 1746125082069,
+      "start": 1746125696308,
+      "end": 1746125696514,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082069,
-      "end": 1746125082069,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082069,
-      "end": 1746125082069,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082070,
-      "end": 1746125082070,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/hooks/media/index.ts [vike:pluginModuleBanner] */\nimport { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1746125082070,
-      "end": 1746125082071,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

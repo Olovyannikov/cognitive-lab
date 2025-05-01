@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport type { ListItem } from '../../types';\n\ninterface CardsProps {\n    items: ListItem[];\n    color?: string;\n}\n\nexport const Cards = ({ items, color }: CardsProps) => (\n    <Grid grow>\n        {items.map((item, index) => (\n            <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>\n        ))}\n    </Grid>\n);\n",
-      "start": 1746125081860,
-      "end": 1746125081901,
+      "start": 1746125696452,
+      "end": 1746125696496,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\nimport type { ListItem } from '../../types';\ninterface CardsProps {\n  items: ListItem[];\n  color?: string;\n}\nexport const Cards = ({\n  items,\n  color\n}: CardsProps) => <Grid grow>\n        {items.map((item, index) => <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>)}\n    </Grid>;",
-      "start": 1746125081901,
-      "end": 1746125081902,
+      "start": 1746125696496,
+      "end": 1746125696497,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -44,8 +44,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, Paper, Stack, Text, Title } from \"@mantine/core\";\nexport const Cards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Grid, { grow: true, children: items.map((item, index) => /* @__PURE__ */ jsx(Grid.Col, { span: 6, children: /* @__PURE__ */ jsx(Paper, { h: \"100%\", radius: 30, px: \"3xl\", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ jsxs(Stack, { gap: \"xs\", children: [\n  /* @__PURE__ */ jsx(Title, { c: `${color}.9`, fz: 24, order: 4, children: item.title }),\n  /* @__PURE__ */ jsx(Text, { fz: 20, children: item.text })\n] }) }) }, index)) });\n",
-      "start": 1746125081902,
-      "end": 1746125082117,
+      "start": 1746125696497,
+      "end": 1746125696766,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,75 +59,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082117,
-      "end": 1746125082117,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Cards/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, Paper, Stack, Text, Title } from \"@mantine/core\";\nexport const Cards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Grid, { grow: true, children: items.map((item, index) => /* @__PURE__ */ jsx(Grid.Col, { span: 6, children: /* @__PURE__ */ jsx(Paper, { h: \"100%\", radius: 30, px: \"3xl\", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ jsxs(Stack, { gap: \"xs\", children: [\n  /* @__PURE__ */ jsx(Title, { c: `${color}.9`, fz: 24, order: 4, children: item.title }),\n  /* @__PURE__ */ jsx(Text, { fz: 20, children: item.text })\n] }) }) }, index)) });\n",
-      "start": 1746125082118,
-      "end": 1746125082118,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

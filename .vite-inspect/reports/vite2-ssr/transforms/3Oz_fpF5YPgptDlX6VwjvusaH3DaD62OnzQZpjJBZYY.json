@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n",
-      "start": 1746125081760,
-      "end": 1746125081791,
+      "start": 1746125696156,
+      "end": 1746125696195,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { MainPageResponse } from './dto';\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: [] as MainPageResponse\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1746125081791,
-      "end": 1746125081793,
+      "start": 1746125696195,
+      "end": 1746125696196,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081793,
-      "end": 1746125081875,
+      "start": 1746125696196,
+      "end": 1746125696288,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,75 +62,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081875,
-      "end": 1746125081875,
+      "start": 1746125696288,
+      "end": 1746125696288,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".relative {\n  position: relative;\n}\n\n.letters {\n  --index: 1;\n  --radius: 5;\n  --total: 1;\n  --character-spacing: -1.1ch;\n\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%) rotate(calc(360deg / var(--total) * var(--index)))\n    translateY(calc(var(--radius, 5) * var(--character-spacing)));\n  transform-origin: center;\n}\n",
-      "start": 1746125082390,
-      "end": 1746125082407,
+      "start": 1746125696603,
+      "end": 1746125696640,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082407,
-      "end": 1746125082407,
+      "start": 1746125696640,
+      "end": 1746125696640,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082407,
-      "end": 1746125082407,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082407,
-      "end": 1746125082407,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082407,
-      "end": 1746125082407,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082407,
-      "end": 1746125082407,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/SpinningText/SpinningText.module.css [vike:pluginModuleBanner] */\nexport const relative = \"OTHxU\";\nexport const letters = \"qhwkn\";\nexport default {\n\trelative: relative,\n\tletters: letters\n};\n",
-      "start": 1746125082408,
-      "end": 1746125082408,
+      "start": 1746125696641,
+      "end": 1746125696641,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

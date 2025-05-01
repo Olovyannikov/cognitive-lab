@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\n\nimport { navigate } from '@/shared/lib';\nimport { FormSuccessScreen, PageLoader } from '@/shared/ui';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\n\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './ReviewPage.module.css';\n\nexport const ReviewPage = () => {\n    const { pending, stale } = useUnit(getSurveysInfoQuery);\n\n    const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\n\n    if (pending || stale) return <PageLoader />;\n\n    return (\n        <InnerLayout\n            maw={850}\n            className={isSubmitted ? s.root : ''}\n            title={!isSubmitted && 'Оставьте отзыв'}\n            text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}\n            image={!isSubmitted ? '/review/question-bubble' : undefined}\n        >\n            {!isSubmitted && (\n                <CreateReviewForm\n                    slots={{\n                        action: <NavigateToHelpPage />,\n                    }}\n                />\n            )}\n            {isSubmitted && (\n                <FormSuccessScreen\n                    description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'\n                    image='/review/star'\n                    slots={{\n                        action: (\n                            <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>\n                                Вернуться назад\n                            </NavigateToMainPage>\n                        ),\n                    }}\n                />\n            )}\n        </InnerLayout>\n    );\n};\n",
-      "start": 1746125081653,
-      "end": 1746125081700,
+      "start": 1746125696063,
+      "end": 1746125696112,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useUnit } from 'effector-react';\nimport { navigate } from '@/shared/lib';\nimport { FormSuccessScreen, PageLoader } from '@/shared/ui';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './ReviewPage.module.css';\nexport const ReviewPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\n  if (pending || stale) return <PageLoader />;\n  return <InnerLayout maw={850} className={isSubmitted ? s.root : ''} title={!isSubmitted && 'Оставьте отзыв'} text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'} image={!isSubmitted ? '/review/question-bubble' : undefined}>\n            {!isSubmitted && <CreateReviewForm slots={{\n      action: <NavigateToHelpPage />\n    }} />}\n            {isSubmitted && <FormSuccessScreen description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.' image='/review/star' slots={{\n      action: <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>\n                                Вернуться назад\n                            </NavigateToMainPage>\n    }} />}\n        </InnerLayout>;\n};",
-      "start": 1746125081700,
-      "end": 1746125081702,
+      "start": 1746125696112,
+      "end": 1746125696114,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { navigate } from \"@/shared/lib\";\nimport { FormSuccessScreen, PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { CreateReviewForm, CreateReviewFormModel } from \"@/features/CreateReviewForm\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./ReviewPage.module.css\";\nexport const ReviewPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(InnerLayout, { maw: 850, className: isSubmitted ? s.root : \"\", title: !isSubmitted && \"Оставьте отзыв\", text: !isSubmitted && \"Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!\", image: !isSubmitted ? \"/review/question-bubble\" : void 0, children: [\n    !isSubmitted && /* @__PURE__ */ jsx(CreateReviewForm, { slots: {\n      action: /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n    } }),\n    isSubmitted && /* @__PURE__ */ jsx(FormSuccessScreen, { description: \"Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.\", image: \"/review/star\", slots: {\n      action: /* @__PURE__ */ jsx(NavigateToMainPage, { size: \"md\", onClick: () => navigate.back(), fullWidth: true, children: \"Вернуться назад\" })\n    } })\n  ] });\n};\n",
-      "start": 1746125081702,
-      "end": 1746125081756,
+      "start": 1746125696114,
+      "end": 1746125696180,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081756,
-      "end": 1746125081756,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/ReviewPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { navigate } from \"@/shared/lib\";\nimport { FormSuccessScreen, PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { CreateReviewForm, CreateReviewFormModel } from \"@/features/CreateReviewForm\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./ReviewPage.module.css\";\nexport const ReviewPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(InnerLayout, { maw: 850, className: isSubmitted ? s.root : \"\", title: !isSubmitted && \"Оставьте отзыв\", text: !isSubmitted && \"Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!\", image: !isSubmitted ? \"/review/question-bubble\" : void 0, children: [\n    !isSubmitted && /* @__PURE__ */ jsx(CreateReviewForm, { slots: {\n      action: /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n    } }),\n    isSubmitted && /* @__PURE__ */ jsx(FormSuccessScreen, { description: \"Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.\", image: \"/review/star\", slots: {\n      action: /* @__PURE__ */ jsx(NavigateToMainPage, { size: \"md\", onClick: () => navigate.back(), fullWidth: true, children: \"Вернуться назад\" })\n    } })\n  ] });\n};\n",
-      "start": 1746125081756,
-      "end": 1746125081757,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

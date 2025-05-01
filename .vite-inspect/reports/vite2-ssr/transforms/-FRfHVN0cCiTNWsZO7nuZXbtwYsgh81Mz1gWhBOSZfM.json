@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Card';\n",
-      "start": 1746125082428,
-      "end": 1746125082451,
+      "start": 1746125696644,
+      "end": 1746125696670,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Card';",
-      "start": 1746125082451,
-      "end": 1746125082452,
+      "start": 1746125696670,
+      "end": 1746125696671,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -26,8 +26,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Card\";\n",
-      "start": 1746125082452,
-      "end": 1746125082517,
+      "start": 1746125696671,
+      "end": 1746125696870,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,75 +39,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696870,
+      "end": 1746125696870,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696870,
+      "end": 1746125696870,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696870,
+      "end": 1746125696870,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Card\";\n",
-      "start": 1746125082518,
-      "end": 1746125082518,
+      "start": 1746125696871,
+      "end": 1746125696871,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

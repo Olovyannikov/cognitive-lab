@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { restore } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\n\nexport const FaqModel = atom(() => {\n    const $faqItems = restore<FaqItem[]>(\n        getFAQQuery.finished.success.map(({ result }) => result.payload),\n        []\n    );\n\n    return {\n        $faqItems,\n    };\n});\n",
-      "start": 1746125081671,
-      "end": 1746125081729,
+      "start": 1746125696187,
+      "end": 1746125696240,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { restore } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\nexport const FaqModel = atom(() => {\n  const $faqItems = restore<FaqItem[]>(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});",
-      "start": 1746125081729,
-      "end": 1746125081730,
+      "start": 1746125696240,
+      "end": 1746125696241,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = atom(() => {\n  const $faqItems = restore(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});\n",
-      "start": 1746125081730,
-      "end": 1746125081821,
+      "start": 1746125696241,
+      "end": 1746125696350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,75 +57,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696350,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081821,
-      "end": 1746125081821,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/model/index.ts [vike:pluginModuleBanner] */\nimport { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = atom(() => {\n  const $faqItems = restore(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});\n",
-      "start": 1746125081821,
-      "end": 1746125081822,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\n\nimport type { ContentResolverProps, ListItem } from '../../types';\n\nimport s from './OrderedList.module.css';\n\ninterface OrderedListProps {\n    items: ListItem[];\n    color?: string;\n    resolver: (p: ContentResolverProps) => ReactNode;\n}\n\nexport const OrderedList = ({ items, color, resolver }: OrderedListProps) => (\n    <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => (\n            <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => (\n                    <Stack key={content.type + idx}>{resolver({ content, color: color ?? 'violet' })}</Stack>\n                ))}\n            </List.Item>\n        ))}\n    </List>\n);\n",
-      "start": 1746125081879,
-      "end": 1746125081933,
+      "start": 1746125696463,
+      "end": 1746125696504,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\nimport type { ContentResolverProps, ListItem } from '../../types';\nimport s from './OrderedList.module.css';\ninterface OrderedListProps {\n  items: ListItem[];\n  color?: string;\n  resolver: (p: ContentResolverProps) => ReactNode;\n}\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}: OrderedListProps) => <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => <Stack key={content.type + idx}>{resolver({\n        content,\n        color: color ?? 'violet'\n      })}</Stack>)}\n            </List.Item>)}\n    </List>;",
-      "start": 1746125081933,
-      "end": 1746125081934,
+      "start": 1746125696504,
+      "end": 1746125696505,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -52,8 +52,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedList.module.css\";\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Ordered List\", type: \"ordered\", className: s.list, \"data-color\": color, children: items?.map((item, index) => /* @__PURE__ */ jsxs(List.Item, { children: [\n  /* @__PURE__ */ jsx(Title, { \"data-color\": color, mb: \"md\", className: s.title, children: item.title }),\n  item.content?.map((content, idx) => /* @__PURE__ */ jsx(Stack, { children: resolver({\n    content,\n    color: color ?? \"violet\"\n  }) }, content.type + idx))\n] }, index)) });\n",
-      "start": 1746125081934,
-      "end": 1746125082161,
+      "start": 1746125696505,
+      "end": 1746125696766,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -69,75 +69,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/OrderedList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedList.module.css\";\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Ordered List\", type: \"ordered\", className: s.list, \"data-color\": color, children: items?.map((item, index) => /* @__PURE__ */ jsxs(List.Item, { children: [\n  /* @__PURE__ */ jsx(Title, { \"data-color\": color, mb: \"md\", className: s.title, children: item.title }),\n  item.content?.map((content, idx) => /* @__PURE__ */ jsx(Stack, { children: resolver({\n    content,\n    color: color ?? \"violet\"\n  }) }, content.type + idx))\n] }, index)) });\n",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

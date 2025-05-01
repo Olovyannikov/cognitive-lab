@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export const clearLocalStorageTestUnits = () => {\n    window.localStorage.removeItem('$currentPage');\n    window.localStorage.removeItem('$currentProgress');\n    window.localStorage.removeItem('$scaleForm');\n    window.localStorage.removeItem('$surveyId');\n};\n",
-      "start": 1746125082051,
-      "end": 1746125082086,
+      "start": 1746125696534,
+      "end": 1746125696574,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem('$currentPage');\n  window.localStorage.removeItem('$currentProgress');\n  window.localStorage.removeItem('$scaleForm');\n  window.localStorage.removeItem('$surveyId');\n};",
-      "start": 1746125082086,
-      "end": 1746125082087,
+      "start": 1746125696574,
+      "end": 1746125696575,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem(\"$currentPage\");\n  window.localStorage.removeItem(\"$currentProgress\");\n  window.localStorage.removeItem(\"$scaleForm\");\n  window.localStorage.removeItem(\"$surveyId\");\n};\n",
-      "start": 1746125082087,
-      "end": 1746125082375,
+      "start": 1746125696575,
+      "end": 1746125696824,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,75 +47,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082375,
-      "end": 1746125082375,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082375,
-      "end": 1746125082375,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/clearLocalStorageTestUnits.ts [vike:pluginModuleBanner] */\nexport const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem(\"$currentPage\");\n  window.localStorage.removeItem(\"$currentProgress\");\n  window.localStorage.removeItem(\"$scaleForm\");\n  window.localStorage.removeItem(\"$surveyId\");\n};\n",
-      "start": 1746125082376,
-      "end": 1746125082376,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

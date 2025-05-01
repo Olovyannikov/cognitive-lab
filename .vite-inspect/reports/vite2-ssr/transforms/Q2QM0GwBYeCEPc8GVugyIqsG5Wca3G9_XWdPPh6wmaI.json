@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".app {\n  display: grid;\n  grid-template: \"h h h h\" auto \"m m m m\" 1fr \"f f f f\" auto / auto 1fr auto;\n  min-height: 100vh;\n}\n\n.header {\n  grid-area: h;\n}\n\n.main {\n  grid-area: m;\n  margin-top: 100px;\n\n  @mixin larger-than 1200px {\n    margin-top: 170px;\n  }\n}\n\n.footer {\n  grid-area: f;\n}\n",
-      "start": 1746125081634,
-      "end": 1746125081662,
+      "start": 1746125696020,
+      "end": 1746125696079,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125081662,
-      "end": 1746125081662,
+      "start": 1746125696079,
+      "end": 1746125696079,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696081,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/RootLayout.module.css [vike:pluginModuleBanner] */\nexport const app = \"KZX-2\";\nexport const header = \"MAUPk\";\nexport const main = \"EprN3\";\nexport const footer = \"_9hgQx\";\nexport default {\n\tapp: app,\n\theader: header,\n\tmain: main,\n\tfooter: footer\n};\n",
-      "start": 1746125081663,
-      "end": 1746125081663,
+      "start": 1746125696081,
+      "end": 1746125696082,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

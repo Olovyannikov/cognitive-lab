@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Paper, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport CircleImage from './circle.svg?react';\n\nimport s from './Card.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    image: string;\n}\n\nexport const Card = ({ text, image, title }: CardProps) => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper className={s.paper}>\n            <CircleImage className={s.background} />\n            <Flex className={s.flex} align='center' gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>\n                <Picture className={s.picture} src={`/test-images/${isMobile ? 'mobile' : 'desktop'}/${image}`} />\n                <Stack gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>\n                    <Title className={s.title} order={4}>\n                        {title}\n                    </Title>\n                    <Text className={s.text}>{text}</Text>\n                </Stack>\n            </Flex>\n        </Paper>\n    );\n};\n",
-      "start": 1746125082522,
-      "end": 1746125082581,
+      "start": 1746125696886,
+      "end": 1746125696952,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex, Paper, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport CircleImage from './circle.svg?react';\nimport s from './Card.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n  image: string;\n}\nexport const Card = ({\n  text,\n  image,\n  title\n}: CardProps) => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Paper className={s.paper}>\n            <CircleImage className={s.background} />\n            <Flex className={s.flex} align='center' gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>\n                <Picture className={s.picture} src={`/test-images/${isMobile ? 'mobile' : 'desktop'}/${image}`} />\n                <Stack gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>\n                    <Title className={s.title} order={4}>\n                        {title}\n                    </Title>\n                    <Text className={s.text}>{text}</Text>\n                </Stack>\n            </Flex>\n        </Paper>;\n};",
-      "start": 1746125082581,
-      "end": 1746125082583,
+      "start": 1746125696952,
+      "end": 1746125696954,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -52,8 +52,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport CircleImage from \"./circle.svg?react\";\nimport s from \"./Card.module.css\";\nexport const Card = ({\n  text,\n  image,\n  title\n}) => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n    /* @__PURE__ */ jsx(CircleImage, { className: s.background }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.flex, align: \"center\", gap: isLarge || !isMobile ? \"lg\" : \"xs\", flex: 1, children: [\n      /* @__PURE__ */ jsx(Picture, { className: s.picture, src: `/test-images/${isMobile ? \"mobile\" : \"desktop\"}/${image}` }),\n      /* @__PURE__ */ jsxs(Stack, { gap: isLarge || !isMobile ? \"lg\" : \"xs\", flex: 1, children: [\n        /* @__PURE__ */ jsx(Title, { className: s.title, order: 4, children: title }),\n        /* @__PURE__ */ jsx(Text, { className: s.text, children: text })\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1746125082583,
-      "end": 1746125082605,
+      "start": 1746125696954,
+      "end": 1746125696984,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -69,75 +69,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696984,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696984,
+      "end": 1746125696985,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696985,
+      "end": 1746125696985,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082605,
-      "end": 1746125082605,
+      "start": 1746125696985,
+      "end": 1746125696985,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/Card/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport CircleImage from \"./circle.svg?react\";\nimport s from \"./Card.module.css\";\nexport const Card = ({\n  text,\n  image,\n  title\n}) => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n    /* @__PURE__ */ jsx(CircleImage, { className: s.background }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.flex, align: \"center\", gap: isLarge || !isMobile ? \"lg\" : \"xs\", flex: 1, children: [\n      /* @__PURE__ */ jsx(Picture, { className: s.picture, src: `/test-images/${isMobile ? \"mobile\" : \"desktop\"}/${image}` }),\n      /* @__PURE__ */ jsxs(Stack, { gap: isLarge || !isMobile ? \"lg\" : \"xs\", flex: 1, children: [\n        /* @__PURE__ */ jsx(Title, { className: s.title, order: 4, children: title }),\n        /* @__PURE__ */ jsx(Text, { className: s.text, children: text })\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1746125082605,
-      "end": 1746125082606,
+      "start": 1746125696985,
+      "end": 1746125696985,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

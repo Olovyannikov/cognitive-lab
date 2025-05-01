@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  position: relative;\n  flex: 1;\n  overflow: hidden;\n  border-radius: var(--mantine-radius-sm);\n  padding: var(--mantine-spacing-md) var(--mantine-spacing-sm);\n  background-color: var(--mantine-color-violet-7);\n\n  @mixin larger-than 992px {\n    padding: var(--mantine-spacing-3xl) var(--mantine-spacing-lg);\n    padding-bottom: 60px;\n  }\n}\n\n.background {\n  position: absolute;\n  left: 0;\n  top: -100%;\n  z-index: 0;\n  rotate: -90deg;\n  scale: 0.6;\n\n  @mixin larger-than 415px {\n    top: 0;\n    rotate: 0deg;\n    scale: 1;\n  }\n\n  @mixin larger-than 1200px {\n    top: -20%;\n  }\n}\n\n.flex {\n  position: relative;\n  z-index: 1;\n  flex-direction: row;\n\n  @mixin larger-than 992px {\n    flex-direction: column;\n    gap: var(--mantine-spacing-lg);\n  }\n}\n\n.picture {\n  width: 50px;\n  height: 50px;\n\n  @mixin larger-than 992px {\n    width: 120px;\n    height: 120px;\n  }\n}\n\n.title,\n.text {\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 1;\n  color: var(--mantine-color-white);\n\n  @mixin larger-than 992px {\n    font-weight: 700;\n    font-size: 24px;\n    text-align: center;\n  }\n}\n\n.text {\n  font-weight: 500;\n  font-size: 14px;\n\n  @mixin larger-than 992px {\n    font-size: 21px;\n  }\n}\n",
-      "start": 1746125082607,
-      "end": 1746125082621,
+      "start": 1746125696986,
+      "end": 1746125697007,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082621,
-      "end": 1746125082621,
+      "start": 1746125697007,
+      "end": 1746125697007,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/Card/Card.module.css [vike:pluginModuleBanner] */\nexport const paper = \"KsBln\";\nexport const background = \"CIbm3\";\nexport const flex = \"aHEXs\";\nexport const picture = \"RYttd\";\nexport const title = \"-URv3\";\nexport const text = \"k38Lm\";\nexport default {\n\tpaper: paper,\n\tbackground: background,\n\tflex: flex,\n\tpicture: picture,\n\ttitle: title,\n\ttext: text\n};\n",
-      "start": 1746125082623,
-      "end": 1746125082623,
+      "start": 1746125697009,
+      "end": 1746125697009,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\n\nimport s from './ReportTemplate.module.css';\n\ninterface ReportTemplateProps {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n    onClose: VoidFunction;\n}\n\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n    const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n    const [onClose] = useUnit([RootModel.allMenusClosed]);\n\n    const isFree = report.report_kind === 'free';\n\n    const getReportUrl = () => {\n        if (isFree) {\n            return `/free-report/${report.user_report}`;\n        }\n\n        return `/report/${report.user_report}`;\n    };\n\n    return (\n        <Flex\n            justify='space-between'\n            className={s.reportLink}\n            gap='xl'\n            component='a'\n            href={getReportUrl()}\n            onClick={() => {\n                onClose(false);\n                report.onClose();\n            }}\n        >\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>\n    );\n};\n",
-      "start": 1746125082613,
-      "end": 1746125082627,
+      "start": 1746125696996,
+      "end": 1746125697017,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\nimport s from './ReportTemplate.module.css';\ninterface ReportTemplateProps {\n  mbti_type: string;\n  user_report: string;\n  created_at: string;\n  report_kind: string;\n  onClose: VoidFunction;\n}\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === 'free';\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return <Flex justify='space-between' className={s.reportLink} gap='xl' component='a' href={getReportUrl()} onClick={() => {\n    onClose(false);\n    report.onClose();\n  }}>\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>;\n};",
-      "start": 1746125082627,
-      "end": 1746125082628,
+      "start": 1746125697017,
+      "end": 1746125697018,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -54,8 +54,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./ReportTemplate.module.css\";\nexport const ReportTemplate = (report) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === \"free\";\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return /* @__PURE__ */ jsxs(Flex, { justify: \"space-between\", className: s.reportLink, gap: \"xl\", component: \"a\", href: getReportUrl(), onClick: () => {\n    onClose(false);\n    report.onClose();\n  }, children: [\n    /* @__PURE__ */ jsxs(Text, { children: [\n      types[report.mbti_type],\n      \" (\",\n      report.mbti_type,\n      \")\"\n    ] }),\n    /* @__PURE__ */ jsx(Text, { component: \"time\", dateTime: report.created_at, children: new Date(report.created_at).toLocaleDateString() })\n  ] });\n};\n",
-      "start": 1746125082628,
-      "end": 1746125082636,
+      "start": 1746125697018,
+      "end": 1746125697024,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -71,75 +71,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697024,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697024,
+      "end": 1746125697025,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697025,
+      "end": 1746125697025,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082636,
-      "end": 1746125082636,
+      "start": 1746125697025,
+      "end": 1746125697025,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697025,
+      "end": 1746125697025,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697025,
+      "end": 1746125697025,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./ReportTemplate.module.css\";\nexport const ReportTemplate = (report) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === \"free\";\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return /* @__PURE__ */ jsxs(Flex, { justify: \"space-between\", className: s.reportLink, gap: \"xl\", component: \"a\", href: getReportUrl(), onClick: () => {\n    onClose(false);\n    report.onClose();\n  }, children: [\n    /* @__PURE__ */ jsxs(Text, { children: [\n      types[report.mbti_type],\n      \" (\",\n      report.mbti_type,\n      \")\"\n    ] }),\n    /* @__PURE__ */ jsx(Text, { component: \"time\", dateTime: report.created_at, children: new Date(report.created_at).toLocaleDateString() })\n  ] });\n};\n",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697025,
+      "end": 1746125697025,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

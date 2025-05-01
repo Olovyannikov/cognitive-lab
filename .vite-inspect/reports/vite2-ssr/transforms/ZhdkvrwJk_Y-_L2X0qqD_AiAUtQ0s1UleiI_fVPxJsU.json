@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Card, Text, Title } from '@mantine/core';\n\nimport { titleColorMap } from '../../config';\nimport type { PersonalityType } from '../../types';\n\nimport s from './PersonalityCard.module.css';\n\ninterface PersonalityCardProps {\n    title: string;\n    type: PersonalityType;\n    description: string[];\n    category: string;\n}\n\nexport const PersonalityCard = ({ type, description, title, category }: PersonalityCardProps) => (\n    <Card component='a' href={`/types/${type}`} className={s.wrapper}>\n        <Box data-type={type} className={s.imageWrapper} data-color={titleColorMap[category]} />\n        <Title className={s.title} order={3}>\n            {title} ({type})\n        </Title>\n        <Text className={s.text}>{description[0]}</Text>\n    </Card>\n);\n",
-      "start": 1746125082424,
-      "end": 1746125082436,
+      "start": 1746125696581,
+      "end": 1746125696616,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Card, Text, Title } from '@mantine/core';\nimport { titleColorMap } from '../../config';\nimport type { PersonalityType } from '../../types';\nimport s from './PersonalityCard.module.css';\ninterface PersonalityCardProps {\n  title: string;\n  type: PersonalityType;\n  description: string[];\n  category: string;\n}\nexport const PersonalityCard = ({\n  type,\n  description,\n  title,\n  category\n}: PersonalityCardProps) => <Card component='a' href={`/types/${type}`} className={s.wrapper}>\n        <Box data-type={type} className={s.imageWrapper} data-color={titleColorMap[category]} />\n        <Title className={s.title} order={3}>\n            {title} ({type})\n        </Title>\n        <Text className={s.text}>{description[0]}</Text>\n    </Card>;",
-      "start": 1746125082436,
-      "end": 1746125082437,
+      "start": 1746125696616,
+      "end": 1746125696617,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Card, Text, Title } from \"@mantine/core\";\nimport { titleColorMap } from \"../../config\";\nimport s from \"./PersonalityCard.module.css\";\nexport const PersonalityCard = ({\n  type,\n  description,\n  title,\n  category\n}) => /* @__PURE__ */ jsxs(Card, { component: \"a\", href: `/types/${type}`, className: s.wrapper, children: [\n  /* @__PURE__ */ jsx(Box, { \"data-type\": type, className: s.imageWrapper, \"data-color\": titleColorMap[category] }),\n  /* @__PURE__ */ jsxs(Title, { className: s.title, order: 3, children: [\n    title,\n    \" (\",\n    type,\n    \")\"\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description[0] })\n] });\n",
-      "start": 1746125082437,
-      "end": 1746125082509,
+      "start": 1746125696617,
+      "end": 1746125696864,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/ui/PersonalityCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Card, Text, Title } from \"@mantine/core\";\nimport { titleColorMap } from \"../../config\";\nimport s from \"./PersonalityCard.module.css\";\nexport const PersonalityCard = ({\n  type,\n  description,\n  title,\n  category\n}) => /* @__PURE__ */ jsxs(Card, { component: \"a\", href: `/types/${type}`, className: s.wrapper, children: [\n  /* @__PURE__ */ jsx(Box, { \"data-type\": type, className: s.imageWrapper, \"data-color\": titleColorMap[category] }),\n  /* @__PURE__ */ jsxs(Title, { className: s.title, order: 3, children: [\n    title,\n    \" (\",\n    type,\n    \")\"\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description[0] })\n] });\n",
-      "start": 1746125082509,
-      "end": 1746125082509,
+      "start": 1746125696864,
+      "end": 1746125696864,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

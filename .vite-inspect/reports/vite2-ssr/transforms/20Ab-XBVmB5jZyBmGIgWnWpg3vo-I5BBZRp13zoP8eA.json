@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './ui';\nexport * from './api';\nexport * from './model';\n",
-      "start": 1746125081626,
-      "end": 1746125081658,
+      "start": 1746125696018,
+      "end": 1746125696068,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './ui';\nexport * from './api';\nexport * from './model';",
-      "start": 1746125081658,
-      "end": 1746125081658,
+      "start": 1746125696068,
+      "end": 1746125696069,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -26,8 +26,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./ui\";\nexport * from \"./api\";\nexport * from \"./model\";\n",
-      "start": 1746125081658,
-      "end": 1746125081706,
+      "start": 1746125696069,
+      "end": 1746125696138,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,75 +39,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/index.ts [vike:pluginModuleBanner] */\nexport * from \"./ui\";\nexport * from \"./api\";\nexport * from \"./model\";\n",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { z } from 'zod';\n\nexport const CreateReviewFormSchema = z.object({\n    name: z.string().min(1, { message: 'Имя обязательно' }),\n    text: z.string().min(1, { message: 'Текст отзыва обязателен' }),\n    informativeness_rate: z.number().min(1, { message: 'Поле обязательно' }),\n    convenience_rate: z.number().min(1, { message: 'Поле обязательно' }),\n    accuracy_rate: z.number().min(1, { message: 'Поле обязательно' }),\n    recommendability_rate: z.number().min(1, { message: 'Поле обязательно' }),\n    satisfaction_rate: z.number().min(1, { message: 'Поле обязательно' }),\n});\n",
-      "start": 1746125082625,
-      "end": 1746125082634,
+      "start": 1746125697015,
+      "end": 1746125697025,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { z } from 'zod';\nexport const CreateReviewFormSchema = z.object({\n  name: z.string().min(1, {\n    message: 'Имя обязательно'\n  }),\n  text: z.string().min(1, {\n    message: 'Текст отзыва обязателен'\n  }),\n  informativeness_rate: z.number().min(1, {\n    message: 'Поле обязательно'\n  }),\n  convenience_rate: z.number().min(1, {\n    message: 'Поле обязательно'\n  }),\n  accuracy_rate: z.number().min(1, {\n    message: 'Поле обязательно'\n  }),\n  recommendability_rate: z.number().min(1, {\n    message: 'Поле обязательно'\n  }),\n  satisfaction_rate: z.number().min(1, {\n    message: 'Поле обязательно'\n  })\n});",
-      "start": 1746125082634,
-      "end": 1746125082636,
+      "start": 1746125697025,
+      "end": 1746125697026,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { z } from \"zod\";\nexport const CreateReviewFormSchema = z.object({\n  name: z.string().min(1, {\n    message: \"Имя обязательно\"\n  }),\n  text: z.string().min(1, {\n    message: \"Текст отзыва обязателен\"\n  }),\n  informativeness_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  convenience_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  accuracy_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  recommendability_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  satisfaction_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  })\n});\n",
-      "start": 1746125082636,
-      "end": 1746125082637,
+      "start": 1746125697026,
+      "end": 1746125697029,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,75 +62,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082637,
-      "end": 1746125082637,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/schema/index.ts [vike:pluginModuleBanner] */\nimport { z } from \"zod\";\nexport const CreateReviewFormSchema = z.object({\n  name: z.string().min(1, {\n    message: \"Имя обязательно\"\n  }),\n  text: z.string().min(1, {\n    message: \"Текст отзыва обязателен\"\n  }),\n  informativeness_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  convenience_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  accuracy_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  recommendability_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  }),\n  satisfaction_rate: z.number().min(1, {\n    message: \"Поле обязательно\"\n  })\n});\n",
-      "start": 1746125082638,
-      "end": 1746125082638,
+      "start": 1746125697029,
+      "end": 1746125697029,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

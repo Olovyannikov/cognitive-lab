@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\n",
-      "start": 1746125081772,
-      "end": 1746125081814,
+      "start": 1746125696214,
+      "end": 1746125696264,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';",
-      "start": 1746125081814,
-      "end": 1746125081814,
+      "start": 1746125696264,
+      "end": 1746125696265,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\n",
-      "start": 1746125081814,
-      "end": 1746125081928,
+      "start": 1746125696265,
+      "end": 1746125696383,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\n",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696384,
+      "end": 1746125696384,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

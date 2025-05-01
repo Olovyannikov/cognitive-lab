@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getReportStructureQuery } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getReportStructureQuery.start,\n});\n",
-      "start": 1746125081537,
-      "end": 1746125081572,
+      "start": 1746125695909,
+      "end": 1746125695954,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getReportStructureQuery } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getReportStructureQuery.start\n  }],\n  or: {\n    sid: \"-5qov29\"\n  }\n});",
-      "start": 1746125081572,
-      "end": 1746125081573,
+      "start": 1746125695954,
+      "end": 1746125695955,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,8 +39,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getReportStructureQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getReportStructureQuery.start\n  }],\n  or: {\n    sid: \"-5qov29\"\n  }\n});\n",
-      "start": 1746125081573,
-      "end": 1746125081620,
+      "start": 1746125695955,
+      "end": 1746125696015,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -54,75 +54,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/full-report/example/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getReportStructureQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getReportStructureQuery.start\n  }],\n  or: {\n    sid: \"-5qov29\"\n  }\n});\n",
-      "start": 1746125081620,
-      "end": 1746125081620,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { List, Text, ThemeIcon } from '@mantine/core';\nimport { CheckCircle } from '@phosphor-icons/react/dist/ssr';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport type { ListItem } from '../../types';\n\nimport s from './IconList.module.css';\n\ninterface IconListProps {\n    items: ListItem[];\n    color?: string;\n}\n\nexport const IconList = ({ items, color }: IconListProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <List classNames={s} data-type='IconList'>\n            {items.map((item) => (\n                <List.Item\n                    icon={\n                        <ThemeIcon color='transparent' c={`${color}.9`} size={isLarge ? 32 : 24}>\n                            <CheckCircle size={isLarge ? 32 : 24} />\n                        </ThemeIcon>\n                    }\n                    key={`${item.type}_${item.text}`}\n                    mb='md'\n                >\n                    <Text fz={isLarge ? 22 : 18} lh={isLarge ? '28px' : '21px'}>\n                        {item.text}\n                    </Text>\n                </List.Item>\n            ))}\n        </List>\n    );\n};\n",
-      "start": 1746125081869,
-      "end": 1746125081912,
+      "start": 1746125696460,
+      "end": 1746125696501,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { List, Text, ThemeIcon } from '@mantine/core';\nimport { CheckCircle } from '@phosphor-icons/react/dist/ssr';\nimport { useIsLarge } from '@/shared/lib';\nimport type { ListItem } from '../../types';\nimport s from './IconList.module.css';\ninterface IconListProps {\n  items: ListItem[];\n  color?: string;\n}\nexport const IconList = ({\n  items,\n  color\n}: IconListProps) => {\n  const isLarge = useIsLarge();\n  return <List classNames={s} data-type='IconList'>\n            {items.map(item => <List.Item icon={<ThemeIcon color='transparent' c={`${color}.9`} size={isLarge ? 32 : 24}>\n                            <CheckCircle size={isLarge ? 32 : 24} />\n                        </ThemeIcon>} key={`${item.type}_${item.text}`} mb='md'>\n                    <Text fz={isLarge ? 22 : 18} lh={isLarge ? '28px' : '21px'}>\n                        {item.text}\n                    </Text>\n                </List.Item>)}\n        </List>;\n};",
-      "start": 1746125081912,
-      "end": 1746125081913,
+      "start": 1746125696501,
+      "end": 1746125696502,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { List, Text, ThemeIcon } from \"@mantine/core\";\nimport { CheckCircle } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport s from \"./IconList.module.css\";\nexport const IconList = ({\n  items,\n  color\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(List, { classNames: s, \"data-type\": \"IconList\", children: items.map((item) => /* @__PURE__ */ jsx(List.Item, { icon: /* @__PURE__ */ jsx(ThemeIcon, { color: \"transparent\", c: `${color}.9`, size: isLarge ? 32 : 24, children: /* @__PURE__ */ jsx(CheckCircle, { size: isLarge ? 32 : 24 }) }), mb: \"md\", children: /* @__PURE__ */ jsx(Text, { fz: isLarge ? 22 : 18, lh: isLarge ? \"28px\" : \"21px\", children: item.text }) }, `${item.type}_${item.text}`)) });\n};\n",
-      "start": 1746125081913,
-      "end": 1746125082157,
+      "start": 1746125696502,
+      "end": 1746125696770,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,75 +60,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/IconList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { List, Text, ThemeIcon } from \"@mantine/core\";\nimport { CheckCircle } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport s from \"./IconList.module.css\";\nexport const IconList = ({\n  items,\n  color\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(List, { classNames: s, \"data-type\": \"IconList\", children: items.map((item) => /* @__PURE__ */ jsx(List.Item, { icon: /* @__PURE__ */ jsx(ThemeIcon, { color: \"transparent\", c: `${color}.9`, size: isLarge ? 32 : 24, children: /* @__PURE__ */ jsx(CheckCircle, { size: isLarge ? 32 : 24 }) }), mb: \"md\", children: /* @__PURE__ */ jsx(Text, { fz: isLarge ? 22 : 18, lh: isLarge ? \"28px\" : \"21px\", children: item.text }) }, `${item.type}_${item.text}`)) });\n};\n",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696770,
+      "end": 1746125696770,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

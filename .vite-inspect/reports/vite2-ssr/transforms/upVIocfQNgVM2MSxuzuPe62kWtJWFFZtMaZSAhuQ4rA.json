@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\n\nimport { atom } from '@/shared/factories';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\n\nexport const PersonalitiesModel = atom(() => {\n    const PersonalitiesInitialGate = createGate();\n    const $personalitiesMap = createStore<Record<string, string>>({});\n\n    sample({\n        clock: PersonalitiesInitialGate.open,\n        target: getPersonalityTypesWithCategoriesQuery.refresh,\n    });\n\n    sample({\n        clock: getPersonalityTypesWithCategoriesQuery.$data,\n        fn: normalizePersonalities,\n        target: $personalitiesMap,\n    });\n\n    return {\n        $personalitiesMap,\n        PersonalitiesInitialGate,\n    };\n});\n",
-      "start": 1746125081732,
-      "end": 1746125081769,
+      "start": 1746125696098,
+      "end": 1746125696156,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { atom } from '@/shared/factories';\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore<Record<string, string>>({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.refresh\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});",
-      "start": 1746125081769,
-      "end": 1746125081770,
+      "start": 1746125696156,
+      "end": 1746125696161,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"../api\";\nimport { normalizePersonalities } from \"../lib\";\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.refresh\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});\n",
-      "start": 1746125081770,
-      "end": 1746125081871,
+      "start": 1746125696161,
+      "end": 1746125696236,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081871,
-      "end": 1746125081871,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081871,
-      "end": 1746125081871,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081871,
-      "end": 1746125081871,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081871,
-      "end": 1746125081871,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081871,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/model/index.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"../api\";\nimport { normalizePersonalities } from \"../lib\";\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.refresh\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});\n",
-      "start": 1746125081872,
-      "end": 1746125081872,
+      "start": 1746125696236,
+      "end": 1746125696237,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

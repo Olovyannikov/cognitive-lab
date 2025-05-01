@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper [data-label-position] {\n  display: flex;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.stack {\n  @mixin larger-than 1200px {\n    margin: 0 auto;\n    max-width: 860px;\n  }\n}\n",
-      "start": 1746125082475,
-      "end": 1746125082507,
+      "start": 1746125696875,
+      "end": 1746125696894,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082507,
-      "end": 1746125082507,
+      "start": 1746125696894,
+      "end": 1746125696894,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696894,
+      "end": 1746125696894,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696894,
+      "end": 1746125696894,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696894,
+      "end": 1746125696894,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"ngvkm\";\nexport const stack = \"C6hAq\";\nexport default {\n\twrapper: wrapper,\n\tstack: stack\n};\n",
-      "start": 1746125082508,
-      "end": 1746125082508,
+      "start": 1746125696895,
+      "end": 1746125696895,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

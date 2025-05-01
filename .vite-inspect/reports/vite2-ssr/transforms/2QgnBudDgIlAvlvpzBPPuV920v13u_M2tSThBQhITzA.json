@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Mantine';\n",
-      "start": 1746125081615,
-      "end": 1746125081636,
+      "start": 1746125696011,
+      "end": 1746125696038,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Mantine';",
-      "start": 1746125081636,
-      "end": 1746125081637,
+      "start": 1746125696038,
+      "end": 1746125696038,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -26,8 +26,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Mantine\";\n",
-      "start": 1746125081637,
-      "end": 1746125081702,
+      "start": 1746125696038,
+      "end": 1746125696084,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,75 +39,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081702,
-      "end": 1746125081702,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081702,
-      "end": 1746125081702,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081702,
-      "end": 1746125081702,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081702,
-      "end": 1746125081702,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081702,
-      "end": 1746125081703,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696084,
+      "end": 1746125696084,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696085,
+      "end": 1746125696085,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696085,
+      "end": 1746125696085,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696085,
+      "end": 1746125696085,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696085,
+      "end": 1746125696085,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/app/providers/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Mantine\";\n",
-      "start": 1746125081703,
-      "end": 1746125081703,
+      "start": 1746125696085,
+      "end": 1746125696085,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

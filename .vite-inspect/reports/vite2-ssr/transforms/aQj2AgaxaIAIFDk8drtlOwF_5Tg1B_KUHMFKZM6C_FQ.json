@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\n\nimport { theme } from './theme';\n\nexport function MantineProvider({ children }: PropsWithChildren) {\n    return (\n        <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>\n    );\n}\n",
-      "start": 1746125081998,
-      "end": 1746125082038,
+      "start": 1746125696266,
+      "end": 1746125696308,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\nimport { theme } from './theme';\nexport function MantineProvider({\n  children\n}: PropsWithChildren) {\n  return <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>;\n}",
-      "start": 1746125082038,
-      "end": 1746125082038,
+      "start": 1746125696308,
+      "end": 1746125696309,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { MantineProvider as Provider } from \"@mantine/core\";\nimport { Notifications } from \"@mantine/notifications\";\nimport { theme } from \"./theme\";\nexport function MantineProvider({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(Provider, { theme, children: [\n    /* @__PURE__ */ jsx(Notifications, {}),\n    children\n  ] });\n}\n",
-      "start": 1746125082038,
-      "end": 1746125082341,
+      "start": 1746125696309,
+      "end": 1746125696475,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696475,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/app/providers/Mantine/provider.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { MantineProvider as Provider } from \"@mantine/core\";\nimport { Notifications } from \"@mantine/notifications\";\nimport { theme } from \"./theme\";\nexport function MantineProvider({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(Provider, { theme, children: [\n    /* @__PURE__ */ jsx(Notifications, {}),\n    children\n  ] });\n}\n",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696475,
+      "end": 1746125696476,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

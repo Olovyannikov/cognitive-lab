@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Link } from 'react-scroll';\nimport { Button, Center, Flex, Group, Menu, Paper, Text } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport { getIconsMap } from '../../../const';\n\nimport s from '../ReportNavigationTemplate.module.css';\n\ninterface DesktopProps {\n    opened: boolean;\n    toggle: VoidFunction;\n    content: string[];\n    color: string;\n    onPageChange({ idx, title }: { idx: number; title: string }): void;\n    activeMenu: string;\n    title?: string;\n}\n\nexport const Desktop = ({ content, activeMenu, toggle, color, title, onPageChange }: DesktopProps) => {\n    const isLarge = useIsLarge();\n    const icons = getIconsMap(isLarge);\n\n    return (\n        <Menu\n            offset={16}\n            keepMounted\n            width='target'\n            classNames={s}\n            data-color={color}\n            position='bottom-end'\n            key={activeMenu}\n            closeOnItemClick\n            middlewares={{\n                flip: false,\n            }}\n        >\n            <Menu.Target>\n                <Button\n                    px={0}\n                    fullWidth\n                    classNames={s}\n                    justify='flex-start'\n                    variant='transparent'\n                    size={isLarge ? 'xl' : 'lg'}\n                    onClick={() => !isLarge && toggle()}\n                >\n                    <Group gap={0} className={s.group} justify={isLarge ? 'flex-start' : 'space-between'}>\n                        <Group\n                            mr={isLarge ? 32 : 20}\n                            gap={isLarge ? 'lg' : 'xs'}\n                            wrap='nowrap'\n                            style={{ overflow: 'hidden' }}\n                        >\n                            <Flex\n                                maw={48}\n                                mah={48}\n                                align='center'\n                                justify='center'\n                                c={`${color}.9`}\n                                bg={`${color}.1`}\n                                p={isLarge ? 'sm' : 10}\n                                className={s.iconWrapper}\n                            >\n                                {icons[title ?? activeMenu]}\n                            </Flex>\n                            <Text ta='start' truncate='end' fz={isLarge ? 24 : 20} fw='bold'>\n                                {title ?? activeMenu}\n                            </Text>\n                        </Group>\n                        <CaretDown\n                            style={{ flex: '0 1 32px' }}\n                            color='var(--mantine-color-dark-9)'\n                            size={isLarge ? 32 : 20}\n                        />\n                    </Group>\n                </Button>\n            </Menu.Target>\n            <Menu.Dropdown visibleFrom='xs' w='auto'>\n                {content?.map((title, idx) => (\n                    <Menu.Item\n                        key={title}\n                        bg={activeMenu === title ? `${color}.0` : 'transparent'}\n                        leftSection={\n                            <Paper p={isLarge ? 10 : 'xxs'} radius='xs' bg={`${color}.1`}>\n                                <Center c={`${color}.9`} className={s.dropdownIcon}>\n                                    {icons[title]}\n                                </Center>\n                            </Paper>\n                        }\n                        onClick={() => onPageChange({ idx, title })}\n                    >\n                        <Link spy to={title} offset={-100} onClick={() => onPageChange({ idx, title })}>\n                            <Text style={{ pointerEvents: 'none' }} span inline fz={14} fw='bold'>\n                                {title}\n                            </Text>\n                        </Link>\n                    </Menu.Item>\n                ))}\n            </Menu.Dropdown>\n        </Menu>\n    );\n};\n",
-      "start": 1746125082191,
-      "end": 1746125082267,
+      "start": 1746125696816,
+      "end": 1746125696839,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Link } from 'react-scroll';\nimport { Button, Center, Flex, Group, Menu, Paper, Text } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useIsLarge } from '@/shared/lib';\nimport { getIconsMap } from '../../../const';\nimport s from '../ReportNavigationTemplate.module.css';\ninterface DesktopProps {\n  opened: boolean;\n  toggle: VoidFunction;\n  content: string[];\n  color: string;\n  onPageChange({\n    idx,\n    title\n  }: {\n    idx: number;\n    title: string;\n  }): void;\n  activeMenu: string;\n  title?: string;\n}\nexport const Desktop = ({\n  content,\n  activeMenu,\n  toggle,\n  color,\n  title,\n  onPageChange\n}: DesktopProps) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return <Menu offset={16} keepMounted width='target' classNames={s} data-color={color} position='bottom-end' key={activeMenu} closeOnItemClick middlewares={{\n    flip: false\n  }}>\n            <Menu.Target>\n                <Button px={0} fullWidth classNames={s} justify='flex-start' variant='transparent' size={isLarge ? 'xl' : 'lg'} onClick={() => !isLarge && toggle()}>\n                    <Group gap={0} className={s.group} justify={isLarge ? 'flex-start' : 'space-between'}>\n                        <Group mr={isLarge ? 32 : 20} gap={isLarge ? 'lg' : 'xs'} wrap='nowrap' style={{\n            overflow: 'hidden'\n          }}>\n                            <Flex maw={48} mah={48} align='center' justify='center' c={`${color}.9`} bg={`${color}.1`} p={isLarge ? 'sm' : 10} className={s.iconWrapper}>\n                                {icons[title ?? activeMenu]}\n                            </Flex>\n                            <Text ta='start' truncate='end' fz={isLarge ? 24 : 20} fw='bold'>\n                                {title ?? activeMenu}\n                            </Text>\n                        </Group>\n                        <CaretDown style={{\n            flex: '0 1 32px'\n          }} color='var(--mantine-color-dark-9)' size={isLarge ? 32 : 20} />\n                    </Group>\n                </Button>\n            </Menu.Target>\n            <Menu.Dropdown visibleFrom='xs' w='auto'>\n                {content?.map((title, idx) => <Menu.Item key={title} bg={activeMenu === title ? `${color}.0` : 'transparent'} leftSection={<Paper p={isLarge ? 10 : 'xxs'} radius='xs' bg={`${color}.1`}>\n                                <Center c={`${color}.9`} className={s.dropdownIcon}>\n                                    {icons[title]}\n                                </Center>\n                            </Paper>} onClick={() => onPageChange({\n        idx,\n        title\n      })}>\n                        <Link spy to={title} offset={-100} onClick={() => onPageChange({\n          idx,\n          title\n        })}>\n                            <Text style={{\n            pointerEvents: 'none'\n          }} span inline fz={14} fw='bold'>\n                                {title}\n                            </Text>\n                        </Link>\n                    </Menu.Item>)}\n            </Menu.Dropdown>\n        </Menu>;\n};",
-      "start": 1746125082267,
-      "end": 1746125082270,
+      "start": 1746125696839,
+      "end": 1746125696841,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -64,8 +64,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Link } from \"react-scroll\";\nimport { Button, Center, Flex, Group, Menu, Paper, Text } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getIconsMap } from \"../../../const\";\nimport s from \"../ReportNavigationTemplate.module.css\";\nexport const Desktop = ({\n  content,\n  activeMenu,\n  toggle,\n  color,\n  title,\n  onPageChange\n}) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return /* @__PURE__ */ jsxs(Menu, { offset: 16, keepMounted: true, width: \"target\", classNames: s, \"data-color\": color, position: \"bottom-end\", closeOnItemClick: true, middlewares: {\n    flip: false\n  }, children: [\n    /* @__PURE__ */ jsx(Menu.Target, { children: /* @__PURE__ */ jsx(Button, { px: 0, fullWidth: true, classNames: s, justify: \"flex-start\", variant: \"transparent\", size: isLarge ? \"xl\" : \"lg\", onClick: () => !isLarge && toggle(), children: /* @__PURE__ */ jsxs(Group, { gap: 0, className: s.group, justify: isLarge ? \"flex-start\" : \"space-between\", children: [\n      /* @__PURE__ */ jsxs(Group, { mr: isLarge ? 32 : 20, gap: isLarge ? \"lg\" : \"xs\", wrap: \"nowrap\", style: {\n        overflow: \"hidden\"\n      }, children: [\n        /* @__PURE__ */ jsx(Flex, { maw: 48, mah: 48, align: \"center\", justify: \"center\", c: `${color}.9`, bg: `${color}.1`, p: isLarge ? \"sm\" : 10, className: s.iconWrapper, children: icons[title ?? activeMenu] }),\n        /* @__PURE__ */ jsx(Text, { ta: \"start\", truncate: \"end\", fz: isLarge ? 24 : 20, fw: \"bold\", children: title ?? activeMenu })\n      ] }),\n      /* @__PURE__ */ jsx(CaretDown, { style: {\n        flex: \"0 1 32px\"\n      }, color: \"var(--mantine-color-dark-9)\", size: isLarge ? 32 : 20 })\n    ] }) }) }),\n    /* @__PURE__ */ jsx(Menu.Dropdown, { visibleFrom: \"xs\", w: \"auto\", children: content?.map((title2, idx) => /* @__PURE__ */ jsx(Menu.Item, { bg: activeMenu === title2 ? `${color}.0` : \"transparent\", leftSection: /* @__PURE__ */ jsx(Paper, { p: isLarge ? 10 : \"xxs\", radius: \"xs\", bg: `${color}.1`, children: /* @__PURE__ */ jsx(Center, { c: `${color}.9`, className: s.dropdownIcon, children: icons[title2] }) }), onClick: () => onPageChange({\n      idx,\n      title: title2\n    }), children: /* @__PURE__ */ jsx(Link, { spy: true, to: title2, offset: -100, onClick: () => onPageChange({\n      idx,\n      title: title2\n    }), children: /* @__PURE__ */ jsx(Text, { style: {\n      pointerEvents: \"none\"\n    }, span: true, inline: true, fz: 14, fw: \"bold\", children: title2 }) }) }, title2)) })\n  ] }, activeMenu);\n};\n",
-      "start": 1746125082270,
-      "end": 1746125082433,
+      "start": 1746125696841,
+      "end": 1746125696959,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -81,75 +81,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082433,
-      "end": 1746125082433,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/desktop/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Link } from \"react-scroll\";\nimport { Button, Center, Flex, Group, Menu, Paper, Text } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getIconsMap } from \"../../../const\";\nimport s from \"../ReportNavigationTemplate.module.css\";\nexport const Desktop = ({\n  content,\n  activeMenu,\n  toggle,\n  color,\n  title,\n  onPageChange\n}) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return /* @__PURE__ */ jsxs(Menu, { offset: 16, keepMounted: true, width: \"target\", classNames: s, \"data-color\": color, position: \"bottom-end\", closeOnItemClick: true, middlewares: {\n    flip: false\n  }, children: [\n    /* @__PURE__ */ jsx(Menu.Target, { children: /* @__PURE__ */ jsx(Button, { px: 0, fullWidth: true, classNames: s, justify: \"flex-start\", variant: \"transparent\", size: isLarge ? \"xl\" : \"lg\", onClick: () => !isLarge && toggle(), children: /* @__PURE__ */ jsxs(Group, { gap: 0, className: s.group, justify: isLarge ? \"flex-start\" : \"space-between\", children: [\n      /* @__PURE__ */ jsxs(Group, { mr: isLarge ? 32 : 20, gap: isLarge ? \"lg\" : \"xs\", wrap: \"nowrap\", style: {\n        overflow: \"hidden\"\n      }, children: [\n        /* @__PURE__ */ jsx(Flex, { maw: 48, mah: 48, align: \"center\", justify: \"center\", c: `${color}.9`, bg: `${color}.1`, p: isLarge ? \"sm\" : 10, className: s.iconWrapper, children: icons[title ?? activeMenu] }),\n        /* @__PURE__ */ jsx(Text, { ta: \"start\", truncate: \"end\", fz: isLarge ? 24 : 20, fw: \"bold\", children: title ?? activeMenu })\n      ] }),\n      /* @__PURE__ */ jsx(CaretDown, { style: {\n        flex: \"0 1 32px\"\n      }, color: \"var(--mantine-color-dark-9)\", size: isLarge ? 32 : 20 })\n    ] }) }) }),\n    /* @__PURE__ */ jsx(Menu.Dropdown, { visibleFrom: \"xs\", w: \"auto\", children: content?.map((title2, idx) => /* @__PURE__ */ jsx(Menu.Item, { bg: activeMenu === title2 ? `${color}.0` : \"transparent\", leftSection: /* @__PURE__ */ jsx(Paper, { p: isLarge ? 10 : \"xxs\", radius: \"xs\", bg: `${color}.1`, children: /* @__PURE__ */ jsx(Center, { c: `${color}.9`, className: s.dropdownIcon, children: icons[title2] }) }), onClick: () => onPageChange({\n      idx,\n      title: title2\n    }), children: /* @__PURE__ */ jsx(Link, { spy: true, to: title2, offset: -100, onClick: () => onPageChange({\n      idx,\n      title: title2\n    }), children: /* @__PURE__ */ jsx(Text, { style: {\n      pointerEvents: \"none\"\n    }, span: true, inline: true, fz: 14, fw: \"bold\", children: title2 }) }) }, title2)) })\n  ] }, activeMenu);\n};\n",
-      "start": 1746125082433,
-      "end": 1746125082434,
+      "start": 1746125696960,
+      "end": 1746125696960,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

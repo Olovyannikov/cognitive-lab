@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\n\nimport { atom } from '@/shared/factories';\n\nimport { sendIssueMutation } from '../api';\nimport type { HelpFormProps } from './types';\n\nexport const HelpFormModel = atom(() => {\n    const HelpFormGate = createGate();\n    const $isFormSent = createStore(false);\n    const sentFormChanged = createEvent();\n    const submitHelpForm = createEvent<HelpFormProps>();\n    const sendHelpFormFx = createEffect(() => {\n        notifications.show({\n            title: 'Успешно!',\n            message: 'Ваш вопрос отправлен',\n        });\n    });\n\n    sample({\n        clock: sentFormChanged,\n        source: $isFormSent,\n        fn: (isFormSent) => !isFormSent,\n        target: $isFormSent,\n    });\n\n    sample({\n        clock: submitHelpForm,\n        target: [sendIssueMutation.start, sendHelpFormFx],\n    });\n\n    sample({\n        clock: sendIssueMutation.finished.success,\n        fn: () => true,\n        target: $isFormSent,\n    });\n\n    sample({\n        clock: HelpFormGate.close,\n        fn: () => false,\n        target: $isFormSent,\n    });\n\n    return {\n        HelpFormGate,\n        sendHelpFormFx,\n        $isFormSent,\n        sentFormChanged,\n        submitHelpForm,\n    };\n});\n",
-      "start": 1746125081901,
-      "end": 1746125081953,
+      "start": 1746125696354,
+      "end": 1746125696417,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { atom } from '@/shared/factories';\nimport { sendIssueMutation } from '../api';\nimport type { HelpFormProps } from './types';\nexport const HelpFormModel = atom(() => {\n  const HelpFormGate = createGate({\n    and: [],\n    or: {\n      name: \"HelpFormGate\",\n      sid: \"qx6n9m\"\n    }\n  });\n  const $isFormSent = createStore(false, {\n    name: \"$isFormSent\",\n    sid: \"-xhd2bg\"\n  });\n  const sentFormChanged = createEvent({\n    name: \"sentFormChanged\",\n    sid: \"txb7m5\"\n  });\n  const submitHelpForm = createEvent<HelpFormProps>({\n    name: \"submitHelpForm\",\n    sid: \"-yplmlq\"\n  });\n  const sendHelpFormFx = createEffect(() => {\n    notifications.show({\n      title: 'Успешно!',\n      message: 'Ваш вопрос отправлен'\n    });\n  }, {\n    name: \"sendHelpFormFx\",\n    sid: \"-z4im3x\"\n  });\n  sample({\n    and: [{\n      clock: sentFormChanged,\n      source: $isFormSent,\n      fn: isFormSent => !isFormSent,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-5hk2xj\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitHelpForm,\n      target: [sendIssueMutation.start, sendHelpFormFx]\n    }],\n    or: {\n      sid: \"-5dpis0\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendIssueMutation.finished.success,\n      fn: () => true,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4zevcm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: HelpFormGate.close,\n      fn: () => false,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4kkfbv\"\n    }\n  });\n  return {\n    HelpFormGate,\n    sendHelpFormFx,\n    $isFormSent,\n    sentFormChanged,\n    submitHelpForm\n  };\n});",
-      "start": 1746125081953,
-      "end": 1746125081955,
+      "start": 1746125696417,
+      "end": 1746125696419,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -60,8 +60,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { sendIssueMutation } from \"../api\";\nexport const HelpFormModel = atom(() => {\n  const HelpFormGate = createGate({\n    and: [],\n    or: {\n      name: \"HelpFormGate\",\n      sid: \"qx6n9m\"\n    }\n  });\n  const $isFormSent = createStore(false, {\n    name: \"$isFormSent\",\n    sid: \"-xhd2bg\"\n  });\n  const sentFormChanged = createEvent({\n    name: \"sentFormChanged\",\n    sid: \"txb7m5\"\n  });\n  const submitHelpForm = createEvent({\n    name: \"submitHelpForm\",\n    sid: \"-yplmlq\"\n  });\n  const sendHelpFormFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Ваш вопрос отправлен\"\n    });\n  }, {\n    name: \"sendHelpFormFx\",\n    sid: \"-z4im3x\"\n  });\n  sample({\n    and: [{\n      clock: sentFormChanged,\n      source: $isFormSent,\n      fn: (isFormSent) => !isFormSent,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-5hk2xj\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitHelpForm,\n      target: [sendIssueMutation.start, sendHelpFormFx]\n    }],\n    or: {\n      sid: \"-5dpis0\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendIssueMutation.finished.success,\n      fn: () => true,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4zevcm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: HelpFormGate.close,\n      fn: () => false,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4kkfbv\"\n    }\n  });\n  return {\n    HelpFormGate,\n    sendHelpFormFx,\n    $isFormSent,\n    sentFormChanged,\n    submitHelpForm\n  };\n});\n",
-      "start": 1746125081955,
-      "end": 1746125082199,
+      "start": 1746125696419,
+      "end": 1746125696685,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -75,75 +75,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/model/index.ts [vike:pluginModuleBanner] */\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { sendIssueMutation } from \"../api\";\nexport const HelpFormModel = atom(() => {\n  const HelpFormGate = createGate({\n    and: [],\n    or: {\n      name: \"HelpFormGate\",\n      sid: \"qx6n9m\"\n    }\n  });\n  const $isFormSent = createStore(false, {\n    name: \"$isFormSent\",\n    sid: \"-xhd2bg\"\n  });\n  const sentFormChanged = createEvent({\n    name: \"sentFormChanged\",\n    sid: \"txb7m5\"\n  });\n  const submitHelpForm = createEvent({\n    name: \"submitHelpForm\",\n    sid: \"-yplmlq\"\n  });\n  const sendHelpFormFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Ваш вопрос отправлен\"\n    });\n  }, {\n    name: \"sendHelpFormFx\",\n    sid: \"-z4im3x\"\n  });\n  sample({\n    and: [{\n      clock: sentFormChanged,\n      source: $isFormSent,\n      fn: (isFormSent) => !isFormSent,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-5hk2xj\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitHelpForm,\n      target: [sendIssueMutation.start, sendHelpFormFx]\n    }],\n    or: {\n      sid: \"-5dpis0\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendIssueMutation.finished.success,\n      fn: () => true,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4zevcm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: HelpFormGate.close,\n      fn: () => false,\n      target: $isFormSent\n    }],\n    or: {\n      sid: \"-4kkfbv\"\n    }\n  });\n  return {\n    HelpFormGate,\n    sendHelpFormFx,\n    $isFormSent,\n    sentFormChanged,\n    submitHelpForm\n  };\n});\n",
-      "start": 1746125082199,
-      "end": 1746125082199,
+      "start": 1746125696685,
+      "end": 1746125696685,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

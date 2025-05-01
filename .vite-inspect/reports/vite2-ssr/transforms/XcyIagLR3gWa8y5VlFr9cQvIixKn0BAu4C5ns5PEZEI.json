@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Stack, Text } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\n\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\n\nimport { HelpForm, HelpFormModel } from '@/widgets/HelpForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nexport const HelpPage = () => {\n    useGate(HelpFormModel.HelpFormGate);\n    const [isFormSent, onSendNewFormHandler] = useUnit([HelpFormModel.$isFormSent, HelpFormModel.sentFormChanged]);\n\n    return (\n        <Box component='section'>\n            <InnerLayout\n                title={isFormSent ? 'Спасибо за ваше обращение!' : 'Служба поддержки'}\n                text={\n                    isFormSent ? (\n                        'Наша команда рассмотрит ваш запрос и ответит вам в кратчайшие сроки.'\n                    ) : (\n                        <>\n                            Чтобы связаться с нами, заполните форму. Мы стараемся отвечать в течение часа, однако в\n                            некоторых случаях это может занять больше времени. Самый быстрый способ получить ответ —\n                            через{' '}\n                            <Text\n                                component='a'\n                                c='blue.7'\n                                td='underline'\n                                target='_blank'\n                                href='https://t.me/cognitivelab_ru'\n                            >\n                                Telegram\n                            </Text>{' '}\n                            или{' '}\n                            <Text\n                                td='underline'\n                                component='a'\n                                c='blue.7'\n                                target='_blank'\n                                href='https://api.whatsapp.com/send/?phone=79043330809'\n                            >\n                                WhatsApp\n                            </Text>\n                            .\n                        </>\n                    )\n                }\n                image={isFormSent ? '/payment/success' : '/helpdesk'}\n            >\n                {isFormSent ? (\n                    <Stack>\n                        <NavigateToMainPage />\n                        <Button bg='white' c='black' onClick={onSendNewFormHandler}>\n                            Написать в поддержку\n                        </Button>\n                    </Stack>\n                ) : (\n                    <HelpForm />\n                )}\n            </InnerLayout>\n        </Box>\n    );\n};\n",
-      "start": 1746125081616,
-      "end": 1746125081641,
+      "start": 1746125696015,
+      "end": 1746125696052,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Button, Stack, Text } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\nimport { HelpForm, HelpFormModel } from '@/widgets/HelpForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nexport const HelpPage = () => {\n  useGate(HelpFormModel.HelpFormGate);\n  const [isFormSent, onSendNewFormHandler] = useUnit([HelpFormModel.$isFormSent, HelpFormModel.sentFormChanged]);\n  return <Box component='section'>\n            <InnerLayout title={isFormSent ? 'Спасибо за ваше обращение!' : 'Служба поддержки'} text={isFormSent ? 'Наша команда рассмотрит ваш запрос и ответит вам в кратчайшие сроки.' : <>\n                            Чтобы связаться с нами, заполните форму. Мы стараемся отвечать в течение часа, однако в\n                            некоторых случаях это может занять больше времени. Самый быстрый способ получить ответ —\n                            через{' '}\n                            <Text component='a' c='blue.7' td='underline' target='_blank' href='https://t.me/cognitivelab_ru'>\n                                Telegram\n                            </Text>{' '}\n                            или{' '}\n                            <Text td='underline' component='a' c='blue.7' target='_blank' href='https://api.whatsapp.com/send/?phone=79043330809'>\n                                WhatsApp\n                            </Text>\n                            .\n                        </>} image={isFormSent ? '/payment/success' : '/helpdesk'}>\n                {isFormSent ? <Stack>\n                        <NavigateToMainPage />\n                        <Button bg='white' c='black' onClick={onSendNewFormHandler}>\n                            Написать в поддержку\n                        </Button>\n                    </Stack> : <HelpForm />}\n            </InnerLayout>\n        </Box>;\n};",
-      "start": 1746125081641,
-      "end": 1746125081643,
+      "start": 1746125696052,
+      "end": 1746125696054,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Stack, Text } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { HelpForm, HelpFormModel } from \"@/widgets/HelpForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nexport const HelpPage = () => {\n  useGate(HelpFormModel.HelpFormGate);\n  const [isFormSent, onSendNewFormHandler] = useUnit([HelpFormModel.$isFormSent, HelpFormModel.sentFormChanged]);\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(InnerLayout, { title: isFormSent ? \"Спасибо за ваше обращение!\" : \"Служба поддержки\", text: isFormSent ? \"Наша команда рассмотрит ваш запрос и ответит вам в кратчайшие сроки.\" : /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Чтобы связаться с нами, заполните форму. Мы стараемся отвечать в течение часа, однако в некоторых случаях это может занять больше времени. Самый быстрый способ получить ответ — через\",\n    \" \",\n    /* @__PURE__ */ jsx(Text, { component: \"a\", c: \"blue.7\", td: \"underline\", target: \"_blank\", href: \"https://t.me/cognitivelab_ru\", children: \"Telegram\" }),\n    \" \",\n    \"или\",\n    \" \",\n    /* @__PURE__ */ jsx(Text, { td: \"underline\", component: \"a\", c: \"blue.7\", target: \"_blank\", href: \"https://api.whatsapp.com/send/?phone=79043330809\", children: \"WhatsApp\" }),\n    \".\"\n  ] }), image: isFormSent ? \"/payment/success\" : \"/helpdesk\", children: isFormSent ? /* @__PURE__ */ jsxs(Stack, { children: [\n    /* @__PURE__ */ jsx(NavigateToMainPage, {}),\n    /* @__PURE__ */ jsx(Button, { bg: \"white\", c: \"black\", onClick: onSendNewFormHandler, children: \"Написать в поддержку\" })\n  ] }) : /* @__PURE__ */ jsx(HelpForm, {}) }) });\n};\n",
-      "start": 1746125081643,
-      "end": 1746125081675,
+      "start": 1746125696054,
+      "end": 1746125696114,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,75 +60,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081675,
-      "end": 1746125081675,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081675,
-      "end": 1746125081676,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081676,
-      "end": 1746125081676,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081676,
-      "end": 1746125081676,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/HelpPage/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Stack, Text } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { HelpForm, HelpFormModel } from \"@/widgets/HelpForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nexport const HelpPage = () => {\n  useGate(HelpFormModel.HelpFormGate);\n  const [isFormSent, onSendNewFormHandler] = useUnit([HelpFormModel.$isFormSent, HelpFormModel.sentFormChanged]);\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(InnerLayout, { title: isFormSent ? \"Спасибо за ваше обращение!\" : \"Служба поддержки\", text: isFormSent ? \"Наша команда рассмотрит ваш запрос и ответит вам в кратчайшие сроки.\" : /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Чтобы связаться с нами, заполните форму. Мы стараемся отвечать в течение часа, однако в некоторых случаях это может занять больше времени. Самый быстрый способ получить ответ — через\",\n    \" \",\n    /* @__PURE__ */ jsx(Text, { component: \"a\", c: \"blue.7\", td: \"underline\", target: \"_blank\", href: \"https://t.me/cognitivelab_ru\", children: \"Telegram\" }),\n    \" \",\n    \"или\",\n    \" \",\n    /* @__PURE__ */ jsx(Text, { td: \"underline\", component: \"a\", c: \"blue.7\", target: \"_blank\", href: \"https://api.whatsapp.com/send/?phone=79043330809\", children: \"WhatsApp\" }),\n    \".\"\n  ] }), image: isFormSent ? \"/payment/success\" : \"/helpdesk\", children: isFormSent ? /* @__PURE__ */ jsxs(Stack, { children: [\n    /* @__PURE__ */ jsx(NavigateToMainPage, {}),\n    /* @__PURE__ */ jsx(Button, { bg: \"white\", c: \"black\", onClick: onSendNewFormHandler, children: \"Написать в поддержку\" })\n  ] }) : /* @__PURE__ */ jsx(HelpForm, {}) }) });\n};\n",
-      "start": 1746125081676,
-      "end": 1746125081676,
+      "start": 1746125696115,
+      "end": 1746125696115,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

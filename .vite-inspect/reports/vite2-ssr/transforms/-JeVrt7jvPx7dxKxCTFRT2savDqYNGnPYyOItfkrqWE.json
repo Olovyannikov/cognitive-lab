@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\n\nimport { MantineProvider } from '@/app/providers';\n\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\n\nimport '@/app/assets/styles/index.css';\n\nexport default function Wrapper({ children }: PropsWithChildren) {\n    return (\n        <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>\n    );\n}\n",
-      "start": 1746125081534,
-      "end": 1746125081555,
+      "start": 1746125695906,
+      "end": 1746125695922,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\nimport { MantineProvider } from '@/app/providers';\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\nimport '@/app/assets/styles/index.css';\nexport default function Wrapper({\n  children\n}: PropsWithChildren) {\n  return <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>;\n}",
-      "start": 1746125081555,
-      "end": 1746125081556,
+      "start": 1746125695922,
+      "end": 1746125695923,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -36,8 +36,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { NavigationProgress } from \"@mantine/nprogress\";\nimport { MantineProvider } from \"@/app/providers\";\nimport { EffectorProvider, ScopeProvider } from \"@/shared/lib\";\nimport \"@/app/assets/styles/index.css\";\nexport default function Wrapper({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(MantineProvider, { children: [\n    /* @__PURE__ */ jsx(NavigationProgress, { \"aria-label\": \"Прогресс навигации\", color: \"violet\" }),\n    /* @__PURE__ */ jsx(ScopeProvider, { children: /* @__PURE__ */ jsx(EffectorProvider, { children }) })\n  ] });\n}\n",
-      "start": 1746125081556,
-      "end": 1746125081608,
+      "start": 1746125695923,
+      "end": 1746125696003,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -51,75 +51,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696003,
+      "end": 1746125696003,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696003,
+      "end": 1746125696003,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/+Wrapper.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { NavigationProgress } from \"@mantine/nprogress\";\nimport { MantineProvider } from \"@/app/providers\";\nimport { EffectorProvider, ScopeProvider } from \"@/shared/lib\";\nimport \"@/app/assets/styles/index.css\";\nexport default function Wrapper({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(MantineProvider, { children: [\n    /* @__PURE__ */ jsx(NavigationProgress, { \"aria-label\": \"Прогресс навигации\", color: \"violet\" }),\n    /* @__PURE__ */ jsx(ScopeProvider, { children: /* @__PURE__ */ jsx(EffectorProvider, { children }) })\n  ] });\n}\n",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

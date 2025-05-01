@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, sample } from 'effector';\nimport { createAction } from 'effector-action';\n\nimport { atom } from '@/shared/factories';\n\nimport { RootModel } from '@/entities/Root';\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\n\nexport const TakeTestAgainModel = atom(() => {\n    const takeTestAgainClicked = createEvent();\n\n    createAction({\n        clock: takeTestAgainMutation.finished.success,\n        target: {\n            surveyId: UserModel.$surveyId,\n            form: TestModel.$scaleForm,\n            page: TestModel.$currentPage,\n            progress: TestModel.$currentProgress,\n            redirect: UserModel.redirectToTestPageFx,\n            takeTestAgain: takeTestAgainMutation.start,\n            closeAllModals: RootModel.allMenusClosed,\n        },\n        fn: (target) => {\n            target.surveyId.reinit();\n            target.page.reinit();\n            target.progress.reinit();\n            target.form.reinit();\n            target.closeAllModals(false);\n        },\n    });\n\n    sample({\n        clock: takeTestAgainClicked,\n        fn: clearLocalStorageTestUnits,\n        target: takeTestAgainMutation.start,\n    });\n\n    sample({\n        clock: takeTestAgainMutation.finished.success,\n        target: TestModel.formReset,\n    });\n\n    return {\n        takeTestAgainClicked,\n    };\n});\n",
-      "start": 1746125082479,
-      "end": 1746125082512,
+      "start": 1746125696875,
+      "end": 1746125696889,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { atom } from '@/shared/factories';\nimport { RootModel } from '@/entities/Root';\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\nexport const TakeTestAgainModel = atom(() => {\n  const takeTestAgainClicked = createEvent({\n    name: \"takeTestAgainClicked\",\n    sid: \"i1qe25\"\n  });\n  createAction({\n    clock: takeTestAgainMutation.finished.success,\n    target: {\n      surveyId: UserModel.$surveyId,\n      form: TestModel.$scaleForm,\n      page: TestModel.$currentPage,\n      progress: TestModel.$currentProgress,\n      redirect: UserModel.redirectToTestPageFx,\n      takeTestAgain: takeTestAgainMutation.start,\n      closeAllModals: RootModel.allMenusClosed\n    },\n    fn: target => {\n      target.surveyId.reinit();\n      target.page.reinit();\n      target.progress.reinit();\n      target.form.reinit();\n      target.closeAllModals(false);\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainClicked,\n      fn: clearLocalStorageTestUnits,\n      target: takeTestAgainMutation.start\n    }],\n    or: {\n      sid: \"-7716mf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainMutation.finished.success,\n      target: TestModel.formReset\n    }],\n    or: {\n      sid: \"-73qf29\"\n    }\n  });\n  return {\n    takeTestAgainClicked\n  };\n});",
-      "start": 1746125082512,
-      "end": 1746125082513,
+      "start": 1746125696889,
+      "end": 1746125696890,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -65,8 +65,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { atom } from \"@/shared/factories\";\nimport { RootModel } from \"@/entities/Root\";\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const TakeTestAgainModel = atom(() => {\n  const takeTestAgainClicked = createEvent({\n    name: \"takeTestAgainClicked\",\n    sid: \"i1qe25\"\n  });\n  createAction({\n    clock: takeTestAgainMutation.finished.success,\n    target: {\n      surveyId: UserModel.$surveyId,\n      form: TestModel.$scaleForm,\n      page: TestModel.$currentPage,\n      progress: TestModel.$currentProgress,\n      redirect: UserModel.redirectToTestPageFx,\n      takeTestAgain: takeTestAgainMutation.start,\n      closeAllModals: RootModel.allMenusClosed\n    },\n    fn: (target) => {\n      target.surveyId.reinit();\n      target.page.reinit();\n      target.progress.reinit();\n      target.form.reinit();\n      target.closeAllModals(false);\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainClicked,\n      fn: clearLocalStorageTestUnits,\n      target: takeTestAgainMutation.start\n    }],\n    or: {\n      sid: \"-7716mf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainMutation.finished.success,\n      target: TestModel.formReset\n    }],\n    or: {\n      sid: \"-73qf29\"\n    }\n  });\n  return {\n    takeTestAgainClicked\n  };\n});\n",
-      "start": 1746125082513,
-      "end": 1746125082580,
+      "start": 1746125696890,
+      "end": 1746125696981,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -80,75 +80,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696981,
+      "end": 1746125696981,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696982,
+      "end": 1746125696982,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/TakeTestAgain/model/index.ts [vike:pluginModuleBanner] */\nimport { createEvent, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { atom } from \"@/shared/factories\";\nimport { RootModel } from \"@/entities/Root\";\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const TakeTestAgainModel = atom(() => {\n  const takeTestAgainClicked = createEvent({\n    name: \"takeTestAgainClicked\",\n    sid: \"i1qe25\"\n  });\n  createAction({\n    clock: takeTestAgainMutation.finished.success,\n    target: {\n      surveyId: UserModel.$surveyId,\n      form: TestModel.$scaleForm,\n      page: TestModel.$currentPage,\n      progress: TestModel.$currentProgress,\n      redirect: UserModel.redirectToTestPageFx,\n      takeTestAgain: takeTestAgainMutation.start,\n      closeAllModals: RootModel.allMenusClosed\n    },\n    fn: (target) => {\n      target.surveyId.reinit();\n      target.page.reinit();\n      target.progress.reinit();\n      target.form.reinit();\n      target.closeAllModals(false);\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainClicked,\n      fn: clearLocalStorageTestUnits,\n      target: takeTestAgainMutation.start\n    }],\n    or: {\n      sid: \"-7716mf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: takeTestAgainMutation.finished.success,\n      target: TestModel.formReset\n    }],\n    or: {\n      sid: \"-73qf29\"\n    }\n  });\n  return {\n    takeTestAgainClicked\n  };\n});\n",
-      "start": 1746125082580,
-      "end": 1746125082580,
+      "start": 1746125696982,
+      "end": 1746125696982,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

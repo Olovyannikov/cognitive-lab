@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\n\nexport default function Page() {\n    return <FreeReportPage />;\n}\n",
-      "start": 1746125081536,
-      "end": 1746125081567,
+      "start": 1746125695909,
+      "end": 1746125695944,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\nexport default function Page() {\n  return <FreeReportPage />;\n}",
-      "start": 1746125081568,
-      "end": 1746125081569,
+      "start": 1746125695944,
+      "end": 1746125695946,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1746125081569,
-      "end": 1746125081611,
+      "start": 1746125695946,
+      "end": 1746125696025,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696025,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696025,
+      "end": 1746125696026,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696026,
+      "end": 1746125696026,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696026,
+      "end": 1746125696026,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/free-report/@reportId/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696026,
+      "end": 1746125696026,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

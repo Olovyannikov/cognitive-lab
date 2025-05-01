@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper {\n  position: relative;\n\n  @mixin larger-than 1200px {\n    display: flex;\n  }\n\n  @mixin larger-than 1400px {\n    display: flex;\n    gap: 240px;\n  }\n}\n\n.items {\n  position: relative;\n  display: flex;\n  align-items: flex-start;\n}\n\n.container {\n  margin: 0 auto;\n}\n\n.item:not(:first-child) {\n  margin-top: 90px;\n}\n\n.item:not(:last-child) {\n  margin-bottom: 10rem;\n\n  @mixin larger-than 1200px {\n    margin-bottom: 20rem;\n  }\n}\n\n.item:last-child {\n  margin-bottom: 60px;\n}\n\n.mobile {\n  transition: 0.3s ease-in-out;\n\n  img {\n    margin: 0 auto;\n    width: 280px;\n    height: 280px;\n  }\n\n  @mixin larger-than 1200px {\n    display: none;\n  }\n}\n\n.content {\n  position: sticky;\n  top: 15%;\n  display: none;\n  overflow: hidden;\n  width: fit-content;\n  height: fit-content;\n\n  @mixin larger-than 1200px {\n    display: flex;\n    flex: 1;\n    justify-self: flex-end;\n    width: max-content;\n\n    > * {\n      flex: 1;\n      justify-content: flex-end;\n    }\n  }\n\n  @mixin larger-than 1400px {\n    flex: 0 1 auto;\n    justify-self: start;\n    width: fit-content;\n  }\n}\n",
-      "start": 1746125082405,
-      "end": 1746125082415,
+      "start": 1746125696589,
+      "end": 1746125696631,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082415,
-      "end": 1746125082415,
+      "start": 1746125696631,
+      "end": 1746125696631,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/StickyScrollReveal/StickyScrollReveal.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"r-9-V\";\nexport const items = \"XWezW\";\nexport const container = \"sgmXU\";\nexport const item = \"KVgjk\";\nexport const mobile = \"zHZCm\";\nexport const content = \"Bu689\";\nexport default {\n\twrapper: wrapper,\n\titems: items,\n\tcontainer: container,\n\titem: item,\n\tmobile: mobile,\n\tcontent: content\n};\n",
-      "start": 1746125082417,
-      "end": 1746125082417,
+      "start": 1746125696632,
+      "end": 1746125696632,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

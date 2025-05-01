@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".box {\n  display: grid;\n  grid-template-areas:\n    \"image\"\n    \"title\"\n    \"text\"\n    \"action\";\n\n  @mixin larger-than 998px {\n    grid-auto-rows: 0fr;\n    grid-template-areas:\n      \"title image\"\n      \"text  image\"\n      \"action image\";\n    grid-template-rows: 0fr;\n    margin: 120px auto 0;\n    max-width: 883px;\n  }\n}\n\n.image {\n  grid-area: image;\n  margin-bottom: var(--mantine-spacing-sm);\n\n  @mixin larger-than 998px {\n    margin-bottom: var(--mantine-spacing-md);\n    margin-left: 60px;\n  }\n}\n\n.title {\n  grid-area: title;\n  margin-bottom: var(--mantine-spacing-sm);\n  text-align: center;\n\n  @mixin larger-than 998px {\n    font-size: 40px;\n    text-align: left;\n  }\n}\n\n.text {\n  grid-area: text;\n  margin-bottom: var(--mantine-spacing-md);\n}\n\n.action {\n  grid-area: action;\n\n  &:empty {\n    display: none;\n  }\n}\n",
-      "start": 1746125082414,
-      "end": 1746125082428,
+      "start": 1746125696587,
+      "end": 1746125696628,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082428,
-      "end": 1746125082428,
+      "start": 1746125696628,
+      "end": 1746125696628,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082429,
-      "end": 1746125082429,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082429,
-      "end": 1746125082429,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082429,
-      "end": 1746125082429,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696629,
+      "end": 1746125696629,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormSuccessScreen/FormSuccessScreen.module.css [vike:pluginModuleBanner] */\nexport const box = \"xYKCJ\";\nexport const image = \"bJV9c\";\nexport const title = \"lKo1A\";\nexport const text = \"DX9b0\";\nexport const action = \"Udkke\";\nexport default {\n\tbox: box,\n\timage: image,\n\ttitle: title,\n\ttext: text,\n\taction: action\n};\n",
-      "start": 1746125082430,
-      "end": 1746125082430,
+      "start": 1746125696630,
+      "end": 1746125696630,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent } from 'effector';\n\nconst appStarted = createEvent();\n\nexport const appService = {\n    appStarted,\n};\n",
-      "start": 1746125081669,
-      "end": 1746125081712,
+      "start": 1746125696099,
+      "end": 1746125696166,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent } from 'effector';\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};",
-      "start": 1746125081712,
-      "end": 1746125081713,
+      "start": 1746125696166,
+      "end": 1746125696167,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
-      "start": 1746125081713,
-      "end": 1746125081788,
+      "start": 1746125696167,
+      "end": 1746125696224,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/services/app/index.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
-      "start": 1746125081788,
-      "end": 1746125081788,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

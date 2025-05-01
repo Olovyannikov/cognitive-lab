@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getFAQQuery } from '@/entities/FAQ';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh,\n});\n",
-      "start": 1746125081536,
-      "end": 1746125081566,
+      "start": 1746125695908,
+      "end": 1746125695932,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});",
-      "start": 1746125081566,
-      "end": 1746125081567,
+      "start": 1746125695932,
+      "end": 1746125695933,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -41,8 +41,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});\n",
-      "start": 1746125081567,
-      "end": 1746125081608,
+      "start": 1746125695934,
+      "end": 1746125696015,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -56,75 +56,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/faq/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});\n",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

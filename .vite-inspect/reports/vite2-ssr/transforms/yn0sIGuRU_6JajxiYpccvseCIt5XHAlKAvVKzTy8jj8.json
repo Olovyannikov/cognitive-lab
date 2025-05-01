@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Flex, Paper, Select, Text, TextInput } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { toInputUppercase } from '@/shared/lib';\nimport { FormInput, FormWrapper } from '@/shared/ui';\n\nimport { getPriceWithPromocodeQuery, ReportModel } from '@/entities/Report';\n\nimport {\n    $promocodeErrorMessage,\n    $showSuccessPromoMessage,\n    applyPromocodeClicked,\n    BuyReportGate,\n    openTransactionPaywallFx,\n} from './model';\nimport { useReportBuyFormViewModel } from './view-model';\n\nimport s from './BuyReportForm.module.css';\n\nexport const BuyReportForm = () => {\n    useGate(BuyReportGate);\n    const { pending } = useUnit(getPriceWithPromocodeQuery);\n    const {\n        urlParsed: {\n            search: { reportId },\n        },\n    } = usePageContext();\n    const { onSubmit, promocodeProps, emailProps, form, selectProps } = useReportBuyFormViewModel();\n\n    const { applyPromoHandler, promocodeError, showSuccessMessage, isLoading, currentUserMbti } = useUnit({\n        applyPromoHandler: applyPromocodeClicked,\n        promocodeError: $promocodeErrorMessage,\n        showSuccessMessage: $showSuccessPromoMessage,\n        isLoading: openTransactionPaywallFx.pending,\n        currentUserMbti: ReportModel.$userMbtiTypes.map((el) => el.find((report) => report[reportId]) ?? null),\n    });\n\n    return (\n        <FormWrapper onSubmit={onSubmit}>\n            <Select {...selectProps} value={reportId ? currentUserMbti?.[reportId] : selectProps.value} />\n            <FormInput {...emailProps} />\n            <Paper bg='gray.0' radius='xs' p='md' px='sm'>\n                <Text className={s.promocodeLabel}>У меня есть промокод</Text>\n                <Flex className={s.promocodeWrapper}>\n                    <TextInput\n                        {...promocodeProps}\n                        disabled={pending || isLoading}\n                        error={promocodeError}\n                        onInput={toInputUppercase}\n                        data-success={showSuccessMessage}\n                        description={showSuccessMessage ? 'Промокод применен' : ''}\n                        inputWrapperOrder={['label', 'input', 'description', 'error']}\n                        size='md'\n                        radius='sm'\n                    />\n                    <Button\n                        fullWidth\n                        size='sm'\n                        mih={42}\n                        variant='default'\n                        loading={pending || isLoading}\n                        onClick={() => !pending && applyPromoHandler(form.values.promo_code.toUpperCase())}\n                    >\n                        Применить\n                    </Button>\n                </Flex>\n            </Paper>\n            <Button loading={pending || isLoading} size='md' type='submit'>\n                Перейти к оплате\n            </Button>\n            <Text fz={12} ta='center' mb={12}>\n                Нажимая на кнопку, вы подтверждаете свое согласие на сбор, хранение и использование ваших персональных\n                данных согласно{' '}\n                <Text\n                    fz={12}\n                    c='blue.7'\n                    component='a'\n                    href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'\n                >\n                    Политике конфиденциальности\n                </Text>{' '}\n                и принимаете условия{' '}\n                <Text\n                    fz={12}\n                    c='blue.7'\n                    component='a'\n                    href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf'\n                >\n                    Публичной оферты\n                </Text>\n            </Text>\n        </FormWrapper>\n    );\n};\n",
-      "start": 1746125081798,
-      "end": 1746125081843,
+      "start": 1746125696240,
+      "end": 1746125696291,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, Flex, Paper, Select, Text, TextInput } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { toInputUppercase } from '@/shared/lib';\nimport { FormInput, FormWrapper } from '@/shared/ui';\nimport { getPriceWithPromocodeQuery, ReportModel } from '@/entities/Report';\nimport { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked, BuyReportGate, openTransactionPaywallFx } from './model';\nimport { useReportBuyFormViewModel } from './view-model';\nimport s from './BuyReportForm.module.css';\nexport const BuyReportForm = () => {\n  useGate(BuyReportGate);\n  const {\n    pending\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        reportId\n      }\n    }\n  } = usePageContext();\n  const {\n    onSubmit,\n    promocodeProps,\n    emailProps,\n    form,\n    selectProps\n  } = useReportBuyFormViewModel();\n  const {\n    applyPromoHandler,\n    promocodeError,\n    showSuccessMessage,\n    isLoading,\n    currentUserMbti\n  } = useUnit({\n    applyPromoHandler: applyPromocodeClicked,\n    promocodeError: $promocodeErrorMessage,\n    showSuccessMessage: $showSuccessPromoMessage,\n    isLoading: openTransactionPaywallFx.pending,\n    currentUserMbti: ReportModel.$userMbtiTypes.map(el => el.find(report => report[reportId]) ?? null)\n  });\n  return <FormWrapper onSubmit={onSubmit}>\n            <Select {...selectProps} value={reportId ? currentUserMbti?.[reportId] : selectProps.value} />\n            <FormInput {...emailProps} />\n            <Paper bg='gray.0' radius='xs' p='md' px='sm'>\n                <Text className={s.promocodeLabel}>У меня есть промокод</Text>\n                <Flex className={s.promocodeWrapper}>\n                    <TextInput {...promocodeProps} disabled={pending || isLoading} error={promocodeError} onInput={toInputUppercase} data-success={showSuccessMessage} description={showSuccessMessage ? 'Промокод применен' : ''} inputWrapperOrder={['label', 'input', 'description', 'error']} size='md' radius='sm' />\n                    <Button fullWidth size='sm' mih={42} variant='default' loading={pending || isLoading} onClick={() => !pending && applyPromoHandler(form.values.promo_code.toUpperCase())}>\n                        Применить\n                    </Button>\n                </Flex>\n            </Paper>\n            <Button loading={pending || isLoading} size='md' type='submit'>\n                Перейти к оплате\n            </Button>\n            <Text fz={12} ta='center' mb={12}>\n                Нажимая на кнопку, вы подтверждаете свое согласие на сбор, хранение и использование ваших персональных\n                данных согласно{' '}\n                <Text fz={12} c='blue.7' component='a' href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'>\n                    Политике конфиденциальности\n                </Text>{' '}\n                и принимаете условия{' '}\n                <Text fz={12} c='blue.7' component='a' href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf'>\n                    Публичной оферты\n                </Text>\n            </Text>\n        </FormWrapper>;\n};",
-      "start": 1746125081843,
-      "end": 1746125081845,
+      "start": 1746125696291,
+      "end": 1746125696293,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -76,8 +76,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Flex, Paper, Select, Text, TextInput } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { toInputUppercase } from \"@/shared/lib\";\nimport { FormInput, FormWrapper } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, ReportModel } from \"@/entities/Report\";\nimport { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked, BuyReportGate, openTransactionPaywallFx } from \"./model\";\nimport { useReportBuyFormViewModel } from \"./view-model\";\nimport s from \"./BuyReportForm.module.css\";\nexport const BuyReportForm = () => {\n  useGate(BuyReportGate);\n  const {\n    pending\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        reportId\n      }\n    }\n  } = usePageContext();\n  const {\n    onSubmit,\n    promocodeProps,\n    emailProps,\n    form,\n    selectProps\n  } = useReportBuyFormViewModel();\n  const {\n    applyPromoHandler,\n    promocodeError,\n    showSuccessMessage,\n    isLoading,\n    currentUserMbti\n  } = useUnit({\n    applyPromoHandler: applyPromocodeClicked,\n    promocodeError: $promocodeErrorMessage,\n    showSuccessMessage: $showSuccessPromoMessage,\n    isLoading: openTransactionPaywallFx.pending,\n    currentUserMbti: ReportModel.$userMbtiTypes.map((el) => el.find((report) => report[reportId]) ?? null)\n  });\n  return /* @__PURE__ */ jsxs(FormWrapper, { onSubmit, children: [\n    /* @__PURE__ */ jsx(Select, { ...selectProps, value: reportId ? currentUserMbti?.[reportId] : selectProps.value }),\n    /* @__PURE__ */ jsx(FormInput, { ...emailProps }),\n    /* @__PURE__ */ jsxs(Paper, { bg: \"gray.0\", radius: \"xs\", p: \"md\", px: \"sm\", children: [\n      /* @__PURE__ */ jsx(Text, { className: s.promocodeLabel, children: \"У меня есть промокод\" }),\n      /* @__PURE__ */ jsxs(Flex, { className: s.promocodeWrapper, children: [\n        /* @__PURE__ */ jsx(TextInput, { ...promocodeProps, disabled: pending || isLoading, error: promocodeError, onInput: toInputUppercase, \"data-success\": showSuccessMessage, description: showSuccessMessage ? \"Промокод применен\" : \"\", inputWrapperOrder: [\"label\", \"input\", \"description\", \"error\"], size: \"md\", radius: \"sm\" }),\n        /* @__PURE__ */ jsx(Button, { fullWidth: true, size: \"sm\", mih: 42, variant: \"default\", loading: pending || isLoading, onClick: () => !pending && applyPromoHandler(form.values.promo_code.toUpperCase()), children: \"Применить\" })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Button, { loading: pending || isLoading, size: \"md\", type: \"submit\", children: \"Перейти к оплате\" }),\n    /* @__PURE__ */ jsxs(Text, { fz: 12, ta: \"center\", mb: 12, children: [\n      \"Нажимая на кнопку, вы подтверждаете свое согласие на сбор, хранение и использование ваших персональных данных согласно\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 12, c: \"blue.7\", component: \"a\", href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf\", children: \"Политике конфиденциальности\" }),\n      \" \",\n      \"и принимаете условия\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 12, c: \"blue.7\", component: \"a\", href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf\", children: \"Публичной оферты\" })\n    ] })\n  ] });\n};\n",
-      "start": 1746125081845,
-      "end": 1746125082031,
+      "start": 1746125696293,
+      "end": 1746125696485,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -91,75 +91,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696485,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/BuyReportForm/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Flex, Paper, Select, Text, TextInput } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { toInputUppercase } from \"@/shared/lib\";\nimport { FormInput, FormWrapper } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, ReportModel } from \"@/entities/Report\";\nimport { $promocodeErrorMessage, $showSuccessPromoMessage, applyPromocodeClicked, BuyReportGate, openTransactionPaywallFx } from \"./model\";\nimport { useReportBuyFormViewModel } from \"./view-model\";\nimport s from \"./BuyReportForm.module.css\";\nexport const BuyReportForm = () => {\n  useGate(BuyReportGate);\n  const {\n    pending\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        reportId\n      }\n    }\n  } = usePageContext();\n  const {\n    onSubmit,\n    promocodeProps,\n    emailProps,\n    form,\n    selectProps\n  } = useReportBuyFormViewModel();\n  const {\n    applyPromoHandler,\n    promocodeError,\n    showSuccessMessage,\n    isLoading,\n    currentUserMbti\n  } = useUnit({\n    applyPromoHandler: applyPromocodeClicked,\n    promocodeError: $promocodeErrorMessage,\n    showSuccessMessage: $showSuccessPromoMessage,\n    isLoading: openTransactionPaywallFx.pending,\n    currentUserMbti: ReportModel.$userMbtiTypes.map((el) => el.find((report) => report[reportId]) ?? null)\n  });\n  return /* @__PURE__ */ jsxs(FormWrapper, { onSubmit, children: [\n    /* @__PURE__ */ jsx(Select, { ...selectProps, value: reportId ? currentUserMbti?.[reportId] : selectProps.value }),\n    /* @__PURE__ */ jsx(FormInput, { ...emailProps }),\n    /* @__PURE__ */ jsxs(Paper, { bg: \"gray.0\", radius: \"xs\", p: \"md\", px: \"sm\", children: [\n      /* @__PURE__ */ jsx(Text, { className: s.promocodeLabel, children: \"У меня есть промокод\" }),\n      /* @__PURE__ */ jsxs(Flex, { className: s.promocodeWrapper, children: [\n        /* @__PURE__ */ jsx(TextInput, { ...promocodeProps, disabled: pending || isLoading, error: promocodeError, onInput: toInputUppercase, \"data-success\": showSuccessMessage, description: showSuccessMessage ? \"Промокод применен\" : \"\", inputWrapperOrder: [\"label\", \"input\", \"description\", \"error\"], size: \"md\", radius: \"sm\" }),\n        /* @__PURE__ */ jsx(Button, { fullWidth: true, size: \"sm\", mih: 42, variant: \"default\", loading: pending || isLoading, onClick: () => !pending && applyPromoHandler(form.values.promo_code.toUpperCase()), children: \"Применить\" })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Button, { loading: pending || isLoading, size: \"md\", type: \"submit\", children: \"Перейти к оплате\" }),\n    /* @__PURE__ */ jsxs(Text, { fz: 12, ta: \"center\", mb: 12, children: [\n      \"Нажимая на кнопку, вы подтверждаете свое согласие на сбор, хранение и использование ваших персональных данных согласно\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 12, c: \"blue.7\", component: \"a\", href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf\", children: \"Политике конфиденциальности\" }),\n      \" \",\n      \"и принимаете условия\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 12, c: \"blue.7\", component: \"a\", href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf\", children: \"Публичной оферты\" })\n    ] })\n  ] });\n};\n",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696485,
+      "end": 1746125696486,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

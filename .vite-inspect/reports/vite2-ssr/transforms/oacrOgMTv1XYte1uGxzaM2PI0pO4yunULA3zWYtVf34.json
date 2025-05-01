@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Center, Flex } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { Section } from '@/shared/ui';\n\nimport { ForWhomCard } from '@/entities/Landing';\n\nimport FirstCardImage from './img/image-card-1.svg?react';\nimport SecondCardImage from './img/image-card-2.svg?react';\nimport ThirdCardImage from './img/image-card-3.svg?react';\nimport FourthCardImage from './img/image-card-4.svg?react';\nimport FirstCardImageDesktop from './img/image-card-desktop-1.svg?react';\nimport SecondCardImageDesktop from './img/image-card-desktop-2.svg?react';\nimport ThirdCardImageDesktop from './img/image-card-desktop-3.svg?react';\nimport FourthCardImageDesktop from './img/image-card-desktop-4.svg?react';\n\nimport s from './ForWhom.module.css';\n\nexport const ForWhom = () => {\n    const { isMobile } = usePageContext();\n\n    return (\n        <Section title='Кому ' filledText='подходит?'>\n            <Flex className={s.cards}>\n                <ForWhomCard\n                    bg={isMobile ? <FirstCardImage /> : <FirstCardImageDesktop />}\n                    title={'Студентам и\\u00a0молодым специалистам'}\n                    image='/landing/image-card/1'\n                    text='Определите, какие сферы деятельности больше всего соответствуют вашему психологическому профилю, чтобы\n                правильно выбрать профессию и понять, какие навыки развивать в первую очередь.'\n                />\n                <ForWhomCard\n                    bg={isMobile ? <SecondCardImage /> : <SecondCardImageDesktop />}\n                    title='Творческим людям'\n                    image='/landing/image-card/2'\n                    text='Найдите баланс между вдохновением и практикой, раскройте свой потенциал, научитесь эффективнее взаимодействовать с командой, управлять креативными порывами и сохранять стабильную продуктивность.'\n                />\n                <ForWhomCard\n                    bg={isMobile ? <ThirdCardImage /> : <ThirdCardImageDesktop />}\n                    title={`Партнерам в\\u00a0отношениях`}\n                    image='/landing/image-card/3'\n                    text={\n                        'Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами.\\n\\n Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.'\n                    }\n                />\n                <ForWhomCard\n                    bg={isMobile ? <FourthCardImage /> : <FourthCardImageDesktop />}\n                    title={'Людям, стремящимся к\\u00a0саморазвитию'}\n                    image='/landing/image-card/4'\n                    text={\n                        'Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием.\\n\\n Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.'\n                    }\n                />\n            </Flex>\n            <Center>\n                <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={706} component='a' href={ROUTES.TEST}>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Section>\n    );\n};\n",
-      "start": 1746125081913,
-      "end": 1746125081965,
+      "start": 1746125696336,
+      "end": 1746125696391,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, Center, Flex } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { Section } from '@/shared/ui';\nimport { ForWhomCard } from '@/entities/Landing';\nimport FirstCardImage from './img/image-card-1.svg?react';\nimport SecondCardImage from './img/image-card-2.svg?react';\nimport ThirdCardImage from './img/image-card-3.svg?react';\nimport FourthCardImage from './img/image-card-4.svg?react';\nimport FirstCardImageDesktop from './img/image-card-desktop-1.svg?react';\nimport SecondCardImageDesktop from './img/image-card-desktop-2.svg?react';\nimport ThirdCardImageDesktop from './img/image-card-desktop-3.svg?react';\nimport FourthCardImageDesktop from './img/image-card-desktop-4.svg?react';\nimport s from './ForWhom.module.css';\nexport const ForWhom = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return <Section title='Кому ' filledText='подходит?'>\n            <Flex className={s.cards}>\n                <ForWhomCard bg={isMobile ? <FirstCardImage /> : <FirstCardImageDesktop />} title={'Студентам и\\u00a0молодым специалистам'} image='/landing/image-card/1' text='Определите, какие сферы деятельности больше всего соответствуют вашему психологическому профилю, чтобы\n                правильно выбрать профессию и понять, какие навыки развивать в первую очередь.' />\n                <ForWhomCard bg={isMobile ? <SecondCardImage /> : <SecondCardImageDesktop />} title='Творческим людям' image='/landing/image-card/2' text='Найдите баланс между вдохновением и практикой, раскройте свой потенциал, научитесь эффективнее взаимодействовать с командой, управлять креативными порывами и сохранять стабильную продуктивность.' />\n                <ForWhomCard bg={isMobile ? <ThirdCardImage /> : <ThirdCardImageDesktop />} title={`Партнерам в\\u00a0отношениях`} image='/landing/image-card/3' text={'Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами.\\n\\n Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.'} />\n                <ForWhomCard bg={isMobile ? <FourthCardImage /> : <FourthCardImageDesktop />} title={'Людям, стремящимся к\\u00a0саморазвитию'} image='/landing/image-card/4' text={'Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием.\\n\\n Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.'} />\n            </Flex>\n            <Center>\n                <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={706} component='a' href={ROUTES.TEST}>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Section>;\n};",
-      "start": 1746125081965,
-      "end": 1746125081967,
+      "start": 1746125696391,
+      "end": 1746125696393,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Center, Flex } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { Section } from \"@/shared/ui\";\nimport { ForWhomCard } from \"@/entities/Landing\";\nimport FirstCardImage from \"./img/image-card-1.svg?react\";\nimport SecondCardImage from \"./img/image-card-2.svg?react\";\nimport ThirdCardImage from \"./img/image-card-3.svg?react\";\nimport FourthCardImage from \"./img/image-card-4.svg?react\";\nimport FirstCardImageDesktop from \"./img/image-card-desktop-1.svg?react\";\nimport SecondCardImageDesktop from \"./img/image-card-desktop-2.svg?react\";\nimport ThirdCardImageDesktop from \"./img/image-card-desktop-3.svg?react\";\nimport FourthCardImageDesktop from \"./img/image-card-desktop-4.svg?react\";\nimport s from \"./ForWhom.module.css\";\nexport const ForWhom = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Section, { title: \"Кому \", filledText: \"подходит?\", children: [\n    /* @__PURE__ */ jsxs(Flex, { className: s.cards, children: [\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(FirstCardImage, {}) : /* @__PURE__ */ jsx(FirstCardImageDesktop, {}), title: \"Студентам и молодым специалистам\", image: \"/landing/image-card/1\", text: \"Определите, какие сферы деятельности больше всего соответствуют вашему психологическому профилю, чтобы\\n                правильно выбрать профессию и понять, какие навыки развивать в первую очередь.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(SecondCardImage, {}) : /* @__PURE__ */ jsx(SecondCardImageDesktop, {}), title: \"Творческим людям\", image: \"/landing/image-card/2\", text: \"Найдите баланс между вдохновением и практикой, раскройте свой потенциал, научитесь эффективнее взаимодействовать с командой, управлять креативными порывами и сохранять стабильную продуктивность.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(ThirdCardImage, {}) : /* @__PURE__ */ jsx(ThirdCardImageDesktop, {}), title: `Партнерам в отношениях`, image: \"/landing/image-card/3\", text: \"Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами.\\n\\n Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(FourthCardImage, {}) : /* @__PURE__ */ jsx(FourthCardImageDesktop, {}), title: \"Людям, стремящимся к саморазвитию\", image: \"/landing/image-card/4\", text: \"Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием.\\n\\n Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.\" })\n    ] }),\n    /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { size: isMobile ? \"md\" : \"xl\", fullWidth: true, maw: 706, component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }) })\n  ] });\n};\n",
-      "start": 1746125081967,
-      "end": 1746125082276,
+      "start": 1746125696393,
+      "end": 1746125696648,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/ForWhom/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Center, Flex } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { Section } from \"@/shared/ui\";\nimport { ForWhomCard } from \"@/entities/Landing\";\nimport FirstCardImage from \"./img/image-card-1.svg?react\";\nimport SecondCardImage from \"./img/image-card-2.svg?react\";\nimport ThirdCardImage from \"./img/image-card-3.svg?react\";\nimport FourthCardImage from \"./img/image-card-4.svg?react\";\nimport FirstCardImageDesktop from \"./img/image-card-desktop-1.svg?react\";\nimport SecondCardImageDesktop from \"./img/image-card-desktop-2.svg?react\";\nimport ThirdCardImageDesktop from \"./img/image-card-desktop-3.svg?react\";\nimport FourthCardImageDesktop from \"./img/image-card-desktop-4.svg?react\";\nimport s from \"./ForWhom.module.css\";\nexport const ForWhom = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Section, { title: \"Кому \", filledText: \"подходит?\", children: [\n    /* @__PURE__ */ jsxs(Flex, { className: s.cards, children: [\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(FirstCardImage, {}) : /* @__PURE__ */ jsx(FirstCardImageDesktop, {}), title: \"Студентам и молодым специалистам\", image: \"/landing/image-card/1\", text: \"Определите, какие сферы деятельности больше всего соответствуют вашему психологическому профилю, чтобы\\n                правильно выбрать профессию и понять, какие навыки развивать в первую очередь.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(SecondCardImage, {}) : /* @__PURE__ */ jsx(SecondCardImageDesktop, {}), title: \"Творческим людям\", image: \"/landing/image-card/2\", text: \"Найдите баланс между вдохновением и практикой, раскройте свой потенциал, научитесь эффективнее взаимодействовать с командой, управлять креативными порывами и сохранять стабильную продуктивность.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(ThirdCardImage, {}) : /* @__PURE__ */ jsx(ThirdCardImageDesktop, {}), title: `Партнерам в отношениях`, image: \"/landing/image-card/3\", text: \"Узнайте, как особенности вашего типа личности влияют на взаимопонимание с партнёром и другими типами.\\n\\n Узнайте, как выстраивать гармоничное общение и совместно решать проблемы для укрепления доверия и поддержки.\" }),\n      /* @__PURE__ */ jsx(ForWhomCard, { bg: isMobile ? /* @__PURE__ */ jsx(FourthCardImage, {}) : /* @__PURE__ */ jsx(FourthCardImageDesktop, {}), title: \"Людям, стремящимся к саморазвитию\", image: \"/landing/image-card/4\", text: \"Получите инструменты для осознанного раскрытия сильных сторон, формирования новых привычек и управления эмоциональным состоянием.\\n\\n Узнайте, как ставить мотивирующие цели, преодолевать внутренние барьеры и двигаться к личностному росту.\" })\n    ] }),\n    /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { size: isMobile ? \"md\" : \"xl\", fullWidth: true, maw: 706, component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }) })\n  ] });\n};\n",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696648,
+      "end": 1746125696648,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

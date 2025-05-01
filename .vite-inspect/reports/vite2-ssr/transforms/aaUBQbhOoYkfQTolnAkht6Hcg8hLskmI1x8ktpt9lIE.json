@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport UnionImage from '@/app/assets/images/union.svg?react';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './Hero.module.css';\n\nexport const Hero = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n\n    return (\n        <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture\n                    cdn\n                    className={s.image}\n                    width={isMobile || !isLarge ? 280 : 673}\n                    height={isMobile || !isLarge ? 280 : 673}\n                    src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`}\n                />\n                <Button\n                    component='a'\n                    href={ROUTES.TEST}\n                    size={isMobile || !isLarge ? 'md' : 'xl'}\n                    className='mantine-button-rainbow'\n                >\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>\n    );\n};\n",
-      "start": 1746125081903,
-      "end": 1746125081956,
+      "start": 1746125696332,
+      "end": 1746125696387,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport UnionImage from '@/app/assets/images/union.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './Hero.module.css';\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture cdn className={s.image} width={isMobile || !isLarge ? 280 : 673} height={isMobile || !isLarge ? 280 : 673} src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`} />\n                <Button component='a' href={ROUTES.TEST} size={isMobile || !isLarge ? 'md' : 'xl'} className='mantine-button-rainbow'>\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>;\n};",
-      "start": 1746125081956,
-      "end": 1746125081957,
+      "start": 1746125696387,
+      "end": 1746125696389,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -52,8 +52,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile || !isLarge ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile || !isLarge ? 280 : 673, height: isMobile || !isLarge ? 280 : 673, src: `/landing/main-hero-char${isMobile || !isLarge ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile || !isLarge ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
-      "start": 1746125081957,
-      "end": 1746125082249,
+      "start": 1746125696389,
+      "end": 1746125696634,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -67,75 +67,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082249,
-      "end": 1746125082249,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082249,
-      "end": 1746125082249,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082249,
-      "end": 1746125082249,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082249,
-      "end": 1746125082249,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082251,
-      "end": 1746125082253,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082254,
-      "end": 1746125082254,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082254,
-      "end": 1746125082254,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082254,
-      "end": 1746125082254,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082254,
-      "end": 1746125082254,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082254,
-      "end": 1746125082254,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082254,
-      "end": 1746125082255,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/Hero/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile || !isLarge ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile || !isLarge ? 280 : 673, height: isMobile || !isLarge ? 280 : 673, src: `/landing/main-hero-char${isMobile || !isLarge ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile || !isLarge ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
-      "start": 1746125082255,
-      "end": 1746125082255,
+      "start": 1746125696634,
+      "end": 1746125696634,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

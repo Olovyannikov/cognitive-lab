@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\n\nimport { isErrorWithMessage } from '@/shared/lib';\n\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\n\nexport const BuyReportGate = createGate();\n\nexport const applyPromocodeClicked = createEvent<string>();\n\nexport const $promocodeErrorMessage = createStore('').reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false);\nexport const reportPurchased = createEvent<PurchasedReportRequest>({});\n\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\n\nsample({\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset,\n});\n\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n    window.open(page, '_self');\n});\n\nsample({\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({ error }) => (isErrorWithMessage(error) ? error.data.message : ''),\n    target: $promocodeErrorMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: reportPurchased,\n    target: purchaseReportMutation.start,\n});\n\nsample({\n    source: once(purchaseReportMutation.finished.success),\n    fn: ({ result }) => result.confirmation_url,\n    target: openTransactionPaywallFx,\n});\n",
-      "start": 1746125082087,
-      "end": 1746125082130,
+      "start": 1746125696550,
+      "end": 1746125696584,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\nimport { isErrorWithMessage } from '@/shared/lib';\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent<string>({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore('', {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent<PurchasedReportRequest>({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n  window.open(page, '_self');\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : '',\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});",
-      "start": 1746125082130,
-      "end": 1746125082132,
+      "start": 1746125696584,
+      "end": 1746125696586,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -72,8 +72,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { once } from \"patronum\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { getPriceWithPromocodeQuery, purchaseReportMutation } from \"@/entities/Report\";\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore(\"\", {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page) => {\n  window.open(page, \"_self\");\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : \"\",\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});\n",
-      "start": 1746125082132,
-      "end": 1746125082409,
+      "start": 1746125696586,
+      "end": 1746125696858,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -87,75 +87,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/BuyReportForm/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { once } from \"patronum\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { getPriceWithPromocodeQuery, purchaseReportMutation } from \"@/entities/Report\";\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore(\"\", {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page) => {\n  window.open(page, \"_self\");\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : \"\",\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});\n",
-      "start": 1746125082409,
-      "end": 1746125082409,
+      "start": 1746125696858,
+      "end": 1746125696858,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

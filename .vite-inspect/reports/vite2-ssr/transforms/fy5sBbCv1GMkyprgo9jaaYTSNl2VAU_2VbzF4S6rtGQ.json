@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { BlogPostPage } from '@/pages/BlogPostPage';\n\nexport default function Page() {\n    return <BlogPostPage />;\n}\n",
-      "start": 1746125081535,
-      "end": 1746125081560,
+      "start": 1746125695908,
+      "end": 1746125695925,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { BlogPostPage } from '@/pages/BlogPostPage';\nexport default function Page() {\n  return <BlogPostPage />;\n}",
-      "start": 1746125081560,
-      "end": 1746125081561,
+      "start": 1746125695925,
+      "end": 1746125695926,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { BlogPostPage } from \"@/pages/BlogPostPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(BlogPostPage, {});\n}\n",
-      "start": 1746125081562,
-      "end": 1746125081611,
+      "start": 1746125695926,
+      "end": 1746125696012,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/blog/@id/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { BlogPostPage } from \"@/pages/BlogPostPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(BlogPostPage, {});\n}\n",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

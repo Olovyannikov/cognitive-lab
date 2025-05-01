@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';\n",
-      "start": 1746125081614,
-      "end": 1746125081633,
+      "start": 1746125696019,
+      "end": 1746125696075,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';",
-      "start": 1746125081633,
-      "end": 1746125081633,
+      "start": 1746125696075,
+      "end": 1746125696077,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./getScope\";\nexport * from \"./ScopeProvider\";\nexport * from \"./EffectorProvider\";\nexport * from \"./events\";\n",
-      "start": 1746125081633,
-      "end": 1746125081659,
+      "start": 1746125696077,
+      "end": 1746125696138,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/index.ts [vike:pluginModuleBanner] */\nexport * from \"./getScope\";\nexport * from \"./ScopeProvider\";\nexport * from \"./EffectorProvider\";\nexport * from \"./events\";\n",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Stack, Title } from '@mantine/core';\n\nimport s from './OrderedCards.module.css';\n\ninterface OrderedCardProps {\n    color: string;\n    items: {\n        text?: string;\n        highlight?: null;\n        title?: string;\n        order?: number;\n    }[];\n}\nexport const OrderedCards = ({ items, color }: OrderedCardProps) => (\n    <Stack>\n        {items.map((item) => (\n            <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>\n        ))}\n    </Stack>\n);\n",
-      "start": 1746125081873,
-      "end": 1746125081924,
+      "start": 1746125696462,
+      "end": 1746125696502,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper, Stack, Title } from '@mantine/core';\nimport s from './OrderedCards.module.css';\ninterface OrderedCardProps {\n  color: string;\n  items: {\n    text?: string;\n    highlight?: null;\n    title?: string;\n    order?: number;\n  }[];\n}\nexport const OrderedCards = ({\n  items,\n  color\n}: OrderedCardProps) => <Stack>\n        {items.map(item => <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>)}\n    </Stack>;",
-      "start": 1746125081924,
-      "end": 1746125081926,
+      "start": 1746125696502,
+      "end": 1746125696504,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Stack, { children: items.map((item) => /* @__PURE__ */ jsx(Paper, { className: s.paper, bg: color === \"positive\" ? \"green.0\" : \"pink.0\", children: /* @__PURE__ */ jsx(Stack, { className: s.stack, children: /* @__PURE__ */ jsxs(Title, { className: s.title, c: color === \"positive\" ? \"green.9\" : \"pink.9\", order: 5, children: [\n  item.order,\n  \". \",\n  item.title\n] }) }) }, item.order)) });\n",
-      "start": 1746125081926,
-      "end": 1746125082157,
+      "start": 1746125696504,
+      "end": 1746125696766,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/OrderedCards/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Stack, { children: items.map((item) => /* @__PURE__ */ jsx(Paper, { className: s.paper, bg: color === \"positive\" ? \"green.0\" : \"pink.0\", children: /* @__PURE__ */ jsx(Stack, { className: s.stack, children: /* @__PURE__ */ jsxs(Title, { className: s.title, c: color === \"positive\" ? \"green.9\" : \"pink.9\", order: 5, children: [\n  item.order,\n  \". \",\n  item.title\n] }) }) }, item.order)) });\n",
-      "start": 1746125082157,
-      "end": 1746125082157,
+      "start": 1746125696766,
+      "end": 1746125696766,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport s from './FormWrapper.module.css';\n\ninterface FormWrapperProps {\n    onSubmit?: FormEventHandler<HTMLFormElement>;\n    className?: string;\n}\n\nexport const FormWrapper = ({ onSubmit, className, children }: PropsWithChildren<FormWrapperProps>) => (\n    <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>\n);\n",
-      "start": 1746125081967,
-      "end": 1746125082025,
+      "start": 1746125696313,
+      "end": 1746125696348,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\nimport s from './FormWrapper.module.css';\ninterface FormWrapperProps {\n  onSubmit?: FormEventHandler<HTMLFormElement>;\n  className?: string;\n}\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}: PropsWithChildren<FormWrapperProps>) => <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>;",
-      "start": 1746125082025,
-      "end": 1746125082026,
+      "start": 1746125696348,
+      "end": 1746125696349,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -40,8 +40,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}) => /* @__PURE__ */ jsx(\"form\", { onSubmit, className, children: /* @__PURE__ */ jsx(Stack, { className: s.stackWrapper, children }) });\n",
-      "start": 1746125082026,
-      "end": 1746125082337,
+      "start": 1746125696349,
+      "end": 1746125696556,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -55,75 +55,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormWrapper/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}) => /* @__PURE__ */ jsx(\"form\", { onSubmit, className, children: /* @__PURE__ */ jsx(Stack, { className: s.stackWrapper, children }) });\n",
-      "start": 1746125082337,
-      "end": 1746125082337,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

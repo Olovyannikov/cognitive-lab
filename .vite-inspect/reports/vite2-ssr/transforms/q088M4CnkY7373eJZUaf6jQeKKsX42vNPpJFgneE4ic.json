@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, createStore, sample } from 'effector';\n\nimport { TestModel } from '@/entities/Test';\n\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n    hints: [question?.hint, ...(question?.rephrasing?.map((phrase) => phrase.hint) ?? [])].filter(Boolean),\n    texts: [question?.text, ...(question?.rephrasing?.map((phrase) => phrase.text) ?? [])].filter(Boolean),\n}));\nconst $currentPhraseIndex = createStore(0);\nconst changePhraseIndex = createEvent();\n\n$currentPhraseIndex.reset(TestModel.formPageChanged);\n\nsample({\n    clock: changePhraseIndex,\n    source: { index: $currentPhraseIndex, phrases: $currentPhrases },\n    fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n    },\n    target: $currentPhraseIndex,\n});\n\nexport const RephrasingModel = {\n    $currentPhrases,\n    $currentPhraseIndex,\n    changePhraseIndex,\n};\n",
-      "start": 1746125082011,
-      "end": 1746125082053,
+      "start": 1746125696350,
+      "end": 1746125696412,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent, createStore, sample } from 'effector';\nimport { TestModel } from '@/entities/Test';\nconst $currentPhrases = TestModel.$currentQuestion.map(question => ({\n  hints: [question?.hint, ...(question?.rephrasing?.map(phrase => phrase.hint) ?? [])].filter(Boolean),\n  texts: [question?.text, ...(question?.rephrasing?.map(phrase => phrase.text) ?? [])].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};",
-      "start": 1746125082053,
-      "end": 1746125082054,
+      "start": 1746125696412,
+      "end": 1746125696414,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -62,8 +62,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [question?.hint, ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []].filter(Boolean),\n  texts: [question?.text, ...question?.rephrasing?.map((phrase) => phrase.text) ?? []].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
-      "start": 1746125082054,
-      "end": 1746125082365,
+      "start": 1746125696414,
+      "end": 1746125696681,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -77,75 +77,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/Rephrasing/model/index.ts [vike:pluginModuleBanner] */\nimport { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [question?.hint, ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []].filter(Boolean),\n  texts: [question?.text, ...question?.rephrasing?.map((phrase) => phrase.text) ?? []].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
-      "start": 1746125082365,
-      "end": 1746125082365,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

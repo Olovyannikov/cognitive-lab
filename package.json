@@ -112,6 +112,7 @@
     "embla-carousel-react": "8.6.0",
     "embla-carousel-wheel-gestures": "8.0.2",
     "express": "4.21.2",
+    "express-static-gzip": "^2.2.0",
     "framer-motion": "12.7.4",
     "lodash-es": "4.17.21",
     "mantine-form-zod-resolver": "1.1.0",

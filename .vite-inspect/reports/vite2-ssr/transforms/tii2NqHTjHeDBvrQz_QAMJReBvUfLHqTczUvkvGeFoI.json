@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { subscribeToNewsMutation } from '../api';\n\nexport const SubscribeToNewsModel = atom(() => {\n    const formSubmitted = createEvent<{ email: string }>();\n\n    const showSuccessToastFx = createEffect(() => {\n        notifications.show({\n            title: 'Успешно!',\n            message: 'Вы подписались на рассылку CognitiveLab',\n        });\n    });\n\n    sample({\n        clock: formSubmitted,\n        target: subscribeToNewsMutation.start,\n    });\n\n    sample({\n        clock: subscribeToNewsMutation.finished.success,\n        target: showSuccessToastFx,\n    });\n\n    return {\n        formSubmitted,\n    };\n});\n",
-      "start": 1746125082525,
-      "end": 1746125082591,
+      "start": 1746125696958,
+      "end": 1746125696976,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { subscribeToNewsMutation } from '../api';\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent<{\n    email: string;\n  }>({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: 'Успешно!',\n      message: 'Вы подписались на рассылку CognitiveLab'\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});",
-      "start": 1746125082591,
-      "end": 1746125082592,
+      "start": 1746125696976,
+      "end": 1746125696977,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -51,8 +51,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { subscribeToNewsMutation } from \"../api\";\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Вы подписались на рассылку CognitiveLab\"\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});\n",
-      "start": 1746125082592,
-      "end": 1746125082613,
+      "start": 1746125696977,
+      "end": 1746125696994,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -66,75 +66,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696994,
+      "end": 1746125696994,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/model/index.ts [vike:pluginModuleBanner] */\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { subscribeToNewsMutation } from \"../api\";\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Вы подписались на рассылку CognitiveLab\"\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});\n",
-      "start": 1746125082613,
-      "end": 1746125082613,
+      "start": 1746125696995,
+      "end": 1746125696995,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

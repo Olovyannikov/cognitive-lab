@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n",
-      "start": 1746125081670,
-      "end": 1746125081732,
+      "start": 1746125696166,
+      "end": 1746125696205,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});",
-      "start": 1746125081733,
-      "end": 1746125081733,
+      "start": 1746125696205,
+      "end": 1746125696206,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -37,8 +37,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1746125081733,
-      "end": 1746125081784,
+      "start": 1746125696206,
+      "end": 1746125696274,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -52,75 +52,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/events.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1746125081785,
-      "end": 1746125081785,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

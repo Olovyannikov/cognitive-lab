@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\n\nimport { getFullReportQuery, getPersonalityTypeQuery, getSurveysInfoQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const currentPageChanged = createEvent<number>();\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nexport const $userMbtiTypes = createStore<Record<string, string>[]>([]);\n\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n\nsample({\n    clock: getSurveysInfoQuery.finished.success,\n    fn: ({ result }) =>\n        result?.reports.map((report) => ({\n            [report.user_report]: report.mbti_type,\n        })) ?? [],\n    target: $userMbtiTypes,\n});\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n\ncreateAction({\n    clock: currentPageChanged,\n    target: {\n        $currentContentPage,\n        $currentPage,\n    },\n    fn: (target, clock) => {\n        target.$currentPage(clock);\n        target.$currentContentPage(clock - 1);\n    },\n});\n",
-      "start": 1746125081850,
-      "end": 1746125081888,
+      "start": 1746125696498,
+      "end": 1746125696543,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { getFullReportQuery, getPersonalityTypeQuery, getSurveysInfoQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"ktaj1b\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"-kwdn3p\"\n});\nexport const currentPageChanged = createEvent<number>({\n  name: \"currentPageChanged\",\n  sid: \"7rhbpz\"\n});\nexport const $isFirstPage = $currentPage.map(page => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false, {\n  name: \"$isLastPage\",\n  sid: \"-7djdaj\"\n});\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"-8j91ir\"\n});\nexport const $userMbtiTypes = createStore<Record<string, string>[]>([], {\n  name: \"$userMbtiTypes\",\n  sid: \"-ldh783\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-h7sqse\"\n  }\n});\nsample({\n  and: [{\n    clock: getSurveysInfoQuery.finished.success,\n    fn: ({\n      result\n    }) => result?.reports.map(report => ({\n      [report.user_report]: report.mbti_type\n    })) ?? [],\n    target: $userMbtiTypes\n  }],\n  or: {\n    sid: \"-gsyarn\"\n  }\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map(el => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"-gcggyt\"\n  }\n});\ncreateAction({\n  clock: currentPageChanged,\n  target: {\n    $currentContentPage,\n    $currentPage\n  },\n  fn: (target, clock) => {\n    target.$currentPage(clock);\n    target.$currentContentPage(clock - 1);\n  }\n});",
-      "start": 1746125081888,
-      "end": 1746125081890,
+      "start": 1746125696543,
+      "end": 1746125696545,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -67,8 +67,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { getFullReportQuery, getPersonalityTypeQuery, getSurveysInfoQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"ktaj1b\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"-kwdn3p\"\n});\nexport const currentPageChanged = createEvent({\n  name: \"currentPageChanged\",\n  sid: \"7rhbpz\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-7djdaj\"\n});\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"-8j91ir\"\n});\nexport const $userMbtiTypes = createStore([], {\n  name: \"$userMbtiTypes\",\n  sid: \"-ldh783\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-h7sqse\"\n  }\n});\nsample({\n  and: [{\n    clock: getSurveysInfoQuery.finished.success,\n    fn: ({\n      result\n    }) => result?.reports.map((report) => ({\n      [report.user_report]: report.mbti_type\n    })) ?? [],\n    target: $userMbtiTypes\n  }],\n  or: {\n    sid: \"-gsyarn\"\n  }\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"-gcggyt\"\n  }\n});\ncreateAction({\n  clock: currentPageChanged,\n  target: {\n    $currentContentPage,\n    $currentPage\n  },\n  fn: (target, clock) => {\n    target.$currentPage(clock);\n    target.$currentContentPage(clock - 1);\n  }\n});\n",
-      "start": 1746125081890,
-      "end": 1746125082105,
+      "start": 1746125696545,
+      "end": 1746125696795,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -82,75 +82,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082105,
-      "end": 1746125082105,
+      "start": 1746125696795,
+      "end": 1746125696795,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082105,
-      "end": 1746125082105,
+      "start": 1746125696795,
+      "end": 1746125696795,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/content.ts [vike:pluginModuleBanner] */\nimport { createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { getFullReportQuery, getPersonalityTypeQuery, getSurveysInfoQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"ktaj1b\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"-kwdn3p\"\n});\nexport const currentPageChanged = createEvent({\n  name: \"currentPageChanged\",\n  sid: \"7rhbpz\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-7djdaj\"\n});\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"-8j91ir\"\n});\nexport const $userMbtiTypes = createStore([], {\n  name: \"$userMbtiTypes\",\n  sid: \"-ldh783\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-h7sqse\"\n  }\n});\nsample({\n  and: [{\n    clock: getSurveysInfoQuery.finished.success,\n    fn: ({\n      result\n    }) => result?.reports.map((report) => ({\n      [report.user_report]: report.mbti_type\n    })) ?? [],\n    target: $userMbtiTypes\n  }],\n  or: {\n    sid: \"-gsyarn\"\n  }\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"-gcggyt\"\n  }\n});\ncreateAction({\n  clock: currentPageChanged,\n  target: {\n    $currentContentPage,\n    $currentPage\n  },\n  fn: (target, clock) => {\n    target.$currentPage(clock);\n    target.$currentContentPage(clock - 1);\n  }\n});\n",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

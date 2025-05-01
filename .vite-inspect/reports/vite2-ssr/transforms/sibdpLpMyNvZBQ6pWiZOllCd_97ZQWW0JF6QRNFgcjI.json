@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\n\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport s from './FullReportSlice.module.css';\n\ninterface ContentResolverProps {\n    page?: number;\n    showPurchaseBanner?: boolean;\n}\n\nexport const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: ContentResolverProps) => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n    const { data } = useUnit(getFullReportQuery);\n\n    const color = TYPE_TO_COLOR_MAP[(type as PersonalityType) ?? data?.mbti_type];\n\n    if (!data) return null;\n\n    const { content } = data.content[page];\n\n    const renderContent = normalizeData(content);\n\n    return (\n        <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => (\n                        <Box mb={60} key={idx}>\n                            {c?.map((el, index) => (\n                                <Fragment key={el.type + index + idx}>\n                                    {contentResolver({ color, content: el })}\n                                </Fragment>\n                            ))}\n                        </Box>\n                    ))}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && (\n                <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button\n                        size='md'\n                        c='dark.7'\n                        component='a'\n                        color='dark.7'\n                        variant='outline'\n                        href={`/purchase-report?mbti_type=${type}`}\n                    >\n                        Купить сейчас\n                    </Button>\n                </AdBanner>\n            )}\n        </>\n    );\n};\n",
-      "start": 1746125081804,
-      "end": 1746125081846,
+      "start": 1746125696260,
+      "end": 1746125696303,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport s from './FullReportSlice.module.css';\ninterface ContentResolverProps {\n  page?: number;\n  showPurchaseBanner?: boolean;\n}\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}: ContentResolverProps) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type as PersonalityType ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => <Box mb={60} key={idx}>\n                            {c?.map((el, index) => <Fragment key={el.type + index + idx}>\n                                    {contentResolver({\n              color,\n              content: el\n            })}\n                                </Fragment>)}\n                        </Box>)}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button size='md' c='dark.7' component='a' color='dark.7' variant='outline' href={`/purchase-report?mbti_type=${type}`}>\n                        Купить сейчас\n                    </Button>\n                </AdBanner>}\n        </>;\n};",
-      "start": 1746125081846,
-      "end": 1746125081848,
+      "start": 1746125696303,
+      "end": 1746125696305,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -60,8 +60,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment as Fragment2 } from \"react\";\nimport { Box, Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./FullReportSlice.module.css\";\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(InnerContainer, { children: /* @__PURE__ */ jsx(Box, { className: s.content, children: renderContent.map((c, idx) => /* @__PURE__ */ jsx(Box, { mb: 60, children: c?.map((el, index) => /* @__PURE__ */ jsx(Fragment2, { children: contentResolver({\n      color,\n      content: el\n    }) }, el.type + index + idx)) }, idx)) }) }),\n    showPurchaseBanner && /* @__PURE__ */ jsxs(AdBanner, { children: [\n      /* @__PURE__ */ jsx(Button, { size: \"md\", radius: \"sm\", component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }),\n      /* @__PURE__ */ jsx(Button, { size: \"md\", c: \"dark.7\", component: \"a\", color: \"dark.7\", variant: \"outline\", href: `/purchase-report?mbti_type=${type}`, children: \"Купить сейчас\" })\n    ] })\n  ] });\n};\n",
-      "start": 1746125081848,
-      "end": 1746125082031,
+      "start": 1746125696305,
+      "end": 1746125696514,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -75,75 +75,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/FullReportSlice/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment as Fragment2 } from \"react\";\nimport { Box, Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./FullReportSlice.module.css\";\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(InnerContainer, { children: /* @__PURE__ */ jsx(Box, { className: s.content, children: renderContent.map((c, idx) => /* @__PURE__ */ jsx(Box, { mb: 60, children: c?.map((el, index) => /* @__PURE__ */ jsx(Fragment2, { children: contentResolver({\n      color,\n      content: el\n    }) }, el.type + index + idx)) }, idx)) }) }),\n    showPurchaseBanner && /* @__PURE__ */ jsxs(AdBanner, { children: [\n      /* @__PURE__ */ jsx(Button, { size: \"md\", radius: \"sm\", component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }),\n      /* @__PURE__ */ jsx(Button, { size: \"md\", c: \"dark.7\", component: \"a\", color: \"dark.7\", variant: \"outline\", href: `/purchase-report?mbti_type=${type}`, children: \"Купить сейчас\" })\n    ] })\n  ] });\n};\n",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n}\n",
-      "start": 1746125081771,
-      "end": 1746125081813,
+      "start": 1746125696210,
+      "end": 1746125696262,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export interface Option {\n  id: string;\n  text: string;\n  order: number;\n  requires_input?: boolean;\n}\nexport interface Rephrasing {\n  hint: string;\n  text: string;\n}\nexport interface ScaleChoiceAnswer {\n  value: number;\n}\nexport interface MultiChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface SingleChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface PreparedAnswer {\n  question: string;\n  answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n  index: number;\n  isMultiple?: boolean;\n  isSingle?: boolean;\n}\nexport interface Answers {\n  answers: PreparedAnswer[];\n}",
-      "start": 1746125081813,
-      "end": 1746125081814,
+      "start": 1746125696262,
+      "end": 1746125696264,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "",
-      "start": 1746125081814,
-      "end": 1746125081928,
+      "start": 1746125696264,
+      "end": 1746125696415,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,75 +62,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/api/types.ts [vike:pluginModuleBanner] */\n",
-      "start": 1746125081928,
-      "end": 1746125081928,
+      "start": 1746125696416,
+      "end": 1746125696416,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

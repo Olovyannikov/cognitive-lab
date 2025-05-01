@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\n\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\n\nimport s from './BlogPostPage.module.css';\n\nexport const BlogPostPage = () => {\n    const { data: post } = useUnit(getBlogPostByIdQuery);\n\n    if (!post) return null;\n\n    return (\n        <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner\n                        title='Узнайте свой тип личности'\n                        description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'\n                        actionSlot={CALL_TO_ACTION['redirectToTest']}\n                    />\n                </Stack>\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1746125081617,
-      "end": 1746125081646,
+      "start": 1746125696017,
+      "end": 1746125696070,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport s from './BlogPostPage.module.css';\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner title='Узнайте свой тип личности' description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.' actionSlot={CALL_TO_ACTION['redirectToTest']} />\n                </Stack>\n            </Container>\n        </Box>;\n};",
-      "start": 1746125081646,
-      "end": 1746125081649,
+      "start": 1746125696070,
+      "end": 1746125696072,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { getBlogPostByIdQuery, Post } from \"@/entities/Blog\";\nimport { Banner } from \"@/entities/Report\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport s from \"./BlogPostPage.module.css\";\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n    /* @__PURE__ */ jsx(Post, { post }),\n    /* @__PURE__ */ jsx(Banner, { title: \"Узнайте свой тип личности\", description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\", actionSlot: CALL_TO_ACTION[\"redirectToTest\"] })\n  ] }) }) });\n};\n",
-      "start": 1746125081649,
-      "end": 1746125081706,
+      "start": 1746125696072,
+      "end": 1746125696138,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,75 +57,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/BlogPostPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { getBlogPostByIdQuery, Post } from \"@/entities/Blog\";\nimport { Banner } from \"@/entities/Report\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport s from \"./BlogPostPage.module.css\";\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n    /* @__PURE__ */ jsx(Post, { post }),\n    /* @__PURE__ */ jsx(Banner, { title: \"Узнайте свой тип личности\", description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\", actionSlot: CALL_TO_ACTION[\"redirectToTest\"] })\n  ] }) }) });\n};\n",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696139,
+      "end": 1746125696139,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

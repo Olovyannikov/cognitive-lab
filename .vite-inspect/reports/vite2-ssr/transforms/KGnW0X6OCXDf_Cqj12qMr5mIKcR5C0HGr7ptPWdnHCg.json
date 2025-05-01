@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { Markdown } from '@/shared/ui';\n\nimport type { BlogPost } from '../../types';\n\nimport s from './BlogPostCard.module.css';\n\ninterface BlogPostCardProps {\n    post: BlogPost;\n}\n\nexport const BlogPostCard = memo(({ post }: BlogPostCardProps) => (\n    <Grid.Col\n        span={{\n            base: 12,\n            lg: post.pinned ? 12 : 4,\n        }}\n        className={clsx(post.pinned && s.pinned)}\n    >\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>\n));\n\nBlogPostCard.displayName = 'BlogPostCard';\n",
-      "start": 1746125081821,
-      "end": 1746125081861,
+      "start": 1746125696248,
+      "end": 1746125696298,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { Markdown } from '@/shared/ui';\nimport type { BlogPost } from '../../types';\nimport s from './BlogPostCard.module.css';\ninterface BlogPostCardProps {\n  post: BlogPost;\n}\nexport const BlogPostCard = memo(({\n  post\n}: BlogPostCardProps) => <Grid.Col span={{\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}} className={clsx(post.pinned && s.pinned)}>\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>);\nBlogPostCard.displayName = 'BlogPostCard';",
-      "start": 1746125081861,
-      "end": 1746125081862,
+      "start": 1746125696298,
+      "end": 1746125696299,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -57,8 +57,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = memo(({\n  post\n}) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}, className: clsx(post.pinned && s.pinned), children: /* @__PURE__ */ jsx(Card, { className: s.cardMain, h: \"100%\", withBorder: true, component: \"a\", href: `/blog/${post.id}`, children: /* @__PURE__ */ jsxs(Flex, { className: clsx(s.card, post.pinned && s.row), gap: \"md\", children: [\n  /* @__PURE__ */ jsx(Image, { className: s.image, fit: \"cover\", radius: \"xs\", src: post.thumbnail_image, alt: post.title }),\n  /* @__PURE__ */ jsxs(Stack, { className: s.preview, justify: \"center\", children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, children: post.title }),\n    /* @__PURE__ */ jsx(Markdown, { children: post.body.data })\n  ] })\n] }) }) }));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
-      "start": 1746125081862,
-      "end": 1746125082059,
+      "start": 1746125696299,
+      "end": 1746125696518,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -72,75 +72,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696519,
+      "end": 1746125696520,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082059,
-      "end": 1746125082059,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/BlogPostCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = memo(({\n  post\n}) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}, className: clsx(post.pinned && s.pinned), children: /* @__PURE__ */ jsx(Card, { className: s.cardMain, h: \"100%\", withBorder: true, component: \"a\", href: `/blog/${post.id}`, children: /* @__PURE__ */ jsxs(Flex, { className: clsx(s.card, post.pinned && s.row), gap: \"md\", children: [\n  /* @__PURE__ */ jsx(Image, { className: s.image, fit: \"cover\", radius: \"xs\", src: post.thumbnail_image, alt: post.title }),\n  /* @__PURE__ */ jsxs(Stack, { className: s.preview, justify: \"center\", children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, children: post.title }),\n    /* @__PURE__ */ jsx(Markdown, { children: post.body.data })\n  ] })\n] }) }) }));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
-      "start": 1746125082060,
-      "end": 1746125082060,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

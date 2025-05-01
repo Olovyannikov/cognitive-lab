@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".box {\n  margin-bottom: 80px;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  text-align: center;\n\n  * {\n    height: fit-content;\n  }\n\n  @mixin larger-than 768px {\n    margin-bottom: 0;\n    padding-bottom: 80px;\n    text-align: left;\n  }\n\n  @mixin larger-than 992px {\n    display: grid;\n    grid-auto-rows: 0fr;\n    grid-template-areas:\n      \"t i\"\n      \"s i\"\n      \"d i\"\n      \"b i\";\n  }\n}\n\n:is(h1, p).text {\n  margin: 0 auto 6px;\n  width: fit-content;\n  font-weight: 700;\n  font-size: 30px;\n  line-height: 32px;\n\n  @mixin larger-than 768px {\n    margin-left: 0;\n    font-size: 56px;\n    line-height: 65px;\n  }\n}\n\nh1.title {\n  grid-area: t;\n  border-radius: 16px;\n  padding: 5px 15px;\n  background-color: var(--mantine-color-lime-4);\n\n  @mixin larger-than 768px {\n    padding: 7px 20px;\n  }\n\n  @mixin larger-than 1200px {\n    margin-top: 105px;\n  }\n}\n\np.subtitle {\n  grid-area: s;\n  margin-bottom: var(--mantine-spacing-lg);\n\n  > span {\n    display: block;\n    margin-top: 8px;\n  }\n\n  @mixin larger-than 576px {\n    > span {\n      display: inline-block;\n    }\n  }\n\n  @mixin larger-than 768px {\n    margin-bottom: 28px;\n  }\n\n  @mixin larger-than 1390px {\n    br {\n      display: none;\n    }\n  }\n}\n\nspan.ai {\n  position: relative;\n  margin-left: var(--mantine-spacing-xs);\n  width: 100%;\n\n  svg {\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    z-index: -1;\n    width: 46px;\n    height: 42px;\n    transform: translate(-50%, -50%);\n\n    @mixin larger-than 768px {\n      width: 93px;\n      height: 85px;\n    }\n  }\n}\n\np.description {\n  grid-area: d;\n  margin-bottom: 16px;\n  max-width: 559px;\n  font-size: 18px;\n  line-height: 24px;\n  text-align: center;\n\n  @mixin larger-than 768px {\n    margin-bottom: 64px;\n    font-size: 24px;\n    line-height: 28px;\n    text-align: left;\n  }\n}\n\n.image {\n  grid-area: i;\n  margin: 0 auto 40px;\n  max-width: 280px;\n  max-height: 280px;\n\n  @mixin larger-than 992px {\n    margin-right: 0;\n    margin-bottom: 0;\n    margin-left: auto;\n    max-width: 673px;\n    max-height: 673px;\n  }\n}\n",
-      "start": 1746125082278,
-      "end": 1746125082303,
+      "start": 1746125696639,
+      "end": 1746125696665,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082303,
-      "end": 1746125082303,
+      "start": 1746125696665,
+      "end": 1746125696665,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/Hero/Hero.module.css [vike:pluginModuleBanner] */\nexport const box = \"Xu6G1\";\nexport const text = \"Y1d0N\";\nexport const title = \"bu2Rn\";\nexport const subtitle = \"gb8-n\";\nexport const ai = \"glSwv\";\nexport const description = \"gBt8H\";\nexport const image = \"_8nIT2\";\nexport default {\n\tbox: box,\n\ttext: text,\n\ttitle: title,\n\tsubtitle: subtitle,\n\tai: ai,\n\tdescription: description,\n\timage: image\n};\n",
-      "start": 1746125082307,
-      "end": 1746125082307,
+      "start": 1746125696669,
+      "end": 1746125696669,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useRef } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport { Box, Group, Paper, Rating, Text, Title } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport AutoScroll from 'embla-carousel-auto-scroll';\nimport { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture, Section } from '@/shared/ui';\n\nimport { ReviewModel } from '@/entities/Review';\n\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport { PeopleTalkModel } from './model';\n\nimport s from './PeopleTalk.module.css';\n\nexport const PeopleTalk = () => {\n    const [reviews] = useUnit([ReviewModel.$allReviews]);\n    const [isActive, setIsActive, setCurrentReview, open] = useUnit([\n        PeopleTalkModel.$isCarouselActive,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.currentReviewSettled,\n        PeopleTalkModel.modalActiveStateSettled,\n    ]);\n    const autoplay = useRef(\n        AutoScroll({\n            playOnInit: true,\n            startDelay: 200,\n            stopOnMouseEnter: true,\n            active: isActive,\n            stopOnInteraction: true,\n            speed: 0.5,\n        })\n    );\n    const wheel = useRef(WheelGesturesPlugin({}));\n\n    const { isMobile } = usePageContext();\n\n    const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];\n\n    return (\n        <Section containerClassName={s.container}>\n            <Title className={s.title}>\n                Что о нас&nbsp;\n                <span>говорят?</span>\n            </Title>\n            <Carousel\n                loop\n                slideGap='lg'\n                withControls={false}\n                plugins={[autoplay.current, wheel.current]}\n                slideSize={isMobile ? '70%' : 624}\n                onMouseLeave={() => isActive && autoplay.current.play()}\n                onPointerLeave={() => isActive && autoplay.current.play()}\n                onPointerEnter={() => autoplay.current.stop()}\n            >\n                {allReviewsList.map((review, index) => (\n                    <Carousel.Slide key={index} className={s.slide}>\n                        <Paper\n                            component='button'\n                            display='flex'\n                            w='100%'\n                            ta='left'\n                            style={{ flexDirection: 'column' }}\n                            onClick={() => {\n                                setCurrentReview(review);\n                                open(true);\n                                setIsActive(false);\n                            }}\n                            withBorder\n                            className={s.paper}\n                        >\n                            <Group w='100%' justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                                <Box>\n                                    <Rating\n                                        size={isMobile ? 'md' : 'lg'}\n                                        readOnly\n                                        defaultValue={review.overall_rate}\n                                        mb='xs'\n                                        fractions={4}\n                                    />\n                                    <Text mb='xxs' className={s.name}>\n                                        {review.name}\n                                    </Text>\n                                    <Text className={s.label}>{review.mbti_type}</Text>\n                                </Box>\n                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} />\n                            </Group>\n                            <Text mb='xs' lineClamp={isMobile ? 8 : 6} className={s.reviewText}>\n                                {review.text}\n                            </Text>\n                            <Text className={s.reviewText} c='dark.2' mt='auto'>\n                                {review.created_at}\n                            </Text>\n                        </Paper>\n                    </Carousel.Slide>\n                ))}\n            </Carousel>\n            <Mobile />\n            <Desktop />\n        </Section>\n    );\n};\n",
-      "start": 1746125081938,
-      "end": 1746125081989,
+      "start": 1746125696346,
+      "end": 1746125696404,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useRef } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport { Box, Group, Paper, Rating, Text, Title } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport AutoScroll from 'embla-carousel-auto-scroll';\nimport { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture, Section } from '@/shared/ui';\nimport { ReviewModel } from '@/entities/Review';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport { PeopleTalkModel } from './model';\nimport s from './PeopleTalk.module.css';\nexport const PeopleTalk = () => {\n  const [reviews] = useUnit([ReviewModel.$allReviews]);\n  const [isActive, setIsActive, setCurrentReview, open] = useUnit([PeopleTalkModel.$isCarouselActive, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.currentReviewSettled, PeopleTalkModel.modalActiveStateSettled]);\n  const autoplay = useRef(AutoScroll({\n    playOnInit: true,\n    startDelay: 200,\n    stopOnMouseEnter: true,\n    active: isActive,\n    stopOnInteraction: true,\n    speed: 0.5\n  }));\n  const wheel = useRef(WheelGesturesPlugin({}));\n  const {\n    isMobile\n  } = usePageContext();\n  const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];\n  return <Section containerClassName={s.container}>\n            <Title className={s.title}>\n                Что о нас&nbsp;\n                <span>говорят?</span>\n            </Title>\n            <Carousel loop slideGap='lg' withControls={false} plugins={[autoplay.current, wheel.current]} slideSize={isMobile ? '70%' : 624} onMouseLeave={() => isActive && autoplay.current.play()} onPointerLeave={() => isActive && autoplay.current.play()} onPointerEnter={() => autoplay.current.stop()}>\n                {allReviewsList.map((review, index) => <Carousel.Slide key={index} className={s.slide}>\n                        <Paper component='button' display='flex' w='100%' ta='left' style={{\n          flexDirection: 'column'\n        }} onClick={() => {\n          setCurrentReview(review);\n          open(true);\n          setIsActive(false);\n        }} withBorder className={s.paper}>\n                            <Group w='100%' justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                                <Box>\n                                    <Rating size={isMobile ? 'md' : 'lg'} readOnly defaultValue={review.overall_rate} mb='xs' fractions={4} />\n                                    <Text mb='xxs' className={s.name}>\n                                        {review.name}\n                                    </Text>\n                                    <Text className={s.label}>{review.mbti_type}</Text>\n                                </Box>\n                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} />\n                            </Group>\n                            <Text mb='xs' lineClamp={isMobile ? 8 : 6} className={s.reviewText}>\n                                {review.text}\n                            </Text>\n                            <Text className={s.reviewText} c='dark.2' mt='auto'>\n                                {review.created_at}\n                            </Text>\n                        </Paper>\n                    </Carousel.Slide>)}\n            </Carousel>\n            <Mobile />\n            <Desktop />\n        </Section>;\n};",
-      "start": 1746125081989,
-      "end": 1746125081994,
+      "start": 1746125696404,
+      "end": 1746125696406,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -89,8 +89,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport { Box, Group, Paper, Rating, Text, Title } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport AutoScroll from \"embla-carousel-auto-scroll\";\nimport { WheelGesturesPlugin } from \"embla-carousel-wheel-gestures\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport { ReviewModel } from \"@/entities/Review\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const PeopleTalk = () => {\n  const [reviews] = useUnit([ReviewModel.$allReviews]);\n  const [isActive, setIsActive, setCurrentReview, open] = useUnit([PeopleTalkModel.$isCarouselActive, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.currentReviewSettled, PeopleTalkModel.modalActiveStateSettled]);\n  const autoplay = useRef(AutoScroll({\n    playOnInit: true,\n    startDelay: 200,\n    stopOnMouseEnter: true,\n    active: isActive,\n    stopOnInteraction: true,\n    speed: 0.5\n  }));\n  const wheel = useRef(WheelGesturesPlugin({}));\n  const {\n    isMobile\n  } = usePageContext();\n  const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];\n  return /* @__PURE__ */ jsxs(Section, { containerClassName: s.container, children: [\n    /* @__PURE__ */ jsxs(Title, { className: s.title, children: [\n      \"Что о нас \",\n      /* @__PURE__ */ jsx(\"span\", { children: \"говорят?\" })\n    ] }),\n    /* @__PURE__ */ jsx(Carousel, { loop: true, slideGap: \"lg\", withControls: false, plugins: [autoplay.current, wheel.current], slideSize: isMobile ? \"70%\" : 624, onMouseLeave: () => isActive && autoplay.current.play(), onPointerLeave: () => isActive && autoplay.current.play(), onPointerEnter: () => autoplay.current.stop(), children: allReviewsList.map((review, index) => /* @__PURE__ */ jsx(Carousel.Slide, { className: s.slide, children: /* @__PURE__ */ jsxs(Paper, { component: \"button\", display: \"flex\", w: \"100%\", ta: \"left\", style: {\n      flexDirection: \"column\"\n    }, onClick: () => {\n      setCurrentReview(review);\n      open(true);\n      setIsActive(false);\n    }, withBorder: true, className: s.paper, children: [\n      /* @__PURE__ */ jsxs(Group, { w: \"100%\", justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsxs(Box, { children: [\n          /* @__PURE__ */ jsx(Rating, { size: isMobile ? \"md\" : \"lg\", readOnly: true, defaultValue: review.overall_rate, mb: \"xs\", fractions: 4 }),\n          /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: review.name }),\n          /* @__PURE__ */ jsx(Text, { className: s.label, children: review.mbti_type })\n        ] }),\n        /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${review.mbti_type}`, className: s.image })\n      ] }),\n      /* @__PURE__ */ jsx(Text, { mb: \"xs\", lineClamp: isMobile ? 8 : 6, className: s.reviewText, children: review.text }),\n      /* @__PURE__ */ jsx(Text, { className: s.reviewText, c: \"dark.2\", mt: \"auto\", children: review.created_at })\n    ] }) }, index)) }),\n    /* @__PURE__ */ jsx(Mobile, {}),\n    /* @__PURE__ */ jsx(Desktop, {})\n  ] });\n};\n",
-      "start": 1746125081994,
-      "end": 1746125082298,
+      "start": 1746125696406,
+      "end": 1746125696677,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -104,75 +104,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/PeopleTalk/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport { Box, Group, Paper, Rating, Text, Title } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport AutoScroll from \"embla-carousel-auto-scroll\";\nimport { WheelGesturesPlugin } from \"embla-carousel-wheel-gestures\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport { ReviewModel } from \"@/entities/Review\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const PeopleTalk = () => {\n  const [reviews] = useUnit([ReviewModel.$allReviews]);\n  const [isActive, setIsActive, setCurrentReview, open] = useUnit([PeopleTalkModel.$isCarouselActive, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.currentReviewSettled, PeopleTalkModel.modalActiveStateSettled]);\n  const autoplay = useRef(AutoScroll({\n    playOnInit: true,\n    startDelay: 200,\n    stopOnMouseEnter: true,\n    active: isActive,\n    stopOnInteraction: true,\n    speed: 0.5\n  }));\n  const wheel = useRef(WheelGesturesPlugin({}));\n  const {\n    isMobile\n  } = usePageContext();\n  const allReviewsList = reviews.length > 5 ? reviews : [...reviews, ...reviews, ...reviews];\n  return /* @__PURE__ */ jsxs(Section, { containerClassName: s.container, children: [\n    /* @__PURE__ */ jsxs(Title, { className: s.title, children: [\n      \"Что о нас \",\n      /* @__PURE__ */ jsx(\"span\", { children: \"говорят?\" })\n    ] }),\n    /* @__PURE__ */ jsx(Carousel, { loop: true, slideGap: \"lg\", withControls: false, plugins: [autoplay.current, wheel.current], slideSize: isMobile ? \"70%\" : 624, onMouseLeave: () => isActive && autoplay.current.play(), onPointerLeave: () => isActive && autoplay.current.play(), onPointerEnter: () => autoplay.current.stop(), children: allReviewsList.map((review, index) => /* @__PURE__ */ jsx(Carousel.Slide, { className: s.slide, children: /* @__PURE__ */ jsxs(Paper, { component: \"button\", display: \"flex\", w: \"100%\", ta: \"left\", style: {\n      flexDirection: \"column\"\n    }, onClick: () => {\n      setCurrentReview(review);\n      open(true);\n      setIsActive(false);\n    }, withBorder: true, className: s.paper, children: [\n      /* @__PURE__ */ jsxs(Group, { w: \"100%\", justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsxs(Box, { children: [\n          /* @__PURE__ */ jsx(Rating, { size: isMobile ? \"md\" : \"lg\", readOnly: true, defaultValue: review.overall_rate, mb: \"xs\", fractions: 4 }),\n          /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: review.name }),\n          /* @__PURE__ */ jsx(Text, { className: s.label, children: review.mbti_type })\n        ] }),\n        /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${review.mbti_type}`, className: s.image })\n      ] }),\n      /* @__PURE__ */ jsx(Text, { mb: \"xs\", lineClamp: isMobile ? 8 : 6, className: s.reviewText, children: review.text }),\n      /* @__PURE__ */ jsx(Text, { className: s.reviewText, c: \"dark.2\", mt: \"auto\", children: review.created_at })\n    ] }) }, index)) }),\n    /* @__PURE__ */ jsx(Mobile, {}),\n    /* @__PURE__ */ jsx(Desktop, {})\n  ] });\n};\n",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696677,
+      "end": 1746125696677,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

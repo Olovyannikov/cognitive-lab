@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Text, Title } from '@mantine/core';\n\nimport s from './StatisticsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n}\n\nexport const StatisticsCard = ({ title, text }: CardProps) => (\n    <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>\n);\n",
-      "start": 1746125082011,
-      "end": 1746125082054,
+      "start": 1746125696365,
+      "end": 1746125696422,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper, Text, Title } from '@mantine/core';\nimport s from './StatisticsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n}\nexport const StatisticsCard = ({\n  title,\n  text\n}: CardProps) => <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>;",
-      "start": 1746125082054,
-      "end": 1746125082055,
+      "start": 1746125696422,
+      "end": 1746125696423,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
-      "start": 1746125082055,
-      "end": 1746125082359,
+      "start": 1746125696423,
+      "end": 1746125696681,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,75 +59,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082359,
-      "end": 1746125082359,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/StatisticsCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
-      "start": 1746125082360,
-      "end": 1746125082360,
+      "start": 1746125696681,
+      "end": 1746125696681,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

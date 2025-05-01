@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, type ButtonProps } from '@mantine/core';\nimport { FileText } from '@phosphor-icons/react/dist/ssr';\n\ninterface NavigateToFullStructureTemplateProps extends ButtonProps {\n    text?: string;\n    link?: string;\n}\n\nexport const NavigateToFullStructureTemplate = ({\n    text = 'Посмотреть структуру отчета',\n    link = '/full-report/example',\n    ...props\n}: NavigateToFullStructureTemplateProps) => (\n    <Button size='md' href={link} component='a' variant='default' leftSection={<FileText size={24} />} {...props}>\n        {text}\n    </Button>\n);\n",
-      "start": 1746125082079,
-      "end": 1746125082118,
+      "start": 1746125696527,
+      "end": 1746125696563,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, type ButtonProps } from '@mantine/core';\nimport { FileText } from '@phosphor-icons/react/dist/ssr';\ninterface NavigateToFullStructureTemplateProps extends ButtonProps {\n  text?: string;\n  link?: string;\n}\nexport const NavigateToFullStructureTemplate = ({\n  text = 'Посмотреть структуру отчета',\n  link = '/full-report/example',\n  ...props\n}: NavigateToFullStructureTemplateProps) => <Button size='md' href={link} component='a' variant='default' leftSection={<FileText size={24} />} {...props}>\n        {text}\n    </Button>;",
-      "start": 1746125082118,
-      "end": 1746125082120,
+      "start": 1746125696563,
+      "end": 1746125696568,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,8 +39,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { FileText } from \"@phosphor-icons/react/dist/ssr\";\nexport const NavigateToFullStructureTemplate = ({\n  text = \"Посмотреть структуру отчета\",\n  link = \"/full-report/example\",\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { size: \"md\", href: link, component: \"a\", variant: \"default\", leftSection: /* @__PURE__ */ jsx(FileText, { size: 24 }), ...props, children: text });\n",
-      "start": 1746125082120,
-      "end": 1746125082405,
+      "start": 1746125696568,
+      "end": 1746125696824,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -56,75 +56,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082405,
-      "end": 1746125082405,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082406,
-      "end": 1746125082406,
+      "start": 1746125696824,
+      "end": 1746125696824,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082406,
-      "end": 1746125082406,
+      "start": 1746125696824,
+      "end": 1746125696825,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082406,
-      "end": 1746125082406,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082406,
-      "end": 1746125082406,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/NavigateToFullStructureTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { FileText } from \"@phosphor-icons/react/dist/ssr\";\nexport const NavigateToFullStructureTemplate = ({\n  text = \"Посмотреть структуру отчета\",\n  link = \"/full-report/example\",\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { size: \"md\", href: link, component: \"a\", variant: \"default\", leftSection: /* @__PURE__ */ jsx(FileText, { size: 24 }), ...props, children: text });\n",
-      "start": 1746125082406,
-      "end": 1746125082406,
+      "start": 1746125696825,
+      "end": 1746125696825,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

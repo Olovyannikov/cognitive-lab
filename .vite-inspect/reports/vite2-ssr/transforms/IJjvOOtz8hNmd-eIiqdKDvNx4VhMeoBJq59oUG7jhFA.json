@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './Subscription.module.css';\n\ninterface SubscriptionProps {\n    title?: string;\n    text?: string;\n    subscriptionFormSlot?: ReactNode;\n}\n\nexport const Subscription = ({ title, text, subscriptionFormSlot }: SubscriptionProps) => {\n    const isHuge = useIsHuge();\n    const isLarge = useIsLarge();\n    return (\n        <Paper\n            radius='lg'\n            bg='violet.0'\n            pos='relative'\n            mt={isLarge ? 100 : 0}\n            mx={isHuge ? -153 : 0}\n            px={isLarge ? '3xl' : 'md'}\n            py={isLarge ? '3xl' : 'xl'}\n        >\n            <Picture\n                pos='absolute'\n                top={isLarge ? 32 : 5}\n                right={32}\n                w={isLarge ? 261 : 90}\n                h={isLarge ? 232 : 90}\n                fit='contain'\n                src='/report/mail'\n            />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1746125081888,
-      "end": 1746125081936,
+      "start": 1746125696477,
+      "end": 1746125696521,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './Subscription.module.css';\ninterface SubscriptionProps {\n  title?: string;\n  text?: string;\n  subscriptionFormSlot?: ReactNode;\n}\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}: SubscriptionProps) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return <Paper radius='lg' bg='violet.0' pos='relative' mt={isLarge ? 100 : 0} mx={isHuge ? -153 : 0} px={isLarge ? '3xl' : 'md'} py={isLarge ? '3xl' : 'xl'}>\n            <Picture pos='absolute' top={isLarge ? 32 : 5} right={32} w={isLarge ? 261 : 90} h={isLarge ? 232 : 90} fit='contain' src='/report/mail' />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>;\n};",
-      "start": 1746125081936,
-      "end": 1746125081938,
+      "start": 1746125696521,
+      "end": 1746125696523,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -48,8 +48,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { radius: \"lg\", bg: \"violet.0\", pos: \"relative\", mt: isLarge ? 100 : 0, mx: isHuge ? -153 : 0, px: isLarge ? \"3xl\" : \"md\", py: isLarge ? \"3xl\" : \"xl\", children: [\n    /* @__PURE__ */ jsx(Picture, { pos: \"absolute\", top: isLarge ? 32 : 5, right: 32, w: isLarge ? 261 : 90, h: isLarge ? 232 : 90, fit: \"contain\", src: \"/report/mail\" }),\n    /* @__PURE__ */ jsxs(Stack, { maw: 1040, className: s.content, children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: \"60%\", children: title }),\n      /* @__PURE__ */ jsx(Text, { fz: isLarge ? 24 : 18, children: text }),\n      subscriptionFormSlot\n    ] })\n  ] });\n};\n",
-      "start": 1746125081938,
-      "end": 1746125082163,
+      "start": 1746125696523,
+      "end": 1746125696775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -65,75 +65,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Subscription/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { radius: \"lg\", bg: \"violet.0\", pos: \"relative\", mt: isLarge ? 100 : 0, mx: isHuge ? -153 : 0, px: isLarge ? \"3xl\" : \"md\", py: isLarge ? \"3xl\" : \"xl\", children: [\n    /* @__PURE__ */ jsx(Picture, { pos: \"absolute\", top: isLarge ? 32 : 5, right: 32, w: isLarge ? 261 : 90, h: isLarge ? 232 : 90, fit: \"contain\", src: \"/report/mail\" }),\n    /* @__PURE__ */ jsxs(Stack, { maw: 1040, className: s.content, children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: \"60%\", children: title }),\n      /* @__PURE__ */ jsx(Text, { fz: isLarge ? 24 : 18, children: text }),\n      subscriptionFormSlot\n    ] })\n  ] });\n};\n",
-      "start": 1746125082163,
-      "end": 1746125082163,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

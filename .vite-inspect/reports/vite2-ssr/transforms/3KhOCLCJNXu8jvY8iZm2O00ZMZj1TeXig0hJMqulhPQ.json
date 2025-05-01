@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getPersonalityTypeQuery } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\nimport { RedirectToTestPage } from '@/features/RedirectToTestPage';\nimport { TakeTestAgain } from '@/features/TakeTestAgain';\n\nimport s from './CTA.module.css';\n\nexport const BuyNowAndNavigateToFullStructureAction = () => {\n    const { data } = useUnit(getPersonalityTypeQuery);\n\n    return (\n        <Flex className={s.actions}>\n            <BuyNowButton mbti={data?.mbti_type} />\n            <NavigateToFullStructureTemplate />\n        </Flex>\n    );\n};\n\nexport const RedirectToTestPageAndNavigateToFullStructureAction = () => (\n    <Flex className={s.actions}>\n        <RedirectToTestPage />\n        <NavigateToFullStructureTemplate />\n    </Flex>\n);\n\nexport const BuyNowOrRedirectToTestPageAction = () => {\n    const { routeParams } = usePageContext();\n\n    return (\n        <Flex className={s.actions}>\n            <RedirectToTestPage />\n            <BuyNowButton mbti={routeParams?.type ?? ' '} variant='default' bg='transparent' />\n        </Flex>\n    );\n};\n\nexport const TakeTestAgainOrBuyReportAction = () => {\n    const surveyId = useUnit(UserModel.$surveyId);\n    const {\n        routeParams: { reportId },\n    } = usePageContext();\n\n    return (\n        <Flex className={s.actions}>\n            {(reportId ?? surveyId) && <BuyNowButton showIcon survey={reportId ?? surveyId} />}\n            <TakeTestAgain />\n        </Flex>\n    );\n};\n",
-      "start": 1746125081783,
-      "end": 1746125081826,
+      "start": 1746125696204,
+      "end": 1746125696248,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getPersonalityTypeQuery } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\nimport { RedirectToTestPage } from '@/features/RedirectToTestPage';\nimport { TakeTestAgain } from '@/features/TakeTestAgain';\nimport s from './CTA.module.css';\nexport const BuyNowAndNavigateToFullStructureAction = () => {\n  const {\n    data\n  } = useUnit(getPersonalityTypeQuery);\n  return <Flex className={s.actions}>\n            <BuyNowButton mbti={data?.mbti_type} />\n            <NavigateToFullStructureTemplate />\n        </Flex>;\n};\nexport const RedirectToTestPageAndNavigateToFullStructureAction = () => <Flex className={s.actions}>\n        <RedirectToTestPage />\n        <NavigateToFullStructureTemplate />\n    </Flex>;\nexport const BuyNowOrRedirectToTestPageAction = () => {\n  const {\n    routeParams\n  } = usePageContext();\n  return <Flex className={s.actions}>\n            <RedirectToTestPage />\n            <BuyNowButton mbti={routeParams?.type ?? ' '} variant='default' bg='transparent' />\n        </Flex>;\n};\nexport const TakeTestAgainOrBuyReportAction = () => {\n  const surveyId = useUnit(UserModel.$surveyId);\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  return <Flex className={s.actions}>\n            {(reportId ?? surveyId) && <BuyNowButton showIcon survey={reportId ?? surveyId} />}\n            <TakeTestAgain />\n        </Flex>;\n};",
-      "start": 1746125081826,
-      "end": 1746125081827,
+      "start": 1746125696248,
+      "end": 1746125696253,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -51,8 +51,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport { RedirectToTestPage } from \"@/features/RedirectToTestPage\";\nimport { TakeTestAgain } from \"@/features/TakeTestAgain\";\nimport s from \"./CTA.module.css\";\nexport const BuyNowAndNavigateToFullStructureAction = () => {\n  const {\n    data\n  } = useUnit(getPersonalityTypeQuery);\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    /* @__PURE__ */ jsx(BuyNowButton, { mbti: data?.mbti_type }),\n    /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n  ] });\n};\nexport const RedirectToTestPageAndNavigateToFullStructureAction = () => /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n  /* @__PURE__ */ jsx(RedirectToTestPage, {}),\n  /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n] });\nexport const BuyNowOrRedirectToTestPageAction = () => {\n  const {\n    routeParams\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    /* @__PURE__ */ jsx(RedirectToTestPage, {}),\n    /* @__PURE__ */ jsx(BuyNowButton, { mbti: routeParams?.type ?? \" \", variant: \"default\", bg: \"transparent\" })\n  ] });\n};\nexport const TakeTestAgainOrBuyReportAction = () => {\n  const surveyId = useUnit(UserModel.$surveyId);\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    (reportId ?? surveyId) && /* @__PURE__ */ jsx(BuyNowButton, { showIcon: true, survey: reportId ?? surveyId }),\n    /* @__PURE__ */ jsx(TakeTestAgain, {})\n  ] });\n};\n",
-      "start": 1746125081827,
-      "end": 1746125082019,
+      "start": 1746125696253,
+      "end": 1746125696383,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -66,75 +66,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082019,
-      "end": 1746125082020,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082020,
-      "end": 1746125082020,
+      "start": 1746125696383,
+      "end": 1746125696383,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CTA/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport { RedirectToTestPage } from \"@/features/RedirectToTestPage\";\nimport { TakeTestAgain } from \"@/features/TakeTestAgain\";\nimport s from \"./CTA.module.css\";\nexport const BuyNowAndNavigateToFullStructureAction = () => {\n  const {\n    data\n  } = useUnit(getPersonalityTypeQuery);\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    /* @__PURE__ */ jsx(BuyNowButton, { mbti: data?.mbti_type }),\n    /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n  ] });\n};\nexport const RedirectToTestPageAndNavigateToFullStructureAction = () => /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n  /* @__PURE__ */ jsx(RedirectToTestPage, {}),\n  /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n] });\nexport const BuyNowOrRedirectToTestPageAction = () => {\n  const {\n    routeParams\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    /* @__PURE__ */ jsx(RedirectToTestPage, {}),\n    /* @__PURE__ */ jsx(BuyNowButton, { mbti: routeParams?.type ?? \" \", variant: \"default\", bg: \"transparent\" })\n  ] });\n};\nexport const TakeTestAgainOrBuyReportAction = () => {\n  const surveyId = useUnit(UserModel.$surveyId);\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Flex, { className: s.actions, children: [\n    (reportId ?? surveyId) && /* @__PURE__ */ jsx(BuyNowButton, { showIcon: true, survey: reportId ?? surveyId }),\n    /* @__PURE__ */ jsx(TakeTestAgain, {})\n  ] });\n};\n",
-      "start": 1746125082020,
-      "end": 1746125082020,
+      "start": 1746125696384,
+      "end": 1746125696384,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

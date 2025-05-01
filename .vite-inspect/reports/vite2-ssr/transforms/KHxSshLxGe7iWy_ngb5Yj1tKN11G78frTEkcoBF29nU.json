@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Title, type TitleProps } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\n\nexport const ReportTitle = ({ children }: TitleProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>\n    );\n};\n",
-      "start": 1746125081887,
-      "end": 1746125081936,
+      "start": 1746125696473,
+      "end": 1746125696515,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Title, type TitleProps } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nexport const ReportTitle = ({\n  children\n}: TitleProps) => {\n  const isLarge = useIsLarge();\n  return <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>;\n};",
-      "start": 1746125081936,
-      "end": 1746125081936,
+      "start": 1746125696515,
+      "end": 1746125696517,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const ReportTitle = ({\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Title, { mb: \"md\", \"data-type\": \"title\", fz: isLarge ? 24 : 20, children });\n};\n",
-      "start": 1746125081936,
-      "end": 1746125082161,
+      "start": 1746125696517,
+      "end": 1746125696775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,75 +47,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportTitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const ReportTitle = ({\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Title, { mb: \"md\", \"data-type\": \"title\", fz: isLarge ? 24 : 20, children });\n};\n",
-      "start": 1746125082161,
-      "end": 1746125082161,
+      "start": 1746125696775,
+      "end": 1746125696775,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\n\nimport { atom } from '@/shared/factories';\nimport { isErrorWithMessage } from '@/shared/lib';\n\nimport { createReviewMutation } from '../api';\nimport type { CreateReviewRequest } from '../api/dto';\n\nexport interface Review {\n    id: string;\n    mbti_type: string;\n    name: string;\n    text: string;\n    informativeness_rate: number;\n    convenience_rate: number;\n    accuracy_rate: number;\n    recommendability_rate: number;\n    satisfaction_rate: number;\n    overall_rate: number;\n    created_at: string;\n}\n\nexport const ReviewModel = atom(() => {\n    const ReviewGate = createGate();\n\n    const $allReviews = createStore<Review[]>([]);\n    const $currentReviewId = createStore<string | null>(null);\n    const $isFormSubmittedSuccessfully = createStore(false);\n    const $hasError = createStore<string | false>(false);\n\n    const reviewCreated = createEvent<CreateReviewRequest>();\n\n    const showMessageFx = createEffect(({ message, isError }: { message: string; isError?: boolean }) => {\n        notifications.show({\n            title: isError ? 'Произошла ошибка' : 'Успешно!',\n            message,\n            color: isError ? 'red' : 'blue',\n        });\n    });\n\n    sample({\n        clock: reviewCreated,\n        target: createReviewMutation.start,\n    });\n\n    sample({\n        clock: createReviewMutation.finished.success,\n        fn: () => true,\n        target: $isFormSubmittedSuccessfully,\n    });\n\n    sample({\n        clock: ReviewGate.close,\n        fn: () => false,\n        target: $isFormSubmittedSuccessfully,\n    });\n\n    sample({\n        clock: createReviewMutation.finished.failure,\n        fn: ({ error }) => (isErrorWithMessage(error) ? error.data.message : 'Произошла ошибка'),\n        target: $hasError,\n    });\n\n    sample({\n        clock: $isFormSubmittedSuccessfully,\n        filter: (success) => success === true,\n        fn: () => ({\n            message: 'Отзыв успешно отправлен!',\n            isError: false,\n        }),\n        target: showMessageFx,\n    });\n\n    sample({\n        clock: $hasError,\n        filter: (hasError) => hasError !== false,\n        fn: (error) => ({\n            message: error === false ? 'Произошла ошибка' : error,\n            isError: true,\n        }),\n        target: showMessageFx,\n    });\n\n    sample({\n        clock: delay($hasError, 300),\n        target: $hasError.reinit,\n    });\n\n    return {\n        $allReviews,\n        $currentReviewId,\n        $isFormSubmittedSuccessfully,\n        reviewCreated,\n        $hasError,\n        ReviewGate,\n    };\n});\n",
-      "start": 1746125081761,
-      "end": 1746125081794,
+      "start": 1746125696162,
+      "end": 1746125696210,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\nimport { atom } from '@/shared/factories';\nimport { isErrorWithMessage } from '@/shared/lib';\nimport { createReviewMutation } from '../api';\nimport type { CreateReviewRequest } from '../api/dto';\nexport interface Review {\n  id: string;\n  mbti_type: string;\n  name: string;\n  text: string;\n  informativeness_rate: number;\n  convenience_rate: number;\n  accuracy_rate: number;\n  recommendability_rate: number;\n  satisfaction_rate: number;\n  overall_rate: number;\n  created_at: string;\n}\nexport const ReviewModel = atom(() => {\n  const ReviewGate = createGate({\n    and: [],\n    or: {\n      name: \"ReviewGate\",\n      sid: \"-ieiw5b\"\n    }\n  });\n  const $allReviews = createStore<Review[]>([], {\n    name: \"$allReviews\",\n    sid: \"-b9etj1\"\n  });\n  const $currentReviewId = createStore<string | null>(null, {\n    name: \"$currentReviewId\",\n    sid: \"huyue6\"\n  });\n  const $isFormSubmittedSuccessfully = createStore(false, {\n    name: \"$isFormSubmittedSuccessfully\",\n    sid: \"4bdvj3\"\n  });\n  const $hasError = createStore<string | false>(false, {\n    name: \"$hasError\",\n    sid: \"j366zd\"\n  });\n  const reviewCreated = createEvent<CreateReviewRequest>({\n    name: \"reviewCreated\",\n    sid: \"-sea2qz\"\n  });\n  const showMessageFx = createEffect(({\n    message,\n    isError\n  }: {\n    message: string;\n    isError?: boolean;\n  }) => {\n    notifications.show({\n      title: isError ? 'Произошла ошибка' : 'Успешно!',\n      message,\n      color: isError ? 'red' : 'blue'\n    });\n  }, {\n    name: \"showMessageFx\",\n    sid: \"sqf3lz\"\n  });\n  sample({\n    and: [{\n      clock: reviewCreated,\n      target: createReviewMutation.start\n    }],\n    or: {\n      sid: \"-3cpdb8\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: () => true,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-39yecf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: ReviewGate.close,\n      fn: () => false,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-2v3ybo\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.failure,\n      fn: ({\n        error\n      }) => isErrorWithMessage(error) ? error.data.message : 'Произошла ошибка',\n      target: $hasError\n    }],\n    or: {\n      sid: \"-2g9iax\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $isFormSubmittedSuccessfully,\n      filter: success => success === true,\n      fn: () => ({\n        message: 'Отзыв успешно отправлен!',\n        isError: false\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-2cyqqr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $hasError,\n      filter: hasError => hasError !== false,\n      fn: error => ({\n        message: error === false ? 'Произошла ошибка' : error,\n        isError: true\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-1vx4ck\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-o9m4q0\",\n        fn: () => delay($hasError, 300),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      target: $hasError.reinit\n    }],\n    or: {\n      sid: \"-1evhyd\"\n    }\n  });\n  return {\n    $allReviews,\n    $currentReviewId,\n    $isFormSubmittedSuccessfully,\n    reviewCreated,\n    $hasError,\n    ReviewGate\n  };\n});",
-      "start": 1746125081794,
-      "end": 1746125081797,
+      "start": 1746125696210,
+      "end": 1746125696214,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -86,8 +86,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { createReviewMutation } from \"../api\";\nexport const ReviewModel = atom(() => {\n  const ReviewGate = createGate({\n    and: [],\n    or: {\n      name: \"ReviewGate\",\n      sid: \"-ieiw5b\"\n    }\n  });\n  const $allReviews = createStore([], {\n    name: \"$allReviews\",\n    sid: \"-b9etj1\"\n  });\n  const $currentReviewId = createStore(null, {\n    name: \"$currentReviewId\",\n    sid: \"huyue6\"\n  });\n  const $isFormSubmittedSuccessfully = createStore(false, {\n    name: \"$isFormSubmittedSuccessfully\",\n    sid: \"4bdvj3\"\n  });\n  const $hasError = createStore(false, {\n    name: \"$hasError\",\n    sid: \"j366zd\"\n  });\n  const reviewCreated = createEvent({\n    name: \"reviewCreated\",\n    sid: \"-sea2qz\"\n  });\n  const showMessageFx = createEffect(({\n    message,\n    isError\n  }) => {\n    notifications.show({\n      title: isError ? \"Произошла ошибка\" : \"Успешно!\",\n      message,\n      color: isError ? \"red\" : \"blue\"\n    });\n  }, {\n    name: \"showMessageFx\",\n    sid: \"sqf3lz\"\n  });\n  sample({\n    and: [{\n      clock: reviewCreated,\n      target: createReviewMutation.start\n    }],\n    or: {\n      sid: \"-3cpdb8\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: () => true,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-39yecf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: ReviewGate.close,\n      fn: () => false,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-2v3ybo\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.failure,\n      fn: ({\n        error\n      }) => isErrorWithMessage(error) ? error.data.message : \"Произошла ошибка\",\n      target: $hasError\n    }],\n    or: {\n      sid: \"-2g9iax\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $isFormSubmittedSuccessfully,\n      filter: (success) => success === true,\n      fn: () => ({\n        message: \"Отзыв успешно отправлен!\",\n        isError: false\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-2cyqqr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $hasError,\n      filter: (hasError) => hasError !== false,\n      fn: (error) => ({\n        message: error === false ? \"Произошла ошибка\" : error,\n        isError: true\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-1vx4ck\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-o9m4q0\",\n        fn: () => delay($hasError, 300),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      target: $hasError.reinit\n    }],\n    or: {\n      sid: \"-1evhyd\"\n    }\n  });\n  return {\n    $allReviews,\n    $currentReviewId,\n    $isFormSubmittedSuccessfully,\n    reviewCreated,\n    $hasError,\n    ReviewGate\n  };\n});\n",
-      "start": 1746125081797,
-      "end": 1746125081877,
+      "start": 1746125696214,
+      "end": 1746125696329,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -101,75 +101,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Review/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { createReviewMutation } from \"../api\";\nexport const ReviewModel = atom(() => {\n  const ReviewGate = createGate({\n    and: [],\n    or: {\n      name: \"ReviewGate\",\n      sid: \"-ieiw5b\"\n    }\n  });\n  const $allReviews = createStore([], {\n    name: \"$allReviews\",\n    sid: \"-b9etj1\"\n  });\n  const $currentReviewId = createStore(null, {\n    name: \"$currentReviewId\",\n    sid: \"huyue6\"\n  });\n  const $isFormSubmittedSuccessfully = createStore(false, {\n    name: \"$isFormSubmittedSuccessfully\",\n    sid: \"4bdvj3\"\n  });\n  const $hasError = createStore(false, {\n    name: \"$hasError\",\n    sid: \"j366zd\"\n  });\n  const reviewCreated = createEvent({\n    name: \"reviewCreated\",\n    sid: \"-sea2qz\"\n  });\n  const showMessageFx = createEffect(({\n    message,\n    isError\n  }) => {\n    notifications.show({\n      title: isError ? \"Произошла ошибка\" : \"Успешно!\",\n      message,\n      color: isError ? \"red\" : \"blue\"\n    });\n  }, {\n    name: \"showMessageFx\",\n    sid: \"sqf3lz\"\n  });\n  sample({\n    and: [{\n      clock: reviewCreated,\n      target: createReviewMutation.start\n    }],\n    or: {\n      sid: \"-3cpdb8\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: () => true,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-39yecf\"\n    }\n  });\n  sample({\n    and: [{\n      clock: ReviewGate.close,\n      fn: () => false,\n      target: $isFormSubmittedSuccessfully\n    }],\n    or: {\n      sid: \"-2v3ybo\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.failure,\n      fn: ({\n        error\n      }) => isErrorWithMessage(error) ? error.data.message : \"Произошла ошибка\",\n      target: $hasError\n    }],\n    or: {\n      sid: \"-2g9iax\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $isFormSubmittedSuccessfully,\n      filter: (success) => success === true,\n      fn: () => ({\n        message: \"Отзыв успешно отправлен!\",\n        isError: false\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-2cyqqr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $hasError,\n      filter: (hasError) => hasError !== false,\n      fn: (error) => ({\n        message: error === false ? \"Произошла ошибка\" : error,\n        isError: true\n      }),\n      target: showMessageFx\n    }],\n    or: {\n      sid: \"-1vx4ck\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-o9m4q0\",\n        fn: () => delay($hasError, 300),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      target: $hasError.reinit\n    }],\n    or: {\n      sid: \"-1evhyd\"\n    }\n  });\n  return {\n    $allReviews,\n    $currentReviewId,\n    $isFormSubmittedSuccessfully,\n    reviewCreated,\n    $hasError,\n    ReviewGate\n  };\n});\n",
-      "start": 1746125081877,
-      "end": 1746125081877,
+      "start": 1746125696329,
+      "end": 1746125696329,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

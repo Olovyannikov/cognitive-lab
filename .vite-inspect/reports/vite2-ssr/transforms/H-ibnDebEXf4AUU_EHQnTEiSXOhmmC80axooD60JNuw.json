@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';\n",
-      "start": 1746125081713,
-      "end": 1746125081760,
+      "start": 1746125696117,
+      "end": 1746125696175,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';",
-      "start": 1746125081760,
-      "end": 1746125081761,
+      "start": 1746125696175,
+      "end": 1746125696176,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
-      "start": 1746125081761,
-      "end": 1746125081833,
+      "start": 1746125696176,
+      "end": 1746125696236,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696236,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696236,
+      "end": 1746125696237,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

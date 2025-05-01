@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile, urlParsed: { search } }) => {\n        let page = 1;\n        let page_size = isMobile ? 5 : 10;\n\n        if (search.page_size) page_size = Number(search.page_size);\n        if (search.page) page = Number(search.page);\n\n        return {\n            page,\n            page_size,\n        };\n    },\n    target: getBlogPostsQuery.start,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile }) => (isMobile ? 5 : 10),\n    target: BlogModel.$pageSize,\n});\n\nsample({\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx,\n});\n",
-      "start": 1746125081534,
-      "end": 1746125081557,
+      "start": 1746125695907,
+      "end": 1746125695929,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});",
-      "start": 1746125081557,
-      "end": 1746125081559,
+      "start": 1746125695929,
+      "end": 1746125695931,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -51,8 +51,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});\n",
-      "start": 1746125081559,
-      "end": 1746125081608,
+      "start": 1746125695932,
+      "end": 1746125696003,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -66,75 +66,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696003,
+      "end": 1746125696003,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696003,
+      "end": 1746125696003,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/blog/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});\n",
-      "start": 1746125081608,
-      "end": 1746125081608,
+      "start": 1746125696004,
+      "end": 1746125696004,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

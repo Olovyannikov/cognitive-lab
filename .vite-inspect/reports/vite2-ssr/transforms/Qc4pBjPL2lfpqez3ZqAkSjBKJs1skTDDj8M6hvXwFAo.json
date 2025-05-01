@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\n\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1746125082451,
-      "end": 1746125082478,
+      "start": 1746125696744,
+      "end": 1746125696767,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];",
-      "start": 1746125082478,
-      "end": 1746125082479,
+      "start": 1746125696767,
+      "end": 1746125696767,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1746125082479,
-      "end": 1746125082521,
+      "start": 1746125696768,
+      "end": 1746125696951,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,75 +47,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082521,
-      "end": 1746125082521,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/const.tsx [vike:pluginModuleBanner] */\nimport { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1746125082521,
-      "end": 1746125082522,
+      "start": 1746125696951,
+      "end": 1746125696951,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

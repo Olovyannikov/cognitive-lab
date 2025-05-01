@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".inner,\n.label {\n  width: 100%;\n  height: auto;\n  color: var(--mantine-color-dark-9);\n\n  svg {\n    @mixin text-data-color 9;\n  }\n}\n\n.wrapper {\n  position: sticky;\n  top: 0;\n  z-index: 199;\n  margin: 0 auto;\n  background-color: var(--mantine-color-white);\n}\n\n.block {\n  margin-bottom: var(--mantine-spacing-3xl);\n  background-color: var(--mantine-color-white);\n  margin-inline: calc(-1 * var(--mantine-spacing-md));\n  padding-block: var(--mantine-spacing-lg);\n  padding-inline: var(--mantine-spacing-md);\n\n  @mixin larger-than 992px {\n    margin-inline: auto;\n  }\n}\n\n.block [data-block] {\n  height: auto;\n}\n\n.dropdownIcon {\n  svg {\n    width: 14px;\n    height: 14px;\n  }\n\n  @mixin larger-than 768px {\n    svg {\n      width: 20px;\n      height: 20px;\n    }\n  }\n}\n\n.dropdown {\n  overflow-y: auto;\n  border-radius: var(--mantine-spacing-lg);\n  padding: 12px 4px 0;\n  max-height: calc(100vh - 100px);\n  box-shadow: var(--mantine-shadow-lg);\n  overscroll-behavior: contain;\n}\n\n.item {\n  margin-bottom: 10px;\n}\n\n.group {\n  flex-wrap: nowrap;\n  align-items: center;\n  overflow: hidden;\n  width: 100%;\n}\n\n.iconWrapper {\n  border-radius: var(--mantine-spacing-md);\n}\n",
-      "start": 1746125082191,
-      "end": 1746125082272,
+      "start": 1746125696821,
+      "end": 1746125696847,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082272,
-      "end": 1746125082272,
+      "start": 1746125696847,
+      "end": 1746125696847,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/ReportNavigationTemplate.module.css [vike:pluginModuleBanner] */\nexport const inner = \"Vb-SK\";\nexport const label = \"-dRHh\";\nexport const wrapper = \"qsP29\";\nexport const block = \"_9gVxm\";\nexport const dropdownIcon = \"oZRps\";\nexport const dropdown = \"qbrO-\";\nexport const item = \"AMb2M\";\nexport const group = \"DA0oe\";\nexport const iconWrapper = \"e-cuU\";\nexport default {\n\tinner: inner,\n\tlabel: label,\n\twrapper: wrapper,\n\tblock: block,\n\tdropdownIcon: dropdownIcon,\n\tdropdown: dropdown,\n\titem: item,\n\tgroup: group,\n\ticonWrapper: iconWrapper\n};\n",
-      "start": 1746125082275,
-      "end": 1746125082275,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

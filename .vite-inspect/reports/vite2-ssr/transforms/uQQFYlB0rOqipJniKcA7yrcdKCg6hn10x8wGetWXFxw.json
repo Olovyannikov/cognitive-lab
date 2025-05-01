@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getStatusInfo, getSurveysInfoQuery, ReportModel } from '@/entities/Report';\n\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\n\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './PaymentCheckPage.module.css';\n\nexport const PaymentCheckPage = () => {\n    const { pending, stale } = useUnit(getSurveysInfoQuery);\n    const { status, order } = useUnit({\n        order: ReportModel.$userOrder,\n        status: ReportModel.$userOrderStatus,\n    });\n\n    const { title, buttonText, text, infoStatus } = getStatusInfo(status);\n\n    if (pending || stale) return <PageLoader />;\n\n    return (\n        <InnerLayout\n            maw={638}\n            className={s.root}\n            title={title}\n            text={text}\n            image={`/payment/${infoStatus}`}\n            navigateTo='/'\n        >\n            <Button size='md' component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>\n                {buttonText}\n            </Button>\n            <NavigateToHelpPage />\n        </InnerLayout>\n    );\n};\n",
-      "start": 1746125081636,
-      "end": 1746125081664,
+      "start": 1746125696045,
+      "end": 1746125696095,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { getStatusInfo, getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './PaymentCheckPage.module.css';\nexport const PaymentCheckPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const {\n    status,\n    order\n  } = useUnit({\n    order: ReportModel.$userOrder,\n    status: ReportModel.$userOrderStatus\n  });\n  const {\n    title,\n    buttonText,\n    text,\n    infoStatus\n  } = getStatusInfo(status);\n  if (pending || stale) return <PageLoader />;\n  return <InnerLayout maw={638} className={s.root} title={title} text={text} image={`/payment/${infoStatus}`} navigateTo='/'>\n            <Button size='md' component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>\n                {buttonText}\n            </Button>\n            <NavigateToHelpPage />\n        </InnerLayout>;\n};",
-      "start": 1746125081664,
-      "end": 1746125081665,
+      "start": 1746125696095,
+      "end": 1746125696096,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -51,8 +51,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getStatusInfo, getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PaymentCheckPage.module.css\";\nexport const PaymentCheckPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const {\n    status,\n    order\n  } = useUnit({\n    order: ReportModel.$userOrder,\n    status: ReportModel.$userOrderStatus\n  });\n  const {\n    title,\n    buttonText,\n    text,\n    infoStatus\n  } = getStatusInfo(status);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(InnerLayout, { maw: 638, className: s.root, title, text, image: `/payment/${infoStatus}`, navigateTo: \"/\", children: [\n    /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: status === \"paid\" ? `/report/${order?.user_report}` : `/`, children: buttonText }),\n    /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n  ] });\n};\n",
-      "start": 1746125081665,
-      "end": 1746125081739,
+      "start": 1746125696096,
+      "end": 1746125696180,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -66,75 +66,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081739,
-      "end": 1746125081739,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/PaymentCheckPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getStatusInfo, getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PaymentCheckPage.module.css\";\nexport const PaymentCheckPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getSurveysInfoQuery);\n  const {\n    status,\n    order\n  } = useUnit({\n    order: ReportModel.$userOrder,\n    status: ReportModel.$userOrderStatus\n  });\n  const {\n    title,\n    buttonText,\n    text,\n    infoStatus\n  } = getStatusInfo(status);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(InnerLayout, { maw: 638, className: s.root, title, text, image: `/payment/${infoStatus}`, navigateTo: \"/\", children: [\n    /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: status === \"paid\" ? `/report/${order?.user_report}` : `/`, children: buttonText }),\n    /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n  ] });\n};\n",
-      "start": 1746125081739,
-      "end": 1746125081740,
+      "start": 1746125696180,
+      "end": 1746125696180,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

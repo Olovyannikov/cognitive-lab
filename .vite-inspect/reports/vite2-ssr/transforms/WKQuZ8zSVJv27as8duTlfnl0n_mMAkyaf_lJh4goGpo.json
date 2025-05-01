@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { submitAnswersMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\n\nexport const SubmitTestModel = atom(() => {\n    const $isSubmitModalShown = createStore<boolean>(false);\n    const submitScaleForm = createEvent();\n    const submitModalStateChanged = createEvent();\n\n    const redirectToFreeReportPageFx = createEffect(async (reportId: string) => {\n        await navigate(`/free-report/${reportId}`);\n    });\n\n    const showSubmitErrorFx = createEffect(async (message: string) => {\n        notifications.show({\n            color: 'red',\n            title: 'Ошибка!',\n            message,\n        });\n    });\n\n    sample({\n        clock: submitModalStateChanged,\n        source: $isSubmitModalShown,\n        fn: (param) => !param,\n        target: $isSubmitModalShown,\n    });\n\n    sample({\n        clock: submitScaleForm,\n        source: TestModel.$scaleForm,\n        target: submitAnswersMutation.start,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        fn: () => false,\n        target: $isSubmitModalShown,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        fn: ({ result }) => result.id,\n        target: UserModel.$surveyId,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        filter: () => !window?.location.origin.includes('free-report'),\n        fn: (report) => report.result.user_free_report,\n        target: redirectToFreeReportPageFx,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        fn: () => {},\n        target: getSurveysInfoQuery.start,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.failure,\n        fn: ({ error }) => error.message,\n        target: showSubmitErrorFx,\n    });\n\n    return {\n        redirectToFreeReportPageFx,\n        $isSubmitModalShown,\n        submitScaleForm,\n        submitModalStateChanged,\n    };\n});\n",
-      "start": 1746125082004,
-      "end": 1746125082043,
+      "start": 1746125696327,
+      "end": 1746125696378,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { submitAnswersMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\nexport const SubmitTestModel = atom(() => {\n  const $isSubmitModalShown = createStore<boolean>(false, {\n    name: \"$isSubmitModalShown\",\n    sid: \"-r9yc2g\"\n  });\n  const submitScaleForm = createEvent({\n    name: \"submitScaleForm\",\n    sid: \"8licx8\"\n  });\n  const submitModalStateChanged = createEvent({\n    name: \"submitModalStateChanged\",\n    sid: \"-dzuo34\"\n  });\n  const redirectToFreeReportPageFx = createEffect(async (reportId: string) => {\n    await navigate(`/free-report/${reportId}`);\n  }, {\n    name: \"redirectToFreeReportPageFx\",\n    sid: \"3g2ycr\"\n  });\n  const showSubmitErrorFx = createEffect(async (message: string) => {\n    notifications.show({\n      color: 'red',\n      title: 'Ошибка!',\n      message\n    });\n  }, {\n    name: \"showSubmitErrorFx\",\n    sid: \"9u4oq0\"\n  });\n  sample({\n    and: [{\n      clock: submitModalStateChanged,\n      source: $isSubmitModalShown,\n      fn: param => !param,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"mwve4u\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitScaleForm,\n      source: TestModel.$scaleForm,\n      target: submitAnswersMutation.start\n    }],\n    or: {\n      sid: \"nc9mqy\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => false,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"nr42rp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: ({\n        result\n      }) => result.id,\n      target: UserModel.$surveyId\n    }],\n    or: {\n      sid: \"nueubv\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      filter: () => !window?.location.origin.includes('free-report'),\n      fn: report => report.result.user_free_report,\n      target: redirectToFreeReportPageFx\n    }],\n    or: {\n      sid: \"o99acm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => {},\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"ooniyq\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.failure,\n      fn: ({\n        error\n      }) => error.message,\n      target: showSubmitErrorFx\n    }],\n    or: {\n      sid: \"oryaiw\"\n    }\n  });\n  return {\n    redirectToFreeReportPageFx,\n    $isSubmitModalShown,\n    submitScaleForm,\n    submitModalStateChanged\n  };\n});",
-      "start": 1746125082043,
-      "end": 1746125082048,
+      "start": 1746125696378,
+      "end": 1746125696380,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -78,8 +78,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { submitAnswersMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const SubmitTestModel = atom(() => {\n  const $isSubmitModalShown = createStore(false, {\n    name: \"$isSubmitModalShown\",\n    sid: \"-r9yc2g\"\n  });\n  const submitScaleForm = createEvent({\n    name: \"submitScaleForm\",\n    sid: \"8licx8\"\n  });\n  const submitModalStateChanged = createEvent({\n    name: \"submitModalStateChanged\",\n    sid: \"-dzuo34\"\n  });\n  const redirectToFreeReportPageFx = createEffect(async (reportId) => {\n    await navigate(`/free-report/${reportId}`);\n  }, {\n    name: \"redirectToFreeReportPageFx\",\n    sid: \"3g2ycr\"\n  });\n  const showSubmitErrorFx = createEffect(async (message) => {\n    notifications.show({\n      color: \"red\",\n      title: \"Ошибка!\",\n      message\n    });\n  }, {\n    name: \"showSubmitErrorFx\",\n    sid: \"9u4oq0\"\n  });\n  sample({\n    and: [{\n      clock: submitModalStateChanged,\n      source: $isSubmitModalShown,\n      fn: (param) => !param,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"mwve4u\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitScaleForm,\n      source: TestModel.$scaleForm,\n      target: submitAnswersMutation.start\n    }],\n    or: {\n      sid: \"nc9mqy\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => false,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"nr42rp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: ({\n        result\n      }) => result.id,\n      target: UserModel.$surveyId\n    }],\n    or: {\n      sid: \"nueubv\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      filter: () => !window?.location.origin.includes(\"free-report\"),\n      fn: (report) => report.result.user_free_report,\n      target: redirectToFreeReportPageFx\n    }],\n    or: {\n      sid: \"o99acm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => {\n      },\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"ooniyq\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.failure,\n      fn: ({\n        error\n      }) => error.message,\n      target: showSubmitErrorFx\n    }],\n    or: {\n      sid: \"oryaiw\"\n    }\n  });\n  return {\n    redirectToFreeReportPageFx,\n    $isSubmitModalShown,\n    submitScaleForm,\n    submitModalStateChanged\n  };\n});\n",
-      "start": 1746125082048,
-      "end": 1746125082354,
+      "start": 1746125696380,
+      "end": 1746125696600,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -95,75 +95,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SubmitTestModal/model/index.ts [vike:pluginModuleBanner] */\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { submitAnswersMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const SubmitTestModel = atom(() => {\n  const $isSubmitModalShown = createStore(false, {\n    name: \"$isSubmitModalShown\",\n    sid: \"-r9yc2g\"\n  });\n  const submitScaleForm = createEvent({\n    name: \"submitScaleForm\",\n    sid: \"8licx8\"\n  });\n  const submitModalStateChanged = createEvent({\n    name: \"submitModalStateChanged\",\n    sid: \"-dzuo34\"\n  });\n  const redirectToFreeReportPageFx = createEffect(async (reportId) => {\n    await navigate(`/free-report/${reportId}`);\n  }, {\n    name: \"redirectToFreeReportPageFx\",\n    sid: \"3g2ycr\"\n  });\n  const showSubmitErrorFx = createEffect(async (message) => {\n    notifications.show({\n      color: \"red\",\n      title: \"Ошибка!\",\n      message\n    });\n  }, {\n    name: \"showSubmitErrorFx\",\n    sid: \"9u4oq0\"\n  });\n  sample({\n    and: [{\n      clock: submitModalStateChanged,\n      source: $isSubmitModalShown,\n      fn: (param) => !param,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"mwve4u\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitScaleForm,\n      source: TestModel.$scaleForm,\n      target: submitAnswersMutation.start\n    }],\n    or: {\n      sid: \"nc9mqy\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => false,\n      target: $isSubmitModalShown\n    }],\n    or: {\n      sid: \"nr42rp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: ({\n        result\n      }) => result.id,\n      target: UserModel.$surveyId\n    }],\n    or: {\n      sid: \"nueubv\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      filter: () => !window?.location.origin.includes(\"free-report\"),\n      fn: (report) => report.result.user_free_report,\n      target: redirectToFreeReportPageFx\n    }],\n    or: {\n      sid: \"o99acm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.success,\n      fn: () => {\n      },\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"ooniyq\"\n    }\n  });\n  sample({\n    and: [{\n      clock: submitAnswersMutation.finished.failure,\n      fn: ({\n        error\n      }) => error.message,\n      target: showSubmitErrorFx\n    }],\n    or: {\n      sid: \"oryaiw\"\n    }\n  });\n  return {\n    redirectToFreeReportPageFx,\n    $isSubmitModalShown,\n    submitScaleForm,\n    submitModalStateChanged\n  };\n});\n",
-      "start": 1746125082354,
-      "end": 1746125082354,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -1,6 +1,7 @@
 import { createHandler } from '@universal-middleware/express';
 import compression from 'compression';
 import express from 'express';
+import expressStaticGzip from 'express-static-gzip';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createGzip } from 'node:zlib';
@@ -21,6 +22,13 @@ async function startServer() {
 
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(`${root}/dist/client`));
+        app.use(
+            '/',
+            expressStaticGzip('dist/client', {
+                enableBrotli: true,
+                orderPreference: ['br', 'gz'],
+            })
+        );
         app.use(
             compression({
                 brotli: true,

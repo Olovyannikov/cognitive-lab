@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import * as Index from './ui';\n\nexport const IndexPage = () => (\n    <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>\n);\n",
-      "start": 1746125081616,
-      "end": 1746125081640,
+      "start": 1746125696015,
+      "end": 1746125696051,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import * as Index from './ui';\nexport const IndexPage = () => <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>;",
-      "start": 1746125081640,
-      "end": 1746125081641,
+      "start": 1746125696051,
+      "end": 1746125696052,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport * as Index from \"./ui\";\nexport const IndexPage = () => /* @__PURE__ */ jsxs(Fragment, { children: [\n  /* @__PURE__ */ jsx(Index.Hero, {}),\n  /* @__PURE__ */ jsx(Index.About, {}),\n  /* @__PURE__ */ jsx(Index.Statistics, {}),\n  /* @__PURE__ */ jsx(Index.ForWhom, {}),\n  /* @__PURE__ */ jsx(Index.HowItHelps, {}),\n  /* @__PURE__ */ jsx(Index.Tariffs, {}),\n  /* @__PURE__ */ jsx(Index.HowItWorks, {}),\n  /* @__PURE__ */ jsx(Index.WhyUs, {}),\n  /* @__PURE__ */ jsx(Index.PeopleTalk, {}),\n  /* @__PURE__ */ jsx(Index.FAQ, {}),\n  /* @__PURE__ */ jsx(Index.MoreInBlog, {}),\n  /* @__PURE__ */ jsx(Index.LetsContinue, {})\n] });\n",
-      "start": 1746125081641,
-      "end": 1746125081659,
+      "start": 1746125696052,
+      "end": 1746125696104,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport * as Index from \"./ui\";\nexport const IndexPage = () => /* @__PURE__ */ jsxs(Fragment, { children: [\n  /* @__PURE__ */ jsx(Index.Hero, {}),\n  /* @__PURE__ */ jsx(Index.About, {}),\n  /* @__PURE__ */ jsx(Index.Statistics, {}),\n  /* @__PURE__ */ jsx(Index.ForWhom, {}),\n  /* @__PURE__ */ jsx(Index.HowItHelps, {}),\n  /* @__PURE__ */ jsx(Index.Tariffs, {}),\n  /* @__PURE__ */ jsx(Index.HowItWorks, {}),\n  /* @__PURE__ */ jsx(Index.WhyUs, {}),\n  /* @__PURE__ */ jsx(Index.PeopleTalk, {}),\n  /* @__PURE__ */ jsx(Index.FAQ, {}),\n  /* @__PURE__ */ jsx(Index.MoreInBlog, {}),\n  /* @__PURE__ */ jsx(Index.LetsContinue, {})\n] });\n",
-      "start": 1746125081660,
-      "end": 1746125081660,
+      "start": 1746125696105,
+      "end": 1746125696105,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

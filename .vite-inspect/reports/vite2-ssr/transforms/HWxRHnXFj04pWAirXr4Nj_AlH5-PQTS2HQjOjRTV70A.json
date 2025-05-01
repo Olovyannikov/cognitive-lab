@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport s from './Link.module.css';\n\ninterface LinkProps {\n    href: string;\n    className?: string;\n    onClick?: VoidFunction;\n}\n\nexport const Link = ({ children, className, ...props }: PropsWithChildren<LinkProps>) => {\n    const [onCloseAllMenus] = useUnit([RootModel.allMenusClosed]);\n    return (\n        <a\n            role='link'\n            tabIndex={0}\n            className={clsx(s.link, className)}\n            onClick={() => onCloseAllMenus(false)}\n            {...props}\n        >\n            {children}\n        </a>\n    );\n};\n",
-      "start": 1746125082607,
-      "end": 1746125082619,
+      "start": 1746125696986,
+      "end": 1746125697006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { RootModel } from '@/entities/Root';\nimport s from './Link.module.css';\ninterface LinkProps {\n  href: string;\n  className?: string;\n  onClick?: VoidFunction;\n}\nexport const Link = ({\n  children,\n  className,\n  ...props\n}: PropsWithChildren<LinkProps>) => {\n  const [onCloseAllMenus] = useUnit([RootModel.allMenusClosed]);\n  return <a role='link' tabIndex={0} className={clsx(s.link, className)} onClick={() => onCloseAllMenus(false)} {...props}>\n            {children}\n        </a>;\n};",
-      "start": 1746125082619,
-      "end": 1746125082621,
+      "start": 1746125697006,
+      "end": 1746125697007,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./Link.module.css\";\nexport const Link = ({\n  children,\n  className,\n  ...props\n}) => {\n  const [onCloseAllMenus] = useUnit([RootModel.allMenusClosed]);\n  return /* @__PURE__ */ jsx(\"a\", { role: \"link\", tabIndex: 0, className: clsx(s.link, className), onClick: () => onCloseAllMenus(false), ...props, children });\n};\n",
-      "start": 1746125082621,
-      "end": 1746125082633,
+      "start": 1746125697007,
+      "end": 1746125697018,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,75 +60,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Link/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./Link.module.css\";\nexport const Link = ({\n  children,\n  className,\n  ...props\n}) => {\n  const [onCloseAllMenus] = useUnit([RootModel.allMenusClosed]);\n  return /* @__PURE__ */ jsx(\"a\", { role: \"link\", tabIndex: 0, className: clsx(s.link, className), onClick: () => onCloseAllMenus(false), ...props, children });\n};\n",
-      "start": 1746125082633,
-      "end": 1746125082633,
+      "start": 1746125697018,
+      "end": 1746125697018,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

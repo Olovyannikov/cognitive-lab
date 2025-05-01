@@ -4,93 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgSemiCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 108 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 252, height: 252, x: -144, y: -24, fill: \"currentColor\", rx: 126 }));\nexport default SvgSemiCircle;\n",
-      "start": 1746125082182,
-      "end": 1746125082424,
+      "start": 1746125696813,
+      "end": 1746125696959,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/assets/icons/semi-circle.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgSemiCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 108 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 252, height: 252, x: -144, y: -24, fill: \"currentColor\", rx: 126 }));\nexport default SvgSemiCircle;\n",
-      "start": 1746125082424,
-      "end": 1746125082425,
+      "start": 1746125696959,
+      "end": 1746125696959,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

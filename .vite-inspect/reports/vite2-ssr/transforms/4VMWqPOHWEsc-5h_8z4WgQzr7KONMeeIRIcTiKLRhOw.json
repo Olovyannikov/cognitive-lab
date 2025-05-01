@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ContentBlock } from '../types';\n\nexport const findBannerIndex = (content: ContentBlock[]) =>\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\n",
-      "start": 1746125081845,
-      "end": 1746125081881,
+      "start": 1746125696422,
+      "end": 1746125696476,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ContentBlock } from '../types';\nexport const findBannerIndex = (content: ContentBlock[]) => content.findIndex(el => el.content.find(el => el.type === 'ordered_cards' && el.color === 'negative'));",
-      "start": 1746125081881,
-      "end": 1746125081882,
+      "start": 1746125696476,
+      "end": 1746125696477,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1746125081882,
-      "end": 1746125082076,
+      "start": 1746125696477,
+      "end": 1746125696738,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696738,
+      "end": 1746125696738,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696739,
+      "end": 1746125696739,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696739,
+      "end": 1746125696739,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696739,
+      "end": 1746125696739,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/findBannerIndex.ts [vike:pluginModuleBanner] */\nexport const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1746125082076,
-      "end": 1746125082076,
+      "start": 1746125696739,
+      "end": 1746125696739,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

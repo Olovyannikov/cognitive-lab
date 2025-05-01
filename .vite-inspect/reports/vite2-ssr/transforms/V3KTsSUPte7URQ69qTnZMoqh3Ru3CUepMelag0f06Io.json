@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getBlogPostByIdQuery } from '@/entities/Blog';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ routeParams: { id } }) => id,\n    target: getBlogPostByIdQuery.start,\n});\n",
-      "start": 1746125081535,
-      "end": 1746125081562,
+      "start": 1746125695908,
+      "end": 1746125695926,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getBlogPostByIdQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams: {\n        id\n      }\n    }) => id,\n    target: getBlogPostByIdQuery.start\n  }],\n  or: {\n    sid: \"a6qvuy\"\n  }\n});",
-      "start": 1746125081562,
-      "end": 1746125081563,
+      "start": 1746125695926,
+      "end": 1746125695927,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getBlogPostByIdQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams: {\n        id\n      }\n    }) => id,\n    target: getBlogPostByIdQuery.start\n  }],\n  or: {\n    sid: \"a6qvuy\"\n  }\n});\n",
-      "start": 1746125081563,
-      "end": 1746125081611,
+      "start": 1746125695927,
+      "end": 1746125696015,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,75 +57,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696015,
+      "end": 1746125696015,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/blog/@id/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getBlogPostByIdQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams: {\n        id\n      }\n    }) => id,\n    target: getBlogPostByIdQuery.start\n  }],\n  or: {\n    sid: \"a6qvuy\"\n  }\n});\n",
-      "start": 1746125081611,
-      "end": 1746125081611,
+      "start": 1746125696016,
+      "end": 1746125696016,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

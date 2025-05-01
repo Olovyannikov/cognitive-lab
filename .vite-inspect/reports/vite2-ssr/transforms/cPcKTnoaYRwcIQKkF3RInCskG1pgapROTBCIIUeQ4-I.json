@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { HelpPage } from '@/pages/HelpPage';\n\nexport default function Page() {\n    return <HelpPage />;\n}\n",
-      "start": 1746125081537,
-      "end": 1746125081573,
+      "start": 1746125695910,
+      "end": 1746125695953,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { HelpPage } from '@/pages/HelpPage';\nexport default function Page() {\n  return <HelpPage />;\n}",
-      "start": 1746125081573,
-      "end": 1746125081574,
+      "start": 1746125695953,
+      "end": 1746125695954,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { HelpPage } from \"@/pages/HelpPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(HelpPage, {});\n}\n",
-      "start": 1746125081574,
-      "end": 1746125081610,
+      "start": 1746125695954,
+      "end": 1746125696012,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696012,
+      "end": 1746125696012,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/help/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { HelpPage } from \"@/pages/HelpPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(HelpPage, {});\n}\n",
-      "start": 1746125081610,
-      "end": 1746125081610,
+      "start": 1746125696013,
+      "end": 1746125696013,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

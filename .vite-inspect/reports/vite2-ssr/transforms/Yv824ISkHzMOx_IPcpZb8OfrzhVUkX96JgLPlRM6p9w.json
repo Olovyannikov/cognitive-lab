@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useScope } from './ScopeProvider';\n\nexport const EffectorProvider = ({ children }: { children: ReactNode }) => {\n    const pageContext = usePageContext();\n    const scope = useScope();\n\n    useEffect(() => {\n        const firePageStarted = async () => {\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, { scope: scope!, params: pageContext });\n            }\n        };\n        firePageStarted().catch(() => {\n            throw new Error('Page start failed');\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [pageContext]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return <Provider value={scope!}>{children}</Provider>;\n};\n",
-      "start": 1746125081670,
-      "end": 1746125081718,
+      "start": 1746125696165,
+      "end": 1746125696204,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({\n  children\n}: {\n  children: ReactNode;\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n        await allSettled(pageStarted, {\n          scope: scope!,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error('Page start failed');\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [pageContext]);\n  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n  return <Provider value={scope!}>{children}</Provider>;\n};",
-      "start": 1746125081718,
-      "end": 1746125081719,
+      "start": 1746125696204,
+      "end": 1746125696205,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1746125081719,
-      "end": 1746125081784,
+      "start": 1746125696205,
+      "end": 1746125696274,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081784,
-      "end": 1746125081784,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/EffectorProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1746125081784,
-      "end": 1746125081785,
+      "start": 1746125696274,
+      "end": 1746125696274,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": "input[data-success=\"true\"] {\n  border-color: var(--mantine-color-green-8);\n}\n\ndiv:has(input[data-success=\"true\"]) + p {\n  color: var(--mantine-color-green-8);\n}\n\n.promocodeLabel {\n  margin-bottom: var(--mantine-spacing-xxs);\n  font-weight: 600;\n  font-size: 14px;\n\n  @mixin larger-than 976px {\n    font-size: 16px;\n  }\n}\n\n.promocodeWrapper {\n  flex-direction: column;\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 976px {\n    flex-direction: row;\n\n    div:has(input) {\n      flex: 1;\n    }\n\n    button {\n      max-width: 138px;\n    }\n  }\n}\n",
-      "start": 1746125082090,
-      "end": 1746125082138,
+      "start": 1746125696555,
+      "end": 1746125696598,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082138,
-      "end": 1746125082138,
+      "start": 1746125696598,
+      "end": 1746125696598,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/BuyReportForm/BuyReportForm.module.css [vike:pluginModuleBanner] */\nexport const promocodeLabel = \"vQBEZ\";\nexport const promocodeWrapper = \"rQ3h-\";\nexport default {\n\tpromocodeLabel: promocodeLabel,\n\tpromocodeWrapper: promocodeWrapper\n};\n",
-      "start": 1746125082140,
-      "end": 1746125082140,
+      "start": 1746125696600,
+      "end": 1746125696600,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

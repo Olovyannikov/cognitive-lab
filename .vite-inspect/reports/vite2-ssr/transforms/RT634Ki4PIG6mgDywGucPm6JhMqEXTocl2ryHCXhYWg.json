@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n",
-      "start": 1746125081851,
-      "end": 1746125081891,
+      "start": 1746125696501,
+      "end": 1746125696545,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});",
-      "start": 1746125081891,
-      "end": 1746125081891,
+      "start": 1746125696545,
+      "end": 1746125696546,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -46,8 +46,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
-      "start": 1746125081891,
-      "end": 1746125082105,
+      "start": 1746125696546,
+      "end": 1746125696795,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -61,75 +61,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082105,
-      "end": 1746125082105,
+      "start": 1746125696795,
+      "end": 1746125696795,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082105,
-      "end": 1746125082105,
+      "start": 1746125696795,
+      "end": 1746125696795,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/reportContent.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
-      "start": 1746125082106,
-      "end": 1746125082106,
+      "start": 1746125696796,
+      "end": 1746125696796,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

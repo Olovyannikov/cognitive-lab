@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { PaymentCheckPage } from '@/pages/PaymentCheckPage';\n\nexport default function Page() {\n    return <PaymentCheckPage />;\n}\n",
-      "start": 1746125081547,
-      "end": 1746125081582,
+      "start": 1746125695920,
+      "end": 1746125695959,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { PaymentCheckPage } from '@/pages/PaymentCheckPage';\nexport default function Page() {\n  return <PaymentCheckPage />;\n}",
-      "start": 1746125081582,
-      "end": 1746125081582,
+      "start": 1746125695959,
+      "end": 1746125695961,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { PaymentCheckPage } from \"@/pages/PaymentCheckPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(PaymentCheckPage, {});\n}\n",
-      "start": 1746125081582,
-      "end": 1746125081627,
+      "start": 1746125695961,
+      "end": 1746125696029,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/payment-check/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { PaymentCheckPage } from \"@/pages/PaymentCheckPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(PaymentCheckPage, {});\n}\n",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

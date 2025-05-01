@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TextInput, TextInputProps } from '@mantine/core';\n\nimport s from './InputBorderless.module.css';\n\ntype InputBorderless = TextInputProps;\n\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\n);\n",
-      "start": 1746125081989,
-      "end": 1746125082035,
+      "start": 1746125696324,
+      "end": 1746125696361,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { TextInput, TextInputProps } from '@mantine/core';\nimport s from './InputBorderless.module.css';\ntype InputBorderless = TextInputProps;\nexport const InputBorderless = ({\n  value,\n  onChange\n}: InputBorderless) => <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />;",
-      "start": 1746125082035,
-      "end": 1746125082036,
+      "start": 1746125696361,
+      "end": 1746125696362,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
-      "start": 1746125082036,
-      "end": 1746125082341,
+      "start": 1746125696362,
+      "end": 1746125696571,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/InputBorderless/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696571,
+      "end": 1746125696571,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

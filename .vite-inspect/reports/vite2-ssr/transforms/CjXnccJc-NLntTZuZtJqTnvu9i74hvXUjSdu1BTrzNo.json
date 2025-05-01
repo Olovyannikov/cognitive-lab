@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrap {\n  @mixin larger-than 1200px {\n    margin: auto;\n    max-width: 860px;\n  }\n}\n\n.root {\n  --title-fz: 24px !important;\n  --title-lh: 28px !important;\n\n  position: relative;\n  text-align: center;\n}\n\n.hint {\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 18px;\n  text-align: center;\n  color: var(--mantine-color-gray-6);\n}\n\n.rephrase {\n  span {\n    align-items: start;\n  }\n}\n\n.checkboxWrapper [data-label-position] {\n  display: flex;\n  place-items: center;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.checkboxWrapper input + svg {\n  position: absolute;\n  left: 50%;\n  top: unset;\n  width: 28px;\n  height: 28px;\n  color: #fff;\n  transform: translateX(-50%);\n  pointer-events: none;\n}\n",
-      "start": 1746125082461,
-      "end": 1746125082495,
+      "start": 1746125696863,
+      "end": 1746125696875,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082495,
-      "end": 1746125082495,
+      "start": 1746125696875,
+      "end": 1746125696875,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082497,
-      "end": 1746125082497,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestMultipleQuestion/TestMultipleQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrap = \"_55tXB\";\nexport const root = \"M7exd\";\nexport const hint = \"WxJH1\";\nexport const rephrase = \"I0ues\";\nexport const checkboxWrapper = \"BP5ZV\";\nexport default {\n\twrap: wrap,\n\troot: root,\n\thint: hint,\n\trephrase: rephrase,\n\tcheckboxWrapper: checkboxWrapper\n};\n",
-      "start": 1746125082497,
-      "end": 1746125082498,
+      "start": 1746125696877,
+      "end": 1746125696877,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { useGate, useUnit } from 'effector-react';\nimport { isArray } from 'lodash-es';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport {\n    type SingleChoiceAnswer,\n    takeTestAgainMutation,\n    TestContainer,\n    TestModel,\n    TestMultipleQuestion,\n    TestProgress,\n    TestScaleQuestion,\n    TestSingleChoiceQuestion,\n} from '@/entities/Test';\n\nimport { RephrasingModel } from '@/features/Rephrasing';\n\nimport { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';\n\nexport const TestPage = () => {\n    useGate(TestModel.TestGate);\n    const data = useUnit(TestModel.$questions);\n    const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([\n        TestModel.$currentPage,\n        TestModel.$currentQuestion,\n        TestModel.$currentProgress,\n        TestModel.$currentValue,\n        TestModel.$isSplashScreenVisible,\n        takeTestAgainMutation.$pending,\n    ]);\n\n    const onChange = useUnit(TestModel.scaleFormFieldChanged);\n\n    const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);\n\n    if (!data || !question) return null;\n    if (isLoading) return <PageLoader />;\n\n    const Map: Record<string, ReactNode> = {\n        scale: (\n            <TestScaleQuestion\n                {...question}\n                text={phrases.texts[phraseIndex] ?? ''}\n                hint={phrases.hints[phraseIndex]}\n                value={String(value)}\n                page={page}\n                onChange={onChange}\n            />\n        ),\n        multiple_choice: question.options && (\n            <TestMultipleQuestion\n                {...question}\n                text={phrases.texts[phraseIndex] ?? ''}\n                hint={phrases.hints[phraseIndex]}\n                page={page}\n                onChange={onChange}\n                value={isArray(value) ? value : null}\n            />\n        ),\n        single_choice: question.options && (\n            <TestSingleChoiceQuestion\n                {...question}\n                text={phrases.texts[phraseIndex] ?? ''}\n                hint={phrases.hints[phraseIndex]}\n                page={page}\n                onChange={onChange}\n                showInput={Boolean(\n                    question.options.find((el) => el.id === (value as SingleChoiceAnswer)?.value)?.requires_input\n                )}\n                value={value as SingleChoiceAnswer}\n            />\n        ),\n    };\n\n    if (isSplashScreen) return <TestSplashScreen />;\n\n    return (\n        <TestContainer>\n            <TestProgress value={progress} page={page} total={data.length} />\n            {Map[question?.type]}\n            <Controls />\n            <SubmitTestModal />\n        </TestContainer>\n    );\n};\n",
-      "start": 1746125081625,
-      "end": 1746125081654,
+      "start": 1746125696015,
+      "end": 1746125696054,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { useGate, useUnit } from 'effector-react';\nimport { isArray } from 'lodash-es';\nimport { PageLoader } from '@/shared/ui';\nimport { type SingleChoiceAnswer, takeTestAgainMutation, TestContainer, TestModel, TestMultipleQuestion, TestProgress, TestScaleQuestion, TestSingleChoiceQuestion } from '@/entities/Test';\nimport { RephrasingModel } from '@/features/Rephrasing';\nimport { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';\nexport const TestPage = () => {\n  useGate(TestModel.TestGate);\n  const data = useUnit(TestModel.$questions);\n  const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([TestModel.$currentPage, TestModel.$currentQuestion, TestModel.$currentProgress, TestModel.$currentValue, TestModel.$isSplashScreenVisible, takeTestAgainMutation.$pending]);\n  const onChange = useUnit(TestModel.scaleFormFieldChanged);\n  const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);\n  if (!data || !question) return null;\n  if (isLoading) return <PageLoader />;\n  const Map: Record<string, ReactNode> = {\n    scale: <TestScaleQuestion {...question} text={phrases.texts[phraseIndex] ?? ''} hint={phrases.hints[phraseIndex]} value={String(value)} page={page} onChange={onChange} />,\n    multiple_choice: question.options && <TestMultipleQuestion {...question} text={phrases.texts[phraseIndex] ?? ''} hint={phrases.hints[phraseIndex]} page={page} onChange={onChange} value={isArray(value) ? value : null} />,\n    single_choice: question.options && <TestSingleChoiceQuestion {...question} text={phrases.texts[phraseIndex] ?? ''} hint={phrases.hints[phraseIndex]} page={page} onChange={onChange} showInput={Boolean(question.options.find(el => el.id === (value as SingleChoiceAnswer)?.value)?.requires_input)} value={value as SingleChoiceAnswer} />\n  };\n  if (isSplashScreen) return <TestSplashScreen />;\n  return <TestContainer>\n            <TestProgress value={progress} page={page} total={data.length} />\n            {Map[question?.type]}\n            <Controls />\n            <SubmitTestModal />\n        </TestContainer>;\n};",
-      "start": 1746125081654,
-      "end": 1746125081656,
+      "start": 1746125696054,
+      "end": 1746125696060,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -84,8 +84,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { isArray } from \"lodash-es\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { takeTestAgainMutation, TestContainer, TestModel, TestMultipleQuestion, TestProgress, TestScaleQuestion, TestSingleChoiceQuestion } from \"@/entities/Test\";\nimport { RephrasingModel } from \"@/features/Rephrasing\";\nimport { Controls, SubmitTestModal, TestSplashScreen } from \"@/widgets/Test\";\nexport const TestPage = () => {\n  useGate(TestModel.TestGate);\n  const data = useUnit(TestModel.$questions);\n  const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([TestModel.$currentPage, TestModel.$currentQuestion, TestModel.$currentProgress, TestModel.$currentValue, TestModel.$isSplashScreenVisible, takeTestAgainMutation.$pending]);\n  const onChange = useUnit(TestModel.scaleFormFieldChanged);\n  const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);\n  if (!data || !question) return null;\n  if (isLoading) return /* @__PURE__ */ jsx(PageLoader, {});\n  const Map = {\n    scale: /* @__PURE__ */ jsx(TestScaleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], value: String(value), page, onChange }),\n    multiple_choice: question.options && /* @__PURE__ */ jsx(TestMultipleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], page, onChange, value: isArray(value) ? value : null }),\n    single_choice: question.options && /* @__PURE__ */ jsx(TestSingleChoiceQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], page, onChange, showInput: Boolean(question.options.find((el) => el.id === value?.value)?.requires_input), value })\n  };\n  if (isSplashScreen) return /* @__PURE__ */ jsx(TestSplashScreen, {});\n  return /* @__PURE__ */ jsxs(TestContainer, { children: [\n    /* @__PURE__ */ jsx(TestProgress, { value: progress, page, total: data.length }),\n    Map[question?.type],\n    /* @__PURE__ */ jsx(Controls, {}),\n    /* @__PURE__ */ jsx(SubmitTestModal, {})\n  ] });\n};\n",
-      "start": 1746125081656,
-      "end": 1746125081706,
+      "start": 1746125696060,
+      "end": 1746125696104,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -99,75 +99,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696104,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/TestPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { isArray } from \"lodash-es\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { takeTestAgainMutation, TestContainer, TestModel, TestMultipleQuestion, TestProgress, TestScaleQuestion, TestSingleChoiceQuestion } from \"@/entities/Test\";\nimport { RephrasingModel } from \"@/features/Rephrasing\";\nimport { Controls, SubmitTestModal, TestSplashScreen } from \"@/widgets/Test\";\nexport const TestPage = () => {\n  useGate(TestModel.TestGate);\n  const data = useUnit(TestModel.$questions);\n  const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([TestModel.$currentPage, TestModel.$currentQuestion, TestModel.$currentProgress, TestModel.$currentValue, TestModel.$isSplashScreenVisible, takeTestAgainMutation.$pending]);\n  const onChange = useUnit(TestModel.scaleFormFieldChanged);\n  const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);\n  if (!data || !question) return null;\n  if (isLoading) return /* @__PURE__ */ jsx(PageLoader, {});\n  const Map = {\n    scale: /* @__PURE__ */ jsx(TestScaleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], value: String(value), page, onChange }),\n    multiple_choice: question.options && /* @__PURE__ */ jsx(TestMultipleQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], page, onChange, value: isArray(value) ? value : null }),\n    single_choice: question.options && /* @__PURE__ */ jsx(TestSingleChoiceQuestion, { ...question, text: phrases.texts[phraseIndex] ?? \"\", hint: phrases.hints[phraseIndex], page, onChange, showInput: Boolean(question.options.find((el) => el.id === value?.value)?.requires_input), value })\n  };\n  if (isSplashScreen) return /* @__PURE__ */ jsx(TestSplashScreen, {});\n  return /* @__PURE__ */ jsxs(TestContainer, { children: [\n    /* @__PURE__ */ jsx(TestProgress, { value: progress, page, total: data.length }),\n    Map[question?.type],\n    /* @__PURE__ */ jsx(Controls, {}),\n    /* @__PURE__ */ jsx(SubmitTestModal, {})\n  ] });\n};\n",
-      "start": 1746125081706,
-      "end": 1746125081706,
+      "start": 1746125696104,
+      "end": 1746125696105,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

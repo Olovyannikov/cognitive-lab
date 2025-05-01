@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\n\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\n\nimport { getFreeResultQuery, getSurveysInfoQuery } from '../api';\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './content';\nimport { $userOrder, $userOrderStatus } from './order';\nimport { $reportContent } from './reportContent';\nimport {\n    $allUserReports,\n    $expressUserReports,\n    $freeUserReports,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $paidUserReports,\n} from './userReports';\n\nexport const ReportModel = atom(() => {\n    const ReportGate = createGate();\n    const FreeReportGate = createGate();\n    const $currentReportId = createStore<string | null>(null);\n    sample({\n        clock: delay(ReportGate.open, 500),\n        source: getSurveysInfoQuery.$data,\n        filter: (data) => data === null,\n        fn: noop,\n        target: getSurveysInfoQuery.refresh,\n    });\n\n    const ReportPageGate = createGate();\n    persist({\n        store: $currentPage,\n        pickup: ReportPageGate.open,\n    });\n    persist({\n        store: $currentContentPage,\n        pickup: ReportPageGate.open,\n    });\n    $currentContentPage.reset(ReportPageGate.close);\n    $currentPage.reset(ReportPageGate.close);\n\n    const currentPageChanged = createEvent<number>();\n\n    createAction({\n        clock: currentPageChanged,\n        target: {\n            $currentContentPage,\n            $currentPage,\n        },\n        fn: (target, clock) => {\n            target.$currentPage(clock);\n            target.$currentContentPage(clock - 1);\n        },\n    });\n\n    const $userMbtiTypes = createStore<Record<string, string>[]>([]);\n\n    sample({\n        clock: getSurveysInfoQuery.finished.success,\n        fn: ({ result }) =>\n            result?.reports.map((report) => ({\n                [report.user_report]: report.mbti_type,\n            })) ?? [],\n        target: $userMbtiTypes,\n    });\n\n    sample({\n        clock: [$currentReportId, FreeReportGate.open],\n        source: $currentReportId,\n        filter: (reportId) =>\n            getFreeResultQuery.$data === null &&\n            reportId !== null &&\n            window.location.pathname.includes('/free-report/'),\n        fn: (id) => ({ id: id ?? '' }),\n        target: getFreeResultQuery.refresh,\n    });\n\n    return {\n        ReportGate,\n        $isUserHasFreeReport,\n        $lastUserFreeReport,\n        $allUserReports,\n        $freeUserReports,\n        $paidUserReports,\n        $expressUserReports,\n        $reportContent,\n        $userOrder,\n        $userOrderStatus,\n        $isFirstPage,\n        $isLastPage,\n        $currentContentPage,\n        currentPageChanged,\n        $userMbtiTypes,\n        ReportPageGate,\n        $currentPage,\n        FreeReportGate,\n        $currentReportId,\n    };\n});\n",
-      "start": 1746125081672,
-      "end": 1746125081736,
+      "start": 1746125696175,
+      "end": 1746125696226,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\nimport { getFreeResultQuery, getSurveysInfoQuery } from '../api';\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './content';\nimport { $userOrder, $userOrderStatus } from './order';\nimport { $reportContent } from './reportContent';\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from './userReports';\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"n92l44\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-2ljiq5\"\n    }\n  });\n  const $currentReportId = createStore<string | null>(null, {\n    name: \"$currentReportId\",\n    sid: \"-ko2ug9\"\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-nyvmz6\",\n        fn: () => delay(ReportGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: getSurveysInfoQuery.$data,\n      filter: data => data === null,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"sdt4cl\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"-4ua68f\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent<number>({\n    name: \"currentPageChanged\",\n    sid: \"-i1ryh3\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore<Record<string, string>[]>([], {\n    name: \"$userMbtiTypes\",\n    sid: \"83741y\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.reports.map(report => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"u7sfjx\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [$currentReportId, FreeReportGate.open],\n      source: $currentReportId,\n      filter: reportId => getFreeResultQuery.$data === null && reportId !== null && window.location.pathname.includes('/free-report/'),\n      fn: id => ({\n        id: id ?? ''\n      }),\n      target: getFreeResultQuery.refresh\n    }],\n    or: {\n      sid: \"uoa9cr\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    $currentReportId\n  };\n});",
-      "start": 1746125081736,
-      "end": 1746125081739,
+      "start": 1746125696226,
+      "end": 1746125696229,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -97,8 +97,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getFreeResultQuery, getSurveysInfoQuery } from \"../api\";\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from \"./content\";\nimport { $userOrder, $userOrderStatus } from \"./order\";\nimport { $reportContent } from \"./reportContent\";\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from \"./userReports\";\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"n92l44\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-2ljiq5\"\n    }\n  });\n  const $currentReportId = createStore(null, {\n    name: \"$currentReportId\",\n    sid: \"-ko2ug9\"\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-nyvmz6\",\n        fn: () => delay(ReportGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: getSurveysInfoQuery.$data,\n      filter: (data) => data === null,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"sdt4cl\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"-4ua68f\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent({\n    name: \"currentPageChanged\",\n    sid: \"-i1ryh3\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore([], {\n    name: \"$userMbtiTypes\",\n    sid: \"83741y\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.reports.map((report) => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"u7sfjx\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [$currentReportId, FreeReportGate.open],\n      source: $currentReportId,\n      filter: (reportId) => getFreeResultQuery.$data === null && reportId !== null && window.location.pathname.includes(\"/free-report/\"),\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: getFreeResultQuery.refresh\n    }],\n    or: {\n      sid: \"uoa9cr\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    $currentReportId\n  };\n});\n",
-      "start": 1746125081739,
-      "end": 1746125081833,
+      "start": 1746125696229,
+      "end": 1746125696350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -112,75 +112,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696350,
+      "end": 1746125696350,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getFreeResultQuery, getSurveysInfoQuery } from \"../api\";\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from \"./content\";\nimport { $userOrder, $userOrderStatus } from \"./order\";\nimport { $reportContent } from \"./reportContent\";\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from \"./userReports\";\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"n92l44\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-2ljiq5\"\n    }\n  });\n  const $currentReportId = createStore(null, {\n    name: \"$currentReportId\",\n    sid: \"-ko2ug9\"\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"-nyvmz6\",\n        fn: () => delay(ReportGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: getSurveysInfoQuery.$data,\n      filter: (data) => data === null,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"sdt4cl\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"-4ua68f\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent({\n    name: \"currentPageChanged\",\n    sid: \"-i1ryh3\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore([], {\n    name: \"$userMbtiTypes\",\n    sid: \"83741y\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.reports.map((report) => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"u7sfjx\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [$currentReportId, FreeReportGate.open],\n      source: $currentReportId,\n      filter: (reportId) => getFreeResultQuery.$data === null && reportId !== null && window.location.pathname.includes(\"/free-report/\"),\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: getFreeResultQuery.refresh\n    }],\n    or: {\n      sid: \"uoa9cr\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    $currentReportId\n  };\n});\n",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696351,
+      "end": 1746125696351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useStoreMap, useUnit } from 'effector-react';\n\nimport { getFullReportQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nexport const FullReportNavigation = () => {\n    const [page, onPageChange] = useUnit([\n        ReportModel.$currentContentPage,\n        ReportModel.currentPageChanged,\n        ReportModel.$currentPage,\n    ]);\n    const content = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    const mbti = useUnit(getFullReportQuery.$data.map((el) => el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti];\n\n    const activeMenu = content?.[page];\n\n    if (!content) return null;\n\n    return (\n        <ReportNavigationTemplate\n            activeMenu={activeMenu}\n            color={color}\n            content={content}\n            title={content[page]}\n            onPageChange={onPageChange}\n        />\n    );\n};\n",
-      "start": 1746125081802,
-      "end": 1746125081845,
+      "start": 1746125696259,
+      "end": 1746125696302,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useStoreMap, useUnit } from 'effector-react';\nimport { getFullReportQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FullReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged, ReportModel.$currentPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  const mbti = useUnit(getFullReportQuery.$data.map(el => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti];\n  const activeMenu = content?.[page];\n  if (!content) return null;\n  return <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} title={content[page]} onPageChange={onPageChange} />;\n};",
-      "start": 1746125081845,
-      "end": 1746125081846,
+      "start": 1746125696302,
+      "end": 1746125696303,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -53,8 +53,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { getFullReportQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FullReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged, ReportModel.$currentPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const mbti = useUnit(getFullReportQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti];\n  const activeMenu = content?.[page];\n  if (!content) return null;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, title: content[page], onPageChange });\n};\n",
-      "start": 1746125081846,
-      "end": 1746125082019,
+      "start": 1746125696303,
+      "end": 1746125696514,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -68,75 +68,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082019,
-      "end": 1746125082019,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082020,
-      "end": 1746125082020,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082020,
-      "end": 1746125082020,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/FullReportNavigation/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { getFullReportQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FullReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged, ReportModel.$currentPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const mbti = useUnit(getFullReportQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti];\n  const activeMenu = content?.[page];\n  if (!content) return null;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, title: content[page], onPageChange });\n};\n",
-      "start": 1746125082020,
-      "end": 1746125082020,
+      "start": 1746125696514,
+      "end": 1746125696514,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TypePage } from '@/pages/TypePage';\n\nexport default function Page() {\n    return <TypePage />;\n}\n",
-      "start": 1746125081562,
-      "end": 1746125081590,
+      "start": 1746125695929,
+      "end": 1746125695965,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { TypePage } from '@/pages/TypePage';\nexport default function Page() {\n  return <TypePage />;\n}",
-      "start": 1746125081590,
-      "end": 1746125081591,
+      "start": 1746125695965,
+      "end": 1746125695965,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TypePage } from \"@/pages/TypePage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TypePage, {});\n}\n",
-      "start": 1746125081591,
-      "end": 1746125081627,
+      "start": 1746125695965,
+      "end": 1746125696029,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696030,
+      "end": 1746125696030,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/types/@type/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TypePage } from \"@/pages/TypePage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TypePage, {});\n}\n",
-      "start": 1746125081627,
-      "end": 1746125081627,
+      "start": 1746125696032,
+      "end": 1746125696032,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

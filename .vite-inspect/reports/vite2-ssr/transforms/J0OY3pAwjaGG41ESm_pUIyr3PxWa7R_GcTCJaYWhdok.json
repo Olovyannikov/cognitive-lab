@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\n\nimport s from './ReportNavigationTemplate.module.css';\n\ninterface ReportNavigationTemplateProps {\n    content: string[];\n    title?: string;\n    onPageChange(n: number): void;\n    color?: string;\n    activeMenu?: string;\n}\n\nexport const ReportNavigationTemplate = ({\n    content,\n    onPageChange,\n    title,\n    color = 'violet',\n    activeMenu = 'Введение',\n}: ReportNavigationTemplateProps) => {\n    const [_, scrollTo] = useWindowScroll();\n    const {\n        urlParsed: { pathname },\n    } = usePageContext();\n\n    const [opened, { close, toggle }] = useDisclosure();\n\n    const isFreeReport = pathname.includes('free');\n\n    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {\n        onPageChange(idx + 1);\n        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);\n    };\n\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler,\n    };\n\n    return (\n        <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>\n    );\n};\n",
-      "start": 1746125081894,
-      "end": 1746125081947,
+      "start": 1746125696493,
+      "end": 1746125696532,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\ninterface ReportNavigationTemplateProps {\n  content: string[];\n  title?: string;\n  onPageChange(n: number): void;\n  color?: string;\n  activeMenu?: string;\n}\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = 'violet',\n  activeMenu = 'Введение'\n}: ReportNavigationTemplateProps) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes('free');\n  const onPageChangeHandler = ({\n    idx\n  }: {\n    idx: number;\n    title: string;\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>;\n};",
-      "start": 1746125081947,
-      "end": 1746125081948,
+      "start": 1746125696532,
+      "end": 1746125696533,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -62,8 +62,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1746125081948,
-      "end": 1746125082185,
+      "start": 1746125696533,
+      "end": 1746125696802,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -79,75 +79,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1746125082185,
-      "end": 1746125082185,
+      "start": 1746125696802,
+      "end": 1746125696802,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

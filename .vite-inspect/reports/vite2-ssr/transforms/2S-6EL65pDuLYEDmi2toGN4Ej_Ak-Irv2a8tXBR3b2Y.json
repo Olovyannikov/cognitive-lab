@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './PartialRecord';\n",
-      "start": 1746125081810,
-      "end": 1746125081850,
+      "start": 1746125696267,
+      "end": 1746125696312,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './PartialRecord';",
-      "start": 1746125081850,
-      "end": 1746125081850,
+      "start": 1746125696312,
+      "end": 1746125696313,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -26,8 +26,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./PartialRecord\";\n",
-      "start": 1746125081850,
-      "end": 1746125082031,
+      "start": 1746125696313,
+      "end": 1746125696518,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,75 +39,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696519,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696519,
+      "end": 1746125696520,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/utility-types/index.ts [vike:pluginModuleBanner] */\nexport * from \"./PartialRecord\";\n",
-      "start": 1746125082031,
-      "end": 1746125082031,
+      "start": 1746125696520,
+      "end": 1746125696520,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

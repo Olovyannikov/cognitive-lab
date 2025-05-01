@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypeQuery } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ routeParams }) => routeParams.type,\n    target: getPersonalityTypeQuery.start,\n});\n",
-      "start": 1746125081563,
-      "end": 1746125081591,
+      "start": 1746125695932,
+      "end": 1746125695965,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypeQuery } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"veepxk\"\n  }\n});",
-      "start": 1746125081591,
-      "end": 1746125081592,
+      "start": 1746125695965,
+      "end": 1746125695966,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"veepxk\"\n  }\n});\n",
-      "start": 1746125081592,
-      "end": 1746125081639,
+      "start": 1746125695966,
+      "end": 1746125696046,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,75 +57,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081639,
-      "end": 1746125081639,
+      "start": 1746125696046,
+      "end": 1746125696046,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/types/@type/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"veepxk\"\n  }\n});\n",
-      "start": 1746125081640,
-      "end": 1746125081640,
+      "start": 1746125696047,
+      "end": 1746125696047,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

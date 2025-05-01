@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation } from '@farfetched/core';\n\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nexport const sendFreeReportOnEmailMutation = createMutation({\n    effect: createInternalRequestFx<{ email: string; user_report_id: string }, void>(({ user_report_id, ...body }) => ({\n        url: API.surveys.email(user_report_id),\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1746125082040,
-      "end": 1746125082080,
+      "start": 1746125696536,
+      "end": 1746125696575,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<{\n      email: string;\n      user_report_id: string;\n    }, void>(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});",
-      "start": 1746125082080,
-      "end": 1746125082081,
+      "start": 1746125696575,
+      "end": 1746125696576,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1746125082081,
-      "end": 1746125082381,
+      "start": 1746125696576,
+      "end": 1746125696843,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SendReportEmail/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1746125082381,
-      "end": 1746125082381,
+      "start": 1746125696843,
+      "end": 1746125696843,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

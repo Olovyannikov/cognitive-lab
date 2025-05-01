@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".card {\n  flex-direction: column;\n  height: 100%;\n\n  @mixin larger-than 768px {\n    &.row {\n      flex-direction: row;\n    }\n  }\n}\n\n.cardMain {\n  transition: outline 0.15s ease-in-out;\n\n  &:is(:hover, :focus-visible) {\n    outline: 2px solid var(--mantine-color-violet-7);\n  }\n}\n\n.image {\n  object-position: center;\n\n  @mixin larger-than 768px {\n    flex: 0 1 auto;\n    height: 354px;\n\n    .pinned & {\n      width: calc(50% - 8px);\n      max-width: 791px;\n    }\n  }\n}\n\n.preview {\n  flex: 1;\n\n  .pinned & {\n    @mixin larger-than 768px {\n      max-width: calc(50% - 8px);\n    }\n  }\n}\n\n.title {\n  font-size: 24px;\n\n  .pinned & {\n    @mixin larger-than 768px {\n      font-size: 40px;\n    }\n  }\n}\n",
-      "start": 1746125082108,
-      "end": 1746125082147,
+      "start": 1746125696574,
+      "end": 1746125696617,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082147,
-      "end": 1746125082147,
+      "start": 1746125696617,
+      "end": 1746125696617,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/BlogPostCard/BlogPostCard.module.css [vike:pluginModuleBanner] */\nexport const card = \"-Zspo\";\nexport const row = \"HiDbu\";\nexport const cardMain = \"-MLEk\";\nexport const image = \"_7gxmd\";\nexport const pinned = \"PIEpC\";\nexport const preview = \"_5juwg\";\nexport const title = \"eGwuo\";\nexport default {\n\tcard: card,\n\trow: row,\n\tcardMain: cardMain,\n\timage: image,\n\tpinned: pinned,\n\tpreview: preview,\n\ttitle: title\n};\n",
-      "start": 1746125082149,
-      "end": 1746125082149,
+      "start": 1746125696619,
+      "end": 1746125696619,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

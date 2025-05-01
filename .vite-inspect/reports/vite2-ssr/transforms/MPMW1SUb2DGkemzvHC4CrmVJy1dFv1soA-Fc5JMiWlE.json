@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { PersonalityTypesResponse } from './dto';\n\nexport const getPersonalityTypesWithCategoriesQuery = createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n        url: API.surveys.personalityTypes,\n    })),\n    initialData: [],\n});\n",
-      "start": 1746125081731,
-      "end": 1746125081768,
+      "start": 1746125696098,
+      "end": 1746125696153,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { PersonalityTypesResponse } from './dto';\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1746125081768,
-      "end": 1746125081769,
+      "start": 1746125696153,
+      "end": 1746125696154,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081769,
-      "end": 1746125081863,
+      "start": 1746125696154,
+      "end": 1746125696224,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,75 +62,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081863,
-      "end": 1746125081863,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081863,
-      "end": 1746125081864,
+      "start": 1746125696224,
+      "end": 1746125696224,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

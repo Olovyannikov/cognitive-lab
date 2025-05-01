@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n",
-      "start": 1746125081957,
-      "end": 1746125082015,
+      "start": 1746125696307,
+      "end": 1746125696346,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;",
-      "start": 1746125082015,
-      "end": 1746125082016,
+      "start": 1746125696346,
+      "end": 1746125696347,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1746125082016,
-      "end": 1746125082330,
+      "start": 1746125696347,
+      "end": 1746125696569,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696569,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696569,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696569,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696569,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696569,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696569,
+      "end": 1746125696570,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082330,
-      "end": 1746125082330,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1746125082331,
-      "end": 1746125082331,
+      "start": 1746125696570,
+      "end": 1746125696570,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

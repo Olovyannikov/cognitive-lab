@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  position: relative;\n  display: flex;\n  border-radius: var(--mantine-spacing-lg);\n  width: 100%;\n  background: var(--mantine-color-violet-0);\n  padding-block: var(--mantine-spacing-xl);\n  padding-inline: var(--mantine-spacing-md);\n\n  @mixin larger-than 1200px {\n    min-height: 336px;\n    padding-block: var(--mantine-spacing-3xl);\n    padding-inline: 153px;\n  }\n}\n\n.root {\n  flex: 1;\n}\n\n.group {\n  gap: var(--mantine-spacing-sm);\n\n  @mixin larger-than 1200px {\n    gap: var(--mantine-spacing-lg);\n  }\n}\n\n.image {\n  width: var(--mantine-spacing-lg);\n  height: var(--mantine-spacing-lg);\n\n  @mixin larger-than 1200px {\n    width: var(--mantine-spacing-3xl);\n    height: var(--mantine-spacing-3xl);\n  }\n}\n\n.title {\n  font-size: var(--mantine-spacing-lg) !important;\n\n  @mixin larger-than 768px {\n    font-size: var(--mantine-spacing-3xl) !important;\n  }\n}\n\n.text {\n  font-size: 16px;\n\n  @mixin larger-than 1024px {\n    max-width: 872px;\n    font-size: 22px;\n  }\n}\n\n.controls {\n  flex-direction: column;\n  gap: var(--mantine-spacing-md);\n\n  @mixin larger-than 768px {\n    flex-direction: row;\n    margin-top: auto;\n  }\n}\n",
-      "start": 1746125082200,
-      "end": 1746125082296,
+      "start": 1746125696824,
+      "end": 1746125696850,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082296,
-      "end": 1746125082296,
+      "start": 1746125696850,
+      "end": 1746125696850,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082297,
-      "end": 1746125082297,
+      "start": 1746125696851,
+      "end": 1746125696851,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082297,
-      "end": 1746125082298,
+      "start": 1746125696851,
+      "end": 1746125696851,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696851,
+      "end": 1746125696851,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/AdBanner/AdBanner.module.css [vike:pluginModuleBanner] */\nexport const paper = \"S5fPF\";\nexport const root = \"SihDo\";\nexport const group = \"Wrp5Q\";\nexport const image = \"SXuXk\";\nexport const title = \"F6iOT\";\nexport const text = \"rOSqy\";\nexport const controls = \"-d8D6\";\nexport default {\n\tpaper: paper,\n\troot: root,\n\tgroup: group,\n\timage: image,\n\ttitle: title,\n\ttext: text,\n\tcontrols: controls\n};\n",
-      "start": 1746125082298,
-      "end": 1746125082298,
+      "start": 1746125696852,
+      "end": 1746125696852,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

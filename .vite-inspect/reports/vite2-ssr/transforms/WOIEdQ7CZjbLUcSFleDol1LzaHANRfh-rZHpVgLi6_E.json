@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './About.module.css';\n\nexport const About = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n    return (\n        <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture\n                    cdn\n                    alt=''\n                    aria-hidden={true}\n                    className={s.image}\n                    width={!isLarge || isMobile ? 210 : 366}\n                    height={!isLarge || isMobile ? 223 : 388}\n                    src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`}\n                />\n            </Box>\n        </Section>\n    );\n};\n",
-      "start": 1746125081905,
-      "end": 1746125081957,
+      "start": 1746125696333,
+      "end": 1746125696390,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './About.module.css';\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture cdn alt='' aria-hidden={true} className={s.image} width={!isLarge || isMobile ? 210 : 366} height={!isLarge || isMobile ? 223 : 388} src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`} />\n            </Box>\n        </Section>;\n};",
-      "start": 1746125081958,
-      "end": 1746125081959,
+      "start": 1746125696390,
+      "end": 1746125696391,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./About.module.css\";\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { title: \"О платформе \", filledText: \"CognitiveLab\", children: /* @__PURE__ */ jsxs(Box, { className: s.grid, children: [\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для личностного роста и карьерного развития.\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, alt: \"\", \"aria-hidden\": true, className: s.image, width: !isLarge || isMobile ? 210 : 366, height: !isLarge || isMobile ? 223 : 388, src: `/landing/letter-main${!isLarge || isMobile ? \"/mobile\" : \"\"}` })\n  ] }) });\n};\n",
-      "start": 1746125081959,
-      "end": 1746125082276,
+      "start": 1746125696391,
+      "end": 1746125696638,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,75 +57,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/About/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./About.module.css\";\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { title: \"О платформе \", filledText: \"CognitiveLab\", children: /* @__PURE__ */ jsxs(Box, { className: s.grid, children: [\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для личностного роста и карьерного развития.\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, alt: \"\", \"aria-hidden\": true, className: s.image, width: !isLarge || isMobile ? 210 : 366, height: !isLarge || isMobile ? 223 : 388, src: `/landing/letter-main${!isLarge || isMobile ? \"/mobile\" : \"\"}` })\n  ] }) });\n};\n",
-      "start": 1746125082276,
-      "end": 1746125082276,
+      "start": 1746125696638,
+      "end": 1746125696638,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

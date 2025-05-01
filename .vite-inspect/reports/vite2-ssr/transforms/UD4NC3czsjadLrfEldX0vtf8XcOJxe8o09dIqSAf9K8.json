@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';\n",
-      "start": 1746125081678,
-      "end": 1746125081740,
+      "start": 1746125696176,
+      "end": 1746125696229,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';",
-      "start": 1746125081740,
-      "end": 1746125081741,
+      "start": 1746125696229,
+      "end": 1746125696230,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./typeToColorMap\";\nexport * from \"./contentResolver\";\nexport * from \"./findBannerIndex\";\nexport * from \"./statusInfo\";\nexport * from \"./normalizeData\";\n",
-      "start": 1746125081741,
-      "end": 1746125081833,
+      "start": 1746125696230,
+      "end": 1746125696320,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,75 +43,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081833,
-      "end": 1746125081833,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696320,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696320,
+      "end": 1746125696321,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696321,
+      "end": 1746125696321,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696321,
+      "end": 1746125696321,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/index.ts [vike:pluginModuleBanner] */\nexport * from \"./typeToColorMap\";\nexport * from \"./contentResolver\";\nexport * from \"./findBannerIndex\";\nexport * from \"./statusInfo\";\nexport * from \"./normalizeData\";\n",
-      "start": 1746125081834,
-      "end": 1746125081834,
+      "start": 1746125696321,
+      "end": 1746125696321,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

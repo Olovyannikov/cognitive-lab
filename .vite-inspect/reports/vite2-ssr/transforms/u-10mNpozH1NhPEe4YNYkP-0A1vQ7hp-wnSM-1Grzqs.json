@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n",
-      "start": 1746125082093,
-      "end": 1746125082137,
+      "start": 1746125696574,
+      "end": 1746125696611,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}",
-      "start": 1746125082137,
-      "end": 1746125082138,
+      "start": 1746125696611,
+      "end": 1746125696612,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\n",
-      "start": 1746125082138,
-      "end": 1746125082402,
+      "start": 1746125696613,
+      "end": 1746125696861,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,75 +47,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/type-guards/isErrorWithMessage.ts [vike:pluginModuleBanner] */\nimport { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\n",
-      "start": 1746125082402,
-      "end": 1746125082402,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './FormSuccessScreen.module.css';\n\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man.webp',\n};\n\ninterface FormSuccessScreenProps {\n    title?: string;\n    description?: string;\n    slots?: {\n        action?: ReactNode;\n    };\n    image?: string;\n}\n\nexport const FormSuccessScreen = ({\n    title = BASE_TEXT.title,\n    description = BASE_TEXT.description,\n    image = BASE_TEXT.image,\n    slots,\n}: FormSuccessScreenProps) => (\n    <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>\n);\n",
-      "start": 1746125081981,
-      "end": 1746125082028,
+      "start": 1746125696315,
+      "end": 1746125696349,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './FormSuccessScreen.module.css';\nconst BASE_TEXT = {\n  title: 'Спасибо за ваш отзыв!',\n  description: 'Спасибо за ваш отзыв!',\n  image: '/images/success-base-man.webp'\n};\ninterface FormSuccessScreenProps {\n  title?: string;\n  description?: string;\n  slots?: {\n    action?: ReactNode;\n  };\n  image?: string;\n}\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}: FormSuccessScreenProps) => <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>;",
-      "start": 1746125082028,
-      "end": 1746125082030,
+      "start": 1746125696349,
+      "end": 1746125696350,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man.webp\"\n};\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}) => /* @__PURE__ */ jsxs(Box, { className: s.box, children: [\n  /* @__PURE__ */ jsx(Picture, { className: s.image, w: 145, \"aria-hidden\": true, src: image, alt: title }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description }),\n  /* @__PURE__ */ jsx(Box, { className: s.action, children: slots?.action })\n] });\n",
-      "start": 1746125082030,
-      "end": 1746125082341,
+      "start": 1746125696350,
+      "end": 1746125696556,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,75 +60,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormSuccessScreen/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man.webp\"\n};\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}) => /* @__PURE__ */ jsxs(Box, { className: s.box, children: [\n  /* @__PURE__ */ jsx(Picture, { className: s.image, w: 145, \"aria-hidden\": true, src: image, alt: title }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description }),\n  /* @__PURE__ */ jsx(Box, { className: s.action, children: slots?.action })\n] });\n",
-      "start": 1746125082341,
-      "end": 1746125082341,
+      "start": 1746125696556,
+      "end": 1746125696556,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

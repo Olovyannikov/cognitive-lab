@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useCallback, useEffect, useState } from 'react';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport type { Mark } from '../../types';\n\nexport const useBarChartViewModel = ({ marks }: { marks?: Mark[] }) => {\n    const [mounted, setMounted] = useState(false);\n    const [selectedItem, setSelectedItem] = useState<Mark | null>(null);\n    const isLarge = useIsLarge();\n\n    const onSelectItemMouseOverHandler = useCallback(\n        (mark: Mark) => {\n            if (selectedItem?.label === mark.label) return;\n            setMounted(false);\n            setTimeout(() => {\n                setSelectedItem(mark);\n                setMounted(true);\n            }, 200);\n        },\n        [selectedItem]\n    );\n\n    useEffect(() => {\n        if (!isLarge) return;\n        setMounted(true);\n        setSelectedItem(marks?.[0] ?? null);\n    }, [isLarge, marks]);\n\n    return {\n        onSelectItemMouseOverHandler,\n        selectedItem,\n        mounted,\n    };\n};\n",
-      "start": 1746125082147,
-      "end": 1746125082174,
+      "start": 1746125696762,
+      "end": 1746125696786,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useCallback, useEffect, useState } from 'react';\nimport { useIsLarge } from '@/shared/lib';\nimport type { Mark } from '../../types';\nexport const useBarChartViewModel = ({\n  marks\n}: {\n  marks?: Mark[];\n}) => {\n  const [mounted, setMounted] = useState(false);\n  const [selectedItem, setSelectedItem] = useState<Mark | null>(null);\n  const isLarge = useIsLarge();\n  const onSelectItemMouseOverHandler = useCallback((mark: Mark) => {\n    if (selectedItem?.label === mark.label) return;\n    setMounted(false);\n    setTimeout(() => {\n      setSelectedItem(mark);\n      setMounted(true);\n    }, 200);\n  }, [selectedItem]);\n  useEffect(() => {\n    if (!isLarge) return;\n    setMounted(true);\n    setSelectedItem(marks?.[0] ?? null);\n  }, [isLarge, marks]);\n  return {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  };\n};",
-      "start": 1746125082174,
-      "end": 1746125082175,
+      "start": 1746125696786,
+      "end": 1746125696788,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { useCallback, useEffect, useState } from \"react\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const useBarChartViewModel = ({\n  marks\n}) => {\n  const [mounted, setMounted] = useState(false);\n  const [selectedItem, setSelectedItem] = useState(null);\n  const isLarge = useIsLarge();\n  const onSelectItemMouseOverHandler = useCallback((mark) => {\n    if (selectedItem?.label === mark.label) return;\n    setMounted(false);\n    setTimeout(() => {\n      setSelectedItem(mark);\n      setMounted(true);\n    }, 200);\n  }, [selectedItem]);\n  useEffect(() => {\n    if (!isLarge) return;\n    setMounted(true);\n    setSelectedItem(marks?.[0] ?? null);\n  }, [isLarge, marks]);\n  return {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  };\n};\n",
-      "start": 1746125082175,
-      "end": 1746125082424,
+      "start": 1746125696788,
+      "end": 1746125696954,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,75 +64,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696954,
+      "end": 1746125696954,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BarChart/view-model.ts [vike:pluginModuleBanner] */\nimport { useCallback, useEffect, useState } from \"react\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const useBarChartViewModel = ({\n  marks\n}) => {\n  const [mounted, setMounted] = useState(false);\n  const [selectedItem, setSelectedItem] = useState(null);\n  const isLarge = useIsLarge();\n  const onSelectItemMouseOverHandler = useCallback((mark) => {\n    if (selectedItem?.label === mark.label) return;\n    setMounted(false);\n    setTimeout(() => {\n      setSelectedItem(mark);\n      setMounted(true);\n    }, 200);\n  }, [selectedItem]);\n  useEffect(() => {\n    if (!isLarge) return;\n    setMounted(true);\n    setSelectedItem(marks?.[0] ?? null);\n  }, [isLarge, marks]);\n  return {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  };\n};\n",
-      "start": 1746125082424,
-      "end": 1746125082424,
+      "start": 1746125696955,
+      "end": 1746125696955,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

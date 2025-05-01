@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { QuestionsResponse } from './dto';\nimport type { Answers } from './types';\n\nexport const getQuestionsQuery = createQuery({\n    effect: createCommonRequestFx<void, QuestionsResponse[]>(() => ({\n        url: `/surveys/questions`,\n    })),\n});\n\nexport const submitAnswersMutation = createMutation({\n    effect: createInternalRequestFx<Answers, { id: string; user_free_report: string }>((body) => ({\n        url: `/surveys/answers/submit`,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n\nexport const takeTestAgainMutation = createQuery({\n    effect: createInternalRequestFx<void, void>(() => ({\n        url: API.surveys.start,\n        method: HTTP_METHODS.POST,\n    })),\n});\n",
-      "start": 1746125081771,
-      "end": 1746125081811,
+      "start": 1746125696208,
+      "end": 1746125696260,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { QuestionsResponse } from './dto';\nimport type { Answers } from './types';\nexport const getQuestionsQuery = _withFactory({\n  sid: \"-iugphm\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, QuestionsResponse[]>(() => ({\n      url: `/surveys/questions`\n    }))\n  }),\n  name: \"getQuestionsQuery\",\n  method: \"createQuery\"\n});\nexport const submitAnswersMutation = _withFactory({\n  sid: \"-r691yw\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<Answers, {\n      id: string;\n      user_free_report: string;\n    }>(body => ({\n      url: `/surveys/answers/submit`,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"submitAnswersMutation\",\n  method: \"createMutation\"\n});\nexport const takeTestAgainMutation = _withFactory({\n  sid: \"fib76p\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<void, void>(() => ({\n      url: API.surveys.start,\n      method: HTTP_METHODS.POST\n    }))\n  }),\n  name: \"takeTestAgainMutation\",\n  method: \"createQuery\"\n});",
-      "start": 1746125081811,
-      "end": 1746125081813,
+      "start": 1746125696260,
+      "end": 1746125696262,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -61,8 +61,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getQuestionsQuery = _withFactory({\n  sid: \"-iugphm\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: `/surveys/questions`\n    }))\n  }),\n  name: \"getQuestionsQuery\",\n  method: \"createQuery\"\n});\nexport const submitAnswersMutation = _withFactory({\n  sid: \"-r691yw\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: `/surveys/answers/submit`,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"submitAnswersMutation\",\n  method: \"createMutation\"\n});\nexport const takeTestAgainMutation = _withFactory({\n  sid: \"fib76p\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx(() => ({\n      url: API.surveys.start,\n      method: HTTP_METHODS.POST\n    }))\n  }),\n  name: \"takeTestAgainMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081813,
-      "end": 1746125081931,
+      "start": 1746125696262,
+      "end": 1746125696415,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -76,75 +76,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696415,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getQuestionsQuery = _withFactory({\n  sid: \"-iugphm\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: `/surveys/questions`\n    }))\n  }),\n  name: \"getQuestionsQuery\",\n  method: \"createQuery\"\n});\nexport const submitAnswersMutation = _withFactory({\n  sid: \"-r691yw\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: `/surveys/answers/submit`,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"submitAnswersMutation\",\n  method: \"createMutation\"\n});\nexport const takeTestAgainMutation = _withFactory({\n  sid: \"fib76p\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx(() => ({\n      url: API.surveys.start,\n      method: HTTP_METHODS.POST\n    }))\n  }),\n  name: \"takeTestAgainMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125081931,
-      "end": 1746125081931,
+      "start": 1746125696415,
+      "end": 1746125696416,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

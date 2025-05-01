@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper {\n  align-items: center;\n  margin-bottom: var(--mantine-spacing-lg);\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 976px {\n    align-items: flex-start;\n    margin-bottom: var(--mantine-spacing-3xl);\n    gap: 0;\n  }\n}\n\n.title {\n  margin-bottom: var(--mantine-spacing-xxs);\n  font-size: 20px;\n  text-align: center;\n\n  @mixin larger-than 976px {\n    margin-bottom: var(--mantine-spacing-xl);\n    font-size: 24px;\n    text-align: left;\n  }\n}\n\n.skeleton {\n  width: 80px;\n  height: 44px;\n\n  @mixin larger-than 976px {\n    width: 105px;\n    height: 63px;\n  }\n}\n\n.price {\n  font-weight: 700;\n  font-size: 28px;\n\n  @mixin larger-than 976px {\n    font-size: 40px;\n  }\n}\n",
-      "start": 1746125082194,
-      "end": 1746125082281,
+      "start": 1746125696841,
+      "end": 1746125696859,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125082281,
-      "end": 1746125082281,
+      "start": 1746125696859,
+      "end": 1746125696859,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696860,
+      "end": 1746125696860,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696860,
+      "end": 1746125696860,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696860,
+      "end": 1746125696860,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696860,
+      "end": 1746125696860,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696860,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125082282,
-      "end": 1746125082282,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/PriceInfo/PriceInfo.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"_16-TG\";\nexport const title = \"bZWuK\";\nexport const skeleton = \"NcXsb\";\nexport const price = \"Scs-7\";\nexport default {\n\twrapper: wrapper,\n\ttitle: title,\n\tskeleton: skeleton,\n\tprice: price\n};\n",
-      "start": 1746125082282,
-      "end": 1746125082283,
+      "start": 1746125696861,
+      "end": 1746125696861,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
