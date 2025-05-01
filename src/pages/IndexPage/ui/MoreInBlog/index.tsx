@@ -58,7 +58,13 @@ export const MoreInBlog = () => {
                     <Carousel.Slide key={index} h='unset'>
                         <Paper h='100%' component='a' href={`/blog/${post.id}`} withBorder className={s.paper}>
                             <Stack justify='space-between' align='flex-start' gap='md'>
-                                <Image src={post.image} className={s.image} width={304} height={304} />
+                                <Image
+                                    width={304}
+                                    height={304}
+                                    src={post.image}
+                                    className={s.image}
+                                    alt={post.image_alt}
+                                />
                                 <Title order={5} className={s.cardTitle}>
                                     {post.title}
                                 </Title>

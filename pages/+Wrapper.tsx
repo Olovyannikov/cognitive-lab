@@ -10,7 +10,7 @@ import '@/app/assets/styles/index.css';
 export default function Wrapper({ children }: PropsWithChildren) {
     return (
         <MantineProvider>
-            <NavigationProgress color='violet' />
+            <NavigationProgress aria-label='Прогресс навигации' color='violet' />
             <ScopeProvider>
                 <EffectorProvider>{children}</EffectorProvider>
             </ScopeProvider>

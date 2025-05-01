@@ -26,7 +26,7 @@ export const Header = ({ className }: ComponentProps<'header'>) => {
 
     const logoLink = useMemo(
         () => ({
-            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }) } : { href: '/' }),
+            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }), href: '#' } : { href: '/' }),
         }),
         [isMainPage, scrollTo]
     );

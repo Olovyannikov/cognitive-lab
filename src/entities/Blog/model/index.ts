@@ -10,8 +10,12 @@ export const BlogModel = atom(() => {
     const $pageSize = createStore(5);
 
     const $blogPosts = restore<BlogPost[]>(
-        getBlogPostsQuery.finished.success.map(({ result }) => result.payload),
+        getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []),
         []
+    );
+    const $totalPages = restore(
+        getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages),
+        0
     );
 
     const pageChanged = createEvent<number>();
@@ -38,11 +42,6 @@ export const BlogModel = atom(() => {
         fn: ({ page_size }, page) => ({ page, page_size }),
         target: getBlogPostsQuery.refresh,
     });
-
-    const $totalPages = restore(
-        getBlogPostsQuery.finished.success.map((res) => res.result.total_pages),
-        1
-    );
 
     const redirectToMainBlogPostPageFx = createEffect(async () => {
         await navigate('/blog');

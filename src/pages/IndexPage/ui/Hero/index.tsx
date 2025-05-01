@@ -28,7 +28,13 @@ export const Hero = () => {
                 <Text className={s.description}>
                     Узнайте свой тип личности и получите персональные советы для вашего развития
                 </Text>
-                <Picture className={s.image} src='/landing/main-hero-char' cdn />
+                <Picture
+                    cdn
+                    className={s.image}
+                    width={isMobile ? 280 : 673}
+                    height={isMobile ? 280 : 673}
+                    src={`/landing/main-hero-char/${isMobile ? 'mobile' : ''}`}
+                />
                 <Button
                     href={ROUTES.TEST}
                     component='a'

@@ -11,4 +11,5 @@ export interface BlogPost {
     additional_info: null;
     created_at: string;
     updated_at: string;
+    image_alt: string;
 }

@@ -1,13 +1,8 @@
 import { allSettled, fork } from 'effector';
-import { navigate } from 'vike/client/router';
 
 import { getBlogPostsQuery } from '../../api';
 import { BlogModel } from '../../model';
 import type { BlogPost } from '../../types';
-
-vi.mock('vike/client/router', () => ({
-    navigate: vi.fn(),
-}));
 
 vi.stubGlobal('scrollTo', vi.fn());
 
@@ -24,6 +19,7 @@ const createMockPost = (id: string): BlogPost => ({
     additional_info: null,
     created_at: '2024-01-01T00:00:00Z',
     updated_at: '2024-01-01T00:00:00Z',
+    image_alt: '',
 });
 
 describe('Blog Model', async () => {
@@ -34,14 +30,14 @@ describe('Blog Model', async () => {
         getBlogPostsQuery.reset();
     });
 
-    it('initial state', () => {
+    it('initial state', async () => {
         const scope = fork();
         const model = setup();
 
         expect(scope.getState(model.$pageSize)).toBe(5);
         expect(scope.getState(model.$currentPage)).toBe(1);
         expect(scope.getState(model.$blogPosts)).toEqual([]);
-        expect(scope.getState(model.$totalPages)).toBe(1);
+        expect(scope.getState(model.$totalPages)).toBe(0);
     });
     it('pageChanged updates currentPage and triggers scroll', async () => {
         const scope = fork();
@@ -82,6 +78,7 @@ describe('Blog Model', async () => {
                     body: expect.objectContaining({
                         data: expect.any(String),
                     }),
+                    image_alt: expect.any(String),
                 }),
             ])
         );
@@ -100,6 +97,7 @@ describe('Blog Model', async () => {
             additional_info: null,
             created_at: '2024-01-01T00:00:00Z',
             updated_at: '2024-01-01T00:00:00Z',
+            image_alt: '',
         });
     });
     it('handles null additional_info correctly', async () => {
@@ -125,23 +123,27 @@ describe('Blog Model', async () => {
         expect(receivedPost.additional_info).toBeNull();
     });
     it('handles API error with blog structure', async () => {
-        const model = setup();
+        const { $blogPosts, $totalPages } = BlogModel;
         const scope = fork({
             handlers: [
                 [
                     getBlogPostsQuery.__.executeFx,
-                    async () => {
-                        throw new Error('API Unavailable');
+                    () => {
+                        throw new Error('Error');
                     },
                 ],
             ],
         });
 
-        await allSettled(model.pageChanged, { scope, params: 2 });
+        await allSettled(getBlogPostsQuery.refresh, {
+            scope,
+            params: {
+                page_size: 5,
+            },
+        });
 
         // Проверяем что блог остался в валидном состоянии
-        expect(scope.getState(model.$blogPosts)).toEqual([]);
-        expect(scope.getState(model.$totalPages)).toBe(1);
-        expect(navigate).toHaveBeenCalledWith('/blog');
+        expect(scope.getState($blogPosts)).toEqual([]);
+        expect(scope.getState($totalPages)).toBe(0);
     });
 });

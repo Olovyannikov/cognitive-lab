@@ -16,7 +16,7 @@ export const getBlogPostsQuery = createQuery({
     })),
     mapData: (data) => {
         if (!data.result) return {} as BlogPostsResponse;
-        const payload = data.result?.payload.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));
+        const payload = data.result?.payload?.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));
 
         return {
             ...data.result,
