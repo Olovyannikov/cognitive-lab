@@ -22,7 +22,7 @@ export const Card = ({ text, image, title }: CardProps) => {
         <Paper className={s.paper}>
             <CircleImage className={s.background} />
             <Flex className={s.flex} align='center' gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>
-                <Picture className={s.picture} src={`/mbti-test/${isMobile ? 'mobile' : 'desktop'}/${image}`} />
+                <Picture className={s.picture} src={`/test-images/${isMobile ? 'mobile' : 'desktop'}/${image}`} />
                 <Stack gap={isLarge || !isMobile ? 'lg' : 'xs'} flex={1}>
                     <Title className={s.title} order={4}>
                         {title}
