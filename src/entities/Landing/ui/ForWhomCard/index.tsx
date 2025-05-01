@@ -17,7 +17,7 @@ export const ForWhomCard = ({ bg, text, image, title }: CardProps) => (
         <Box className={s.cardTop}>
             {bg}
             <Title order={4}>{title}</Title>
-            <Picture src={image} w={150} h={121} />
+            <Picture cdn src={image} w={150} h={121} />
         </Box>
         <Text className={s.description}>{text}</Text>
     </Box>

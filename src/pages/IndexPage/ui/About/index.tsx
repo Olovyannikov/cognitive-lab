@@ -12,12 +12,13 @@ export const About = () => (
                 личностного роста и карьерного развития.
             </Text>
             <Picture
-                className={s.image}
-                src='/landing/letter-main'
+                cdn
+                alt=''
                 width={210}
                 height={223}
                 aria-hidden={true}
-                alt=''
+                className={s.image}
+                src='/landing/letter-main'
             />
         </Box>
     </Section>
