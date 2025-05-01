@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useUnit } from 'effector-react';
+import { useGate, useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
 
 import { PageLoader } from '@/shared/ui';
@@ -20,11 +20,12 @@ import { RephrasingModel } from '@/features/Rephrasing';
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
+    useGate(TestModel.TestGate);
     const data = useUnit(TestModel.$questions);
-    const [page, progress, question, value, isSplashScreen, isLoading] = useUnit([
+    const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([
         TestModel.$currentPage,
-        TestModel.$currentProgress,
         TestModel.$currentQuestion,
+        TestModel.$currentProgress,
         TestModel.$currentValue,
         TestModel.$isSplashScreenVisible,
         takeTestAgainMutation.$pending,

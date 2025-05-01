@@ -1,4 +1,5 @@
 import { createEvent, createStore, restore, sample } from 'effector';
+import { createGate } from 'effector-react';
 import { isArray, isNumber } from 'lodash-es';
 import { delay } from 'patronum';
 
@@ -9,6 +10,8 @@ import type { QuestionsResponse } from '../api/dto';
 import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
 
 export const TestModel = atom(() => {
+    const TestGate = createGate();
+
     const formReset = createEvent();
     const setSplashScreenVisibility = createEvent<boolean>();
 
@@ -40,7 +43,7 @@ export const TestModel = atom(() => {
     });
 
     sample({
-        clock: [$currentPage, $questions],
+        clock: [$currentPage, $questions, TestGate.open],
         source: {
             page: $currentPage,
             questions: $questions,
@@ -152,5 +155,6 @@ export const TestModel = atom(() => {
         $isSplashScreenVisible,
         scaleFormFieldChanged,
         $questions,
+        TestGate,
     };
 });
