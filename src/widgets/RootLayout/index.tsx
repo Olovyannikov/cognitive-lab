@@ -13,6 +13,7 @@ export const RootLayout = ({ children }: PropsWithChildren) => {
     useGate(PersonalitiesModel.PersonalitiesInitialGate);
     useGate(UserModel.UserGate);
     useGate(ReportModel.ReportGate);
+    useGate(ReportModel.FreeReportGate);
     return (
         <div className={s.app}>
             <Header className={s.header} />
