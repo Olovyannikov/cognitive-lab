@@ -1,6 +1,8 @@
 import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { ROUTES } from '@/shared/config';
+
 import { FLOW_STEPS } from './const';
 import { Decor, icons } from './Icons';
 
@@ -26,7 +28,14 @@ export const HowItWorks = () => {
                 ))}
             </Flex>
             <Center>
-                <Button maw={706} fullWidth href='/test' component='a' variant='white' size={isMobile ? 'md' : 'xl'}>
+                <Button
+                    maw={706}
+                    fullWidth
+                    component='a'
+                    variant='white'
+                    href={ROUTES.TEST}
+                    size={isMobile ? 'md' : 'xl'}
+                >
                     Пройти тест
                 </Button>
             </Center>

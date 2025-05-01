@@ -1,6 +1,7 @@
 import { Box, Button, Text, Title } from '@mantine/core';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { ROUTES } from '@/shared/config';
 import { Section, StickyScrollReveal } from '@/shared/ui';
 
 import { CARDS } from './const';
@@ -25,7 +26,7 @@ export const WhyUs = () => {
                     content={CARDS}
                 />
             </Box>
-            <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={604} component='a' href='/test'>
+            <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={604} component='a' href={ROUTES.TEST}>
                 Пройти тест
             </Button>
         </Section>

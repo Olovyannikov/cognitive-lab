@@ -3,6 +3,8 @@ import { Check } from '@phosphor-icons/react/dist/ssr';
 import clsx from 'clsx';
 import { isNumber } from 'lodash-es';
 
+import { ROUTES } from '@/shared/config';
+
 import s from './TariffCard.module.css';
 
 interface TariffCardProps {
@@ -42,7 +44,7 @@ export const TariffCard = ({
                 </List.Item>
             ))}
         </List>
-        <Button component='a' href={buyNow ? '/purchase?type=""' : '/test'} variant='outline' className={s.button}>
+        <Button component='a' href={buyNow ? '/purchase?type=""' : ROUTES.TEST} variant='outline' className={s.button}>
             {buyNow ? 'Купить сейчас' : 'Пройти тест'}
         </Button>
     </Paper>

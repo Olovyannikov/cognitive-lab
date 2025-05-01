@@ -57,6 +57,7 @@ export const BuyReportForm = () => {
                     <Button
                         fullWidth
                         size='sm'
+                        mih={42}
                         variant='default'
                         loading={pending || isLoading}
                         onClick={() => !pending && applyPromoHandler(form.values.promo_code.toUpperCase())}
