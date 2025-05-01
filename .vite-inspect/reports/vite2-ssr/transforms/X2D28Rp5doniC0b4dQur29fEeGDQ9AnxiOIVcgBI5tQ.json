@@ -1,0 +1,157 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FullReportPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\n\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\n\nexport const FullReportPage = () => {\n    useGate(ReportModel.ReportPageGate);\n    const { data, pending, stale } = useUnit(getFullReportQuery);\n    const [isFirstPage, page] = useUnit([\n        ReportModel.$currentContentPage.map((page) => page === 0),\n        ReportModel.$currentContentPage,\n    ]);\n\n    const titleMap = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    if (stale || pending) return <PageLoader />;\n    if (!data) return;\n\n    return (\n        <Box component='section'>\n            <Container>\n                {isFirstPage && (\n                    <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />\n                )}\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\n                <FullReportNavigation />\n                <FullReportSlice page={page} />\n                <NavigateToReviewPage />\n            </Container>\n            <ReportPagination />\n        </Box>\n    );\n};\n",
+      "start": 1746125081653,
+      "end": 1746125081703,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const {\n    data,\n    pending,\n    stale\n  } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([ReportModel.$currentContentPage.map(page => page === 0), ReportModel.$currentContentPage]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  if (stale || pending) return <PageLoader />;\n  if (!data) return;\n  return <Box component='section'>\n            <Container>\n                {isFirstPage && <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />}\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\n                <FullReportNavigation />\n                <FullReportSlice page={page} />\n                <NavigateToReviewPage />\n            </Container>\n            <ReportPagination />\n        </Box>;\n};",
+      "start": 1746125081703,
+      "end": 1746125081705,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Container",
+          "useGate",
+          "useStoreMap",
+          "useUnit",
+          "PageLoader",
+          "CategoryBanner",
+          "getFullReportQuery",
+          "ReportHeader",
+          "ReportModel",
+          "TYPE_TO_COLOR_MAP",
+          "NavigateToReviewPage",
+          "FullReportNavigation",
+          "FullReportSlice",
+          "ReportPagination",
+          "FullReportPage",
+          "ReportPageGate",
+          "data",
+          "pending",
+          "stale",
+          "isFirstPage",
+          "page",
+          "$currentContentPage",
+          "map",
+          "titleMap",
+          "store",
+          "$data",
+          "keys",
+          "fn",
+          "content",
+          "title",
+          "mbti_type"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FullReportPage/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\n\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\n\nexport const FullReportPage = () => {\n    useGate(ReportModel.ReportPageGate);\n    const { data, pending, stale } = useUnit(getFullReportQuery);\n    const [isFirstPage, page] = useUnit([\n        ReportModel.$currentContentPage.map((page) => page === 0),\n        ReportModel.$currentContentPage,\n    ]);\n\n    const titleMap = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    if (stale || pending) return <PageLoader />;\n    if (!data) return;\n\n    return (\n        <Box component='section'>\n            <Container>\n                {isFirstPage && (\n                    <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />\n                )}\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\n                <FullReportNavigation />\n                <FullReportSlice page={page} />\n                <NavigateToReviewPage />\n            </Container>\n            <ReportPagination />\n        </Box>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,SAAS,QAAQ,eAAe;AAC9C,SAASC,OAAO,EAAEC,WAAW,EAAEC,OAAO,QAAQ,gBAAgB;AAE9D,SAASC,UAAU,QAAQ,aAAa;AAExC,SAASC,cAAc,EAAEC,kBAAkB,EAAEC,YAAY,EAAEC,WAAW,EAAEC,iBAAiB,QAAQ,mBAAmB;AAEpH,SAASC,oBAAoB,QAAQ,iCAAiC;AAEtE,SAASC,oBAAoB,QAAQ,gCAAgC;AACrE,SAASC,eAAe,QAAQ,2BAA2B;AAC3D,SAASC,gBAAgB,QAAQ,4BAA4B;AAE7D,OAAO,MAAMC,cAAc,GAAGA,CAAA,KAAM;EAChCb,OAAO,CAACO,WAAW,CAACO,cAAc,CAAC;EACnC,MAAM;IAAEC,IAAI;IAAEC,OAAO;IAAEC;EAAM,CAAC,GAAGf,OAAO,CAACG,kBAAkB,CAAC;EAC5D,MAAM,CAACa,WAAW,EAAEC,IAAI,CAAC,GAAGjB,OAAO,CAAC,CAChCK,WAAW,CAACa,mBAAmB,CAACC,GAAG,CAAEF,IAAI,IAAKA,IAAI,KAAK,CAAC,CAAC,EACzDZ,WAAW,CAACa,mBAAmB,CAClC,CAAC;EAEF,MAAME,QAAQ,GAAGrB,WAAW,CAAC;IACzBsB,KAAK,EAAElB,kBAAkB,CAACmB,KAAK;IAC/BC,IAAI,EAAE,CAAC,OAAO,EAAEN,IAAI,CAAC;IACrBO,EAAE,EAAGC,OAAO,IAAKA,OAAO,EAAEA,OAAO,EAAEN,GAAG,CAAC,CAAC;MAAEO;IAAM,CAAC,KAAKA,KAAK;EAC/D,CAAC,CAAC;EAEF,IAAIX,KAAK,IAAID,OAAO,EAAE,OAAO,CAAC,UAAU,GAAG;EAC3C,IAAI,CAACD,IAAI,EAAE;EAEX,OACI,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS;AAChC,YAAY,CAAC,SAAS;AACtB,gBAAgB,CAACG,WAAW,IACR,CAAC,YAAY,CAAC,iBAAiB,CAAC,CAACV,iBAAiB,CAAC,CAAC,IAAI,CAAC,CAACO,IAAI,CAACc,SAAS,CAAC,CAAC,IAAI,CAAC,CAACd,IAAI,CAACa,KAAK,CAAC,GAC9F;AACjB,gBAAgB,CAAC,CAACV,WAAW,IAAI,CAAC,cAAc,CAAC,KAAK,CAAC,CAACI,QAAQ,CAACH,IAAI,CAAC,CAAC,CAAC,KAAK,CAAC,CAACX,iBAAiB,CAACO,IAAI,CAACc,SAAS,CAAC,CAAC,GAAG;AACpH,gBAAgB,CAAC,oBAAoB;AACrC,gBAAgB,CAAC,eAAe,CAAC,IAAI,CAAC,CAACV,IAAI,CAAC;AAC5C,gBAAgB,CAAC,oBAAoB;AACrC,YAAY,EAAE,SAAS;AACvB,YAAY,CAAC,gBAAgB;AAC7B,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useGate, useStoreMap, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { FullReportNavigation } from \"@/widgets/FullReportNavigation\";\nimport { FullReportSlice } from \"@/widgets/FullReportSlice\";\nimport { ReportPagination } from \"@/widgets/ReportPagination\";\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const {\n    data,\n    pending,\n    stale\n  } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([ReportModel.$currentContentPage.map((page2) => page2 === 0), ReportModel.$currentContentPage]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", page],\n    fn: (content) => content?.content?.map(({\n      title\n    }) => title)\n  });\n  if (stale || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return;\n  return /* @__PURE__ */ jsxs(Box, { component: \"section\", children: [\n    /* @__PURE__ */ jsxs(Container, { children: [\n      isFirstPage && /* @__PURE__ */ jsx(ReportHeader, { typeToColorMapper: TYPE_TO_COLOR_MAP, type: data.mbti_type, name: data.title }),\n      !isFirstPage && /* @__PURE__ */ jsx(CategoryBanner, { title: titleMap[page], color: TYPE_TO_COLOR_MAP[data.mbti_type] }),\n      /* @__PURE__ */ jsx(FullReportNavigation, {}),\n      /* @__PURE__ */ jsx(FullReportSlice, { page }),\n      /* @__PURE__ */ jsx(NavigateToReviewPage, {})\n    ] }),\n    /* @__PURE__ */ jsx(ReportPagination, {})\n  ] });\n};\n",
+      "start": 1746125081705,
+      "end": 1746125081756,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FullReportPage/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const {\n    data,\n    pending,\n    stale\n  } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([ReportModel.$currentContentPage.map(page => page === 0), ReportModel.$currentContentPage]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  if (stale || pending) return <PageLoader />;\n  if (!data) return;\n  return <Box component='section'>\n            <Container>\n                {isFirstPage && <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />}\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\n                <FullReportNavigation />\n                <FullReportSlice page={page} />\n                <NavigateToReviewPage />\n            </Container>\n            <ReportPagination />\n        </Box>;\n};"
+        ],
+        "mappings": "AAuB+B,cAGnB,YAHmB;AAvB/B,SAAS,KAAK,iBAAiB;AAC/B,SAAS,SAAS,aAAa,eAAe;AAC9C,SAAS,kBAAkB;AAC3B,SAAS,gBAAgB,oBAAoB,cAAc,aAAa,yBAAyB;AACjG,SAAS,4BAA4B;AACrC,SAAS,4BAA4B;AACrC,SAAS,uBAAuB;AAChC,SAAS,wBAAwB;AAC1B,aAAM,iBAAiB,MAAM;AAClC,UAAQ,YAAY,cAAc;AAClC,QAAM;AAAA,IACJ;AAAA,IACA;AAAA,IACA;AAAA,EACF,IAAI,QAAQ,kBAAkB;AAC9B,QAAM,CAAC,aAAa,IAAI,IAAI,QAAQ,CAAC,YAAY,oBAAoB,IAAI,CAAAA,UAAQA,UAAS,CAAC,GAAG,YAAY,mBAAmB,CAAC;AAC9H,QAAM,WAAW,YAAY;AAAA,IAC3B,OAAO,mBAAmB;AAAA,IAC1B,MAAM,CAAC,SAAS,IAAI;AAAA,IACpB,IAAI,aAAW,SAAS,SAAS,IAAI,CAAC;AAAA,MACpC;AAAA,IACF,MAAM,KAAK;AAAA,EACb,CAAC;AACD,MAAI,SAAS,QAAS,QAAO,oBAAC,cAAW;AACzC,MAAI,CAAC,KAAM;AACX,SAAO,qBAAC,OAAI,WAAU,WACZ;AAAA,yBAAC,aACI;AAAA,qBAAe,oBAAC,gBAAa,mBAAmB,mBAAmB,MAAM,KAAK,WAAW,MAAM,KAAK,OAAO;AAAA,MAC3G,CAAC,eAAe,oBAAC,kBAAe,OAAO,SAAS,IAAI,GAAG,OAAO,kBAAkB,KAAK,SAAS,GAAG;AAAA,MAClG,oBAAC,wBAAqB;AAAA,MACtB,oBAAC,mBAAgB,MAAY;AAAA,MAC7B,oBAAC,wBAAqB;AAAA,OAC1B;AAAA,IACA,oBAAC,oBAAiB;AAAA,KACtB;AACR;",
+        "names": ["page"]
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081756,
+      "end": 1746125081756,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/FullReportPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useGate, useStoreMap, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { FullReportNavigation } from \"@/widgets/FullReportNavigation\";\nimport { FullReportSlice } from \"@/widgets/FullReportSlice\";\nimport { ReportPagination } from \"@/widgets/ReportPagination\";\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const {\n    data,\n    pending,\n    stale\n  } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([ReportModel.$currentContentPage.map((page2) => page2 === 0), ReportModel.$currentContentPage]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", page],\n    fn: (content) => content?.content?.map(({\n      title\n    }) => title)\n  });\n  if (stale || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return;\n  return /* @__PURE__ */ jsxs(Box, { component: \"section\", children: [\n    /* @__PURE__ */ jsxs(Container, { children: [\n      isFirstPage && /* @__PURE__ */ jsx(ReportHeader, { typeToColorMapper: TYPE_TO_COLOR_MAP, type: data.mbti_type, name: data.title }),\n      !isFirstPage && /* @__PURE__ */ jsx(CategoryBanner, { title: titleMap[page], color: TYPE_TO_COLOR_MAP[data.mbti_type] }),\n      /* @__PURE__ */ jsx(FullReportNavigation, {}),\n      /* @__PURE__ */ jsx(FullReportSlice, { page }),\n      /* @__PURE__ */ jsx(NavigateToReviewPage, {})\n    ] }),\n    /* @__PURE__ */ jsx(ReportPagination, {})\n  ] });\n};\n",
+      "start": 1746125081757,
+      "end": 1746125081757,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/FullReportPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

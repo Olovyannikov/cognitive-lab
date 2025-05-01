@@ -1,0 +1,145 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedCards/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Paper, Stack, Title } from '@mantine/core';\n\nimport s from './OrderedCards.module.css';\n\ninterface OrderedCardProps {\n    color: string;\n    items: {\n        text?: string;\n        highlight?: null;\n        title?: string;\n        order?: number;\n    }[];\n}\nexport const OrderedCards = ({ items, color }: OrderedCardProps) => (\n    <Stack>\n        {items.map((item) => (\n            <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>\n        ))}\n    </Stack>\n);\n",
+      "start": 1746125081873,
+      "end": 1746125081924,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Paper, Stack, Title } from '@mantine/core';\nimport s from './OrderedCards.module.css';\ninterface OrderedCardProps {\n  color: string;\n  items: {\n    text?: string;\n    highlight?: null;\n    title?: string;\n    order?: number;\n  }[];\n}\nexport const OrderedCards = ({\n  items,\n  color\n}: OrderedCardProps) => <Stack>\n        {items.map(item => <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>)}\n    </Stack>;",
+      "start": 1746125081924,
+      "end": 1746125081926,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Paper",
+          "Stack",
+          "Title",
+          "s",
+          "OrderedCardProps",
+          "color",
+          "items",
+          "text",
+          "highlight",
+          "title",
+          "order",
+          "OrderedCards",
+          "map",
+          "item",
+          "paper",
+          "stack"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedCards/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper, Stack, Title } from '@mantine/core';\n\nimport s from './OrderedCards.module.css';\n\ninterface OrderedCardProps {\n    color: string;\n    items: {\n        text?: string;\n        highlight?: null;\n        title?: string;\n        order?: number;\n    }[];\n}\nexport const OrderedCards = ({ items, color }: OrderedCardProps) => (\n    <Stack>\n        {items.map((item) => (\n            <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>\n        ))}\n    </Stack>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,KAAK,EAAEC,KAAK,QAAQ,eAAe;AAEnD,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,UAAUC,gBAAgB,CAAC;EACvBC,KAAK,EAAE,MAAM;EACbC,KAAK,EAAE;IACHC,IAAI,CAAC,EAAE,MAAM;IACbC,SAAS,CAAC,EAAE,IAAI;IAChBC,KAAK,CAAC,EAAE,MAAM;IACdC,KAAK,CAAC,EAAE,MAAM;EAClB,CAAC,EAAE;AACP;AACA,OAAO,MAAMC,YAAY,GAAGA,CAAC;EAAEL,KAAK;EAAED;AAAwB,CAAjB,EAAED,gBAAgB,KAC3D,CAAC,KAAK;AACV,QAAQ,CAACE,KAAK,CAACM,GAAG,CAAEC,IAAI,IACZ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACV,CAAC,CAACW,KAAK,CAAC,CAAC,EAAE,CAAC,CAACT,KAAK,KAAK,UAAU,GAAG,SAAS,GAAG,QAAQ,CAAC,CAAC,GAAG,CAAC,CAACQ,IAAI,CAACH,KAAK,CAAC;AACxG,gBAAgB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACP,CAAC,CAACY,KAAK,CAAC;AAC1C,oBAAoB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACZ,CAAC,CAACM,KAAK,CAAC,CAAC,CAAC,CAAC,CAACJ,KAAK,KAAK,UAAU,GAAG,SAAS,GAAG,QAAQ,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AACxG,wBAAwB,CAACQ,IAAI,CAACH,KAAK,CAAC,EAAE,CAACG,IAAI,CAACJ,KAAK;AACjD,oBAAoB,EAAE,KAAK;AAC3B,gBAAgB,EAAE,KAAK;AACvB,YAAY,EAAE,KAAK,CACV,CAAC;AACV,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Stack, { children: items.map((item) => /* @__PURE__ */ jsx(Paper, { className: s.paper, bg: color === \"positive\" ? \"green.0\" : \"pink.0\", children: /* @__PURE__ */ jsx(Stack, { className: s.stack, children: /* @__PURE__ */ jsxs(Title, { className: s.title, c: color === \"positive\" ? \"green.9\" : \"pink.9\", order: 5, children: [\n  item.order,\n  \". \",\n  item.title\n] }) }) }, item.order)) });\n",
+      "start": 1746125081926,
+      "end": 1746125082157,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedCards/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper, Stack, Title } from '@mantine/core';\nimport s from './OrderedCards.module.css';\ninterface OrderedCardProps {\n  color: string;\n  items: {\n    text?: string;\n    highlight?: null;\n    title?: string;\n    order?: number;\n  }[];\n}\nexport const OrderedCards = ({\n  items,\n  color\n}: OrderedCardProps) => <Stack>\n        {items.map(item => <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>)}\n    </Stack>;"
+        ],
+        "mappings": "AAgBgB,cACI,YADJ;AAhBhB,SAAS,OAAO,OAAO,aAAa;AACpC,OAAO,OAAO;AAUP,aAAM,eAAe,CAAC;AAAA,EAC3B;AAAA,EACA;AACF,MAAwB,oBAAC,SAChB,gBAAM,IAAI,UAAQ,oBAAC,SAAM,WAAW,EAAE,OAAO,IAAI,UAAU,aAAa,YAAY,UAC7E,8BAAC,SAAM,WAAW,EAAE,OAChB,+BAAC,SAAM,WAAW,EAAE,OAAO,GAAG,UAAU,aAAa,YAAY,UAAU,OAAO,GAC7E;AAAA,OAAK;AAAA,EAAM;AAAA,EAAG,KAAK;AAAA,GACxB,GACJ,KAL4F,KAAK,KAMrG,CAAQ,GAChB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/OrderedCards/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Stack, { children: items.map((item) => /* @__PURE__ */ jsx(Paper, { className: s.paper, bg: color === \"positive\" ? \"green.0\" : \"pink.0\", children: /* @__PURE__ */ jsx(Stack, { className: s.stack, children: /* @__PURE__ */ jsxs(Title, { className: s.title, c: color === \"positive\" ? \"green.9\" : \"pink.9\", order: 5, children: [\n  item.order,\n  \". \",\n  item.title\n] }) }) }, item.order)) });\n",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/OrderedCards/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9V,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\n\nimport s from './ReportGroupTemplate.module.css';\n\ninterface ReportGroupTemplateProps {\n    reports: { mbti_type: string; user_report: string; created_at: string; report_kind: string }[];\n    render: ReactNode;\n    label: string;\n}\n\nexport const ReportGroupTemplate = ({ reports, render, label }: ReportGroupTemplateProps) => (\n    <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>\n);\n",
+      "start": 1746125082613,
+      "end": 1746125082625,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\nimport s from './ReportGroupTemplate.module.css';\ninterface ReportGroupTemplateProps {\n  reports: {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n  }[];\n  render: ReactNode;\n  label: string;\n}\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}: ReportGroupTemplateProps) => <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>;",
+      "start": 1746125082625,
+      "end": 1746125082627,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "Stack",
+          "Text",
+          "s",
+          "ReportGroupTemplateProps",
+          "reports",
+          "mbti_type",
+          "user_report",
+          "created_at",
+          "report_kind",
+          "render",
+          "label",
+          "ReportGroupTemplate",
+          "length",
+          "title"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\n\nimport s from './ReportGroupTemplate.module.css';\n\ninterface ReportGroupTemplateProps {\n    reports: { mbti_type: string; user_report: string; created_at: string; report_kind: string }[];\n    render: ReactNode;\n    label: string;\n}\n\nexport const ReportGroupTemplate = ({ reports, render, label }: ReportGroupTemplateProps) => (\n    <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,SAAS,QAAQ,OAAO;AACtC,SAASC,KAAK,EAAEC,IAAI,QAAQ,eAAe;AAE3C,OAAOC,CAAC,MAAM,kCAAkC;AAEhD,UAAUC,wBAAwB,CAAC;EAC/BC,OAAO,EAAE;IAAEC,SAAS,EAAE,MAAM;IAAEC,WAAW,EAAE,MAAM;IAAEC,UAAU,EAAE,MAAM;IAAEC,WAAW,EAAE,MAAM;EAAC,CAAC,EAAE;EAC9FC,MAAM,EAAEV,SAAS;EACjBW,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,MAAMC,mBAAmB,GAAGA,CAAC;EAAEP,OAAO;EAAEK,MAAM;EAAEC;AAAgC,CAAzB,EAAEP,wBAAwB,KACpF,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,IAAI;AAC1B,QAAQ,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,CAACC,OAAO,EAAEQ,MAAM,CAAC,CAAC,SAAS,CAAC,CAACV,CAAC,CAACW,KAAK,CAAC;AAC3D,YAAY,CAACH,KAAK;AAClB,QAAQ,EAAE,IAAI;AACd,QAAQ,CAACD,MAAM;AACf,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Stack, Text } from \"@mantine/core\";\nimport s from \"./ReportGroupTemplate.module.css\";\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}) => /* @__PURE__ */ jsxs(Stack, { gap: 0, mb: \"xs\", children: [\n  /* @__PURE__ */ jsx(Text, { hidden: !reports?.length, className: s.title, children: label }),\n  render\n] });\n",
+      "start": 1746125082627,
+      "end": 1746125082637,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\nimport s from './ReportGroupTemplate.module.css';\ninterface ReportGroupTemplateProps {\n  reports: {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n  }[];\n  render: ReactNode;\n  label: string;\n}\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}: ReportGroupTemplateProps) => <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>;"
+        ],
+        "mappings": "AAiBgC,SACxB,KADwB;AAhBhC,SAAS,OAAO,YAAY;AAC5B,OAAO,OAAO;AAWP,aAAM,sBAAsB,CAAC;AAAA,EAClC;AAAA,EACA;AAAA,EACA;AACF,MAAgC,qBAAC,SAAM,KAAK,GAAG,IAAG,MAC1C;AAAA,sBAAC,QAAK,QAAQ,CAAC,SAAS,QAAQ,WAAW,EAAE,OACxC,iBACL;AAAA,EACC;AAAA,GACL;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082637,
+      "end": 1746125082637,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082637,
+      "end": 1746125082637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Stack, Text } from \"@mantine/core\";\nimport s from \"./ReportGroupTemplate.module.css\";\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}) => /* @__PURE__ */ jsxs(Stack, { gap: 0, mb: \"xs\", children: [\n  /* @__PURE__ */ jsx(Text, { hidden: !reports?.length, className: s.title, children: label }),\n  render\n] });\n",
+      "start": 1746125082638,
+      "end": 1746125082638,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

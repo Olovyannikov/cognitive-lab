@@ -1,0 +1,137 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+pageInitiated.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\nimport { appService } from '@/shared/services';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start,\n});\n",
+      "start": 1746125081534,
+      "end": 1746125081556,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { appService } from '@/shared/services';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start\n  }],\n  or: {\n    sid: \"m69awt\"\n  }\n});",
+      "start": 1746125081556,
+      "end": 1746125081557,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "sample",
+          "createPageInit",
+          "appService",
+          "getPersonalityTypesWithCategoriesQuery",
+          "pageInitiated",
+          "and",
+          "clock",
+          "appStarted",
+          "target",
+          "start",
+          "or",
+          "sid"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+pageInitiated.ts"],
+        "sourcesContent": [
+          "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\nimport { appService } from '@/shared/services';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start,\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,QAAQ,UAAU;AAEjC,SAASC,cAAc,QAAQ,cAAc;AAC7C,SAASC,UAAU,QAAQ,mBAAmB;AAE9C,SAASC,sCAAsC,QAAQ,wBAAwB;AAE/E,OAAO,MAAMC,aAAa,GAAGH,cAAc,CAAC,CAAC;AAE7CD,MAAM;EAAAK,GAAA,GAAC;IACHC,KAAK,EAAE,CAACJ,UAAU,CAACK,UAAU,EAAEH,aAAa,CAAC;IAC7CI,MAAM,EAAEL,sCAAsC,CAACM;EACnD,CAAC;EAAAC,EAAA;IAAAC,GAAA;EAAA;AAAA,EAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { appService } from \"@/shared/services\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start\n  }],\n  or: {\n    sid: \"m69awt\"\n  }\n});\n",
+      "start": 1746125081557,
+      "end": 1746125081610,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+pageInitiated.ts"],
+        "sourcesContent": [
+          "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { appService } from '@/shared/services';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start\n  }],\n  or: {\n    sid: \"m69awt\"\n  }\n});"
+        ],
+        "mappings": "AAAA,SAAS,cAAc;AACvB,SAAS,sBAAsB;AAC/B,SAAS,kBAAkB;AAC3B,SAAS,8CAA8C;AAChD,aAAM,gBAAgB,eAAe;AAC5C,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO,CAAC,WAAW,YAAY,aAAa;AAAA,IAC5C,QAAQ,uCAAuC;AAAA,EACjD,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { appService } from \"@/shared/services\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: [appService.appStarted, pageInitiated],\n    target: getPersonalityTypesWithCategoriesQuery.start\n  }],\n  or: {\n    sid: \"m69awt\"\n  }\n});\n",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/+pageInitiated.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC;"
+      }
+    }
+  ]
+}

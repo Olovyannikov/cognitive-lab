@@ -1,0 +1,143 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\n\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nimport { Footer, Header } from './ui';\n\nimport s from './RootLayout.module.css';\n\nexport const RootLayout = ({ children }: PropsWithChildren) => {\n    useGate(PersonalitiesModel.PersonalitiesInitialGate);\n    useGate(UserModel.UserGate);\n    useGate(ReportModel.ReportGate);\n    useGate(ReportModel.FreeReportGate);\n    return (\n        <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>\n    );\n};\n",
+      "start": 1746125081534,
+      "end": 1746125081549,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nimport { Footer, Header } from './ui';\nimport s from './RootLayout.module.css';\nexport const RootLayout = ({\n  children\n}: PropsWithChildren) => {\n  useGate(PersonalitiesModel.PersonalitiesInitialGate);\n  useGate(UserModel.UserGate);\n  useGate(ReportModel.ReportGate);\n  useGate(ReportModel.FreeReportGate);\n  return <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>;\n};",
+      "start": 1746125081549,
+      "end": 1746125081555,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "PropsWithChildren",
+          "useGate",
+          "PersonalitiesModel",
+          "ReportModel",
+          "UserModel",
+          "Footer",
+          "Header",
+          "s",
+          "RootLayout",
+          "children",
+          "PersonalitiesInitialGate",
+          "UserGate",
+          "ReportGate",
+          "FreeReportGate",
+          "app",
+          "header",
+          "main",
+          "footer"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\n\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nimport { Footer, Header } from './ui';\n\nimport s from './RootLayout.module.css';\n\nexport const RootLayout = ({ children }: PropsWithChildren) => {\n    useGate(PersonalitiesModel.PersonalitiesInitialGate);\n    useGate(UserModel.UserGate);\n    useGate(ReportModel.ReportGate);\n    useGate(ReportModel.FreeReportGate);\n    return (\n        <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,cAAcA,iBAAiB,QAAQ,OAAO;AAC9C,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,kBAAkB,QAAQ,wBAAwB;AAC3D,SAASC,WAAW,QAAQ,mBAAmB;AAC/C,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,SAASC,MAAM,EAAEC,MAAM,QAAQ,MAAM;AAErC,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,OAAO,MAAMC,UAAU,GAAGA,CAAC;EAAEC;AAA4B,CAAlB,EAAET,iBAAiB,KAAK;EAC3DC,OAAO,CAACC,kBAAkB,CAACQ,wBAAwB,CAAC;EACpDT,OAAO,CAACG,SAAS,CAACO,QAAQ,CAAC;EAC3BV,OAAO,CAACE,WAAW,CAACS,UAAU,CAAC;EAC/BX,OAAO,CAACE,WAAW,CAACU,cAAc,CAAC;EACnC,OACI,CAAC,GAAG,CAAC,SAAS,CAAC,CAACN,CAAC,CAACO,GAAG,CAAC;AAC9B,YAAY,CAAC,MAAM,CAAC,SAAS,CAAC,CAACP,CAAC,CAACQ,MAAM,CAAC;AACxC,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACR,CAAC,CAACS,IAAI,CAAC,CAAC,EAAE,CAAC,cAAc;AACtD,gBAAgB,CAACP,QAAQ;AACzB,YAAY,EAAE,IAAI;AAClB,YAAY,CAAC,MAAM,CAAC,SAAS,CAAC,CAACF,CAAC,CAACU,MAAM,CAAC;AACxC,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { ReportModel } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({\n  children\n}) => {\n  useGate(PersonalitiesModel.PersonalitiesInitialGate);\n  useGate(UserModel.UserGate);\n  useGate(ReportModel.ReportGate);\n  useGate(ReportModel.FreeReportGate);\n  return /* @__PURE__ */ jsxs(\"div\", { className: s.app, children: [\n    /* @__PURE__ */ jsx(Header, { className: s.header }),\n    /* @__PURE__ */ jsx(\"main\", { className: s.main, id: \"page-content\", children }),\n    /* @__PURE__ */ jsx(Footer, { className: s.footer })\n  ] });\n};\n",
+      "start": 1746125081555,
+      "end": 1746125081627,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nimport { Footer, Header } from './ui';\nimport s from './RootLayout.module.css';\nexport const RootLayout = ({\n  children\n}: PropsWithChildren) => {\n  useGate(PersonalitiesModel.PersonalitiesInitialGate);\n  useGate(UserModel.UserGate);\n  useGate(ReportModel.ReportGate);\n  useGate(ReportModel.FreeReportGate);\n  return <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>;\n};"
+        ],
+        "mappings": "AAcS,SACG,KADH;AAbT,SAAS,eAAe;AACxB,SAAS,0BAA0B;AACnC,SAAS,mBAAmB;AAC5B,SAAS,iBAAiB;AAC1B,SAAS,QAAQ,cAAc;AAC/B,OAAO,OAAO;AACP,aAAM,aAAa,CAAC;AAAA,EACzB;AACF,MAAyB;AACvB,UAAQ,mBAAmB,wBAAwB;AACnD,UAAQ,UAAU,QAAQ;AAC1B,UAAQ,YAAY,UAAU;AAC9B,UAAQ,YAAY,cAAc;AAClC,SAAO,qBAAC,SAAI,WAAW,EAAE,KACf;AAAA,wBAAC,UAAO,WAAW,EAAE,QAAQ;AAAA,IAC7B,oBAAC,UAAK,WAAW,EAAE,MAAM,IAAG,gBACvB,UACL;AAAA,IACA,oBAAC,UAAO,WAAW,EAAE,QAAQ;AAAA,KACjC;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { ReportModel } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({\n  children\n}) => {\n  useGate(PersonalitiesModel.PersonalitiesInitialGate);\n  useGate(UserModel.UserGate);\n  useGate(ReportModel.ReportGate);\n  useGate(ReportModel.FreeReportGate);\n  return /* @__PURE__ */ jsxs(\"div\", { className: s.app, children: [\n    /* @__PURE__ */ jsx(Header, { className: s.header }),\n    /* @__PURE__ */ jsx(\"main\", { className: s.main, id: \"page-content\", children }),\n    /* @__PURE__ */ jsx(Footer, { className: s.footer })\n  ] });\n};\n",
+      "start": 1746125081627,
+      "end": 1746125081627,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

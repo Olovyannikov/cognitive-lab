@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/payment-check/+guard.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { redirect } from 'vike/abort';\nimport type { GuardAsync } from 'vike/types';\n\nexport const guard: GuardAsync = async (ctx): ReturnType<GuardAsync> => {\n    if (!ctx.urlParsed.search.order_id) {\n        throw redirect('/');\n    }\n};\n",
+      "start": 1746125081548,
+      "end": 1746125081582,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { redirect } from 'vike/abort';\nimport type { GuardAsync } from 'vike/types';\nexport const guard: GuardAsync = async (ctx): ReturnType<GuardAsync> => {\n  if (!ctx.urlParsed.search.order_id) {\n    throw redirect('/');\n  }\n};",
+      "start": 1746125081582,
+      "end": 1746125081583,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["redirect", "GuardAsync", "guard", "ctx", "ReturnType", "urlParsed", "search", "order_id"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/payment-check/+guard.ts"],
+        "sourcesContent": [
+          "import { redirect } from 'vike/abort';\nimport type { GuardAsync } from 'vike/types';\n\nexport const guard: GuardAsync = async (ctx): ReturnType<GuardAsync> => {\n    if (!ctx.urlParsed.search.order_id) {\n        throw redirect('/');\n    }\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,YAAY;AACrC,cAAcC,UAAU,QAAQ,YAAY;AAE5C,OAAO,MAAMC,KAAK,EAAED,UAAU,GAAG,MAAAC,CAAOC,GAAG,CAAC,EAAEC,UAAU,CAACH,UAAU,CAAC,IAAI;EACpE,IAAI,CAACE,GAAG,CAACE,SAAS,CAACC,MAAM,CAACC,QAAQ,EAAE;IAChC,MAAMP,QAAQ,CAAC,GAAG,CAAC;EACvB;AACJ,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { redirect } from \"vike/abort\";\nexport const guard = async (ctx) => {\n  if (!ctx.urlParsed.search.order_id) {\n    throw redirect(\"/\");\n  }\n};\n",
+      "start": 1746125081583,
+      "end": 1746125081620,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/payment-check/+guard.ts"],
+        "sourcesContent": [
+          "import { redirect } from 'vike/abort';\nimport type { GuardAsync } from 'vike/types';\nexport const guard: GuardAsync = async (ctx): ReturnType<GuardAsync> => {\n  if (!ctx.urlParsed.search.order_id) {\n    throw redirect('/');\n  }\n};"
+        ],
+        "mappings": "AAAA,SAAS,gBAAgB;AAElB,aAAM,QAAoB,OAAO,QAAgC;AACtE,MAAI,CAAC,IAAI,UAAU,OAAO,UAAU;AAClC,UAAM,SAAS,GAAG;AAAA,EACpB;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/payment-check/+guard.ts [vike:pluginModuleBanner] */\nimport { redirect } from \"vike/abort\";\nexport const guard = async (ctx) => {\n  if (!ctx.urlParsed.search.order_id) {\n    throw redirect(\"/\");\n  }\n};\n",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/payment-check/+guard.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC;AACF,CAAC;"
+      }
+    }
+  ]
+}

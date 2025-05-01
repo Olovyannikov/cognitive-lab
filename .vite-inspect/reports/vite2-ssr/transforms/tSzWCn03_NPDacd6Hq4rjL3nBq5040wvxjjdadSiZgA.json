@@ -1,0 +1,146 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\n\nexport const LandingModel = atom(() => {\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\n\n    sample({\n        clock: getMainPageInfoQuery.finished.success,\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n        target: $statisticsAndTrust,\n    });\n\n    return {\n        $statisticsAndTrust,\n    };\n});\n",
+      "start": 1746125081761,
+      "end": 1746125081793,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: res => res.result.find(el => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});",
+      "start": 1746125081793,
+      "end": 1746125081794,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createStore",
+          "sample",
+          "atom",
+          "getMainPageInfoQuery",
+          "StatisticsAndTrust",
+          "LandingModel",
+          "$statisticsAndTrust",
+          "name",
+          "sid",
+          "and",
+          "clock",
+          "finished",
+          "success",
+          "fn",
+          "res",
+          "result",
+          "find",
+          "el",
+          "statistics_and_trust",
+          "target",
+          "or"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"],
+        "sourcesContent": [
+          "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\n\nexport const LandingModel = atom(() => {\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\n\n    sample({\n        clock: getMainPageInfoQuery.finished.success,\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n        target: $statisticsAndTrust,\n    });\n\n    return {\n        $statisticsAndTrust,\n    };\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE9C,SAASC,IAAI,QAAQ,oBAAoB;AAEzC,SAASC,oBAAoB,QAAQ,QAAQ;AAC7C,cAAcC,kBAAkB,QAAQ,YAAY;AAEpD,OAAO,MAAMC,YAAY,GAAGH,IAAI,CAAC,MAAM;EACnC,MAAMI,mBAAmB,GAAGN,WAAW,CAACI,kBAAkB,EAAE,CAAC,CAAC,EAAE;IAAAG,IAAA;IAAAC,GAAA;EAAA,EAAC;EAEjEP,MAAM;IAAAQ,GAAA,GAAC;MACHC,KAAK,EAAEP,oBAAoB,CAACQ,QAAQ,CAACC,OAAO;MAC5CC,EAAE,EAAGC,GAAG,IAAKA,GAAG,CAACC,MAAM,CAACC,IAAI,CAAEC,EAAE,IAAKA,EAAE,CAACC,oBAAoB,CAAC,EAAEA,oBAAoB,IAAI,EAAE;MACzFC,MAAM,EAAEb;IACZ,CAAC;IAAAc,EAAA;MAAAZ,GAAA;IAAA;EAAA,EAAC;EAEF,OAAO;IACHF;EACJ,CAAC;AACL,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});\n",
+      "start": 1746125081794,
+      "end": 1746125081875,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"],
+        "sourcesContent": [
+          "import { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: res => res.result.find(el => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});"
+        ],
+        "mappings": "AAAA,SAAS,aAAa,cAAc;AACpC,SAAS,YAAY;AACrB,SAAS,4BAA4B;AAE9B,aAAM,eAAe,KAAK,MAAM;AACrC,QAAM,sBAAsB,YAAkC,CAAC,GAAG;AAAA,IAChE,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,qBAAqB,SAAS;AAAA,MACrC,IAAI,SAAO,IAAI,OAAO,KAAK,QAAM,GAAG,oBAAoB,GAAG,wBAAwB,CAAC;AAAA,MACpF,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Landing/model/index.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});\n",
+      "start": 1746125081875,
+      "end": 1746125081875,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Landing/model/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
+      }
+    }
+  ]
+}

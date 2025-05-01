@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FullReportSlice/FullReportSlice.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".title {\n  font-size: 26px;\n\n  @mixin larger-than 1024px {\n    font-size: 40px;\n  }\n}\n\nh5 + strong {\n  font-weight: 400;\n}\n\n.content {\n  position: relative;\n  margin-bottom: var(--mantine-spacing-5xl);\n  padding-bottom: var(--mantine-spacing-sm);\n\n  &:has(+ div) {\n    &::after {\n      content: \"\";\n      position: absolute;\n      left: 50%;\n      bottom: 0;\n      width: 240px;\n      height: 1px;\n      background-color: var(--mantine-color-gray-6);\n      translate: -50%;\n    }\n  }\n\n  span:has(strong) {\n    font-size: 18px;\n\n    @mixin larger-than 1024px {\n      font-size: 22px;\n    }\n  }\n}\n",
+      "start": 1746125082095,
+      "end": 1746125082140,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082140,
+      "end": 1746125082140,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/FullReportSlice/FullReportSlice.module.css [vike:pluginModuleBanner] */\nexport const title = \"zprX1\";\nexport const content = \"PeZdW\";\nexport default {\n\ttitle: title,\n\tcontent: content\n};\n",
+      "start": 1746125082141,
+      "end": 1746125082141,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/FullReportSlice/FullReportSlice.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC;"
+      }
+    }
+  ]
+}

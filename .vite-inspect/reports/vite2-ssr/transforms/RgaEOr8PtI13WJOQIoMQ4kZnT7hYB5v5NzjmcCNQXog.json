@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Header/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Title, type TitleProps } from '@mantine/core';\n\nimport s from './Header.module.css';\n\ninterface HeaderProps extends TitleProps {\n    text: string;\n}\n\nexport const Header = ({ text, ...props }: HeaderProps) => (\n    <Title className={s.title} order={5} {...props}>\n        {text}\n    </Title>\n);\n",
+      "start": 1746125081867,
+      "end": 1746125081910,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Title, type TitleProps } from '@mantine/core';\nimport s from './Header.module.css';\ninterface HeaderProps extends TitleProps {\n  text: string;\n}\nexport const Header = ({\n  text,\n  ...props\n}: HeaderProps) => <Title className={s.title} order={5} {...props}>\n        {text}\n    </Title>;",
+      "start": 1746125081910,
+      "end": 1746125081911,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Title", "TitleProps", "s", "HeaderProps", "text", "Header", "props", "title"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Header/index.tsx"],
+        "sourcesContent": [
+          "import { Title, type TitleProps } from '@mantine/core';\n\nimport s from './Header.module.css';\n\ninterface HeaderProps extends TitleProps {\n    text: string;\n}\n\nexport const Header = ({ text, ...props }: HeaderProps) => (\n    <Title className={s.title} order={5} {...props}>\n        {text}\n    </Title>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAE,KAAKC,UAAU,QAAQ,eAAe;AAEtD,OAAOC,CAAC,MAAM,qBAAqB;AAEnC,UAAUC,WAAW,SAASF,UAAU,CAAC;EACrCG,IAAI,EAAE,MAAM;AAChB;AAEA,OAAO,MAAMC,MAAM,GAAGA,CAAC;EAAED,IAAI;EAAE,GAAGE;AAAmB,CAAZ,EAAEH,WAAW,KAClD,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACK,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,IAAID,KAAK,CAAC;AACnD,QAAQ,CAACF,IAAI;AACb,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Header.module.css\";\nexport const Header = ({\n  text,\n  ...props\n}) => /* @__PURE__ */ jsx(Title, { className: s.title, order: 5, ...props, children: text });\n",
+      "start": 1746125081911,
+      "end": 1746125082157,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Header/index.tsx"],
+        "sourcesContent": [
+          "import { Title, type TitleProps } from '@mantine/core';\nimport s from './Header.module.css';\ninterface HeaderProps extends TitleProps {\n  text: string;\n}\nexport const Header = ({\n  text,\n  ...props\n}: HeaderProps) => <Title className={s.title} order={5} {...props}>\n        {text}\n    </Title>;"
+        ],
+        "mappings": "AAQmB;AARnB,SAAS,aAA8B;AACvC,OAAO,OAAO;AAIP,aAAM,SAAS,CAAC;AAAA,EACrB;AAAA,EACA,GAAG;AACL,MAAmB,oBAAC,SAAM,WAAW,EAAE,OAAO,OAAO,GAAI,GAAG,OACnD,gBACL;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Header/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Header.module.css\";\nexport const Header = ({\n  text,\n  ...props\n}) => /* @__PURE__ */ jsx(Title, { className: s.title, order: 5, ...props, children: text });\n",
+      "start": 1746125082157,
+      "end": 1746125082157,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Header/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

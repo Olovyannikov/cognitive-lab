@@ -1,0 +1,133 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToMainPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Button, type ButtonProps } from '@mantine/core';\n\nexport const NavigateToMainPage = ({\n    href = '/',\n    onClick,\n    ...props\n}: ButtonProps & { href?: string; onClick?: VoidFunction }) => (\n    <Button component={onClick ? 'button' : 'a'} {...(href ? { href } : {})} onClick={onClick} {...props}>\n        {props.children ?? 'На главную'}\n    </Button>\n);\n",
+      "start": 1746125081715,
+      "end": 1746125081762,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Button, type ButtonProps } from '@mantine/core';\nexport const NavigateToMainPage = ({\n  href = '/',\n  onClick,\n  ...props\n}: ButtonProps & {\n  href?: string;\n  onClick?: VoidFunction;\n}) => <Button component={onClick ? 'button' : 'a'} {...href ? {\n  href\n} : {}} onClick={onClick} {...props}>\n        {props.children ?? 'На главную'}\n    </Button>;",
+      "start": 1746125081762,
+      "end": 1746125081763,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Button",
+          "ButtonProps",
+          "NavigateToMainPage",
+          "href",
+          "onClick",
+          "props",
+          "VoidFunction",
+          "children"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToMainPage/index.tsx"],
+        "sourcesContent": [
+          "import { Button, type ButtonProps } from '@mantine/core';\n\nexport const NavigateToMainPage = ({\n    href = '/',\n    onClick,\n    ...props\n}: ButtonProps & { href?: string; onClick?: VoidFunction }) => (\n    <Button component={onClick ? 'button' : 'a'} {...(href ? { href } : {})} onClick={onClick} {...props}>\n        {props.children ?? 'На главную'}\n    </Button>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,EAAE,KAAKC,WAAW,QAAQ,eAAe;AAExD,OAAO,MAAMC,kBAAkB,GAAGA,CAAC;EAC/BC,IAAI,GAAG,GAAG;EACVC,OAAO;EACP,GAAGC;AACkD,CAAxD,EAAEJ,WAAW,GAAG;EAAEE,IAAI,CAAC,EAAE,MAAM;EAAEC,OAAO,CAAC,EAAEE,YAAY;AAAC,CAAC,KACtD,CAAC,MAAM,CAAC,SAAS,CAAC,CAACF,OAAO,GAAG,QAAQ,GAAG,GAAG,CAAC,CAAC,IAAKD,IAAI,GAAG;EAAEA;AAAK,CAAC,GAAG,CAAC,CAAE,CAAC,CAAC,OAAO,CAAC,CAACC,OAAO,CAAC,CAAC,IAAIC,KAAK,CAAC;AACzG,QAAQ,CAACA,KAAK,CAACE,QAAQ,IAAI,YAAY;AACvC,IAAI,EAAE,MAAM,CACX",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToMainPage = ({\n  href = \"/\",\n  onClick,\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { component: onClick ? \"button\" : \"a\", ...href ? {\n  href\n} : {}, onClick, ...props, children: props.children ?? \"На главную\" });\n",
+      "start": 1746125081763,
+      "end": 1746125081871,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToMainPage/index.tsx"],
+        "sourcesContent": [
+          "import { Button, type ButtonProps } from '@mantine/core';\nexport const NavigateToMainPage = ({\n  href = '/',\n  onClick,\n  ...props\n}: ButtonProps & {\n  href?: string;\n  onClick?: VoidFunction;\n}) => <Button component={onClick ? 'button' : 'a'} {...href ? {\n  href\n} : {}} onClick={onClick} {...props}>\n        {props.children ?? 'На главную'}\n    </Button>;"
+        ],
+        "mappings": "AAQM;AARN,SAAS,cAAgC;AAClC,aAAM,qBAAqB,CAAC;AAAA,EACjC,OAAO;AAAA,EACP;AAAA,EACA,GAAG;AACL,MAGM,oBAAC,UAAO,WAAW,UAAU,WAAW,KAAM,GAAG,OAAO;AAAA,EAC5D;AACF,IAAI,CAAC,GAAG,SAAmB,GAAG,OACrB,gBAAM,YAAY,cACvB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/NavigateToMainPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToMainPage = ({\n  href = \"/\",\n  onClick,\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { component: onClick ? \"button\" : \"a\", ...href ? {\n  href\n} : {}, onClick, ...props, children: props.children ?? \"На главную\" });\n",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/NavigateToMainPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Footer/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ComponentProps } from 'react';\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\n\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\n\nimport s from './Footer.module.css';\n\nexport const Footer = ({ className }: ComponentProps<'footer'>) => (\n    <footer className={clsx(className, s.footer)}>\n        <Container>\n            <Box className={s.topWrapper}>\n                <Top />\n                <Flex className={s.items}>\n                    <Section title='Меню'>\n                        <List className={s.menu} data={MENU} />\n                    </Section>\n                    <Section title='Контакты'>\n                        <List className={s.contacts} data={CONTACTS} />\n                        <SubscribeToNews />\n                    </Section>\n                </Flex>\n            </Box>\n            <Divider className={s.divider} />\n            <MetaInfo className={s.docs} />\n        </Container>\n    </footer>\n);\n",
+      "start": 1746125081767,
+      "end": 1746125081802,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ComponentProps } from 'react';\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\nimport s from './Footer.module.css';\nexport const Footer = ({\n  className\n}: ComponentProps<'footer'>) => <footer className={clsx(className, s.footer)}>\n        <Container>\n            <Box className={s.topWrapper}>\n                <Top />\n                <Flex className={s.items}>\n                    <Section title='Меню'>\n                        <List className={s.menu} data={MENU} />\n                    </Section>\n                    <Section title='Контакты'>\n                        <List className={s.contacts} data={CONTACTS} />\n                        <SubscribeToNews />\n                    </Section>\n                </Flex>\n            </Box>\n            <Divider className={s.divider} />\n            <MetaInfo className={s.docs} />\n        </Container>\n    </footer>;",
+      "start": 1746125081802,
+      "end": 1746125081804,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ComponentProps",
+          "Box",
+          "Container",
+          "Divider",
+          "Flex",
+          "clsx",
+          "SubscribeToNews",
+          "CONTACTS",
+          "MENU",
+          "List",
+          "MetaInfo",
+          "Section",
+          "Top",
+          "s",
+          "Footer",
+          "className",
+          "footer",
+          "topWrapper",
+          "items",
+          "menu",
+          "contacts",
+          "divider",
+          "docs"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Footer/index.tsx"],
+        "sourcesContent": [
+          "import type { ComponentProps } from 'react';\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\n\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\n\nimport s from './Footer.module.css';\n\nexport const Footer = ({ className }: ComponentProps<'footer'>) => (\n    <footer className={clsx(className, s.footer)}>\n        <Container>\n            <Box className={s.topWrapper}>\n                <Top />\n                <Flex className={s.items}>\n                    <Section title='Меню'>\n                        <List className={s.menu} data={MENU} />\n                    </Section>\n                    <Section title='Контакты'>\n                        <List className={s.contacts} data={CONTACTS} />\n                        <SubscribeToNews />\n                    </Section>\n                </Flex>\n            </Box>\n            <Divider className={s.divider} />\n            <MetaInfo className={s.docs} />\n        </Container>\n    </footer>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,cAAc,QAAQ,OAAO;AAC3C,SAASC,GAAG,EAAEC,SAAS,EAAEC,OAAO,EAAEC,IAAI,QAAQ,eAAe;AAC7D,OAAOC,IAAI,MAAM,MAAM;AAEvB,SAASC,eAAe,QAAQ,4BAA4B;AAE5D,SAASC,QAAQ,EAAEC,IAAI,QAAQ,aAAa;AAC5C,SAASC,IAAI,QAAQ,SAAS;AAC9B,SAASC,QAAQ,QAAQ,aAAa;AACtC,SAASC,OAAO,QAAQ,YAAY;AACpC,SAASC,GAAG,QAAQ,QAAQ;AAE5B,OAAOC,CAAC,MAAM,qBAAqB;AAEnC,OAAO,MAAMC,MAAM,GAAGA,CAAC;EAAEC;AAAoC,CAAzB,EAAEf,cAAc,CAAC,QAAQ,CAAC,KAC1D,CAAC,MAAM,CAAC,SAAS,CAAC,CAACK,IAAI,CAACU,SAAS,EAAEF,CAAC,CAACG,MAAM,CAAC,CAAC;AACjD,QAAQ,CAAC,SAAS;AAClB,YAAY,CAAC,GAAG,CAAC,SAAS,CAAC,CAACH,CAAC,CAACI,UAAU,CAAC;AACzC,gBAAgB,CAAC,GAAG;AACpB,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACK,KAAK,CAAC;AACzC,oBAAoB,CAAC,OAAO,CAAC,KAAK,CAAC,MAAM;AACzC,wBAAwB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACL,CAAC,CAACM,IAAI,CAAC,CAAC,IAAI,CAAC,CAACX,IAAI,CAAC;AAC5D,oBAAoB,EAAE,OAAO;AAC7B,oBAAoB,CAAC,OAAO,CAAC,KAAK,CAAC,UAAU;AAC7C,wBAAwB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACK,CAAC,CAACO,QAAQ,CAAC,CAAC,IAAI,CAAC,CAACb,QAAQ,CAAC;AACpE,wBAAwB,CAAC,eAAe;AACxC,oBAAoB,EAAE,OAAO;AAC7B,gBAAgB,EAAE,IAAI;AACtB,YAAY,EAAE,GAAG;AACjB,YAAY,CAAC,OAAO,CAAC,SAAS,CAAC,CAACM,CAAC,CAACQ,OAAO,CAAC;AAC1C,YAAY,CAAC,QAAQ,CAAC,SAAS,CAAC,CAACR,CAAC,CAACS,IAAI,CAAC;AACxC,QAAQ,EAAE,SAAS;AACnB,IAAI,EAAE,MAAM,CACX",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Divider, Flex } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { SubscribeToNews } from \"@/features/SubscribeToNews\";\nimport { CONTACTS, MENU } from \"../../const\";\nimport { List } from \"../List\";\nimport { MetaInfo } from \"../Metainfo\";\nimport { Section } from \"../Section\";\nimport { Top } from \"../Top\";\nimport s from \"./Footer.module.css\";\nexport const Footer = ({\n  className\n}) => /* @__PURE__ */ jsx(\"footer\", { className: clsx(className, s.footer), children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsxs(Box, { className: s.topWrapper, children: [\n    /* @__PURE__ */ jsx(Top, {}),\n    /* @__PURE__ */ jsxs(Flex, { className: s.items, children: [\n      /* @__PURE__ */ jsx(Section, { title: \"Меню\", children: /* @__PURE__ */ jsx(List, { className: s.menu, data: MENU }) }),\n      /* @__PURE__ */ jsxs(Section, { title: \"Контакты\", children: [\n        /* @__PURE__ */ jsx(List, { className: s.contacts, data: CONTACTS }),\n        /* @__PURE__ */ jsx(SubscribeToNews, {})\n      ] })\n    ] })\n  ] }),\n  /* @__PURE__ */ jsx(Divider, { className: s.divider }),\n  /* @__PURE__ */ jsx(MetaInfo, { className: s.docs })\n] }) });\n",
+      "start": 1746125081804,
+      "end": 1746125081923,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Footer/index.tsx"],
+        "sourcesContent": [
+          "import type { ComponentProps } from 'react';\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\nimport s from './Footer.module.css';\nexport const Footer = ({\n  className\n}: ComponentProps<'footer'>) => <footer className={clsx(className, s.footer)}>\n        <Container>\n            <Box className={s.topWrapper}>\n                <Top />\n                <Flex className={s.items}>\n                    <Section title='Меню'>\n                        <List className={s.menu} data={MENU} />\n                    </Section>\n                    <Section title='Контакты'>\n                        <List className={s.contacts} data={CONTACTS} />\n                        <SubscribeToNews />\n                    </Section>\n                </Flex>\n            </Box>\n            <Divider className={s.divider} />\n            <MetaInfo className={s.docs} />\n        </Container>\n    </footer>;"
+        ],
+        "mappings": "AAegB,cAKI,YALJ;AAdhB,SAAS,KAAK,WAAW,SAAS,YAAY;AAC9C,OAAO,UAAU;AACjB,SAAS,uBAAuB;AAChC,SAAS,UAAU,YAAY;AAC/B,SAAS,YAAY;AACrB,SAAS,gBAAgB;AACzB,SAAS,eAAe;AACxB,SAAS,WAAW;AACpB,OAAO,OAAO;AACP,aAAM,SAAS,CAAC;AAAA,EACrB;AACF,MAAgC,oBAAC,YAAO,WAAW,KAAK,WAAW,EAAE,MAAM,GACnE,+BAAC,aACG;AAAA,uBAAC,OAAI,WAAW,EAAE,YACd;AAAA,wBAAC,OAAI;AAAA,IACL,qBAAC,QAAK,WAAW,EAAE,OACf;AAAA,0BAAC,WAAQ,OAAM,QACX,8BAAC,QAAK,WAAW,EAAE,MAAM,MAAM,MAAM,GACzC;AAAA,MACA,qBAAC,WAAQ,OAAM,YACX;AAAA,4BAAC,QAAK,WAAW,EAAE,UAAU,MAAM,UAAU;AAAA,QAC7C,oBAAC,mBAAgB;AAAA,SACrB;AAAA,OACJ;AAAA,KACJ;AAAA,EACA,oBAAC,WAAQ,WAAW,EAAE,SAAS;AAAA,EAC/B,oBAAC,YAAS,WAAW,EAAE,MAAM;AAAA,GACjC,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081923,
+      "end": 1746125081923,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081923,
+      "end": 1746125081924,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081924,
+      "end": 1746125081924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081924,
+      "end": 1746125081924,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Footer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Divider, Flex } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { SubscribeToNews } from \"@/features/SubscribeToNews\";\nimport { CONTACTS, MENU } from \"../../const\";\nimport { List } from \"../List\";\nimport { MetaInfo } from \"../Metainfo\";\nimport { Section } from \"../Section\";\nimport { Top } from \"../Top\";\nimport s from \"./Footer.module.css\";\nexport const Footer = ({\n  className\n}) => /* @__PURE__ */ jsx(\"footer\", { className: clsx(className, s.footer), children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsxs(Box, { className: s.topWrapper, children: [\n    /* @__PURE__ */ jsx(Top, {}),\n    /* @__PURE__ */ jsxs(Flex, { className: s.items, children: [\n      /* @__PURE__ */ jsx(Section, { title: \"Меню\", children: /* @__PURE__ */ jsx(List, { className: s.menu, data: MENU }) }),\n      /* @__PURE__ */ jsxs(Section, { title: \"Контакты\", children: [\n        /* @__PURE__ */ jsx(List, { className: s.contacts, data: CONTACTS }),\n        /* @__PURE__ */ jsx(SubscribeToNews, {})\n      ] })\n    ] })\n  ] }),\n  /* @__PURE__ */ jsx(Divider, { className: s.divider }),\n  /* @__PURE__ */ jsx(MetaInfo, { className: s.docs })\n] }) });\n",
+      "start": 1746125081924,
+      "end": 1746125081924,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Footer/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

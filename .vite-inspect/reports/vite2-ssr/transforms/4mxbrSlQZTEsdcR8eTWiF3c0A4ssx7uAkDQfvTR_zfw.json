@@ -1,0 +1,142 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paragraph/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Text, type TextProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\n\nimport s from './Paragraph.module.css';\n\ninterface ParagraphProps extends TextProps {\n    text: string;\n}\n\nexport const Paragraph = ({ text, className, ...rest }: ParagraphProps) => (\n    <Markdown\n        className={s.text}\n        options={{\n            overrides: {\n                p: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                span: (props) => (\n                    <Text span className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                pre: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,\n            },\n        }}\n    >\n        {text}\n    </Markdown>\n);\n",
+      "start": 1746125081881,
+      "end": 1746125081934,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Text, type TextProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\nimport s from './Paragraph.module.css';\ninterface ParagraphProps extends TextProps {\n  text: string;\n}\nexport const Paragraph = ({\n  text,\n  className,\n  ...rest\n}: ParagraphProps) => <Markdown className={s.text} options={{\n  overrides: {\n    p: props => <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    span: props => <Text span className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    pre: props => <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    code: props => <Markdown className={s.text}>{props.children}</Markdown>\n  }\n}}>\n        {text}\n    </Markdown>;",
+      "start": 1746125081934,
+      "end": 1746125081936,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Text",
+          "TextProps",
+          "clsx",
+          "Markdown",
+          "s",
+          "ParagraphProps",
+          "text",
+          "Paragraph",
+          "className",
+          "rest",
+          "overrides",
+          "p",
+          "props",
+          "children",
+          "span",
+          "pre",
+          "code"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paragraph/index.tsx"],
+        "sourcesContent": [
+          "import { Text, type TextProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\n\nimport s from './Paragraph.module.css';\n\ninterface ParagraphProps extends TextProps {\n    text: string;\n}\n\nexport const Paragraph = ({ text, className, ...rest }: ParagraphProps) => (\n    <Markdown\n        className={s.text}\n        options={{\n            overrides: {\n                p: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                span: (props) => (\n                    <Text span className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                pre: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,\n            },\n        }}\n    >\n        {text}\n    </Markdown>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,EAAE,KAAKC,SAAS,QAAQ,eAAe;AACpD,OAAOC,IAAI,MAAM,MAAM;AACvB,OAAOC,QAAQ,MAAM,iBAAiB;AAEtC,OAAOC,CAAC,MAAM,wBAAwB;AAEtC,UAAUC,cAAc,SAASJ,SAAS,CAAC;EACvCK,IAAI,EAAE,MAAM;AAChB;AAEA,OAAO,MAAMC,SAAS,GAAGA,CAAC;EAAED,IAAI;EAAEE,SAAS;EAAE,GAAGC;AAAqB,CAAf,EAAEJ,cAAc,KAClE,CAAC,QAAQ,CACL,SAAS,CAAC,CAACD,CAAC,CAACE,IAAI,CAAC,CAClB,OAAO,CAAC,CAAC;EACLI,SAAS,EAAE;IACPC,CAAC,EAAGC,KAAK,IACL,CAAC,IAAI,CAAC,SAAS,CAAC,CAACV,IAAI,CAACE,CAAC,CAACE,IAAI,EAAEE,SAAS,CAAC,CAAC,CAAC,IAAIC,IAAI,CAAC;AACvE,wBAAwB,CAACG,KAAK,CAACC,QAAQ;AACvC,oBAAoB,EAAE,IAAI,CACT;IACDC,IAAI,EAAGF,KAAK,IACR,CAAC,IAAI,CAAC,IAAI,CAAC,SAAS,CAAC,CAACV,IAAI,CAACE,CAAC,CAACE,IAAI,EAAEE,SAAS,CAAC,CAAC,CAAC,IAAIC,IAAI,CAAC;AAC5E,wBAAwB,CAACG,KAAK,CAACC,QAAQ;AACvC,oBAAoB,EAAE,IAAI,CACT;IACDE,GAAG,EAAGH,KAAK,IACP,CAAC,IAAI,CAAC,SAAS,CAAC,CAACV,IAAI,CAACE,CAAC,CAACE,IAAI,EAAEE,SAAS,CAAC,CAAC,CAAC,IAAIC,IAAI,CAAC;AACvE,wBAAwB,CAACG,KAAK,CAACC,QAAQ;AACvC,oBAAoB,EAAE,IAAI,CACT;IACDG,IAAI,EAAGJ,KAAK,IAAK,CAAC,QAAQ,CAAC,SAAS,CAAC,CAACR,CAAC,CAACE,IAAI,CAAC,CAAC,CAACM,KAAK,CAACC,QAAQ,CAAC,EAAE,QAAQ;EAC5E;AACJ,CAAC,CAAC;AAEV,QAAQ,CAACP,IAAI;AACb,IAAI,EAAE,QAAQ,CACb",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./Paragraph.module.css\";\nexport const Paragraph = ({\n  text,\n  className,\n  ...rest\n}) => /* @__PURE__ */ jsx(Markdown, { className: s.text, options: {\n  overrides: {\n    p: (props) => /* @__PURE__ */ jsx(Text, { className: clsx(s.text, className), ...rest, children: props.children }),\n    span: (props) => /* @__PURE__ */ jsx(Text, { span: true, className: clsx(s.text, className), ...rest, children: props.children }),\n    pre: (props) => /* @__PURE__ */ jsx(Text, { className: clsx(s.text, className), ...rest, children: props.children }),\n    code: (props) => /* @__PURE__ */ jsx(Markdown, { className: s.text, children: props.children })\n  }\n}, children: text });\n",
+      "start": 1746125081936,
+      "end": 1746125082161,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paragraph/index.tsx"],
+        "sourcesContent": [
+          "import { Text, type TextProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\nimport s from './Paragraph.module.css';\ninterface ParagraphProps extends TextProps {\n  text: string;\n}\nexport const Paragraph = ({\n  text,\n  className,\n  ...rest\n}: ParagraphProps) => <Markdown className={s.text} options={{\n  overrides: {\n    p: props => <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    span: props => <Text span className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    pre: props => <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>,\n    code: props => <Markdown className={s.text}>{props.children}</Markdown>\n  }\n}}>\n        {text}\n    </Markdown>;"
+        ],
+        "mappings": "AAagB;AAbhB,SAAS,YAA4B;AACrC,OAAO,UAAU;AACjB,OAAO,cAAc;AACrB,OAAO,OAAO;AAIP,aAAM,YAAY,CAAC;AAAA,EACxB;AAAA,EACA;AAAA,EACA,GAAG;AACL,MAAsB,oBAAC,YAAS,WAAW,EAAE,MAAM,SAAS;AAAA,EAC1D,WAAW;AAAA,IACT,GAAG,WAAS,oBAAC,QAAK,WAAW,KAAK,EAAE,MAAM,SAAS,GAAI,GAAG,MACrC,gBAAM,UACX;AAAA,IAChB,MAAM,WAAS,oBAAC,QAAK,MAAI,MAAC,WAAW,KAAK,EAAE,MAAM,SAAS,GAAI,GAAG,MAC7C,gBAAM,UACX;AAAA,IAChB,KAAK,WAAS,oBAAC,QAAK,WAAW,KAAK,EAAE,MAAM,SAAS,GAAI,GAAG,MACvC,gBAAM,UACX;AAAA,IAChB,MAAM,WAAS,oBAAC,YAAS,WAAW,EAAE,MAAO,gBAAM,UAAS;AAAA,EAC9D;AACF,GACS,gBACL;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Paragraph/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./Paragraph.module.css\";\nexport const Paragraph = ({\n  text,\n  className,\n  ...rest\n}) => /* @__PURE__ */ jsx(Markdown, { className: s.text, options: {\n  overrides: {\n    p: (props) => /* @__PURE__ */ jsx(Text, { className: clsx(s.text, className), ...rest, children: props.children }),\n    span: (props) => /* @__PURE__ */ jsx(Text, { span: true, className: clsx(s.text, className), ...rest, children: props.children }),\n    pre: (props) => /* @__PURE__ */ jsx(Text, { className: clsx(s.text, className), ...rest, children: props.children }),\n    code: (props) => /* @__PURE__ */ jsx(Markdown, { className: s.text, children: props.children })\n  }\n}, children: text });\n",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Paragraph/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

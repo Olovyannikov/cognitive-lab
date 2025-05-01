@@ -1,0 +1,133 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n",
+      "start": 1746125081670,
+      "end": 1746125081732,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});",
+      "start": 1746125081733,
+      "end": 1746125081733,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createEvent",
+          "PageContextClient",
+          "PageContextServer",
+          "createPageInit",
+          "T",
+          "name",
+          "sid",
+          "createPageStart"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"],
+        "sourcesContent": [
+          "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,QAAQ,UAAU;AACtC,cAAcC,iBAAiB,EAAEC,iBAAiB,QAAQ,YAAY;AAEtE,OAAO,MAAMC,cAAc,GAAG,CAAC,IAAI,IAAI,EAACA,CAAA,KAAMH,WAAW,CAACE,iBAAiB,CAACE,CAAC,CAAC,CAAC;EAAAC,IAAA;EAAAC,GAAA;AAAA,CAAC,CAAC;AACjF,OAAO,MAAMC,eAAe,GAAG,CAAC,IAAI,IAAI,EAACA,CAAA,KAAMP,WAAW,CAACC,iBAAiB,CAACG,CAAC,CAAC,CAAC;EAAAC,IAAA;EAAAC,GAAA;AAAA,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
+      "start": 1746125081733,
+      "end": 1746125081784,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"],
+        "sourcesContent": [
+          "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB;AAErB,aAAM,iBAAiB,MAAiB,YAAkC;AAAA,EAC/E,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACM,aAAM,kBAAkB,MAAiB,YAAkC;AAAA,EAChF,MAAM;AAAA,EACN,KAAK;AACP,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/lib/effector/events.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
+      "start": 1746125081785,
+      "end": 1746125081785,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/lib/effector/events.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;"
+      }
+    }
+  ]
+}

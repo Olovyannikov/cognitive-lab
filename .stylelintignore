@@ -12,3 +12,4 @@
 .stylelintignore
 .stylelintrc
 *.html
+.vite-inspect

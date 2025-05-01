@@ -1,0 +1,137 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+onBeforeRender.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { allSettled, fork, serialize } from 'effector';\nimport type { OnBeforeRenderAsync } from 'vike/types';\n\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\n    const { pageInitiated } = pageContext.config;\n\n    const scope = fork();\n\n    if (pageInitiated) {\n        await allSettled(pageInitiated, { scope, params: pageContext });\n    }\n\n    return {\n        pageContext: {\n            scope,\n            scopeValues: serialize(scope),\n        },\n    };\n};\n",
+      "start": 1746125081534,
+      "end": 1746125081543,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { allSettled, fork, serialize } from 'effector';\nimport type { OnBeforeRenderAsync } from 'vike/types';\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\n  const {\n    pageInitiated\n  } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};",
+      "start": 1746125081543,
+      "end": 1746125081545,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "allSettled",
+          "fork",
+          "serialize",
+          "OnBeforeRenderAsync",
+          "onBeforeRender",
+          "pageContext",
+          "ReturnType",
+          "pageInitiated",
+          "config",
+          "scope",
+          "params",
+          "scopeValues"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+onBeforeRender.ts"],
+        "sourcesContent": [
+          "import { allSettled, fork, serialize } from 'effector';\nimport type { OnBeforeRenderAsync } from 'vike/types';\n\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\n    const { pageInitiated } = pageContext.config;\n\n    const scope = fork();\n\n    if (pageInitiated) {\n        await allSettled(pageInitiated, { scope, params: pageContext });\n    }\n\n    return {\n        pageContext: {\n            scope,\n            scopeValues: serialize(scope),\n        },\n    };\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,UAAU,EAAEC,IAAI,EAAEC,SAAS,QAAQ,UAAU;AACtD,cAAcC,mBAAmB,QAAQ,YAAY;AAErD,OAAO,MAAMC,cAAc,EAAED,mBAAmB,GAAG,MAAAC,CAAOC,WAAW,CAAC,EAAEC,UAAU,CAACH,mBAAmB,CAAC,IAAI;EACvG,MAAM;IAAEI;EAAc,CAAC,GAAGF,WAAW,CAACG,MAAM;EAE5C,MAAMC,KAAK,GAAGR,IAAI,CAAC,CAAC;EAEpB,IAAIM,aAAa,EAAE;IACf,MAAMP,UAAU,CAACO,aAAa,EAAE;MAAEE,KAAK;MAAEC,MAAM,EAAEL;IAAY,CAAC,CAAC;EACnE;EAEA,OAAO;IACHA,WAAW,EAAE;MACTI,KAAK;MACLE,WAAW,EAAET,SAAS,CAACO,KAAK;IAChC;EACJ,CAAC;AACL,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { allSettled, fork, serialize } from \"effector\";\nexport const onBeforeRender = async (pageContext) => {\n  const {\n    pageInitiated\n  } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};\n",
+      "start": 1746125081545,
+      "end": 1746125081639,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+onBeforeRender.ts"],
+        "sourcesContent": [
+          "import { allSettled, fork, serialize } from 'effector';\nimport type { OnBeforeRenderAsync } from 'vike/types';\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\n  const {\n    pageInitiated\n  } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};"
+        ],
+        "mappings": "AAAA,SAAS,YAAY,MAAM,iBAAiB;AAErC,aAAM,iBAAsC,OAAO,gBAAiD;AACzG,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,YAAY;AAChB,QAAM,QAAQ,KAAK;AACnB,MAAI,eAAe;AACjB,UAAM,WAAW,eAAe;AAAA,MAC9B;AAAA,MACA,QAAQ;AAAA,IACV,CAAC;AAAA,EACH;AACA,SAAO;AAAA,IACL,aAAa;AAAA,MACX;AAAA,MACA,aAAa,UAAU,KAAK;AAAA,IAC9B;AAAA,EACF;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081639,
+      "end": 1746125081639,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/+onBeforeRender.ts [vike:pluginModuleBanner] */\nimport { allSettled, fork, serialize } from \"effector\";\nexport const onBeforeRender = async (pageContext) => {\n  const {\n    pageInitiated\n  } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};\n",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/+onBeforeRender.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC;"
+      }
+    }
+  ]
+}

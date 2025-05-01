@@ -1,0 +1,137 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/RedirectToTestPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { memo, type MouseEvent } from 'react';\nimport { Button, type ButtonProps } from '@mantine/core';\n\nimport { ROUTES } from '@/shared/config';\n\ninterface RedirectToTestPageProps {\n    loading?: boolean;\n    onClick?: (e: MouseEvent) => void;\n}\n\nexport const RedirectToTestPage = memo(({ loading, ...props }: ButtonProps & RedirectToTestPageProps) => (\n    <Button\n        component={loading ? 'button' : 'a'}\n        loading={loading}\n        disabled={loading}\n        miw={144}\n        href={ROUTES.TEST}\n        size='md'\n        {...props}\n    >\n        Пройти тест\n    </Button>\n));\n",
+      "start": 1746125082080,
+      "end": 1746125082121,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { memo, type MouseEvent } from 'react';\nimport { Button, type ButtonProps } from '@mantine/core';\nimport { ROUTES } from '@/shared/config';\ninterface RedirectToTestPageProps {\n  loading?: boolean;\n  onClick?: (e: MouseEvent) => void;\n}\nexport const RedirectToTestPage = memo(({\n  loading,\n  ...props\n}: ButtonProps & RedirectToTestPageProps) => <Button component={loading ? 'button' : 'a'} loading={loading} disabled={loading} miw={144} href={ROUTES.TEST} size='md' {...props}>\n        Пройти тест\n    </Button>);",
+      "start": 1746125082121,
+      "end": 1746125082122,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "memo",
+          "MouseEvent",
+          "Button",
+          "ButtonProps",
+          "ROUTES",
+          "RedirectToTestPageProps",
+          "loading",
+          "onClick",
+          "e",
+          "RedirectToTestPage",
+          "props",
+          "TEST"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/RedirectToTestPage/index.tsx"],
+        "sourcesContent": [
+          "import { memo, type MouseEvent } from 'react';\nimport { Button, type ButtonProps } from '@mantine/core';\n\nimport { ROUTES } from '@/shared/config';\n\ninterface RedirectToTestPageProps {\n    loading?: boolean;\n    onClick?: (e: MouseEvent) => void;\n}\n\nexport const RedirectToTestPage = memo(({ loading, ...props }: ButtonProps & RedirectToTestPageProps) => (\n    <Button\n        component={loading ? 'button' : 'a'}\n        loading={loading}\n        disabled={loading}\n        miw={144}\n        href={ROUTES.TEST}\n        size='md'\n        {...props}\n    >\n        Пройти тест\n    </Button>\n));\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,EAAE,KAAKC,UAAU,QAAQ,OAAO;AAC7C,SAASC,MAAM,EAAE,KAAKC,WAAW,QAAQ,eAAe;AAExD,SAASC,MAAM,QAAQ,iBAAiB;AAExC,UAAUC,uBAAuB,CAAC;EAC9BC,OAAO,CAAC,EAAE,OAAO;EACjBC,OAAO,CAAC,EAAE,CAACC,CAAC,EAAEP,UAAU,EAAE,GAAG,IAAI;AACrC;AAEA,OAAO,MAAMQ,kBAAkB,GAAGT,IAAI,CAAC,CAAC;EAAEM,OAAO;EAAE,GAAGI;AAA6C,CAAtC,EAAEP,WAAW,GAAGE,uBAAuB,KAChG,CAAC,MAAM,CACH,SAAS,CAAC,CAACC,OAAO,GAAG,QAAQ,GAAG,GAAG,CAAC,CACpC,OAAO,CAAC,CAACA,OAAO,CAAC,CACjB,QAAQ,CAAC,CAACA,OAAO,CAAC,CAClB,GAAG,CAAC,CAAC,GAAG,CAAC,CACT,IAAI,CAAC,CAACF,MAAM,CAACO,IAAI,CAAC,CAClB,IAAI,CAAC,IAAI,CACT,IAAID,KAAK,CAAC;AAElB;AACA,IAAI,EAAE,MAAM,CACX,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Button } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nexport const RedirectToTestPage = memo(({\n  loading,\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { component: loading ? \"button\" : \"a\", loading, disabled: loading, miw: 144, href: ROUTES.TEST, size: \"md\", ...props, children: \"Пройти тест\" }));\n",
+      "start": 1746125082122,
+      "end": 1746125082405,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/RedirectToTestPage/index.tsx"],
+        "sourcesContent": [
+          "import { memo, type MouseEvent } from 'react';\nimport { Button, type ButtonProps } from '@mantine/core';\nimport { ROUTES } from '@/shared/config';\ninterface RedirectToTestPageProps {\n  loading?: boolean;\n  onClick?: (e: MouseEvent) => void;\n}\nexport const RedirectToTestPage = memo(({\n  loading,\n  ...props\n}: ButtonProps & RedirectToTestPageProps) => <Button component={loading ? 'button' : 'a'} loading={loading} disabled={loading} miw={144} href={ROUTES.TEST} size='md' {...props}>\n        Пройти тест\n    </Button>);"
+        ],
+        "mappings": "AAU6C;AAV7C,SAAS,YAA6B;AACtC,SAAS,cAAgC;AACzC,SAAS,cAAc;AAKhB,aAAM,qBAAqB,KAAK,CAAC;AAAA,EACtC;AAAA,EACA,GAAG;AACL,MAA6C,oBAAC,UAAO,WAAW,UAAU,WAAW,KAAK,SAAkB,UAAU,SAAS,KAAK,KAAK,MAAM,OAAO,MAAM,MAAK,MAAM,GAAG,OAAO,yBAE7K,CAAS;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082405,
+      "end": 1746125082405,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082406,
+      "end": 1746125082406,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082406,
+      "end": 1746125082406,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082406,
+      "end": 1746125082406,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082406,
+      "end": 1746125082406,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/RedirectToTestPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Button } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nexport const RedirectToTestPage = memo(({\n  loading,\n  ...props\n}) => /* @__PURE__ */ jsx(Button, { component: loading ? \"button\" : \"a\", loading, disabled: loading, miw: 144, href: ROUTES.TEST, size: \"md\", ...props, children: \"Пройти тест\" }));\n",
+      "start": 1746125082406,
+      "end": 1746125082406,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/RedirectToTestPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

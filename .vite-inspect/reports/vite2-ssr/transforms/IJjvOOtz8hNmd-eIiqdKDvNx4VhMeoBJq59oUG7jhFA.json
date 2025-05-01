@@ -1,0 +1,146 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subscription/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './Subscription.module.css';\n\ninterface SubscriptionProps {\n    title?: string;\n    text?: string;\n    subscriptionFormSlot?: ReactNode;\n}\n\nexport const Subscription = ({ title, text, subscriptionFormSlot }: SubscriptionProps) => {\n    const isHuge = useIsHuge();\n    const isLarge = useIsLarge();\n    return (\n        <Paper\n            radius='lg'\n            bg='violet.0'\n            pos='relative'\n            mt={isLarge ? 100 : 0}\n            mx={isHuge ? -153 : 0}\n            px={isLarge ? '3xl' : 'md'}\n            py={isLarge ? '3xl' : 'xl'}\n        >\n            <Picture\n                pos='absolute'\n                top={isLarge ? 32 : 5}\n                right={32}\n                w={isLarge ? 261 : 90}\n                h={isLarge ? 232 : 90}\n                fit='contain'\n                src='/report/mail'\n            />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>\n    );\n};\n",
+      "start": 1746125081888,
+      "end": 1746125081936,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './Subscription.module.css';\ninterface SubscriptionProps {\n  title?: string;\n  text?: string;\n  subscriptionFormSlot?: ReactNode;\n}\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}: SubscriptionProps) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return <Paper radius='lg' bg='violet.0' pos='relative' mt={isLarge ? 100 : 0} mx={isHuge ? -153 : 0} px={isLarge ? '3xl' : 'md'} py={isLarge ? '3xl' : 'xl'}>\n            <Picture pos='absolute' top={isLarge ? 32 : 5} right={32} w={isLarge ? 261 : 90} h={isLarge ? 232 : 90} fit='contain' src='/report/mail' />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>;\n};",
+      "start": 1746125081936,
+      "end": 1746125081938,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "Paper",
+          "Stack",
+          "Text",
+          "Title",
+          "useIsHuge",
+          "useIsLarge",
+          "Picture",
+          "s",
+          "SubscriptionProps",
+          "title",
+          "text",
+          "subscriptionFormSlot",
+          "Subscription",
+          "isHuge",
+          "isLarge",
+          "content"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subscription/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './Subscription.module.css';\n\ninterface SubscriptionProps {\n    title?: string;\n    text?: string;\n    subscriptionFormSlot?: ReactNode;\n}\n\nexport const Subscription = ({ title, text, subscriptionFormSlot }: SubscriptionProps) => {\n    const isHuge = useIsHuge();\n    const isLarge = useIsLarge();\n    return (\n        <Paper\n            radius='lg'\n            bg='violet.0'\n            pos='relative'\n            mt={isLarge ? 100 : 0}\n            mx={isHuge ? -153 : 0}\n            px={isLarge ? '3xl' : 'md'}\n            py={isLarge ? '3xl' : 'xl'}\n        >\n            <Picture\n                pos='absolute'\n                top={isLarge ? 32 : 5}\n                right={32}\n                w={isLarge ? 261 : 90}\n                h={isLarge ? 232 : 90}\n                fit='contain'\n                src='/report/mail'\n            />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,cAAcA,SAAS,QAAQ,OAAO;AACtC,SAASC,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAEzD,SAASC,SAAS,EAAEC,UAAU,QAAQ,cAAc;AACpD,SAASC,OAAO,QAAQ,aAAa;AAErC,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,UAAUC,iBAAiB,CAAC;EACxBC,KAAK,CAAC,EAAE,MAAM;EACdC,IAAI,CAAC,EAAE,MAAM;EACbC,oBAAoB,CAAC,EAAEZ,SAAS;AACpC;AAEA,OAAO,MAAMa,YAAY,GAAGA,CAAC;EAAEH,KAAK;EAAEC,IAAI;EAAEC;AAAwC,CAAlB,EAAEH,iBAAiB,KAAK;EACtF,MAAMK,MAAM,GAAGT,SAAS,CAAC,CAAC;EAC1B,MAAMU,OAAO,GAAGT,UAAU,CAAC,CAAC;EAC5B,OACI,CAAC,KAAK,CACF,MAAM,CAAC,IAAI,CACX,EAAE,CAAC,UAAU,CACb,GAAG,CAAC,UAAU,CACd,EAAE,CAAC,CAACS,OAAO,GAAG,GAAG,GAAG,CAAC,CAAC,CACtB,EAAE,CAAC,CAACD,MAAM,GAAG,CAAC,GAAG,GAAG,CAAC,CAAC,CACtB,EAAE,CAAC,CAACC,OAAO,GAAG,KAAK,GAAG,IAAI,CAAC,CAC3B,EAAE,CAAC,CAACA,OAAO,GAAG,KAAK,GAAG,IAAI,CAAC;AAEvC,YAAY,CAAC,OAAO,CACJ,GAAG,CAAC,UAAU,CACd,GAAG,CAAC,CAACA,OAAO,GAAG,EAAE,GAAG,CAAC,CAAC,CACtB,KAAK,CAAC,CAAC,EAAE,CAAC,CACV,CAAC,CAAC,CAACA,OAAO,GAAG,GAAG,GAAG,EAAE,CAAC,CACtB,CAAC,CAAC,CAACA,OAAO,GAAG,GAAG,GAAG,EAAE,CAAC,CACtB,GAAG,CAAC,SAAS,CACb,GAAG,CAAC,cAAc;AAElC,YAAY,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,CAAC,SAAS,CAAC,CAACP,CAAC,CAACQ,OAAO,CAAC;AACnD,gBAAgB,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAACD,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC,CAAC,QAAQ,CAAC,SAAS,CAAC,GAAG,CAAC,KAAK;AACpF,oBAAoB,CAACL,KAAK;AAC1B,gBAAgB,EAAE,KAAK;AACvB,gBAAgB,CAAC,IAAI,CAAC,EAAE,CAAC,CAACK,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC,CAAC,CAACJ,IAAI,CAAC,EAAE,IAAI;AACzD,gBAAgB,CAACC,oBAAoB;AACrC,YAAY,EAAE,KAAK;AACnB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { radius: \"lg\", bg: \"violet.0\", pos: \"relative\", mt: isLarge ? 100 : 0, mx: isHuge ? -153 : 0, px: isLarge ? \"3xl\" : \"md\", py: isLarge ? \"3xl\" : \"xl\", children: [\n    /* @__PURE__ */ jsx(Picture, { pos: \"absolute\", top: isLarge ? 32 : 5, right: 32, w: isLarge ? 261 : 90, h: isLarge ? 232 : 90, fit: \"contain\", src: \"/report/mail\" }),\n    /* @__PURE__ */ jsxs(Stack, { maw: 1040, className: s.content, children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: \"60%\", children: title }),\n      /* @__PURE__ */ jsx(Text, { fz: isLarge ? 24 : 18, children: text }),\n      subscriptionFormSlot\n    ] })\n  ] });\n};\n",
+      "start": 1746125081938,
+      "end": 1746125082163,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subscription/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './Subscription.module.css';\ninterface SubscriptionProps {\n  title?: string;\n  text?: string;\n  subscriptionFormSlot?: ReactNode;\n}\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}: SubscriptionProps) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return <Paper radius='lg' bg='violet.0' pos='relative' mt={isLarge ? 100 : 0} mx={isHuge ? -153 : 0} px={isLarge ? '3xl' : 'md'} py={isLarge ? '3xl' : 'xl'}>\n            <Picture pos='absolute' top={isLarge ? 32 : 5} right={32} w={isLarge ? 261 : 90} h={isLarge ? 232 : 90} fit='contain' src='/report/mail' />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>;\n};"
+        ],
+        "mappings": "AAkBY,cACA,YADA;AAjBZ,SAAS,OAAO,OAAO,MAAM,aAAa;AAC1C,SAAS,WAAW,kBAAkB;AACtC,SAAS,eAAe;AACxB,OAAO,OAAO;AAMP,aAAM,eAAe,CAAC;AAAA,EAC3B;AAAA,EACA;AAAA,EACA;AACF,MAAyB;AACvB,QAAM,SAAS,UAAU;AACzB,QAAM,UAAU,WAAW;AAC3B,SAAO,qBAAC,SAAM,QAAO,MAAK,IAAG,YAAW,KAAI,YAAW,IAAI,UAAU,MAAM,GAAG,IAAI,SAAS,OAAO,GAAG,IAAI,UAAU,QAAQ,MAAM,IAAI,UAAU,QAAQ,MAC7I;AAAA,wBAAC,WAAQ,KAAI,YAAW,KAAK,UAAU,KAAK,GAAG,OAAO,IAAI,GAAG,UAAU,MAAM,IAAI,GAAG,UAAU,MAAM,IAAI,KAAI,WAAU,KAAI,gBAAe;AAAA,IACzI,qBAAC,SAAM,KAAK,MAAM,WAAW,EAAE,SAC3B;AAAA,0BAAC,SAAM,OAAO,GAAG,IAAI,UAAU,KAAK,IAAI,UAAS,WAAU,KAAI,OAC1D,iBACL;AAAA,MACA,oBAAC,QAAK,IAAI,UAAU,KAAK,IAAK,gBAAK;AAAA,MAClC;AAAA,OACL;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Subscription/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({\n  title,\n  text,\n  subscriptionFormSlot\n}) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { radius: \"lg\", bg: \"violet.0\", pos: \"relative\", mt: isLarge ? 100 : 0, mx: isHuge ? -153 : 0, px: isLarge ? \"3xl\" : \"md\", py: isLarge ? \"3xl\" : \"xl\", children: [\n    /* @__PURE__ */ jsx(Picture, { pos: \"absolute\", top: isLarge ? 32 : 5, right: 32, w: isLarge ? 261 : 90, h: isLarge ? 232 : 90, fit: \"contain\", src: \"/report/mail\" }),\n    /* @__PURE__ */ jsxs(Stack, { maw: 1040, className: s.content, children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: \"60%\", children: title }),\n      /* @__PURE__ */ jsx(Text, { fz: isLarge ? 24 : 18, children: text }),\n      subscriptionFormSlot\n    ] })\n  ] });\n};\n",
+      "start": 1746125082163,
+      "end": 1746125082163,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Subscription/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

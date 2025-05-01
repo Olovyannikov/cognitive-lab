@@ -1,0 +1,143 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet',\n};\n",
+      "start": 1746125081843,
+      "end": 1746125081878,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n  ISTJ: 'indigo',\n  ISFJ: 'indigo',\n  ESTJ: 'indigo',\n  ESFJ: 'indigo',\n  ISTP: 'yellow',\n  ISFP: 'yellow',\n  ESTP: 'yellow',\n  ESFP: 'yellow',\n  INFJ: 'green',\n  INFP: 'green',\n  ENFJ: 'green',\n  ENFP: 'green',\n  INTJ: 'violet',\n  INTP: 'violet',\n  ENTJ: 'violet',\n  ENTP: 'violet'\n};",
+      "start": 1746125081878,
+      "end": 1746125081879,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "TYPE_TO_COLOR_MAP",
+          "Record",
+          "ISTJ",
+          "ISFJ",
+          "ESTJ",
+          "ESFJ",
+          "ISTP",
+          "ISFP",
+          "ESTP",
+          "ESFP",
+          "INFJ",
+          "INFP",
+          "ENFJ",
+          "ENFP",
+          "INTJ",
+          "INTP",
+          "ENTJ",
+          "ENTP"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts"],
+        "sourcesContent": [
+          "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet',\n};\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,iBAAiB,EAAEC,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,GAAG;EACrDC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EAEdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EAEdC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EAEbC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE;AACV,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
+      "start": 1746125081879,
+      "end": 1746125082074,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts"],
+        "sourcesContent": [
+          "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n  ISTJ: 'indigo',\n  ISFJ: 'indigo',\n  ESTJ: 'indigo',\n  ESFJ: 'indigo',\n  ISTP: 'yellow',\n  ISFP: 'yellow',\n  ESTP: 'yellow',\n  ESFP: 'yellow',\n  INFJ: 'green',\n  INFP: 'green',\n  ENFJ: 'green',\n  ENFP: 'green',\n  INTJ: 'violet',\n  INTP: 'violet',\n  ENTJ: 'violet',\n  ENTP: 'violet'\n};"
+        ],
+        "mappings": "AAAO,aAAM,oBAA4C;AAAA,EACvD,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/lib/typeToColorMap.ts [vike:pluginModuleBanner] */\nexport const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/lib/typeToColorMap.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC;"
+      }
+    }
+  ]
+}

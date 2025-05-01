@@ -1,0 +1,128 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteLine/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Blockquote } from '@mantine/core';\n\nimport { Paragraph } from '../Paragraph';\n\ninterface BlockquoteLineProps {\n    text?: string;\n    color?: string;\n}\n\nexport const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (\n    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>\n);\n",
+      "start": 1746125081855,
+      "end": 1746125081900,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Blockquote } from '@mantine/core';\nimport { Paragraph } from '../Paragraph';\ninterface BlockquoteLineProps {\n  text?: string;\n  color?: string;\n}\nexport const BlockquoteLine = ({\n  text,\n  color\n}: BlockquoteLineProps) => <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>;",
+      "start": 1746125081900,
+      "end": 1746125081901,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Blockquote", "Paragraph", "BlockquoteLineProps", "text", "color", "BlockquoteLine"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteLine/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Blockquote } from '@mantine/core';\n\nimport { Paragraph } from '../Paragraph';\n\ninterface BlockquoteLineProps {\n    text?: string;\n    color?: string;\n}\n\nexport const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (\n    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,UAAU,QAAQ,eAAe;AAE1C,SAASC,SAAS,QAAQ,cAAc;AAExC,UAAUC,mBAAmB,CAAC;EAC1BC,IAAI,CAAC,EAAE,MAAM;EACbC,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,cAAc,GAAGA,CAAC;EAAEF,IAAI;EAAEC;AAA2B,CAApB,EAAEF,mBAAmB,KAC/D,CAAC,UAAU,CAAC,EAAE,CAAC,IAAI,CAAC,EAAE,CAAC,IAAI,CAAC,EAAE,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,GAAGE,KAAK,IAAI,CAAC,CAAC,EAAE,CAAC,aAAa,CAAC,IAAI,CAAC,CAAC,IAAI,CAAC;AACzF,QAAQ,CAAC,SAAS,CAAC,IAAI,CAAC,CAACD,IAAI,IAAI,EAAE,CAAC;AACpC,IAAI,EAAE,UAAU,CACf",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `${color}.9`, bg: \"transparent\", icon: null, children: /* @__PURE__ */ jsx(Paragraph, { text: text ?? \"\" }) });\n",
+      "start": 1746125081901,
+      "end": 1746125082117,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteLine/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Blockquote } from '@mantine/core';\nimport { Paragraph } from '../Paragraph';\ninterface BlockquoteLineProps {\n  text?: string;\n  color?: string;\n}\nexport const BlockquoteLine = ({\n  text,\n  color\n}: BlockquoteLineProps) => <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>;"
+        ],
+        "mappings": "AAUQ;AAVR,SAAS,kBAAkB;AAC3B,SAAS,iBAAiB;AAKnB,aAAM,iBAAiB,CAAC;AAAA,EAC7B;AAAA,EACA;AACF,MAA2B,oBAAC,cAAW,IAAG,MAAK,IAAG,MAAK,IAAG,MAAK,OAAO,GAAG,KAAK,MAAM,IAAG,eAAc,MAAM,MACnG,8BAAC,aAAU,MAAM,QAAQ,IAAI,GACjC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082117,
+      "end": 1746125082117,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/BlockQuoteLine/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `${color}.9`, bg: \"transparent\", icon: null, children: /* @__PURE__ */ jsx(Paragraph, { text: text ?? \"\" }) });\n",
+      "start": 1746125082118,
+      "end": 1746125082118,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/BlockQuoteLine/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

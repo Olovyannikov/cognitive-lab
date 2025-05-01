@@ -1,0 +1,156 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FullReportSlice/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\n\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport s from './FullReportSlice.module.css';\n\ninterface ContentResolverProps {\n    page?: number;\n    showPurchaseBanner?: boolean;\n}\n\nexport const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: ContentResolverProps) => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n    const { data } = useUnit(getFullReportQuery);\n\n    const color = TYPE_TO_COLOR_MAP[(type as PersonalityType) ?? data?.mbti_type];\n\n    if (!data) return null;\n\n    const { content } = data.content[page];\n\n    const renderContent = normalizeData(content);\n\n    return (\n        <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => (\n                        <Box mb={60} key={idx}>\n                            {c?.map((el, index) => (\n                                <Fragment key={el.type + index + idx}>\n                                    {contentResolver({ color, content: el })}\n                                </Fragment>\n                            ))}\n                        </Box>\n                    ))}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && (\n                <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button\n                        size='md'\n                        c='dark.7'\n                        component='a'\n                        color='dark.7'\n                        variant='outline'\n                        href={`/purchase-report?mbti_type=${type}`}\n                    >\n                        Купить сейчас\n                    </Button>\n                </AdBanner>\n            )}\n        </>\n    );\n};\n",
+      "start": 1746125081804,
+      "end": 1746125081846,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport s from './FullReportSlice.module.css';\ninterface ContentResolverProps {\n  page?: number;\n  showPurchaseBanner?: boolean;\n}\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}: ContentResolverProps) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type as PersonalityType ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => <Box mb={60} key={idx}>\n                            {c?.map((el, index) => <Fragment key={el.type + index + idx}>\n                                    {contentResolver({\n              color,\n              content: el\n            })}\n                                </Fragment>)}\n                        </Box>)}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button size='md' c='dark.7' component='a' color='dark.7' variant='outline' href={`/purchase-report?mbti_type=${type}`}>\n                        Купить сейчас\n                    </Button>\n                </AdBanner>}\n        </>;\n};",
+      "start": 1746125081846,
+      "end": 1746125081848,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Fragment",
+          "Box",
+          "Button",
+          "useUnit",
+          "usePageContext",
+          "ROUTES",
+          "InnerContainer",
+          "PersonalityType",
+          "AdBanner",
+          "contentResolver",
+          "getFullReportQuery",
+          "normalizeData",
+          "TYPE_TO_COLOR_MAP",
+          "s",
+          "ContentResolverProps",
+          "page",
+          "showPurchaseBanner",
+          "FullReportSlice",
+          "routeParams",
+          "type",
+          "data",
+          "color",
+          "mbti_type",
+          "content",
+          "renderContent",
+          "map",
+          "c",
+          "idx",
+          "el",
+          "index",
+          "TEST"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FullReportSlice/index.tsx"],
+        "sourcesContent": [
+          "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\n\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport s from './FullReportSlice.module.css';\n\ninterface ContentResolverProps {\n    page?: number;\n    showPurchaseBanner?: boolean;\n}\n\nexport const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: ContentResolverProps) => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n    const { data } = useUnit(getFullReportQuery);\n\n    const color = TYPE_TO_COLOR_MAP[(type as PersonalityType) ?? data?.mbti_type];\n\n    if (!data) return null;\n\n    const { content } = data.content[page];\n\n    const renderContent = normalizeData(content);\n\n    return (\n        <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => (\n                        <Box mb={60} key={idx}>\n                            {c?.map((el, index) => (\n                                <Fragment key={el.type + index + idx}>\n                                    {contentResolver({ color, content: el })}\n                                </Fragment>\n                            ))}\n                        </Box>\n                    ))}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && (\n                <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button\n                        size='md'\n                        c='dark.7'\n                        component='a'\n                        color='dark.7'\n                        variant='outline'\n                        href={`/purchase-report?mbti_type=${type}`}\n                    >\n                        Купить сейчас\n                    </Button>\n                </AdBanner>\n            )}\n        </>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,OAAO;AAChC,SAASC,GAAG,EAAEC,MAAM,QAAQ,eAAe;AAC3C,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,MAAM,QAAQ,iBAAiB;AACxC,SAASC,cAAc,QAAQ,aAAa;AAE5C,cAAcC,eAAe,QAAQ,wBAAwB;AAC7D,SAASC,QAAQ,EAAEC,eAAe,EAAEC,kBAAkB,EAAEC,aAAa,EAAEC,iBAAiB,QAAQ,mBAAmB;AAEnH,OAAOC,CAAC,MAAM,8BAA8B;AAE5C,UAAUC,oBAAoB,CAAC;EAC3BC,IAAI,CAAC,EAAE,MAAM;EACbC,kBAAkB,CAAC,EAAE,OAAO;AAChC;AAEA,OAAO,MAAMC,eAAe,GAAGA,CAAC;EAAEF,IAAI,GAAG,CAAC;EAAEC,kBAAkB,GAAG;AAA4B,CAArB,EAAEF,oBAAoB,KAAK;EAC/F,MAAM;IACFI,WAAW,EAAE;MAAEC;IAAK;EACxB,CAAC,GAAGf,cAAc,CAAC,CAAC;EACpB,MAAM;IAAEgB;EAAK,CAAC,GAAGjB,OAAO,CAACO,kBAAkB,CAAC;EAE5C,MAAMW,KAAK,GAAGT,iBAAiB,CAAEO,IAAI,IAAIZ,eAAe,IAAKa,IAAI,EAAEE,SAAS,CAAC;EAE7E,IAAI,CAACF,IAAI,EAAE,OAAO,IAAI;EAEtB,MAAM;IAAEG;EAAQ,CAAC,GAAGH,IAAI,CAACG,OAAO,CAACR,IAAI,CAAC;EAEtC,MAAMS,aAAa,GAAGb,aAAa,CAACY,OAAO,CAAC;EAE5C,OACI;AACR,YAAY,CAAC,cAAc;AAC3B,gBAAgB,CAAC,GAAG,CAAC,SAAS,CAAC,CAACV,CAAC,CAACU,OAAO,CAAC;AAC1C,oBAAoB,CAACC,aAAa,CAACC,GAAG,CAAC,CAACC,CAAC,EAAEC,GAAG,KACtB,CAAC,GAAG,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAACA,GAAG,CAAC;AAC9C,4BAA4B,CAACD,CAAC,EAAED,GAAG,CAAC,CAACG,EAAE,EAAEC,KAAK,KACd,CAAC,QAAQ,CAAC,GAAG,CAAC,CAACD,EAAE,CAACT,IAAI,GAAGU,KAAK,GAAGF,GAAG,CAAC;AACrE,oCAAoC,CAAClB,eAAe,CAAC;cAAEY,KAAK;cAAEE,OAAO,EAAEK;YAAG,CAAC,CAAC;AAC5E,gCAAgC,EAAE,QAAQ,CACb,CAAC;AAC9B,wBAAwB,EAAE,GAAG,CACR,CAAC;AACtB,gBAAgB,EAAE,GAAG;AACrB,YAAY,EAAE,cAAc;AAC5B,YAAY,CAACZ,kBAAkB,IACf,CAAC,QAAQ;AACzB,oBAAoB,CAAC,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,CAAC,CAACX,MAAM,CAACyB,IAAI,CAAC;AAClF;AACA,oBAAoB,EAAE,MAAM;AAC5B,oBAAoB,CAAC,MAAM,CACH,IAAI,CAAC,IAAI,CACT,CAAC,CAAC,QAAQ,CACV,SAAS,CAAC,GAAG,CACb,KAAK,CAAC,QAAQ,CACd,OAAO,CAAC,SAAS,CACjB,IAAI,CAAC,CAAC,8BAA8BX,IAAI,EAAE,CAAC;AAEnE;AACA,oBAAoB,EAAE,MAAM;AAC5B,gBAAgB,EAAE,QAAQ,CACb;AACb,QAAQ,GAAG;AAEX,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment as Fragment2 } from \"react\";\nimport { Box, Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./FullReportSlice.module.css\";\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(InnerContainer, { children: /* @__PURE__ */ jsx(Box, { className: s.content, children: renderContent.map((c, idx) => /* @__PURE__ */ jsx(Box, { mb: 60, children: c?.map((el, index) => /* @__PURE__ */ jsx(Fragment2, { children: contentResolver({\n      color,\n      content: el\n    }) }, el.type + index + idx)) }, idx)) }) }),\n    showPurchaseBanner && /* @__PURE__ */ jsxs(AdBanner, { children: [\n      /* @__PURE__ */ jsx(Button, { size: \"md\", radius: \"sm\", component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }),\n      /* @__PURE__ */ jsx(Button, { size: \"md\", c: \"dark.7\", component: \"a\", color: \"dark.7\", variant: \"outline\", href: `/purchase-report?mbti_type=${type}`, children: \"Купить сейчас\" })\n    ] })\n  ] });\n};\n",
+      "start": 1746125081848,
+      "end": 1746125082031,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FullReportSlice/index.tsx"],
+        "sourcesContent": [
+          "import { Fragment } from 'react';\nimport { Box, Button } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { InnerContainer } from '@/shared/ui';\nimport type { PersonalityType } from '@/entities/Personality';\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport s from './FullReportSlice.module.css';\ninterface ContentResolverProps {\n  page?: number;\n  showPurchaseBanner?: boolean;\n}\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}: ContentResolverProps) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type as PersonalityType ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return <>\n            <InnerContainer>\n                <Box className={s.content}>\n                    {renderContent.map((c, idx) => <Box mb={60} key={idx}>\n                            {c?.map((el, index) => <Fragment key={el.type + index + idx}>\n                                    {contentResolver({\n              color,\n              content: el\n            })}\n                                </Fragment>)}\n                        </Box>)}\n                </Box>\n            </InnerContainer>\n            {showPurchaseBanner && <AdBanner>\n                    <Button size='md' radius='sm' component='a' href={ROUTES.TEST}>\n                        Пройти тест\n                    </Button>\n                    <Button size='md' c='dark.7' component='a' color='dark.7' variant='outline' href={`/purchase-report?mbti_type=${type}`}>\n                        Купить сейчас\n                    </Button>\n                </AdBanner>}\n        </>;\n};"
+        ],
+        "mappings": "AA+BS,mBAI0C,KAShB,YAb1B;AA/BT,SAAS,YAAAA,iBAAgB;AACzB,SAAS,KAAK,cAAc;AAC5B,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,cAAc;AACvB,SAAS,sBAAsB;AAE/B,SAAS,UAAU,iBAAiB,oBAAoB,eAAe,yBAAyB;AAChG,OAAO,OAAO;AAKP,aAAM,kBAAkB,CAAC;AAAA,EAC9B,OAAO;AAAA,EACP,qBAAqB;AACvB,MAA4B;AAC1B,QAAM;AAAA,IACJ,aAAa;AAAA,MACX;AAAA,IACF;AAAA,EACF,IAAI,eAAe;AACnB,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,QAAQ,kBAAkB;AAC9B,QAAM,QAAQ,kBAAkB,QAA2B,MAAM,SAAS;AAC1E,MAAI,CAAC,KAAM,QAAO;AAClB,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,KAAK,QAAQ,IAAI;AACrB,QAAM,gBAAgB,cAAc,OAAO;AAC3C,SAAO,iCACG;AAAA,wBAAC,kBACG,8BAAC,OAAI,WAAW,EAAE,SACb,wBAAc,IAAI,CAAC,GAAG,QAAQ,oBAAC,OAAI,IAAI,IAC/B,aAAG,IAAI,CAAC,IAAI,UAAU,oBAACA,WAAA,EACf,0BAAgB;AAAA,MACvC;AAAA,MACA,SAAS;AAAA,IACX,CAAC,KAJqD,GAAG,OAAO,QAAQ,GAKpD,CAAW,KAN0B,GAO7C,CAAM,GACd,GACJ;AAAA,IACC,sBAAsB,qBAAC,YAChB;AAAA,0BAAC,UAAO,MAAK,MAAK,QAAO,MAAK,WAAU,KAAI,MAAM,OAAO,MAAM,yBAE/D;AAAA,MACA,oBAAC,UAAO,MAAK,MAAK,GAAE,UAAS,WAAU,KAAI,OAAM,UAAS,SAAQ,WAAU,MAAM,8BAA8B,IAAI,IAAI,2BAExH;AAAA,OACJ;AAAA,KACR;AACR;",
+        "names": ["Fragment"]
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/FullReportSlice/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment as Fragment2 } from \"react\";\nimport { Box, Button } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { AdBanner, contentResolver, getFullReportQuery, normalizeData, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./FullReportSlice.module.css\";\nexport const FullReportSlice = ({\n  page = 0,\n  showPurchaseBanner = false\n}) => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  const {\n    data\n  } = useUnit(getFullReportQuery);\n  const color = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  if (!data) return null;\n  const {\n    content\n  } = data.content[page];\n  const renderContent = normalizeData(content);\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(InnerContainer, { children: /* @__PURE__ */ jsx(Box, { className: s.content, children: renderContent.map((c, idx) => /* @__PURE__ */ jsx(Box, { mb: 60, children: c?.map((el, index) => /* @__PURE__ */ jsx(Fragment2, { children: contentResolver({\n      color,\n      content: el\n    }) }, el.type + index + idx)) }, idx)) }) }),\n    showPurchaseBanner && /* @__PURE__ */ jsxs(AdBanner, { children: [\n      /* @__PURE__ */ jsx(Button, { size: \"md\", radius: \"sm\", component: \"a\", href: ROUTES.TEST, children: \"Пройти тест\" }),\n      /* @__PURE__ */ jsx(Button, { size: \"md\", c: \"dark.7\", component: \"a\", color: \"dark.7\", variant: \"outline\", href: `/purchase-report?mbti_type=${type}`, children: \"Купить сейчас\" })\n    ] })\n  ] });\n};\n",
+      "start": 1746125082031,
+      "end": 1746125082031,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/FullReportSlice/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3Q,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

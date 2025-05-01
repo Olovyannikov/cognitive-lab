@@ -1,0 +1,165 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Header/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { type ComponentProps, useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Navigation } from '../Navigation';\n\nimport s from './Header.module.css';\n\nexport const Header = ({ className }: ComponentProps<'header'>) => {\n    const { urlPathname } = usePageContext();\n    const [_, scrollTo] = useWindowScroll();\n    const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n    const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n\n    const pinned = useHeadroom({ fixedAt: 120 });\n\n    const isMainPage = urlPathname === '/';\n\n    const logoLink = useMemo(\n        () => ({\n            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }), href: '#' } : { href: '/' }),\n        }),\n        [isMainPage, scrollTo]\n    );\n    const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n\n    return (\n        <header className={clsx(s.header, pinned && s.pinned, className)}>\n            <Box className={s.container}>\n                <Group align='center' justify='space-between' w='100%'>\n                    <a className={s.logoLink} {...logoLink}>\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\n                    </a>\n                    <Burger\n                        lineSize={2}\n                        hiddenFrom='lg'\n                        opened={isOpened}\n                        className={s.burger}\n                        onClick={onBurgerClickHandler}\n                        aria-label='Открыть мобильное меню сайта'\n                    />\n                    <Navigation />\n                </Group>\n            </Box>\n        </header>\n    );\n};\n",
+      "start": 1746125081768,
+      "end": 1746125081804,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { type ComponentProps, useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\nimport { RootModel } from '@/entities/Root';\nimport { Navigation } from '../Navigation';\nimport s from './Header.module.css';\nexport const Header = ({\n  className\n}: ComponentProps<'header'>) => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n  const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === '/';\n  const logoLink = useMemo(() => ({\n    ...(isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: '#'\n    } : {\n      href: '/'\n    })\n  }), [isMainPage, scrollTo]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return <header className={clsx(s.header, pinned && s.pinned, className)}>\n            <Box className={s.container}>\n                <Group align='center' justify='space-between' w='100%'>\n                    <a className={s.logoLink} {...logoLink}>\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\n                    </a>\n                    <Burger lineSize={2} hiddenFrom='lg' opened={isOpened} className={s.burger} onClick={onBurgerClickHandler} aria-label='Открыть мобильное меню сайта' />\n                    <Navigation />\n                </Group>\n            </Box>\n        </header>;\n};",
+      "start": 1746125081804,
+      "end": 1746125081809,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ComponentProps",
+          "useMemo",
+          "Box",
+          "Burger",
+          "Group",
+          "useHeadroom",
+          "useWindowScroll",
+          "clsx",
+          "useUnit",
+          "usePageContext",
+          "CognitiveLogo",
+          "LogoSmall",
+          "RootModel",
+          "Navigation",
+          "s",
+          "Header",
+          "className",
+          "urlPathname",
+          "_",
+          "scrollTo",
+          "isOpened",
+          "isSubmenuOpened",
+          "$isMenuOpened",
+          "$isSubmenuOpened",
+          "toggleMenu",
+          "allMenusClose",
+          "allMenusClosed",
+          "pinned",
+          "fixedAt",
+          "isMainPage",
+          "logoLink",
+          "onClick",
+          "y",
+          "href",
+          "onBurgerClickHandler",
+          "header",
+          "container",
+          "logoLarge",
+          "logoSmall",
+          "burger"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Header/index.tsx"],
+        "sourcesContent": [
+          "import { type ComponentProps, useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Navigation } from '../Navigation';\n\nimport s from './Header.module.css';\n\nexport const Header = ({ className }: ComponentProps<'header'>) => {\n    const { urlPathname } = usePageContext();\n    const [_, scrollTo] = useWindowScroll();\n    const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n    const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n\n    const pinned = useHeadroom({ fixedAt: 120 });\n\n    const isMainPage = urlPathname === '/';\n\n    const logoLink = useMemo(\n        () => ({\n            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }), href: '#' } : { href: '/' }),\n        }),\n        [isMainPage, scrollTo]\n    );\n    const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n\n    return (\n        <header className={clsx(s.header, pinned && s.pinned, className)}>\n            <Box className={s.container}>\n                <Group align='center' justify='space-between' w='100%'>\n                    <a className={s.logoLink} {...logoLink}>\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\n                    </a>\n                    <Burger\n                        lineSize={2}\n                        hiddenFrom='lg'\n                        opened={isOpened}\n                        className={s.burger}\n                        onClick={onBurgerClickHandler}\n                        aria-label='Открыть мобильное меню сайта'\n                    />\n                    <Navigation />\n                </Group>\n            </Box>\n        </header>\n    );\n};\n"
+        ],
+        "mappings": "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",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Burger, Group } from \"@mantine/core\";\nimport { useHeadroom, useWindowScroll } from \"@mantine/hooks\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport LogoSmall from \"@/app/assets/images/logo.svg?react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Navigation } from \"../Navigation\";\nimport s from \"./Header.module.css\";\nexport const Header = ({\n  className\n}) => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n  const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === \"/\";\n  const logoLink = useMemo(() => ({\n    ...isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: \"#\"\n    } : {\n      href: \"/\"\n    }\n  }), [isMainPage, scrollTo]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return /* @__PURE__ */ jsx(\"header\", { className: clsx(s.header, pinned && s.pinned, className), children: /* @__PURE__ */ jsx(Box, { className: s.container, children: /* @__PURE__ */ jsxs(Group, { align: \"center\", justify: \"space-between\", w: \"100%\", children: [\n    /* @__PURE__ */ jsxs(\"a\", { className: s.logoLink, ...logoLink, children: [\n      /* @__PURE__ */ jsx(CognitiveLogo, { className: s.logoLarge, width: 220, height: 36 }),\n      /* @__PURE__ */ jsx(LogoSmall, { className: s.logoSmall, width: 36, height: 36 })\n    ] }),\n    /* @__PURE__ */ jsx(Burger, { lineSize: 2, hiddenFrom: \"lg\", opened: isOpened, className: s.burger, onClick: onBurgerClickHandler, \"aria-label\": \"Открыть мобильное меню сайта\" }),\n    /* @__PURE__ */ jsx(Navigation, {})\n  ] }) }) });\n};\n",
+      "start": 1746125081809,
+      "end": 1746125081928,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Header/index.tsx"],
+        "sourcesContent": [
+          "import { type ComponentProps, useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\nimport { RootModel } from '@/entities/Root';\nimport { Navigation } from '../Navigation';\nimport s from './Header.module.css';\nexport const Header = ({\n  className\n}: ComponentProps<'header'>) => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n  const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === '/';\n  const logoLink = useMemo(() => ({\n    ...(isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: '#'\n    } : {\n      href: '/'\n    })\n  }), [isMainPage, scrollTo]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return <header className={clsx(s.header, pinned && s.pinned, className)}>\n            <Box className={s.container}>\n                <Group align='center' justify='space-between' w='100%'>\n                    <a className={s.logoLink} {...logoLink}>\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\n                    </a>\n                    <Burger lineSize={2} hiddenFrom='lg' opened={isOpened} className={s.burger} onClick={onBurgerClickHandler} aria-label='Открыть мобильное меню сайта' />\n                    <Navigation />\n                </Group>\n            </Box>\n        </header>;\n};"
+        ],
+        "mappings": "AAsCoB,SACI,KADJ;AAtCpB,SAA8B,eAAe;AAC7C,SAAS,KAAK,QAAQ,aAAa;AACnC,SAAS,aAAa,uBAAuB;AAC7C,OAAO,UAAU;AACjB,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,OAAO,mBAAmB;AAC1B,OAAO,eAAe;AACtB,SAAS,iBAAiB;AAC1B,SAAS,kBAAkB;AAC3B,OAAO,OAAO;AACP,aAAM,SAAS,CAAC;AAAA,EACrB;AACF,MAAgC;AAC9B,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,CAAC,GAAG,QAAQ,IAAI,gBAAgB;AACtC,QAAM,CAAC,UAAU,eAAe,IAAI,QAAQ,CAAC,UAAU,eAAe,UAAU,gBAAgB,CAAC;AACjG,QAAM,CAAC,YAAY,aAAa,IAAI,QAAQ,CAAC,UAAU,YAAY,UAAU,cAAc,CAAC;AAC5F,QAAM,SAAS,YAAY;AAAA,IACzB,SAAS;AAAA,EACX,CAAC;AACD,QAAM,aAAa,gBAAgB;AACnC,QAAM,WAAW,QAAQ,OAAO;AAAA,IAC9B,GAAI,aAAa;AAAA,MACf,SAAS,MAAM,SAAS;AAAA,QACtB,GAAG;AAAA,MACL,CAAC;AAAA,MACD,MAAM;AAAA,IACR,IAAI;AAAA,MACF,MAAM;AAAA,IACR;AAAA,EACF,IAAI,CAAC,YAAY,QAAQ,CAAC;AAC1B,QAAM,uBAAuB,kBAAkB,MAAM,cAAc,KAAK,IAAI;AAC5E,SAAO,oBAAC,YAAO,WAAW,KAAK,EAAE,QAAQ,UAAU,EAAE,QAAQ,SAAS,GAC5D,8BAAC,OAAI,WAAW,EAAE,WACd,+BAAC,SAAM,OAAM,UAAS,SAAQ,iBAAgB,GAAE,QAC5C;AAAA,yBAAC,OAAE,WAAW,EAAE,UAAW,GAAG,UAC1B;AAAA,0BAAC,iBAAc,WAAW,EAAE,WAAW,OAAO,KAAK,QAAQ,IAAI;AAAA,MAC/D,oBAAC,aAAU,WAAW,EAAE,WAAW,OAAO,IAAI,QAAQ,IAAI;AAAA,OAC9D;AAAA,IACA,oBAAC,UAAO,UAAU,GAAG,YAAW,MAAK,QAAQ,UAAU,WAAW,EAAE,QAAQ,SAAS,sBAAsB,cAAW,gCAA+B;AAAA,IACrJ,oBAAC,cAAW;AAAA,KAChB,GACJ,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Header/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Burger, Group } from \"@mantine/core\";\nimport { useHeadroom, useWindowScroll } from \"@mantine/hooks\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport LogoSmall from \"@/app/assets/images/logo.svg?react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Navigation } from \"../Navigation\";\nimport s from \"./Header.module.css\";\nexport const Header = ({\n  className\n}) => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n  const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === \"/\";\n  const logoLink = useMemo(() => ({\n    ...isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: \"#\"\n    } : {\n      href: \"/\"\n    }\n  }), [isMainPage, scrollTo]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return /* @__PURE__ */ jsx(\"header\", { className: clsx(s.header, pinned && s.pinned, className), children: /* @__PURE__ */ jsx(Box, { className: s.container, children: /* @__PURE__ */ jsxs(Group, { align: \"center\", justify: \"space-between\", w: \"100%\", children: [\n    /* @__PURE__ */ jsxs(\"a\", { className: s.logoLink, ...logoLink, children: [\n      /* @__PURE__ */ jsx(CognitiveLogo, { className: s.logoLarge, width: 220, height: 36 }),\n      /* @__PURE__ */ jsx(LogoSmall, { className: s.logoSmall, width: 36, height: 36 })\n    ] }),\n    /* @__PURE__ */ jsx(Burger, { lineSize: 2, hiddenFrom: \"lg\", opened: isOpened, className: s.burger, onClick: onBurgerClickHandler, \"aria-label\": \"Открыть мобильное меню сайта\" }),\n    /* @__PURE__ */ jsx(Navigation, {})\n  ] }) }) });\n};\n",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Header/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

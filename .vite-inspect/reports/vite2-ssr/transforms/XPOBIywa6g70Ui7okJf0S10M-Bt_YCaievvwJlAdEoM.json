@@ -1,0 +1,137 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './Preheader.module.css';\n\ninterface PreheaderProps {\n    title: string;\n    color?: string;\n}\n\nexport const Preheader = ({ color = 'violet', title }: PreheaderProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n",
+      "start": 1746125081893,
+      "end": 1746125081945,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './Preheader.module.css';\ninterface PreheaderProps {\n  title: string;\n  color?: string;\n}\nexport const Preheader = ({\n  color = 'violet',\n  title\n}: PreheaderProps) => <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>;",
+      "start": 1746125081945,
+      "end": 1746125081946,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Paper",
+          "Title",
+          "CloudIcon",
+          "SemiCircle",
+          "s",
+          "PreheaderProps",
+          "title",
+          "color",
+          "Preheader",
+          "paper",
+          "box"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './Preheader.module.css';\n\ninterface PreheaderProps {\n    title: string;\n    color?: string;\n}\n\nexport const Preheader = ({ color = 'violet', title }: PreheaderProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,KAAK,EAAEC,KAAK,QAAQ,eAAe;AAEjD,OAAOC,SAAS,MAAM,uCAAuC;AAC7D,OAAOC,UAAU,MAAM,6CAA6C;AAEpE,OAAOC,CAAC,MAAM,wBAAwB;AAEtC,UAAUC,cAAc,CAAC;EACrBC,KAAK,EAAE,MAAM;EACbC,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,SAAS,GAAGA,CAAC;EAAED,KAAK,GAAG,QAAQ;EAAED;AAAsB,CAAf,EAAED,cAAc,KACjE,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACK,KAAK,CAAC,CAAC,UAAU,CAAC,CAACF,KAAK,CAAC;AACjD,QAAQ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACH,CAAC,CAACE,KAAK,CAAC,CAAC,CAACA,KAAK,CAAC,EAAE,KAAK;AACjD,QAAQ,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACM,GAAG,CAAC,CAAC,UAAU,CAAC,CAACH,KAAK,CAAC;AAClE,YAAY,CAAC,SAAS,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,MAAM,CAAC,MAAM;AAChD,QAAQ,EAAE,GAAG;AACb,QAAQ,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAAC,SAAS,CAAC,CAACH,CAAC,CAACM,GAAG,CAAC,CAAC,UAAU,CAAC,CAACH,KAAK,CAAC;AAClE,YAAY,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,MAAM,CAAC,MAAM;AACjD,QAAQ,EAAE,GAAG;AACb,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./Preheader.module.css\";\nexport const Preheader = ({\n  color = \"violet\",\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
+      "start": 1746125081946,
+      "end": 1746125082172,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './Preheader.module.css';\ninterface PreheaderProps {\n  title: string;\n  color?: string;\n}\nexport const Preheader = ({\n  color = 'violet',\n  title\n}: PreheaderProps) => <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>;"
+        ],
+        "mappings": "AAWsB,SACd,KADc;AAXtB,SAAS,KAAK,OAAO,aAAa;AAClC,OAAO,eAAe;AACtB,OAAO,gBAAgB;AACvB,OAAO,OAAO;AAKP,aAAM,YAAY,CAAC;AAAA,EACxB,QAAQ;AAAA,EACR;AACF,MAAsB,qBAAC,SAAM,WAAW,EAAE,OAAO,cAAY,OACrD;AAAA,sBAAC,SAAM,WAAW,EAAE,OAAQ,iBAAM;AAAA,EAClC,oBAAC,OAAI,aAAY,MAAK,WAAW,EAAE,KAAK,cAAY,OAChD,8BAAC,aAAU,OAAO,KAAK,QAAO,QAAO,GACzC;AAAA,EACA,oBAAC,OAAI,aAAY,MAAK,WAAW,EAAE,KAAK,cAAY,OAChD,8BAAC,cAAW,OAAO,KAAK,QAAO,QAAO,GAC1C;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082172,
+      "end": 1746125082173,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Preheader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./Preheader.module.css\";\nexport const Preheader = ({\n  color = \"violet\",\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Preheader/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

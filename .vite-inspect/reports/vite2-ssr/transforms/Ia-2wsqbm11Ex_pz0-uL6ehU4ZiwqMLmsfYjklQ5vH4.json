@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/ui/SubscribeToNews.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "div.flex {\n  flex-direction: column;\n\n  @mixin larger-than 992px {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n  }\n\n  @mixin larger-than 1200px {\n    grid-template-columns: 1fr;\n  }\n\n  @mixin larger-than 1460px {\n    grid-template-columns: 280px 130px;\n  }\n}\n\n.title {\n  margin-bottom: var(--mantine-spacing-sm);\n  font-weight: 600;\n  font-size: 20px;\n  line-height: 1;\n}\n",
+      "start": 1746125082525,
+      "end": 1746125082593,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082593,
+      "end": 1746125082593,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/SubscribeToNews/ui/SubscribeToNews.module.css [vike:pluginModuleBanner] */\nexport const flex = \"gAMD6\";\nexport const title = \"nyS-v\";\nexport default {\n\tflex: flex,\n\ttitle: title\n};\n",
+      "start": 1746125082595,
+      "end": 1746125082595,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/SubscribeToNews/ui/SubscribeToNews.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\n\nimport s from './TestContainer.module.css';\n\nexport const TestContainer = ({ children }: PropsWithChildren) => (\n    <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>\n);\n",
+      "start": 1746125082057,
+      "end": 1746125082091,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\nimport s from './TestContainer.module.css';\nexport const TestContainer = ({\n  children\n}: PropsWithChildren) => <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>;",
+      "start": 1746125082091,
+      "end": 1746125082093,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["PropsWithChildren", "Box", "Container", "s", "TestContainer", "children", "container"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\n\nimport s from './TestContainer.module.css';\n\nexport const TestContainer = ({ children }: PropsWithChildren) => (\n    <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,iBAAiB,QAAQ,OAAO;AAC9C,SAASC,GAAG,EAAEC,SAAS,QAAQ,eAAe;AAE9C,OAAOC,CAAC,MAAM,4BAA4B;AAE1C,OAAO,MAAMC,aAAa,GAAGA,CAAC;EAAEC;AAA4B,CAAlB,EAAEL,iBAAiB,KACzD,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS;AAC5B,QAAQ,CAAC,SAAS,CAAC,SAAS,CAAC,CAACG,CAAC,CAACG,SAAS,CAAC,CAAC,CAACD,QAAQ,CAAC,EAAE,SAAS;AAChE,IAAI,EAAE,GAAG,CACR",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { className: s.container, children }) });\n",
+      "start": 1746125082093,
+      "end": 1746125082390,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\nimport s from './TestContainer.module.css';\nexport const TestContainer = ({\n  children\n}: PropsWithChildren) => <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>;"
+        ],
+        "mappings": "AAMQ;AALR,SAAS,KAAK,iBAAiB;AAC/B,OAAO,OAAO;AACP,aAAM,gBAAgB,CAAC;AAAA,EAC5B;AACF,MAAyB,oBAAC,OAAI,WAAU,WAChC,8BAAC,aAAU,WAAW,EAAE,WAAY,UAAS,GACjD;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestContainer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { className: s.container, children }) });\n",
+      "start": 1746125082390,
+      "end": 1746125082390,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestContainer/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

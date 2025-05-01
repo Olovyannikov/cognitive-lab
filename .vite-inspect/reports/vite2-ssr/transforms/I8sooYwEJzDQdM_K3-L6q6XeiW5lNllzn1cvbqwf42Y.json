@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/PeopleTalk.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".container {\n  padding: 0;\n\n  @mixin larger-than 1024px {\n    --container-size: 100% !important;\n  }\n}\n\n.title {\n  margin-bottom: 40px;\n  font-size: 34px;\n  line-height: 40px;\n  text-align: center;\n\n  span {\n    color: var(--mantine-color-violet-7);\n  }\n\n  @mixin larger-than 992px {\n    margin-bottom: 80px;\n    font-size: 64px;\n    line-height: 75px;\n  }\n}\n\n.paper {\n  border-width: 2px;\n  border-color: var(--mantine-color-violet-5);\n  padding: 24px;\n  height: 100%;\n  color: var(--mantine-color-dark-7);\n}\n\n.name {\n  margin-bottom: var(--mantine-spacing-xxs);\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28px;\n\n  @mixin larger-than 992px {\n    font-size: 32px;\n    line-height: 38px;\n  }\n}\n\n.label {\n  margin-bottom: 8px;\n  font-size: 18px;\n  line-height: 21px;\n  color: var(--mantine-color-dark-2);\n\n  @mixin larger-than 992px {\n    font-size: 24px;\n    line-height: 28px;\n  }\n}\n\n.image {\n  width: 60px;\n  height: 60px;\n\n  @mixin larger-than 992px {\n    width: 100px;\n    height: 100px;\n  }\n}\n\n.reviewText {\n  font-size: 18px;\n  line-height: 21px;\n\n  @mixin larger-than 992px {\n    font-size: 22px;\n    line-height: 26px;\n  }\n}\n\n.drawer section {\n  border-top-left-radius: 16px;\n  border-top-right-radius: 16px;\n}\n\n.slide {\n  --carousel-slide-size: 70%;\n\n  @mixin larger-than 992px {\n    --carousel-slide-size: 624px;\n  }\n}\n",
+      "start": 1746125082369,
+      "end": 1746125082382,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082382,
+      "end": 1746125082382,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/PeopleTalk/PeopleTalk.module.css [vike:pluginModuleBanner] */\nexport const container = \"NCEMR\";\nexport const title = \"c6sr3\";\nexport const paper = \"Es6kP\";\nexport const name = \"ccUV7\";\nexport const label = \"UF0t7\";\nexport const image = \"r535f\";\nexport const reviewText = \"zGZR5\";\nexport const drawer = \"L4d1D\";\nexport const slide = \"x4KYx\";\nexport default {\n\tcontainer: container,\n\ttitle: title,\n\tpaper: paper,\n\tname: name,\n\tlabel: label,\n\timage: image,\n\treviewText: reviewText,\n\tdrawer: drawer,\n\tslide: slide\n};\n",
+      "start": 1746125082384,
+      "end": 1746125082384,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/PeopleTalk/PeopleTalk.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

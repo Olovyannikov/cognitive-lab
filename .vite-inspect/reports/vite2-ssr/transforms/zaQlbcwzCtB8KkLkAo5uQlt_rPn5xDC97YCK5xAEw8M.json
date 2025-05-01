@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PointsList/PointsList.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".stack {\n  max-width: max-content;\n\n  @mixin larger-than 998px {\n    position: relative;\n    max-width: 900px;\n  }\n}\n\n.point {\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 998px {\n    gap: var(--mantine-spacing-sm);\n  }\n}\n\n.check {\n  width: 16px;\n  height: 16px;\n\n  @mixin larger-than 998px {\n    width: 24px;\n    height: 24px;\n  }\n}\n\n.text {\n  flex: 1;\n  font-size: 16px;\n  line-height: 18px;\n\n  @mixin larger-than 998px {\n    font-size: 22px;\n    line-height: 25px;\n  }\n}\n",
+      "start": 1746125082400,
+      "end": 1746125082413,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082413,
+      "end": 1746125082413,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082413,
+      "end": 1746125082413,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082413,
+      "end": 1746125082413,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082413,
+      "end": 1746125082413,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/PointsList/PointsList.module.css [vike:pluginModuleBanner] */\nexport const stack = \"aJgL5\";\nexport const point = \"nXjq1\";\nexport const check = \"TkoaI\";\nexport const text = \"CvW3b\";\nexport default {\n\tstack: stack,\n\tpoint: point,\n\tcheck: check,\n\ttext: text\n};\n",
+      "start": 1746125082414,
+      "end": 1746125082414,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/PointsList/PointsList.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport UnionImage from '@/app/assets/images/union.svg?react';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './Hero.module.css';\n\nexport const Hero = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n\n    return (\n        <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture\n                    cdn\n                    className={s.image}\n                    width={isMobile || !isLarge ? 280 : 673}\n                    height={isMobile || !isLarge ? 280 : 673}\n                    src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`}\n                />\n                <Button\n                    component='a'\n                    href={ROUTES.TEST}\n                    size={isMobile || !isLarge ? 'md' : 'xl'}\n                    className='mantine-button-rainbow'\n                >\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>\n    );\n};\n",
+      "start": 1746125081903,
+      "end": 1746125081956,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport UnionImage from '@/app/assets/images/union.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './Hero.module.css';\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture cdn className={s.image} width={isMobile || !isLarge ? 280 : 673} height={isMobile || !isLarge ? 280 : 673} src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`} />\n                <Button component='a' href={ROUTES.TEST} size={isMobile || !isLarge ? 'md' : 'xl'} className='mantine-button-rainbow'>\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>;\n};",
+      "start": 1746125081956,
+      "end": 1746125081957,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Button",
+          "Container",
+          "Text",
+          "Title",
+          "clsx",
+          "usePageContext",
+          "UnionImage",
+          "ROUTES",
+          "useIsLarge",
+          "Picture",
+          "Section",
+          "s",
+          "Hero",
+          "isMobile",
+          "isLarge",
+          "box",
+          "text",
+          "title",
+          "subtitle",
+          "ai",
+          "description",
+          "image",
+          "TEST"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"],
+        "sourcesContent": [
+          "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport UnionImage from '@/app/assets/images/union.svg?react';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './Hero.module.css';\n\nexport const Hero = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n\n    return (\n        <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture\n                    cdn\n                    className={s.image}\n                    width={isMobile || !isLarge ? 280 : 673}\n                    height={isMobile || !isLarge ? 280 : 673}\n                    src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`}\n                />\n                <Button\n                    component='a'\n                    href={ROUTES.TEST}\n                    size={isMobile || !isLarge ? 'md' : 'xl'}\n                    className='mantine-button-rainbow'\n                >\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,EAAEC,SAAS,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAC9D,OAAOC,IAAI,MAAM,MAAM;AACvB,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,OAAOC,UAAU,MAAM,qCAAqC;AAE5D,SAASC,MAAM,QAAQ,iBAAiB;AACxC,SAASC,UAAU,QAAQ,cAAc;AACzC,SAASC,OAAO,EAAEC,OAAO,QAAQ,aAAa;AAE9C,OAAOC,CAAC,MAAM,mBAAmB;AAEjC,OAAO,MAAMC,IAAI,GAAGA,CAAA,KAAM;EACtB,MAAM;IAAEC;EAAS,CAAC,GAAGR,cAAc,CAAC,CAAC;EACrC,MAAMS,OAAO,GAAGN,UAAU,CAAC,CAAC;EAE5B,OACI,CAAC,OAAO,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAACK,QAAQ,IAAI,CAACC,OAAO,GAAG,CAAC,GAAG,GAAG,CAAC;AAC3D,YAAY,CAAC,SAAS,CAAC,SAAS,CAAC,CAACH,CAAC,CAACI,GAAG,CAAC;AACxC,gBAAgB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACX,IAAI,CAACO,CAAC,CAACK,IAAI,EAAEL,CAAC,CAACM,KAAK,CAAC,CAAC,CAAC,oBAAoB,EAAE,KAAK;AACpF,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACb,IAAI,CAACO,CAAC,CAACK,IAAI,EAAEL,CAAC,CAACO,QAAQ,CAAC,CAAC;AAC1D,sCAAsC,CAAC,EAAE;AACzC,oBAAoB,CAAC,IAAI;AACzB;AACA,wBAAwB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACP,CAAC,CAACQ,EAAE,CAAC;AAC9C,+BAA+B,CAAC,UAAU;AAC1C,wBAAwB,EAAE,IAAI;AAC9B,oBAAoB,EAAE,IAAI;AAC1B,gBAAgB,EAAE,IAAI;AACtB,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACR,CAAC,CAACS,WAAW,CAAC;AAC/C;AACA,gBAAgB,EAAE,IAAI;AACtB,gBAAgB,CAAC,OAAO,CACJ,GAAG,CACH,SAAS,CAAC,CAACT,CAAC,CAACU,KAAK,CAAC,CACnB,KAAK,CAAC,CAACR,QAAQ,IAAI,CAACC,OAAO,GAAG,GAAG,GAAG,GAAG,CAAC,CACxC,MAAM,CAAC,CAACD,QAAQ,IAAI,CAACC,OAAO,GAAG,GAAG,GAAG,GAAG,CAAC,CACzC,GAAG,CAAC,CAAC,0BAA0BD,QAAQ,IAAI,CAACC,OAAO,GAAG,SAAS,GAAG,EAAE,EAAE,CAAC;AAE3F,gBAAgB,CAAC,MAAM,CACH,SAAS,CAAC,GAAG,CACb,IAAI,CAAC,CAACP,MAAM,CAACe,IAAI,CAAC,CAClB,IAAI,CAAC,CAACT,QAAQ,IAAI,CAACC,OAAO,GAAG,IAAI,GAAG,IAAI,CAAC,CACzC,SAAS,CAAC,wBAAwB;AAEtD;AACA,gBAAgB,EAAE,MAAM;AACxB,YAAY,EAAE,SAAS;AACvB,QAAQ,EAAE,OAAO,CAAC;AAElB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile || !isLarge ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile || !isLarge ? 280 : 673, height: isMobile || !isLarge ? 280 : 673, src: `/landing/main-hero-char${isMobile || !isLarge ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile || !isLarge ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
+      "start": 1746125081957,
+      "end": 1746125082249,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"],
+        "sourcesContent": [
+          "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport UnionImage from '@/app/assets/images/union.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './Hero.module.css';\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section pt={0} pb={isMobile || !isLarge ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture cdn className={s.image} width={isMobile || !isLarge ? 280 : 673} height={isMobile || !isLarge ? 280 : 673} src={`/landing/main-hero-char${isMobile || !isLarge ? '/mobile' : ''}`} />\n                <Button component='a' href={ROUTES.TEST} size={isMobile || !isLarge ? 'md' : 'xl'} className='mantine-button-rainbow'>\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>;\n};"
+        ],
+        "mappings": "AAegB,cAKQ,YALR;AAfhB,SAAS,QAAQ,WAAW,MAAM,aAAa;AAC/C,OAAO,UAAU;AACjB,SAAS,sBAAsB;AAC/B,OAAO,gBAAgB;AACvB,SAAS,cAAc;AACvB,SAAS,kBAAkB;AAC3B,SAAS,SAAS,eAAe;AACjC,OAAO,OAAO;AACP,aAAM,OAAO,MAAM;AACxB,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,UAAU,WAAW;AAC3B,SAAO,oBAAC,WAAQ,IAAI,GAAG,IAAI,YAAY,CAAC,UAAU,IAAI,KAC5C,+BAAC,aAAU,WAAW,EAAE,KACpB;AAAA,wBAAC,SAAM,WAAW,KAAK,EAAE,MAAM,EAAE,KAAK,GAAG,kCAAoB;AAAA,IAC7D,qBAAC,QAAK,WAAW,KAAK,EAAE,MAAM,EAAE,QAAQ,GAAG;AAAA;AAAA,MACrB,oBAAC,QAAG;AAAA,MACtB,qBAAC,UAAK;AAAA;AAAA,QAEF,qBAAC,UAAK,WAAW,EAAE,IAAI;AAAA;AAAA,UAChB,oBAAC,cAAW;AAAA,WACnB;AAAA,SACJ;AAAA,OACJ;AAAA,IACA,oBAAC,QAAK,WAAW,EAAE,aAAa,0FAEhC;AAAA,IACA,oBAAC,WAAQ,KAAG,MAAC,WAAW,EAAE,OAAO,OAAO,YAAY,CAAC,UAAU,MAAM,KAAK,QAAQ,YAAY,CAAC,UAAU,MAAM,KAAK,KAAK,0BAA0B,YAAY,CAAC,UAAU,YAAY,EAAE,IAAI;AAAA,IAC5L,oBAAC,UAAO,WAAU,KAAI,MAAM,OAAO,MAAM,MAAM,YAAY,CAAC,UAAU,OAAO,MAAM,WAAU,0BAAyB,yBAEtH;AAAA,KACJ,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082249,
+      "end": 1746125082249,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082249,
+      "end": 1746125082249,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082249,
+      "end": 1746125082249,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082249,
+      "end": 1746125082249,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082251,
+      "end": 1746125082253,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082254,
+      "end": 1746125082254,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082254,
+      "end": 1746125082254,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082254,
+      "end": 1746125082254,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082254,
+      "end": 1746125082254,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082254,
+      "end": 1746125082254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082254,
+      "end": 1746125082255,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/Hero/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile || !isLarge ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile || !isLarge ? 280 : 673, height: isMobile || !isLarge ? 280 : 673, src: `/landing/main-hero-char${isMobile || !isLarge ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile || !isLarge ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
+      "start": 1746125082255,
+      "end": 1746125082255,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/Hero/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9N,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
+      }
+    }
+  ]
+}

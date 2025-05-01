@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/FilledBulletList/FilledBulletList.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".root {\n  @mixin text-data-color 9;\n\n  @mixin smaller-than 768px {\n    max-width: calc(100% - 4vw);\n  }\n}\n\n.itemWrapper {\n  display: inline-flex;\n}\n\n.itemLabel {\n  p {\n    margin-bottom: var(--mantine-spacing-xs);\n    font-weight: 600;\n  }\n\n  @mixin larger-than 1200px {\n    gap: var(--mantine-spacing-xs);\n  }\n}\n\n.text {\n  font-size: 18px;\n\n  @mixin larger-than 768px {\n    font-size: 22px;\n  }\n}\n",
+      "start": 1746125082161,
+      "end": 1746125082186,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082186,
+      "end": 1746125082186,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082188,
+      "end": 1746125082188,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082188,
+      "end": 1746125082188,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082188,
+      "end": 1746125082188,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/FilledBulletList/FilledBulletList.module.css [vike:pluginModuleBanner] */\nexport const root = \"hF1iE\";\nexport const itemWrapper = \"x9Qw6\";\nexport const itemLabel = \"hQek7\";\nexport const text = \"_8YQid\";\nexport default {\n\troot: root,\n\titemWrapper: itemWrapper,\n\titemLabel: itemLabel,\n\ttext: text\n};\n",
+      "start": 1746125082189,
+      "end": 1746125082189,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/FilledBulletList/FilledBulletList.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
+      }
+    }
+  ]
+}

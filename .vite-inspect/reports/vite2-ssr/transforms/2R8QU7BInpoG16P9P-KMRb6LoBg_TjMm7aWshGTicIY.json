@@ -1,0 +1,149 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/model.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createEvent, createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport type { Review } from '@/entities/Review';\n\nexport const PeopleTalkModel = atom(() => {\n    const $currentReview = createStore<null | Review>(null);\n    const currentReviewSettled = createEvent<Review>();\n    sample({\n        clock: currentReviewSettled,\n        fn: (review) => ({\n            ...review,\n            created_at: review.created_at.includes('.')\n                ? review.created_at\n                : new Date(review.created_at).toLocaleDateString(),\n        }),\n        target: $currentReview,\n    });\n\n    const $isCarouselActive = createStore<boolean>(true);\n    const carouselActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: carouselActiveStateSettled,\n        target: $isCarouselActive,\n    });\n\n    const $isModalOpened = createStore<boolean>(false);\n    const modalActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: modalActiveStateSettled,\n        target: $isModalOpened,\n    });\n\n    return {\n        $currentReview,\n        currentReviewSettled,\n        $isCarouselActive,\n        carouselActiveStateSettled,\n        $isModalOpened,\n        modalActiveStateSettled,\n    };\n});\n",
+      "start": 1746125082364,
+      "end": 1746125082378,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createEvent, createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport type { Review } from '@/entities/Review';\nexport const PeopleTalkModel = atom(() => {\n  const $currentReview = createStore<null | Review>(null, {\n    name: \"$currentReview\",\n    sid: \"-r3ynw\"\n  });\n  const currentReviewSettled = createEvent<Review>({\n    name: \"currentReviewSettled\",\n    sid: \"-utio9p\"\n  });\n  sample({\n    and: [{\n      clock: currentReviewSettled,\n      fn: review => ({\n        ...review,\n        created_at: review.created_at.includes('.') ? review.created_at : new Date(review.created_at).toLocaleDateString()\n      }),\n      target: $currentReview\n    }],\n    or: {\n      sid: \"-uzz121\"\n    }\n  });\n  const $isCarouselActive = createStore<boolean>(true, {\n    name: \"$isCarouselActive\",\n    sid: \"-jdqn76\"\n  });\n  const carouselActiveStateSettled = createEvent<boolean>({\n    name: \"carouselActiveStateSettled\",\n    sid: \"i2r7ze\"\n  });\n  sample({\n    and: [{\n      clock: carouselActiveStateSettled,\n      target: $isCarouselActive\n    }],\n    or: {\n      sid: \"-uha0vr\"\n    }\n  });\n  const $isModalOpened = createStore<boolean>(false, {\n    name: \"$isModalOpened\",\n    sid: \"yskqwb\"\n  });\n  const modalActiveStateSettled = createEvent<boolean>({\n    name: \"modalActiveStateSettled\",\n    sid: \"m4pid5\"\n  });\n  sample({\n    and: [{\n      clock: modalActiveStateSettled,\n      target: $isModalOpened\n    }],\n    or: {\n      sid: \"-u1vs9n\"\n    }\n  });\n  return {\n    $currentReview,\n    currentReviewSettled,\n    $isCarouselActive,\n    carouselActiveStateSettled,\n    $isModalOpened,\n    modalActiveStateSettled\n  };\n});",
+      "start": 1746125082379,
+      "end": 1746125082380,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createEvent",
+          "createStore",
+          "sample",
+          "atom",
+          "Review",
+          "PeopleTalkModel",
+          "$currentReview",
+          "name",
+          "sid",
+          "currentReviewSettled",
+          "and",
+          "clock",
+          "fn",
+          "review",
+          "created_at",
+          "includes",
+          "Date",
+          "toLocaleDateString",
+          "target",
+          "or",
+          "$isCarouselActive",
+          "carouselActiveStateSettled",
+          "$isModalOpened",
+          "modalActiveStateSettled"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/model.ts"],
+        "sourcesContent": [
+          "import { createEvent, createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport type { Review } from '@/entities/Review';\n\nexport const PeopleTalkModel = atom(() => {\n    const $currentReview = createStore<null | Review>(null);\n    const currentReviewSettled = createEvent<Review>();\n    sample({\n        clock: currentReviewSettled,\n        fn: (review) => ({\n            ...review,\n            created_at: review.created_at.includes('.')\n                ? review.created_at\n                : new Date(review.created_at).toLocaleDateString(),\n        }),\n        target: $currentReview,\n    });\n\n    const $isCarouselActive = createStore<boolean>(true);\n    const carouselActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: carouselActiveStateSettled,\n        target: $isCarouselActive,\n    });\n\n    const $isModalOpened = createStore<boolean>(false);\n    const modalActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: modalActiveStateSettled,\n        target: $isModalOpened,\n    });\n\n    return {\n        $currentReview,\n        currentReviewSettled,\n        $isCarouselActive,\n        carouselActiveStateSettled,\n        $isModalOpened,\n        modalActiveStateSettled,\n    };\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE3D,SAASC,IAAI,QAAQ,oBAAoB;AAEzC,cAAcC,MAAM,QAAQ,mBAAmB;AAE/C,OAAO,MAAMC,eAAe,GAAGF,IAAI,CAAC,MAAM;EACtC,MAAMG,cAAc,GAAGL,WAAW,CAAC,IAAI,GAAGG,MAAM,CAAC,CAAC,IAAI;IAAAG,IAAA;IAAAC,GAAA;EAAA,EAAC;EACvD,MAAMC,oBAAoB,GAAGT,WAAW,CAACI,MAAM,CAAC;IAAAG,IAAA;IAAAC,GAAA;EAAA,CAAC,CAAC;EAClDN,MAAM;IAAAQ,GAAA,GAAC;MACHC,KAAK,EAAEF,oBAAoB;MAC3BG,EAAE,EAAGC,MAAM,KAAM;QACb,GAAGA,MAAM;QACTC,UAAU,EAAED,MAAM,CAACC,UAAU,CAACC,QAAQ,CAAC,GAAG,CAAC,GACrCF,MAAM,CAACC,UAAU,GACjB,IAAIE,IAAI,CAACH,MAAM,CAACC,UAAU,CAAC,CAACG,kBAAkB,CAAC;MACzD,CAAC,CAAC;MACFC,MAAM,EAAEZ;IACZ,CAAC;IAAAa,EAAA;MAAAX,GAAA;IAAA;EAAA,EAAC;EAEF,MAAMY,iBAAiB,GAAGnB,WAAW,CAAC,OAAO,CAAC,CAAC,IAAI;IAAAM,IAAA;IAAAC,GAAA;EAAA,EAAC;EACpD,MAAMa,0BAA0B,GAAGrB,WAAW,CAAC,OAAO,CAAC;IAAAO,IAAA;IAAAC,GAAA;EAAA,CAAC,CAAC;EACzDN,MAAM;IAAAQ,GAAA,GAAC;MACHC,KAAK,EAAEU,0BAA0B;MACjCH,MAAM,EAAEE;IACZ,CAAC;IAAAD,EAAA;MAAAX,GAAA;IAAA;EAAA,EAAC;EAEF,MAAMc,cAAc,GAAGrB,WAAW,CAAC,OAAO,CAAC,CAAC,KAAK;IAAAM,IAAA;IAAAC,GAAA;EAAA,EAAC;EAClD,MAAMe,uBAAuB,GAAGvB,WAAW,CAAC,OAAO,CAAC;IAAAO,IAAA;IAAAC,GAAA;EAAA,CAAC,CAAC;EACtDN,MAAM;IAAAQ,GAAA,GAAC;MACHC,KAAK,EAAEY,uBAAuB;MAC9BL,MAAM,EAAEI;IACZ,CAAC;IAAAH,EAAA;MAAAX,GAAA;IAAA;EAAA,EAAC;EAEF,OAAO;IACHF,cAAc;IACdG,oBAAoB;IACpBW,iBAAiB;IACjBC,0BAA0B;IAC1BC,cAAc;IACdC;EACJ,CAAC;AACL,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createEvent, createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nexport const PeopleTalkModel = atom(() => {\n  const $currentReview = createStore(null, {\n    name: \"$currentReview\",\n    sid: \"-r3ynw\"\n  });\n  const currentReviewSettled = createEvent({\n    name: \"currentReviewSettled\",\n    sid: \"-utio9p\"\n  });\n  sample({\n    and: [{\n      clock: currentReviewSettled,\n      fn: (review) => ({\n        ...review,\n        created_at: review.created_at.includes(\".\") ? review.created_at : new Date(review.created_at).toLocaleDateString()\n      }),\n      target: $currentReview\n    }],\n    or: {\n      sid: \"-uzz121\"\n    }\n  });\n  const $isCarouselActive = createStore(true, {\n    name: \"$isCarouselActive\",\n    sid: \"-jdqn76\"\n  });\n  const carouselActiveStateSettled = createEvent({\n    name: \"carouselActiveStateSettled\",\n    sid: \"i2r7ze\"\n  });\n  sample({\n    and: [{\n      clock: carouselActiveStateSettled,\n      target: $isCarouselActive\n    }],\n    or: {\n      sid: \"-uha0vr\"\n    }\n  });\n  const $isModalOpened = createStore(false, {\n    name: \"$isModalOpened\",\n    sid: \"yskqwb\"\n  });\n  const modalActiveStateSettled = createEvent({\n    name: \"modalActiveStateSettled\",\n    sid: \"m4pid5\"\n  });\n  sample({\n    and: [{\n      clock: modalActiveStateSettled,\n      target: $isModalOpened\n    }],\n    or: {\n      sid: \"-u1vs9n\"\n    }\n  });\n  return {\n    $currentReview,\n    currentReviewSettled,\n    $isCarouselActive,\n    carouselActiveStateSettled,\n    $isModalOpened,\n    modalActiveStateSettled\n  };\n});\n",
+      "start": 1746125082380,
+      "end": 1746125082494,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/model.ts"],
+        "sourcesContent": [
+          "import { createEvent, createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport type { Review } from '@/entities/Review';\nexport const PeopleTalkModel = atom(() => {\n  const $currentReview = createStore<null | Review>(null, {\n    name: \"$currentReview\",\n    sid: \"-r3ynw\"\n  });\n  const currentReviewSettled = createEvent<Review>({\n    name: \"currentReviewSettled\",\n    sid: \"-utio9p\"\n  });\n  sample({\n    and: [{\n      clock: currentReviewSettled,\n      fn: review => ({\n        ...review,\n        created_at: review.created_at.includes('.') ? review.created_at : new Date(review.created_at).toLocaleDateString()\n      }),\n      target: $currentReview\n    }],\n    or: {\n      sid: \"-uzz121\"\n    }\n  });\n  const $isCarouselActive = createStore<boolean>(true, {\n    name: \"$isCarouselActive\",\n    sid: \"-jdqn76\"\n  });\n  const carouselActiveStateSettled = createEvent<boolean>({\n    name: \"carouselActiveStateSettled\",\n    sid: \"i2r7ze\"\n  });\n  sample({\n    and: [{\n      clock: carouselActiveStateSettled,\n      target: $isCarouselActive\n    }],\n    or: {\n      sid: \"-uha0vr\"\n    }\n  });\n  const $isModalOpened = createStore<boolean>(false, {\n    name: \"$isModalOpened\",\n    sid: \"yskqwb\"\n  });\n  const modalActiveStateSettled = createEvent<boolean>({\n    name: \"modalActiveStateSettled\",\n    sid: \"m4pid5\"\n  });\n  sample({\n    and: [{\n      clock: modalActiveStateSettled,\n      target: $isModalOpened\n    }],\n    or: {\n      sid: \"-u1vs9n\"\n    }\n  });\n  return {\n    $currentReview,\n    currentReviewSettled,\n    $isCarouselActive,\n    carouselActiveStateSettled,\n    $isModalOpened,\n    modalActiveStateSettled\n  };\n});"
+        ],
+        "mappings": "AAAA,SAAS,aAAa,aAAa,cAAc;AACjD,SAAS,YAAY;AAEd,aAAM,kBAAkB,KAAK,MAAM;AACxC,QAAM,iBAAiB,YAA2B,MAAM;AAAA,IACtD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,uBAAuB,YAAoB;AAAA,IAC/C,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO;AAAA,MACP,IAAI,aAAW;AAAA,QACb,GAAG;AAAA,QACH,YAAY,OAAO,WAAW,SAAS,GAAG,IAAI,OAAO,aAAa,IAAI,KAAK,OAAO,UAAU,EAAE,mBAAmB;AAAA,MACnH;AAAA,MACA,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,QAAM,oBAAoB,YAAqB,MAAM;AAAA,IACnD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,6BAA6B,YAAqB;AAAA,IACtD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO;AAAA,MACP,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,QAAM,iBAAiB,YAAqB,OAAO;AAAA,IACjD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,0BAA0B,YAAqB;AAAA,IACnD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO;AAAA,MACP,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/PeopleTalk/model.ts [vike:pluginModuleBanner] */\nimport { createEvent, createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nexport const PeopleTalkModel = atom(() => {\n  const $currentReview = createStore(null, {\n    name: \"$currentReview\",\n    sid: \"-r3ynw\"\n  });\n  const currentReviewSettled = createEvent({\n    name: \"currentReviewSettled\",\n    sid: \"-utio9p\"\n  });\n  sample({\n    and: [{\n      clock: currentReviewSettled,\n      fn: (review) => ({\n        ...review,\n        created_at: review.created_at.includes(\".\") ? review.created_at : new Date(review.created_at).toLocaleDateString()\n      }),\n      target: $currentReview\n    }],\n    or: {\n      sid: \"-uzz121\"\n    }\n  });\n  const $isCarouselActive = createStore(true, {\n    name: \"$isCarouselActive\",\n    sid: \"-jdqn76\"\n  });\n  const carouselActiveStateSettled = createEvent({\n    name: \"carouselActiveStateSettled\",\n    sid: \"i2r7ze\"\n  });\n  sample({\n    and: [{\n      clock: carouselActiveStateSettled,\n      target: $isCarouselActive\n    }],\n    or: {\n      sid: \"-uha0vr\"\n    }\n  });\n  const $isModalOpened = createStore(false, {\n    name: \"$isModalOpened\",\n    sid: \"yskqwb\"\n  });\n  const modalActiveStateSettled = createEvent({\n    name: \"modalActiveStateSettled\",\n    sid: \"m4pid5\"\n  });\n  sample({\n    and: [{\n      clock: modalActiveStateSettled,\n      target: $isModalOpened\n    }],\n    or: {\n      sid: \"-u1vs9n\"\n    }\n  });\n  return {\n    $currentReview,\n    currentReviewSettled,\n    $isCarouselActive,\n    carouselActiveStateSettled,\n    $isModalOpened,\n    modalActiveStateSettled\n  };\n});\n",
+      "start": 1746125082494,
+      "end": 1746125082494,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/PeopleTalk/model.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
+      }
+    }
+  ]
+}

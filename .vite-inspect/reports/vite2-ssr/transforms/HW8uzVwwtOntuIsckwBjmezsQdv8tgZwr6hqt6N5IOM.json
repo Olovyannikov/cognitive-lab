@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FullReportExamplePage/FullReportExamplePage.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".block {\n  span:has(strong) {\n    font-size: 18px;\n\n    @mixin larger-than 1024px {\n      font-size: 22px;\n    }\n  }\n}\n",
+      "start": 1746125081774,
+      "end": 1746125081820,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125081820,
+      "end": 1746125081820,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/FullReportExamplePage/FullReportExamplePage.module.css [vike:pluginModuleBanner] */\nexport const block = \"WLlog\";\nexport default {\n\tblock: block\n};\n",
+      "start": 1746125081821,
+      "end": 1746125081821,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/FullReportExamplePage/FullReportExamplePage.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

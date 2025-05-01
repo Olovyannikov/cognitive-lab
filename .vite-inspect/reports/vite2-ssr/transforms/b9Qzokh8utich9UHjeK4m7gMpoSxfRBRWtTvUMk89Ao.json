@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".wrapper [data-label-position] {\n  display: flex;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.stack {\n  @mixin larger-than 1200px {\n    margin: 0 auto;\n    max-width: 860px;\n  }\n}\n",
+      "start": 1746125082475,
+      "end": 1746125082507,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082507,
+      "end": 1746125082507,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"ngvkm\";\nexport const stack = \"C6hAq\";\nexport default {\n\twrapper: wrapper,\n\tstack: stack\n};\n",
+      "start": 1746125082508,
+      "end": 1746125082508,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

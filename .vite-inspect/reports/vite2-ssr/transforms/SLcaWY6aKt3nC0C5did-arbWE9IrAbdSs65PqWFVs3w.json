@@ -1,0 +1,152 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/ui/PersonalityCategory/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Grid, Text, Title } from '@mantine/core';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { titleColorMap } from '../../config';\nimport type { Personality } from '../../types';\nimport { PersonalityCard } from '../PersonalityCard';\n\nimport s from './PersonalityCategory.module.css';\n\ninterface PersonalityCategoryProps {\n    title: string;\n    description: string;\n    types: Personality[];\n}\n\nexport const PersonalityCategory = ({ title, description, types }: PersonalityCategoryProps) => (\n    <Box>\n        <Title className={s.title} data-color={titleColorMap[title]} order={3}>\n            {title}\n        </Title>\n        <Text className={s.description} fw={500}>\n            {description}\n        </Text>\n        <InnerContainer maw={1386}>\n            <Grid gutter='5xl'>\n                {types.map((type) => (\n                    <Grid.Col\n                        key={type.code}\n                        span={{\n                            base: 12,\n                            sm: 6,\n                            lg: 4,\n                            xl: 3,\n                        }}\n                    >\n                        <PersonalityCard\n                            type={type.code}\n                            category={title}\n                            title={type.name}\n                            description={type.descriptions}\n                        />\n                    </Grid.Col>\n                ))}\n            </Grid>\n        </InnerContainer>\n    </Box>\n);\n",
+      "start": 1746125081996,
+      "end": 1746125082036,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Grid, Text, Title } from '@mantine/core';\nimport { InnerContainer } from '@/shared/ui';\nimport { titleColorMap } from '../../config';\nimport type { Personality } from '../../types';\nimport { PersonalityCard } from '../PersonalityCard';\nimport s from './PersonalityCategory.module.css';\ninterface PersonalityCategoryProps {\n  title: string;\n  description: string;\n  types: Personality[];\n}\nexport const PersonalityCategory = ({\n  title,\n  description,\n  types\n}: PersonalityCategoryProps) => <Box>\n        <Title className={s.title} data-color={titleColorMap[title]} order={3}>\n            {title}\n        </Title>\n        <Text className={s.description} fw={500}>\n            {description}\n        </Text>\n        <InnerContainer maw={1386}>\n            <Grid gutter='5xl'>\n                {types.map(type => <Grid.Col key={type.code} span={{\n        base: 12,\n        sm: 6,\n        lg: 4,\n        xl: 3\n      }}>\n                        <PersonalityCard type={type.code} category={title} title={type.name} description={type.descriptions} />\n                    </Grid.Col>)}\n            </Grid>\n        </InnerContainer>\n    </Box>;",
+      "start": 1746125082036,
+      "end": 1746125082037,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Grid",
+          "Text",
+          "Title",
+          "InnerContainer",
+          "titleColorMap",
+          "Personality",
+          "PersonalityCard",
+          "s",
+          "PersonalityCategoryProps",
+          "title",
+          "description",
+          "types",
+          "PersonalityCategory",
+          "map",
+          "type",
+          "code",
+          "base",
+          "sm",
+          "lg",
+          "xl",
+          "name",
+          "descriptions"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/ui/PersonalityCategory/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Grid, Text, Title } from '@mantine/core';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { titleColorMap } from '../../config';\nimport type { Personality } from '../../types';\nimport { PersonalityCard } from '../PersonalityCard';\n\nimport s from './PersonalityCategory.module.css';\n\ninterface PersonalityCategoryProps {\n    title: string;\n    description: string;\n    types: Personality[];\n}\n\nexport const PersonalityCategory = ({ title, description, types }: PersonalityCategoryProps) => (\n    <Box>\n        <Title className={s.title} data-color={titleColorMap[title]} order={3}>\n            {title}\n        </Title>\n        <Text className={s.description} fw={500}>\n            {description}\n        </Text>\n        <InnerContainer maw={1386}>\n            <Grid gutter='5xl'>\n                {types.map((type) => (\n                    <Grid.Col\n                        key={type.code}\n                        span={{\n                            base: 12,\n                            sm: 6,\n                            lg: 4,\n                            xl: 3,\n                        }}\n                    >\n                        <PersonalityCard\n                            type={type.code}\n                            category={title}\n                            title={type.name}\n                            description={type.descriptions}\n                        />\n                    </Grid.Col>\n                ))}\n            </Grid>\n        </InnerContainer>\n    </Box>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,IAAI,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAEtD,SAASC,cAAc,QAAQ,aAAa;AAE5C,SAASC,aAAa,QAAQ,cAAc;AAC5C,cAAcC,WAAW,QAAQ,aAAa;AAC9C,SAASC,eAAe,QAAQ,oBAAoB;AAEpD,OAAOC,CAAC,MAAM,kCAAkC;AAEhD,UAAUC,wBAAwB,CAAC;EAC/BC,KAAK,EAAE,MAAM;EACbC,WAAW,EAAE,MAAM;EACnBC,KAAK,EAAEN,WAAW,EAAE;AACxB;AAEA,OAAO,MAAMO,mBAAmB,GAAGA,CAAC;EAAEH,KAAK;EAAEC,WAAW;EAAEC;AAAgC,CAAzB,EAAEH,wBAAwB,KACvF,CAAC,GAAG;AACR,QAAQ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACE,KAAK,CAAC,CAAC,UAAU,CAAC,CAACL,aAAa,CAACK,KAAK,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAC9E,YAAY,CAACA,KAAK;AAClB,QAAQ,EAAE,KAAK;AACf,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACG,WAAW,CAAC,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC;AAChD,YAAY,CAACA,WAAW;AACxB,QAAQ,EAAE,IAAI;AACd,QAAQ,CAAC,cAAc,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC;AAClC,YAAY,CAAC,IAAI,CAAC,MAAM,CAAC,KAAK;AAC9B,gBAAgB,CAACC,KAAK,CAACE,GAAG,CAAEC,IAAI,IACZ,CAAC,IAAI,CAAC,GAAG,CACL,GAAG,CAAC,CAACA,IAAI,CAACC,IAAI,CAAC,CACf,IAAI,CAAC,CAAC;QACFC,IAAI,EAAE,EAAE;QACRC,EAAE,EAAE,CAAC;QACLC,EAAE,EAAE,CAAC;QACLC,EAAE,EAAE;MACR,CAAC,CAAC;AAE1B,wBAAwB,CAAC,eAAe,CACZ,IAAI,CAAC,CAACL,IAAI,CAACC,IAAI,CAAC,CAChB,QAAQ,CAAC,CAACN,KAAK,CAAC,CAChB,KAAK,CAAC,CAACK,IAAI,CAACM,IAAI,CAAC,CACjB,WAAW,CAAC,CAACN,IAAI,CAACO,YAAY,CAAC;AAE3D,oBAAoB,EAAE,IAAI,CAAC,GAAG,CACb,CAAC;AAClB,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,cAAc;AACxB,IAAI,EAAE,GAAG,CACR",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Grid, Text, Title } from \"@mantine/core\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { titleColorMap } from \"../../config\";\nimport { PersonalityCard } from \"../PersonalityCard\";\nimport s from \"./PersonalityCategory.module.css\";\nexport const PersonalityCategory = ({\n  title,\n  description,\n  types\n}) => /* @__PURE__ */ jsxs(Box, { children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, \"data-color\": titleColorMap[title], order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, fw: 500, children: description }),\n  /* @__PURE__ */ jsx(InnerContainer, { maw: 1386, children: /* @__PURE__ */ jsx(Grid, { gutter: \"5xl\", children: types.map((type) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n    base: 12,\n    sm: 6,\n    lg: 4,\n    xl: 3\n  }, children: /* @__PURE__ */ jsx(PersonalityCard, { type: type.code, category: title, title: type.name, description: type.descriptions }) }, type.code)) }) })\n] });\n",
+      "start": 1746125082038,
+      "end": 1746125082341,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/ui/PersonalityCategory/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Grid, Text, Title } from '@mantine/core';\nimport { InnerContainer } from '@/shared/ui';\nimport { titleColorMap } from '../../config';\nimport type { Personality } from '../../types';\nimport { PersonalityCard } from '../PersonalityCard';\nimport s from './PersonalityCategory.module.css';\ninterface PersonalityCategoryProps {\n  title: string;\n  description: string;\n  types: Personality[];\n}\nexport const PersonalityCategory = ({\n  title,\n  description,\n  types\n}: PersonalityCategoryProps) => <Box>\n        <Title className={s.title} data-color={titleColorMap[title]} order={3}>\n            {title}\n        </Title>\n        <Text className={s.description} fw={500}>\n            {description}\n        </Text>\n        <InnerContainer maw={1386}>\n            <Grid gutter='5xl'>\n                {types.map(type => <Grid.Col key={type.code} span={{\n        base: 12,\n        sm: 6,\n        lg: 4,\n        xl: 3\n      }}>\n                        <PersonalityCard type={type.code} category={title} title={type.name} description={type.descriptions} />\n                    </Grid.Col>)}\n            </Grid>\n        </InnerContainer>\n    </Box>;"
+        ],
+        "mappings": "AAegC,SACxB,KADwB;AAfhC,SAAS,KAAK,MAAM,MAAM,aAAa;AACvC,SAAS,sBAAsB;AAC/B,SAAS,qBAAqB;AAE9B,SAAS,uBAAuB;AAChC,OAAO,OAAO;AAMP,aAAM,sBAAsB,CAAC;AAAA,EAClC;AAAA,EACA;AAAA,EACA;AACF,MAAgC,qBAAC,OACzB;AAAA,sBAAC,SAAM,WAAW,EAAE,OAAO,cAAY,cAAc,KAAK,GAAG,OAAO,GAC/D,iBACL;AAAA,EACA,oBAAC,QAAK,WAAW,EAAE,aAAa,IAAI,KAC/B,uBACL;AAAA,EACA,oBAAC,kBAAe,KAAK,MACjB,8BAAC,QAAK,QAAO,OACR,gBAAM,IAAI,UAAQ,oBAAC,KAAK,KAAL,EAAyB,MAAM;AAAA,IAC3D,MAAM;AAAA,IACN,IAAI;AAAA,IACJ,IAAI;AAAA,IACJ,IAAI;AAAA,EACN,GACkB,8BAAC,mBAAgB,MAAM,KAAK,MAAM,UAAU,OAAO,OAAO,KAAK,MAAM,aAAa,KAAK,cAAc,KAN3E,KAAK,IAOnC,CAAW,GACnB,GACJ;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Personality/ui/PersonalityCategory/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Grid, Text, Title } from \"@mantine/core\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { titleColorMap } from \"../../config\";\nimport { PersonalityCard } from \"../PersonalityCard\";\nimport s from \"./PersonalityCategory.module.css\";\nexport const PersonalityCategory = ({\n  title,\n  description,\n  types\n}) => /* @__PURE__ */ jsxs(Box, { children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, \"data-color\": titleColorMap[title], order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, fw: 500, children: description }),\n  /* @__PURE__ */ jsx(InnerContainer, { maw: 1386, children: /* @__PURE__ */ jsx(Grid, { gutter: \"5xl\", children: types.map((type) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n    base: 12,\n    sm: 6,\n    lg: 4,\n    xl: 3\n  }, children: /* @__PURE__ */ jsx(PersonalityCard, { type: type.code, category: title, title: type.name, description: type.descriptions }) }, type.code)) }) })\n] });\n",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Personality/ui/PersonalityCategory/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/J,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

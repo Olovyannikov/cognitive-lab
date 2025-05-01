@@ -1,0 +1,134 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InnerContainer/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Container, ContainerProps } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './InnerContainer.module.css';\n\nexport const InnerContainer = ({ children, className, ...rest }: ContainerProps) => (\n    <Container className={clsx(s.container, className)} {...rest}>\n        {children}\n    </Container>\n);\n",
+      "start": 1746125081953,
+      "end": 1746125082011,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Container, ContainerProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './InnerContainer.module.css';\nexport const InnerContainer = ({\n  children,\n  className,\n  ...rest\n}: ContainerProps) => <Container className={clsx(s.container, className)} {...rest}>\n        {children}\n    </Container>;",
+      "start": 1746125082011,
+      "end": 1746125082011,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Container",
+          "ContainerProps",
+          "clsx",
+          "s",
+          "InnerContainer",
+          "children",
+          "className",
+          "rest",
+          "container"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InnerContainer/index.tsx"],
+        "sourcesContent": [
+          "import { Container, ContainerProps } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './InnerContainer.module.css';\n\nexport const InnerContainer = ({ children, className, ...rest }: ContainerProps) => (\n    <Container className={clsx(s.container, className)} {...rest}>\n        {children}\n    </Container>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,EAAEC,cAAc,QAAQ,eAAe;AACzD,OAAOC,IAAI,MAAM,MAAM;AAEvB,OAAOC,CAAC,MAAM,6BAA6B;AAE3C,OAAO,MAAMC,cAAc,GAAGA,CAAC;EAAEC,QAAQ;EAAEC,SAAS;EAAE,GAAGC;AAAqB,CAAf,EAAEN,cAAc,KAC3E,CAAC,SAAS,CAAC,SAAS,CAAC,CAACC,IAAI,CAACC,CAAC,CAACK,SAAS,EAAEF,SAAS,CAAC,CAAC,CAAC,IAAIC,IAAI,CAAC;AACjE,QAAQ,CAACF,QAAQ;AACjB,IAAI,EAAE,SAAS,CACd",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Container } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./InnerContainer.module.css\";\nexport const InnerContainer = ({\n  children,\n  className,\n  ...rest\n}) => /* @__PURE__ */ jsx(Container, { className: clsx(s.container, className), ...rest, children });\n",
+      "start": 1746125082011,
+      "end": 1746125082330,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InnerContainer/index.tsx"],
+        "sourcesContent": [
+          "import { Container, ContainerProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './InnerContainer.module.css';\nexport const InnerContainer = ({\n  children,\n  className,\n  ...rest\n}: ContainerProps) => <Container className={clsx(s.container, className)} {...rest}>\n        {children}\n    </Container>;"
+        ],
+        "mappings": "AAOsB;AAPtB,SAAS,iBAAiC;AAC1C,OAAO,UAAU;AACjB,OAAO,OAAO;AACP,aAAM,iBAAiB,CAAC;AAAA,EAC7B;AAAA,EACA;AAAA,EACA,GAAG;AACL,MAAsB,oBAAC,aAAU,WAAW,KAAK,EAAE,WAAW,SAAS,GAAI,GAAG,MACrE,UACL;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/InnerContainer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Container } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./InnerContainer.module.css\";\nexport const InnerContainer = ({\n  children,\n  className,\n  ...rest\n}) => /* @__PURE__ */ jsx(Container, { className: clsx(s.container, className), ...rest, children });\n",
+      "start": 1746125082331,
+      "end": 1746125082331,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/InnerContainer/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

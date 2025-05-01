@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paywall/Paywall.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".wrapper {\n  display: grid;\n  grid-template-areas:\n    \"top man\"\n    \"points points\"\n    \"actions actions\";\n  grid-template-columns: 1fr 100px;\n  margin-top: 60px;\n  gap: var(--mantine-spacing-lg);\n\n  @mixin larger-than 720px {\n    grid-template-areas:\n      \"man top\"\n      \"man points\"\n      \"man actions\";\n    grid-template-columns: 260px 1fr;\n  }\n}\n\n.top {\n  grid-area: top;\n\n  h3 {\n    margin: 0;\n    font-size: 20px;\n    line-height: 23px;\n\n    @mixin larger-than 720px {\n      font-size: 32px;\n      line-height: 37px;\n    }\n  }\n}\n\n.paywallMan {\n  grid-area: man;\n  width: 100px;\n  height: 100px;\n\n  @mixin larger-than 720px {\n    width: 260px;\n    height: 260px;\n  }\n}\n\n.points {\n  grid-area: points;\n}\n\n.actions {\n  flex-direction: column;\n  grid-area: actions;\n\n  @mixin larger-than 865px {\n    flex-direction: row;\n    margin-left: 36px;\n  }\n}\n",
+      "start": 1746125082172,
+      "end": 1746125082197,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082197,
+      "end": 1746125082197,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082198,
+      "end": 1746125082198,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Paywall/Paywall.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"PPycV\";\nexport const top = \"jxg1H\";\nexport const paywallMan = \"dX-wJ\";\nexport const points = \"DO9HA\";\nexport const actions = \"fTKuV\";\nexport default {\n\twrapper: wrapper,\n\ttop: top,\n\tpaywallMan: paywallMan,\n\tpoints: points,\n\tactions: actions\n};\n",
+      "start": 1746125082198,
+      "end": 1746125082199,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Paywall/Paywall.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC;"
+      }
+    }
+  ]
+}

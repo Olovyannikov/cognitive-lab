@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CTA/ui/CTA.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".actions {\n  flex-direction: column;\n  margin-top: auto;\n  width: 100%;\n  gap: var(--mantine-spacing-md);\n\n  @mixin larger-than 598px {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: var(--mantine-spacing-sm);\n  }\n\n  @mixin larger-than 1200px {\n    display: flex;\n    flex-direction: row;\n\n    a,\n    button {\n      width: fit-content;\n    }\n  }\n}\n",
+      "start": 1746125082078,
+      "end": 1746125082120,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082120,
+      "end": 1746125082120,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/CTA/ui/CTA.module.css [vike:pluginModuleBanner] */\nexport const actions = \"R5N-E\";\nexport default {\n\tactions: actions\n};\n",
+      "start": 1746125082121,
+      "end": 1746125082121,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/CTA/ui/CTA.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { TextInput, TextInputProps } from '@mantine/core';\n\nimport s from './InputBorderless.module.css';\n\ntype InputBorderless = TextInputProps;\n\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\n);\n",
+      "start": 1746125081989,
+      "end": 1746125082035,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { TextInput, TextInputProps } from '@mantine/core';\nimport s from './InputBorderless.module.css';\ntype InputBorderless = TextInputProps;\nexport const InputBorderless = ({\n  value,\n  onChange\n}: InputBorderless) => <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />;",
+      "start": 1746125082035,
+      "end": 1746125082036,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["TextInput", "TextInputProps", "s", "InputBorderless", "value", "onChange"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx"],
+        "sourcesContent": [
+          "import { TextInput, TextInputProps } from '@mantine/core';\n\nimport s from './InputBorderless.module.css';\n\ntype InputBorderless = TextInputProps;\n\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,EAAEC,cAAc,QAAQ,eAAe;AAEzD,OAAOC,CAAC,MAAM,8BAA8B;AAE5C,KAAKC,eAAe,GAAGF,cAAc;AAErC,OAAO,MAAME,eAAe,GAAGA,CAAC;EAAEC,KAAK;EAAEC;AAA0B,CAAhB,EAAEF,eAAe,KAChE,CAAC,SAAS,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,SAAS,CAAC,UAAU,CAAC,CAACD,CAAC,CAAC,CAAC,KAAK,CAAC,CAACE,KAAK,CAAC,CAAC,QAAQ,CAAC,CAACC,QAAQ,CAAC,GAChF",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
+      "start": 1746125082036,
+      "end": 1746125082341,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx"],
+        "sourcesContent": [
+          "import { TextInput, TextInputProps } from '@mantine/core';\nimport s from './InputBorderless.module.css';\ntype InputBorderless = TextInputProps;\nexport const InputBorderless = ({\n  value,\n  onChange\n}: InputBorderless) => <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />;"
+        ],
+        "mappings": "AAMuB;AANvB,SAAS,iBAAiC;AAC1C,OAAO,OAAO;AAEP,aAAM,kBAAkB,CAAC;AAAA,EAC9B;AAAA,EACA;AACF,MAAuB,oBAAC,aAAU,IAAI,IAAI,WAAS,MAAC,YAAY,GAAG,OAAc,UAAoB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/InputBorderless/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/InputBorderless/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/HowItHelps.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".stack {\n  margin-bottom: calc(90px * 4 + 20px);\n  gap: 12px;\n\n  @mixin larger-than 992px {\n    gap: 40px;\n  }\n}\n",
+      "start": 1746125082300,
+      "end": 1746125082332,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082332,
+      "end": 1746125082332,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082332,
+      "end": 1746125082332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082332,
+      "end": 1746125082332,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082332,
+      "end": 1746125082332,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/HowItHelps/HowItHelps.module.css [vike:pluginModuleBanner] */\nexport const stack = \"e86ds\";\nexport default {\n\tstack: stack\n};\n",
+      "start": 1746125082333,
+      "end": 1746125082333,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/HowItHelps/HowItHelps.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

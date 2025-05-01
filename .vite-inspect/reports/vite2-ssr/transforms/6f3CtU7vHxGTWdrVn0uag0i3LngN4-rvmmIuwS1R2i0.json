@@ -1,0 +1,144 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Metainfo/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { DOCS } from '../../const';\nimport { List } from '../List';\n\nimport s from './MetaInfo.module.css';\n\nexport const MetaInfo = ({ className }: ComponentProps<'ul'>) => (\n    <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>\n);\n",
+      "start": 1746125082030,
+      "end": 1746125082072,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\nimport { DOCS } from '../../const';\nimport { List } from '../List';\nimport s from './MetaInfo.module.css';\nexport const MetaInfo = ({\n  className\n}: ComponentProps<'ul'>) => <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>;",
+      "start": 1746125082072,
+      "end": 1746125082073,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ComponentProps",
+          "Box",
+          "Flex",
+          "Text",
+          "clsx",
+          "DOCS",
+          "List",
+          "s",
+          "MetaInfo",
+          "className",
+          "root",
+          "docs",
+          "text",
+          "disclamer",
+          "meta"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Metainfo/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { DOCS } from '../../const';\nimport { List } from '../List';\n\nimport s from './MetaInfo.module.css';\n\nexport const MetaInfo = ({ className }: ComponentProps<'ul'>) => (\n    <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,cAAc,QAAQ,OAAO;AAC3C,SAASC,GAAG,EAAEC,IAAI,EAAEC,IAAI,QAAQ,eAAe;AAC/C,OAAOC,IAAI,MAAM,MAAM;AAEvB,SAASC,IAAI,QAAQ,aAAa;AAClC,SAASC,IAAI,QAAQ,SAAS;AAE9B,OAAOC,CAAC,MAAM,uBAAuB;AAErC,OAAO,MAAMC,QAAQ,GAAGA,CAAC;EAAEC;AAAgC,CAArB,EAAET,cAAc,CAAC,IAAI,CAAC,KACxD,CAAC,IAAI,CAAC,SAAS,CAAC,CAACO,CAAC,CAACG,IAAI,CAAC;AAC5B,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACN,IAAI,CAACK,SAAS,EAAEF,CAAC,CAACI,IAAI,CAAC,CAAC,CAAC,IAAI,CAAC,CAACN,IAAI,CAAC;AAC7D,QAAQ,CAAC,GAAG,CAAC,SAAS,CAAC,CAACE,CAAC,CAACK,IAAI,CAAC;AAC/B,YAAY,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,SAAS,CAAC,CAACL,CAAC,CAACM,SAAS,CAAC;AACpD;AACA;AACA,YAAY,EAAE,IAAI;AAClB,YAAY,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ,CAAC,SAAS,CAAC,CAACN,CAAC,CAACO,IAAI,CAAC;AAC/C;AACA,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,GAAG;AACb,IAAI,EAAE,IAAI,CACT",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({\n  className\n}) => /* @__PURE__ */ jsxs(Flex, { className: s.root, children: [\n  /* @__PURE__ */ jsx(List, { className: clsx(className, s.docs), data: DOCS }),\n  /* @__PURE__ */ jsxs(Box, { className: s.text, children: [\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.disclamer, children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\" }),\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.meta, children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\" })\n  ] })\n] });\n",
+      "start": 1746125082073,
+      "end": 1746125082375,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Metainfo/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\nimport { DOCS } from '../../const';\nimport { List } from '../List';\nimport s from './MetaInfo.module.css';\nexport const MetaInfo = ({\n  className\n}: ComponentProps<'ul'>) => <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>;"
+        ],
+        "mappings": "AASQ,cACA,YADA;AARR,SAAS,KAAK,MAAM,YAAY;AAChC,OAAO,UAAU;AACjB,SAAS,YAAY;AACrB,SAAS,YAAY;AACrB,OAAO,OAAO;AACP,aAAM,WAAW,CAAC;AAAA,EACvB;AACF,MAA4B,qBAAC,QAAK,WAAW,EAAE,MACvC;AAAA,sBAAC,QAAK,WAAW,KAAK,WAAW,EAAE,IAAI,GAAG,MAAM,MAAM;AAAA,EACtD,qBAAC,OAAI,WAAW,EAAE,MACd;AAAA,wBAAC,QAAK,GAAE,UAAS,WAAW,EAAE,WAAW,4IAGzC;AAAA,IACA,oBAAC,QAAK,GAAE,UAAS,WAAW,EAAE,MAAM,+FAEpC;AAAA,KACJ;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082375,
+      "end": 1746125082375,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082375,
+      "end": 1746125082375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Metainfo/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({\n  className\n}) => /* @__PURE__ */ jsxs(Flex, { className: s.root, children: [\n  /* @__PURE__ */ jsx(List, { className: clsx(className, s.docs), data: DOCS }),\n  /* @__PURE__ */ jsxs(Box, { className: s.text, children: [\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.disclamer, children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\" }),\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.meta, children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\" })\n  ] })\n] });\n",
+      "start": 1746125082376,
+      "end": 1746125082376,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Metainfo/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/J,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

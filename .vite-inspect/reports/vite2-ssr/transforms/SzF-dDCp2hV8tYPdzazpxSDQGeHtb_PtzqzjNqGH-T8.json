@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".reportLink {\n  margin-left: -12px;\n  padding: 10px;\n  width: calc(100% + 24px);\n  text-decoration: none;\n  color: var(--mantine-color-dark-6);\n\n  p {\n    min-width: 170px;\n  }\n\n  time {\n    color: var(--mantine-color-gray-6);\n  }\n\n  &:hover {\n    background-color: var(--mantine-color-gray-1);\n  }\n\n  @mixin larger-than 992px {\n    margin: 0;\n    padding: 4px 10px;\n    width: 100%;\n  }\n}\n",
+      "start": 1746125082639,
+      "end": 1746125082644,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css [vike:pluginModuleBanner] */\nexport const reportLink = \"_8oSnO\";\nexport default {\n\treportLink: reportLink\n};\n",
+      "start": 1746125082645,
+      "end": 1746125082645,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC;"
+      }
+    }
+  ]
+}

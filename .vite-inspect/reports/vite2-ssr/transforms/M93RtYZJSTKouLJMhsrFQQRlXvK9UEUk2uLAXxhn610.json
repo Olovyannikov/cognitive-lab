@@ -1,0 +1,138 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPostPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\n\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\n\nimport s from './BlogPostPage.module.css';\n\nexport const BlogPostPage = () => {\n    const { data: post } = useUnit(getBlogPostByIdQuery);\n\n    if (!post) return null;\n\n    return (\n        <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner\n                        title='Узнайте свой тип личности'\n                        description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'\n                        actionSlot={CALL_TO_ACTION['redirectToTest']}\n                    />\n                </Stack>\n            </Container>\n        </Box>\n    );\n};\n",
+      "start": 1746125081617,
+      "end": 1746125081646,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport s from './BlogPostPage.module.css';\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner title='Узнайте свой тип личности' description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.' actionSlot={CALL_TO_ACTION['redirectToTest']} />\n                </Stack>\n            </Container>\n        </Box>;\n};",
+      "start": 1746125081646,
+      "end": 1746125081649,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Container",
+          "Stack",
+          "useUnit",
+          "getBlogPostByIdQuery",
+          "Post",
+          "Banner",
+          "CALL_TO_ACTION",
+          "s",
+          "BlogPostPage",
+          "data",
+          "post",
+          "stack"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPostPage/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\n\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\n\nimport s from './BlogPostPage.module.css';\n\nexport const BlogPostPage = () => {\n    const { data: post } = useUnit(getBlogPostByIdQuery);\n\n    if (!post) return null;\n\n    return (\n        <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner\n                        title='Узнайте свой тип личности'\n                        description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'\n                        actionSlot={CALL_TO_ACTION['redirectToTest']}\n                    />\n                </Stack>\n            </Container>\n        </Box>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,SAAS,EAAEC,KAAK,QAAQ,eAAe;AACrD,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,oBAAoB,EAAEC,IAAI,QAAQ,iBAAiB;AAC5D,SAASC,MAAM,QAAQ,mBAAmB;AAE1C,SAASC,cAAc,QAAQ,eAAe;AAE9C,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,OAAO,MAAMC,YAAY,GAAGA,CAAA,KAAM;EAC9B,MAAM;IAAEC,IAAI,EAAEC;EAAK,CAAC,GAAGR,OAAO,CAACC,oBAAoB,CAAC;EAEpD,IAAI,CAACO,IAAI,EAAE,OAAO,IAAI;EAEtB,OACI,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS;AAChC,YAAY,CAAC,SAAS;AACtB,gBAAgB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACH,CAAC,CAACI,KAAK,CAAC;AAC1C,oBAAoB,CAAC,IAAI,CAAC,IAAI,CAAC,CAACD,IAAI,CAAC;AACrC,oBAAoB,CAAC,MAAM,CACH,KAAK,CAAC,2BAA2B,CACjC,WAAW,CAAC,mTAAmT,CAC/T,UAAU,CAAC,CAACJ,cAAc,CAAC,gBAAgB,CAAC,CAAC;AAErE,gBAAgB,EAAE,KAAK;AACvB,YAAY,EAAE,SAAS;AACvB,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { getBlogPostByIdQuery, Post } from \"@/entities/Blog\";\nimport { Banner } from \"@/entities/Report\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport s from \"./BlogPostPage.module.css\";\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n    /* @__PURE__ */ jsx(Post, { post }),\n    /* @__PURE__ */ jsx(Banner, { title: \"Узнайте свой тип личности\", description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\", actionSlot: CALL_TO_ACTION[\"redirectToTest\"] })\n  ] }) }) });\n};\n",
+      "start": 1746125081649,
+      "end": 1746125081706,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPostPage/index.tsx"],
+        "sourcesContent": [
+          "import { Box, Container, Stack } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { getBlogPostByIdQuery, Post } from '@/entities/Blog';\nimport { Banner } from '@/entities/Report';\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport s from './BlogPostPage.module.css';\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return <Box component='section'>\n            <Container>\n                <Stack className={s.stack}>\n                    <Post post={post} />\n                    <Banner title='Узнайте свой тип личности' description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.' actionSlot={CALL_TO_ACTION['redirectToTest']} />\n                </Stack>\n            </Container>\n        </Box>;\n};"
+        ],
+        "mappings": "AAagB,SACI,KADJ;AAbhB,SAAS,KAAK,WAAW,aAAa;AACtC,SAAS,eAAe;AACxB,SAAS,sBAAsB,YAAY;AAC3C,SAAS,cAAc;AACvB,SAAS,sBAAsB;AAC/B,OAAO,OAAO;AACP,aAAM,eAAe,MAAM;AAChC,QAAM;AAAA,IACJ,MAAM;AAAA,EACR,IAAI,QAAQ,oBAAoB;AAChC,MAAI,CAAC,KAAM,QAAO;AAClB,SAAO,oBAAC,OAAI,WAAU,WACZ,8BAAC,aACG,+BAAC,SAAM,WAAW,EAAE,OAChB;AAAA,wBAAC,QAAK,MAAY;AAAA,IAClB,oBAAC,UAAO,OAAM,6BAA4B,aAAY,qTAAoT,YAAY,eAAe,gBAAgB,GAAG;AAAA,KAC5Z,GACJ,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/BlogPostPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { getBlogPostByIdQuery, Post } from \"@/entities/Blog\";\nimport { Banner } from \"@/entities/Report\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport s from \"./BlogPostPage.module.css\";\nexport const BlogPostPage = () => {\n  const {\n    data: post\n  } = useUnit(getBlogPostByIdQuery);\n  if (!post) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n    /* @__PURE__ */ jsx(Post, { post }),\n    /* @__PURE__ */ jsx(Banner, { title: \"Узнайте свой тип личности\", description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\", actionSlot: CALL_TO_ACTION[\"redirectToTest\"] })\n  ] }) }) });\n};\n",
+      "start": 1746125081706,
+      "end": 1746125081706,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/BlogPostPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

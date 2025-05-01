@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import * as Index from './ui';\n\nexport const IndexPage = () => (\n    <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>\n);\n",
+      "start": 1746125081616,
+      "end": 1746125081640,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import * as Index from './ui';\nexport const IndexPage = () => <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>;",
+      "start": 1746125081640,
+      "end": 1746125081641,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Index", "IndexPage"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/index.tsx"],
+        "sourcesContent": [
+          "import * as Index from './ui';\n\nexport const IndexPage = () => (\n    <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>\n);\n"
+        ],
+        "mappings": "AAAA,OAAO,KAAKA,KAAK,MAAM,MAAM;AAE7B,OAAO,MAAMC,SAAS,GAAGA,CAAA,KACrB;AACJ,QAAQ,CAAC,KAAK,CAAC,IAAI;AACnB,QAAQ,CAAC,KAAK,CAAC,KAAK;AACpB,QAAQ,CAAC,KAAK,CAAC,UAAU;AACzB,QAAQ,CAAC,KAAK,CAAC,OAAO;AACtB,QAAQ,CAAC,KAAK,CAAC,UAAU;AACzB,QAAQ,CAAC,KAAK,CAAC,OAAO;AACtB,QAAQ,CAAC,KAAK,CAAC,UAAU;AACzB,QAAQ,CAAC,KAAK,CAAC,KAAK;AACpB,QAAQ,CAAC,KAAK,CAAC,UAAU;AACzB,QAAQ,CAAC,KAAK,CAAC,GAAG;AAClB,QAAQ,CAAC,KAAK,CAAC,UAAU;AACzB,QAAQ,CAAC,KAAK,CAAC,YAAY;AAC3B,IAAI,GACH",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport * as Index from \"./ui\";\nexport const IndexPage = () => /* @__PURE__ */ jsxs(Fragment, { children: [\n  /* @__PURE__ */ jsx(Index.Hero, {}),\n  /* @__PURE__ */ jsx(Index.About, {}),\n  /* @__PURE__ */ jsx(Index.Statistics, {}),\n  /* @__PURE__ */ jsx(Index.ForWhom, {}),\n  /* @__PURE__ */ jsx(Index.HowItHelps, {}),\n  /* @__PURE__ */ jsx(Index.Tariffs, {}),\n  /* @__PURE__ */ jsx(Index.HowItWorks, {}),\n  /* @__PURE__ */ jsx(Index.WhyUs, {}),\n  /* @__PURE__ */ jsx(Index.PeopleTalk, {}),\n  /* @__PURE__ */ jsx(Index.FAQ, {}),\n  /* @__PURE__ */ jsx(Index.MoreInBlog, {}),\n  /* @__PURE__ */ jsx(Index.LetsContinue, {})\n] });\n",
+      "start": 1746125081641,
+      "end": 1746125081659,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/index.tsx"],
+        "sourcesContent": [
+          "import * as Index from './ui';\nexport const IndexPage = () => <>\n        <Index.Hero />\n        <Index.About />\n        <Index.Statistics />\n        <Index.ForWhom />\n        <Index.HowItHelps />\n        <Index.Tariffs />\n        <Index.HowItWorks />\n        <Index.WhyUs />\n        <Index.PeopleTalk />\n        <Index.FAQ />\n        <Index.MoreInBlog />\n        <Index.LetsContinue />\n    </>;"
+        ],
+        "mappings": "AAC+B,mBACvB,KADuB;AAD/B,YAAY,WAAW;AAChB,aAAM,YAAY,MAAM,iCACvB;AAAA,sBAAC,MAAM,MAAN,EAAW;AAAA,EACZ,oBAAC,MAAM,OAAN,EAAY;AAAA,EACb,oBAAC,MAAM,YAAN,EAAiB;AAAA,EAClB,oBAAC,MAAM,SAAN,EAAc;AAAA,EACf,oBAAC,MAAM,YAAN,EAAiB;AAAA,EAClB,oBAAC,MAAM,SAAN,EAAc;AAAA,EACf,oBAAC,MAAM,YAAN,EAAiB;AAAA,EAClB,oBAAC,MAAM,OAAN,EAAY;AAAA,EACb,oBAAC,MAAM,YAAN,EAAiB;AAAA,EAClB,oBAAC,MAAM,KAAN,EAAU;AAAA,EACX,oBAAC,MAAM,YAAN,EAAiB;AAAA,EAClB,oBAAC,MAAM,cAAN,EAAmB;AAAA,GACxB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport * as Index from \"./ui\";\nexport const IndexPage = () => /* @__PURE__ */ jsxs(Fragment, { children: [\n  /* @__PURE__ */ jsx(Index.Hero, {}),\n  /* @__PURE__ */ jsx(Index.About, {}),\n  /* @__PURE__ */ jsx(Index.Statistics, {}),\n  /* @__PURE__ */ jsx(Index.ForWhom, {}),\n  /* @__PURE__ */ jsx(Index.HowItHelps, {}),\n  /* @__PURE__ */ jsx(Index.Tariffs, {}),\n  /* @__PURE__ */ jsx(Index.HowItWorks, {}),\n  /* @__PURE__ */ jsx(Index.WhyUs, {}),\n  /* @__PURE__ */ jsx(Index.PeopleTalk, {}),\n  /* @__PURE__ */ jsx(Index.FAQ, {}),\n  /* @__PURE__ */ jsx(Index.MoreInBlog, {}),\n  /* @__PURE__ */ jsx(Index.LetsContinue, {})\n] });\n",
+      "start": 1746125081660,
+      "end": 1746125081660,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

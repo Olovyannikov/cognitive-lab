@@ -1,0 +1,136 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Tariffs/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Flex } from '@mantine/core';\n\nimport { Section } from '@/shared/ui';\n\nimport { TariffCard } from '@/entities/Landing';\n\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from './const';\nimport UnionImage from './union.svg?react';\n\nimport s from './Tafiffs.module.css';\n\nexport const Tariffs = () => (\n    <Section id='tariffs' filledText='Тарифы'>\n        <UnionImage width={228} height={208} className={s.union} />\n        <Flex className={s.flex}>\n            <TariffCard\n                title='Базовый'\n                price='Бесплатно'\n                features={FREE_TARIFF}\n                description='Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI'\n            />\n            <TariffCard\n                isFull\n                price={990}\n                title='Полный'\n                features={FULL_TARIFF}\n                description='Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.'\n            />\n            <TariffCard\n                buyNow\n                price={890}\n                title='Экспресс'\n                features={EXPRESS_TARIFF}\n                description='Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.'\n            />\n        </Flex>\n    </Section>\n);\n",
+      "start": 1746125081934,
+      "end": 1746125081984,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Flex } from '@mantine/core';\nimport { Section } from '@/shared/ui';\nimport { TariffCard } from '@/entities/Landing';\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from './const';\nimport UnionImage from './union.svg?react';\nimport s from './Tafiffs.module.css';\nexport const Tariffs = () => <Section id='tariffs' filledText='Тарифы'>\n        <UnionImage width={228} height={208} className={s.union} />\n        <Flex className={s.flex}>\n            <TariffCard title='Базовый' price='Бесплатно' features={FREE_TARIFF} description='Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI' />\n            <TariffCard isFull price={990} title='Полный' features={FULL_TARIFF} description='Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.' />\n            <TariffCard buyNow price={890} title='Экспресс' features={EXPRESS_TARIFF} description='Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.' />\n        </Flex>\n    </Section>;",
+      "start": 1746125081984,
+      "end": 1746125081987,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Flex",
+          "Section",
+          "TariffCard",
+          "EXPRESS_TARIFF",
+          "FREE_TARIFF",
+          "FULL_TARIFF",
+          "UnionImage",
+          "s",
+          "Tariffs",
+          "union",
+          "flex"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Tariffs/index.tsx"],
+        "sourcesContent": [
+          "import { Flex } from '@mantine/core';\n\nimport { Section } from '@/shared/ui';\n\nimport { TariffCard } from '@/entities/Landing';\n\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from './const';\nimport UnionImage from './union.svg?react';\n\nimport s from './Tafiffs.module.css';\n\nexport const Tariffs = () => (\n    <Section id='tariffs' filledText='Тарифы'>\n        <UnionImage width={228} height={208} className={s.union} />\n        <Flex className={s.flex}>\n            <TariffCard\n                title='Базовый'\n                price='Бесплатно'\n                features={FREE_TARIFF}\n                description='Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI'\n            />\n            <TariffCard\n                isFull\n                price={990}\n                title='Полный'\n                features={FULL_TARIFF}\n                description='Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.'\n            />\n            <TariffCard\n                buyNow\n                price={890}\n                title='Экспресс'\n                features={EXPRESS_TARIFF}\n                description='Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.'\n            />\n        </Flex>\n    </Section>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,QAAQ,eAAe;AAEpC,SAASC,OAAO,QAAQ,aAAa;AAErC,SAASC,UAAU,QAAQ,oBAAoB;AAE/C,SAASC,cAAc,EAAEC,WAAW,EAAEC,WAAW,QAAQ,SAAS;AAClE,OAAOC,UAAU,MAAM,mBAAmB;AAE1C,OAAOC,CAAC,MAAM,sBAAsB;AAEpC,OAAO,MAAMC,OAAO,GAAGA,CAAA,KACnB,CAAC,OAAO,CAAC,EAAE,CAAC,SAAS,CAAC,UAAU,CAAC,QAAQ;AAC7C,QAAQ,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,MAAM,CAAC,CAAC,GAAG,CAAC,CAAC,SAAS,CAAC,CAACD,CAAC,CAACE,KAAK,CAAC;AAChE,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACG,IAAI,CAAC;AAChC,YAAY,CAAC,UAAU,CACP,KAAK,CAAC,SAAS,CACf,KAAK,CAAC,WAAW,CACjB,QAAQ,CAAC,CAACN,WAAW,CAAC,CACtB,WAAW,CAAC,6EAA6E;AAEzG,YAAY,CAAC,UAAU,CACP,MAAM,CACN,KAAK,CAAC,CAAC,GAAG,CAAC,CACX,KAAK,CAAC,QAAQ,CACd,QAAQ,CAAC,CAACC,WAAW,CAAC,CACtB,WAAW,CAAC,gGAAgG;AAE5H,YAAY,CAAC,UAAU,CACP,MAAM,CACN,KAAK,CAAC,CAAC,GAAG,CAAC,CACX,KAAK,CAAC,UAAU,CAChB,QAAQ,CAAC,CAACF,cAAc,CAAC,CACzB,WAAW,CAAC,iGAAiG;AAE7H,QAAQ,EAAE,IAAI;AACd,IAAI,EAAE,OAAO,CACZ",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { TariffCard } from \"@/entities/Landing\";\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from \"./const\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./Tafiffs.module.css\";\nexport const Tariffs = () => /* @__PURE__ */ jsxs(Section, { id: \"tariffs\", filledText: \"Тарифы\", children: [\n  /* @__PURE__ */ jsx(UnionImage, { width: 228, height: 208, className: s.union }),\n  /* @__PURE__ */ jsxs(Flex, { className: s.flex, children: [\n    /* @__PURE__ */ jsx(TariffCard, { title: \"Базовый\", price: \"Бесплатно\", features: FREE_TARIFF, description: \"Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI\" }),\n    /* @__PURE__ */ jsx(TariffCard, { isFull: true, price: 990, title: \"Полный\", features: FULL_TARIFF, description: \"Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.\" }),\n    /* @__PURE__ */ jsx(TariffCard, { buyNow: true, price: 890, title: \"Экспресс\", features: EXPRESS_TARIFF, description: \"Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.\" })\n  ] })\n] });\n",
+      "start": 1746125081987,
+      "end": 1746125082289,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Tariffs/index.tsx"],
+        "sourcesContent": [
+          "import { Flex } from '@mantine/core';\nimport { Section } from '@/shared/ui';\nimport { TariffCard } from '@/entities/Landing';\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from './const';\nimport UnionImage from './union.svg?react';\nimport s from './Tafiffs.module.css';\nexport const Tariffs = () => <Section id='tariffs' filledText='Тарифы'>\n        <UnionImage width={228} height={208} className={s.union} />\n        <Flex className={s.flex}>\n            <TariffCard title='Базовый' price='Бесплатно' features={FREE_TARIFF} description='Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI' />\n            <TariffCard isFull price={990} title='Полный' features={FULL_TARIFF} description='Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.' />\n            <TariffCard buyNow price={890} title='Экспресс' features={EXPRESS_TARIFF} description='Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.' />\n        </Flex>\n    </Section>;"
+        ],
+        "mappings": "AAOQ,cACA,YADA;AAPR,SAAS,YAAY;AACrB,SAAS,eAAe;AACxB,SAAS,kBAAkB;AAC3B,SAAS,gBAAgB,aAAa,mBAAmB;AACzD,OAAO,gBAAgB;AACvB,OAAO,OAAO;AACP,aAAM,UAAU,MAAM,qBAAC,WAAQ,IAAG,WAAU,YAAW,UACtD;AAAA,sBAAC,cAAW,OAAO,KAAK,QAAQ,KAAK,WAAW,EAAE,OAAO;AAAA,EACzD,qBAAC,QAAK,WAAW,EAAE,MACf;AAAA,wBAAC,cAAW,OAAM,WAAU,OAAM,aAAY,UAAU,aAAa,aAAY,+EAA8E;AAAA,IAC/J,oBAAC,cAAW,QAAM,MAAC,OAAO,KAAK,OAAM,UAAS,UAAU,aAAa,aAAY,kGAAiG;AAAA,IAClL,oBAAC,cAAW,QAAM,MAAC,OAAO,KAAK,OAAM,YAAW,UAAU,gBAAgB,aAAY,mGAAkG;AAAA,KAC5L;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082289,
+      "end": 1746125082289,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082289,
+      "end": 1746125082289,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082289,
+      "end": 1746125082290,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/Tariffs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { TariffCard } from \"@/entities/Landing\";\nimport { EXPRESS_TARIFF, FREE_TARIFF, FULL_TARIFF } from \"./const\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./Tafiffs.module.css\";\nexport const Tariffs = () => /* @__PURE__ */ jsxs(Section, { id: \"tariffs\", filledText: \"Тарифы\", children: [\n  /* @__PURE__ */ jsx(UnionImage, { width: 228, height: 208, className: s.union }),\n  /* @__PURE__ */ jsxs(Flex, { className: s.flex, children: [\n    /* @__PURE__ */ jsx(TariffCard, { title: \"Базовый\", price: \"Бесплатно\", features: FREE_TARIFF, description: \"Для тех, кто хочет быстро познакомиться с нашей платформой и методикой MBTI\" }),\n    /* @__PURE__ */ jsx(TariffCard, { isFull: true, price: 990, title: \"Полный\", features: FULL_TARIFF, description: \"Для тех, кто хочет детальный анализ, индивидуальные рекомендации и персональный план действий.\" }),\n    /* @__PURE__ */ jsx(TariffCard, { buyNow: true, price: 890, title: \"Экспресс\", features: EXPRESS_TARIFF, description: \"Для тех, кто уже знает свой MBTI-тип (или предполагает) и хочет мгновенно получить общий отчёт.\" })\n  ] })\n] });\n",
+      "start": 1746125082290,
+      "end": 1746125082290,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/Tariffs/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7N,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

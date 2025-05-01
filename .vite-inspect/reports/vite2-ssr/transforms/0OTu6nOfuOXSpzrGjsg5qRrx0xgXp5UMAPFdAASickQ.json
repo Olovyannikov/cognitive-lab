@@ -1,0 +1,162 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestScaleQuestion/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { PreparedAnswer } from '../../api/types';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\nimport s from './TestScaleQuestion.module.css';\n\ninterface TestScaleQuestionProps extends QuestionsResponse {\n    onChange: (payload: PreparedAnswer) => void;\n    page: number;\n    value: string;\n}\n\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }: TestScaleQuestionProps) => (\n    <Paper className={s.wrapper}>\n        <QuestionTitle fixed text={text} hint={hint} />\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\n            <Radio.Group\n                className={s.group}\n                name={id}\n                value={value}\n                onChange={(val) =>\n                    onChange({\n                        question: id,\n                        answer: {\n                            value: Number(val),\n                        },\n                        index: page - 1,\n                    })\n                }\n            >\n                <Flex className={s.radioWrapper} justify='space-between'>\n                    {SCALE_RADIO_ITEMS.map((radio) => (\n                        <RadioElement key={radio.value} size={radio.size} value={radio.value} />\n                    ))}\n                </Flex>\n            </Radio.Group>\n            <Flex className={s.agreedBlock} justify='space-between'>\n                <Text className={s.agreed} c='indigo.8' fw={700}>\n                    Не согласен\n                </Text>\n                <Text className={s.agreed} c='lime.8' fw={700}>\n                    Согласен\n                </Text>\n            </Flex>\n        </Stack>\n    </Paper>\n);\n",
+      "start": 1746125082064,
+      "end": 1746125082108,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { PreparedAnswer } from '../../api/types';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport s from './TestScaleQuestion.module.css';\ninterface TestScaleQuestionProps extends QuestionsResponse {\n  onChange: (payload: PreparedAnswer) => void;\n  page: number;\n  value: string;\n}\nexport const TestScaleQuestion = ({\n  value,\n  page,\n  text,\n  hint,\n  id,\n  onChange\n}: TestScaleQuestionProps) => <Paper className={s.wrapper}>\n        <QuestionTitle fixed text={text} hint={hint} />\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\n            <Radio.Group className={s.group} name={id} value={value} onChange={val => onChange({\n      question: id,\n      answer: {\n        value: Number(val)\n      },\n      index: page - 1\n    })}>\n                <Flex className={s.radioWrapper} justify='space-between'>\n                    {SCALE_RADIO_ITEMS.map(radio => <RadioElement key={radio.value} size={radio.size} value={radio.value} />)}\n                </Flex>\n            </Radio.Group>\n            <Flex className={s.agreedBlock} justify='space-between'>\n                <Text className={s.agreed} c='indigo.8' fw={700}>\n                    Не согласен\n                </Text>\n                <Text className={s.agreed} c='lime.8' fw={700}>\n                    Согласен\n                </Text>\n            </Flex>\n        </Stack>\n    </Paper>;",
+      "start": 1746125082108,
+      "end": 1746125082110,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Flex",
+          "Paper",
+          "Radio",
+          "Stack",
+          "Text",
+          "QuestionsResponse",
+          "PreparedAnswer",
+          "SCALE_RADIO_ITEMS",
+          "RadioElement",
+          "QuestionTitle",
+          "s",
+          "TestScaleQuestionProps",
+          "onChange",
+          "payload",
+          "page",
+          "value",
+          "TestScaleQuestion",
+          "text",
+          "hint",
+          "id",
+          "wrapper",
+          "group",
+          "val",
+          "question",
+          "answer",
+          "Number",
+          "index",
+          "radioWrapper",
+          "map",
+          "radio",
+          "size",
+          "agreedBlock",
+          "agreed"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestScaleQuestion/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { PreparedAnswer } from '../../api/types';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\nimport s from './TestScaleQuestion.module.css';\n\ninterface TestScaleQuestionProps extends QuestionsResponse {\n    onChange: (payload: PreparedAnswer) => void;\n    page: number;\n    value: string;\n}\n\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }: TestScaleQuestionProps) => (\n    <Paper className={s.wrapper}>\n        <QuestionTitle fixed text={text} hint={hint} />\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\n            <Radio.Group\n                className={s.group}\n                name={id}\n                value={value}\n                onChange={(val) =>\n                    onChange({\n                        question: id,\n                        answer: {\n                            value: Number(val),\n                        },\n                        index: page - 1,\n                    })\n                }\n            >\n                <Flex className={s.radioWrapper} justify='space-between'>\n                    {SCALE_RADIO_ITEMS.map((radio) => (\n                        <RadioElement key={radio.value} size={radio.size} value={radio.value} />\n                    ))}\n                </Flex>\n            </Radio.Group>\n            <Flex className={s.agreedBlock} justify='space-between'>\n                <Text className={s.agreed} c='indigo.8' fw={700}>\n                    Не согласен\n                </Text>\n                <Text className={s.agreed} c='lime.8' fw={700}>\n                    Согласен\n                </Text>\n            </Flex>\n        </Stack>\n    </Paper>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,QAAQ,eAAe;AAE/D,cAAcC,iBAAiB,QAAQ,eAAe;AACtD,cAAcC,cAAc,QAAQ,iBAAiB;AACrD,SAASC,iBAAiB,QAAQ,qBAAqB;AACvD,SAASC,YAAY,QAAQ,iBAAiB;AAC9C,SAASC,aAAa,QAAQ,sBAAsB;AAEpD,OAAOC,CAAC,MAAM,gCAAgC;AAE9C,UAAUC,sBAAsB,SAASN,iBAAiB,CAAC;EACvDO,QAAQ,EAAE,CAACC,OAAO,EAAEP,cAAc,EAAE,GAAG,IAAI;EAC3CQ,IAAI,EAAE,MAAM;EACZC,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,MAAMC,iBAAiB,GAAGA,CAAC;EAAED,KAAK;EAAED,IAAI;EAAEG,IAAI;EAAEC,IAAI;EAAEC,EAAE;EAAEP;AAAiC,CAAvB,EAAED,sBAAsB,KAC/F,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACU,OAAO,CAAC;AAChC,QAAQ,CAAC,aAAa,CAAC,KAAK,CAAC,IAAI,CAAC,CAACH,IAAI,CAAC,CAAC,IAAI,CAAC,CAACC,IAAI,CAAC;AACpD,QAAQ,CAAC,KAAK,CAAC,GAAG,CAAC,UAAU,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,IAAI;AAC1D,YAAY,CAAC,KAAK,CAAC,KAAK,CACR,SAAS,CAAC,CAACR,CAAC,CAACW,KAAK,CAAC,CACnB,IAAI,CAAC,CAACF,EAAE,CAAC,CACT,KAAK,CAAC,CAACJ,KAAK,CAAC,CACb,QAAQ,CAAC,CAAEO,GAAG,IACVV,QAAQ,CAAC;MACLW,QAAQ,EAAEJ,EAAE;MACZK,MAAM,EAAE;QACJT,KAAK,EAAEU,MAAM,CAACH,GAAG;MACrB,CAAC;MACDI,KAAK,EAAEZ,IAAI,GAAG;IAClB,CAAC,CACL,CAAC;AAEjB,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACiB,YAAY,CAAC,CAAC,OAAO,CAAC,eAAe;AACxE,oBAAoB,CAACpB,iBAAiB,CAACqB,GAAG,CAAEC,KAAK,IACzB,CAAC,YAAY,CAAC,GAAG,CAAC,CAACA,KAAK,CAACd,KAAK,CAAC,CAAC,IAAI,CAAC,CAACc,KAAK,CAACC,IAAI,CAAC,CAAC,KAAK,CAAC,CAACD,KAAK,CAACd,KAAK,CAAC,GACxE,CAAC;AACtB,gBAAgB,EAAE,IAAI;AACtB,YAAY,EAAE,KAAK,CAAC,KAAK;AACzB,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACL,CAAC,CAACqB,WAAW,CAAC,CAAC,OAAO,CAAC,eAAe;AACnE,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACrB,CAAC,CAACsB,MAAM,CAAC,CAAC,CAAC,CAAC,UAAU,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC;AAChE;AACA,gBAAgB,EAAE,IAAI;AACtB,gBAAgB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACtB,CAAC,CAACsB,MAAM,CAAC,CAAC,CAAC,CAAC,QAAQ,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC;AAC9D;AACA,gBAAgB,EAAE,IAAI;AACtB,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,KAAK;AACf,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Radio, Stack, Text } from \"@mantine/core\";\nimport { SCALE_RADIO_ITEMS } from \"../../lib/constants\";\nimport { RadioElement } from \"../RadioElement\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestScaleQuestion.module.css\";\nexport const TestScaleQuestion = ({\n  value,\n  page,\n  text,\n  hint,\n  id,\n  onChange\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.wrapper, children: [\n  /* @__PURE__ */ jsx(QuestionTitle, { fixed: true, text, hint }),\n  /* @__PURE__ */ jsxs(Stack, { pos: \"relative\", maw: 1145, m: \"auto\", gap: \"xs\", children: [\n    /* @__PURE__ */ jsx(Radio.Group, { className: s.group, name: id, value, onChange: (val) => onChange({\n      question: id,\n      answer: {\n        value: Number(val)\n      },\n      index: page - 1\n    }), children: /* @__PURE__ */ jsx(Flex, { className: s.radioWrapper, justify: \"space-between\", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ jsx(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.agreedBlock, justify: \"space-between\", children: [\n      /* @__PURE__ */ jsx(Text, { className: s.agreed, c: \"indigo.8\", fw: 700, children: \"Не согласен\" }),\n      /* @__PURE__ */ jsx(Text, { className: s.agreed, c: \"lime.8\", fw: 700, children: \"Согласен\" })\n    ] })\n  ] })\n] });\n",
+      "start": 1746125082110,
+      "end": 1746125082396,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestScaleQuestion/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { PreparedAnswer } from '../../api/types';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport s from './TestScaleQuestion.module.css';\ninterface TestScaleQuestionProps extends QuestionsResponse {\n  onChange: (payload: PreparedAnswer) => void;\n  page: number;\n  value: string;\n}\nexport const TestScaleQuestion = ({\n  value,\n  page,\n  text,\n  hint,\n  id,\n  onChange\n}: TestScaleQuestionProps) => <Paper className={s.wrapper}>\n        <QuestionTitle fixed text={text} hint={hint} />\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\n            <Radio.Group className={s.group} name={id} value={value} onChange={val => onChange({\n      question: id,\n      answer: {\n        value: Number(val)\n      },\n      index: page - 1\n    })}>\n                <Flex className={s.radioWrapper} justify='space-between'>\n                    {SCALE_RADIO_ITEMS.map(radio => <RadioElement key={radio.value} size={radio.size} value={radio.value} />)}\n                </Flex>\n            </Radio.Group>\n            <Flex className={s.agreedBlock} justify='space-between'>\n                <Text className={s.agreed} c='indigo.8' fw={700}>\n                    Не согласен\n                </Text>\n                <Text className={s.agreed} c='lime.8' fw={700}>\n                    Согласен\n                </Text>\n            </Flex>\n        </Stack>\n    </Paper>;"
+        ],
+        "mappings": "AAoBQ,cAaI,YAbJ;AApBR,SAAS,MAAM,OAAO,OAAO,OAAO,YAAY;AAGhD,SAAS,yBAAyB;AAClC,SAAS,oBAAoB;AAC7B,SAAS,qBAAqB;AAC9B,OAAO,OAAO;AAMP,aAAM,oBAAoB,CAAC;AAAA,EAChC;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF,MAA8B,qBAAC,SAAM,WAAW,EAAE,SAC1C;AAAA,sBAAC,iBAAc,OAAK,MAAC,MAAY,MAAY;AAAA,EAC7C,qBAAC,SAAM,KAAI,YAAW,KAAK,MAAM,GAAE,QAAO,KAAI,MAC1C;AAAA,wBAAC,MAAM,OAAN,EAAY,WAAW,EAAE,OAAO,MAAM,IAAI,OAAc,UAAU,SAAO,SAAS;AAAA,MACzF,UAAU;AAAA,MACV,QAAQ;AAAA,QACN,OAAO,OAAO,GAAG;AAAA,MACnB;AAAA,MACA,OAAO,OAAO;AAAA,IAChB,CAAC,GACW,8BAAC,QAAK,WAAW,EAAE,cAAc,SAAQ,iBACpC,4BAAkB,IAAI,WAAS,oBAAC,gBAA+B,MAAM,MAAM,MAAM,OAAO,MAAM,SAA5C,MAAM,KAA6C,CAAE,GAC5G,GACJ;AAAA,IACA,qBAAC,QAAK,WAAW,EAAE,aAAa,SAAQ,iBACpC;AAAA,0BAAC,QAAK,WAAW,EAAE,QAAQ,GAAE,YAAW,IAAI,KAAK,yBAEjD;AAAA,MACA,oBAAC,QAAK,WAAW,EAAE,QAAQ,GAAE,UAAS,IAAI,KAAK,sBAE/C;AAAA,OACJ;AAAA,KACJ;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082396,
+      "end": 1746125082396,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082397,
+      "end": 1746125082397,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082397,
+      "end": 1746125082397,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082397,
+      "end": 1746125082397,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestScaleQuestion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Radio, Stack, Text } from \"@mantine/core\";\nimport { SCALE_RADIO_ITEMS } from \"../../lib/constants\";\nimport { RadioElement } from \"../RadioElement\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestScaleQuestion.module.css\";\nexport const TestScaleQuestion = ({\n  value,\n  page,\n  text,\n  hint,\n  id,\n  onChange\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.wrapper, children: [\n  /* @__PURE__ */ jsx(QuestionTitle, { fixed: true, text, hint }),\n  /* @__PURE__ */ jsxs(Stack, { pos: \"relative\", maw: 1145, m: \"auto\", gap: \"xs\", children: [\n    /* @__PURE__ */ jsx(Radio.Group, { className: s.group, name: id, value, onChange: (val) => onChange({\n      question: id,\n      answer: {\n        value: Number(val)\n      },\n      index: page - 1\n    }), children: /* @__PURE__ */ jsx(Flex, { className: s.radioWrapper, justify: \"space-between\", children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ jsx(RadioElement, { size: radio.size, value: radio.value }, radio.value)) }) }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.agreedBlock, justify: \"space-between\", children: [\n      /* @__PURE__ */ jsx(Text, { className: s.agreed, c: \"indigo.8\", fw: 700, children: \"Не согласен\" }),\n      /* @__PURE__ */ jsx(Text, { className: s.agreed, c: \"lime.8\", fw: 700, children: \"Согласен\" })\n    ] })\n  ] })\n] });\n",
+      "start": 1746125082397,
+      "end": 1746125082397,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestScaleQuestion/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7O,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

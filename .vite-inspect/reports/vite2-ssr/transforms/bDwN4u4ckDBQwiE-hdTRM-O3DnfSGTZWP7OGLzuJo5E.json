@@ -1,0 +1,136 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/ShowFullStructure/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\n\nimport s from './ShowFullStructure.module.css';\n\nexport const ShowFullStructure = () => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n\n    return (\n        <Group className={s.group} justify='space-between'>\n            <Text className={s.text}>Больше информации в полном отчете</Text>\n            <Group>\n                <BuyNowButton mbti={type} />\n                <NavigateToFullStructureTemplate />\n            </Group>\n        </Group>\n    );\n};\n",
+      "start": 1746125081794,
+      "end": 1746125081842,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\nimport s from './ShowFullStructure.module.css';\nexport const ShowFullStructure = () => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  return <Group className={s.group} justify='space-between'>\n            <Text className={s.text}>Больше информации в полном отчете</Text>\n            <Group>\n                <BuyNowButton mbti={type} />\n                <NavigateToFullStructureTemplate />\n            </Group>\n        </Group>;\n};",
+      "start": 1746125081842,
+      "end": 1746125081843,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Group",
+          "Text",
+          "usePageContext",
+          "BuyNowButton",
+          "NavigateToFullStructureTemplate",
+          "s",
+          "ShowFullStructure",
+          "routeParams",
+          "type",
+          "group",
+          "text"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/ShowFullStructure/index.tsx"],
+        "sourcesContent": [
+          "import { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\n\nimport s from './ShowFullStructure.module.css';\n\nexport const ShowFullStructure = () => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n\n    return (\n        <Group className={s.group} justify='space-between'>\n            <Text className={s.text}>Больше информации в полном отчете</Text>\n            <Group>\n                <BuyNowButton mbti={type} />\n                <NavigateToFullStructureTemplate />\n            </Group>\n        </Group>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,IAAI,QAAQ,eAAe;AAC3C,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,YAAY,QAAQ,yBAAyB;AACtD,SAASC,+BAA+B,QAAQ,4CAA4C;AAE5F,OAAOC,CAAC,MAAM,gCAAgC;AAE9C,OAAO,MAAMC,iBAAiB,GAAGA,CAAA,KAAM;EACnC,MAAM;IACFC,WAAW,EAAE;MAAEC;IAAK;EACxB,CAAC,GAAGN,cAAc,CAAC,CAAC;EAEpB,OACI,CAAC,KAAK,CAAC,SAAS,CAAC,CAACG,CAAC,CAACI,KAAK,CAAC,CAAC,OAAO,CAAC,eAAe;AAC1D,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACK,IAAI,CAAC,CAAC,iCAAiC,EAAE,IAAI;AAC5E,YAAY,CAAC,KAAK;AAClB,gBAAgB,CAAC,YAAY,CAAC,IAAI,CAAC,CAACF,IAAI,CAAC;AACzC,gBAAgB,CAAC,+BAA+B;AAChD,YAAY,EAAE,KAAK;AACnB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport s from \"./ShowFullStructure.module.css\";\nexport const ShowFullStructure = () => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Group, { className: s.group, justify: \"space-between\", children: [\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: \"Больше информации в полном отчете\" }),\n    /* @__PURE__ */ jsxs(Group, { children: [\n      /* @__PURE__ */ jsx(BuyNowButton, { mbti: type }),\n      /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n    ] })\n  ] });\n};\n",
+      "start": 1746125081843,
+      "end": 1746125082019,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/ShowFullStructure/index.tsx"],
+        "sourcesContent": [
+          "import { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\nimport s from './ShowFullStructure.module.css';\nexport const ShowFullStructure = () => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  return <Group className={s.group} justify='space-between'>\n            <Text className={s.text}>Больше информации в полном отчете</Text>\n            <Group>\n                <BuyNowButton mbti={type} />\n                <NavigateToFullStructureTemplate />\n            </Group>\n        </Group>;\n};"
+        ],
+        "mappings": "AAYY,cACA,YADA;AAZZ,SAAS,OAAO,YAAY;AAC5B,SAAS,sBAAsB;AAC/B,SAAS,oBAAoB;AAC7B,SAAS,uCAAuC;AAChD,OAAO,OAAO;AACP,aAAM,oBAAoB,MAAM;AACrC,QAAM;AAAA,IACJ,aAAa;AAAA,MACX;AAAA,IACF;AAAA,EACF,IAAI,eAAe;AACnB,SAAO,qBAAC,SAAM,WAAW,EAAE,OAAO,SAAQ,iBAChC;AAAA,wBAAC,QAAK,WAAW,EAAE,MAAM,+CAAiC;AAAA,IAC1D,qBAAC,SACG;AAAA,0BAAC,gBAAa,MAAM,MAAM;AAAA,MAC1B,oBAAC,mCAAgC;AAAA,OACrC;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082019,
+      "end": 1746125082019,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082019,
+      "end": 1746125082020,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082020,
+      "end": 1746125082020,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/ShowFullStructure/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport s from \"./ShowFullStructure.module.css\";\nexport const ShowFullStructure = () => {\n  const {\n    routeParams: {\n      type\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Group, { className: s.group, justify: \"space-between\", children: [\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: \"Больше информации в полном отчете\" }),\n    /* @__PURE__ */ jsxs(Group, { children: [\n      /* @__PURE__ */ jsx(BuyNowButton, { mbti: type }),\n      /* @__PURE__ */ jsx(NavigateToFullStructureTemplate, {})\n    ] })\n  ] });\n};\n",
+      "start": 1746125082020,
+      "end": 1746125082020,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/ShowFullStructure/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

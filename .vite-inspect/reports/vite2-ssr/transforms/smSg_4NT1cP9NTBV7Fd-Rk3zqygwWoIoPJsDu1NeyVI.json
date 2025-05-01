@@ -1,0 +1,120 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export * from './atom';\nexport * from './disclosure';\n",
+      "start": 1746125081830,
+      "end": 1746125081872,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export * from './atom';\nexport * from './disclosure';",
+      "start": 1746125081872,
+      "end": 1746125081873,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts"],
+        "sourcesContent": ["export * from './atom';\nexport * from './disclosure';\n"],
+        "mappings": "AAAA,cAAc,QAAQ;AACtB,cAAc,cAAc",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export * from \"./atom\";\nexport * from \"./disclosure\";\n",
+      "start": 1746125081873,
+      "end": 1746125082074,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts"],
+        "sourcesContent": ["export * from './atom';\nexport * from './disclosure';"],
+        "mappings": "AAAA,cAAc;AACd,cAAc;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/factories/index.ts [vike:pluginModuleBanner] */\nexport * from \"./atom\";\nexport * from \"./disclosure\";\n",
+      "start": 1746125082074,
+      "end": 1746125082074,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/factories/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

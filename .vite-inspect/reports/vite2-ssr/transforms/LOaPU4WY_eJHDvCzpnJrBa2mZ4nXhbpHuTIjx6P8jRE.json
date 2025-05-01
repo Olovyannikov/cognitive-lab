@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/TestContainer.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".container {\n  display: grid;\n  grid-template-rows: max-content;\n  padding-bottom: var(--mantine-spacing-5xl);\n  min-height: calc(100vh - 4rem);\n\n  @mixin larger-than 992px {\n    min-height: 888px;\n  }\n}\n",
+      "start": 1746125082454,
+      "end": 1746125082489,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082489,
+      "end": 1746125082489,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestContainer/TestContainer.module.css [vike:pluginModuleBanner] */\nexport const container = \"_8A6vQ\";\nexport default {\n\tcontainer: container\n};\n",
+      "start": 1746125082490,
+      "end": 1746125082490,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestContainer/TestContainer.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PointsList/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ComponentProps, CSSProperties } from 'react';\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\n\nimport s from './PointsList.module.css';\n\ninterface PointsBlockProps extends ComponentProps<'div'> {\n    points?: string[];\n    position?: CSSProperties['position'];\n    color?: string;\n}\n\nexport const PointsList = ({ points, color = 'violet', ...props }: PointsBlockProps) => {\n    if (!points || !points.length) return null;\n\n    return (\n        <Stack className={clsx(s.stack, props.className)}>\n            {points.map((item, index) => (\n                <Group className={s.point} key={`${item}_${index}`}>\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\n                    <Text className={s.text}>{item}</Text>\n                </Group>\n            ))}\n        </Stack>\n    );\n};\n",
+      "start": 1746125081956,
+      "end": 1746125082011,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ComponentProps, CSSProperties } from 'react';\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport s from './PointsList.module.css';\ninterface PointsBlockProps extends ComponentProps<'div'> {\n  points?: string[];\n  position?: CSSProperties['position'];\n  color?: string;\n}\nexport const PointsList = ({\n  points,\n  color = 'violet',\n  ...props\n}: PointsBlockProps) => {\n  if (!points || !points.length) return null;\n  return <Stack className={clsx(s.stack, props.className)}>\n            {points.map((item, index) => <Group className={s.point} key={`${item}_${index}`}>\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\n                    <Text className={s.text}>{item}</Text>\n                </Group>)}\n        </Stack>;\n};",
+      "start": 1746125082011,
+      "end": 1746125082013,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ComponentProps",
+          "CSSProperties",
+          "Group",
+          "Stack",
+          "Text",
+          "Check",
+          "clsx",
+          "s",
+          "PointsBlockProps",
+          "points",
+          "position",
+          "color",
+          "PointsList",
+          "props",
+          "length",
+          "stack",
+          "className",
+          "map",
+          "item",
+          "index",
+          "point",
+          "check",
+          "text"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PointsList/index.tsx"],
+        "sourcesContent": [
+          "import type { ComponentProps, CSSProperties } from 'react';\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\n\nimport s from './PointsList.module.css';\n\ninterface PointsBlockProps extends ComponentProps<'div'> {\n    points?: string[];\n    position?: CSSProperties['position'];\n    color?: string;\n}\n\nexport const PointsList = ({ points, color = 'violet', ...props }: PointsBlockProps) => {\n    if (!points || !points.length) return null;\n\n    return (\n        <Stack className={clsx(s.stack, props.className)}>\n            {points.map((item, index) => (\n                <Group className={s.point} key={`${item}_${index}`}>\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\n                    <Text className={s.text}>{item}</Text>\n                </Group>\n            ))}\n        </Stack>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,cAAcA,cAAc,EAAEC,aAAa,QAAQ,OAAO;AAC1D,SAASC,KAAK,EAAEC,KAAK,EAAEC,IAAI,QAAQ,eAAe;AAClD,SAASC,KAAK,QAAQ,gCAAgC;AACtD,OAAOC,IAAI,MAAM,MAAM;AAEvB,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,UAAUC,gBAAgB,SAASR,cAAc,CAAC,KAAK,CAAC,CAAC;EACrDS,MAAM,CAAC,EAAE,MAAM,EAAE;EACjBC,QAAQ,CAAC,EAAET,aAAa,CAAC,UAAU,CAAC;EACpCU,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,UAAU,GAAGA,CAAC;EAAEH,MAAM;EAAEE,KAAK,GAAG,QAAQ;EAAE,GAAGE;AAAwB,CAAjB,EAAEL,gBAAgB,KAAK;EACpF,IAAI,CAACC,MAAM,IAAI,CAACA,MAAM,CAACK,MAAM,EAAE,OAAO,IAAI;EAE1C,OACI,CAAC,KAAK,CAAC,SAAS,CAAC,CAACR,IAAI,CAACC,CAAC,CAACQ,KAAK,EAAEF,KAAK,CAACG,SAAS,CAAC,CAAC;AACzD,YAAY,CAACP,MAAM,CAACQ,GAAG,CAAC,CAACC,IAAI,EAAEC,KAAK,KACpB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACZ,CAAC,CAACa,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,GAAGF,IAAI,IAAIC,KAAK,EAAE,CAAC;AACnE,oBAAoB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACZ,CAAC,CAACc,KAAK,CAAC,CAAC,MAAM,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC,uBAAuBV,KAAK,KAAK,CAAC;AACtG,oBAAoB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACe,IAAI,CAAC,CAAC,CAACJ,IAAI,CAAC,EAAE,IAAI;AACzD,gBAAgB,EAAE,KAAK,CACV,CAAC;AACd,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport s from \"./PointsList.module.css\";\nexport const PointsList = ({\n  points,\n  color = \"violet\",\n  ...props\n}) => {\n  if (!points || !points.length) return null;\n  return /* @__PURE__ */ jsx(Stack, { className: clsx(s.stack, props.className), children: points.map((item, index) => /* @__PURE__ */ jsxs(Group, { className: s.point, children: [\n    /* @__PURE__ */ jsx(Check, { className: s.check, weight: \"bold\", color: `var(--mantine-color-${color}-9)` }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: item })\n  ] }, `${item}_${index}`)) });\n};\n",
+      "start": 1746125082013,
+      "end": 1746125082334,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PointsList/index.tsx"],
+        "sourcesContent": [
+          "import type { ComponentProps, CSSProperties } from 'react';\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport s from './PointsList.module.css';\ninterface PointsBlockProps extends ComponentProps<'div'> {\n  points?: string[];\n  position?: CSSProperties['position'];\n  color?: string;\n}\nexport const PointsList = ({\n  points,\n  color = 'violet',\n  ...props\n}: PointsBlockProps) => {\n  if (!points || !points.length) return null;\n  return <Stack className={clsx(s.stack, props.className)}>\n            {points.map((item, index) => <Group className={s.point} key={`${item}_${index}`}>\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\n                    <Text className={s.text}>{item}</Text>\n                </Group>)}\n        </Stack>;\n};"
+        ],
+        "mappings": "AAiByC,SACrB,KADqB;AAhBzC,SAAS,OAAO,OAAO,YAAY;AACnC,SAAS,aAAa;AACtB,OAAO,UAAU;AACjB,OAAO,OAAO;AAMP,aAAM,aAAa,CAAC;AAAA,EACzB;AAAA,EACA,QAAQ;AAAA,EACR,GAAG;AACL,MAAwB;AACtB,MAAI,CAAC,UAAU,CAAC,OAAO,OAAQ,QAAO;AACtC,SAAO,oBAAC,SAAM,WAAW,KAAK,EAAE,OAAO,MAAM,SAAS,GAC3C,iBAAO,IAAI,CAAC,MAAM,UAAU,qBAAC,SAAM,WAAW,EAAE,OACzC;AAAA,wBAAC,SAAM,WAAW,EAAE,OAAO,QAAO,QAAO,OAAO,uBAAuB,KAAK,OAAO;AAAA,IACnF,oBAAC,QAAK,WAAW,EAAE,MAAO,gBAAK;AAAA,OAFsB,GAAG,IAAI,IAAI,KAAK,EAGzE,CAAQ,GAChB;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/PointsList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport s from \"./PointsList.module.css\";\nexport const PointsList = ({\n  points,\n  color = \"violet\",\n  ...props\n}) => {\n  if (!points || !points.length) return null;\n  return /* @__PURE__ */ jsx(Stack, { className: clsx(s.stack, props.className), children: points.map((item, index) => /* @__PURE__ */ jsxs(Group, { className: s.point, children: [\n    /* @__PURE__ */ jsx(Check, { className: s.check, weight: \"bold\", color: `var(--mantine-color-${color}-9)` }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: item })\n  ] }, `${item}_${index}`)) });\n};\n",
+      "start": 1746125082334,
+      "end": 1746125082334,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/PointsList/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC;"
+      }
+    }
+  ]
+}

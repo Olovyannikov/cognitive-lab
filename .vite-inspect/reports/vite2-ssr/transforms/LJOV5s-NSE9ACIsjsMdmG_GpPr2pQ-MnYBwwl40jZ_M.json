@@ -1,0 +1,159 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/ui/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\n\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\n\nimport s from './SubscribeToNews.module.css';\n\nexport const SubscribeToNews = () => {\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: '',\n        },\n        validate: zodResolver(SubscribeToNewsSchema),\n    });\n    const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n        SubscribeToNewsModel.formSubmitted,\n        subscribeToNewsMutation.$pending,\n        subscribeToNewsMutation.$succeeded,\n    ]);\n\n    useEffect(() => {\n        if (isLoading || !isSucceeded) return;\n        form.reset();\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [isLoading, isSucceeded]);\n\n    const onSubmit = form.onSubmit((data) => {\n        onFormSubmit(data);\n    });\n\n    return (\n        <form onSubmit={onSubmit}>\n            <Title className={s.title} order={6}>\n                Новости на почту\n            </Title>\n            <Flex className={s.flex} gap='sm'>\n                <FocusTrap active={Boolean(form.errors.email)}>\n                    <TextInput\n                        inputMode='email'\n                        placeholder='info@mail.ru'\n                        {...form.getInputProps('email')}\n                        key={form.key('email')}\n                    />\n                </FocusTrap>\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\n                    Подписаться\n                </Button>\n            </Flex>\n        </form>\n    );\n};\n",
+      "start": 1746125082447,
+      "end": 1746125082476,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\nimport s from './SubscribeToNews.module.css';\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: 'controlled',\n    initialValues: {\n      email: ''\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([SubscribeToNewsModel.formSubmitted, subscribeToNewsMutation.$pending, subscribeToNewsMutation.$succeeded]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [isLoading, isSucceeded]);\n  const onSubmit = form.onSubmit(data => {\n    onFormSubmit(data);\n  });\n  return <form onSubmit={onSubmit}>\n            <Title className={s.title} order={6}>\n                Новости на почту\n            </Title>\n            <Flex className={s.flex} gap='sm'>\n                <FocusTrap active={Boolean(form.errors.email)}>\n                    <TextInput inputMode='email' placeholder='info@mail.ru' {...form.getInputProps('email')} key={form.key('email')} />\n                </FocusTrap>\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\n                    Подписаться\n                </Button>\n            </Flex>\n        </form>;\n};",
+      "start": 1746125082476,
+      "end": 1746125082477,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useEffect",
+          "Button",
+          "Flex",
+          "FocusTrap",
+          "TextInput",
+          "Title",
+          "useForm",
+          "useUnit",
+          "zodResolver",
+          "subscribeToNewsMutation",
+          "SubscribeToNewsModel",
+          "SubscribeToNewsSchema",
+          "s",
+          "SubscribeToNews",
+          "form",
+          "mode",
+          "initialValues",
+          "email",
+          "validate",
+          "onFormSubmit",
+          "isLoading",
+          "isSucceeded",
+          "formSubmitted",
+          "$pending",
+          "$succeeded",
+          "reset",
+          "onSubmit",
+          "data",
+          "title",
+          "flex",
+          "Boolean",
+          "errors",
+          "getInputProps",
+          "key"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/ui/index.tsx"],
+        "sourcesContent": [
+          "import { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\n\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\n\nimport s from './SubscribeToNews.module.css';\n\nexport const SubscribeToNews = () => {\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: '',\n        },\n        validate: zodResolver(SubscribeToNewsSchema),\n    });\n    const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n        SubscribeToNewsModel.formSubmitted,\n        subscribeToNewsMutation.$pending,\n        subscribeToNewsMutation.$succeeded,\n    ]);\n\n    useEffect(() => {\n        if (isLoading || !isSucceeded) return;\n        form.reset();\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [isLoading, isSucceeded]);\n\n    const onSubmit = form.onSubmit((data) => {\n        onFormSubmit(data);\n    });\n\n    return (\n        <form onSubmit={onSubmit}>\n            <Title className={s.title} order={6}>\n                Новости на почту\n            </Title>\n            <Flex className={s.flex} gap='sm'>\n                <FocusTrap active={Boolean(form.errors.email)}>\n                    <TextInput\n                        inputMode='email'\n                        placeholder='info@mail.ru'\n                        {...form.getInputProps('email')}\n                        key={form.key('email')}\n                    />\n                </FocusTrap>\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\n                    Подписаться\n                </Button>\n            </Flex>\n        </form>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,QAAQ,OAAO;AACjC,SAASC,MAAM,EAAEC,IAAI,EAAEC,SAAS,EAAEC,SAAS,EAAEC,KAAK,QAAQ,eAAe;AACzE,SAASC,OAAO,QAAQ,eAAe;AACvC,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,WAAW,QAAQ,2BAA2B;AAEvD,SAASC,uBAAuB,QAAQ,QAAQ;AAChD,SAASC,oBAAoB,QAAQ,UAAU;AAC/C,SAASC,qBAAqB,QAAQ,WAAW;AAEjD,OAAOC,CAAC,MAAM,8BAA8B;AAE5C,OAAO,MAAMC,eAAe,GAAGA,CAAA,KAAM;EACjC,MAAMC,IAAI,GAAGR,OAAO,CAAC;IACjBS,IAAI,EAAE,YAAY;IAClBC,aAAa,EAAE;MACXC,KAAK,EAAE;IACX,CAAC;IACDC,QAAQ,EAAEV,WAAW,CAACG,qBAAqB;EAC/C,CAAC,CAAC;EACF,MAAM,CAACQ,YAAY,EAAEC,SAAS,EAAEC,WAAW,CAAC,GAAGd,OAAO,CAAC,CACnDG,oBAAoB,CAACY,aAAa,EAClCb,uBAAuB,CAACc,QAAQ,EAChCd,uBAAuB,CAACe,UAAU,CACrC,CAAC;EAEFxB,SAAS,CAAC,MAAM;IACZ,IAAIoB,SAAS,IAAI,CAACC,WAAW,EAAE;IAC/BP,IAAI,CAACW,KAAK,CAAC,CAAC;IACZ;EACJ,CAAC,EAAE,CAACL,SAAS,EAAEC,WAAW,CAAC,CAAC;EAE5B,MAAMK,QAAQ,GAAGZ,IAAI,CAACY,QAAQ,CAAEC,IAAI,IAAK;IACrCR,YAAY,CAACQ,IAAI,CAAC;EACtB,CAAC,CAAC;EAEF,OACI,CAAC,IAAI,CAAC,QAAQ,CAAC,CAACD,QAAQ,CAAC;AACjC,YAAY,CAAC,KAAK,CAAC,SAAS,CAAC,CAACd,CAAC,CAACgB,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAChD;AACA,YAAY,EAAE,KAAK;AACnB,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAAChB,CAAC,CAACiB,IAAI,CAAC,CAAC,GAAG,CAAC,IAAI;AAC7C,gBAAgB,CAAC,SAAS,CAAC,MAAM,CAAC,CAACC,OAAO,CAAChB,IAAI,CAACiB,MAAM,CAACd,KAAK,CAAC,CAAC;AAC9D,oBAAoB,CAAC,SAAS,CACN,SAAS,CAAC,OAAO,CACjB,WAAW,CAAC,cAAc,CAC1B,IAAIH,IAAI,CAACkB,aAAa,CAAC,OAAO,CAAC,CAAC,CAChC,GAAG,CAAC,CAAClB,IAAI,CAACmB,GAAG,CAAC,OAAO,CAAC,CAAC;AAE/C,gBAAgB,EAAE,SAAS;AAC3B,gBAAgB,CAAC,MAAM,CAAC,OAAO,CAAC,CAACb,SAAS,CAAC,CAAC,QAAQ,CAAC,CAACA,SAAS,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,QAAQ;AACxF;AACA,gBAAgB,EAAE,MAAM;AACxB,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,IAAI,CAAC;AAEf,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useEffect } from \"react\";\nimport { Button, Flex, FocusTrap, TextInput, Title } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { subscribeToNewsMutation } from \"../api\";\nimport { SubscribeToNewsModel } from \"../model\";\nimport { SubscribeToNewsSchema } from \"../schema\";\nimport s from \"./SubscribeToNews.module.css\";\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\"\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([SubscribeToNewsModel.formSubmitted, subscribeToNewsMutation.$pending, subscribeToNewsMutation.$succeeded]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n  }, [isLoading, isSucceeded]);\n  const onSubmit = form.onSubmit((data) => {\n    onFormSubmit(data);\n  });\n  return /* @__PURE__ */ jsxs(\"form\", { onSubmit, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 6, children: \"Новости на почту\" }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.flex, gap: \"sm\", children: [\n      /* @__PURE__ */ jsx(FocusTrap, { active: Boolean(form.errors.email), children: /* @__PURE__ */ createElement(TextInput, { inputMode: \"email\", placeholder: \"info@mail.ru\", ...form.getInputProps(\"email\"), key: form.key(\"email\") }) }),\n      /* @__PURE__ */ jsx(Button, { loading: isLoading, disabled: isLoading, fullWidth: true, type: \"submit\", children: \"Подписаться\" })\n    ] })\n  ] });\n};\n",
+      "start": 1746125082477,
+      "end": 1746125082521,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/ui/index.tsx"],
+        "sourcesContent": [
+          "import { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\nimport s from './SubscribeToNews.module.css';\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: 'controlled',\n    initialValues: {\n      email: ''\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([SubscribeToNewsModel.formSubmitted, subscribeToNewsMutation.$pending, subscribeToNewsMutation.$succeeded]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [isLoading, isSucceeded]);\n  const onSubmit = form.onSubmit(data => {\n    onFormSubmit(data);\n  });\n  return <form onSubmit={onSubmit}>\n            <Title className={s.title} order={6}>\n                Новости на почту\n            </Title>\n            <Flex className={s.flex} gap='sm'>\n                <FocusTrap active={Boolean(form.errors.email)}>\n                    <TextInput inputMode='email' placeholder='info@mail.ru' {...form.getInputProps('email')} key={form.key('email')} />\n                </FocusTrap>\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\n                    Подписаться\n                </Button>\n            </Flex>\n        </form>;\n};"
+        ],
+        "mappings": "AA2BY,cAGA,YAHA;AAKQ;AAhCpB,SAAS,iBAAiB;AAC1B,SAAS,QAAQ,MAAM,WAAW,WAAW,aAAa;AAC1D,SAAS,eAAe;AACxB,SAAS,eAAe;AACxB,SAAS,mBAAmB;AAC5B,SAAS,+BAA+B;AACxC,SAAS,4BAA4B;AACrC,SAAS,6BAA6B;AACtC,OAAO,OAAO;AACP,aAAM,kBAAkB,MAAM;AACnC,QAAM,OAAO,QAAQ;AAAA,IACnB,MAAM;AAAA,IACN,eAAe;AAAA,MACb,OAAO;AAAA,IACT;AAAA,IACA,UAAU,YAAY,qBAAqB;AAAA,EAC7C,CAAC;AACD,QAAM,CAAC,cAAc,WAAW,WAAW,IAAI,QAAQ,CAAC,qBAAqB,eAAe,wBAAwB,UAAU,wBAAwB,UAAU,CAAC;AACjK,YAAU,MAAM;AACd,QAAI,aAAa,CAAC,YAAa;AAC/B,SAAK,MAAM;AAAA,EAEb,GAAG,CAAC,WAAW,WAAW,CAAC;AAC3B,QAAM,WAAW,KAAK,SAAS,UAAQ;AACrC,iBAAa,IAAI;AAAA,EACnB,CAAC;AACD,SAAO,qBAAC,UAAK,UACH;AAAA,wBAAC,SAAM,WAAW,EAAE,OAAO,OAAO,GAAG,8BAErC;AAAA,IACA,qBAAC,QAAK,WAAW,EAAE,MAAM,KAAI,MACzB;AAAA,0BAAC,aAAU,QAAQ,QAAQ,KAAK,OAAO,KAAK,GACxC,wCAAC,aAAU,WAAU,SAAQ,aAAY,gBAAgB,GAAG,KAAK,cAAc,OAAO,GAAG,KAAK,KAAK,IAAI,OAAO,GAAG,GACrH;AAAA,MACA,oBAAC,UAAO,SAAS,WAAW,UAAU,WAAW,WAAS,MAAC,MAAK,UAAS,yBAEzE;AAAA,OACJ;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/SubscribeToNews/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useEffect } from \"react\";\nimport { Button, Flex, FocusTrap, TextInput, Title } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { subscribeToNewsMutation } from \"../api\";\nimport { SubscribeToNewsModel } from \"../model\";\nimport { SubscribeToNewsSchema } from \"../schema\";\nimport s from \"./SubscribeToNews.module.css\";\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\"\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([SubscribeToNewsModel.formSubmitted, subscribeToNewsMutation.$pending, subscribeToNewsMutation.$succeeded]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n  }, [isLoading, isSucceeded]);\n  const onSubmit = form.onSubmit((data) => {\n    onFormSubmit(data);\n  });\n  return /* @__PURE__ */ jsxs(\"form\", { onSubmit, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 6, children: \"Новости на почту\" }),\n    /* @__PURE__ */ jsxs(Flex, { className: s.flex, gap: \"sm\", children: [\n      /* @__PURE__ */ jsx(FocusTrap, { active: Boolean(form.errors.email), children: /* @__PURE__ */ createElement(TextInput, { inputMode: \"email\", placeholder: \"info@mail.ru\", ...form.getInputProps(\"email\"), key: form.key(\"email\") }) }),\n      /* @__PURE__ */ jsx(Button, { loading: isLoading, disabled: isLoading, fullWidth: true, type: \"submit\", children: \"Подписаться\" })\n    ] })\n  ] });\n};\n",
+      "start": 1746125082521,
+      "end": 1746125082522,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/SubscribeToNews/ui/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7O,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

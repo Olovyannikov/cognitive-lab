@@ -1,0 +1,143 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n}\n",
+      "start": 1746125081771,
+      "end": 1746125081813,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export interface Option {\n  id: string;\n  text: string;\n  order: number;\n  requires_input?: boolean;\n}\nexport interface Rephrasing {\n  hint: string;\n  text: string;\n}\nexport interface ScaleChoiceAnswer {\n  value: number;\n}\nexport interface MultiChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface SingleChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface PreparedAnswer {\n  question: string;\n  answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n  index: number;\n  isMultiple?: boolean;\n  isSingle?: boolean;\n}\nexport interface Answers {\n  answers: PreparedAnswer[];\n}",
+      "start": 1746125081813,
+      "end": 1746125081814,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Option",
+          "id",
+          "text",
+          "order",
+          "requires_input",
+          "Rephrasing",
+          "hint",
+          "ScaleChoiceAnswer",
+          "value",
+          "MultiChoiceAnswer",
+          "input",
+          "SingleChoiceAnswer",
+          "PreparedAnswer",
+          "question",
+          "answer",
+          "index",
+          "isMultiple",
+          "isSingle",
+          "Answers",
+          "answers"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts"],
+        "sourcesContent": [
+          "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n}\n"
+        ],
+        "mappings": "AAAA,OAAO,UAAUA,MAAM,CAAC;EACpBC,EAAE,EAAE,MAAM;EACVC,IAAI,EAAE,MAAM;EACZC,KAAK,EAAE,MAAM;EACbC,cAAc,CAAC,EAAE,OAAO;AAC5B;AAEA,OAAO,UAAUC,UAAU,CAAC;EACxBC,IAAI,EAAE,MAAM;EACZJ,IAAI,EAAE,MAAM;AAChB;AAEA,OAAO,UAAUK,iBAAiB,CAAC;EAC/BC,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,UAAUC,iBAAiB,CAAC;EAC/BD,KAAK,EAAE,MAAM;EACbE,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,UAAUC,kBAAkB,CAAC;EAChCH,KAAK,EAAE,MAAM;EACbE,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,UAAUE,cAAc,CAAC;EAC5BC,QAAQ,EAAE,MAAM;EAChBC,MAAM,EAAEP,iBAAiB,GAAGI,kBAAkB,GAAGA,kBAAkB,EAAE,GAAGF,iBAAiB,EAAE;EAC3FM,KAAK,EAAE,MAAM;EACbC,UAAU,CAAC,EAAE,OAAO;EACpBC,QAAQ,CAAC,EAAE,OAAO;AACtB;AAEA,OAAO,UAAUC,OAAO,CAAC;EACrBC,OAAO,EAAEP,cAAc,EAAE;AAC7B",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "",
+      "start": 1746125081814,
+      "end": 1746125081928,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [],
+        "sourcesContent": [],
+        "mappings": "",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/api/types.ts [vike:pluginModuleBanner] */\n",
+      "start": 1746125081928,
+      "end": 1746125081928,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/api/types.ts"],
+        "names": [],
+        "mappings": ";"
+      }
+    }
+  ]
+}

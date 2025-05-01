@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestScaleQuestion/TestScaleQuestion.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".wrapper {\n  @mixin larger-than 1200px {\n    margin-top: 80px;\n  }\n}\n\n.radioWrapper {\n  @mixin larger-than 768px {\n    gap: 50px;\n  }\n}\n\n.radioWrapper [data-label-position] {\n  --radio-size: auto;\n\n  display: flex;\n  place-content: center;\n  place-items: center;\n  gap: 0;\n\n  @mixin larger-than 768px {\n    margin: 0 auto;\n    max-width: 700px;\n  }\n}\n\n.radioWrapper input + svg {\n  position: absolute;\n  left: unset;\n  top: unset;\n  width: 32px;\n  height: 32px;\n  color: #fff;\n  pointer-events: none;\n\n  @mixin larger-than 998px {\n    left: 50%;\n    top: 0;\n    width: 64px;\n    height: 64px;\n    transform: translateX(-50%);\n  }\n}\n\n.agreed {\n  &:last-of-type {\n    left: unset;\n    right: 0;\n  }\n\n  @mixin larger-than 920px {\n    font-size: 24px;\n  }\n\n  @mixin larger-than 1100px {\n    position: absolute;\n    left: 0;\n    top: 50%;\n    font-size: 24px;\n    transform: translateY(-50%);\n  }\n}\n\n.top {\n  @mixin larger-than 768px {\n    display: grid;\n    grid-template-columns: 1fr 32px;\n    max-width: 1145px;\n    margin-block: auto;\n  }\n}\n\n.group {\n  margin: 0;\n  max-width: 100%;\n\n  @mixin larger-than 768px {\n    margin: auto;\n    max-width: 700px;\n  }\n}\n",
+      "start": 1746125082470,
+      "end": 1746125082501,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082501,
+      "end": 1746125082501,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestScaleQuestion/TestScaleQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"zrbBT\";\nexport const radioWrapper = \"ZWRtO\";\nexport const agreed = \"vKukv\";\nexport const top = \"T4whI\";\nexport const group = \"_8pLNV\";\nexport default {\n\twrapper: wrapper,\n\tradioWrapper: radioWrapper,\n\tagreed: agreed,\n\ttop: top,\n\tgroup: group\n};\n",
+      "start": 1746125082503,
+      "end": 1746125082503,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestScaleQuestion/TestScaleQuestion.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

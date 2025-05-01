@@ -1,0 +1,157 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/desktop.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture } from '@/shared/ui';\n\nimport { PeopleTalkModel } from './model';\n\nimport s from './PeopleTalk.module.css';\n\nexport const Desktop = () => {\n    const { isMobile } = usePageContext();\n\n    const [opened, setIsActive, currentReview, close] = useUnit([\n        PeopleTalkModel.$isModalOpened,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.$currentReview,\n        PeopleTalkModel.modalActiveStateSettled,\n    ]);\n\n    return (\n        <Modal\n            size='lg'\n            centered\n            opened={!isMobile && opened}\n            onClose={() => {\n                close(false);\n                setIsActive(true);\n            }}\n        >\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating\n                            size={!isMobile ? 'lg' : 'md'}\n                            readOnly\n                            defaultValue={currentReview?.overall_rate}\n                            mb='xs'\n                            fractions={4}\n                        />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>\n    );\n};\n",
+      "start": 1746125082350,
+      "end": 1746125082366,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture } from '@/shared/ui';\nimport { PeopleTalkModel } from './model';\nimport s from './PeopleTalk.module.css';\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return <Modal size='lg' centered opened={!isMobile && opened} onClose={() => {\n    close(false);\n    setIsActive(true);\n  }}>\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating size={!isMobile ? 'lg' : 'md'} readOnly defaultValue={currentReview?.overall_rate} mb='xs' fractions={4} />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>;\n};",
+      "start": 1746125082366,
+      "end": 1746125082368,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Group",
+          "Modal",
+          "Rating",
+          "Text",
+          "useUnit",
+          "usePageContext",
+          "Picture",
+          "PeopleTalkModel",
+          "s",
+          "Desktop",
+          "isMobile",
+          "opened",
+          "setIsActive",
+          "currentReview",
+          "close",
+          "$isModalOpened",
+          "carouselActiveStateSettled",
+          "$currentReview",
+          "modalActiveStateSettled",
+          "overall_rate",
+          "name",
+          "label",
+          "mbti_type",
+          "image",
+          "reviewText",
+          "text",
+          "created_at"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/desktop.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture } from '@/shared/ui';\n\nimport { PeopleTalkModel } from './model';\n\nimport s from './PeopleTalk.module.css';\n\nexport const Desktop = () => {\n    const { isMobile } = usePageContext();\n\n    const [opened, setIsActive, currentReview, close] = useUnit([\n        PeopleTalkModel.$isModalOpened,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.$currentReview,\n        PeopleTalkModel.modalActiveStateSettled,\n    ]);\n\n    return (\n        <Modal\n            size='lg'\n            centered\n            opened={!isMobile && opened}\n            onClose={() => {\n                close(false);\n                setIsActive(true);\n            }}\n        >\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating\n                            size={!isMobile ? 'lg' : 'md'}\n                            readOnly\n                            defaultValue={currentReview?.overall_rate}\n                            mb='xs'\n                            fractions={4}\n                        />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,KAAK,EAAEC,KAAK,EAAEC,MAAM,EAAEC,IAAI,QAAQ,eAAe;AAC/D,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,OAAO,QAAQ,aAAa;AAErC,SAASC,eAAe,QAAQ,SAAS;AAEzC,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,OAAO,MAAMC,OAAO,GAAGA,CAAA,KAAM;EACzB,MAAM;IAAEC;EAAS,CAAC,GAAGL,cAAc,CAAC,CAAC;EAErC,MAAM,CAACM,MAAM,EAAEC,WAAW,EAAEC,aAAa,EAAEC,KAAK,CAAC,GAAGV,OAAO,CAAC,CACxDG,eAAe,CAACQ,cAAc,EAC9BR,eAAe,CAACS,0BAA0B,EAC1CT,eAAe,CAACU,cAAc,EAC9BV,eAAe,CAACW,uBAAuB,CAC1C,CAAC;EAEF,OACI,CAAC,KAAK,CACF,IAAI,CAAC,IAAI,CACT,QAAQ,CACR,MAAM,CAAC,CAAC,CAACR,QAAQ,IAAIC,MAAM,CAAC,CAC5B,OAAO,CAAC,CAAC,MAAM;IACXG,KAAK,CAAC,KAAK,CAAC;IACZF,WAAW,CAAC,IAAI,CAAC;EACrB,CAAC,CAAC;AAEd,YAAY;AACZ,gBAAgB,CAAC,KAAK,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,OAAO,CAAC,eAAe,CAAC,KAAK,CAAC,YAAY,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ;AAChG,oBAAoB,CAAC,GAAG;AACxB,wBAAwB,CAAC,MAAM,CACH,IAAI,CAAC,CAAC,CAACF,QAAQ,GAAG,IAAI,GAAG,IAAI,CAAC,CAC9B,QAAQ,CACR,YAAY,CAAC,CAACG,aAAa,EAAEM,YAAY,CAAC,CAC1C,EAAE,CAAC,IAAI,CACP,SAAS,CAAC,CAAC,CAAC,CAAC;AAEzC,wBAAwB,CAAC,IAAI,CAAC,EAAE,CAAC,KAAK,CAAC,SAAS,CAAC,CAACX,CAAC,CAACY,IAAI,CAAC;AACzD,4BAA4B,CAACP,aAAa,EAAEO,IAAI;AAChD,wBAAwB,EAAE,IAAI;AAC9B,wBAAwB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACZ,CAAC,CAACa,KAAK,CAAC,CAAC,CAACR,aAAa,EAAES,SAAS,CAAC,EAAE,IAAI;AAClF,oBAAoB,EAAE,GAAG;AACzB,oBAAoB,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,kBAAkBT,aAAa,EAAES,SAAS,EAAE,CAAC,CAAC,SAAS,CAAC,CAACd,CAAC,CAACe,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC;AACnH,gBAAgB,EAAE,KAAK;AACvB,gBAAgB,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,SAAS,CAAC,CAACf,CAAC,CAACgB,UAAU,CAAC;AAC9D,oBAAoB,CAACX,aAAa,EAAEY,IAAI;AACxC,gBAAgB,EAAE,IAAI;AACtB,gBAAgB,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,QAAQ,CAAC,EAAE,CAAC,MAAM;AAC1D,oBAAoB,CAACZ,aAAa,EAAEa,UAAU;AAC9C,gBAAgB,EAAE,IAAI;AACtB,YAAY;AACZ,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return /* @__PURE__ */ jsx(Modal, { size: \"lg\", centered: true, opened: !isMobile && opened, onClose: () => {\n    close(false);\n    setIsActive(true);\n  }, children: /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsxs(Group, { px: 40, justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsxs(Box, { children: [\n        /* @__PURE__ */ jsx(Rating, { size: !isMobile ? \"lg\" : \"md\", readOnly: true, defaultValue: currentReview?.overall_rate, mb: \"xs\", fractions: 4 }),\n        /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: currentReview?.name }),\n        /* @__PURE__ */ jsx(Text, { className: s.label, children: currentReview?.mbti_type })\n      ] }),\n      /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${currentReview?.mbti_type}`, className: s.image, w: 100, h: 100 })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { pb: 40, px: 40, className: s.reviewText, children: currentReview?.text }),\n    /* @__PURE__ */ jsx(Text, { px: 40, fz: 24, c: \"dark.2\", mt: \"auto\", children: currentReview?.created_at })\n  ] }) });\n};\n",
+      "start": 1746125082368,
+      "end": 1746125082491,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/desktop.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture } from '@/shared/ui';\nimport { PeopleTalkModel } from './model';\nimport s from './PeopleTalk.module.css';\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return <Modal size='lg' centered opened={!isMobile && opened} onClose={() => {\n    close(false);\n    setIsActive(true);\n  }}>\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating size={!isMobile ? 'lg' : 'md'} readOnly defaultValue={currentReview?.overall_rate} mb='xs' fractions={4} />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>;\n};"
+        ],
+        "mappings": "AAeY,mBAGY,KADJ,YAFR;AAfZ,SAAS,KAAK,OAAO,OAAO,QAAQ,YAAY;AAChD,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,eAAe;AACxB,SAAS,uBAAuB;AAChC,OAAO,OAAO;AACP,aAAM,UAAU,MAAM;AAC3B,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,CAAC,QAAQ,aAAa,eAAe,KAAK,IAAI,QAAQ,CAAC,gBAAgB,gBAAgB,gBAAgB,4BAA4B,gBAAgB,gBAAgB,gBAAgB,uBAAuB,CAAC;AACjN,SAAO,oBAAC,SAAM,MAAK,MAAK,UAAQ,MAAC,QAAQ,CAAC,YAAY,QAAQ,SAAS,MAAM;AAC3E,UAAM,KAAK;AACX,gBAAY,IAAI;AAAA,EAClB,GACU,2CACI;AAAA,yBAAC,SAAM,IAAI,IAAI,SAAQ,iBAAgB,OAAM,cAAa,KAAI,MAAK,MAAK,UACpE;AAAA,2BAAC,OACG;AAAA,4BAAC,UAAO,MAAM,CAAC,WAAW,OAAO,MAAM,UAAQ,MAAC,cAAc,eAAe,cAAc,IAAG,MAAK,WAAW,GAAG;AAAA,QACjH,oBAAC,QAAK,IAAG,OAAM,WAAW,EAAE,MACvB,yBAAe,MACpB;AAAA,QACA,oBAAC,QAAK,WAAW,EAAE,OAAQ,yBAAe,WAAU;AAAA,SACxD;AAAA,MACA,oBAAC,WAAQ,KAAK,kBAAkB,eAAe,SAAS,IAAI,WAAW,EAAE,OAAO,GAAG,KAAK,GAAG,KAAK;AAAA,OACpG;AAAA,IACA,oBAAC,QAAK,IAAI,IAAI,IAAI,IAAI,WAAW,EAAE,YAC9B,yBAAe,MACpB;AAAA,IACA,oBAAC,QAAK,IAAI,IAAI,IAAI,IAAI,GAAE,UAAS,IAAG,QAC/B,yBAAe,YACpB;AAAA,KACJ,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/PeopleTalk/desktop.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return /* @__PURE__ */ jsx(Modal, { size: \"lg\", centered: true, opened: !isMobile && opened, onClose: () => {\n    close(false);\n    setIsActive(true);\n  }, children: /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsxs(Group, { px: 40, justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsxs(Box, { children: [\n        /* @__PURE__ */ jsx(Rating, { size: !isMobile ? \"lg\" : \"md\", readOnly: true, defaultValue: currentReview?.overall_rate, mb: \"xs\", fractions: 4 }),\n        /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: currentReview?.name }),\n        /* @__PURE__ */ jsx(Text, { className: s.label, children: currentReview?.mbti_type })\n      ] }),\n      /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${currentReview?.mbti_type}`, className: s.image, w: 100, h: 100 })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { pb: 40, px: 40, className: s.reviewText, children: currentReview?.text }),\n    /* @__PURE__ */ jsx(Text, { px: 40, fz: 24, c: \"dark.2\", mt: \"auto\", children: currentReview?.created_at })\n  ] }) });\n};\n",
+      "start": 1746125082491,
+      "end": 1746125082491,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/PeopleTalk/desktop.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
+      }
+    }
+  ]
+}

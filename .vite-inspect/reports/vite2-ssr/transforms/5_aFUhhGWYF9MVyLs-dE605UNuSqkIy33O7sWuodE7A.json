@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createEvent } from 'effector';\n\nconst appStarted = createEvent();\n\nexport const appService = {\n    appStarted,\n};\n",
+      "start": 1746125081669,
+      "end": 1746125081712,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createEvent } from 'effector';\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};",
+      "start": 1746125081712,
+      "end": 1746125081713,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["createEvent", "appStarted", "name", "sid", "appService"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"],
+        "sourcesContent": [
+          "import { createEvent } from 'effector';\n\nconst appStarted = createEvent();\n\nexport const appService = {\n    appStarted,\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,QAAQ,UAAU;AAEtC,MAAMC,UAAU,GAAGD,WAAW;EAAAE,IAAA;EAAAC,GAAA;AAAA,CAAC,CAAC;AAEhC,OAAO,MAAMC,UAAU,GAAG;EACtBH;AACJ,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
+      "start": 1746125081713,
+      "end": 1746125081788,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"],
+        "sourcesContent": [
+          "import { createEvent } from 'effector';\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB;AAC5B,MAAM,aAAa,YAAY;AAAA,EAC7B,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACM,aAAM,aAAa;AAAA,EACxB;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/services/app/index.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
+      "start": 1746125081788,
+      "end": 1746125081788,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/services/app/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC;"
+      }
+    }
+  ]
+}

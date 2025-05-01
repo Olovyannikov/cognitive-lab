@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n",
+      "start": 1746125081957,
+      "end": 1746125082015,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;",
+      "start": 1746125082015,
+      "end": 1746125082016,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Center", "Loader", "PageLoader"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
+        "sourcesContent": [
+          "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,EAAEC,MAAM,QAAQ,eAAe;AAE9C,OAAO,MAAMC,UAAU,GAAGA,CAAA,KACtB,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC;AACrB,QAAQ,CAAC,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,UAAU;AAC1C,IAAI,EAAE,MAAM,CACX",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
+      "start": 1746125082016,
+      "end": 1746125082330,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
+        "sourcesContent": [
+          "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;"
+        ],
+        "mappings": "AAEQ;AAFR,SAAS,QAAQ,cAAc;AACxB,aAAM,aAAa,MAAM,oBAAC,UAAO,KAAK,KACrC,8BAAC,UAAO,MAAK,MAAK,OAAM,YAAW,GACvC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082330,
+      "end": 1746125082330,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
+      "start": 1746125082331,
+      "end": 1746125082331,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/PageLoader/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

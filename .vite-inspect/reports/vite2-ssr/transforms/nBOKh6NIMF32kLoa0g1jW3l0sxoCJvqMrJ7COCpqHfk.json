@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/Banner.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".paper {\n  position: relative;\n  display: flex;\n  margin-bottom: 60px;\n  padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);\n\n  @mixin data-color 1;\n\n  @mixin larger-than 998px {\n    padding: calc(var(--mantine-spacing-3xl) + var(--mantine-spacing-xxs) * 2) var(--mantine-spacing-3xl);\n    min-height: 336px;\n  }\n}\n\n.title {\n  display: flex;\n  align-items: center;\n  margin-bottom: var(--mantine-spacing-md);\n  font-size: 20px;\n  line-height: 23px;\n  gap: var(--mantine-spacing-xs);\n  text-wrap: balance;\n\n  .emoji {\n    width: 24px;\n    height: 24px;\n\n    @mixin larger-than 998px {\n      width: 32px;\n      height: 32px;\n    }\n  }\n\n  @mixin larger-than 998px {\n    margin-bottom: var(--mantine-spacing-lg);\n    font-size: 32px;\n    line-height: 37px;\n  }\n}\n\n.description {\n  font-size: 16px;\n  line-height: 18px;\n\n  &:not(:last-child) {\n    margin-bottom: var(--mantine-spacing-md);\n  }\n\n  @mixin larger-than 998px {\n    max-width: 872px;\n    font-size: 22px;\n    line-height: 25px;\n  }\n}\n\n.image {\n  display: none;\n  object-fit: contain;\n\n  @mixin larger-than 1200px {\n    position: absolute;\n    right: 60px;\n    display: block;\n  }\n}\n",
+      "start": 1746125082123,
+      "end": 1746125082168,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/Banner/Banner.module.css [vike:pluginModuleBanner] */\nexport const paper = \"pWynw\";\nexport const title = \"RbREL\";\nexport const emoji = \"TcObh\";\nexport const description = \"O3ou-\";\nexport const image = \"iHzBb\";\nexport default {\n\tpaper: paper,\n\ttitle: title,\n\temoji: emoji,\n\tdescription: description,\n\timage: image\n};\n",
+      "start": 1746125082171,
+      "end": 1746125082171,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/Banner/Banner.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

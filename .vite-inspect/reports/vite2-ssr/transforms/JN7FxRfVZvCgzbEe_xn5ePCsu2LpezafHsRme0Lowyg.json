@@ -1,0 +1,128 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/TextStrokeDash/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Paper } from '@mantine/core';\n\nimport { Paragraph } from '@/entities/Report';\n\nimport s from './TextStrokeDash.module.css';\n\ninterface TextStrokeDashProps {\n    text: string;\n    color?: string;\n}\n\nexport const TextStrokeDash = ({ text, color }: TextStrokeDashProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>\n);\n",
+      "start": 1746125081891,
+      "end": 1746125081946,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Paper } from '@mantine/core';\nimport { Paragraph } from '@/entities/Report';\nimport s from './TextStrokeDash.module.css';\ninterface TextStrokeDashProps {\n  text: string;\n  color?: string;\n}\nexport const TextStrokeDash = ({\n  text,\n  color\n}: TextStrokeDashProps) => <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>;",
+      "start": 1746125081946,
+      "end": 1746125081947,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Paper", "Paragraph", "s", "TextStrokeDashProps", "text", "color", "TextStrokeDash", "paper"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/TextStrokeDash/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper } from '@mantine/core';\n\nimport { Paragraph } from '@/entities/Report';\n\nimport s from './TextStrokeDash.module.css';\n\ninterface TextStrokeDashProps {\n    text: string;\n    color?: string;\n}\n\nexport const TextStrokeDash = ({ text, color }: TextStrokeDashProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,QAAQ,eAAe;AAErC,SAASC,SAAS,QAAQ,mBAAmB;AAE7C,OAAOC,CAAC,MAAM,6BAA6B;AAE3C,UAAUC,mBAAmB,CAAC;EAC1BC,IAAI,EAAE,MAAM;EACZC,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,cAAc,GAAGA,CAAC;EAAEF,IAAI;EAAEC;AAA2B,CAApB,EAAEF,mBAAmB,KAC/D,CAAC,KAAK,CAAC,UAAU,CAAC,CAACE,KAAK,CAAC,CAAC,SAAS,CAAC,CAACH,CAAC,CAACK,KAAK,CAAC;AACjD,QAAQ,CAAC,SAAS,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,IAAI,CAAC,CAACH,IAAI,CAAC;AACtC,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
+      "start": 1746125081947,
+      "end": 1746125082172,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/TextStrokeDash/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper } from '@mantine/core';\nimport { Paragraph } from '@/entities/Report';\nimport s from './TextStrokeDash.module.css';\ninterface TextStrokeDashProps {\n  text: string;\n  color?: string;\n}\nexport const TextStrokeDash = ({\n  text,\n  color\n}: TextStrokeDashProps) => <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>;"
+        ],
+        "mappings": "AAWQ;AAXR,SAAS,aAAa;AACtB,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AAKP,aAAM,iBAAiB,CAAC;AAAA,EAC7B;AAAA,EACA;AACF,MAA2B,oBAAC,SAAM,cAAY,OAAO,WAAW,EAAE,OAC1D,8BAAC,aAAU,IAAI,IAAI,MAAY,GACnC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082172,
+      "end": 1746125082172,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082172,
+      "end": 1746125082173,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/TextStrokeDash/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
+      "start": 1746125082173,
+      "end": 1746125082173,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/TextStrokeDash/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

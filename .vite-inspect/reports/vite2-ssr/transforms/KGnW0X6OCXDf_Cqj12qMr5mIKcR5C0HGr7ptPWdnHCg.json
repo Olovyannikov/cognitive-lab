@@ -1,0 +1,153 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/BlogPostCard/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { Markdown } from '@/shared/ui';\n\nimport type { BlogPost } from '../../types';\n\nimport s from './BlogPostCard.module.css';\n\ninterface BlogPostCardProps {\n    post: BlogPost;\n}\n\nexport const BlogPostCard = memo(({ post }: BlogPostCardProps) => (\n    <Grid.Col\n        span={{\n            base: 12,\n            lg: post.pinned ? 12 : 4,\n        }}\n        className={clsx(post.pinned && s.pinned)}\n    >\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>\n));\n\nBlogPostCard.displayName = 'BlogPostCard';\n",
+      "start": 1746125081821,
+      "end": 1746125081861,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { Markdown } from '@/shared/ui';\nimport type { BlogPost } from '../../types';\nimport s from './BlogPostCard.module.css';\ninterface BlogPostCardProps {\n  post: BlogPost;\n}\nexport const BlogPostCard = memo(({\n  post\n}: BlogPostCardProps) => <Grid.Col span={{\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}} className={clsx(post.pinned && s.pinned)}>\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>);\nBlogPostCard.displayName = 'BlogPostCard';",
+      "start": 1746125081861,
+      "end": 1746125081862,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "memo",
+          "Card",
+          "Flex",
+          "Grid",
+          "Image",
+          "Stack",
+          "Title",
+          "clsx",
+          "Markdown",
+          "BlogPost",
+          "s",
+          "BlogPostCardProps",
+          "post",
+          "BlogPostCard",
+          "base",
+          "lg",
+          "pinned",
+          "cardMain",
+          "id",
+          "card",
+          "row",
+          "image",
+          "thumbnail_image",
+          "title",
+          "preview",
+          "body",
+          "data",
+          "displayName"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/BlogPostCard/index.tsx"],
+        "sourcesContent": [
+          "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { Markdown } from '@/shared/ui';\n\nimport type { BlogPost } from '../../types';\n\nimport s from './BlogPostCard.module.css';\n\ninterface BlogPostCardProps {\n    post: BlogPost;\n}\n\nexport const BlogPostCard = memo(({ post }: BlogPostCardProps) => (\n    <Grid.Col\n        span={{\n            base: 12,\n            lg: post.pinned ? 12 : 4,\n        }}\n        className={clsx(post.pinned && s.pinned)}\n    >\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>\n));\n\nBlogPostCard.displayName = 'BlogPostCard';\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,QAAQ,OAAO;AAC5B,SAASC,IAAI,EAAEC,IAAI,EAAEC,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,QAAQ,eAAe;AACrE,OAAOC,IAAI,MAAM,MAAM;AAEvB,SAASC,QAAQ,QAAQ,aAAa;AAEtC,cAAcC,QAAQ,QAAQ,aAAa;AAE3C,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,UAAUC,iBAAiB,CAAC;EACxBC,IAAI,EAAEH,QAAQ;AAClB;AAEA,OAAO,MAAMI,YAAY,GAAGb,IAAI,CAAC,CAAC;EAAEY;AAAwB,CAAlB,EAAED,iBAAiB,KACzD,CAAC,IAAI,CAAC,GAAG,CACL,IAAI,CAAC,CAAC;EACFG,IAAI,EAAE,EAAE;EACRC,EAAE,EAAEH,IAAI,CAACI,MAAM,GAAG,EAAE,GAAG;AAC3B,CAAC,CAAC,CACF,SAAS,CAAC,CAACT,IAAI,CAACK,IAAI,CAACI,MAAM,IAAIN,CAAC,CAACM,MAAM,CAAC,CAAC;AAEjD,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACN,CAAC,CAACO,QAAQ,CAAC,CAAC,CAAC,CAAC,MAAM,CAAC,UAAU,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,SAASL,IAAI,CAACM,EAAE,EAAE,CAAC;AAChG,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACX,IAAI,CAACG,CAAC,CAACS,IAAI,EAAEP,IAAI,CAACI,MAAM,IAAIN,CAAC,CAACU,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,IAAI;AACzE,gBAAgB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACV,CAAC,CAACW,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,MAAM,CAAC,IAAI,CAAC,GAAG,CAAC,CAACT,IAAI,CAACU,eAAe,CAAC,CAAC,GAAG,CAAC,CAACV,IAAI,CAACW,KAAK,CAAC;AAC9G,gBAAgB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACb,CAAC,CAACc,OAAO,CAAC,CAAC,OAAO,CAAC,QAAQ;AAC7D,oBAAoB,CAAC,KAAK,CAAC,SAAS,CAAC,CAACd,CAAC,CAACa,KAAK,CAAC,CAAC,CAACX,IAAI,CAACW,KAAK,CAAC,EAAE,KAAK;AAClE,oBAAoB,CAAC,QAAQ,CAAC,CAACX,IAAI,CAACa,IAAI,CAACC,IAAI,CAAC,EAAE,QAAQ;AACxD,gBAAgB,EAAE,KAAK;AACvB,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,IAAI;AACd,IAAI,EAAE,IAAI,CAAC,GAAG,CACb,CAAC;AAEFb,YAAY,CAACc,WAAW,GAAG,cAAc",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = memo(({\n  post\n}) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}, className: clsx(post.pinned && s.pinned), children: /* @__PURE__ */ jsx(Card, { className: s.cardMain, h: \"100%\", withBorder: true, component: \"a\", href: `/blog/${post.id}`, children: /* @__PURE__ */ jsxs(Flex, { className: clsx(s.card, post.pinned && s.row), gap: \"md\", children: [\n  /* @__PURE__ */ jsx(Image, { className: s.image, fit: \"cover\", radius: \"xs\", src: post.thumbnail_image, alt: post.title }),\n  /* @__PURE__ */ jsxs(Stack, { className: s.preview, justify: \"center\", children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, children: post.title }),\n    /* @__PURE__ */ jsx(Markdown, { children: post.body.data })\n  ] })\n] }) }) }));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
+      "start": 1746125081862,
+      "end": 1746125082059,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/BlogPostCard/index.tsx"],
+        "sourcesContent": [
+          "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { Markdown } from '@/shared/ui';\nimport type { BlogPost } from '../../types';\nimport s from './BlogPostCard.module.css';\ninterface BlogPostCardProps {\n  post: BlogPost;\n}\nexport const BlogPostCard = memo(({\n  post\n}: BlogPostCardProps) => <Grid.Col span={{\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}} className={clsx(post.pinned && s.pinned)}>\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>);\nBlogPostCard.displayName = 'BlogPostCard';"
+        ],
+        "mappings": "AAiBgB,cACA,YADA;AAjBhB,SAAS,YAAY;AACrB,SAAS,MAAM,MAAM,MAAM,OAAO,OAAO,aAAa;AACtD,OAAO,UAAU;AACjB,SAAS,gBAAgB;AAEzB,OAAO,OAAO;AAIP,aAAM,eAAe,KAAK,CAAC;AAAA,EAChC;AACF,MAAyB,oBAAC,KAAK,KAAL,EAAS,MAAM;AAAA,EACvC,MAAM;AAAA,EACN,IAAI,KAAK,SAAS,KAAK;AACzB,GAAG,WAAW,KAAK,KAAK,UAAU,EAAE,MAAM,GAClC,8BAAC,QAAK,WAAW,EAAE,UAAU,GAAE,QAAO,YAAU,MAAC,WAAU,KAAI,MAAM,SAAS,KAAK,EAAE,IACjF,+BAAC,QAAK,WAAW,KAAK,EAAE,MAAM,KAAK,UAAU,EAAE,GAAG,GAAG,KAAI,MACrD;AAAA,sBAAC,SAAM,WAAW,EAAE,OAAO,KAAI,SAAQ,QAAO,MAAK,KAAK,KAAK,iBAAiB,KAAK,KAAK,OAAO;AAAA,EAC/F,qBAAC,SAAM,WAAW,EAAE,SAAS,SAAQ,UACjC;AAAA,wBAAC,SAAM,WAAW,EAAE,OAAQ,eAAK,OAAM;AAAA,IACvC,oBAAC,YAAU,eAAK,KAAK,MAAK;AAAA,KAC9B;AAAA,GACJ,GACJ,GACJ,CAAW;AACf,aAAa,cAAc;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082059,
+      "end": 1746125082059,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Blog/ui/BlogPostCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = memo(({\n  post\n}) => /* @__PURE__ */ jsx(Grid.Col, { span: {\n  base: 12,\n  lg: post.pinned ? 12 : 4\n}, className: clsx(post.pinned && s.pinned), children: /* @__PURE__ */ jsx(Card, { className: s.cardMain, h: \"100%\", withBorder: true, component: \"a\", href: `/blog/${post.id}`, children: /* @__PURE__ */ jsxs(Flex, { className: clsx(s.card, post.pinned && s.row), gap: \"md\", children: [\n  /* @__PURE__ */ jsx(Image, { className: s.image, fit: \"cover\", radius: \"xs\", src: post.thumbnail_image, alt: post.title }),\n  /* @__PURE__ */ jsxs(Stack, { className: s.preview, justify: \"center\", children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, children: post.title }),\n    /* @__PURE__ */ jsx(Markdown, { children: post.body.data })\n  ] })\n] }) }) }));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
+      "start": 1746125082060,
+      "end": 1746125082060,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Blog/ui/BlogPostCard/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5R,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

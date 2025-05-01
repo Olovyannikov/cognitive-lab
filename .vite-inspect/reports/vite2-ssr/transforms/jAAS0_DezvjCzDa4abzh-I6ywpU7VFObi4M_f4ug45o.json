@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n};\n",
+      "start": 1746125082471,
+      "end": 1746125082500,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test'\n};",
+      "start": 1746125082500,
+      "end": 1746125082500,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["CDN_URL", "ROUTES", "TEST"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"],
+        "sourcesContent": [
+          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n};\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,OAAO,GAAG,oCAAoC;AAE3D,OAAO,MAAMC,MAAM,GAAG;EAClBC,IAAI,EAAE;AACV,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\"\n};\n",
+      "start": 1746125082500,
+      "end": 1746125082526,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"],
+        "sourcesContent": [
+          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test'\n};"
+        ],
+        "mappings": "AAAO,aAAM,UAAU;AAChB,aAAM,SAAS;AAAA,EACpB,MAAM;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/config/constants.ts [vike:pluginModuleBanner] */\nexport const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\"\n};\n",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/config/constants.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n",
+      "start": 1746125081813,
+      "end": 1746125081854,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');",
+      "start": 1746125081854,
+      "end": 1746125081855,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["useMediaQuery", "useIsMedium", "useIsLarge", "useIsHuge", "useIsLargeMenu"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
+        "sourcesContent": [
+          "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n"
+        ],
+        "mappings": "AAAA,SAASA,aAAa,QAAQ,gBAAgB;AAE9C,OAAO,MAAMC,WAAW,GAAGA,CAAA,KAAMD,aAAa,CAAC,qBAAqB,CAAC;AACrE,OAAO,MAAME,UAAU,GAAGA,CAAA,KAAMF,aAAa,CAAC,oBAAoB,CAAC;AACnE,OAAO,MAAMG,SAAS,GAAGA,CAAA,KAAMH,aAAa,CAAC,qBAAqB,CAAC;AACnE,OAAO,MAAMI,cAAc,GAAGA,CAAA,KAAMJ,aAAa,CAAC,qBAAqB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
+      "start": 1746125081855,
+      "end": 1746125082069,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
+        "sourcesContent": [
+          "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');"
+        ],
+        "mappings": "AAAA,SAAS,qBAAqB;AACvB,aAAM,cAAc,MAAM,cAAc,qBAAqB;AAC7D,aAAM,aAAa,MAAM,cAAc,oBAAoB;AAC3D,aAAM,YAAY,MAAM,cAAc,qBAAqB;AAC3D,aAAM,iBAAiB,MAAM,cAAc,qBAAqB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082069,
+      "end": 1746125082069,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082069,
+      "end": 1746125082069,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082070,
+      "end": 1746125082070,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/lib/hooks/media/index.ts [vike:pluginModuleBanner] */\nimport { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
+      "start": 1746125082070,
+      "end": 1746125082071,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/lib/hooks/media/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

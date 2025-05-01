@@ -1,0 +1,148 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/PurchasePage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\n\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\n\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './PurchasePage.module.css';\n\nexport const PurchasePage = () => {\n    const { data, pending } = useUnit(getRegularPriceQuery);\n    const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n\n    if (!data && pending) return <PageLoader />;\n    if (!data) return null;\n\n    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n    const currentPromoPrice = type\n        ? dataWithPromocode?.skip_survey_price.final\n        : dataWithPromocode?.regular_price.final;\n\n    return (\n        <InnerLayout className={s.root} image='/payment/logo'>\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\n            <BuyReportForm />\n            <NavigateToHelpPage />\n        </InnerLayout>\n    );\n};\n",
+      "start": 1746125081638,
+      "end": 1746125081668,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { PageLoader } from '@/shared/ui';\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './PurchasePage.module.css';\nexport const PurchasePage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getRegularPriceQuery);\n  const {\n    data: dataWithPromocode\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  if (!data && pending) return <PageLoader />;\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return <InnerLayout className={s.root} image='/payment/logo'>\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\n            <BuyReportForm />\n            <NavigateToHelpPage />\n        </InnerLayout>;\n};",
+      "start": 1746125081668,
+      "end": 1746125081669,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useUnit",
+          "usePageContext",
+          "PageLoader",
+          "getPriceWithPromocodeQuery",
+          "getRegularPriceQuery",
+          "PriceInfo",
+          "NavigateToHelpPage",
+          "BuyReportForm",
+          "InnerLayout",
+          "s",
+          "PurchasePage",
+          "data",
+          "pending",
+          "dataWithPromocode",
+          "urlParsed",
+          "search",
+          "type",
+          "currentRegularPrice",
+          "skip_survey_price",
+          "regular_price",
+          "currentPromoPrice",
+          "final",
+          "root"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/PurchasePage/index.tsx"],
+        "sourcesContent": [
+          "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\n\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\n\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './PurchasePage.module.css';\n\nexport const PurchasePage = () => {\n    const { data, pending } = useUnit(getRegularPriceQuery);\n    const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n\n    if (!data && pending) return <PageLoader />;\n    if (!data) return null;\n\n    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n    const currentPromoPrice = type\n        ? dataWithPromocode?.skip_survey_price.final\n        : dataWithPromocode?.regular_price.final;\n\n    return (\n        <InnerLayout className={s.root} image='/payment/logo'>\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\n            <BuyReportForm />\n            <NavigateToHelpPage />\n        </InnerLayout>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,UAAU,QAAQ,aAAa;AAExC,SAASC,0BAA0B,EAAEC,oBAAoB,EAAEC,SAAS,QAAQ,mBAAmB;AAE/F,SAASC,kBAAkB,QAAQ,+BAA+B;AAElE,SAASC,aAAa,QAAQ,yBAAyB;AACvD,SAASC,WAAW,QAAQ,uBAAuB;AAEnD,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,OAAO,MAAMC,YAAY,GAAGA,CAAA,KAAM;EAC9B,MAAM;IAAEC,IAAI;IAAEC;EAAQ,CAAC,GAAGZ,OAAO,CAACI,oBAAoB,CAAC;EACvD,MAAM;IAAEO,IAAI,EAAEE;EAAkB,CAAC,GAAGb,OAAO,CAACG,0BAA0B,CAAC;EAEvE,MAAM;IACFW,SAAS,EAAE;MACPC,MAAM,EAAE;QAAEC;MAAK;IACnB;EACJ,CAAC,GAAGf,cAAc,CAAC,CAAC;EAEpB,IAAI,CAACU,IAAI,IAAIC,OAAO,EAAE,OAAO,CAAC,UAAU,GAAG;EAC3C,IAAI,CAACD,IAAI,EAAE,OAAO,IAAI;EAEtB,MAAMM,mBAAmB,GAAGD,IAAI,GAAGL,IAAI,CAACO,iBAAiB,GAAGP,IAAI,CAACQ,aAAa;EAC9E,MAAMC,iBAAiB,GAAGJ,IAAI,GACxBH,iBAAiB,EAAEK,iBAAiB,CAACG,KAAK,GAC1CR,iBAAiB,EAAEM,aAAa,CAACE,KAAK;EAE5C,OACI,CAAC,WAAW,CAAC,SAAS,CAAC,CAACZ,CAAC,CAACa,IAAI,CAAC,CAAC,KAAK,CAAC,eAAe;AAC7D,YAAY,CAAC,SAAS,CAAC,YAAY,CAAC,CAACL,mBAAmB,CAAC,CAAC,cAAc,CAAC,CAACG,iBAAiB,CAAC;AAC5F,YAAY,CAAC,aAAa;AAC1B,YAAY,CAAC,kBAAkB;AAC/B,QAAQ,EAAE,WAAW,CAAC;AAEtB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { BuyReportForm } from \"@/widgets/BuyReportForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PurchasePage.module.css\";\nexport const PurchasePage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getRegularPriceQuery);\n  const {\n    data: dataWithPromocode\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  if (!data && pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return /* @__PURE__ */ jsxs(InnerLayout, { className: s.root, image: \"/payment/logo\", children: [\n    /* @__PURE__ */ jsx(PriceInfo, { regularPrice: currentRegularPrice, promocodePrice: currentPromoPrice }),\n    /* @__PURE__ */ jsx(BuyReportForm, {}),\n    /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n  ] });\n};\n",
+      "start": 1746125081669,
+      "end": 1746125081754,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/PurchasePage/index.tsx"],
+        "sourcesContent": [
+          "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { PageLoader } from '@/shared/ui';\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './PurchasePage.module.css';\nexport const PurchasePage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getRegularPriceQuery);\n  const {\n    data: dataWithPromocode\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  if (!data && pending) return <PageLoader />;\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return <InnerLayout className={s.root} image='/payment/logo'>\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\n            <BuyReportForm />\n            <NavigateToHelpPage />\n        </InnerLayout>;\n};"
+        ],
+        "mappings": "AAuB+B,cAItB,YAJsB;AAvB/B,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,kBAAkB;AAC3B,SAAS,4BAA4B,sBAAsB,iBAAiB;AAC5E,SAAS,0BAA0B;AACnC,SAAS,qBAAqB;AAC9B,SAAS,mBAAmB;AAC5B,OAAO,OAAO;AACP,aAAM,eAAe,MAAM;AAChC,QAAM;AAAA,IACJ;AAAA,IACA;AAAA,EACF,IAAI,QAAQ,oBAAoB;AAChC,QAAM;AAAA,IACJ,MAAM;AAAA,EACR,IAAI,QAAQ,0BAA0B;AACtC,QAAM;AAAA,IACJ,WAAW;AAAA,MACT,QAAQ;AAAA,QACN;AAAA,MACF;AAAA,IACF;AAAA,EACF,IAAI,eAAe;AACnB,MAAI,CAAC,QAAQ,QAAS,QAAO,oBAAC,cAAW;AACzC,MAAI,CAAC,KAAM,QAAO;AAClB,QAAM,sBAAsB,OAAO,KAAK,oBAAoB,KAAK;AACjE,QAAM,oBAAoB,OAAO,mBAAmB,kBAAkB,QAAQ,mBAAmB,cAAc;AAC/G,SAAO,qBAAC,eAAY,WAAW,EAAE,MAAM,OAAM,iBACnC;AAAA,wBAAC,aAAU,cAAc,qBAAqB,gBAAgB,mBAAmB;AAAA,IACjF,oBAAC,iBAAc;AAAA,IACf,oBAAC,sBAAmB;AAAA,KACxB;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/PurchasePage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { BuyReportForm } from \"@/widgets/BuyReportForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PurchasePage.module.css\";\nexport const PurchasePage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getRegularPriceQuery);\n  const {\n    data: dataWithPromocode\n  } = useUnit(getPriceWithPromocodeQuery);\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  if (!data && pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return /* @__PURE__ */ jsxs(InnerLayout, { className: s.root, image: \"/payment/logo\", children: [\n    /* @__PURE__ */ jsx(PriceInfo, { regularPrice: currentRegularPrice, promocodePrice: currentPromoPrice }),\n    /* @__PURE__ */ jsx(BuyReportForm, {}),\n    /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n  ] });\n};\n",
+      "start": 1746125081754,
+      "end": 1746125081754,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/PurchasePage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

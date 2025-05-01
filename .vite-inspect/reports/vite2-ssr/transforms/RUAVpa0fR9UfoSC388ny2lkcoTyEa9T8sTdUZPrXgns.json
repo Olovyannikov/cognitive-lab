@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/CategoryBanner/CategoryBanner.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".paper {\n  position: relative;\n  overflow: hidden;\n  margin-bottom: 32px;\n  padding: var(--mantine-spacing-sm);\n  text-align: center;\n  padding-block: var(--mantine-spacing-md);\n\n  @mixin data-color 1;\n\n  @mixin larger-than 600px {\n    margin-bottom: 60px;\n    padding: 0 0 0 153px;\n    text-align: left;\n    padding-block: 0;\n  }\n}\n\n.title {\n  position: relative;\n  z-index: 1;\n\n  @mixin larger-than 600px {\n    padding-block: 50px;\n  }\n}\n\n.box {\n  position: absolute;\n  right: 0;\n  top: 0;\n  bottom: 0;\n\n  &:last-child {\n    left: 0;\n    right: unset;\n  }\n\n  @mixin text-data-color 2;\n}\n",
+      "start": 1746125082195,
+      "end": 1746125082291,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082291,
+      "end": 1746125082291,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082293,
+      "end": 1746125082293,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/CategoryBanner/CategoryBanner.module.css [vike:pluginModuleBanner] */\nexport const paper = \"laKEK\";\nexport const title = \"I8TD7\";\nexport const box = \"NZtOu\";\nexport default {\n\tpaper: paper,\n\ttitle: title,\n\tbox: box\n};\n",
+      "start": 1746125082294,
+      "end": 1746125082294,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/CategoryBanner/CategoryBanner.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC;"
+      }
+    }
+  ]
+}

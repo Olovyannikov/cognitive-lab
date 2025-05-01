@@ -1,0 +1,162 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/User/model/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\n\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\n\nexport const UserModel = atom(() => {\n    const UserGate = createGate();\n    const $userId = createStore('');\n    const $surveyId = createStore<string | null>(null);\n\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST));\n\n    persist({\n        store: $userId,\n        pickup: UserGate.open,\n    });\n\n    persist({\n        store: $surveyId,\n        pickup: UserGate.open,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $userId,\n        fn: (currentUuid) => (currentUuid?.length > 0 ? currentUuid : uuidv4()),\n        target: $userId,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $surveyId,\n        fn: (currentSurveyId) => (currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : ''),\n        target: $surveyId,\n    });\n\n    return {\n        $userId,\n        $surveyId,\n        UserGate,\n        redirectToTestPageFx,\n    };\n});\n",
+      "start": 1746125081772,
+      "end": 1746125081814,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\nexport const UserModel = atom(() => {\n  const UserGate = createGate({\n    and: [],\n    or: {\n      name: \"UserGate\",\n      sid: \"-xn4zqx\"\n    }\n  });\n  const $userId = createStore('', {\n    name: \"$userId\",\n    sid: \"5g3ab7\"\n  });\n  const $surveyId = createStore<string | null>(null, {\n    name: \"$surveyId\",\n    sid: \"6dqqht\"\n  });\n  const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n    name: \"redirectToTestPageFx\",\n    sid: \"-v9ms8i\"\n  });\n  persist({\n    store: $userId,\n    pickup: UserGate.open\n  });\n  persist({\n    store: $surveyId,\n    pickup: UserGate.open\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"uv6as\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $userId,\n      fn: currentUuid => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n      target: $userId\n    }],\n    or: {\n      sid: \"-xfl31t\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"e44lc8\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $surveyId,\n      fn: currentSurveyId => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : '',\n      target: $surveyId\n    }],\n    or: {\n      sid: \"-x06ufp\"\n    }\n  });\n  return {\n    $userId,\n    $surveyId,\n    UserGate,\n    redirectToTestPageFx\n  };\n});",
+      "start": 1746125081814,
+      "end": 1746125081816,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createEffect",
+          "createStore",
+          "sample",
+          "createGate",
+          "persist",
+          "delay",
+          "v4",
+          "uuidv4",
+          "navigate",
+          "ROUTES",
+          "atom",
+          "UserModel",
+          "UserGate",
+          "and",
+          "or",
+          "name",
+          "sid",
+          "$userId",
+          "$surveyId",
+          "redirectToTestPageFx",
+          "TEST",
+          "store",
+          "pickup",
+          "open",
+          "clock",
+          "_withFactory",
+          "\"uv6as\"",
+          "fn",
+          "\"clock\"",
+          "method",
+          "\"delay\"",
+          "source",
+          "currentUuid",
+          "length",
+          "target",
+          "\"e44lc8\"",
+          "currentSurveyId"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/User/model/index.ts"],
+        "sourcesContent": [
+          "import { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\n\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\n\nexport const UserModel = atom(() => {\n    const UserGate = createGate();\n    const $userId = createStore('');\n    const $surveyId = createStore<string | null>(null);\n\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST));\n\n    persist({\n        store: $userId,\n        pickup: UserGate.open,\n    });\n\n    persist({\n        store: $surveyId,\n        pickup: UserGate.open,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $userId,\n        fn: (currentUuid) => (currentUuid?.length > 0 ? currentUuid : uuidv4()),\n        target: $userId,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $surveyId,\n        fn: (currentSurveyId) => (currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : ''),\n        target: $surveyId,\n    });\n\n    return {\n        $userId,\n        $surveyId,\n        UserGate,\n        redirectToTestPageFx,\n    };\n});\n"
+        ],
+        "mappings": ";AAAA,SAASA,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAC5D,SAASC,UAAU,QAAQ,gBAAgB;AAC3C,SAASC,OAAO,QAAQ,wBAAwB;AAChD,SAASC,KAAK,QAAQ,UAAU;AAChC,SAASC,EAAE,IAAIC,MAAM,QAAQ,MAAM;AACnC,SAASC,QAAQ,QAAQ,oBAAoB;AAE7C,SAASC,MAAM,QAAQ,iBAAiB;AACxC,SAASC,IAAI,QAAQ,oBAAoB;AAEzC,OAAO,MAAMC,SAAS,GAAGD,IAAI,CAAC,MAAM;EAChC,MAAME,QAAQ,GAAGT,UAAU;IAAAU,GAAA;IAAAC,EAAA;MAAAC,IAAA;MAAAC,GAAA;IAAA;EAAA,CAAC,CAAC;EAC7B,MAAMC,OAAO,GAAGhB,WAAW,CAAC,EAAE;IAAAc,IAAA;IAAAC,GAAA;EAAA,EAAC;EAC/B,MAAME,SAAS,GAAGjB,WAAW,CAAC,MAAM,GAAG,IAAI,CAAC,CAAC,IAAI;IAAAc,IAAA;IAAAC,GAAA;EAAA,EAAC;EAElD,MAAMG,oBAAoB,GAAGnB,YAAY,CAAC,YAAY,MAAMQ,QAAQ,CAACC,MAAM,CAACW,IAAI,CAAC;IAAAL,IAAA;IAAAC,GAAA;EAAA,EAAC;EAElFZ,OAAO,CAAC;IACJiB,KAAK,EAAEJ,OAAO;IACdK,MAAM,EAAEV,QAAQ,CAACW;EACrB,CAAC,CAAC;EAEFnB,OAAO,CAAC;IACJiB,KAAK,EAAEH,SAAS;IAChBI,MAAM,EAAEV,QAAQ,CAACW;EACrB,CAAC,CAAC;EAEFrB,MAAM;IAAAW,GAAA,GAAC;MACHW,KAAK,EAAAC,YAAA;QAAAT,GAAA,EAAAU,OAAA;QAAAC,EAAA,EAAAA,CAAA,KAAEtB,KAAK,CAACO,QAAQ,CAACW,IAAI,EAAE,GAAG,CAAC;QAAAR,IAAA,EAAAa,OAAA;QAAAC,MAAA,EAAAC;MAAA;MAChCC,MAAM,EAAEd,OAAO;MACfU,EAAE,EAAGK,WAAW,IAAMA,WAAW,EAAEC,MAAM,GAAG,CAAC,GAAGD,WAAW,GAAGzB,MAAM,CAAC,CAAE;MACvE2B,MAAM,EAAEjB;IACZ,CAAC;IAAAH,EAAA;MAAAE,GAAA;IAAA;EAAA,EAAC;EAEFd,MAAM;IAAAW,GAAA,GAAC;MACHW,KAAK,EAAAC,YAAA;QAAAT,GAAA,EAAAmB,QAAA;QAAAR,EAAA,EAAAA,CAAA,KAAEtB,KAAK,CAACO,QAAQ,CAACW,IAAI,EAAE,GAAG,CAAC;QAAAR,IAAA,EAAAa,OAAA;QAAAC,MAAA,EAAAC;MAAA;MAChCC,MAAM,EAAEb,SAAS;MACjBS,EAAE,EAAGS,eAAe,IAAMA,eAAe,IAAIA,eAAe,EAAEH,MAAM,GAAG,CAAC,GAAGG,eAAe,GAAG,EAAG;MAChGF,MAAM,EAAEhB;IACZ,CAAC;IAAAJ,EAAA;MAAAE,GAAA;IAAA;EAAA,EAAC;EAEF,OAAO;IACHC,OAAO;IACPC,SAAS;IACTN,QAAQ;IACRO;EACJ,CAAC;AACL,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { v4 as uuidv4 } from \"uuid\";\nimport { navigate } from \"vike/client/router\";\nimport { ROUTES } from \"@/shared/config\";\nimport { atom } from \"@/shared/factories\";\nexport const UserModel = atom(() => {\n  const UserGate = createGate({\n    and: [],\n    or: {\n      name: \"UserGate\",\n      sid: \"-xn4zqx\"\n    }\n  });\n  const $userId = createStore(\"\", {\n    name: \"$userId\",\n    sid: \"5g3ab7\"\n  });\n  const $surveyId = createStore(null, {\n    name: \"$surveyId\",\n    sid: \"6dqqht\"\n  });\n  const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n    name: \"redirectToTestPageFx\",\n    sid: \"-v9ms8i\"\n  });\n  persist({\n    store: $userId,\n    pickup: UserGate.open\n  });\n  persist({\n    store: $surveyId,\n    pickup: UserGate.open\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"uv6as\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $userId,\n      fn: (currentUuid) => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n      target: $userId\n    }],\n    or: {\n      sid: \"-xfl31t\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"e44lc8\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $surveyId,\n      fn: (currentSurveyId) => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : \"\",\n      target: $surveyId\n    }],\n    or: {\n      sid: \"-x06ufp\"\n    }\n  });\n  return {\n    $userId,\n    $surveyId,\n    UserGate,\n    redirectToTestPageFx\n  };\n});\n",
+      "start": 1746125081816,
+      "end": 1746125081962,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/User/model/index.ts"],
+        "sourcesContent": [
+          "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\nexport const UserModel = atom(() => {\n  const UserGate = createGate({\n    and: [],\n    or: {\n      name: \"UserGate\",\n      sid: \"-xn4zqx\"\n    }\n  });\n  const $userId = createStore('', {\n    name: \"$userId\",\n    sid: \"5g3ab7\"\n  });\n  const $surveyId = createStore<string | null>(null, {\n    name: \"$surveyId\",\n    sid: \"6dqqht\"\n  });\n  const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n    name: \"redirectToTestPageFx\",\n    sid: \"-v9ms8i\"\n  });\n  persist({\n    store: $userId,\n    pickup: UserGate.open\n  });\n  persist({\n    store: $surveyId,\n    pickup: UserGate.open\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"uv6as\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $userId,\n      fn: currentUuid => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n      target: $userId\n    }],\n    or: {\n      sid: \"-xfl31t\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"e44lc8\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $surveyId,\n      fn: currentSurveyId => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : '',\n      target: $surveyId\n    }],\n    or: {\n      sid: \"-x06ufp\"\n    }\n  });\n  return {\n    $userId,\n    $surveyId,\n    UserGate,\n    redirectToTestPageFx\n  };\n});"
+        ],
+        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,cAAc,aAAa,cAAc;AAClD,SAAS,kBAAkB;AAC3B,SAAS,eAAe;AACxB,SAAS,aAAa;AACtB,SAAS,MAAM,cAAc;AAC7B,SAAS,gBAAgB;AACzB,SAAS,cAAc;AACvB,SAAS,YAAY;AACd,aAAM,YAAY,KAAK,MAAM;AAClC,QAAM,WAAW,WAAW;AAAA,IAC1B,KAAK,CAAC;AAAA,IACN,IAAI;AAAA,MACF,MAAM;AAAA,MACN,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,QAAM,UAAU,YAAY,IAAI;AAAA,IAC9B,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,YAAY,YAA2B,MAAM;AAAA,IACjD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,uBAAuB,aAAa,YAAY,MAAM,SAAS,OAAO,IAAI,GAAG;AAAA,IACjF,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,UAAQ;AAAA,IACN,OAAO;AAAA,IACP,QAAQ,SAAS;AAAA,EACnB,CAAC;AACD,UAAQ;AAAA,IACN,OAAO;AAAA,IACP,QAAQ,SAAS;AAAA,EACnB,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,aAAa;AAAA,QAClB,KAAK;AAAA,QACL,IAAI,MAAM,MAAM,SAAS,MAAM,GAAG;AAAA,QAClC,MAAM;AAAA,QACN,QAAQ;AAAA,MACV,CAAC;AAAA,MACD,QAAQ;AAAA,MACR,IAAI,iBAAe,aAAa,SAAS,IAAI,cAAc,OAAO;AAAA,MAClE,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,aAAa;AAAA,QAClB,KAAK;AAAA,QACL,IAAI,MAAM,MAAM,SAAS,MAAM,GAAG;AAAA,QAClC,MAAM;AAAA,QACN,QAAQ;AAAA,MACV,CAAC;AAAA,MACD,QAAQ;AAAA,MACR,IAAI,qBAAmB,mBAAmB,iBAAiB,SAAS,IAAI,kBAAkB;AAAA,MAC1F,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/User/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { v4 as uuidv4 } from \"uuid\";\nimport { navigate } from \"vike/client/router\";\nimport { ROUTES } from \"@/shared/config\";\nimport { atom } from \"@/shared/factories\";\nexport const UserModel = atom(() => {\n  const UserGate = createGate({\n    and: [],\n    or: {\n      name: \"UserGate\",\n      sid: \"-xn4zqx\"\n    }\n  });\n  const $userId = createStore(\"\", {\n    name: \"$userId\",\n    sid: \"5g3ab7\"\n  });\n  const $surveyId = createStore(null, {\n    name: \"$surveyId\",\n    sid: \"6dqqht\"\n  });\n  const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n    name: \"redirectToTestPageFx\",\n    sid: \"-v9ms8i\"\n  });\n  persist({\n    store: $userId,\n    pickup: UserGate.open\n  });\n  persist({\n    store: $surveyId,\n    pickup: UserGate.open\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"uv6as\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $userId,\n      fn: (currentUuid) => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n      target: $userId\n    }],\n    or: {\n      sid: \"-xfl31t\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"e44lc8\",\n        fn: () => delay(UserGate.open, 500),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      source: $surveyId,\n      fn: (currentSurveyId) => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : \"\",\n      target: $surveyId\n    }],\n    or: {\n      sid: \"-x06ufp\"\n    }\n  });\n  return {\n    $userId,\n    $surveyId,\n    UserGate,\n    redirectToTestPageFx\n  };\n});\n",
+      "start": 1746125081962,
+      "end": 1746125081962,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/User/model/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
+      }
+    }
+  ]
+}

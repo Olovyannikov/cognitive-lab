@@ -1,0 +1,144 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/PriceInfo/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport s from './PriceInfo.module.css';\n\ninterface PriceInfoProps {\n    regularPrice: number;\n    promocodePrice?: number;\n}\n\nexport const PriceInfo = ({ regularPrice, promocodePrice }: PriceInfoProps) => {\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n    return (\n        <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text\n                    hidden={!regularPrice}\n                    className={s.price}\n                    td={promocodePrice ? 'line-through' : ''}\n                    c={promocodePrice ? 'dark.0' : 'dark.7'}\n                >\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>\n    );\n};\n",
+      "start": 1746125081896,
+      "end": 1746125081949,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport s from './PriceInfo.module.css';\ninterface PriceInfoProps {\n  regularPrice: number;\n  promocodePrice?: number;\n}\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}: PriceInfoProps) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text hidden={!regularPrice} className={s.price} td={promocodePrice ? 'line-through' : ''} c={promocodePrice ? 'dark.0' : 'dark.7'}>\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>;\n};",
+      "start": 1746125081949,
+      "end": 1746125081950,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Group",
+          "Skeleton",
+          "Stack",
+          "Text",
+          "Title",
+          "usePageContext",
+          "s",
+          "PriceInfoProps",
+          "regularPrice",
+          "promocodePrice",
+          "PriceInfo",
+          "urlParsed",
+          "search",
+          "type",
+          "wrapper",
+          "title",
+          "skeleton",
+          "Boolean",
+          "price"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/PriceInfo/index.tsx"],
+        "sourcesContent": [
+          "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport s from './PriceInfo.module.css';\n\ninterface PriceInfoProps {\n    regularPrice: number;\n    promocodePrice?: number;\n}\n\nexport const PriceInfo = ({ regularPrice, promocodePrice }: PriceInfoProps) => {\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n    return (\n        <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text\n                    hidden={!regularPrice}\n                    className={s.price}\n                    td={promocodePrice ? 'line-through' : ''}\n                    c={promocodePrice ? 'dark.0' : 'dark.7'}\n                >\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,QAAQ,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AACnE,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,OAAOC,CAAC,MAAM,wBAAwB;AAEtC,UAAUC,cAAc,CAAC;EACrBC,YAAY,EAAE,MAAM;EACpBC,cAAc,CAAC,EAAE,MAAM;AAC3B;AAEA,OAAO,MAAMC,SAAS,GAAGA,CAAC;EAAEF,YAAY;EAAEC;AAA+B,CAAf,EAAEF,cAAc,KAAK;EAC3E,MAAM;IACFI,SAAS,EAAE;MACPC,MAAM,EAAE;QAAEC;MAAK;IACnB;EACJ,CAAC,GAAGR,cAAc,CAAC,CAAC;EACpB,OACI,CAAC,KAAK,CAAC,SAAS,CAAC,CAACC,CAAC,CAACQ,OAAO,CAAC;AACpC,YAAY,CAAC,KAAK,CAAC,SAAS,CAAC,CAACR,CAAC,CAACS,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAChD,gBAAgB,CAACF,IAAI,GAAG,wCAAwC,GAAG,sCAAsC;AACzG,YAAY,EAAE,KAAK;AACnB;AACA,YAAY,CAAC,QAAQ,CAAC,SAAS,CAAC,CAACP,CAAC,CAACU,QAAQ,CAAC,CAAC,MAAM,CAAC,CAACC,OAAO,CAACT,YAAY,CAAC,CAAC,CAAC,MAAM,CAAC,IAAI;AACvF;AACA,YAAY,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI;AAC3B,gBAAgB,CAAC,IAAI,CACD,MAAM,CAAC,CAAC,CAACA,YAAY,CAAC,CACtB,SAAS,CAAC,CAACF,CAAC,CAACY,KAAK,CAAC,CACnB,EAAE,CAAC,CAACT,cAAc,GAAG,cAAc,GAAG,EAAE,CAAC,CACzC,CAAC,CAAC,CAACA,cAAc,GAAG,QAAQ,GAAG,QAAQ,CAAC;AAE5D,oBAAoB,CAACD,YAAY,CAAC,CAAC,GAAG;AACtC,oBAAoB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACY,KAAK,CAAC,CAAC,IAAI,CAAC,EAAE,CAAC,WAAW;AACjE;AACA,oBAAoB,EAAE,IAAI;AAC1B,gBAAgB,EAAE,IAAI;AACtB;AACA,gBAAgB,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,CAACT,cAAc,CAAC,CAAC,SAAS,CAAC,CAACH,CAAC,CAACY,KAAK,CAAC,CAAC,CAAC,CAAC,UAAU;AAC/E,oBAAoB,CAACT,cAAc,CAAC,CAAC,GAAG;AACxC,oBAAoB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACH,CAAC,CAACY,KAAK,CAAC,CAAC,IAAI,CAAC,EAAE,CAAC,WAAW;AACjE;AACA,oBAAoB,EAAE,IAAI;AAC1B,gBAAgB,EAAE,IAAI;AACtB,YAAY,EAAE,KAAK;AACnB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Skeleton, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport s from \"./PriceInfo.module.css\";\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Stack, { className: s.wrapper, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: type ? \"Экспресс-отчёт по вашему типу личности\" : \"Полный отчет по вашему типу личности\" }),\n    /* @__PURE__ */ jsx(Skeleton, { className: s.skeleton, hidden: Boolean(regularPrice), radius: \"sm\" }),\n    /* @__PURE__ */ jsxs(Group, { gap: \"lg\", children: [\n      /* @__PURE__ */ jsxs(Text, { hidden: !regularPrice, className: s.price, td: promocodePrice ? \"line-through\" : \"\", c: promocodePrice ? \"dark.0\" : \"dark.7\", children: [\n        regularPrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] }),\n      /* @__PURE__ */ jsxs(Text, { hidden: !promocodePrice, className: s.price, c: \"violet.8\", children: [\n        promocodePrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] })\n    ] })\n  ] });\n};\n",
+      "start": 1746125081950,
+      "end": 1746125082191,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/PriceInfo/index.tsx"],
+        "sourcesContent": [
+          "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport s from './PriceInfo.module.css';\ninterface PriceInfoProps {\n  regularPrice: number;\n  promocodePrice?: number;\n}\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}: PriceInfoProps) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text hidden={!regularPrice} className={s.price} td={promocodePrice ? 'line-through' : ''} c={promocodePrice ? 'dark.0' : 'dark.7'}>\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>;\n};"
+        ],
+        "mappings": "AAmBY,cAOI,YAPJ;AAnBZ,SAAS,OAAO,UAAU,OAAO,MAAM,aAAa;AACpD,SAAS,sBAAsB;AAC/B,OAAO,OAAO;AAKP,aAAM,YAAY,CAAC;AAAA,EACxB;AAAA,EACA;AACF,MAAsB;AACpB,QAAM;AAAA,IACJ,WAAW;AAAA,MACT,QAAQ;AAAA,QACN;AAAA,MACF;AAAA,IACF;AAAA,EACF,IAAI,eAAe;AACnB,SAAO,qBAAC,SAAM,WAAW,EAAE,SACjB;AAAA,wBAAC,SAAM,WAAW,EAAE,OAAO,OAAO,GAC7B,iBAAO,2CAA2C,wCACvD;AAAA,IAEA,oBAAC,YAAS,WAAW,EAAE,UAAU,QAAQ,QAAQ,YAAY,GAAG,QAAO,MAAK;AAAA,IAE5E,qBAAC,SAAM,KAAI,MACP;AAAA,2BAAC,QAAK,QAAQ,CAAC,cAAc,WAAW,EAAE,OAAO,IAAI,iBAAiB,iBAAiB,IAAI,GAAG,iBAAiB,WAAW,UACrH;AAAA;AAAA,QAAc;AAAA,QACf,oBAAC,QAAK,WAAW,EAAE,OAAO,MAAI,MAAC,IAAG,aAAY,eAE9C;AAAA,SACJ;AAAA,MAEA,qBAAC,QAAK,QAAQ,CAAC,gBAAgB,WAAW,EAAE,OAAO,GAAE,YAChD;AAAA;AAAA,QAAgB;AAAA,QACjB,oBAAC,QAAK,WAAW,EAAE,OAAO,MAAI,MAAC,IAAG,aAAY,eAE9C;AAAA,SACJ;AAAA,OACJ;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/PriceInfo/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Skeleton, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport s from \"./PriceInfo.module.css\";\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Stack, { className: s.wrapper, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: type ? \"Экспресс-отчёт по вашему типу личности\" : \"Полный отчет по вашему типу личности\" }),\n    /* @__PURE__ */ jsx(Skeleton, { className: s.skeleton, hidden: Boolean(regularPrice), radius: \"sm\" }),\n    /* @__PURE__ */ jsxs(Group, { gap: \"lg\", children: [\n      /* @__PURE__ */ jsxs(Text, { hidden: !regularPrice, className: s.price, td: promocodePrice ? \"line-through\" : \"\", c: promocodePrice ? \"dark.0\" : \"dark.7\", children: [\n        regularPrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] }),\n      /* @__PURE__ */ jsxs(Text, { hidden: !promocodePrice, className: s.price, c: \"violet.8\", children: [\n        promocodePrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] })\n    ] })\n  ] });\n};\n",
+      "start": 1746125082191,
+      "end": 1746125082191,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/PriceInfo/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ConclusionPaywall/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\n\ninterface ConclusionPaywallProps {\n    text?: string;\n    title?: string;\n    points?: string[];\n    actionsSlot?: ReactNode;\n    color?: string;\n}\n\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' }: ConclusionPaywallProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper\n            bg={`${color}.0`}\n            pos='relative'\n            py={isLarge ? '3xl' : 'xl'}\n            px={isLarge ? '3xl' : 'md'}\n            radius={isLarge ? 'lg' : 'md'}\n        >\n            <Picture\n                src='/report/gem'\n                w={isLarge ? 250 : 108}\n                h={isLarge ? 250 : 108}\n                pos='absolute'\n                top={isLarge ? 0 : 20}\n                right={0}\n            />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>\n    );\n};\n",
+      "start": 1746125081861,
+      "end": 1746125081902,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\ninterface ConclusionPaywallProps {\n  text?: string;\n  title?: string;\n  points?: string[];\n  actionsSlot?: ReactNode;\n  color?: string;\n}\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = 'violet'\n}: ConclusionPaywallProps) => {\n  const isLarge = useIsLarge();\n  return <Paper bg={`${color}.0`} pos='relative' py={isLarge ? '3xl' : 'xl'} px={isLarge ? '3xl' : 'md'} radius={isLarge ? 'lg' : 'md'}>\n            <Picture src='/report/gem' w={isLarge ? 250 : 108} h={isLarge ? 250 : 108} pos='absolute' top={isLarge ? 0 : 20} right={0} />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{\n        textWrap: 'balance'\n      }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>;\n};",
+      "start": 1746125081902,
+      "end": 1746125081903,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "Group",
+          "Paper",
+          "Stack",
+          "Text",
+          "Title",
+          "useIsLarge",
+          "Picture",
+          "PointsList",
+          "ConclusionPaywallProps",
+          "text",
+          "title",
+          "points",
+          "actionsSlot",
+          "color",
+          "ConclusionPaywall",
+          "isLarge",
+          "textWrap"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ConclusionPaywall/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\n\ninterface ConclusionPaywallProps {\n    text?: string;\n    title?: string;\n    points?: string[];\n    actionsSlot?: ReactNode;\n    color?: string;\n}\n\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' }: ConclusionPaywallProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper\n            bg={`${color}.0`}\n            pos='relative'\n            py={isLarge ? '3xl' : 'xl'}\n            px={isLarge ? '3xl' : 'md'}\n            radius={isLarge ? 'lg' : 'md'}\n        >\n            <Picture\n                src='/report/gem'\n                w={isLarge ? 250 : 108}\n                h={isLarge ? 250 : 108}\n                pos='absolute'\n                top={isLarge ? 0 : 20}\n                right={0}\n            />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,cAAcA,SAAS,QAAQ,OAAO;AACtC,SAASC,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAEhE,SAASC,UAAU,QAAQ,cAAc;AACzC,SAASC,OAAO,EAAEC,UAAU,QAAQ,aAAa;AAEjD,UAAUC,sBAAsB,CAAC;EAC7BC,IAAI,CAAC,EAAE,MAAM;EACbC,KAAK,CAAC,EAAE,MAAM;EACdC,MAAM,CAAC,EAAE,MAAM,EAAE;EACjBC,WAAW,CAAC,EAAEb,SAAS;EACvBc,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,iBAAiB,GAAGA,CAAC;EAAEL,IAAI;EAAEC,KAAK;EAAEC,MAAM;EAAEC,WAAW;EAAEC,KAAK,GAAG;AAAiC,CAAvB,EAAEL,sBAAsB,KAAK;EACjH,MAAMO,OAAO,GAAGV,UAAU,CAAC,CAAC;EAE5B,OACI,CAAC,KAAK,CACF,EAAE,CAAC,CAAC,GAAGQ,KAAK,IAAI,CAAC,CACjB,GAAG,CAAC,UAAU,CACd,EAAE,CAAC,CAACE,OAAO,GAAG,KAAK,GAAG,IAAI,CAAC,CAC3B,EAAE,CAAC,CAACA,OAAO,GAAG,KAAK,GAAG,IAAI,CAAC,CAC3B,MAAM,CAAC,CAACA,OAAO,GAAG,IAAI,GAAG,IAAI,CAAC;AAE1C,YAAY,CAAC,OAAO,CACJ,GAAG,CAAC,aAAa,CACjB,CAAC,CAAC,CAACA,OAAO,GAAG,GAAG,GAAG,GAAG,CAAC,CACvB,CAAC,CAAC,CAACA,OAAO,GAAG,GAAG,GAAG,GAAG,CAAC,CACvB,GAAG,CAAC,UAAU,CACd,GAAG,CAAC,CAACA,OAAO,GAAG,CAAC,GAAG,EAAE,CAAC,CACtB,KAAK,CAAC,CAAC,CAAC,CAAC;AAEzB,YAAY,CAAC,KAAK,CAAC,GAAG,CAAC,CAACA,OAAO,GAAG,IAAI,GAAG,IAAI,CAAC;AAC9C,gBAAgB,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAACA,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC,CAAC,QAAQ,CAAC,SAAS,CAAC,GAAG,CAAC,CAACA,OAAO,GAAG,MAAM,GAAG,KAAK,CAAC;AACzG,oBAAoB,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI;AACnC,wBAAwB,CAAC,OAAO,CAAC,GAAG,CAAC,WAAW,CAAC,IAAI,CAAC,GAAG,CAAC,aAAa,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;AACrF,wBAAwB,CAACL,KAAK;AAC9B,oBAAoB,EAAE,KAAK;AAC3B,gBAAgB,EAAE,KAAK;AACvB,gBAAgB,CAAC,IAAI,CAAC,GAAG,CAAC,CAACK,OAAO,GAAG,GAAG,GAAG,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC;QAAEC,QAAQ,EAAE;MAAU,CAAC,CAAC,CAAC,EAAE,CAAC,CAACD,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC;AACxG,oBAAoB,CAACN,IAAI;AACzB,gBAAgB,EAAE,IAAI;AACtB,gBAAgB,CAAC,UAAU,CAAC,QAAQ,CAAC,QAAQ,CAAC,MAAM,CAAC,CAACE,MAAM,CAAC;AAC7D,gBAAgB,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,CAACI,OAAO,GAAG,aAAa,GAAG,MAAM,CAAC;AACpE,oBAAoB,CAACH,WAAW;AAChC,gBAAgB,EAAE,KAAK;AACvB,YAAY,EAAE,KAAK;AACnB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { bg: `${color}.0`, pos: \"relative\", py: isLarge ? \"3xl\" : \"xl\", px: isLarge ? \"3xl\" : \"md\", radius: isLarge ? \"lg\" : \"md\", children: [\n    /* @__PURE__ */ jsx(Picture, { src: \"/report/gem\", w: isLarge ? 250 : 108, h: isLarge ? 250 : 108, pos: \"absolute\", top: isLarge ? 0 : 20, right: 0 }),\n    /* @__PURE__ */ jsxs(Stack, { gap: isLarge ? \"lg\" : \"md\", children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: isLarge ? \"100%\" : \"60%\", children: /* @__PURE__ */ jsxs(Group, { gap: \"xs\", children: [\n        /* @__PURE__ */ jsx(Picture, { cdn: true, visibleFrom: \"md\", src: \"/emoji/star\", w: 48, h: 48 }),\n        title\n      ] }) }),\n      /* @__PURE__ */ jsx(Text, { maw: isLarge ? 950 : \"80%\", style: {\n        textWrap: \"balance\"\n      }, fz: isLarge ? 24 : 16, children: text }),\n      /* @__PURE__ */ jsx(PointsList, { position: \"static\", points }),\n      /* @__PURE__ */ jsx(Group, { gap: \"sm\", w: isLarge ? \"fit-content\" : \"100%\", children: actionsSlot })\n    ] })\n  ] });\n};\n",
+      "start": 1746125081903,
+      "end": 1746125082145,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ConclusionPaywall/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\ninterface ConclusionPaywallProps {\n  text?: string;\n  title?: string;\n  points?: string[];\n  actionsSlot?: ReactNode;\n  color?: string;\n}\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = 'violet'\n}: ConclusionPaywallProps) => {\n  const isLarge = useIsLarge();\n  return <Paper bg={`${color}.0`} pos='relative' py={isLarge ? '3xl' : 'xl'} px={isLarge ? '3xl' : 'md'} radius={isLarge ? 'lg' : 'md'}>\n            <Picture src='/report/gem' w={isLarge ? 250 : 108} h={isLarge ? 250 : 108} pos='absolute' top={isLarge ? 0 : 20} right={0} />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{\n        textWrap: 'balance'\n      }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>;\n};"
+        ],
+        "mappings": "AAoBY,cAGQ,YAHR;AAnBZ,SAAS,OAAO,OAAO,OAAO,MAAM,aAAa;AACjD,SAAS,kBAAkB;AAC3B,SAAS,SAAS,kBAAkB;AAQ7B,aAAM,oBAAoB,CAAC;AAAA,EAChC;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA,QAAQ;AACV,MAA8B;AAC5B,QAAM,UAAU,WAAW;AAC3B,SAAO,qBAAC,SAAM,IAAI,GAAG,KAAK,MAAM,KAAI,YAAW,IAAI,UAAU,QAAQ,MAAM,IAAI,UAAU,QAAQ,MAAM,QAAQ,UAAU,OAAO,MACtH;AAAA,wBAAC,WAAQ,KAAI,eAAc,GAAG,UAAU,MAAM,KAAK,GAAG,UAAU,MAAM,KAAK,KAAI,YAAW,KAAK,UAAU,IAAI,IAAI,OAAO,GAAG;AAAA,IAC3H,qBAAC,SAAM,KAAK,UAAU,OAAO,MACzB;AAAA,0BAAC,SAAM,OAAO,GAAG,IAAI,UAAU,KAAK,IAAI,UAAS,WAAU,KAAK,UAAU,SAAS,OAC/E,+BAAC,SAAM,KAAI,MACP;AAAA,4BAAC,WAAQ,KAAG,MAAC,aAAY,MAAK,KAAI,eAAc,GAAG,IAAI,GAAG,IAAI;AAAA,QAC7D;AAAA,SACL,GACJ;AAAA,MACA,oBAAC,QAAK,KAAK,UAAU,MAAM,OAAO,OAAO;AAAA,QACjD,UAAU;AAAA,MACZ,GAAG,IAAI,UAAU,KAAK,IACP,gBACL;AAAA,MACA,oBAAC,cAAW,UAAS,UAAS,QAAgB;AAAA,MAC9C,oBAAC,SAAM,KAAI,MAAK,GAAG,UAAU,gBAAgB,QACxC,uBACL;AAAA,OACJ;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082145,
+      "end": 1746125082145,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/ConclusionPaywall/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { bg: `${color}.0`, pos: \"relative\", py: isLarge ? \"3xl\" : \"xl\", px: isLarge ? \"3xl\" : \"md\", radius: isLarge ? \"lg\" : \"md\", children: [\n    /* @__PURE__ */ jsx(Picture, { src: \"/report/gem\", w: isLarge ? 250 : 108, h: isLarge ? 250 : 108, pos: \"absolute\", top: isLarge ? 0 : 20, right: 0 }),\n    /* @__PURE__ */ jsxs(Stack, { gap: isLarge ? \"lg\" : \"md\", children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: isLarge ? \"100%\" : \"60%\", children: /* @__PURE__ */ jsxs(Group, { gap: \"xs\", children: [\n        /* @__PURE__ */ jsx(Picture, { cdn: true, visibleFrom: \"md\", src: \"/emoji/star\", w: 48, h: 48 }),\n        title\n      ] }) }),\n      /* @__PURE__ */ jsx(Text, { maw: isLarge ? 950 : \"80%\", style: {\n        textWrap: \"balance\"\n      }, fz: isLarge ? 24 : 16, children: text }),\n      /* @__PURE__ */ jsx(PointsList, { position: \"static\", points }),\n      /* @__PURE__ */ jsx(Group, { gap: \"sm\", w: isLarge ? \"fit-content\" : \"100%\", children: actionsSlot })\n    ] })\n  ] });\n};\n",
+      "start": 1746125082145,
+      "end": 1746125082146,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/ConclusionPaywall/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

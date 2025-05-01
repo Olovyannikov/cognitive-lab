@@ -1,0 +1,148 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useStoreMap, useUnit } from 'effector-react';\n\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nexport const FreeReportNavigation = () => {\n    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    const activeMenu = content?.[page];\n\n    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n\n    if (!content) return;\n\n    return (\n        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />\n    );\n};\n",
+      "start": 1746125081766,
+      "end": 1746125081801,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useStoreMap, useUnit } from 'effector-react';\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  const activeMenu = content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map(el => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n  if (!content) return;\n  return <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />;\n};",
+      "start": 1746125081801,
+      "end": 1746125081802,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useStoreMap",
+          "useUnit",
+          "getFreeResultQuery",
+          "ReportModel",
+          "ReportNavigationTemplate",
+          "TYPE_TO_COLOR_MAP",
+          "FreeReportNavigation",
+          "page",
+          "onPageChange",
+          "$currentContentPage",
+          "currentPageChanged",
+          "content",
+          "store",
+          "$data",
+          "keys",
+          "fn",
+          "map",
+          "title",
+          "activeMenu",
+          "mbti",
+          "el",
+          "mbti_type",
+          "color"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx"],
+        "sourcesContent": [
+          "import { useStoreMap, useUnit } from 'effector-react';\n\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nexport const FreeReportNavigation = () => {\n    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    const activeMenu = content?.[page];\n\n    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n\n    if (!content) return;\n\n    return (\n        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,OAAO,QAAQ,gBAAgB;AAErD,SAASC,kBAAkB,EAAEC,WAAW,EAAEC,wBAAwB,EAAEC,iBAAiB,QAAQ,mBAAmB;AAEhH,OAAO,MAAMC,oBAAoB,GAAGA,CAAA,KAAM;EACtC,MAAM,CAACC,IAAI,EAAEC,YAAY,CAAC,GAAGP,OAAO,CAAC,CAACE,WAAW,CAACM,mBAAmB,EAAEN,WAAW,CAACO,kBAAkB,CAAC,CAAC;EACvG,MAAMC,OAAO,GAAGX,WAAW,CAAC;IACxBY,KAAK,EAAEV,kBAAkB,CAACW,KAAK;IAC/BC,IAAI,EAAE,CAAC,OAAO,EAAEP,IAAI,CAAC;IACrBQ,EAAE,EAAGJ,OAAO,IAAKA,OAAO,EAAEA,OAAO,EAAEK,GAAG,CAAC,CAAC;MAAEC;IAAM,CAAC,KAAKA,KAAK;EAC/D,CAAC,CAAC;EAEF,MAAMC,UAAU,GAAGP,OAAO,GAAGJ,IAAI,CAAC;EAElC,MAAMY,IAAI,GAAGlB,OAAO,CAACC,kBAAkB,CAACW,KAAK,CAACG,GAAG,CAAEI,EAAE,IAAKA,EAAE,EAAEC,SAAS,CAAC,CAAC;EACzE,MAAMC,KAAK,GAAGjB,iBAAiB,CAACc,IAAI,IAAI,EAAE,CAAC;EAE3C,IAAI,CAACR,OAAO,EAAE;EAEd,OACI,CAAC,wBAAwB,CAAC,UAAU,CAAC,CAACO,UAAU,CAAC,CAAC,KAAK,CAAC,CAACI,KAAK,CAAC,CAAC,OAAO,CAAC,CAACX,OAAO,CAAC,CAAC,YAAY,CAAC,CAACH,YAAY,CAAC,GAAG;AAExH,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const activeMenu = content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, onPageChange });\n};\n",
+      "start": 1746125081802,
+      "end": 1746125081877,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx"],
+        "sourcesContent": [
+          "import { useStoreMap, useUnit } from 'effector-react';\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  const activeMenu = content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map(el => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n  if (!content) return;\n  return <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />;\n};"
+        ],
+        "mappings": "AAeS;AAfT,SAAS,aAAa,eAAe;AACrC,SAAS,oBAAoB,aAAa,0BAA0B,yBAAyB;AACtF,aAAM,uBAAuB,MAAM;AACxC,QAAM,CAAC,MAAM,YAAY,IAAI,QAAQ,CAAC,YAAY,qBAAqB,YAAY,kBAAkB,CAAC;AACtG,QAAM,UAAU,YAAY;AAAA,IAC1B,OAAO,mBAAmB;AAAA,IAC1B,MAAM,CAAC,SAAS,IAAI;AAAA,IACpB,IAAI,CAAAA,aAAWA,UAAS,SAAS,IAAI,CAAC;AAAA,MACpC;AAAA,IACF,MAAM,KAAK;AAAA,EACb,CAAC;AACD,QAAM,aAAa,UAAU,IAAI;AACjC,QAAM,OAAO,QAAQ,mBAAmB,MAAM,IAAI,QAAM,IAAI,SAAS,CAAC;AACtE,QAAM,QAAQ,kBAAkB,QAAQ,EAAE;AAC1C,MAAI,CAAC,QAAS;AACd,SAAO,oBAAC,4BAAyB,YAAwB,OAAc,SAAkB,cAA4B;AACvH;",
+        "names": ["content"]
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/FreeReportNavigation/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const activeMenu = content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, onPageChange });\n};\n",
+      "start": 1746125081877,
+      "end": 1746125081877,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/FreeReportNavigation/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC;"
+      }
+    }
+  ]
+}

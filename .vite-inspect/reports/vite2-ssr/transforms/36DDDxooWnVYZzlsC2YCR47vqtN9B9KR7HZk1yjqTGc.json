@@ -1,0 +1,159 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestMultipleQuestion/view-model.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\n\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\n\ninterface UseMultipleQuestionViewModelProps {\n    onChange: (payload: {\n        question: string;\n        answer: { input?: string; value: string }[];\n        index: number;\n        isMultiple: boolean;\n    }) => void;\n    page: number;\n    id: string;\n    value: MultiChoiceAnswer[] | null;\n    options?: Option[];\n}\n\nexport const useMultipleQuestionViewModel = ({\n    onChange,\n    options,\n    page,\n    id,\n    value,\n}: UseMultipleQuestionViewModelProps) => {\n    const [input, setInput] = useState('');\n    const [localValues, setLocalValues] = useState<string[]>([]);\n    const [debounced] = useDebouncedValue(input, 200);\n\n    useEffect(() => {\n        const obj: { value: string; input?: string }[] = [];\n\n        // TODO: check and remove - ?\n        // if (localValues.length < 1) {\n        //     onChange({\n        //         question: id,\n        //         answer: obj,\n        //         index: page - 1,\n        //         isMultiple: true,\n        //     });\n        // }\n\n        localValues?.forEach((v, idx) => {\n            if (!options) return;\n\n            if (localValues[idx] === options[options?.length - 1].id) {\n                return (obj[idx] = {\n                    value: v,\n                    input: debounced,\n                });\n            }\n\n            obj[idx] = {\n                value: v,\n            };\n        });\n\n        onChange({\n            question: id,\n            answer: obj,\n            index: page - 1,\n            isMultiple: true,\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [localValues, debounced]);\n\n    useEffect(() => {\n        setInput(value?.find((el) => el.input)?.input ?? '');\n        setLocalValues(value?.map((el) => el.value) ?? []);\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [id, page]);\n\n    return {\n        localValues,\n        input,\n        setLocalValues,\n        setInput,\n    };\n};\n",
+      "start": 1746125082458,
+      "end": 1746125082491,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\ninterface UseMultipleQuestionViewModelProps {\n  onChange: (payload: {\n    question: string;\n    answer: {\n      input?: string;\n      value: string;\n    }[];\n    index: number;\n    isMultiple: boolean;\n  }) => void;\n  page: number;\n  id: string;\n  value: MultiChoiceAnswer[] | null;\n  options?: Option[];\n}\nexport const useMultipleQuestionViewModel = ({\n  onChange,\n  options,\n  page,\n  id,\n  value\n}: UseMultipleQuestionViewModelProps) => {\n  const [input, setInput] = useState('');\n  const [localValues, setLocalValues] = useState<string[]>([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj: {\n      value: string;\n      input?: string;\n    }[] = [];\n\n    // TODO: check and remove - ?\n    // if (localValues.length < 1) {\n    //     onChange({\n    //         question: id,\n    //         answer: obj,\n    //         index: page - 1,\n    //         isMultiple: true,\n    //     });\n    // }\n\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [localValues, debounced]);\n  useEffect(() => {\n    setInput(value?.find(el => el.input)?.input ?? '');\n    setLocalValues(value?.map(el => el.value) ?? []);\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [id, page]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};",
+      "start": 1746125082491,
+      "end": 1746125082493,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useEffect",
+          "useState",
+          "useDebouncedValue",
+          "MultiChoiceAnswer",
+          "Option",
+          "UseMultipleQuestionViewModelProps",
+          "onChange",
+          "payload",
+          "question",
+          "answer",
+          "input",
+          "value",
+          "index",
+          "isMultiple",
+          "page",
+          "id",
+          "options",
+          "useMultipleQuestionViewModel",
+          "setInput",
+          "localValues",
+          "setLocalValues",
+          "debounced",
+          "obj",
+          "forEach",
+          "v",
+          "idx",
+          "length",
+          "find",
+          "el",
+          "map"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestMultipleQuestion/view-model.ts"
+        ],
+        "sourcesContent": [
+          "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\n\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\n\ninterface UseMultipleQuestionViewModelProps {\n    onChange: (payload: {\n        question: string;\n        answer: { input?: string; value: string }[];\n        index: number;\n        isMultiple: boolean;\n    }) => void;\n    page: number;\n    id: string;\n    value: MultiChoiceAnswer[] | null;\n    options?: Option[];\n}\n\nexport const useMultipleQuestionViewModel = ({\n    onChange,\n    options,\n    page,\n    id,\n    value,\n}: UseMultipleQuestionViewModelProps) => {\n    const [input, setInput] = useState('');\n    const [localValues, setLocalValues] = useState<string[]>([]);\n    const [debounced] = useDebouncedValue(input, 200);\n\n    useEffect(() => {\n        const obj: { value: string; input?: string }[] = [];\n\n        // TODO: check and remove - ?\n        // if (localValues.length < 1) {\n        //     onChange({\n        //         question: id,\n        //         answer: obj,\n        //         index: page - 1,\n        //         isMultiple: true,\n        //     });\n        // }\n\n        localValues?.forEach((v, idx) => {\n            if (!options) return;\n\n            if (localValues[idx] === options[options?.length - 1].id) {\n                return (obj[idx] = {\n                    value: v,\n                    input: debounced,\n                });\n            }\n\n            obj[idx] = {\n                value: v,\n            };\n        });\n\n        onChange({\n            question: id,\n            answer: obj,\n            index: page - 1,\n            isMultiple: true,\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [localValues, debounced]);\n\n    useEffect(() => {\n        setInput(value?.find((el) => el.input)?.input ?? '');\n        setLocalValues(value?.map((el) => el.value) ?? []);\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [id, page]);\n\n    return {\n        localValues,\n        input,\n        setLocalValues,\n        setInput,\n    };\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,EAAEC,QAAQ,QAAQ,OAAO;AAC3C,SAASC,iBAAiB,QAAQ,gBAAgB;AAElD,cAAcC,iBAAiB,EAAEC,MAAM,QAAQ,iBAAiB;AAEhE,UAAUC,iCAAiC,CAAC;EACxCC,QAAQ,EAAE,CAACC,OAAO,EAAE;IAChBC,QAAQ,EAAE,MAAM;IAChBC,MAAM,EAAE;MAAEC,KAAK,CAAC,EAAE,MAAM;MAAEC,KAAK,EAAE,MAAM;IAAC,CAAC,EAAE;IAC3CC,KAAK,EAAE,MAAM;IACbC,UAAU,EAAE,OAAO;EACvB,CAAC,EAAE,GAAG,IAAI;EACVC,IAAI,EAAE,MAAM;EACZC,EAAE,EAAE,MAAM;EACVJ,KAAK,EAAER,iBAAiB,EAAE,GAAG,IAAI;EACjCa,OAAO,CAAC,EAAEZ,MAAM,EAAE;AACtB;AAEA,OAAO,MAAMa,4BAA4B,GAAGA,CAAC;EACzCX,QAAQ;EACRU,OAAO;EACPF,IAAI;EACJC,EAAE;EACFJ;AAC+B,CAAlC,EAAEN,iCAAiC,KAAK;EACrC,MAAM,CAACK,KAAK,EAAEQ,QAAQ,CAAC,GAAGjB,QAAQ,CAAC,EAAE,CAAC;EACtC,MAAM,CAACkB,WAAW,EAAEC,cAAc,CAAC,GAAGnB,QAAQ,CAAC,MAAM,EAAE,CAAC,CAAC,EAAE,CAAC;EAC5D,MAAM,CAACoB,SAAS,CAAC,GAAGnB,iBAAiB,CAACQ,KAAK,EAAE,GAAG,CAAC;EAEjDV,SAAS,CAAC,MAAM;IACZ,MAAMsB,GAAG,EAAE;MAAEX,KAAK,EAAE,MAAM;MAAED,KAAK,CAAC,EAAE,MAAM;IAAC,CAAC,EAAE,GAAG,EAAE;;IAEnD;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;IAEAS,WAAW,EAAEI,OAAO,CAAC,CAACC,CAAC,EAAEC,GAAG,KAAK;MAC7B,IAAI,CAACT,OAAO,EAAE;MAEd,IAAIG,WAAW,CAACM,GAAG,CAAC,KAAKT,OAAO,CAACA,OAAO,EAAEU,MAAM,GAAG,CAAC,CAAC,CAACX,EAAE,EAAE;QACtD,OAAQO,GAAG,CAACG,GAAG,CAAC,GAAG;UACfd,KAAK,EAAEa,CAAC;UACRd,KAAK,EAAEW;QACX,CAAC;MACL;MAEAC,GAAG,CAACG,GAAG,CAAC,GAAG;QACPd,KAAK,EAAEa;MACX,CAAC;IACL,CAAC,CAAC;IAEFlB,QAAQ,CAAC;MACLE,QAAQ,EAAEO,EAAE;MACZN,MAAM,EAAEa,GAAG;MACXV,KAAK,EAAEE,IAAI,GAAG,CAAC;MACfD,UAAU,EAAE;IAChB,CAAC,CAAC;IACF;EACJ,CAAC,EAAE,CAACM,WAAW,EAAEE,SAAS,CAAC,CAAC;EAE5BrB,SAAS,CAAC,MAAM;IACZkB,QAAQ,CAACP,KAAK,EAAEgB,IAAI,CAAEC,EAAE,IAAKA,EAAE,CAAClB,KAAK,CAAC,EAAEA,KAAK,IAAI,EAAE,CAAC;IACpDU,cAAc,CAACT,KAAK,EAAEkB,GAAG,CAAED,EAAE,IAAKA,EAAE,CAACjB,KAAK,CAAC,IAAI,EAAE,CAAC;IAClD;EACJ,CAAC,EAAE,CAACI,EAAE,EAAED,IAAI,CAAC,CAAC;EAEd,OAAO;IACHK,WAAW;IACXT,KAAK;IACLU,cAAc;IACdF;EACJ,CAAC;AACL,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { useEffect, useState } from \"react\";\nimport { useDebouncedValue } from \"@mantine/hooks\";\nexport const useMultipleQuestionViewModel = ({\n  onChange,\n  options,\n  page,\n  id,\n  value\n}) => {\n  const [input, setInput] = useState(\"\");\n  const [localValues, setLocalValues] = useState([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj = [];\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n  }, [localValues, debounced]);\n  useEffect(() => {\n    setInput(value?.find((el) => el.input)?.input ?? \"\");\n    setLocalValues(value?.map((el) => el.value) ?? []);\n  }, [id, page]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};\n",
+      "start": 1746125082493,
+      "end": 1746125082526,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestMultipleQuestion/view-model.ts"
+        ],
+        "sourcesContent": [
+          "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\ninterface UseMultipleQuestionViewModelProps {\n  onChange: (payload: {\n    question: string;\n    answer: {\n      input?: string;\n      value: string;\n    }[];\n    index: number;\n    isMultiple: boolean;\n  }) => void;\n  page: number;\n  id: string;\n  value: MultiChoiceAnswer[] | null;\n  options?: Option[];\n}\nexport const useMultipleQuestionViewModel = ({\n  onChange,\n  options,\n  page,\n  id,\n  value\n}: UseMultipleQuestionViewModelProps) => {\n  const [input, setInput] = useState('');\n  const [localValues, setLocalValues] = useState<string[]>([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj: {\n      value: string;\n      input?: string;\n    }[] = [];\n\n    // TODO: check and remove - ?\n    // if (localValues.length < 1) {\n    //     onChange({\n    //         question: id,\n    //         answer: obj,\n    //         index: page - 1,\n    //         isMultiple: true,\n    //     });\n    // }\n\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [localValues, debounced]);\n  useEffect(() => {\n    setInput(value?.find(el => el.input)?.input ?? '');\n    setLocalValues(value?.map(el => el.value) ?? []);\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [id, page]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};"
+        ],
+        "mappings": "AAAA,SAAS,WAAW,gBAAgB;AACpC,SAAS,yBAAyB;AAiB3B,aAAM,+BAA+B,CAAC;AAAA,EAC3C;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF,MAAyC;AACvC,QAAM,CAAC,OAAO,QAAQ,IAAI,SAAS,EAAE;AACrC,QAAM,CAAC,aAAa,cAAc,IAAI,SAAmB,CAAC,CAAC;AAC3D,QAAM,CAAC,SAAS,IAAI,kBAAkB,OAAO,GAAG;AAChD,YAAU,MAAM;AACd,UAAM,MAGA,CAAC;AAYP,iBAAa,QAAQ,CAAC,GAAG,QAAQ;AAC/B,UAAI,CAAC,QAAS;AACd,UAAI,YAAY,GAAG,MAAM,QAAQ,SAAS,SAAS,CAAC,EAAE,IAAI;AACxD,eAAO,IAAI,GAAG,IAAI;AAAA,UAChB,OAAO;AAAA,UACP,OAAO;AAAA,QACT;AAAA,MACF;AACA,UAAI,GAAG,IAAI;AAAA,QACT,OAAO;AAAA,MACT;AAAA,IACF,CAAC;AACD,aAAS;AAAA,MACP,UAAU;AAAA,MACV,QAAQ;AAAA,MACR,OAAO,OAAO;AAAA,MACd,YAAY;AAAA,IACd,CAAC;AAAA,EAEH,GAAG,CAAC,aAAa,SAAS,CAAC;AAC3B,YAAU,MAAM;AACd,aAAS,OAAO,KAAK,QAAM,GAAG,KAAK,GAAG,SAAS,EAAE;AACjD,mBAAe,OAAO,IAAI,QAAM,GAAG,KAAK,KAAK,CAAC,CAAC;AAAA,EAEjD,GAAG,CAAC,IAAI,IAAI,CAAC;AACb,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestMultipleQuestion/view-model.ts [vike:pluginModuleBanner] */\nimport { useEffect, useState } from \"react\";\nimport { useDebouncedValue } from \"@mantine/hooks\";\nexport const useMultipleQuestionViewModel = ({\n  onChange,\n  options,\n  page,\n  id,\n  value\n}) => {\n  const [input, setInput] = useState(\"\");\n  const [localValues, setLocalValues] = useState([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj = [];\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n  }, [localValues, debounced]);\n  useEffect(() => {\n    setInput(value?.find((el) => el.input)?.input ?? \"\");\n    setLocalValues(value?.map((el) => el.value) ?? []);\n  }, [id, page]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};\n",
+      "start": 1746125082526,
+      "end": 1746125082526,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestMultipleQuestion/view-model.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
+      }
+    }
+  ]
+}

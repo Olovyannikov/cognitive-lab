@@ -1,0 +1,141 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestQuestionTitle/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './TestQuestionTitle.module.css';\n\ninterface QuestionTitleProps {\n    text: string;\n    hint?: string;\n    fixed?: boolean;\n}\n\nexport const QuestionTitle = ({ text, hint, fixed = false }: QuestionTitleProps) => (\n    <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\n        <Stack gap='sm'>\n            <Title classNames={s} order={4}>\n                {text}\n            </Title>\n            <Text className={s.hint}>{hint}</Text>\n        </Stack>\n    </Group>\n);\n",
+      "start": 1746125082454,
+      "end": 1746125082487,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './TestQuestionTitle.module.css';\ninterface QuestionTitleProps {\n  text: string;\n  hint?: string;\n  fixed?: boolean;\n}\nexport const QuestionTitle = ({\n  text,\n  hint,\n  fixed = false\n}: QuestionTitleProps) => <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\n        <Stack gap='sm'>\n            <Title classNames={s} order={4}>\n                {text}\n            </Title>\n            <Text className={s.hint}>{hint}</Text>\n        </Stack>\n    </Group>;",
+      "start": 1746125082487,
+      "end": 1746125082488,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Group",
+          "Stack",
+          "Text",
+          "Title",
+          "clsx",
+          "s",
+          "QuestionTitleProps",
+          "text",
+          "hint",
+          "fixed",
+          "QuestionTitle",
+          "wrapper"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestQuestionTitle/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './TestQuestionTitle.module.css';\n\ninterface QuestionTitleProps {\n    text: string;\n    hint?: string;\n    fixed?: boolean;\n}\n\nexport const QuestionTitle = ({ text, hint, fixed = false }: QuestionTitleProps) => (\n    <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\n        <Stack gap='sm'>\n            <Title classNames={s} order={4}>\n                {text}\n            </Title>\n            <Text className={s.hint}>{hint}</Text>\n        </Stack>\n    </Group>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AACzD,OAAOC,IAAI,MAAM,MAAM;AAEvB,OAAOC,CAAC,MAAM,gCAAgC;AAE9C,UAAUC,kBAAkB,CAAC;EACzBC,IAAI,EAAE,MAAM;EACZC,IAAI,CAAC,EAAE,MAAM;EACbC,KAAK,CAAC,EAAE,OAAO;AACnB;AAEA,OAAO,MAAMC,aAAa,GAAGA,CAAC;EAAEH,IAAI;EAAEC,IAAI;EAAEC,KAAK,GAAG;AAA0B,CAAnB,EAAEH,kBAAkB,KAC3E,CAAC,KAAK,CAAC,SAAS,CAAC,CAACF,IAAI,CAACC,CAAC,CAACM,OAAO,EAAEF,KAAK,IAAIJ,CAAC,CAACI,KAAK,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,QAAQ;AAC5F,QAAQ,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI;AACvB,YAAY,CAAC,KAAK,CAAC,UAAU,CAAC,CAACJ,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAC3C,gBAAgB,CAACE,IAAI;AACrB,YAAY,EAAE,KAAK;AACnB,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACG,IAAI,CAAC,CAAC,CAACA,IAAI,CAAC,EAAE,IAAI;AACjD,QAAQ,EAAE,KAAK;AACf,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./TestQuestionTitle.module.css\";\nexport const QuestionTitle = ({\n  text,\n  hint,\n  fixed = false\n}) => /* @__PURE__ */ jsx(Group, { className: clsx(s.wrapper, fixed && s.fixed), gap: 0, align: \"start\", wrap: \"nowrap\", children: /* @__PURE__ */ jsxs(Stack, { gap: \"sm\", children: [\n  /* @__PURE__ */ jsx(Title, { classNames: s, order: 4, children: text }),\n  /* @__PURE__ */ jsx(Text, { className: s.hint, children: hint })\n] }) });\n",
+      "start": 1746125082488,
+      "end": 1746125082524,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestQuestionTitle/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './TestQuestionTitle.module.css';\ninterface QuestionTitleProps {\n  text: string;\n  hint?: string;\n  fixed?: boolean;\n}\nexport const QuestionTitle = ({\n  text,\n  hint,\n  fixed = false\n}: QuestionTitleProps) => <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\n        <Stack gap='sm'>\n            <Title classNames={s} order={4}>\n                {text}\n            </Title>\n            <Text className={s.hint}>{hint}</Text>\n        </Stack>\n    </Group>;"
+        ],
+        "mappings": "AAaQ,SACI,KADJ;AAbR,SAAS,OAAO,OAAO,MAAM,aAAa;AAC1C,OAAO,UAAU;AACjB,OAAO,OAAO;AAMP,aAAM,gBAAgB,CAAC;AAAA,EAC5B;AAAA,EACA;AAAA,EACA,QAAQ;AACV,MAA0B,oBAAC,SAAM,WAAW,KAAK,EAAE,SAAS,SAAS,EAAE,KAAK,GAAG,KAAK,GAAG,OAAM,SAAQ,MAAK,UAClG,+BAAC,SAAM,KAAI,MACP;AAAA,sBAAC,SAAM,YAAY,GAAG,OAAO,GACxB,gBACL;AAAA,EACA,oBAAC,QAAK,WAAW,EAAE,MAAO,gBAAK;AAAA,GACnC,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/TestQuestionTitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./TestQuestionTitle.module.css\";\nexport const QuestionTitle = ({\n  text,\n  hint,\n  fixed = false\n}) => /* @__PURE__ */ jsx(Group, { className: clsx(s.wrapper, fixed && s.fixed), gap: 0, align: \"start\", wrap: \"nowrap\", children: /* @__PURE__ */ jsxs(Stack, { gap: \"sm\", children: [\n  /* @__PURE__ */ jsx(Title, { classNames: s, order: 4, children: text }),\n  /* @__PURE__ */ jsx(Text, { className: s.hint, children: hint })\n] }) });\n",
+      "start": 1746125082524,
+      "end": 1746125082524,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Test/ui/TestQuestionTitle/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

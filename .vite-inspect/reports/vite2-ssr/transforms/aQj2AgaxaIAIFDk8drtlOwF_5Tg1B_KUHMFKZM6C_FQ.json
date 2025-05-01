@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/app/providers/Mantine/provider.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\n\nimport { theme } from './theme';\n\nexport function MantineProvider({ children }: PropsWithChildren) {\n    return (\n        <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>\n    );\n}\n",
+      "start": 1746125081998,
+      "end": 1746125082038,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\nimport { theme } from './theme';\nexport function MantineProvider({\n  children\n}: PropsWithChildren) {\n  return <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>;\n}",
+      "start": 1746125082038,
+      "end": 1746125082038,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["PropsWithChildren", "MantineProvider", "Provider", "Notifications", "theme", "children"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/app/providers/Mantine/provider.tsx"],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\n\nimport { theme } from './theme';\n\nexport function MantineProvider({ children }: PropsWithChildren) {\n    return (\n        <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>\n    );\n}\n"
+        ],
+        "mappings": "AAAA,cAAcA,iBAAiB,QAAQ,OAAO;AAC9C,SAASC,eAAe,IAAIC,QAAQ,QAAQ,eAAe;AAC3D,SAASC,aAAa,QAAQ,wBAAwB;AAEtD,SAASC,KAAK,QAAQ,SAAS;AAE/B,OAAO,SAASH,eAAeA,CAAC;EAAEI;AAA4B,CAAlB,EAAEL,iBAAiB,EAAE;EAC7D,OACI,CAAC,QAAQ,CAAC,KAAK,CAAC,CAACI,KAAK,CAAC;AAC/B,YAAY,CAAC,aAAa;AAC1B,YAAY,CAACC,QAAQ;AACrB,QAAQ,EAAE,QAAQ,CAAC;AAEnB",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { MantineProvider as Provider } from \"@mantine/core\";\nimport { Notifications } from \"@mantine/notifications\";\nimport { theme } from \"./theme\";\nexport function MantineProvider({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(Provider, { theme, children: [\n    /* @__PURE__ */ jsx(Notifications, {}),\n    children\n  ] });\n}\n",
+      "start": 1746125082038,
+      "end": 1746125082341,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/app/providers/Mantine/provider.tsx"],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { MantineProvider as Provider } from '@mantine/core';\nimport { Notifications } from '@mantine/notifications';\nimport { theme } from './theme';\nexport function MantineProvider({\n  children\n}: PropsWithChildren) {\n  return <Provider theme={theme}>\n            <Notifications />\n            {children}\n        </Provider>;\n}"
+        ],
+        "mappings": "AAOS,SACG,KADH;AANT,SAAS,mBAAmB,gBAAgB;AAC5C,SAAS,qBAAqB;AAC9B,SAAS,aAAa;AACf,gBAAS,gBAAgB;AAAA,EAC9B;AACF,GAAsB;AACpB,SAAO,qBAAC,YAAS,OACP;AAAA,wBAAC,iBAAc;AAAA,IACd;AAAA,KACL;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/app/providers/Mantine/provider.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { MantineProvider as Provider } from \"@mantine/core\";\nimport { Notifications } from \"@mantine/notifications\";\nimport { theme } from \"./theme\";\nexport function MantineProvider({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(Provider, { theme, children: [\n    /* @__PURE__ */ jsx(Notifications, {}),\n    children\n  ] });\n}\n",
+      "start": 1746125082341,
+      "end": 1746125082341,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/app/providers/Mantine/provider.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN;"
+      }
+    }
+  ]
+}

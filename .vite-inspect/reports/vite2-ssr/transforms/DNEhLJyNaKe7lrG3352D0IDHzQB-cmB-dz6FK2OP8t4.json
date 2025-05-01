@@ -1,0 +1,149 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Mark } from '../types';\n\nexport function barChartPrepareData(\n    item: Partial<{\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\n    }>\n) {\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item.mbti_data ?? ''),\n    })) as Mark[];\n}\n",
+      "start": 1746125082121,
+      "end": 1746125082164,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Mark } from '../types';\nexport function barChartPrepareData(item: Partial<{\n  mbti_data: Record<string, {\n    text: string;\n    type: 'header' | 'paragraph';\n  }[]>;\n  mbti_percentages: Record<string, {\n    negative: number;\n    positive: number;\n  }>;\n}>) {\n  return Object.entries(item.mbti_percentages ?? '').map(el => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? '')\n  })) as Mark[];\n}",
+      "start": 1746125082164,
+      "end": 1746125082165,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Mark",
+          "barChartPrepareData",
+          "item",
+          "Partial",
+          "mbti_data",
+          "Record",
+          "text",
+          "type",
+          "mbti_percentages",
+          "negative",
+          "positive",
+          "Object",
+          "entries",
+          "map",
+          "el",
+          "value",
+          "label",
+          "data",
+          "mbti_type",
+          "keys"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts"
+        ],
+        "sourcesContent": [
+          "import { Mark } from '../types';\n\nexport function barChartPrepareData(\n    item: Partial<{\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\n    }>\n) {\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item.mbti_data ?? ''),\n    })) as Mark[];\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,QAAQ,UAAU;AAE/B,OAAO,SAASC,mBAAmBA,CAC/BC,IAAI,EAAEC,OAAO,CAAC;EACVC,SAAS,EAAEC,MAAM,CAAC,MAAM,EAAE;IAAEC,IAAI,EAAE,MAAM;IAAEC,IAAI,EAAE,QAAQ,GAAG,WAAW;EAAC,CAAC,EAAE,CAAC;EAC3EC,gBAAgB,EAAEH,MAAM,CAAC,MAAM,EAAE;IAAEI,QAAQ,EAAE,MAAM;IAAEC,QAAQ,EAAE,MAAM;EAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,EACJ;EACE,OAAOC,MAAM,CAACC,OAAO,CAACV,IAAI,CAACM,gBAAgB,IAAI,EAAE,CAAC,CAACK,GAAG,CAAEC,EAAE,KAAM;IAC5DC,KAAK,EAAED,EAAE,CAAC,CAAC,CAAC,CAACJ,QAAQ;IACrBM,KAAK,EAAEF,EAAE,CAAC,CAAC,CAAC;IACZG,IAAI,EAAEf,IAAI,CAACE,SAAS,GAAGU,EAAE,CAAC,CAAC,CAAC,CAAC;IAC7BI,SAAS,EAAEP,MAAM,CAACQ,IAAI,CAACjB,IAAI,CAACE,SAAS,IAAI,EAAE;EAC/C,CAAC,CAAC,CAAC,IAAIJ,IAAI,EAAE;AACjB",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
+      "start": 1746125082165,
+      "end": 1746125082424,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts"
+        ],
+        "sourcesContent": [
+          "import { Mark } from '../types';\nexport function barChartPrepareData(item: Partial<{\n  mbti_data: Record<string, {\n    text: string;\n    type: 'header' | 'paragraph';\n  }[]>;\n  mbti_percentages: Record<string, {\n    negative: number;\n    positive: number;\n  }>;\n}>) {\n  return Object.entries(item.mbti_percentages ?? '').map(el => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? '')\n  })) as Mark[];\n}"
+        ],
+        "mappings": "AACO,gBAAS,oBAAoB,MAShC;AACF,SAAO,OAAO,QAAQ,KAAK,oBAAoB,EAAE,EAAE,IAAI,SAAO;AAAA,IAC5D,OAAO,GAAG,CAAC,EAAE;AAAA,IACb,OAAO,GAAG,CAAC;AAAA,IACX,MAAM,KAAK,YAAY,GAAG,CAAC,CAAC;AAAA,IAC5B,WAAW,OAAO,KAAK,KAAK,aAAa,EAAE;AAAA,EAC7C,EAAE;AACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/lib/barChartPreparedData.ts [vike:pluginModuleBanner] */\nexport function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
+      "start": 1746125082424,
+      "end": 1746125082424,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/lib/barChartPreparedData.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC;AACL;"
+      }
+    }
+  ]
+}

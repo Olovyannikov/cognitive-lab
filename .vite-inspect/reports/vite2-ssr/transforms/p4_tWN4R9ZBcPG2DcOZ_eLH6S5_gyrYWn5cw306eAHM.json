@@ -1,0 +1,140 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/StatisticsCard/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Paper, Text, Title } from '@mantine/core';\n\nimport s from './StatisticsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n}\n\nexport const StatisticsCard = ({ title, text }: CardProps) => (\n    <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>\n);\n",
+      "start": 1746125082011,
+      "end": 1746125082054,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Paper, Text, Title } from '@mantine/core';\nimport s from './StatisticsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n}\nexport const StatisticsCard = ({\n  title,\n  text\n}: CardProps) => <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>;",
+      "start": 1746125082054,
+      "end": 1746125082055,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Paper",
+          "Text",
+          "Title",
+          "s",
+          "CardProps",
+          "title",
+          "text",
+          "StatisticsCard",
+          "paper",
+          "paperTitle",
+          "paperText"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/StatisticsCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper, Text, Title } from '@mantine/core';\n\nimport s from './StatisticsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n}\n\nexport const StatisticsCard = ({ title, text }: CardProps) => (\n    <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAElD,OAAOC,CAAC,MAAM,6BAA6B;AAE3C,UAAUC,SAAS,CAAC;EAChBC,KAAK,EAAE,MAAM;EACbC,IAAI,EAAE,MAAM;AAChB;AAEA,OAAO,MAAMC,cAAc,GAAGA,CAAC;EAAEF,KAAK;EAAEC;AAAgB,CAAV,EAAEF,SAAS,KACrD,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACK,KAAK,CAAC;AAC9B,QAAQ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACL,CAAC,CAACM,UAAU,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AACjD,YAAY,CAACJ,KAAK;AAClB,QAAQ,EAAE,KAAK;AACf,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACO,SAAS,CAAC,CAAC,CAACJ,IAAI,CAAC,EAAE,IAAI;AAClD,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
+      "start": 1746125082055,
+      "end": 1746125082359,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/StatisticsCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper, Text, Title } from '@mantine/core';\nimport s from './StatisticsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n}\nexport const StatisticsCard = ({\n  title,\n  text\n}: CardProps) => <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>;"
+        ],
+        "mappings": "AASiB,SACT,KADS;AATjB,SAAS,OAAO,MAAM,aAAa;AACnC,OAAO,OAAO;AAKP,aAAM,iBAAiB,CAAC;AAAA,EAC7B;AAAA,EACA;AACF,MAAiB,qBAAC,SAAM,WAAW,EAAE,OAC7B;AAAA,sBAAC,SAAM,WAAW,EAAE,YAAY,OAAO,GAClC,iBACL;AAAA,EACA,oBAAC,QAAK,WAAW,EAAE,WAAY,gBAAK;AAAA,GACxC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Landing/ui/StatisticsCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
+      "start": 1746125082360,
+      "end": 1746125082360,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Landing/ui/StatisticsCard/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

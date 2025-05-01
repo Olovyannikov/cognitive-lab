@@ -1,0 +1,128 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportTitle/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Title, type TitleProps } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\n\nexport const ReportTitle = ({ children }: TitleProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>\n    );\n};\n",
+      "start": 1746125081887,
+      "end": 1746125081936,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Title, type TitleProps } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nexport const ReportTitle = ({\n  children\n}: TitleProps) => {\n  const isLarge = useIsLarge();\n  return <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>;\n};",
+      "start": 1746125081936,
+      "end": 1746125081936,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Title", "TitleProps", "useIsLarge", "ReportTitle", "children", "isLarge"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportTitle/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Title, type TitleProps } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\n\nexport const ReportTitle = ({ children }: TitleProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAE,KAAKC,UAAU,QAAQ,eAAe;AAEtD,SAASC,UAAU,QAAQ,cAAc;AAEzC,OAAO,MAAMC,WAAW,GAAGA,CAAC;EAAEC;AAAqB,CAAX,EAAEH,UAAU,KAAK;EACrD,MAAMI,OAAO,GAAGH,UAAU,CAAC,CAAC;EAE5B,OACI,CAAC,KAAK,CAAC,EAAE,CAAC,IAAI,CAAC,SAAS,CAAC,OAAO,CAAC,EAAE,CAAC,CAACG,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC;AAC/D,YAAY,CAACD,QAAQ;AACrB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const ReportTitle = ({\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Title, { mb: \"md\", \"data-type\": \"title\", fz: isLarge ? 24 : 20, children });\n};\n",
+      "start": 1746125081936,
+      "end": 1746125082161,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportTitle/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Title, type TitleProps } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nexport const ReportTitle = ({\n  children\n}: TitleProps) => {\n  const isLarge = useIsLarge();\n  return <Title mb='md' data-type='title' fz={isLarge ? 24 : 20}>\n            {children}\n        </Title>;\n};"
+        ],
+        "mappings": "AAMS;AANT,SAAS,aAA8B;AACvC,SAAS,kBAAkB;AACpB,aAAM,cAAc,CAAC;AAAA,EAC1B;AACF,MAAkB;AAChB,QAAM,UAAU,WAAW;AAC3B,SAAO,oBAAC,SAAM,IAAG,MAAK,aAAU,SAAQ,IAAI,UAAU,KAAK,IAChD,UACL;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/ReportTitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const ReportTitle = ({\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Title, { mb: \"md\", \"data-type\": \"title\", fz: isLarge ? 24 : 20, children });\n};\n",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/ReportTitle/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxG,CAAC;"
+      }
+    }
+  ]
+}

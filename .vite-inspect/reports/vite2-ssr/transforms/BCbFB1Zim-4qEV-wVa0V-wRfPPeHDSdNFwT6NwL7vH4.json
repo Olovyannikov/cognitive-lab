@@ -1,0 +1,152 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\n\nimport s from './ReportTemplate.module.css';\n\ninterface ReportTemplateProps {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n    onClose: VoidFunction;\n}\n\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n    const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n    const [onClose] = useUnit([RootModel.allMenusClosed]);\n\n    const isFree = report.report_kind === 'free';\n\n    const getReportUrl = () => {\n        if (isFree) {\n            return `/free-report/${report.user_report}`;\n        }\n\n        return `/report/${report.user_report}`;\n    };\n\n    return (\n        <Flex\n            justify='space-between'\n            className={s.reportLink}\n            gap='xl'\n            component='a'\n            href={getReportUrl()}\n            onClick={() => {\n                onClose(false);\n                report.onClose();\n            }}\n        >\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>\n    );\n};\n",
+      "start": 1746125082613,
+      "end": 1746125082627,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\nimport s from './ReportTemplate.module.css';\ninterface ReportTemplateProps {\n  mbti_type: string;\n  user_report: string;\n  created_at: string;\n  report_kind: string;\n  onClose: VoidFunction;\n}\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === 'free';\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return <Flex justify='space-between' className={s.reportLink} gap='xl' component='a' href={getReportUrl()} onClick={() => {\n    onClose(false);\n    report.onClose();\n  }}>\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>;\n};",
+      "start": 1746125082627,
+      "end": 1746125082628,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Flex",
+          "Text",
+          "useUnit",
+          "PersonalitiesModel",
+          "RootModel",
+          "s",
+          "ReportTemplateProps",
+          "mbti_type",
+          "user_report",
+          "created_at",
+          "report_kind",
+          "onClose",
+          "VoidFunction",
+          "ReportTemplate",
+          "report",
+          "types",
+          "$personalitiesMap",
+          "allMenusClosed",
+          "isFree",
+          "getReportUrl",
+          "reportLink",
+          "Date",
+          "toLocaleDateString"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\n\nimport s from './ReportTemplate.module.css';\n\ninterface ReportTemplateProps {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n    onClose: VoidFunction;\n}\n\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n    const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n    const [onClose] = useUnit([RootModel.allMenusClosed]);\n\n    const isFree = report.report_kind === 'free';\n\n    const getReportUrl = () => {\n        if (isFree) {\n            return `/free-report/${report.user_report}`;\n        }\n\n        return `/report/${report.user_report}`;\n    };\n\n    return (\n        <Flex\n            justify='space-between'\n            className={s.reportLink}\n            gap='xl'\n            component='a'\n            href={getReportUrl()}\n            onClick={() => {\n                onClose(false);\n                report.onClose();\n            }}\n        >\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,EAAEC,IAAI,QAAQ,eAAe;AAC1C,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,kBAAkB,QAAQ,wBAAwB;AAC3D,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,OAAOC,CAAC,MAAM,6BAA6B;AAE3C,UAAUC,mBAAmB,CAAC;EAC1BC,SAAS,EAAE,MAAM;EACjBC,WAAW,EAAE,MAAM;EACnBC,UAAU,EAAE,MAAM;EAClBC,WAAW,EAAE,MAAM;EACnBC,OAAO,EAAEC,YAAY;AACzB;AAEA,OAAO,MAAMC,cAAc,GAAGA,CAACC,MAAM,EAAER,mBAAmB,KAAK;EAC3D,MAAM,CAACS,KAAK,CAAC,GAAGb,OAAO,CAAC,CAACC,kBAAkB,CAACa,iBAAiB,CAAC,CAAC;EAC/D,MAAM,CAACL,OAAO,CAAC,GAAGT,OAAO,CAAC,CAACE,SAAS,CAACa,cAAc,CAAC,CAAC;EAErD,MAAMC,MAAM,GAAGJ,MAAM,CAACJ,WAAW,KAAK,MAAM;EAE5C,MAAMS,YAAY,GAAGA,CAAA,KAAM;IACvB,IAAID,MAAM,EAAE;MACR,OAAO,gBAAgBJ,MAAM,CAACN,WAAW,EAAE;IAC/C;IAEA,OAAO,WAAWM,MAAM,CAACN,WAAW,EAAE;EAC1C,CAAC;EAED,OACI,CAAC,IAAI,CACD,OAAO,CAAC,eAAe,CACvB,SAAS,CAAC,CAACH,CAAC,CAACe,UAAU,CAAC,CACxB,GAAG,CAAC,IAAI,CACR,SAAS,CAAC,GAAG,CACb,IAAI,CAAC,CAACD,YAAY,CAAC,CAAC,CAAC,CACrB,OAAO,CAAC,CAAC,MAAM;IACXR,OAAO,CAAC,KAAK,CAAC;IACdG,MAAM,CAACH,OAAO,CAAC,CAAC;EACpB,CAAC,CAAC;AAEd,YAAY,CAAC,IAAI;AACjB,gBAAgB,CAACI,KAAK,CAACD,MAAM,CAACP,SAAS,CAAC,CAAC,EAAE,CAACO,MAAM,CAACP,SAAS,CAAC;AAC7D,YAAY,EAAE,IAAI;AAClB,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,MAAM,CAAC,QAAQ,CAAC,CAACO,MAAM,CAACL,UAAU,CAAC;AAC/D,gBAAgB,CAAC,IAAIY,IAAI,CAACP,MAAM,CAACL,UAAU,CAAC,CAACa,kBAAkB,CAAC,CAAC;AACjE,YAAY,EAAE,IAAI;AAClB,QAAQ,EAAE,IAAI,CAAC;AAEf,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./ReportTemplate.module.css\";\nexport const ReportTemplate = (report) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === \"free\";\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return /* @__PURE__ */ jsxs(Flex, { justify: \"space-between\", className: s.reportLink, gap: \"xl\", component: \"a\", href: getReportUrl(), onClick: () => {\n    onClose(false);\n    report.onClose();\n  }, children: [\n    /* @__PURE__ */ jsxs(Text, { children: [\n      types[report.mbti_type],\n      \" (\",\n      report.mbti_type,\n      \")\"\n    ] }),\n    /* @__PURE__ */ jsx(Text, { component: \"time\", dateTime: report.created_at, children: new Date(report.created_at).toLocaleDateString() })\n  ] });\n};\n",
+      "start": 1746125082628,
+      "end": 1746125082636,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Flex, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { PersonalitiesModel } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\nimport s from './ReportTemplate.module.css';\ninterface ReportTemplateProps {\n  mbti_type: string;\n  user_report: string;\n  created_at: string;\n  report_kind: string;\n  onClose: VoidFunction;\n}\nexport const ReportTemplate = (report: ReportTemplateProps) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === 'free';\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return <Flex justify='space-between' className={s.reportLink} gap='xl' component='a' href={getReportUrl()} onClick={() => {\n    onClose(false);\n    report.onClose();\n  }}>\n            <Text>\n                {types[report.mbti_type]} ({report.mbti_type})\n            </Text>\n            <Text component='time' dateTime={report.created_at}>\n                {new Date(report.created_at).toLocaleDateString()}\n            </Text>\n        </Flex>;\n};"
+        ],
+        "mappings": "AA0BY,SAGA,KAHA;AA1BZ,SAAS,MAAM,YAAY;AAC3B,SAAS,eAAe;AACxB,SAAS,0BAA0B;AACnC,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AAQP,aAAM,iBAAiB,CAAC,WAAgC;AAC7D,QAAM,CAAC,KAAK,IAAI,QAAQ,CAAC,mBAAmB,iBAAiB,CAAC;AAC9D,QAAM,CAAC,OAAO,IAAI,QAAQ,CAAC,UAAU,cAAc,CAAC;AACpD,QAAM,SAAS,OAAO,gBAAgB;AACtC,QAAM,eAAe,MAAM;AACzB,QAAI,QAAQ;AACV,aAAO,gBAAgB,OAAO,WAAW;AAAA,IAC3C;AACA,WAAO,WAAW,OAAO,WAAW;AAAA,EACtC;AACA,SAAO,qBAAC,QAAK,SAAQ,iBAAgB,WAAW,EAAE,YAAY,KAAI,MAAK,WAAU,KAAI,MAAM,aAAa,GAAG,SAAS,MAAM;AACxH,YAAQ,KAAK;AACb,WAAO,QAAQ;AAAA,EACjB,GACU;AAAA,yBAAC,QACI;AAAA,YAAM,OAAO,SAAS;AAAA,MAAE;AAAA,MAAG,OAAO;AAAA,MAAU;AAAA,OACjD;AAAA,IACA,oBAAC,QAAK,WAAU,QAAO,UAAU,OAAO,YACnC,cAAI,KAAK,OAAO,UAAU,EAAE,mBAAmB,GACpD;AAAA,KACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082636,
+      "end": 1746125082636,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082637,
+      "end": 1746125082637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082637,
+      "end": 1746125082637,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PersonalitiesModel } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport s from \"./ReportTemplate.module.css\";\nexport const ReportTemplate = (report) => {\n  const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);\n  const [onClose] = useUnit([RootModel.allMenusClosed]);\n  const isFree = report.report_kind === \"free\";\n  const getReportUrl = () => {\n    if (isFree) {\n      return `/free-report/${report.user_report}`;\n    }\n    return `/report/${report.user_report}`;\n  };\n  return /* @__PURE__ */ jsxs(Flex, { justify: \"space-between\", className: s.reportLink, gap: \"xl\", component: \"a\", href: getReportUrl(), onClick: () => {\n    onClose(false);\n    report.onClose();\n  }, children: [\n    /* @__PURE__ */ jsxs(Text, { children: [\n      types[report.mbti_type],\n      \" (\",\n      report.mbti_type,\n      \")\"\n    ] }),\n    /* @__PURE__ */ jsx(Text, { component: \"time\", dateTime: report.created_at, children: new Date(report.created_at).toLocaleDateString() })\n  ] });\n};\n",
+      "start": 1746125082637,
+      "end": 1746125082637,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

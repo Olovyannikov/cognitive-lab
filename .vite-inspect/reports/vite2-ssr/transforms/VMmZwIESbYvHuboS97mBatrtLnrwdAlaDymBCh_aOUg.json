@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { TestPage } from '@/pages/TestPage';\n\nexport default function Page() {\n    return <TestPage />;\n}\n",
+      "start": 1746125081538,
+      "end": 1746125081577,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n  return <TestPage />;\n}",
+      "start": 1746125081577,
+      "end": 1746125081577,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["TestPage", "Page"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx"],
+        "sourcesContent": [
+          "import { TestPage } from '@/pages/TestPage';\n\nexport default function Page() {\n    return <TestPage />;\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,kBAAkB;AAE3C,eAAe,SAASC,IAAIA,CAAA,EAAG;EAC3B,OAAO,CAAC,QAAQ,GAAG;AACvB",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TestPage, {});\n}\n",
+      "start": 1746125081577,
+      "end": 1746125081620,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx"],
+        "sourcesContent": [
+          "import { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n  return <TestPage />;\n}"
+        ],
+        "mappings": "AAES;AAFT,SAAS,gBAAgB;AACzB,wBAAwB,OAAO;AAC7B,SAAO,oBAAC,YAAS;AACnB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/mbti-test/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TestPage, {});\n}\n",
+      "start": 1746125081620,
+      "end": 1746125081620,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/mbti-test/+Page.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export const noop = () => undefined;\n",
+      "start": 1746125081670,
+      "end": 1746125081711,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export const noop = () => undefined;",
+      "start": 1746125081711,
+      "end": 1746125081712,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["noop", "undefined"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"],
+        "sourcesContent": ["export const noop = () => undefined;\n"],
+        "mappings": "AAAA,OAAO,MAAMA,IAAI,GAAGA,CAAA,KAAMC,SAAS",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const noop = () => void 0;\n",
+      "start": 1746125081712,
+      "end": 1746125081784,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"],
+        "sourcesContent": ["export const noop = () => undefined;"],
+        "mappings": "AAAO,aAAM,OAAO,MAAM;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081784,
+      "end": 1746125081784,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/lib/noop/index.ts [vike:pluginModuleBanner] */\nexport const noop = () => void 0;\n",
+      "start": 1746125081785,
+      "end": 1746125081785,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/lib/noop/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

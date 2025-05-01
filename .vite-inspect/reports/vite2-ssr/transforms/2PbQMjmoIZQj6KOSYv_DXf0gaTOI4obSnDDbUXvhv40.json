@@ -1,0 +1,150 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedList/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\n\nimport type { ContentResolverProps, ListItem } from '../../types';\n\nimport s from './OrderedList.module.css';\n\ninterface OrderedListProps {\n    items: ListItem[];\n    color?: string;\n    resolver: (p: ContentResolverProps) => ReactNode;\n}\n\nexport const OrderedList = ({ items, color, resolver }: OrderedListProps) => (\n    <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => (\n            <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => (\n                    <Stack key={content.type + idx}>{resolver({ content, color: color ?? 'violet' })}</Stack>\n                ))}\n            </List.Item>\n        ))}\n    </List>\n);\n",
+      "start": 1746125081879,
+      "end": 1746125081933,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\nimport type { ContentResolverProps, ListItem } from '../../types';\nimport s from './OrderedList.module.css';\ninterface OrderedListProps {\n  items: ListItem[];\n  color?: string;\n  resolver: (p: ContentResolverProps) => ReactNode;\n}\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}: OrderedListProps) => <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => <Stack key={content.type + idx}>{resolver({\n        content,\n        color: color ?? 'violet'\n      })}</Stack>)}\n            </List.Item>)}\n    </List>;",
+      "start": 1746125081933,
+      "end": 1746125081934,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "List",
+          "Stack",
+          "Title",
+          "ContentResolverProps",
+          "ListItem",
+          "s",
+          "OrderedListProps",
+          "items",
+          "color",
+          "resolver",
+          "p",
+          "OrderedList",
+          "list",
+          "map",
+          "item",
+          "index",
+          "title",
+          "content",
+          "idx",
+          "type"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedList/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\n\nimport type { ContentResolverProps, ListItem } from '../../types';\n\nimport s from './OrderedList.module.css';\n\ninterface OrderedListProps {\n    items: ListItem[];\n    color?: string;\n    resolver: (p: ContentResolverProps) => ReactNode;\n}\n\nexport const OrderedList = ({ items, color, resolver }: OrderedListProps) => (\n    <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => (\n            <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => (\n                    <Stack key={content.type + idx}>{resolver({ content, color: color ?? 'violet' })}</Stack>\n                ))}\n            </List.Item>\n        ))}\n    </List>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,QAAQ,OAAO;AACjC,SAASC,IAAI,EAAEC,KAAK,EAAEC,KAAK,QAAQ,eAAe;AAElD,cAAcC,oBAAoB,EAAEC,QAAQ,QAAQ,aAAa;AAEjE,OAAOC,CAAC,MAAM,0BAA0B;AAExC,UAAUC,gBAAgB,CAAC;EACvBC,KAAK,EAAEH,QAAQ,EAAE;EACjBI,KAAK,CAAC,EAAE,MAAM;EACdC,QAAQ,EAAE,CAACC,CAAC,EAAEP,oBAAoB,EAAE,GAAGJ,SAAS;AACpD;AAEA,OAAO,MAAMY,WAAW,GAAGA,CAAC;EAAEJ,KAAK;EAAEC,KAAK;EAAEC;AAA2B,CAAjB,EAAEH,gBAAgB,KACpE,CAAC,IAAI,CAAC,SAAS,CAAC,cAAc,CAAC,IAAI,CAAC,SAAS,CAAC,SAAS,CAAC,CAACD,CAAC,CAACO,IAAI,CAAC,CAAC,UAAU,CAAC,CAACJ,KAAK,CAAC;AACvF,QAAQ,CAACD,KAAK,EAAEM,GAAG,CAAC,CAACC,IAAI,EAAEC,KAAK,KACpB,CAAC,IAAI,CAAC,IAAI,CAAC,GAAG,CAAC,CAACA,KAAK,CAAC;AAClC,gBAAgB,CAAC,KAAK,CAAC,UAAU,CAAC,CAACP,KAAK,CAAC,CAAC,EAAE,CAAC,IAAI,CAAC,SAAS,CAAC,CAACH,CAAC,CAACW,KAAK,CAAC;AACrE,oBAAoB,CAACF,IAAI,CAACE,KAAK;AAC/B,gBAAgB,EAAE,KAAK;AACvB,gBAAgB,CAACF,IAAI,CAACG,OAAO,EAAEJ,GAAG,CAAC,CAACI,OAAO,EAAEC,GAAG,KAC5B,CAAC,KAAK,CAAC,GAAG,CAAC,CAACD,OAAO,CAACE,IAAI,GAAGD,GAAG,CAAC,CAAC,CAACT,QAAQ,CAAC;QAAEQ,OAAO;QAAET,KAAK,EAAEA,KAAK,IAAI;MAAS,CAAC,CAAC,CAAC,EAAE,KAAK,CAC3F,CAAC;AAClB,YAAY,EAAE,IAAI,CAAC,IAAI,CACd,CAAC;AACV,IAAI,EAAE,IAAI,CACT",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedList.module.css\";\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Ordered List\", type: \"ordered\", className: s.list, \"data-color\": color, children: items?.map((item, index) => /* @__PURE__ */ jsxs(List.Item, { children: [\n  /* @__PURE__ */ jsx(Title, { \"data-color\": color, mb: \"md\", className: s.title, children: item.title }),\n  item.content?.map((content, idx) => /* @__PURE__ */ jsx(Stack, { children: resolver({\n    content,\n    color: color ?? \"violet\"\n  }) }, content.type + idx))\n] }, index)) });\n",
+      "start": 1746125081934,
+      "end": 1746125082161,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedList/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { ReactNode } from 'react';\nimport { List, Stack, Title } from '@mantine/core';\nimport type { ContentResolverProps, ListItem } from '../../types';\nimport s from './OrderedList.module.css';\ninterface OrderedListProps {\n  items: ListItem[];\n  color?: string;\n  resolver: (p: ContentResolverProps) => ReactNode;\n}\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}: OrderedListProps) => <List data-type='Ordered List' type='ordered' className={s.list} data-color={color}>\n        {items?.map((item, index) => <List.Item key={index}>\n                <Title data-color={color} mb='md' className={s.title}>\n                    {item.title}\n                </Title>\n                {item.content?.map((content, idx) => <Stack key={content.type + idx}>{resolver({\n        content,\n        color: color ?? 'violet'\n      })}</Stack>)}\n            </List.Item>)}\n    </List>;"
+        ],
+        "mappings": "AAcqC,SACrB,KADqB;AAbrC,SAAS,MAAM,OAAO,aAAa;AAEnC,OAAO,OAAO;AAMP,aAAM,cAAc,CAAC;AAAA,EAC1B;AAAA,EACA;AAAA,EACA;AACF,MAAwB,oBAAC,QAAK,aAAU,gBAAe,MAAK,WAAU,WAAW,EAAE,MAAM,cAAY,OAC5F,iBAAO,IAAI,CAAC,MAAM,UAAU,qBAAC,KAAK,MAAL,EACtB;AAAA,sBAAC,SAAM,cAAY,OAAO,IAAG,MAAK,WAAW,EAAE,OAC1C,eAAK,OACV;AAAA,EACC,KAAK,SAAS,IAAI,CAAC,SAAS,QAAQ,oBAAC,SAAgC,mBAAS;AAAA,IACvF;AAAA,IACA,OAAO,SAAS;AAAA,EAClB,CAAC,KAH0D,QAAQ,OAAO,GAGvE,CAAQ;AAAA,KAPoC,KAQzC,CAAY,GACpB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/OrderedList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedList.module.css\";\nexport const OrderedList = ({\n  items,\n  color,\n  resolver\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Ordered List\", type: \"ordered\", className: s.list, \"data-color\": color, children: items?.map((item, index) => /* @__PURE__ */ jsxs(List.Item, { children: [\n  /* @__PURE__ */ jsx(Title, { \"data-color\": color, mb: \"md\", className: s.title, children: item.title }),\n  item.content?.map((content, idx) => /* @__PURE__ */ jsx(Stack, { children: resolver({\n    content,\n    color: color ?? \"violet\"\n  }) }, content.type + idx))\n] }, index)) });\n",
+      "start": 1746125082161,
+      "end": 1746125082161,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/OrderedList/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1M,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

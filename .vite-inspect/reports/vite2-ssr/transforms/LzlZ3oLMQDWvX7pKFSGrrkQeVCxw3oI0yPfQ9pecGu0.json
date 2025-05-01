@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/review/@userReport/+Page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { ReviewPage } from '@/pages/ReviewPage';\n\nexport default function Page() {\n    return <ReviewPage />;\n}\n",
+      "start": 1746125081559,
+      "end": 1746125081585,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { ReviewPage } from '@/pages/ReviewPage';\nexport default function Page() {\n  return <ReviewPage />;\n}",
+      "start": 1746125081585,
+      "end": 1746125081590,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["ReviewPage", "Page"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/review/@userReport/+Page.tsx"],
+        "sourcesContent": [
+          "import { ReviewPage } from '@/pages/ReviewPage';\n\nexport default function Page() {\n    return <ReviewPage />;\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,UAAU,QAAQ,oBAAoB;AAE/C,eAAe,SAASC,IAAIA,CAAA,EAAG;EAC3B,OAAO,CAAC,UAAU,GAAG;AACzB",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { ReviewPage } from \"@/pages/ReviewPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(ReviewPage, {});\n}\n",
+      "start": 1746125081590,
+      "end": 1746125081639,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/review/@userReport/+Page.tsx"],
+        "sourcesContent": [
+          "import { ReviewPage } from '@/pages/ReviewPage';\nexport default function Page() {\n  return <ReviewPage />;\n}"
+        ],
+        "mappings": "AAES;AAFT,SAAS,kBAAkB;AAC3B,wBAAwB,OAAO;AAC7B,SAAO,oBAAC,cAAW;AACrB;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081639,
+      "end": 1746125081639,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/review/@userReport/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { ReviewPage } from \"@/pages/ReviewPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(ReviewPage, {});\n}\n",
+      "start": 1746125081640,
+      "end": 1746125081640,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/review/@userReport/+Page.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C;"
+      }
+    }
+  ]
+}

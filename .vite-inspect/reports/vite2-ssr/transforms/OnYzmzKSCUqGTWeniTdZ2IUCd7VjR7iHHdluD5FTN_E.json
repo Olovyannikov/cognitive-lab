@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/FormInput.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".label {\n  margin-bottom: var(--mantine-spacing-xxs);\n  font-weight: 600;\n  font-size: 14px;\n\n  @mixin larger-than 976px {\n    font-size: 16px;\n  }\n}\n\n.required {\n  font-size: 16px;\n}\n",
+      "start": 1746125082411,
+      "end": 1746125082425,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082425,
+      "end": 1746125082425,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/ui/FormInput/FormInput.module.css [vike:pluginModuleBanner] */\nexport const label = \"HrlS-\";\nexport const required = \"-jGmj\";\nexport default {\n\tlabel: label,\n\trequired: required\n};\n",
+      "start": 1746125082426,
+      "end": 1746125082426,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/ui/FormInput/FormInput.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/HowItHelpsCard/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { type ReactNode, useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\n\nimport s from './HowItHelpsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    bg: ReactNode;\n    i: number;\n}\n\nexport const HowItHelpsCard = ({ i, title, bg, text }: CardProps) => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Box ref={container} className={s.wrapper}>\n            <motion.div\n                className={s.card}\n                style={{\n                    top: `calc(${i * 90}px)`,\n                }}\n            >\n                {bg}\n                <Title order={4}>{title}</Title>\n                <Text>{text}</Text>\n            </motion.div>\n        </Box>\n    );\n};\n",
+      "start": 1746125082015,
+      "end": 1746125082056,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { type ReactNode, useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\nimport s from './HowItHelpsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n  bg: ReactNode;\n  i: number;\n}\nexport const HowItHelpsCard = ({\n  i,\n  title,\n  bg,\n  text\n}: CardProps) => {\n  const container = useRef<HTMLDivElement>(null);\n  return <Box ref={container} className={s.wrapper}>\n            <motion.div className={s.card} style={{\n      top: `calc(${i * 90}px)`\n    }}>\n                {bg}\n                <Title order={4}>{title}</Title>\n                <Text>{text}</Text>\n            </motion.div>\n        </Box>;\n};",
+      "start": 1746125082056,
+      "end": 1746125082057,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "useRef",
+          "Box",
+          "Text",
+          "Title",
+          "motion",
+          "s",
+          "CardProps",
+          "title",
+          "text",
+          "bg",
+          "i",
+          "HowItHelpsCard",
+          "container",
+          "HTMLDivElement",
+          "wrapper",
+          "card",
+          "top"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/HowItHelpsCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { type ReactNode, useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\n\nimport s from './HowItHelpsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    bg: ReactNode;\n    i: number;\n}\n\nexport const HowItHelpsCard = ({ i, title, bg, text }: CardProps) => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Box ref={container} className={s.wrapper}>\n            <motion.div\n                className={s.card}\n                style={{\n                    top: `calc(${i * 90}px)`,\n                }}\n            >\n                {bg}\n                <Title order={4}>{title}</Title>\n                <Text>{text}</Text>\n            </motion.div>\n        </Box>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAAS,KAAKA,SAAS,EAAEC,MAAM,QAAQ,OAAO;AAC9C,SAASC,GAAG,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAChD,SAASC,MAAM,QAAQ,eAAe;AAEtC,OAAOC,CAAC,MAAM,6BAA6B;AAE3C,UAAUC,SAAS,CAAC;EAChBC,KAAK,EAAE,MAAM;EACbC,IAAI,EAAE,MAAM;EACZC,EAAE,EAAEV,SAAS;EACbW,CAAC,EAAE,MAAM;AACb;AAEA,OAAO,MAAMC,cAAc,GAAGA,CAAC;EAAED,CAAC;EAAEH,KAAK;EAAEE,EAAE;EAAED;AAAgB,CAAV,EAAEF,SAAS,KAAK;EACjE,MAAMM,SAAS,GAAGZ,MAAM,CAACa,cAAc,CAAC,CAAC,IAAI,CAAC;EAE9C,OACI,CAAC,GAAG,CAAC,GAAG,CAAC,CAACD,SAAS,CAAC,CAAC,SAAS,CAAC,CAACP,CAAC,CAACS,OAAO,CAAC;AAClD,YAAY,CAAC,MAAM,CAAC,GAAG,CACP,SAAS,CAAC,CAACT,CAAC,CAACU,IAAI,CAAC,CAClB,KAAK,CAAC,CAAC;MACHC,GAAG,EAAE,QAAQN,CAAC,GAAG,EAAE;IACvB,CAAC,CAAC;AAElB,gBAAgB,CAACD,EAAE;AACnB,gBAAgB,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAACF,KAAK,CAAC,EAAE,KAAK;AAC/C,gBAAgB,CAAC,IAAI,CAAC,CAACC,IAAI,CAAC,EAAE,IAAI;AAClC,YAAY,EAAE,MAAM,CAAC,GAAG;AACxB,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { motion } from \"framer-motion\";\nimport s from \"./HowItHelpsCard.module.css\";\nexport const HowItHelpsCard = ({\n  i,\n  title,\n  bg,\n  text\n}) => {\n  const container = useRef(null);\n  return /* @__PURE__ */ jsx(Box, { ref: container, className: s.wrapper, children: /* @__PURE__ */ jsxs(motion.div, { className: s.card, style: {\n    top: `calc(${i * 90}px)`\n  }, children: [\n    bg,\n    /* @__PURE__ */ jsx(Title, { order: 4, children: title }),\n    /* @__PURE__ */ jsx(Text, { children: text })\n  ] }) });\n};\n",
+      "start": 1746125082057,
+      "end": 1746125082365,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/HowItHelpsCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { type ReactNode, useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\nimport s from './HowItHelpsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n  bg: ReactNode;\n  i: number;\n}\nexport const HowItHelpsCard = ({\n  i,\n  title,\n  bg,\n  text\n}: CardProps) => {\n  const container = useRef<HTMLDivElement>(null);\n  return <Box ref={container} className={s.wrapper}>\n            <motion.div className={s.card} style={{\n      top: `calc(${i * 90}px)`\n    }}>\n                {bg}\n                <Title order={4}>{title}</Title>\n                <Text>{text}</Text>\n            </motion.div>\n        </Box>;\n};"
+        ],
+        "mappings": "AAkBY,SAII,KAJJ;AAlBZ,SAAyB,cAAc;AACvC,SAAS,KAAK,MAAM,aAAa;AACjC,SAAS,cAAc;AACvB,OAAO,OAAO;AAOP,aAAM,iBAAiB,CAAC;AAAA,EAC7B;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF,MAAiB;AACf,QAAM,YAAY,OAAuB,IAAI;AAC7C,SAAO,oBAAC,OAAI,KAAK,WAAW,WAAW,EAAE,SAC/B,+BAAC,OAAO,KAAP,EAAW,WAAW,EAAE,MAAM,OAAO;AAAA,IAC5C,KAAK,QAAQ,IAAI,EAAE;AAAA,EACrB,GACa;AAAA;AAAA,IACD,oBAAC,SAAM,OAAO,GAAI,iBAAM;AAAA,IACxB,oBAAC,QAAM,gBAAK;AAAA,KAChB,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Landing/ui/HowItHelpsCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { motion } from \"framer-motion\";\nimport s from \"./HowItHelpsCard.module.css\";\nexport const HowItHelpsCard = ({\n  i,\n  title,\n  bg,\n  text\n}) => {\n  const container = useRef(null);\n  return /* @__PURE__ */ jsx(Box, { ref: container, className: s.wrapper, children: /* @__PURE__ */ jsxs(motion.div, { className: s.card, style: {\n    top: `calc(${i * 90}px)`\n  }, children: [\n    bg,\n    /* @__PURE__ */ jsx(Title, { order: 4, children: title }),\n    /* @__PURE__ */ jsx(Text, { children: text })\n  ] }) });\n};\n",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Landing/ui/HowItHelpsCard/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/MenuItem/MenuItem.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".item {\n  &:hover {\n    background-color: #fff;\n  }\n}\n\n.paper {\n  color: var(--mantine-color-dark-9);\n  transition: background-color 0.3s;\n\n  &:is(:hover, :focus-visible) {\n    @mixin data-color 3;\n  }\n\n  @mixin data-color 2;\n\n  @mixin larger-than 768px {\n    width: 100%;\n  }\n}\n\n.items {\n  flex-direction: column;\n\n  @mixin larger-than 768px {\n    flex-direction: row;\n  }\n}\n",
+      "start": 1746125082637,
+      "end": 1746125082641,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082641,
+      "end": 1746125082641,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/MenuItem/MenuItem.module.css [vike:pluginModuleBanner] */\nexport const item = \"M-p5K\";\nexport const paper = \"f9q-F\";\nexport const items = \"RnOxQ\";\nexport default {\n\titem: item,\n\tpaper: paper,\n\titems: items\n};\n",
+      "start": 1746125082644,
+      "end": 1746125082644,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Navigation/MenuItem/MenuItem.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

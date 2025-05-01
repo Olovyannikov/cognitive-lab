@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { usePageContext } from 'vike-react/usePageContext';\n\nimport { ErrorPage } from '@/pages/ErrorPage';\n\nexport default function Page() {\n    const { is404 } = usePageContext();\n    if (is404) return <ErrorPage />;\n\n    return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}\n",
+      "start": 1746125081534,
+      "end": 1746125081545,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { usePageContext } from 'vike-react/usePageContext';\nimport { ErrorPage } from '@/pages/ErrorPage';\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return <ErrorPage />;\n  return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}",
+      "start": 1746125081545,
+      "end": 1746125081546,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["usePageContext", "ErrorPage", "Page", "is404"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"],
+        "sourcesContent": [
+          "import { usePageContext } from 'vike-react/usePageContext';\n\nimport { ErrorPage } from '@/pages/ErrorPage';\n\nexport default function Page() {\n    const { is404 } = usePageContext();\n    if (is404) return <ErrorPage />;\n\n    return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,SAAS,QAAQ,mBAAmB;AAE7C,eAAe,SAASC,IAAIA,CAAA,EAAG;EAC3B,MAAM;IAAEC;EAAM,CAAC,GAAGH,cAAc,CAAC,CAAC;EAClC,IAAIG,KAAK,EAAE,OAAO,CAAC,SAAS,GAAG;EAE/B,OAAO,CAAC,SAAS,CAAC,KAAK,CAAC,aAAa,CAAC,KAAK,CAAC,wBAAwB,GAAG;AAC3E",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ErrorPage } from \"@/pages/ErrorPage\";\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return /* @__PURE__ */ jsx(ErrorPage, {});\n  return /* @__PURE__ */ jsx(ErrorPage, { image: \"/errors/500\", title: \"Что-то пошло не так...\" });\n}\n",
+      "start": 1746125081547,
+      "end": 1746125081610,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"],
+        "sourcesContent": [
+          "import { usePageContext } from 'vike-react/usePageContext';\nimport { ErrorPage } from '@/pages/ErrorPage';\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return <ErrorPage />;\n  return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}"
+        ],
+        "mappings": "AAMoB;AANpB,SAAS,sBAAsB;AAC/B,SAAS,iBAAiB;AAC1B,wBAAwB,OAAO;AAC7B,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,eAAe;AACnB,MAAI,MAAO,QAAO,oBAAC,aAAU;AAC7B,SAAO,oBAAC,aAAU,OAAM,eAAc,OAAM,0BAAyB;AACvE;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! pages/_error/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ErrorPage } from \"@/pages/ErrorPage\";\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return /* @__PURE__ */ jsx(ErrorPage, {});\n  return /* @__PURE__ */ jsx(ErrorPage, { image: \"/errors/500\", title: \"Что-то пошло не так...\" });\n}\n",
+      "start": 1746125081610,
+      "end": 1746125081610,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["pages/_error/+Page.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG;"
+      }
+    }
+  ]
+}

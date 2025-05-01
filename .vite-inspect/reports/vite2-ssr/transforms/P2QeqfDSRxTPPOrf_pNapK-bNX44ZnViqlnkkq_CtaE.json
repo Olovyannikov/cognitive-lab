@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AccordionBlock/AccordionBlock.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".description {\n  font-weight: 700;\n  font-size: 18px;\n  line-height: 1;\n\n  @mixin larger-than 992px {\n    font-size: 24px;\n  }\n}\n\n.title {\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 1;\n  color: var(--mantine-color-dark-3);\n\n  @mixin larger-than 992px {\n    font-size: 20px;\n  }\n}\n",
+      "start": 1746125082124,
+      "end": 1746125082167,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082167,
+      "end": 1746125082167,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/ui/AccordionBlock/AccordionBlock.module.css [vike:pluginModuleBanner] */\nexport const description = \"WxMqo\";\nexport const title = \"PrONq\";\nexport default {\n\tdescription: description,\n\ttitle: title\n};\n",
+      "start": 1746125082168,
+      "end": 1746125082168,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/ui/AccordionBlock/AccordionBlock.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

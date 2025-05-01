@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Button } from '@mantine/core';\n\nexport const NavigateToHelpPage = () => (\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>\n);\n",
+      "start": 1746125081726,
+      "end": 1746125081765,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Button } from '@mantine/core';\nexport const NavigateToHelpPage = () => <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>;",
+      "start": 1746125081765,
+      "end": 1746125081766,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["Button", "NavigateToHelpPage"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"],
+        "sourcesContent": [
+          "import { Button } from '@mantine/core';\n\nexport const NavigateToHelpPage = () => (\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,QAAQ,eAAe;AAEtC,OAAO,MAAMC,kBAAkB,GAAGA,CAAA,KAC9B,CAAC,MAAM,CAAC,SAAS,CAAC,OAAO,CAAC,QAAQ,CAAC,IAAI,CAAC,IAAI,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,CAAC,OAAO;AAC3E;AACA,IAAI,EAAE,MAAM,CACX",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"subtle\", size: \"md\", component: \"a\", href: \"/help\", children: \"Служба поддержки\" });\n",
+      "start": 1746125081766,
+      "end": 1746125081871,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"],
+        "sourcesContent": [
+          "import { Button } from '@mantine/core';\nexport const NavigateToHelpPage = () => <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>;"
+        ],
+        "mappings": "AACwC;AADxC,SAAS,cAAc;AAChB,aAAM,qBAAqB,MAAM,oBAAC,UAAO,WAAS,MAAC,SAAQ,UAAS,MAAK,MAAK,WAAU,KAAI,MAAK,SAAQ,8BAE5G;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081871,
+      "end": 1746125081871,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/NavigateToHelpPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"subtle\", size: \"md\", component: \"a\", href: \"/help\", children: \"Служба поддержки\" });\n",
+      "start": 1746125081872,
+      "end": 1746125081872,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/NavigateToHelpPage/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/view-model/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport { HelpFormModel } from '../model';\n\nexport const useHelpFormViewModel = () => {\n    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n    const user = useUnit(getSurveysInfoQuery.$data);\n\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            email: '',\n            subject: '',\n            text: '',\n        },\n        validate: {\n            email: (value: string) => (/^\\S+@\\S+$/.test(value) ? null : 'Неправильный email'),\n            text: (value: string) => (value.length > 0 ? null : 'Введите ваш вопрос'),\n        },\n    });\n\n    useEffect(() => {\n        if (!user) return;\n        form.setFieldValue('email', user?.user?.email ?? '');\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [user]);\n\n    const nameProps = {\n        label: 'Имя',\n        placeholder: 'Как к Вам обращаться?',\n        key: form.key('name'),\n        ...form.getInputProps('name'),\n    };\n\n    const emailProps = {\n        label: 'Электронная почта',\n        placeholder: 'name@mail.ru',\n        withAsterisk: true,\n        key: form.key('email'),\n        ...form.getInputProps('email'),\n    };\n\n    const themeProps = {\n        label: 'Тема вопроса',\n        placeholder: 'С чем связан вопрос?',\n        key: form.key('subject'),\n        ...form.getInputProps('subject'),\n    };\n\n    const questionProps = {\n        label: 'Ваш вопрос',\n        placeholder: 'Принимаем вопросы, замечания, предложения',\n        withAsterisk: true,\n        key: form.key('text'),\n        ...form.getInputProps('text'),\n    };\n\n    const onSubmit = form.onSubmit((data) => {\n        submitFormHandler(data);\n    });\n\n    return {\n        nameProps,\n        emailProps,\n        themeProps,\n        questionProps,\n        onSubmit,\n    };\n};\n",
+      "start": 1746125082192,
+      "end": 1746125082278,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { HelpFormModel } from '../model';\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: 'controlled',\n    initialValues: {\n      name: '',\n      email: '',\n      subject: '',\n      text: ''\n    },\n    validate: {\n      email: (value: string) => /^\\S+@\\S+$/.test(value) ? null : 'Неправильный email',\n      text: (value: string) => value.length > 0 ? null : 'Введите ваш вопрос'\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue('email', user?.user?.email ?? '');\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [user]);\n  const nameProps = {\n    label: 'Имя',\n    placeholder: 'Как к Вам обращаться?',\n    key: form.key('name'),\n    ...form.getInputProps('name')\n  };\n  const emailProps = {\n    label: 'Электронная почта',\n    placeholder: 'name@mail.ru',\n    withAsterisk: true,\n    key: form.key('email'),\n    ...form.getInputProps('email')\n  };\n  const themeProps = {\n    label: 'Тема вопроса',\n    placeholder: 'С чем связан вопрос?',\n    key: form.key('subject'),\n    ...form.getInputProps('subject')\n  };\n  const questionProps = {\n    label: 'Ваш вопрос',\n    placeholder: 'Принимаем вопросы, замечания, предложения',\n    withAsterisk: true,\n    key: form.key('text'),\n    ...form.getInputProps('text')\n  };\n  const onSubmit = form.onSubmit(data => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};",
+      "start": 1746125082278,
+      "end": 1746125082280,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useEffect",
+          "useForm",
+          "useUnit",
+          "getSurveysInfoQuery",
+          "HelpFormModel",
+          "useHelpFormViewModel",
+          "submitFormHandler",
+          "submitHelpForm",
+          "user",
+          "$data",
+          "form",
+          "mode",
+          "initialValues",
+          "name",
+          "email",
+          "subject",
+          "text",
+          "validate",
+          "value",
+          "test",
+          "length",
+          "setFieldValue",
+          "nameProps",
+          "label",
+          "placeholder",
+          "key",
+          "getInputProps",
+          "emailProps",
+          "withAsterisk",
+          "themeProps",
+          "questionProps",
+          "onSubmit",
+          "data"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/view-model/index.ts"],
+        "sourcesContent": [
+          "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport { HelpFormModel } from '../model';\n\nexport const useHelpFormViewModel = () => {\n    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n    const user = useUnit(getSurveysInfoQuery.$data);\n\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            email: '',\n            subject: '',\n            text: '',\n        },\n        validate: {\n            email: (value: string) => (/^\\S+@\\S+$/.test(value) ? null : 'Неправильный email'),\n            text: (value: string) => (value.length > 0 ? null : 'Введите ваш вопрос'),\n        },\n    });\n\n    useEffect(() => {\n        if (!user) return;\n        form.setFieldValue('email', user?.user?.email ?? '');\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [user]);\n\n    const nameProps = {\n        label: 'Имя',\n        placeholder: 'Как к Вам обращаться?',\n        key: form.key('name'),\n        ...form.getInputProps('name'),\n    };\n\n    const emailProps = {\n        label: 'Электронная почта',\n        placeholder: 'name@mail.ru',\n        withAsterisk: true,\n        key: form.key('email'),\n        ...form.getInputProps('email'),\n    };\n\n    const themeProps = {\n        label: 'Тема вопроса',\n        placeholder: 'С чем связан вопрос?',\n        key: form.key('subject'),\n        ...form.getInputProps('subject'),\n    };\n\n    const questionProps = {\n        label: 'Ваш вопрос',\n        placeholder: 'Принимаем вопросы, замечания, предложения',\n        withAsterisk: true,\n        key: form.key('text'),\n        ...form.getInputProps('text'),\n    };\n\n    const onSubmit = form.onSubmit((data) => {\n        submitFormHandler(data);\n    });\n\n    return {\n        nameProps,\n        emailProps,\n        themeProps,\n        questionProps,\n        onSubmit,\n    };\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,QAAQ,OAAO;AACjC,SAASC,OAAO,QAAQ,eAAe;AACvC,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,mBAAmB,QAAQ,mBAAmB;AAEvD,SAASC,aAAa,QAAQ,UAAU;AAExC,OAAO,MAAMC,oBAAoB,GAAGA,CAAA,KAAM;EACtC,MAAMC,iBAAiB,GAAGJ,OAAO,CAACE,aAAa,CAACG,cAAc,CAAC;EAC/D,MAAMC,IAAI,GAAGN,OAAO,CAACC,mBAAmB,CAACM,KAAK,CAAC;EAE/C,MAAMC,IAAI,GAAGT,OAAO,CAAC;IACjBU,IAAI,EAAE,YAAY;IAClBC,aAAa,EAAE;MACXC,IAAI,EAAE,EAAE;MACRC,KAAK,EAAE,EAAE;MACTC,OAAO,EAAE,EAAE;MACXC,IAAI,EAAE;IACV,CAAC;IACDC,QAAQ,EAAE;MACNH,KAAK,EAAEA,CAACI,KAAK,EAAE,MAAM,KAAM,WAAW,CAACC,IAAI,CAACD,KAAK,CAAC,GAAG,IAAI,GAAG,oBAAqB;MACjFF,IAAI,EAAEA,CAACE,KAAK,EAAE,MAAM,KAAMA,KAAK,CAACE,MAAM,GAAG,CAAC,GAAG,IAAI,GAAG;IACxD;EACJ,CAAC,CAAC;EAEFpB,SAAS,CAAC,MAAM;IACZ,IAAI,CAACQ,IAAI,EAAE;IACXE,IAAI,CAACW,aAAa,CAAC,OAAO,EAAEb,IAAI,EAAEA,IAAI,EAAEM,KAAK,IAAI,EAAE,CAAC;IACpD;EACJ,CAAC,EAAE,CAACN,IAAI,CAAC,CAAC;EAEV,MAAMc,SAAS,GAAG;IACdC,KAAK,EAAE,KAAK;IACZC,WAAW,EAAE,uBAAuB;IACpCC,GAAG,EAAEf,IAAI,CAACe,GAAG,CAAC,MAAM,CAAC;IACrB,GAAGf,IAAI,CAACgB,aAAa,CAAC,MAAM;EAChC,CAAC;EAED,MAAMC,UAAU,GAAG;IACfJ,KAAK,EAAE,mBAAmB;IAC1BC,WAAW,EAAE,cAAc;IAC3BI,YAAY,EAAE,IAAI;IAClBH,GAAG,EAAEf,IAAI,CAACe,GAAG,CAAC,OAAO,CAAC;IACtB,GAAGf,IAAI,CAACgB,aAAa,CAAC,OAAO;EACjC,CAAC;EAED,MAAMG,UAAU,GAAG;IACfN,KAAK,EAAE,cAAc;IACrBC,WAAW,EAAE,sBAAsB;IACnCC,GAAG,EAAEf,IAAI,CAACe,GAAG,CAAC,SAAS,CAAC;IACxB,GAAGf,IAAI,CAACgB,aAAa,CAAC,SAAS;EACnC,CAAC;EAED,MAAMI,aAAa,GAAG;IAClBP,KAAK,EAAE,YAAY;IACnBC,WAAW,EAAE,2CAA2C;IACxDI,YAAY,EAAE,IAAI;IAClBH,GAAG,EAAEf,IAAI,CAACe,GAAG,CAAC,MAAM,CAAC;IACrB,GAAGf,IAAI,CAACgB,aAAa,CAAC,MAAM;EAChC,CAAC;EAED,MAAMK,QAAQ,GAAGrB,IAAI,CAACqB,QAAQ,CAAEC,IAAI,IAAK;IACrC1B,iBAAiB,CAAC0B,IAAI,CAAC;EAC3B,CAAC,CAAC;EAEF,OAAO;IACHV,SAAS;IACTK,UAAU;IACVE,UAAU;IACVC,aAAa;IACbC;EACJ,CAAC;AACL,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { useEffect } from \"react\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { HelpFormModel } from \"../model\";\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      email: \"\",\n      subject: \"\",\n      text: \"\"\n    },\n    validate: {\n      email: (value) => /^\\S+@\\S+$/.test(value) ? null : \"Неправильный email\",\n      text: (value) => value.length > 0 ? null : \"Введите ваш вопрос\"\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue(\"email\", user?.user?.email ?? \"\");\n  }, [user]);\n  const nameProps = {\n    label: \"Имя\",\n    placeholder: \"Как к Вам обращаться?\",\n    key: form.key(\"name\"),\n    ...form.getInputProps(\"name\")\n  };\n  const emailProps = {\n    label: \"Электронная почта\",\n    placeholder: \"name@mail.ru\",\n    withAsterisk: true,\n    key: form.key(\"email\"),\n    ...form.getInputProps(\"email\")\n  };\n  const themeProps = {\n    label: \"Тема вопроса\",\n    placeholder: \"С чем связан вопрос?\",\n    key: form.key(\"subject\"),\n    ...form.getInputProps(\"subject\")\n  };\n  const questionProps = {\n    label: \"Ваш вопрос\",\n    placeholder: \"Принимаем вопросы, замечания, предложения\",\n    withAsterisk: true,\n    key: form.key(\"text\"),\n    ...form.getInputProps(\"text\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};\n",
+      "start": 1746125082280,
+      "end": 1746125082433,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/view-model/index.ts"],
+        "sourcesContent": [
+          "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { HelpFormModel } from '../model';\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: 'controlled',\n    initialValues: {\n      name: '',\n      email: '',\n      subject: '',\n      text: ''\n    },\n    validate: {\n      email: (value: string) => /^\\S+@\\S+$/.test(value) ? null : 'Неправильный email',\n      text: (value: string) => value.length > 0 ? null : 'Введите ваш вопрос'\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue('email', user?.user?.email ?? '');\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [user]);\n  const nameProps = {\n    label: 'Имя',\n    placeholder: 'Как к Вам обращаться?',\n    key: form.key('name'),\n    ...form.getInputProps('name')\n  };\n  const emailProps = {\n    label: 'Электронная почта',\n    placeholder: 'name@mail.ru',\n    withAsterisk: true,\n    key: form.key('email'),\n    ...form.getInputProps('email')\n  };\n  const themeProps = {\n    label: 'Тема вопроса',\n    placeholder: 'С чем связан вопрос?',\n    key: form.key('subject'),\n    ...form.getInputProps('subject')\n  };\n  const questionProps = {\n    label: 'Ваш вопрос',\n    placeholder: 'Принимаем вопросы, замечания, предложения',\n    withAsterisk: true,\n    key: form.key('text'),\n    ...form.getInputProps('text')\n  };\n  const onSubmit = form.onSubmit(data => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};"
+        ],
+        "mappings": "AAAA,SAAS,iBAAiB;AAC1B,SAAS,eAAe;AACxB,SAAS,eAAe;AACxB,SAAS,2BAA2B;AACpC,SAAS,qBAAqB;AACvB,aAAM,uBAAuB,MAAM;AACxC,QAAM,oBAAoB,QAAQ,cAAc,cAAc;AAC9D,QAAM,OAAO,QAAQ,oBAAoB,KAAK;AAC9C,QAAM,OAAO,QAAQ;AAAA,IACnB,MAAM;AAAA,IACN,eAAe;AAAA,MACb,MAAM;AAAA,MACN,OAAO;AAAA,MACP,SAAS;AAAA,MACT,MAAM;AAAA,IACR;AAAA,IACA,UAAU;AAAA,MACR,OAAO,CAAC,UAAkB,YAAY,KAAK,KAAK,IAAI,OAAO;AAAA,MAC3D,MAAM,CAAC,UAAkB,MAAM,SAAS,IAAI,OAAO;AAAA,IACrD;AAAA,EACF,CAAC;AACD,YAAU,MAAM;AACd,QAAI,CAAC,KAAM;AACX,SAAK,cAAc,SAAS,MAAM,MAAM,SAAS,EAAE;AAAA,EAErD,GAAG,CAAC,IAAI,CAAC;AACT,QAAM,YAAY;AAAA,IAChB,OAAO;AAAA,IACP,aAAa;AAAA,IACb,KAAK,KAAK,IAAI,MAAM;AAAA,IACpB,GAAG,KAAK,cAAc,MAAM;AAAA,EAC9B;AACA,QAAM,aAAa;AAAA,IACjB,OAAO;AAAA,IACP,aAAa;AAAA,IACb,cAAc;AAAA,IACd,KAAK,KAAK,IAAI,OAAO;AAAA,IACrB,GAAG,KAAK,cAAc,OAAO;AAAA,EAC/B;AACA,QAAM,aAAa;AAAA,IACjB,OAAO;AAAA,IACP,aAAa;AAAA,IACb,KAAK,KAAK,IAAI,SAAS;AAAA,IACvB,GAAG,KAAK,cAAc,SAAS;AAAA,EACjC;AACA,QAAM,gBAAgB;AAAA,IACpB,OAAO;AAAA,IACP,aAAa;AAAA,IACb,cAAc;AAAA,IACd,KAAK,KAAK,IAAI,MAAM;AAAA,IACpB,GAAG,KAAK,cAAc,MAAM;AAAA,EAC9B;AACA,QAAM,WAAW,KAAK,SAAS,UAAQ;AACrC,sBAAkB,IAAI;AAAA,EACxB,CAAC;AACD,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082433,
+      "end": 1746125082433,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/HelpForm/view-model/index.ts [vike:pluginModuleBanner] */\nimport { useEffect } from \"react\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { HelpFormModel } from \"../model\";\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      email: \"\",\n      subject: \"\",\n      text: \"\"\n    },\n    validate: {\n      email: (value) => /^\\S+@\\S+$/.test(value) ? null : \"Неправильный email\",\n      text: (value) => value.length > 0 ? null : \"Введите ваш вопрос\"\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue(\"email\", user?.user?.email ?? \"\");\n  }, [user]);\n  const nameProps = {\n    label: \"Имя\",\n    placeholder: \"Как к Вам обращаться?\",\n    key: form.key(\"name\"),\n    ...form.getInputProps(\"name\")\n  };\n  const emailProps = {\n    label: \"Электронная почта\",\n    placeholder: \"name@mail.ru\",\n    withAsterisk: true,\n    key: form.key(\"email\"),\n    ...form.getInputProps(\"email\")\n  };\n  const themeProps = {\n    label: \"Тема вопроса\",\n    placeholder: \"С чем связан вопрос?\",\n    key: form.key(\"subject\"),\n    ...form.getInputProps(\"subject\")\n  };\n  const questionProps = {\n    label: \"Ваш вопрос\",\n    placeholder: \"Принимаем вопросы, замечания, предложения\",\n    withAsterisk: true,\n    key: form.key(\"text\"),\n    ...form.getInputProps(\"text\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};\n",
+      "start": 1746125082433,
+      "end": 1746125082434,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/HelpForm/view-model/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC;AACH,CAAC;"
+      }
+    }
+  ]
+}

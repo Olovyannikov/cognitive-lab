@@ -1,0 +1,147 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Faq/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { reflect } from '@effector/reflect';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Faq = reflect({\n    view: Link,\n    bind: {\n        href: '/faq',\n        children: 'Ответы на вопросы',\n        onClick: () => RootModel.allMenusClosed(false),\n    },\n});\n",
+      "start": 1746125082523,
+      "end": 1746125082584,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { reflect } from '@effector/reflect';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Faq = _withFactory({\n  sid: \"-6athhm\",\n  fn: () => reflect({\n    view: Link,\n    bind: {\n      href: '/faq',\n      children: 'Ответы на вопросы',\n      onClick: () => RootModel.allMenusClosed(false)\n    }\n  }),\n  name: \"Faq\",\n  method: \"reflect\"\n});",
+      "start": 1746125082584,
+      "end": 1746125082584,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "reflect",
+          "RootModel",
+          "Link",
+          "Faq",
+          "_withFactory",
+          "sid",
+          "\"-6athhm\"",
+          "fn",
+          "view",
+          "bind",
+          "href",
+          "children",
+          "onClick",
+          "allMenusClosed",
+          "name",
+          "\"Faq\"",
+          "method",
+          "\"reflect\""
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Faq/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { reflect } from '@effector/reflect';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Faq = reflect({\n    view: Link,\n    bind: {\n        href: '/faq',\n        children: 'Ответы на вопросы',\n        onClick: () => RootModel.allMenusClosed(false),\n    },\n});\n"
+        ],
+        "mappings": ";AAAA,SAASA,OAAO,QAAQ,mBAAmB;AAE3C,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,SAASC,IAAI,QAAQ,YAAY;AAEjC,OAAO,MAAMC,GAAG,GAAAC,YAAA;EAAAC,GAAA,EAAAC,SAAA;EAAAC,EAAA,EAAAA,CAAA,KAAGP,OAAO,CAAC;IACvBQ,IAAI,EAAEN,IAAI;IACVO,IAAI,EAAE;MACFC,IAAI,EAAE,MAAM;MACZC,QAAQ,EAAE,mBAAmB;MAC7BC,OAAO,EAAEA,CAAA,KAAMX,SAAS,CAACY,cAAc,CAAC,KAAK;IACjD;EACJ,CAAC,CAAC;EAAAC,IAAA,EAAAC,KAAA;EAAAC,MAAA,EAAAC;AAAA",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { reflect } from \"@effector/reflect\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Faq = _withFactory({\n  sid: \"-6athhm\",\n  fn: () => reflect({\n    view: Link,\n    bind: {\n      href: \"/faq\",\n      children: \"Ответы на вопросы\",\n      onClick: () => RootModel.allMenusClosed(false)\n    }\n  }),\n  name: \"Faq\",\n  method: \"reflect\"\n});\n",
+      "start": 1746125082584,
+      "end": 1746125082605,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Faq/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { withFactory as _withFactory } from \"effector\";\nimport { reflect } from '@effector/reflect';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Faq = _withFactory({\n  sid: \"-6athhm\",\n  fn: () => reflect({\n    view: Link,\n    bind: {\n      href: '/faq',\n      children: 'Ответы на вопросы',\n      onClick: () => RootModel.allMenusClosed(false)\n    }\n  }),\n  name: \"Faq\",\n  method: \"reflect\"\n});"
+        ],
+        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,eAAe;AACxB,SAAS,iBAAiB;AAC1B,SAAS,YAAY;AACd,aAAM,MAAM,aAAa;AAAA,EAC9B,KAAK;AAAA,EACL,IAAI,MAAM,QAAQ;AAAA,IAChB,MAAM;AAAA,IACN,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,UAAU;AAAA,MACV,SAAS,MAAM,UAAU,eAAe,KAAK;AAAA,IAC/C;AAAA,EACF,CAAC;AAAA,EACD,MAAM;AAAA,EACN,QAAQ;AACV,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082605,
+      "end": 1746125082605,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/Faq/index.tsx [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { reflect } from \"@effector/reflect\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Faq = _withFactory({\n  sid: \"-6athhm\",\n  fn: () => reflect({\n    view: Link,\n    bind: {\n      href: \"/faq\",\n      children: \"Ответы на вопросы\",\n      onClick: () => RootModel.allMenusClosed(false)\n    }\n  }),\n  name: \"Faq\",\n  method: \"reflect\"\n});\n",
+      "start": 1746125082606,
+      "end": 1746125082606,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Faq/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC;"
+      }
+    }
+  ]
+}

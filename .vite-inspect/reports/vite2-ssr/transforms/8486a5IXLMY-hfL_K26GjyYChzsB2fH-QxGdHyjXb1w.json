@@ -1,0 +1,156 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/TariffCard/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\n\nimport { ROUTES } from '@/shared/config';\n\nimport s from './TariffCard.module.css';\n\ninterface TariffCardProps {\n    title: string;\n    description: string;\n    price: number | string;\n    features: {\n        title: string;\n        description: string;\n    }[];\n    isFull?: boolean;\n    buyNow?: boolean;\n}\n\nexport const TariffCard = ({\n    title,\n    features,\n    price,\n    description,\n    isFull = false,\n    buyNow = false,\n}: TariffCardProps) => (\n    <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map((item) => (\n                <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>\n            ))}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>\n);\n",
+      "start": 1746125082016,
+      "end": 1746125082057,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\nimport { ROUTES } from '@/shared/config';\nimport s from './TariffCard.module.css';\ninterface TariffCardProps {\n  title: string;\n  description: string;\n  price: number | string;\n  features: {\n    title: string;\n    description: string;\n  }[];\n  isFull?: boolean;\n  buyNow?: boolean;\n}\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}: TariffCardProps) => <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map(item => <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>)}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>;",
+      "start": 1746125082057,
+      "end": 1746125082059,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Button",
+          "Divider",
+          "List",
+          "Paper",
+          "Text",
+          "Title",
+          "Check",
+          "clsx",
+          "isNumber",
+          "ROUTES",
+          "s",
+          "TariffCardProps",
+          "title",
+          "description",
+          "price",
+          "features",
+          "isFull",
+          "buyNow",
+          "TariffCard",
+          "tariff",
+          "full",
+          "num",
+          "list",
+          "map",
+          "item",
+          "TEST",
+          "button"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/TariffCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\n\nimport { ROUTES } from '@/shared/config';\n\nimport s from './TariffCard.module.css';\n\ninterface TariffCardProps {\n    title: string;\n    description: string;\n    price: number | string;\n    features: {\n        title: string;\n        description: string;\n    }[];\n    isFull?: boolean;\n    buyNow?: boolean;\n}\n\nexport const TariffCard = ({\n    title,\n    features,\n    price,\n    description,\n    isFull = false,\n    buyNow = false,\n}: TariffCardProps) => (\n    <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map((item) => (\n                <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>\n            ))}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>\n);\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,EAAEC,OAAO,EAAEC,IAAI,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AACzE,SAASC,KAAK,QAAQ,gCAAgC;AACtD,OAAOC,IAAI,MAAM,MAAM;AACvB,SAASC,QAAQ,QAAQ,WAAW;AAEpC,SAASC,MAAM,QAAQ,iBAAiB;AAExC,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,UAAUC,eAAe,CAAC;EACtBC,KAAK,EAAE,MAAM;EACbC,WAAW,EAAE,MAAM;EACnBC,KAAK,EAAE,MAAM,GAAG,MAAM;EACtBC,QAAQ,EAAE;IACNH,KAAK,EAAE,MAAM;IACbC,WAAW,EAAE,MAAM;EACvB,CAAC,EAAE;EACHG,MAAM,CAAC,EAAE,OAAO;EAChBC,MAAM,CAAC,EAAE,OAAO;AACpB;AAEA,OAAO,MAAMC,UAAU,GAAGA,CAAC;EACvBN,KAAK;EACLG,QAAQ;EACRD,KAAK;EACLD,WAAW;EACXG,MAAM,GAAG,KAAK;EACdC,MAAM,GAAG;AACI,CAAhB,EAAEN,eAAe,KACd,CAAC,KAAK,CAAC,SAAS,CAAC,CAACJ,IAAI,CAACG,CAAC,CAACS,MAAM,EAAEH,MAAM,IAAIN,CAAC,CAACU,IAAI,CAAC,CAAC;AACvD,QAAQ,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAACR,KAAK,CAAC,EAAE,KAAK;AACvC,QAAQ,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC,CAACC,WAAW,CAAC,EAAE,IAAI;AAC1C,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACN,IAAI,CAACG,CAAC,CAACI,KAAK,EAAEN,QAAQ,CAACM,KAAK,CAAC,IAAIJ,CAAC,CAACW,GAAG,CAAC,CAAC,CAAC,EAAE,CAAC,MAAM;AAC3E,YAAY,CAACP,KAAK;AAClB,QAAQ,EAAE,IAAI;AACd,QAAQ,CAAC,OAAO;AAChB,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACY,IAAI,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,KAAK,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,EAAE,CAAC,GAAG,CAAC;AACzE,YAAY,CAACP,QAAQ,EAAEQ,GAAG,CAAEC,IAAI,IAChB,CAAC,IAAI,CAAC,IAAI,CAAC,GAAG,CAAC,CAACA,IAAI,CAACZ,KAAK,CAAC;AAC3C,oBAAoB,CAAC,IAAI,CAAC,IAAI,CAAC,EAAE,CAAC,KAAK;AACvC,wBAAwB,CAACY,IAAI,CAACZ,KAAK;AACnC,oBAAoB,EAAE,IAAI;AAC1B,oBAAoB,CAAC,IAAI,CAAC,IAAI,CAAC,CAACY,IAAI,CAACX,WAAW,CAAC,EAAE,IAAI;AACvD,gBAAgB,EAAE,IAAI,CAAC,IAAI,CACd,CAAC;AACd,QAAQ,EAAE,IAAI;AACd,QAAQ,CAAC,MAAM,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,CAAC,CAACI,MAAM,GAAG,mBAAmB,GAAGR,MAAM,CAACgB,IAAI,CAAC,CAAC,OAAO,CAAC,SAAS,CAAC,SAAS,CAAC,CAACf,CAAC,CAACgB,MAAM,CAAC;AACtH,YAAY,CAACT,MAAM,GAAG,eAAe,GAAG,aAAa;AACrD,QAAQ,EAAE,MAAM;AAChB,IAAI,EAAE,KAAK,CACV",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Divider, List, Paper, Text, Title } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { isNumber } from \"lodash-es\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./TariffCard.module.css\";\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}) => /* @__PURE__ */ jsxs(Paper, { className: clsx(s.tariff, isFull && s.full), children: [\n  /* @__PURE__ */ jsx(Title, { order: 5, children: title }),\n  /* @__PURE__ */ jsx(Text, { mih: 63, children: description }),\n  /* @__PURE__ */ jsx(Text, { className: clsx(s.price, isNumber(price) && s.num), fw: \"bold\", children: price }),\n  /* @__PURE__ */ jsx(Divider, {}),\n  /* @__PURE__ */ jsx(List, { className: s.list, icon: /* @__PURE__ */ jsx(Check, { weight: \"bold\", size: 24 }), children: features?.map((item) => /* @__PURE__ */ jsxs(List.Item, { children: [\n    /* @__PURE__ */ jsx(Text, { span: true, fw: \"600\", children: item.title }),\n    /* @__PURE__ */ jsx(Text, { span: true, children: item.description })\n  ] }, item.title)) }),\n  /* @__PURE__ */ jsx(Button, { component: \"a\", href: buyNow ? '/purchase?type=\"\"' : ROUTES.TEST, variant: \"outline\", className: s.button, children: buyNow ? \"Купить сейчас\" : \"Пройти тест\" })\n] });\n",
+      "start": 1746125082059,
+      "end": 1746125082369,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/TariffCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\nimport { ROUTES } from '@/shared/config';\nimport s from './TariffCard.module.css';\ninterface TariffCardProps {\n  title: string;\n  description: string;\n  price: number | string;\n  features: {\n    title: string;\n    description: string;\n  }[];\n  isFull?: boolean;\n  buyNow?: boolean;\n}\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}: TariffCardProps) => <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map(item => <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>)}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>;"
+        ],
+        "mappings": "AAyBQ,cAO2B,YAP3B;AAzBR,SAAS,QAAQ,SAAS,MAAM,OAAO,MAAM,aAAa;AAC1D,SAAS,aAAa;AACtB,OAAO,UAAU;AACjB,SAAS,gBAAgB;AACzB,SAAS,cAAc;AACvB,OAAO,OAAO;AAYP,aAAM,aAAa,CAAC;AAAA,EACzB;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA,SAAS;AAAA,EACT,SAAS;AACX,MAAuB,qBAAC,SAAM,WAAW,KAAK,EAAE,QAAQ,UAAU,EAAE,IAAI,GAChE;AAAA,sBAAC,SAAM,OAAO,GAAI,iBAAM;AAAA,EACxB,oBAAC,QAAK,KAAK,IAAK,uBAAY;AAAA,EAC5B,oBAAC,QAAK,WAAW,KAAK,EAAE,OAAO,SAAS,KAAK,KAAK,EAAE,GAAG,GAAG,IAAG,QACxD,iBACL;AAAA,EACA,oBAAC,WAAQ;AAAA,EACT,oBAAC,QAAK,WAAW,EAAE,MAAM,MAAM,oBAAC,SAAM,QAAO,QAAO,MAAM,IAAI,GACzD,oBAAU,IAAI,UAAQ,qBAAC,KAAK,MAAL,EAChB;AAAA,wBAAC,QAAK,MAAI,MAAC,IAAG,OACT,eAAK,OACV;AAAA,IACA,oBAAC,QAAK,MAAI,MAAE,eAAK,aAAY;AAAA,OAJE,KAAK,KAKxC,CAAY,GACpB;AAAA,EACA,oBAAC,UAAO,WAAU,KAAI,MAAM,SAAS,sBAAsB,OAAO,MAAM,SAAQ,WAAU,WAAW,EAAE,QAClG,mBAAS,kBAAkB,eAChC;AAAA,GACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Landing/ui/TariffCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Divider, List, Paper, Text, Title } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { isNumber } from \"lodash-es\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./TariffCard.module.css\";\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}) => /* @__PURE__ */ jsxs(Paper, { className: clsx(s.tariff, isFull && s.full), children: [\n  /* @__PURE__ */ jsx(Title, { order: 5, children: title }),\n  /* @__PURE__ */ jsx(Text, { mih: 63, children: description }),\n  /* @__PURE__ */ jsx(Text, { className: clsx(s.price, isNumber(price) && s.num), fw: \"bold\", children: price }),\n  /* @__PURE__ */ jsx(Divider, {}),\n  /* @__PURE__ */ jsx(List, { className: s.list, icon: /* @__PURE__ */ jsx(Check, { weight: \"bold\", size: 24 }), children: features?.map((item) => /* @__PURE__ */ jsxs(List.Item, { children: [\n    /* @__PURE__ */ jsx(Text, { span: true, fw: \"600\", children: item.title }),\n    /* @__PURE__ */ jsx(Text, { span: true, children: item.description })\n  ] }, item.title)) }),\n  /* @__PURE__ */ jsx(Button, { component: \"a\", href: buyNow ? '/purchase?type=\"\"' : ROUTES.TEST, variant: \"outline\", className: s.button, children: buyNow ? \"Купить сейчас\" : \"Пройти тест\" })\n] });\n",
+      "start": 1746125082369,
+      "end": 1746125082369,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Landing/ui/TariffCard/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/L,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/L,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

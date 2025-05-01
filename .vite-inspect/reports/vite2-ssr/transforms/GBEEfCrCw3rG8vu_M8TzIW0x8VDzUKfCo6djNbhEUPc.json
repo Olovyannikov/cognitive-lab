@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/methods.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export const HTTP_METHODS = {\n    POST: 'POST',\n    PUT: 'PUT',\n    PATCH: 'PATCH',\n    DELETE: 'DELETE',\n    GET: 'GET',\n} as const;\n",
+      "start": 1746125082441,
+      "end": 1746125082465,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export const HTTP_METHODS = {\n  POST: 'POST',\n  PUT: 'PUT',\n  PATCH: 'PATCH',\n  DELETE: 'DELETE',\n  GET: 'GET'\n} as const;",
+      "start": 1746125082465,
+      "end": 1746125082466,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["HTTP_METHODS", "POST", "PUT", "PATCH", "DELETE", "GET", "const"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/methods.ts"],
+        "sourcesContent": [
+          "export const HTTP_METHODS = {\n    POST: 'POST',\n    PUT: 'PUT',\n    PATCH: 'PATCH',\n    DELETE: 'DELETE',\n    GET: 'GET',\n} as const;\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,YAAY,GAAG;EACxBC,IAAI,EAAE,MAAM;EACZC,GAAG,EAAE,KAAK;EACVC,KAAK,EAAE,OAAO;EACdC,MAAM,EAAE,QAAQ;EAChBC,GAAG,EAAE;AACT,CAAC,IAAIC,KAAK",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const HTTP_METHODS = {\n  POST: \"POST\",\n  PUT: \"PUT\",\n  PATCH: \"PATCH\",\n  DELETE: \"DELETE\",\n  GET: \"GET\"\n};\n",
+      "start": 1746125082466,
+      "end": 1746125082521,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/methods.ts"],
+        "sourcesContent": [
+          "export const HTTP_METHODS = {\n  POST: 'POST',\n  PUT: 'PUT',\n  PATCH: 'PATCH',\n  DELETE: 'DELETE',\n  GET: 'GET'\n} as const;"
+        ],
+        "mappings": "AAAO,aAAM,eAAe;AAAA,EAC1B,MAAM;AAAA,EACN,KAAK;AAAA,EACL,OAAO;AAAA,EACP,QAAQ;AAAA,EACR,KAAK;AACP;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082521,
+      "end": 1746125082521,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/shared/api/methods.ts [vike:pluginModuleBanner] */\nexport const HTTP_METHODS = {\n  POST: \"POST\",\n  PUT: \"PUT\",\n  PATCH: \"PATCH\",\n  DELETE: \"DELETE\",\n  GET: \"GET\"\n};\n",
+      "start": 1746125082521,
+      "end": 1746125082522,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/shared/api/methods.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC;"
+      }
+    }
+  ]
+}

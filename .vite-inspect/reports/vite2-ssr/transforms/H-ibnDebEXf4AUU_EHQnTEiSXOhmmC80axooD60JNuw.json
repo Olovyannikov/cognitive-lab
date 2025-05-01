@@ -1,0 +1,124 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';\n",
+      "start": 1746125081713,
+      "end": 1746125081760,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';",
+      "start": 1746125081760,
+      "end": 1746125081761,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/index.ts"],
+        "sourcesContent": [
+          "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';\n"
+        ],
+        "mappings": "AAAA,cAAc,QAAQ;AACtB,cAAc,SAAS;AACvB,cAAc,cAAc;AAC5B,cAAc,WAAW;AACzB,cAAc,cAAc;AAC5B,cAAc,WAAW;AACzB,cAAc,cAAc;AAC5B,cAAc,SAAS;AACvB,cAAc,cAAc;AAC5B,cAAc,OAAO;AACrB,cAAc,cAAc;AAC5B,cAAc,gBAAgB",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
+      "start": 1746125081761,
+      "end": 1746125081833,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/index.ts"],
+        "sourcesContent": [
+          "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';"
+        ],
+        "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125081833,
+      "end": 1746125081833,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125081833,
+      "end": 1746125081833,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125081833,
+      "end": 1746125081833,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/IndexPage/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
+      "start": 1746125081834,
+      "end": 1746125081834,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/pages/IndexPage/ui/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

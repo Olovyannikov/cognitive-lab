@@ -1,0 +1,158 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/model/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createEvent, createStore, sample } from 'effector';\n\nimport { TestModel } from '@/entities/Test';\n\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n    hints: [question?.hint, ...(question?.rephrasing?.map((phrase) => phrase.hint) ?? [])].filter(Boolean),\n    texts: [question?.text, ...(question?.rephrasing?.map((phrase) => phrase.text) ?? [])].filter(Boolean),\n}));\nconst $currentPhraseIndex = createStore(0);\nconst changePhraseIndex = createEvent();\n\n$currentPhraseIndex.reset(TestModel.formPageChanged);\n\nsample({\n    clock: changePhraseIndex,\n    source: { index: $currentPhraseIndex, phrases: $currentPhrases },\n    fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n    },\n    target: $currentPhraseIndex,\n});\n\nexport const RephrasingModel = {\n    $currentPhrases,\n    $currentPhraseIndex,\n    changePhraseIndex,\n};\n",
+      "start": 1746125082011,
+      "end": 1746125082053,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createEvent, createStore, sample } from 'effector';\nimport { TestModel } from '@/entities/Test';\nconst $currentPhrases = TestModel.$currentQuestion.map(question => ({\n  hints: [question?.hint, ...(question?.rephrasing?.map(phrase => phrase.hint) ?? [])].filter(Boolean),\n  texts: [question?.text, ...(question?.rephrasing?.map(phrase => phrase.text) ?? [])].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};",
+      "start": 1746125082053,
+      "end": 1746125082054,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createEvent",
+          "createStore",
+          "sample",
+          "TestModel",
+          "$currentPhrases",
+          "$currentQuestion",
+          "map",
+          "question",
+          "hints",
+          "hint",
+          "rephrasing",
+          "phrase",
+          "filter",
+          "Boolean",
+          "texts",
+          "text",
+          "$currentPhraseIndex",
+          "name",
+          "sid",
+          "changePhraseIndex",
+          "reset",
+          "formPageChanged",
+          "and",
+          "clock",
+          "source",
+          "index",
+          "phrases",
+          "fn",
+          "phrasesLen",
+          "length",
+          "target",
+          "or",
+          "RephrasingModel"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/model/index.ts"],
+        "sourcesContent": [
+          "import { createEvent, createStore, sample } from 'effector';\n\nimport { TestModel } from '@/entities/Test';\n\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n    hints: [question?.hint, ...(question?.rephrasing?.map((phrase) => phrase.hint) ?? [])].filter(Boolean),\n    texts: [question?.text, ...(question?.rephrasing?.map((phrase) => phrase.text) ?? [])].filter(Boolean),\n}));\nconst $currentPhraseIndex = createStore(0);\nconst changePhraseIndex = createEvent();\n\n$currentPhraseIndex.reset(TestModel.formPageChanged);\n\nsample({\n    clock: changePhraseIndex,\n    source: { index: $currentPhraseIndex, phrases: $currentPhrases },\n    fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n    },\n    target: $currentPhraseIndex,\n});\n\nexport const RephrasingModel = {\n    $currentPhrases,\n    $currentPhraseIndex,\n    changePhraseIndex,\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE3D,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,MAAMC,eAAe,GAAGD,SAAS,CAACE,gBAAgB,CAACC,GAAG,CAAEC,QAAQ,KAAM;EAClEC,KAAK,EAAE,CAACD,QAAQ,EAAEE,IAAI,EAAE,IAAIF,QAAQ,EAAEG,UAAU,EAAEJ,GAAG,CAAEK,MAAM,IAAKA,MAAM,CAACF,IAAI,CAAC,IAAI,EAAE,CAAC,CAAC,CAACG,MAAM,CAACC,OAAO,CAAC;EACtGC,KAAK,EAAE,CAACP,QAAQ,EAAEQ,IAAI,EAAE,IAAIR,QAAQ,EAAEG,UAAU,EAAEJ,GAAG,CAAEK,MAAM,IAAKA,MAAM,CAACI,IAAI,CAAC,IAAI,EAAE,CAAC,CAAC,CAACH,MAAM,CAACC,OAAO;AACzG,CAAC,CAAC,CAAC;AACH,MAAMG,mBAAmB,GAAGf,WAAW,CAAC,CAAC;EAAAgB,IAAA;EAAAC,GAAA;AAAA,EAAC;AAC1C,MAAMC,iBAAiB,GAAGnB,WAAW;EAAAiB,IAAA;EAAAC,GAAA;AAAA,CAAC,CAAC;AAEvCF,mBAAmB,CAACI,KAAK,CAACjB,SAAS,CAACkB,eAAe,CAAC;AAEpDnB,MAAM;EAAAoB,GAAA,GAAC;IACHC,KAAK,EAAEJ,iBAAiB;IACxBK,MAAM,EAAE;MAAEC,KAAK,EAAET,mBAAmB;MAAEU,OAAO,EAAEtB;IAAgB,CAAC;IAChEuB,EAAE,EAAEA,CAAC;MAAEF,KAAK;MAAEC;IAAQ,CAAC,KAAK;MACxB,MAAME,UAAU,GAAGF,OAAO,CAACZ,KAAK,CAACe,MAAM;MACvC,IAAIJ,KAAK,IAAIG,UAAU,GAAG,CAAC,EAAE,OAAO,CAAC;MACrC,OAAOH,KAAK,GAAG,CAAC;IACpB,CAAC;IACDK,MAAM,EAAEd;EACZ,CAAC;EAAAe,EAAA;IAAAb,GAAA;EAAA;AAAA,EAAC;AAEF,OAAO,MAAMc,eAAe,GAAG;EAC3B5B,eAAe;EACfY,mBAAmB;EACnBG;AACJ,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [question?.hint, ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []].filter(Boolean),\n  texts: [question?.text, ...question?.rephrasing?.map((phrase) => phrase.text) ?? []].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
+      "start": 1746125082054,
+      "end": 1746125082365,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/model/index.ts"],
+        "sourcesContent": [
+          "import { createEvent, createStore, sample } from 'effector';\nimport { TestModel } from '@/entities/Test';\nconst $currentPhrases = TestModel.$currentQuestion.map(question => ({\n  hints: [question?.hint, ...(question?.rephrasing?.map(phrase => phrase.hint) ?? [])].filter(Boolean),\n  texts: [question?.text, ...(question?.rephrasing?.map(phrase => phrase.text) ?? [])].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};"
+        ],
+        "mappings": "AAAA,SAAS,aAAa,aAAa,cAAc;AACjD,SAAS,iBAAiB;AAC1B,MAAM,kBAAkB,UAAU,iBAAiB,IAAI,eAAa;AAAA,EAClE,OAAO,CAAC,UAAU,MAAM,GAAI,UAAU,YAAY,IAAI,YAAU,OAAO,IAAI,KAAK,CAAC,CAAE,EAAE,OAAO,OAAO;AAAA,EACnG,OAAO,CAAC,UAAU,MAAM,GAAI,UAAU,YAAY,IAAI,YAAU,OAAO,IAAI,KAAK,CAAC,CAAE,EAAE,OAAO,OAAO;AACrG,EAAE;AACF,MAAM,sBAAsB,YAAY,GAAG;AAAA,EACzC,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACD,MAAM,oBAAoB,YAAY;AAAA,EACpC,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACD,oBAAoB,MAAM,UAAU,eAAe;AACnD,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO;AAAA,IACP,QAAQ;AAAA,MACN,OAAO;AAAA,MACP,SAAS;AAAA,IACX;AAAA,IACA,IAAI,CAAC;AAAA,MACH;AAAA,MACA;AAAA,IACF,MAAM;AACJ,YAAM,aAAa,QAAQ,MAAM;AACjC,UAAI,SAAS,aAAa,EAAG,QAAO;AACpC,aAAO,QAAQ;AAAA,IACjB;AAAA,IACA,QAAQ;AAAA,EACV,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;AACM,aAAM,kBAAkB;AAAA,EAC7B;AAAA,EACA;AAAA,EACA;AACF;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/features/Rephrasing/model/index.ts [vike:pluginModuleBanner] */\nimport { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [question?.hint, ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []].filter(Boolean),\n  texts: [question?.text, ...question?.rephrasing?.map((phrase) => phrase.text) ?? []].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  name: \"$currentPhraseIndex\",\n  sid: \"-8rjaqw\"\n});\nconst changePhraseIndex = createEvent({\n  name: \"changePhraseIndex\",\n  sid: \"ia3rlf\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [{\n    clock: changePhraseIndex,\n    source: {\n      index: $currentPhraseIndex,\n      phrases: $currentPhrases\n    },\n    fn: ({\n      index,\n      phrases\n    }) => {\n      const phrasesLen = phrases.texts.length;\n      if (index >= phrasesLen - 1) return 0;\n      return index + 1;\n    },\n    target: $currentPhraseIndex\n  }],\n  or: {\n    sid: \"gyyngu\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
+      "start": 1746125082365,
+      "end": 1746125082365,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/features/Rephrasing/model/index.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrG,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CA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"
+      }
+    }
+  ]
+}

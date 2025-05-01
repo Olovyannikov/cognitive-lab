@@ -1,0 +1,103 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/SplashScreen.module.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".title {\n  margin-bottom: var(--mantine-spacing-xl);\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 100%;\n  text-align: center;\n\n  @mixin larger-than 992px {\n    margin-bottom: var(--mantine-spacing-5xl);\n    font-size: 48px;\n  }\n}\n\n.cards {\n  flex-direction: column;\n  margin-bottom: var(--mantine-spacing-xl);\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 992px {\n    flex-direction: row;\n    margin-bottom: var(--mantine-spacing-5xl);\n    gap: var(--mantine-spacing-lg);\n  }\n}\n",
+      "start": 1746125082430,
+      "end": 1746125082452,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "start": 1746125082452,
+      "end": 1746125082452,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/Test/SplashScreen/SplashScreen.module.css [vike:pluginModuleBanner] */\nexport const title = \"O9AN7\";\nexport const cards = \"L5bZS\";\nexport default {\n\ttitle: title,\n\tcards: cards\n};\n",
+      "start": 1746125082453,
+      "end": 1746125082453,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/widgets/Test/SplashScreen/SplashScreen.module.css"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

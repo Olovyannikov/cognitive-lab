@@ -1,0 +1,144 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/ForWhomCard/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui/Picture';\n\nimport s from './ForWhomCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    bg: ReactNode;\n    image: `/${string}/${string}`;\n}\n\nexport const ForWhomCard = ({ bg, text, image, title }: CardProps) => (\n    <Box className={s.card}>\n        <Box className={s.cardTop}>\n            {bg}\n            <Title order={4}>{title}</Title>\n            <Picture cdn src={image} w={150} h={121} />\n        </Box>\n        <Text className={s.description}>{text}</Text>\n    </Box>\n);\n",
+      "start": 1746125082013,
+      "end": 1746125082055,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui/Picture';\nimport s from './ForWhomCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n  bg: ReactNode;\n  image: `/${string}/${string}`;\n}\nexport const ForWhomCard = ({\n  bg,\n  text,\n  image,\n  title\n}: CardProps) => <Box className={s.card}>\n        <Box className={s.cardTop}>\n            {bg}\n            <Title order={4}>{title}</Title>\n            <Picture cdn src={image} w={150} h={121} />\n        </Box>\n        <Text className={s.description}>{text}</Text>\n    </Box>;",
+      "start": 1746125082055,
+      "end": 1746125082056,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ReactNode",
+          "Box",
+          "Text",
+          "Title",
+          "Picture",
+          "s",
+          "CardProps",
+          "title",
+          "text",
+          "bg",
+          "image",
+          "ForWhomCard",
+          "card",
+          "cardTop",
+          "description"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/ForWhomCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui/Picture';\n\nimport s from './ForWhomCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    bg: ReactNode;\n    image: `/${string}/${string}`;\n}\n\nexport const ForWhomCard = ({ bg, text, image, title }: CardProps) => (\n    <Box className={s.card}>\n        <Box className={s.cardTop}>\n            {bg}\n            <Title order={4}>{title}</Title>\n            <Picture cdn src={image} w={150} h={121} />\n        </Box>\n        <Text className={s.description}>{text}</Text>\n    </Box>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,SAAS,QAAQ,OAAO;AACtC,SAASC,GAAG,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAEhD,SAASC,OAAO,QAAQ,qBAAqB;AAE7C,OAAOC,CAAC,MAAM,0BAA0B;AAExC,UAAUC,SAAS,CAAC;EAChBC,KAAK,EAAE,MAAM;EACbC,IAAI,EAAE,MAAM;EACZC,EAAE,EAAET,SAAS;EACbU,KAAK,EAAE,IAAI,MAAM,IAAI,MAAM,EAAE;AACjC;AAEA,OAAO,MAAMC,WAAW,GAAGA,CAAC;EAAEF,EAAE;EAAED,IAAI;EAAEE,KAAK;EAAEH;AAAiB,CAAV,EAAED,SAAS,KAC7D,CAAC,GAAG,CAAC,SAAS,CAAC,CAACD,CAAC,CAACO,IAAI,CAAC;AAC3B,QAAQ,CAAC,GAAG,CAAC,SAAS,CAAC,CAACP,CAAC,CAACQ,OAAO,CAAC;AAClC,YAAY,CAACJ,EAAE;AACf,YAAY,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAACF,KAAK,CAAC,EAAE,KAAK;AAC3C,YAAY,CAAC,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAACG,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC;AACpD,QAAQ,EAAE,GAAG;AACb,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACL,CAAC,CAACS,WAAW,CAAC,CAAC,CAACN,IAAI,CAAC,EAAE,IAAI;AACpD,IAAI,EAAE,GAAG,CACR",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui/Picture\";\nimport s from \"./ForWhomCard.module.css\";\nexport const ForWhomCard = ({\n  bg,\n  text,\n  image,\n  title\n}) => /* @__PURE__ */ jsxs(Box, { className: s.card, children: [\n  /* @__PURE__ */ jsxs(Box, { className: s.cardTop, children: [\n    bg,\n    /* @__PURE__ */ jsx(Title, { order: 4, children: title }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, src: image, w: 150, h: 121 })\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, children: text })\n] });\n",
+      "start": 1746125082056,
+      "end": 1746125082359,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/ForWhomCard/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui/Picture';\nimport s from './ForWhomCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n  bg: ReactNode;\n  image: `/${string}/${string}`;\n}\nexport const ForWhomCard = ({\n  bg,\n  text,\n  image,\n  title\n}: CardProps) => <Box className={s.card}>\n        <Box className={s.cardTop}>\n            {bg}\n            <Title order={4}>{title}</Title>\n            <Picture cdn src={image} w={150} h={121} />\n        </Box>\n        <Text className={s.description}>{text}</Text>\n    </Box>;"
+        ],
+        "mappings": "AAgBQ,SAEI,KAFJ;AAfR,SAAS,KAAK,MAAM,aAAa;AACjC,SAAS,eAAe;AACxB,OAAO,OAAO;AAOP,aAAM,cAAc,CAAC;AAAA,EAC1B;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF,MAAiB,qBAAC,OAAI,WAAW,EAAE,MAC3B;AAAA,uBAAC,OAAI,WAAW,EAAE,SACb;AAAA;AAAA,IACD,oBAAC,SAAM,OAAO,GAAI,iBAAM;AAAA,IACxB,oBAAC,WAAQ,KAAG,MAAC,KAAK,OAAO,GAAG,KAAK,GAAG,KAAK;AAAA,KAC7C;AAAA,EACA,oBAAC,QAAK,WAAW,EAAE,aAAc,gBAAK;AAAA,GAC1C;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1746125082359,
+      "end": 1746125082359,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Landing/ui/ForWhomCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui/Picture\";\nimport s from \"./ForWhomCard.module.css\";\nexport const ForWhomCard = ({\n  bg,\n  text,\n  image,\n  title\n}) => /* @__PURE__ */ jsxs(Box, { className: s.card, children: [\n  /* @__PURE__ */ jsxs(Box, { className: s.cardTop, children: [\n    bg,\n    /* @__PURE__ */ jsx(Title, { order: 4, children: title }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, src: image, w: 150, h: 121 })\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, children: text })\n] });\n",
+      "start": 1746125082360,
+      "end": 1746125082360,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Landing/ui/ForWhomCard/index.tsx"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}
