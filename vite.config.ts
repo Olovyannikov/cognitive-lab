@@ -2,6 +2,8 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 import vike from 'vike/plugin';
 import { defineConfig } from 'vite';
+import compress from 'vite-plugin-compress';
+import inspect from 'vite-plugin-inspect';
 import svgr from 'vite-plugin-svgr';
 import vercel from 'vite-plugin-vercel';
 
@@ -10,6 +12,10 @@ export default defineConfig(({ mode }) => {
 
     return {
         plugins: [
+            inspect({
+                build: true,
+                outputDir: '.vite-inspect',
+            }),
             vike(),
             react({
                 babel: {
@@ -19,6 +25,7 @@ export default defineConfig(({ mode }) => {
             }),
             svgr(),
             vercel(),
+            compress(),
         ],
         css: {
             modules: {
@@ -29,6 +36,14 @@ export default defineConfig(({ mode }) => {
         resolve: {
             alias: {
                 '@': fileURLToPath(new URL('./src', import.meta.url)),
+            },
+        },
+        build: {
+            target: 'es2020',
+            rollupOptions: {
+                output: {
+                    manualChunks: (id) => (id.includes('node_modules') ? 'vendor' : 'app'),
+                },
             },
         },
     };
