@@ -1,5 +1,7 @@
 import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';
 
+import { ROUTES } from '@/shared/config';
+
 import { Personality, titleColorMap } from '@/entities/Personality';
 
 import s from './MenuItem.module.css';
@@ -29,7 +31,7 @@ export const MenuItem = ({ types, category, description, onClose }: MenuItemProp
                     key={type.code}
                     onClick={onClose}
                     className={s.paper}
-                    href={`/types/${type.code}`}
+                    href={`${ROUTES.TYPES}/${type.code}`}
                     data-color={`${titleColorMap[category]}`}
                 >
                     <Stack gap={6} align='center'>
