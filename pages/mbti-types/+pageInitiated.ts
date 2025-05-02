@@ -4,7 +4,7 @@ import { createPageInit } from '@/shared/lib';
 
 import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
 
-const pageInitiated = createPageInit();
+export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,
