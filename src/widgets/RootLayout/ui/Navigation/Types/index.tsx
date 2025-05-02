@@ -2,6 +2,7 @@ import { Button, Menu, Stack } from '@mantine/core';
 import { ArrowLeft } from '@phosphor-icons/react/dist/ssr';
 import { useList, useUnit } from 'effector-react';
 
+import { ROUTES } from '@/shared/config';
 import { useIsMedium } from '@/shared/lib';
 
 import { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';
@@ -43,7 +44,7 @@ export const Types = () => {
             disabled
         >
             <Menu.Target>
-                <Link href='/types' onClick={() => onCloseAllMenus(false)}>
+                <Link href={ROUTES.TYPES} onClick={() => onCloseAllMenus(false)}>
                     Типы личности
                 </Link>
             </Menu.Target>

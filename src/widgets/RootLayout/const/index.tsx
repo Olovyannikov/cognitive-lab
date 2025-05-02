@@ -1,5 +1,7 @@
 import { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 
+import { ROUTES } from '@/shared/config';
+
 export const OWNER_INFO = [
     {
         id: 0,
@@ -60,7 +62,7 @@ export const MENU = [
     },
     {
         id: 0,
-        label: <a href='/types'>Типы личности</a>,
+        label: <a href={ROUTES.TYPES}>Типы личности</a>,
     },
     {
         id: 1,

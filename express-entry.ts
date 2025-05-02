@@ -4,11 +4,7 @@ import express from 'express';
 import expressStaticGzip from 'express-static-gzip';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createGzip } from 'node:zlib';
-import { SitemapStream, streamToPromise } from 'sitemap';
 import { createDevMiddleware } from 'vike/server';
-
-import { ROUTES } from '@/shared/config';
 
 import { vikeHandler } from './server/vike-handler';
 
@@ -41,44 +37,6 @@ async function startServer() {
         const { devMiddleware } = await createDevMiddleware({ root });
         app.use(devMiddleware);
     }
-
-    /**
-     * Sitemap route
-     **/
-
-    let sitemap: Buffer<ArrayBufferLike>;
-    app.get('/sitemap.xml', (req, res) => {
-        res.header('Content-Type', 'application/xml');
-        res.header('Content-Encoding', 'gzip');
-        // if we have a cached entry send it
-        if (sitemap) {
-            res.send(sitemap);
-            return;
-        }
-
-        try {
-            const smStream = new SitemapStream({ hostname: 'https://cognitivelab.ru/' });
-            const pipeline = smStream.pipe(createGzip());
-
-            // pipe your entries or directly write them.
-            smStream.write({ url: '/', changefreq: 'daily', priority: 0.3 });
-            smStream.write({ url: ROUTES.TEST, changefreq: 'weekly', priority: 0.7 });
-            smStream.write({ url: '/types', changefreq: 'weekly', priority: 0.5 });
-            smStream.write({ url: '/mbti-test', changefreq: 'weekly', priority: 0.5 });
-
-            // cache the response
-            streamToPromise(pipeline).then((sm) => (sitemap = sm));
-            // make sure to attach a write stream such as streamToPromise before ending
-            smStream.end();
-            // stream write the response
-            pipeline.pipe(res).on('error', (e) => {
-                throw e;
-            });
-        } catch (e) {
-            console.error(e);
-            res.status(500).end();
-        }
-    });
 
     /**
      * Vike route

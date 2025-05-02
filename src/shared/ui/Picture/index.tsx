@@ -40,6 +40,7 @@ export const Picture = ({
             <source srcSet={`${fullPath}.jpg 1x, ${fullPath}@2x.jpg 2x`} />
             <source srcSet={`${fullPath}.png 1x, ${fullPath}@2x.png 2x`} />
             <Image
+                fetchPriority='high'
                 loading='lazy'
                 draggable={draggable}
                 w={width}
