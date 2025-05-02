@@ -23,8 +23,8 @@ async function startServer() {
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(`${root}/dist/client`));
         app.use(
-            '/',
-            expressStaticGzip('dist/client', {
+            root,
+            expressStaticGzip(`${root}/dist/client`, {
                 enableBrotli: true,
                 orderPreference: ['br', 'gz'],
             })
@@ -64,6 +64,7 @@ async function startServer() {
             smStream.write({ url: '/', changefreq: 'daily', priority: 0.3 });
             smStream.write({ url: ROUTES.TEST, changefreq: 'weekly', priority: 0.7 });
             smStream.write({ url: '/types', changefreq: 'weekly', priority: 0.5 });
+            smStream.write({ url: '/mbti-test', changefreq: 'weekly', priority: 0.5 });
 
             // cache the response
             streamToPromise(pipeline).then((sm) => (sitemap = sm));

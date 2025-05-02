@@ -11,7 +11,16 @@ export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,
-    target: [getMainPageInfoQuery.refresh, getReviewsQuery.refresh],
+    target: getMainPageInfoQuery.refresh,
+});
+
+sample({
+    clock: pageInitiated,
+    fn: () => ({
+        page: 1,
+        page_size: 100,
+    }),
+    target: getReviewsQuery.refresh,
 });
 
 sample({
@@ -28,14 +37,6 @@ sample({
         show_on_main: true,
     }),
     target: getFAQQuery.refresh,
-});
-
-sample({
-    clock: getReviewsQuery.finished.success,
-    fn: ({ result }) => ({
-        page_size: result.total_count,
-    }),
-    target: getReviewsQuery.refresh,
 });
 
 sample({
