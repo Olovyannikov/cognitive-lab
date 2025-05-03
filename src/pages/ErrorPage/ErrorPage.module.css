@@ -1,7 +1,6 @@
 .pic {
   img {
     height: 200px;
-    max-width: 200px;
 
     @mixin larger-than 992px {
       height: 400px;

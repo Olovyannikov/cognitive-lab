@@ -20,9 +20,10 @@ export const FreeReportPage = () => {
     useGate(ReportModel.FreeReportGate);
     const data = useUnit(getFreeResultQuery.$data);
     const pending = useUnit(getFreeResultQuery.$pending);
+    const stale = useUnit(getFreeResultQuery.$stale);
     const surveyId = useUnit(UserModel.$surveyId);
 
-    if (pending) return <PageLoader />;
+    if (pending || stale) return <PageLoader />;
     if (!data) return null;
 
     return (

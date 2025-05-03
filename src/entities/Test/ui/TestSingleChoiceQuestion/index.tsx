@@ -63,7 +63,7 @@ export const TestSingleChoiceQuestion = ({
                             question: id,
                             answer: {
                                 value: localVal,
-                                input: value?.input,
+                                input: showInput && value?.input ? value.input.trim() : ' '.trim(),
                             },
                             index: page - 1,
                             isSingle: true,
@@ -93,7 +93,7 @@ export const TestSingleChoiceQuestion = ({
                                 question: id,
                                 answer: {
                                     value: value.value,
-                                    input: e.target.value ?? '',
+                                    input: e.target.value ?? ' ',
                                 },
                                 index: page - 1,
                                 isSingle: true,
