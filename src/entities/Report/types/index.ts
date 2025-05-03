@@ -78,7 +78,9 @@ export type OrderStatus = 'pending' | 'paid' | 'canceled_by_user' | 'cancelled';
 
 export interface Order {
     id: string;
-    payment: null;
+    payment: {
+        payment_id: string;
+    };
     status: OrderStatus;
     user_report: string;
 }

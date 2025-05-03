@@ -12,7 +12,7 @@ import { InnerLayout } from '@/widgets/InnerLayout';
 import s from './PaymentCheckPage.module.css';
 
 export const PaymentCheckPage = () => {
-    const { pending, stale } = useUnit(getSurveysInfoQuery);
+    const { pending, stale, data } = useUnit(getSurveysInfoQuery);
     const { status, order } = useUnit({
         order: ReportModel.$userOrder,
         status: ReportModel.$userOrderStatus,
@@ -21,6 +21,11 @@ export const PaymentCheckPage = () => {
     const { title, buttonText, text, infoStatus } = getStatusInfo(status);
 
     if (pending || stale) return <PageLoader />;
+
+    const href =
+        status === 'paid'
+            ? `/report/${order?.user_report}`
+            : `https://yoomoney.ru/checkout/payments/v2/contract?orderId=${data?.user_orders?.find((el) => el.payment?.payment_id)?.payment?.payment_id}`;
 
     return (
         <InnerLayout
@@ -31,7 +36,7 @@ export const PaymentCheckPage = () => {
             image={`/payment/${infoStatus}`}
             navigateTo='/'
         >
-            <Button size='md' component='a' href={status === 'paid' ? `/report/${order?.user_report}` : `/`}>
+            <Button size='md' component='a' href={href}>
                 {buttonText}
             </Button>
             <NavigateToHelpPage />

@@ -93,7 +93,7 @@ export const TestSingleChoiceQuestion = ({
                                 question: id,
                                 answer: {
                                     value: value.value,
-                                    input: e.target.value,
+                                    input: e.target.value ?? '',
                                 },
                                 index: page - 1,
                                 isSingle: true,
