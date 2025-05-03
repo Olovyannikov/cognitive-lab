@@ -1,5 +1,4 @@
-import { createEvent, sample } from 'effector';
-import { createEffect } from 'effector/effector.umd';
+import { createEffect, createEvent, sample } from 'effector';
 import { createAction } from 'effector-action';
 
 import { atom } from '@/shared/factories';
@@ -11,7 +10,7 @@ import { UserModel } from '@/entities/User';
 export const TakeTestAgainModel = atom(() => {
     const takeTestAgainClicked = createEvent();
 
-    const clearLocalStorage = createEffect(async () => {
+    const clearLocalStorageFx = createEffect(async () => {
         await clearLocalStorageTestUnits();
     });
 
@@ -35,11 +34,11 @@ export const TakeTestAgainModel = atom(() => {
 
     sample({
         clock: takeTestAgainClicked,
-        target: clearLocalStorage,
+        target: clearLocalStorageFx,
     });
 
     sample({
-        clock: clearLocalStorage.done,
+        clock: clearLocalStorageFx.done,
         target: takeTestAgainMutation.start,
     });
 
