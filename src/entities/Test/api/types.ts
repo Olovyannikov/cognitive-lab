@@ -30,6 +30,7 @@ export interface PreparedAnswer {
     index: number;
     isMultiple?: boolean;
     isSingle?: boolean;
+    showInput?: boolean;
 }
 
 export interface Answers {

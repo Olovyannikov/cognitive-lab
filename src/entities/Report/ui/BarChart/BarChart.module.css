@@ -29,11 +29,11 @@
 
   &[data-type="S-N"] {
     &::before {
-      content: "Интуиция";
+      content: "Сенсорика";
     }
 
     &::after {
-      content: "Сенсорика";
+      content: "Интуиция";
     }
   }
 

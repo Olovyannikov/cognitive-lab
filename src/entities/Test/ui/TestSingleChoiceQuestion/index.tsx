@@ -18,6 +18,7 @@ interface TestSingleChoiceQuestionProps extends QuestionsResponse {
         answer: { input?: string; value: string };
         index: number;
         isSingle?: boolean;
+        showInput?: boolean;
     }) => void;
     page: number;
     showInput: boolean;
@@ -44,6 +45,7 @@ export const TestSingleChoiceQuestion = ({
                 },
                 index: page - 1,
                 isSingle: true,
+                showInput,
             });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -65,6 +67,7 @@ export const TestSingleChoiceQuestion = ({
                             },
                             index: page - 1,
                             isSingle: true,
+                            showInput: options?.find((el) => el.id === localVal)?.requires_input,
                         });
                     }}
                 >
@@ -94,6 +97,7 @@ export const TestSingleChoiceQuestion = ({
                                 },
                                 index: page - 1,
                                 isSingle: true,
+                                showInput,
                             });
                         }}
                     />

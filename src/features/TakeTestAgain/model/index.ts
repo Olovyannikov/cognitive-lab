@@ -1,4 +1,5 @@
 import { createEvent, sample } from 'effector';
+import { createEffect } from 'effector/effector.umd';
 import { createAction } from 'effector-action';
 
 import { atom } from '@/shared/factories';
@@ -10,8 +11,11 @@ import { UserModel } from '@/entities/User';
 export const TakeTestAgainModel = atom(() => {
     const takeTestAgainClicked = createEvent();
 
-    createAction({
-        clock: takeTestAgainMutation.finished.success,
+    const clearLocalStorage = createEffect(async () => {
+        await clearLocalStorageTestUnits();
+    });
+
+    const action = createAction({
         target: {
             surveyId: UserModel.$surveyId,
             form: TestModel.$scaleForm,
@@ -22,23 +26,26 @@ export const TakeTestAgainModel = atom(() => {
             closeAllModals: RootModel.allMenusClosed,
         },
         fn: (target) => {
-            target.surveyId.reinit();
-            target.page.reinit();
-            target.progress.reinit();
-            target.form.reinit();
+            target.page(1);
+            target.progress(0);
+            target.form({ answers: [] });
             target.closeAllModals(false);
         },
     });
 
     sample({
         clock: takeTestAgainClicked,
-        fn: clearLocalStorageTestUnits,
+        target: clearLocalStorage,
+    });
+
+    sample({
+        clock: clearLocalStorage.done,
         target: takeTestAgainMutation.start,
     });
 
     sample({
         clock: takeTestAgainMutation.finished.success,
-        target: TestModel.formReset,
+        target: [action],
     });
 
     return {

@@ -30,6 +30,7 @@ export const TestModel = atom(() => {
 
     const formPageChanged = createEvent<number>();
     const scaleFormFieldChanged = createEvent<PreparedAnswer>();
+
     const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
 
     const $questions = restore(
@@ -69,13 +70,20 @@ export const TestModel = atom(() => {
         clock: delayedFormFieldChanged,
         source: { page: $currentPage, progress: $currentProgress, direction: $direction },
         filter: (params, field) => !field.isMultiple && params.direction === 'forward',
-        fn: ({ page, progress }, answer) =>
-            (answer?.answer as SingleChoiceAnswer).value !== null &&
-            (answer?.answer as SingleChoiceAnswer).value !== '' &&
-            (answer?.answer as SingleChoiceAnswer).value !== undefined &&
-            progress < 100
-                ? page + 1
-                : page,
+        fn: ({ page, progress }, answer) => {
+            if (answer.showInput) return page;
+
+            if (
+                (answer?.answer as SingleChoiceAnswer).value !== null &&
+                (answer?.answer as SingleChoiceAnswer).value !== '' &&
+                (answer?.answer as SingleChoiceAnswer).value !== undefined &&
+                progress < 100
+            ) {
+                return page + 1;
+            }
+
+            return page;
+        },
         target: formPageChanged,
     });
 

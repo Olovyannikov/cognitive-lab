@@ -1,4 +1,4 @@
-import { Mark } from '../types';
+import type { Mark } from '../types';
 
 export function barChartPrepareData(
     item: Partial<{

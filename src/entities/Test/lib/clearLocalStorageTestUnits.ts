@@ -1,6 +1,7 @@
-export const clearLocalStorageTestUnits = () => {
-    window.localStorage.removeItem('$currentPage');
-    window.localStorage.removeItem('$currentProgress');
-    window.localStorage.removeItem('$scaleForm');
-    window.localStorage.removeItem('$surveyId');
+export const clearLocalStorageTestUnits = async () => {
+    const userId = window.localStorage.getItem('$userId');
+
+    window.localStorage.clear();
+
+    window.localStorage.setItem('$userId', userId ?? '');
 };
