@@ -1,5 +1,4 @@
-import { createEvent, createStore, sample } from 'effector';
-import { createEffect } from 'effector/effector.umd';
+import { createEffect, createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/local';
@@ -92,14 +91,14 @@ export const ReportModel = atom(() => {
         target: getFreeResultQuery.start,
     });
 
-    const redirectTo404 = createEffect(async () => {
+    const redirectTo404Fx = createEffect(async () => {
         await navigate('/error/404');
     });
 
     sample({
         clock: getFreeResultQuery.finished.failure,
         filter: is404Error,
-        target: redirectTo404,
+        target: redirectTo404Fx,
     });
 
     return {
