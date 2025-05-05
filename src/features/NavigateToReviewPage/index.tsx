@@ -12,7 +12,9 @@ export const NavigateToReviewPage = () => {
         isMobile,
     } = usePageContext();
     const hasComment = useUnit(
-        getSurveysInfoQuery.$data.map((user) => user?.left_comments.find((comment) => comment.user_report === reportId))
+        getSurveysInfoQuery.$data.map(
+            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null
+        )
     );
     if (hasComment) return;
 

@@ -4,10 +4,9 @@ import { createPageStart } from '@/shared/lib';
 
 import { ReportModel } from '@/entities/Report';
 
-export const pageInitiated = createPageStart();
-
+export const pageStarted = createPageStart();
 sample({
-    clock: pageInitiated,
+    clock: pageStarted,
     fn: (ctx) => ctx.routeParams.reportId,
-    target: ReportModel.$currentReportId,
+    target: ReportModel.reportIdReceived,
 });

@@ -2,6 +2,7 @@ import { Flex, Text } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
 import { PersonalitiesModel } from '@/entities/Personality';
+import { ReportModel } from '@/entities/Report';
 import { RootModel } from '@/entities/Root';
 
 import s from './ReportTemplate.module.css';
@@ -17,6 +18,7 @@ interface ReportTemplateProps {
 export const ReportTemplate = (report: ReportTemplateProps) => {
     const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);
     const [onClose] = useUnit([RootModel.allMenusClosed]);
+    const [onSetReportId] = useUnit([ReportModel.reportIdReceived]);
 
     const isFree = report.report_kind === 'free';
 
@@ -36,6 +38,7 @@ export const ReportTemplate = (report: ReportTemplateProps) => {
             component='a'
             href={getReportUrl()}
             onClick={() => {
+                onSetReportId(report?.user_report);
                 onClose(false);
                 report.onClose();
             }}

@@ -117,7 +117,8 @@ p.description {
   }
 }
 
-.image {
+.image,
+.image img {
   grid-area: i;
   margin: 0 auto 40px;
   max-width: 280px;

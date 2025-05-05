@@ -1,4 +1,3 @@
-import { cache } from '@farfetched/core';
 import { sample } from 'effector';
 import { isObject } from 'lodash-es';
 
@@ -26,5 +25,3 @@ sample({
         }) ?? null,
     target: ReportModel.$userOrder,
 });
-
-cache(getSurveysInfoQuery);

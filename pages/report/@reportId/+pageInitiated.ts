@@ -1,10 +1,10 @@
 import { sample } from 'effector';
 
-import { createPageStart } from '@/shared/lib';
+import { createPageInit } from '@/shared/lib';
 
 import { ReportModel } from '@/entities/Report';
 
-export const pageInitiated = createPageStart();
+export const pageInitiated = createPageInit();
 
 sample({
     clock: pageInitiated,

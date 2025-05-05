@@ -8,7 +8,7 @@ export const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>
     Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))
 );
 export const $lastUserFreeReport = getSurveysInfoQuery.$data.map(
-    (user) => user?.reports.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
+    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)
 );
 
 export const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);
