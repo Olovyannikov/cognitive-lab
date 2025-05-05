@@ -4,7 +4,7 @@ import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
 
-import { ReportModel } from '@/entities/Report';
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { submitAnswersMutation, TestModel } from '@/entities/Test';
 import { UserModel } from '@/entities/User';
 
@@ -61,7 +61,7 @@ export const SubmitTestModel = atom(() => {
         clock: redirectToFreeReportPageFx.done,
         source: submitAnswersMutation.finished.success.map((params) => params.result),
         fn: (data) => data.user_free_report,
-        target: ReportModel.reportIdReceived,
+        target: [ReportModel.freeReportIdReceived, getSurveysInfoQuery.start],
     });
 
     sample({

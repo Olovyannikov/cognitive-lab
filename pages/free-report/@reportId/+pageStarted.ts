@@ -8,5 +8,5 @@ export const pageStarted = createPageStart();
 sample({
     clock: pageStarted,
     fn: (ctx) => ctx.routeParams.reportId,
-    target: ReportModel.reportIdReceived,
+    target: ReportModel.freeReportIdReceived,
 });

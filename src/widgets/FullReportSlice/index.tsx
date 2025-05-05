@@ -26,15 +26,13 @@ export const FullReportSlice = ({ page = 0, showPurchaseBanner = false }: Conten
 
     if (!data) return null;
 
-    const { content } = data.content[page];
-
-    const renderContent = normalizeData(content);
+    const renderContent = normalizeData(data?.content?.[page]?.content ?? null);
 
     return (
         <>
             <InnerContainer>
                 <Box className={s.content}>
-                    {renderContent.map((c, idx) => (
+                    {renderContent?.map((c, idx) => (
                         <Box mb={60} key={idx}>
                             {c?.map((el, index) => (
                                 <Fragment key={el.type + index + idx}>

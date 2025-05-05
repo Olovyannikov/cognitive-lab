@@ -1,9 +1,9 @@
-import { createEffect, createEvent, createStore, sample, split } from 'effector';
+import { createEffect, createEvent, createStore, sample } from 'effector';
 import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/local';
 import { isUndefined } from 'lodash-es';
-import { combineEvents } from 'patronum';
+import { combineEvents, delay } from 'patronum';
 import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
@@ -26,12 +26,19 @@ export const ReportModel = atom(() => {
     const ReportGate = createGate();
     const FreeReportGate = createGate();
 
-    const reportIdReceived = createEvent<string>();
-    const $currentReportId = createStore<string | null>(null);
+    const freeReportIdReceived = createEvent<string>();
+    const fullReportIdReceived = createEvent<string>();
+    const $currentFreeReportId = createStore<string | null>(null);
+    const $currentFullReportId = createStore<string | null>(null);
 
     sample({
-        clock: reportIdReceived,
-        target: $currentReportId,
+        clock: freeReportIdReceived,
+        target: $currentFreeReportId,
+    });
+
+    sample({
+        clock: fullReportIdReceived,
+        target: $currentFullReportId,
     });
 
     const redirectToMainPageFx = createEffect(async () => await navigate('/'));
@@ -42,13 +49,8 @@ export const ReportModel = atom(() => {
         target: redirectToMainPageFx,
     });
 
-    sample({
-        clock: [combineEvents([ReportGate.open, FreeReportGate.open]), $currentReportId],
-        fn: () => ({}),
-        target: getSurveysInfoQuery.refresh,
-    });
-
     const ReportPageGate = createGate();
+
     persist({
         store: $currentPage,
         pickup: ReportPageGate.open,
@@ -86,26 +88,34 @@ export const ReportModel = atom(() => {
         target: $userMbtiTypes,
     });
 
-    const currentResultReceived = createEvent<{ id: string; isFreeReport: boolean }>();
+    const freeReportReceived = combineEvents([delay(FreeReportGate.open, 600), freeReportIdReceived]);
 
     sample({
-        clock: $currentReportId,
-        filter: (id) => id !== null,
-        fn: (id) => {
-            const isFreeReport = window?.location.pathname.includes('/free-report/');
-            if (!id) return { id: '', isFreeReport };
-            return { id, isFreeReport };
-        },
-        target: currentResultReceived,
+        clock: freeReportReceived,
+        source: $currentFreeReportId,
+        fn: (id) => ({ id: id ?? '' }),
+        target: getFreeResultQuery.start,
     });
 
-    split({
-        source: currentResultReceived,
-        match: (data) => (data.isFreeReport ? 'free' : 'paid'),
-        cases: {
-            free: getFreeResultQuery.refresh,
-            paid: getFullReportQuery.refresh,
-        },
+    sample({
+        clock: freeReportReceived,
+        fn: () => ({}),
+        target: getSurveysInfoQuery.refresh,
+    });
+
+    const fullReportReceived = combineEvents([delay(ReportPageGate.open, 600), fullReportIdReceived]);
+
+    sample({
+        clock: fullReportReceived,
+        source: $currentFullReportId,
+        fn: (id) => ({ id: id ?? '' }),
+        target: getFullReportQuery.start,
+    });
+
+    sample({
+        clock: fullReportReceived,
+        fn: () => ({}),
+        target: getSurveysInfoQuery.refresh,
     });
 
     const redirectTo404Fx = createEffect(async () => {
@@ -137,7 +147,9 @@ export const ReportModel = atom(() => {
         ReportPageGate,
         $currentPage,
         FreeReportGate,
-        reportIdReceived,
-        $currentReportId,
+        fullReportIdReceived,
+        freeReportIdReceived,
+        $currentFreeReportId,
+        $currentFullReportId,
     };
 });

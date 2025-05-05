@@ -18,7 +18,10 @@ interface ReportTemplateProps {
 export const ReportTemplate = (report: ReportTemplateProps) => {
     const [types] = useUnit([PersonalitiesModel.$personalitiesMap]);
     const [onClose] = useUnit([RootModel.allMenusClosed]);
-    const [onSetReportId] = useUnit([ReportModel.reportIdReceived]);
+    const [onSetFreeReportId, onSetFullReportId] = useUnit([
+        ReportModel.freeReportIdReceived,
+        ReportModel.fullReportIdReceived,
+    ]);
 
     const isFree = report.report_kind === 'free';
 
@@ -38,7 +41,7 @@ export const ReportTemplate = (report: ReportTemplateProps) => {
             component='a'
             href={getReportUrl()}
             onClick={() => {
-                onSetReportId(report?.user_report);
+                isFree ? onSetFreeReportId(report?.user_report) : onSetFullReportId(report?.user_report);
                 onClose(false);
                 report.onClose();
             }}

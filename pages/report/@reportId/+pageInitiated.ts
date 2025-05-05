@@ -9,5 +9,5 @@ export const pageInitiated = createPageInit();
 sample({
     clock: pageInitiated,
     fn: (ctx) => ctx.routeParams.reportId,
-    target: ReportModel.$currentReportId,
+    target: ReportModel.$currentFullReportId,
 });

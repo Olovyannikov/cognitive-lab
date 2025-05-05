@@ -12,7 +12,7 @@ export const PersonalitiesModel = atom(() => {
 
     sample({
         clock: PersonalitiesInitialGate.open,
-        target: getPersonalityTypesWithCategoriesQuery.refresh,
+        target: getPersonalityTypesWithCategoriesQuery.start,
     });
 
     sample({

@@ -22,10 +22,12 @@ export const ReportPagination = () => {
     });
 
     const icons = getIconsMap(isLarge);
-    const titlePrev = content[page - 2]?.title;
-    const titleNext = content[page]?.title;
-    const color = TYPE_TO_COLOR_MAP[content[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content[0]?.mbti];
+    const titlePrev = content?.[page - 2]?.title ?? '';
+    const titleNext = content?.[page]?.title ?? '';
+    const color = TYPE_TO_COLOR_MAP[content?.[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content?.[0]?.mbti];
     const [_, scrollTo] = useWindowScroll();
+
+    if (!content) return null;
 
     return (
         <Pagination.Root
@@ -42,7 +44,7 @@ export const ReportPagination = () => {
                     0
                 );
             }}
-            total={content.length}
+            total={content?.length}
         >
             <Container>
                 <Group className={s.grid}>
@@ -89,7 +91,7 @@ export const ReportPagination = () => {
                                         {icons[titleNext]}
                                     </Flex>
                                     <Text hidden={!isLarge} className={s.text}>
-                                        {content[page]?.title ?? ''}
+                                        {content?.[page]?.title ?? ''}
                                     </Text>
                                 </Group>
                                 <ArrowRight color={`var(--mantine-color-${color}-9)`} weight='bold' size={24} />
