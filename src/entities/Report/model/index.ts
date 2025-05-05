@@ -3,6 +3,7 @@ import { createAction } from 'effector-action';
 import { createGate } from 'effector-react';
 import { persist } from 'effector-storage/local';
 import { isUndefined } from 'lodash-es';
+import { combineEvents } from 'patronum';
 import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
@@ -42,7 +43,7 @@ export const ReportModel = atom(() => {
     });
 
     sample({
-        clock: [ReportGate.open, FreeReportGate.open, $currentReportId],
+        clock: [combineEvents([ReportGate.open, FreeReportGate.open]), $currentReportId],
         fn: () => ({}),
         target: getSurveysInfoQuery.refresh,
     });

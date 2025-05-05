@@ -64,7 +64,7 @@ export const ReportPagination = () => {
                                             {icons[titlePrev]}
                                         </Flex>
                                         <Text hidden={!isLarge} className={s.text}>
-                                            {content[page - 2].title ?? ''}
+                                            {titlePrev ?? ''}
                                         </Text>
                                     </Group>
                                 </Group>

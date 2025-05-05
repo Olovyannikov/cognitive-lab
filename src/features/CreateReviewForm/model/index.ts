@@ -26,7 +26,7 @@ export const CreateReviewFormModel = atom(() => {
     sample({
         clock: createReviewMutation.finished.success,
         fn: noop,
-        target: getSurveysInfoQuery.start,
+        target: getSurveysInfoQuery.refresh,
     });
 
     return {

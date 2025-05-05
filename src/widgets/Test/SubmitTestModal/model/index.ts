@@ -3,9 +3,8 @@ import { createEffect, createEvent, createStore, sample } from 'effector';
 import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
-import { noop } from '@/shared/lib';
 
-import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
+import { ReportModel } from '@/entities/Report';
 import { submitAnswersMutation, TestModel } from '@/entities/Test';
 import { UserModel } from '@/entities/User';
 
@@ -55,13 +54,14 @@ export const SubmitTestModel = atom(() => {
         clock: submitAnswersMutation.finished.success,
         filter: () => !window?.location.origin.includes('free-report'),
         fn: (report) => report.result.user_free_report,
-        target: [ReportModel.$currentReportId, redirectToFreeReportPageFx],
+        target: redirectToFreeReportPageFx,
     });
 
     sample({
-        clock: submitAnswersMutation.finished.success,
-        fn: noop,
-        target: getSurveysInfoQuery.start,
+        clock: redirectToFreeReportPageFx.done,
+        source: submitAnswersMutation.finished.success.map((params) => params.result),
+        fn: (data) => data.user_free_report,
+        target: ReportModel.reportIdReceived,
     });
 
     sample({
