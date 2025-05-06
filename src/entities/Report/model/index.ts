@@ -94,13 +94,7 @@ export const ReportModel = atom(() => {
         clock: freeReportReceived,
         source: $currentFreeReportId,
         fn: (id) => ({ id: id ?? '' }),
-        target: getFreeResultQuery.start,
-    });
-
-    sample({
-        clock: freeReportReceived,
-        fn: () => ({}),
-        target: getSurveysInfoQuery.refresh,
+        target: [getSurveysInfoQuery.refresh, getFreeResultQuery.start],
     });
 
     const fullReportReceived = combineEvents([delay(ReportPageGate.open, 600), fullReportIdReceived]);
@@ -109,13 +103,7 @@ export const ReportModel = atom(() => {
         clock: fullReportReceived,
         source: $currentFullReportId,
         fn: (id) => ({ id: id ?? '' }),
-        target: getFullReportQuery.start,
-    });
-
-    sample({
-        clock: fullReportReceived,
-        fn: () => ({}),
-        target: getSurveysInfoQuery.refresh,
+        target: [getSurveysInfoQuery.refresh, getFullReportQuery.start],
     });
 
     const redirectTo404Fx = createEffect(async () => {

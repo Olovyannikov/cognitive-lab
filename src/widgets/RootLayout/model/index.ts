@@ -4,6 +4,7 @@ import { createGate } from 'effector-react';
 import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
+import { noop } from '@/shared/lib';
 
 import { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from '@/entities/Personality';
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
@@ -23,7 +24,7 @@ export const RootLayoutModel = atom(() => {
 
     sample({
         clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),
-        fn: () => ({}),
+        fn: noop,
         target: getSurveysInfoQuery.refresh,
     });
 
