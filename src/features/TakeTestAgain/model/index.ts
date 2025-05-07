@@ -34,17 +34,12 @@ export const TakeTestAgainModel = atom(() => {
 
     sample({
         clock: takeTestAgainClicked,
-        target: clearLocalStorageFx,
-    });
-
-    sample({
-        clock: clearLocalStorageFx.done,
         target: takeTestAgainMutation.start,
     });
 
     sample({
         clock: takeTestAgainMutation.finished.success,
-        target: [action],
+        target: [action, clearLocalStorageFx],
     });
 
     return {
