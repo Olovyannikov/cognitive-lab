@@ -18,9 +18,7 @@ import s from './FreeReportPage.module.css';
 
 export const FreeReportPage = () => {
     useGate(ReportModel.FreeReportGate);
-    const data = useUnit(getFreeResultQuery.$data);
-    const pending = useUnit(getFreeResultQuery.$pending);
-    const stale = useUnit(getFreeResultQuery.$stale);
+    const { data, stale, pending } = useUnit(getFreeResultQuery);
     const surveyId = useUnit(UserModel.$surveyId);
 
     if (pending || stale) return <PageLoader />;

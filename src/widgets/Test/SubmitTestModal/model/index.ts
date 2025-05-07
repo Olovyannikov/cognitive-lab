@@ -4,7 +4,7 @@ import { navigate } from 'vike/client/router';
 
 import { atom } from '@/shared/factories';
 
-import { ReportModel } from '@/entities/Report';
+import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
 import { submitAnswersMutation, TestModel } from '@/entities/Test';
 import { UserModel } from '@/entities/User';
 
@@ -47,7 +47,7 @@ export const SubmitTestModel = atom(() => {
     sample({
         clock: submitAnswersMutation.finished.success,
         fn: ({ result }) => result.id,
-        target: UserModel.$surveyId,
+        target: [UserModel.$surveyId, getSurveysInfoQuery.start],
     });
 
     sample({
