@@ -69,3 +69,4 @@ firebase
 *.xml
 Dockerfile
 *.yml
+.cursor

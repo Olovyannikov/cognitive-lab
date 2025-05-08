@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# FSD
+
+"Feature Sliced Design" - architectural design methodology for Front-End applications, a design approach where a product's features are divided into separate, standalone components, or "slices". Each slice is then designed and developed independently, allowing for greater flexibility, modularity, and scalability in the design process. This approach is often used in software development and can be applied to the design of web or mobile applications, as well as other types of software products.
+
+|__ src/
+   |-- app/      # Initializing application logic
+   |-- pages/    # Application pages
+   |-- widgets/  # (Optional) Independent and self-contained blocks for pages
+   |-- features/ # (Optional) Processing of use-cases (user scenarios)
+   |-- entities/ # (Optional) Business entities that domain logic operates
+   |-- shared/   # Reused modules, non-business specific
