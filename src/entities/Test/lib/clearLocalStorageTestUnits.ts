@@ -1,4 +1,4 @@
-export const clearLocalStorageTestUnits = async () => {
+export const clearLocalStorageTestUnits = () => {
     const userId = window.localStorage.getItem('$userId');
 
     window.localStorage.clear();
