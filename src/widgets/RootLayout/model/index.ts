@@ -25,7 +25,7 @@ export const RootLayoutModel = atom(() => {
     sample({
         clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),
         fn: noop,
-        target: getSurveysInfoQuery.refresh,
+        target: getSurveysInfoQuery.start,
     });
 
     concurrency(getSurveysInfoQuery, {

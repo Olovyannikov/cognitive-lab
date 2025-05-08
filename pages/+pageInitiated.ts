@@ -9,5 +9,5 @@ export const pageInitiated = createPageInit();
 
 sample({
     clock: [appService.appStarted, pageInitiated],
-    target: getPersonalityTypesWithCategoriesQuery.refresh,
+    target: [getPersonalityTypesWithCategoriesQuery.refresh],
 });
