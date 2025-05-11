@@ -64,6 +64,7 @@ export default eslintTypescript.config(
             // effector,
             ...effector.configs.recommended.rules,
             ...effector.configs.scope.rules,
+            ...effector.configs.react.rules,
             // Possible Errors
             'no-console': [2, { allow: ['warn', 'error', 'info'] }], // sometimes console warnings or console errors are helpful, but console.log probably shouldn't be checked into source control (?)
             'no-constant-condition': 2,
