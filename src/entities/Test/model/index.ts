@@ -51,7 +51,7 @@ export const TestModel = atom(() => {
     /** Текущее значение ответа */
     const $currentValue = createStore<PreparedAnswer['answer'] | null>(null).reset(formReset);
     /** Видимость сплэш-экрана */
-    const $isSplashScreenVisible = createStore<boolean>(true);
+    const $isSplashScreenVisible = createStore<boolean>(true).reset(formReset);
 
     /** Событие смены направления (вперед/назад) */
     const directionChanged = createEvent<'forward' | 'backward'>();
