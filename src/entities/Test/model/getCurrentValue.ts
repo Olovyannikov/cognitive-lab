@@ -1,26 +1,29 @@
 import { isArray, isNumber } from 'lodash-es';
 
-import type { MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
+import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
 
 /**
  * Возвращает значение текущего ответа для страницы (индекса)
  * @param answers Массив ответов
  * @param page Текущий номер страницы (1-based)
+ * @param pages Все страницы
  */
 export const getCurrentValue = (
     answers: PreparedAnswer[],
-    page: number | undefined
+    page: number,
+    pages: number | Answers
 ): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {
-    if (!isNumber(page) || !answers?.length) return null;
-    const currentPage = page - 1;
-    const answer = answers[currentPage]?.answer;
-    if (!answer) return null;
-
-    if (isArray(answer)) {
-        return answer as MultiChoiceAnswer[];
+    const currentPage = (isNumber(pages) ? pages : page) - 1;
+    const current = answers[currentPage];
+    if (!current?.answer) return null;
+    if (isArray(current.answer)) {
+        return current.answer as unknown as MultiChoiceAnswer;
     }
-    if (typeof answer === 'object' && 'value' in answer && !Array.isArray(answer)) {
-        return answer as SingleChoiceAnswer;
+    if (current.isSingle) {
+        return current.answer as unknown as SingleChoiceAnswer;
+    }
+    if ('value' in current.answer) {
+        return current.answer.value as unknown as ScaleChoiceAnswer;
     }
     return null;
 };
