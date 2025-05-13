@@ -5,9 +5,13 @@ import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
 
+import { isValidAnswer } from '@/entities/Test/model/isValidAnswer';
+
 import { getQuestionsQuery } from '../api';
 import type { QuestionsResponse } from '../api/dto';
 import type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';
+import { DELAY_MS } from './constants';
+import { getProgress } from './getProgress';
 
 export const TestModel = atom(() => {
     const TestGate = createGate();
@@ -38,7 +42,7 @@ export const TestModel = atom(() => {
 
     const formPageChanged = createEvent<number>();
 
-    const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
+    const delayedFormFieldChanged = delay(scaleFormFieldChanged, DELAY_MS);
 
     const $questions = restore(
         getQuestionsQuery.finished.success.map((el) => el.result),
@@ -69,22 +73,9 @@ export const TestModel = atom(() => {
         filter: (params, field) => !field.isMultiple && params.direction === 'forward',
         fn: ({ page, progress, form }, answer) => {
             const currentAnswer = form.answers[page - 1];
-            if (!currentAnswer || currentAnswer.answer == null || JSON.stringify(currentAnswer.answer) === '{}') {
-                return page;
-            }
-            if (
-                typeof currentAnswer.answer === 'object' &&
-                'value' in currentAnswer.answer &&
-                (currentAnswer.answer.value === null || currentAnswer.answer.value === '')
-            ) {
-                return page;
-            }
-            if (Array.isArray(currentAnswer.answer) && currentAnswer.answer.length === 0) {
-                return page;
-            }
 
+            if (!isValidAnswer(currentAnswer)) return page;
             if (answer.showInput || !(answer?.answer as SingleChoiceAnswer).value) return page;
-
             if (
                 (answer?.answer as SingleChoiceAnswer).value !== null &&
                 (answer?.answer as SingleChoiceAnswer).value !== '' &&
@@ -157,8 +148,7 @@ export const TestModel = atom(() => {
     sample({
         clock: $scaleForm,
         source: { questions: $questions, form: $scaleForm },
-        fn: ({ questions, form: { answers } }) =>
-            Number(((answers.length / (questions?.length ?? 0)) * 100).toFixed(0)),
+        fn: ({ questions, form: { answers } }) => getProgress(answers.length, questions.length),
         target: $currentProgress,
     });
 
