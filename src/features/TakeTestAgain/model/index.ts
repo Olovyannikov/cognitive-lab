@@ -5,23 +5,17 @@ import { atom } from '@/shared/factories';
 
 import { RootModel } from '@/entities/Root';
 import { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';
-import { UserModel } from '@/entities/User';
 
 export const TakeTestAgainModel = atom(() => {
     const takeTestAgainClicked = createEvent();
 
-    const clearLocalStorageFx = createEffect(async () => {
-        await clearLocalStorageTestUnits();
-    });
+    const clearLocalStorageFx = createEffect(clearLocalStorageTestUnits);
 
     const action = createAction({
         target: {
-            surveyId: UserModel.$surveyId,
             form: TestModel.$scaleForm,
             page: TestModel.$currentPage,
             progress: TestModel.$currentProgress,
-            redirect: UserModel.redirectToTestPageFx,
-            takeTestAgain: takeTestAgainMutation.start,
             closeAllModals: RootModel.allMenusClosed,
         },
         fn: (target) => {
