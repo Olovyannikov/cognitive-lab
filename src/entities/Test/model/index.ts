@@ -15,9 +15,17 @@ export const TestModel = atom(() => {
     const formReset = createEvent();
     const setSplashScreenVisibility = createEvent<boolean>();
 
+    const scaleFormFieldChanged = createEvent<PreparedAnswer>();
+
     const $scaleForm = createStore<Answers>({
         answers: [],
-    }).reset(formReset);
+    })
+        .reset(formReset)
+        .on(scaleFormFieldChanged, (form, field) => {
+            const updatedAnswers = [...form.answers];
+            updatedAnswers[field.index] = field;
+            return { ...form, answers: updatedAnswers };
+        });
 
     const $currentPage = createStore(1).reset(formReset);
     const $currentProgress = createStore(0).reset(formReset);
@@ -29,7 +37,6 @@ export const TestModel = atom(() => {
     const $direction = createStore<'forward' | 'backward'>('forward').on(directionChanged, (_, dir) => dir);
 
     const formPageChanged = createEvent<number>();
-    const scaleFormFieldChanged = createEvent<PreparedAnswer>();
 
     const delayedFormFieldChanged = delay(scaleFormFieldChanged, 250);
 
@@ -57,21 +64,26 @@ export const TestModel = atom(() => {
     });
 
     sample({
-        clock: scaleFormFieldChanged,
-        source: $scaleForm,
-        fn: (form, field) => {
-            form.answers[field.index] = field;
-            return { ...form };
-        },
-        target: $scaleForm,
-    });
-
-    sample({
         clock: delayedFormFieldChanged,
-        source: { page: $currentPage, progress: $currentProgress, direction: $direction },
+        source: { page: $currentPage, progress: $currentProgress, direction: $direction, form: $scaleForm },
         filter: (params, field) => !field.isMultiple && params.direction === 'forward',
-        fn: ({ page, progress }, answer) => {
-            if (answer.showInput) return page;
+        fn: ({ page, progress, form }, answer) => {
+            const currentAnswer = form.answers[page - 1];
+            if (!currentAnswer || currentAnswer.answer == null || JSON.stringify(currentAnswer.answer) === '{}') {
+                return page;
+            }
+            if (
+                typeof currentAnswer.answer === 'object' &&
+                'value' in currentAnswer.answer &&
+                (currentAnswer.answer.value === null || currentAnswer.answer.value === '')
+            ) {
+                return page;
+            }
+            if (Array.isArray(currentAnswer.answer) && currentAnswer.answer.length === 0) {
+                return page;
+            }
+
+            if (answer.showInput || !(answer?.answer as SingleChoiceAnswer).value) return page;
 
             if (
                 (answer?.answer as SingleChoiceAnswer).value !== null &&

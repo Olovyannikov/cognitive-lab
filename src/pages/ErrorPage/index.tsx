@@ -16,7 +16,7 @@ export const ErrorPage = ({ title = 'Страница не найдена', imag
         <Container>
             <Center ta='center' className={s.center}>
                 <Stack className={s.stack}>
-                    <Picture className={s.pic} src={image} width={400} height={400} />
+                    <Picture cdn className={s.pic} src={image} width={400} height={400} />
                     <Title className={s.title} order={1}>
                         {title}
                     </Title>
