@@ -26,22 +26,6 @@ function getServerScope(values?: Values) {
  */
 const currentScope: Scope = fork();
 
-/*
- *
- * Handler to get current client scope.
- *
- * Required for proper integrations with dev-tools.
- *
- * @returns current client scope in browser and null in server environment
- */
-export function getClientScope() {
-    if (isClient) {
-        return currentScope;
-    }
-
-    return null;
-}
-
 let prevValues: Values;
 /**
  * @private

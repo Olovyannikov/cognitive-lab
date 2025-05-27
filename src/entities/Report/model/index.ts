@@ -10,7 +10,7 @@ import { atom } from '@/shared/factories';
 import { is404Error } from '@/shared/lib';
 
 import { getFreeResultQuery, getFullReportQuery, getSurveysInfoQuery } from '../api';
-import { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './content';
+import { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './contentPage';
 import { $userOrder, $userOrderStatus } from './order';
 import { $reportContent } from './reportContent';
 import {

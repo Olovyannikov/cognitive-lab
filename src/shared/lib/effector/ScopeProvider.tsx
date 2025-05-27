@@ -5,8 +5,8 @@ import { usePageContext } from 'vike-react/usePageContext';
 
 import { getScope } from './getScope';
 
-export const ScopeContext = createContext<Scope | undefined>(undefined);
-export const ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});
+const ScopeContext = createContext<Scope | undefined>(undefined);
+const ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});
 
 export const ScopeProvider = ({ children }: PropsWithChildren) => {
     const pageContext = usePageContext() as PageContextClient;
@@ -30,4 +30,3 @@ export const ScopeProvider = ({ children }: PropsWithChildren) => {
 };
 
 export const useScope = () => useContext(ScopeContext);
-export const useScopeUpdate = () => useContext(ScopeUpdateContext);

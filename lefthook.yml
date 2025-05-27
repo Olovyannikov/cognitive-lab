@@ -2,13 +2,13 @@ pre-commit:
     parallel: true
     commands:
         fsd:
-            run: npm run lint:fsd
+            run: pnpm run lint:fsd
         eslint:
             glob: '*.{ts,tsx,js,jsx}'
-            run: npm run lint:ts
+            run: pnpm run lint:ts
         stylelint:
             glob: '*.{css}'
-            run: npm run lint:css {staged_files}
+            run: pnpm run lint:css {staged_files}
         prettier:
             run: npx prettier --write {staged_files} && git add {staged_files}
         solidarity:
@@ -16,7 +16,9 @@ pre-commit:
         circular:
             run: npx madge --circular --extensions ts,tsx src
         unit-test:
-            run: npm run test:unit
+            run: pnpm run test:unit
+        knip:
+            run: knip && pnpm run knip:md && pnpm run knip:fix
 
 commit-msg:
     parallel: true

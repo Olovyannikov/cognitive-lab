@@ -165,7 +165,7 @@ export default eslintTypescript.config(
                         ['^react', '^@?\\w'],
                         /* import 'foo*' or import '@foo*' */
                         [`^\\u0000@?\\w`],
-                        /* import '@cloud-ru*' or import '@snack-ui*' */
+                        /* import '@my-beautiful-lib*' or import '@my-awesome-ui-kit*' */
                         [`^\\u0000(${ourOwnModules})`],
                         /* import '#foo*' */
                         ['^\\u0000#\\w'],
@@ -175,7 +175,7 @@ export default eslintTypescript.config(
                         [`^(${nodeBuiltinModules})`],
                         /* import ... from 'foo*' or import ... from '@foo*' */
                         [`^@?\\w`],
-                        /* import ... from '@cloud-ru*' or import ... from '@snack-ui*' */
+                        /* import ... from '@my-beautiful-lib*' or import '@my-awesome-ui-kit*' */
                         [`^(${ourOwnModules})`],
                         /* import ... from '@foo*' */
                         ['^@\\w'],
