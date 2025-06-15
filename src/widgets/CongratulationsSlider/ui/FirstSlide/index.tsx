@@ -2,13 +2,18 @@ import { useContext } from 'react';
 import { Carousel } from '@mantine/carousel';
 import { Box, Button, Center, Flex, Paper, Stack, Text, Title } from '@mantine/core';
 import { ArrowRight, Trophy } from '@phosphor-icons/react/dist/ssr';
+import { useUnit } from 'effector-react/effector-react.umd';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { Picture } from '@/shared/ui';
 
+import { getFreeResultQuery } from '@/entities/Report';
+
 import { CongratulationsContext } from '../../context/CongratulationsProvider';
 
 export const FirstSlide = () => {
+    const { data } = useUnit(getFreeResultQuery);
+
     const { onNextSlideHandler } = useContext(CongratulationsContext);
     const { routeParams } = usePageContext();
 
@@ -24,10 +29,17 @@ export const FirstSlide = () => {
                     <Title order={2} fz={26}>
                         Ваш тип личности —{' '}
                         <Text fz={26} fw={700} inline c='violet.7'>
-                            Командир (ENTJ)
+                            {data?.title}
                         </Text>
                     </Title>
-                    <Picture width={180} height={180} m='auto' cdn src={'/types/circles/ENTJ'} extraPath={'_2'} />
+                    <Picture
+                        width={180}
+                        height={180}
+                        m='auto'
+                        cdn
+                        src={`/types/circles/${data?.mbti_type}`}
+                        extraPath={'_2'}
+                    />
                     <Paper
                         maw='65%'
                         top={-50}
