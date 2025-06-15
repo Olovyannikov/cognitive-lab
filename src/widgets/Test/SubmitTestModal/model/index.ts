@@ -5,7 +5,7 @@ import { navigate } from 'vike/client/router';
 import { atom } from '@/shared/factories';
 
 import { getSurveysInfoQuery, ReportModel } from '@/entities/Report';
-import { submitAnswersMutation, TestModel } from '@/entities/Test';
+import { submitAnswersMutation, TestEmailFormModel, TestModel } from '@/entities/Test';
 import { UserModel } from '@/entities/User';
 
 export const SubmitTestModel = atom(() => {
@@ -13,8 +13,8 @@ export const SubmitTestModel = atom(() => {
     const submitScaleForm = createEvent();
     const submitModalStateChanged = createEvent();
 
-    const redirectToFreeReportPageFx = createEffect(async (reportId: string) => {
-        await navigate(`/free-report/${reportId}`);
+    const redirectToCongratsPageFx = createEffect(async (reportId: string) => {
+        await navigate(`/congratulations/${reportId}`);
     });
 
     const showSubmitErrorFx = createEffect(async (message: string) => {
@@ -26,6 +26,13 @@ export const SubmitTestModel = atom(() => {
     });
 
     sample({
+        clock: getSurveysInfoQuery.$data,
+        filter: Boolean,
+        fn: (data) => data?.user?.email,
+        target: TestEmailFormModel.form.fields.email.change,
+    });
+
+    sample({
         clock: submitModalStateChanged,
         source: $isSubmitModalShown,
         fn: (param) => !param,
@@ -34,7 +41,15 @@ export const SubmitTestModel = atom(() => {
 
     sample({
         clock: submitScaleForm,
-        source: TestModel.$scaleForm,
+        source: {
+            form: TestModel.$scaleForm,
+            emailForm: TestEmailFormModel.form.$values,
+        },
+        fn: ({ form, emailForm }) => ({
+            answers: form.answers,
+            email: emailForm.email,
+            approve_subscription: emailForm.approve_subscription,
+        }),
         target: submitAnswersMutation.start,
     });
 
@@ -54,11 +69,11 @@ export const SubmitTestModel = atom(() => {
         clock: submitAnswersMutation.finished.success,
         filter: () => !window?.location.origin.includes('free-report'),
         fn: (report) => report.result.user_free_report,
-        target: [redirectToFreeReportPageFx],
+        target: [redirectToCongratsPageFx],
     });
 
     sample({
-        clock: redirectToFreeReportPageFx.done,
+        clock: redirectToCongratsPageFx.done,
         source: submitAnswersMutation.finished.success.map((params) => params.result),
         fn: (data) => data.user_free_report,
         target: [ReportModel.freeReportIdReceived],
@@ -71,7 +86,7 @@ export const SubmitTestModel = atom(() => {
     });
 
     return {
-        redirectToFreeReportPageFx,
+        redirectToFreeReportPageFx: redirectToCongratsPageFx,
         $isSubmitModalShown,
         submitScaleForm,
         submitModalStateChanged,

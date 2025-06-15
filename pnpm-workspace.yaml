@@ -2,4 +2,5 @@ ignoredBuiltDependencies:
     - esbuild
 onlyBuiltDependencies:
     - '@evilmartians/lefthook'
+    - ejs
     - unrs-resolver

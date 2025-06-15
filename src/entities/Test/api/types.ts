@@ -35,4 +35,6 @@ export interface PreparedAnswer {
 
 export interface Answers {
     answers: PreparedAnswer[];
+    email?: string;
+    approve_subscription?: boolean;
 }

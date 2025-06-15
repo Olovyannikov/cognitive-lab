@@ -1,13 +1,18 @@
 import type { ReactNode } from 'react';
+import { useForm } from '@effector-reform/react';
+import { Box, Checkbox, Text, TextInput } from '@mantine/core';
+import { Envelope } from '@phosphor-icons/react/dist/ssr';
 import { useGate, useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
 
 import { PageLoader } from '@/shared/ui';
 
 import {
+    EmailFieldWrapper,
     type SingleChoiceAnswer,
     takeTestAgainMutation,
     TestContainer,
+    TestEmailFormModel,
     TestModel,
     TestMultipleQuestion,
     TestProgress,
@@ -34,6 +39,8 @@ export const TestPage = () => {
     const onChange = useUnit(TestModel.scaleFormFieldChanged);
 
     const [phraseIndex, phrases] = useUnit([RephrasingModel.$currentPhraseIndex, RephrasingModel.$currentPhrases]);
+
+    const { fields } = useForm(TestEmailFormModel.form);
 
     if (!data || !question) return null;
     if (isLoading) return <PageLoader />;
@@ -71,6 +78,50 @@ export const TestPage = () => {
                 )}
                 value={value as SingleChoiceAnswer}
             />
+        ),
+        email: (
+            <EmailFieldWrapper
+                {...question}
+                text={phrases.texts[phraseIndex] ?? ''}
+                hint={phrases.hints[phraseIndex] ?? ''}
+            >
+                <TextInput
+                    placeholder='mymail.@mail.ru'
+                    label='Введите Email для отчёта'
+                    value={fields.email.value}
+                    onChange={(e) => fields.email.onChange(e.target.value)}
+                    leftSection={<Envelope color='var(--mantine-color-gray-5)' size={20} />}
+                />
+                <Checkbox
+                    radius='xxs'
+                    checked={fields.approve_subscription.value}
+                    onChange={() => fields.approve_subscription.onChange(!fields.approve_subscription.value)}
+                    label={
+                        <Text
+                            size='sm'
+                            style={{
+                                lineHeight: 'normal',
+                            }}
+                        >
+                            Согласен(-на) на получение новостей, персональных акций и{' '}
+                            <Box
+                                td='none'
+                                c='blue.7'
+                                component='a'
+                                href='https://storage.yandexcloud.net/cognitive-lab-public/marketing.pdf'
+                            >
+                                рекламных материалов
+                            </Box>{' '}
+                            от CognitiveLab по электронной почте
+                        </Text>
+                    }
+                    styles={{
+                        label: {
+                            paddingLeft: 'var(--mantine-spacing-xs)',
+                        },
+                    }}
+                />
+            </EmailFieldWrapper>
         ),
     };
 

@@ -76,11 +76,11 @@ export const Controls = () => {
                     fz={16}
                     c='dark.6'
                     variant='subtle'
-                    hidden={!isLast || (isLast && !isExists())}
-                    className={clsx(s.button, s.next, s.end)}
+                    hidden={!isLast}
                     onClick={controlModal}
-                    rightSection={<ArrowRight weight='bold' />}
                     aria-label='Завершить тестирование'
+                    className={clsx(s.button, s.next, s.end)}
+                    rightSection={<ArrowRight weight='bold' />}
                 />
             </Group>
         </Pagination.Root>

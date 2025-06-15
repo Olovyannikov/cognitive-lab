@@ -1,4 +1,5 @@
 import { createMutation, createQuery } from '@farfetched/core';
+import { v4 } from 'uuid';
 
 import { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';
 
@@ -9,6 +10,17 @@ export const getQuestionsQuery = createQuery({
     effect: createCommonRequestFx<void, QuestionsResponse[]>(() => ({
         url: `/surveys/questions`,
     })),
+    mapData: (data) => [
+        ...data.result,
+        {
+            id: v4(),
+            text: 'Ваш Email',
+            type: 'email',
+            category: '',
+            reverse_scored: false,
+            hint: 'Пришлем отчет и бонусные материалы',
+        },
+    ],
 });
 
 export const submitAnswersMutation = createMutation({
