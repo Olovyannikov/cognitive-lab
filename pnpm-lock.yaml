@@ -67,6 +67,9 @@ importers:
             effector-storage:
                 specifier: 7.1.0
                 version: 7.1.0(effector@23.3.0)
+            embla-carousel:
+                specifier: ^8.6.0
+                version: 8.6.0
             embla-carousel-auto-scroll:
                 specifier: 8.6.0
                 version: 8.6.0(embla-carousel@8.6.0)

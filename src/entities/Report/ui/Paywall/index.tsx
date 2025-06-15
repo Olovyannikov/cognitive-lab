@@ -65,7 +65,7 @@ export const Paywall = ({
     return (
         <Box className={s.wrapper}>
             <Group wrap='nowrap' gap='xs' className={s.top}>
-                <Picture w='3xl' h='3xl' src='/emoji/lock' />
+                <Picture w='3xl' h='3xl' cdn src='/emoji/lock' />
                 <h3>{title}</h3>
             </Group>
             <Picture className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />
@@ -78,7 +78,7 @@ export const Paywall = ({
                     href={currentUrl()}
                     size={isLarge ? 'md' : 'sm'}
                     maw={isLarge ? 'fit-content' : '100%'}
-                    leftSection={<Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' />}
+                    leftSection={<Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' />}
                 >
                     {isExamplePage ? 'Пройти тест' : button_text}
                 </Button>

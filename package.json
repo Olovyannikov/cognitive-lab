@@ -113,6 +113,7 @@
     "effector-action": "1.1.0",
     "effector-react": "23.3.0",
     "effector-storage": "7.1.0",
+    "embla-carousel": "^8.6.0",
     "embla-carousel-auto-scroll": "8.6.0",
     "embla-carousel-react": "8.6.0",
     "embla-carousel-wheel-gestures": "8.0.2",

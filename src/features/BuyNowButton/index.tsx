@@ -60,7 +60,7 @@ export const BuyNowButton = ({
             component='a'
             href={href ?? currentUrl()}
             className={className}
-            leftSection={showIcon ? <Picture w={20} h={20} src='/emoji/key' aria-hidden={true} alt='' /> : null}
+            leftSection={showIcon ? <Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' /> : null}
             {...props}
         >
             {getChildren()}
