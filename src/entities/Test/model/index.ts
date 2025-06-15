@@ -1,5 +1,6 @@
 import { createEvent, createStore, restore, sample } from 'effector';
 import { createGate } from 'effector-react';
+import { isNull } from 'lodash-es';
 import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
@@ -93,7 +94,13 @@ export const TestModel = atom(() => {
     // --- Логика перехода вперед по шкале ---
     sample({
         clock: delayedFormFieldChanged,
-        source: { page: $currentPage, progress: $currentProgress, direction: $direction, form: $scaleForm },
+        source: {
+            page: $currentPage,
+            progress: $currentProgress,
+            direction: $direction,
+            form: $scaleForm,
+            questions: $questions,
+        },
         filter: (params, field) => !field.isMultiple && params.direction === 'forward',
         fn: ({ page, progress, form }, answer) => {
             const currentAnswer = form.answers[page - 1];
@@ -101,10 +108,10 @@ export const TestModel = atom(() => {
             if (!isValidAnswer(currentAnswer)) return page;
             const singleValue = (answer?.answer as SingleChoiceAnswer).value;
 
-            if (answer.showInput || !singleValue) return page;
-            const isValidSingle = singleValue !== '' && singleValue !== undefined;
+            const isValidSingle = singleValue !== '' && singleValue !== undefined && !isNull(singleValue);
+            if (answer.showInput || !isValidSingle) return page;
 
-            if (isValidSingle && progress < 100) {
+            if (isValidSingle && progress < 100 && page === form.answers.length) {
                 return page + 1;
             }
             return page;

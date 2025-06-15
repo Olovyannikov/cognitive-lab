@@ -70,3 +70,4 @@ firebase
 Dockerfile
 *.yml
 .cursor
+.swc
