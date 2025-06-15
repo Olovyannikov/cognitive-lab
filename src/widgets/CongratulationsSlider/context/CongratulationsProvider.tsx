@@ -1,6 +1,7 @@
-import { createContext, type PropsWithChildren, useCallback, useState } from 'react';
+import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';
 import { Carousel } from '@mantine/carousel';
 import type { EmblaCarouselType } from 'embla-carousel';
+import AutoHeight from 'embla-carousel-auto-height';
 import { noop } from 'lodash-es';
 
 import styles from './CongratulationsProvider.module.css';
@@ -18,6 +19,8 @@ export const CongratulationsContext = createContext<CongratulationsContextProps>
 export const CongratulationsProvider = ({ children }: PropsWithChildren) => {
     const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
 
+    const autoheight = useRef(AutoHeight());
+
     const onNextSlideHandler = useCallback(() => {
         embla?.scrollNext();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -30,7 +33,22 @@ export const CongratulationsProvider = ({ children }: PropsWithChildren) => {
                 onNextSlideHandler,
             }}
         >
-            <Carousel getEmblaApi={setEmbla} pb={40} withControls={false} withIndicators classNames={styles}>
+            <Carousel
+                styles={{
+                    container: {
+                        display: 'flex',
+                        height: '100%',
+                        alignItems: 'flex-start',
+                        transition: 'height 0.2s',
+                    },
+                }}
+                pb={60}
+                getEmblaApi={setEmbla}
+                withControls={false}
+                withIndicators
+                classNames={styles}
+                plugins={[autoheight.current]}
+            >
                 {children}
             </Carousel>
         </CongratulationsContext.Provider>
