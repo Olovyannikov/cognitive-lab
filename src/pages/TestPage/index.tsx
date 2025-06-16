@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 import { useForm } from '@effector-reform/react';
 import { Box, Checkbox, Text, TextInput } from '@mantine/core';
-import { Envelope } from '@phosphor-icons/react/dist/ssr';
+import { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';
 import { useGate, useUnit } from 'effector-react';
 import { isArray } from 'lodash-es';
 
+import { useIsLarge } from '@/shared/lib';
 import { PageLoader } from '@/shared/ui';
 
 import {
@@ -25,6 +26,8 @@ import { RephrasingModel } from '@/features/Rephrasing';
 import { Controls, SubmitTestModal, TestSplashScreen } from '@/widgets/Test';
 
 export const TestPage = () => {
+    const isLarge = useIsLarge();
+
     useGate(TestModel.TestGate);
     const data = useUnit(TestModel.$questions);
     const [page, question, progress, value, isSplashScreen, isLoading] = useUnit([
@@ -86,19 +89,21 @@ export const TestPage = () => {
                 hint={phrases.hints[phraseIndex] ?? ''}
             >
                 <TextInput
+                    size={isLarge ? 'xl' : 'md'}
                     placeholder='mymail.@mail.ru'
                     label='Введите Email для отчёта'
                     value={fields.email.value}
                     onChange={(e) => fields.email.onChange(e.target.value)}
-                    leftSection={<Envelope color='var(--mantine-color-gray-5)' size={20} />}
+                    leftSection={<EnvelopeSimple color='var(--mantine-color-gray-5)' size={isLarge ? 32 : 20} />}
                 />
                 <Checkbox
+                    size={isLarge ? 'md' : 'sm'}
                     radius='xxs'
                     checked={fields.approve_subscription.value}
                     onChange={() => fields.approve_subscription.onChange(!fields.approve_subscription.value)}
                     label={
                         <Text
-                            size='sm'
+                            size={isLarge ? 'md' : 'sm'}
                             style={{
                                 lineHeight: 'normal',
                             }}
@@ -108,6 +113,7 @@ export const TestPage = () => {
                                 td='none'
                                 c='blue.7'
                                 component='a'
+                                target='_blank'
                                 href='https://storage.yandexcloud.net/cognitive-lab-public/marketing.pdf'
                             >
                                 рекламных материалов
