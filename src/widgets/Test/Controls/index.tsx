@@ -16,6 +16,11 @@ import s from './Controls.module.css';
 
 export const Controls = () => {
     const questions = useUnit(TestModel.$questions);
+
+    console.log({
+        questions,
+    });
+
     const { page, onChange, controlModal, value, onDirectionChange } = useUnit({
         page: TestModel.$currentPage,
         onChange: TestModel.formPageChanged,
