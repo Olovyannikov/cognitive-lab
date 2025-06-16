@@ -1,0 +1,87 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+
+  @mixin larger-than 768px {
+    margin-bottom: 113px;
+    text-align: left;
+    padding-inline: 65px;
+  }
+}
+
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  gap: 8px;
+
+  @mixin larger-than 768px {
+    display: block;
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+.subtitle,
+.subtitle b {
+  font-size: 26px;
+  line-height: normal;
+
+  @mixin larger-than 768px {
+    max-width: 759px;
+    font-size: 40px;
+  }
+}
+
+.subtitle b {
+  font-weight: 700;
+  color: var(--mantine-color-violet-5);
+}
+
+.description {
+  font-size: 18px;
+  line-height: normal;
+
+  @mixin larger-than 768px {
+    margin-bottom: 250px;
+    max-width: 663px;
+    font-size: 24px;
+  }
+}
+
+.controls {
+  @mixin larger-than 768px {
+    flex-direction: row;
+  }
+}
+
+.picture {
+  margin: 0 auto;
+  width: 280px;
+  height: 202px;
+
+  @mixin larger-than 1200px {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 494px;
+    height: 357px;
+  }
+}
+
+.gem {
+  width: 20px;
+  height: 20px;
+
+  @mixin larger-than 768px {
+    position: absolute;
+    left: calc(-46px - 20px);
+    top: 0;
+    width: 46px;
+    height: 46px;
+  }
+}

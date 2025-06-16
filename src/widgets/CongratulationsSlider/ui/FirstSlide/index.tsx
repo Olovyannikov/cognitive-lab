@@ -1,17 +1,21 @@
 import { useContext } from 'react';
 import { Carousel } from '@mantine/carousel';
-import { Box, Button, Center, Flex, Paper, Stack, Text, Title } from '@mantine/core';
-import { ArrowRight, Trophy } from '@phosphor-icons/react/dist/ssr';
+import { ActionIcon, Box, Button, Flex, Paper, Stack, Text, Title } from '@mantine/core';
+import { ArrowRight, Trophy, X } from '@phosphor-icons/react/dist/ssr';
 import { useUnit } from 'effector-react/effector-react.umd';
 import { usePageContext } from 'vike-react/usePageContext';
 
+import { useIsLarge } from '@/shared/lib';
 import { Picture } from '@/shared/ui';
 
 import { getFreeResultQuery } from '@/entities/Report';
 
 import { CongratulationsContext } from '../../context/CongratulationsProvider';
 
+import s from './FirstSlide.module.css';
+
 export const FirstSlide = () => {
+    const isLarge = useIsLarge();
     const { data } = useUnit(getFreeResultQuery);
 
     const { onNextSlideHandler } = useContext(CongratulationsContext);
@@ -21,94 +25,103 @@ export const FirstSlide = () => {
 
     return (
         <Carousel.Slide>
-            <Center ta='center'>
+            <Box className={s.container}>
                 <Stack gap='md'>
-                    <Text fz={18} fw='bold'>
-                        Поздравляем!
-                    </Text>
-                    <Title order={2} fz={26}>
-                        Ваш тип личности —{' '}
-                        <Text fz={26} fw={700} inline c='violet.7'>
-                            {data?.title}
+                    <Box className={s.top}>
+                        <Text className={s.pretitle}>
+                            <Picture className={s.titleImage} cdn src='/slider/popper' />
+                            Поздравляем!
                         </Text>
-                    </Title>
-                    <Picture
-                        width={180}
-                        height={180}
-                        m='auto'
-                        cdn
-                        src={`/types/circles/${data?.mbti_type}`}
-                        extraPath={'_2'}
-                    />
-                    <Paper
-                        maw='65%'
-                        top={-50}
-                        pos='relative'
-                        mb={-50}
-                        ml='auto'
-                        mr='auto'
-                        style={{ zIndex: 1, borderBottomRightRadius: 0 }}
-                        radius={'sm'}
-                        c='violet.7'
-                        bg='violet.0'
-                        p='xs'
-                    >
-                        <Flex gap='xs' align='center'>
-                            <Flex style={{ borderRadius: 'var(--mantine-radius-xs)' }} p='xs' bg='violet.1'>
-                                <Trophy size={14} />
+                        <Title className={s.title} order={2}>
+                            Ваш тип личности —{' '}
+                            <Text inline c='violet.7'>
+                                {data?.title ?? 'Командир (ENTJ)'}
+                            </Text>
+                        </Title>
+                        <Picture
+                            className={s.image}
+                            width={180}
+                            height={180}
+                            m='auto'
+                            cdn
+                            src={`/types/circles/${data?.mbti_type ?? 'ENTJ'}`}
+                            extraPath={'_2'}
+                        />
+                        <Paper className={s.badge}>
+                            <Flex gap='xs' align='center'>
+                                <Flex className={s.badgeIconContainer}>
+                                    <Trophy size={14} />
+                                </Flex>
+                                <Text className={s.badgeText}>
+                                    Вы входите в <b>топ-10%</b> людей с таким мышлением!
+                                </Text>
                             </Flex>
-                            <Text fz={11} fw={500} lh='normal' ta='left'>
-                                Вы входите в <b>топ-10%</b> людей с таким мышлением!
-                            </Text>
-                        </Flex>
-                    </Paper>
-                    <Stack ta='left'>
-                        <Text>Мы подготовили для вас два отчета:</Text>
-                        <Box>
-                            <Paper mb={2} c='violet.7' p='md' w='fit-content' bg='violet.0'>
-                                <Text mb={4} fz={18} fw='bold'>
-                                    Базовый
-                                </Text>
-                                <Text fz={14} c='violet.3'>
-                                    Краткий профиль
-                                </Text>
-                            </Paper>
-                            <Text fz={12} fw={500} c='violet.7' ml='md'>
-                                Уже доступен
-                            </Text>
-                        </Box>
-                        <Box>
-                            <Paper mb={2} c='violet.7' p='md' w='fit-content' bg='gray.2'>
-                                <Text c='gray.7' mb={4} fz={18} inline fw='bold'>
-                                    Полный за 990&nbsp;
-                                    <Text component='span' fw='600' inline ff='system-ui'>
-                                        ₽
+                        </Paper>
+                    </Box>
+
+                    <Box className={s.reportInfo}>
+                        <Text className={s.reportSubtitle}>Мы подготовили для вас два отчета:</Text>
+                        <Flex className={s.reportTypesContainer}>
+                            <Box>
+                                <Paper className={s.reportType} data-first>
+                                    <Text className={s.reportTitle} inline>
+                                        Базовый
                                     </Text>
+                                    <Text className={s.reportDescription} c='violet.3'>
+                                        Краткий профиль
+                                    </Text>
+                                </Paper>
+                                <Text className={s.availability}>Уже доступен</Text>
+                            </Box>
+                            <Box>
+                                <Paper className={s.reportType} bg='gray.2' data-last>
+                                    <Text c='gray.7' inline className={s.reportTitle}>
+                                        Полный за 990&nbsp;
+                                        <Text component='span' fw='600' inline ff='system-ui'>
+                                            ₽
+                                        </Text>
+                                    </Text>
+                                    <Text className={s.reportDescription} c='gray.6'>
+                                        Детальная инструкция к вашей личности
+                                    </Text>
+                                </Paper>
+                                <Text c='gray.6' className={s.availability}>
+                                    Доступен после оплаты
                                 </Text>
-                                <Text fz={14} c='gray.6'>
-                                    Детальная инструкция к вашей личности
-                                </Text>
-                            </Paper>
-                            <Text fz={12} fw={500} c='gray.6' ml='md'>
-                                Доступен после оплаты
-                            </Text>
-                        </Box>
-                    </Stack>
+                            </Box>
+                        </Flex>
+                    </Box>
                     <Stack gap='sm'>
                         <Button
-                            size='md'
                             variant='filled'
-                            rightSection={<ArrowRight size={20} />}
+                            size={isLarge ? 'xl' : 'md'}
                             onClick={onNextSlideHandler}
+                            w={isLarge ? 'fit-content' : '100%'}
+                            rightSection={<ArrowRight size={isLarge ? 24 : 20} />}
                         >
                             А что в полном отчёте?
                         </Button>
-                        <Button component='a' href={`/free-report/${id}`} size='md' variant='subtle' c='dark.2'>
-                            Не хочу это знать
-                        </Button>
+                        {!isLarge && (
+                            <Button component='a' href={`/free-report/${id}`} size='md' variant='subtle' c='dark.2'>
+                                Не хочу это знать
+                            </Button>
+                        )}
+                        {isLarge && (
+                            <ActionIcon
+                                component='a'
+                                href={`/free-report/${id}`}
+                                pos='absolute'
+                                right={40}
+                                top={0}
+                                c='gray'
+                                variant='subtle'
+                            >
+                                <X />
+                            </ActionIcon>
+                        )}
                     </Stack>
                 </Stack>
-            </Center>
+            </Box>
         </Carousel.Slide>
     );
 };

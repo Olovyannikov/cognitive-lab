@@ -1,0 +1,137 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+
+  @mixin larger-than 768px {
+    margin-bottom: 113px;
+    padding-top: 12px;
+    padding-inline: 65px;
+  }
+}
+
+.pretitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  gap: 8px;
+
+  @mixin larger-than 768px {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+  height: fit-content;
+
+  @mixin larger-than 768px {
+    margin-bottom: 20px;
+  }
+}
+
+.title,
+.title b {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: normal;
+
+  @mixin larger-than 768px {
+    font-size: 40px;
+    text-align: left;
+  }
+}
+
+.cards {
+  text-align: left;
+
+  @mixin larger-than 1200px {
+    flex-flow: row wrap;
+    margin-bottom: 110px;
+    gap: 8px 12px;
+  }
+}
+
+.card {
+  padding: var(--mantine-spacing-sm);
+  background-color: var(--mantine-color-violet-0);
+
+  &:last-child {
+    display: none;
+  }
+
+  @mixin larger-than 1200px {
+    padding: 16px 20px;
+    width: 100%;
+    max-width: 638px;
+
+    &:nth-of-type(2) {
+      order: 3;
+      max-width: 740px;
+    }
+
+    &:nth-of-type(3) {
+      max-width: calc(100% - 638px - 12px);
+    }
+
+    &:last-of-type {
+      display: block;
+      order: 4;
+      max-width: calc(100% - 740px - 12px);
+    }
+  }
+}
+
+.cardIcon {
+  display: flex;
+  flex-shrink: 0;
+  place-content: center;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+
+  @mixin larger-than 768px {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.cardTitle {
+  font-size: 18px;
+  color: var(--mantine-color-violet-7);
+
+  @mixin larger-than 768px {
+    font-size: 22px;
+    padding-block: 6px;
+  }
+}
+
+.cardDescription {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+
+  @mixin larger-than 768px {
+    font-size: 18px;
+  }
+}
+
+.titleIcon {
+  width: 21px;
+  height: 21px;
+
+  @mixin larger-than 768px {
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    width: 46px;
+    height: 46px;
+  }
+}
