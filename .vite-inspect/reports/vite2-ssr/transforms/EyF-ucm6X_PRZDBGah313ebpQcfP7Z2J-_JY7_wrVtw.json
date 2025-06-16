@@ -1,0 +1,152 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createStore, sample } from 'effector';\n\nimport { getFullReportQuery } from '../api';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n",
+      "start": 1750105187706,
+      "end": 1750105187745,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createStore, sample } from 'effector';\nimport { getFullReportQuery } from '../api';\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map(page => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map(el => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});",
+      "start": 1750105187745,
+      "end": 1750105187746,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createStore",
+          "sample",
+          "getFullReportQuery",
+          "$currentContentPage",
+          "name",
+          "sid",
+          "$currentPage",
+          "$isFirstPage",
+          "map",
+          "page",
+          "$isLastPage",
+          "and",
+          "clock",
+          "source",
+          "$data",
+          "fn",
+          "content",
+          "el",
+          "length",
+          "target",
+          "or"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"
+        ],
+        "sourcesContent": [
+          "import { createStore, sample } from 'effector';\n\nimport { getFullReportQuery } from '../api';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE9C,SAASC,kBAAkB,QAAQ,QAAQ;AAE3C,OAAO,MAAMC,mBAAmB,GAAGH,WAAW,CAAC,CAAC;EAAAI,IAAA;EAAAC,GAAA;AAAA,EAAC;AACjD,OAAO,MAAMC,YAAY,GAAGN,WAAW,CAAC,CAAC;EAAAI,IAAA;EAAAC,GAAA;AAAA,EAAC;AAC1C,OAAO,MAAME,YAAY,GAAGD,YAAY,CAACE,GAAG,CAAEC,IAAI,IAAKA,IAAI,GAAG,CAAC,IAAI,CAAC,CAAC;AACrE,OAAO,MAAMC,WAAW,GAAGV,WAAW,CAAC,OAAO,CAAC,CAAC,KAAK;EAAAI,IAAA;EAAAC,GAAA;AAAA,EAAC;AAEtDJ,MAAM;EAAAU,GAAA,GAAC;IACHC,KAAK,EAAEN,YAAY;IACnBO,MAAM,EAAEX,kBAAkB,CAACY,KAAK;IAChCC,EAAE,EAAEA,CAACC,OAAO,EAAEP,IAAI,KAAKA,IAAI,IAAIO,OAAO,CAACA,OAAO,EAAER,GAAG,CAAES,EAAE,IAAKA,EAAE,CAACD,OAAO,CAAC,EAAEE,MAAM;IAC/EC,MAAM,EAAET;EACZ,CAAC;EAAAU,EAAA;IAAAf,GAAA;EAAA;AAAA,EAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});\n",
+      "start": 1750105187746,
+      "end": 1750105187942,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"
+        ],
+        "sourcesContent": [
+          "import { createStore, sample } from 'effector';\nimport { getFullReportQuery } from '../api';\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map(page => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map(el => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});"
+        ],
+        "mappings": "AAAA,SAAS,aAAa,cAAc;AACpC,SAAS,0BAA0B;AAC5B,aAAM,sBAAsB,YAAY,GAAG;AAAA,EAChD,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACM,aAAM,eAAe,YAAY,GAAG;AAAA,EACzC,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACM,aAAM,eAAe,aAAa,IAAI,UAAQ,OAAO,KAAK,CAAC;AAC3D,aAAM,cAAc,YAAqB,OAAO;AAAA,EACrD,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACD,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO;AAAA,IACP,QAAQ,mBAAmB;AAAA,IAC3B,IAAI,CAAC,SAAS,SAAS,QAAQ,QAAQ,SAAS,IAAI,QAAM,GAAG,OAAO,GAAG;AAAA,IACvE,QAAQ;AAAA,EACV,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105187942,
+      "end": 1750105187942,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Report/model/contentPage.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});\n",
+      "start": 1750105187943,
+      "end": 1750105187943,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/entities/Report/model/contentPage.ts"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC;"
+      }
+    }
+  ]
+}

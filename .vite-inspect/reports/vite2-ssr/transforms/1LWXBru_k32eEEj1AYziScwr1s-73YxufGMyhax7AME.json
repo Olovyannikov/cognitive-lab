@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Center, Container, Title } from '@mantine/core';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\n\nimport { ROUTES } from '@/shared/config';\n\nimport s from './LetsContinue.module.css';\n\nexport const LetsContinue = () => (\n    <Box component='section' className={s.root}>\n        <Container>\n            <Center className={s.logo}>\n                <CognitiveLogo />\n            </Center>\n            <Title className={s.title} order={2}>\n                Готовы узнать ваш <span>тип личности?</span>\n            </Title>\n            <Center>\n                <Button className='mantine-button-rainbow' href={ROUTES.TEST} component='a'>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Container>\n    </Box>\n);\n",
-      "start": 1746125696348,
-      "end": 1746125696410,
+      "start": 1750105187859,
+      "end": 1750105187901,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Button, Center, Container, Title } from '@mantine/core';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport s from './LetsContinue.module.css';\nexport const LetsContinue = () => <Box component='section' className={s.root}>\n        <Container>\n            <Center className={s.logo}>\n                <CognitiveLogo />\n            </Center>\n            <Title className={s.title} order={2}>\n                Готовы узнать ваш <span>тип личности?</span>\n            </Title>\n            <Center>\n                <Button className='mantine-button-rainbow' href={ROUTES.TEST} component='a'>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Container>\n    </Box>;",
-      "start": 1746125696410,
-      "end": 1746125696411,
+      "start": 1750105187901,
+      "end": 1750105187902,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -44,8 +44,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Title } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./LetsContinue.module.css\";\nexport const LetsContinue = () => /* @__PURE__ */ jsx(Box, { component: \"section\", className: s.root, children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsx(Center, { className: s.logo, children: /* @__PURE__ */ jsx(CognitiveLogo, {}) }),\n  /* @__PURE__ */ jsxs(Title, { className: s.title, order: 2, children: [\n    \"Готовы узнать ваш \",\n    /* @__PURE__ */ jsx(\"span\", { children: \"тип личности?\" })\n  ] }),\n  /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { className: \"mantine-button-rainbow\", href: ROUTES.TEST, component: \"a\", children: \"Пройти тест\" }) })\n] }) });\n",
-      "start": 1746125696411,
-      "end": 1746125696663,
+      "start": 1750105187902,
+      "end": 1750105188190,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -61,79 +61,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188190,
+      "end": 1750105188190,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188190,
+      "end": 1750105188190,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188190,
+      "end": 1750105188191,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/LetsContinue/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Title } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./LetsContinue.module.css\";\nexport const LetsContinue = () => /* @__PURE__ */ jsx(Box, { component: \"section\", className: s.root, children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsx(Center, { className: s.logo, children: /* @__PURE__ */ jsx(CognitiveLogo, {}) }),\n  /* @__PURE__ */ jsxs(Title, { className: s.title, order: 2, children: [\n    \"Готовы узнать ваш \",\n    /* @__PURE__ */ jsx(\"span\", { children: \"тип личности?\" })\n  ] }),\n  /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { className: \"mantine-button-rainbow\", href: ROUTES.TEST, component: \"a\", children: \"Пройти тест\" }) })\n] }) });\n",
-      "start": 1746125696663,
-      "end": 1746125696663,
+      "start": 1750105188191,
+      "end": 1750105188191,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/IndexPage/ui/LetsContinue/index.tsx"],
+        "sources": [
+          "src/pages/IndexPage/ui/LetsContinue/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

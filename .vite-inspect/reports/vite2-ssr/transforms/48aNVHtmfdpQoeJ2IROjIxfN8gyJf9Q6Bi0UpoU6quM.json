@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const BlogPage = () => {\n    const { data, pending } = useUnit(getBlogPostsQuery);\n    const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n    const totalPages = useUnit(BlogModel.$totalPages);\n    const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);\n\n    if (!data || pending) return <PageLoader />;\n\n    return (\n        <PageLayout title='Блог'>\n            {!pending && <Grid>{blogPosts}</Grid>}\n            <Pagination\n                mt='sm'\n                value={page}\n                hideWithOnePage\n                onChange={onPageChange}\n                total={isNumberLike(totalPages) ? totalPages : 1}\n            />\n        </PageLayout>\n    );\n};\n",
-      "start": 1746125696010,
-      "end": 1746125696038,
+      "start": 1750105187449,
+      "end": 1750105187483,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const BlogPage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, post => post.id && <BlogPostCard post={post} />);\n  if (!data || pending) return <PageLoader />;\n  return <PageLayout title='Блог'>\n            {!pending && <Grid>{blogPosts}</Grid>}\n            <Pagination mt='sm' value={page} hideWithOnePage onChange={onPageChange} total={isNumberLike(totalPages) ? totalPages : 1} />\n        </PageLayout>;\n};",
-      "start": 1746125696038,
-      "end": 1746125696040,
+      "start": 1750105187483,
+      "end": 1750105187484,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -41,7 +41,9 @@
           "post",
           "id"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPage/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPage/index.tsx"
+        ],
         "sourcesContent": [
           "import { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const BlogPage = () => {\n    const { data, pending } = useUnit(getBlogPostsQuery);\n    const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n    const totalPages = useUnit(BlogModel.$totalPages);\n    const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);\n\n    if (!data || pending) return <PageLoader />;\n\n    return (\n        <PageLayout title='Блог'>\n            {!pending && <Grid>{blogPosts}</Grid>}\n            <Pagination\n                mt='sm'\n                value={page}\n                hideWithOnePage\n                onChange={onPageChange}\n                total={isNumberLike(totalPages) ? totalPages : 1}\n            />\n        </PageLayout>\n    );\n};\n"
         ],
@@ -52,12 +54,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, isNumberLike, Pagination } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from \"@/entities/Blog\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const BlogPage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && /* @__PURE__ */ jsx(BlogPostCard, { post }));\n  if (!data || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(PageLayout, { title: \"Блог\", children: [\n    !pending && /* @__PURE__ */ jsx(Grid, { children: blogPosts }),\n    /* @__PURE__ */ jsx(Pagination, { mt: \"sm\", value: page, hideWithOnePage: true, onChange: onPageChange, total: isNumberLike(totalPages) ? totalPages : 1 })\n  ] });\n};\n",
-      "start": 1746125696040,
-      "end": 1746125696084,
+      "start": 1750105187484,
+      "end": 1750105187502,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPage/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPage/index.tsx"
+        ],
         "sourcesContent": [
           "import { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const BlogPage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, post => post.id && <BlogPostCard post={post} />);\n  if (!data || pending) return <PageLoader />;\n  return <PageLayout title='Блог'>\n            {!pending && <Grid>{blogPosts}</Grid>}\n            <Pagination mt='sm' value={page} hideWithOnePage onChange={onPageChange} total={isNumberLike(totalPages) ? totalPages : 1} />\n        </PageLayout>;\n};"
         ],
@@ -67,79 +71,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696084,
-      "end": 1746125696084,
+      "start": 1750105187502,
+      "end": 1750105187502,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696085,
-      "end": 1746125696085,
+      "start": 1750105187503,
+      "end": 1750105187503,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696085,
-      "end": 1746125696085,
+      "start": 1750105187503,
+      "end": 1750105187503,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696085,
-      "end": 1746125696085,
+      "start": 1750105187503,
+      "end": 1750105187503,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696085,
-      "end": 1746125696085,
+      "start": 1750105187503,
+      "end": 1750105187503,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/BlogPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, isNumberLike, Pagination } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from \"@/entities/Blog\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const BlogPage = () => {\n  const {\n    data,\n    pending\n  } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && /* @__PURE__ */ jsx(BlogPostCard, { post }));\n  if (!data || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsxs(PageLayout, { title: \"Блог\", children: [\n    !pending && /* @__PURE__ */ jsx(Grid, { children: blogPosts }),\n    /* @__PURE__ */ jsx(Pagination, { mt: \"sm\", value: page, hideWithOnePage: true, onChange: onPageChange, total: isNumberLike(totalPages) ? totalPages : 1 })\n  ] });\n};\n",
-      "start": 1746125696085,
-      "end": 1746125696085,
+      "start": 1750105187503,
+      "end": 1750105187503,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/BlogPage/index.tsx"],
+        "sources": [
+          "src/pages/BlogPage/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

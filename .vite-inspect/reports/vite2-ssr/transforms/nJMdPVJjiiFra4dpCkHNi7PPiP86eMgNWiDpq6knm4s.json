@@ -4,97 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".progress {\n  width: 100%;\n}\n\n.text {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 19px;\n\n  @mixin larger-than 1200px {\n    font-size: 24px;\n    line-height: 28px;\n  }\n}\n",
-      "start": 1746125696867,
-      "end": 1746125696881,
+      "start": 1750105188292,
+      "end": 1750105188310,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696881,
-      "end": 1746125696881,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestProgress/TestProgress.module.css [vike:pluginModuleBanner] */\nexport const progress = \"fY-vn\";\nexport const text = \"ucSMo\";\nexport default {\n\tprogress: progress,\n\ttext: text\n};\n",
-      "start": 1746125696882,
-      "end": 1746125696882,
+      "start": 1750105188310,
+      "end": 1750105188310,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Test/ui/TestProgress/TestProgress.module.css"],
+        "sources": [
+          "src/entities/Test/ui/TestProgress/TestProgress.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
       }

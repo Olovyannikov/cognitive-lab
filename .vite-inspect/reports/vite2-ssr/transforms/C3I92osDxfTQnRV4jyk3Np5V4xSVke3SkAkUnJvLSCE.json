@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './AdBanner.module.css';\n\ninterface AdBannerProps {\n    content?: string;\n    title?: string;\n    type?: string;\n}\n\nconst INITIAL_CONTENT =\n    'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' +\n    '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' +\n    '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' +\n    '                    поставленных целей.';\n\nexport const AdBanner = ({\n    children,\n    content = INITIAL_CONTENT,\n    title = 'Узнайте свой тип личности',\n    type = 'ESFJ',\n}: PropsWithChildren<AdBannerProps>) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper className={s.paper}>\n            <Stack className={s.root}>\n                <Group className={s.group}>\n                    <Picture className={s.image} src='/emoji/star' />\n                    <Title className={s.title} fz={20}>\n                        {title}\n                    </Title>\n                </Group>\n                <Text className={s.text}>{content}</Text>\n                <Image\n                    w={300}\n                    h={340}\n                    right={0}\n                    bottom={0}\n                    pos='absolute'\n                    visibleFrom='xl'\n                    className={s.image}\n                    src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`}\n                />\n                <Flex className={s.controls}>{children}</Flex>\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1746125696497,
-      "end": 1746125696536,
+      "start": 1750105187771,
+      "end": 1750105187833,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './AdBanner.module.css';\ninterface AdBannerProps {\n  content?: string;\n  title?: string;\n  type?: string;\n}\nconst INITIAL_CONTENT = 'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' + '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' + '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' + '                    поставленных целей.';\nexport const AdBanner = ({\n  children,\n  content = INITIAL_CONTENT,\n  title = 'Узнайте свой тип личности',\n  type = 'ESFJ'\n}: PropsWithChildren<AdBannerProps>) => {\n  const isLarge = useIsLarge();\n  return <Paper className={s.paper}>\n            <Stack className={s.root}>\n                <Group className={s.group}>\n                    <Picture className={s.image} src='/emoji/star' />\n                    <Title className={s.title} fz={20}>\n                        {title}\n                    </Title>\n                </Group>\n                <Text className={s.text}>{content}</Text>\n                <Image w={300} h={340} right={0} bottom={0} pos='absolute' visibleFrom='xl' className={s.image} src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`} />\n                <Flex className={s.controls}>{children}</Flex>\n            </Stack>\n        </Paper>;\n};",
-      "start": 1746125696536,
-      "end": 1746125696542,
+      "start": 1750105187833,
+      "end": 1750105187835,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -43,7 +43,9 @@
           "text",
           "controls"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AdBanner/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AdBanner/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './AdBanner.module.css';\n\ninterface AdBannerProps {\n    content?: string;\n    title?: string;\n    type?: string;\n}\n\nconst INITIAL_CONTENT =\n    'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' +\n    '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' +\n    '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' +\n    '                    поставленных целей.';\n\nexport const AdBanner = ({\n    children,\n    content = INITIAL_CONTENT,\n    title = 'Узнайте свой тип личности',\n    type = 'ESFJ',\n}: PropsWithChildren<AdBannerProps>) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper className={s.paper}>\n            <Stack className={s.root}>\n                <Group className={s.group}>\n                    <Picture className={s.image} src='/emoji/star' />\n                    <Title className={s.title} fz={20}>\n                        {title}\n                    </Title>\n                </Group>\n                <Text className={s.text}>{content}</Text>\n                <Image\n                    w={300}\n                    h={340}\n                    right={0}\n                    bottom={0}\n                    pos='absolute'\n                    visibleFrom='xl'\n                    className={s.image}\n                    src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`}\n                />\n                <Flex className={s.controls}>{children}</Flex>\n            </Stack>\n        </Paper>\n    );\n};\n"
         ],
@@ -54,12 +56,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./AdBanner.module.css\";\nconst INITIAL_CONTENT = \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n                    поставленных целей.\";\nexport const AdBanner = ({\n  children,\n  content = INITIAL_CONTENT,\n  title = \"Узнайте свой тип личности\",\n  type = \"ESFJ\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Paper, { className: s.paper, children: /* @__PURE__ */ jsxs(Stack, { className: s.root, children: [\n    /* @__PURE__ */ jsxs(Group, { className: s.group, children: [\n      /* @__PURE__ */ jsx(Picture, { className: s.image, src: \"/emoji/star\" }),\n      /* @__PURE__ */ jsx(Title, { className: s.title, fz: 20, children: title })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: content }),\n    /* @__PURE__ */ jsx(Image, { w: 300, h: 340, right: 0, bottom: 0, pos: \"absolute\", visibleFrom: \"xl\", className: s.image, src: `/images/types/${isLarge ? \"\" : \"mobile/\"}${type}.png` }),\n    /* @__PURE__ */ jsx(Flex, { className: s.controls, children })\n  ] }) });\n};\n",
-      "start": 1746125696542,
-      "end": 1746125696802,
+      "start": 1750105187835,
+      "end": 1750105188085,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AdBanner/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AdBanner/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './AdBanner.module.css';\ninterface AdBannerProps {\n  content?: string;\n  title?: string;\n  type?: string;\n}\nconst INITIAL_CONTENT = 'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' + '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' + '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' + '                    поставленных целей.';\nexport const AdBanner = ({\n  children,\n  content = INITIAL_CONTENT,\n  title = 'Узнайте свой тип личности',\n  type = 'ESFJ'\n}: PropsWithChildren<AdBannerProps>) => {\n  const isLarge = useIsLarge();\n  return <Paper className={s.paper}>\n            <Stack className={s.root}>\n                <Group className={s.group}>\n                    <Picture className={s.image} src='/emoji/star' />\n                    <Title className={s.title} fz={20}>\n                        {title}\n                    </Title>\n                </Group>\n                <Text className={s.text}>{content}</Text>\n                <Image w={300} h={340} right={0} bottom={0} pos='absolute' visibleFrom='xl' className={s.image} src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`} />\n                <Flex className={s.controls}>{children}</Flex>\n            </Stack>\n        </Paper>;\n};"
         ],
@@ -69,79 +73,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/AdBanner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./AdBanner.module.css\";\nconst INITIAL_CONTENT = \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n                    поставленных целей.\";\nexport const AdBanner = ({\n  children,\n  content = INITIAL_CONTENT,\n  title = \"Узнайте свой тип личности\",\n  type = \"ESFJ\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Paper, { className: s.paper, children: /* @__PURE__ */ jsxs(Stack, { className: s.root, children: [\n    /* @__PURE__ */ jsxs(Group, { className: s.group, children: [\n      /* @__PURE__ */ jsx(Picture, { className: s.image, src: \"/emoji/star\" }),\n      /* @__PURE__ */ jsx(Title, { className: s.title, fz: 20, children: title })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: content }),\n    /* @__PURE__ */ jsx(Image, { w: 300, h: 340, right: 0, bottom: 0, pos: \"absolute\", visibleFrom: \"xl\", className: s.image, src: `/images/types/${isLarge ? \"\" : \"mobile/\"}${type}.png` }),\n    /* @__PURE__ */ jsx(Flex, { className: s.controls, children })\n  ] }) });\n};\n",
-      "start": 1746125696802,
-      "end": 1746125696802,
+      "start": 1750105188086,
+      "end": 1750105188086,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/AdBanner/index.tsx"],
+        "sources": [
+          "src/entities/Report/ui/AdBanner/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1Y,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5L,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\n\nimport { getBlogPostsQuery } from '../api';\nimport type { BlogPost } from '../types';\n\nexport const BlogModel = atom(() => {\n    const $pageSize = createStore(5);\n\n    const $blogPosts = restore<BlogPost[]>(\n        getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []),\n        []\n    );\n    const $totalPages = restore(\n        getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages),\n        0\n    );\n\n    const pageChanged = createEvent<number>();\n    const $currentPage = restore(pageChanged, 1);\n\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));\n\n    sample({\n        clock: pageChanged,\n        target: scrollToTopFx,\n    });\n\n    sample({\n        clock: $pageSize,\n        filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n        fn: (pageSize) => ({ page: 1, page_size: pageSize }),\n        target: getBlogPostsQuery.refresh,\n    });\n    sample({\n        clock: $currentPage,\n        source: {\n            page_size: $pageSize,\n        },\n        fn: ({ page_size }, page) => ({ page, page_size }),\n        target: getBlogPostsQuery.refresh,\n    });\n\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\n        await navigate('/blog');\n    });\n\n    sample({\n        clock: getBlogPostsQuery.finished.failure,\n        target: redirectToMainBlogPostPageFx,\n    });\n\n    return {\n        $pageSize,\n        $blogPosts,\n        pageChanged,\n        $totalPages,\n        $currentPage,\n        scrollToTopFx,\n        redirectToMainBlogPostPageFx,\n    };\n});\n",
-      "start": 1746125696097,
-      "end": 1746125696148,
+      "start": 1750105187498,
+      "end": 1750105187560,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { getBlogPostsQuery } from '../api';\nimport type { BlogPost } from '../types';\nexport const BlogModel = atom(() => {\n  const $pageSize = createStore(5, {\n    name: \"$pageSize\",\n    sid: \"2aag3l\"\n  });\n  const $blogPosts = restore<BlogPost[]>(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result?.payload ?? []), [], {\n    name: \"$blogPosts\",\n    sid: \"-vcd1gb\"\n  });\n  const $totalPages = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result.total_pages), 0, {\n    name: \"$totalPages\",\n    sid: \"ua01ft\"\n  });\n  const pageChanged = createEvent<number>({\n    name: \"pageChanged\",\n    sid: \"-w562qa\"\n  });\n  const $currentPage = restore(pageChanged, 1, {\n    name: \"$currentPage\",\n    sid: \"-l1rlxv\"\n  });\n  const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n    name: \"scrollToTopFx\",\n    sid: \"oqoflb\"\n  });\n  sample({\n    and: [{\n      clock: pageChanged,\n      target: scrollToTopFx\n    }],\n    or: {\n      sid: \"-va5zsa\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $pageSize,\n      filter: getBlogPostsQuery.$data.map(el => el?.payload?.length < 1),\n      fn: pageSize => ({\n        page: 1,\n        page_size: pageSize\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uvvccw\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $currentPage,\n      source: {\n        page_size: $pageSize\n      },\n      fn: ({\n        page_size\n      }, page) => ({\n        page,\n        page_size\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uskksq\"\n    }\n  });\n  const redirectToMainBlogPostPageFx = createEffect(async () => {\n    await navigate('/blog');\n  }, {\n    name: \"redirectToMainBlogPostPageFx\",\n    sid: \"bpxijm\"\n  });\n  sample({\n    and: [{\n      clock: getBlogPostsQuery.finished.failure,\n      target: redirectToMainBlogPostPageFx\n    }],\n    or: {\n      sid: \"-tybw5v\"\n    }\n  });\n  return {\n    $pageSize,\n    $blogPosts,\n    pageChanged,\n    $totalPages,\n    $currentPage,\n    scrollToTopFx,\n    redirectToMainBlogPostPageFx\n  };\n});",
-      "start": 1746125696148,
-      "end": 1746125696151,
+      "start": 1750105187560,
+      "end": 1750105187562,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -60,7 +60,9 @@
           "redirectToMainBlogPostPageFx",
           "failure"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/model/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/model/index.ts"
+        ],
         "sourcesContent": [
           "import { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\n\nimport { getBlogPostsQuery } from '../api';\nimport type { BlogPost } from '../types';\n\nexport const BlogModel = atom(() => {\n    const $pageSize = createStore(5);\n\n    const $blogPosts = restore<BlogPost[]>(\n        getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []),\n        []\n    );\n    const $totalPages = restore(\n        getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages),\n        0\n    );\n\n    const pageChanged = createEvent<number>();\n    const $currentPage = restore(pageChanged, 1);\n\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));\n\n    sample({\n        clock: pageChanged,\n        target: scrollToTopFx,\n    });\n\n    sample({\n        clock: $pageSize,\n        filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n        fn: (pageSize) => ({ page: 1, page_size: pageSize }),\n        target: getBlogPostsQuery.refresh,\n    });\n    sample({\n        clock: $currentPage,\n        source: {\n            page_size: $pageSize,\n        },\n        fn: ({ page_size }, page) => ({ page, page_size }),\n        target: getBlogPostsQuery.refresh,\n    });\n\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\n        await navigate('/blog');\n    });\n\n    sample({\n        clock: getBlogPostsQuery.finished.failure,\n        target: redirectToMainBlogPostPageFx,\n    });\n\n    return {\n        $pageSize,\n        $blogPosts,\n        pageChanged,\n        $totalPages,\n        $currentPage,\n        scrollToTopFx,\n        redirectToMainBlogPostPageFx,\n    };\n});\n"
         ],
@@ -71,12 +73,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEffect, createEvent, createStore, restore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getBlogPostsQuery } from \"../api\";\nexport const BlogModel = atom(() => {\n  const $pageSize = createStore(5, {\n    name: \"$pageSize\",\n    sid: \"2aag3l\"\n  });\n  const $blogPosts = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result?.payload ?? []), [], {\n    name: \"$blogPosts\",\n    sid: \"-vcd1gb\"\n  });\n  const $totalPages = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result.total_pages), 0, {\n    name: \"$totalPages\",\n    sid: \"ua01ft\"\n  });\n  const pageChanged = createEvent({\n    name: \"pageChanged\",\n    sid: \"-w562qa\"\n  });\n  const $currentPage = restore(pageChanged, 1, {\n    name: \"$currentPage\",\n    sid: \"-l1rlxv\"\n  });\n  const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n    name: \"scrollToTopFx\",\n    sid: \"oqoflb\"\n  });\n  sample({\n    and: [{\n      clock: pageChanged,\n      target: scrollToTopFx\n    }],\n    or: {\n      sid: \"-va5zsa\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $pageSize,\n      filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n      fn: (pageSize) => ({\n        page: 1,\n        page_size: pageSize\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uvvccw\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $currentPage,\n      source: {\n        page_size: $pageSize\n      },\n      fn: ({\n        page_size\n      }, page) => ({\n        page,\n        page_size\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uskksq\"\n    }\n  });\n  const redirectToMainBlogPostPageFx = createEffect(async () => {\n    await navigate(\"/blog\");\n  }, {\n    name: \"redirectToMainBlogPostPageFx\",\n    sid: \"bpxijm\"\n  });\n  sample({\n    and: [{\n      clock: getBlogPostsQuery.finished.failure,\n      target: redirectToMainBlogPostPageFx\n    }],\n    or: {\n      sid: \"-tybw5v\"\n    }\n  });\n  return {\n    $pageSize,\n    $blogPosts,\n    pageChanged,\n    $totalPages,\n    $currentPage,\n    scrollToTopFx,\n    redirectToMainBlogPostPageFx\n  };\n});\n",
-      "start": 1746125696151,
-      "end": 1746125696234,
+      "start": 1750105187563,
+      "end": 1750105187672,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/model/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/model/index.ts"
+        ],
         "sourcesContent": [
           "import { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { getBlogPostsQuery } from '../api';\nimport type { BlogPost } from '../types';\nexport const BlogModel = atom(() => {\n  const $pageSize = createStore(5, {\n    name: \"$pageSize\",\n    sid: \"2aag3l\"\n  });\n  const $blogPosts = restore<BlogPost[]>(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result?.payload ?? []), [], {\n    name: \"$blogPosts\",\n    sid: \"-vcd1gb\"\n  });\n  const $totalPages = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result.total_pages), 0, {\n    name: \"$totalPages\",\n    sid: \"ua01ft\"\n  });\n  const pageChanged = createEvent<number>({\n    name: \"pageChanged\",\n    sid: \"-w562qa\"\n  });\n  const $currentPage = restore(pageChanged, 1, {\n    name: \"$currentPage\",\n    sid: \"-l1rlxv\"\n  });\n  const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n    name: \"scrollToTopFx\",\n    sid: \"oqoflb\"\n  });\n  sample({\n    and: [{\n      clock: pageChanged,\n      target: scrollToTopFx\n    }],\n    or: {\n      sid: \"-va5zsa\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $pageSize,\n      filter: getBlogPostsQuery.$data.map(el => el?.payload?.length < 1),\n      fn: pageSize => ({\n        page: 1,\n        page_size: pageSize\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uvvccw\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $currentPage,\n      source: {\n        page_size: $pageSize\n      },\n      fn: ({\n        page_size\n      }, page) => ({\n        page,\n        page_size\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uskksq\"\n    }\n  });\n  const redirectToMainBlogPostPageFx = createEffect(async () => {\n    await navigate('/blog');\n  }, {\n    name: \"redirectToMainBlogPostPageFx\",\n    sid: \"bpxijm\"\n  });\n  sample({\n    and: [{\n      clock: getBlogPostsQuery.finished.failure,\n      target: redirectToMainBlogPostPageFx\n    }],\n    or: {\n      sid: \"-tybw5v\"\n    }\n  });\n  return {\n    $pageSize,\n    $blogPosts,\n    pageChanged,\n    $totalPages,\n    $currentPage,\n    scrollToTopFx,\n    redirectToMainBlogPostPageFx\n  };\n});"
         ],
@@ -86,79 +90,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696234,
-      "end": 1746125696234,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Blog/model/index.ts [vike:pluginModuleBanner] */\nimport { createEffect, createEvent, createStore, restore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getBlogPostsQuery } from \"../api\";\nexport const BlogModel = atom(() => {\n  const $pageSize = createStore(5, {\n    name: \"$pageSize\",\n    sid: \"2aag3l\"\n  });\n  const $blogPosts = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result?.payload ?? []), [], {\n    name: \"$blogPosts\",\n    sid: \"-vcd1gb\"\n  });\n  const $totalPages = restore(getBlogPostsQuery.finished.success.map(({\n    result\n  }) => result.total_pages), 0, {\n    name: \"$totalPages\",\n    sid: \"ua01ft\"\n  });\n  const pageChanged = createEvent({\n    name: \"pageChanged\",\n    sid: \"-w562qa\"\n  });\n  const $currentPage = restore(pageChanged, 1, {\n    name: \"$currentPage\",\n    sid: \"-l1rlxv\"\n  });\n  const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n    name: \"scrollToTopFx\",\n    sid: \"oqoflb\"\n  });\n  sample({\n    and: [{\n      clock: pageChanged,\n      target: scrollToTopFx\n    }],\n    or: {\n      sid: \"-va5zsa\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $pageSize,\n      filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n      fn: (pageSize) => ({\n        page: 1,\n        page_size: pageSize\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uvvccw\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $currentPage,\n      source: {\n        page_size: $pageSize\n      },\n      fn: ({\n        page_size\n      }, page) => ({\n        page,\n        page_size\n      }),\n      target: getBlogPostsQuery.refresh\n    }],\n    or: {\n      sid: \"-uskksq\"\n    }\n  });\n  const redirectToMainBlogPostPageFx = createEffect(async () => {\n    await navigate(\"/blog\");\n  }, {\n    name: \"redirectToMainBlogPostPageFx\",\n    sid: \"bpxijm\"\n  });\n  sample({\n    and: [{\n      clock: getBlogPostsQuery.finished.failure,\n      target: redirectToMainBlogPostPageFx\n    }],\n    or: {\n      sid: \"-tybw5v\"\n    }\n  });\n  return {\n    $pageSize,\n    $blogPosts,\n    pageChanged,\n    $totalPages,\n    $currentPage,\n    scrollToTopFx,\n    redirectToMainBlogPostPageFx\n  };\n});\n",
-      "start": 1746125696234,
-      "end": 1746125696235,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Blog/model/index.ts"],
+        "sources": [
+          "src/entities/Blog/model/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }

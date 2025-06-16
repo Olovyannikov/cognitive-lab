@@ -4,20 +4,25 @@
     {
       "name": "vite:load-fallback",
       "result": "import { PurchasePage } from '@/pages/PurchasePage';\n\nexport default function Page() {\n    return <PurchasePage />;\n}\n",
-      "start": 1746125695924,
-      "end": 1746125695963,
+      "start": 1750105187370,
+      "end": 1750105187403,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { PurchasePage } from '@/pages/PurchasePage';\nexport default function Page() {\n  return <PurchasePage />;\n}",
-      "start": 1746125695963,
-      "end": 1746125695963,
+      "start": 1750105187403,
+      "end": 1750105187404,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["PurchasePage", "Page"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/purchase/@surveyId/+Page.tsx"],
+        "names": [
+          "PurchasePage",
+          "Page"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/purchase/@surveyId/+Page.tsx"
+        ],
         "sourcesContent": [
           "import { PurchasePage } from '@/pages/PurchasePage';\n\nexport default function Page() {\n    return <PurchasePage />;\n}\n"
         ],
@@ -28,12 +33,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { PurchasePage } from \"@/pages/PurchasePage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(PurchasePage, {});\n}\n",
-      "start": 1746125695963,
-      "end": 1746125696029,
+      "start": 1750105187404,
+      "end": 1750105187461,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/purchase/@surveyId/+Page.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/purchase/@surveyId/+Page.tsx"
+        ],
         "sourcesContent": [
           "import { PurchasePage } from '@/pages/PurchasePage';\nexport default function Page() {\n  return <PurchasePage />;\n}"
         ],
@@ -43,79 +50,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696030,
-      "end": 1746125696030,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696032,
-      "end": 1746125696032,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696032,
-      "end": 1746125696032,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696032,
-      "end": 1746125696032,
+      "start": 1750105187461,
+      "end": 1750105187461,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696032,
-      "end": 1746125696032,
+      "start": 1750105187461,
+      "end": 1750105187462,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/purchase/@surveyId/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { PurchasePage } from \"@/pages/PurchasePage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(PurchasePage, {});\n}\n",
-      "start": 1746125696032,
-      "end": 1746125696032,
+      "start": 1750105187462,
+      "end": 1750105187462,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["pages/purchase/@surveyId/+Page.tsx"],
+        "sources": [
+          "pages/purchase/@surveyId/+Page.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C;"
       }

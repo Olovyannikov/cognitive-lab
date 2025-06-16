@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const TypesPage = () => {\n    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => (\n        <PersonalityCategory description={description} title={category} types={types} />\n    ));\n\n    return (\n        <PageLayout title='Типы личности'>\n            <Stack>{categories}</Stack>\n        </PageLayout>\n    );\n};\n",
-      "start": 1746125696046,
-      "end": 1746125696096,
+      "start": 1750105187458,
+      "end": 1750105187490,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({\n    category,\n    types,\n    description\n  }) => <PersonalityCategory description={description} title={category} types={types} />);\n  return <PageLayout title='Типы личности'>\n            <Stack>{categories}</Stack>\n        </PageLayout>;\n};",
-      "start": 1746125696096,
-      "end": 1746125696097,
+      "start": 1750105187490,
+      "end": 1750105187491,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -29,7 +29,9 @@
           "types",
           "description"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypesPage/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypesPage/index.tsx"
+        ],
         "sourcesContent": [
           "import { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const TypesPage = () => {\n    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => (\n        <PersonalityCategory description={description} title={category} types={types} />\n    ));\n\n    return (\n        <PageLayout title='Типы личности'>\n            <Stack>{categories}</Stack>\n        </PageLayout>\n    );\n};\n"
         ],
@@ -40,12 +42,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from \"@/entities/Personality\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({\n    category,\n    types,\n    description\n  }) => /* @__PURE__ */ jsx(PersonalityCategory, { description, title: category, types }));\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Типы личности\", children: /* @__PURE__ */ jsx(Stack, { children: categories }) });\n};\n",
-      "start": 1746125696097,
-      "end": 1746125696172,
+      "start": 1750105187491,
+      "end": 1750105187563,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypesPage/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypesPage/index.tsx"
+        ],
         "sourcesContent": [
           "import { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({\n    category,\n    types,\n    description\n  }) => <PersonalityCategory description={description} title={category} types={types} />);\n  return <PageLayout title='Типы личности'>\n            <Stack>{categories}</Stack>\n        </PageLayout>;\n};"
         ],
@@ -55,79 +59,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/TypesPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from \"@/entities/Personality\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({\n    category,\n    types,\n    description\n  }) => /* @__PURE__ */ jsx(PersonalityCategory, { description, title: category, types }));\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Типы личности\", children: /* @__PURE__ */ jsx(Stack, { children: categories }) });\n};\n",
-      "start": 1746125696172,
-      "end": 1746125696172,
+      "start": 1750105187564,
+      "end": 1750105187564,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/TypesPage/index.tsx"],
+        "sources": [
+          "src/pages/TypesPage/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpI,CAAC;"
       }

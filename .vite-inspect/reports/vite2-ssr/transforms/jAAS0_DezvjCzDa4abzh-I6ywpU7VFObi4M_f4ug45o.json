@@ -3,121 +3,132 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n};\n",
-      "start": 1746125696845,
-      "end": 1746125696862,
+      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n    TYPES: '/mbti-types',\n};\n",
+      "start": 1750105188330,
+      "end": 1750105188348,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test'\n};",
-      "start": 1746125696862,
-      "end": 1746125696863,
+      "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test',\n  TYPES: '/mbti-types'\n};",
+      "start": 1750105188348,
+      "end": 1750105188348,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["CDN_URL", "ROUTES", "TEST"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"],
-        "sourcesContent": [
-          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n};\n"
+        "names": [
+          "CDN_URL",
+          "ROUTES",
+          "TEST",
+          "TYPES"
         ],
-        "mappings": "AAAA,OAAO,MAAMA,OAAO,GAAG,oCAAoC;AAE3D,OAAO,MAAMC,MAAM,GAAG;EAClBC,IAAI,EAAE;AACV,CAAC",
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"
+        ],
+        "sourcesContent": [
+          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n    TYPES: '/mbti-types',\n};\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,OAAO,GAAG,oCAAoC;AAE3D,OAAO,MAAMC,MAAM,GAAG;EAClBC,IAAI,EAAE,YAAY;EAClBC,KAAK,EAAE;AACX,CAAC",
         "ignoreList": []
       }
     },
     {
       "name": "vite:esbuild",
-      "result": "export const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\"\n};\n",
-      "start": 1746125696863,
-      "end": 1746125696960,
+      "result": "export const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
+      "start": 1750105188348,
+      "end": 1750105188432,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"],
-        "sourcesContent": [
-          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test'\n};"
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts"
         ],
-        "mappings": "AAAO,aAAM,UAAU;AAChB,aAAM,SAAS;AAAA,EACpB,MAAM;AACR;",
+        "sourcesContent": [
+          "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test',\n  TYPES: '/mbti-types'\n};"
+        ],
+        "mappings": "AAAO,aAAM,UAAU;AAChB,aAAM,SAAS;AAAA,EACpB,MAAM;AAAA,EACN,OAAO;AACT;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696960,
-      "end": 1746125696960,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/config/constants.ts [vike:pluginModuleBanner] */\nexport const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\"\n};\n",
-      "start": 1746125696960,
-      "end": 1746125696961,
+      "result": "/*! src/shared/config/constants.ts [vike:pluginModuleBanner] */\nexport const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/config/constants.ts"],
+        "sources": [
+          "src/shared/config/constants.ts"
+        ],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC;"
       }
     }
   ]

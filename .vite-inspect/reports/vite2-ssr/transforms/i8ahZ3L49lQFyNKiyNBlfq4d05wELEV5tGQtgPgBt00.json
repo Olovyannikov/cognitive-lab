@@ -4,20 +4,22 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Picture';\nexport * from './Section';\nexport * from './SpinningText';\nexport * from './StickyScrollReveal';\nexport * from './InnerContainer';\nexport * from './Accordion';\nexport * from './PointsList';\nexport * from './PageLoader';\nexport * from './Markdown';\nexport * from './FormInput';\nexport * from './FormWrapper';\nexport * from './FormSuccessScreen';\nexport * from './IconCheck';\nexport * from './InputBorderless';\n",
-      "start": 1746125696106,
-      "end": 1746125696169,
+      "start": 1750105187566,
+      "end": 1750105187614,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Picture';\nexport * from './Section';\nexport * from './SpinningText';\nexport * from './StickyScrollReveal';\nexport * from './InnerContainer';\nexport * from './Accordion';\nexport * from './PointsList';\nexport * from './PageLoader';\nexport * from './Markdown';\nexport * from './FormInput';\nexport * from './FormWrapper';\nexport * from './FormSuccessScreen';\nexport * from './IconCheck';\nexport * from './InputBorderless';",
-      "start": 1746125696169,
-      "end": 1746125696170,
+      "start": 1750105187614,
+      "end": 1750105187614,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/index.ts"
+        ],
         "sourcesContent": [
           "export * from './Picture';\nexport * from './Section';\nexport * from './SpinningText';\nexport * from './StickyScrollReveal';\nexport * from './InnerContainer';\nexport * from './Accordion';\nexport * from './PointsList';\nexport * from './PageLoader';\nexport * from './Markdown';\nexport * from './FormInput';\nexport * from './FormWrapper';\nexport * from './FormSuccessScreen';\nexport * from './IconCheck';\nexport * from './InputBorderless';\n"
         ],
@@ -28,12 +30,14 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Picture\";\nexport * from \"./Section\";\nexport * from \"./SpinningText\";\nexport * from \"./StickyScrollReveal\";\nexport * from \"./InnerContainer\";\nexport * from \"./Accordion\";\nexport * from \"./PointsList\";\nexport * from \"./PageLoader\";\nexport * from \"./Markdown\";\nexport * from \"./FormInput\";\nexport * from \"./FormWrapper\";\nexport * from \"./FormSuccessScreen\";\nexport * from \"./IconCheck\";\nexport * from \"./InputBorderless\";\n",
-      "start": 1746125696171,
-      "end": 1746125696236,
+      "start": 1750105187614,
+      "end": 1750105187734,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/index.ts"
+        ],
         "sourcesContent": [
           "export * from './Picture';\nexport * from './Section';\nexport * from './SpinningText';\nexport * from './StickyScrollReveal';\nexport * from './InnerContainer';\nexport * from './Accordion';\nexport * from './PointsList';\nexport * from './PageLoader';\nexport * from './Markdown';\nexport * from './FormInput';\nexport * from './FormWrapper';\nexport * from './FormSuccessScreen';\nexport * from './IconCheck';\nexport * from './InputBorderless';"
         ],
@@ -43,79 +47,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696236,
-      "end": 1746125696236,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Picture\";\nexport * from \"./Section\";\nexport * from \"./SpinningText\";\nexport * from \"./StickyScrollReveal\";\nexport * from \"./InnerContainer\";\nexport * from \"./Accordion\";\nexport * from \"./PointsList\";\nexport * from \"./PageLoader\";\nexport * from \"./Markdown\";\nexport * from \"./FormInput\";\nexport * from \"./FormWrapper\";\nexport * from \"./FormSuccessScreen\";\nexport * from \"./IconCheck\";\nexport * from \"./InputBorderless\";\n",
-      "start": 1746125696236,
-      "end": 1746125696237,
+      "start": 1750105187735,
+      "end": 1750105187735,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/ui/index.ts"],
+        "sources": [
+          "src/shared/ui/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

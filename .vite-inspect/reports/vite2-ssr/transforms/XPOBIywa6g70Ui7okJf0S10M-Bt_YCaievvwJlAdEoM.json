@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './Preheader.module.css';\n\ninterface PreheaderProps {\n    title: string;\n    color?: string;\n}\n\nexport const Preheader = ({ color = 'violet', title }: PreheaderProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n",
-      "start": 1746125696491,
-      "end": 1746125696530,
+      "start": 1750105187759,
+      "end": 1750105187825,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './Preheader.module.css';\ninterface PreheaderProps {\n  title: string;\n  color?: string;\n}\nexport const Preheader = ({\n  color = 'violet',\n  title\n}: PreheaderProps) => <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>;",
-      "start": 1746125696530,
-      "end": 1746125696532,
+      "start": 1750105187825,
+      "end": 1750105187826,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,7 +30,9 @@
           "paper",
           "box"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"
+        ],
         "sourcesContent": [
           "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './Preheader.module.css';\n\ninterface PreheaderProps {\n    title: string;\n    color?: string;\n}\n\nexport const Preheader = ({ color = 'violet', title }: PreheaderProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n"
         ],
@@ -41,12 +43,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./Preheader.module.css\";\nexport const Preheader = ({\n  color = \"violet\",\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
-      "start": 1746125696532,
-      "end": 1746125696799,
+      "start": 1750105187826,
+      "end": 1750105188070,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Preheader/index.tsx"
+        ],
         "sourcesContent": [
           "import { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './Preheader.module.css';\ninterface PreheaderProps {\n  title: string;\n  color?: string;\n}\nexport const Preheader = ({\n  color = 'violet',\n  title\n}: PreheaderProps) => <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>;"
         ],
@@ -56,79 +60,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Preheader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./Preheader.module.css\";\nexport const Preheader = ({\n  color = \"violet\",\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
-      "start": 1746125696799,
-      "end": 1746125696799,
+      "start": 1750105188070,
+      "end": 1750105188070,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/Preheader/index.tsx"],
+        "sources": [
+          "src/entities/Report/ui/Preheader/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC;"
       }

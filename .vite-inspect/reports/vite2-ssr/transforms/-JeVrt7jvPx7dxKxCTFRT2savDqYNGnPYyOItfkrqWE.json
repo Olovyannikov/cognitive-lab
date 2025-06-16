@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\n\nimport { MantineProvider } from '@/app/providers';\n\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\n\nimport '@/app/assets/styles/index.css';\n\nexport default function Wrapper({ children }: PropsWithChildren) {\n    return (\n        <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>\n    );\n}\n",
-      "start": 1746125695906,
-      "end": 1746125695922,
+      "start": 1750105187346,
+      "end": 1750105187364,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\nimport { MantineProvider } from '@/app/providers';\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\nimport '@/app/assets/styles/index.css';\nexport default function Wrapper({\n  children\n}: PropsWithChildren) {\n  return <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>;\n}",
-      "start": 1746125695922,
-      "end": 1746125695923,
+      "start": 1750105187364,
+      "end": 1750105187366,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -25,7 +25,9 @@
           "Wrapper",
           "children"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+Wrapper.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+Wrapper.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\n\nimport { MantineProvider } from '@/app/providers';\n\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\n\nimport '@/app/assets/styles/index.css';\n\nexport default function Wrapper({ children }: PropsWithChildren) {\n    return (\n        <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>\n    );\n}\n"
         ],
@@ -36,12 +38,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { NavigationProgress } from \"@mantine/nprogress\";\nimport { MantineProvider } from \"@/app/providers\";\nimport { EffectorProvider, ScopeProvider } from \"@/shared/lib\";\nimport \"@/app/assets/styles/index.css\";\nexport default function Wrapper({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(MantineProvider, { children: [\n    /* @__PURE__ */ jsx(NavigationProgress, { \"aria-label\": \"Прогресс навигации\", color: \"violet\" }),\n    /* @__PURE__ */ jsx(ScopeProvider, { children: /* @__PURE__ */ jsx(EffectorProvider, { children }) })\n  ] });\n}\n",
-      "start": 1746125695923,
-      "end": 1746125696003,
+      "start": 1750105187366,
+      "end": 1750105187433,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+Wrapper.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+Wrapper.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { NavigationProgress } from '@mantine/nprogress';\nimport { MantineProvider } from '@/app/providers';\nimport { EffectorProvider, ScopeProvider } from '@/shared/lib';\nimport '@/app/assets/styles/index.css';\nexport default function Wrapper({\n  children\n}: PropsWithChildren) {\n  return <MantineProvider>\n            <NavigationProgress aria-label='Прогресс навигации' color='violet' />\n            <ScopeProvider>\n                <EffectorProvider>{children}</EffectorProvider>\n            </ScopeProvider>\n        </MantineProvider>;\n}"
         ],
@@ -51,79 +55,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696003,
-      "end": 1746125696003,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696003,
-      "end": 1746125696003,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187433,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187433,
+      "end": 1750105187434,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187434,
+      "end": 1750105187434,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187434,
+      "end": 1750105187434,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/+Wrapper.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { NavigationProgress } from \"@mantine/nprogress\";\nimport { MantineProvider } from \"@/app/providers\";\nimport { EffectorProvider, ScopeProvider } from \"@/shared/lib\";\nimport \"@/app/assets/styles/index.css\";\nexport default function Wrapper({\n  children\n}) {\n  return /* @__PURE__ */ jsxs(MantineProvider, { children: [\n    /* @__PURE__ */ jsx(NavigationProgress, { \"aria-label\": \"Прогресс навигации\", color: \"violet\" }),\n    /* @__PURE__ */ jsx(ScopeProvider, { children: /* @__PURE__ */ jsx(EffectorProvider, { children }) })\n  ] });\n}\n",
-      "start": 1746125696004,
-      "end": 1746125696004,
+      "start": 1750105187434,
+      "end": 1750105187434,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["pages/+Wrapper.tsx"],
+        "sources": [
+          "pages/+Wrapper.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN;"
       }

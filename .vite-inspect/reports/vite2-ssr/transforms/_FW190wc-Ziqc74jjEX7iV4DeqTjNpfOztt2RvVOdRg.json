@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\n\nimport { TakeTestAgainModel } from '../model';\n\nexport const TakeTestAgain = reflect({\n    view: Button<'button'>,\n    bind: {\n        size: 'md',\n        variant: 'default',\n        children: 'Пройти тест заново',\n        leftSection: <ArrowClockwise size={20} />,\n        onClick: TakeTestAgainModel.takeTestAgainClicked,\n    },\n});\n",
-      "start": 1746125696875,
-      "end": 1746125696890,
+      "start": 1750105188256,
+      "end": 1750105188274,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\nimport { TakeTestAgainModel } from '../model';\nexport const TakeTestAgain = _withFactory({\n  sid: \"-wmkgvz\",\n  fn: () => reflect({\n    view: Button<'button'>,\n    bind: {\n      size: 'md',\n      variant: 'default',\n      children: 'Пройти тест заново',\n      leftSection: <ArrowClockwise size={20} />,\n      onClick: TakeTestAgainModel.takeTestAgainClicked\n    }\n  }),\n  name: \"TakeTestAgain\",\n  method: \"reflect\"\n});",
-      "start": 1746125696890,
-      "end": 1746125696891,
+      "start": 1750105188274,
+      "end": 1750105188276,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,7 +39,9 @@
           "method",
           "\"reflect\""
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/ui/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/ui/index.tsx"
+        ],
         "sourcesContent": [
           "import { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\n\nimport { TakeTestAgainModel } from '../model';\n\nexport const TakeTestAgain = reflect({\n    view: Button<'button'>,\n    bind: {\n        size: 'md',\n        variant: 'default',\n        children: 'Пройти тест заново',\n        leftSection: <ArrowClockwise size={20} />,\n        onClick: TakeTestAgainModel.takeTestAgainClicked,\n    },\n});\n"
         ],
@@ -50,12 +52,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { reflect } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowClockwise } from \"@phosphor-icons/react/dist/ssr\";\nimport { TakeTestAgainModel } from \"../model\";\nexport const TakeTestAgain = _withFactory({\n  sid: \"-wmkgvz\",\n  fn: () => reflect({\n    view: Button,\n    bind: {\n      size: \"md\",\n      variant: \"default\",\n      children: \"Пройти тест заново\",\n      leftSection: /* @__PURE__ */ jsx(ArrowClockwise, { size: 20 }),\n      onClick: TakeTestAgainModel.takeTestAgainClicked\n    }\n  }),\n  name: \"TakeTestAgain\",\n  method: \"reflect\"\n});\n",
-      "start": 1746125696891,
-      "end": 1746125696981,
+      "start": 1750105188276,
+      "end": 1750105188419,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/ui/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/ui/index.tsx"
+        ],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\nimport { TakeTestAgainModel } from '../model';\nexport const TakeTestAgain = _withFactory({\n  sid: \"-wmkgvz\",\n  fn: () => reflect({\n    view: Button<'button'>,\n    bind: {\n      size: 'md',\n      variant: 'default',\n      children: 'Пройти тест заново',\n      leftSection: <ArrowClockwise size={20} />,\n      onClick: TakeTestAgainModel.takeTestAgainClicked\n    }\n  }),\n  name: \"TakeTestAgain\",\n  method: \"reflect\"\n});"
         ],
@@ -65,79 +69,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188419,
+      "end": 1750105188419,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/TakeTestAgain/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { reflect } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowClockwise } from \"@phosphor-icons/react/dist/ssr\";\nimport { TakeTestAgainModel } from \"../model\";\nexport const TakeTestAgain = _withFactory({\n  sid: \"-wmkgvz\",\n  fn: () => reflect({\n    view: Button,\n    bind: {\n      size: \"md\",\n      variant: \"default\",\n      children: \"Пройти тест заново\",\n      leftSection: /* @__PURE__ */ jsx(ArrowClockwise, { size: 20 }),\n      onClick: TakeTestAgainModel.takeTestAgainClicked\n    }\n  }),\n  name: \"TakeTestAgain\",\n  method: \"reflect\"\n});\n",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188420,
+      "end": 1750105188420,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/features/TakeTestAgain/ui/index.tsx"],
+        "sources": [
+          "src/features/TakeTestAgain/ui/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC;"
       }

@@ -4,19 +4,26 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Main = () => {\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href='/' onClick={() => onClose(false)}>\n            Главная\n        </Link>\n    );\n};\n",
-      "start": 1746125696956,
-      "end": 1746125696963,
+      "start": 1750105188428,
+      "end": 1750105188443,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useUnit } from 'effector-react';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Main = () => {\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return <Link href='/' onClick={() => onClose(false)}>\n            Главная\n        </Link>;\n};",
-      "start": 1746125696963,
-      "end": 1746125696964,
+      "start": 1750105188443,
+      "end": 1750105188444,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["useUnit", "RootModel", "Link", "Main", "onClose", "allMenusClosed"],
+        "names": [
+          "useUnit",
+          "RootModel",
+          "Link",
+          "Main",
+          "onClose",
+          "allMenusClosed"
+        ],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Main/index.tsx"
         ],
@@ -30,8 +37,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Main = () => {\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: \"/\", onClick: () => onClose(false), children: \"Главная\" });\n};\n",
-      "start": 1746125696964,
-      "end": 1746125696989,
+      "start": 1750105188444,
+      "end": 1750105188465,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,79 +54,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188465,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188465,
+      "end": 1750105188466,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188466,
+      "end": 1750105188466,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188466,
+      "end": 1750105188466,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Main/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Main = () => {\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: \"/\", onClick: () => onClose(false), children: \"Главная\" });\n};\n",
-      "start": 1746125696989,
-      "end": 1746125696990,
+      "start": 1750105188466,
+      "end": 1750105188466,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/RootLayout/ui/Navigation/Main/index.tsx"],
+        "sources": [
+          "src/widgets/RootLayout/ui/Navigation/Main/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrG,CAAC;"
       }

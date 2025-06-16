@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsx ./express-entry.ts",
     "build": "vike build",
-    "start": "npm run build && cross-env NODE_ENV=production tsx ./express-entry.ts",
+    "start": "pnpm run build && cross-env NODE_ENV=production tsx ./express-entry.ts",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:css": "npx stylelint \"**/*.{css}\" --allow-empty-input",

@@ -3,121 +3,127 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\n",
-      "start": 1746125696214,
-      "end": 1746125696264,
+      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n",
+      "start": 1750105187622,
+      "end": 1750105187663,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';",
-      "start": 1746125696264,
-      "end": 1746125696265,
+      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';",
+      "start": 1750105187663,
+      "end": 1750105187667,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"],
-        "sourcesContent": [
-          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\n"
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"
         ],
-        "mappings": "AAAA,cAAc,iBAAiB;AAC/B,cAAc,wBAAwB;AACtC,cAAc,gBAAgB;AAC9B,cAAc,qBAAqB;AACnC,cAAc,4BAA4B",
+        "sourcesContent": [
+          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n"
+        ],
+        "mappings": "AAAA,cAAc,iBAAiB;AAC/B,cAAc,wBAAwB;AACtC,cAAc,gBAAgB;AAC9B,cAAc,qBAAqB;AACnC,cAAc,4BAA4B;AAC1C,cAAc,cAAc",
         "ignoreList": []
       }
     },
     {
       "name": "vite:esbuild",
-      "result": "export * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\n",
-      "start": 1746125696265,
-      "end": 1746125696383,
+      "result": "export * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\nexport * from \"./EmailField\";\n",
+      "start": 1750105187667,
+      "end": 1750105187827,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"],
-        "sourcesContent": [
-          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';"
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"
         ],
-        "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
+        "sourcesContent": [
+          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';"
+        ],
+        "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187827,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187827,
+      "end": 1750105187828,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187828,
+      "end": 1750105187828,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696383,
-      "end": 1746125696383,
+      "start": 1750105187828,
+      "end": 1750105187828,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Test/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\n",
-      "start": 1746125696384,
-      "end": 1746125696384,
+      "result": "/*! src/entities/Test/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\nexport * from \"./EmailField\";\n",
+      "start": 1750105187828,
+      "end": 1750105187828,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Test/ui/index.ts"],
+        "sources": [
+          "src/entities/Test/ui/index.ts"
+        ],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

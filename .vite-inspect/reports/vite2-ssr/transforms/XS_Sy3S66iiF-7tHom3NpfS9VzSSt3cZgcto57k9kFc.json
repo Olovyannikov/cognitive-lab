@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { List, type ListProps, Text } from '@mantine/core';\n\nimport type { ListItem } from '../../types';\n\nimport s from './FilledBulletList.module.css';\n\ninterface FilledBulletListProps extends ListProps {\n    items?: ListItem[];\n}\n\nexport const FilledBulletList = ({ items, ...props }: FilledBulletListProps) => (\n    <List data-type='Filled Bullet List' classNames={s} {...props}>\n        {items?.map((item) => (\n            <List.Item hidden={!item.text && !item.title} key={`${item.type}_${item.title}`} mb='md'>\n                <Text lh='21px' className={s.text} span={item.text?.startsWith(' — ') || item.title?.endsWith(': ')}>\n                    {item.title}\n                </Text>\n                <Text className={s.text} span c='dark.7' lh='21px'>\n                    {item.text}\n                </Text>\n            </List.Item>\n        ))}\n    </List>\n);\n",
-      "start": 1746125696454,
-      "end": 1746125696498,
+      "start": 1750105187720,
+      "end": 1750105187775,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { List, type ListProps, Text } from '@mantine/core';\nimport type { ListItem } from '../../types';\nimport s from './FilledBulletList.module.css';\ninterface FilledBulletListProps extends ListProps {\n  items?: ListItem[];\n}\nexport const FilledBulletList = ({\n  items,\n  ...props\n}: FilledBulletListProps) => <List data-type='Filled Bullet List' classNames={s} {...props}>\n        {items?.map(item => <List.Item hidden={!item.text && !item.title} key={`${item.type}_${item.title}`} mb='md'>\n                <Text lh='21px' className={s.text} span={item.text?.startsWith(' — ') || item.title?.endsWith(': ')}>\n                    {item.title}\n                </Text>\n                <Text className={s.text} span c='dark.7' lh='21px'>\n                    {item.text}\n                </Text>\n            </List.Item>)}\n    </List>;",
-      "start": 1746125696498,
-      "end": 1746125696500,
+      "start": 1750105187775,
+      "end": 1750105187776,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Text } from \"@mantine/core\";\nimport s from \"./FilledBulletList.module.css\";\nexport const FilledBulletList = ({\n  items,\n  ...props\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Filled Bullet List\", classNames: s, ...props, children: items?.map((item) => /* @__PURE__ */ jsxs(List.Item, { hidden: !item.text && !item.title, mb: \"md\", children: [\n  /* @__PURE__ */ jsx(Text, { lh: \"21px\", className: s.text, span: item.text?.startsWith(\" — \") || item.title?.endsWith(\": \"), children: item.title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, span: true, c: \"dark.7\", lh: \"21px\", children: item.text })\n] }, `${item.type}_${item.title}`)) });\n",
-      "start": 1746125696500,
-      "end": 1746125696746,
+      "start": 1750105187776,
+      "end": 1750105188028,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,79 +64,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/FilledBulletList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { List, Text } from \"@mantine/core\";\nimport s from \"./FilledBulletList.module.css\";\nexport const FilledBulletList = ({\n  items,\n  ...props\n}) => /* @__PURE__ */ jsx(List, { \"data-type\": \"Filled Bullet List\", classNames: s, ...props, children: items?.map((item) => /* @__PURE__ */ jsxs(List.Item, { hidden: !item.text && !item.title, mb: \"md\", children: [\n  /* @__PURE__ */ jsx(Text, { lh: \"21px\", className: s.text, span: item.text?.startsWith(\" — \") || item.title?.endsWith(\": \"), children: item.title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, span: true, c: \"dark.7\", lh: \"21px\", children: item.text })\n] }, `${item.type}_${item.title}`)) });\n",
-      "start": 1746125696746,
-      "end": 1746125696746,
+      "start": 1750105188028,
+      "end": 1750105188029,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/FilledBulletList/index.tsx"],
+        "sources": [
+          "src/entities/Report/ui/FilledBulletList/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

@@ -4,21 +4,30 @@
     {
       "name": "vite:load-fallback",
       "result": "export const navigate = {\n    back: () => window.history.back(),\n};\n",
-      "start": 1746125696293,
-      "end": 1746125696330,
+      "start": 1750105187669,
+      "end": 1750105187696,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const navigate = {\n  back: () => window.history.back()\n};",
-      "start": 1746125696330,
-      "end": 1746125696331,
+      "start": 1750105187696,
+      "end": 1750105187696,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["navigate", "back", "window", "history"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"],
-        "sourcesContent": ["export const navigate = {\n    back: () => window.history.back(),\n};\n"],
+        "names": [
+          "navigate",
+          "back",
+          "window",
+          "history"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"
+        ],
+        "sourcesContent": [
+          "export const navigate = {\n    back: () => window.history.back(),\n};\n"
+        ],
         "mappings": "AAAA,OAAO,MAAMA,QAAQ,GAAG;EACpBC,IAAI,EAAEA,CAAA,KAAMC,MAAM,CAACC,OAAO,CAACF,IAAI,CAAC;AACpC,CAAC",
         "ignoreList": []
       }
@@ -26,92 +35,98 @@
     {
       "name": "vite:esbuild",
       "result": "export const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1746125696331,
-      "end": 1746125696529,
+      "start": 1750105187696,
+      "end": 1750105187896,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"],
-        "sourcesContent": ["export const navigate = {\n  back: () => window.history.back()\n};"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"
+        ],
+        "sourcesContent": [
+          "export const navigate = {\n  back: () => window.history.back()\n};"
+        ],
         "mappings": "AAAO,aAAM,WAAW;AAAA,EACtB,MAAM,MAAM,OAAO,QAAQ,KAAK;AAClC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187896,
+      "end": 1750105187896,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187896,
+      "end": 1750105187896,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187896,
+      "end": 1750105187896,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/navigate/index.ts [vike:pluginModuleBanner] */\nexport const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1746125696529,
-      "end": 1746125696529,
+      "start": 1750105187897,
+      "end": 1750105187897,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/lib/utils/navigate/index.ts"],
+        "sources": [
+          "src/shared/lib/utils/navigate/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC;"
       }

@@ -1,0 +1,141 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { isNumber } from 'lodash-es';\n\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n\n    return true;\n};\n",
+      "start": 1750105187967,
+      "end": 1750105188007,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { isNumber } from 'lodash-es';\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n  if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== '';\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};",
+      "start": 1750105188007,
+      "end": 1750105188008,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "isNumber",
+          "PreparedAnswer",
+          "isValidAnswer",
+          "answer",
+          "JSON",
+          "stringify",
+          "value",
+          "Array",
+          "isArray",
+          "length"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts"
+        ],
+        "sourcesContent": [
+          "import { isNumber } from 'lodash-es';\n\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n\n    return true;\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,WAAW;AAEpC,cAAcC,cAAc,QAAQ,cAAc;;AAElD;AACA;AACA;AACA,OAAO,MAAMC,aAAa,GAAGA,CAACC,MAAM,EAAEF,cAAc,GAAG,SAAS,GAAG,IAAI,CAAC,EAAE,OAAO,IAAI;EACjF,IAAI,CAACD,QAAQ,CAACG,MAAM,CAAC,KAAKA,MAAM,EAAEA,MAAM,IAAI,IAAI,IAAIC,IAAI,CAACC,SAAS,CAACF,MAAM,CAACA,MAAM,CAAC,KAAK,IAAI,CAAC,EAAE,OAAO,KAAK;EACzG,IAAI,OAAOA,MAAM,CAACA,MAAM,KAAK,QAAQ,IAAI,OAAO,IAAIA,MAAM,CAACA,MAAM,EAAE;IAC/D,OAAOA,MAAM,CAACA,MAAM,CAACG,KAAK,KAAK,IAAI,IAAIH,MAAM,CAACA,MAAM,CAACG,KAAK,KAAK,EAAE;EACrE;EACA,IAAIC,KAAK,CAACC,OAAO,CAACL,MAAM,CAACA,MAAM,CAAC,EAAE;IAC9B,OAAOA,MAAM,CAACA,MAAM,CAACM,MAAM,GAAG,CAAC;EACnC;EAEA,OAAO,IAAI;AACf,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
+      "start": 1750105188008,
+      "end": 1750105188259,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts"
+        ],
+        "sourcesContent": [
+          "import { isNumber } from 'lodash-es';\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n  if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== '';\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};"
+        ],
+        "mappings": "AAAA,SAAS,gBAAgB;AAMlB,aAAM,gBAAgB,CAAC,WAAuD;AACnF,MAAI,CAAC,SAAS,MAAM,MAAM,QAAQ,UAAU,QAAQ,KAAK,UAAU,OAAO,MAAM,MAAM,MAAO,QAAO;AACpG,MAAI,OAAO,OAAO,WAAW,YAAY,WAAW,OAAO,QAAQ;AACjE,WAAO,OAAO,OAAO,UAAU,QAAQ,OAAO,OAAO,UAAU;AAAA,EACjE;AACA,MAAI,MAAM,QAAQ,OAAO,MAAM,GAAG;AAChC,WAAO,OAAO,OAAO,SAAS;AAAA,EAChC;AACA,SAAO;AACT;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/model/isValidAnswer.ts [vike:pluginModuleBanner] */\nimport { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
+      "start": 1750105188260,
+      "end": 1750105188260,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/entities/Test/model/isValidAnswer.ts"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC;"
+      }
+    }
+  ]
+}

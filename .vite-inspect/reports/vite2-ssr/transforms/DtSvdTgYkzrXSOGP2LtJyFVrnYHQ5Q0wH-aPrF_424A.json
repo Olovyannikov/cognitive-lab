@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useRef } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport { Section } from '@/shared/ui';\n\nimport { HowItHelpsCard } from '@/entities/Landing';\n\nimport { CARDS } from './const';\n\nimport s from './HowItHelps.module.css';\n\nexport const HowItHelps = () => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Section\n            title={\n                <>\n                    Как тест <span style={{ color: 'var(--mantine-color-violet-7)' }}>поможет вам?</span>\n                </>\n            }\n        >\n            <Stack ref={container} className={s.stack}>\n                {CARDS.map((card, i) => (\n                    <HowItHelpsCard {...card} key={card.id} i={i} />\n                ))}\n            </Stack>\n        </Section>\n    );\n};\n",
-      "start": 1746125696338,
-      "end": 1746125696393,
+      "start": 1750105187838,
+      "end": 1750105187877,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useRef } from 'react';\nimport { Stack } from '@mantine/core';\nimport { Section } from '@/shared/ui';\nimport { HowItHelpsCard } from '@/entities/Landing';\nimport { CARDS } from './const';\nimport s from './HowItHelps.module.css';\nexport const HowItHelps = () => {\n  const container = useRef<HTMLDivElement>(null);\n  return <Section title={<>\n                    Как тест <span style={{\n      color: 'var(--mantine-color-violet-7)'\n    }}>поможет вам?</span>\n                </>}>\n            <Stack ref={container} className={s.stack}>\n                {CARDS.map((card, i) => <HowItHelpsCard {...card} key={card.id} i={i} />)}\n            </Stack>\n        </Section>;\n};",
-      "start": 1746125696393,
-      "end": 1746125696395,
+      "start": 1750105187877,
+      "end": 1750105187878,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -33,7 +33,9 @@
           "i",
           "id"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/index.tsx"
+        ],
         "sourcesContent": [
           "import { useRef } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport { Section } from '@/shared/ui';\n\nimport { HowItHelpsCard } from '@/entities/Landing';\n\nimport { CARDS } from './const';\n\nimport s from './HowItHelps.module.css';\n\nexport const HowItHelps = () => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Section\n            title={\n                <>\n                    Как тест <span style={{ color: 'var(--mantine-color-violet-7)' }}>поможет вам?</span>\n                </>\n            }\n        >\n            <Stack ref={container} className={s.stack}>\n                {CARDS.map((card, i) => (\n                    <HowItHelpsCard {...card} key={card.id} i={i} />\n                ))}\n            </Stack>\n        </Section>\n    );\n};\n"
         ],
@@ -44,12 +46,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useRef } from \"react\";\nimport { Stack } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { HowItHelpsCard } from \"@/entities/Landing\";\nimport { CARDS } from \"./const\";\nimport s from \"./HowItHelps.module.css\";\nexport const HowItHelps = () => {\n  const container = useRef(null);\n  return /* @__PURE__ */ jsx(Section, { title: /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Как тест \",\n    /* @__PURE__ */ jsx(\"span\", { style: {\n      color: \"var(--mantine-color-violet-7)\"\n    }, children: \"поможет вам?\" })\n  ] }), children: /* @__PURE__ */ jsx(Stack, { ref: container, className: s.stack, children: CARDS.map((card, i) => /* @__PURE__ */ createElement(HowItHelpsCard, { ...card, key: card.id, i })) }) });\n};\n",
-      "start": 1746125696395,
-      "end": 1746125696610,
+      "start": 1750105187878,
+      "end": 1750105188153,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/index.tsx"
+        ],
         "sourcesContent": [
           "import { useRef } from 'react';\nimport { Stack } from '@mantine/core';\nimport { Section } from '@/shared/ui';\nimport { HowItHelpsCard } from '@/entities/Landing';\nimport { CARDS } from './const';\nimport s from './HowItHelps.module.css';\nexport const HowItHelps = () => {\n  const container = useRef<HTMLDivElement>(null);\n  return <Section title={<>\n                    Как тест <span style={{\n      color: 'var(--mantine-color-violet-7)'\n    }}>поможет вам?</span>\n                </>}>\n            <Stack ref={container} className={s.stack}>\n                {CARDS.map((card, i) => <HowItHelpsCard {...card} key={card.id} i={i} />)}\n            </Stack>\n        </Section>;\n};"
         ],
@@ -59,79 +63,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696610,
-      "end": 1746125696610,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696610,
-      "end": 1746125696611,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696611,
-      "end": 1746125696611,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696611,
-      "end": 1746125696611,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItHelps/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useRef } from \"react\";\nimport { Stack } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { HowItHelpsCard } from \"@/entities/Landing\";\nimport { CARDS } from \"./const\";\nimport s from \"./HowItHelps.module.css\";\nexport const HowItHelps = () => {\n  const container = useRef(null);\n  return /* @__PURE__ */ jsx(Section, { title: /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Как тест \",\n    /* @__PURE__ */ jsx(\"span\", { style: {\n      color: \"var(--mantine-color-violet-7)\"\n    }, children: \"поможет вам?\" })\n  ] }), children: /* @__PURE__ */ jsx(Stack, { ref: container, className: s.stack, children: CARDS.map((card, i) => /* @__PURE__ */ createElement(HowItHelpsCard, { ...card, key: card.id, i })) }) });\n};\n",
-      "start": 1746125696611,
-      "end": 1746125696611,
+      "start": 1750105188153,
+      "end": 1750105188153,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/IndexPage/ui/HowItHelps/index.tsx"],
+        "sources": [
+          "src/pages/IndexPage/ui/HowItHelps/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtM,CAAC;"
       }

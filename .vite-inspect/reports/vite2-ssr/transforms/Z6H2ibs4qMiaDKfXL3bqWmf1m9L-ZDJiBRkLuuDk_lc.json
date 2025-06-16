@@ -4,21 +4,25 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './ui';\n",
-      "start": 1746125696404,
-      "end": 1746125696454,
+      "start": 1750105187906,
+      "end": 1750105187948,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './ui';",
-      "start": 1746125696454,
-      "end": 1746125696458,
+      "start": 1750105187948,
+      "end": 1750105187949,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"],
-        "sourcesContent": ["export * from './ui';\n"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"
+        ],
+        "sourcesContent": [
+          "export * from './ui';\n"
+        ],
         "mappings": "AAAA,cAAc,MAAM",
         "ignoreList": []
       }
@@ -26,92 +30,98 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./ui\";\n",
-      "start": 1746125696458,
-      "end": 1746125696738,
+      "start": 1750105187949,
+      "end": 1750105188229,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"],
-        "sourcesContent": ["export * from './ui';"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"
+        ],
+        "sourcesContent": [
+          "export * from './ui';"
+        ],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696738,
-      "end": 1746125696738,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696739,
-      "end": 1746125696739,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696739,
-      "end": 1746125696739,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696739,
-      "end": 1746125696739,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/index.ts [vike:pluginModuleBanner] */\nexport * from \"./ui\";\n",
-      "start": 1746125696739,
-      "end": 1746125696739,
+      "start": 1750105188229,
+      "end": 1750105188229,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/features/SubscribeToNews/index.ts"],
+        "sources": [
+          "src/features/SubscribeToNews/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

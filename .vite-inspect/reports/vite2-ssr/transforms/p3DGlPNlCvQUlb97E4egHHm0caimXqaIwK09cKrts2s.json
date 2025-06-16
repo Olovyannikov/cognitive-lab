@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren, ReactNode, Ref } from 'react';\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './Section.module.css';\n\ninterface SectionProps extends BoxProps {\n    title?: ReactNode;\n    filledText?: string;\n    containerClassName?: string;\n    ref?: Ref<HTMLDivElement>;\n    id?: string;\n    hidden?: boolean;\n}\n\nexport const Section = ({\n    children,\n    filledText,\n    title,\n    className,\n    containerClassName,\n    ref,\n    id,\n    hidden = false,\n    ...props\n}: PropsWithChildren<SectionProps>) => (\n    <Box\n        id={id}\n        ref={ref}\n        className={clsx(s.box, className)}\n        pos='relative'\n        component='section'\n        hidden={hidden}\n        {...props}\n    >\n        <Container className={containerClassName}>\n            {(title || filledText) && (\n                <Title className={s.title} order={2}>\n                    {title}\n                    <span>{filledText}</span>\n                </Title>\n            )}\n            {children}\n        </Container>\n    </Box>\n);\n",
-      "start": 1746125696296,
-      "end": 1746125696334,
+      "start": 1750105187773,
+      "end": 1750105187837,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren, ReactNode, Ref } from 'react';\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './Section.module.css';\ninterface SectionProps extends BoxProps {\n  title?: ReactNode;\n  filledText?: string;\n  containerClassName?: string;\n  ref?: Ref<HTMLDivElement>;\n  id?: string;\n  hidden?: boolean;\n}\nexport const Section = ({\n  children,\n  filledText,\n  title,\n  className,\n  containerClassName,\n  ref,\n  id,\n  hidden = false,\n  ...props\n}: PropsWithChildren<SectionProps>) => <Box id={id} ref={ref} className={clsx(s.box, className)} pos='relative' component='section' hidden={hidden} {...props}>\n        <Container className={containerClassName}>\n            {(title || filledText) && <Title className={s.title} order={2}>\n                    {title}\n                    <span>{filledText}</span>\n                </Title>}\n            {children}\n        </Container>\n    </Box>;",
-      "start": 1746125696335,
-      "end": 1746125696336,
+      "start": 1750105187837,
+      "end": 1750105187838,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -40,7 +40,9 @@
           "props",
           "box"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Section/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Section/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren, ReactNode, Ref } from 'react';\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './Section.module.css';\n\ninterface SectionProps extends BoxProps {\n    title?: ReactNode;\n    filledText?: string;\n    containerClassName?: string;\n    ref?: Ref<HTMLDivElement>;\n    id?: string;\n    hidden?: boolean;\n}\n\nexport const Section = ({\n    children,\n    filledText,\n    title,\n    className,\n    containerClassName,\n    ref,\n    id,\n    hidden = false,\n    ...props\n}: PropsWithChildren<SectionProps>) => (\n    <Box\n        id={id}\n        ref={ref}\n        className={clsx(s.box, className)}\n        pos='relative'\n        component='section'\n        hidden={hidden}\n        {...props}\n    >\n        <Container className={containerClassName}>\n            {(title || filledText) && (\n                <Title className={s.title} order={2}>\n                    {title}\n                    <span>{filledText}</span>\n                </Title>\n            )}\n            {children}\n        </Container>\n    </Box>\n);\n"
         ],
@@ -51,12 +53,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./Section.module.css\";\nexport const Section = ({\n  children,\n  filledText,\n  title,\n  className,\n  containerClassName,\n  ref,\n  id,\n  hidden = false,\n  ...props\n}) => /* @__PURE__ */ jsx(Box, { id, ref, className: clsx(s.box, className), pos: \"relative\", component: \"section\", hidden, ...props, children: /* @__PURE__ */ jsxs(Container, { className: containerClassName, children: [\n  (title || filledText) && /* @__PURE__ */ jsxs(Title, { className: s.title, order: 2, children: [\n    title,\n    /* @__PURE__ */ jsx(\"span\", { children: filledText })\n  ] }),\n  children\n] }) });\n",
-      "start": 1746125696336,
-      "end": 1746125696552,
+      "start": 1750105187838,
+      "end": 1750105188113,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Section/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Section/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren, ReactNode, Ref } from 'react';\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './Section.module.css';\ninterface SectionProps extends BoxProps {\n  title?: ReactNode;\n  filledText?: string;\n  containerClassName?: string;\n  ref?: Ref<HTMLDivElement>;\n  id?: string;\n  hidden?: boolean;\n}\nexport const Section = ({\n  children,\n  filledText,\n  title,\n  className,\n  containerClassName,\n  ref,\n  id,\n  hidden = false,\n  ...props\n}: PropsWithChildren<SectionProps>) => <Box id={id} ref={ref} className={clsx(s.box, className)} pos='relative' component='section' hidden={hidden} {...props}>\n        <Container className={containerClassName}>\n            {(title || filledText) && <Title className={s.title} order={2}>\n                    {title}\n                    <span>{filledText}</span>\n                </Title>}\n            {children}\n        </Container>\n    </Box>;"
         ],
@@ -66,79 +70,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696552,
-      "end": 1746125696552,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696552,
-      "end": 1746125696552,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696552,
-      "end": 1746125696552,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/Section/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./Section.module.css\";\nexport const Section = ({\n  children,\n  filledText,\n  title,\n  className,\n  containerClassName,\n  ref,\n  id,\n  hidden = false,\n  ...props\n}) => /* @__PURE__ */ jsx(Box, { id, ref, className: clsx(s.box, className), pos: \"relative\", component: \"section\", hidden, ...props, children: /* @__PURE__ */ jsxs(Container, { className: containerClassName, children: [\n  (title || filledText) && /* @__PURE__ */ jsxs(Title, { className: s.title, order: 2, children: [\n    title,\n    /* @__PURE__ */ jsx(\"span\", { children: filledText })\n  ] }),\n  children\n] }) });\n",
-      "start": 1746125696553,
-      "end": 1746125696553,
+      "start": 1750105188113,
+      "end": 1750105188114,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/ui/Section/index.tsx"],
+        "sources": [
+          "src/shared/ui/Section/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3N,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

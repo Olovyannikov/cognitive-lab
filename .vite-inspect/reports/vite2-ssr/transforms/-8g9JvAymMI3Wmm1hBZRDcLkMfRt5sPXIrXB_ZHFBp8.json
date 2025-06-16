@@ -4,20 +4,31 @@
     {
       "name": "vite:load-fallback",
       "result": "import { trackMediaQuery } from '@withease/web-api';\n\nimport { appService } from '../services/app';\n\nexport const { mobile, desktop, huge, large } = trackMediaQuery(\n    {\n        mobile: '(max-width: 767px)',\n        desktop: '(min-width: 768px)',\n        large: '(min-width: 992px)',\n        huge: '(min-width: 1200px)',\n    },\n    { setup: appService.appStarted }\n);\n",
-      "start": 1746125696870,
-      "end": 1746125696884,
+      "start": 1750105188292,
+      "end": 1750105188308,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { trackMediaQuery } from '@withease/web-api';\nimport { appService } from '../services/app';\nexport const {\n  mobile,\n  desktop,\n  huge,\n  large\n} = trackMediaQuery({\n  mobile: '(max-width: 767px)',\n  desktop: '(min-width: 768px)',\n  large: '(min-width: 992px)',\n  huge: '(min-width: 1200px)'\n}, {\n  setup: appService.appStarted\n});",
-      "start": 1746125696884,
-      "end": 1746125696886,
+      "start": 1750105188308,
+      "end": 1750105188309,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["trackMediaQuery", "appService", "mobile", "desktop", "huge", "large", "setup", "appStarted"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/media/index.ts"],
+        "names": [
+          "trackMediaQuery",
+          "appService",
+          "mobile",
+          "desktop",
+          "huge",
+          "large",
+          "setup",
+          "appStarted"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/media/index.ts"
+        ],
         "sourcesContent": [
           "import { trackMediaQuery } from '@withease/web-api';\n\nimport { appService } from '../services/app';\n\nexport const { mobile, desktop, huge, large } = trackMediaQuery(\n    {\n        mobile: '(max-width: 767px)',\n        desktop: '(min-width: 768px)',\n        large: '(min-width: 992px)',\n        huge: '(min-width: 1200px)',\n    },\n    { setup: appService.appStarted }\n);\n"
         ],
@@ -28,12 +39,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { trackMediaQuery } from \"@withease/web-api\";\nimport { appService } from \"../services/app\";\nexport const {\n  mobile,\n  desktop,\n  huge,\n  large\n} = trackMediaQuery({\n  mobile: \"(max-width: 767px)\",\n  desktop: \"(min-width: 768px)\",\n  large: \"(min-width: 992px)\",\n  huge: \"(min-width: 1200px)\"\n}, {\n  setup: appService.appStarted\n});\n",
-      "start": 1746125696886,
-      "end": 1746125696974,
+      "start": 1750105188309,
+      "end": 1750105188425,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/media/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/media/index.ts"
+        ],
         "sourcesContent": [
           "import { trackMediaQuery } from '@withease/web-api';\nimport { appService } from '../services/app';\nexport const {\n  mobile,\n  desktop,\n  huge,\n  large\n} = trackMediaQuery({\n  mobile: '(max-width: 767px)',\n  desktop: '(min-width: 768px)',\n  large: '(min-width: 992px)',\n  huge: '(min-width: 1200px)'\n}, {\n  setup: appService.appStarted\n});"
         ],
@@ -43,79 +56,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/media/index.ts [vike:pluginModuleBanner] */\nimport { trackMediaQuery } from \"@withease/web-api\";\nimport { appService } from \"../services/app\";\nexport const {\n  mobile,\n  desktop,\n  huge,\n  large\n} = trackMediaQuery({\n  mobile: \"(max-width: 767px)\",\n  desktop: \"(min-width: 768px)\",\n  large: \"(min-width: 992px)\",\n  huge: \"(min-width: 1200px)\"\n}, {\n  setup: appService.appStarted\n});\n",
-      "start": 1746125696975,
-      "end": 1746125696975,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/media/index.ts"],
+        "sources": [
+          "src/shared/media/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC;"
       }

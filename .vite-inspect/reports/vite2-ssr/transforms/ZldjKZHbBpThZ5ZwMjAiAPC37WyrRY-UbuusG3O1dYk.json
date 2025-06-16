@@ -4,20 +4,26 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n",
-      "start": 1746125696307,
-      "end": 1746125696346,
+      "start": 1750105187806,
+      "end": 1750105187856,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;",
-      "start": 1746125696346,
-      "end": 1746125696347,
+      "start": 1750105187856,
+      "end": 1750105187857,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["Center", "Loader", "PageLoader"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
+        "names": [
+          "Center",
+          "Loader",
+          "PageLoader"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"
+        ],
         "sourcesContent": [
           "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n"
         ],
@@ -28,12 +34,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1746125696347,
-      "end": 1746125696569,
+      "start": 1750105187857,
+      "end": 1750105188113,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"
+        ],
         "sourcesContent": [
           "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;"
         ],
@@ -43,79 +51,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696569,
-      "end": 1746125696569,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696569,
-      "end": 1746125696569,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696569,
-      "end": 1746125696569,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696569,
-      "end": 1746125696569,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696569,
-      "end": 1746125696569,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696569,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188113,
+      "end": 1750105188113,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1746125696570,
-      "end": 1746125696570,
+      "start": 1750105188114,
+      "end": 1750105188114,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/ui/PageLoader/index.tsx"],
+        "sources": [
+          "src/shared/ui/PageLoader/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

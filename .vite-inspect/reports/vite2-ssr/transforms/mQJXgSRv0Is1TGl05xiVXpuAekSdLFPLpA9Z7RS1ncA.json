@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture } from '@/shared/ui';\n\nimport { PeopleTalkModel } from './model';\n\nimport s from './PeopleTalk.module.css';\n\nexport const Desktop = () => {\n    const { isMobile } = usePageContext();\n\n    const [opened, setIsActive, currentReview, close] = useUnit([\n        PeopleTalkModel.$isModalOpened,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.$currentReview,\n        PeopleTalkModel.modalActiveStateSettled,\n    ]);\n\n    return (\n        <Modal\n            size='lg'\n            centered\n            opened={!isMobile && opened}\n            onClose={() => {\n                close(false);\n                setIsActive(true);\n            }}\n        >\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating\n                            size={!isMobile ? 'lg' : 'md'}\n                            readOnly\n                            defaultValue={currentReview?.overall_rate}\n                            mb='xs'\n                            fractions={4}\n                        />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>\n    );\n};\n",
-      "start": 1746125696685,
-      "end": 1746125696714,
+      "start": 1750105188226,
+      "end": 1750105188239,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture } from '@/shared/ui';\nimport { PeopleTalkModel } from './model';\nimport s from './PeopleTalk.module.css';\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return <Modal size='lg' centered opened={!isMobile && opened} onClose={() => {\n    close(false);\n    setIsActive(true);\n  }}>\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating size={!isMobile ? 'lg' : 'md'} readOnly defaultValue={currentReview?.overall_rate} mb='xs' fractions={4} />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>;\n};",
-      "start": 1746125696714,
-      "end": 1746125696716,
+      "start": 1750105188239,
+      "end": 1750105188241,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -59,8 +59,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return /* @__PURE__ */ jsx(Modal, { size: \"lg\", centered: true, opened: !isMobile && opened, onClose: () => {\n    close(false);\n    setIsActive(true);\n  }, children: /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsxs(Group, { px: 40, justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsxs(Box, { children: [\n        /* @__PURE__ */ jsx(Rating, { size: !isMobile ? \"lg\" : \"md\", readOnly: true, defaultValue: currentReview?.overall_rate, mb: \"xs\", fractions: 4 }),\n        /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: currentReview?.name }),\n        /* @__PURE__ */ jsx(Text, { className: s.label, children: currentReview?.mbti_type })\n      ] }),\n      /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${currentReview?.mbti_type}`, className: s.image, w: 100, h: 100 })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { pb: 40, px: 40, className: s.reviewText, children: currentReview?.text }),\n    /* @__PURE__ */ jsx(Text, { px: 40, fz: 24, c: \"dark.2\", mt: \"auto\", children: currentReview?.created_at })\n  ] }) });\n};\n",
-      "start": 1746125696716,
-      "end": 1746125696888,
+      "start": 1750105188241,
+      "end": 1750105188412,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -76,79 +76,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188412,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188412,
+      "end": 1750105188413,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/PeopleTalk/desktop.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([PeopleTalkModel.$isModalOpened, PeopleTalkModel.carouselActiveStateSettled, PeopleTalkModel.$currentReview, PeopleTalkModel.modalActiveStateSettled]);\n  return /* @__PURE__ */ jsx(Modal, { size: \"lg\", centered: true, opened: !isMobile && opened, onClose: () => {\n    close(false);\n    setIsActive(true);\n  }, children: /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsxs(Group, { px: 40, justify: \"space-between\", align: \"flex-start\", gap: \"md\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsxs(Box, { children: [\n        /* @__PURE__ */ jsx(Rating, { size: !isMobile ? \"lg\" : \"md\", readOnly: true, defaultValue: currentReview?.overall_rate, mb: \"xs\", fractions: 4 }),\n        /* @__PURE__ */ jsx(Text, { mb: \"xxs\", className: s.name, children: currentReview?.name }),\n        /* @__PURE__ */ jsx(Text, { className: s.label, children: currentReview?.mbti_type })\n      ] }),\n      /* @__PURE__ */ jsx(Picture, { src: `/types/circles/${currentReview?.mbti_type}`, className: s.image, w: 100, h: 100 })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { pb: 40, px: 40, className: s.reviewText, children: currentReview?.text }),\n    /* @__PURE__ */ jsx(Text, { px: 40, fz: 24, c: \"dark.2\", mt: \"auto\", children: currentReview?.created_at })\n  ] }) });\n};\n",
-      "start": 1746125696888,
-      "end": 1746125696888,
+      "start": 1750105188413,
+      "end": 1750105188413,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/IndexPage/ui/PeopleTalk/desktop.tsx"],
+        "sources": [
+          "src/pages/IndexPage/ui/PeopleTalk/desktop.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
       }

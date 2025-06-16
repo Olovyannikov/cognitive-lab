@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Text, Title } from '@mantine/core';\n\nimport s from './StatisticsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n}\n\nexport const StatisticsCard = ({ title, text }: CardProps) => (\n    <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>\n);\n",
-      "start": 1746125696365,
-      "end": 1746125696422,
+      "start": 1750105187689,
+      "end": 1750105187715,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper, Text, Title } from '@mantine/core';\nimport s from './StatisticsCard.module.css';\ninterface CardProps {\n  title: string;\n  text: string;\n}\nexport const StatisticsCard = ({\n  title,\n  text\n}: CardProps) => <Paper className={s.paper}>\n        <Title className={s.paperTitle} order={3}>\n            {title}\n        </Title>\n        <Text className={s.paperText}>{text}</Text>\n    </Paper>;",
-      "start": 1746125696422,
-      "end": 1746125696423,
+      "start": 1750105187715,
+      "end": 1750105187720,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,8 +42,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
-      "start": 1746125696423,
-      "end": 1746125696681,
+      "start": 1750105187720,
+      "end": 1750105187937,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,79 +59,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/StatisticsCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Text, Title } from \"@mantine/core\";\nimport s from \"./StatisticsCard.module.css\";\nexport const StatisticsCard = ({\n  title,\n  text\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.paperTitle, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.paperText, children: text })\n] });\n",
-      "start": 1746125696681,
-      "end": 1746125696681,
+      "start": 1750105187937,
+      "end": 1750105187937,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Landing/ui/StatisticsCard/index.tsx"],
+        "sources": [
+          "src/entities/Landing/ui/StatisticsCard/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC;"
       }

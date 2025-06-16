@@ -4,23 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export type PartialRecord<K extends keyof never, T> = {\n    [P in K]?: T;\n};\n",
-      "start": 1746125696568,
-      "end": 1746125696607,
+      "start": 1750105187980,
+      "end": 1750105188018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export type PartialRecord<K extends keyof never, T> = { [P in K]?: T };",
-      "start": 1746125696607,
-      "end": 1746125696608,
+      "start": 1750105188018,
+      "end": 1750105188019,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["PartialRecord", "K", "T"],
+        "names": [
+          "PartialRecord",
+          "K",
+          "T"
+        ],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/PartialRecord/index.ts"
         ],
-        "sourcesContent": ["export type PartialRecord<K extends keyof never, T> = {\n    [P in K]?: T;\n};\n"],
+        "sourcesContent": [
+          "export type PartialRecord<K extends keyof never, T> = {\n    [P in K]?: T;\n};\n"
+        ],
         "mappings": "AAAA,OAAO,KAAKA,aAAa,CAAC,UAAU,MAAM,KAAK,EAAE,CAAC,CAAC,GAAG,QAC5CC,CAAC,IAAIC,CAAC,EACf",
         "ignoreList": []
       }
@@ -28,8 +34,8 @@
     {
       "name": "vite:esbuild",
       "result": "",
-      "start": 1746125696608,
-      "end": 1746125696861,
+      "start": 1750105188019,
+      "end": 1750105188284,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -41,79 +47,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/utility-types/PartialRecord/index.ts [vike:pluginModuleBanner] */\n",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188284,
+      "end": 1750105188284,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/lib/types/utility-types/PartialRecord/index.ts"],
+        "sources": [
+          "src/shared/lib/types/utility-types/PartialRecord/index.ts"
+        ],
         "names": [],
         "mappings": ";"
       }

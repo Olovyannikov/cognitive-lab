@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\n\nimport { ROUTES } from '@/shared/config';\n\nimport s from './TariffCard.module.css';\n\ninterface TariffCardProps {\n    title: string;\n    description: string;\n    price: number | string;\n    features: {\n        title: string;\n        description: string;\n    }[];\n    isFull?: boolean;\n    buyNow?: boolean;\n}\n\nexport const TariffCard = ({\n    title,\n    features,\n    price,\n    description,\n    isFull = false,\n    buyNow = false,\n}: TariffCardProps) => (\n    <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map((item) => (\n                <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>\n            ))}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>\n);\n",
-      "start": 1746125696389,
-      "end": 1746125696445,
+      "start": 1750105187689,
+      "end": 1750105187722,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, Divider, List, Paper, Text, Title } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { isNumber } from 'lodash-es';\nimport { ROUTES } from '@/shared/config';\nimport s from './TariffCard.module.css';\ninterface TariffCardProps {\n  title: string;\n  description: string;\n  price: number | string;\n  features: {\n    title: string;\n    description: string;\n  }[];\n  isFull?: boolean;\n  buyNow?: boolean;\n}\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}: TariffCardProps) => <Paper className={clsx(s.tariff, isFull && s.full)}>\n        <Title order={5}>{title}</Title>\n        <Text mih={63}>{description}</Text>\n        <Text className={clsx(s.price, isNumber(price) && s.num)} fw='bold'>\n            {price}\n        </Text>\n        <Divider />\n        <List className={s.list} icon={<Check weight='bold' size={24} />}>\n            {features?.map(item => <List.Item key={item.title}>\n                    <Text span fw='600'>\n                        {item.title}\n                    </Text>\n                    <Text span>{item.description}</Text>\n                </List.Item>)}\n        </List>\n        <Button component='a' href={buyNow ? '/purchase?type=\"\"' : ROUTES.TEST} variant='outline' className={s.button}>\n            {buyNow ? 'Купить сейчас' : 'Пройти тест'}\n        </Button>\n    </Paper>;",
-      "start": 1746125696446,
-      "end": 1746125696448,
+      "start": 1750105187723,
+      "end": 1750105187724,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -58,8 +58,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Divider, List, Paper, Text, Title } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { isNumber } from \"lodash-es\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./TariffCard.module.css\";\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}) => /* @__PURE__ */ jsxs(Paper, { className: clsx(s.tariff, isFull && s.full), children: [\n  /* @__PURE__ */ jsx(Title, { order: 5, children: title }),\n  /* @__PURE__ */ jsx(Text, { mih: 63, children: description }),\n  /* @__PURE__ */ jsx(Text, { className: clsx(s.price, isNumber(price) && s.num), fw: \"bold\", children: price }),\n  /* @__PURE__ */ jsx(Divider, {}),\n  /* @__PURE__ */ jsx(List, { className: s.list, icon: /* @__PURE__ */ jsx(Check, { weight: \"bold\", size: 24 }), children: features?.map((item) => /* @__PURE__ */ jsxs(List.Item, { children: [\n    /* @__PURE__ */ jsx(Text, { span: true, fw: \"600\", children: item.title }),\n    /* @__PURE__ */ jsx(Text, { span: true, children: item.description })\n  ] }, item.title)) }),\n  /* @__PURE__ */ jsx(Button, { component: \"a\", href: buyNow ? '/purchase?type=\"\"' : ROUTES.TEST, variant: \"outline\", className: s.button, children: buyNow ? \"Купить сейчас\" : \"Пройти тест\" })\n] });\n",
-      "start": 1746125696448,
-      "end": 1746125696716,
+      "start": 1750105187724,
+      "end": 1750105187942,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -75,79 +75,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696716,
-      "end": 1746125696716,
+      "start": 1750105187942,
+      "end": 1750105187942,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/TariffCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Divider, List, Paper, Text, Title } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { isNumber } from \"lodash-es\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./TariffCard.module.css\";\nexport const TariffCard = ({\n  title,\n  features,\n  price,\n  description,\n  isFull = false,\n  buyNow = false\n}) => /* @__PURE__ */ jsxs(Paper, { className: clsx(s.tariff, isFull && s.full), children: [\n  /* @__PURE__ */ jsx(Title, { order: 5, children: title }),\n  /* @__PURE__ */ jsx(Text, { mih: 63, children: description }),\n  /* @__PURE__ */ jsx(Text, { className: clsx(s.price, isNumber(price) && s.num), fw: \"bold\", children: price }),\n  /* @__PURE__ */ jsx(Divider, {}),\n  /* @__PURE__ */ jsx(List, { className: s.list, icon: /* @__PURE__ */ jsx(Check, { weight: \"bold\", size: 24 }), children: features?.map((item) => /* @__PURE__ */ jsxs(List.Item, { children: [\n    /* @__PURE__ */ jsx(Text, { span: true, fw: \"600\", children: item.title }),\n    /* @__PURE__ */ jsx(Text, { span: true, children: item.description })\n  ] }, item.title)) }),\n  /* @__PURE__ */ jsx(Button, { component: \"a\", href: buyNow ? '/purchase?type=\"\"' : ROUTES.TEST, variant: \"outline\", className: s.button, children: buyNow ? \"Купить сейчас\" : \"Пройти тест\" })\n] });\n",
-      "start": 1746125696716,
-      "end": 1746125696717,
+      "start": 1750105187942,
+      "end": 1750105187943,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Landing/ui/TariffCard/index.tsx"],
+        "sources": [
+          "src/entities/Landing/ui/TariffCard/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/L,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/L,CAAC,CAAC,CAAC,CAAC;"
       }

@@ -4,97 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  border: 3px dashed currentcolor;\n  border-radius: var(--mantine-spacing-lg);\n  padding-block: var(--mantine-spacing-lg);\n  padding-inline: var(--mantine-spacing-3xl);\n\n  :is(span, p) {\n    color: var(--mantine-color-dark-9);\n  }\n\n  @mixin text-data-color 9;\n}\n",
-      "start": 1746125696799,
-      "end": 1746125696817,
+      "start": 1750105188051,
+      "end": 1750105188091,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696817,
-      "end": 1746125696817,
+      "start": 1750105188091,
+      "end": 1750105188091,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/TextStrokeDash/TextStrokeDash.module.css [vike:pluginModuleBanner] */\nexport const paper = \"_8cR2t\";\nexport default {\n\tpaper: paper\n};\n",
-      "start": 1746125696819,
-      "end": 1746125696819,
+      "start": 1750105188092,
+      "end": 1750105188092,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/TextStrokeDash/TextStrokeDash.module.css"],
+        "sources": [
+          "src/entities/Report/ui/TextStrokeDash/TextStrokeDash.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
       }

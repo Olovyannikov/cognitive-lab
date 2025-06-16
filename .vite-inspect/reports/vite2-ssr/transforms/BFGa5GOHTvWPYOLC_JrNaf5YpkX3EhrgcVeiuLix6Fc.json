@@ -4,97 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  position: sticky;\n  bottom: 0;\n  z-index: 100;\n  box-shadow: 0 0 4px 1px #0d151a26;\n  background-color: var(--mantine-color-white);\n  padding-block: var(--mantine-spacing-lg);\n\n  @mixin larger-than 992px {\n    padding-block: 40px;\n  }\n}\n\n.grid {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n\n  &:has(button:only-child) {\n    grid-template-columns: 1fr;\n  }\n}\n\n:is(.prev, .next) {\n  display: flex;\n  place-self: start start;\n  border: none;\n  gap: var(--mantine-spacing-3xl);\n\n  svg {\n    @mixin text-data-color 9;\n  }\n\n  &:hover {\n    background-color: transparent;\n  }\n}\n\n.next {\n  place-self: end end;\n}\n\n.text {\n  font-weight: 700;\n  font-size: 24px;\n}\n\n.paper {\n  border-radius: var(--mantine-radius-md);\n\n  svg {\n    width: 20px;\n    height: 20px;\n  }\n\n  @mixin larger-than 992px {\n    svg {\n      width: 24px;\n      height: 24px;\n    }\n  }\n}\n\n.nextGroup {\n  flex-direction: row-reverse;\n}\n\n.controlWrapper {\n  display: grid;\n  grid-template-columns: 28px 1fr;\n\n  &[data-last] {\n    grid-template-columns: 1fr 28px;\n  }\n}\n",
-      "start": 1746125696577,
-      "end": 1746125696620,
+      "start": 1750105187987,
+      "end": 1750105188025,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696620,
-      "end": 1746125696620,
+      "start": 1750105188025,
+      "end": 1750105188025,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188027,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188027,
+      "end": 1750105188028,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/ReportPagination/ReportPagination.module.css [vike:pluginModuleBanner] */\nexport const root = \"aKhR1\";\nexport const grid = \"fO1Vd\";\nexport const prev = \"EH0sS\";\nexport const next = \"t-fgb\";\nexport const text = \"o-X-I\";\nexport const paper = \"zqIWn\";\nexport const nextGroup = \"ciUC7\";\nexport const controlWrapper = \"uY6Cz\";\nexport default {\n\troot: root,\n\tgrid: grid,\n\tprev: prev,\n\tnext: next,\n\ttext: text,\n\tpaper: paper,\n\tnextGroup: nextGroup,\n\tcontrolWrapper: controlWrapper\n};\n",
-      "start": 1746125696626,
-      "end": 1746125696626,
+      "start": 1750105188028,
+      "end": 1750105188028,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/ReportPagination/ReportPagination.module.css"],
+        "sources": [
+          "src/widgets/ReportPagination/ReportPagination.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC;"
       }

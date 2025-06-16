@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\n\nimport s from './List.module.css';\n\ninterface ListProps extends ComponentProps<'ul'> {\n    data: {\n        id: number;\n        label: ReactNode;\n        icon?: ReactNode;\n    }[];\n}\n\nexport const List = ({ data, className }: ListProps) => (\n    <ul className={clsx(s.list, className)}>\n        {data?.map((item) => (\n            <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>\n        ))}\n    </ul>\n);\n",
-      "start": 1746125696391,
-      "end": 1746125696449,
+      "start": 1750105187888,
+      "end": 1750105187934,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\nimport s from './List.module.css';\ninterface ListProps extends ComponentProps<'ul'> {\n  data: {\n    id: number;\n    label: ReactNode;\n    icon?: ReactNode;\n  }[];\n}\nexport const List = ({\n  data,\n  className\n}: ListProps) => <ul className={clsx(s.list, className)}>\n        {data?.map(item => <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>)}\n    </ul>;",
-      "start": 1746125696449,
-      "end": 1746125696451,
+      "start": 1750105187934,
+      "end": 1750105187936,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -32,7 +32,9 @@
           "map",
           "item"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"
+        ],
         "sourcesContent": [
           "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\n\nimport s from './List.module.css';\n\ninterface ListProps extends ComponentProps<'ul'> {\n    data: {\n        id: number;\n        label: ReactNode;\n        icon?: ReactNode;\n    }[];\n}\n\nexport const List = ({ data, className }: ListProps) => (\n    <ul className={clsx(s.list, className)}>\n        {data?.map((item) => (\n            <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>\n        ))}\n    </ul>\n);\n"
         ],
@@ -43,12 +45,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({\n  data,\n  className\n}) => /* @__PURE__ */ jsx(\"ul\", { className: clsx(s.list, className), children: data?.map((item) => /* @__PURE__ */ jsxs(\"li\", { children: [\n  item.icon,\n  item.label\n] }, item.id)) });\n",
-      "start": 1746125696451,
-      "end": 1746125696720,
+      "start": 1750105187936,
+      "end": 1750105188212,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"
+        ],
         "sourcesContent": [
           "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\nimport s from './List.module.css';\ninterface ListProps extends ComponentProps<'ul'> {\n  data: {\n    id: number;\n    label: ReactNode;\n    icon?: ReactNode;\n  }[];\n}\nexport const List = ({\n  data,\n  className\n}: ListProps) => <ul className={clsx(s.list, className)}>\n        {data?.map(item => <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>)}\n    </ul>;"
         ],
@@ -58,79 +62,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/List/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({\n  data,\n  className\n}) => /* @__PURE__ */ jsx(\"ul\", { className: clsx(s.list, className), children: data?.map((item) => /* @__PURE__ */ jsxs(\"li\", { children: [\n  item.icon,\n  item.label\n] }, item.id)) });\n",
-      "start": 1746125696720,
-      "end": 1746125696720,
+      "start": 1750105188212,
+      "end": 1750105188212,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/RootLayout/ui/List/index.tsx"],
+        "sources": [
+          "src/widgets/RootLayout/ui/List/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

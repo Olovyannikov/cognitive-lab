@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport CircleImage from '@/shared/assets/images/circle.svg?react';\nimport CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';\nimport { Picture } from '@/shared/ui';\n\nimport s from './ReportHeader.module.css';\n\ninterface ReportHeaderProps {\n    type: string;\n    name: string;\n    preTitle?: string;\n    typeToColorMapper?: Record<string, string>;\n}\n\nexport const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper }: ReportHeaderProps) => {\n    const currentColor = typeToColorMapper?.[type];\n    const { isMobile } = usePageContext();\n    const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');\n\n    return (\n        <Paper className={s.paper} data-color={currentColor}>\n            <Stack className={s.stack}>\n                <Text className={s.personalityType}>{preTitle}</Text>\n                <Title className={s.name}>{currentName ?? name}</Title>\n            </Stack>\n            <Picture\n                draggable={false}\n                className={s.character}\n                src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}\n            />\n            <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />\n            <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />\n        </Paper>\n    );\n};\n",
-      "start": 1746125696482,
-      "end": 1746125696525,
+      "start": 1750105187756,
+      "end": 1750105187822,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport CircleImage from '@/shared/assets/images/circle.svg?react';\nimport CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';\nimport { Picture } from '@/shared/ui';\nimport s from './ReportHeader.module.css';\ninterface ReportHeaderProps {\n  type: string;\n  name: string;\n  preTitle?: string;\n  typeToColorMapper?: Record<string, string>;\n}\nexport const ReportHeader = ({\n  type,\n  name,\n  preTitle = 'Ваш тип личности',\n  typeToColorMapper\n}: ReportHeaderProps) => {\n  const currentColor = typeToColorMapper?.[type];\n  const {\n    isMobile\n  } = usePageContext();\n  const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');\n  return <Paper className={s.paper} data-color={currentColor}>\n            <Stack className={s.stack}>\n                <Text className={s.personalityType}>{preTitle}</Text>\n                <Title className={s.name}>{currentName ?? name}</Title>\n            </Stack>\n            <Picture draggable={false} className={s.character} src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`} />\n            <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />\n            <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />\n        </Paper>;\n};",
-      "start": 1746125696525,
-      "end": 1746125696527,
+      "start": 1750105187822,
+      "end": 1750105187825,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -60,8 +60,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CircleImage from \"@/shared/assets/images/circle.svg?react\";\nimport CircleSmallImage from \"@/shared/assets/images/circle_small.svg?react\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./ReportHeader.module.css\";\nexport const ReportHeader = ({\n  type,\n  name,\n  preTitle = \"Ваш тип личности\",\n  typeToColorMapper\n}) => {\n  const currentColor = typeToColorMapper?.[type];\n  const {\n    isMobile\n  } = usePageContext();\n  const currentName = name?.split(\"—\")[1]?.replaceAll(\"»\", \"\").replaceAll(\"«\", \"\");\n  return /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": currentColor, children: [\n    /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n      /* @__PURE__ */ jsx(Text, { className: s.personalityType, children: preTitle }),\n      /* @__PURE__ */ jsx(Title, { className: s.name, children: currentName ?? name })\n    ] }),\n    /* @__PURE__ */ jsx(Picture, { draggable: false, className: s.character, src: `/report/types/${isMobile ? \"mobile/\" : \"\"}${type}` }),\n    /* @__PURE__ */ jsx(CircleImage, { \"data-color\": currentColor, className: clsx(s.image, s.desktop) }),\n    /* @__PURE__ */ jsx(CircleSmallImage, { \"data-color\": currentColor, className: clsx(s.image, s.mobile) })\n  ] });\n};\n",
-      "start": 1746125696527,
-      "end": 1746125696784,
+      "start": 1750105187825,
+      "end": 1750105188037,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -77,79 +77,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188037,
+      "end": 1750105188037,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188038,
+      "end": 1750105188038,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188038,
+      "end": 1750105188038,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188038,
+      "end": 1750105188038,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportHeader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CircleImage from \"@/shared/assets/images/circle.svg?react\";\nimport CircleSmallImage from \"@/shared/assets/images/circle_small.svg?react\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./ReportHeader.module.css\";\nexport const ReportHeader = ({\n  type,\n  name,\n  preTitle = \"Ваш тип личности\",\n  typeToColorMapper\n}) => {\n  const currentColor = typeToColorMapper?.[type];\n  const {\n    isMobile\n  } = usePageContext();\n  const currentName = name?.split(\"—\")[1]?.replaceAll(\"»\", \"\").replaceAll(\"«\", \"\");\n  return /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": currentColor, children: [\n    /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n      /* @__PURE__ */ jsx(Text, { className: s.personalityType, children: preTitle }),\n      /* @__PURE__ */ jsx(Title, { className: s.name, children: currentName ?? name })\n    ] }),\n    /* @__PURE__ */ jsx(Picture, { draggable: false, className: s.character, src: `/report/types/${isMobile ? \"mobile/\" : \"\"}${type}` }),\n    /* @__PURE__ */ jsx(CircleImage, { \"data-color\": currentColor, className: clsx(s.image, s.desktop) }),\n    /* @__PURE__ */ jsx(CircleSmallImage, { \"data-color\": currentColor, className: clsx(s.image, s.mobile) })\n  ] });\n};\n",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188038,
+      "end": 1750105188038,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/ReportHeader/index.tsx"],
+        "sources": [
+          "src/entities/Report/ui/ReportHeader/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

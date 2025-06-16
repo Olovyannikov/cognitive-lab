@@ -1,0 +1,143 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/EmailField/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { Paper, Stack } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\ntype EmailFieldWrapperProps = QuestionsResponse;\n\nexport const EmailFieldWrapper = ({\n    text = 'Ваш Email',\n    hint,\n    children,\n}: PropsWithChildren<EmailFieldWrapperProps>) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper maw={588} mx='auto'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap={isLarge ? 'lg' : 'sm'}>{children}</Stack>\n        </Paper>\n    );\n};\n",
+      "start": 1750105187930,
+      "end": 1750105187976,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import type { PropsWithChildren } from 'react';\nimport { Paper, Stack } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport type { QuestionsResponse } from '../../api/dto';\nimport { QuestionTitle } from '../TestQuestionTitle';\ntype EmailFieldWrapperProps = QuestionsResponse;\nexport const EmailFieldWrapper = ({\n  text = 'Ваш Email',\n  hint,\n  children\n}: PropsWithChildren<EmailFieldWrapperProps>) => {\n  const isLarge = useIsLarge();\n  return <Paper maw={588} mx='auto'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap={isLarge ? 'lg' : 'sm'}>{children}</Stack>\n        </Paper>;\n};",
+      "start": 1750105187976,
+      "end": 1750105187977,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "PropsWithChildren",
+          "Paper",
+          "Stack",
+          "useIsLarge",
+          "QuestionsResponse",
+          "QuestionTitle",
+          "EmailFieldWrapperProps",
+          "EmailFieldWrapper",
+          "text",
+          "hint",
+          "children",
+          "isLarge"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/EmailField/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { Paper, Stack } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\ntype EmailFieldWrapperProps = QuestionsResponse;\n\nexport const EmailFieldWrapper = ({\n    text = 'Ваш Email',\n    hint,\n    children,\n}: PropsWithChildren<EmailFieldWrapperProps>) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper maw={588} mx='auto'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap={isLarge ? 'lg' : 'sm'}>{children}</Stack>\n        </Paper>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,cAAcA,iBAAiB,QAAQ,OAAO;AAC9C,SAASC,KAAK,EAAEC,KAAK,QAAQ,eAAe;AAE5C,SAASC,UAAU,QAAQ,cAAc;AAEzC,cAAcC,iBAAiB,QAAQ,eAAe;AACtD,SAASC,aAAa,QAAQ,sBAAsB;AAEpD,KAAKC,sBAAsB,GAAGF,iBAAiB;AAE/C,OAAO,MAAMG,iBAAiB,GAAGA,CAAC;EAC9BC,IAAI,GAAG,WAAW;EAClBC,IAAI;EACJC;AACuC,CAA1C,EAAEV,iBAAiB,CAACM,sBAAsB,CAAC,KAAK;EAC7C,MAAMK,OAAO,GAAGR,UAAU,CAAC,CAAC;EAE5B,OACI,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,MAAM;AAClC,YAAY,CAAC,aAAa,CAAC,IAAI,CAAC,CAACK,IAAI,CAAC,CAAC,IAAI,CAAC,CAACC,IAAI,CAAC;AAClD,YAAY,CAAC,KAAK,CAAC,GAAG,CAAC,CAACE,OAAO,GAAG,IAAI,GAAG,IAAI,CAAC,CAAC,CAACD,QAAQ,CAAC,EAAE,KAAK;AAChE,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nexport const EmailFieldWrapper = ({\n  text = \"Ваш Email\",\n  hint,\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { maw: 588, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(QuestionTitle, { text, hint }),\n    /* @__PURE__ */ jsx(Stack, { gap: isLarge ? \"lg\" : \"sm\", children })\n  ] });\n};\n",
+      "start": 1750105187977,
+      "end": 1750105188248,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/EmailField/index.tsx"
+        ],
+        "sourcesContent": [
+          "import type { PropsWithChildren } from 'react';\nimport { Paper, Stack } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport type { QuestionsResponse } from '../../api/dto';\nimport { QuestionTitle } from '../TestQuestionTitle';\ntype EmailFieldWrapperProps = QuestionsResponse;\nexport const EmailFieldWrapper = ({\n  text = 'Ваш Email',\n  hint,\n  children\n}: PropsWithChildren<EmailFieldWrapperProps>) => {\n  const isLarge = useIsLarge();\n  return <Paper maw={588} mx='auto'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap={isLarge ? 'lg' : 'sm'}>{children}</Stack>\n        </Paper>;\n};"
+        ],
+        "mappings": "AAYS,SACG,KADH;AAXT,SAAS,OAAO,aAAa;AAC7B,SAAS,kBAAkB;AAE3B,SAAS,qBAAqB;AAEvB,aAAM,oBAAoB,CAAC;AAAA,EAChC,OAAO;AAAA,EACP;AAAA,EACA;AACF,MAAiD;AAC/C,QAAM,UAAU,WAAW;AAC3B,SAAO,qBAAC,SAAM,KAAK,KAAK,IAAG,QACjB;AAAA,wBAAC,iBAAc,MAAY,MAAY;AAAA,IACvC,oBAAC,SAAM,KAAK,UAAU,OAAO,MAAO,UAAS;AAAA,KACjD;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/ui/EmailField/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nexport const EmailFieldWrapper = ({\n  text = \"Ваш Email\",\n  hint,\n  children\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { maw: 588, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(QuestionTitle, { text, hint }),\n    /* @__PURE__ */ jsx(Stack, { gap: isLarge ? \"lg\" : \"sm\", children })\n  ] });\n};\n",
+      "start": 1750105188248,
+      "end": 1750105188248,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/entities/Test/ui/EmailField/index.tsx"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
+      }
+    }
+  ]
+}

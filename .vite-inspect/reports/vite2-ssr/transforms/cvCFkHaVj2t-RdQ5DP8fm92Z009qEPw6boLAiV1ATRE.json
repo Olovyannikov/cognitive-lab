@@ -4,97 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 342 364\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 173, cy: 140, r: 224, fill: \"#6741D9\" }), /* @__PURE__ */ React.createElement(\"circle\", { cx: 171, cy: -62, r: 174, fill: \"#7048E8\" }));\nexport default SvgCircle;\n",
-      "start": 1746125696986,
-      "end": 1746125697014,
+      "start": 1750105188476,
+      "end": 1750105188497,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188497,
+      "end": 1750105188497,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/Card/circle.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 342 364\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 173, cy: 140, r: 224, fill: \"#6741D9\" }), /* @__PURE__ */ React.createElement(\"circle\", { cx: 171, cy: -62, r: 174, fill: \"#7048E8\" }));\nexport default SvgCircle;\n",
-      "start": 1746125697014,
-      "end": 1746125697014,
+      "start": 1750105188498,
+      "end": 1750105188498,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/Test/SplashScreen/ui/Card/circle.svg?react"],
+        "sources": [
+          "src/widgets/Test/SplashScreen/ui/Card/circle.svg?react"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5V,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

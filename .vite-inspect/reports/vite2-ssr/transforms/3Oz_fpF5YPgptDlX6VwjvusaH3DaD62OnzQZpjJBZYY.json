@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n",
-      "start": 1746125696156,
-      "end": 1746125696195,
+      "start": 1750105187556,
+      "end": 1750105187602,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { MainPageResponse } from './dto';\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: [] as MainPageResponse\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1746125696195,
-      "end": 1746125696196,
+      "start": 1750105187602,
+      "end": 1750105187603,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -36,7 +36,9 @@
           "method",
           "\"createQuery\""
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"
+        ],
         "sourcesContent": [
           "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n"
         ],
@@ -47,12 +49,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125696196,
-      "end": 1746125696288,
+      "start": 1750105187603,
+      "end": 1750105187706,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"
+        ],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { MainPageResponse } from './dto';\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: [] as MainPageResponse\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});"
         ],
@@ -62,79 +66,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187706,
+      "end": 1750105187706,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187706,
+      "end": 1750105187706,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187706,
+      "end": 1750105187706,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187707,
+      "end": 1750105187707,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Landing/api/index.ts"],
+        "sources": [
+          "src/entities/Landing/api/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;"
       }

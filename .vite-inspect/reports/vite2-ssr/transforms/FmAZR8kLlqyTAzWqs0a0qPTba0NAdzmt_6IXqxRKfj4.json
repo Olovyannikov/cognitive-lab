@@ -4,97 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImage1 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 176, height: 198, viewBox: \"0 0 176 198\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M5.78058 0H176V196.236C168.464 197.398 160.748 198 152.894 198C68.4529 198 0 128.38 0 42.5C0 27.7648 2.0152 13.5083 5.78058 0Z\", fill: \"#6741D9\" }));\nexport default SvgImage1;\n",
-      "start": 1746125696881,
-      "end": 1746125696981,
+      "start": 1750105188394,
+      "end": 1750105188432,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696981,
-      "end": 1746125696981,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696981,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItHelps/img/image-1.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImage1 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 176, height: 198, viewBox: \"0 0 176 198\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M5.78058 0H176V196.236C168.464 197.398 160.748 198 152.894 198C68.4529 198 0 128.38 0 42.5C0 27.7648 2.0152 13.5083 5.78058 0Z\", fill: \"#6741D9\" }));\nexport default SvgImage1;\n",
-      "start": 1746125696982,
-      "end": 1746125696982,
+      "start": 1750105188432,
+      "end": 1750105188432,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/IndexPage/ui/HowItHelps/img/image-1.svg?react"],
+        "sources": [
+          "src/pages/IndexPage/ui/HowItHelps/img/image-1.svg?react"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1a,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

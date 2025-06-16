@@ -4,20 +4,30 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Title } from '@mantine/core';\n\ninterface SubtitleProps {\n    text: string;\n    type: string;\n}\n\nimport s from './Subtitle.module.css';\n\nexport const Subtitle = ({ type, text }: SubtitleProps) => (\n    <Title data-type={type} className={s.subtitle} order={3} mb='md'>\n        {text}\n    </Title>\n);\n",
-      "start": 1746125696479,
-      "end": 1746125696523,
+      "start": 1750105187749,
+      "end": 1750105187819,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Title } from '@mantine/core';\ninterface SubtitleProps {\n  text: string;\n  type: string;\n}\nimport s from './Subtitle.module.css';\nexport const Subtitle = ({\n  type,\n  text\n}: SubtitleProps) => <Title data-type={type} className={s.subtitle} order={3} mb='md'>\n        {text}\n    </Title>;",
-      "start": 1746125696523,
-      "end": 1746125696524,
+      "start": 1750105187819,
+      "end": 1750105187821,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["Title", "SubtitleProps", "text", "type", "s", "Subtitle", "subtitle"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subtitle/index.tsx"],
+        "names": [
+          "Title",
+          "SubtitleProps",
+          "text",
+          "type",
+          "s",
+          "Subtitle",
+          "subtitle"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subtitle/index.tsx"
+        ],
         "sourcesContent": [
           "import { Title } from '@mantine/core';\n\ninterface SubtitleProps {\n    text: string;\n    type: string;\n}\n\nimport s from './Subtitle.module.css';\n\nexport const Subtitle = ({ type, text }: SubtitleProps) => (\n    <Title data-type={type} className={s.subtitle} order={3} mb='md'>\n        {text}\n    </Title>\n);\n"
         ],
@@ -28,12 +38,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Subtitle.module.css\";\nexport const Subtitle = ({\n  type,\n  text\n}) => /* @__PURE__ */ jsx(Title, { \"data-type\": type, className: s.subtitle, order: 3, mb: \"md\", children: text });\n",
-      "start": 1746125696524,
-      "end": 1746125696784,
+      "start": 1750105187821,
+      "end": 1750105188032,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subtitle/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subtitle/index.tsx"
+        ],
         "sourcesContent": [
           "import { Title } from '@mantine/core';\ninterface SubtitleProps {\n  text: string;\n  type: string;\n}\nimport s from './Subtitle.module.css';\nexport const Subtitle = ({\n  type,\n  text\n}: SubtitleProps) => <Title data-type={type} className={s.subtitle} order={3} mb='md'>\n        {text}\n    </Title>;"
         ],
@@ -43,79 +55,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696784,
-      "end": 1746125696784,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Subtitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Subtitle.module.css\";\nexport const Subtitle = ({\n  type,\n  text\n}) => /* @__PURE__ */ jsx(Title, { \"data-type\": type, className: s.subtitle, order: 3, mb: \"md\", children: text });\n",
-      "start": 1746125696785,
-      "end": 1746125696785,
+      "start": 1750105188032,
+      "end": 1750105188032,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Report/ui/Subtitle/index.tsx"],
+        "sources": [
+          "src/entities/Report/ui/Subtitle/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

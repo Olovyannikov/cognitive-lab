@@ -4,20 +4,25 @@
     {
       "name": "vite:load-fallback",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\n\nexport default function Page() {\n    return <FreeReportPage />;\n}\n",
-      "start": 1746125695909,
-      "end": 1746125695944,
+      "start": 1750105187349,
+      "end": 1750105187372,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\nexport default function Page() {\n  return <FreeReportPage />;\n}",
-      "start": 1746125695944,
-      "end": 1746125695946,
+      "start": 1750105187372,
+      "end": 1750105187373,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["FreeReportPage", "Page"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/free-report/@reportId/+Page.tsx"],
+        "names": [
+          "FreeReportPage",
+          "Page"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/free-report/@reportId/+Page.tsx"
+        ],
         "sourcesContent": [
           "import { FreeReportPage } from '@/pages/FreeReportPage';\n\nexport default function Page() {\n    return <FreeReportPage />;\n}\n"
         ],
@@ -28,12 +33,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1746125695946,
-      "end": 1746125696025,
+      "start": 1750105187373,
+      "end": 1750105187436,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/free-report/@reportId/+Page.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/free-report/@reportId/+Page.tsx"
+        ],
         "sourcesContent": [
           "import { FreeReportPage } from '@/pages/FreeReportPage';\nexport default function Page() {\n  return <FreeReportPage />;\n}"
         ],
@@ -43,79 +50,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187436,
+      "end": 1750105187436,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187436,
+      "end": 1750105187436,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187436,
+      "end": 1750105187436,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187436,
+      "end": 1750105187436,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696025,
-      "end": 1746125696025,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696025,
-      "end": 1746125696026,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696026,
-      "end": 1746125696026,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696026,
-      "end": 1746125696026,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/free-report/@reportId/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1746125696026,
-      "end": 1746125696026,
+      "start": 1750105187437,
+      "end": 1750105187437,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["pages/free-report/@reportId/+Page.tsx"],
+        "sources": [
+          "pages/free-report/@reportId/+Page.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD;"
       }

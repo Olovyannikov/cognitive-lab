@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { CSSProperties } from 'react';\nimport { VisuallyHidden } from '@mantine/core';\nimport clsx from 'clsx';\nimport { motion, type Transition, type Variants } from 'motion/react';\n\nimport s from './SpinningText.module.css';\n\ninterface SpinningTextProps {\n    children: string | string[];\n    style?: CSSProperties;\n    duration?: number;\n    className?: string;\n    reverse?: boolean;\n    fontSize?: number;\n    radius?: number;\n    transition?: Transition;\n    variants?: {\n        container?: Variants;\n        item?: Variants;\n    };\n}\n\nconst BASE_TRANSITION = {\n    repeat: Infinity,\n    ease: 'linear',\n};\n\nconst BASE_ITEM_VARIANTS = {\n    hidden: {\n        opacity: 1,\n    },\n    visible: {\n        opacity: 1,\n    },\n};\n\nexport const SpinningText = ({\n    children,\n    duration = 10,\n    style,\n    className,\n    reverse = false,\n    radius = 5,\n    transition,\n    variants,\n}: SpinningTextProps) => {\n    if (typeof children !== 'string' && !Array.isArray(children)) {\n        throw new Error('children must be a string or an array of strings');\n    }\n\n    if (Array.isArray(children)) {\n        if (!children.every((child) => typeof child === 'string')) {\n            throw new Error('all elements in children array must be strings');\n        }\n        // eslint-disable-next-line no-param-reassign\n        children = children.join('');\n    }\n\n    const letters = children.split('');\n    letters.push(' ');\n\n    const finalTransition = {\n        ...BASE_TRANSITION,\n        ...transition,\n        duration: (transition as { duration?: number })?.duration ?? duration,\n    };\n\n    const containerVariants = {\n        visible: { rotate: reverse ? -360 : 360 },\n        ...variants?.container,\n    };\n\n    const itemVariants = {\n        ...BASE_ITEM_VARIANTS,\n        ...variants?.item,\n    };\n\n    return (\n        <motion.div\n            className={clsx(s.relative, className)}\n            style={{\n                ...style,\n            }}\n            initial='hidden'\n            animate='visible'\n            variants={containerVariants}\n            transition={finalTransition}\n        >\n            {letters.map((letter, index) => (\n                <motion.span\n                    aria-hidden='true'\n                    key={`${index}-${letter}`}\n                    variants={itemVariants}\n                    className={s.letters}\n                    style={{\n                        '--index': index,\n                        '--total': letters.length,\n                        '--radius': radius,\n                    }}\n                >\n                    {letter}\n                </motion.span>\n            ))}\n            <VisuallyHidden>{children}</VisuallyHidden>\n        </motion.div>\n    );\n};\n",
-      "start": 1746125696298,
-      "end": 1746125696336,
+      "start": 1750105187775,
+      "end": 1750105187839,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { CSSProperties } from 'react';\nimport { VisuallyHidden } from '@mantine/core';\nimport clsx from 'clsx';\nimport { motion, type Transition, type Variants } from 'motion/react';\nimport s from './SpinningText.module.css';\ninterface SpinningTextProps {\n  children: string | string[];\n  style?: CSSProperties;\n  duration?: number;\n  className?: string;\n  reverse?: boolean;\n  fontSize?: number;\n  radius?: number;\n  transition?: Transition;\n  variants?: {\n    container?: Variants;\n    item?: Variants;\n  };\n}\nconst BASE_TRANSITION = {\n  repeat: Infinity,\n  ease: 'linear'\n};\nconst BASE_ITEM_VARIANTS = {\n  hidden: {\n    opacity: 1\n  },\n  visible: {\n    opacity: 1\n  }\n};\nexport const SpinningText = ({\n  children,\n  duration = 10,\n  style,\n  className,\n  reverse = false,\n  radius = 5,\n  transition,\n  variants\n}: SpinningTextProps) => {\n  if (typeof children !== 'string' && !Array.isArray(children)) {\n    throw new Error('children must be a string or an array of strings');\n  }\n  if (Array.isArray(children)) {\n    if (!children.every(child => typeof child === 'string')) {\n      throw new Error('all elements in children array must be strings');\n    }\n    // eslint-disable-next-line no-param-reassign\n    children = children.join('');\n  }\n  const letters = children.split('');\n  letters.push(' ');\n  const finalTransition = {\n    ...BASE_TRANSITION,\n    ...transition,\n    duration: (transition as {\n      duration?: number;\n    })?.duration ?? duration\n  };\n  const containerVariants = {\n    visible: {\n      rotate: reverse ? -360 : 360\n    },\n    ...variants?.container\n  };\n  const itemVariants = {\n    ...BASE_ITEM_VARIANTS,\n    ...variants?.item\n  };\n  return <motion.div className={clsx(s.relative, className)} style={{\n    ...style\n  }} initial='hidden' animate='visible' variants={containerVariants} transition={finalTransition}>\n            {letters.map((letter, index) => <motion.span aria-hidden='true' key={`${index}-${letter}`} variants={itemVariants} className={s.letters} style={{\n      '--index': index,\n      '--total': letters.length,\n      '--radius': radius\n    }}>\n                    {letter}\n                </motion.span>)}\n            <VisuallyHidden>{children}</VisuallyHidden>\n        </motion.div>;\n};",
-      "start": 1746125696336,
-      "end": 1746125696338,
+      "start": 1750105187839,
+      "end": 1750105187841,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -64,7 +64,9 @@
           "index",
           "length"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/SpinningText/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/SpinningText/index.tsx"
+        ],
         "sourcesContent": [
           "import type { CSSProperties } from 'react';\nimport { VisuallyHidden } from '@mantine/core';\nimport clsx from 'clsx';\nimport { motion, type Transition, type Variants } from 'motion/react';\n\nimport s from './SpinningText.module.css';\n\ninterface SpinningTextProps {\n    children: string | string[];\n    style?: CSSProperties;\n    duration?: number;\n    className?: string;\n    reverse?: boolean;\n    fontSize?: number;\n    radius?: number;\n    transition?: Transition;\n    variants?: {\n        container?: Variants;\n        item?: Variants;\n    };\n}\n\nconst BASE_TRANSITION = {\n    repeat: Infinity,\n    ease: 'linear',\n};\n\nconst BASE_ITEM_VARIANTS = {\n    hidden: {\n        opacity: 1,\n    },\n    visible: {\n        opacity: 1,\n    },\n};\n\nexport const SpinningText = ({\n    children,\n    duration = 10,\n    style,\n    className,\n    reverse = false,\n    radius = 5,\n    transition,\n    variants,\n}: SpinningTextProps) => {\n    if (typeof children !== 'string' && !Array.isArray(children)) {\n        throw new Error('children must be a string or an array of strings');\n    }\n\n    if (Array.isArray(children)) {\n        if (!children.every((child) => typeof child === 'string')) {\n            throw new Error('all elements in children array must be strings');\n        }\n        // eslint-disable-next-line no-param-reassign\n        children = children.join('');\n    }\n\n    const letters = children.split('');\n    letters.push(' ');\n\n    const finalTransition = {\n        ...BASE_TRANSITION,\n        ...transition,\n        duration: (transition as { duration?: number })?.duration ?? duration,\n    };\n\n    const containerVariants = {\n        visible: { rotate: reverse ? -360 : 360 },\n        ...variants?.container,\n    };\n\n    const itemVariants = {\n        ...BASE_ITEM_VARIANTS,\n        ...variants?.item,\n    };\n\n    return (\n        <motion.div\n            className={clsx(s.relative, className)}\n            style={{\n                ...style,\n            }}\n            initial='hidden'\n            animate='visible'\n            variants={containerVariants}\n            transition={finalTransition}\n        >\n            {letters.map((letter, index) => (\n                <motion.span\n                    aria-hidden='true'\n                    key={`${index}-${letter}`}\n                    variants={itemVariants}\n                    className={s.letters}\n                    style={{\n                        '--index': index,\n                        '--total': letters.length,\n                        '--radius': radius,\n                    }}\n                >\n                    {letter}\n                </motion.span>\n            ))}\n            <VisuallyHidden>{children}</VisuallyHidden>\n        </motion.div>\n    );\n};\n"
         ],
@@ -75,12 +77,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { VisuallyHidden } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { motion } from \"motion/react\";\nimport s from \"./SpinningText.module.css\";\nconst BASE_TRANSITION = {\n  repeat: Infinity,\n  ease: \"linear\"\n};\nconst BASE_ITEM_VARIANTS = {\n  hidden: {\n    opacity: 1\n  },\n  visible: {\n    opacity: 1\n  }\n};\nexport const SpinningText = ({\n  children,\n  duration = 10,\n  style,\n  className,\n  reverse = false,\n  radius = 5,\n  transition,\n  variants\n}) => {\n  if (typeof children !== \"string\" && !Array.isArray(children)) {\n    throw new Error(\"children must be a string or an array of strings\");\n  }\n  if (Array.isArray(children)) {\n    if (!children.every((child) => typeof child === \"string\")) {\n      throw new Error(\"all elements in children array must be strings\");\n    }\n    children = children.join(\"\");\n  }\n  const letters = children.split(\"\");\n  letters.push(\" \");\n  const finalTransition = {\n    ...BASE_TRANSITION,\n    ...transition,\n    duration: transition?.duration ?? duration\n  };\n  const containerVariants = {\n    visible: {\n      rotate: reverse ? -360 : 360\n    },\n    ...variants?.container\n  };\n  const itemVariants = {\n    ...BASE_ITEM_VARIANTS,\n    ...variants?.item\n  };\n  return /* @__PURE__ */ jsxs(motion.div, { className: clsx(s.relative, className), style: {\n    ...style\n  }, initial: \"hidden\", animate: \"visible\", variants: containerVariants, transition: finalTransition, children: [\n    letters.map((letter, index) => /* @__PURE__ */ jsx(motion.span, { \"aria-hidden\": \"true\", variants: itemVariants, className: s.letters, style: {\n      \"--index\": index,\n      \"--total\": letters.length,\n      \"--radius\": radius\n    }, children: letter }, `${index}-${letter}`)),\n    /* @__PURE__ */ jsx(VisuallyHidden, { children })\n  ] });\n};\n",
-      "start": 1746125696338,
-      "end": 1746125696571,
+      "start": 1750105187841,
+      "end": 1750105188095,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/SpinningText/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/SpinningText/index.tsx"
+        ],
         "sourcesContent": [
           "import type { CSSProperties } from 'react';\nimport { VisuallyHidden } from '@mantine/core';\nimport clsx from 'clsx';\nimport { motion, type Transition, type Variants } from 'motion/react';\nimport s from './SpinningText.module.css';\ninterface SpinningTextProps {\n  children: string | string[];\n  style?: CSSProperties;\n  duration?: number;\n  className?: string;\n  reverse?: boolean;\n  fontSize?: number;\n  radius?: number;\n  transition?: Transition;\n  variants?: {\n    container?: Variants;\n    item?: Variants;\n  };\n}\nconst BASE_TRANSITION = {\n  repeat: Infinity,\n  ease: 'linear'\n};\nconst BASE_ITEM_VARIANTS = {\n  hidden: {\n    opacity: 1\n  },\n  visible: {\n    opacity: 1\n  }\n};\nexport const SpinningText = ({\n  children,\n  duration = 10,\n  style,\n  className,\n  reverse = false,\n  radius = 5,\n  transition,\n  variants\n}: SpinningTextProps) => {\n  if (typeof children !== 'string' && !Array.isArray(children)) {\n    throw new Error('children must be a string or an array of strings');\n  }\n  if (Array.isArray(children)) {\n    if (!children.every(child => typeof child === 'string')) {\n      throw new Error('all elements in children array must be strings');\n    }\n    // eslint-disable-next-line no-param-reassign\n    children = children.join('');\n  }\n  const letters = children.split('');\n  letters.push(' ');\n  const finalTransition = {\n    ...BASE_TRANSITION,\n    ...transition,\n    duration: (transition as {\n      duration?: number;\n    })?.duration ?? duration\n  };\n  const containerVariants = {\n    visible: {\n      rotate: reverse ? -360 : 360\n    },\n    ...variants?.container\n  };\n  const itemVariants = {\n    ...BASE_ITEM_VARIANTS,\n    ...variants?.item\n  };\n  return <motion.div className={clsx(s.relative, className)} style={{\n    ...style\n  }} initial='hidden' animate='visible' variants={containerVariants} transition={finalTransition}>\n            {letters.map((letter, index) => <motion.span aria-hidden='true' key={`${index}-${letter}`} variants={itemVariants} className={s.letters} style={{\n      '--index': index,\n      '--total': letters.length,\n      '--radius': radius\n    }}>\n                    {letter}\n                </motion.span>)}\n            <VisuallyHidden>{children}</VisuallyHidden>\n        </motion.div>;\n};"
         ],
@@ -90,79 +94,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188095,
+      "end": 1750105188095,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188095,
+      "end": 1750105188095,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188095,
+      "end": 1750105188095,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188095,
+      "end": 1750105188096,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/SpinningText/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { VisuallyHidden } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { motion } from \"motion/react\";\nimport s from \"./SpinningText.module.css\";\nconst BASE_TRANSITION = {\n  repeat: Infinity,\n  ease: \"linear\"\n};\nconst BASE_ITEM_VARIANTS = {\n  hidden: {\n    opacity: 1\n  },\n  visible: {\n    opacity: 1\n  }\n};\nexport const SpinningText = ({\n  children,\n  duration = 10,\n  style,\n  className,\n  reverse = false,\n  radius = 5,\n  transition,\n  variants\n}) => {\n  if (typeof children !== \"string\" && !Array.isArray(children)) {\n    throw new Error(\"children must be a string or an array of strings\");\n  }\n  if (Array.isArray(children)) {\n    if (!children.every((child) => typeof child === \"string\")) {\n      throw new Error(\"all elements in children array must be strings\");\n    }\n    children = children.join(\"\");\n  }\n  const letters = children.split(\"\");\n  letters.push(\" \");\n  const finalTransition = {\n    ...BASE_TRANSITION,\n    ...transition,\n    duration: transition?.duration ?? duration\n  };\n  const containerVariants = {\n    visible: {\n      rotate: reverse ? -360 : 360\n    },\n    ...variants?.container\n  };\n  const itemVariants = {\n    ...BASE_ITEM_VARIANTS,\n    ...variants?.item\n  };\n  return /* @__PURE__ */ jsxs(motion.div, { className: clsx(s.relative, className), style: {\n    ...style\n  }, initial: \"hidden\", animate: \"visible\", variants: containerVariants, transition: finalTransition, children: [\n    letters.map((letter, index) => /* @__PURE__ */ jsx(motion.span, { \"aria-hidden\": \"true\", variants: itemVariants, className: s.letters, style: {\n      \"--index\": index,\n      \"--total\": letters.length,\n      \"--radius\": radius\n    }, children: letter }, `${index}-${letter}`)),\n    /* @__PURE__ */ jsx(VisuallyHidden, { children })\n  ] });\n};\n",
-      "start": 1746125696571,
-      "end": 1746125696571,
+      "start": 1750105188096,
+      "end": 1750105188096,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/ui/SpinningText/index.tsx"],
+        "sources": [
+          "src/shared/ui/SpinningText/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC;AACF,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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AAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

@@ -3,35 +3,43 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export const clearLocalStorageTestUnits = () => {\n    window.localStorage.removeItem('$currentPage');\n    window.localStorage.removeItem('$currentProgress');\n    window.localStorage.removeItem('$scaleForm');\n    window.localStorage.removeItem('$surveyId');\n};\n",
-      "start": 1746125696534,
-      "end": 1746125696574,
+      "result": "export const clearLocalStorageTestUnits = () => {\n    const userId = window.localStorage.getItem('$userId');\n\n    window.localStorage.clear();\n\n    window.localStorage.setItem('$userId', userId ?? '');\n};\n",
+      "start": 1750105187918,
+      "end": 1750105187966,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "result": "export const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem('$currentPage');\n  window.localStorage.removeItem('$currentProgress');\n  window.localStorage.removeItem('$scaleForm');\n  window.localStorage.removeItem('$surveyId');\n};",
-      "start": 1746125696574,
-      "end": 1746125696575,
+      "result": "export const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem('$userId');\n  window.localStorage.clear();\n  window.localStorage.setItem('$userId', userId ?? '');\n};",
+      "start": 1750105187966,
+      "end": 1750105187967,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["clearLocalStorageTestUnits", "window", "localStorage", "removeItem"],
+        "names": [
+          "clearLocalStorageTestUnits",
+          "userId",
+          "window",
+          "localStorage",
+          "getItem",
+          "clear",
+          "setItem"
+        ],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/clearLocalStorageTestUnits.ts"
         ],
         "sourcesContent": [
-          "export const clearLocalStorageTestUnits = () => {\n    window.localStorage.removeItem('$currentPage');\n    window.localStorage.removeItem('$currentProgress');\n    window.localStorage.removeItem('$scaleForm');\n    window.localStorage.removeItem('$surveyId');\n};\n"
+          "export const clearLocalStorageTestUnits = () => {\n    const userId = window.localStorage.getItem('$userId');\n\n    window.localStorage.clear();\n\n    window.localStorage.setItem('$userId', userId ?? '');\n};\n"
         ],
-        "mappings": "AAAA,OAAO,MAAMA,0BAA0B,GAAGA,CAAA,KAAM;EAC5CC,MAAM,CAACC,YAAY,CAACC,UAAU,CAAC,cAAc,CAAC;EAC9CF,MAAM,CAACC,YAAY,CAACC,UAAU,CAAC,kBAAkB,CAAC;EAClDF,MAAM,CAACC,YAAY,CAACC,UAAU,CAAC,YAAY,CAAC;EAC5CF,MAAM,CAACC,YAAY,CAACC,UAAU,CAAC,WAAW,CAAC;AAC/C,CAAC",
+        "mappings": "AAAA,OAAO,MAAMA,0BAA0B,GAAGA,CAAA,KAAM;EAC5C,MAAMC,MAAM,GAAGC,MAAM,CAACC,YAAY,CAACC,OAAO,CAAC,SAAS,CAAC;EAErDF,MAAM,CAACC,YAAY,CAACE,KAAK,CAAC,CAAC;EAE3BH,MAAM,CAACC,YAAY,CAACG,OAAO,CAAC,SAAS,EAAEL,MAAM,IAAI,EAAE,CAAC;AACxD,CAAC",
         "ignoreList": []
       }
     },
     {
       "name": "vite:esbuild",
-      "result": "export const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem(\"$currentPage\");\n  window.localStorage.removeItem(\"$currentProgress\");\n  window.localStorage.removeItem(\"$scaleForm\");\n  window.localStorage.removeItem(\"$surveyId\");\n};\n",
-      "start": 1746125696575,
-      "end": 1746125696824,
+      "result": "export const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem(\"$userId\");\n  window.localStorage.clear();\n  window.localStorage.setItem(\"$userId\", userId ?? \"\");\n};\n",
+      "start": 1750105187967,
+      "end": 1750105188227,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,89 +47,91 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/clearLocalStorageTestUnits.ts"
         ],
         "sourcesContent": [
-          "export const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem('$currentPage');\n  window.localStorage.removeItem('$currentProgress');\n  window.localStorage.removeItem('$scaleForm');\n  window.localStorage.removeItem('$surveyId');\n};"
+          "export const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem('$userId');\n  window.localStorage.clear();\n  window.localStorage.setItem('$userId', userId ?? '');\n};"
         ],
-        "mappings": "AAAO,aAAM,6BAA6B,MAAM;AAC9C,SAAO,aAAa,WAAW,cAAc;AAC7C,SAAO,aAAa,WAAW,kBAAkB;AACjD,SAAO,aAAa,WAAW,YAAY;AAC3C,SAAO,aAAa,WAAW,WAAW;AAC5C;",
+        "mappings": "AAAO,aAAM,6BAA6B,MAAM;AAC9C,QAAM,SAAS,OAAO,aAAa,QAAQ,SAAS;AACpD,SAAO,aAAa,MAAM;AAC1B,SAAO,aAAa,QAAQ,WAAW,UAAU,EAAE;AACrD;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696824,
-      "end": 1746125696824,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696825,
-      "end": 1746125696825,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696825,
-      "end": 1746125696825,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696825,
-      "end": 1746125696825,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Test/lib/clearLocalStorageTestUnits.ts [vike:pluginModuleBanner] */\nexport const clearLocalStorageTestUnits = () => {\n  window.localStorage.removeItem(\"$currentPage\");\n  window.localStorage.removeItem(\"$currentProgress\");\n  window.localStorage.removeItem(\"$scaleForm\");\n  window.localStorage.removeItem(\"$surveyId\");\n};\n",
-      "start": 1746125696825,
-      "end": 1746125696825,
+      "result": "/*! src/entities/Test/lib/clearLocalStorageTestUnits.ts [vike:pluginModuleBanner] */\nexport const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem(\"$userId\");\n  window.localStorage.clear();\n  window.localStorage.setItem(\"$userId\", userId ?? \"\");\n};\n",
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Test/lib/clearLocalStorageTestUnits.ts"],
+        "sources": [
+          "src/entities/Test/lib/clearLocalStorageTestUnits.ts"
+        ],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC;"
       }
     }
   ]

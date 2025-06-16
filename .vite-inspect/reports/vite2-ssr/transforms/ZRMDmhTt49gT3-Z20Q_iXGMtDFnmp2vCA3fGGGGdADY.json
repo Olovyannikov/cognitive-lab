@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { restore } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\n\nexport const FaqModel = atom(() => {\n    const $faqItems = restore<FaqItem[]>(\n        getFAQQuery.finished.success.map(({ result }) => result.payload),\n        []\n    );\n\n    return {\n        $faqItems,\n    };\n});\n",
-      "start": 1746125696187,
-      "end": 1746125696240,
+      "start": 1750105187512,
+      "end": 1750105187574,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { restore } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\nexport const FaqModel = atom(() => {\n  const $faqItems = restore<FaqItem[]>(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});",
-      "start": 1746125696240,
-      "end": 1746125696241,
+      "start": 1750105187574,
+      "end": 1750105187575,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -31,7 +31,9 @@
           "name",
           "sid"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/model/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/model/index.ts"
+        ],
         "sourcesContent": [
           "import { restore } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\n\nexport const FaqModel = atom(() => {\n    const $faqItems = restore<FaqItem[]>(\n        getFAQQuery.finished.success.map(({ result }) => result.payload),\n        []\n    );\n\n    return {\n        $faqItems,\n    };\n});\n"
         ],
@@ -42,12 +44,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = atom(() => {\n  const $faqItems = restore(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});\n",
-      "start": 1746125696241,
-      "end": 1746125696350,
+      "start": 1750105187575,
+      "end": 1750105187672,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/model/index.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/model/index.ts"
+        ],
         "sourcesContent": [
           "import { restore } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\nexport const FaqModel = atom(() => {\n  const $faqItems = restore<FaqItem[]>(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});"
         ],
@@ -57,79 +61,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696350,
-      "end": 1746125696350,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696350,
-      "end": 1746125696350,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696350,
-      "end": 1746125696350,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696350,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/model/index.ts [vike:pluginModuleBanner] */\nimport { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = atom(() => {\n  const $faqItems = restore(getFAQQuery.finished.success.map(({\n    result\n  }) => result.payload), [], {\n    name: \"$faqItems\",\n    sid: \"-f1wks5\"\n  });\n  return {\n    $faqItems\n  };\n});\n",
-      "start": 1746125696351,
-      "end": 1746125696351,
+      "start": 1750105187672,
+      "end": 1750105187672,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/FAQ/model/index.ts"],
+        "sources": [
+          "src/entities/FAQ/model/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }

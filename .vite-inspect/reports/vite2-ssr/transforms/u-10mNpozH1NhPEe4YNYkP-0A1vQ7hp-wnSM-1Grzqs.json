@@ -3,35 +3,44 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n",
-      "start": 1746125696574,
-      "end": 1746125696611,
+      "result": "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n\nexport function is404Error(value: unknown): value is { error: { status: 404 } } {\n    return isObject(value) && 'error' in value && 'status' in (value.error as { error: { status: 404 } });\n}\n",
+      "start": 1750105187981,
+      "end": 1750105188019,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "result": "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}",
-      "start": 1746125696611,
-      "end": 1746125696612,
+      "result": "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value: unknown): value is {\n  error: {\n    status: 404;\n  };\n} {\n  return isObject(value) && 'error' in value && 'status' in (value.error as {\n    error: {\n      status: 404;\n    };\n  });\n}",
+      "start": 1750105188019,
+      "end": 1750105188020,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["isObject", "isErrorWithMessage", "value", "data", "message"],
+        "names": [
+          "isObject",
+          "isErrorWithMessage",
+          "value",
+          "data",
+          "message",
+          "is404Error",
+          "error",
+          "status"
+        ],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/type-guards/isErrorWithMessage.ts"
         ],
         "sourcesContent": [
-          "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n"
+          "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n\nexport function is404Error(value: unknown): value is { error: { status: 404 } } {\n    return isObject(value) && 'error' in value && 'status' in (value.error as { error: { status: 404 } });\n}\n"
         ],
-        "mappings": "AAAA,SAASA,QAAQ,QAAQ,WAAW;AAEpC,OAAO,SAASC,kBAAkBA,CAACC,KAAK,EAAE,OAAO,CAAC,EAAEA,KAAK,IAAI;EAAEC,IAAI,EAAE;IAAEC,OAAO,EAAE,MAAM;EAAC,CAAC;AAAC,CAAC,CAAC;EACvF,OAAOJ,QAAQ,CAACE,KAAK,CAAC,IAAI,MAAM,IAAIA,KAAK,IAAI,SAAS,IAAIA,KAAK;AACnE",
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,WAAW;AAEpC,OAAO,SAASC,kBAAkBA,CAACC,KAAK,EAAE,OAAO,CAAC,EAAEA,KAAK,IAAI;EAAEC,IAAI,EAAE;IAAEC,OAAO,EAAE,MAAM;EAAC,CAAC;AAAC,CAAC,CAAC;EACvF,OAAOJ,QAAQ,CAACE,KAAK,CAAC,IAAI,MAAM,IAAIA,KAAK,IAAI,SAAS,IAAIA,KAAK;AACnE;AAEA,OAAO,SAASG,UAAUA,CAACH,KAAK,EAAE,OAAO,CAAC,EAAEA,KAAK,IAAI;EAAEI,KAAK,EAAE;IAAEC,MAAM,EAAE,GAAG;EAAC,CAAC;AAAC,CAAC,CAAC;EAC5E,OAAOP,QAAQ,CAACE,KAAK,CAAC,IAAI,OAAO,IAAIA,KAAK,IAAI,QAAQ,KAAKA,KAAK,CAACI,KAAK,IAAI;IAAEA,KAAK,EAAE;MAAEC,MAAM,EAAE,GAAG;IAAC,CAAC;EAAC,CAAC,CAAC;AACzG",
         "ignoreList": []
       }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\n",
-      "start": 1746125696613,
-      "end": 1746125696861,
+      "result": "import { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\nexport function is404Error(value) {\n  return isObject(value) && \"error\" in value && \"status\" in value.error;\n}\n",
+      "start": 1750105188020,
+      "end": 1750105188277,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,89 +48,91 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/type-guards/isErrorWithMessage.ts"
         ],
         "sourcesContent": [
-          "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}"
+          "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value: unknown): value is {\n  error: {\n    status: 404;\n  };\n} {\n  return isObject(value) && 'error' in value && 'status' in (value.error as {\n    error: {\n      status: 404;\n    };\n  });\n}"
         ],
-        "mappings": "AAAA,SAAS,gBAAgB;AAClB,gBAAS,mBAAmB,OAIjC;AACA,SAAO,SAAS,KAAK,KAAK,UAAU,SAAS,aAAa;AAC5D;",
+        "mappings": "AAAA,SAAS,gBAAgB;AAClB,gBAAS,mBAAmB,OAIjC;AACA,SAAO,SAAS,KAAK,KAAK,UAAU,SAAS,aAAa;AAC5D;AACO,gBAAS,WAAW,OAIzB;AACA,SAAO,SAAS,KAAK,KAAK,WAAW,SAAS,YAAa,MAAM;AAKnE;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188277,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188277,
+      "end": 1750105188278,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188278,
+      "end": 1750105188278,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "start": 1750105188278,
+      "end": 1750105188278,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/lib/types/type-guards/isErrorWithMessage.ts [vike:pluginModuleBanner] */\nimport { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\n",
-      "start": 1746125696861,
-      "end": 1746125696861,
+      "result": "/*! src/shared/lib/types/type-guards/isErrorWithMessage.ts [vike:pluginModuleBanner] */\nimport { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\nexport function is404Error(value) {\n  return isObject(value) && \"error\" in value && \"status\" in value.error;\n}\n",
+      "start": 1750105188278,
+      "end": 1750105188278,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/lib/types/type-guards/isErrorWithMessage.ts"],
+        "sources": [
+          "src/shared/lib/types/type-guards/isErrorWithMessage.ts"
+        ],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE;"
       }
     }
   ]

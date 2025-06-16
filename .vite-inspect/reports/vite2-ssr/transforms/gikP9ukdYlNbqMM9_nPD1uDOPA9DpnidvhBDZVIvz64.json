@@ -1,0 +1,167 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/model/index.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { concurrency } from '@farfetched/core';\nimport { sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\n\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from '@/entities/Personality';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nexport const RootLayoutModel = atom(() => {\n    const RootLayoutGate = createGate();\n\n    sample({\n        clock: RootLayoutGate.open,\n        target: [\n            PersonalitiesModel.PersonalitiesInitialGate.open,\n            UserModel.UserGate.open,\n            ReportModel.ReportGate.open,\n        ],\n    });\n\n    sample({\n        clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        fn: noop,\n        target: getSurveysInfoQuery.start,\n    });\n\n    concurrency(getSurveysInfoQuery, {\n        strategy: 'TAKE_FIRST',\n    });\n\n    return {\n        RootLayoutGate,\n    };\n});\n",
+      "start": 1750105187459,
+      "end": 1750105187491,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { concurrency } from '@farfetched/core';\nimport { sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from '@/entities/Personality';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nexport const RootLayoutModel = atom(() => {\n  const RootLayoutGate = createGate({\n    and: [],\n    or: {\n      name: \"RootLayoutGate\",\n      sid: \"ntkxgz\"\n    }\n  });\n  sample({\n    and: [{\n      clock: RootLayoutGate.open,\n      target: [PersonalitiesModel.PersonalitiesInitialGate.open, UserModel.UserGate.open, ReportModel.ReportGate.open]\n    }],\n    or: {\n      sid: \"ojnhnr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"u738ei\",\n        fn: () => delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      fn: noop,\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"p05bgl\"\n    }\n  });\n  _withFactory({\n    sid: \"pezrhc\",\n    fn: () => concurrency(getSurveysInfoQuery, {\n      strategy: 'TAKE_FIRST'\n    }),\n    name: \"none\",\n    method: \"concurrency\"\n  });\n  return {\n    RootLayoutGate\n  };\n});",
+      "start": 1750105187491,
+      "end": 1750105187493,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "concurrency",
+          "sample",
+          "createGate",
+          "delay",
+          "atom",
+          "noop",
+          "getPersonalityTypesWithCategoriesQuery",
+          "PersonalitiesModel",
+          "getSurveysInfoQuery",
+          "ReportModel",
+          "UserModel",
+          "RootLayoutModel",
+          "RootLayoutGate",
+          "and",
+          "or",
+          "name",
+          "sid",
+          "clock",
+          "open",
+          "target",
+          "PersonalitiesInitialGate",
+          "UserGate",
+          "ReportGate",
+          "_withFactory",
+          "\"u738ei\"",
+          "fn",
+          "finished",
+          "success",
+          "\"clock\"",
+          "method",
+          "\"delay\"",
+          "start",
+          "\"pezrhc\"",
+          "strategy",
+          "\"none\"",
+          "\"concurrency\""
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/model/index.ts"
+        ],
+        "sourcesContent": [
+          "import { concurrency } from '@farfetched/core';\nimport { sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\n\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from '@/entities/Personality';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nexport const RootLayoutModel = atom(() => {\n    const RootLayoutGate = createGate();\n\n    sample({\n        clock: RootLayoutGate.open,\n        target: [\n            PersonalitiesModel.PersonalitiesInitialGate.open,\n            UserModel.UserGate.open,\n            ReportModel.ReportGate.open,\n        ],\n    });\n\n    sample({\n        clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        fn: noop,\n        target: getSurveysInfoQuery.start,\n    });\n\n    concurrency(getSurveysInfoQuery, {\n        strategy: 'TAKE_FIRST',\n    });\n\n    return {\n        RootLayoutGate,\n    };\n});\n"
+        ],
+        "mappings": ";AAAA,SAASA,WAAW,QAAQ,kBAAkB;AAC9C,SAASC,MAAM,QAAQ,UAAU;AACjC,SAASC,UAAU,QAAQ,gBAAgB;AAC3C,SAASC,KAAK,QAAQ,UAAU;AAEhC,SAASC,IAAI,QAAQ,oBAAoB;AACzC,SAASC,IAAI,QAAQ,cAAc;AAEnC,SAASC,sCAAsC,EAAEC,kBAAkB,QAAQ,wBAAwB;AACnG,SAASC,mBAAmB,EAAEC,WAAW,QAAQ,mBAAmB;AACpE,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,OAAO,MAAMC,eAAe,GAAGP,IAAI,CAAC,MAAM;EACtC,MAAMQ,cAAc,GAAGV,UAAU;IAAAW,GAAA;IAAAC,EAAA;MAAAC,IAAA;MAAAC,GAAA;IAAA;EAAA,CAAC,CAAC;EAEnCf,MAAM;IAAAY,GAAA,GAAC;MACHI,KAAK,EAAEL,cAAc,CAACM,IAAI;MAC1BC,MAAM,EAAE,CACJZ,kBAAkB,CAACa,wBAAwB,CAACF,IAAI,EAChDR,SAAS,CAACW,QAAQ,CAACH,IAAI,EACvBT,WAAW,CAACa,UAAU,CAACJ,IAAI;IAEnC,CAAC;IAAAJ,EAAA;MAAAE,GAAA;IAAA;EAAA,EAAC;EAEFf,MAAM;IAAAY,GAAA,GAAC;MACHI,KAAK,EAAAM,YAAA;QAAAP,GAAA,EAAAQ,QAAA;QAAAC,EAAA,EAAAA,CAAA,KAAEtB,KAAK,CAACG,sCAAsC,CAACoB,QAAQ,CAACC,OAAO,EAAE,GAAG,CAAC;QAAAZ,IAAA,EAAAa,OAAA;QAAAC,MAAA,EAAAC;MAAA;MAC1EL,EAAE,EAAEpB,IAAI;MACRc,MAAM,EAAEX,mBAAmB,CAACuB;IAChC,CAAC;IAAAjB,EAAA;MAAAE,GAAA;IAAA;EAAA,EAAC;EAEFO,YAAA;IAAAP,GAAA,EAAAgB,QAAA;IAAAP,EAAA,EAAAA,CAAA,KAAAzB,WAAW,CAACQ,mBAAmB,EAAE;MAC7ByB,QAAQ,EAAE;IACd,CAAC,CAAC;IAAAlB,IAAA,EAAAmB,MAAA;IAAAL,MAAA,EAAAM;EAAA;EAEF,OAAO;IACHvB;EACJ,CAAC;AACL,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { concurrency } from \"@farfetched/core\";\nimport { sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from \"@/entities/Personality\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nexport const RootLayoutModel = atom(() => {\n  const RootLayoutGate = createGate({\n    and: [],\n    or: {\n      name: \"RootLayoutGate\",\n      sid: \"ntkxgz\"\n    }\n  });\n  sample({\n    and: [{\n      clock: RootLayoutGate.open,\n      target: [PersonalitiesModel.PersonalitiesInitialGate.open, UserModel.UserGate.open, ReportModel.ReportGate.open]\n    }],\n    or: {\n      sid: \"ojnhnr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"u738ei\",\n        fn: () => delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      fn: noop,\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"p05bgl\"\n    }\n  });\n  _withFactory({\n    sid: \"pezrhc\",\n    fn: () => concurrency(getSurveysInfoQuery, {\n      strategy: \"TAKE_FIRST\"\n    }),\n    name: \"none\",\n    method: \"concurrency\"\n  });\n  return {\n    RootLayoutGate\n  };\n});\n",
+      "start": 1750105187493,
+      "end": 1750105187582,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/model/index.ts"
+        ],
+        "sourcesContent": [
+          "import { withFactory as _withFactory } from \"effector\";\nimport { concurrency } from '@farfetched/core';\nimport { sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { delay } from 'patronum';\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from '@/entities/Personality';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nexport const RootLayoutModel = atom(() => {\n  const RootLayoutGate = createGate({\n    and: [],\n    or: {\n      name: \"RootLayoutGate\",\n      sid: \"ntkxgz\"\n    }\n  });\n  sample({\n    and: [{\n      clock: RootLayoutGate.open,\n      target: [PersonalitiesModel.PersonalitiesInitialGate.open, UserModel.UserGate.open, ReportModel.ReportGate.open]\n    }],\n    or: {\n      sid: \"ojnhnr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"u738ei\",\n        fn: () => delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      fn: noop,\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"p05bgl\"\n    }\n  });\n  _withFactory({\n    sid: \"pezrhc\",\n    fn: () => concurrency(getSurveysInfoQuery, {\n      strategy: 'TAKE_FIRST'\n    }),\n    name: \"none\",\n    method: \"concurrency\"\n  });\n  return {\n    RootLayoutGate\n  };\n});"
+        ],
+        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,mBAAmB;AAC5B,SAAS,cAAc;AACvB,SAAS,kBAAkB;AAC3B,SAAS,aAAa;AACtB,SAAS,YAAY;AACrB,SAAS,YAAY;AACrB,SAAS,wCAAwC,0BAA0B;AAC3E,SAAS,qBAAqB,mBAAmB;AACjD,SAAS,iBAAiB;AACnB,aAAM,kBAAkB,KAAK,MAAM;AACxC,QAAM,iBAAiB,WAAW;AAAA,IAChC,KAAK,CAAC;AAAA,IACN,IAAI;AAAA,MACF,MAAM;AAAA,MACN,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,eAAe;AAAA,MACtB,QAAQ,CAAC,mBAAmB,yBAAyB,MAAM,UAAU,SAAS,MAAM,YAAY,WAAW,IAAI;AAAA,IACjH,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,aAAa;AAAA,QAClB,KAAK;AAAA,QACL,IAAI,MAAM,MAAM,uCAAuC,SAAS,SAAS,GAAG;AAAA,QAC5E,MAAM;AAAA,QACN,QAAQ;AAAA,MACV,CAAC;AAAA,MACD,IAAI;AAAA,MACJ,QAAQ,oBAAoB;AAAA,IAC9B,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,eAAa;AAAA,IACX,KAAK;AAAA,IACL,IAAI,MAAM,YAAY,qBAAqB;AAAA,MACzC,UAAU;AAAA,IACZ,CAAC;AAAA,IACD,MAAM;AAAA,IACN,QAAQ;AAAA,EACV,CAAC;AACD,SAAO;AAAA,IACL;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/widgets/RootLayout/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { concurrency } from \"@farfetched/core\";\nimport { sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { delay } from \"patronum\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalitiesModel } from \"@/entities/Personality\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nexport const RootLayoutModel = atom(() => {\n  const RootLayoutGate = createGate({\n    and: [],\n    or: {\n      name: \"RootLayoutGate\",\n      sid: \"ntkxgz\"\n    }\n  });\n  sample({\n    and: [{\n      clock: RootLayoutGate.open,\n      target: [PersonalitiesModel.PersonalitiesInitialGate.open, UserModel.UserGate.open, ReportModel.ReportGate.open]\n    }],\n    or: {\n      sid: \"ojnhnr\"\n    }\n  });\n  sample({\n    and: [{\n      clock: _withFactory({\n        sid: \"u738ei\",\n        fn: () => delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),\n        name: \"clock\",\n        method: \"delay\"\n      }),\n      fn: noop,\n      target: getSurveysInfoQuery.start\n    }],\n    or: {\n      sid: \"p05bgl\"\n    }\n  });\n  _withFactory({\n    sid: \"pezrhc\",\n    fn: () => concurrency(getSurveysInfoQuery, {\n      strategy: \"TAKE_FIRST\"\n    }),\n    name: \"none\",\n    method: \"concurrency\"\n  });\n  return {\n    RootLayoutGate\n  };\n});\n",
+      "start": 1750105187582,
+      "end": 1750105187582,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/widgets/RootLayout/model/index.ts"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,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"
+      }
+    }
+  ]
+}

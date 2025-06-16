@@ -4,20 +4,26 @@
     {
       "name": "vite:load-fallback",
       "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n",
-      "start": 1746125696871,
-      "end": 1746125696886,
+      "start": 1750105188292,
+      "end": 1750105188309,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const SCALE_RADIO_ITEMS = [{\n  value: '-3',\n  size: '50px'\n}, {\n  value: '-2',\n  size: '40px'\n}, {\n  value: '-1',\n  size: '30px'\n}, {\n  value: '0',\n  size: '20px'\n}, {\n  value: '1',\n  size: '30px'\n}, {\n  value: '2',\n  size: '40px'\n}, {\n  value: '3',\n  size: '50px'\n}];",
-      "start": 1746125696886,
-      "end": 1746125696886,
+      "start": 1750105188309,
+      "end": 1750105188309,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": ["SCALE_RADIO_ITEMS", "value", "size"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"],
+        "names": [
+          "SCALE_RADIO_ITEMS",
+          "value",
+          "size"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"
+        ],
         "sourcesContent": [
           "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n"
         ],
@@ -28,12 +34,14 @@
     {
       "name": "vite:esbuild",
       "result": "export const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
-      "start": 1746125696886,
-      "end": 1746125696974,
+      "start": 1750105188309,
+      "end": 1750105188425,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"
+        ],
         "sourcesContent": [
           "export const SCALE_RADIO_ITEMS = [{\n  value: '-3',\n  size: '50px'\n}, {\n  value: '-2',\n  size: '40px'\n}, {\n  value: '-1',\n  size: '30px'\n}, {\n  value: '0',\n  size: '20px'\n}, {\n  value: '1',\n  size: '30px'\n}, {\n  value: '2',\n  size: '40px'\n}, {\n  value: '3',\n  size: '50px'\n}];"
         ],
@@ -43,79 +51,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696974,
-      "end": 1746125696974,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/constants.ts [vike:pluginModuleBanner] */\nexport const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
-      "start": 1746125696975,
-      "end": 1746125696975,
+      "start": 1750105188425,
+      "end": 1750105188425,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/entities/Test/lib/constants.ts"],
+        "sources": [
+          "src/entities/Test/lib/constants.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC;"
       }

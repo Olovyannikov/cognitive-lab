@@ -1,0 +1,143 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/CongratulationsPage/index.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react/effector-react.umd';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getFreeResultQuery } from '@/entities/Report';\n\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\n\nexport const CongratulationsPage = () => {\n    const { pending, stale } = useUnit(getFreeResultQuery);\n\n    if (stale || pending) return <PageLoader />;\n\n    return (\n        <Box component='section'>\n            <Container py='lg'>\n                <CongratulationsProvider>\n                    <FirstSlide />\n                    <SecondSlide />\n                    <LastSlide />\n                </CongratulationsProvider>\n            </Container>\n        </Box>\n    );\n};\n",
+      "start": 1750105187450,
+      "end": 1750105187484,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react/effector-react.umd';\nimport { PageLoader } from '@/shared/ui';\nimport { getFreeResultQuery } from '@/entities/Report';\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\nexport const CongratulationsPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getFreeResultQuery);\n  if (stale || pending) return <PageLoader />;\n  return <Box component='section'>\n            <Container py='lg'>\n                <CongratulationsProvider>\n                    <FirstSlide />\n                    <SecondSlide />\n                    <LastSlide />\n                </CongratulationsProvider>\n            </Container>\n        </Box>;\n};",
+      "start": 1750105187484,
+      "end": 1750105187485,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Box",
+          "Container",
+          "useUnit",
+          "PageLoader",
+          "getFreeResultQuery",
+          "CongratulationsProvider",
+          "FirstSlide",
+          "LastSlide",
+          "SecondSlide",
+          "CongratulationsPage",
+          "pending",
+          "stale"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/CongratulationsPage/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react/effector-react.umd';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getFreeResultQuery } from '@/entities/Report';\n\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\n\nexport const CongratulationsPage = () => {\n    const { pending, stale } = useUnit(getFreeResultQuery);\n\n    if (stale || pending) return <PageLoader />;\n\n    return (\n        <Box component='section'>\n            <Container py='lg'>\n                <CongratulationsProvider>\n                    <FirstSlide />\n                    <SecondSlide />\n                    <LastSlide />\n                </CongratulationsProvider>\n            </Container>\n        </Box>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,GAAG,EAAEC,SAAS,QAAQ,eAAe;AAC9C,SAASC,OAAO,QAAQ,mCAAmC;AAE3D,SAASC,UAAU,QAAQ,aAAa;AAExC,SAASC,kBAAkB,QAAQ,mBAAmB;AAEtD,SAASC,uBAAuB,EAAEC,UAAU,EAAEC,SAAS,EAAEC,WAAW,QAAQ,iCAAiC;AAE7G,OAAO,MAAMC,mBAAmB,GAAGA,CAAA,KAAM;EACrC,MAAM;IAAEC,OAAO;IAAEC;EAAM,CAAC,GAAGT,OAAO,CAACE,kBAAkB,CAAC;EAEtD,IAAIO,KAAK,IAAID,OAAO,EAAE,OAAO,CAAC,UAAU,GAAG;EAE3C,OACI,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS;AAChC,YAAY,CAAC,SAAS,CAAC,EAAE,CAAC,IAAI;AAC9B,gBAAgB,CAAC,uBAAuB;AACxC,oBAAoB,CAAC,UAAU;AAC/B,oBAAoB,CAAC,WAAW;AAChC,oBAAoB,CAAC,SAAS;AAC9B,gBAAgB,EAAE,uBAAuB;AACzC,YAAY,EAAE,SAAS;AACvB,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useUnit } from \"effector-react/effector-react.umd\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getFreeResultQuery } from \"@/entities/Report\";\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from \"@/widgets/CongratulationsSlider\";\nexport const CongratulationsPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getFreeResultQuery);\n  if (stale || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { py: \"lg\", children: /* @__PURE__ */ jsxs(CongratulationsProvider, { children: [\n    /* @__PURE__ */ jsx(FirstSlide, {}),\n    /* @__PURE__ */ jsx(SecondSlide, {}),\n    /* @__PURE__ */ jsx(LastSlide, {})\n  ] }) }) });\n};\n",
+      "start": 1750105187485,
+      "end": 1750105187502,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/CongratulationsPage/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react/effector-react.umd';\nimport { PageLoader } from '@/shared/ui';\nimport { getFreeResultQuery } from '@/entities/Report';\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\nexport const CongratulationsPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getFreeResultQuery);\n  if (stale || pending) return <PageLoader />;\n  return <Box component='section'>\n            <Container py='lg'>\n                <CongratulationsProvider>\n                    <FirstSlide />\n                    <SecondSlide />\n                    <LastSlide />\n                </CongratulationsProvider>\n            </Container>\n        </Box>;\n};"
+        ],
+        "mappings": "AAU+B,cAGf,YAHe;AAV/B,SAAS,KAAK,iBAAiB;AAC/B,SAAS,eAAe;AACxB,SAAS,kBAAkB;AAC3B,SAAS,0BAA0B;AACnC,SAAS,yBAAyB,YAAY,WAAW,mBAAmB;AACrE,aAAM,sBAAsB,MAAM;AACvC,QAAM;AAAA,IACJ;AAAA,IACA;AAAA,EACF,IAAI,QAAQ,kBAAkB;AAC9B,MAAI,SAAS,QAAS,QAAO,oBAAC,cAAW;AACzC,SAAO,oBAAC,OAAI,WAAU,WACZ,8BAAC,aAAU,IAAG,MACV,+BAAC,2BACG;AAAA,wBAAC,cAAW;AAAA,IACZ,oBAAC,eAAY;AAAA,IACb,oBAAC,aAAU;AAAA,KACf,GACJ,GACJ;AACR;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105187502,
+      "end": 1750105187502,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105187502,
+      "end": 1750105187503,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105187503,
+      "end": 1750105187503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105187503,
+      "end": 1750105187503,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105187503,
+      "end": 1750105187503,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/pages/CongratulationsPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useUnit } from \"effector-react/effector-react.umd\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getFreeResultQuery } from \"@/entities/Report\";\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from \"@/widgets/CongratulationsSlider\";\nexport const CongratulationsPage = () => {\n  const {\n    pending,\n    stale\n  } = useUnit(getFreeResultQuery);\n  if (stale || pending) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { py: \"lg\", children: /* @__PURE__ */ jsxs(CongratulationsProvider, { children: [\n    /* @__PURE__ */ jsx(FirstSlide, {}),\n    /* @__PURE__ */ jsx(SecondSlide, {}),\n    /* @__PURE__ */ jsx(LastSlide, {})\n  ] }) }) });\n};\n",
+      "start": 1750105187503,
+      "end": 1750105187503,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/pages/CongratulationsPage/index.tsx"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    }
+  ]
+}

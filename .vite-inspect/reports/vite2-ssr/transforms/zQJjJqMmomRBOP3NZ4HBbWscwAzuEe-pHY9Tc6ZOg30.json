@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\n\nimport { InnerContainer, Picture } from '@/shared/ui';\n\nimport s from './InnerLayout.module.css';\n\ninterface InnerLayoutProps {\n    image?: string;\n    text?: ReactNode;\n    title?: ReactNode;\n    navigateTo?: string;\n    className?: string;\n    maw?: number;\n}\n\nexport const InnerLayout = ({\n    text,\n    title,\n    image,\n    children,\n    className,\n    maw = 538,\n}: PropsWithChildren<InnerLayoutProps>) => (\n    <Box component='section' className={className}>\n        <Container pb={80}>\n            <InnerContainer className={s.wrapper}>\n                {image && <Picture src={image} w={140} h={140} flex='auto' />}\n                <Stack w='100%' maw={maw} mx='auto'>\n                    <Title order={2} className={s.title} hidden={!title}>\n                        {title}\n                    </Title>\n                    <Text className={s.text} hidden={!text}>\n                        {text}\n                    </Text>\n                    {children}\n                </Stack>\n            </InnerContainer>\n        </Container>\n    </Box>\n);\n",
-      "start": 1746125696153,
-      "end": 1746125696189,
+      "start": 1750105187611,
+      "end": 1750105187645,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\ninterface InnerLayoutProps {\n  image?: string;\n  text?: ReactNode;\n  title?: ReactNode;\n  navigateTo?: string;\n  className?: string;\n  maw?: number;\n}\nexport const InnerLayout = ({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}: PropsWithChildren<InnerLayoutProps>) => <Box component='section' className={className}>\n        <Container pb={80}>\n            <InnerContainer className={s.wrapper}>\n                {image && <Picture src={image} w={140} h={140} flex='auto' />}\n                <Stack w='100%' maw={maw} mx='auto'>\n                    <Title order={2} className={s.title} hidden={!title}>\n                        {title}\n                    </Title>\n                    <Text className={s.text} hidden={!text}>\n                        {text}\n                    </Text>\n                    {children}\n                </Stack>\n            </InnerContainer>\n        </Container>\n    </Box>;",
-      "start": 1746125696189,
-      "end": 1746125696194,
+      "start": 1750105187645,
+      "end": 1750105187646,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -38,7 +38,9 @@
           "children",
           "wrapper"
         ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\n\nimport { InnerContainer, Picture } from '@/shared/ui';\n\nimport s from './InnerLayout.module.css';\n\ninterface InnerLayoutProps {\n    image?: string;\n    text?: ReactNode;\n    title?: ReactNode;\n    navigateTo?: string;\n    className?: string;\n    maw?: number;\n}\n\nexport const InnerLayout = ({\n    text,\n    title,\n    image,\n    children,\n    className,\n    maw = 538,\n}: PropsWithChildren<InnerLayoutProps>) => (\n    <Box component='section' className={className}>\n        <Container pb={80}>\n            <InnerContainer className={s.wrapper}>\n                {image && <Picture src={image} w={140} h={140} flex='auto' />}\n                <Stack w='100%' maw={maw} mx='auto'>\n                    <Title order={2} className={s.title} hidden={!title}>\n                        {title}\n                    </Title>\n                    <Text className={s.text} hidden={!text}>\n                        {text}\n                    </Text>\n                    {children}\n                </Stack>\n            </InnerContainer>\n        </Container>\n    </Box>\n);\n"
         ],
@@ -49,12 +51,14 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = ({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", className, children: /* @__PURE__ */ jsx(Container, { pb: 80, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.wrapper, children: [\n  image && /* @__PURE__ */ jsx(Picture, { src: image, w: 140, h: 140, flex: \"auto\" }),\n  /* @__PURE__ */ jsxs(Stack, { w: \"100%\", maw, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, hidden: !title, children: title }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, hidden: !text, children: text }),\n    children\n  ] })\n] }) }) });\n",
-      "start": 1746125696194,
-      "end": 1746125696288,
+      "start": 1750105187646,
+      "end": 1750105187799,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"
+        ],
         "sourcesContent": [
           "import type { PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\ninterface InnerLayoutProps {\n  image?: string;\n  text?: ReactNode;\n  title?: ReactNode;\n  navigateTo?: string;\n  className?: string;\n  maw?: number;\n}\nexport const InnerLayout = ({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}: PropsWithChildren<InnerLayoutProps>) => <Box component='section' className={className}>\n        <Container pb={80}>\n            <InnerContainer className={s.wrapper}>\n                {image && <Picture src={image} w={140} h={140} flex='auto' />}\n                <Stack w='100%' maw={maw} mx='auto'>\n                    <Title order={2} className={s.title} hidden={!title}>\n                        {title}\n                    </Title>\n                    <Text className={s.text} hidden={!text}>\n                        {text}\n                    </Text>\n                    {children}\n                </Stack>\n            </InnerContainer>\n        </Container>\n    </Box>;"
         ],
@@ -64,79 +68,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187799,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187799,
+      "end": 1750105187800,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187800,
+      "end": 1750105187800,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187800,
+      "end": 1750105187800,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/InnerLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = ({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", className, children: /* @__PURE__ */ jsx(Container, { pb: 80, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.wrapper, children: [\n  image && /* @__PURE__ */ jsx(Picture, { src: image, w: 140, h: 140, flex: \"auto\" }),\n  /* @__PURE__ */ jsxs(Stack, { w: \"100%\", maw, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, hidden: !title, children: title }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, hidden: !text, children: text }),\n    children\n  ] })\n] }) }) });\n",
-      "start": 1746125696288,
-      "end": 1746125696288,
+      "start": 1750105187800,
+      "end": 1750105187800,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/InnerLayout/index.tsx"],
+        "sources": [
+          "src/widgets/InnerLayout/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

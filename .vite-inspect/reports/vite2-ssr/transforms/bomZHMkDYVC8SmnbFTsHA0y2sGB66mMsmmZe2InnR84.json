@@ -3,98 +3,100 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": ".root {\n  position: relative;\n\n  @mixin larger-than 1200px {\n    order: 1;\n    max-height: 45px;\n  }\n}\n\n.link {\n  align-items: center;\n  padding: 8px 10px;\n  width: max-content;\n  min-height: 48px;\n  text-decoration: none;\n  color: var(--mantine-color-gray-9);\n  transition: 0.15s ease-in-out background-color;\n\n  @mixin larger-than 1200px {\n    min-width: 205px;\n    font-size: 16px;\n    padding-inline: 22px;\n\n    span {\n      overflow: visible;\n    }\n  }\n}\n\n.link.loaded svg {\n  transition: rotate 0.3s ease-in-out;\n  translate: 0 8%;\n\n  &.rotate {\n    rotate: -180deg;\n  }\n\n  @mixin larger-than 992px {\n    translate: 0;\n  }\n}\n\n.buttonGroup {\n  align-items: center;\n  gap: 10px;\n}\n\n.pill {\n  color: var(--mantine-color-white);\n  background-color: var(--mantine-color-gray-8);\n\n  span {\n    font-weight: 700;\n    line-height: 20px;\n  }\n\n  button:hover & {\n    background-color: var(--mantine-color-violet-7);\n  }\n}\n\n.collapse {\n  padding: 0;\n  background: var(--mantine-color-white);\n\n  @mixin larger-than 1200px {\n    position: absolute;\n    right: 0;\n    top: calc(2.5rem + 8px);\n    border: 1px solid var(--mantine-color-gray-4);\n    border-radius: 4px;\n    padding: 16px 16px 0;\n    min-width: 240px;\n    box-shadow:\n      0 1px 3px 0 #0000000d,\n      0 10px 15px -5px #0000000d,\n      0 7px 7px -5px #0000000a;\n    padding-inline: var(--mantine-spacing-md);\n  }\n}\n\n.category {\n  overflow: hidden;\n  padding: 12px;\n\n  @mixin larger-than 1200px {\n    overflow: hidden;\n    padding: 0;\n  }\n}\n",
-      "start": 1746125696996,
-      "end": 1746125697018,
+      "result": ".root {\n  position: relative;\n\n  @mixin larger-than 1200px {\n    order: 1;\n    max-height: 45px;\n  }\n}\n\n.link {\n  align-items: center;\n  padding: 8px 10px;\n  width: max-content;\n  min-height: 48px;\n  text-decoration: none;\n  color: var(--mantine-color-gray-9);\n  transition: 0.15s ease-in-out background-color;\n\n  @mixin larger-than 1200px {\n    min-width: 205px;\n    font-size: 16px;\n    padding-inline: 22px;\n\n    span {\n      overflow: visible;\n    }\n  }\n}\n\n.link.loaded svg {\n  transition: rotate 0.3s ease-in-out;\n  translate: 0 8%;\n\n  &.rotate {\n    rotate: -180deg;\n  }\n\n  @mixin larger-than 992px {\n    translate: 0;\n  }\n}\n\n.buttonGroup {\n  align-items: center;\n  gap: 10px;\n}\n\n.pill {\n  color: var(--mantine-color-white);\n  background-color: var(--mantine-color-gray-8);\n\n  span {\n    font-weight: 700;\n  }\n\n  button:hover & {\n    background-color: var(--mantine-color-violet-7);\n  }\n}\n\n.collapse {\n  padding: 0;\n  background: var(--mantine-color-white);\n\n  @mixin larger-than 1200px {\n    position: absolute;\n    right: 0;\n    top: calc(2.5rem + 8px);\n    border: 1px solid var(--mantine-color-gray-4);\n    border-radius: 4px;\n    padding: 16px 16px 0;\n    min-width: 240px;\n    box-shadow:\n      0 1px 3px 0 #0000000d,\n      0 10px 15px -5px #0000000d,\n      0 7px 7px -5px #0000000a;\n    padding-inline: var(--mantine-spacing-md);\n  }\n}\n\n.category {\n  overflow: hidden;\n  padding: 12px;\n\n  @mixin larger-than 1200px {\n    overflow: hidden;\n    padding: 0;\n  }\n}\n",
+      "start": 1750105188471,
+      "end": 1750105188485,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125697018,
-      "end": 1746125697018,
+      "start": 1750105188485,
+      "end": 1750105188485,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188487,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188487,
+      "end": 1750105188488,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/Reports.module.css [vike:pluginModuleBanner] */\nexport const root = \"MNoiT\";\nexport const link = \"qArP0\";\nexport const loaded = \"_5AYRx\";\nexport const rotate = \"pkuWS\";\nexport const buttonGroup = \"MU-3W\";\nexport const pill = \"pvpxX\";\nexport const collapse = \"g7831\";\nexport const category = \"d-mUn\";\nexport default {\n\troot: root,\n\tlink: link,\n\tloaded: loaded,\n\trotate: rotate,\n\tbuttonGroup: buttonGroup,\n\tpill: pill,\n\tcollapse: collapse,\n\tcategory: category\n};\n",
-      "start": 1746125697021,
-      "end": 1746125697021,
+      "start": 1750105188488,
+      "end": 1750105188488,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/Reports.module.css"],
+        "sources": [
+          "src/widgets/RootLayout/ui/Navigation/Reports/Reports.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC;"
       }

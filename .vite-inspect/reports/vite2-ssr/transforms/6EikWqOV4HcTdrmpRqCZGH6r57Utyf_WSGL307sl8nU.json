@@ -4,97 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".title {\n  --s: 1px; /* the thickness */\n  --c: var(--mantine-color-gray-3); /* the color */\n  --w: calc(100vw - 8px); /* the width */\n  --g: 2px; /* the gap */\n\n  position: relative;\n  z-index: 1;\n  margin: 0;\n  border-image: linear-gradient(#0000 calc(49% - var(--s) / 2), var(--c) 0 calc(50% + var(--s) / 2), #0000 0) 0 1/0\n    var(--w) / 0 calc(var(--w) + var(--g));\n  width: fit-content;\n  font-size: 14px;\n  color: var(--mantine-color-gray-6);\n  background-color: #fff;\n\n  @mixin larger-than 992px {\n    --w: calc(100vw);\n    --g: 2px;\n\n    left: 10px;\n  }\n}\n",
-      "start": 1746125697026,
-      "end": 1746125697029,
+      "start": 1750105188497,
+      "end": 1750105188501,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125697029,
-      "end": 1746125697029,
+      "start": 1750105188501,
+      "end": 1750105188501,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/ReportGroupTemplate.module.css [vike:pluginModuleBanner] */\nexport const title = \"_1Q6R4\";\nexport default {\n\ttitle: title\n};\n",
-      "start": 1746125697030,
-      "end": 1746125697030,
+      "start": 1750105188502,
+      "end": 1750105188502,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/ReportGroupTemplate.module.css"],
+        "sources": [
+          "src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/ReportGroupTemplate.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
       }

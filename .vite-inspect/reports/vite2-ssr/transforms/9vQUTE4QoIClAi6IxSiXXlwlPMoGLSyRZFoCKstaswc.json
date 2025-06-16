@@ -1,0 +1,145 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/testEmailFormModel.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\n\nimport { atom } from '@/shared/factories';\n\nexport const TestEmailFormModel = atom(() => {\n    const form = createForm({\n        schema: {\n            email: '',\n            approve_subscription: Boolean(false),\n        },\n        validation: zodAdapter(\n            z.object({\n                email: z.string().email(),\n                approve_subscription: z.boolean(),\n            })\n        ),\n    });\n\n    return {\n        form,\n    };\n});\n",
+      "start": 1750105187623,
+      "end": 1750105187667,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-babel",
+      "result": "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\nimport { atom } from '@/shared/factories';\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: '',\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});",
+      "start": 1750105187667,
+      "end": 1750105187668,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createForm",
+          "zodAdapter",
+          "z",
+          "atom",
+          "TestEmailFormModel",
+          "form",
+          "schema",
+          "email",
+          "approve_subscription",
+          "Boolean",
+          "validation",
+          "object",
+          "string",
+          "boolean"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/testEmailFormModel.ts"
+        ],
+        "sourcesContent": [
+          "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\n\nimport { atom } from '@/shared/factories';\n\nexport const TestEmailFormModel = atom(() => {\n    const form = createForm({\n        schema: {\n            email: '',\n            approve_subscription: Boolean(false),\n        },\n        validation: zodAdapter(\n            z.object({\n                email: z.string().email(),\n                approve_subscription: z.boolean(),\n            })\n        ),\n    });\n\n    return {\n        form,\n    };\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,UAAU,QAAQ,uBAAuB;AAClD,SAASC,UAAU,QAAQ,sBAAsB;AACjD,SAASC,CAAC,QAAQ,KAAK;AAEvB,SAASC,IAAI,QAAQ,oBAAoB;AAEzC,OAAO,MAAMC,kBAAkB,GAAGD,IAAI,CAAC,MAAM;EACzC,MAAME,IAAI,GAAGL,UAAU,CAAC;IACpBM,MAAM,EAAE;MACJC,KAAK,EAAE,EAAE;MACTC,oBAAoB,EAAEC,OAAO,CAAC,KAAK;IACvC,CAAC;IACDC,UAAU,EAAET,UAAU,CAClBC,CAAC,CAACS,MAAM,CAAC;MACLJ,KAAK,EAAEL,CAAC,CAACU,MAAM,CAAC,CAAC,CAACL,KAAK,CAAC,CAAC;MACzBC,oBAAoB,EAAEN,CAAC,CAACW,OAAO,CAAC;IACpC,CAAC,CACL;EACJ,CAAC,CAAC;EAEF,OAAO;IACHR;EACJ,CAAC;AACL,CAAC,CAAC",
+        "ignoreList": []
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: \"\",\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});\n",
+      "start": 1750105187668,
+      "end": 1750105187827,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/testEmailFormModel.ts"
+        ],
+        "sourcesContent": [
+          "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\nimport { atom } from '@/shared/factories';\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: '',\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});"
+        ],
+        "mappings": "AAAA,SAAS,kBAAkB;AAC3B,SAAS,kBAAkB;AAC3B,SAAS,SAAS;AAClB,SAAS,YAAY;AACd,aAAM,qBAAqB,KAAK,MAAM;AAC3C,QAAM,OAAO,WAAW;AAAA,IACtB,QAAQ;AAAA,MACN,OAAO;AAAA,MACP,sBAAsB,QAAQ,KAAK;AAAA,IACrC;AAAA,IACA,YAAY,WAAW,EAAE,OAAO;AAAA,MAC9B,OAAO,EAAE,OAAO,EAAE,MAAM;AAAA,MACxB,sBAAsB,EAAE,QAAQ;AAAA,IAClC,CAAC,CAAC;AAAA,EACJ,CAAC;AACD,SAAO;AAAA,IACL;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:fileEnv",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:extractAssets:remove-javaScript",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "post"
+    },
+    {
+      "name": "vike:extractExportNames",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "post"
+    },
+    {
+      "name": "vike:envVars",
+      "start": 1750105187827,
+      "end": 1750105187827,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750105187827,
+      "end": 1750105187828,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750105187828,
+      "end": 1750105187828,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750105187828,
+      "end": 1750105187828,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginModuleBanner",
+      "result": "/*! src/entities/Test/model/testEmailFormModel.ts [vike:pluginModuleBanner] */\nimport { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: \"\",\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});\n",
+      "start": 1750105187828,
+      "end": 1750105187828,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "src/entities/Test/model/testEmailFormModel.ts"
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
+      }
+    }
+  ]
+}

@@ -4,97 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgCloud = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 474 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 213, height: 213, x: 86, y: 121, fill: \"currentColor\", rx: 106.934 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 214, height: 214, x: 192, y: 38, fill: \"currentColor\", rx: 107 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 188, height: 188, x: 348, y: 45, fill: \"currentColor\", rx: 94.232 }));\nexport default SvgCloud;\n",
-      "start": 1746125696812,
-      "end": 1746125696959,
+      "start": 1750105188083,
+      "end": 1750105188292,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/assets/icons/cloud.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgCloud = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 474 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 213, height: 213, x: 86, y: 121, fill: \"currentColor\", rx: 106.934 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 214, height: 214, x: 192, y: 38, fill: \"currentColor\", rx: 107 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 188, height: 188, x: 348, y: 45, fill: \"currentColor\", rx: 94.232 }));\nexport default SvgCloud;\n",
-      "start": 1746125696959,
-      "end": 1746125696959,
+      "start": 1750105188292,
+      "end": 1750105188292,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/shared/assets/icons/cloud.svg?react"],
+        "sources": [
+          "src/shared/assets/icons/cloud.svg?react"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9gB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

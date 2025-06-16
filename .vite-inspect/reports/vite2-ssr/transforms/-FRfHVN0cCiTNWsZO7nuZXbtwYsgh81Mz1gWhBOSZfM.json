@@ -4,21 +4,25 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Card';\n",
-      "start": 1746125696644,
-      "end": 1746125696670,
+      "start": 1750105188318,
+      "end": 1750105188342,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Card';",
-      "start": 1746125696670,
-      "end": 1746125696671,
+      "start": 1750105188342,
+      "end": 1750105188343,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/ui/index.ts"],
-        "sourcesContent": ["export * from './Card';\n"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/ui/index.ts"
+        ],
+        "sourcesContent": [
+          "export * from './Card';\n"
+        ],
         "mappings": "AAAA,cAAc,QAAQ",
         "ignoreList": []
       }
@@ -26,92 +30,98 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Card\";\n",
-      "start": 1746125696671,
-      "end": 1746125696870,
+      "start": 1750105188343,
+      "end": 1750105188429,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/ui/index.ts"],
-        "sourcesContent": ["export * from './Card';"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/ui/index.ts"
+        ],
+        "sourcesContent": [
+          "export * from './Card';"
+        ],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1746125696870,
-      "end": 1746125696870,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696870,
-      "end": 1746125696870,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696870,
-      "end": 1746125696870,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Card\";\n",
-      "start": 1746125696871,
-      "end": 1746125696871,
+      "start": 1750105188429,
+      "end": 1750105188429,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/Test/SplashScreen/ui/index.ts"],
+        "sources": [
+          "src/widgets/Test/SplashScreen/ui/index.ts"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

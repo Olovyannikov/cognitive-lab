@@ -4,97 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".flex {\n  flex-direction: column;\n\n  @mixin larger-than 992px {\n    flex-direction: row;\n    gap: 32px;\n  }\n}\n\n.union {\n  position: absolute;\n  left: 1.8rem;\n  top: 12%;\n  z-index: -1;\n  display: none;\n  height: 210px;\n\n  @mixin larger-than 992px {\n    display: block;\n  }\n}\n",
-      "start": 1746125696680,
-      "end": 1746125696712,
+      "start": 1750105188211,
+      "end": 1750105188225,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1746125696712,
-      "end": 1746125696712,
+      "start": 1750105188225,
+      "end": 1750105188225,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188226,
+      "end": 1750105188226,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/Tariffs/Tafiffs.module.css [vike:pluginModuleBanner] */\nexport const flex = \"_3qVBQ\";\nexport const union = \"cKQ-a\";\nexport default {\n\tflex: flex,\n\tunion: union\n};\n",
-      "start": 1746125696713,
-      "end": 1746125696713,
+      "start": 1750105188227,
+      "end": 1750105188227,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/pages/IndexPage/ui/Tariffs/Tafiffs.module.css"],
+        "sources": [
+          "src/pages/IndexPage/ui/Tariffs/Tafiffs.module.css"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
       }

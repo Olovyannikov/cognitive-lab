@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Tariffs = () => {\n    const { urlPathname } = usePageContext();\n\n    const isMainPage = urlPathname === '/';\n\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>\n    );\n};\n",
-      "start": 1746125696956,
-      "end": 1746125696972,
+      "start": 1750105188428,
+      "end": 1750105188444,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === '/';\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>;\n};",
-      "start": 1746125696972,
-      "end": 1746125696973,
+      "start": 1750105188444,
+      "end": 1750105188445,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -40,8 +40,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: isMainPage ? \"#tariffs\" : \"/#tariffs\", onClick: () => onClose(false), children: \"Тарифы\" });\n};\n",
-      "start": 1746125696973,
-      "end": 1746125696989,
+      "start": 1750105188445,
+      "end": 1750105188471,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -57,79 +57,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188471,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188471,
+      "end": 1750105188472,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188472,
+      "end": 1750105188472,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1746125696989,
-      "end": 1746125696989,
+      "start": 1750105188472,
+      "end": 1750105188472,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: isMainPage ? \"#tariffs\" : \"/#tariffs\", onClick: () => onClose(false), children: \"Тарифы\" });\n};\n",
-      "start": 1746125696989,
-      "end": 1746125696990,
+      "start": 1750105188472,
+      "end": 1750105188472,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": ["src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx"],
+        "sources": [
+          "src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx"
+        ],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtI,CAAC;"
       }
