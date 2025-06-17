@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".box {\n  display: grid;\n  grid-template-areas:\n    \"image\"\n    \"title\"\n    \"text\"\n    \"action\";\n\n  @mixin larger-than 998px {\n    grid-auto-rows: 0fr;\n    grid-template-areas:\n      \"title image\"\n      \"text  image\"\n      \"action image\";\n    grid-template-rows: 0fr;\n    margin: 120px auto 0;\n    max-width: 883px;\n  }\n}\n\n.image {\n  grid-area: image;\n  margin-bottom: var(--mantine-spacing-sm);\n\n  @mixin larger-than 998px {\n    margin-bottom: var(--mantine-spacing-md);\n    margin-left: 60px;\n  }\n}\n\n.title {\n  grid-area: title;\n  margin-bottom: var(--mantine-spacing-sm);\n  text-align: center;\n\n  @mixin larger-than 998px {\n    font-size: 40px;\n    text-align: left;\n  }\n}\n\n.text {\n  grid-area: text;\n  margin-bottom: var(--mantine-spacing-md);\n}\n\n.action {\n  grid-area: action;\n\n  &:empty {\n    display: none;\n  }\n}\n",
-      "start": 1750105188138,
-      "end": 1750105188160,
+      "start": 1750184199328,
+      "end": 1750184199362,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199362,
+      "end": 1750184199362,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormSuccessScreen/FormSuccessScreen.module.css [vike:pluginModuleBanner] */\nexport const box = \"xYKCJ\";\nexport const image = \"bJV9c\";\nexport const title = \"lKo1A\";\nexport const text = \"DX9b0\";\nexport const action = \"Udkke\";\nexport default {\n\tbox: box,\n\timage: image,\n\ttitle: title,\n\ttext: text,\n\taction: action\n};\n",
-      "start": 1750105188161,
-      "end": 1750105188161,
+      "start": 1750184199363,
+      "end": 1750184199363,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/ui/FormSuccessScreen/FormSuccessScreen.module.css"
-        ],
+        "sources": ["src/shared/ui/FormSuccessScreen/FormSuccessScreen.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC;"
       }

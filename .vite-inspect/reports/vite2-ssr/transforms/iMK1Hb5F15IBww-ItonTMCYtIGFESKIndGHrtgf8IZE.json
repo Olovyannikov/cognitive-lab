@@ -4,99 +4,97 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgSemiCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 108 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 252, height: 252, x: -144, y: -24, fill: \"currentColor\", rx: 126 }));\nexport default SvgSemiCircle;\n",
-      "start": 1750105188083,
-      "end": 1750105188292,
+      "start": 1750184199433,
+      "end": 1750184199595,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199595,
+      "end": 1750184199595,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199596,
+      "end": 1750184199596,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199596,
+      "end": 1750184199596,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/assets/icons/semi-circle.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgSemiCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 108 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 252, height: 252, x: -144, y: -24, fill: \"currentColor\", rx: 126 }));\nexport default SvgSemiCircle;\n",
-      "start": 1750105188292,
-      "end": 1750105188292,
+      "start": 1750184199596,
+      "end": 1750184199596,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/assets/icons/semi-circle.svg?react"
-        ],
+        "sources": ["src/shared/assets/icons/semi-circle.svg?react"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9R,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

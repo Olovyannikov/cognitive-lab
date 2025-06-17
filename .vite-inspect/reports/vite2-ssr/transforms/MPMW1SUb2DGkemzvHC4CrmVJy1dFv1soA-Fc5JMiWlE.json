@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { PersonalityTypesResponse } from './dto';\n\nexport const getPersonalityTypesWithCategoriesQuery = createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n        url: API.surveys.personalityTypes,\n    })),\n    initialData: [],\n});\n",
-      "start": 1750105187497,
-      "end": 1750105187549,
+      "start": 1750184198835,
+      "end": 1750184198854,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { PersonalityTypesResponse } from './dto';\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1750105187549,
-      "end": 1750105187550,
+      "start": 1750184198854,
+      "end": 1750184198855,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -36,9 +36,7 @@
           "method",
           "\"createQuery\""
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/api/index.ts"],
         "sourcesContent": [
           "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { PersonalityTypesResponse } from './dto';\n\nexport const getPersonalityTypesWithCategoriesQuery = createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n        url: API.surveys.personalityTypes,\n    })),\n    initialData: [],\n});\n"
         ],
@@ -49,14 +47,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750105187550,
-      "end": 1750105187651,
+      "start": 1750184198855,
+      "end": 1750184198952,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/api/index.ts"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { PersonalityTypesResponse } from './dto';\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, PersonalityTypesResponse[]>(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});"
         ],
@@ -66,81 +62,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187651,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getPersonalityTypesWithCategoriesQuery = _withFactory({\n  sid: \"-g6h4cy\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.personalityTypes\n    })),\n    initialData: []\n  }),\n  name: \"getPersonalityTypesWithCategoriesQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Personality/api/index.ts"
-        ],
+        "sources": ["src/entities/Personality/api/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;"
       }

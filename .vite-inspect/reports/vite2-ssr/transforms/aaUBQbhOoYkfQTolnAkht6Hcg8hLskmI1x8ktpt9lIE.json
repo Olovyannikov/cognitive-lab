@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport UnionImage from '@/app/assets/images/union.svg?react';\n\nimport { ROUTES } from '@/shared/config';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './Hero.module.css';\n\nexport const Hero = () => {\n    const { isMobile } = usePageContext();\n\n    return (\n        <Section pt={0} pb={isMobile ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture\n                    cdn\n                    className={s.image}\n                    width={isMobile ? 280 : 673}\n                    height={isMobile ? 280 : 673}\n                    src={`/landing/main-hero-char${isMobile ? '/mobile' : ''}`}\n                />\n                <Button\n                    component='a'\n                    href={ROUTES.TEST}\n                    size={isMobile ? 'md' : 'xl'}\n                    className='mantine-button-rainbow'\n                >\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>\n    );\n};\n",
-      "start": 1750105187832,
-      "end": 1750105187872,
+      "start": 1750184199201,
+      "end": 1750184199239,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport UnionImage from '@/app/assets/images/union.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './Hero.module.css';\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return <Section pt={0} pb={isMobile ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture cdn className={s.image} width={isMobile ? 280 : 673} height={isMobile ? 280 : 673} src={`/landing/main-hero-char${isMobile ? '/mobile' : ''}`} />\n                <Button component='a' href={ROUTES.TEST} size={isMobile ? 'md' : 'xl'} className='mantine-button-rainbow'>\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>;\n};",
-      "start": 1750105187872,
-      "end": 1750105187874,
+      "start": 1750184199239,
+      "end": 1750184199240,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,9 +39,7 @@
           "image",
           "TEST"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"],
         "sourcesContent": [
           "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport UnionImage from '@/app/assets/images/union.svg?react';\n\nimport { ROUTES } from '@/shared/config';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './Hero.module.css';\n\nexport const Hero = () => {\n    const { isMobile } = usePageContext();\n\n    return (\n        <Section pt={0} pb={isMobile ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture\n                    cdn\n                    className={s.image}\n                    width={isMobile ? 280 : 673}\n                    height={isMobile ? 280 : 673}\n                    src={`/landing/main-hero-char${isMobile ? '/mobile' : ''}`}\n                />\n                <Button\n                    component='a'\n                    href={ROUTES.TEST}\n                    size={isMobile ? 'md' : 'xl'}\n                    className='mantine-button-rainbow'\n                >\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>\n    );\n};\n"
         ],
@@ -52,14 +50,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile ? 280 : 673, height: isMobile ? 280 : 673, src: `/landing/main-hero-char${isMobile ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
-      "start": 1750105187874,
-      "end": 1750105188138,
+      "start": 1750184199240,
+      "end": 1750184199450,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Hero/index.tsx"],
         "sourcesContent": [
           "import { Button, Container, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport UnionImage from '@/app/assets/images/union.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './Hero.module.css';\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return <Section pt={0} pb={isMobile ? 0 : 200}>\n            <Container className={s.box}>\n                <Title className={clsx(s.text, s.title)}>Тест на тип личности</Title>\n                <Text className={clsx(s.text, s.subtitle)}>\n                    и выбор профессии <br />\n                    <span>\n                        с&nbsp;\n                        <span className={s.ai}>\n                            AI <UnionImage />\n                        </span>\n                    </span>\n                </Text>\n                <Text className={s.description}>\n                    Узнайте свой тип личности и получите персональные советы для вашего развития\n                </Text>\n                <Picture cdn className={s.image} width={isMobile ? 280 : 673} height={isMobile ? 280 : 673} src={`/landing/main-hero-char${isMobile ? '/mobile' : ''}`} />\n                <Button component='a' href={ROUTES.TEST} size={isMobile ? 'md' : 'xl'} className='mantine-button-rainbow'>\n                    Пройти тест\n                </Button>\n            </Container>\n        </Section>;\n};"
         ],
@@ -69,81 +65,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/Hero/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Container, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport UnionImage from \"@/app/assets/images/union.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./Hero.module.css\";\nexport const Hero = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsx(Section, { pt: 0, pb: isMobile ? 0 : 200, children: /* @__PURE__ */ jsxs(Container, { className: s.box, children: [\n    /* @__PURE__ */ jsx(Title, { className: clsx(s.text, s.title), children: \"Тест на тип личности\" }),\n    /* @__PURE__ */ jsxs(Text, { className: clsx(s.text, s.subtitle), children: [\n      \"и выбор профессии \",\n      /* @__PURE__ */ jsx(\"br\", {}),\n      /* @__PURE__ */ jsxs(\"span\", { children: [\n        \"с \",\n        /* @__PURE__ */ jsxs(\"span\", { className: s.ai, children: [\n          \"AI \",\n          /* @__PURE__ */ jsx(UnionImage, {})\n        ] })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Узнайте свой тип личности и получите персональные советы для вашего развития\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.image, width: isMobile ? 280 : 673, height: isMobile ? 280 : 673, src: `/landing/main-hero-char${isMobile ? \"/mobile\" : \"\"}` }),\n    /* @__PURE__ */ jsx(Button, { component: \"a\", href: ROUTES.TEST, size: isMobile ? \"md\" : \"xl\", className: \"mantine-button-rainbow\", children: \"Пройти тест\" })\n  ] }) });\n};\n",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/Hero/index.tsx"
-        ],
+        "sources": ["src/pages/IndexPage/ui/Hero/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1L,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
       }

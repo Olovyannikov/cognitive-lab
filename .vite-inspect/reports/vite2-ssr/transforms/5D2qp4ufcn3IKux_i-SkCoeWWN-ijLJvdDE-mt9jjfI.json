@@ -4,27 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "export const noop = () => {};\n",
-      "start": 1750105187497,
-      "end": 1750105187547,
+      "start": 1750184198836,
+      "end": 1750184198857,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const noop = () => {};",
-      "start": 1750105187547,
-      "end": 1750105187547,
+      "start": 1750184198857,
+      "end": 1750184198858,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "noop"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"
-        ],
-        "sourcesContent": [
-          "export const noop = () => {};\n"
-        ],
+        "names": ["noop"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"],
+        "sourcesContent": ["export const noop = () => {};\n"],
         "mappings": "AAAA,OAAO,MAAMA,IAAI,GAAGA,CAAA,KAAM,CAAC,CAAC",
         "ignoreList": []
       }
@@ -32,98 +26,92 @@
     {
       "name": "vite:esbuild",
       "result": "export const noop = () => {\n};\n",
-      "start": 1750105187547,
-      "end": 1750105187651,
+      "start": 1750184198858,
+      "end": 1750184198952,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"
-        ],
-        "sourcesContent": [
-          "export const noop = () => {};"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/noop/index.ts"],
+        "sourcesContent": ["export const noop = () => {};"],
         "mappings": "AAAO,aAAM,OAAO,MAAM;AAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187651,
-      "end": 1750105187651,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187651,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/noop/index.ts [vike:pluginModuleBanner] */\nexport const noop = () => {\n};\n",
-      "start": 1750105187652,
-      "end": 1750105187652,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/noop/index.ts"
-        ],
+        "sources": ["src/shared/lib/noop/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC;"
       }

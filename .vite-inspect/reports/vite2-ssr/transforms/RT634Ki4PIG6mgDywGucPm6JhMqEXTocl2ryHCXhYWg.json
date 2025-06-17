@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n",
-      "start": 1750105187706,
-      "end": 1750105187741,
+      "start": 1750184199164,
+      "end": 1750184199218,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});",
-      "start": 1750105187741,
-      "end": 1750105187743,
+      "start": 1750184199218,
+      "end": 1750184199219,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -35,9 +35,7 @@
           "target",
           "or"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\n\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n"
         ],
@@ -48,14 +46,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
-      "start": 1750105187743,
-      "end": 1750105187942,
+      "start": 1750184199219,
+      "end": 1750184199426,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});"
         ],
@@ -65,81 +61,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/reportContent.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
-      "start": 1750105187943,
-      "end": 1750105187943,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/model/reportContent.ts"
-        ],
+        "sources": ["src/entities/Report/model/reportContent.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }

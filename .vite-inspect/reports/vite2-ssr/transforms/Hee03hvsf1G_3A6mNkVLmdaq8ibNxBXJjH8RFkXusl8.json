@@ -4,25 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TypesPage } from '@/pages/TypesPage';\n\nexport default function Page() {\n    return <TypesPage />;\n}\n",
-      "start": 1750105187364,
-      "end": 1750105187400,
+      "start": 1750184198703,
+      "end": 1750184198737,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { TypesPage } from '@/pages/TypesPage';\nexport default function Page() {\n  return <TypesPage />;\n}",
-      "start": 1750105187400,
-      "end": 1750105187401,
+      "start": 1750184198737,
+      "end": 1750184198738,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "TypesPage",
-          "Page"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+Page.tsx"
-        ],
+        "names": ["TypesPage", "Page"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+Page.tsx"],
         "sourcesContent": [
           "import { TypesPage } from '@/pages/TypesPage';\n\nexport default function Page() {\n    return <TypesPage />;\n}\n"
         ],
@@ -33,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TypesPage } from \"@/pages/TypesPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TypesPage, {});\n}\n",
-      "start": 1750105187401,
-      "end": 1750105187451,
+      "start": 1750184198738,
+      "end": 1750184198775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+Page.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+Page.tsx"],
         "sourcesContent": [
           "import { TypesPage } from '@/pages/TypesPage';\nexport default function Page() {\n  return <TypesPage />;\n}"
         ],
@@ -50,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/mbti-types/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TypesPage } from \"@/pages/TypesPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TypesPage, {});\n}\n",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198777,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/mbti-types/+Page.tsx"
-        ],
+        "sources": ["pages/mbti-types/+Page.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C;"
       }

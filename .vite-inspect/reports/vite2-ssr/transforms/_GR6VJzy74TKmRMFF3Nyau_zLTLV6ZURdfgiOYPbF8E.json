@@ -3,26 +3,22 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "export const API = {\n    URL: import.meta.env.VITE_BASE_URL,\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n",
-      "start": 1750105188217,
-      "end": 1750105188235,
+      "result": "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n",
+      "start": 1750184199448,
+      "end": 1750184199493,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "result": "export const API = {\n  URL: import.meta.env.VITE_BASE_URL,\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};",
-      "start": 1750105188235,
-      "end": 1750105188236,
+      "result": "export const API = {\n  URL: 'https://api.dev.cognitivelab.ru',\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};",
+      "start": 1750184199493,
+      "end": 1750184199495,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [
           "API",
           "URL",
-          "import",
-          "meta",
-          "env",
-          "VITE_BASE_URL",
           "surveys",
           "mainPage",
           "comments",
@@ -52,115 +48,107 @@
           "support",
           "issues"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"],
         "sourcesContent": [
-          "export const API = {\n    URL: import.meta.env.VITE_BASE_URL,\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n"
+          "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n"
         ],
-        "mappings": "AAAA,OAAO,MAAMA,GAAG,GAAG;EACfC,GAAG,EAAEC,MAAM,CAACC,IAAI,CAACC,GAAG,CAACC,aAAa;EAClCC,OAAO,EAAE;IACLC,QAAQ,EAAE,oBAAoB;IAC9BC,QAAQ,EAAE,mBAAmB;IAC7BC,eAAe,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,8BAA8BA,IAAI,EAAE;IACvEC,gBAAgB,EAAE,4BAA4B;IAC9CC,SAAS,EAAE,oBAAoB;IAC/BC,IAAI,EAAE,eAAe;IACrBC,UAAU,EAAE,sBAAsB;IAClCC,cAAc,EAAEA,CAACC,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE,EAAE;IAC5DC,UAAU,EAAEA,CAACD,EAAE,EAAE,MAAM,KAAK,yBAAyBA,EAAE,EAAE;IACzDE,KAAK,EAAE,gBAAgB;IACvBC,KAAK,EAAEA,CAACH,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE;EACrD,CAAC;EACDI,IAAI,EAAE;IACFC,KAAK,EAAE,QAAQ;IACfC,QAAQ,EAAEA,CAACN,EAAE,EAAE,MAAM,KAAK,UAAUA,EAAE;EAC1C,CAAC;EACDO,GAAG,EAAE;IACDC,IAAI,EAAE;EACV,CAAC;EACDC,IAAI,EAAE;IACFC,SAAS,EAAE;EACf,CAAC;EACDC,QAAQ,EAAE;IACNC,QAAQ,EAAE,2BAA2B;IACrCC,YAAY,EAAE,yBAAyB;IACvCC,UAAU,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,yCAAyCA,IAAI;EAC/E,CAAC;EACDC,OAAO,EAAE;IACLC,MAAM,EAAE;EACZ;AACJ,CAAC",
+        "mappings": "AAAA,OAAO,MAAMA,GAAG,GAAG;EACfC,GAAG,EAAE,iCAAiC;EACtCC,OAAO,EAAE;IACLC,QAAQ,EAAE,oBAAoB;IAC9BC,QAAQ,EAAE,mBAAmB;IAC7BC,eAAe,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,8BAA8BA,IAAI,EAAE;IACvEC,gBAAgB,EAAE,4BAA4B;IAC9CC,SAAS,EAAE,oBAAoB;IAC/BC,IAAI,EAAE,eAAe;IACrBC,UAAU,EAAE,sBAAsB;IAClCC,cAAc,EAAEA,CAACC,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE,EAAE;IAC5DC,UAAU,EAAEA,CAACD,EAAE,EAAE,MAAM,KAAK,yBAAyBA,EAAE,EAAE;IACzDE,KAAK,EAAE,gBAAgB;IACvBC,KAAK,EAAEA,CAACH,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE;EACrD,CAAC;EACDI,IAAI,EAAE;IACFC,KAAK,EAAE,QAAQ;IACfC,QAAQ,EAAEA,CAACN,EAAE,EAAE,MAAM,KAAK,UAAUA,EAAE;EAC1C,CAAC;EACDO,GAAG,EAAE;IACDC,IAAI,EAAE;EACV,CAAC;EACDC,IAAI,EAAE;IACFC,SAAS,EAAE;EACf,CAAC;EACDC,QAAQ,EAAE;IACNC,QAAQ,EAAE,2BAA2B;IACrCC,YAAY,EAAE,yBAAyB;IACvCC,UAAU,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,yCAAyCA,IAAI;EAC/E,CAAC;EACDC,OAAO,EAAE;IACLC,MAAM,EAAE;EACZ;AACJ,CAAC",
         "ignoreList": []
       }
     },
     {
       "name": "vite:esbuild",
-      "result": "export const API = {\n  URL: import.meta.env.VITE_BASE_URL,\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
-      "start": 1750105188236,
-      "end": 1750105188408,
+      "result": "export const API = {\n  URL: \"https://api.dev.cognitivelab.ru\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
+      "start": 1750184199495,
+      "end": 1750184199676,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"],
         "sourcesContent": [
-          "export const API = {\n  URL: import.meta.env.VITE_BASE_URL,\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};"
+          "export const API = {\n  URL: 'https://api.dev.cognitivelab.ru',\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};"
         ],
-        "mappings": "AAAO,aAAM,MAAM;AAAA,EACjB,KAAK,YAAY,IAAI;AAAA,EACrB,SAAS;AAAA,IACP,UAAU;AAAA,IACV,UAAU;AAAA,IACV,iBAAiB,CAAC,SAAiB,8BAA8B,IAAI;AAAA,IACrE,kBAAkB;AAAA,IAClB,WAAW;AAAA,IACX,MAAM;AAAA,IACN,YAAY;AAAA,IACZ,gBAAgB,CAAC,OAAe,wBAAwB,EAAE;AAAA,IAC1D,YAAY,CAAC,OAAe,yBAAyB,EAAE;AAAA,IACvD,OAAO;AAAA,IACP,OAAO,CAAC,OAAe,wBAAwB,EAAE;AAAA,EACnD;AAAA,EACA,MAAM;AAAA,IACJ,OAAO;AAAA,IACP,UAAU,CAAC,OAAe,UAAU,EAAE;AAAA,EACxC;AAAA,EACA,KAAK;AAAA,IACH,MAAM;AAAA,EACR;AAAA,EACA,MAAM;AAAA,IACJ,WAAW;AAAA,EACb;AAAA,EACA,UAAU;AAAA,IACR,UAAU;AAAA,IACV,cAAc;AAAA,IACd,YAAY,CAAC,SAAiB,yCAAyC,IAAI;AAAA,EAC7E;AAAA,EACA,SAAS;AAAA,IACP,QAAQ;AAAA,EACV;AACF;",
+        "mappings": "AAAO,aAAM,MAAM;AAAA,EACjB,KAAK;AAAA,EACL,SAAS;AAAA,IACP,UAAU;AAAA,IACV,UAAU;AAAA,IACV,iBAAiB,CAAC,SAAiB,8BAA8B,IAAI;AAAA,IACrE,kBAAkB;AAAA,IAClB,WAAW;AAAA,IACX,MAAM;AAAA,IACN,YAAY;AAAA,IACZ,gBAAgB,CAAC,OAAe,wBAAwB,EAAE;AAAA,IAC1D,YAAY,CAAC,OAAe,yBAAyB,EAAE;AAAA,IACvD,OAAO;AAAA,IACP,OAAO,CAAC,OAAe,wBAAwB,EAAE;AAAA,EACnD;AAAA,EACA,MAAM;AAAA,IACJ,OAAO;AAAA,IACP,UAAU,CAAC,OAAe,UAAU,EAAE;AAAA,EACxC;AAAA,EACA,KAAK;AAAA,IACH,MAAM;AAAA,EACR;AAAA,EACA,MAAM;AAAA,IACJ,WAAW;AAAA,EACb;AAAA,EACA,UAAU;AAAA,IACR,UAAU;AAAA,IACV,cAAc;AAAA,IACd,YAAY,CAAC,SAAiB,yCAAyC,IAAI;AAAA,EAC7E;AAAA,EACA,SAAS;AAAA,IACP,QAAQ;AAAA,EACV;AACF;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "result": "export const API = {\n  URL: \"https://api.cognitivelab.ru/api/v1\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
-      "start": 1750105188408,
-      "end": 1750105188432,
-      "order": "normal-normal",
-      "sourcemaps": null
+      "start": 1750184199676,
+      "end": 1750184199676,
+      "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/api/constants.ts [vike:pluginModuleBanner] */\nexport const API = {\n  URL: \"https://api.cognitivelab.ru/api/v1\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "result": "/*! src/shared/api/constants.ts [vike:pluginModuleBanner] */\nexport const API = {\n  URL: \"https://api.dev.cognitivelab.ru\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/api/constants.ts"
-        ],
+        "sources": ["src/shared/api/constants.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC;AACF,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC;AACF,CAAC;"
       }
     }
   ]

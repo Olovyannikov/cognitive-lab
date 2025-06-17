@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\n\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\n\nimport s from './RootLayout.module.css';\n\nexport const RootLayout = ({ children }: PropsWithChildren) => {\n    useGate(RootLayoutModel.RootLayoutGate);\n    return (\n        <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>\n    );\n};\n",
-      "start": 1750105187346,
-      "end": 1750105187367,
+      "start": 1750184198681,
+      "end": 1750184198701,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\nimport s from './RootLayout.module.css';\nexport const RootLayout = ({\n  children\n}: PropsWithChildren) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>;\n};",
-      "start": 1750105187367,
-      "end": 1750105187368,
+      "start": 1750184198701,
+      "end": 1750184198703,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -31,9 +31,7 @@
           "main",
           "footer"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\n\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\n\nimport s from './RootLayout.module.css';\n\nexport const RootLayout = ({ children }: PropsWithChildren) => {\n    useGate(RootLayoutModel.RootLayoutGate);\n    return (\n        <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>\n    );\n};\n"
         ],
@@ -44,14 +42,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { RootLayoutModel } from \"./model\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({\n  children\n}) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return /* @__PURE__ */ jsxs(\"div\", { className: s.app, children: [\n    /* @__PURE__ */ jsx(Header, { className: s.header }),\n    /* @__PURE__ */ jsx(\"main\", { className: s.main, id: \"page-content\", children }),\n    /* @__PURE__ */ jsx(Footer, { className: s.footer })\n  ] });\n};\n",
-      "start": 1750105187368,
-      "end": 1750105187451,
+      "start": 1750184198703,
+      "end": 1750184198775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\nimport s from './RootLayout.module.css';\nexport const RootLayout = ({\n  children\n}: PropsWithChildren) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>;\n};"
         ],
@@ -61,81 +57,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198775,
+      "end": 1750184198775,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198776,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { RootLayoutModel } from \"./model\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({\n  children\n}) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return /* @__PURE__ */ jsxs(\"div\", { className: s.app, children: [\n    /* @__PURE__ */ jsx(Header, { className: s.header }),\n    /* @__PURE__ */ jsx(\"main\", { className: s.main, id: \"page-content\", children }),\n    /* @__PURE__ */ jsx(Footer, { className: s.footer })\n  ] });\n};\n",
-      "start": 1750105187451,
-      "end": 1750105187451,
+      "start": 1750184198776,
+      "end": 1750184198777,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/index.tsx"
-        ],
+        "sources": ["src/widgets/RootLayout/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

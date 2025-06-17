@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import {\n    BuyNowAndNavigateToFullStructureAction,\n    BuyNowOrRedirectToTestPageAction,\n    RedirectToTestPageAndNavigateToFullStructureAction,\n    TakeTestAgainOrBuyReportAction,\n} from './ui';\n\nexport const CALL_TO_ACTION = {\n    buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n    redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n    redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n    takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />,\n};\n",
-      "start": 1750105187598,
-      "end": 1750105187640,
+      "start": 1750184198871,
+      "end": 1750184198933,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from './ui';\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n  redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n  redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n  takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />\n};",
-      "start": 1750105187640,
-      "end": 1750105187641,
+      "start": 1750184198933,
+      "end": 1750184198933,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -27,9 +27,7 @@
           "redirectToTest",
           "takeTestAgainOrBuyReport"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CTA/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CTA/index.tsx"],
         "sourcesContent": [
           "import {\n    BuyNowAndNavigateToFullStructureAction,\n    BuyNowOrRedirectToTestPageAction,\n    RedirectToTestPageAndNavigateToFullStructureAction,\n    TakeTestAgainOrBuyReportAction,\n} from './ui';\n\nexport const CALL_TO_ACTION = {\n    buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n    redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n    redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n    takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />,\n};\n"
         ],
@@ -40,14 +38,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from \"./ui\";\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: /* @__PURE__ */ jsx(BuyNowAndNavigateToFullStructureAction, {}),\n  redirectToTestPageAndNavigateToFullStructure: /* @__PURE__ */ jsx(RedirectToTestPageAndNavigateToFullStructureAction, {}),\n  redirectToTest: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}),\n  takeTestAgainOrBuyReport: /* @__PURE__ */ jsx(TakeTestAgainOrBuyReportAction, {})\n};\n",
-      "start": 1750105187641,
-      "end": 1750105187759,
+      "start": 1750184198933,
+      "end": 1750184198998,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CTA/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CTA/index.tsx"],
         "sourcesContent": [
           "import { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from './ui';\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n  redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n  redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n  takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />\n};"
         ],
@@ -57,81 +53,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187759,
-      "end": 1750105187759,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CTA/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from \"./ui\";\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: /* @__PURE__ */ jsx(BuyNowAndNavigateToFullStructureAction, {}),\n  redirectToTestPageAndNavigateToFullStructure: /* @__PURE__ */ jsx(RedirectToTestPageAndNavigateToFullStructureAction, {}),\n  redirectToTest: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}),\n  takeTestAgainOrBuyReport: /* @__PURE__ */ jsx(TakeTestAgainOrBuyReportAction, {})\n};\n",
-      "start": 1750105187759,
-      "end": 1750105187760,
+      "start": 1750184198998,
+      "end": 1750184198998,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/CTA/index.tsx"
-        ],
+        "sources": ["src/widgets/CTA/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { subscribeToNewsMutation } from '../api';\n\nexport const SubscribeToNewsModel = atom(() => {\n    const formSubmitted = createEvent<{ email: string }>();\n\n    const showSuccessToastFx = createEffect(() => {\n        notifications.show({\n            title: 'Успешно!',\n            message: 'Вы подписались на рассылку CognitiveLab',\n        });\n    });\n\n    sample({\n        clock: formSubmitted,\n        target: subscribeToNewsMutation.start,\n    });\n\n    sample({\n        clock: subscribeToNewsMutation.finished.success,\n        target: showSuccessToastFx,\n    });\n\n    return {\n        formSubmitted,\n    };\n});\n",
-      "start": 1750105188427,
-      "end": 1750105188435,
+      "start": 1750184199707,
+      "end": 1750184199725,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { subscribeToNewsMutation } from '../api';\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent<{\n    email: string;\n  }>({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: 'Успешно!',\n      message: 'Вы подписались на рассылку CognitiveLab'\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});",
-      "start": 1750105188435,
-      "end": 1750105188436,
+      "start": 1750184199725,
+      "end": 1750184199726,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -40,9 +40,7 @@
           "finished",
           "success"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/model/index.ts"],
         "sourcesContent": [
           "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { subscribeToNewsMutation } from '../api';\n\nexport const SubscribeToNewsModel = atom(() => {\n    const formSubmitted = createEvent<{ email: string }>();\n\n    const showSuccessToastFx = createEffect(() => {\n        notifications.show({\n            title: 'Успешно!',\n            message: 'Вы подписались на рассылку CognitiveLab',\n        });\n    });\n\n    sample({\n        clock: formSubmitted,\n        target: subscribeToNewsMutation.start,\n    });\n\n    sample({\n        clock: subscribeToNewsMutation.finished.success,\n        target: showSuccessToastFx,\n    });\n\n    return {\n        formSubmitted,\n    };\n});\n"
         ],
@@ -53,14 +51,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { subscribeToNewsMutation } from \"../api\";\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Вы подписались на рассылку CognitiveLab\"\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});\n",
-      "start": 1750105188436,
-      "end": 1750105188465,
+      "start": 1750184199726,
+      "end": 1750184199742,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/model/index.ts"],
         "sourcesContent": [
           "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { subscribeToNewsMutation } from '../api';\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent<{\n    email: string;\n  }>({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: 'Успешно!',\n      message: 'Вы подписались на рассылку CognitiveLab'\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});"
         ],
@@ -70,81 +66,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188465,
-      "end": 1750105188465,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188465,
-      "end": 1750105188466,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188466,
-      "end": 1750105188466,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188466,
-      "end": 1750105188466,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/model/index.ts [vike:pluginModuleBanner] */\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { subscribeToNewsMutation } from \"../api\";\nexport const SubscribeToNewsModel = atom(() => {\n  const formSubmitted = createEvent({\n    name: \"formSubmitted\",\n    sid: \"snl680\"\n  });\n  const showSuccessToastFx = createEffect(() => {\n    notifications.show({\n      title: \"Успешно!\",\n      message: \"Вы подписались на рассылку CognitiveLab\"\n    });\n  }, {\n    name: \"showSuccessToastFx\",\n    sid: \"-e5l6ul\"\n  });\n  sample({\n    and: [{\n      clock: formSubmitted,\n      target: subscribeToNewsMutation.start\n    }],\n    or: {\n      sid: \"-gb2pg1\"\n    }\n  });\n  sample({\n    and: [{\n      clock: subscribeToNewsMutation.finished.success,\n      target: showSuccessToastFx\n    }],\n    or: {\n      sid: \"-fws20n\"\n    }\n  });\n  return {\n    formSubmitted\n  };\n});\n",
-      "start": 1750105188466,
-      "end": 1750105188466,
+      "start": 1750184199742,
+      "end": 1750184199742,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/SubscribeToNews/model/index.ts"
-        ],
+        "sources": ["src/features/SubscribeToNews/model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAA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"
       }

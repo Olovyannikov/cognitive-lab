@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n",
-      "start": 1750105187510,
-      "end": 1750105187573,
+      "start": 1750184198836,
+      "end": 1750184198859,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});",
-      "start": 1750105187573,
-      "end": 1750105187574,
+      "start": 1750184198859,
+      "end": 1750184198860,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -26,9 +26,7 @@
           "sid",
           "createPageStart"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"],
         "sourcesContent": [
           "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n"
         ],
@@ -39,14 +37,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1750105187574,
-      "end": 1750105187628,
+      "start": 1750184198860,
+      "end": 1750184198934,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/events.ts"],
         "sourcesContent": [
           "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});"
         ],
@@ -56,81 +52,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187628,
-      "end": 1750105187628,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187628,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/events.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/effector/events.ts"
-        ],
+        "sources": ["src/shared/lib/effector/events.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;"
       }

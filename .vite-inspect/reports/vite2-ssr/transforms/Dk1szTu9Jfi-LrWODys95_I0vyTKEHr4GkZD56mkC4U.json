@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  min-height: 1200px;\n}\n\n.title,\n.title span {\n  margin-bottom: 60px;\n  font-weight: 700;\n  font-size: 34px;\n  line-height: 40px;\n\n  @mixin larger-than 1024px {\n    margin-bottom: 80px;\n    font-size: 64px;\n    line-height: 75px;\n  }\n}\n\n.container {\n  position: relative;\n  padding-bottom: 0;\n}\n\n.content {\n  position: relative;\n\n  @mixin larger-than 992px {\n    margin-bottom: 10rem;\n  }\n}\n\n.card {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  width: 100%;\n\n  @mixin larger-than 1024px {\n    display: grid;\n    column-gap: 240px;\n    align-items: center;\n    grid-template-areas:\n      \"t i\"\n      \"d i\";\n    grid-template-columns: 1fr 300px;\n  }\n}\n\n.cardTitle {\n  grid-area: t;\n  margin: 0 0 16px;\n  font-size: 32px;\n  line-height: 38px;\n  text-align: center;\n\n  &[data-index=\"0\"] {\n    color: var(--mantine-color-lime-8);\n  }\n\n  &[data-index=\"1\"] {\n    color: var(--mantine-color-violet-7);\n  }\n\n  &[data-index=\"2\"] {\n    color: var(--mantine-color-pink-7);\n  }\n\n  @mixin larger-than 1024px {\n    margin-bottom: 32px;\n    height: fit-content;\n    font-size: 40px;\n    line-height: 47px;\n    text-align: left;\n  }\n}\n\n.cardDescription {\n  grid-area: d;\n  margin: 0 0 16px;\n  font-size: 18px;\n  line-height: 21px;\n  text-align: center;\n\n  @mixin larger-than 1024px {\n    align-items: center;\n    grid-row-end: 1;\n    margin-bottom: 0;\n    width: 760px;\n    font-size: 24px;\n    line-height: 28px;\n    text-align: left;\n  }\n}\n\n.cardImage {\n  margin: auto;\n  width: 100%;\n  height: auto;\n  max-width: 280px;\n\n  @mixin larger-than 1024px {\n    height: auto;\n    max-width: 300px;\n  }\n}\n\n.images img {\n  max-width: 350px;\n  max-height: 350px;\n}\n",
-      "start": 1750105188181,
-      "end": 1750105188208,
+      "start": 1750184199541,
+      "end": 1750184199564,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188208,
-      "end": 1750105188208,
+      "start": 1750184199565,
+      "end": 1750184199565,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/WhyUs/WhyUs.module.css [vike:pluginModuleBanner] */\nexport const root = \"_0-1PX\";\nexport const title = \"QjnKa\";\nexport const container = \"H9zrB\";\nexport const content = \"F029H\";\nexport const card = \"_1tI-3\";\nexport const cardTitle = \"qMthH\";\nexport const cardDescription = \"vWGvW\";\nexport const cardImage = \"NYtsr\";\nexport const images = \"zdbra\";\nexport default {\n\troot: root,\n\ttitle: title,\n\tcontainer: container,\n\tcontent: content,\n\tcard: card,\n\tcardTitle: cardTitle,\n\tcardDescription: cardDescription,\n\tcardImage: cardImage,\n\timages: images\n};\n",
-      "start": 1750105188211,
-      "end": 1750105188211,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/WhyUs/WhyUs.module.css"
-        ],
+        "sources": ["src/pages/IndexPage/ui/WhyUs/WhyUs.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC;"
       }

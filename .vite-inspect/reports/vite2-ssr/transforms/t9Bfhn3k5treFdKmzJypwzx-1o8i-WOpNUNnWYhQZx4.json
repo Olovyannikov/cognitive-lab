@@ -4,22 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n",
-      "start": 1750105187548,
-      "end": 1750105187598,
+      "start": 1750184198906,
+      "end": 1750184198958,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';",
-      "start": 1750105187598,
-      "end": 1750105187598,
+      "start": 1750184198958,
+      "end": 1750184198959,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"],
         "sourcesContent": [
           "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n"
         ],
@@ -30,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Banner\";\nexport * from \"./AccordionBlock\";\nexport * from \"./BarChart\";\nexport * from \"./BlockQuoteFilled\";\nexport * from \"./BlockQuoteLine\";\nexport * from \"./Cards\";\nexport * from \"./ConclusionPaywall\";\nexport * from \"./FilledBulletList\";\nexport * from \"./Header\";\nexport * from \"./IconList\";\nexport * from \"./OrderedCards\";\nexport * from \"./OrderedList\";\nexport * from \"./Paragraph\";\nexport * from \"./Paywall\";\nexport * from \"./ReportTitle\";\nexport * from \"./Subscription\";\nexport * from \"./Subtitle\";\nexport * from \"./TextStrokeDash\";\nexport * from \"./ReportHeader\";\nexport * from \"./Preheader\";\nexport * from \"./ReportNavigationTemplate\";\nexport * from \"./PriceInfo\";\nexport * from \"./CategoryBanner\";\nexport * from \"./AdBanner\";\n",
-      "start": 1750105187598,
-      "end": 1750105187702,
+      "start": 1750184198959,
+      "end": 1750184199091,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"],
         "sourcesContent": [
           "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';"
         ],
@@ -47,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187702,
-      "end": 1750105187702,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187703,
-      "end": 1750105187703,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187703,
-      "end": 1750105187703,
+      "start": 1750184199091,
+      "end": 1750184199091,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Banner\";\nexport * from \"./AccordionBlock\";\nexport * from \"./BarChart\";\nexport * from \"./BlockQuoteFilled\";\nexport * from \"./BlockQuoteLine\";\nexport * from \"./Cards\";\nexport * from \"./ConclusionPaywall\";\nexport * from \"./FilledBulletList\";\nexport * from \"./Header\";\nexport * from \"./IconList\";\nexport * from \"./OrderedCards\";\nexport * from \"./OrderedList\";\nexport * from \"./Paragraph\";\nexport * from \"./Paywall\";\nexport * from \"./ReportTitle\";\nexport * from \"./Subscription\";\nexport * from \"./Subtitle\";\nexport * from \"./TextStrokeDash\";\nexport * from \"./ReportHeader\";\nexport * from \"./Preheader\";\nexport * from \"./ReportNavigationTemplate\";\nexport * from \"./PriceInfo\";\nexport * from \"./CategoryBanner\";\nexport * from \"./AdBanner\";\n",
-      "start": 1750105187703,
-      "end": 1750105187703,
+      "start": 1750184199092,
+      "end": 1750184199092,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/index.ts"
-        ],
+        "sources": ["src/entities/Report/ui/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

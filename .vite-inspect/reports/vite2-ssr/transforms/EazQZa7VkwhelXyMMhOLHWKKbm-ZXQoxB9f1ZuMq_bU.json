@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ChangeEvent } from 'react';\n\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n    e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750105187669,
-      "end": 1750105187695,
+      "start": 1750184199003,
+      "end": 1750184199044,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ChangeEvent } from 'react';\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};",
-      "start": 1750105187695,
-      "end": 1750105187695,
+      "start": 1750184199044,
+      "end": 1750184199044,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,8 +39,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750105187695,
-      "end": 1750105187896,
+      "start": 1750184199045,
+      "end": 1750184199232,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -56,81 +56,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/toInputUpperCase/index.ts [vike:pluginModuleBanner] */\nexport const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/utils/toInputUpperCase/index.ts"
-        ],
+        "sources": ["src/shared/lib/utils/toInputUpperCase/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC;"
       }

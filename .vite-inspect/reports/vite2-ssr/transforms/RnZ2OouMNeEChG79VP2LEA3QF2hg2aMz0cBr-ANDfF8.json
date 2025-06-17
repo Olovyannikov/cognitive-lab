@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './FirstSlide';\nexport * from './SecondSlide';\nexport * from './LastSlide';\n",
-      "start": 1750105187825,
-      "end": 1750105187864,
+      "start": 1750184199170,
+      "end": 1750184199224,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './FirstSlide';\nexport * from './SecondSlide';\nexport * from './LastSlide';",
-      "start": 1750105187864,
-      "end": 1750105187865,
+      "start": 1750184199224,
+      "end": 1750184199225,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./FirstSlide\";\nexport * from \"./SecondSlide\";\nexport * from \"./LastSlide\";\n",
-      "start": 1750105187865,
-      "end": 1750105188134,
+      "start": 1750184199225,
+      "end": 1750184199433,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199433,
+      "end": 1750184199433,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199433,
+      "end": 1750184199433,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199433,
+      "end": 1750184199433,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199433,
+      "end": 1750184199433,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199433,
+      "end": 1750184199433,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./FirstSlide\";\nexport * from \"./SecondSlide\";\nexport * from \"./LastSlide\";\n",
-      "start": 1750105188134,
-      "end": 1750105188134,
+      "start": 1750184199434,
+      "end": 1750184199434,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/CongratulationsSlider/ui/index.ts"
-        ],
+        "sources": ["src/widgets/CongratulationsSlider/ui/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

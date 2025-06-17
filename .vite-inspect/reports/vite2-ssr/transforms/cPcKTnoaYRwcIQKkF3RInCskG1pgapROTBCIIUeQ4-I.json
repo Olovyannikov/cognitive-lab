@@ -4,25 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { HelpPage } from '@/pages/HelpPage';\n\nexport default function Page() {\n    return <HelpPage />;\n}\n",
-      "start": 1750105187350,
-      "end": 1750105187383,
+      "start": 1750184198685,
+      "end": 1750184198725,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { HelpPage } from '@/pages/HelpPage';\nexport default function Page() {\n  return <HelpPage />;\n}",
-      "start": 1750105187383,
-      "end": 1750105187384,
+      "start": 1750184198725,
+      "end": 1750184198725,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "HelpPage",
-          "Page"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/help/+Page.tsx"
-        ],
+        "names": ["HelpPage", "Page"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/help/+Page.tsx"],
         "sourcesContent": [
           "import { HelpPage } from '@/pages/HelpPage';\n\nexport default function Page() {\n    return <HelpPage />;\n}\n"
         ],
@@ -33,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { HelpPage } from \"@/pages/HelpPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(HelpPage, {});\n}\n",
-      "start": 1750105187384,
-      "end": 1750105187444,
+      "start": 1750184198725,
+      "end": 1750184198762,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/help/+Page.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/help/+Page.tsx"],
         "sourcesContent": [
           "import { HelpPage } from '@/pages/HelpPage';\nexport default function Page() {\n  return <HelpPage />;\n}"
         ],
@@ -50,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187444,
-      "end": 1750105187445,
+      "start": 1750184198762,
+      "end": 1750184198762,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/help/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { HelpPage } from \"@/pages/HelpPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(HelpPage, {});\n}\n",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198763,
+      "end": 1750184198763,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/help/+Page.tsx"
-        ],
+        "sources": ["pages/help/+Page.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C;"
       }

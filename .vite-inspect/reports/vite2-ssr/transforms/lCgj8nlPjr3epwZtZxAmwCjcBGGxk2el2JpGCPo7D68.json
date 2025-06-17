@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Link } from 'react-scroll';\nimport { Box, Center, Divider, Drawer, Menu, Paper, Text } from '@mantine/core';\nimport { X } from '@phosphor-icons/react/dist/ssr';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport { getIconsMap } from '../../../const';\n\nimport s from '../ReportNavigationTemplate.module.css';\n\ninterface MobileProps {\n    opened: boolean;\n    close: VoidFunction;\n    content: string[];\n    color: string;\n    activeMenu: string;\n    onPageChange({ idx, title }: { idx: number; title: string }): void;\n}\n\nexport const Mobile = ({ opened, close, content, color, onPageChange, activeMenu }: MobileProps) => {\n    const isLarge = useIsLarge();\n    const icons = getIconsMap(isLarge);\n\n    return (\n        <Drawer\n            hiddenFrom='xs'\n            opened={opened}\n            onClose={close}\n            style={{\n                position: 'fixed',\n                zIndex: 9999,\n            }}\n            title={\n                <Box w='100%'>\n                    <Text fw='bold' fz={20}>\n                        Разделы отчёта\n                    </Text>\n                </Box>\n            }\n            closeButtonProps={{\n                icon: <X size={32} />,\n                iconSize: 32,\n            }}\n            styles={{\n                body: {\n                    padding: 0,\n                },\n            }}\n        >\n            <Divider pos='sticky' top={63} />\n            <Box py='sm'>\n                <Menu>\n                    {content?.map((title, idx) => (\n                        <Menu.Item\n                            px='md'\n                            bg={activeMenu === title ? `${color}.0` : 'transparent'}\n                            mb='sm'\n                            key={title}\n                            leftSection={\n                                <Paper p='xs' radius='xs' bg={`${color}.1`}>\n                                    <Center c={`${color}.9`} className={s.dropdownIcon}>\n                                        {icons[title]}\n                                    </Center>\n                                </Paper>\n                            }\n                            onClick={() => {\n                                onPageChange({ idx, title });\n                                close();\n                            }}\n                            style={{\n                                borderRadius: 0,\n                                paddingBlock: 6,\n                            }}\n                            styles={{\n                                itemSection: {\n                                    marginInlineEnd: 'var(--mantine-spacing-sm)',\n                                },\n                                itemLabel: {\n                                    display: 'flex',\n                                },\n                            }}\n                        >\n                            <Link\n                                spy\n                                to={title}\n                                offset={-100}\n                                onClick={() => {\n                                    onPageChange({ idx, title });\n                                    close();\n                                }}\n                                style={{\n                                    lineHeight: 1,\n                                }}\n                            >\n                                <Text style={{ pointerEvents: 'none' }} span inline fz={16} lh={1} fw='bold'>\n                                    {title}\n                                </Text>\n                            </Link>\n                        </Menu.Item>\n                    ))}\n                </Menu>\n            </Box>\n        </Drawer>\n    );\n};\n",
-      "start": 1750105188085,
-      "end": 1750105188115,
+      "start": 1750184199443,
+      "end": 1750184199483,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Link } from 'react-scroll';\nimport { Box, Center, Divider, Drawer, Menu, Paper, Text } from '@mantine/core';\nimport { X } from '@phosphor-icons/react/dist/ssr';\nimport { useIsLarge } from '@/shared/lib';\nimport { getIconsMap } from '../../../const';\nimport s from '../ReportNavigationTemplate.module.css';\ninterface MobileProps {\n  opened: boolean;\n  close: VoidFunction;\n  content: string[];\n  color: string;\n  activeMenu: string;\n  onPageChange({\n    idx,\n    title\n  }: {\n    idx: number;\n    title: string;\n  }): void;\n}\nexport const Mobile = ({\n  opened,\n  close,\n  content,\n  color,\n  onPageChange,\n  activeMenu\n}: MobileProps) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return <Drawer hiddenFrom='xs' opened={opened} onClose={close} style={{\n    position: 'fixed',\n    zIndex: 9999\n  }} title={<Box w='100%'>\n                    <Text fw='bold' fz={20}>\n                        Разделы отчёта\n                    </Text>\n                </Box>} closeButtonProps={{\n    icon: <X size={32} />,\n    iconSize: 32\n  }} styles={{\n    body: {\n      padding: 0\n    }\n  }}>\n            <Divider pos='sticky' top={63} />\n            <Box py='sm'>\n                <Menu>\n                    {content?.map((title, idx) => <Menu.Item px='md' bg={activeMenu === title ? `${color}.0` : 'transparent'} mb='sm' key={title} leftSection={<Paper p='xs' radius='xs' bg={`${color}.1`}>\n                                    <Center c={`${color}.9`} className={s.dropdownIcon}>\n                                        {icons[title]}\n                                    </Center>\n                                </Paper>} onClick={() => {\n          onPageChange({\n            idx,\n            title\n          });\n          close();\n        }} style={{\n          borderRadius: 0,\n          paddingBlock: 6\n        }} styles={{\n          itemSection: {\n            marginInlineEnd: 'var(--mantine-spacing-sm)'\n          },\n          itemLabel: {\n            display: 'flex'\n          }\n        }}>\n                            <Link spy to={title} offset={-100} onClick={() => {\n            onPageChange({\n              idx,\n              title\n            });\n            close();\n          }} style={{\n            lineHeight: 1\n          }}>\n                                <Text style={{\n              pointerEvents: 'none'\n            }} span inline fz={16} lh={1} fw='bold'>\n                                    {title}\n                                </Text>\n                            </Link>\n                        </Menu.Item>)}\n                </Menu>\n            </Box>\n        </Drawer>;\n};",
-      "start": 1750105188115,
-      "end": 1750105188118,
+      "start": 1750184199483,
+      "end": 1750184199485,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -72,8 +72,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Link } from \"react-scroll\";\nimport { Box, Center, Divider, Drawer, Menu, Paper, Text } from \"@mantine/core\";\nimport { X } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getIconsMap } from \"../../../const\";\nimport s from \"../ReportNavigationTemplate.module.css\";\nexport const Mobile = ({\n  opened,\n  close,\n  content,\n  color,\n  onPageChange,\n  activeMenu\n}) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return /* @__PURE__ */ jsxs(Drawer, { hiddenFrom: \"xs\", opened, onClose: close, style: {\n    position: \"fixed\",\n    zIndex: 9999\n  }, title: /* @__PURE__ */ jsx(Box, { w: \"100%\", children: /* @__PURE__ */ jsx(Text, { fw: \"bold\", fz: 20, children: \"Разделы отчёта\" }) }), closeButtonProps: {\n    icon: /* @__PURE__ */ jsx(X, { size: 32 }),\n    iconSize: 32\n  }, styles: {\n    body: {\n      padding: 0\n    }\n  }, children: [\n    /* @__PURE__ */ jsx(Divider, { pos: \"sticky\", top: 63 }),\n    /* @__PURE__ */ jsx(Box, { py: \"sm\", children: /* @__PURE__ */ jsx(Menu, { children: content?.map((title, idx) => /* @__PURE__ */ jsx(Menu.Item, { px: \"md\", bg: activeMenu === title ? `${color}.0` : \"transparent\", mb: \"sm\", leftSection: /* @__PURE__ */ jsx(Paper, { p: \"xs\", radius: \"xs\", bg: `${color}.1`, children: /* @__PURE__ */ jsx(Center, { c: `${color}.9`, className: s.dropdownIcon, children: icons[title] }) }), onClick: () => {\n      onPageChange({\n        idx,\n        title\n      });\n      close();\n    }, style: {\n      borderRadius: 0,\n      paddingBlock: 6\n    }, styles: {\n      itemSection: {\n        marginInlineEnd: \"var(--mantine-spacing-sm)\"\n      },\n      itemLabel: {\n        display: \"flex\"\n      }\n    }, children: /* @__PURE__ */ jsx(Link, { spy: true, to: title, offset: -100, onClick: () => {\n      onPageChange({\n        idx,\n        title\n      });\n      close();\n    }, style: {\n      lineHeight: 1\n    }, children: /* @__PURE__ */ jsx(Text, { style: {\n      pointerEvents: \"none\"\n    }, span: true, inline: true, fz: 16, lh: 1, fw: \"bold\", children: title }) }) }, title)) }) })\n  ] });\n};\n",
-      "start": 1750105188118,
-      "end": 1750105188303,
+      "start": 1750184199485,
+      "end": 1750184199675,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -89,81 +89,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/mobile/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Link } from \"react-scroll\";\nimport { Box, Center, Divider, Drawer, Menu, Paper, Text } from \"@mantine/core\";\nimport { X } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getIconsMap } from \"../../../const\";\nimport s from \"../ReportNavigationTemplate.module.css\";\nexport const Mobile = ({\n  opened,\n  close,\n  content,\n  color,\n  onPageChange,\n  activeMenu\n}) => {\n  const isLarge = useIsLarge();\n  const icons = getIconsMap(isLarge);\n  return /* @__PURE__ */ jsxs(Drawer, { hiddenFrom: \"xs\", opened, onClose: close, style: {\n    position: \"fixed\",\n    zIndex: 9999\n  }, title: /* @__PURE__ */ jsx(Box, { w: \"100%\", children: /* @__PURE__ */ jsx(Text, { fw: \"bold\", fz: 20, children: \"Разделы отчёта\" }) }), closeButtonProps: {\n    icon: /* @__PURE__ */ jsx(X, { size: 32 }),\n    iconSize: 32\n  }, styles: {\n    body: {\n      padding: 0\n    }\n  }, children: [\n    /* @__PURE__ */ jsx(Divider, { pos: \"sticky\", top: 63 }),\n    /* @__PURE__ */ jsx(Box, { py: \"sm\", children: /* @__PURE__ */ jsx(Menu, { children: content?.map((title, idx) => /* @__PURE__ */ jsx(Menu.Item, { px: \"md\", bg: activeMenu === title ? `${color}.0` : \"transparent\", mb: \"sm\", leftSection: /* @__PURE__ */ jsx(Paper, { p: \"xs\", radius: \"xs\", bg: `${color}.1`, children: /* @__PURE__ */ jsx(Center, { c: `${color}.9`, className: s.dropdownIcon, children: icons[title] }) }), onClick: () => {\n      onPageChange({\n        idx,\n        title\n      });\n      close();\n    }, style: {\n      borderRadius: 0,\n      paddingBlock: 6\n    }, styles: {\n      itemSection: {\n        marginInlineEnd: \"var(--mantine-spacing-sm)\"\n      },\n      itemLabel: {\n        display: \"flex\"\n      }\n    }, children: /* @__PURE__ */ jsx(Link, { spy: true, to: title, offset: -100, onClick: () => {\n      onPageChange({\n        idx,\n        title\n      });\n      close();\n    }, style: {\n      lineHeight: 1\n    }, children: /* @__PURE__ */ jsx(Text, { style: {\n      pointerEvents: \"none\"\n    }, span: true, inline: true, fz: 16, lh: 1, fw: \"bold\", children: title }) }) }, title)) }) })\n  ] });\n};\n",
-      "start": 1750105188303,
-      "end": 1750105188303,
+      "start": 1750184199675,
+      "end": 1750184199675,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/ReportNavigationTemplate/mobile/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/ReportNavigationTemplate/mobile/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxb,CAAC,CAAC,CAAC,CAA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C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

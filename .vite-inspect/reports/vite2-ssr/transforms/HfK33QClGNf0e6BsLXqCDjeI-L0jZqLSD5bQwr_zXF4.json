@@ -4,31 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { OrderStatus } from '../types';\n\nexport const getStatusInfo = (status?: OrderStatus) => {\n    let result = {\n        title: 'Не получилось провести оплату.',\n        text: 'К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.',\n        buttonText: 'Повторить попытку оплаты',\n        infoStatus: 'error',\n    };\n\n    if (status === 'paid') {\n        result = {\n            title: 'Оплата прошла успешно!',\n            text: 'Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.',\n            buttonText: 'Посмотреть полный отчет',\n            infoStatus: 'success',\n        };\n    }\n\n    return result;\n};\n",
-      "start": 1750105187706,
-      "end": 1750105187749,
+      "start": 1750184199095,
+      "end": 1750184199152,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { OrderStatus } from '../types';\nexport const getStatusInfo = (status?: OrderStatus) => {\n  let result = {\n    title: 'Не получилось провести оплату.',\n    text: 'К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.',\n    buttonText: 'Повторить попытку оплаты',\n    infoStatus: 'error'\n  };\n  if (status === 'paid') {\n    result = {\n      title: 'Оплата прошла успешно!',\n      text: 'Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.',\n      buttonText: 'Посмотреть полный отчет',\n      infoStatus: 'success'\n    };\n  }\n  return result;\n};",
-      "start": 1750105187749,
-      "end": 1750105187755,
+      "start": 1750184199152,
+      "end": 1750184199154,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "OrderStatus",
-          "getStatusInfo",
-          "status",
-          "result",
-          "title",
-          "text",
-          "buttonText",
-          "infoStatus"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/statusInfo.ts"
-        ],
+        "names": ["OrderStatus", "getStatusInfo", "status", "result", "title", "text", "buttonText", "infoStatus"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/statusInfo.ts"],
         "sourcesContent": [
           "import type { OrderStatus } from '../types';\n\nexport const getStatusInfo = (status?: OrderStatus) => {\n    let result = {\n        title: 'Не получилось провести оплату.',\n        text: 'К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.',\n        buttonText: 'Повторить попытку оплаты',\n        infoStatus: 'error',\n    };\n\n    if (status === 'paid') {\n        result = {\n            title: 'Оплата прошла успешно!',\n            text: 'Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.',\n            buttonText: 'Посмотреть полный отчет',\n            infoStatus: 'success',\n        };\n    }\n\n    return result;\n};\n"
         ],
@@ -39,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "export const getStatusInfo = (status) => {\n  let result = {\n    title: \"Не получилось провести оплату.\",\n    text: \"К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.\",\n    buttonText: \"Повторить попытку оплаты\",\n    infoStatus: \"error\"\n  };\n  if (status === \"paid\") {\n    result = {\n      title: \"Оплата прошла успешно!\",\n      text: \"Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.\",\n      buttonText: \"Посмотреть полный отчет\",\n      infoStatus: \"success\"\n    };\n  }\n  return result;\n};\n",
-      "start": 1750105187755,
-      "end": 1750105187964,
+      "start": 1750184199154,
+      "end": 1750184199394,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/statusInfo.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/statusInfo.ts"],
         "sourcesContent": [
           "import type { OrderStatus } from '../types';\nexport const getStatusInfo = (status?: OrderStatus) => {\n  let result = {\n    title: 'Не получилось провести оплату.',\n    text: 'К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.',\n    buttonText: 'Повторить попытку оплаты',\n    infoStatus: 'error'\n  };\n  if (status === 'paid') {\n    result = {\n      title: 'Оплата прошла успешно!',\n      text: 'Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.',\n      buttonText: 'Посмотреть полный отчет',\n      infoStatus: 'success'\n    };\n  }\n  return result;\n};"
         ],
@@ -56,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/statusInfo.ts [vike:pluginModuleBanner] */\nexport const getStatusInfo = (status) => {\n  let result = {\n    title: \"Не получилось провести оплату.\",\n    text: \"К сожалению, ваша оплата не прошла успешно. Пожалуйста, попробуйте снова или обратитесь в нашу службу поддержки для решения этого вопроса. Мы всегда готовы помочь вам завершить процесс и предоставить доступ к вашим результатам.\",\n    buttonText: \"Повторить попытку оплаты\",\n    infoStatus: \"error\"\n  };\n  if (status === \"paid\") {\n    result = {\n      title: \"Оплата прошла успешно!\",\n      text: \"Вы можете перейти к своему отчету, просто нажав на кнопку ниже, либо воспользоваться ссылкой,которая была отправлена на ваш электронный адрес. Если у вас появятся вопросы или понадобится помощь, наша команда всегда на связи.\",\n      buttonText: \"Посмотреть полный отчет\",\n      infoStatus: \"success\"\n    };\n  }\n  return result;\n};\n",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199394,
+      "end": 1750184199394,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/lib/statusInfo.ts"
-        ],
+        "sources": ["src/entities/Report/lib/statusInfo.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/O,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9O,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC;"
       }

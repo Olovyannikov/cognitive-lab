@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\n\ninterface ConclusionPaywallProps {\n    text?: string;\n    title?: string;\n    points?: string[];\n    actionsSlot?: ReactNode;\n    color?: string;\n}\n\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' }: ConclusionPaywallProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper\n            bg={`${color}.0`}\n            pos='relative'\n            py={isLarge ? '3xl' : 'xl'}\n            px={isLarge ? '3xl' : 'md'}\n            radius={isLarge ? 'lg' : 'md'}\n        >\n            <Picture\n                src='/report/gem'\n                w={isLarge ? 250 : 108}\n                h={isLarge ? 250 : 108}\n                pos='absolute'\n                top={isLarge ? 0 : 20}\n                right={0}\n            />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750105187715,
-      "end": 1750105187773,
+      "start": 1750184199117,
+      "end": 1750184199164,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\ninterface ConclusionPaywallProps {\n  text?: string;\n  title?: string;\n  points?: string[];\n  actionsSlot?: ReactNode;\n  color?: string;\n}\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = 'violet'\n}: ConclusionPaywallProps) => {\n  const isLarge = useIsLarge();\n  return <Paper bg={`${color}.0`} pos='relative' py={isLarge ? '3xl' : 'xl'} px={isLarge ? '3xl' : 'md'} radius={isLarge ? 'lg' : 'md'}>\n            <Picture src='/report/gem' w={isLarge ? 250 : 108} h={isLarge ? 250 : 108} pos='absolute' top={isLarge ? 0 : 20} right={0} />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{\n        textWrap: 'balance'\n      }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>;\n};",
-      "start": 1750105187773,
-      "end": 1750105187775,
+      "start": 1750184199164,
+      "end": 1750184199165,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { bg: `${color}.0`, pos: \"relative\", py: isLarge ? \"3xl\" : \"xl\", px: isLarge ? \"3xl\" : \"md\", radius: isLarge ? \"lg\" : \"md\", children: [\n    /* @__PURE__ */ jsx(Picture, { src: \"/report/gem\", w: isLarge ? 250 : 108, h: isLarge ? 250 : 108, pos: \"absolute\", top: isLarge ? 0 : 20, right: 0 }),\n    /* @__PURE__ */ jsxs(Stack, { gap: isLarge ? \"lg\" : \"md\", children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: isLarge ? \"100%\" : \"60%\", children: /* @__PURE__ */ jsxs(Group, { gap: \"xs\", children: [\n        /* @__PURE__ */ jsx(Picture, { cdn: true, visibleFrom: \"md\", src: \"/emoji/star\", w: 48, h: 48 }),\n        title\n      ] }) }),\n      /* @__PURE__ */ jsx(Text, { maw: isLarge ? 950 : \"80%\", style: {\n        textWrap: \"balance\"\n      }, fz: isLarge ? 24 : 16, children: text }),\n      /* @__PURE__ */ jsx(PointsList, { position: \"static\", points }),\n      /* @__PURE__ */ jsx(Group, { gap: \"sm\", w: isLarge ? \"fit-content\" : \"100%\", children: actionsSlot })\n    ] })\n  ] });\n};\n",
-      "start": 1750105187775,
-      "end": 1750105187990,
+      "start": 1750184199165,
+      "end": 1750184199407,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -66,81 +66,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ConclusionPaywall/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({\n  text,\n  title,\n  points,\n  actionsSlot,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsxs(Paper, { bg: `${color}.0`, pos: \"relative\", py: isLarge ? \"3xl\" : \"xl\", px: isLarge ? \"3xl\" : \"md\", radius: isLarge ? \"lg\" : \"md\", children: [\n    /* @__PURE__ */ jsx(Picture, { src: \"/report/gem\", w: isLarge ? 250 : 108, h: isLarge ? 250 : 108, pos: \"absolute\", top: isLarge ? 0 : 20, right: 0 }),\n    /* @__PURE__ */ jsxs(Stack, { gap: isLarge ? \"lg\" : \"md\", children: [\n      /* @__PURE__ */ jsx(Title, { order: 5, fz: isLarge ? 32 : 20, textWrap: \"balance\", maw: isLarge ? \"100%\" : \"60%\", children: /* @__PURE__ */ jsxs(Group, { gap: \"xs\", children: [\n        /* @__PURE__ */ jsx(Picture, { cdn: true, visibleFrom: \"md\", src: \"/emoji/star\", w: 48, h: 48 }),\n        title\n      ] }) }),\n      /* @__PURE__ */ jsx(Text, { maw: isLarge ? 950 : \"80%\", style: {\n        textWrap: \"balance\"\n      }, fz: isLarge ? 24 : 16, children: text }),\n      /* @__PURE__ */ jsx(PointsList, { position: \"static\", points }),\n      /* @__PURE__ */ jsx(Group, { gap: \"sm\", w: isLarge ? \"fit-content\" : \"100%\", children: actionsSlot })\n    ] })\n  ] });\n};\n",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/ConclusionPaywall/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/ConclusionPaywall/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

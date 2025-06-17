@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport type { ListItem } from '../../types';\n\ninterface CardsProps {\n    items: ListItem[];\n    color?: string;\n}\n\nexport const Cards = ({ items, color }: CardsProps) => (\n    <Grid grow>\n        {items.map((item, index) => (\n            <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>\n        ))}\n    </Grid>\n);\n",
-      "start": 1750105187713,
-      "end": 1750105187772,
+      "start": 1750184199117,
+      "end": 1750184199161,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\nimport type { ListItem } from '../../types';\ninterface CardsProps {\n  items: ListItem[];\n  color?: string;\n}\nexport const Cards = ({\n  items,\n  color\n}: CardsProps) => <Grid grow>\n        {items.map((item, index) => <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>)}\n    </Grid>;",
-      "start": 1750105187772,
-      "end": 1750105187773,
+      "start": 1750184199161,
+      "end": 1750184199162,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -33,9 +33,7 @@
           "title",
           "text"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Cards/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Cards/index.tsx"],
         "sourcesContent": [
           "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport type { ListItem } from '../../types';\n\ninterface CardsProps {\n    items: ListItem[];\n    color?: string;\n}\n\nexport const Cards = ({ items, color }: CardsProps) => (\n    <Grid grow>\n        {items.map((item, index) => (\n            <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>\n        ))}\n    </Grid>\n);\n"
         ],
@@ -46,14 +44,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, Paper, Stack, Text, Title } from \"@mantine/core\";\nexport const Cards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Grid, { grow: true, children: items.map((item, index) => /* @__PURE__ */ jsx(Grid.Col, { span: 6, children: /* @__PURE__ */ jsx(Paper, { h: \"100%\", radius: 30, px: \"3xl\", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ jsxs(Stack, { gap: \"xs\", children: [\n  /* @__PURE__ */ jsx(Title, { c: `${color}.9`, fz: 24, order: 4, children: item.title }),\n  /* @__PURE__ */ jsx(Text, { fz: 20, children: item.text })\n] }) }) }, index)) });\n",
-      "start": 1750105187773,
-      "end": 1750105188032,
+      "start": 1750184199162,
+      "end": 1750184199396,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Cards/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Cards/index.tsx"],
         "sourcesContent": [
           "import { Grid, Paper, Stack, Text, Title } from '@mantine/core';\nimport type { ListItem } from '../../types';\ninterface CardsProps {\n  items: ListItem[];\n  color?: string;\n}\nexport const Cards = ({\n  items,\n  color\n}: CardsProps) => <Grid grow>\n        {items.map((item, index) => <Grid.Col key={index} span={6}>\n                <Paper h='100%' radius={30} px='3xl' py={22} bg={`${color}.0`}>\n                    <Stack gap='xs'>\n                        <Title c={`${color}.9`} fz={24} order={4}>\n                            {item.title}\n                        </Title>\n                        <Text fz={20}>{item.text}</Text>\n                    </Stack>\n                </Paper>\n            </Grid.Col>)}\n    </Grid>;"
         ],
@@ -63,81 +59,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Cards/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Grid, Paper, Stack, Text, Title } from \"@mantine/core\";\nexport const Cards = ({\n  items,\n  color\n}) => /* @__PURE__ */ jsx(Grid, { grow: true, children: items.map((item, index) => /* @__PURE__ */ jsx(Grid.Col, { span: 6, children: /* @__PURE__ */ jsx(Paper, { h: \"100%\", radius: 30, px: \"3xl\", py: 22, bg: `${color}.0`, children: /* @__PURE__ */ jsxs(Stack, { gap: \"xs\", children: [\n  /* @__PURE__ */ jsx(Title, { c: `${color}.9`, fz: 24, order: 4, children: item.title }),\n  /* @__PURE__ */ jsx(Text, { fz: 20, children: item.text })\n] }) }) }, index)) });\n",
-      "start": 1750105188032,
-      "end": 1750105188032,
+      "start": 1750184199396,
+      "end": 1750184199397,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/Cards/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/Cards/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5R,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

@@ -4,31 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ContentBlock } from '../types';\n\nexport const findBannerIndex = (content: ContentBlock[]) =>\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\n",
-      "start": 1750105187706,
-      "end": 1750105187748,
+      "start": 1750184199094,
+      "end": 1750184199151,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ContentBlock } from '../types';\nexport const findBannerIndex = (content: ContentBlock[]) => content.findIndex(el => el.content.find(el => el.type === 'ordered_cards' && el.color === 'negative'));",
-      "start": 1750105187748,
-      "end": 1750105187749,
+      "start": 1750184199151,
+      "end": 1750184199152,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "ContentBlock",
-          "findBannerIndex",
-          "content",
-          "findIndex",
-          "el",
-          "find",
-          "type",
-          "color"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"
-        ],
+        "names": ["ContentBlock", "findBannerIndex", "content", "findIndex", "el", "find", "type", "color"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"],
         "sourcesContent": [
           "import type { ContentBlock } from '../types';\n\nexport const findBannerIndex = (content: ContentBlock[]) =>\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\n"
         ],
@@ -39,100 +28,94 @@
     {
       "name": "vite:esbuild",
       "result": "export const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1750105187749,
-      "end": 1750105187964,
+      "start": 1750184199152,
+      "end": 1750184199390,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"],
         "sourcesContent": [
           "import type { ContentBlock } from '../types';\nexport const findBannerIndex = (content: ContentBlock[]) => content.findIndex(el => el.content.find(el => el.type === 'ordered_cards' && el.color === 'negative'));"
         ],
         "mappings": "AACO,aAAM,kBAAkB,CAAC,YAA4B,QAAQ,UAAU,QAAM,GAAG,QAAQ,KAAK,CAAAA,QAAMA,IAAG,SAAS,mBAAmBA,IAAG,UAAU,UAAU,CAAC;",
-        "names": [
-          "el"
-        ]
+        "names": ["el"]
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199390,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199390,
+      "end": 1750184199391,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199391,
+      "end": 1750184199391,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199391,
+      "end": 1750184199391,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/findBannerIndex.ts [vike:pluginModuleBanner] */\nexport const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199391,
+      "end": 1750184199391,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/lib/findBannerIndex.ts"
-        ],
+        "sources": ["src/entities/Report/lib/findBannerIndex.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

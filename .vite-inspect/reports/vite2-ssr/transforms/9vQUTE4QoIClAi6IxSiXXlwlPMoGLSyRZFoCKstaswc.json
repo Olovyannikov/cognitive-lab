@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\n\nimport { atom } from '@/shared/factories';\n\nexport const TestEmailFormModel = atom(() => {\n    const form = createForm({\n        schema: {\n            email: '',\n            approve_subscription: Boolean(false),\n        },\n        validation: zodAdapter(\n            z.object({\n                email: z.string().email(),\n                approve_subscription: z.boolean(),\n            })\n        ),\n    });\n\n    return {\n        form,\n    };\n});\n",
-      "start": 1750105187623,
-      "end": 1750105187667,
+      "start": 1750184198862,
+      "end": 1750184198925,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\nimport { atom } from '@/shared/factories';\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: '',\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});",
-      "start": 1750105187667,
-      "end": 1750105187668,
+      "start": 1750184198925,
+      "end": 1750184198926,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: \"\",\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});\n",
-      "start": 1750105187668,
-      "end": 1750105187827,
+      "start": 1750184198926,
+      "end": 1750184199035,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -62,81 +62,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199035,
+      "end": 1750184199035,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187827,
-      "end": 1750105187827,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187827,
-      "end": 1750105187828,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187828,
-      "end": 1750105187828,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187828,
-      "end": 1750105187828,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/testEmailFormModel.ts [vike:pluginModuleBanner] */\nimport { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = atom(() => {\n  const form = createForm({\n    schema: {\n      email: \"\",\n      approve_subscription: Boolean(false)\n    },\n    validation: zodAdapter(z.object({\n      email: z.string().email(),\n      approve_subscription: z.boolean()\n    }))\n  });\n  return {\n    form\n  };\n});\n",
-      "start": 1750105187828,
-      "end": 1750105187828,
+      "start": 1750184199036,
+      "end": 1750184199036,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/model/testEmailFormModel.ts"
-        ],
+        "sources": ["src/entities/Test/model/testEmailFormModel.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }

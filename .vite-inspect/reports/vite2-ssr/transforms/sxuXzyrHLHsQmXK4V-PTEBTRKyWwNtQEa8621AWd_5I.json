@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\n\nimport { Section } from '@/shared/ui';\n\nimport { FaqModel } from '@/entities/FAQ';\n\nimport UnionImage from './union.svg?react';\n\nimport s from './FAQ.module.css';\n\nexport const FAQ = () => {\n    const items = useList(\n        FaqModel.$faqItems.map((el) => el.slice(0, 3)),\n        (item) => (\n            <Accordion.Item value={item.title}>\n                <Accordion.Control>\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\n                        {item.title}\n                    </Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>\n        )\n    );\n\n    return (\n        <Section className={s.section}>\n            <Title className={s.mainTitle} order={2}>\n                Часто задаваемые{' '}\n                <a href='/faq'>\n                    вопросы <ArrowUpRight weight='bold' />\n                </a>\n            </Title>\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n                {items}\n            </Accordion>\n            <UnionImage width={228} height={208} className={s.union} />\n        </Section>\n    );\n};\n",
-      "start": 1750105187850,
-      "end": 1750105187885,
+      "start": 1750184199215,
+      "end": 1750184199263,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\nimport { Section } from '@/shared/ui';\nimport { FaqModel } from '@/entities/FAQ';\nimport UnionImage from './union.svg?react';\nimport s from './FAQ.module.css';\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map(el => el.slice(0, 3)), item => <Accordion.Item value={item.title}>\n                <Accordion.Control>\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\n                        {item.title}\n                    </Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>);\n  return <Section className={s.section}>\n            <Title className={s.mainTitle} order={2}>\n                Часто задаваемые{' '}\n                <a href='/faq'>\n                    вопросы <ArrowUpRight weight='bold' />\n                </a>\n            </Title>\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n                {items}\n            </Accordion>\n            <UnionImage width={228} height={208} className={s.union} />\n        </Section>;\n};",
-      "start": 1750105187885,
-      "end": 1750105187886,
+      "start": 1750184199263,
+      "end": 1750184199264,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -42,9 +42,7 @@
           "mainTitle",
           "union"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/FAQ/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/FAQ/index.tsx"],
         "sourcesContent": [
           "import { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\n\nimport { Section } from '@/shared/ui';\n\nimport { FaqModel } from '@/entities/FAQ';\n\nimport UnionImage from './union.svg?react';\n\nimport s from './FAQ.module.css';\n\nexport const FAQ = () => {\n    const items = useList(\n        FaqModel.$faqItems.map((el) => el.slice(0, 3)),\n        (item) => (\n            <Accordion.Item value={item.title}>\n                <Accordion.Control>\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\n                        {item.title}\n                    </Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>\n        )\n    );\n\n    return (\n        <Section className={s.section}>\n            <Title className={s.mainTitle} order={2}>\n                Часто задаваемые{' '}\n                <a href='/faq'>\n                    вопросы <ArrowUpRight weight='bold' />\n                </a>\n            </Title>\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n                {items}\n            </Accordion>\n            <UnionImage width={228} height={208} className={s.union} />\n        </Section>\n    );\n};\n"
         ],
@@ -55,14 +53,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { ArrowUpRight, CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList } from \"effector-react\";\nimport Markdown from \"markdown-to-jsx\";\nimport { Section } from \"@/shared/ui\";\nimport { FaqModel } from \"@/entities/FAQ\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./FAQ.module.css\";\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map((el) => el.slice(0, 3)), (item) => /* @__PURE__ */ jsxs(Accordion.Item, { value: item.title, children: [\n    /* @__PURE__ */ jsx(Accordion.Control, { children: /* @__PURE__ */ jsx(Title, { order: 5, className: s.accordionLabel, fw: \"bold\", children: item.title }) }),\n    /* @__PURE__ */ jsx(Accordion.Panel, { children: /* @__PURE__ */ jsx(Markdown, { children: item.body.data }) })\n  ] }));\n  return /* @__PURE__ */ jsxs(Section, { className: s.section, children: [\n    /* @__PURE__ */ jsxs(Title, { className: s.mainTitle, order: 2, children: [\n      \"Часто задаваемые\",\n      \" \",\n      /* @__PURE__ */ jsxs(\"a\", { href: \"/faq\", children: [\n        \"вопросы \",\n        /* @__PURE__ */ jsx(ArrowUpRight, { weight: \"bold\" })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Accordion, { variant: \"filled\", classNames: s, chevron: /* @__PURE__ */ jsx(CaretDown, { weight: \"bold\", size: 24 }), children: items }),\n    /* @__PURE__ */ jsx(UnionImage, { width: 228, height: 208, className: s.union })\n  ] });\n};\n",
-      "start": 1750105187886,
-      "end": 1750105188177,
+      "start": 1750184199264,
+      "end": 1750184199500,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/FAQ/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/FAQ/index.tsx"],
         "sourcesContent": [
           "import { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\nimport { Section } from '@/shared/ui';\nimport { FaqModel } from '@/entities/FAQ';\nimport UnionImage from './union.svg?react';\nimport s from './FAQ.module.css';\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map(el => el.slice(0, 3)), item => <Accordion.Item value={item.title}>\n                <Accordion.Control>\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\n                        {item.title}\n                    </Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>);\n  return <Section className={s.section}>\n            <Title className={s.mainTitle} order={2}>\n                Часто задаваемые{' '}\n                <a href='/faq'>\n                    вопросы <ArrowUpRight weight='bold' />\n                </a>\n            </Title>\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n                {items}\n            </Accordion>\n            <UnionImage width={228} height={208} className={s.union} />\n        </Section>;\n};"
         ],
@@ -72,81 +68,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188177,
-      "end": 1750105188178,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188178,
-      "end": 1750105188178,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188178,
-      "end": 1750105188178,
+      "start": 1750184199500,
+      "end": 1750184199500,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/FAQ/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { ArrowUpRight, CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList } from \"effector-react\";\nimport Markdown from \"markdown-to-jsx\";\nimport { Section } from \"@/shared/ui\";\nimport { FaqModel } from \"@/entities/FAQ\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./FAQ.module.css\";\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map((el) => el.slice(0, 3)), (item) => /* @__PURE__ */ jsxs(Accordion.Item, { value: item.title, children: [\n    /* @__PURE__ */ jsx(Accordion.Control, { children: /* @__PURE__ */ jsx(Title, { order: 5, className: s.accordionLabel, fw: \"bold\", children: item.title }) }),\n    /* @__PURE__ */ jsx(Accordion.Panel, { children: /* @__PURE__ */ jsx(Markdown, { children: item.body.data }) })\n  ] }));\n  return /* @__PURE__ */ jsxs(Section, { className: s.section, children: [\n    /* @__PURE__ */ jsxs(Title, { className: s.mainTitle, order: 2, children: [\n      \"Часто задаваемые\",\n      \" \",\n      /* @__PURE__ */ jsxs(\"a\", { href: \"/faq\", children: [\n        \"вопросы \",\n        /* @__PURE__ */ jsx(ArrowUpRight, { weight: \"bold\" })\n      ] })\n    ] }),\n    /* @__PURE__ */ jsx(Accordion, { variant: \"filled\", classNames: s, chevron: /* @__PURE__ */ jsx(CaretDown, { weight: \"bold\", size: 24 }), children: items }),\n    /* @__PURE__ */ jsx(UnionImage, { width: 228, height: 208, className: s.union })\n  ] });\n};\n",
-      "start": 1750105188178,
-      "end": 1750105188178,
+      "start": 1750184199500,
+      "end": 1750184199501,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/FAQ/index.tsx"
-        ],
+        "sources": ["src/pages/IndexPage/ui/FAQ/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

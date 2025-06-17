@@ -4,28 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent } from 'effector';\n\nconst appStarted = createEvent();\n\nexport const appService = {\n    appStarted,\n};\n",
-      "start": 1750105187496,
-      "end": 1750105187545,
+      "start": 1750184198836,
+      "end": 1750184198858,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent } from 'effector';\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};",
-      "start": 1750105187545,
-      "end": 1750105187546,
+      "start": 1750184198858,
+      "end": 1750184198859,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "createEvent",
-          "appStarted",
-          "name",
-          "sid",
-          "appService"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"
-        ],
+        "names": ["createEvent", "appStarted", "name", "sid", "appService"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"],
         "sourcesContent": [
           "import { createEvent } from 'effector';\n\nconst appStarted = createEvent();\n\nexport const appService = {\n    appStarted,\n};\n"
         ],
@@ -36,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
-      "start": 1750105187546,
-      "end": 1750105187628,
+      "start": 1750184198859,
+      "end": 1750184198982,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/services/app/index.ts"],
         "sourcesContent": [
           "import { createEvent } from 'effector';\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};"
         ],
@@ -53,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187628,
-      "end": 1750105187628,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187628,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/services/app/index.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nconst appStarted = createEvent({\n  name: \"appStarted\",\n  sid: \"-ru60z1\"\n});\nexport const appService = {\n  appStarted\n};\n",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198982,
+      "end": 1750184198982,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/services/app/index.ts"
-        ],
+        "sources": ["src/shared/services/app/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC;"
       }

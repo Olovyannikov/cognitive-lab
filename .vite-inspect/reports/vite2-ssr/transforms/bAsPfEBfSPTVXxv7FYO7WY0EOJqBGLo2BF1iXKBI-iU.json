@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\n\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\n\nimport s from './HowItWorks.module.css';\n\nexport const HowItWorks = () => {\n    const { isMobile } = usePageContext();\n    return (\n        <Paper className={s.wrapper} radius={40} component='section'>\n            <Decor />\n            <Title className={s.title} order={2}>\n                Как это работает?\n            </Title>\n            <Flex className={s.flex} gap='md'>\n                {FLOW_STEPS.map((step, idx) => (\n                    <Paper key={step.id} className={s.paper}>\n                        <Box className={s.number}>{icons[idx]}</Box>\n                        <Title className={s.cardTitle} order={4}>\n                            {step.label}\n                        </Title>\n                        <Text className={s.cardText}>{step.description}</Text>\n                    </Paper>\n                ))}\n            </Flex>\n            <Center>\n                <Button\n                    maw={706}\n                    fullWidth\n                    component='a'\n                    variant='white'\n                    href={ROUTES.TEST}\n                    size={isMobile ? 'md' : 'xl'}\n                >\n                    Пройти тест\n                </Button>\n            </Center>\n        </Paper>\n    );\n};\n",
-      "start": 1750105187847,
-      "end": 1750105187879,
+      "start": 1750184199211,
+      "end": 1750184199254,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\nimport s from './HowItWorks.module.css';\nexport const HowItWorks = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return <Paper className={s.wrapper} radius={40} component='section'>\n            <Decor />\n            <Title className={s.title} order={2}>\n                Как это работает?\n            </Title>\n            <Flex className={s.flex} gap='md'>\n                {FLOW_STEPS.map((step, idx) => <Paper key={step.id} className={s.paper}>\n                        <Box className={s.number}>{icons[idx]}</Box>\n                        <Title className={s.cardTitle} order={4}>\n                            {step.label}\n                        </Title>\n                        <Text className={s.cardText}>{step.description}</Text>\n                    </Paper>)}\n            </Flex>\n            <Center>\n                <Button maw={706} fullWidth component='a' variant='white' href={ROUTES.TEST} size={isMobile ? 'md' : 'xl'}>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Paper>;\n};",
-      "start": 1750105187879,
-      "end": 1750105187880,
+      "start": 1750184199254,
+      "end": 1750184199256,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,9 +47,7 @@
           "description",
           "TEST"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/index.tsx"],
         "sourcesContent": [
           "import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\n\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\n\nimport s from './HowItWorks.module.css';\n\nexport const HowItWorks = () => {\n    const { isMobile } = usePageContext();\n    return (\n        <Paper className={s.wrapper} radius={40} component='section'>\n            <Decor />\n            <Title className={s.title} order={2}>\n                Как это работает?\n            </Title>\n            <Flex className={s.flex} gap='md'>\n                {FLOW_STEPS.map((step, idx) => (\n                    <Paper key={step.id} className={s.paper}>\n                        <Box className={s.number}>{icons[idx]}</Box>\n                        <Title className={s.cardTitle} order={4}>\n                            {step.label}\n                        </Title>\n                        <Text className={s.cardText}>{step.description}</Text>\n                    </Paper>\n                ))}\n            </Flex>\n            <Center>\n                <Button\n                    maw={706}\n                    fullWidth\n                    component='a'\n                    variant='white'\n                    href={ROUTES.TEST}\n                    size={isMobile ? 'md' : 'xl'}\n                >\n                    Пройти тест\n                </Button>\n            </Center>\n        </Paper>\n    );\n};\n"
         ],
@@ -60,14 +58,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Flex, Paper, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { FLOW_STEPS } from \"./const\";\nimport { Decor, icons } from \"./Icons\";\nimport s from \"./HowItWorks.module.css\";\nexport const HowItWorks = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Paper, { className: s.wrapper, radius: 40, component: \"section\", children: [\n    /* @__PURE__ */ jsx(Decor, {}),\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: \"Как это работает?\" }),\n    /* @__PURE__ */ jsx(Flex, { className: s.flex, gap: \"md\", children: FLOW_STEPS.map((step, idx) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n      /* @__PURE__ */ jsx(Box, { className: s.number, children: icons[idx] }),\n      /* @__PURE__ */ jsx(Title, { className: s.cardTitle, order: 4, children: step.label }),\n      /* @__PURE__ */ jsx(Text, { className: s.cardText, children: step.description })\n    ] }, step.id)) }),\n    /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { maw: 706, fullWidth: true, component: \"a\", variant: \"white\", href: ROUTES.TEST, size: isMobile ? \"md\" : \"xl\", children: \"Пройти тест\" }) })\n  ] });\n};\n",
-      "start": 1750105187881,
-      "end": 1750105188157,
+      "start": 1750184199256,
+      "end": 1750184199489,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/index.tsx"],
         "sourcesContent": [
           "import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\nimport s from './HowItWorks.module.css';\nexport const HowItWorks = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return <Paper className={s.wrapper} radius={40} component='section'>\n            <Decor />\n            <Title className={s.title} order={2}>\n                Как это работает?\n            </Title>\n            <Flex className={s.flex} gap='md'>\n                {FLOW_STEPS.map((step, idx) => <Paper key={step.id} className={s.paper}>\n                        <Box className={s.number}>{icons[idx]}</Box>\n                        <Title className={s.cardTitle} order={4}>\n                            {step.label}\n                        </Title>\n                        <Text className={s.cardText}>{step.description}</Text>\n                    </Paper>)}\n            </Flex>\n            <Center>\n                <Button maw={706} fullWidth component='a' variant='white' href={ROUTES.TEST} size={isMobile ? 'md' : 'xl'}>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Paper>;\n};"
         ],
@@ -77,81 +73,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199489,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199489,
+      "end": 1750184199490,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199490,
+      "end": 1750184199490,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItWorks/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Flex, Paper, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { FLOW_STEPS } from \"./const\";\nimport { Decor, icons } from \"./Icons\";\nimport s from \"./HowItWorks.module.css\";\nexport const HowItWorks = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Paper, { className: s.wrapper, radius: 40, component: \"section\", children: [\n    /* @__PURE__ */ jsx(Decor, {}),\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: \"Как это работает?\" }),\n    /* @__PURE__ */ jsx(Flex, { className: s.flex, gap: \"md\", children: FLOW_STEPS.map((step, idx) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, children: [\n      /* @__PURE__ */ jsx(Box, { className: s.number, children: icons[idx] }),\n      /* @__PURE__ */ jsx(Title, { className: s.cardTitle, order: 4, children: step.label }),\n      /* @__PURE__ */ jsx(Text, { className: s.cardText, children: step.description })\n    ] }, step.id)) }),\n    /* @__PURE__ */ jsx(Center, { children: /* @__PURE__ */ jsx(Button, { maw: 706, fullWidth: true, component: \"a\", variant: \"white\", href: ROUTES.TEST, size: isMobile ? \"md\" : \"xl\", children: \"Пройти тест\" }) })\n  ] });\n};\n",
-      "start": 1750105188157,
-      "end": 1750105188157,
+      "start": 1750184199490,
+      "end": 1750184199490,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/HowItWorks/index.tsx"
-        ],
+        "sources": ["src/pages/IndexPage/ui/HowItWorks/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }

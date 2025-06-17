@@ -4,28 +4,19 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper } from '@mantine/core';\n\nimport { Paragraph } from '@/entities/Report';\n\nimport s from './TextStrokeDash.module.css';\n\ninterface TextStrokeDashProps {\n    text: string;\n    color?: string;\n}\n\nexport const TextStrokeDash = ({ text, color }: TextStrokeDashProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>\n);\n",
-      "start": 1750105187755,
-      "end": 1750105187821,
+      "start": 1750184199152,
+      "end": 1750184199205,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper } from '@mantine/core';\nimport { Paragraph } from '@/entities/Report';\nimport s from './TextStrokeDash.module.css';\ninterface TextStrokeDashProps {\n  text: string;\n  color?: string;\n}\nexport const TextStrokeDash = ({\n  text,\n  color\n}: TextStrokeDashProps) => <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>;",
-      "start": 1750105187821,
-      "end": 1750105187822,
+      "start": 1750184199205,
+      "end": 1750184199206,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "Paper",
-          "Paragraph",
-          "s",
-          "TextStrokeDashProps",
-          "text",
-          "color",
-          "TextStrokeDash",
-          "paper"
-        ],
+        "names": ["Paper", "Paragraph", "s", "TextStrokeDashProps", "text", "color", "TextStrokeDash", "paper"],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/TextStrokeDash/index.tsx"
         ],
@@ -39,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
-      "start": 1750105187822,
-      "end": 1750105188037,
+      "start": 1750184199206,
+      "end": 1750184199426,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -56,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188037,
-      "end": 1750105188037,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188037,
-      "end": 1750105188038,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188038,
-      "end": 1750105188038,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188038,
-      "end": 1750105188038,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/TextStrokeDash/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
-      "start": 1750105188038,
-      "end": 1750105188038,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/TextStrokeDash/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/TextStrokeDash/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

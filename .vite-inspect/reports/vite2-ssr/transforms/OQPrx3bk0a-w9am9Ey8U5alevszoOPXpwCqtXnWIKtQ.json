@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PersonalityTypesResponse } from '../api/dto';\n\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) =>\n    data\n        .map((types) => types.types)\n        .flat()\n        .reduce(\n            (acc, curr) => {\n                acc[curr.code] = curr.name;\n\n                return acc;\n            },\n            {} as Record<string, string>\n        ) ?? ({} as Record<string, string>);\n",
-      "start": 1750105187676,
-      "end": 1750105187709,
+      "start": 1750184198981,
+      "end": 1750184199024,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PersonalityTypesResponse } from '../api/dto';\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) => data.map(types => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {} as Record<string, string>) ?? {} as Record<string, string>;",
-      "start": 1750105187709,
-      "end": 1750105187710,
+      "start": 1750184199024,
+      "end": 1750184199028,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -30,9 +30,7 @@
           "name",
           "Record"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"],
         "sourcesContent": [
           "import type { PersonalityTypesResponse } from '../api/dto';\n\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) =>\n    data\n        .map((types) => types.types)\n        .flat()\n        .reduce(\n            (acc, curr) => {\n                acc[curr.code] = curr.name;\n\n                return acc;\n            },\n            {} as Record<string, string>\n        ) ?? ({} as Record<string, string>);\n"
         ],
@@ -43,14 +41,12 @@
     {
       "name": "vite:esbuild",
       "result": "export const normalizePersonalities = (data) => data.map((types) => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {}) ?? {};\n",
-      "start": 1750105187710,
-      "end": 1750105187912,
+      "start": 1750184199028,
+      "end": 1750184199227,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"],
         "sourcesContent": [
           "import type { PersonalityTypesResponse } from '../api/dto';\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) => data.map(types => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {} as Record<string, string>) ?? {} as Record<string, string>;"
         ],
@@ -60,81 +56,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/lib/index.ts [vike:pluginModuleBanner] */\nexport const normalizePersonalities = (data) => data.map((types) => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {}) ?? {};\n",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199227,
+      "end": 1750184199227,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Personality/lib/index.ts"
-        ],
+        "sources": ["src/entities/Personality/lib/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

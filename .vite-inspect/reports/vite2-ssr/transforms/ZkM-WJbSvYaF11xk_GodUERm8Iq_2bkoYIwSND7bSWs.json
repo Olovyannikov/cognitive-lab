@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { SendIssueRequest } from './dto';\n\nexport const sendIssueMutation = createQuery({\n    effect: createInternalRequestFx<SendIssueRequest, { id: string }>((body) => ({\n        url: API.support.issues,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1750105188264,
-      "end": 1750105188279,
+      "start": 1750184199292,
+      "end": 1750184199328,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { SendIssueRequest } from './dto';\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<SendIssueRequest, {\n      id: string;\n    }>(body => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});",
-      "start": 1750105188279,
-      "end": 1750105188280,
+      "start": 1750184199328,
+      "end": 1750184199329,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,9 +39,7 @@
           "\"sendIssueMutation\"",
           "\"createQuery\""
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/api/index.ts"],
         "sourcesContent": [
           "import { createQuery } from '@farfetched/core';\n\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { SendIssueRequest } from './dto';\n\nexport const sendIssueMutation = createQuery({\n    effect: createInternalRequestFx<SendIssueRequest, { id: string }>((body) => ({\n        url: API.support.issues,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n"
         ],
@@ -52,14 +50,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((body) => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750105188280,
-      "end": 1750105188421,
+      "start": 1750184199329,
+      "end": 1750184199575,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/api/index.ts"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { SendIssueRequest } from './dto';\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<SendIssueRequest, {\n      id: string;\n    }>(body => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});"
         ],
@@ -69,81 +65,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188421,
-      "end": 1750105188421,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188421,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188422,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188422,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188422,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188422,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendIssueMutation = _withFactory({\n  sid: \"-y6so3x\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((body) => ({\n      url: API.support.issues,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendIssueMutation\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750105188422,
-      "end": 1750105188422,
+      "start": 1750184199575,
+      "end": 1750184199575,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/HelpForm/api/index.ts"
-        ],
+        "sources": ["src/widgets/HelpForm/api/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;"
       }

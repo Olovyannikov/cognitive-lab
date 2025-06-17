@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".reportLink {\n  margin-left: -12px;\n  padding: 10px;\n  width: calc(100% + 24px);\n  text-decoration: none;\n  color: var(--mantine-color-dark-6);\n\n  p {\n    min-width: 170px;\n  }\n\n  time {\n    color: var(--mantine-color-gray-6);\n  }\n\n  &:hover {\n    background-color: var(--mantine-color-gray-1);\n  }\n\n  @mixin larger-than 992px {\n    margin: 0;\n    padding: 4px 10px;\n    width: 100%;\n  }\n}\n",
-      "start": 1750105188498,
-      "end": 1750105188505,
+      "start": 1750184199758,
+      "end": 1750184199761,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188505,
-      "end": 1750105188505,
+      "start": 1750184199761,
+      "end": 1750184199761,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css [vike:pluginModuleBanner] */\nexport const reportLink = \"_8oSnO\";\nexport default {\n\treportLink: reportLink\n};\n",
-      "start": 1750105188506,
-      "end": 1750105188506,
+      "start": 1750184199762,
+      "end": 1750184199762,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Reports/ReportTemplate/ReportTemplate.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC;"
       }

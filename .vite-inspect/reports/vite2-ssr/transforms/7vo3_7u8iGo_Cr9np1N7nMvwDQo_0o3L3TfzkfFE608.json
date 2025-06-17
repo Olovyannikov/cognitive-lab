@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Blockquote, Text, Title } from '@mantine/core';\nimport MarkdownToJsx from 'markdown-to-jsx';\n\nimport s from './Markdown.module.css';\n\nexport const Markdown = ({ children }: { children: string }) => (\n    <MarkdownToJsx\n        className={s.mkd}\n        options={{\n            overrides: {\n                h1: (props) => (\n                    <Title order={1} className={s.title}>\n                        {props.children}\n                    </Title>\n                ),\n                h2: (props) => (\n                    <Title order={2} className={s.title}>\n                        {props.children}\n                    </Title>\n                ),\n                p: (props) => <Text className={s.text}>{props.children}</Text>,\n                blockquote: (props) => (\n                    <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\n                        {props.children}\n                    </Blockquote>\n                ),\n                a: (props) => <>{props.children}</>,\n            },\n        }}\n    >\n        {children}\n    </MarkdownToJsx>\n);\n",
-      "start": 1750105187812,
-      "end": 1750105187858,
+      "start": 1750184199021,
+      "end": 1750184199064,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Blockquote, Text, Title } from '@mantine/core';\nimport MarkdownToJsx from 'markdown-to-jsx';\nimport s from './Markdown.module.css';\nexport const Markdown = ({\n  children\n}: {\n  children: string;\n}) => <MarkdownToJsx className={s.mkd} options={{\n  overrides: {\n    h1: props => <Title order={1} className={s.title}>\n                        {props.children}\n                    </Title>,\n    h2: props => <Title order={2} className={s.title}>\n                        {props.children}\n                    </Title>,\n    p: props => <Text className={s.text}>{props.children}</Text>,\n    blockquote: props => <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\n                        {props.children}\n                    </Blockquote>,\n    a: props => <>{props.children}</>\n  }\n}}>\n        {children}\n    </MarkdownToJsx>;",
-      "start": 1750105187858,
-      "end": 1750105187859,
+      "start": 1750184199064,
+      "end": 1750184199065,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -35,9 +35,7 @@
           "blockquote",
           "a"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Markdown/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Markdown/index.tsx"],
         "sourcesContent": [
           "import { Blockquote, Text, Title } from '@mantine/core';\nimport MarkdownToJsx from 'markdown-to-jsx';\n\nimport s from './Markdown.module.css';\n\nexport const Markdown = ({ children }: { children: string }) => (\n    <MarkdownToJsx\n        className={s.mkd}\n        options={{\n            overrides: {\n                h1: (props) => (\n                    <Title order={1} className={s.title}>\n                        {props.children}\n                    </Title>\n                ),\n                h2: (props) => (\n                    <Title order={2} className={s.title}>\n                        {props.children}\n                    </Title>\n                ),\n                p: (props) => <Text className={s.text}>{props.children}</Text>,\n                blockquote: (props) => (\n                    <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\n                        {props.children}\n                    </Blockquote>\n                ),\n                a: (props) => <>{props.children}</>,\n            },\n        }}\n    >\n        {children}\n    </MarkdownToJsx>\n);\n"
         ],
@@ -48,14 +46,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx } from \"react/jsx-runtime\";\nimport { Blockquote, Text, Title } from \"@mantine/core\";\nimport MarkdownToJsx from \"markdown-to-jsx\";\nimport s from \"./Markdown.module.css\";\nexport const Markdown = ({\n  children\n}) => /* @__PURE__ */ jsx(MarkdownToJsx, { className: s.mkd, options: {\n  overrides: {\n    h1: (props) => /* @__PURE__ */ jsx(Title, { order: 1, className: s.title, children: props.children }),\n    h2: (props) => /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, children: props.children }),\n    p: (props) => /* @__PURE__ */ jsx(Text, { className: s.text, children: props.children }),\n    blockquote: (props) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `violet.9`, bg: \"transparent\", icon: null, children: props.children }),\n    a: (props) => /* @__PURE__ */ jsx(Fragment, { children: props.children })\n  }\n}, children });\n",
-      "start": 1750105187859,
-      "end": 1750105188129,
+      "start": 1750184199065,
+      "end": 1750184199276,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Markdown/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Markdown/index.tsx"],
         "sourcesContent": [
           "import { Blockquote, Text, Title } from '@mantine/core';\nimport MarkdownToJsx from 'markdown-to-jsx';\nimport s from './Markdown.module.css';\nexport const Markdown = ({\n  children\n}: {\n  children: string;\n}) => <MarkdownToJsx className={s.mkd} options={{\n  overrides: {\n    h1: props => <Title order={1} className={s.title}>\n                        {props.children}\n                    </Title>,\n    h2: props => <Title order={2} className={s.title}>\n                        {props.children}\n                    </Title>,\n    p: props => <Text className={s.text}>{props.children}</Text>,\n    blockquote: props => <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\n                        {props.children}\n                    </Blockquote>,\n    a: props => <>{props.children}</>\n  }\n}}>\n        {children}\n    </MarkdownToJsx>;"
         ],
@@ -65,81 +61,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188129,
-      "end": 1750105188129,
+      "start": 1750184199276,
+      "end": 1750184199276,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188129,
-      "end": 1750105188130,
+      "start": 1750184199277,
+      "end": 1750184199277,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188130,
-      "end": 1750105188130,
+      "start": 1750184199277,
+      "end": 1750184199277,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188130,
-      "end": 1750105188130,
+      "start": 1750184199277,
+      "end": 1750184199277,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188130,
-      "end": 1750105188130,
+      "start": 1750184199277,
+      "end": 1750184199277,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/Markdown/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx } from \"react/jsx-runtime\";\nimport { Blockquote, Text, Title } from \"@mantine/core\";\nimport MarkdownToJsx from \"markdown-to-jsx\";\nimport s from \"./Markdown.module.css\";\nexport const Markdown = ({\n  children\n}) => /* @__PURE__ */ jsx(MarkdownToJsx, { className: s.mkd, options: {\n  overrides: {\n    h1: (props) => /* @__PURE__ */ jsx(Title, { order: 1, className: s.title, children: props.children }),\n    h2: (props) => /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, children: props.children }),\n    p: (props) => /* @__PURE__ */ jsx(Text, { className: s.text, children: props.children }),\n    blockquote: (props) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `violet.9`, bg: \"transparent\", icon: null, children: props.children }),\n    a: (props) => /* @__PURE__ */ jsx(Fragment, { children: props.children })\n  }\n}, children });\n",
-      "start": 1750105188130,
-      "end": 1750105188130,
+      "start": 1750184199277,
+      "end": 1750184199277,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/ui/Markdown/index.tsx"
-        ],
+        "sources": ["src/shared/ui/Markdown/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

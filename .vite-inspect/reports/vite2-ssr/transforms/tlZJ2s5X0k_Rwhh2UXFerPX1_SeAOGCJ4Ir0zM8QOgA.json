@@ -4,25 +4,19 @@
     {
       "name": "vite:load-fallback",
       "result": "export const CARDS = [\n    {\n        id: 0,\n        title: 'Сколько времени займет тестирование?',\n        text: 'Тестирование займет примерно 15-20 минут',\n        image: 'clock',\n    },\n    {\n        id: 1,\n        title: 'Что делать, если я не понимаю вопрос?',\n        text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n        image: 'clockworks',\n    },\n    {\n        id: 2,\n        title: 'Как лучше отвечать: быстро или обдуманно?',\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n        image: 'bubble',\n    },\n    {\n        id: 3,\n        title: 'Как понять, что я ответил правильно?',\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n        image: 'heart',\n    },\n];\n",
-      "start": 1750105188316,
-      "end": 1750105188338,
+      "start": 1750184199359,
+      "end": 1750184199379,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const CARDS = [{\n  id: 0,\n  title: 'Сколько времени займет тестирование?',\n  text: 'Тестирование займет примерно 15-20 минут',\n  image: 'clock'\n}, {\n  id: 1,\n  title: 'Что делать, если я не понимаю вопрос?',\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: 'clockworks'\n}, {\n  id: 2,\n  title: 'Как лучше отвечать: быстро или обдуманно?',\n  text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n  image: 'bubble'\n}, {\n  id: 3,\n  title: 'Как понять, что я ответил правильно?',\n  text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n  image: 'heart'\n}];",
-      "start": 1750105188338,
-      "end": 1750105188340,
+      "start": 1750184199379,
+      "end": 1750184199380,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "CARDS",
-          "id",
-          "title",
-          "text",
-          "image"
-        ],
+        "names": ["CARDS", "id", "title", "text", "image"],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/const/index.ts"
         ],
@@ -36,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const CARDS = [{\n  id: 0,\n  title: \"Сколько времени займет тестирование?\",\n  text: \"Тестирование займет примерно 15-20 минут\",\n  image: \"clock\"\n}, {\n  id: 1,\n  title: \"Что делать, если я не понимаю вопрос?\",\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: \"clockworks\"\n}, {\n  id: 2,\n  title: \"Как лучше отвечать: быстро или обдуманно?\",\n  text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n  image: \"bubble\"\n}, {\n  id: 3,\n  title: \"Как понять, что я ответил правильно?\",\n  text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n  image: \"heart\"\n}];\n",
-      "start": 1750105188340,
-      "end": 1750105188429,
+      "start": 1750184199380,
+      "end": 1750184199584,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -53,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/const/index.ts [vike:pluginModuleBanner] */\nexport const CARDS = [{\n  id: 0,\n  title: \"Сколько времени займет тестирование?\",\n  text: \"Тестирование займет примерно 15-20 минут\",\n  image: \"clock\"\n}, {\n  id: 1,\n  title: \"Что делать, если я не понимаю вопрос?\",\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: \"clockworks\"\n}, {\n  id: 2,\n  title: \"Как лучше отвечать: быстро или обдуманно?\",\n  text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n  image: \"bubble\"\n}, {\n  id: 3,\n  title: \"Как понять, что я ответил правильно?\",\n  text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n  image: \"heart\"\n}];\n",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/Test/SplashScreen/const/index.ts"
-        ],
+        "sources": ["src/widgets/Test/SplashScreen/const/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;"
       }

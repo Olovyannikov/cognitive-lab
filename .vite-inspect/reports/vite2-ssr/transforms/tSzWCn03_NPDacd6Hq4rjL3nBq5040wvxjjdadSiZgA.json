@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\n\nexport const LandingModel = atom(() => {\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\n\n    sample({\n        clock: getMainPageInfoQuery.finished.success,\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n        target: $statisticsAndTrust,\n    });\n\n    return {\n        $statisticsAndTrust,\n    };\n});\n",
-      "start": 1750105187557,
-      "end": 1750105187603,
+      "start": 1750184198930,
+      "end": 1750184198976,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: res => res.result.find(el => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});",
-      "start": 1750105187603,
-      "end": 1750105187604,
+      "start": 1750184198976,
+      "end": 1750184198978,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,9 +39,7 @@
           "target",
           "or"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\n\nexport const LandingModel = atom(() => {\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\n\n    sample({\n        clock: getMainPageInfoQuery.finished.success,\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n        target: $statisticsAndTrust,\n    });\n\n    return {\n        $statisticsAndTrust,\n    };\n});\n"
         ],
@@ -52,14 +50,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});\n",
-      "start": 1750105187604,
-      "end": 1750105187734,
+      "start": 1750184198978,
+      "end": 1750184199133,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: res => res.result.find(el => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});"
         ],
@@ -69,81 +65,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/model/index.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = atom(() => {\n  const $statisticsAndTrust = createStore([], {\n    name: \"$statisticsAndTrust\",\n    sid: \"-7v5633\"\n  });\n  sample({\n    and: [{\n      clock: getMainPageInfoQuery.finished.success,\n      fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n      target: $statisticsAndTrust\n    }],\n    or: {\n      sid: \"vzo0lh\"\n    }\n  });\n  return {\n    $statisticsAndTrust\n  };\n});\n",
-      "start": 1750105187735,
-      "end": 1750105187735,
+      "start": 1750184199133,
+      "end": 1750184199133,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Landing/model/index.ts"
-        ],
+        "sources": ["src/entities/Landing/model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }

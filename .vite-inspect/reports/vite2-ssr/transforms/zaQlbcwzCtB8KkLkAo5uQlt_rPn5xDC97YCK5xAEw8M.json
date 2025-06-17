@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".stack {\n  max-width: max-content;\n\n  @mixin larger-than 998px {\n    position: relative;\n    max-width: 900px;\n  }\n}\n\n.point {\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 998px {\n    gap: var(--mantine-spacing-sm);\n  }\n}\n\n.check {\n  width: 16px;\n  height: 16px;\n\n  @mixin larger-than 998px {\n    width: 24px;\n    height: 24px;\n  }\n}\n\n.text {\n  flex: 1;\n  font-size: 16px;\n  line-height: 18px;\n\n  @mixin larger-than 998px {\n    font-size: 22px;\n    line-height: 25px;\n  }\n}\n",
-      "start": 1750105188129,
-      "end": 1750105188150,
+      "start": 1750184199329,
+      "end": 1750184199364,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188150,
-      "end": 1750105188150,
+      "start": 1750184199364,
+      "end": 1750184199364,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/PointsList/PointsList.module.css [vike:pluginModuleBanner] */\nexport const stack = \"aJgL5\";\nexport const point = \"nXjq1\";\nexport const check = \"TkoaI\";\nexport const text = \"CvW3b\";\nexport default {\n\tstack: stack,\n\tpoint: point,\n\tcheck: check,\n\ttext: text\n};\n",
-      "start": 1750105188151,
-      "end": 1750105188151,
+      "start": 1750184199365,
+      "end": 1750184199365,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/ui/PointsList/PointsList.module.css"
-        ],
+        "sources": ["src/shared/ui/PointsList/PointsList.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
       }

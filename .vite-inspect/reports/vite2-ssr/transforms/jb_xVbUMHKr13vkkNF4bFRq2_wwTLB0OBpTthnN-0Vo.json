@@ -4,28 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n",
-      "start": 1750105187673,
-      "end": 1750105187703,
+      "start": 1750184199001,
+      "end": 1750184199042,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');",
-      "start": 1750105187703,
-      "end": 1750105187704,
+      "start": 1750184199042,
+      "end": 1750184199043,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "useMediaQuery",
-          "useIsMedium",
-          "useIsLarge",
-          "useIsHuge",
-          "useIsLargeMenu"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"
-        ],
+        "names": ["useMediaQuery", "useIsMedium", "useIsLarge", "useIsHuge", "useIsLargeMenu"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
         "sourcesContent": [
           "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n"
         ],
@@ -36,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1750105187704,
-      "end": 1750105187912,
+      "start": 1750184199043,
+      "end": 1750184199232,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
         "sourcesContent": [
           "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');"
         ],
@@ -53,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/hooks/media/index.ts [vike:pluginModuleBanner] */\nimport { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199232,
+      "end": 1750184199232,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/hooks/media/index.ts"
-        ],
+        "sources": ["src/shared/lib/hooks/media/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

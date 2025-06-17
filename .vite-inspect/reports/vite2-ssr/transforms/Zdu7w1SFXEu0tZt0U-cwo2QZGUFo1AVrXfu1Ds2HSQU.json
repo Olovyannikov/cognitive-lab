@@ -4,25 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { CongratulationsPage } from '@/pages/CongratulationsPage';\n\nexport default function Page() {\n    return <CongratulationsPage />;\n}\n",
-      "start": 1750105187348,
-      "end": 1750105187370,
+      "start": 1750184198683,
+      "end": 1750184198714,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { CongratulationsPage } from '@/pages/CongratulationsPage';\nexport default function Page() {\n  return <CongratulationsPage />;\n}",
-      "start": 1750105187370,
-      "end": 1750105187371,
+      "start": 1750184198714,
+      "end": 1750184198715,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "CongratulationsPage",
-          "Page"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/congratulations/@id/+Page.tsx"
-        ],
+        "names": ["CongratulationsPage", "Page"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/congratulations/@id/+Page.tsx"],
         "sourcesContent": [
           "import { CongratulationsPage } from '@/pages/CongratulationsPage';\n\nexport default function Page() {\n    return <CongratulationsPage />;\n}\n"
         ],
@@ -33,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { CongratulationsPage } from \"@/pages/CongratulationsPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(CongratulationsPage, {});\n}\n",
-      "start": 1750105187371,
-      "end": 1750105187444,
+      "start": 1750184198715,
+      "end": 1750184198771,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/congratulations/@id/+Page.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/congratulations/@id/+Page.tsx"],
         "sourcesContent": [
           "import { CongratulationsPage } from '@/pages/CongratulationsPage';\nexport default function Page() {\n  return <CongratulationsPage />;\n}"
         ],
@@ -50,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/congratulations/@id/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { CongratulationsPage } from \"@/pages/CongratulationsPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(CongratulationsPage, {});\n}\n",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198771,
+      "end": 1750184198771,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/congratulations/@id/+Page.tsx"
-        ],
+        "sources": ["pages/congratulations/@id/+Page.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD;"
       }

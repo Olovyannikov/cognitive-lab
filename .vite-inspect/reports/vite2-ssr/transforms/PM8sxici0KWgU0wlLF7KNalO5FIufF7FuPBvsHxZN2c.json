@@ -4,27 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "export const FLOW_STEPS = [\n    {\n        id: 0,\n        label: 'Прохождение теста',\n        description:\n            'Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа',\n    },\n    {\n        id: 1,\n        label: 'Анализ ответов',\n        description:\n            'Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль',\n    },\n    {\n        id: 2,\n        label: 'Отчёт и действия',\n        description:\n            'Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь',\n    },\n];\n",
-      "start": 1750105188183,
-      "end": 1750105188206,
+      "start": 1750184199520,
+      "end": 1750184199541,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const FLOW_STEPS = [{\n  id: 0,\n  label: 'Прохождение теста',\n  description: 'Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа'\n}, {\n  id: 1,\n  label: 'Анализ ответов',\n  description: 'Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль'\n}, {\n  id: 2,\n  label: 'Отчёт и действия',\n  description: 'Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь'\n}];",
-      "start": 1750105188207,
-      "end": 1750105188208,
+      "start": 1750184199541,
+      "end": 1750184199541,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "FLOW_STEPS",
-          "id",
-          "label",
-          "description"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/const.ts"
-        ],
+        "names": ["FLOW_STEPS", "id", "label", "description"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/const.ts"],
         "sourcesContent": [
           "export const FLOW_STEPS = [\n    {\n        id: 0,\n        label: 'Прохождение теста',\n        description:\n            'Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа',\n    },\n    {\n        id: 1,\n        label: 'Анализ ответов',\n        description:\n            'Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль',\n    },\n    {\n        id: 2,\n        label: 'Отчёт и действия',\n        description:\n            'Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь',\n    },\n];\n"
         ],
@@ -35,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "export const FLOW_STEPS = [{\n  id: 0,\n  label: \"Прохождение теста\",\n  description: \"Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа\"\n}, {\n  id: 1,\n  label: \"Анализ ответов\",\n  description: \"Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль\"\n}, {\n  id: 2,\n  label: \"Отчёт и действия\",\n  description: \"Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь\"\n}];\n",
-      "start": 1750105188208,
-      "end": 1750105188345,
+      "start": 1750184199541,
+      "end": 1750184199696,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/const.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/const.ts"],
         "sourcesContent": [
           "export const FLOW_STEPS = [{\n  id: 0,\n  label: 'Прохождение теста',\n  description: 'Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа'\n}, {\n  id: 1,\n  label: 'Анализ ответов',\n  description: 'Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль'\n}, {\n  id: 2,\n  label: 'Отчёт и действия',\n  description: 'Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь'\n}];"
         ],
@@ -52,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItWorks/const.ts [vike:pluginModuleBanner] */\nexport const FLOW_STEPS = [{\n  id: 0,\n  label: \"Прохождение теста\",\n  description: \"Пройдите тест, честно отвечая на вопросы о ваших предпочтениях и склонностях. На этом этапе формируется основа для точного определения вашего MBTI-типа\"\n}, {\n  id: 1,\n  label: \"Анализ ответов\",\n  description: \"Наши алгоритмы совмещают методы MBTI и искусственный интеллект для глубокой обработки данных. Это позволяет учесть нюансы и сформировать точный психологический профиль\"\n}, {\n  id: 2,\n  label: \"Отчёт и действия\",\n  description: \"Получите детальный отчёт с описанием вашего типа личности и персональными рекомендациями. Применяйте их на практике, отслеживайте прогресс и корректируйте свой путь\"\n}];\n",
-      "start": 1750105188345,
-      "end": 1750105188345,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/HowItWorks/const.ts"
-        ],
+        "sources": ["src/pages/IndexPage/ui/HowItWorks/const.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvK,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvL,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpL,CAAC,CAAC;"
       }

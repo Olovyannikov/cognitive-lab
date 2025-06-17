@@ -4,99 +4,97 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImageCard4 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 174, height: 122, viewBox: \"0 0 174 122\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 18.5, cy: 31.5, r: 155.5, fill: \"#F59F00\" }));\nexport default SvgImageCard4;\n",
-      "start": 1750105188157,
-      "end": 1750105188329,
+      "start": 1750184199506,
+      "end": 1750184199695,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188329,
-      "end": 1750105188329,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/ForWhom/img/image-card-4.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImageCard4 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 174, height: 122, viewBox: \"0 0 174 122\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 18.5, cy: 31.5, r: 155.5, fill: \"#F59F00\" }));\nexport default SvgImageCard4;\n",
-      "start": 1750105188330,
-      "end": 1750105188330,
+      "start": 1750184199695,
+      "end": 1750184199695,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/ForWhom/img/image-card-4.svg?react"
-        ],
+        "sources": ["src/pages/IndexPage/ui/ForWhom/img/image-card-4.svg?react"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/R,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

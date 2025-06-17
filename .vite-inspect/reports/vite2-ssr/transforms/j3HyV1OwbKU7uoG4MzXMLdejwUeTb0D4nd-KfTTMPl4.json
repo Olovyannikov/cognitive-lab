@@ -4,25 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './media';\n",
-      "start": 1750105187497,
-      "end": 1750105187556,
+      "start": 1750184198836,
+      "end": 1750184198858,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './media';",
-      "start": 1750105187557,
-      "end": 1750105187557,
+      "start": 1750184198858,
+      "end": 1750184198858,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './media';\n"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/index.ts"],
+        "sourcesContent": ["export * from './media';\n"],
         "mappings": "AAAA,cAAc,SAAS",
         "ignoreList": []
       }
@@ -30,98 +26,92 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./media\";\n",
-      "start": 1750105187557,
-      "end": 1750105187670,
+      "start": 1750184198858,
+      "end": 1750184198952,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './media';"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/index.ts"],
+        "sourcesContent": ["export * from './media';"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/hooks/index.ts [vike:pluginModuleBanner] */\nexport * from \"./media\";\n",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/hooks/index.ts"
-        ],
+        "sources": ["src/shared/lib/hooks/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

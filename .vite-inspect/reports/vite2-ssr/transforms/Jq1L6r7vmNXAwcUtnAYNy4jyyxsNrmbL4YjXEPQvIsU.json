@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh,\n});\n",
-      "start": 1750105187366,
-      "end": 1750105187403,
+      "start": 1750184198704,
+      "end": 1750184198738,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});",
-      "start": 1750105187403,
-      "end": 1750105187403,
+      "start": 1750184198738,
+      "end": 1750184198739,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,9 +28,7 @@
           "or",
           "sid"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh,\n});\n"
         ],
@@ -41,14 +39,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});\n",
-      "start": 1750105187403,
-      "end": 1750105187444,
+      "start": 1750184198739,
+      "end": 1750184198778,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});"
         ],
@@ -58,81 +54,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198778,
+      "end": 1750184198779,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/mbti-types/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});\n",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/mbti-types/+pageInitiated.ts"
-        ],
+        "sources": ["pages/mbti-types/+pageInitiated.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }

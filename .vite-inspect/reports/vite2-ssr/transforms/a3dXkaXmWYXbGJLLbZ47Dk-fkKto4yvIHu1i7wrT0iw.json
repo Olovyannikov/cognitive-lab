@@ -4,27 +4,19 @@
     {
       "name": "vite:load-fallback",
       "result": "export const clearLocalStorageTestUnits = () => {\n    const userId = window.localStorage.getItem('$userId');\n\n    window.localStorage.clear();\n\n    window.localStorage.setItem('$userId', userId ?? '');\n};\n",
-      "start": 1750105187918,
-      "end": 1750105187966,
+      "start": 1750184199064,
+      "end": 1750184199104,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem('$userId');\n  window.localStorage.clear();\n  window.localStorage.setItem('$userId', userId ?? '');\n};",
-      "start": 1750105187966,
-      "end": 1750105187967,
+      "start": 1750184199104,
+      "end": 1750184199104,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "clearLocalStorageTestUnits",
-          "userId",
-          "window",
-          "localStorage",
-          "getItem",
-          "clear",
-          "setItem"
-        ],
+        "names": ["clearLocalStorageTestUnits", "userId", "window", "localStorage", "getItem", "clear", "setItem"],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/clearLocalStorageTestUnits.ts"
         ],
@@ -38,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem(\"$userId\");\n  window.localStorage.clear();\n  window.localStorage.setItem(\"$userId\", userId ?? \"\");\n};\n",
-      "start": 1750105187967,
-      "end": 1750105188227,
+      "start": 1750184199104,
+      "end": 1750184199294,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -55,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/clearLocalStorageTestUnits.ts [vike:pluginModuleBanner] */\nexport const clearLocalStorageTestUnits = () => {\n  const userId = window.localStorage.getItem(\"$userId\");\n  window.localStorage.clear();\n  window.localStorage.setItem(\"$userId\", userId ?? \"\");\n};\n",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199294,
+      "end": 1750184199294,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/lib/clearLocalStorageTestUnits.ts"
-        ],
+        "sources": ["src/entities/Test/lib/clearLocalStorageTestUnits.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC;"
       }

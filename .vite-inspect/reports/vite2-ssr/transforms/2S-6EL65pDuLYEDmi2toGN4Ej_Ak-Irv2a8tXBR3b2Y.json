@@ -4,25 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './PartialRecord';\n",
-      "start": 1750105187654,
-      "end": 1750105187692,
+      "start": 1750184198987,
+      "end": 1750184199033,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './PartialRecord';",
-      "start": 1750105187692,
-      "end": 1750105187693,
+      "start": 1750184199033,
+      "end": 1750184199034,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './PartialRecord';\n"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"],
+        "sourcesContent": ["export * from './PartialRecord';\n"],
         "mappings": "AAAA,cAAc,iBAAiB",
         "ignoreList": []
       }
@@ -30,98 +26,92 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./PartialRecord\";\n",
-      "start": 1750105187693,
-      "end": 1750105187896,
+      "start": 1750184199034,
+      "end": 1750184199229,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './PartialRecord';"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"],
+        "sourcesContent": ["export * from './PartialRecord';"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187896,
-      "end": 1750105187896,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/utility-types/index.ts [vike:pluginModuleBanner] */\nexport * from \"./PartialRecord\";\n",
-      "start": 1750105187897,
-      "end": 1750105187897,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/types/utility-types/index.ts"
-        ],
+        "sources": ["src/shared/lib/types/utility-types/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

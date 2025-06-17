@@ -4,25 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './model';\nexport * from './ui';\n",
-      "start": 1750105187641,
-      "end": 1750105187677,
+      "start": 1750184198973,
+      "end": 1750184199014,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './model';\nexport * from './ui';",
-      "start": 1750105187677,
-      "end": 1750105187677,
+      "start": 1750184199014,
+      "end": 1750184199015,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './model';\nexport * from './ui';\n"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/index.ts"],
+        "sourcesContent": ["export * from './model';\nexport * from './ui';\n"],
         "mappings": "AAAA,cAAc,SAAS;AACvB,cAAc,MAAM",
         "ignoreList": []
       }
@@ -30,98 +26,92 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./model\";\nexport * from \"./ui\";\n",
-      "start": 1750105187677,
-      "end": 1750105187854,
+      "start": 1750184199015,
+      "end": 1750184199172,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './model';\nexport * from './ui';"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/index.ts"],
+        "sourcesContent": ["export * from './model';\nexport * from './ui';"],
         "mappings": "AAAA,cAAc;AACd,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199172,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199172,
+      "end": 1750184199173,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199173,
+      "end": 1750184199173,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199173,
+      "end": 1750184199173,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/index.ts [vike:pluginModuleBanner] */\nexport * from \"./model\";\nexport * from \"./ui\";\n",
-      "start": 1750105187855,
-      "end": 1750105187855,
+      "start": 1750184199173,
+      "end": 1750184199173,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/CreateReviewForm/index.ts"
-        ],
+        "sources": ["src/features/CreateReviewForm/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

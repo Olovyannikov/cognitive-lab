@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".header {\n  position: fixed;\n  z-index: 200;\n  margin-bottom: var(--mantine-spacing-xs);\n  border-bottom: 1px solid var(--mantine-color-gray-3);\n  width: 100%;\n  box-shadow: 0 0 4px 1px #20007f1a;\n  background-color: #fff;\n  transform: translate3d(0, -120px, 0);\n  transition: transform 400ms ease;\n  padding-block: var(--mantine-spacing-xl);\n\n  &.pinned {\n    transform: translate3d(0, 0, 0);\n  }\n\n  @mixin larger-than 768px {\n    margin-bottom: var(--mantine-spacing-3xl);\n  }\n\n  @mixin larger-than 1200px {\n    left: 16px;\n    right: 16px;\n    top: 0;\n    margin: 20px auto 80px;\n    border-bottom: none;\n    border-radius: 20px;\n    max-width: calc(100% - 32px);\n    padding-block: 0;\n  }\n\n  @mixin larger-than 1682px {\n    max-width: 1682px;\n  }\n}\n\n.logoLink {\n  display: flex;\n  align-items: center;\n}\n\n.burger > div {\n  border-radius: var(--mantine-spacing-xl);\n\n  &::after,\n  &::before {\n    border-radius: var(--mantine-spacing-xl);\n  }\n}\n\n.container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-inline: var(--mantine-spacing-md);\n\n  @mixin larger-than 1465px {\n    padding-inline: 40px;\n  }\n}\n\n.logoLarge {\n  display: none;\n\n  @mixin smaller-than 1200px {\n    display: block;\n  }\n\n  @mixin larger-than 1400px {\n    display: block;\n  }\n}\n\n.logoSmall {\n  display: none;\n\n  @mixin larger-than 1200px {\n    display: block;\n  }\n\n  @mixin larger-than 1400px {\n    display: none;\n  }\n}\n",
-      "start": 1750105187909,
-      "end": 1750105187959,
+      "start": 1750184199236,
+      "end": 1750184199287,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105187959,
-      "end": 1750105187959,
+      "start": 1750184199287,
+      "end": 1750184199287,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105187961,
-      "end": 1750105187961,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105187961,
-      "end": 1750105187961,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187961,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Header/Header.module.css [vike:pluginModuleBanner] */\nexport const header = \"_--APr\";\nexport const pinned = \"rr932\";\nexport const logoLink = \"YG38Q\";\nexport const burger = \"CpYnV\";\nexport const container = \"xBYBI\";\nexport const logoLarge = \"jLKvB\";\nexport const logoSmall = \"RYw-O\";\nexport default {\n\theader: header,\n\tpinned: pinned,\n\tlogoLink: logoLink,\n\tburger: burger,\n\tcontainer: container,\n\tlogoLarge: logoLarge,\n\tlogoSmall: logoSmall\n};\n",
-      "start": 1750105187962,
-      "end": 1750105187962,
+      "start": 1750184199289,
+      "end": 1750184199289,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Header/Header.module.css"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Header/Header.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC;"
       }

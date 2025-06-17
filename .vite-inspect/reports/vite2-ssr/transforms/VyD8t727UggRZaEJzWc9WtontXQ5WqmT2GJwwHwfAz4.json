@@ -4,31 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box } from '@mantine/core';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\n\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\n\nimport s from './Top.module.css';\n\nexport const Top = () => (\n    <Box className={s.top}>\n        <CognitiveLogo width={200} height={35} />\n\n        <p>Технологии самопознания</p>\n        <List className={s.owner} data={OWNER_INFO} />\n    </Box>\n);\n",
-      "start": 1750105187903,
-      "end": 1750105187947,
+      "start": 1750184199253,
+      "end": 1750184199296,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box } from '@mantine/core';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\nimport s from './Top.module.css';\nexport const Top = () => <Box className={s.top}>\n        <CognitiveLogo width={200} height={35} />\n\n        <p>Технологии самопознания</p>\n        <List className={s.owner} data={OWNER_INFO} />\n    </Box>;",
-      "start": 1750105187947,
-      "end": 1750105187948,
+      "start": 1750184199296,
+      "end": 1750184199297,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "Box",
-          "CognitiveLogo",
-          "OWNER_INFO",
-          "List",
-          "s",
-          "Top",
-          "top",
-          "owner"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Top/index.tsx"
-        ],
+        "names": ["Box", "CognitiveLogo", "OWNER_INFO", "List", "s", "Top", "top", "owner"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Top/index.tsx"],
         "sourcesContent": [
           "import { Box } from '@mantine/core';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\n\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\n\nimport s from './Top.module.css';\n\nexport const Top = () => (\n    <Box className={s.top}>\n        <CognitiveLogo width={200} height={35} />\n\n        <p>Технологии самопознания</p>\n        <List className={s.owner} data={OWNER_INFO} />\n    </Box>\n);\n"
         ],
@@ -39,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { OWNER_INFO } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./Top.module.css\";\nexport const Top = () => /* @__PURE__ */ jsxs(Box, { className: s.top, children: [\n  /* @__PURE__ */ jsx(CognitiveLogo, { width: 200, height: 35 }),\n  /* @__PURE__ */ jsx(\"p\", { children: \"Технологии самопознания\" }),\n  /* @__PURE__ */ jsx(List, { className: s.owner, data: OWNER_INFO })\n] });\n",
-      "start": 1750105187948,
-      "end": 1750105188229,
+      "start": 1750184199297,
+      "end": 1750184199555,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Top/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Top/index.tsx"],
         "sourcesContent": [
           "import { Box } from '@mantine/core';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\nimport s from './Top.module.css';\nexport const Top = () => <Box className={s.top}>\n        <CognitiveLogo width={200} height={35} />\n\n        <p>Технологии самопознания</p>\n        <List className={s.owner} data={OWNER_INFO} />\n    </Box>;"
         ],
@@ -56,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199555,
+      "end": 1750184199556,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Top/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { OWNER_INFO } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./Top.module.css\";\nexport const Top = () => /* @__PURE__ */ jsxs(Box, { className: s.top, children: [\n  /* @__PURE__ */ jsx(CognitiveLogo, { width: 200, height: 35 }),\n  /* @__PURE__ */ jsx(\"p\", { children: \"Технологии самопознания\" }),\n  /* @__PURE__ */ jsx(List, { className: s.owner, data: OWNER_INFO })\n] });\n",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Top/index.tsx"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Top/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC;"
       }

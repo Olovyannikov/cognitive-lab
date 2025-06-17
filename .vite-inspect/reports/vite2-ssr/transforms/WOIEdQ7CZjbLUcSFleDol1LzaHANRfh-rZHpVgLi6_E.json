@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './About.module.css';\n\nexport const About = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n    return (\n        <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture\n                    cdn\n                    alt=''\n                    aria-hidden={true}\n                    className={s.image}\n                    width={!isLarge || isMobile ? 210 : 366}\n                    height={!isLarge || isMobile ? 223 : 388}\n                    src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`}\n                />\n            </Box>\n        </Section>\n    );\n};\n",
-      "start": 1750105187833,
-      "end": 1750105187875,
+      "start": 1750184199202,
+      "end": 1750184199240,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './About.module.css';\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture cdn alt='' aria-hidden={true} className={s.image} width={!isLarge || isMobile ? 210 : 366} height={!isLarge || isMobile ? 223 : 388} src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`} />\n            </Box>\n        </Section>;\n};",
-      "start": 1750105187875,
-      "end": 1750105187876,
+      "start": 1750184199240,
+      "end": 1750184199241,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -31,9 +31,7 @@
           "description",
           "image"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/About/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/About/index.tsx"],
         "sourcesContent": [
           "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\n\nimport s from './About.module.css';\n\nexport const About = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n    return (\n        <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture\n                    cdn\n                    alt=''\n                    aria-hidden={true}\n                    className={s.image}\n                    width={!isLarge || isMobile ? 210 : 366}\n                    height={!isLarge || isMobile ? 223 : 388}\n                    src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`}\n                />\n            </Box>\n        </Section>\n    );\n};\n"
         ],
@@ -44,14 +42,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./About.module.css\";\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { title: \"О платформе \", filledText: \"CognitiveLab\", children: /* @__PURE__ */ jsxs(Box, { className: s.grid, children: [\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для личностного роста и карьерного развития.\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, alt: \"\", \"aria-hidden\": true, className: s.image, width: !isLarge || isMobile ? 210 : 366, height: !isLarge || isMobile ? 223 : 388, src: `/landing/letter-main${!isLarge || isMobile ? \"/mobile\" : \"\"}` })\n  ] }) });\n};\n",
-      "start": 1750105187876,
-      "end": 1750105188138,
+      "start": 1750184199241,
+      "end": 1750184199450,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/About/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/About/index.tsx"],
         "sourcesContent": [
           "import { Box, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section } from '@/shared/ui';\nimport s from './About.module.css';\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return <Section title='О платформе ' filledText='CognitiveLab'>\n            <Box className={s.grid}>\n                <Text className={s.description}>\n                    Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для\n                    личностного роста и карьерного развития.\n                </Text>\n                <Picture cdn alt='' aria-hidden={true} className={s.image} width={!isLarge || isMobile ? 210 : 366} height={!isLarge || isMobile ? 223 : 388} src={`/landing/letter-main${!isLarge || isMobile ? '/mobile' : ''}`} />\n            </Box>\n        </Section>;\n};"
         ],
@@ -61,81 +57,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188138,
-      "end": 1750105188138,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/About/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section } from \"@/shared/ui\";\nimport s from \"./About.module.css\";\nexport const About = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Section, { title: \"О платформе \", filledText: \"CognitiveLab\", children: /* @__PURE__ */ jsxs(Box, { className: s.grid, children: [\n    /* @__PURE__ */ jsx(Text, { className: s.description, children: \"Пройдите тест и узнайте, какие скрытые ресурсы в вас заложены и как их лучше всего применять для личностного роста и карьерного развития.\" }),\n    /* @__PURE__ */ jsx(Picture, { cdn: true, alt: \"\", \"aria-hidden\": true, className: s.image, width: !isLarge || isMobile ? 210 : 366, height: !isLarge || isMobile ? 223 : 388, src: `/landing/letter-main${!isLarge || isMobile ? \"/mobile\" : \"\"}` })\n  ] }) });\n};\n",
-      "start": 1750105188139,
-      "end": 1750105188139,
+      "start": 1750184199450,
+      "end": 1750184199450,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/About/index.tsx"
-        ],
+        "sources": ["src/pages/IndexPage/ui/About/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
       }

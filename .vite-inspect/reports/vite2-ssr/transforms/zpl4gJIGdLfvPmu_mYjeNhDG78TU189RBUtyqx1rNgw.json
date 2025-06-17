@@ -4,25 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './BlogPostCard';\nexport * from './Post';\n",
-      "start": 1750105187504,
-      "end": 1750105187565,
+      "start": 1750184198856,
+      "end": 1750184198915,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './BlogPostCard';\nexport * from './Post';",
-      "start": 1750105187565,
-      "end": 1750105187566,
+      "start": 1750184198915,
+      "end": 1750184198916,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './BlogPostCard';\nexport * from './Post';\n"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/index.ts"],
+        "sourcesContent": ["export * from './BlogPostCard';\nexport * from './Post';\n"],
         "mappings": "AAAA,cAAc,gBAAgB;AAC9B,cAAc,QAAQ",
         "ignoreList": []
       }
@@ -30,98 +26,92 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./BlogPostCard\";\nexport * from \"./Post\";\n",
-      "start": 1750105187566,
-      "end": 1750105187672,
+      "start": 1750184198916,
+      "end": 1750184198989,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/index.ts"
-        ],
-        "sourcesContent": [
-          "export * from './BlogPostCard';\nexport * from './Post';"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/index.ts"],
+        "sourcesContent": ["export * from './BlogPostCard';\nexport * from './Post';"],
         "mappings": "AAAA,cAAc;AACd,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198989,
+      "end": 1750184198989,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./BlogPostCard\";\nexport * from \"./Post\";\n",
-      "start": 1750105187672,
-      "end": 1750105187672,
+      "start": 1750184198990,
+      "end": 1750184198990,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Blog/ui/index.ts"
-        ],
+        "sources": ["src/entities/Blog/ui/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

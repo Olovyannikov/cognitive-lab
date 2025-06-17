@@ -4,27 +4,19 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\n\nimport s from './TestContainer.module.css';\n\nexport const TestContainer = ({ children }: PropsWithChildren) => (\n    <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>\n);\n",
-      "start": 1750105187919,
-      "end": 1750105187969,
+      "start": 1750184199052,
+      "end": 1750184199094,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\nimport s from './TestContainer.module.css';\nexport const TestContainer = ({\n  children\n}: PropsWithChildren) => <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>;",
-      "start": 1750105187969,
-      "end": 1750105187970,
+      "start": 1750184199094,
+      "end": 1750184199095,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "PropsWithChildren",
-          "Box",
-          "Container",
-          "s",
-          "TestContainer",
-          "children",
-          "container"
-        ],
+        "names": ["PropsWithChildren", "Box", "Container", "s", "TestContainer", "children", "container"],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/index.tsx"
         ],
@@ -38,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { className: s.container, children }) });\n",
-      "start": 1750105187970,
-      "end": 1750105188230,
+      "start": 1750184199095,
+      "end": 1750184199355,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -55,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestContainer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { className: s.container, children }) });\n",
-      "start": 1750105188230,
-      "end": 1750105188230,
+      "start": 1750184199356,
+      "end": 1750184199356,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/ui/TestContainer/index.tsx"
-        ],
+        "sources": ["src/entities/Test/ui/TestContainer/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

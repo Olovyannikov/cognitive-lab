@@ -4,99 +4,97 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgUnion = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 229 209\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#74B816\", fillRule: \"evenodd\", d: \"M114.322 33.445C69.1 2.94 26.308-8.87 8.646 7.15c-17.66 16.018-5.069 55.218 27.958 96.781-33.384 41.338-46.31 80.457-28.782 96.601 17.529 16.143 60.425 4.63 105.907-25.564 45.227 30.511 88.026 42.325 105.689 26.304 17.664-16.021 5.066-55.228-27.971-96.798 33.374-41.331 46.294-80.441 28.768-96.583-17.526-16.142-60.416-4.633-105.893 25.554Z\", clipRule: \"evenodd\" }));\nexport default SvgUnion;\n",
-      "start": 1750105188234,
-      "end": 1750105188414,
+      "start": 1750184199536,
+      "end": 1750184199696,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188414,
-      "end": 1750105188414,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188414,
-      "end": 1750105188414,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188414,
-      "end": 1750105188414,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188414,
-      "end": 1750105188414,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199696,
+      "end": 1750184199696,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199697,
+      "end": 1750184199697,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199697,
+      "end": 1750184199697,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/FAQ/union.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgUnion = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 229 209\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#74B816\", fillRule: \"evenodd\", d: \"M114.322 33.445C69.1 2.94 26.308-8.87 8.646 7.15c-17.66 16.018-5.069 55.218 27.958 96.781-33.384 41.338-46.31 80.457-28.782 96.601 17.529 16.143 60.425 4.63 105.907-25.564 45.227 30.511 88.026 42.325 105.689 26.304 17.664-16.021 5.066-55.228-27.971-96.798 33.374-41.331 46.294-80.441 28.768-96.583-17.526-16.142-60.416-4.633-105.893 25.554Z\", clipRule: \"evenodd\" }));\nexport default SvgUnion;\n",
-      "start": 1750105188415,
-      "end": 1750105188415,
+      "start": 1750184199697,
+      "end": 1750184199697,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/IndexPage/ui/FAQ/union.svg?react"
-        ],
+        "sources": ["src/pages/IndexPage/ui/FAQ/union.svg?react"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtmB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

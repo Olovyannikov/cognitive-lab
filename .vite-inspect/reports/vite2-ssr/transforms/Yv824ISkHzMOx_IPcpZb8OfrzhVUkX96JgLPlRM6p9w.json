@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useScope } from './ScopeProvider';\n\nexport const EffectorProvider = ({ children }: { children: ReactNode }) => {\n    const pageContext = usePageContext();\n    const scope = useScope();\n\n    useEffect(() => {\n        const firePageStarted = async () => {\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, { scope: scope!, params: pageContext });\n            }\n        };\n        firePageStarted().catch(() => {\n            throw new Error('Page start failed');\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [pageContext]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return <Provider value={scope!}>{children}</Provider>;\n};\n",
-      "start": 1750105187508,
-      "end": 1750105187571,
+      "start": 1750184198836,
+      "end": 1750184198860,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({\n  children\n}: {\n  children: ReactNode;\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n        await allSettled(pageStarted, {\n          scope: scope!,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error('Page start failed');\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [pageContext]);\n  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n  return <Provider value={scope!}>{children}</Provider>;\n};",
-      "start": 1750105187571,
-      "end": 1750105187572,
+      "start": 1750184198860,
+      "end": 1750184198861,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -47,8 +47,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1750105187572,
-      "end": 1750105187628,
+      "start": 1750184198861,
+      "end": 1750184198934,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,81 +64,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187628,
-      "end": 1750105187628,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187628,
-      "end": 1750105187628,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198934,
+      "end": 1750184198934,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/EffectorProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1750105187629,
-      "end": 1750105187629,
+      "start": 1750184198935,
+      "end": 1750184198935,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/lib/effector/EffectorProvider.tsx"
-        ],
+        "sources": ["src/shared/lib/effector/EffectorProvider.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
       }

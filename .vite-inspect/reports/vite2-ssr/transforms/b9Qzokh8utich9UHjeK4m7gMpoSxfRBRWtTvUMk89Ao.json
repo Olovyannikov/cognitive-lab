@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper [data-label-position] {\n  display: flex;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.stack {\n  @mixin larger-than 1200px {\n    margin: 0 auto;\n    max-width: 860px;\n  }\n}\n",
-      "start": 1750105188310,
-      "end": 1750105188337,
+      "start": 1750184199372,
+      "end": 1750184199395,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188337,
-      "end": 1750105188337,
+      "start": 1750184199395,
+      "end": 1750184199395,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"ngvkm\";\nexport const stack = \"C6hAq\";\nexport default {\n\twrapper: wrapper,\n\tstack: stack\n};\n",
-      "start": 1750105188338,
-      "end": 1750105188338,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css"
-        ],
+        "sources": ["src/entities/Test/ui/TestSingleChoiceQuestion/TestSingleChoiceQuestion.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page: 1,\n        page_size: 100,\n    }),\n    target: getReviewsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page_size: 100,\n    }),\n    target: getAllBlogPostsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        show_on_main: true,\n    }),\n    target: getFAQQuery.refresh,\n});\n\nsample({\n    clock: getReviewsQuery.finished.success,\n    fn: ({ result }) =>\n        result.payload.map((data) => ({\n            ...data,\n            created_at: new Date(data.created_at).toLocaleDateString('ru-RU'),\n        })),\n    target: ReviewModel.$allReviews,\n});\n",
-      "start": 1750105187351,
-      "end": 1750105187390,
+      "start": 1750184198701,
+      "end": 1750184198736,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh\n  }],\n  or: {\n    sid: \"oja7sy\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page: 1,\n      page_size: 100\n    }),\n    target: getReviewsQuery.refresh\n  }],\n  or: {\n    sid: \"om16rr\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page_size: 100\n    }),\n    target: getAllBlogPostsQuery.refresh\n  }],\n  or: {\n    sid: \"p2j0kl\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      show_on_main: true\n    }),\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"pih1s2\"\n  }\n});\nsample({\n  and: [{\n    clock: getReviewsQuery.finished.success,\n    fn: ({\n      result\n    }) => result.payload.map(data => ({\n      ...data,\n      created_at: new Date(data.created_at).toLocaleDateString('ru-RU')\n    })),\n    target: ReviewModel.$allReviews\n  }],\n  or: {\n    sid: \"pyf2zj\"\n  }\n});",
-      "start": 1750105187390,
-      "end": 1750105187392,
+      "start": 1750184198736,
+      "end": 1750184198737,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -46,9 +46,7 @@
           "toLocaleDateString",
           "$allReviews"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/index/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/index/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page: 1,\n        page_size: 100,\n    }),\n    target: getReviewsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page_size: 100,\n    }),\n    target: getAllBlogPostsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        show_on_main: true,\n    }),\n    target: getFAQQuery.refresh,\n});\n\nsample({\n    clock: getReviewsQuery.finished.success,\n    fn: ({ result }) =>\n        result.payload.map((data) => ({\n            ...data,\n            created_at: new Date(data.created_at).toLocaleDateString('ru-RU'),\n        })),\n    target: ReviewModel.$allReviews,\n});\n"
         ],
@@ -59,14 +57,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getAllBlogPostsQuery } from \"@/entities/Blog\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nimport { getMainPageInfoQuery } from \"@/entities/Landing\";\nimport { getReviewsQuery, ReviewModel } from \"@/entities/Review\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh\n  }],\n  or: {\n    sid: \"oja7sy\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page: 1,\n      page_size: 100\n    }),\n    target: getReviewsQuery.refresh\n  }],\n  or: {\n    sid: \"om16rr\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page_size: 100\n    }),\n    target: getAllBlogPostsQuery.refresh\n  }],\n  or: {\n    sid: \"p2j0kl\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      show_on_main: true\n    }),\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"pih1s2\"\n  }\n});\nsample({\n  and: [{\n    clock: getReviewsQuery.finished.success,\n    fn: ({\n      result\n    }) => result.payload.map((data) => ({\n      ...data,\n      created_at: new Date(data.created_at).toLocaleDateString(\"ru-RU\")\n    })),\n    target: ReviewModel.$allReviews\n  }],\n  or: {\n    sid: \"pyf2zj\"\n  }\n});\n",
-      "start": 1750105187392,
-      "end": 1750105187436,
+      "start": 1750184198737,
+      "end": 1750184198778,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/index/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/index/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh\n  }],\n  or: {\n    sid: \"oja7sy\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page: 1,\n      page_size: 100\n    }),\n    target: getReviewsQuery.refresh\n  }],\n  or: {\n    sid: \"om16rr\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page_size: 100\n    }),\n    target: getAllBlogPostsQuery.refresh\n  }],\n  or: {\n    sid: \"p2j0kl\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      show_on_main: true\n    }),\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"pih1s2\"\n  }\n});\nsample({\n  and: [{\n    clock: getReviewsQuery.finished.success,\n    fn: ({\n      result\n    }) => result.payload.map(data => ({\n      ...data,\n      created_at: new Date(data.created_at).toLocaleDateString('ru-RU')\n    })),\n    target: ReviewModel.$allReviews\n  }],\n  or: {\n    sid: \"pyf2zj\"\n  }\n});"
         ],
@@ -76,81 +72,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187436,
-      "end": 1750105187436,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187436,
-      "end": 1750105187436,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187436,
-      "end": 1750105187436,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187436,
-      "end": 1750105187436,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198778,
+      "end": 1750184198778,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198778,
+      "end": 1750184198779,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/index/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getAllBlogPostsQuery } from \"@/entities/Blog\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nimport { getMainPageInfoQuery } from \"@/entities/Landing\";\nimport { getReviewsQuery, ReviewModel } from \"@/entities/Review\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh\n  }],\n  or: {\n    sid: \"oja7sy\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page: 1,\n      page_size: 100\n    }),\n    target: getReviewsQuery.refresh\n  }],\n  or: {\n    sid: \"om16rr\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      page_size: 100\n    }),\n    target: getAllBlogPostsQuery.refresh\n  }],\n  or: {\n    sid: \"p2j0kl\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: () => ({\n      show_on_main: true\n    }),\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"pih1s2\"\n  }\n});\nsample({\n  and: [{\n    clock: getReviewsQuery.finished.success,\n    fn: ({\n      result\n    }) => result.payload.map((data) => ({\n      ...data,\n      created_at: new Date(data.created_at).toLocaleDateString(\"ru-RU\")\n    })),\n    target: ReviewModel.$allReviews\n  }],\n  or: {\n    sid: \"pyf2zj\"\n  }\n});\n",
-      "start": 1750105187437,
-      "end": 1750105187437,
+      "start": 1750184198779,
+      "end": 1750184198779,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/index/+pageInitiated.ts"
-        ],
+        "sources": ["pages/index/+pageInitiated.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD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"
       }

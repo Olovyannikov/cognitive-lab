@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  position: relative;\n  overflow: hidden;\n  margin-bottom: var(--mantine-spacing-3xl);\n  padding: var(--mantine-spacing-sm);\n  text-align: center;\n  padding-block: var(--mantine-spacing-md);\n\n  @mixin data-color 2;\n\n  @mixin larger-than 600px {\n    margin-bottom: 60px;\n    padding: 0 var(--mantine-spacing-sm) 0 153px;\n    text-align: left;\n    padding-block: 0;\n  }\n}\n\n.title {\n  position: relative;\n  z-index: 1;\n  font-size: 20px;\n  line-height: 23px;\n\n  @mixin larger-than 600px {\n    font-size: 40px;\n    line-height: 47px;\n    padding-block: 50px;\n  }\n}\n\n.box {\n  position: absolute;\n  right: 0;\n  top: 0;\n  bottom: 0;\n\n  &:last-child {\n    left: 0;\n    right: unset;\n  }\n\n  @mixin text-data-color 2;\n}\n",
-      "start": 1750105188083,
-      "end": 1750105188109,
+      "start": 1750184199433,
+      "end": 1750184199454,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188109,
-      "end": 1750105188109,
+      "start": 1750184199454,
+      "end": 1750184199454,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199456,
+      "end": 1750184199456,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199456,
+      "end": 1750184199456,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199456,
+      "end": 1750184199456,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Preheader/Preheader.module.css [vike:pluginModuleBanner] */\nexport const paper = \"Z7VwG\";\nexport const title = \"KKUFn\";\nexport const box = \"UzcO-\";\nexport default {\n\tpaper: paper,\n\ttitle: title,\n\tbox: box\n};\n",
-      "start": 1750105188111,
-      "end": 1750105188111,
+      "start": 1750184199457,
+      "end": 1750184199457,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/Preheader/Preheader.module.css"
-        ],
+        "sources": ["src/entities/Report/ui/Preheader/Preheader.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC;"
       }

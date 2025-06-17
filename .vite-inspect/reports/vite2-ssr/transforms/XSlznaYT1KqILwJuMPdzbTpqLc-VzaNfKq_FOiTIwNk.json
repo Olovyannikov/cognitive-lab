@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './Banner.module.css';\n\ninterface BannerProps {\n    color?: string;\n    actionSlot?: ReactNode;\n    title?: string;\n    description?: string;\n    image?:\n        | string\n        | {\n              src: string;\n              extra: string;\n          };\n}\n\nconst BANNER_CONFIG = {\n    title: 'Купить отчет без прохождения теста',\n    description:\n        'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n    image: {\n        src: '/types/circles/ENTP',\n        extra: '_2',\n    },\n};\n\nexport const Banner = ({\n    color = 'violet',\n    actionSlot,\n    title = BANNER_CONFIG.title,\n    description = BANNER_CONFIG.description,\n    image = BANNER_CONFIG.image,\n}: BannerProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Stack className={s.inner}>\n            <Title order={3} className={s.title}>\n                <Picture cdn className={s.emoji} src='/emoji/star' />\n                {title}\n            </Title>\n            <Text className={s.description}>{description}</Text>\n            <Picture\n                className={s.image}\n                aria-hidden\n                src={typeof image !== 'string' ? image.src : image}\n                extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''}\n                w={260}\n                h={260}\n            />\n            {actionSlot}\n        </Stack>\n    </Paper>\n);\n",
-      "start": 1750105187709,
-      "end": 1750105187761,
+      "start": 1750184199117,
+      "end": 1750184199170,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './Banner.module.css';\ninterface BannerProps {\n  color?: string;\n  actionSlot?: ReactNode;\n  title?: string;\n  description?: string;\n  image?: string | {\n    src: string;\n    extra: string;\n  };\n}\nconst BANNER_CONFIG = {\n  title: 'Купить отчет без прохождения теста',\n  description: 'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n  image: {\n    src: '/types/circles/ENTP',\n    extra: '_2'\n  }\n};\nexport const Banner = ({\n  color = 'violet',\n  actionSlot,\n  title = BANNER_CONFIG.title,\n  description = BANNER_CONFIG.description,\n  image = BANNER_CONFIG.image\n}: BannerProps) => <Paper data-color={color} className={s.paper}>\n        <Stack className={s.inner}>\n            <Title order={3} className={s.title}>\n                <Picture cdn className={s.emoji} src='/emoji/star' />\n                {title}\n            </Title>\n            <Text className={s.description}>{description}</Text>\n            <Picture className={s.image} aria-hidden src={typeof image !== 'string' ? image.src : image} extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''} w={260} h={260} />\n            {actionSlot}\n        </Stack>\n    </Paper>;",
-      "start": 1750105187761,
-      "end": 1750105187763,
+      "start": 1750184199170,
+      "end": 1750184199172,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -38,9 +38,7 @@
           "inner",
           "emoji"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/index.tsx"],
         "sourcesContent": [
           "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './Banner.module.css';\n\ninterface BannerProps {\n    color?: string;\n    actionSlot?: ReactNode;\n    title?: string;\n    description?: string;\n    image?:\n        | string\n        | {\n              src: string;\n              extra: string;\n          };\n}\n\nconst BANNER_CONFIG = {\n    title: 'Купить отчет без прохождения теста',\n    description:\n        'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n    image: {\n        src: '/types/circles/ENTP',\n        extra: '_2',\n    },\n};\n\nexport const Banner = ({\n    color = 'violet',\n    actionSlot,\n    title = BANNER_CONFIG.title,\n    description = BANNER_CONFIG.description,\n    image = BANNER_CONFIG.image,\n}: BannerProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Stack className={s.inner}>\n            <Title order={3} className={s.title}>\n                <Picture cdn className={s.emoji} src='/emoji/star' />\n                {title}\n            </Title>\n            <Text className={s.description}>{description}</Text>\n            <Picture\n                className={s.image}\n                aria-hidden\n                src={typeof image !== 'string' ? image.src : image}\n                extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''}\n                w={260}\n                h={260}\n            />\n            {actionSlot}\n        </Stack>\n    </Paper>\n);\n"
         ],
@@ -51,14 +49,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Banner.module.css\";\nconst BANNER_CONFIG = {\n  title: \"Купить отчет без прохождения теста\",\n  description: \"Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!\",\n  image: {\n    src: \"/types/circles/ENTP\",\n    extra: \"_2\"\n  }\n};\nexport const Banner = ({\n  color = \"violet\",\n  actionSlot,\n  title = BANNER_CONFIG.title,\n  description = BANNER_CONFIG.description,\n  image = BANNER_CONFIG.image\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsxs(Stack, { className: s.inner, children: [\n  /* @__PURE__ */ jsxs(Title, { order: 3, className: s.title, children: [\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.emoji, src: \"/emoji/star\" }),\n    title\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, children: description }),\n  /* @__PURE__ */ jsx(Picture, { className: s.image, \"aria-hidden\": true, src: typeof image !== \"string\" ? image.src : image, extraPath: typeof image !== \"string\" && \"extra\" in image ? image.extra : \"\", w: 260, h: 260 }),\n  actionSlot\n] }) });\n",
-      "start": 1750105187763,
-      "end": 1750105187988,
+      "start": 1750184199172,
+      "end": 1750184199407,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/index.tsx"],
         "sourcesContent": [
           "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './Banner.module.css';\ninterface BannerProps {\n  color?: string;\n  actionSlot?: ReactNode;\n  title?: string;\n  description?: string;\n  image?: string | {\n    src: string;\n    extra: string;\n  };\n}\nconst BANNER_CONFIG = {\n  title: 'Купить отчет без прохождения теста',\n  description: 'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n  image: {\n    src: '/types/circles/ENTP',\n    extra: '_2'\n  }\n};\nexport const Banner = ({\n  color = 'violet',\n  actionSlot,\n  title = BANNER_CONFIG.title,\n  description = BANNER_CONFIG.description,\n  image = BANNER_CONFIG.image\n}: BannerProps) => <Paper data-color={color} className={s.paper}>\n        <Stack className={s.inner}>\n            <Title order={3} className={s.title}>\n                <Picture cdn className={s.emoji} src='/emoji/star' />\n                {title}\n            </Title>\n            <Text className={s.description}>{description}</Text>\n            <Picture className={s.image} aria-hidden src={typeof image !== 'string' ? image.src : image} extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''} w={260} h={260} />\n            {actionSlot}\n        </Stack>\n    </Paper>;"
         ],
@@ -68,81 +64,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187988,
-      "end": 1750105187988,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187988,
-      "end": 1750105187988,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187988,
-      "end": 1750105187988,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Banner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Banner.module.css\";\nconst BANNER_CONFIG = {\n  title: \"Купить отчет без прохождения теста\",\n  description: \"Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!\",\n  image: {\n    src: \"/types/circles/ENTP\",\n    extra: \"_2\"\n  }\n};\nexport const Banner = ({\n  color = \"violet\",\n  actionSlot,\n  title = BANNER_CONFIG.title,\n  description = BANNER_CONFIG.description,\n  image = BANNER_CONFIG.image\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsxs(Stack, { className: s.inner, children: [\n  /* @__PURE__ */ jsxs(Title, { order: 3, className: s.title, children: [\n    /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.emoji, src: \"/emoji/star\" }),\n    title\n  ] }),\n  /* @__PURE__ */ jsx(Text, { className: s.description, children: description }),\n  /* @__PURE__ */ jsx(Picture, { className: s.image, \"aria-hidden\": true, src: typeof image !== \"string\" ? image.src : image, extraPath: typeof image !== \"string\" && \"extra\" in image ? image.extra : \"\", w: 260, h: 260 }),\n  actionSlot\n] }) });\n",
-      "start": 1750105187989,
-      "end": 1750105187989,
+      "start": 1750184199407,
+      "end": 1750184199407,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/Banner/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/Banner/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5N,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

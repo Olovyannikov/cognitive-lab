@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { getFullReportQuery } from '../api';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n",
-      "start": 1750105187706,
-      "end": 1750105187745,
+      "start": 1750184199162,
+      "end": 1750184199215,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { getFullReportQuery } from '../api';\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map(page => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map(el => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});",
-      "start": 1750105187745,
-      "end": 1750105187746,
+      "start": 1750184199215,
+      "end": 1750184199216,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,9 +39,7 @@
           "target",
           "or"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\n\nimport { getFullReportQuery } from '../api';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n"
         ],
@@ -52,14 +50,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});\n",
-      "start": 1750105187746,
-      "end": 1750105187942,
+      "start": 1750184199216,
+      "end": 1750184199420,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\nimport { getFullReportQuery } from '../api';\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map(page => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map(el => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});"
         ],
@@ -69,81 +65,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/contentPage.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  name: \"$currentContentPage\",\n  sid: \"hd4l5e\"\n});\nexport const $currentPage = createStore(1, {\n  name: \"$currentPage\",\n  sid: \"heugse\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  name: \"$isLastPage\",\n  sid: \"-cc7tro\"\n});\nsample({\n  and: [{\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage\n  }],\n  or: {\n    sid: \"xlm24t\"\n  }\n});\n",
-      "start": 1750105187943,
-      "end": 1750105187943,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/model/contentPage.ts"
-        ],
+        "sources": ["src/entities/Report/model/contentPage.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }

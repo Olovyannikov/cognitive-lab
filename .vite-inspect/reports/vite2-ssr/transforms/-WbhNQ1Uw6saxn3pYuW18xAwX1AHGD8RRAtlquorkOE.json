@@ -4,29 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Text } from '@mantine/core';\n\nimport s from './AnswerLabel.module.css';\n\nexport const AnswerLabel = ({ children }: PropsWithChildren) => <Text className={s.text}>{children}</Text>;\n",
-      "start": 1750105188308,
-      "end": 1750105188331,
+      "start": 1750184199366,
+      "end": 1750184199384,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Text } from '@mantine/core';\nimport s from './AnswerLabel.module.css';\nexport const AnswerLabel = ({\n  children\n}: PropsWithChildren) => <Text className={s.text}>{children}</Text>;",
-      "start": 1750105188331,
-      "end": 1750105188332,
+      "start": 1750184199384,
+      "end": 1750184199385,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "PropsWithChildren",
-          "Text",
-          "s",
-          "AnswerLabel",
-          "children",
-          "text"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/AnswerLabel/index.tsx"
-        ],
+        "names": ["PropsWithChildren", "Text", "s", "AnswerLabel", "children", "text"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/AnswerLabel/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { Text } from '@mantine/core';\n\nimport s from './AnswerLabel.module.css';\n\nexport const AnswerLabel = ({ children }: PropsWithChildren) => <Text className={s.text}>{children}</Text>;\n"
         ],
@@ -37,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport s from \"./AnswerLabel.module.css\";\nexport const AnswerLabel = ({\n  children\n}) => /* @__PURE__ */ jsx(Text, { className: s.text, children });\n",
-      "start": 1750105188333,
-      "end": 1750105188429,
+      "start": 1750184199385,
+      "end": 1750184199584,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/AnswerLabel/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/AnswerLabel/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport { Text } from '@mantine/core';\nimport s from './AnswerLabel.module.css';\nexport const AnswerLabel = ({\n  children\n}: PropsWithChildren) => <Text className={s.text}>{children}</Text>;"
         ],
@@ -54,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/AnswerLabel/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport s from \"./AnswerLabel.module.css\";\nexport const AnswerLabel = ({\n  children\n}) => /* @__PURE__ */ jsx(Text, { className: s.text, children });\n",
-      "start": 1750105188429,
-      "end": 1750105188429,
+      "start": 1750184199584,
+      "end": 1750184199584,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/ui/AnswerLabel/index.tsx"
-        ],
+        "sources": ["src/entities/Test/ui/AnswerLabel/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

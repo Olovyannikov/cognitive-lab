@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\n\nimport { isErrorWithMessage } from '@/shared/lib';\n\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\n\nexport const BuyReportGate = createGate();\n\nexport const applyPromocodeClicked = createEvent<string>();\n\nexport const $promocodeErrorMessage = createStore('').reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false);\nexport const reportPurchased = createEvent<PurchasedReportRequest>({});\n\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\n\nsample({\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset,\n});\n\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n    window.open(page, '_self');\n});\n\nsample({\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({ error }) => (isErrorWithMessage(error) ? error.data.message : ''),\n    target: $promocodeErrorMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: reportPurchased,\n    target: purchaseReportMutation.start,\n});\n\nsample({\n    source: once(purchaseReportMutation.finished.success),\n    fn: ({ result }) => result.confirmation_url,\n    target: openTransactionPaywallFx,\n});\n",
-      "start": 1750105187969,
-      "end": 1750105188008,
+      "start": 1750184199269,
+      "end": 1750184199315,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\nimport { isErrorWithMessage } from '@/shared/lib';\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent<string>({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore('', {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent<PurchasedReportRequest>({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n  window.open(page, '_self');\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : '',\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});",
-      "start": 1750105188008,
-      "end": 1750105188010,
+      "start": 1750184199315,
+      "end": 1750184199317,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -61,9 +61,7 @@
           "result",
           "confirmation_url"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/BuyReportForm/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/BuyReportForm/model/index.ts"],
         "sourcesContent": [
           "import { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\n\nimport { isErrorWithMessage } from '@/shared/lib';\n\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\n\nexport const BuyReportGate = createGate();\n\nexport const applyPromocodeClicked = createEvent<string>();\n\nexport const $promocodeErrorMessage = createStore('').reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false);\nexport const reportPurchased = createEvent<PurchasedReportRequest>({});\n\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\n\nsample({\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset,\n});\n\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n    window.open(page, '_self');\n});\n\nsample({\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({ error }) => (isErrorWithMessage(error) ? error.data.message : ''),\n    target: $promocodeErrorMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage,\n});\n\nsample({\n    clock: reportPurchased,\n    target: purchaseReportMutation.start,\n});\n\nsample({\n    source: once(purchaseReportMutation.finished.success),\n    fn: ({ result }) => result.confirmation_url,\n    target: openTransactionPaywallFx,\n});\n"
         ],
@@ -74,14 +72,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { once } from \"patronum\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { getPriceWithPromocodeQuery, purchaseReportMutation } from \"@/entities/Report\";\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore(\"\", {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page) => {\n  window.open(page, \"_self\");\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : \"\",\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});\n",
-      "start": 1750105188010,
-      "end": 1750105188284,
+      "start": 1750184199317,
+      "end": 1750184199571,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/BuyReportForm/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/BuyReportForm/model/index.ts"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { once } from 'patronum';\nimport { isErrorWithMessage } from '@/shared/lib';\nimport { getPriceWithPromocodeQuery, type PurchasedReportRequest, purchaseReportMutation } from '@/entities/Report';\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent<string>({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore('', {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent<PurchasedReportRequest>({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page: string) => {\n  window.open(page, '_self');\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : '',\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});"
         ],
@@ -91,81 +87,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/BuyReportForm/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { once } from \"patronum\";\nimport { isErrorWithMessage } from \"@/shared/lib\";\nimport { getPriceWithPromocodeQuery, purchaseReportMutation } from \"@/entities/Report\";\nexport const BuyReportGate = createGate({\n  and: [],\n  or: {\n    name: \"BuyReportGate\",\n    sid: \"zihff9\"\n  }\n});\nexport const applyPromocodeClicked = createEvent({\n  name: \"applyPromocodeClicked\",\n  sid: \"1wx151\"\n});\nexport const $promocodeErrorMessage = createStore(\"\", {\n  name: \"$promocodeErrorMessage\",\n  sid: \"fak484\"\n}).reset(applyPromocodeClicked);\nexport const $showSuccessPromoMessage = createStore(false, {\n  name: \"$showSuccessPromoMessage\",\n  sid: \"-yp7qwn\"\n});\nexport const reportPurchased = createEvent({}, {\n  name: \"reportPurchased\",\n  sid: \"r9kt81\"\n});\n$showSuccessPromoMessage.reset(BuyReportGate.close);\n$promocodeErrorMessage.reset(BuyReportGate.close);\nsample({\n  and: [{\n    clock: BuyReportGate.close,\n    target: getPriceWithPromocodeQuery.reset\n  }],\n  or: {\n    sid: \"-9fn862\"\n  }\n});\nexport const openTransactionPaywallFx = createEffect(async (page) => {\n  window.open(page, \"_self\");\n}, {\n  name: \"openTransactionPaywallFx\",\n  sid: \"-d8frxp\"\n});\nsample({\n  and: [{\n    clock: applyPromocodeClicked,\n    target: getPriceWithPromocodeQuery.start\n  }],\n  or: {\n    sid: \"-9ap2tt\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: ({\n      error\n    }) => isErrorWithMessage(error) ? error.data.message : \"\",\n    target: $promocodeErrorMessage\n  }],\n  or: {\n    sid: \"-8wefef\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.failure,\n    fn: () => false,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8hjzdo\"\n  }\n});\nsample({\n  and: [{\n    clock: getPriceWithPromocodeQuery.finished.success,\n    fn: () => true,\n    target: $showSuccessPromoMessage\n  }],\n  or: {\n    sid: \"-8e97ti\"\n  }\n});\nsample({\n  and: [{\n    clock: reportPurchased,\n    target: purchaseReportMutation.start\n  }],\n  or: {\n    sid: \"-7zersr\"\n  }\n});\nsample({\n  and: [{\n    source: _withFactory({\n      sid: \"cu1eo3\",\n      fn: () => once(purchaseReportMutation.finished.success),\n      name: \"source\",\n      method: \"once\"\n    }),\n    fn: ({\n      result\n    }) => result.confirmation_url,\n    target: openTransactionPaywallFx\n  }],\n  or: {\n    sid: \"-7wnsty\"\n  }\n});\n",
-      "start": 1750105188284,
-      "end": 1750105188284,
+      "start": 1750184199572,
+      "end": 1750184199572,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/BuyReportForm/model/index.ts"
-        ],
+        "sources": ["src/widgets/BuyReportForm/model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,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"
       }

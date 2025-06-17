@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const FaqPage = () => {\n    const { data } = useUnit(getFAQQuery);\n\n    return (\n        <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>\n    );\n};\n",
-      "start": 1750105187440,
-      "end": 1750105187465,
+      "start": 1750184198765,
+      "end": 1750184198780,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>;\n};",
-      "start": 1750105187465,
-      "end": 1750105187466,
+      "start": 1750184198780,
+      "end": 1750184198781,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -28,9 +28,7 @@
           "data",
           "payload"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"],
         "sourcesContent": [
           "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const FaqPage = () => {\n    const { data } = useUnit(getFAQQuery);\n\n    return (\n        <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>\n    );\n};\n"
         ],
@@ -41,14 +39,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Ответы на вопросы\", children: /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(Box, { mb: \"3xl\", children: /* @__PURE__ */ jsx(FAQList, { items: data?.payload }) }),\n    /* @__PURE__ */ jsxs(Text, { ta: \"center\", fz: 20, children: [\n      \"Остались вопросы? Напишите нам в\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 20, component: \"a\", href: \"/help\", span: true, c: \"blue.7\", children: \"Службу поддержки\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750105187466,
-      "end": 1750105187538,
+      "start": 1750184198782,
+      "end": 1750184198817,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"],
         "sourcesContent": [
           "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>;\n};"
         ],
@@ -58,81 +54,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198817,
+      "end": 1750184198817,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198817,
+      "end": 1750184198817,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/FaqPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Ответы на вопросы\", children: /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(Box, { mb: \"3xl\", children: /* @__PURE__ */ jsx(FAQList, { items: data?.payload }) }),\n    /* @__PURE__ */ jsxs(Text, { ta: \"center\", fz: 20, children: [\n      \"Остались вопросы? Напишите нам в\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 20, component: \"a\", href: \"/help\", span: true, c: \"blue.7\", children: \"Службу поддержки\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750105187539,
-      "end": 1750105187539,
+      "start": 1750184198818,
+      "end": 1750184198818,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/FaqPage/index.tsx"
-        ],
+        "sources": ["src/pages/FaqPage/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
       }

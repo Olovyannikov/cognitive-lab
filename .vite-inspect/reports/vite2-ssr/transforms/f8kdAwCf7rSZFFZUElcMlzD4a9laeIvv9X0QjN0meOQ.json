@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".drawer {\n  position: relative;\n  z-index: 1200;\n\n  header {\n    margin-bottom: var(--mantine-spacing-sm);\n    border-bottom: 1px solid var(--mantine-color-dark-0);\n    gap: 2rem;\n  }\n\n  h2 {\n    flex: 1;\n  }\n}\n\n.testLink {\n  @mixin larger-than 992px {\n    order: 2;\n  }\n}\n",
-      "start": 1750105188291,
-      "end": 1750105188311,
+      "start": 1750184199587,
+      "end": 1750184199602,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188311,
-      "end": 1750105188311,
+      "start": 1750184199602,
+      "end": 1750184199602,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Navigation.module.css [vike:pluginModuleBanner] */\nexport const drawer = \"BLn5B\";\nexport const testLink = \"eQwhm\";\nexport default {\n\tdrawer: drawer,\n\ttestLink: testLink\n};\n",
-      "start": 1750105188312,
-      "end": 1750105188312,
+      "start": 1750184199603,
+      "end": 1750184199603,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Navigation/Navigation.module.css"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Navigation/Navigation.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC;"
       }

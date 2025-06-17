@@ -4,30 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\n\nimport s from './Section.module.css';\n\ninterface SectionProps {\n    title: string;\n}\n\nexport const Section = ({ title, children }: PropsWithChildren<SectionProps>) => (\n    <section className={s.section}>\n        <h2>{title}</h2>\n        {children}\n    </section>\n);\n",
-      "start": 1750105187902,
-      "end": 1750105187946,
+      "start": 1750184199248,
+      "end": 1750184199295,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { PropsWithChildren } from 'react';\nimport s from './Section.module.css';\ninterface SectionProps {\n  title: string;\n}\nexport const Section = ({\n  title,\n  children\n}: PropsWithChildren<SectionProps>) => <section className={s.section}>\n        <h2>{title}</h2>\n        {children}\n    </section>;",
-      "start": 1750105187946,
-      "end": 1750105187947,
+      "start": 1750184199295,
+      "end": 1750184199296,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "PropsWithChildren",
-          "s",
-          "SectionProps",
-          "title",
-          "Section",
-          "children",
-          "section"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Section/index.tsx"
-        ],
+        "names": ["PropsWithChildren", "s", "SectionProps", "title", "Section", "children", "section"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Section/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\n\nimport s from './Section.module.css';\n\ninterface SectionProps {\n    title: string;\n}\n\nexport const Section = ({ title, children }: PropsWithChildren<SectionProps>) => (\n    <section className={s.section}>\n        <h2>{title}</h2>\n        {children}\n    </section>\n);\n"
         ],
@@ -38,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport s from \"./Section.module.css\";\nexport const Section = ({\n  title,\n  children\n}) => /* @__PURE__ */ jsxs(\"section\", { className: s.section, children: [\n  /* @__PURE__ */ jsx(\"h2\", { children: title }),\n  children\n] });\n",
-      "start": 1750105187947,
-      "end": 1750105188229,
+      "start": 1750184199296,
+      "end": 1750184199549,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Section/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Section/index.tsx"],
         "sourcesContent": [
           "import type { PropsWithChildren } from 'react';\nimport s from './Section.module.css';\ninterface SectionProps {\n  title: string;\n}\nexport const Section = ({\n  title,\n  children\n}: PropsWithChildren<SectionProps>) => <section className={s.section}>\n        <h2>{title}</h2>\n        {children}\n    </section>;"
         ],
@@ -55,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Section/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport s from \"./Section.module.css\";\nexport const Section = ({\n  title,\n  children\n}) => /* @__PURE__ */ jsxs(\"section\", { className: s.section, children: [\n  /* @__PURE__ */ jsx(\"h2\", { children: title }),\n  children\n] });\n",
-      "start": 1750105188229,
-      "end": 1750105188229,
+      "start": 1750184199549,
+      "end": 1750184199549,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Section/index.tsx"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Section/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC;"
       }

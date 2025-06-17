@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\n\nimport { getSurveysInfoQuery, UserReportComment } from '@/entities/Report';\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\n\nexport const CreateReviewFormModel = atom(() => {\n    const $isSubmitted = createStore(false);\n    const $comments = createStore<UserReportComment[]>([]);\n\n    sample({\n        clock: getSurveysInfoQuery.finished.success,\n        fn: ({ result }) => result?.left_comments ?? [],\n        target: $comments,\n    });\n\n    sample({\n        clock: $comments,\n        source: ReviewModel.$currentReviewId,\n        fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),\n        target: $isSubmitted,\n    });\n\n    sample({\n        clock: createReviewMutation.finished.success,\n        fn: noop,\n        target: getSurveysInfoQuery.refresh,\n    });\n\n    return {\n        $isSubmitted,\n    };\n});\n",
-      "start": 1750105187949,
-      "end": 1750105187997,
+      "start": 1750184199267,
+      "end": 1750184199312,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\nimport { getSurveysInfoQuery, UserReportComment } from '@/entities/Report';\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\nexport const CreateReviewFormModel = atom(() => {\n  const $isSubmitted = createStore(false, {\n    name: \"$isSubmitted\",\n    sid: \"-n5zpxd\"\n  });\n  const $comments = createStore<UserReportComment[]>([], {\n    name: \"$comments\",\n    sid: \"-tk2hgq\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.left_comments ?? [],\n      target: $comments\n    }],\n    or: {\n      sid: \"xnhzlm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $comments,\n      source: ReviewModel.$currentReviewId,\n      fn: (id, comments) => Boolean(comments?.filter(({\n        user_report\n      }) => user_report === id).length),\n      target: $isSubmitted\n    }],\n    or: {\n      sid: \"xqsr5s\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"y66zrw\"\n    }\n  });\n  return {\n    $isSubmitted\n  };\n});",
-      "start": 1750105187997,
-      "end": 1750105187999,
+      "start": 1750184199312,
+      "end": 1750184199313,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -62,8 +62,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nexport const CreateReviewFormModel = atom(() => {\n  const $isSubmitted = createStore(false, {\n    name: \"$isSubmitted\",\n    sid: \"-n5zpxd\"\n  });\n  const $comments = createStore([], {\n    name: \"$comments\",\n    sid: \"-tk2hgq\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.left_comments ?? [],\n      target: $comments\n    }],\n    or: {\n      sid: \"xnhzlm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $comments,\n      source: ReviewModel.$currentReviewId,\n      fn: (id, comments) => Boolean(comments?.filter(({\n        user_report\n      }) => user_report === id).length),\n      target: $isSubmitted\n    }],\n    or: {\n      sid: \"xqsr5s\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"y66zrw\"\n    }\n  });\n  return {\n    $isSubmitted\n  };\n});\n",
-      "start": 1750105187999,
-      "end": 1750105188271,
+      "start": 1750184199313,
+      "end": 1750184199567,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -79,81 +79,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/model/index.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nexport const CreateReviewFormModel = atom(() => {\n  const $isSubmitted = createStore(false, {\n    name: \"$isSubmitted\",\n    sid: \"-n5zpxd\"\n  });\n  const $comments = createStore([], {\n    name: \"$comments\",\n    sid: \"-tk2hgq\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      fn: ({\n        result\n      }) => result?.left_comments ?? [],\n      target: $comments\n    }],\n    or: {\n      sid: \"xnhzlm\"\n    }\n  });\n  sample({\n    and: [{\n      clock: $comments,\n      source: ReviewModel.$currentReviewId,\n      fn: (id, comments) => Boolean(comments?.filter(({\n        user_report\n      }) => user_report === id).length),\n      target: $isSubmitted\n    }],\n    or: {\n      sid: \"xqsr5s\"\n    }\n  });\n  sample({\n    and: [{\n      clock: createReviewMutation.finished.success,\n      fn: noop,\n      target: getSurveysInfoQuery.refresh\n    }],\n    or: {\n      sid: \"y66zrw\"\n    }\n  });\n  return {\n    $isSubmitted\n  };\n});\n",
-      "start": 1750105188271,
-      "end": 1750105188271,
+      "start": 1750184199567,
+      "end": 1750184199567,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/CreateReviewForm/model/index.ts"
-        ],
+        "sources": ["src/features/CreateReviewForm/model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CA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"
       }

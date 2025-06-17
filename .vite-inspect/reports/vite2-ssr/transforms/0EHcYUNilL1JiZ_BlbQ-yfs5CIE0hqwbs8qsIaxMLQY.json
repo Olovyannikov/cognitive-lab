@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".image {\n  margin-bottom: var(--mantine-spacing-md);\n  border-radius: var(--mantine-spacing-lg);\n  max-height: 399px;\n\n  @mixin larger-than 768px {\n    margin-bottom: 80px;\n    border-radius: 80px;\n  }\n}\n\n.text {\n  font-size: 18px;\n  line-height: 22px;\n\n  @mixin larger-than 768px {\n    font-size: 22px;\n    line-height: 26px;\n  }\n}\n",
-      "start": 1750105188003,
-      "end": 1750105188046,
+      "start": 1750184199369,
+      "end": 1750184199391,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188046,
-      "end": 1750105188046,
+      "start": 1750184199391,
+      "end": 1750184199391,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/Post/Post.module.css [vike:pluginModuleBanner] */\nexport const image = \"wikKX\";\nexport const text = \"K1acp\";\nexport default {\n\timage: image,\n\ttext: text\n};\n",
-      "start": 1750105188047,
-      "end": 1750105188047,
+      "start": 1750184199392,
+      "end": 1750184199392,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Blog/ui/Post/Post.module.css"
-        ],
+        "sources": ["src/entities/Blog/ui/Post/Post.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
       }

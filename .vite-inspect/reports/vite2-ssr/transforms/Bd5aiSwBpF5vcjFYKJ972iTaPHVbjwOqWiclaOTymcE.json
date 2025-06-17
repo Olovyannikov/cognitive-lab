@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { ROUTES } from '@/shared/config';\n\nimport { Personality, titleColorMap } from '@/entities/Personality';\n\nimport s from './MenuItem.module.css';\n\ninterface MenuItemProps {\n    category: string;\n    description: string;\n    types: Personality[];\n    onClose: VoidFunction;\n}\n\nexport const MenuItem = ({ types, category, description, onClose }: MenuItemProps) => (\n    <Menu.Item className={s.item} component='div'>\n        <Title mb='xxs' fz={20} order={3}>\n            {category}\n        </Title>\n        <Text mb='xs' fz={18} lh='21px'>\n            {description}\n        </Text>\n        <Flex className={s.items} gap='md'>\n            {types.map((type) => (\n                <Paper\n                    py='sm'\n                    px={32}\n                    radius='md'\n                    component='a'\n                    key={type.code}\n                    onClick={onClose}\n                    className={s.paper}\n                    href={`${ROUTES.TYPES}/${type.code}`}\n                    data-color={`${titleColorMap[category]}`}\n                >\n                    <Stack gap={6} align='center'>\n                        <Text lh='20px' fw={600} fz={18}>\n                            {type.name}\n                        </Text>\n                        <Text fz={16} lh='18px'>\n                            {type.code}\n                        </Text>\n                    </Stack>\n                </Paper>\n            ))}\n        </Flex>\n    </Menu.Item>\n);\n",
-      "start": 1750105188473,
-      "end": 1750105188483,
+      "start": 1750184199737,
+      "end": 1750184199753,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\nimport { ROUTES } from '@/shared/config';\nimport { Personality, titleColorMap } from '@/entities/Personality';\nimport s from './MenuItem.module.css';\ninterface MenuItemProps {\n  category: string;\n  description: string;\n  types: Personality[];\n  onClose: VoidFunction;\n}\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}: MenuItemProps) => <Menu.Item className={s.item} component='div'>\n        <Title mb='xxs' fz={20} order={3}>\n            {category}\n        </Title>\n        <Text mb='xs' fz={18} lh='21px'>\n            {description}\n        </Text>\n        <Flex className={s.items} gap='md'>\n            {types.map(type => <Paper py='sm' px={32} radius='md' component='a' key={type.code} onClick={onClose} className={s.paper} href={`${ROUTES.TYPES}/${type.code}`} data-color={`${titleColorMap[category]}`}>\n                    <Stack gap={6} align='center'>\n                        <Text lh='20px' fw={600} fz={18}>\n                            {type.name}\n                        </Text>\n                        <Text fz={16} lh='18px'>\n                            {type.code}\n                        </Text>\n                    </Stack>\n                </Paper>)}\n        </Flex>\n    </Menu.Item>;",
-      "start": 1750105188483,
-      "end": 1750105188484,
+      "start": 1750184199753,
+      "end": 1750184199755,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -56,8 +56,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}) => /* @__PURE__ */ jsxs(Menu.Item, { className: s.item, component: \"div\", children: [\n  /* @__PURE__ */ jsx(Title, { mb: \"xxs\", fz: 20, order: 3, children: category }),\n  /* @__PURE__ */ jsx(Text, { mb: \"xs\", fz: 18, lh: \"21px\", children: description }),\n  /* @__PURE__ */ jsx(Flex, { className: s.items, gap: \"md\", children: types.map((type) => /* @__PURE__ */ jsx(Paper, { py: \"sm\", px: 32, radius: \"md\", component: \"a\", onClick: onClose, className: s.paper, href: `${ROUTES.TYPES}/${type.code}`, \"data-color\": `${titleColorMap[category]}`, children: /* @__PURE__ */ jsxs(Stack, { gap: 6, align: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { lh: \"20px\", fw: 600, fz: 18, children: type.name }),\n    /* @__PURE__ */ jsx(Text, { fz: 16, lh: \"18px\", children: type.code })\n  ] }) }, type.code)) })\n] });\n",
-      "start": 1750105188484,
-      "end": 1750105188497,
+      "start": 1750184199755,
+      "end": 1750184199758,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -73,81 +73,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188497,
-      "end": 1750105188497,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188498,
-      "end": 1750105188498,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({\n  types,\n  category,\n  description,\n  onClose\n}) => /* @__PURE__ */ jsxs(Menu.Item, { className: s.item, component: \"div\", children: [\n  /* @__PURE__ */ jsx(Title, { mb: \"xxs\", fz: 20, order: 3, children: category }),\n  /* @__PURE__ */ jsx(Text, { mb: \"xs\", fz: 18, lh: \"21px\", children: description }),\n  /* @__PURE__ */ jsx(Flex, { className: s.items, gap: \"md\", children: types.map((type) => /* @__PURE__ */ jsx(Paper, { py: \"sm\", px: 32, radius: \"md\", component: \"a\", onClick: onClose, className: s.paper, href: `${ROUTES.TYPES}/${type.code}`, \"data-color\": `${titleColorMap[category]}`, children: /* @__PURE__ */ jsxs(Stack, { gap: 6, align: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { lh: \"20px\", fw: 600, fz: 18, children: type.name }),\n    /* @__PURE__ */ jsx(Text, { fz: 16, lh: \"18px\", children: type.code })\n  ] }) }, type.code)) })\n] });\n",
-      "start": 1750105188498,
-      "end": 1750105188498,
+      "start": 1750184199758,
+      "end": 1750184199758,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3W,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC;"
       }

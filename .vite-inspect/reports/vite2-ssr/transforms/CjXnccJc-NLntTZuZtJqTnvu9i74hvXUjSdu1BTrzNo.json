@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrap {\n  @mixin larger-than 1200px {\n    margin: auto;\n    max-width: 860px;\n  }\n}\n\n.root {\n  --title-fz: 24px !important;\n  --title-lh: 28px !important;\n\n  position: relative;\n  text-align: center;\n}\n\n.hint {\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 18px;\n  text-align: center;\n  color: var(--mantine-color-gray-6);\n}\n\n.rephrase {\n  span {\n    align-items: start;\n  }\n}\n\n.checkboxWrapper [data-label-position] {\n  display: flex;\n  place-items: center;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.checkboxWrapper input + svg {\n  position: absolute;\n  left: 50%;\n  top: unset;\n  width: 28px;\n  height: 28px;\n  color: #fff;\n  transform: translateX(-50%);\n  pointer-events: none;\n}\n",
-      "start": 1750105188310,
-      "end": 1750105188333,
+      "start": 1750184199366,
+      "end": 1750184199385,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188333,
-      "end": 1750105188333,
+      "start": 1750184199385,
+      "end": 1750184199385,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199386,
+      "end": 1750184199386,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199386,
+      "end": 1750184199386,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199386,
+      "end": 1750184199386,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199386,
+      "end": 1750184199386,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestMultipleQuestion/TestMultipleQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrap = \"_55tXB\";\nexport const root = \"M7exd\";\nexport const hint = \"WxJH1\";\nexport const rephrase = \"I0ues\";\nexport const checkboxWrapper = \"BP5ZV\";\nexport default {\n\twrap: wrap,\n\troot: root,\n\thint: hint,\n\trephrase: rephrase,\n\tcheckboxWrapper: checkboxWrapper\n};\n",
-      "start": 1750105188334,
-      "end": 1750105188334,
+      "start": 1750184199387,
+      "end": 1750184199387,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/ui/TestMultipleQuestion/TestMultipleQuestion.module.css"
-        ],
+        "sources": ["src/entities/Test/ui/TestMultipleQuestion/TestMultipleQuestion.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC;"
       }

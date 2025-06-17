@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './CategoryBanner.module.css';\n\ninterface CategoryBannerProps {\n    title: string;\n    color?: string;\n}\n\nexport const CategoryBanner = ({ color, title }: CategoryBannerProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n",
-      "start": 1750105187769,
-      "end": 1750105187832,
+      "start": 1750184199160,
+      "end": 1750184199213,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './CategoryBanner.module.css';\ninterface CategoryBannerProps {\n  title: string;\n  color?: string;\n}\nexport const CategoryBanner = ({\n  color,\n  title\n}: CategoryBannerProps) => <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>;",
-      "start": 1750105187832,
-      "end": 1750105187833,
+      "start": 1750184199213,
+      "end": 1750184199214,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -43,8 +43,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./CategoryBanner.module.css\";\nexport const CategoryBanner = ({\n  color,\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
-      "start": 1750105187833,
-      "end": 1750105188085,
+      "start": 1750184199214,
+      "end": 1750184199429,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,81 +60,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199429,
+      "end": 1750184199429,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199429,
+      "end": 1750184199429,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199429,
+      "end": 1750184199429,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/CategoryBanner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./CategoryBanner.module.css\";\nexport const CategoryBanner = ({\n  color,\n  title\n}) => /* @__PURE__ */ jsxs(Paper, { className: s.paper, \"data-color\": color, children: [\n  /* @__PURE__ */ jsx(Title, { className: s.title, children: title }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"sm\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(CloudIcon, { width: 474, height: \"100%\" }) }),\n  /* @__PURE__ */ jsx(Box, { visibleFrom: \"xs\", className: s.box, \"data-color\": color, children: /* @__PURE__ */ jsx(SemiCircle, { width: 150, height: \"100%\" }) })\n] });\n",
-      "start": 1750105188086,
-      "end": 1750105188086,
+      "start": 1750184199430,
+      "end": 1750184199430,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/CategoryBanner/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/CategoryBanner/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC;"
       }

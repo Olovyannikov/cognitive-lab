@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\n\nimport { isExists } from '@/shared/lib';\n\nimport { RephrasingModel } from '../model';\n\nimport s from './Rephrasing.module.css';\n\nexport const Rephrasing = variant({\n    if: RephrasingModel.$currentPhrases.map(({ texts, hints }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n        fz: 16,\n        c: 'dark.9',\n        color: 'dark.9',\n        display: 'flex',\n        variant: 'subtle',\n        className: s.root,\n        children: 'Перефразировать',\n        leftSection: <ArrowsClockwise size={18} />,\n        onClick: RephrasingModel.changePhraseIndex,\n    },\n});\n",
-      "start": 1750105187932,
-      "end": 1750105187980,
+      "start": 1750184199042,
+      "end": 1750184199075,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\nimport { isExists } from '@/shared/lib';\nimport { RephrasingModel } from '../model';\nimport s from './Rephrasing.module.css';\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n      fz: 16,\n      c: 'dark.9',\n      color: 'dark.9',\n      display: 'flex',\n      variant: 'subtle',\n      className: s.root,\n      children: 'Перефразировать',\n      leftSection: <ArrowsClockwise size={18} />,\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});",
-      "start": 1750105187980,
-      "end": 1750105187981,
+      "start": 1750184199075,
+      "end": 1750184199077,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -53,9 +53,7 @@
           "method",
           "\"variant\""
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/ui/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/ui/index.tsx"],
         "sourcesContent": [
           "import type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\n\nimport { isExists } from '@/shared/lib';\n\nimport { RephrasingModel } from '../model';\n\nimport s from './Rephrasing.module.css';\n\nexport const Rephrasing = variant({\n    if: RephrasingModel.$currentPhrases.map(({ texts, hints }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n        fz: 16,\n        c: 'dark.9',\n        color: 'dark.9',\n        display: 'flex',\n        variant: 'subtle',\n        className: s.root,\n        children: 'Перефразировать',\n        leftSection: <ArrowsClockwise size={18} />,\n        onClick: RephrasingModel.changePhraseIndex,\n    },\n});\n"
         ],
@@ -66,14 +64,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { variant } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowsClockwise } from \"@phosphor-icons/react\";\nimport { isExists } from \"@/shared/lib\";\nimport { RephrasingModel } from \"../model\";\nimport s from \"./Rephrasing.module.css\";\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button,\n    else: void 0,\n    bind: {\n      fz: 16,\n      c: \"dark.9\",\n      color: \"dark.9\",\n      display: \"flex\",\n      variant: \"subtle\",\n      className: s.root,\n      children: \"Перефразировать\",\n      leftSection: /* @__PURE__ */ jsx(ArrowsClockwise, { size: 18 }),\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});\n",
-      "start": 1750105187981,
-      "end": 1750105188250,
+      "start": 1750184199077,
+      "end": 1750184199320,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/ui/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/ui/index.tsx"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport type { ComponentType } from 'react';\nimport { variant } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowsClockwise } from '@phosphor-icons/react';\nimport { isExists } from '@/shared/lib';\nimport { RephrasingModel } from '../model';\nimport s from './Rephrasing.module.css';\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button as ComponentType,\n    else: undefined,\n    bind: {\n      fz: 16,\n      c: 'dark.9',\n      color: 'dark.9',\n      display: 'flex',\n      variant: 'subtle',\n      className: s.root,\n      children: 'Перефразировать',\n      leftSection: <ArrowsClockwise size={18} />,\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});"
         ],
@@ -83,81 +79,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199320,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/Rephrasing/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { withFactory as _withFactory } from \"effector\";\nimport { variant } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowsClockwise } from \"@phosphor-icons/react\";\nimport { isExists } from \"@/shared/lib\";\nimport { RephrasingModel } from \"../model\";\nimport s from \"./Rephrasing.module.css\";\nexport const Rephrasing = _withFactory({\n  sid: \"hbbhjk\",\n  fn: () => variant({\n    if: RephrasingModel.$currentPhrases.map(({\n      texts,\n      hints\n    }) => isExists(texts, 1) && isExists(hints, 1)),\n    then: Button,\n    else: void 0,\n    bind: {\n      fz: 16,\n      c: \"dark.9\",\n      color: \"dark.9\",\n      display: \"flex\",\n      variant: \"subtle\",\n      className: s.root,\n      children: \"Перефразировать\",\n      leftSection: /* @__PURE__ */ jsx(ArrowsClockwise, { size: 18 }),\n      onClick: RephrasingModel.changePhraseIndex\n    }\n  }),\n  name: \"Rephrasing\",\n  method: \"variant\"\n});\n",
-      "start": 1750105188250,
-      "end": 1750105188250,
+      "start": 1750184199320,
+      "end": 1750184199321,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/Rephrasing/ui/index.tsx"
-        ],
+        "sources": ["src/features/Rephrasing/ui/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC;"
       }

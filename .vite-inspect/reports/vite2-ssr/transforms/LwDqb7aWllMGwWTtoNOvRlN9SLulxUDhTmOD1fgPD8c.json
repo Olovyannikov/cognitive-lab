@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\n\ntype CreateRequestParams = FetchOptions & {\n    url: string;\n};\n\ntype Fn<P> = (params: P) => CreateRequestParams;\n\ntype Payload<P> = CreateRequestParams | Fn<P>;\n\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n    payload: Payload<P>;\n    withTokenInHeaders?: boolean;\n};\n\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\n\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n    return typeof payload === 'function' ? payload(params) : payload;\n}\n\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n    baseURL,\n    headers,\n    payload,\n    withTokenInHeaders,\n}: CreateRequestInstanceParams<P>) =>\n    createEffect<P, R>((params): Promise<R> => {\n        const { url, ...fetchOptions } = getConfig(payload, params);\n\n        const newHeaders = new Headers(headers);\n\n        if (withTokenInHeaders) {\n            newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n        }\n\n        return ofetch(url, {\n            ...fetchOptions,\n            headers: newHeaders,\n            baseURL,\n        }) as Promise<R>;\n    });\nexport const createRequestFx =\n    (params: CreateRequestFxParams) =>\n    <P = CreateRequestParams, R = void>(payload: Payload<P>) =>\n        createRequestInstance<P, R>({\n            ...(params as CreateRequestParams),\n            payload,\n        });\n",
-      "start": 1750105188218,
-      "end": 1750105188231,
+      "start": 1750184199448,
+      "end": 1750184199495,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\ntype CreateRequestParams = FetchOptions & {\n  url: string;\n};\ntype Fn<P> = (params: P) => CreateRequestParams;\ntype Payload<P> = CreateRequestParams | Fn<P>;\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n  payload: Payload<P>;\n  withTokenInHeaders?: boolean;\n};\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n  return typeof payload === 'function' ? payload(params) : payload;\n}\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}: CreateRequestInstanceParams<P>) => createEffect<P, R>((params): Promise<R> => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  }) as Promise<R>;\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params: CreateRequestFxParams) => <P = CreateRequestParams, R = void>(payload: Payload<P>) => createRequestInstance<P, R>({\n  ...(params as CreateRequestParams),\n  payload\n});",
-      "start": 1750105188231,
-      "end": 1750105188234,
+      "start": 1750184199495,
+      "end": 1750184199500,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,9 +49,7 @@
           "sid",
           "createRequestFx"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/create-request-fx.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/create-request-fx.ts"],
         "sourcesContent": [
           "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\n\ntype CreateRequestParams = FetchOptions & {\n    url: string;\n};\n\ntype Fn<P> = (params: P) => CreateRequestParams;\n\ntype Payload<P> = CreateRequestParams | Fn<P>;\n\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n    payload: Payload<P>;\n    withTokenInHeaders?: boolean;\n};\n\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\n\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n    return typeof payload === 'function' ? payload(params) : payload;\n}\n\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n    baseURL,\n    headers,\n    payload,\n    withTokenInHeaders,\n}: CreateRequestInstanceParams<P>) =>\n    createEffect<P, R>((params): Promise<R> => {\n        const { url, ...fetchOptions } = getConfig(payload, params);\n\n        const newHeaders = new Headers(headers);\n\n        if (withTokenInHeaders) {\n            newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n        }\n\n        return ofetch(url, {\n            ...fetchOptions,\n            headers: newHeaders,\n            baseURL,\n        }) as Promise<R>;\n    });\nexport const createRequestFx =\n    (params: CreateRequestFxParams) =>\n    <P = CreateRequestParams, R = void>(payload: Payload<P>) =>\n        createRequestInstance<P, R>({\n            ...(params as CreateRequestParams),\n            payload,\n        });\n"
         ],
@@ -62,14 +60,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEffect } from \"effector\";\nimport { ofetch } from \"ofetch\";\nfunction getConfig(payload, params) {\n  return typeof payload === \"function\" ? payload(params) : payload;\n}\nconst createRequestInstance = ({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}) => createEffect((params) => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append(\"Authorization\", `Token ${JSON.parse(localStorage.getItem(\"$userId\") ?? \"\")}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  });\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params) => (payload) => createRequestInstance({\n  ...params,\n  payload\n});\n",
-      "start": 1750105188234,
-      "end": 1750105188408,
+      "start": 1750184199500,
+      "end": 1750184199676,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/create-request-fx.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/create-request-fx.ts"],
         "sourcesContent": [
           "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\ntype CreateRequestParams = FetchOptions & {\n  url: string;\n};\ntype Fn<P> = (params: P) => CreateRequestParams;\ntype Payload<P> = CreateRequestParams | Fn<P>;\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n  payload: Payload<P>;\n  withTokenInHeaders?: boolean;\n};\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n  return typeof payload === 'function' ? payload(params) : payload;\n}\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}: CreateRequestInstanceParams<P>) => createEffect<P, R>((params): Promise<R> => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  }) as Promise<R>;\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params: CreateRequestFxParams) => <P = CreateRequestParams, R = void>(payload: Payload<P>) => createRequestInstance<P, R>({\n  ...(params as CreateRequestParams),\n  payload\n});"
         ],
@@ -79,81 +75,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188408,
-      "end": 1750105188408,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188408,
-      "end": 1750105188409,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/api/create-request-fx.ts [vike:pluginModuleBanner] */\nimport { createEffect } from \"effector\";\nimport { ofetch } from \"ofetch\";\nfunction getConfig(payload, params) {\n  return typeof payload === \"function\" ? payload(params) : payload;\n}\nconst createRequestInstance = ({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}) => createEffect((params) => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append(\"Authorization\", `Token ${JSON.parse(localStorage.getItem(\"$userId\") ?? \"\")}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  });\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params) => (payload) => createRequestInstance({\n  ...params,\n  payload\n});\n",
-      "start": 1750105188409,
-      "end": 1750105188409,
+      "start": 1750184199676,
+      "end": 1750184199676,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/api/create-request-fx.ts"
-        ],
+        "sources": ["src/shared/api/create-request-fx.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC;"
       }

@@ -4,25 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button } from '@mantine/core';\n\nexport const NavigateToHelpPage = () => (\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>\n);\n",
-      "start": 1750105187602,
-      "end": 1750105187642,
+      "start": 1750184198921,
+      "end": 1750184198964,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button } from '@mantine/core';\nexport const NavigateToHelpPage = () => <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>;",
-      "start": 1750105187642,
-      "end": 1750105187643,
+      "start": 1750184198964,
+      "end": 1750184198965,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "Button",
-          "NavigateToHelpPage"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"
-        ],
+        "names": ["Button", "NavigateToHelpPage"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"],
         "sourcesContent": [
           "import { Button } from '@mantine/core';\n\nexport const NavigateToHelpPage = () => (\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>\n);\n"
         ],
@@ -33,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"subtle\", size: \"md\", component: \"a\", href: \"/help\", children: \"Служба поддержки\" });\n",
-      "start": 1750105187643,
-      "end": 1750105187799,
+      "start": 1750184198965,
+      "end": 1750184199119,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx"],
         "sourcesContent": [
           "import { Button } from '@mantine/core';\nexport const NavigateToHelpPage = () => <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>;"
         ],
@@ -50,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187799,
-      "end": 1750105187799,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187799,
-      "end": 1750105187800,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187800,
-      "end": 1750105187800,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187800,
-      "end": 1750105187800,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/NavigateToHelpPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"subtle\", size: \"md\", component: \"a\", href: \"/help\", children: \"Служба поддержки\" });\n",
-      "start": 1750105187800,
-      "end": 1750105187800,
+      "start": 1750184199119,
+      "end": 1750184199119,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/NavigateToHelpPage/index.tsx"
-        ],
+        "sources": ["src/features/NavigateToHelpPage/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\n\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\n\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\n);\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\n);\n\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\n",
-      "start": 1750105187706,
-      "end": 1750105187743,
+      "start": 1750184199165,
+      "end": 1750184199219,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) => response?.reports?.filter(report => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map(user => Boolean(user?.reports?.find?.(report => report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(user => user?.reports?.find?.(el => el.report_kind === 'free') ?? {} as UserReportInfo);\nexport const $allUserReports = getSurveysInfoQuery.$data.map(el => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'express'));",
-      "start": 1750105187743,
-      "end": 1750105187745,
+      "start": 1750184199219,
+      "end": 1750184199224,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -40,9 +40,7 @@
           "$paidUserReports",
           "$expressUserReports"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"],
         "sourcesContent": [
           "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\n\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\n\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\n);\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\n);\n\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\n"
         ],
@@ -53,14 +51,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750105187745,
-      "end": 1750105187942,
+      "start": 1750184199224,
+      "end": 1750184199426,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"],
         "sourcesContent": [
           "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) => response?.reports?.filter(report => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map(user => Boolean(user?.reports?.find?.(report => report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(user => user?.reports?.find?.(el => el.report_kind === 'free') ?? {} as UserReportInfo);\nexport const $allUserReports = getSurveysInfoQuery.$data.map(el => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'express'));"
         ],
@@ -70,81 +66,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187942,
-      "end": 1750105187942,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/userReports.ts [vike:pluginModuleBanner] */\nimport { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750105187943,
-      "end": 1750105187943,
+      "start": 1750184199426,
+      "end": 1750184199426,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/model/userReports.ts"
-        ],
+        "sources": ["src/entities/Report/model/userReports.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

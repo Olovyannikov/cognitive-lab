@@ -4,27 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { usePageContext } from 'vike-react/usePageContext';\n\nimport { ErrorPage } from '@/pages/ErrorPage';\n\nexport default function Page() {\n    const { is404 } = usePageContext();\n    if (is404) return <ErrorPage />;\n\n    return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}\n",
-      "start": 1750105187346,
-      "end": 1750105187357,
+      "start": 1750184198682,
+      "end": 1750184198712,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { usePageContext } from 'vike-react/usePageContext';\nimport { ErrorPage } from '@/pages/ErrorPage';\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return <ErrorPage />;\n  return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}",
-      "start": 1750105187357,
-      "end": 1750105187359,
+      "start": 1750184198712,
+      "end": 1750184198713,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "usePageContext",
-          "ErrorPage",
-          "Page",
-          "is404"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"
-        ],
+        "names": ["usePageContext", "ErrorPage", "Page", "is404"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"],
         "sourcesContent": [
           "import { usePageContext } from 'vike-react/usePageContext';\n\nimport { ErrorPage } from '@/pages/ErrorPage';\n\nexport default function Page() {\n    const { is404 } = usePageContext();\n    if (is404) return <ErrorPage />;\n\n    return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}\n"
         ],
@@ -35,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ErrorPage } from \"@/pages/ErrorPage\";\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return /* @__PURE__ */ jsx(ErrorPage, {});\n  return /* @__PURE__ */ jsx(ErrorPage, { image: \"/errors/500\", title: \"Что-то пошло не так...\" });\n}\n",
-      "start": 1750105187359,
-      "end": 1750105187444,
+      "start": 1750184198713,
+      "end": 1750184198767,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/_error/+Page.tsx"],
         "sourcesContent": [
           "import { usePageContext } from 'vike-react/usePageContext';\nimport { ErrorPage } from '@/pages/ErrorPage';\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return <ErrorPage />;\n  return <ErrorPage image='/errors/500' title='Что-то пошло не так...' />;\n}"
         ],
@@ -52,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187444,
-      "end": 1750105187444,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/_error/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ErrorPage } from \"@/pages/ErrorPage\";\nexport default function Page() {\n  const {\n    is404\n  } = usePageContext();\n  if (is404) return /* @__PURE__ */ jsx(ErrorPage, {});\n  return /* @__PURE__ */ jsx(ErrorPage, { image: \"/errors/500\", title: \"Что-то пошло не так...\" });\n}\n",
-      "start": 1750105187445,
-      "end": 1750105187445,
+      "start": 1750184198767,
+      "end": 1750184198767,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/_error/+Page.tsx"
-        ],
+        "sources": ["pages/_error/+Page.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClG;"
       }

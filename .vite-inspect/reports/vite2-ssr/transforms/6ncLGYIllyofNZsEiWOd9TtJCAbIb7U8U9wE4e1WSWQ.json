@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypeQuery } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ routeParams }) => routeParams.type,\n    target: getPersonalityTypeQuery.start,\n});\n",
-      "start": 1750105187376,
-      "end": 1750105187406,
+      "start": 1750184198709,
+      "end": 1750184198740,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypeQuery } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"ahxr5j\"\n  }\n});",
-      "start": 1750105187406,
-      "end": 1750105187407,
+      "start": 1750184198740,
+      "end": 1750184198741,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -31,9 +31,7 @@
           "or",
           "sid"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/@type/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/@type/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypeQuery } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ routeParams }) => routeParams.type,\n    target: getPersonalityTypeQuery.start,\n});\n"
         ],
@@ -44,14 +42,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"ahxr5j\"\n  }\n});\n",
-      "start": 1750105187407,
-      "end": 1750105187461,
+      "start": 1750184198741,
+      "end": 1750184198792,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/@type/+pageInitiated.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-types/@type/+pageInitiated.ts"],
         "sourcesContent": [
           "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypeQuery } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"ahxr5j\"\n  }\n});"
         ],
@@ -61,81 +57,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198792,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198792,
+      "end": 1750184198793,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187461,
-      "end": 1750105187461,
+      "start": 1750184198793,
+      "end": 1750184198793,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187462,
-      "end": 1750105187462,
+      "start": 1750184198793,
+      "end": 1750184198793,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! pages/mbti-types/@type/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypeQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      routeParams\n    }) => routeParams.type,\n    target: getPersonalityTypeQuery.start\n  }],\n  or: {\n    sid: \"ahxr5j\"\n  }\n});\n",
-      "start": 1750105187462,
-      "end": 1750105187462,
+      "start": 1750184198793,
+      "end": 1750184198793,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "pages/mbti-types/@type/+pageInitiated.ts"
-        ],
+        "sources": ["pages/mbti-types/@type/+pageInitiated.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }

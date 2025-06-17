@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".subtitle {\n  font-size: 20px;\n}\n",
-      "start": 1750105188044,
-      "end": 1750105188088,
+      "start": 1750184199429,
+      "end": 1750184199447,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199447,
+      "end": 1750184199447,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Subtitle/Subtitle.module.css [vike:pluginModuleBanner] */\nexport const subtitle = \"h8kHs\";\nexport default {\n\tsubtitle: subtitle\n};\n",
-      "start": 1750105188088,
-      "end": 1750105188088,
+      "start": 1750184199448,
+      "end": 1750184199448,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/Subtitle/Subtitle.module.css"
-        ],
+        "sources": ["src/entities/Report/ui/Subtitle/Subtitle.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC;"
       }

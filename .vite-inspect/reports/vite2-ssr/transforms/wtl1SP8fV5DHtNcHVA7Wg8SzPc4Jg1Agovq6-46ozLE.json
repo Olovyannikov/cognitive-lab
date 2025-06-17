@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation } from '@farfetched/core';\n\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nexport const sendFreeReportOnEmailMutation = createMutation({\n    effect: createInternalRequestFx<{ email: string; user_report_id: string }, void>(({ user_report_id, ...body }) => ({\n        url: API.surveys.email(user_report_id),\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1750105187879,
-      "end": 1750105187920,
+      "start": 1750184199069,
+      "end": 1750184199111,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<{\n      email: string;\n      user_report_id: string;\n    }, void>(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});",
-      "start": 1750105187921,
-      "end": 1750105187922,
+      "start": 1750184199111,
+      "end": 1750184199112,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -38,9 +38,7 @@
           "\"sendFreeReportOnEmailMutation\"",
           "\"createMutation\""
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/api/index.ts"],
         "sourcesContent": [
           "import { createMutation } from '@farfetched/core';\n\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nexport const sendFreeReportOnEmailMutation = createMutation({\n    effect: createInternalRequestFx<{ email: string; user_report_id: string }, void>(({ user_report_id, ...body }) => ({\n        url: API.surveys.email(user_report_id),\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n"
         ],
@@ -51,14 +49,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1750105187922,
-      "end": 1750105188212,
+      "start": 1750184199112,
+      "end": 1750184199377,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/api/index.ts"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<{\n      email: string;\n      user_report_id: string;\n    }, void>(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});"
         ],
@@ -68,81 +64,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SendReportEmail/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const sendFreeReportOnEmailMutation = _withFactory({\n  sid: \"-s4ky2h\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx(({\n      user_report_id,\n      ...body\n    }) => ({\n      url: API.surveys.email(user_report_id),\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"sendFreeReportOnEmailMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1750105188212,
-      "end": 1750105188212,
+      "start": 1750184199377,
+      "end": 1750184199377,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/SendReportEmail/api/index.ts"
-        ],
+        "sources": ["src/features/SendReportEmail/api/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;"
       }

@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  @mixin larger-than 992px {\n    padding-block: 120px;\n  }\n}\n",
-      "start": 1750105187640,
-      "end": 1750105187684,
+      "start": 1750184198969,
+      "end": 1750184199014,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105187684,
-      "end": 1750105187684,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/ReviewPage/ReviewPage.module.css [vike:pluginModuleBanner] */\nexport const root = \"OO7bl\";\nexport default {\n\troot: root\n};\n",
-      "start": 1750105187685,
-      "end": 1750105187685,
+      "start": 1750184199014,
+      "end": 1750184199014,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/pages/ReviewPage/ReviewPage.module.css"
-        ],
+        "sources": ["src/pages/ReviewPage/ReviewPage.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\n\nimport s from './ReportNavigationTemplate.module.css';\n\ninterface ReportNavigationTemplateProps {\n    content: string[];\n    title?: string;\n    onPageChange(n: number): void;\n    color?: string;\n    activeMenu?: string;\n}\n\nexport const ReportNavigationTemplate = ({\n    content,\n    onPageChange,\n    title,\n    color = 'violet',\n    activeMenu = 'Введение',\n}: ReportNavigationTemplateProps) => {\n    const [_, scrollTo] = useWindowScroll();\n    const {\n        urlParsed: { pathname },\n    } = usePageContext();\n\n    const [opened, { close, toggle }] = useDisclosure();\n\n    const isFreeReport = pathname.includes('free');\n\n    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {\n        onPageChange(idx + 1);\n        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);\n    };\n\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler,\n    };\n\n    return (\n        <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>\n    );\n};\n",
-      "start": 1750105187763,
-      "end": 1750105187829,
+      "start": 1750184199157,
+      "end": 1750184199209,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\ninterface ReportNavigationTemplateProps {\n  content: string[];\n  title?: string;\n  onPageChange(n: number): void;\n  color?: string;\n  activeMenu?: string;\n}\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = 'violet',\n  activeMenu = 'Введение'\n}: ReportNavigationTemplateProps) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes('free');\n  const onPageChangeHandler = ({\n    idx\n  }: {\n    idx: number;\n    title: string;\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>;\n};",
-      "start": 1750105187829,
-      "end": 1750105187831,
+      "start": 1750184199209,
+      "end": 1750184199211,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -62,8 +62,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1750105187831,
-      "end": 1750105188070,
+      "start": 1750184199211,
+      "end": 1750184199439,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -79,81 +79,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199439,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1750105188070,
-      "end": 1750105188070,
+      "start": 1750184199439,
+      "end": 1750184199440,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/ReportNavigationTemplate/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/ReportNavigationTemplate/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,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,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
       }

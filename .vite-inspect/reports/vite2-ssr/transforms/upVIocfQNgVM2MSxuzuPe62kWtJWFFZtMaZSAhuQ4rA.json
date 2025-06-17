@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\n\nimport { atom } from '@/shared/factories';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\n\nexport const PersonalitiesModel = atom(() => {\n    const PersonalitiesInitialGate = createGate();\n    const $personalitiesMap = createStore<Record<string, string>>({});\n\n    sample({\n        clock: PersonalitiesInitialGate.open,\n        target: getPersonalityTypesWithCategoriesQuery.start,\n    });\n\n    sample({\n        clock: getPersonalityTypesWithCategoriesQuery.$data,\n        fn: normalizePersonalities,\n        target: $personalitiesMap,\n    });\n\n    return {\n        $personalitiesMap,\n        PersonalitiesInitialGate,\n    };\n});\n",
-      "start": 1750105187497,
-      "end": 1750105187555,
+      "start": 1750184198835,
+      "end": 1750184198855,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { atom } from '@/shared/factories';\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore<Record<string, string>>({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.start\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});",
-      "start": 1750105187555,
-      "end": 1750105187556,
+      "start": 1750184198855,
+      "end": 1750184198856,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -38,9 +38,7 @@
           "$data",
           "fn"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/model/index.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\n\nimport { atom } from '@/shared/factories';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\n\nexport const PersonalitiesModel = atom(() => {\n    const PersonalitiesInitialGate = createGate();\n    const $personalitiesMap = createStore<Record<string, string>>({});\n\n    sample({\n        clock: PersonalitiesInitialGate.open,\n        target: getPersonalityTypesWithCategoriesQuery.start,\n    });\n\n    sample({\n        clock: getPersonalityTypesWithCategoriesQuery.$data,\n        fn: normalizePersonalities,\n        target: $personalitiesMap,\n    });\n\n    return {\n        $personalitiesMap,\n        PersonalitiesInitialGate,\n    };\n});\n"
         ],
@@ -51,14 +49,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"../api\";\nimport { normalizePersonalities } from \"../lib\";\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.start\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});\n",
-      "start": 1750105187556,
-      "end": 1750105187670,
+      "start": 1750184198856,
+      "end": 1750184198952,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/model/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/model/index.ts"],
         "sourcesContent": [
           "import { createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { atom } from '@/shared/factories';\nimport { getPersonalityTypesWithCategoriesQuery } from '../api';\nimport { normalizePersonalities } from '../lib';\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore<Record<string, string>>({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.start\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});"
         ],
@@ -68,81 +64,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/model/index.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"../api\";\nimport { normalizePersonalities } from \"../lib\";\nexport const PersonalitiesModel = atom(() => {\n  const PersonalitiesInitialGate = createGate({\n    and: [],\n    or: {\n      name: \"PersonalitiesInitialGate\",\n      sid: \"-ny01mw\"\n    }\n  });\n  const $personalitiesMap = createStore({}, {\n    name: \"$personalitiesMap\",\n    sid: \"uipdgv\"\n  });\n  sample({\n    and: [{\n      clock: PersonalitiesInitialGate.open,\n      target: getPersonalityTypesWithCategoriesQuery.start\n    }],\n    or: {\n      sid: \"ubjsnk\"\n    }\n  });\n  sample({\n    and: [{\n      clock: getPersonalityTypesWithCategoriesQuery.$data,\n      fn: normalizePersonalities,\n      target: $personalitiesMap\n    }],\n    or: {\n      sid: \"uearmd\"\n    }\n  });\n  return {\n    $personalitiesMap,\n    PersonalitiesInitialGate\n  };\n});\n",
-      "start": 1750105187670,
-      "end": 1750105187670,
+      "start": 1750184198952,
+      "end": 1750184198952,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Personality/model/index.ts"
-        ],
+        "sources": ["src/entities/Personality/model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }

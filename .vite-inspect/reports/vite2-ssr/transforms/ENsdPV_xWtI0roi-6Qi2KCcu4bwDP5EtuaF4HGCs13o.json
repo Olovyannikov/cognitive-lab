@@ -4,29 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TextInput } from '@mantine/core';\n\nimport s from './FormInput.module.css';\n\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md',\n});\n",
-      "start": 1750105187815,
-      "end": 1750105187859,
+      "start": 1750184199022,
+      "end": 1750184199063,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: 'md'\n});",
-      "start": 1750105187859,
-      "end": 1750105187860,
+      "start": 1750184199063,
+      "end": 1750184199064,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "TextInput",
-          "s",
-          "FormInput",
-          "withProps",
-          "classNames",
-          "size"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"
-        ],
+        "names": ["TextInput", "s", "FormInput", "withProps", "classNames", "size"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"],
         "sourcesContent": [
           "import { TextInput } from '@mantine/core';\n\nimport s from './FormInput.module.css';\n\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md',\n});\n"
         ],
@@ -37,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750105187860,
-      "end": 1750105188113,
+      "start": 1750184199064,
+      "end": 1750184199244,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"],
         "sourcesContent": [
           "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: 'md'\n});"
         ],
@@ -54,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188113,
-      "end": 1750105188113,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormInput/index.tsx [vike:pluginModuleBanner] */\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750105188114,
-      "end": 1750105188114,
+      "start": 1750184199244,
+      "end": 1750184199244,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/ui/FormInput/index.tsx"
-        ],
+        "sources": ["src/shared/ui/FormInput/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC;"
       }

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './use-create-review-form';\n",
-      "start": 1750105188325,
-      "end": 1750105188347,
+      "start": 1750184199599,
+      "end": 1750184199611,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './use-create-review-form';",
-      "start": 1750105188347,
-      "end": 1750105188348,
+      "start": 1750184199611,
+      "end": 1750184199612,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -20,9 +20,7 @@
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/view-model/index.ts"
         ],
-        "sourcesContent": [
-          "export * from './use-create-review-form';\n"
-        ],
+        "sourcesContent": ["export * from './use-create-review-form';\n"],
         "mappings": "AAAA,cAAc,0BAA0B",
         "ignoreList": []
       }
@@ -30,98 +28,94 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./use-create-review-form\";\n",
-      "start": 1750105188348,
-      "end": 1750105188432,
+      "start": 1750184199612,
+      "end": 1750184199704,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/view-model/index.ts"
         ],
-        "sourcesContent": [
-          "export * from './use-create-review-form';"
-        ],
+        "sourcesContent": ["export * from './use-create-review-form';"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/view-model/index.ts [vike:pluginModuleBanner] */\nexport * from \"./use-create-review-form\";\n",
-      "start": 1750105188432,
-      "end": 1750105188432,
+      "start": 1750184199704,
+      "end": 1750184199704,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/features/CreateReviewForm/view-model/index.ts"
-        ],
+        "sources": ["src/features/CreateReviewForm/view-model/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

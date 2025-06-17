@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { DOCS } from '../../const';\nimport { List } from '../List';\n\nimport s from './MetaInfo.module.css';\n\nexport const MetaInfo = ({ className }: ComponentProps<'ul'>) => (\n    <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>\n);\n",
-      "start": 1750105187901,
-      "end": 1750105187945,
+      "start": 1750184199247,
+      "end": 1750184199297,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\nimport { DOCS } from '../../const';\nimport { List } from '../List';\nimport s from './MetaInfo.module.css';\nexport const MetaInfo = ({\n  className\n}: ComponentProps<'ul'>) => <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>;",
-      "start": 1750105187945,
-      "end": 1750105187946,
+      "start": 1750184199297,
+      "end": 1750184199299,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -46,8 +46,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({\n  className\n}) => /* @__PURE__ */ jsxs(Flex, { className: s.root, children: [\n  /* @__PURE__ */ jsx(List, { className: clsx(className, s.docs), data: DOCS }),\n  /* @__PURE__ */ jsxs(Box, { className: s.text, children: [\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.disclamer, children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\" }),\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.meta, children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\" })\n  ] })\n] });\n",
-      "start": 1750105187946,
-      "end": 1750105188227,
+      "start": 1750184199299,
+      "end": 1750184199555,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -63,81 +63,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199555,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199555,
+      "end": 1750184199556,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Metainfo/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({\n  className\n}) => /* @__PURE__ */ jsxs(Flex, { className: s.root, children: [\n  /* @__PURE__ */ jsx(List, { className: clsx(className, s.docs), data: DOCS }),\n  /* @__PURE__ */ jsxs(Box, { className: s.text, children: [\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.disclamer, children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\" }),\n    /* @__PURE__ */ jsx(Text, { c: \"gray.6\", className: s.meta, children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\" })\n  ] })\n] });\n",
-      "start": 1750105188227,
-      "end": 1750105188227,
+      "start": 1750184199556,
+      "end": 1750184199556,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/RootLayout/ui/Metainfo/index.tsx"
-        ],
+        "sources": ["src/widgets/RootLayout/ui/Metainfo/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/J,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;"
       }

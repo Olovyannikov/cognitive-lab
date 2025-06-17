@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".indicator {\n  background-color: var(--mantine-color-dark-7);\n  opacity: 0.1;\n\n  &[data-active] {\n    opacity: 1;\n  }\n}\n",
-      "start": 1750105188138,
-      "end": 1750105188159,
+      "start": 1750184199457,
+      "end": 1750184199503,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188159,
-      "end": 1750105188159,
+      "start": 1750184199503,
+      "end": 1750184199503,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199503,
+      "end": 1750184199503,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199503,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/context/CongratulationsProvider.module.css [vike:pluginModuleBanner] */\nexport const indicator = \"_4LrTi\";\nexport default {\n\tindicator: indicator\n};\n",
-      "start": 1750105188160,
-      "end": 1750105188160,
+      "start": 1750184199504,
+      "end": 1750184199504,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/CongratulationsSlider/context/CongratulationsProvider.module.css"
-        ],
+        "sources": ["src/widgets/CongratulationsSlider/context/CongratulationsProvider.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC;"
       }

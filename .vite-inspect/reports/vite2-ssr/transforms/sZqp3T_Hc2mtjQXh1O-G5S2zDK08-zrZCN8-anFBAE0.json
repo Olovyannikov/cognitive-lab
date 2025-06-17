@@ -4,99 +4,97 @@
     {
       "name": "vite:load-fallback",
       "result": ".container {\n  margin: 0 auto;\n  text-align: center;\n\n  @mixin larger-than 768px {\n    margin-bottom: 113px;\n    padding-inline: 65px;\n  }\n}\n\n.top {\n  position: relative;\n\n  @mixin larger-than 992px {\n    display: grid;\n    grid-auto-rows: max-content;\n    grid-template-areas:\n      \"p i\"\n      \"t i\"\n      \". i\";\n    grid-template-columns: 1fr 357px;\n  }\n}\n\n.pretitle {\n  position: relative;\n  grid-area: p;\n  margin-bottom: 16px;\n  font-weight: 700;\n  font-size: 18px;\n  line-height: normal;\n\n  @mixin larger-than 768px {\n    margin-bottom: 40px;\n    font-size: 32px;\n    text-align: left;\n  }\n}\n\n.title {\n  grid-area: t;\n  margin-bottom: 16px;\n  height: fit-content;\n\n  @mixin larger-than 768px {\n    margin-bottom: 60px;\n  }\n}\n\n.title,\n.title p {\n  font-weight: 700;\n  font-size: 26px;\n  line-height: normal;\n\n  @mixin larger-than 768px {\n    font-size: 40px;\n    text-align: left;\n  }\n}\n\n.image {\n  grid-area: i;\n\n  img {\n    @mixin larger-than 768px {\n      width: 357px !important;\n      height: 357px !important;\n    }\n\n    @mixin larger-than 992px {\n      margin-top: 50px !important;\n    }\n  }\n}\n\n.badge {\n  position: relative;\n  top: -45px;\n  z-index: 1;\n  margin-right: auto;\n  margin-bottom: -45px;\n  margin-left: auto;\n  border-radius: var(--mantine-radius-sm);\n  border-bottom-right-radius: 0;\n  padding: var(--mantine-spacing-xs);\n  height: fit-content;\n  max-width: 53%;\n  color: var(--mantine-color-violet-7);\n  background-color: var(--mantine-color-violet-0);\n\n  @mixin larger-than 768px {\n    margin-bottom: 0;\n    border-radius: var(--mantine-radius-lg);\n    border-bottom-right-radius: 0;\n    padding: var(--mantine-spacing-md);\n    max-width: 386px;\n  }\n\n  @mixin larger-than 992px {\n    position: absolute;\n    right: 0;\n    top: unset;\n    bottom: -45px;\n  }\n\n  @mixin larger-than 1320px {\n    right: 357px;\n    top: 50px;\n    bottom: unset;\n  }\n}\n\n.badgeIconContainer {\n  border-radius: var(--mantine-radius-xs);\n  padding: var(--mantine-spacing-xs);\n  background-color: var(--mantine-color-violet-1);\n\n  @mixin larger-than 768px {\n    border-radius: var(--mantine-radius-md);\n    padding: calc(var(--mantine-spacing-sm) + var(--mantine-spacing-xxs) / 2);\n\n    svg {\n      width: 24px;\n      height: 24px;\n    }\n  }\n}\n\n.badgeText {\n  font-weight: 500;\n  font-size: 12px;\n  line-height: normal;\n  text-align: left;\n\n  @mixin larger-than 768px {\n    font-size: 20px;\n  }\n}\n\n.reportInfo {\n  text-align: left;\n\n  @mixin larger-than 768px {\n    margin-bottom: 150px;\n  }\n\n  @mixin larger-than 1210px {\n    margin-top: -130px;\n  }\n}\n\n.reportSubtitle {\n  margin-bottom: var(--mantine-spacing-md);\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 24px;\n\n  @mixin larger-than 768px {\n    font-size: 24px;\n  }\n}\n\n.reportTypesContainer {\n  flex-direction: column;\n  gap: var(--mantine-spacing-md);\n\n  @mixin larger-than 768px {\n    flex-direction: row;\n    gap: 0;\n  }\n}\n\n.reportType {\n  margin-bottom: 2px;\n  padding: var(--mantine-spacing-md);\n  width: fit-content;\n  color: var(--mantine-color-violet-7);\n  background-color: var(--mantine-color-violet-0);\n\n  @mixin larger-than 768px {\n    margin-bottom: 12px;\n    border-radius: var(--mantine-radius-lg);\n\n    &[data-first] {\n      border-top-right-radius: 0;\n      border-bottom-right-radius: 0;\n    }\n\n    &[data-last] {\n      border-top-left-radius: 0;\n      border-bottom-left-radius: 0;\n\n      /* HACK: из-за разных шрифтов */\n      padding-bottom: 15px;\n      min-width: 463px;\n    }\n  }\n}\n\n.reportTitle,\n.reportTitle span {\n  margin-bottom: 4px;\n  font-weight: 700;\n  font-size: 18px;\n\n  @mixin larger-than 768px {\n    font-size: 24px;\n  }\n}\n\n.reportDescription {\n  font-size: 14px;\n\n  @mixin larger-than 768px {\n    font-size: 18px;\n  }\n}\n\n.availability {\n  margin-left: var(--mantine-spacing-md);\n  font-weight: 500;\n  font-size: 12px;\n  color: var(--mantine-color-violet-7);\n\n  @mixin larger-than 768px {\n    font-size: 16px;\n  }\n}\n\n.titleImage {\n  width: 21px;\n  height: 21px;\n\n  @mixin larger-than 768px {\n    position: absolute;\n    left: -50px;\n    bottom: 0;\n    width: 40px;\n    height: 40px;\n  }\n}\n",
-      "start": 1750105188333,
-      "end": 1750105188397,
+      "start": 1750184199620,
+      "end": 1750184199683,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
-      "start": 1750105188397,
-      "end": 1750105188397,
+      "start": 1750184199683,
+      "end": 1750184199683,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/ui/FirstSlide/FirstSlide.module.css [vike:pluginModuleBanner] */\nexport const container = \"_239m3\";\nexport const top = \"gluqv\";\nexport const pretitle = \"RJotY\";\nexport const title = \"gu-p5\";\nexport const image = \"QqEM8\";\nexport const badge = \"FAb2R\";\nexport const badgeIconContainer = \"joEkd\";\nexport const badgeText = \"fufpq\";\nexport const reportInfo = \"CY2Qo\";\nexport const reportSubtitle = \"v1IWK\";\nexport const reportTypesContainer = \"knYlr\";\nexport const reportType = \"NzNfF\";\nexport const reportTitle = \"H-Zfu\";\nexport const reportDescription = \"q2Xvi\";\nexport const availability = \"K4-Z3\";\nexport const titleImage = \"XZ9XZ\";\nexport default {\n\tcontainer: container,\n\ttop: top,\n\tpretitle: pretitle,\n\ttitle: title,\n\timage: image,\n\tbadge: badge,\n\tbadgeIconContainer: badgeIconContainer,\n\tbadgeText: badgeText,\n\treportInfo: reportInfo,\n\treportSubtitle: reportSubtitle,\n\treportTypesContainer: reportTypesContainer,\n\treportType: reportType,\n\treportTitle: reportTitle,\n\treportDescription: reportDescription,\n\tavailability: availability,\n\ttitleImage: titleImage\n};\n",
-      "start": 1750105188402,
-      "end": 1750105188402,
+      "start": 1750184199688,
+      "end": 1750184199688,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/widgets/CongratulationsSlider/ui/FirstSlide/FirstSlide.module.css"
-        ],
+        "sources": ["src/widgets/CongratulationsSlider/ui/FirstSlide/FirstSlide.module.css"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC;"
       }

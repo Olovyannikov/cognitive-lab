@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\n\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\n\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true,\n});\n\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n});\n",
-      "start": 1750105187670,
-      "end": 1750105187696,
+      "start": 1750184198981,
+      "end": 1750184199022,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});",
-      "start": 1750105187696,
-      "end": 1750105187697,
+      "start": 1750184199022,
+      "end": 1750184199023,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -29,9 +29,7 @@
           "withTokenInHeaders",
           "createCommonRequestFx"
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"],
         "sourcesContent": [
           "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\n\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\n\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true,\n});\n\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n});\n"
         ],
@@ -42,14 +40,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});\n",
-      "start": 1750105187697,
-      "end": 1750105187912,
+      "start": 1750184199023,
+      "end": 1750184199229,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"],
         "sourcesContent": [
           "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});"
         ],
@@ -59,85 +55,83 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187912,
-      "end": 1750105187912,
+      "start": 1750184199229,
+      "end": 1750184199229,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187912,
-      "end": 1750105187913,
+      "start": 1750184199229,
+      "end": 1750184199230,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187913,
-      "end": 1750105187913,
+      "start": 1750184199230,
+      "end": 1750184199230,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "result": "import { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.cognitivelab.ru/api/v1\"\n});\n",
-      "start": 1750105187913,
-      "end": 1750105188177,
+      "result": "import { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\"\n});\n",
+      "start": 1750184199230,
+      "end": 1750184199446,
       "order": "normal-normal",
       "sourcemaps": null
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/api/index.ts [vike:pluginModuleBanner] */\nimport { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.cognitivelab.ru/api/v1\"\n});\n",
-      "start": 1750105188177,
-      "end": 1750105188177,
+      "result": "/*! src/shared/api/index.ts [vike:pluginModuleBanner] */\nimport { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\"\n});\n",
+      "start": 1750184199446,
+      "end": 1750184199446,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/shared/api/index.ts"
-        ],
+        "sources": ["src/shared/api/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC;"
       }
     }
   ]

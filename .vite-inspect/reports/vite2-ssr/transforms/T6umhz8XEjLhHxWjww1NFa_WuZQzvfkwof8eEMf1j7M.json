@@ -4,26 +4,19 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Blockquote } from '@mantine/core';\n\nimport { Paragraph } from '../Paragraph';\n\ninterface BlockquoteLineProps {\n    text?: string;\n    color?: string;\n}\n\nexport const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (\n    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>\n);\n",
-      "start": 1750105187712,
-      "end": 1750105187771,
+      "start": 1750184199117,
+      "end": 1750184199160,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Blockquote } from '@mantine/core';\nimport { Paragraph } from '../Paragraph';\ninterface BlockquoteLineProps {\n  text?: string;\n  color?: string;\n}\nexport const BlockquoteLine = ({\n  text,\n  color\n}: BlockquoteLineProps) => <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>;",
-      "start": 1750105187771,
-      "end": 1750105187772,
+      "start": 1750184199160,
+      "end": 1750184199161,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "Blockquote",
-          "Paragraph",
-          "BlockquoteLineProps",
-          "text",
-          "color",
-          "BlockquoteLine"
-        ],
+        "names": ["Blockquote", "Paragraph", "BlockquoteLineProps", "text", "color", "BlockquoteLine"],
         "sources": [
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteLine/index.tsx"
         ],
@@ -37,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `${color}.9`, bg: \"transparent\", icon: null, children: /* @__PURE__ */ jsx(Paragraph, { text: text ?? \"\" }) });\n",
-      "start": 1750105187772,
-      "end": 1750105187990,
+      "start": 1750184199161,
+      "end": 1750184199396,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -54,81 +47,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199396,
+      "end": 1750184199396,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BlockQuoteLine/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Blockquote, { mb: \"md\", py: \"sm\", px: \"md\", color: `${color}.9`, bg: \"transparent\", icon: null, children: /* @__PURE__ */ jsx(Paragraph, { text: text ?? \"\" }) });\n",
-      "start": 1750105187990,
-      "end": 1750105187990,
+      "start": 1750184199397,
+      "end": 1750184199397,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/ui/BlockQuoteLine/index.tsx"
-        ],
+        "sources": ["src/entities/Report/ui/BlockQuoteLine/index.tsx"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

@@ -4,22 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';\n",
-      "start": 1750105187466,
-      "end": 1750105187504,
+      "start": 1750184198771,
+      "end": 1750184198800,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';",
-      "start": 1750105187504,
-      "end": 1750105187505,
+      "start": 1750184198800,
+      "end": 1750184198801,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
         "names": [],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/index.ts"],
         "sourcesContent": [
           "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';\n"
         ],
@@ -30,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "export * from \"./model\";\nexport * from \"./lib\";\nexport * from \"./api\";\nexport * from \"./api/types\";\nexport * from \"./ui\";\nexport * from \"./model/testEmailFormModel\";\n",
-      "start": 1750105187505,
-      "end": 1750105187584,
+      "start": 1750184198801,
+      "end": 1750184198841,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/index.ts"],
         "sourcesContent": [
           "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';"
         ],
@@ -47,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198841,
+      "end": 1750184198841,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187584,
-      "end": 1750105187584,
+      "start": 1750184198842,
+      "end": 1750184198842,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187584,
-      "end": 1750105187585,
+      "start": 1750184198842,
+      "end": 1750184198842,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187585,
-      "end": 1750105187585,
+      "start": 1750184198842,
+      "end": 1750184198842,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187585,
-      "end": 1750105187585,
+      "start": 1750184198842,
+      "end": 1750184198842,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/index.ts [vike:pluginModuleBanner] */\nexport * from \"./model\";\nexport * from \"./lib\";\nexport * from \"./api\";\nexport * from \"./api/types\";\nexport * from \"./ui\";\nexport * from \"./model/testEmailFormModel\";\n",
-      "start": 1750105187585,
-      "end": 1750105187585,
+      "start": 1750184198842,
+      "end": 1750184198842,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Test/index.ts"
-        ],
+        "sources": ["src/entities/Test/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }

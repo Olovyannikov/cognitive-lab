@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation, createQuery } from '@farfetched/core';\nimport type { PageContextServer } from 'vike/types';\n\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\n\nexport const getReviewsQuery = createQuery({\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>((params) => ({\n        url: API.surveys.comments,\n        params: params ?? {},\n    })),\n});\n\nexport const createReviewMutation = createMutation({\n    effect: createInternalRequestFx<CreateReviewRequest, void>((body) => ({\n        url: API.surveys.comments,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1750105187560,
-      "end": 1750105187607,
+      "start": 1750184198945,
+      "end": 1750184198985,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from '@farfetched/core';\nimport type { PageContextServer } from 'vike/types';\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\nexport const getReviewsQuery = _withFactory({\n  sid: \"-juon18\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>(params => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  }),\n  name: \"getReviewsQuery\",\n  method: \"createQuery\"\n});\nexport const createReviewMutation = _withFactory({\n  sid: \"-sexnrd\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<CreateReviewRequest, void>(body => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"createReviewMutation\",\n  method: \"createMutation\"\n});",
-      "start": 1750105187607,
-      "end": 1750105187611,
+      "start": 1750184198985,
+      "end": 1750184198987,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -48,9 +48,7 @@
           "\"createReviewMutation\"",
           "\"createMutation\""
         ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Review/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Review/api/index.ts"],
         "sourcesContent": [
           "import { createMutation, createQuery } from '@farfetched/core';\nimport type { PageContextServer } from 'vike/types';\n\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\n\nexport const getReviewsQuery = createQuery({\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>((params) => ({\n        url: API.surveys.comments,\n        params: params ?? {},\n    })),\n});\n\nexport const createReviewMutation = createMutation({\n    effect: createInternalRequestFx<CreateReviewRequest, void>((body) => ({\n        url: API.surveys.comments,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n"
         ],
@@ -61,14 +59,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getReviewsQuery = _withFactory({\n  sid: \"-juon18\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  }),\n  name: \"getReviewsQuery\",\n  method: \"createQuery\"\n});\nexport const createReviewMutation = _withFactory({\n  sid: \"-sexnrd\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"createReviewMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1750105187611,
-      "end": 1750105187706,
+      "start": 1750184198987,
+      "end": 1750184199149,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Review/api/index.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Review/api/index.ts"],
         "sourcesContent": [
           "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from '@farfetched/core';\nimport type { PageContextServer } from 'vike/types';\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\nexport const getReviewsQuery = _withFactory({\n  sid: \"-juon18\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>(params => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  }),\n  name: \"getReviewsQuery\",\n  method: \"createQuery\"\n});\nexport const createReviewMutation = _withFactory({\n  sid: \"-sexnrd\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<CreateReviewRequest, void>(body => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"createReviewMutation\",\n  method: \"createMutation\"\n});"
         ],
@@ -78,81 +74,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187706,
-      "end": 1750105187706,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187706,
-      "end": 1750105187706,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187706,
-      "end": 1750105187706,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199149,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199149,
+      "end": 1750184199150,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199150,
+      "end": 1750184199150,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199150,
+      "end": 1750184199150,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Review/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getReviewsQuery = _withFactory({\n  sid: \"-juon18\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  }),\n  name: \"getReviewsQuery\",\n  method: \"createQuery\"\n});\nexport const createReviewMutation = _withFactory({\n  sid: \"-sexnrd\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"createReviewMutation\",\n  method: \"createMutation\"\n});\n",
-      "start": 1750105187707,
-      "end": 1750105187707,
+      "start": 1750184199150,
+      "end": 1750184199150,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Review/api/index.ts"
-        ],
+        "sources": ["src/entities/Review/api/index.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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"
       }

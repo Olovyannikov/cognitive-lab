@@ -4,32 +4,20 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore } from 'effector';\n\nimport type { Order } from '../types';\n\nexport const $userOrder = createStore<Order | null>(null);\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\n",
-      "start": 1750105187706,
-      "end": 1750105187746,
+      "start": 1750184199163,
+      "end": 1750184199217,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createStore } from 'effector';\nimport type { Order } from '../types';\nexport const $userOrder = createStore<Order | null>(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map(order => order?.status ?? 'pending');",
-      "start": 1750105187746,
-      "end": 1750105187747,
+      "start": 1750184199217,
+      "end": 1750184199218,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
-        "names": [
-          "createStore",
-          "Order",
-          "$userOrder",
-          "name",
-          "sid",
-          "$userOrderStatus",
-          "map",
-          "order",
-          "status"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"
-        ],
+        "names": ["createStore", "Order", "$userOrder", "name", "sid", "$userOrderStatus", "map", "order", "status"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"],
         "sourcesContent": [
           "import { createStore } from 'effector';\n\nimport type { Order } from '../types';\n\nexport const $userOrder = createStore<Order | null>(null);\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\n"
         ],
@@ -40,14 +28,12 @@
     {
       "name": "vite:esbuild",
       "result": "import { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750105187747,
-      "end": 1750105187964,
+      "start": 1750184199218,
+      "end": 1750184199420,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"
-        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"],
         "sourcesContent": [
           "import { createStore } from 'effector';\nimport type { Order } from '../types';\nexport const $userOrder = createStore<Order | null>(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map(order => order?.status ?? 'pending');"
         ],
@@ -57,81 +43,79 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/order.ts [vike:pluginModuleBanner] */\nimport { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750105187964,
-      "end": 1750105187964,
+      "start": 1750184199420,
+      "end": 1750184199420,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
-        "sources": [
-          "src/entities/Report/model/order.ts"
-        ],
+        "sources": ["src/entities/Report/model/order.ts"],
         "names": [],
         "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
