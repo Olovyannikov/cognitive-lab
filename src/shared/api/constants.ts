@@ -1,5 +1,5 @@
 export const API = {
-    URL: import.meta.env.VITE_BASE_URL,
+    URL: 'https://api.dev.cognitivelab.ru',
     surveys: {
         mainPage: '/surveys/main-page',
         comments: '/surveys/comments',
