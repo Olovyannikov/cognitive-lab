@@ -7,7 +7,7 @@ export default defineConfig({
             escapeString: true,
         },
         globals: true,
-        environment: 'jsdom',
+        environment: 'happy-dom',
         outputFile: 'reports/unit/unit-report.xml',
         include: ['**/__tests__/**/*.spec.(ts|js|tsx|jsx)'],
         reporters: ['default', 'junit'],
