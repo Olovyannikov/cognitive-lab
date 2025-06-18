@@ -1,6 +1,7 @@
 import { concurrency } from '@farfetched/core';
 import { sample } from 'effector';
 import { createGate } from 'effector-react';
+import { isEmpty } from 'lodash-es';
 import { delay } from 'patronum';
 
 import { atom } from '@/shared/factories';
@@ -25,7 +26,7 @@ export const RootLayoutModel = atom(() => {
     sample({
         clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),
         source: getSurveysInfoQuery.$data,
-        filter: (data) => data === null,
+        filter: (data) => data === null || isEmpty(data),
         fn: noop,
         target: getSurveysInfoQuery.start,
     });

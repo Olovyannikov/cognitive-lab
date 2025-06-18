@@ -22,7 +22,7 @@ export const PaymentCheckPage = () => {
 
     const { title, buttonText, text, infoStatus } = getStatusInfo(status);
 
-    if (pending || stale) return <PageLoader />;
+    if (status === 'pending' || pending || stale) return <PageLoader />;
     if (error?.name) return <ErrorPage image='/errors/500' title='Произошла ошибка' />;
 
     const href =
