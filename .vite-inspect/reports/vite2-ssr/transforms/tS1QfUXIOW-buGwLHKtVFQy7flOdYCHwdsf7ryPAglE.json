@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport s from './NavigateToReviewPage.module.css';\n\nexport const NavigateToReviewPage = () => {\n    const {\n        routeParams: { reportId },\n        isMobile,\n    } = usePageContext();\n    const hasComment = useUnit(\n        getSurveysInfoQuery.$data.map(\n            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null\n        )\n    );\n    if (hasComment) return;\n\n    return (\n        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\n\n            <Button\n                maw={311}\n                fullWidth\n                component='a'\n                variant='default'\n                href={`/review/${reportId}`}\n                size={isMobile ? 'sm' : 'lg'}\n            >\n                Оставить отзыв\n            </Button>\n        </Stack>\n    );\n};\n",
-      "start": 1750239308278,
-      "end": 1750239308295,
+      "start": 1750271784819,
+      "end": 1750271784838,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport s from './NavigateToReviewPage.module.css';\nexport const NavigateToReviewPage = ()=>{\n    const { routeParams: { reportId }, isMobile } = usePageContext();\n    const hasComment = useUnit(getSurveysInfoQuery.$data.map((user)=>user?.left_comments?.find((comment)=>comment.user_report === reportId) ?? null));\n    if (hasComment) return;\n    return /*#__PURE__*/ _jsxs(Stack, {\n        gap: isMobile ? 'lg' : '5xl',\n        mb: isMobile ? 'xl' : 100,\n        justify: \"center\",\n        align: \"center\",\n        ta: \"center\",\n        children: [\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n            }),\n            /*#__PURE__*/ _jsx(Button, {\n                maw: 311,\n                fullWidth: true,\n                component: \"a\",\n                variant: \"default\",\n                href: `/review/${reportId}`,\n                size: isMobile ? 'sm' : 'lg',\n                children: \"Оставить отзыв\"\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308295,
-      "end": 1750239308301,
+      "start": 1750271784838,
+      "end": 1750271784841,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToReviewPage/index.tsx\"],\"sourcesContent\":[\"import { Button, Stack, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { getSurveysInfoQuery } from '@/entities/Report';\\n\\nimport s from './NavigateToReviewPage.module.css';\\n\\nexport const NavigateToReviewPage = () => {\\n    const {\\n        routeParams: { reportId },\\n        isMobile,\\n    } = usePageContext();\\n    const hasComment = useUnit(\\n        getSurveysInfoQuery.$data.map(\\n            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null\\n        )\\n    );\\n    if (hasComment) return;\\n\\n    return (\\n        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\\n\\n            <Button\\n                maw={311}\\n                fullWidth\\n                component='a'\\n                variant='default'\\n                href={`/review/${reportId}`}\\n                size={isMobile ? 'sm' : 'lg'}\\n            >\\n                Оставить отзыв\\n            </Button>\\n        </Stack>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Stack\",\"Text\",\"useUnit\",\"usePageContext\",\"getSurveysInfoQuery\",\"s\",\"NavigateToReviewPage\",\"routeParams\",\"reportId\",\"isMobile\",\"hasComment\",\"$data\",\"map\",\"user\",\"left_comments\",\"find\",\"comment\",\"user_report\",\"gap\",\"mb\",\"justify\",\"align\",\"ta\",\"className\",\"text\",\"maw\",\"fullWidth\",\"component\",\"variant\",\"href\",\"size\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AACpD,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,mBAAmB,QAAQ,oBAAoB;AAExD,OAAOC,OAAO,oCAAoC;AAElD,OAAO,MAAMC,uBAAuB;IAChC,MAAM,EACFC,aAAa,EAAEC,QAAQ,EAAE,EACzBC,QAAQ,EACX,GAAGN;IACJ,MAAMO,aAAaR,QACfE,oBAAoBO,KAAK,CAACC,GAAG,CACzB,CAACC,OAASA,MAAMC,eAAeC,KAAK,CAACC,UAAYA,QAAQC,WAAW,KAAKT,aAAa;IAG9F,IAAIE,YAAY;IAEhB,qBACI,MAACV;QAAMkB,KAAKT,WAAW,OAAO;QAAOU,IAAIV,WAAW,OAAO;QAAKW,SAAQ;QAASC,OAAM;QAASC,IAAG;;0BAC/F,KAACrB;gBAAKsB,WAAWlB,EAAEmB,IAAI;0BAAE;;0BAEzB,KAACzB;gBACG0B,KAAK;gBACLC,SAAS;gBACTC,WAAU;gBACVC,SAAQ;gBACRC,MAAM,CAAC,QAAQ,EAAErB,UAAU;gBAC3BsB,MAAMrB,WAAW,OAAO;0BAC3B;;;;AAKb,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const { routeParams: { reportId }, isMobile } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ _jsxs(Stack, {\n    gap: isMobile ? \"lg\" : \"5xl\",\n    mb: isMobile ? \"xl\" : 100,\n    justify: \"center\",\n    align: \"center\",\n    ta: \"center\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        maw: 311,\n        fullWidth: true,\n        component: \"a\",\n        variant: \"default\",\n        href: `/review/${reportId}`,\n        size: isMobile ? \"sm\" : \"lg\",\n        children: \"Оставить отзыв\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308301,
-      "end": 1750239308335,
+      "start": 1750271784841,
+      "end": 1750271784872,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784872,
+      "end": 1750271784872,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/NavigateToReviewPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const { routeParams: { reportId }, isMobile } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ _jsxs(Stack, {\n    gap: isMobile ? \"lg\" : \"5xl\",\n    mb: isMobile ? \"xl\" : 100,\n    justify: \"center\",\n    align: \"center\",\n    ta: \"center\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        maw: 311,\n        fullWidth: true,\n        component: \"a\",\n        variant: \"default\",\n        href: `/review/${reportId}`,\n        size: isMobile ? \"sm\" : \"lg\",\n        children: \"Оставить отзыв\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784872,
+      "end": 1750271784872,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

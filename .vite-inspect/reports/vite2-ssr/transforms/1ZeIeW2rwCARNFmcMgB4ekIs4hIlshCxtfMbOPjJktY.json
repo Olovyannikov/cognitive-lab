@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\n\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\n\nexport const RootModel = atom(() => {\n    const MainMenu = invoke(disclosureFactory, {\n        open: false,\n    });\n    const Submenu = invoke(disclosureFactory, {\n        open: false,\n    });\n\n    const allMenusClosed = createEvent<false>();\n\n    sample({\n        clock: [allMenusClosed, desktop.$matches],\n        fn: () => false,\n        target: [MainMenu.$open, Submenu.$open],\n    });\n    sample({\n        clock: MainMenu.$open,\n        filter: (isOpen) => !isOpen,\n        target: Submenu.$open,\n    });\n\n    return {\n        $isMenuOpened: MainMenu.$open,\n        closeMenu: MainMenu.closed,\n        toggleMenu: MainMenu.toggle,\n        $isSubmenuOpened: Submenu.$open,\n        allMenusClosed,\n        openSubmenu: Submenu.opened,\n        closeSubmenu: Submenu.closed,\n    };\n});\n",
-      "start": 1750239308713,
-      "end": 1750239308724,
+      "start": 1750271785227,
+      "end": 1750271785241,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\nexport const RootModel = _effector$factory({\n    sid: \"9dw06u10\",\n    fn: ()=>atom(()=>{\n            const MainMenu = _effector$factory({\n                sid: \"bi6ez88w\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const Submenu = _effector$factory({\n                sid: \"3l0ekbrq\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const allMenusClosed = createEvent({\n                sid: \"dknuxzxi\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: [\n                            allMenusClosed,\n                            desktop.$matches\n                        ],\n                        fn: ()=>false,\n                        target: [\n                            MainMenu.$open,\n                            Submenu.$open\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"4b0ccq3a\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: MainMenu.$open,\n                        filter: (isOpen)=>!isOpen,\n                        target: Submenu.$open\n                    }\n                ],\n                or: {\n                    sid: \"bn456wvo\"\n                }\n            });\n            return {\n                $isMenuOpened: MainMenu.$open,\n                closeMenu: MainMenu.closed,\n                toggleMenu: MainMenu.toggle,\n                $isSubmenuOpened: Submenu.$open,\n                allMenusClosed,\n                openSubmenu: Submenu.opened,\n                closeSubmenu: Submenu.closed\n            };\n        })\n});\n",
-      "start": 1750239308724,
-      "end": 1750239308729,
+      "start": 1750271785241,
+      "end": 1750271785244,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Root/model/index.ts\"],\"sourcesContent\":[\"import { invoke } from '@withease/factories';\\nimport { createEvent, sample } from 'effector';\\n\\nimport { atom, disclosureFactory } from '@/shared/factories';\\nimport { desktop } from '@/shared/media';\\n\\nexport const RootModel = atom(() => {\\n    const MainMenu = invoke(disclosureFactory, {\\n        open: false,\\n    });\\n    const Submenu = invoke(disclosureFactory, {\\n        open: false,\\n    });\\n\\n    const allMenusClosed = createEvent<false>();\\n\\n    sample({\\n        clock: [allMenusClosed, desktop.$matches],\\n        fn: () => false,\\n        target: [MainMenu.$open, Submenu.$open],\\n    });\\n    sample({\\n        clock: MainMenu.$open,\\n        filter: (isOpen) => !isOpen,\\n        target: Submenu.$open,\\n    });\\n\\n    return {\\n        $isMenuOpened: MainMenu.$open,\\n        closeMenu: MainMenu.closed,\\n        toggleMenu: MainMenu.toggle,\\n        $isSubmenuOpened: Submenu.$open,\\n        allMenusClosed,\\n        openSubmenu: Submenu.opened,\\n        closeSubmenu: Submenu.closed,\\n    };\\n});\\n\"],\"names\":[\"invoke\",\"createEvent\",\"sample\",\"atom\",\"disclosureFactory\",\"desktop\",\"RootModel\",\"MainMenu\",\"open\",\"Submenu\",\"allMenusClosed\",\"clock\",\"$matches\",\"fn\",\"target\",\"$open\",\"filter\",\"isOpen\",\"$isMenuOpened\",\"closeMenu\",\"closed\",\"toggleMenu\",\"toggle\",\"$isSubmenuOpened\",\"openSubmenu\",\"opened\",\"closeSubmenu\"],\"mappings\":\";AAAA,SAASA,MAAM,QAAQ,sBAAsB;AAC7C,SAASC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,IAAI,EAAEC,iBAAiB,QAAQ,qBAAqB;AAC7D,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,OAAO,MAAMC;;YAAYH,KAAK;YAC1B,MAAMI;;wBAAWP,OAAOI,mBAAmB;wBACvCI,MAAM;oBACV;;YACA,MAAMC;;wBAAUT,OAAOI,mBAAmB;wBACtCI,MAAM;oBACV;;YAEA,MAAME,iBAAiBT;;;YAEvBC;;oBAAO;wBACHS,OAAO;4BAACD;4BAAgBL,QAAQO,QAAQ;yBAAC;wBACzCC,IAAI,IAAM;wBACVC,QAAQ;4BAACP,SAASQ,KAAK;4BAAEN,QAAQM,KAAK;yBAAC;oBAC3C;;;;;;YACAb;;oBAAO;wBACHS,OAAOJ,SAASQ,KAAK;wBACrBC,QAAQ,CAACC,SAAW,CAACA;wBACrBH,QAAQL,QAAQM,KAAK;oBACzB;;;;;;YAEA,OAAO;gBACHG,eAAeX,SAASQ,KAAK;gBAC7BI,WAAWZ,SAASa,MAAM;gBAC1BC,YAAYd,SAASe,MAAM;gBAC3BC,kBAAkBd,QAAQM,KAAK;gBAC/BL;gBACAc,aAAaf,QAAQgB,MAAM;gBAC3BC,cAAcjB,QAAQW,MAAM;YAChC;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = _effector$factory({\n  sid: \"9dw06u10\",\n  fn: () => atom(() => {\n    const MainMenu = _effector$factory({\n      sid: \"bi6ez88w\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const Submenu = _effector$factory({\n      sid: \"3l0ekbrq\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const allMenusClosed = createEvent({\n      sid: \"dknuxzxi\"\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            allMenusClosed,\n            desktop.$matches\n          ],\n          fn: () => false,\n          target: [\n            MainMenu.$open,\n            Submenu.$open\n          ]\n        }\n      ],\n      or: {\n        sid: \"4b0ccq3a\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: MainMenu.$open,\n          filter: (isOpen) => !isOpen,\n          target: Submenu.$open\n        }\n      ],\n      or: {\n        sid: \"bn456wvo\"\n      }\n    });\n    return {\n      $isMenuOpened: MainMenu.$open,\n      closeMenu: MainMenu.closed,\n      toggleMenu: MainMenu.toggle,\n      $isSubmenuOpened: Submenu.$open,\n      allMenusClosed,\n      openSubmenu: Submenu.opened,\n      closeSubmenu: Submenu.closed\n    };\n  })\n});\n",
-      "start": 1750239308729,
-      "end": 1750239308809,
+      "start": 1750271785244,
+      "end": 1750271785341,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785341,
+      "end": 1750271785341,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Root/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = _effector$factory({\n  sid: \"9dw06u10\",\n  fn: () => atom(() => {\n    const MainMenu = _effector$factory({\n      sid: \"bi6ez88w\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const Submenu = _effector$factory({\n      sid: \"3l0ekbrq\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const allMenusClosed = createEvent({\n      sid: \"dknuxzxi\"\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            allMenusClosed,\n            desktop.$matches\n          ],\n          fn: () => false,\n          target: [\n            MainMenu.$open,\n            Submenu.$open\n          ]\n        }\n      ],\n      or: {\n        sid: \"4b0ccq3a\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: MainMenu.$open,\n          filter: (isOpen) => !isOpen,\n          target: Submenu.$open\n        }\n      ],\n      or: {\n        sid: \"bn456wvo\"\n      }\n    });\n    return {\n      $isMenuOpened: MainMenu.$open,\n      closeMenu: MainMenu.closed,\n      toggleMenu: MainMenu.toggle,\n      $isSubmenuOpened: Submenu.$open,\n      allMenusClosed,\n      openSubmenu: Submenu.opened,\n      closeSubmenu: Submenu.closed\n    };\n  })\n});\n",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

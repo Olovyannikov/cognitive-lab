@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getQuestionsQuery } from '@/entities/Test';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getQuestionsQuery.start,\n});\n",
-      "start": 1750239308173,
-      "end": 1750239308187,
+      "start": 1750271784678,
+      "end": 1750271784696,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getQuestionsQuery } from '@/entities/Test';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            target: getQuestionsQuery.start\n        }\n    ],\n    or: {\n        sid: \"4dvfirto\"\n    }\n});\n",
-      "start": 1750239308187,
-      "end": 1750239308190,
+      "start": 1750271784696,
+      "end": 1750271784699,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { createPageInit } from '@/shared/lib';\\n\\nimport { getQuestionsQuery } from '@/entities/Test';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    target: getQuestionsQuery.start,\\n});\\n\"],\"names\":[\"sample\",\"createPageInit\",\"getQuestionsQuery\",\"pageInitiated\",\"clock\",\"target\",\"start\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,cAAc,QAAQ,eAAe;AAE9C,SAASC,iBAAiB,QAAQ,kBAAkB;AAEpD,OAAO,MAAMC,gBAAgBF,iBAAiB;AAE9CD;;QAAO;YACHI,OAAOD;YACPE,QAAQH,kBAAkBI,KAAK;QACnC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getQuestionsQuery } from \"@/entities/Test\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getQuestionsQuery.start\n    }\n  ],\n  or: {\n    sid: \"4dvfirto\"\n  }\n});\n",
-      "start": 1750239308190,
-      "end": 1750239308229,
+      "start": 1750271784699,
+      "end": 1750271784778,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "start": 1750271784778,
+      "end": 1750271784778,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784778,
+      "end": 1750271784778,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "start": 1750271784778,
+      "end": 1750271784778,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "start": 1750271784778,
+      "end": 1750271784778,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "start": 1750271784778,
+      "end": 1750271784778,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308229,
-      "end": 1750239308229,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784779,
+      "end": 1750271784779,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308229,
-      "end": 1750239308230,
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308230,
-      "end": 1750239308230,
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308230,
-      "end": 1750239308230,
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/mbti-test/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getQuestionsQuery } from \"@/entities/Test\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getQuestionsQuery.start\n    }\n  ],\n  or: {\n    sid: \"4dvfirto\"\n  }\n});\n",
-      "start": 1750239308230,
-      "end": 1750239308230,
+      "start": 1750271784779,
+      "end": 1750271784779,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

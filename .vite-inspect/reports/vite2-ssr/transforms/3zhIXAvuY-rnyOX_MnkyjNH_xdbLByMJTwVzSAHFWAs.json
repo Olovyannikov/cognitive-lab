@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useEffect } from 'react';\nimport { Paper, Radio, Stack } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { InputBorderless } from '@/shared/ui';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport { SingleChoiceAnswer } from '../../api/types';\nimport { AnswerLabel } from '../AnswerLabel';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\nimport s from './TestSingleChoiceQuestion.module.css';\n\ninterface TestSingleChoiceQuestionProps extends QuestionsResponse {\n    value: SingleChoiceAnswer;\n    onChange: (payload: {\n        question: string;\n        answer: { input?: string; value: string };\n        index: number;\n        isSingle?: boolean;\n        showInput?: boolean;\n    }) => void;\n    page: number;\n    showInput: boolean;\n}\n\nexport const TestSingleChoiceQuestion = ({\n    text,\n    hint,\n    id,\n    value,\n    onChange,\n    page,\n    options,\n    showInput,\n}: TestSingleChoiceQuestionProps) => {\n    const isLarge = useIsLarge();\n\n    useEffect(() => {\n        if (!showInput) {\n            onChange({\n                question: id,\n                answer: {\n                    value: value?.value,\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput,\n            });\n        }\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [showInput]);\n\n    return (\n        <Paper mb='5xl'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap='xs' className={s.stack}>\n                <Radio.Group\n                    name={id}\n                    value={value?.value ?? ''}\n                    onChange={(localVal) => {\n                        onChange({\n                            question: id,\n                            answer: {\n                                value: localVal,\n                                input: showInput && value?.input ? value.input.trim() : ' '.trim(),\n                            },\n                            index: page - 1,\n                            isSingle: true,\n                            showInput: options?.find((el) => el.id === localVal)?.requires_input,\n                        });\n                    }}\n                >\n                    <Stack gap='lg' className={s.wrapper}>\n                        {options?.map((option) => (\n                            <Radio\n                                color='lime.8'\n                                key={option.id}\n                                value={option.id}\n                                size={isLarge ? 'xl' : 'lg'}\n                                label={<AnswerLabel>{option.text}</AnswerLabel>}\n                            />\n                        ))}\n                    </Stack>\n                </Radio.Group>\n                {showInput && (\n                    <InputBorderless\n                        autoFocus\n                        value={value?.input}\n                        defaultValue={value?.input}\n                        onChange={(e) => {\n                            onChange({\n                                question: id,\n                                answer: {\n                                    value: value.value,\n                                    input: e.target.value ?? ' ',\n                                },\n                                index: page - 1,\n                                isSingle: true,\n                                showInput,\n                            });\n                        }}\n                    />\n                )}\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308411,
-      "end": 1750239308429,
+      "start": 1750271785005,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useEffect } from 'react';\nimport { Paper, Radio, Stack } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { InputBorderless } from '@/shared/ui';\nimport { AnswerLabel } from '../AnswerLabel';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport s from './TestSingleChoiceQuestion.module.css';\nexport const TestSingleChoiceQuestion = ({ text, hint, id, value, onChange, page, options, showInput })=>{\n    const isLarge = useIsLarge();\n    useEffect(()=>{\n        if (!showInput) {\n            onChange({\n                question: id,\n                answer: {\n                    value: value?.value\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput\n            });\n        }\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        showInput\n    ]);\n    return /*#__PURE__*/ _jsxs(Paper, {\n        mb: \"5xl\",\n        children: [\n            /*#__PURE__*/ _jsx(QuestionTitle, {\n                text: text,\n                hint: hint\n            }),\n            /*#__PURE__*/ _jsxs(Stack, {\n                gap: \"xs\",\n                className: s.stack,\n                children: [\n                    /*#__PURE__*/ _jsx(Radio.Group, {\n                        name: id,\n                        value: value?.value ?? '',\n                        onChange: (localVal)=>{\n                            onChange({\n                                question: id,\n                                answer: {\n                                    value: localVal,\n                                    input: showInput && value?.input ? value.input.trim() : ' '.trim()\n                                },\n                                index: page - 1,\n                                isSingle: true,\n                                showInput: options?.find((el)=>el.id === localVal)?.requires_input\n                            });\n                        },\n                        children: /*#__PURE__*/ _jsx(Stack, {\n                            gap: \"lg\",\n                            className: s.wrapper,\n                            children: options?.map((option)=>/*#__PURE__*/ _jsx(Radio, {\n                                    color: \"lime.8\",\n                                    value: option.id,\n                                    size: isLarge ? 'xl' : 'lg',\n                                    label: /*#__PURE__*/ _jsx(AnswerLabel, {\n                                        children: option.text\n                                    })\n                                }, option.id))\n                        })\n                    }),\n                    showInput && /*#__PURE__*/ _jsx(InputBorderless, {\n                        autoFocus: true,\n                        value: value?.input,\n                        defaultValue: value?.input,\n                        onChange: (e)=>{\n                            onChange({\n                                question: id,\n                                answer: {\n                                    value: value.value,\n                                    input: e.target.value ?? ' '\n                                },\n                                index: page - 1,\n                                isSingle: true,\n                                showInput\n                            });\n                        }\n                    })\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308429,
-      "end": 1750239308434,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestSingleChoiceQuestion/index.tsx\"],\"sourcesContent\":[\"import { useEffect } from 'react';\\nimport { Paper, Radio, Stack } from '@mantine/core';\\n\\nimport { useIsLarge } from '@/shared/lib';\\nimport { InputBorderless } from '@/shared/ui';\\n\\nimport type { QuestionsResponse } from '../../api/dto';\\nimport { SingleChoiceAnswer } from '../../api/types';\\nimport { AnswerLabel } from '../AnswerLabel';\\nimport { QuestionTitle } from '../TestQuestionTitle';\\n\\nimport s from './TestSingleChoiceQuestion.module.css';\\n\\ninterface TestSingleChoiceQuestionProps extends QuestionsResponse {\\n    value: SingleChoiceAnswer;\\n    onChange: (payload: {\\n        question: string;\\n        answer: { input?: string; value: string };\\n        index: number;\\n        isSingle?: boolean;\\n        showInput?: boolean;\\n    }) => void;\\n    page: number;\\n    showInput: boolean;\\n}\\n\\nexport const TestSingleChoiceQuestion = ({\\n    text,\\n    hint,\\n    id,\\n    value,\\n    onChange,\\n    page,\\n    options,\\n    showInput,\\n}: TestSingleChoiceQuestionProps) => {\\n    const isLarge = useIsLarge();\\n\\n    useEffect(() => {\\n        if (!showInput) {\\n            onChange({\\n                question: id,\\n                answer: {\\n                    value: value?.value,\\n                },\\n                index: page - 1,\\n                isSingle: true,\\n                showInput,\\n            });\\n        }\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [showInput]);\\n\\n    return (\\n        <Paper mb='5xl'>\\n            <QuestionTitle text={text} hint={hint} />\\n            <Stack gap='xs' className={s.stack}>\\n                <Radio.Group\\n                    name={id}\\n                    value={value?.value ?? ''}\\n                    onChange={(localVal) => {\\n                        onChange({\\n                            question: id,\\n                            answer: {\\n                                value: localVal,\\n                                input: showInput && value?.input ? value.input.trim() : ' '.trim(),\\n                            },\\n                            index: page - 1,\\n                            isSingle: true,\\n                            showInput: options?.find((el) => el.id === localVal)?.requires_input,\\n                        });\\n                    }}\\n                >\\n                    <Stack gap='lg' className={s.wrapper}>\\n                        {options?.map((option) => (\\n                            <Radio\\n                                color='lime.8'\\n                                key={option.id}\\n                                value={option.id}\\n                                size={isLarge ? 'xl' : 'lg'}\\n                                label={<AnswerLabel>{option.text}</AnswerLabel>}\\n                            />\\n                        ))}\\n                    </Stack>\\n                </Radio.Group>\\n                {showInput && (\\n                    <InputBorderless\\n                        autoFocus\\n                        value={value?.input}\\n                        defaultValue={value?.input}\\n                        onChange={(e) => {\\n                            onChange({\\n                                question: id,\\n                                answer: {\\n                                    value: value.value,\\n                                    input: e.target.value ?? ' ',\\n                                },\\n                                index: page - 1,\\n                                isSingle: true,\\n                                showInput,\\n                            });\\n                        }}\\n                    />\\n                )}\\n            </Stack>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"useEffect\",\"Paper\",\"Radio\",\"Stack\",\"useIsLarge\",\"InputBorderless\",\"AnswerLabel\",\"QuestionTitle\",\"s\",\"TestSingleChoiceQuestion\",\"text\",\"hint\",\"id\",\"value\",\"onChange\",\"page\",\"options\",\"showInput\",\"isLarge\",\"question\",\"answer\",\"index\",\"isSingle\",\"mb\",\"gap\",\"className\",\"stack\",\"Group\",\"name\",\"localVal\",\"input\",\"trim\",\"find\",\"el\",\"requires_input\",\"wrapper\",\"map\",\"option\",\"color\",\"size\",\"label\",\"autoFocus\",\"defaultValue\",\"e\",\"target\"],\"mappings\":\";AAAA,SAASA,SAAS,QAAQ,QAAQ;AAClC,SAASC,KAAK,EAAEC,KAAK,EAAEC,KAAK,QAAQ,gBAAgB;AAEpD,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,eAAe,QAAQ,cAAc;AAI9C,SAASC,WAAW,QAAQ,iBAAiB;AAC7C,SAASC,aAAa,QAAQ,uBAAuB;AAErD,OAAOC,OAAO,wCAAwC;AAetD,OAAO,MAAMC,2BAA2B,CAAC,EACrCC,IAAI,EACJC,IAAI,EACJC,EAAE,EACFC,KAAK,EACLC,QAAQ,EACRC,IAAI,EACJC,OAAO,EACPC,SAAS,EACmB;IAC5B,MAAMC,UAAUd;IAEhBJ,UAAU;QACN,IAAI,CAACiB,WAAW;YACZH,SAAS;gBACLK,UAAUP;gBACVQ,QAAQ;oBACJP,OAAOA,OAAOA;gBAClB;gBACAQ,OAAON,OAAO;gBACdO,UAAU;gBACVL;YACJ;QACJ;IACA,uDAAuD;IAC3D,GAAG;QAACA;KAAU;IAEd,qBACI,MAAChB;QAAMsB,IAAG;;0BACN,KAAChB;gBAAcG,MAAMA;gBAAMC,MAAMA;;0BACjC,MAACR;gBAAMqB,KAAI;gBAAKC,WAAWjB,EAAEkB,KAAK;;kCAC9B,KAACxB,MAAMyB,KAAK;wBACRC,MAAMhB;wBACNC,OAAOA,OAAOA,SAAS;wBACvBC,UAAU,CAACe;4BACPf,SAAS;gCACLK,UAAUP;gCACVQ,QAAQ;oCACJP,OAAOgB;oCACPC,OAAOb,aAAaJ,OAAOiB,QAAQjB,MAAMiB,KAAK,CAACC,IAAI,KAAK,IAAIA,IAAI;gCACpE;gCACAV,OAAON,OAAO;gCACdO,UAAU;gCACVL,WAAWD,SAASgB,KAAK,CAACC,KAAOA,GAAGrB,EAAE,KAAKiB,WAAWK;4BAC1D;wBACJ;kCAEA,cAAA,KAAC/B;4BAAMqB,KAAI;4BAAKC,WAAWjB,EAAE2B,OAAO;sCAC/BnB,SAASoB,IAAI,CAACC,uBACX,KAACnC;oCACGoC,OAAM;oCAENzB,OAAOwB,OAAOzB,EAAE;oCAChB2B,MAAMrB,UAAU,OAAO;oCACvBsB,qBAAO,KAAClC;kDAAa+B,OAAO3B,IAAI;;mCAH3B2B,OAAOzB,EAAE;;;oBAQ7BK,2BACG,KAACZ;wBACGoC,SAAS;wBACT5B,OAAOA,OAAOiB;wBACdY,cAAc7B,OAAOiB;wBACrBhB,UAAU,CAAC6B;4BACP7B,SAAS;gCACLK,UAAUP;gCACVQ,QAAQ;oCACJP,OAAOA,MAAMA,KAAK;oCAClBiB,OAAOa,EAAEC,MAAM,CAAC/B,KAAK,IAAI;gCAC7B;gCACAQ,OAAON,OAAO;gCACdO,UAAU;gCACVL;4BACJ;wBACJ;;;;;;AAMxB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { Paper, Radio, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InputBorderless } from \"@/shared/ui\";\nimport { AnswerLabel } from \"../AnswerLabel\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestSingleChoiceQuestion.module.css\";\nexport const TestSingleChoiceQuestion = ({ text, hint, id, value, onChange, page, options, showInput }) => {\n  const isLarge = useIsLarge();\n  useEffect(() => {\n    if (!showInput) {\n      onChange({\n        question: id,\n        answer: {\n          value: value?.value\n        },\n        index: page - 1,\n        isSingle: true,\n        showInput\n      });\n    }\n  }, [\n    showInput\n  ]);\n  return /* @__PURE__ */ _jsxs(Paper, {\n    mb: \"5xl\",\n    children: [\n      /* @__PURE__ */ _jsx(QuestionTitle, {\n        text,\n        hint\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: \"xs\",\n        className: s.stack,\n        children: [\n          /* @__PURE__ */ _jsx(Radio.Group, {\n            name: id,\n            value: value?.value ?? \"\",\n            onChange: (localVal) => {\n              onChange({\n                question: id,\n                answer: {\n                  value: localVal,\n                  input: showInput && value?.input ? value.input.trim() : \" \".trim()\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput: options?.find((el) => el.id === localVal)?.requires_input\n              });\n            },\n            children: /* @__PURE__ */ _jsx(Stack, {\n              gap: \"lg\",\n              className: s.wrapper,\n              children: options?.map((option) => /* @__PURE__ */ _jsx(Radio, {\n                color: \"lime.8\",\n                value: option.id,\n                size: isLarge ? \"xl\" : \"lg\",\n                label: /* @__PURE__ */ _jsx(AnswerLabel, {\n                  children: option.text\n                })\n              }, option.id))\n            })\n          }),\n          showInput && /* @__PURE__ */ _jsx(InputBorderless, {\n            autoFocus: true,\n            value: value?.input,\n            defaultValue: value?.input,\n            onChange: (e) => {\n              onChange({\n                question: id,\n                answer: {\n                  value: value.value,\n                  input: e.target.value ?? \" \"\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput\n              });\n            }\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308434,
-      "end": 1750239308643,
+      "start": 1750271785023,
+      "end": 1750271785250,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785250,
+      "end": 1750271785250,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestSingleChoiceQuestion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { Paper, Radio, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InputBorderless } from \"@/shared/ui\";\nimport { AnswerLabel } from \"../AnswerLabel\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestSingleChoiceQuestion.module.css\";\nexport const TestSingleChoiceQuestion = ({ text, hint, id, value, onChange, page, options, showInput }) => {\n  const isLarge = useIsLarge();\n  useEffect(() => {\n    if (!showInput) {\n      onChange({\n        question: id,\n        answer: {\n          value: value?.value\n        },\n        index: page - 1,\n        isSingle: true,\n        showInput\n      });\n    }\n  }, [\n    showInput\n  ]);\n  return /* @__PURE__ */ _jsxs(Paper, {\n    mb: \"5xl\",\n    children: [\n      /* @__PURE__ */ _jsx(QuestionTitle, {\n        text,\n        hint\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: \"xs\",\n        className: s.stack,\n        children: [\n          /* @__PURE__ */ _jsx(Radio.Group, {\n            name: id,\n            value: value?.value ?? \"\",\n            onChange: (localVal) => {\n              onChange({\n                question: id,\n                answer: {\n                  value: localVal,\n                  input: showInput && value?.input ? value.input.trim() : \" \".trim()\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput: options?.find((el) => el.id === localVal)?.requires_input\n              });\n            },\n            children: /* @__PURE__ */ _jsx(Stack, {\n              gap: \"lg\",\n              className: s.wrapper,\n              children: options?.map((option) => /* @__PURE__ */ _jsx(Radio, {\n                color: \"lime.8\",\n                value: option.id,\n                size: isLarge ? \"xl\" : \"lg\",\n                label: /* @__PURE__ */ _jsx(AnswerLabel, {\n                  children: option.text\n                })\n              }, option.id))\n            })\n          }),\n          showInput && /* @__PURE__ */ _jsx(InputBorderless, {\n            autoFocus: true,\n            value: value?.input,\n            defaultValue: value?.input,\n            onChange: (e) => {\n              onChange({\n                question: id,\n                answer: {\n                  value: value.value,\n                  input: e.target.value ?? \" \"\n                },\n                index: page - 1,\n                isSingle: true,\n                showInput\n              });\n            }\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785250,
+      "end": 1750271785250,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

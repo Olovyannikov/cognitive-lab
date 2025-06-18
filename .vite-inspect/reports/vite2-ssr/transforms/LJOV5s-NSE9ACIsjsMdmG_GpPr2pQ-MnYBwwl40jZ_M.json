@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\n\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\n\nimport s from './SubscribeToNews.module.css';\n\nexport const SubscribeToNews = () => {\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: '',\n        },\n        validate: zodResolver(SubscribeToNewsSchema),\n    });\n    const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n        SubscribeToNewsModel.formSubmitted,\n        subscribeToNewsMutation.$pending,\n        subscribeToNewsMutation.$succeeded,\n    ]);\n\n    useEffect(() => {\n        if (isLoading || !isSucceeded) return;\n        form.reset();\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [isLoading, isSucceeded]);\n\n    const onSubmit = form.onSubmit((data) => {\n        onFormSubmit(data);\n    });\n\n    return (\n        <form onSubmit={onSubmit}>\n            <Title className={s.title} order={6}>\n                Новости на почту\n            </Title>\n            <Flex className={s.flex} gap='sm'>\n                <FocusTrap active={Boolean(form.errors.email)}>\n                    <TextInput\n                        inputMode='email'\n                        placeholder='info@mail.ru'\n                        {...form.getInputProps('email')}\n                        key={form.key('email')}\n                    />\n                </FocusTrap>\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\n                    Подписаться\n                </Button>\n            </Flex>\n        </form>\n    );\n};\n",
-      "start": 1750239308599,
-      "end": 1750239308620,
+      "start": 1750271785237,
+      "end": 1750271785248,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useEffect } from 'react';\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { subscribeToNewsMutation } from '../api';\nimport { SubscribeToNewsModel } from '../model';\nimport { SubscribeToNewsSchema } from '../schema';\nimport s from './SubscribeToNews.module.css';\nexport const SubscribeToNews = ()=>{\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: ''\n        },\n        validate: zodResolver(SubscribeToNewsSchema)\n    });\n    const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n        SubscribeToNewsModel.formSubmitted,\n        subscribeToNewsMutation.$pending,\n        subscribeToNewsMutation.$succeeded\n    ]);\n    useEffect(()=>{\n        if (isLoading || !isSucceeded) return;\n        form.reset();\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        isLoading,\n        isSucceeded\n    ]);\n    const onSubmit = form.onSubmit((data)=>{\n        onFormSubmit(data);\n    });\n    return /*#__PURE__*/ _jsxs(\"form\", {\n        onSubmit: onSubmit,\n        children: [\n            /*#__PURE__*/ _jsx(Title, {\n                className: s.title,\n                order: 6,\n                children: \"Новости на почту\"\n            }),\n            /*#__PURE__*/ _jsxs(Flex, {\n                className: s.flex,\n                gap: \"sm\",\n                children: [\n                    /*#__PURE__*/ _jsx(FocusTrap, {\n                        active: Boolean(form.errors.email),\n                        children: /*#__PURE__*/ _createElement(TextInput, {\n                            inputMode: \"email\",\n                            placeholder: \"info@mail.ru\",\n                            ...form.getInputProps('email'),\n                            key: form.key('email')\n                        })\n                    }),\n                    /*#__PURE__*/ _jsx(Button, {\n                        loading: isLoading,\n                        disabled: isLoading,\n                        fullWidth: true,\n                        type: \"submit\",\n                        children: \"Подписаться\"\n                    })\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308620,
-      "end": 1750239308624,
+      "start": 1750271785248,
+      "end": 1750271785249,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/ui/index.tsx\"],\"sourcesContent\":[\"import { useEffect } from 'react';\\nimport { Button, Flex, FocusTrap, TextInput, Title } from '@mantine/core';\\nimport { useForm } from '@mantine/form';\\nimport { useUnit } from 'effector-react';\\nimport { zodResolver } from 'mantine-form-zod-resolver';\\n\\nimport { subscribeToNewsMutation } from '../api';\\nimport { SubscribeToNewsModel } from '../model';\\nimport { SubscribeToNewsSchema } from '../schema';\\n\\nimport s from './SubscribeToNews.module.css';\\n\\nexport const SubscribeToNews = () => {\\n    const form = useForm({\\n        mode: 'controlled',\\n        initialValues: {\\n            email: '',\\n        },\\n        validate: zodResolver(SubscribeToNewsSchema),\\n    });\\n    const [onFormSubmit, isLoading, isSucceeded] = useUnit([\\n        SubscribeToNewsModel.formSubmitted,\\n        subscribeToNewsMutation.$pending,\\n        subscribeToNewsMutation.$succeeded,\\n    ]);\\n\\n    useEffect(() => {\\n        if (isLoading || !isSucceeded) return;\\n        form.reset();\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [isLoading, isSucceeded]);\\n\\n    const onSubmit = form.onSubmit((data) => {\\n        onFormSubmit(data);\\n    });\\n\\n    return (\\n        <form onSubmit={onSubmit}>\\n            <Title className={s.title} order={6}>\\n                Новости на почту\\n            </Title>\\n            <Flex className={s.flex} gap='sm'>\\n                <FocusTrap active={Boolean(form.errors.email)}>\\n                    <TextInput\\n                        inputMode='email'\\n                        placeholder='info@mail.ru'\\n                        {...form.getInputProps('email')}\\n                        key={form.key('email')}\\n                    />\\n                </FocusTrap>\\n                <Button loading={isLoading} disabled={isLoading} fullWidth type='submit'>\\n                    Подписаться\\n                </Button>\\n            </Flex>\\n        </form>\\n    );\\n};\\n\"],\"names\":[\"useEffect\",\"Button\",\"Flex\",\"FocusTrap\",\"TextInput\",\"Title\",\"useForm\",\"useUnit\",\"zodResolver\",\"subscribeToNewsMutation\",\"SubscribeToNewsModel\",\"SubscribeToNewsSchema\",\"s\",\"SubscribeToNews\",\"form\",\"mode\",\"initialValues\",\"email\",\"validate\",\"onFormSubmit\",\"isLoading\",\"isSucceeded\",\"formSubmitted\",\"$pending\",\"$succeeded\",\"reset\",\"onSubmit\",\"data\",\"className\",\"title\",\"order\",\"flex\",\"gap\",\"active\",\"Boolean\",\"errors\",\"inputMode\",\"placeholder\",\"getInputProps\",\"key\",\"loading\",\"disabled\",\"fullWidth\",\"type\"],\"mappings\":\";;AAAA,SAASA,SAAS,QAAQ,QAAQ;AAClC,SAASC,MAAM,EAAEC,IAAI,EAAEC,SAAS,EAAEC,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AAC1E,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,WAAW,QAAQ,4BAA4B;AAExD,SAASC,uBAAuB,QAAQ,SAAS;AACjD,SAASC,oBAAoB,QAAQ,WAAW;AAChD,SAASC,qBAAqB,QAAQ,YAAY;AAElD,OAAOC,OAAO,+BAA+B;AAE7C,OAAO,MAAMC,kBAAkB;IAC3B,MAAMC,OAAOR,QAAQ;QACjBS,MAAM;QACNC,eAAe;YACXC,OAAO;QACX;QACAC,UAAUV,YAAYG;IAC1B;IACA,MAAM,CAACQ,cAAcC,WAAWC,YAAY,GAAGd,QAAQ;QACnDG,qBAAqBY,aAAa;QAClCb,wBAAwBc,QAAQ;QAChCd,wBAAwBe,UAAU;KACrC;IAEDxB,UAAU;QACN,IAAIoB,aAAa,CAACC,aAAa;QAC/BP,KAAKW,KAAK;IACV,uDAAuD;IAC3D,GAAG;QAACL;QAAWC;KAAY;IAE3B,MAAMK,WAAWZ,KAAKY,QAAQ,CAAC,CAACC;QAC5BR,aAAaQ;IACjB;IAEA,qBACI,MAACb;QAAKY,UAAUA;;0BACZ,KAACrB;gBAAMuB,WAAWhB,EAAEiB,KAAK;gBAAEC,OAAO;0BAAG;;0BAGrC,MAAC5B;gBAAK0B,WAAWhB,EAAEmB,IAAI;gBAAEC,KAAI;;kCACzB,KAAC7B;wBAAU8B,QAAQC,QAAQpB,KAAKqB,MAAM,CAAClB,KAAK;kCACxC,cAAA,eAACb;4BACGgC,WAAU;4BACVC,aAAY;4BACX,GAAGvB,KAAKwB,aAAa,CAAC,QAAQ;4BAC/BC,KAAKzB,KAAKyB,GAAG,CAAC;;;kCAGtB,KAACtC;wBAAOuC,SAASpB;wBAAWqB,UAAUrB;wBAAWsB,SAAS;wBAACC,MAAK;kCAAS;;;;;;AAMzF,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useEffect } from \"react\";\nimport { Button, Flex, FocusTrap, TextInput, Title } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { subscribeToNewsMutation } from \"../api\";\nimport { SubscribeToNewsModel } from \"../model\";\nimport { SubscribeToNewsSchema } from \"../schema\";\nimport s from \"./SubscribeToNews.module.css\";\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\"\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n    SubscribeToNewsModel.formSubmitted,\n    subscribeToNewsMutation.$pending,\n    subscribeToNewsMutation.$succeeded\n  ]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n  }, [\n    isLoading,\n    isSucceeded\n  ]);\n  const onSubmit = form.onSubmit((data) => {\n    onFormSubmit(data);\n  });\n  return /* @__PURE__ */ _jsxs(\"form\", {\n    onSubmit,\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        className: s.title,\n        order: 6,\n        children: \"Новости на почту\"\n      }),\n      /* @__PURE__ */ _jsxs(Flex, {\n        className: s.flex,\n        gap: \"sm\",\n        children: [\n          /* @__PURE__ */ _jsx(FocusTrap, {\n            active: Boolean(form.errors.email),\n            children: /* @__PURE__ */ _createElement(TextInput, {\n              inputMode: \"email\",\n              placeholder: \"info@mail.ru\",\n              ...form.getInputProps(\"email\"),\n              key: form.key(\"email\")\n            })\n          }),\n          /* @__PURE__ */ _jsx(Button, {\n            loading: isLoading,\n            disabled: isLoading,\n            fullWidth: true,\n            type: \"submit\",\n            children: \"Подписаться\"\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308624,
-      "end": 1750239308774,
+      "start": 1750271785249,
+      "end": 1750271785346,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785346,
+      "end": 1750271785346,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785346,
+      "end": 1750271785346,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785346,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useEffect } from \"react\";\nimport { Button, Flex, FocusTrap, TextInput, Title } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { subscribeToNewsMutation } from \"../api\";\nimport { SubscribeToNewsModel } from \"../model\";\nimport { SubscribeToNewsSchema } from \"../schema\";\nimport s from \"./SubscribeToNews.module.css\";\nexport const SubscribeToNews = () => {\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\"\n    },\n    validate: zodResolver(SubscribeToNewsSchema)\n  });\n  const [onFormSubmit, isLoading, isSucceeded] = useUnit([\n    SubscribeToNewsModel.formSubmitted,\n    subscribeToNewsMutation.$pending,\n    subscribeToNewsMutation.$succeeded\n  ]);\n  useEffect(() => {\n    if (isLoading || !isSucceeded) return;\n    form.reset();\n  }, [\n    isLoading,\n    isSucceeded\n  ]);\n  const onSubmit = form.onSubmit((data) => {\n    onFormSubmit(data);\n  });\n  return /* @__PURE__ */ _jsxs(\"form\", {\n    onSubmit,\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        className: s.title,\n        order: 6,\n        children: \"Новости на почту\"\n      }),\n      /* @__PURE__ */ _jsxs(Flex, {\n        className: s.flex,\n        gap: \"sm\",\n        children: [\n          /* @__PURE__ */ _jsx(FocusTrap, {\n            active: Boolean(form.errors.email),\n            children: /* @__PURE__ */ _createElement(TextInput, {\n              inputMode: \"email\",\n              placeholder: \"info@mail.ru\",\n              ...form.getInputProps(\"email\"),\n              key: form.key(\"email\")\n            })\n          }),\n          /* @__PURE__ */ _jsx(Button, {\n            loading: isLoading,\n            disabled: isLoading,\n            fullWidth: true,\n            type: \"submit\",\n            children: \"Подписаться\"\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308774,
-      "end": 1750239308774,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

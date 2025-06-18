@@ -3,24 +3,24 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "import type { Mark } from '../types';\n\nexport function barChartPrepareData(\n    item: Partial<{\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\n    }>\n) {\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item.mbti_data ?? ''),\n    })) as Mark[];\n}\n",
-      "start": 1750239308566,
-      "end": 1750239308599,
+      "result": "import type { Mark } from '../types';\n\nexport type BarChartPreparedDataProps = Partial<{\n    mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n    mbti_percentages?: Record<string, { negative: number; positive: number }>;\n}>;\n\nexport function barChartPrepareData(item?: BarChartPreparedDataProps) {\n    return Object.entries(item?.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item?.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item?.mbti_data ?? ''),\n    })) as Mark[];\n}\n",
+      "start": 1750271785110,
+      "end": 1750271785133,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "result": "export function barChartPrepareData(item) {\n    return Object.entries(item.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item.mbti_data ?? '')\n        }));\n}\n",
-      "start": 1750239308599,
-      "end": 1750239308601,
+      "result": "export function barChartPrepareData(item) {\n    return Object.entries(item?.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item?.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item?.mbti_data ?? '')\n        }));\n}\n",
+      "start": 1750271785133,
+      "end": 1750271785137,
       "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts\"],\"sourcesContent\":[\"import type { Mark } from '../types';\\n\\nexport function barChartPrepareData(\\n    item: Partial<{\\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\\n    }>\\n) {\\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\\n        value: el[1].positive,\\n        label: el[0],\\n        data: item.mbti_data?.[el[0]],\\n        mbti_type: Object.keys(item.mbti_data ?? ''),\\n    })) as Mark[];\\n}\\n\"],\"names\":[\"barChartPrepareData\",\"item\",\"Object\",\"entries\",\"mbti_percentages\",\"map\",\"el\",\"value\",\"positive\",\"label\",\"data\",\"mbti_data\",\"mbti_type\",\"keys\"],\"mappings\":\"AAEA,OAAO,SAASA,oBACZC,IAGE;IAEF,OAAOC,OAAOC,OAAO,CAACF,KAAKG,gBAAgB,IAAI,IAAIC,GAAG,CAAC,CAACC,KAAQ,CAAA;YAC5DC,OAAOD,EAAE,CAAC,EAAE,CAACE,QAAQ;YACrBC,OAAOH,EAAE,CAAC,EAAE;YACZI,MAAMT,KAAKU,SAAS,EAAE,CAACL,EAAE,CAAC,EAAE,CAAC;YAC7BM,WAAWV,OAAOW,IAAI,CAACZ,KAAKU,SAAS,IAAI;QAC7C,CAAA;AACJ\"}"
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts\"],\"sourcesContent\":[\"import type { Mark } from '../types';\\n\\nexport type BarChartPreparedDataProps = Partial<{\\n    mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\\n    mbti_percentages?: Record<string, { negative: number; positive: number }>;\\n}>;\\n\\nexport function barChartPrepareData(item?: BarChartPreparedDataProps) {\\n    return Object.entries(item?.mbti_percentages ?? '').map((el) => ({\\n        value: el[1].positive,\\n        label: el[0],\\n        data: item?.mbti_data?.[el[0]],\\n        mbti_type: Object.keys(item?.mbti_data ?? ''),\\n    })) as Mark[];\\n}\\n\"],\"names\":[\"barChartPrepareData\",\"item\",\"Object\",\"entries\",\"mbti_percentages\",\"map\",\"el\",\"value\",\"positive\",\"label\",\"data\",\"mbti_data\",\"mbti_type\",\"keys\"],\"mappings\":\"AAOA,OAAO,SAASA,oBAAoBC,IAAgC;IAChE,OAAOC,OAAOC,OAAO,CAACF,MAAMG,oBAAoB,IAAIC,GAAG,CAAC,CAACC,KAAQ,CAAA;YAC7DC,OAAOD,EAAE,CAAC,EAAE,CAACE,QAAQ;YACrBC,OAAOH,EAAE,CAAC,EAAE;YACZI,MAAMT,MAAMU,WAAW,CAACL,EAAE,CAAC,EAAE,CAAC;YAC9BM,WAAWV,OAAOW,IAAI,CAACZ,MAAMU,aAAa;QAC9C,CAAA;AACJ\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "export function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750239308601,
-      "end": 1750239308772,
+      "result": "export function barChartPrepareData(item) {\n  return Object.entries(item?.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item?.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item?.mbti_data ?? \"\")\n  }));\n}\n",
+      "start": 1750271785137,
+      "end": 1750271785281,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -28,89 +28,95 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts"
         ],
         "sourcesContent": [
-          "export function barChartPrepareData(item) {\n    return Object.entries(item.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item.mbti_data ?? '')\n        }));\n}\n"
+          "export function barChartPrepareData(item) {\n    return Object.entries(item?.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item?.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item?.mbti_data ?? '')\n        }));\n}\n"
         ],
-        "mappings": "AAAO,gBAAS,oBAAoB,MAAM;AACtC,SAAO,OAAO,QAAQ,KAAK,oBAAoB,EAAE,EAAE,IAAI,CAAC,QAAM;AAAA,IACtD,OAAO,GAAG,CAAC,EAAE;AAAA,IACb,OAAO,GAAG,CAAC;AAAA,IACX,MAAM,KAAK,YAAY,GAAG,CAAC,CAAC;AAAA,IAC5B,WAAW,OAAO,KAAK,KAAK,aAAa,EAAE;AAAA,EAC/C,EAAE;AACV;",
+        "mappings": "AAAO,gBAAS,oBAAoB,MAAM;AACtC,SAAO,OAAO,QAAQ,MAAM,oBAAoB,EAAE,EAAE,IAAI,CAAC,QAAM;AAAA,IACvD,OAAO,GAAG,CAAC,EAAE;AAAA,IACb,OAAO,GAAG,CAAC;AAAA,IACX,MAAM,MAAM,YAAY,GAAG,CAAC,CAAC;AAAA,IAC7B,WAAW,OAAO,KAAK,MAAM,aAAa,EAAE;AAAA,EAChD,EAAE;AACV;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785281,
+      "end": 1750271785281,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785281,
+      "end": 1750271785281,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785282,
+      "end": 1750271785282,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Report/lib/barChartPreparedData.ts [vike:pluginModuleBanner] */\nexport function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750239308773,
-      "end": 1750239308773,
+      "name": "vike:build:pluginModuleBanner",
+      "result": "/*! src/entities/Report/lib/barChartPreparedData.ts [vike:pluginModuleBanner] */\nexport function barChartPrepareData(item) {\n  return Object.entries(item?.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item?.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item?.mbti_data ?? \"\")\n  }));\n}\n",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/lib/barChartPreparedData.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC;AACL;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC;AACL;"
       }
     }
   ]

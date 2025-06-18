@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { reflect } from '@effector/reflect';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Faq = reflect({\n    view: Link,\n    bind: {\n        href: '/faq',\n        children: 'Ответы на вопросы',\n        onClick: () => RootModel.allMenusClosed(false),\n    },\n});\n",
-      "start": 1750239308811,
-      "end": 1750239308820,
+      "start": 1750271785346,
+      "end": 1750271785351,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { reflect } from '@effector/reflect';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Faq = reflect({\n    view: Link,\n    bind: {\n        href: '/faq',\n        children: 'Ответы на вопросы',\n        onClick: ()=>RootModel.allMenusClosed(false)\n    }\n});\n",
-      "start": 1750239308820,
-      "end": 1750239308822,
+      "start": 1750271785351,
+      "end": 1750271785354,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Faq/index.tsx\"],\"sourcesContent\":[\"import { reflect } from '@effector/reflect';\\n\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Link } from '../../Link';\\n\\nexport const Faq = reflect({\\n    view: Link,\\n    bind: {\\n        href: '/faq',\\n        children: 'Ответы на вопросы',\\n        onClick: () => RootModel.allMenusClosed(false),\\n    },\\n});\\n\"],\"names\":[\"reflect\",\"RootModel\",\"Link\",\"Faq\",\"view\",\"bind\",\"href\",\"children\",\"onClick\",\"allMenusClosed\"],\"mappings\":\"AAAA,SAASA,OAAO,QAAQ,oBAAoB;AAE5C,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,IAAI,QAAQ,aAAa;AAElC,OAAO,MAAMC,MAAMH,QAAQ;IACvBI,MAAMF;IACNG,MAAM;QACFC,MAAM;QACNC,UAAU;QACVC,SAAS,IAAMP,UAAUQ,cAAc,CAAC;IAC5C;AACJ,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { reflect } from \"@effector/reflect\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Faq = reflect({\n  view: Link,\n  bind: {\n    href: \"/faq\",\n    children: \"Ответы на вопросы\",\n    onClick: () => RootModel.allMenusClosed(false)\n  }\n});\n",
-      "start": 1750239308822,
-      "end": 1750239308827,
+      "start": 1750271785354,
+      "end": 1750271785360,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785360,
+      "end": 1750271785360,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Faq/index.tsx [vike:pluginModuleBanner] */\nimport { reflect } from \"@effector/reflect\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Faq = reflect({\n  view: Link,\n  bind: {\n    href: \"/faq\",\n    children: \"Ответы на вопросы\",\n    onClick: () => RootModel.allMenusClosed(false)\n  }\n});\n",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

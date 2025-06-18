@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ContentResult, Order } from '../types';\n\nexport type ReportResult = ContentResult;\n\nexport interface RegularPriceResponse {\n    regular_price: number;\n    skip_survey_price: number;\n}\n\nexport interface PromoPriceResponse {\n    regular_price: {\n        discount: number;\n        final: number;\n        original: number;\n    };\n    skip_survey_price: {\n        discount: number;\n        final: number;\n        original: number;\n    };\n}\n\nexport interface PurchasedReportRequest {\n    email: string;\n    promo_code?: string;\n    mbti_type?: string;\n    user_report?: string;\n}\n\nexport interface UserReportComment {\n    accuracy_rate: number;\n    convenience_rate: number;\n    created_at: string;\n    id: string;\n    informativeness_rate: number;\n    mbti_type: string;\n    name: string;\n    overall_rate: number;\n    recommendability_rate: number;\n    satisfaction_rate: number;\n    text: string;\n    user_report: string;\n}\n\nexport interface UserReportInfo {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n}\n\nexport interface SurveysInfoResponse {\n    user_orders: Order[];\n    reports: UserReportInfo[];\n    left_comments: UserReportComment[];\n    user: {\n        email: string;\n    };\n}\n",
-      "start": 1750239308279,
-      "end": 1750239308296,
+      "start": 1750271784836,
+      "end": 1750271784850,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export { };\n",
-      "start": 1750239308296,
-      "end": 1750239308301,
+      "start": 1750271784850,
+      "end": 1750271784854,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/api/dto.ts\"],\"sourcesContent\":[\"import type { ContentResult, Order } from '../types';\\n\\nexport type ReportResult = ContentResult;\\n\\nexport interface RegularPriceResponse {\\n    regular_price: number;\\n    skip_survey_price: number;\\n}\\n\\nexport interface PromoPriceResponse {\\n    regular_price: {\\n        discount: number;\\n        final: number;\\n        original: number;\\n    };\\n    skip_survey_price: {\\n        discount: number;\\n        final: number;\\n        original: number;\\n    };\\n}\\n\\nexport interface PurchasedReportRequest {\\n    email: string;\\n    promo_code?: string;\\n    mbti_type?: string;\\n    user_report?: string;\\n}\\n\\nexport interface UserReportComment {\\n    accuracy_rate: number;\\n    convenience_rate: number;\\n    created_at: string;\\n    id: string;\\n    informativeness_rate: number;\\n    mbti_type: string;\\n    name: string;\\n    overall_rate: number;\\n    recommendability_rate: number;\\n    satisfaction_rate: number;\\n    text: string;\\n    user_report: string;\\n}\\n\\nexport interface UserReportInfo {\\n    mbti_type: string;\\n    user_report: string;\\n    created_at: string;\\n    report_kind: string;\\n}\\n\\nexport interface SurveysInfoResponse {\\n    user_orders: Order[];\\n    reports: UserReportInfo[];\\n    left_comments: UserReportComment[];\\n    user: {\\n        email: string;\\n    };\\n}\\n\"],\"names\":[],\"mappings\":\"AAmDA,WAOC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export {};\n",
-      "start": 1750239308301,
-      "end": 1750239308335,
+      "start": 1750271784854,
+      "end": 1750271784899,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784899,
+      "end": 1750271784899,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/api/dto.ts [vike:pluginModuleBanner] */\nexport {};\n",
-      "start": 1750239308335,
-      "end": 1750239308335,
+      "start": 1750271784899,
+      "end": 1750271784899,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

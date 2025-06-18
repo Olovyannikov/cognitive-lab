@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { memo, type MouseEvent } from 'react';\nimport { Button, type ButtonProps } from '@mantine/core';\n\nimport { ROUTES } from '@/shared/config';\n\ninterface RedirectToTestPageProps {\n    loading?: boolean;\n    onClick?: (e: MouseEvent) => void;\n}\n\nexport const RedirectToTestPage = memo(({ loading, ...props }: ButtonProps & RedirectToTestPageProps) => (\n    <Button\n        component={loading ? 'button' : 'a'}\n        loading={loading}\n        disabled={loading}\n        miw={144}\n        href={ROUTES.TEST}\n        size='md'\n        {...props}\n    >\n        Пройти тест\n    </Button>\n));\n",
-      "start": 1750239308430,
-      "end": 1750239308456,
+      "start": 1750271784993,
+      "end": 1750271785016,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { memo } from 'react';\nimport { Button } from '@mantine/core';\nimport { ROUTES } from '@/shared/config';\nexport const RedirectToTestPage = /*#__PURE__*/ memo(({ loading, ...props })=>/*#__PURE__*/ _jsx(Button, {\n        component: loading ? 'button' : 'a',\n        loading: loading,\n        disabled: loading,\n        miw: 144,\n        href: ROUTES.TEST,\n        size: \"md\",\n        ...props,\n        children: \"Пройти тест\"\n    }));\n",
-      "start": 1750239308456,
-      "end": 1750239308463,
+      "start": 1750271785016,
+      "end": 1750271785022,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/RedirectToTestPage/index.tsx\"],\"sourcesContent\":[\"import { memo, type MouseEvent } from 'react';\\nimport { Button, type ButtonProps } from '@mantine/core';\\n\\nimport { ROUTES } from '@/shared/config';\\n\\ninterface RedirectToTestPageProps {\\n    loading?: boolean;\\n    onClick?: (e: MouseEvent) => void;\\n}\\n\\nexport const RedirectToTestPage = memo(({ loading, ...props }: ButtonProps & RedirectToTestPageProps) => (\\n    <Button\\n        component={loading ? 'button' : 'a'}\\n        loading={loading}\\n        disabled={loading}\\n        miw={144}\\n        href={ROUTES.TEST}\\n        size='md'\\n        {...props}\\n    >\\n        Пройти тест\\n    </Button>\\n));\\n\"],\"names\":[\"memo\",\"Button\",\"ROUTES\",\"RedirectToTestPage\",\"loading\",\"props\",\"component\",\"disabled\",\"miw\",\"href\",\"TEST\",\"size\"],\"mappings\":\";AAAA,SAASA,IAAI,QAAyB,QAAQ;AAC9C,SAASC,MAAM,QAA0B,gBAAgB;AAEzD,SAASC,MAAM,QAAQ,kBAAkB;AAOzC,OAAO,MAAMC,mCAAqBH,KAAK,CAAC,EAAEI,OAAO,EAAE,GAAGC,OAA8C,iBAChG,KAACJ;QACGK,WAAWF,UAAU,WAAW;QAChCA,SAASA;QACTG,UAAUH;QACVI,KAAK;QACLC,MAAMP,OAAOQ,IAAI;QACjBC,MAAK;QACJ,GAAGN,KAAK;kBACZ;QAGF\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Button } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nexport const RedirectToTestPage = /* @__PURE__ */ memo(({ loading, ...props }) => /* @__PURE__ */ _jsx(Button, {\n  component: loading ? \"button\" : \"a\",\n  loading,\n  disabled: loading,\n  miw: 144,\n  href: ROUTES.TEST,\n  size: \"md\",\n  ...props,\n  children: \"Пройти тест\"\n}));\n",
-      "start": 1750239308463,
-      "end": 1750239308710,
+      "start": 1750271785022,
+      "end": 1750271785240,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785240,
+      "end": 1750271785240,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308710,
-      "end": 1750239308711,
+      "start": 1750271785240,
+      "end": 1750271785241,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/RedirectToTestPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Button } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nexport const RedirectToTestPage = /* @__PURE__ */ memo(({ loading, ...props }) => /* @__PURE__ */ _jsx(Button, {\n  component: loading ? \"button\" : \"a\",\n  loading,\n  disabled: loading,\n  miw: 144,\n  href: ROUTES.TEST,\n  size: \"md\",\n  ...props,\n  children: \"Пройти тест\"\n}));\n",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

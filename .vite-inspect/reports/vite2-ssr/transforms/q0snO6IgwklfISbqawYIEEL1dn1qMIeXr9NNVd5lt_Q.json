@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n    showInput?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n    email?: string;\n    approve_subscription?: boolean;\n}\n",
-      "start": 1750239308296,
-      "end": 1750239308308,
+      "start": 1750271784854,
+      "end": 1750271784873,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export { };\n",
-      "start": 1750239308308,
-      "end": 1750239308312,
+      "start": 1750271784873,
+      "end": 1750271784878,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts\"],\"sourcesContent\":[\"export interface Option {\\n    id: string;\\n    text: string;\\n    order: number;\\n    requires_input?: boolean;\\n}\\n\\nexport interface Rephrasing {\\n    hint: string;\\n    text: string;\\n}\\n\\nexport interface ScaleChoiceAnswer {\\n    value: number;\\n}\\n\\nexport interface MultiChoiceAnswer {\\n    value: string;\\n    input?: string;\\n}\\n\\nexport interface SingleChoiceAnswer {\\n    value: string;\\n    input?: string;\\n}\\n\\nexport interface PreparedAnswer {\\n    question: string;\\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\\n    index: number;\\n    isMultiple?: boolean;\\n    isSingle?: boolean;\\n    showInput?: boolean;\\n}\\n\\nexport interface Answers {\\n    answers: PreparedAnswer[];\\n    email?: string;\\n    approve_subscription?: boolean;\\n}\\n\"],\"names\":[],\"mappings\":\"AAmCA,WAIC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export {};\n",
-      "start": 1750239308312,
-      "end": 1750239308386,
+      "start": 1750271784878,
+      "end": 1750271784972,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784972,
+      "end": 1750271784972,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/api/types.ts [vike:pluginModuleBanner] */\nexport {};\n",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784973,
+      "end": 1750271784973,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImage2 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 187, height: 244, viewBox: \"0 0 187 244\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M80.8139 0C65.0655 50.2848 35.5318 87.4139 0 99C45.6767 113.894 81.4411 170.999 90.7506 244C97.3811 191.971 117.473 148.023 145 121.642C162.537 138.449 177.057 162.36 187 190.972V6.99852C177.057 35.6132 162.537 59.5506 145 76.3584C126.046 58.1923 110.616 31.7291 100.68 0H80.8139Z\", fill: \"#82C91E\" }));\nexport default SvgImage2;\n",
-      "start": 1750239308785,
-      "end": 1750239308818,
+      "start": 1750271785330,
+      "end": 1750271785352,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785353,
+      "end": 1750271785353,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItHelps/img/image-2.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImage2 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 187, height: 244, viewBox: \"0 0 187 244\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M80.8139 0C65.0655 50.2848 35.5318 87.4139 0 99C45.6767 113.894 81.4411 170.999 90.7506 244C97.3811 191.971 117.473 148.023 145 121.642C162.537 138.449 177.057 162.36 187 190.972V6.99852C177.057 35.6132 162.537 59.5506 145 76.3584C126.046 58.1923 110.616 31.7291 100.68 0H80.8139Z\", fill: \"#82C91E\" }));\nexport default SvgImage2;\n",
-      "start": 1750239308818,
-      "end": 1750239308818,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

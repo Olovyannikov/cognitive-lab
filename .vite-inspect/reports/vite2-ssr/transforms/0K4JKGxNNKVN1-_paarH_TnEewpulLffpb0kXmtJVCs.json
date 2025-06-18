@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\n\nimport s from './Accordion.module.css';\n\nexport const Accordion = ({ children }: AccordionProps) => (\n    <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {children}\n    </UIAccordion>\n);\n",
-      "start": 1750239308322,
-      "end": 1750239308334,
+      "start": 1750271784869,
+      "end": 1750271784894,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport s from './Accordion.module.css';\nexport const Accordion = ({ children })=>/*#__PURE__*/ _jsx(UIAccordion, {\n        radius: 0,\n        variant: \"filled\",\n        classNames: s,\n        chevron: /*#__PURE__*/ _jsx(CaretDown, {\n            weight: \"bold\",\n            size: 24\n        }),\n        children: children\n    });\n",
-      "start": 1750239308334,
-      "end": 1750239308343,
+      "start": 1750271784894,
+      "end": 1750271784898,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Accordion/index.tsx\"],\"sourcesContent\":[\"import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\\n\\nimport s from './Accordion.module.css';\\n\\nexport const Accordion = ({ children }: AccordionProps) => (\\n    <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\\n        {children}\\n    </UIAccordion>\\n);\\n\"],\"names\":[\"Accordion\",\"UIAccordion\",\"CaretDown\",\"s\",\"children\",\"radius\",\"variant\",\"classNames\",\"chevron\",\"weight\",\"size\"],\"mappings\":\";AAAA,SAASA,aAAaC,WAAW,QAAwB,gBAAgB;AACzE,SAASC,SAAS,QAAQ,iCAAiC;AAE3D,OAAOC,OAAO,yBAAyB;AAEvC,OAAO,MAAMH,YAAY,CAAC,EAAEI,QAAQ,EAAkB,iBAClD,KAACH;QAAYI,QAAQ;QAAGC,SAAQ;QAASC,YAAYJ;QAAGK,uBAAS,KAACN;YAAUO,QAAO;YAAOC,MAAM;;kBAC3FN;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({ children }) => /* @__PURE__ */ _jsx(UIAccordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children\n});\n",
-      "start": 1750239308343,
-      "end": 1750239308452,
+      "start": 1750271784898,
+      "end": 1750271785009,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785010,
+      "end": 1750271785010,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/Accordion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({ children }) => /* @__PURE__ */ _jsx(UIAccordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children\n});\n",
-      "start": 1750239308453,
-      "end": 1750239308453,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ContentResolverProps } from '../types';\nimport {\n    AccordionBlock,\n    BarChart,\n    BlockQuoteFilled,\n    BlockquoteLine,\n    Cards,\n    ConclusionPaywall,\n    FilledBulletList,\n    Header,\n    IconList,\n    OrderedCards,\n    OrderedList,\n    Paragraph,\n    Paywall,\n    ReportTitle,\n    Subscription,\n    Subtitle,\n    TextStrokeDash,\n} from '../ui';\nimport { barChartPrepareData } from './barChartPreparedData';\nimport { isListItemArray } from './guards';\n\nexport const contentResolver = ({\n    content,\n    color = 'violet',\n    actions,\n    surveyId,\n    mbti,\n    slots,\n    index,\n}: ContentResolverProps) => {\n    switch (content.type) {\n        case 'blockquote_filled':\n            return <BlockQuoteFilled color={color} text={content.text ?? ''} />;\n        case 'header':\n            return <Header {...content} />;\n        case 'paragraph':\n            return <Paragraph {...content} />;\n        case 'cards':\n            return isListItemArray(content.items) && <Cards items={content.items} color={color} />;\n        case 'ordered_cards':\n            return <OrderedCards color={content.color} items={isListItemArray(content.items) ? content.items : []} />;\n        case 'title':\n            return <ReportTitle>{content.text}</ReportTitle>;\n        case 'subtitle':\n            return <Subtitle {...content} />;\n        case 'ordered_list':\n            return (\n                <OrderedList\n                    color={color}\n                    data-type={content.type}\n                    resolver={contentResolver}\n                    items={isListItemArray(content.items) ? content.items : []}\n                />\n            );\n        case 'blockquote_line':\n            return <BlockquoteLine text={content.text} color={color} />;\n        case 'filled_bullet_list':\n            return <FilledBulletList data-color={color} items={isListItemArray(content.items) ? content.items : []} />;\n        case 'paywall':\n            return (\n                <Paywall\n                    {...content}\n                    color={color}\n                    surveyId={surveyId}\n                    mbti={mbti}\n                    index={index}\n                    action={slots?.paywallExtraAction}\n                />\n            );\n        case 'conclusion_paywall':\n            return <ConclusionPaywall {...content} color={color} actionsSlot={actions?.conclusion_paywall} />;\n        case 'bar_chart':\n            return <BarChart marks={barChartPrepareData(content)} />;\n        case 'icon_list':\n            return <IconList items={isListItemArray(content.items) ? content.items : []} color={color} />;\n        case 'subscription':\n            return <Subscription {...content} subscriptionFormSlot={slots?.subscribeEmail} />;\n        case 'text_stroke_dash':\n            return <TextStrokeDash text={content.text ?? ''} color={color} />;\n        case 'accordion':\n            return <AccordionBlock items={isListItemArray(content.items) ? content.items : []} />;\n        default:\n            return <>UNKNOWN</>;\n    }\n};\n",
-      "start": 1750239308366,
-      "end": 1750239308395,
+      "start": 1750271784943,
+      "end": 1750271784963,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { AccordionBlock, BarChart, BlockQuoteFilled, BlockquoteLine, Cards, ConclusionPaywall, FilledBulletList, Header, IconList, OrderedCards, OrderedList, Paragraph, Paywall, ReportTitle, Subscription, Subtitle, TextStrokeDash } from '../ui';\nimport { barChartPrepareData } from './barChartPreparedData';\nimport { isListItemArray } from './guards';\nexport const contentResolver = ({ content, color = 'violet', actions, surveyId, mbti, slots, index })=>{\n    switch(content.type){\n        case 'blockquote_filled':\n            return /*#__PURE__*/ _jsx(BlockQuoteFilled, {\n                color: color,\n                text: content.text ?? ''\n            });\n        case 'header':\n            return /*#__PURE__*/ _jsx(Header, {\n                ...content\n            });\n        case 'paragraph':\n            return /*#__PURE__*/ _jsx(Paragraph, {\n                ...content\n            });\n        case 'cards':\n            return isListItemArray(content.items) && /*#__PURE__*/ _jsx(Cards, {\n                items: content.items,\n                color: color\n            });\n        case 'ordered_cards':\n            return /*#__PURE__*/ _jsx(OrderedCards, {\n                color: content.color,\n                items: isListItemArray(content.items) ? content.items : []\n            });\n        case 'title':\n            return /*#__PURE__*/ _jsx(ReportTitle, {\n                children: content.text\n            });\n        case 'subtitle':\n            return /*#__PURE__*/ _jsx(Subtitle, {\n                ...content\n            });\n        case 'ordered_list':\n            return /*#__PURE__*/ _jsx(OrderedList, {\n                color: color,\n                \"data-type\": content.type,\n                resolver: contentResolver,\n                items: isListItemArray(content.items) ? content.items : []\n            });\n        case 'blockquote_line':\n            return /*#__PURE__*/ _jsx(BlockquoteLine, {\n                text: content.text,\n                color: color\n            });\n        case 'filled_bullet_list':\n            return /*#__PURE__*/ _jsx(FilledBulletList, {\n                \"data-color\": color,\n                items: isListItemArray(content.items) ? content.items : []\n            });\n        case 'paywall':\n            return /*#__PURE__*/ _jsx(Paywall, {\n                ...content,\n                color: color,\n                surveyId: surveyId,\n                mbti: mbti,\n                index: index,\n                action: slots?.paywallExtraAction\n            });\n        case 'conclusion_paywall':\n            return /*#__PURE__*/ _jsx(ConclusionPaywall, {\n                ...content,\n                color: color,\n                actionsSlot: actions?.conclusion_paywall\n            });\n        case 'bar_chart':\n            return /*#__PURE__*/ _jsx(BarChart, {\n                marks: barChartPrepareData(content)\n            });\n        case 'icon_list':\n            return /*#__PURE__*/ _jsx(IconList, {\n                items: isListItemArray(content.items) ? content.items : [],\n                color: color\n            });\n        case 'subscription':\n            return /*#__PURE__*/ _jsx(Subscription, {\n                ...content,\n                subscriptionFormSlot: slots?.subscribeEmail\n            });\n        case 'text_stroke_dash':\n            return /*#__PURE__*/ _jsx(TextStrokeDash, {\n                text: content.text ?? '',\n                color: color\n            });\n        case 'accordion':\n            return /*#__PURE__*/ _jsx(AccordionBlock, {\n                items: isListItemArray(content.items) ? content.items : []\n            });\n        default:\n            return /*#__PURE__*/ _jsx(_Fragment, {\n                children: \"UNKNOWN\"\n            });\n    }\n};\n",
-      "start": 1750239308395,
-      "end": 1750239308402,
+      "start": 1750271784963,
+      "end": 1750271784972,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/contentResolver.tsx\"],\"sourcesContent\":[\"import type { ContentResolverProps } from '../types';\\nimport {\\n    AccordionBlock,\\n    BarChart,\\n    BlockQuoteFilled,\\n    BlockquoteLine,\\n    Cards,\\n    ConclusionPaywall,\\n    FilledBulletList,\\n    Header,\\n    IconList,\\n    OrderedCards,\\n    OrderedList,\\n    Paragraph,\\n    Paywall,\\n    ReportTitle,\\n    Subscription,\\n    Subtitle,\\n    TextStrokeDash,\\n} from '../ui';\\nimport { barChartPrepareData } from './barChartPreparedData';\\nimport { isListItemArray } from './guards';\\n\\nexport const contentResolver = ({\\n    content,\\n    color = 'violet',\\n    actions,\\n    surveyId,\\n    mbti,\\n    slots,\\n    index,\\n}: ContentResolverProps) => {\\n    switch (content.type) {\\n        case 'blockquote_filled':\\n            return <BlockQuoteFilled color={color} text={content.text ?? ''} />;\\n        case 'header':\\n            return <Header {...content} />;\\n        case 'paragraph':\\n            return <Paragraph {...content} />;\\n        case 'cards':\\n            return isListItemArray(content.items) && <Cards items={content.items} color={color} />;\\n        case 'ordered_cards':\\n            return <OrderedCards color={content.color} items={isListItemArray(content.items) ? content.items : []} />;\\n        case 'title':\\n            return <ReportTitle>{content.text}</ReportTitle>;\\n        case 'subtitle':\\n            return <Subtitle {...content} />;\\n        case 'ordered_list':\\n            return (\\n                <OrderedList\\n                    color={color}\\n                    data-type={content.type}\\n                    resolver={contentResolver}\\n                    items={isListItemArray(content.items) ? content.items : []}\\n                />\\n            );\\n        case 'blockquote_line':\\n            return <BlockquoteLine text={content.text} color={color} />;\\n        case 'filled_bullet_list':\\n            return <FilledBulletList data-color={color} items={isListItemArray(content.items) ? content.items : []} />;\\n        case 'paywall':\\n            return (\\n                <Paywall\\n                    {...content}\\n                    color={color}\\n                    surveyId={surveyId}\\n                    mbti={mbti}\\n                    index={index}\\n                    action={slots?.paywallExtraAction}\\n                />\\n            );\\n        case 'conclusion_paywall':\\n            return <ConclusionPaywall {...content} color={color} actionsSlot={actions?.conclusion_paywall} />;\\n        case 'bar_chart':\\n            return <BarChart marks={barChartPrepareData(content)} />;\\n        case 'icon_list':\\n            return <IconList items={isListItemArray(content.items) ? content.items : []} color={color} />;\\n        case 'subscription':\\n            return <Subscription {...content} subscriptionFormSlot={slots?.subscribeEmail} />;\\n        case 'text_stroke_dash':\\n            return <TextStrokeDash text={content.text ?? ''} color={color} />;\\n        case 'accordion':\\n            return <AccordionBlock items={isListItemArray(content.items) ? content.items : []} />;\\n        default:\\n            return <>UNKNOWN</>;\\n    }\\n};\\n\"],\"names\":[\"AccordionBlock\",\"BarChart\",\"BlockQuoteFilled\",\"BlockquoteLine\",\"Cards\",\"ConclusionPaywall\",\"FilledBulletList\",\"Header\",\"IconList\",\"OrderedCards\",\"OrderedList\",\"Paragraph\",\"Paywall\",\"ReportTitle\",\"Subscription\",\"Subtitle\",\"TextStrokeDash\",\"barChartPrepareData\",\"isListItemArray\",\"contentResolver\",\"content\",\"color\",\"actions\",\"surveyId\",\"mbti\",\"slots\",\"index\",\"type\",\"text\",\"items\",\"data-type\",\"resolver\",\"data-color\",\"action\",\"paywallExtraAction\",\"actionsSlot\",\"conclusion_paywall\",\"marks\",\"subscriptionFormSlot\",\"subscribeEmail\"],\"mappings\":\";AACA,SACIA,cAAc,EACdC,QAAQ,EACRC,gBAAgB,EAChBC,cAAc,EACdC,KAAK,EACLC,iBAAiB,EACjBC,gBAAgB,EAChBC,MAAM,EACNC,QAAQ,EACRC,YAAY,EACZC,WAAW,EACXC,SAAS,EACTC,OAAO,EACPC,WAAW,EACXC,YAAY,EACZC,QAAQ,EACRC,cAAc,QACX,QAAQ;AACf,SAASC,mBAAmB,QAAQ,yBAAyB;AAC7D,SAASC,eAAe,QAAQ,WAAW;AAE3C,OAAO,MAAMC,kBAAkB,CAAC,EAC5BC,OAAO,EACPC,QAAQ,QAAQ,EAChBC,OAAO,EACPC,QAAQ,EACRC,IAAI,EACJC,KAAK,EACLC,KAAK,EACc;IACnB,OAAQN,QAAQO,IAAI;QAChB,KAAK;YACD,qBAAO,KAACzB;gBAAiBmB,OAAOA;gBAAOO,MAAMR,QAAQQ,IAAI,IAAI;;QACjE,KAAK;YACD,qBAAO,KAACrB;gBAAQ,GAAGa,OAAO;;QAC9B,KAAK;YACD,qBAAO,KAACT;gBAAW,GAAGS,OAAO;;QACjC,KAAK;YACD,OAAOF,gBAAgBE,QAAQS,KAAK,mBAAK,KAACzB;gBAAMyB,OAAOT,QAAQS,KAAK;gBAAER,OAAOA;;QACjF,KAAK;YACD,qBAAO,KAACZ;gBAAaY,OAAOD,QAAQC,KAAK;gBAAEQ,OAAOX,gBAAgBE,QAAQS,KAAK,IAAIT,QAAQS,KAAK,GAAG,EAAE;;QACzG,KAAK;YACD,qBAAO,KAAChB;0BAAaO,QAAQQ,IAAI;;QACrC,KAAK;YACD,qBAAO,KAACb;gBAAU,GAAGK,OAAO;;QAChC,KAAK;YACD,qBACI,KAACV;gBACGW,OAAOA;gBACPS,aAAWV,QAAQO,IAAI;gBACvBI,UAAUZ;gBACVU,OAAOX,gBAAgBE,QAAQS,KAAK,IAAIT,QAAQS,KAAK,GAAG,EAAE;;QAGtE,KAAK;YACD,qBAAO,KAAC1B;gBAAeyB,MAAMR,QAAQQ,IAAI;gBAAEP,OAAOA;;QACtD,KAAK;YACD,qBAAO,KAACf;gBAAiB0B,cAAYX;gBAAOQ,OAAOX,gBAAgBE,QAAQS,KAAK,IAAIT,QAAQS,KAAK,GAAG,EAAE;;QAC1G,KAAK;YACD,qBACI,KAACjB;gBACI,GAAGQ,OAAO;gBACXC,OAAOA;gBACPE,UAAUA;gBACVC,MAAMA;gBACNE,OAAOA;gBACPO,QAAQR,OAAOS;;QAG3B,KAAK;YACD,qBAAO,KAAC7B;gBAAmB,GAAGe,OAAO;gBAAEC,OAAOA;gBAAOc,aAAab,SAASc;;QAC/E,KAAK;YACD,qBAAO,KAACnC;gBAASoC,OAAOpB,oBAAoBG;;QAChD,KAAK;YACD,qBAAO,KAACZ;gBAASqB,OAAOX,gBAAgBE,QAAQS,KAAK,IAAIT,QAAQS,KAAK,GAAG,EAAE;gBAAER,OAAOA;;QACxF,KAAK;YACD,qBAAO,KAACP;gBAAc,GAAGM,OAAO;gBAAEkB,sBAAsBb,OAAOc;;QACnE,KAAK;YACD,qBAAO,KAACvB;gBAAeY,MAAMR,QAAQQ,IAAI,IAAI;gBAAIP,OAAOA;;QAC5D,KAAK;YACD,qBAAO,KAACrB;gBAAe6B,OAAOX,gBAAgBE,QAAQS,KAAK,IAAIT,QAAQS,KAAK,GAAG,EAAE;;QACrF;YACI,qBAAO;0BAAE;;IACjB;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { AccordionBlock, BarChart, BlockQuoteFilled, BlockquoteLine, Cards, ConclusionPaywall, FilledBulletList, Header, IconList, OrderedCards, OrderedList, Paragraph, Paywall, ReportTitle, Subscription, Subtitle, TextStrokeDash } from \"../ui\";\nimport { barChartPrepareData } from \"./barChartPreparedData\";\nimport { isListItemArray } from \"./guards\";\nexport const contentResolver = ({ content, color = \"violet\", actions, surveyId, mbti, slots, index }) => {\n  switch (content.type) {\n    case \"blockquote_filled\":\n      return /* @__PURE__ */ _jsx(BlockQuoteFilled, {\n        color,\n        text: content.text ?? \"\"\n      });\n    case \"header\":\n      return /* @__PURE__ */ _jsx(Header, {\n        ...content\n      });\n    case \"paragraph\":\n      return /* @__PURE__ */ _jsx(Paragraph, {\n        ...content\n      });\n    case \"cards\":\n      return isListItemArray(content.items) && /* @__PURE__ */ _jsx(Cards, {\n        items: content.items,\n        color\n      });\n    case \"ordered_cards\":\n      return /* @__PURE__ */ _jsx(OrderedCards, {\n        color: content.color,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"title\":\n      return /* @__PURE__ */ _jsx(ReportTitle, {\n        children: content.text\n      });\n    case \"subtitle\":\n      return /* @__PURE__ */ _jsx(Subtitle, {\n        ...content\n      });\n    case \"ordered_list\":\n      return /* @__PURE__ */ _jsx(OrderedList, {\n        color,\n        \"data-type\": content.type,\n        resolver: contentResolver,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"blockquote_line\":\n      return /* @__PURE__ */ _jsx(BlockquoteLine, {\n        text: content.text,\n        color\n      });\n    case \"filled_bullet_list\":\n      return /* @__PURE__ */ _jsx(FilledBulletList, {\n        \"data-color\": color,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"paywall\":\n      return /* @__PURE__ */ _jsx(Paywall, {\n        ...content,\n        color,\n        surveyId,\n        mbti,\n        index,\n        action: slots?.paywallExtraAction\n      });\n    case \"conclusion_paywall\":\n      return /* @__PURE__ */ _jsx(ConclusionPaywall, {\n        ...content,\n        color,\n        actionsSlot: actions?.conclusion_paywall\n      });\n    case \"bar_chart\":\n      return /* @__PURE__ */ _jsx(BarChart, {\n        marks: barChartPrepareData(content)\n      });\n    case \"icon_list\":\n      return /* @__PURE__ */ _jsx(IconList, {\n        items: isListItemArray(content.items) ? content.items : [],\n        color\n      });\n    case \"subscription\":\n      return /* @__PURE__ */ _jsx(Subscription, {\n        ...content,\n        subscriptionFormSlot: slots?.subscribeEmail\n      });\n    case \"text_stroke_dash\":\n      return /* @__PURE__ */ _jsx(TextStrokeDash, {\n        text: content.text ?? \"\",\n        color\n      });\n    case \"accordion\":\n      return /* @__PURE__ */ _jsx(AccordionBlock, {\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    default:\n      return /* @__PURE__ */ _jsx(_Fragment, {\n        children: \"UNKNOWN\"\n      });\n  }\n};\n",
-      "start": 1750239308402,
-      "end": 1750239308563,
+      "start": 1750271784972,
+      "end": 1750271785103,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785104,
+      "end": 1750271785104,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308563,
-      "end": 1750239308564,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/contentResolver.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { AccordionBlock, BarChart, BlockQuoteFilled, BlockquoteLine, Cards, ConclusionPaywall, FilledBulletList, Header, IconList, OrderedCards, OrderedList, Paragraph, Paywall, ReportTitle, Subscription, Subtitle, TextStrokeDash } from \"../ui\";\nimport { barChartPrepareData } from \"./barChartPreparedData\";\nimport { isListItemArray } from \"./guards\";\nexport const contentResolver = ({ content, color = \"violet\", actions, surveyId, mbti, slots, index }) => {\n  switch (content.type) {\n    case \"blockquote_filled\":\n      return /* @__PURE__ */ _jsx(BlockQuoteFilled, {\n        color,\n        text: content.text ?? \"\"\n      });\n    case \"header\":\n      return /* @__PURE__ */ _jsx(Header, {\n        ...content\n      });\n    case \"paragraph\":\n      return /* @__PURE__ */ _jsx(Paragraph, {\n        ...content\n      });\n    case \"cards\":\n      return isListItemArray(content.items) && /* @__PURE__ */ _jsx(Cards, {\n        items: content.items,\n        color\n      });\n    case \"ordered_cards\":\n      return /* @__PURE__ */ _jsx(OrderedCards, {\n        color: content.color,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"title\":\n      return /* @__PURE__ */ _jsx(ReportTitle, {\n        children: content.text\n      });\n    case \"subtitle\":\n      return /* @__PURE__ */ _jsx(Subtitle, {\n        ...content\n      });\n    case \"ordered_list\":\n      return /* @__PURE__ */ _jsx(OrderedList, {\n        color,\n        \"data-type\": content.type,\n        resolver: contentResolver,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"blockquote_line\":\n      return /* @__PURE__ */ _jsx(BlockquoteLine, {\n        text: content.text,\n        color\n      });\n    case \"filled_bullet_list\":\n      return /* @__PURE__ */ _jsx(FilledBulletList, {\n        \"data-color\": color,\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    case \"paywall\":\n      return /* @__PURE__ */ _jsx(Paywall, {\n        ...content,\n        color,\n        surveyId,\n        mbti,\n        index,\n        action: slots?.paywallExtraAction\n      });\n    case \"conclusion_paywall\":\n      return /* @__PURE__ */ _jsx(ConclusionPaywall, {\n        ...content,\n        color,\n        actionsSlot: actions?.conclusion_paywall\n      });\n    case \"bar_chart\":\n      return /* @__PURE__ */ _jsx(BarChart, {\n        marks: barChartPrepareData(content)\n      });\n    case \"icon_list\":\n      return /* @__PURE__ */ _jsx(IconList, {\n        items: isListItemArray(content.items) ? content.items : [],\n        color\n      });\n    case \"subscription\":\n      return /* @__PURE__ */ _jsx(Subscription, {\n        ...content,\n        subscriptionFormSlot: slots?.subscribeEmail\n      });\n    case \"text_stroke_dash\":\n      return /* @__PURE__ */ _jsx(TextStrokeDash, {\n        text: content.text ?? \"\",\n        color\n      });\n    case \"accordion\":\n      return /* @__PURE__ */ _jsx(AccordionBlock, {\n        items: isListItemArray(content.items) ? content.items : []\n      });\n    default:\n      return /* @__PURE__ */ _jsx(_Fragment, {\n        children: \"UNKNOWN\"\n      });\n  }\n};\n",
-      "start": 1750239308564,
-      "end": 1750239308564,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const CONGRATULATIONS_MAP: Record<string, number> = {\n    ISTJ: 11,\n    ISFJ: 11,\n    ESTJ: 9,\n    ESFJ: 11,\n    ISTP: 5,\n    ISFP: 7,\n    ESTP: 5,\n    ESFP: 7,\n    INTJ: 2,\n    INTP: 3,\n    ENTJ: 2,\n    ENTP: 3,\n    INFJ: 1,\n    INFP: 4,\n    ENFJ: 2,\n    ENFP: 6,\n};\n",
-      "start": 1750239308738,
-      "end": 1750239308771,
+      "start": 1750271785328,
+      "end": 1750271785336,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const CONGRATULATIONS_MAP = {\n    ISTJ: 11,\n    ISFJ: 11,\n    ESTJ: 9,\n    ESFJ: 11,\n    ISTP: 5,\n    ISFP: 7,\n    ESTP: 5,\n    ESFP: 7,\n    INTJ: 2,\n    INTP: 3,\n    ENTJ: 2,\n    ENTP: 3,\n    INFJ: 1,\n    INFP: 4,\n    ENFJ: 2,\n    ENFP: 6\n};\n",
-      "start": 1750239308771,
-      "end": 1750239308774,
+      "start": 1750271785336,
+      "end": 1750271785340,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/const/index.ts\"],\"sourcesContent\":[\"export const CONGRATULATIONS_MAP: Record<string, number> = {\\n    ISTJ: 11,\\n    ISFJ: 11,\\n    ESTJ: 9,\\n    ESFJ: 11,\\n    ISTP: 5,\\n    ISFP: 7,\\n    ESTP: 5,\\n    ESFP: 7,\\n    INTJ: 2,\\n    INTP: 3,\\n    ENTJ: 2,\\n    ENTP: 3,\\n    INFJ: 1,\\n    INFP: 4,\\n    ENFJ: 2,\\n    ENFP: 6,\\n};\\n\"],\"names\":[\"CONGRATULATIONS_MAP\",\"ISTJ\",\"ISFJ\",\"ESTJ\",\"ESFJ\",\"ISTP\",\"ISFP\",\"ESTP\",\"ESFP\",\"INTJ\",\"INTP\",\"ENTJ\",\"ENTP\",\"INFJ\",\"INFP\",\"ENFJ\",\"ENFP\"],\"mappings\":\"AAAA,OAAO,MAAMA,sBAA8C;IACvDC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;AACV,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const CONGRATULATIONS_MAP = {\n  ISTJ: 11,\n  ISFJ: 11,\n  ESTJ: 9,\n  ESFJ: 11,\n  ISTP: 5,\n  ISFP: 7,\n  ESTP: 5,\n  ESFP: 7,\n  INTJ: 2,\n  INTP: 3,\n  ENTJ: 2,\n  ENTP: 3,\n  INFJ: 1,\n  INFP: 4,\n  ENFJ: 2,\n  ENFP: 6\n};\n",
-      "start": 1750239308774,
-      "end": 1750239308817,
+      "start": 1750271785340,
+      "end": 1750271785352,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785353,
+      "end": 1750271785353,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/const/index.ts [vike:pluginModuleBanner] */\nexport const CONGRATULATIONS_MAP = {\n  ISTJ: 11,\n  ISFJ: 11,\n  ESTJ: 9,\n  ESFJ: 11,\n  ISTP: 5,\n  ISFP: 7,\n  ESTP: 5,\n  ESFP: 7,\n  INTJ: 2,\n  INTP: 3,\n  ENTJ: 2,\n  ENTP: 3,\n  INFJ: 1,\n  INFP: 4,\n  ENFJ: 2,\n  ENFP: 6\n};\n",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

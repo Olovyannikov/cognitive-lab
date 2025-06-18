@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet',\n};\n",
-      "start": 1750239308365,
-      "end": 1750239308388,
+      "start": 1750271784943,
+      "end": 1750271784963,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const TYPE_TO_COLOR_MAP = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet'\n};\n",
-      "start": 1750239308388,
-      "end": 1750239308395,
+      "start": 1750271784963,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts\"],\"sourcesContent\":[\"export const TYPE_TO_COLOR_MAP: Record<string, string> = {\\n    ISTJ: 'indigo',\\n    ISFJ: 'indigo',\\n    ESTJ: 'indigo',\\n    ESFJ: 'indigo',\\n\\n    ISTP: 'yellow',\\n    ISFP: 'yellow',\\n    ESTP: 'yellow',\\n    ESFP: 'yellow',\\n\\n    INFJ: 'green',\\n    INFP: 'green',\\n    ENFJ: 'green',\\n    ENFP: 'green',\\n\\n    INTJ: 'violet',\\n    INTP: 'violet',\\n    ENTJ: 'violet',\\n    ENTP: 'violet',\\n};\\n\"],\"names\":[\"TYPE_TO_COLOR_MAP\",\"ISTJ\",\"ISFJ\",\"ESTJ\",\"ESFJ\",\"ISTP\",\"ISFP\",\"ESTP\",\"ESFP\",\"INFJ\",\"INFP\",\"ENFJ\",\"ENFP\",\"INTJ\",\"INTP\",\"ENTJ\",\"ENTP\"],\"mappings\":\"AAAA,OAAO,MAAMA,oBAA4C;IACrDC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;AACV,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
-      "start": 1750239308395,
-      "end": 1750239308526,
+      "start": 1750271784971,
+      "end": 1750271785096,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785097,
+      "end": 1750271785097,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308526,
-      "end": 1750239308527,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/typeToColorMap.ts [vike:pluginModuleBanner] */\nexport const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

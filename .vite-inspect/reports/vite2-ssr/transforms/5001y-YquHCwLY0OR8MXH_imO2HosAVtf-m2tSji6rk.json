@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getFreeResultQuery } from '@/entities/Report';\n\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\n\nexport const CongratulationsPage = () => {\n    const { pending, stale } = useUnit(getFreeResultQuery);\n\n    if (stale || pending) return <PageLoader />;\n\n    return (\n        <Box component='section'>\n            <Container py='lg'>\n                <CongratulationsProvider>\n                    <FirstSlide />\n                    <SecondSlide />\n                    <LastSlide />\n                </CongratulationsProvider>\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1750239308219,
-      "end": 1750239308231,
+      "start": 1750271784771,
+      "end": 1750271784786,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { getFreeResultQuery } from '@/entities/Report';\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\nexport const CongratulationsPage = ()=>{\n    const { pending, stale } = useUnit(getFreeResultQuery);\n    if (stale || pending) return /*#__PURE__*/ _jsx(PageLoader, {});\n    return /*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        children: /*#__PURE__*/ _jsx(Container, {\n            py: \"lg\",\n            children: /*#__PURE__*/ _jsxs(CongratulationsProvider, {\n                children: [\n                    /*#__PURE__*/ _jsx(FirstSlide, {}),\n                    /*#__PURE__*/ _jsx(SecondSlide, {}),\n                    /*#__PURE__*/ _jsx(LastSlide, {})\n                ]\n            })\n        })\n    });\n};\n",
-      "start": 1750239308231,
-      "end": 1750239308236,
+      "start": 1750271784786,
+      "end": 1750271784789,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/CongratulationsPage/index.tsx\"],\"sourcesContent\":[\"import { Box, Container } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\n\\nimport { PageLoader } from '@/shared/ui';\\n\\nimport { getFreeResultQuery } from '@/entities/Report';\\n\\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from '@/widgets/CongratulationsSlider';\\n\\nexport const CongratulationsPage = () => {\\n    const { pending, stale } = useUnit(getFreeResultQuery);\\n\\n    if (stale || pending) return <PageLoader />;\\n\\n    return (\\n        <Box component='section'>\\n            <Container py='lg'>\\n                <CongratulationsProvider>\\n                    <FirstSlide />\\n                    <SecondSlide />\\n                    <LastSlide />\\n                </CongratulationsProvider>\\n            </Container>\\n        </Box>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Container\",\"useUnit\",\"PageLoader\",\"getFreeResultQuery\",\"CongratulationsProvider\",\"FirstSlide\",\"LastSlide\",\"SecondSlide\",\"CongratulationsPage\",\"pending\",\"stale\",\"component\",\"py\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,SAAS,QAAQ,gBAAgB;AAC/C,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,UAAU,QAAQ,cAAc;AAEzC,SAASC,kBAAkB,QAAQ,oBAAoB;AAEvD,SAASC,uBAAuB,EAAEC,UAAU,EAAEC,SAAS,EAAEC,WAAW,QAAQ,kCAAkC;AAE9G,OAAO,MAAMC,sBAAsB;IAC/B,MAAM,EAAEC,OAAO,EAAEC,KAAK,EAAE,GAAGT,QAAQE;IAEnC,IAAIO,SAASD,SAAS,qBAAO,KAACP;IAE9B,qBACI,KAACH;QAAIY,WAAU;kBACX,cAAA,KAACX;YAAUY,IAAG;sBACV,cAAA,MAACR;;kCACG,KAACC;kCACD,KAACE;kCACD,KAACD;;;;;AAKrB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getFreeResultQuery } from \"@/entities/Report\";\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from \"@/widgets/CongratulationsSlider\";\nexport const CongratulationsPage = () => {\n  const { pending, stale } = useUnit(getFreeResultQuery);\n  if (stale || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsx(Box, {\n    component: \"section\",\n    children: /* @__PURE__ */ _jsx(Container, {\n      py: \"lg\",\n      children: /* @__PURE__ */ _jsxs(CongratulationsProvider, {\n        children: [\n          /* @__PURE__ */ _jsx(FirstSlide, {}),\n          /* @__PURE__ */ _jsx(SecondSlide, {}),\n          /* @__PURE__ */ _jsx(LastSlide, {})\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308236,
-      "end": 1750239308266,
+      "start": 1750271784789,
+      "end": 1750271784824,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784824,
+      "end": 1750271784824,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308266,
-      "end": 1750239308266,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/CongratulationsPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getFreeResultQuery } from \"@/entities/Report\";\nimport { CongratulationsProvider, FirstSlide, LastSlide, SecondSlide } from \"@/widgets/CongratulationsSlider\";\nexport const CongratulationsPage = () => {\n  const { pending, stale } = useUnit(getFreeResultQuery);\n  if (stale || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsx(Box, {\n    component: \"section\",\n    children: /* @__PURE__ */ _jsx(Container, {\n      py: \"lg\",\n      children: /* @__PURE__ */ _jsxs(CongratulationsProvider, {\n        children: [\n          /* @__PURE__ */ _jsx(FirstSlide, {}),\n          /* @__PURE__ */ _jsx(SecondSlide, {}),\n          /* @__PURE__ */ _jsx(LastSlide, {})\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308266,
-      "end": 1750239308267,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

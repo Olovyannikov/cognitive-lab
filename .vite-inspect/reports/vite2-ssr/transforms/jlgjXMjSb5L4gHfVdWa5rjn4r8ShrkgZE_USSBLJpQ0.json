@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './TestQuestionTitle.module.css';\n\ninterface QuestionTitleProps {\n    text: string;\n    hint?: string;\n    fixed?: boolean;\n}\n\nexport const QuestionTitle = ({ text, hint, fixed = false }: QuestionTitleProps) => (\n    <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\n        <Stack gap='sm'>\n            <Title classNames={s} order={4}>\n                {text}\n            </Title>\n            <Text className={s.hint}>{hint}</Text>\n        </Stack>\n    </Group>\n);\n",
-      "start": 1750239308623,
-      "end": 1750239308634,
+      "start": 1750271785281,
+      "end": 1750271785289,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './TestQuestionTitle.module.css';\nexport const QuestionTitle = ({ text, hint, fixed = false })=>/*#__PURE__*/ _jsx(Group, {\n        className: clsx(s.wrapper, fixed && s.fixed),\n        gap: 0,\n        align: \"start\",\n        wrap: \"nowrap\",\n        children: /*#__PURE__*/ _jsxs(Stack, {\n            gap: \"sm\",\n            children: [\n                /*#__PURE__*/ _jsx(Title, {\n                    classNames: s,\n                    order: 4,\n                    children: text\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    className: s.hint,\n                    children: hint\n                })\n            ]\n        })\n    });\n",
-      "start": 1750239308634,
-      "end": 1750239308638,
+      "start": 1750271785289,
+      "end": 1750271785293,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestQuestionTitle/index.tsx\"],\"sourcesContent\":[\"import { Group, Stack, Text, Title } from '@mantine/core';\\nimport clsx from 'clsx';\\n\\nimport s from './TestQuestionTitle.module.css';\\n\\ninterface QuestionTitleProps {\\n    text: string;\\n    hint?: string;\\n    fixed?: boolean;\\n}\\n\\nexport const QuestionTitle = ({ text, hint, fixed = false }: QuestionTitleProps) => (\\n    <Group className={clsx(s.wrapper, fixed && s.fixed)} gap={0} align='start' wrap='nowrap'>\\n        <Stack gap='sm'>\\n            <Title classNames={s} order={4}>\\n                {text}\\n            </Title>\\n            <Text className={s.hint}>{hint}</Text>\\n        </Stack>\\n    </Group>\\n);\\n\"],\"names\":[\"Group\",\"Stack\",\"Text\",\"Title\",\"clsx\",\"s\",\"QuestionTitle\",\"text\",\"hint\",\"fixed\",\"className\",\"wrapper\",\"gap\",\"align\",\"wrap\",\"classNames\",\"order\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAC1D,OAAOC,UAAU,OAAO;AAExB,OAAOC,OAAO,iCAAiC;AAQ/C,OAAO,MAAMC,gBAAgB,CAAC,EAAEC,IAAI,EAAEC,IAAI,EAAEC,QAAQ,KAAK,EAAsB,iBAC3E,KAACT;QAAMU,WAAWN,KAAKC,EAAEM,OAAO,EAAEF,SAASJ,EAAEI,KAAK;QAAGG,KAAK;QAAGC,OAAM;QAAQC,MAAK;kBAC5E,cAAA,MAACb;YAAMW,KAAI;;8BACP,KAACT;oBAAMY,YAAYV;oBAAGW,OAAO;8BACxBT;;8BAEL,KAACL;oBAAKQ,WAAWL,EAAEG,IAAI;8BAAGA;;;;OAGpC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./TestQuestionTitle.module.css\";\nexport const QuestionTitle = ({ text, hint, fixed = false }) => /* @__PURE__ */ _jsx(Group, {\n  className: clsx(s.wrapper, fixed && s.fixed),\n  gap: 0,\n  align: \"start\",\n  wrap: \"nowrap\",\n  children: /* @__PURE__ */ _jsxs(Stack, {\n    gap: \"sm\",\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        classNames: s,\n        order: 4,\n        children: text\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.hint,\n        children: hint\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308638,
-      "end": 1750239308779,
+      "start": 1750271785293,
+      "end": 1750271785350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785350,
+      "end": 1750271785350,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestQuestionTitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./TestQuestionTitle.module.css\";\nexport const QuestionTitle = ({ text, hint, fixed = false }) => /* @__PURE__ */ _jsx(Group, {\n  className: clsx(s.wrapper, fixed && s.fixed),\n  gap: 0,\n  align: \"start\",\n  wrap: \"nowrap\",\n  children: /* @__PURE__ */ _jsxs(Stack, {\n    gap: \"sm\",\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        classNames: s,\n        order: 4,\n        children: text\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.hint,\n        children: hint\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

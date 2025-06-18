@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isNumber } from 'lodash-es';\n\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n\n    return true;\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308463,
+      "start": 1750271785006,
+      "end": 1750271785019,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { isNumber } from 'lodash-es';\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */ export const isValidAnswer = (answer)=>{\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n    return true;\n};\n",
-      "start": 1750239308463,
-      "end": 1750239308468,
+      "start": 1750271785019,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts\"],\"sourcesContent\":[\"import { isNumber } from 'lodash-es';\\n\\nimport type { PreparedAnswer } from '../api/types';\\n\\n/**\\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\\n */\\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\\n        return answer.answer.value !== null && answer.answer.value !== '';\\n    }\\n    if (Array.isArray(answer.answer)) {\\n        return answer.answer.length > 0;\\n    }\\n\\n    return true;\\n};\\n\"],\"names\":[\"isNumber\",\"isValidAnswer\",\"answer\",\"JSON\",\"stringify\",\"value\",\"Array\",\"isArray\",\"length\"],\"mappings\":\"AAAA,SAASA,QAAQ,QAAQ,YAAY;AAIrC;;CAEC,GACD,OAAO,MAAMC,gBAAgB,CAACC;IAC1B,IAAI,CAACF,SAASE,WAAYA,CAAAA,QAAQA,UAAU,QAAQC,KAAKC,SAAS,CAACF,OAAOA,MAAM,MAAM,IAAG,GAAI,OAAO;IACpG,IAAI,OAAOA,OAAOA,MAAM,KAAK,YAAY,WAAWA,OAAOA,MAAM,EAAE;QAC/D,OAAOA,OAAOA,MAAM,CAACG,KAAK,KAAK,QAAQH,OAAOA,MAAM,CAACG,KAAK,KAAK;IACnE;IACA,IAAIC,MAAMC,OAAO,CAACL,OAAOA,MAAM,GAAG;QAC9B,OAAOA,OAAOA,MAAM,CAACM,MAAM,GAAG;IAClC;IAEA,OAAO;AACX,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
-      "start": 1750239308468,
-      "end": 1750239308710,
+      "start": 1750271785023,
+      "end": 1750271785237,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785237,
+      "end": 1750271785237,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785237,
+      "end": 1750271785238,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308710,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/isValidAnswer.ts [vike:pluginModuleBanner] */\nimport { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './Subscription.module.css';\n\ninterface SubscriptionProps {\n    title?: string;\n    text?: string;\n    subscriptionFormSlot?: ReactNode;\n}\n\nexport const Subscription = ({ title, text, subscriptionFormSlot }: SubscriptionProps) => {\n    const isHuge = useIsHuge();\n    const isLarge = useIsLarge();\n    return (\n        <Paper\n            radius='lg'\n            bg='violet.0'\n            pos='relative'\n            mt={isLarge ? 100 : 0}\n            mx={isHuge ? -153 : 0}\n            px={isLarge ? '3xl' : 'md'}\n            py={isLarge ? '3xl' : 'xl'}\n        >\n            <Picture\n                cdn\n                right={32}\n                fit='contain'\n                pos='absolute'\n                src='/report/mail'\n                top={isLarge ? 32 : 5}\n                w={isLarge ? 261 : 90}\n                h={isLarge ? 232 : 90}\n            />\n            <Stack maw={1040} className={s.content}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\n                    {title}\n                </Title>\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\n                {subscriptionFormSlot}\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308361,
-      "end": 1750239308384,
+      "start": 1750271784925,
+      "end": 1750271784944,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './Subscription.module.css';\nexport const Subscription = ({ title, text, subscriptionFormSlot })=>{\n    const isHuge = useIsHuge();\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsxs(Paper, {\n        radius: \"lg\",\n        bg: \"violet.0\",\n        pos: \"relative\",\n        mt: isLarge ? 100 : 0,\n        mx: isHuge ? -153 : 0,\n        px: isLarge ? '3xl' : 'md',\n        py: isLarge ? '3xl' : 'xl',\n        children: [\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                right: 32,\n                fit: \"contain\",\n                pos: \"absolute\",\n                src: \"/report/mail\",\n                top: isLarge ? 32 : 5,\n                w: isLarge ? 261 : 90,\n                h: isLarge ? 232 : 90\n            }),\n            /*#__PURE__*/ _jsxs(Stack, {\n                maw: 1040,\n                className: s.content,\n                children: [\n                    /*#__PURE__*/ _jsx(Title, {\n                        order: 5,\n                        fz: isLarge ? 32 : 20,\n                        textWrap: \"balance\",\n                        maw: \"60%\",\n                        children: title\n                    }),\n                    /*#__PURE__*/ _jsx(Text, {\n                        fz: isLarge ? 24 : 18,\n                        children: text\n                    }),\n                    subscriptionFormSlot\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308384,
-      "end": 1750239308387,
+      "start": 1750271784944,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subscription/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Paper, Stack, Text, Title } from '@mantine/core';\\n\\nimport { useIsHuge, useIsLarge } from '@/shared/lib';\\nimport { Picture } from '@/shared/ui';\\n\\nimport s from './Subscription.module.css';\\n\\ninterface SubscriptionProps {\\n    title?: string;\\n    text?: string;\\n    subscriptionFormSlot?: ReactNode;\\n}\\n\\nexport const Subscription = ({ title, text, subscriptionFormSlot }: SubscriptionProps) => {\\n    const isHuge = useIsHuge();\\n    const isLarge = useIsLarge();\\n    return (\\n        <Paper\\n            radius='lg'\\n            bg='violet.0'\\n            pos='relative'\\n            mt={isLarge ? 100 : 0}\\n            mx={isHuge ? -153 : 0}\\n            px={isLarge ? '3xl' : 'md'}\\n            py={isLarge ? '3xl' : 'xl'}\\n        >\\n            <Picture\\n                cdn\\n                right={32}\\n                fit='contain'\\n                pos='absolute'\\n                src='/report/mail'\\n                top={isLarge ? 32 : 5}\\n                w={isLarge ? 261 : 90}\\n                h={isLarge ? 232 : 90}\\n            />\\n            <Stack maw={1040} className={s.content}>\\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>\\n                    {title}\\n                </Title>\\n                <Text fz={isLarge ? 24 : 18}>{text}</Text>\\n                {subscriptionFormSlot}\\n            </Stack>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Paper\",\"Stack\",\"Text\",\"Title\",\"useIsHuge\",\"useIsLarge\",\"Picture\",\"s\",\"Subscription\",\"title\",\"text\",\"subscriptionFormSlot\",\"isHuge\",\"isLarge\",\"radius\",\"bg\",\"pos\",\"mt\",\"mx\",\"px\",\"py\",\"cdn\",\"right\",\"fit\",\"src\",\"top\",\"w\",\"h\",\"maw\",\"className\",\"content\",\"order\",\"fz\",\"textWrap\"],\"mappings\":\";AACA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAE1D,SAASC,SAAS,EAAEC,UAAU,QAAQ,eAAe;AACrD,SAASC,OAAO,QAAQ,cAAc;AAEtC,OAAOC,OAAO,4BAA4B;AAQ1C,OAAO,MAAMC,eAAe,CAAC,EAAEC,KAAK,EAAEC,IAAI,EAAEC,oBAAoB,EAAqB;IACjF,MAAMC,SAASR;IACf,MAAMS,UAAUR;IAChB,qBACI,MAACL;QACGc,QAAO;QACPC,IAAG;QACHC,KAAI;QACJC,IAAIJ,UAAU,MAAM;QACpBK,IAAIN,SAAS,CAAC,MAAM;QACpBO,IAAIN,UAAU,QAAQ;QACtBO,IAAIP,UAAU,QAAQ;;0BAEtB,KAACP;gBACGe,GAAG;gBACHC,OAAO;gBACPC,KAAI;gBACJP,KAAI;gBACJQ,KAAI;gBACJC,KAAKZ,UAAU,KAAK;gBACpBa,GAAGb,UAAU,MAAM;gBACnBc,GAAGd,UAAU,MAAM;;0BAEvB,MAACZ;gBAAM2B,KAAK;gBAAMC,WAAWtB,EAAEuB,OAAO;;kCAClC,KAAC3B;wBAAM4B,OAAO;wBAAGC,IAAInB,UAAU,KAAK;wBAAIoB,UAAS;wBAAUL,KAAI;kCAC1DnB;;kCAEL,KAACP;wBAAK8B,IAAInB,UAAU,KAAK;kCAAKH;;oBAC7BC;;;;;AAIjB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({ title, text, subscriptionFormSlot }) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    radius: \"lg\",\n    bg: \"violet.0\",\n    pos: \"relative\",\n    mt: isLarge ? 100 : 0,\n    mx: isHuge ? -153 : 0,\n    px: isLarge ? \"3xl\" : \"md\",\n    py: isLarge ? \"3xl\" : \"xl\",\n    children: [\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        right: 32,\n        fit: \"contain\",\n        pos: \"absolute\",\n        src: \"/report/mail\",\n        top: isLarge ? 32 : 5,\n        w: isLarge ? 261 : 90,\n        h: isLarge ? 232 : 90\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        maw: 1040,\n        className: s.content,\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            order: 5,\n            fz: isLarge ? 32 : 20,\n            textWrap: \"balance\",\n            maw: \"60%\",\n            children: title\n          }),\n          /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 24 : 18,\n            children: text\n          }),\n          subscriptionFormSlot\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308387,
-      "end": 1750239308528,
+      "start": 1750271784956,
+      "end": 1750271785091,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785091,
+      "end": 1750271785091,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Subscription/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsHuge, useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Subscription.module.css\";\nexport const Subscription = ({ title, text, subscriptionFormSlot }) => {\n  const isHuge = useIsHuge();\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    radius: \"lg\",\n    bg: \"violet.0\",\n    pos: \"relative\",\n    mt: isLarge ? 100 : 0,\n    mx: isHuge ? -153 : 0,\n    px: isLarge ? \"3xl\" : \"md\",\n    py: isLarge ? \"3xl\" : \"xl\",\n    children: [\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        right: 32,\n        fit: \"contain\",\n        pos: \"absolute\",\n        src: \"/report/mail\",\n        top: isLarge ? 32 : 5,\n        w: isLarge ? 261 : 90,\n        h: isLarge ? 232 : 90\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        maw: 1040,\n        className: s.content,\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            order: 5,\n            fz: isLarge ? 32 : 20,\n            textWrap: \"balance\",\n            maw: \"60%\",\n            children: title\n          }),\n          /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 24 : 18,\n            children: text\n          }),\n          subscriptionFormSlot\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308528,
-      "end": 1750239308528,
+      "start": 1750271785091,
+      "end": 1750271785091,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

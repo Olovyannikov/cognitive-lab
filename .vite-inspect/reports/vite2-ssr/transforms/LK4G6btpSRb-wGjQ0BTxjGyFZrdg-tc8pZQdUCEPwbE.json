@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container, Title } from '@mantine/core';\n\nimport s from './PageLayout.module.css';\n\ninterface PageLayoutProps {\n    title: string;\n}\n\nexport const PageLayout = ({ title, children }: PropsWithChildren<PageLayoutProps>) => (\n    <Box component='section' pb={32}>\n        <Container>\n            <Title order={2} className={s.title}>\n                {title}\n            </Title>\n            {children}\n        </Container>\n    </Box>\n);\n",
-      "start": 1750239308265,
-      "end": 1750239308276,
+      "start": 1750271784811,
+      "end": 1750271784825,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from '@mantine/core';\nimport s from './PageLayout.module.css';\nexport const PageLayout = ({ title, children })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        pb: 32,\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsx(Title, {\n                    order: 2,\n                    className: s.title,\n                    children: title\n                }),\n                children\n            ]\n        })\n    });\n",
-      "start": 1750239308276,
-      "end": 1750239308282,
+      "start": 1750271784825,
+      "end": 1750271784830,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/PageLayout/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { Box, Container, Title } from '@mantine/core';\\n\\nimport s from './PageLayout.module.css';\\n\\ninterface PageLayoutProps {\\n    title: string;\\n}\\n\\nexport const PageLayout = ({ title, children }: PropsWithChildren<PageLayoutProps>) => (\\n    <Box component='section' pb={32}>\\n        <Container>\\n            <Title order={2} className={s.title}>\\n                {title}\\n            </Title>\\n            {children}\\n        </Container>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Container\",\"Title\",\"s\",\"PageLayout\",\"title\",\"children\",\"component\",\"pb\",\"order\",\"className\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AAEtD,OAAOC,OAAO,0BAA0B;AAMxC,OAAO,MAAMC,aAAa,CAAC,EAAEC,KAAK,EAAEC,QAAQ,EAAsC,iBAC9E,KAACN;QAAIO,WAAU;QAAUC,IAAI;kBACzB,cAAA,MAACP;;8BACG,KAACC;oBAAMO,OAAO;oBAAGC,WAAWP,EAAEE,KAAK;8BAC9BA;;gBAEJC;;;OAGX\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({ title, children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  pb: 32,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        order: 2,\n        className: s.title,\n        children: title\n      }),\n      children\n    ]\n  })\n});\n",
-      "start": 1750239308282,
-      "end": 1750239308322,
+      "start": 1750271784830,
+      "end": 1750271784857,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784857,
+      "end": 1750271784857,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308322,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/PageLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({ title, children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  pb: 32,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        order: 2,\n        className: s.title,\n        children: title\n      }),\n      children\n    ]\n  })\n});\n",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

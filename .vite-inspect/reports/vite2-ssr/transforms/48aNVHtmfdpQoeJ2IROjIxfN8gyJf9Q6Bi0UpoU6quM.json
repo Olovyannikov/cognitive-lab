@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const BlogPage = () => {\n    const { data, pending } = useUnit(getBlogPostsQuery);\n    const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\n    const totalPages = useUnit(BlogModel.$totalPages);\n    const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);\n\n    if (!data || pending) return <PageLoader />;\n\n    return (\n        <PageLayout title='Блог'>\n            {!pending && <Grid>{blogPosts}</Grid>}\n            <Pagination\n                mt='sm'\n                value={page}\n                hideWithOnePage\n                onChange={onPageChange}\n                total={isNumberLike(totalPages) ? totalPages : 1}\n            />\n        </PageLayout>\n    );\n};\n",
-      "start": 1750239308209,
-      "end": 1750239308226,
+      "start": 1750271784738,
+      "end": 1750271784775,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Grid, isNumberLike, Pagination } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const BlogPage = ()=>{\n    const { data, pending } = useUnit(getBlogPostsQuery);\n    const [page, onPageChange] = useUnit([\n        BlogModel.$currentPage,\n        BlogModel.pageChanged\n    ]);\n    const totalPages = useUnit(BlogModel.$totalPages);\n    const blogPosts = useList(BlogModel.$blogPosts, (post)=>post.id && /*#__PURE__*/ _jsx(BlogPostCard, {\n            post: post\n        }));\n    if (!data || pending) return /*#__PURE__*/ _jsx(PageLoader, {});\n    return /*#__PURE__*/ _jsxs(PageLayout, {\n        title: \"Блог\",\n        children: [\n            !pending && /*#__PURE__*/ _jsx(Grid, {\n                children: blogPosts\n            }),\n            /*#__PURE__*/ _jsx(Pagination, {\n                mt: \"sm\",\n                value: page,\n                hideWithOnePage: true,\n                onChange: onPageChange,\n                total: isNumberLike(totalPages) ? totalPages : 1\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308226,
-      "end": 1750239308233,
+      "start": 1750271784775,
+      "end": 1750271784782,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/BlogPage/index.tsx\"],\"sourcesContent\":[\"import { Grid, isNumberLike, Pagination } from '@mantine/core';\\nimport { useList, useUnit } from 'effector-react';\\n\\nimport { PageLoader } from '@/shared/ui';\\n\\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from '@/entities/Blog';\\n\\nimport { PageLayout } from '@/widgets/PageLayout';\\n\\nexport const BlogPage = () => {\\n    const { data, pending } = useUnit(getBlogPostsQuery);\\n    const [page, onPageChange] = useUnit([BlogModel.$currentPage, BlogModel.pageChanged]);\\n    const totalPages = useUnit(BlogModel.$totalPages);\\n    const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && <BlogPostCard post={post} />);\\n\\n    if (!data || pending) return <PageLoader />;\\n\\n    return (\\n        <PageLayout title='Блог'>\\n            {!pending && <Grid>{blogPosts}</Grid>}\\n            <Pagination\\n                mt='sm'\\n                value={page}\\n                hideWithOnePage\\n                onChange={onPageChange}\\n                total={isNumberLike(totalPages) ? totalPages : 1}\\n            />\\n        </PageLayout>\\n    );\\n};\\n\"],\"names\":[\"Grid\",\"isNumberLike\",\"Pagination\",\"useList\",\"useUnit\",\"PageLoader\",\"BlogModel\",\"BlogPostCard\",\"getBlogPostsQuery\",\"PageLayout\",\"BlogPage\",\"data\",\"pending\",\"page\",\"onPageChange\",\"$currentPage\",\"pageChanged\",\"totalPages\",\"$totalPages\",\"blogPosts\",\"$blogPosts\",\"post\",\"id\",\"title\",\"mt\",\"value\",\"hideWithOnePage\",\"onChange\",\"total\"],\"mappings\":\";AAAA,SAASA,IAAI,EAAEC,YAAY,EAAEC,UAAU,QAAQ,gBAAgB;AAC/D,SAASC,OAAO,EAAEC,OAAO,QAAQ,iBAAiB;AAElD,SAASC,UAAU,QAAQ,cAAc;AAEzC,SAASC,SAAS,EAAEC,YAAY,EAAEC,iBAAiB,QAAQ,kBAAkB;AAE7E,SAASC,UAAU,QAAQ,uBAAuB;AAElD,OAAO,MAAMC,WAAW;IACpB,MAAM,EAAEC,IAAI,EAAEC,OAAO,EAAE,GAAGR,QAAQI;IAClC,MAAM,CAACK,MAAMC,aAAa,GAAGV,QAAQ;QAACE,UAAUS,YAAY;QAAET,UAAUU,WAAW;KAAC;IACpF,MAAMC,aAAab,QAAQE,UAAUY,WAAW;IAChD,MAAMC,YAAYhB,QAAQG,UAAUc,UAAU,EAAE,CAACC,OAASA,KAAKC,EAAE,kBAAI,KAACf;YAAac,MAAMA;;IAEzF,IAAI,CAACV,QAAQC,SAAS,qBAAO,KAACP;IAE9B,qBACI,MAACI;QAAWc,OAAM;;YACb,CAACX,yBAAW,KAACZ;0BAAMmB;;0BACpB,KAACjB;gBACGsB,IAAG;gBACHC,OAAOZ;gBACPa,eAAe;gBACfC,UAAUb;gBACVc,OAAO3B,aAAagB,cAAcA,aAAa;;;;AAI/D,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Grid, isNumberLike, Pagination } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from \"@/entities/Blog\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const BlogPage = () => {\n  const { data, pending } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([\n    BlogModel.$currentPage,\n    BlogModel.pageChanged\n  ]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && /* @__PURE__ */ _jsx(BlogPostCard, {\n    post\n  }));\n  if (!data || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsxs(PageLayout, {\n    title: \"Блог\",\n    children: [\n      !pending && /* @__PURE__ */ _jsx(Grid, {\n        children: blogPosts\n      }),\n      /* @__PURE__ */ _jsx(Pagination, {\n        mt: \"sm\",\n        value: page,\n        hideWithOnePage: true,\n        onChange: onPageChange,\n        total: isNumberLike(totalPages) ? totalPages : 1\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308233,
-      "end": 1750239308245,
+      "start": 1750271784782,
+      "end": 1750271784790,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784790,
+      "end": 1750271784790,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/BlogPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Grid, isNumberLike, Pagination } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { BlogModel, BlogPostCard, getBlogPostsQuery } from \"@/entities/Blog\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const BlogPage = () => {\n  const { data, pending } = useUnit(getBlogPostsQuery);\n  const [page, onPageChange] = useUnit([\n    BlogModel.$currentPage,\n    BlogModel.pageChanged\n  ]);\n  const totalPages = useUnit(BlogModel.$totalPages);\n  const blogPosts = useList(BlogModel.$blogPosts, (post) => post.id && /* @__PURE__ */ _jsx(BlogPostCard, {\n    post\n  }));\n  if (!data || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsxs(PageLayout, {\n    title: \"Блог\",\n    children: [\n      !pending && /* @__PURE__ */ _jsx(Grid, {\n        children: blogPosts\n      }),\n      /* @__PURE__ */ _jsx(Pagination, {\n        mt: \"sm\",\n        value: page,\n        hideWithOnePage: true,\n        onChange: onPageChange,\n        total: isNumberLike(totalPages) ? totalPages : 1\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308245,
-      "end": 1750239308246,
+      "start": 1750271784790,
+      "end": 1750271784790,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

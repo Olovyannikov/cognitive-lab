@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './ui';\n",
-      "start": 1750239308395,
-      "end": 1750239308415,
+      "start": 1750271784979,
+      "end": 1750271784993,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './ui';\n",
-      "start": 1750239308415,
-      "end": 1750239308419,
+      "start": 1750271784993,
+      "end": 1750271785008,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts\"],\"sourcesContent\":[\"export * from './ui';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,OAAO\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./ui\";\n",
-      "start": 1750239308419,
-      "end": 1750239308595,
+      "start": 1750271785008,
+      "end": 1750271785197,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785197,
+      "end": 1750271785197,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/index.ts [vike:pluginModuleBanner] */\nexport * from \"./ui\";\n",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

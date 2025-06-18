@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore } from 'effector';\n\nimport type { Order } from '../types';\n\nexport const $userOrder = createStore<Order | null>(null);\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\n",
-      "start": 1750239308384,
-      "end": 1750239308406,
+      "start": 1750271784943,
+      "end": 1750271784962,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { createStore } from 'effector';\nexport const $userOrder = createStore(null, {\n    sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order)=>order?.status ?? 'pending');\n",
-      "start": 1750239308406,
-      "end": 1750239308409,
+      "start": 1750271784962,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts\"],\"sourcesContent\":[\"import { createStore } from 'effector';\\n\\nimport type { Order } from '../types';\\n\\nexport const $userOrder = createStore<Order | null>(null);\\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\\n\"],\"names\":[\"createStore\",\"$userOrder\",\"$userOrderStatus\",\"map\",\"order\",\"status\"],\"mappings\":\"AAAA,SAASA,WAAW,QAAQ,WAAW;AAIvC,OAAO,MAAMC,aAAaD,YAA0B;;GAAM;AAC1D,OAAO,MAAME,mBAAmBD,YAAYE,IAAI,CAACC,QAAUA,OAAOC,UAAU,WAAW\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750239308409,
-      "end": 1750239308566,
+      "start": 1750271784971,
+      "end": 1750271785096,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785097,
+      "end": 1750271785097,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/order.ts [vike:pluginModuleBanner] */\nimport { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750239308566,
-      "end": 1750239308567,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

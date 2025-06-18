@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport { HelpFormModel } from '../model';\n\nexport const useHelpFormViewModel = () => {\n    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n    const user = useUnit(getSurveysInfoQuery.$data);\n\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            email: '',\n            subject: '',\n            text: '',\n        },\n        validate: {\n            email: (value: string) => (/^\\S+@\\S+$/.test(value) ? null : 'Неправильный email'),\n            text: (value: string) => (value.length > 0 ? null : 'Введите ваш вопрос'),\n        },\n    });\n\n    useEffect(() => {\n        if (!user) return;\n        form.setFieldValue('email', user?.user?.email ?? '');\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [user]);\n\n    const nameProps = {\n        label: 'Имя',\n        placeholder: 'Как к Вам обращаться?',\n        key: form.key('name'),\n        ...form.getInputProps('name'),\n    };\n\n    const emailProps = {\n        label: 'Электронная почта',\n        placeholder: 'name@mail.ru',\n        withAsterisk: true,\n        key: form.key('email'),\n        ...form.getInputProps('email'),\n    };\n\n    const themeProps = {\n        label: 'Тема вопроса',\n        placeholder: 'С чем связан вопрос?',\n        key: form.key('subject'),\n        ...form.getInputProps('subject'),\n    };\n\n    const questionProps = {\n        label: 'Ваш вопрос',\n        placeholder: 'Принимаем вопросы, замечания, предложения',\n        withAsterisk: true,\n        key: form.key('text'),\n        ...form.getInputProps('text'),\n    };\n\n    const onSubmit = form.onSubmit((data) => {\n        submitFormHandler(data);\n    });\n\n    return {\n        nameProps,\n        emailProps,\n        themeProps,\n        questionProps,\n        onSubmit,\n    };\n};\n",
-      "start": 1750239308689,
-      "end": 1750239308707,
+      "start": 1750271785052,
+      "end": 1750271785065,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { useEffect } from 'react';\nimport { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { HelpFormModel } from '../model';\nexport const useHelpFormViewModel = ()=>{\n    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n    const user = useUnit(getSurveysInfoQuery.$data);\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            email: '',\n            subject: '',\n            text: ''\n        },\n        validate: {\n            email: (value)=>/^\\S+@\\S+$/.test(value) ? null : 'Неправильный email',\n            text: (value)=>value.length > 0 ? null : 'Введите ваш вопрос'\n        }\n    });\n    useEffect(()=>{\n        if (!user) return;\n        form.setFieldValue('email', user?.user?.email ?? '');\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        user\n    ]);\n    const nameProps = {\n        label: 'Имя',\n        placeholder: 'Как к Вам обращаться?',\n        key: form.key('name'),\n        ...form.getInputProps('name')\n    };\n    const emailProps = {\n        label: 'Электронная почта',\n        placeholder: 'name@mail.ru',\n        withAsterisk: true,\n        key: form.key('email'),\n        ...form.getInputProps('email')\n    };\n    const themeProps = {\n        label: 'Тема вопроса',\n        placeholder: 'С чем связан вопрос?',\n        key: form.key('subject'),\n        ...form.getInputProps('subject')\n    };\n    const questionProps = {\n        label: 'Ваш вопрос',\n        placeholder: 'Принимаем вопросы, замечания, предложения',\n        withAsterisk: true,\n        key: form.key('text'),\n        ...form.getInputProps('text')\n    };\n    const onSubmit = form.onSubmit((data)=>{\n        submitFormHandler(data);\n    });\n    return {\n        nameProps,\n        emailProps,\n        themeProps,\n        questionProps,\n        onSubmit\n    };\n};\n",
-      "start": 1750239308707,
-      "end": 1750239308708,
+      "start": 1750271785065,
+      "end": 1750271785069,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/view-model/index.ts\"],\"sourcesContent\":[\"import { useEffect } from 'react';\\nimport { useForm } from '@mantine/form';\\nimport { useUnit } from 'effector-react';\\n\\nimport { getSurveysInfoQuery } from '@/entities/Report';\\n\\nimport { HelpFormModel } from '../model';\\n\\nexport const useHelpFormViewModel = () => {\\n    const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\\n    const user = useUnit(getSurveysInfoQuery.$data);\\n\\n    const form = useForm({\\n        mode: 'controlled',\\n        initialValues: {\\n            name: '',\\n            email: '',\\n            subject: '',\\n            text: '',\\n        },\\n        validate: {\\n            email: (value: string) => (/^\\\\S+@\\\\S+$/.test(value) ? null : 'Неправильный email'),\\n            text: (value: string) => (value.length > 0 ? null : 'Введите ваш вопрос'),\\n        },\\n    });\\n\\n    useEffect(() => {\\n        if (!user) return;\\n        form.setFieldValue('email', user?.user?.email ?? '');\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [user]);\\n\\n    const nameProps = {\\n        label: 'Имя',\\n        placeholder: 'Как к Вам обращаться?',\\n        key: form.key('name'),\\n        ...form.getInputProps('name'),\\n    };\\n\\n    const emailProps = {\\n        label: 'Электронная почта',\\n        placeholder: 'name@mail.ru',\\n        withAsterisk: true,\\n        key: form.key('email'),\\n        ...form.getInputProps('email'),\\n    };\\n\\n    const themeProps = {\\n        label: 'Тема вопроса',\\n        placeholder: 'С чем связан вопрос?',\\n        key: form.key('subject'),\\n        ...form.getInputProps('subject'),\\n    };\\n\\n    const questionProps = {\\n        label: 'Ваш вопрос',\\n        placeholder: 'Принимаем вопросы, замечания, предложения',\\n        withAsterisk: true,\\n        key: form.key('text'),\\n        ...form.getInputProps('text'),\\n    };\\n\\n    const onSubmit = form.onSubmit((data) => {\\n        submitFormHandler(data);\\n    });\\n\\n    return {\\n        nameProps,\\n        emailProps,\\n        themeProps,\\n        questionProps,\\n        onSubmit,\\n    };\\n};\\n\"],\"names\":[\"useEffect\",\"useForm\",\"useUnit\",\"getSurveysInfoQuery\",\"HelpFormModel\",\"useHelpFormViewModel\",\"submitFormHandler\",\"submitHelpForm\",\"user\",\"$data\",\"form\",\"mode\",\"initialValues\",\"name\",\"email\",\"subject\",\"text\",\"validate\",\"value\",\"test\",\"length\",\"setFieldValue\",\"nameProps\",\"label\",\"placeholder\",\"key\",\"getInputProps\",\"emailProps\",\"withAsterisk\",\"themeProps\",\"questionProps\",\"onSubmit\",\"data\"],\"mappings\":\"AAAA,SAASA,SAAS,QAAQ,QAAQ;AAClC,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,mBAAmB,QAAQ,oBAAoB;AAExD,SAASC,aAAa,QAAQ,WAAW;AAEzC,OAAO,MAAMC,uBAAuB;IAChC,MAAMC,oBAAoBJ,QAAQE,cAAcG,cAAc;IAC9D,MAAMC,OAAON,QAAQC,oBAAoBM,KAAK;IAE9C,MAAMC,OAAOT,QAAQ;QACjBU,MAAM;QACNC,eAAe;YACXC,MAAM;YACNC,OAAO;YACPC,SAAS;YACTC,MAAM;QACV;QACAC,UAAU;YACNH,OAAO,CAACI,QAAmB,YAAYC,IAAI,CAACD,SAAS,OAAO;YAC5DF,MAAM,CAACE,QAAmBA,MAAME,MAAM,GAAG,IAAI,OAAO;QACxD;IACJ;IAEApB,UAAU;QACN,IAAI,CAACQ,MAAM;QACXE,KAAKW,aAAa,CAAC,SAASb,MAAMA,MAAMM,SAAS;IACjD,uDAAuD;IAC3D,GAAG;QAACN;KAAK;IAET,MAAMc,YAAY;QACdC,OAAO;QACPC,aAAa;QACbC,KAAKf,KAAKe,GAAG,CAAC;QACd,GAAGf,KAAKgB,aAAa,CAAC,OAAO;IACjC;IAEA,MAAMC,aAAa;QACfJ,OAAO;QACPC,aAAa;QACbI,cAAc;QACdH,KAAKf,KAAKe,GAAG,CAAC;QACd,GAAGf,KAAKgB,aAAa,CAAC,QAAQ;IAClC;IAEA,MAAMG,aAAa;QACfN,OAAO;QACPC,aAAa;QACbC,KAAKf,KAAKe,GAAG,CAAC;QACd,GAAGf,KAAKgB,aAAa,CAAC,UAAU;IACpC;IAEA,MAAMI,gBAAgB;QAClBP,OAAO;QACPC,aAAa;QACbI,cAAc;QACdH,KAAKf,KAAKe,GAAG,CAAC;QACd,GAAGf,KAAKgB,aAAa,CAAC,OAAO;IACjC;IAEA,MAAMK,WAAWrB,KAAKqB,QAAQ,CAAC,CAACC;QAC5B1B,kBAAkB0B;IACtB;IAEA,OAAO;QACHV;QACAK;QACAE;QACAC;QACAC;IACJ;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { useEffect } from \"react\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { HelpFormModel } from \"../model\";\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      email: \"\",\n      subject: \"\",\n      text: \"\"\n    },\n    validate: {\n      email: (value) => /^\\S+@\\S+$/.test(value) ? null : \"Неправильный email\",\n      text: (value) => value.length > 0 ? null : \"Введите ваш вопрос\"\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue(\"email\", user?.user?.email ?? \"\");\n  }, [\n    user\n  ]);\n  const nameProps = {\n    label: \"Имя\",\n    placeholder: \"Как к Вам обращаться?\",\n    key: form.key(\"name\"),\n    ...form.getInputProps(\"name\")\n  };\n  const emailProps = {\n    label: \"Электронная почта\",\n    placeholder: \"name@mail.ru\",\n    withAsterisk: true,\n    key: form.key(\"email\"),\n    ...form.getInputProps(\"email\")\n  };\n  const themeProps = {\n    label: \"Тема вопроса\",\n    placeholder: \"С чем связан вопрос?\",\n    key: form.key(\"subject\"),\n    ...form.getInputProps(\"subject\")\n  };\n  const questionProps = {\n    label: \"Ваш вопрос\",\n    placeholder: \"Принимаем вопросы, замечания, предложения\",\n    withAsterisk: true,\n    key: form.key(\"text\"),\n    ...form.getInputProps(\"text\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};\n",
-      "start": 1750239308708,
-      "end": 1750239308807,
+      "start": 1750271785069,
+      "end": 1750271785267,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785267,
+      "end": 1750271785267,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785267,
+      "end": 1750271785268,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/view-model/index.ts [vike:pluginModuleBanner] */\nimport { useEffect } from \"react\";\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { HelpFormModel } from \"../model\";\nexport const useHelpFormViewModel = () => {\n  const submitFormHandler = useUnit(HelpFormModel.submitHelpForm);\n  const user = useUnit(getSurveysInfoQuery.$data);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      email: \"\",\n      subject: \"\",\n      text: \"\"\n    },\n    validate: {\n      email: (value) => /^\\S+@\\S+$/.test(value) ? null : \"Неправильный email\",\n      text: (value) => value.length > 0 ? null : \"Введите ваш вопрос\"\n    }\n  });\n  useEffect(() => {\n    if (!user) return;\n    form.setFieldValue(\"email\", user?.user?.email ?? \"\");\n  }, [\n    user\n  ]);\n  const nameProps = {\n    label: \"Имя\",\n    placeholder: \"Как к Вам обращаться?\",\n    key: form.key(\"name\"),\n    ...form.getInputProps(\"name\")\n  };\n  const emailProps = {\n    label: \"Электронная почта\",\n    placeholder: \"name@mail.ru\",\n    withAsterisk: true,\n    key: form.key(\"email\"),\n    ...form.getInputProps(\"email\")\n  };\n  const themeProps = {\n    label: \"Тема вопроса\",\n    placeholder: \"С чем связан вопрос?\",\n    key: form.key(\"subject\"),\n    ...form.getInputProps(\"subject\")\n  };\n  const questionProps = {\n    label: \"Ваш вопрос\",\n    placeholder: \"Принимаем вопросы, замечания, предложения\",\n    withAsterisk: true,\n    key: form.key(\"text\"),\n    ...form.getInputProps(\"text\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    submitFormHandler(data);\n  });\n  return {\n    nameProps,\n    emailProps,\n    themeProps,\n    questionProps,\n    onSubmit\n  };\n};\n",
-      "start": 1750239308807,
-      "end": 1750239308807,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

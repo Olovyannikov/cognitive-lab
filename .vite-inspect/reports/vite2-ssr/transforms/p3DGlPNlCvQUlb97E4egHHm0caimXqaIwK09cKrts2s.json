@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren, ReactNode, Ref } from 'react';\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport s from './Section.module.css';\n\ninterface SectionProps extends BoxProps {\n    title?: ReactNode;\n    filledText?: string;\n    containerClassName?: string;\n    ref?: Ref<HTMLDivElement>;\n    id?: string;\n    hidden?: boolean;\n}\n\nexport const Section = ({\n    children,\n    filledText,\n    title,\n    className,\n    containerClassName,\n    ref,\n    id,\n    hidden = false,\n    ...props\n}: PropsWithChildren<SectionProps>) => (\n    <Box\n        id={id}\n        ref={ref}\n        className={clsx(s.box, className)}\n        pos='relative'\n        component='section'\n        hidden={hidden}\n        {...props}\n    >\n        <Container className={containerClassName}>\n            {(title || filledText) && (\n                <Title className={s.title} order={2}>\n                    {title}\n                    <span>{filledText}</span>\n                </Title>\n            )}\n            {children}\n        </Container>\n    </Box>\n);\n",
-      "start": 1750239308322,
-      "end": 1750239308334,
+      "start": 1750271784867,
+      "end": 1750271784885,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport s from './Section.module.css';\nexport const Section = ({ children, filledText, title, className, containerClassName, ref, id, hidden = false, ...props })=>/*#__PURE__*/ _jsx(Box, {\n        id: id,\n        ref: ref,\n        className: clsx(s.box, className),\n        pos: \"relative\",\n        component: \"section\",\n        hidden: hidden,\n        ...props,\n        children: /*#__PURE__*/ _jsxs(Container, {\n            className: containerClassName,\n            children: [\n                (title || filledText) && /*#__PURE__*/ _jsxs(Title, {\n                    className: s.title,\n                    order: 2,\n                    children: [\n                        title,\n                        /*#__PURE__*/ _jsx(\"span\", {\n                            children: filledText\n                        })\n                    ]\n                }),\n                children\n            ]\n        })\n    });\n",
-      "start": 1750239308334,
-      "end": 1750239308336,
+      "start": 1750271784885,
+      "end": 1750271784898,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Section/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren, ReactNode, Ref } from 'react';\\nimport { Box, type BoxProps, Container, Title } from '@mantine/core';\\nimport clsx from 'clsx';\\n\\nimport s from './Section.module.css';\\n\\ninterface SectionProps extends BoxProps {\\n    title?: ReactNode;\\n    filledText?: string;\\n    containerClassName?: string;\\n    ref?: Ref<HTMLDivElement>;\\n    id?: string;\\n    hidden?: boolean;\\n}\\n\\nexport const Section = ({\\n    children,\\n    filledText,\\n    title,\\n    className,\\n    containerClassName,\\n    ref,\\n    id,\\n    hidden = false,\\n    ...props\\n}: PropsWithChildren<SectionProps>) => (\\n    <Box\\n        id={id}\\n        ref={ref}\\n        className={clsx(s.box, className)}\\n        pos='relative'\\n        component='section'\\n        hidden={hidden}\\n        {...props}\\n    >\\n        <Container className={containerClassName}>\\n            {(title || filledText) && (\\n                <Title className={s.title} order={2}>\\n                    {title}\\n                    <span>{filledText}</span>\\n                </Title>\\n            )}\\n            {children}\\n        </Container>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Container\",\"Title\",\"clsx\",\"s\",\"Section\",\"children\",\"filledText\",\"title\",\"className\",\"containerClassName\",\"ref\",\"id\",\"hidden\",\"props\",\"box\",\"pos\",\"component\",\"order\",\"span\"],\"mappings\":\";AACA,SAASA,GAAG,EAAiBC,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AACrE,OAAOC,UAAU,OAAO;AAExB,OAAOC,OAAO,uBAAuB;AAWrC,OAAO,MAAMC,UAAU,CAAC,EACpBC,QAAQ,EACRC,UAAU,EACVC,KAAK,EACLC,SAAS,EACTC,kBAAkB,EAClBC,GAAG,EACHC,EAAE,EACFC,SAAS,KAAK,EACd,GAAGC,OAC2B,iBAC9B,KAACd;QACGY,IAAIA;QACJD,KAAKA;QACLF,WAAWN,KAAKC,EAAEW,GAAG,EAAEN;QACvBO,KAAI;QACJC,WAAU;QACVJ,QAAQA;QACP,GAAGC,KAAK;kBAET,cAAA,MAACb;YAAUQ,WAAWC;;gBAChBF,CAAAA,SAASD,UAAS,mBAChB,MAACL;oBAAMO,WAAWL,EAAEI,KAAK;oBAAEU,OAAO;;wBAC7BV;sCACD,KAACW;sCAAMZ;;;;gBAGdD;;;OAGX\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./Section.module.css\";\nexport const Section = ({ children, filledText, title, className, containerClassName, ref, id, hidden = false, ...props }) => /* @__PURE__ */ _jsx(Box, {\n  id,\n  ref,\n  className: clsx(s.box, className),\n  pos: \"relative\",\n  component: \"section\",\n  hidden,\n  ...props,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    className: containerClassName,\n    children: [\n      (title || filledText) && /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        order: 2,\n        children: [\n          title,\n          /* @__PURE__ */ _jsx(\"span\", {\n            children: filledText\n          })\n        ]\n      }),\n      children\n    ]\n  })\n});\n",
-      "start": 1750239308336,
-      "end": 1750239308440,
+      "start": 1750271784898,
+      "end": 1750271785009,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785010,
+      "end": 1750271785010,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/Section/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport s from \"./Section.module.css\";\nexport const Section = ({ children, filledText, title, className, containerClassName, ref, id, hidden = false, ...props }) => /* @__PURE__ */ _jsx(Box, {\n  id,\n  ref,\n  className: clsx(s.box, className),\n  pos: \"relative\",\n  component: \"section\",\n  hidden,\n  ...props,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    className: containerClassName,\n    children: [\n      (title || filledText) && /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        order: 2,\n        children: [\n          title,\n          /* @__PURE__ */ _jsx(\"span\", {\n            children: filledText\n          })\n        ]\n      }),\n      children\n    ]\n  })\n});\n",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

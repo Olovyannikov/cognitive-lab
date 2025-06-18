@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useMemo } from 'react';\nimport { Box, Button, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section, StickyScrollReveal } from '@/shared/ui';\n\nimport s from './WhyUs.module.css';\n\nexport const WhyUs = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n\n    const CARDS = useMemo(\n        () => [\n            {\n                id: 0,\n                color: 'lime.8',\n                title: 'Уникальные\\nAI-инсайты',\n                description:\n                    'Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.',\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENFJ`} />,\n            },\n            {\n                id: 1,\n                color: 'violet.7',\n                title: 'Подтверждённая эффективность',\n                description:\n                    'Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.',\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENTJ`} />,\n            },\n            {\n                id: 2,\n                color: 'pink.7',\n                title: 'Постоянное совершенствование',\n                description:\n                    'Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.',\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ESTP`} />,\n            },\n        ],\n        [isMobile, isLarge]\n    );\n\n    return (\n        <Section className={s.root} containerClassName={s.container}>\n            <Title order={2} className={s.title} ta='center'>\n                Почему стоит выбрать тестирование в&nbsp;\n                <Text span c='violet'>\n                    CognitiveLab?\n                </Text>\n            </Title>\n            <Box className={s.content}>\n                <StickyScrollReveal\n                    contentClassName={s.images}\n                    titleClassName={s.cardTitle}\n                    descriptionClassName={s.cardDescription}\n                    content={CARDS}\n                />\n            </Box>\n            <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={604} component='a' href={ROUTES.TEST}>\n                Пройти тест\n            </Button>\n        </Section>\n    );\n};\n",
-      "start": 1750239308417,
-      "end": 1750239308435,
+      "start": 1750271784963,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from 'react';\nimport { Box, Button, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, Section, StickyScrollReveal } from '@/shared/ui';\nimport s from './WhyUs.module.css';\nexport const WhyUs = ()=>{\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n    const CARDS = useMemo(()=>[\n            {\n                id: 0,\n                color: 'lime.8',\n                title: 'Уникальные\\nAI-инсайты',\n                description: 'Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.',\n                content: /*#__PURE__*/ _jsx(Picture, {\n                    cdn: true,\n                    src: `/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENFJ`\n                })\n            },\n            {\n                id: 1,\n                color: 'violet.7',\n                title: 'Подтверждённая эффективность',\n                description: 'Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.',\n                content: /*#__PURE__*/ _jsx(Picture, {\n                    cdn: true,\n                    src: `/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENTJ`\n                })\n            },\n            {\n                id: 2,\n                color: 'pink.7',\n                title: 'Постоянное совершенствование',\n                description: 'Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.',\n                content: /*#__PURE__*/ _jsx(Picture, {\n                    cdn: true,\n                    src: `/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ESTP`\n                })\n            }\n        ], [\n        isMobile,\n        isLarge\n    ]);\n    return /*#__PURE__*/ _jsxs(Section, {\n        className: s.root,\n        containerClassName: s.container,\n        children: [\n            /*#__PURE__*/ _jsxs(Title, {\n                order: 2,\n                className: s.title,\n                ta: \"center\",\n                children: [\n                    \"Почему стоит выбрать тестирование в \",\n                    /*#__PURE__*/ _jsx(Text, {\n                        span: true,\n                        c: \"violet\",\n                        children: \"CognitiveLab?\"\n                    })\n                ]\n            }),\n            /*#__PURE__*/ _jsx(Box, {\n                className: s.content,\n                children: /*#__PURE__*/ _jsx(StickyScrollReveal, {\n                    contentClassName: s.images,\n                    titleClassName: s.cardTitle,\n                    descriptionClassName: s.cardDescription,\n                    content: CARDS\n                })\n            }),\n            /*#__PURE__*/ _jsx(Button, {\n                size: isMobile ? 'md' : 'xl',\n                fullWidth: true,\n                maw: 604,\n                component: \"a\",\n                href: ROUTES.TEST,\n                children: \"Пройти тест\"\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308441,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/WhyUs/index.tsx\"],\"sourcesContent\":[\"import { useMemo } from 'react';\\nimport { Box, Button, Text, Title } from '@mantine/core';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { ROUTES } from '@/shared/config';\\nimport { useIsLarge } from '@/shared/lib';\\nimport { Picture, Section, StickyScrollReveal } from '@/shared/ui';\\n\\nimport s from './WhyUs.module.css';\\n\\nexport const WhyUs = () => {\\n    const { isMobile } = usePageContext();\\n    const isLarge = useIsLarge();\\n\\n    const CARDS = useMemo(\\n        () => [\\n            {\\n                id: 0,\\n                color: 'lime.8',\\n                title: 'Уникальные\\\\nAI-инсайты',\\n                description:\\n                    'Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.',\\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENFJ`} />,\\n            },\\n            {\\n                id: 1,\\n                color: 'violet.7',\\n                title: 'Подтверждённая эффективность',\\n                description:\\n                    'Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.',\\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ENTJ`} />,\\n            },\\n            {\\n                id: 2,\\n                color: 'pink.7',\\n                title: 'Постоянное совершенствование',\\n                description:\\n                    'Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.',\\n                content: <Picture cdn src={`/landing/why-us/${isMobile || !isLarge ? 'mobile/' : ''}ESTP`} />,\\n            },\\n        ],\\n        [isMobile, isLarge]\\n    );\\n\\n    return (\\n        <Section className={s.root} containerClassName={s.container}>\\n            <Title order={2} className={s.title} ta='center'>\\n                Почему стоит выбрать тестирование в&nbsp;\\n                <Text span c='violet'>\\n                    CognitiveLab?\\n                </Text>\\n            </Title>\\n            <Box className={s.content}>\\n                <StickyScrollReveal\\n                    contentClassName={s.images}\\n                    titleClassName={s.cardTitle}\\n                    descriptionClassName={s.cardDescription}\\n                    content={CARDS}\\n                />\\n            </Box>\\n            <Button size={isMobile ? 'md' : 'xl'} fullWidth maw={604} component='a' href={ROUTES.TEST}>\\n                Пройти тест\\n            </Button>\\n        </Section>\\n    );\\n};\\n\"],\"names\":[\"useMemo\",\"Box\",\"Button\",\"Text\",\"Title\",\"usePageContext\",\"ROUTES\",\"useIsLarge\",\"Picture\",\"Section\",\"StickyScrollReveal\",\"s\",\"WhyUs\",\"isMobile\",\"isLarge\",\"CARDS\",\"id\",\"color\",\"title\",\"description\",\"content\",\"cdn\",\"src\",\"className\",\"root\",\"containerClassName\",\"container\",\"order\",\"ta\",\"span\",\"c\",\"contentClassName\",\"images\",\"titleClassName\",\"cardTitle\",\"descriptionClassName\",\"cardDescription\",\"size\",\"fullWidth\",\"maw\",\"component\",\"href\",\"TEST\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,QAAQ;AAChC,SAASC,GAAG,EAAEC,MAAM,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AACzD,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,MAAM,QAAQ,kBAAkB;AACzC,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,OAAO,EAAEC,OAAO,EAAEC,kBAAkB,QAAQ,cAAc;AAEnE,OAAOC,OAAO,qBAAqB;AAEnC,OAAO,MAAMC,QAAQ;IACjB,MAAM,EAAEC,QAAQ,EAAE,GAAGR;IACrB,MAAMS,UAAUP;IAEhB,MAAMQ,QAAQf,QACV,IAAM;YACF;gBACIgB,IAAI;gBACJC,OAAO;gBACPC,OAAO;gBACPC,aACI;gBACJC,uBAAS,KAACZ;oBAAQa,GAAG;oBAACC,KAAK,CAAC,gBAAgB,EAAET,YAAY,CAACC,UAAU,YAAY,GAAG,IAAI,CAAC;;YAC7F;YACA;gBACIE,IAAI;gBACJC,OAAO;gBACPC,OAAO;gBACPC,aACI;gBACJC,uBAAS,KAACZ;oBAAQa,GAAG;oBAACC,KAAK,CAAC,gBAAgB,EAAET,YAAY,CAACC,UAAU,YAAY,GAAG,IAAI,CAAC;;YAC7F;YACA;gBACIE,IAAI;gBACJC,OAAO;gBACPC,OAAO;gBACPC,aACI;gBACJC,uBAAS,KAACZ;oBAAQa,GAAG;oBAACC,KAAK,CAAC,gBAAgB,EAAET,YAAY,CAACC,UAAU,YAAY,GAAG,IAAI,CAAC;;YAC7F;SACH,EACD;QAACD;QAAUC;KAAQ;IAGvB,qBACI,MAACL;QAAQc,WAAWZ,EAAEa,IAAI;QAAEC,oBAAoBd,EAAEe,SAAS;;0BACvD,MAACtB;gBAAMuB,OAAO;gBAAGJ,WAAWZ,EAAEO,KAAK;gBAAEU,IAAG;;oBAAS;kCAE7C,KAACzB;wBAAK0B,IAAI;wBAACC,GAAE;kCAAS;;;;0BAI1B,KAAC7B;gBAAIsB,WAAWZ,EAAES,OAAO;0BACrB,cAAA,KAACV;oBACGqB,kBAAkBpB,EAAEqB,MAAM;oBAC1BC,gBAAgBtB,EAAEuB,SAAS;oBAC3BC,sBAAsBxB,EAAEyB,eAAe;oBACvChB,SAASL;;;0BAGjB,KAACb;gBAAOmC,MAAMxB,WAAW,OAAO;gBAAMyB,SAAS;gBAACC,KAAK;gBAAKC,WAAU;gBAAIC,MAAMnC,OAAOoC,IAAI;0BAAE;;;;AAKvG,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Button, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section, StickyScrollReveal } from \"@/shared/ui\";\nimport s from \"./WhyUs.module.css\";\nexport const WhyUs = () => {\n  const { isMobile } = usePageContext();\n  const isLarge = useIsLarge();\n  const CARDS = useMemo(() => [\n    {\n      id: 0,\n      color: \"lime.8\",\n      title: \"Уникальные\\nAI-инсайты\",\n      description: \"Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ENFJ`\n      })\n    },\n    {\n      id: 1,\n      color: \"violet.7\",\n      title: \"Подтверждённая эффективность\",\n      description: \"Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ENTJ`\n      })\n    },\n    {\n      id: 2,\n      color: \"pink.7\",\n      title: \"Постоянное совершенствование\",\n      description: \"Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ESTP`\n      })\n    }\n  ], [\n    isMobile,\n    isLarge\n  ]);\n  return /* @__PURE__ */ _jsxs(Section, {\n    className: s.root,\n    containerClassName: s.container,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        order: 2,\n        className: s.title,\n        ta: \"center\",\n        children: [\n          \"Почему стоит выбрать тестирование в \",\n          /* @__PURE__ */ _jsx(Text, {\n            span: true,\n            c: \"violet\",\n            children: \"CognitiveLab?\"\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Box, {\n        className: s.content,\n        children: /* @__PURE__ */ _jsx(StickyScrollReveal, {\n          contentClassName: s.images,\n          titleClassName: s.cardTitle,\n          descriptionClassName: s.cardDescription,\n          content: CARDS\n        })\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        size: isMobile ? \"md\" : \"xl\",\n        fullWidth: true,\n        maw: 604,\n        component: \"a\",\n        href: ROUTES.TEST,\n        children: \"Пройти тест\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308441,
-      "end": 1750239308659,
+      "start": 1750271784986,
+      "end": 1750271785165,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785165,
+      "end": 1750271785165,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/WhyUs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Button, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, Section, StickyScrollReveal } from \"@/shared/ui\";\nimport s from \"./WhyUs.module.css\";\nexport const WhyUs = () => {\n  const { isMobile } = usePageContext();\n  const isLarge = useIsLarge();\n  const CARDS = useMemo(() => [\n    {\n      id: 0,\n      color: \"lime.8\",\n      title: \"Уникальные\\nAI-инсайты\",\n      description: \"Искусственный интеллект анализирует тонкие детали, которые обычные опросы не учитывают, создавая глубоко индивидуализированный профиль и повышая точность рекомендаций.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ENFJ`\n      })\n    },\n    {\n      id: 1,\n      color: \"violet.7\",\n      title: \"Подтверждённая эффективность\",\n      description: \"Тысячи пользователей уже отметили точность отчётов и рост личной эффективности. Постоянная обратная связь помогает нам совершенствовать продукт и гарантировать высокое качество результатов.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ENTJ`\n      })\n    },\n    {\n      id: 2,\n      color: \"pink.7\",\n      title: \"Постоянное совершенствование\",\n      description: \"Мы опираемся на проверенные исследования, отзывы пользователей и последние достижения поведенческой науки. Наш тест непрерывно обновляется, сохраняя свою актуальность и эффективность.\",\n      content: /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        src: `/landing/why-us/${isMobile || !isLarge ? \"mobile/\" : \"\"}ESTP`\n      })\n    }\n  ], [\n    isMobile,\n    isLarge\n  ]);\n  return /* @__PURE__ */ _jsxs(Section, {\n    className: s.root,\n    containerClassName: s.container,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        order: 2,\n        className: s.title,\n        ta: \"center\",\n        children: [\n          \"Почему стоит выбрать тестирование в \",\n          /* @__PURE__ */ _jsx(Text, {\n            span: true,\n            c: \"violet\",\n            children: \"CognitiveLab?\"\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Box, {\n        className: s.content,\n        children: /* @__PURE__ */ _jsx(StickyScrollReveal, {\n          contentClassName: s.images,\n          titleClassName: s.cardTitle,\n          descriptionClassName: s.cardDescription,\n          content: CARDS\n        })\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        size: isMobile ? \"md\" : \"xl\",\n        fullWidth: true,\n        maw: 604,\n        component: \"a\",\n        href: ROUTES.TEST,\n        children: \"Пройти тест\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308659,
-      "end": 1750239308659,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

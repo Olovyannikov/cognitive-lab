@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const TypesPage = () => {\n    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => (\n        <PersonalityCategory description={description} title={category} types={types} />\n    ));\n\n    return (\n        <PageLayout title='Типы личности'>\n            <Stack>{categories}</Stack>\n        </PageLayout>\n    );\n};\n",
-      "start": 1750239308233,
-      "end": 1750239308261,
+      "start": 1750271784776,
+      "end": 1750271784790,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const TypesPage = ()=>{\n    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description })=>/*#__PURE__*/ _jsx(PersonalityCategory, {\n            description: description,\n            title: category,\n            types: types\n        }));\n    return /*#__PURE__*/ _jsx(PageLayout, {\n        title: \"Типы личности\",\n        children: /*#__PURE__*/ _jsx(Stack, {\n            children: categories\n        })\n    });\n};\n",
-      "start": 1750239308261,
-      "end": 1750239308267,
+      "start": 1750271784790,
+      "end": 1750271784811,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypesPage/index.tsx\"],\"sourcesContent\":[\"import { Stack } from '@mantine/core';\\nimport { useList } from 'effector-react';\\n\\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from '@/entities/Personality';\\n\\nimport { PageLayout } from '@/widgets/PageLayout';\\n\\nexport const TypesPage = () => {\\n    const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => (\\n        <PersonalityCategory description={description} title={category} types={types} />\\n    ));\\n\\n    return (\\n        <PageLayout title='Типы личности'>\\n            <Stack>{categories}</Stack>\\n        </PageLayout>\\n    );\\n};\\n\"],\"names\":[\"Stack\",\"useList\",\"getPersonalityTypesWithCategoriesQuery\",\"PersonalityCategory\",\"PageLayout\",\"TypesPage\",\"categories\",\"$data\",\"category\",\"types\",\"description\",\"title\"],\"mappings\":\";AAAA,SAASA,KAAK,QAAQ,gBAAgB;AACtC,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,sCAAsC,EAAEC,mBAAmB,QAAQ,yBAAyB;AAErG,SAASC,UAAU,QAAQ,uBAAuB;AAElD,OAAO,MAAMC,YAAY;IACrB,MAAMC,aAAaL,QAAQC,uCAAuCK,KAAK,EAAE,CAAC,EAAEC,QAAQ,EAAEC,KAAK,EAAEC,WAAW,EAAE,iBACtG,KAACP;YAAoBO,aAAaA;YAAaC,OAAOH;YAAUC,OAAOA;;IAG3E,qBACI,KAACL;QAAWO,OAAM;kBACd,cAAA,KAACX;sBAAOM;;;AAGpB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from \"@/entities/Personality\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => /* @__PURE__ */ _jsx(PersonalityCategory, {\n    description,\n    title: category,\n    types\n  }));\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Типы личности\",\n    children: /* @__PURE__ */ _jsx(Stack, {\n      children: categories\n    })\n  });\n};\n",
-      "start": 1750239308267,
-      "end": 1750239308293,
+      "start": 1750271784811,
+      "end": 1750271784827,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784827,
+      "end": 1750271784827,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308293,
-      "end": 1750239308293,
+      "start": 1750271784827,
+      "end": 1750271784827,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/TypesPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { getPersonalityTypesWithCategoriesQuery, PersonalityCategory } from \"@/entities/Personality\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const TypesPage = () => {\n  const categories = useList(getPersonalityTypesWithCategoriesQuery.$data, ({ category, types, description }) => /* @__PURE__ */ _jsx(PersonalityCategory, {\n    description,\n    title: category,\n    types\n  }));\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Типы личности\",\n    children: /* @__PURE__ */ _jsx(Stack, {\n      children: categories\n    })\n  });\n};\n",
-      "start": 1750239308293,
-      "end": 1750239308294,
+      "start": 1750271784827,
+      "end": 1750271784828,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

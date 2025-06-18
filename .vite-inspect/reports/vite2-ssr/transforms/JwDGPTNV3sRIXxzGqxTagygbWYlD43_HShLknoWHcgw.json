@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isArray, isNumber } from 'lodash-es';\n\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\n\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */\nexport const getCurrentValue = (\n    answers: PreparedAnswer[],\n    page: number,\n    pages: number | Answers\n): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer as unknown as MultiChoiceAnswer;\n    }\n    if (current.isSingle) {\n        return current.answer as unknown as SingleChoiceAnswer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value as unknown as ScaleChoiceAnswer;\n    }\n    return null;\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308463,
+      "start": 1750271785006,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { isArray, isNumber } from 'lodash-es';\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */ export const getCurrentValue = (answers, page, pages)=>{\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer;\n    }\n    if (current.isSingle) {\n        return current.answer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value;\n    }\n    return null;\n};\n",
-      "start": 1750239308463,
-      "end": 1750239308469,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/getCurrentValue.ts\"],\"sourcesContent\":[\"import { isArray, isNumber } from 'lodash-es';\\n\\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\\n\\n/**\\n * Возвращает значение текущего ответа для страницы (индекса)\\n * @param answers Массив ответов\\n * @param page Текущий номер страницы (1-based)\\n * @param pages Все страницы\\n */\\nexport const getCurrentValue = (\\n    answers: PreparedAnswer[],\\n    page: number,\\n    pages: number | Answers\\n): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\\n    const current = answers[currentPage];\\n    if (!current?.answer) return null;\\n    if (isArray(current.answer)) {\\n        return current.answer as unknown as MultiChoiceAnswer;\\n    }\\n    if (current.isSingle) {\\n        return current.answer as unknown as SingleChoiceAnswer;\\n    }\\n    if ('value' in current.answer) {\\n        return current.answer.value as unknown as ScaleChoiceAnswer;\\n    }\\n    return null;\\n};\\n\"],\"names\":[\"isArray\",\"isNumber\",\"getCurrentValue\",\"answers\",\"page\",\"pages\",\"currentPage\",\"current\",\"answer\",\"isSingle\",\"value\"],\"mappings\":\"AAAA,SAASA,OAAO,EAAEC,QAAQ,QAAQ,YAAY;AAI9C;;;;;CAKC,GACD,OAAO,MAAMC,kBAAkB,CAC3BC,SACAC,MACAC;IAEA,MAAMC,cAAc,AAACL,CAAAA,SAASI,SAASA,QAAQD,IAAG,IAAK;IACvD,MAAMG,UAAUJ,OAAO,CAACG,YAAY;IACpC,IAAI,CAACC,SAASC,QAAQ,OAAO;IAC7B,IAAIR,QAAQO,QAAQC,MAAM,GAAG;QACzB,OAAOD,QAAQC,MAAM;IACzB;IACA,IAAID,QAAQE,QAAQ,EAAE;QAClB,OAAOF,QAAQC,MAAM;IACzB;IACA,IAAI,WAAWD,QAAQC,MAAM,EAAE;QAC3B,OAAOD,QAAQC,MAAM,CAACE,KAAK;IAC/B;IACA,OAAO;AACX,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { isArray, isNumber } from \"lodash-es\";\nexport const getCurrentValue = (answers, page, pages) => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer;\n  }\n  if (current.isSingle) {\n    return current.answer;\n  }\n  if (\"value\" in current.answer) {\n    return current.answer.value;\n  }\n  return null;\n};\n",
-      "start": 1750239308469,
-      "end": 1750239308710,
+      "start": 1750271785023,
+      "end": 1750271785240,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785240,
+      "end": 1750271785240,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785240,
+      "end": 1750271785240,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308710,
-      "end": 1750239308711,
+      "start": 1750271785240,
+      "end": 1750271785241,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/getCurrentValue.ts [vike:pluginModuleBanner] */\nimport { isArray, isNumber } from \"lodash-es\";\nexport const getCurrentValue = (answers, page, pages) => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer;\n  }\n  if (current.isSingle) {\n    return current.answer;\n  }\n  if (\"value\" in current.answer) {\n    return current.answer.value;\n  }\n  return null;\n};\n",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785241,
+      "end": 1750271785241,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

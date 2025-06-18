@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Center, Container, Title } from '@mantine/core';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\n\nimport { ROUTES } from '@/shared/config';\n\nimport s from './LetsContinue.module.css';\n\nexport const LetsContinue = () => (\n    <Box component='section' className={s.root}>\n        <Container>\n            <Center className={s.logo}>\n                <CognitiveLogo />\n            </Center>\n            <Title className={s.title} order={2}>\n                Готовы узнать ваш <span>тип личности?</span>\n            </Title>\n            <Center>\n                <Button className='mantine-button-rainbow' href={ROUTES.TEST} component='a'>\n                    Пройти тест\n                </Button>\n            </Center>\n        </Container>\n    </Box>\n);\n",
-      "start": 1750239308419,
-      "end": 1750239308438,
+      "start": 1750271784963,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Title } from '@mantine/core';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport { ROUTES } from '@/shared/config';\nimport s from './LetsContinue.module.css';\nexport const LetsContinue = ()=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        className: s.root,\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsx(Center, {\n                    className: s.logo,\n                    children: /*#__PURE__*/ _jsx(CognitiveLogo, {})\n                }),\n                /*#__PURE__*/ _jsxs(Title, {\n                    className: s.title,\n                    order: 2,\n                    children: [\n                        \"Готовы узнать ваш \",\n                        /*#__PURE__*/ _jsx(\"span\", {\n                            children: \"тип личности?\"\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Center, {\n                    children: /*#__PURE__*/ _jsx(Button, {\n                        className: \"mantine-button-rainbow\",\n                        href: ROUTES.TEST,\n                        component: \"a\",\n                        children: \"Пройти тест\"\n                    })\n                })\n            ]\n        })\n    });\n",
-      "start": 1750239308438,
-      "end": 1750239308444,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/LetsContinue/index.tsx\"],\"sourcesContent\":[\"import { Box, Button, Center, Container, Title } from '@mantine/core';\\n\\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\\n\\nimport { ROUTES } from '@/shared/config';\\n\\nimport s from './LetsContinue.module.css';\\n\\nexport const LetsContinue = () => (\\n    <Box component='section' className={s.root}>\\n        <Container>\\n            <Center className={s.logo}>\\n                <CognitiveLogo />\\n            </Center>\\n            <Title className={s.title} order={2}>\\n                Готовы узнать ваш <span>тип личности?</span>\\n            </Title>\\n            <Center>\\n                <Button className='mantine-button-rainbow' href={ROUTES.TEST} component='a'>\\n                    Пройти тест\\n                </Button>\\n            </Center>\\n        </Container>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Button\",\"Center\",\"Container\",\"Title\",\"CognitiveLogo\",\"ROUTES\",\"s\",\"LetsContinue\",\"component\",\"className\",\"root\",\"logo\",\"title\",\"order\",\"span\",\"href\",\"TEST\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,MAAM,EAAEC,MAAM,EAAEC,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AAEtE,OAAOC,mBAAmB,+CAA+C;AAEzE,SAASC,MAAM,QAAQ,kBAAkB;AAEzC,OAAOC,OAAO,4BAA4B;AAE1C,OAAO,MAAMC,eAAe,kBACxB,KAACR;QAAIS,WAAU;QAAUC,WAAWH,EAAEI,IAAI;kBACtC,cAAA,MAACR;;8BACG,KAACD;oBAAOQ,WAAWH,EAAEK,IAAI;8BACrB,cAAA,KAACP;;8BAEL,MAACD;oBAAMM,WAAWH,EAAEM,KAAK;oBAAEC,OAAO;;wBAAG;sCACf,KAACC;sCAAK;;;;8BAE5B,KAACb;8BACG,cAAA,KAACD;wBAAOS,WAAU;wBAAyBM,MAAMV,OAAOW,IAAI;wBAAER,WAAU;kCAAI;;;;;OAM1F\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Title } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./LetsContinue.module.css\";\nexport const LetsContinue = () => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  className: s.root,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Center, {\n        className: s.logo,\n        children: /* @__PURE__ */ _jsx(CognitiveLogo, {})\n      }),\n      /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        order: 2,\n        children: [\n          \"Готовы узнать ваш \",\n          /* @__PURE__ */ _jsx(\"span\", {\n            children: \"тип личности?\"\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Center, {\n        children: /* @__PURE__ */ _jsx(Button, {\n          className: \"mantine-button-rainbow\",\n          href: ROUTES.TEST,\n          component: \"a\",\n          children: \"Пройти тест\"\n        })\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308444,
-      "end": 1750239308672,
+      "start": 1750271784986,
+      "end": 1750271785191,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785191,
+      "end": 1750271785191,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785192,
+      "end": 1750271785192,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785192,
+      "end": 1750271785192,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/LetsContinue/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Title } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { ROUTES } from \"@/shared/config\";\nimport s from \"./LetsContinue.module.css\";\nexport const LetsContinue = () => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  className: s.root,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Center, {\n        className: s.logo,\n        children: /* @__PURE__ */ _jsx(CognitiveLogo, {})\n      }),\n      /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        order: 2,\n        children: [\n          \"Готовы узнать ваш \",\n          /* @__PURE__ */ _jsx(\"span\", {\n            children: \"тип личности?\"\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Center, {\n        children: /* @__PURE__ */ _jsx(Button, {\n          className: \"mantine-button-rainbow\",\n          href: ROUTES.TEST,\n          component: \"a\",\n          children: \"Пройти тест\"\n        })\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308672,
-      "end": 1750239308673,
+      "start": 1750271785192,
+      "end": 1750271785192,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './PartialRecord';\n",
-      "start": 1750239308321,
-      "end": 1750239308334,
+      "start": 1750271784943,
+      "end": 1750271784963,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './PartialRecord';\n",
-      "start": 1750239308334,
-      "end": 1750239308336,
+      "start": 1750271784963,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts\"],\"sourcesContent\":[\"export * from './PartialRecord';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,kBAAkB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./PartialRecord\";\n",
-      "start": 1750239308336,
-      "end": 1750239308440,
+      "start": 1750271784971,
+      "end": 1750271785110,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785110,
+      "end": 1750271785110,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/utility-types/index.ts [vike:pluginModuleBanner] */\nexport * from \"./PartialRecord\";\n",
-      "start": 1750239308440,
-      "end": 1750239308440,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

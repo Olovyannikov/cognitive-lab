@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\n\nimport { getBlogPostsQuery } from '../api';\nimport type { BlogPost } from '../types';\n\nexport const BlogModel = atom(() => {\n    const $pageSize = createStore(5);\n\n    const $blogPosts = restore<BlogPost[]>(\n        getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []),\n        []\n    );\n    const $totalPages = restore(\n        getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages),\n        0\n    );\n\n    const pageChanged = createEvent<number>();\n    const $currentPage = restore(pageChanged, 1);\n\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));\n\n    sample({\n        clock: pageChanged,\n        target: scrollToTopFx,\n    });\n\n    sample({\n        clock: $pageSize,\n        filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n        fn: (pageSize) => ({ page: 1, page_size: pageSize }),\n        target: getBlogPostsQuery.refresh,\n    });\n    sample({\n        clock: $currentPage,\n        source: {\n            page_size: $pageSize,\n        },\n        fn: ({ page_size }, page) => ({ page, page_size }),\n        target: getBlogPostsQuery.refresh,\n    });\n\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\n        await navigate('/blog');\n    });\n\n    sample({\n        clock: getBlogPostsQuery.finished.failure,\n        target: redirectToMainBlogPostPageFx,\n    });\n\n    return {\n        $pageSize,\n        $blogPosts,\n        pageChanged,\n        $totalPages,\n        $currentPage,\n        scrollToTopFx,\n        redirectToMainBlogPostPageFx,\n    };\n});\n",
-      "start": 1750239308271,
-      "end": 1750239308284,
+      "start": 1750271784819,
+      "end": 1750271784839,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createEffect, createEvent, createStore, restore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { getBlogPostsQuery } from '../api';\nexport const BlogModel = _effector$factory({\n    sid: \"5wlqazdd\",\n    fn: ()=>atom(()=>{\n            const $pageSize = createStore(5, {\n                sid: \"ehf31n8\"\n            });\n            const $blogPosts = restore(getBlogPostsQuery.finished.success.map(({ result })=>result?.payload ?? []), [], {\n                sid: \"6fdvqley\"\n            });\n            const $totalPages = restore(getBlogPostsQuery.finished.success.map(({ result })=>result.total_pages), 0, {\n                sid: \"7zs4vcxk\"\n            });\n            const pageChanged = createEvent({\n                sid: \"1gi6ft8c\"\n            });\n            const $currentPage = restore(pageChanged, 1, {\n                sid: \"1uf1cnjm\"\n            });\n            const scrollToTopFx = createEffect(()=>window.scrollTo(0, 0), {\n                sid: \"3ievvsaw\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: pageChanged,\n                        target: scrollToTopFx\n                    }\n                ],\n                or: {\n                    sid: \"68xgqtoo\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: $pageSize,\n                        filter: getBlogPostsQuery.$data.map((el)=>el?.payload?.length < 1),\n                        fn: (pageSize)=>({\n                                page: 1,\n                                page_size: pageSize\n                            }),\n                        target: getBlogPostsQuery.refresh\n                    }\n                ],\n                or: {\n                    sid: \"4m2m2j8e\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: $currentPage,\n                        source: {\n                            page_size: $pageSize\n                        },\n                        fn: ({ page_size }, page)=>({\n                                page,\n                                page_size\n                            }),\n                        target: getBlogPostsQuery.refresh\n                    }\n                ],\n                or: {\n                    sid: \"8psz0lie\"\n                }\n            });\n            const redirectToMainBlogPostPageFx = createEffect(async ()=>{\n                await navigate('/blog');\n            }, {\n                sid: \"4pa7qckd\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: getBlogPostsQuery.finished.failure,\n                        target: redirectToMainBlogPostPageFx\n                    }\n                ],\n                or: {\n                    sid: \"5gmsvr1m\"\n                }\n            });\n            return {\n                $pageSize,\n                $blogPosts,\n                pageChanged,\n                $totalPages,\n                $currentPage,\n                scrollToTopFx,\n                redirectToMainBlogPostPageFx\n            };\n        })\n});\n",
-      "start": 1750239308284,
-      "end": 1750239308293,
+      "start": 1750271784839,
+      "end": 1750271784842,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/model/index.ts\"],\"sourcesContent\":[\"import { createEffect, createEvent, createStore, restore, sample } from 'effector';\\nimport { navigate } from 'vike/client/router';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { getBlogPostsQuery } from '../api';\\nimport type { BlogPost } from '../types';\\n\\nexport const BlogModel = atom(() => {\\n    const $pageSize = createStore(5);\\n\\n    const $blogPosts = restore<BlogPost[]>(\\n        getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []),\\n        []\\n    );\\n    const $totalPages = restore(\\n        getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages),\\n        0\\n    );\\n\\n    const pageChanged = createEvent<number>();\\n    const $currentPage = restore(pageChanged, 1);\\n\\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0));\\n\\n    sample({\\n        clock: pageChanged,\\n        target: scrollToTopFx,\\n    });\\n\\n    sample({\\n        clock: $pageSize,\\n        filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\\n        fn: (pageSize) => ({ page: 1, page_size: pageSize }),\\n        target: getBlogPostsQuery.refresh,\\n    });\\n    sample({\\n        clock: $currentPage,\\n        source: {\\n            page_size: $pageSize,\\n        },\\n        fn: ({ page_size }, page) => ({ page, page_size }),\\n        target: getBlogPostsQuery.refresh,\\n    });\\n\\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\\n        await navigate('/blog');\\n    });\\n\\n    sample({\\n        clock: getBlogPostsQuery.finished.failure,\\n        target: redirectToMainBlogPostPageFx,\\n    });\\n\\n    return {\\n        $pageSize,\\n        $blogPosts,\\n        pageChanged,\\n        $totalPages,\\n        $currentPage,\\n        scrollToTopFx,\\n        redirectToMainBlogPostPageFx,\\n    };\\n});\\n\"],\"names\":[\"createEffect\",\"createEvent\",\"createStore\",\"restore\",\"sample\",\"navigate\",\"atom\",\"getBlogPostsQuery\",\"BlogModel\",\"$pageSize\",\"$blogPosts\",\"finished\",\"success\",\"map\",\"result\",\"payload\",\"$totalPages\",\"total_pages\",\"pageChanged\",\"$currentPage\",\"scrollToTopFx\",\"window\",\"scrollTo\",\"clock\",\"target\",\"filter\",\"$data\",\"el\",\"length\",\"fn\",\"pageSize\",\"page\",\"page_size\",\"refresh\",\"source\",\"redirectToMainBlogPostPageFx\",\"failure\"],\"mappings\":\";AAAA,SAASA,YAAY,EAAEC,WAAW,EAAEC,WAAW,EAAEC,OAAO,EAAEC,MAAM,QAAQ,WAAW;AACnF,SAASC,QAAQ,QAAQ,qBAAqB;AAE9C,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,iBAAiB,QAAQ,SAAS;AAG3C,OAAO,MAAMC;;YAAYF,KAAK;YAC1B,MAAMG,YAAYP,YAAY;;;YAE9B,MAAMQ,aAAaP,QACfI,kBAAkBI,QAAQ,CAACC,OAAO,CAACC,GAAG,CAAC,CAAC,EAAEC,MAAM,EAAE,GAAKA,QAAQC,WAAW,EAAE,GAC5E,EAAE;;;YAEN,MAAMC,cAAcb,QAChBI,kBAAkBI,QAAQ,CAACC,OAAO,CAACC,GAAG,CAAC,CAAC,EAAEC,MAAM,EAAE,GAAKA,OAAOG,WAAW,GACzE;;;YAGJ,MAAMC,cAAcjB;;;YACpB,MAAMkB,eAAehB,QAAQe,aAAa;;;YAE1C,MAAME,gBAAgBpB,aAAa,IAAMqB,OAAOC,QAAQ,CAAC,GAAG;;;YAE5DlB;;oBAAO;wBACHmB,OAAOL;wBACPM,QAAQJ;oBACZ;;;;;;YAEAhB;;oBAAO;wBACHmB,OAAOd;wBACPgB,QAAQlB,kBAAkBmB,KAAK,CAACb,GAAG,CAAC,CAACc,KAAOA,IAAIZ,SAASa,SAAS;wBAClEC,IAAI,CAACC,WAAc,CAAA;gCAAEC,MAAM;gCAAGC,WAAWF;4BAAS,CAAA;wBAClDN,QAAQjB,kBAAkB0B,OAAO;oBACrC;;;;;;YACA7B;;oBAAO;wBACHmB,OAAOJ;wBACPe,QAAQ;4BACJF,WAAWvB;wBACf;wBACAoB,IAAI,CAAC,EAAEG,SAAS,EAAE,EAAED,OAAU,CAAA;gCAAEA;gCAAMC;4BAAU,CAAA;wBAChDR,QAAQjB,kBAAkB0B,OAAO;oBACrC;;;;;;YAEA,MAAME,+BAA+BnC,aAAa;gBAC9C,MAAMK,SAAS;YACnB;;;YAEAD;;oBAAO;wBACHmB,OAAOhB,kBAAkBI,QAAQ,CAACyB,OAAO;wBACzCZ,QAAQW;oBACZ;;;;;;YAEA,OAAO;gBACH1B;gBACAC;gBACAQ;gBACAF;gBACAG;gBACAC;gBACAe;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createEvent, createStore, restore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getBlogPostsQuery } from \"../api\";\nexport const BlogModel = _effector$factory({\n  sid: \"5wlqazdd\",\n  fn: () => atom(() => {\n    const $pageSize = createStore(5, {\n      sid: \"ehf31n8\"\n    });\n    const $blogPosts = restore(getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []), [], {\n      sid: \"6fdvqley\"\n    });\n    const $totalPages = restore(getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages), 0, {\n      sid: \"7zs4vcxk\"\n    });\n    const pageChanged = createEvent({\n      sid: \"1gi6ft8c\"\n    });\n    const $currentPage = restore(pageChanged, 1, {\n      sid: \"1uf1cnjm\"\n    });\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n      sid: \"3ievvsaw\"\n    });\n    sample({\n      and: [\n        {\n          clock: pageChanged,\n          target: scrollToTopFx\n        }\n      ],\n      or: {\n        sid: \"68xgqtoo\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $pageSize,\n          filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n          fn: (pageSize) => ({\n            page: 1,\n            page_size: pageSize\n          }),\n          target: getBlogPostsQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"4m2m2j8e\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $currentPage,\n          source: {\n            page_size: $pageSize\n          },\n          fn: ({ page_size }, page) => ({\n            page,\n            page_size\n          }),\n          target: getBlogPostsQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"8psz0lie\"\n      }\n    });\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\n      await navigate(\"/blog\");\n    }, {\n      sid: \"4pa7qckd\"\n    });\n    sample({\n      and: [\n        {\n          clock: getBlogPostsQuery.finished.failure,\n          target: redirectToMainBlogPostPageFx\n        }\n      ],\n      or: {\n        sid: \"5gmsvr1m\"\n      }\n    });\n    return {\n      $pageSize,\n      $blogPosts,\n      pageChanged,\n      $totalPages,\n      $currentPage,\n      scrollToTopFx,\n      redirectToMainBlogPostPageFx\n    };\n  })\n});\n",
-      "start": 1750239308293,
-      "end": 1750239308330,
+      "start": 1750271784842,
+      "end": 1750271784882,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784882,
+      "end": 1750271784882,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Blog/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createEvent, createStore, restore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getBlogPostsQuery } from \"../api\";\nexport const BlogModel = _effector$factory({\n  sid: \"5wlqazdd\",\n  fn: () => atom(() => {\n    const $pageSize = createStore(5, {\n      sid: \"ehf31n8\"\n    });\n    const $blogPosts = restore(getBlogPostsQuery.finished.success.map(({ result }) => result?.payload ?? []), [], {\n      sid: \"6fdvqley\"\n    });\n    const $totalPages = restore(getBlogPostsQuery.finished.success.map(({ result }) => result.total_pages), 0, {\n      sid: \"7zs4vcxk\"\n    });\n    const pageChanged = createEvent({\n      sid: \"1gi6ft8c\"\n    });\n    const $currentPage = restore(pageChanged, 1, {\n      sid: \"1uf1cnjm\"\n    });\n    const scrollToTopFx = createEffect(() => window.scrollTo(0, 0), {\n      sid: \"3ievvsaw\"\n    });\n    sample({\n      and: [\n        {\n          clock: pageChanged,\n          target: scrollToTopFx\n        }\n      ],\n      or: {\n        sid: \"68xgqtoo\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $pageSize,\n          filter: getBlogPostsQuery.$data.map((el) => el?.payload?.length < 1),\n          fn: (pageSize) => ({\n            page: 1,\n            page_size: pageSize\n          }),\n          target: getBlogPostsQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"4m2m2j8e\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $currentPage,\n          source: {\n            page_size: $pageSize\n          },\n          fn: ({ page_size }, page) => ({\n            page,\n            page_size\n          }),\n          target: getBlogPostsQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"8psz0lie\"\n      }\n    });\n    const redirectToMainBlogPostPageFx = createEffect(async () => {\n      await navigate(\"/blog\");\n    }, {\n      sid: \"4pa7qckd\"\n    });\n    sample({\n      and: [\n        {\n          clock: getBlogPostsQuery.finished.failure,\n          target: redirectToMainBlogPostPageFx\n        }\n      ],\n      or: {\n        sid: \"5gmsvr1m\"\n      }\n    });\n    return {\n      $pageSize,\n      $blogPosts,\n      pageChanged,\n      $totalPages,\n      $currentPage,\n      scrollToTopFx,\n      redirectToMainBlogPostPageFx\n    };\n  })\n});\n",
-      "start": 1750239308330,
-      "end": 1750239308330,
+      "start": 1750271784882,
+      "end": 1750271784882,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

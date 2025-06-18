@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Box, Button, Flex, Group } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\n\nimport s from './Paywall.module.css';\n\ninterface PaywallProps {\n    points?: string[];\n    title?: string;\n    button_text?: ReactNode;\n    color?: string;\n    surveyId?: string;\n    index?: number;\n    mbti?: string;\n    action?: ReactNode;\n}\n\nfunction isOdd(num: number) {\n    return num % 2;\n}\n\nexport const Paywall = ({\n    points,\n    button_text,\n    title = 'Больше о Вас в полном отчете',\n    color,\n    surveyId,\n    index = 0,\n    mbti = 'ENTP',\n    action = null,\n}: PaywallProps) => {\n    const isLarge = useIsLarge();\n    const {\n        routeParams: { reportId },\n        url,\n    } = usePageContext();\n\n    const isExamplePage = url.includes('example');\n\n    const currentUrl = () => {\n        let href = `/purchase`;\n\n        if (isExamplePage) {\n            href = ROUTES.TEST;\n            return href;\n        }\n\n        if (surveyId) {\n            href += `/${surveyId}`;\n        }\n\n        if (mbti && !reportId) {\n            href += `?type=${mbti}`;\n        } else {\n            href += `?reportId=${reportId}`;\n        }\n\n        return href;\n    };\n\n    return (\n        <Box className={s.wrapper}>\n            <Group wrap='nowrap' gap='xs' className={s.top}>\n                <Picture w='3xl' h='3xl' cdn src='/emoji/lock' />\n                <h3>{title}</h3>\n            </Group>\n            <Picture cdn className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />\n            <PointsList className={s.points} points={points} color={color} />\n            <Flex className={s.actions} gap='sm'>\n                <Button\n                    component='a'\n                    fullWidth\n                    miw={150}\n                    href={currentUrl()}\n                    size={isLarge ? 'md' : 'sm'}\n                    maw={isLarge ? 'fit-content' : '100%'}\n                    leftSection={<Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' />}\n                >\n                    {isExamplePage ? 'Пройти тест' : button_text}\n                </Button>\n                {action}\n            </Flex>\n        </Box>\n    );\n};\n",
-      "start": 1750239308361,
-      "end": 1750239308384,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Flex, Group } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\nimport s from './Paywall.module.css';\nfunction isOdd(num) {\n    return num % 2;\n}\nexport const Paywall = ({ points, button_text, title = 'Больше о Вас в полном отчете', color, surveyId, index = 0, mbti = 'ENTP', action = null })=>{\n    const isLarge = useIsLarge();\n    const { routeParams: { reportId }, url } = usePageContext();\n    const isExamplePage = url.includes('example');\n    const currentUrl = ()=>{\n        let href = `/purchase`;\n        if (isExamplePage) {\n            href = ROUTES.TEST;\n            return href;\n        }\n        if (surveyId) {\n            href += `/${surveyId}`;\n        }\n        if (mbti && !reportId) {\n            href += `?type=${mbti}`;\n        } else {\n            href += `?reportId=${reportId}`;\n        }\n        return href;\n    };\n    return /*#__PURE__*/ _jsxs(Box, {\n        className: s.wrapper,\n        children: [\n            /*#__PURE__*/ _jsxs(Group, {\n                wrap: \"nowrap\",\n                gap: \"xs\",\n                className: s.top,\n                children: [\n                    /*#__PURE__*/ _jsx(Picture, {\n                        w: \"3xl\",\n                        h: \"3xl\",\n                        cdn: true,\n                        src: \"/emoji/lock\"\n                    }),\n                    /*#__PURE__*/ _jsx(\"h3\", {\n                        children: title\n                    })\n                ]\n            }),\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                className: s.paywallMan,\n                src: `/types/circles/${mbti}`,\n                extraPath: isOdd(index) ? '_2' : ''\n            }),\n            /*#__PURE__*/ _jsx(PointsList, {\n                className: s.points,\n                points: points,\n                color: color\n            }),\n            /*#__PURE__*/ _jsxs(Flex, {\n                className: s.actions,\n                gap: \"sm\",\n                children: [\n                    /*#__PURE__*/ _jsx(Button, {\n                        component: \"a\",\n                        fullWidth: true,\n                        miw: 150,\n                        href: currentUrl(),\n                        size: isLarge ? 'md' : 'sm',\n                        maw: isLarge ? 'fit-content' : '100%',\n                        leftSection: /*#__PURE__*/ _jsx(Picture, {\n                            w: 20,\n                            h: 20,\n                            cdn: true,\n                            src: \"/emoji/key\",\n                            \"aria-hidden\": true,\n                            alt: \"\"\n                        }),\n                        children: isExamplePage ? 'Пройти тест' : button_text\n                    }),\n                    action\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308384,
-      "end": 1750239308388,
+      "start": 1750271784944,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paywall/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Box, Button, Flex, Group } from '@mantine/core';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { ROUTES } from '@/shared/config';\\nimport { useIsLarge } from '@/shared/lib';\\nimport { Picture, PointsList } from '@/shared/ui';\\n\\nimport s from './Paywall.module.css';\\n\\ninterface PaywallProps {\\n    points?: string[];\\n    title?: string;\\n    button_text?: ReactNode;\\n    color?: string;\\n    surveyId?: string;\\n    index?: number;\\n    mbti?: string;\\n    action?: ReactNode;\\n}\\n\\nfunction isOdd(num: number) {\\n    return num % 2;\\n}\\n\\nexport const Paywall = ({\\n    points,\\n    button_text,\\n    title = 'Больше о Вас в полном отчете',\\n    color,\\n    surveyId,\\n    index = 0,\\n    mbti = 'ENTP',\\n    action = null,\\n}: PaywallProps) => {\\n    const isLarge = useIsLarge();\\n    const {\\n        routeParams: { reportId },\\n        url,\\n    } = usePageContext();\\n\\n    const isExamplePage = url.includes('example');\\n\\n    const currentUrl = () => {\\n        let href = `/purchase`;\\n\\n        if (isExamplePage) {\\n            href = ROUTES.TEST;\\n            return href;\\n        }\\n\\n        if (surveyId) {\\n            href += `/${surveyId}`;\\n        }\\n\\n        if (mbti && !reportId) {\\n            href += `?type=${mbti}`;\\n        } else {\\n            href += `?reportId=${reportId}`;\\n        }\\n\\n        return href;\\n    };\\n\\n    return (\\n        <Box className={s.wrapper}>\\n            <Group wrap='nowrap' gap='xs' className={s.top}>\\n                <Picture w='3xl' h='3xl' cdn src='/emoji/lock' />\\n                <h3>{title}</h3>\\n            </Group>\\n            <Picture cdn className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />\\n            <PointsList className={s.points} points={points} color={color} />\\n            <Flex className={s.actions} gap='sm'>\\n                <Button\\n                    component='a'\\n                    fullWidth\\n                    miw={150}\\n                    href={currentUrl()}\\n                    size={isLarge ? 'md' : 'sm'}\\n                    maw={isLarge ? 'fit-content' : '100%'}\\n                    leftSection={<Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' />}\\n                >\\n                    {isExamplePage ? 'Пройти тест' : button_text}\\n                </Button>\\n                {action}\\n            </Flex>\\n        </Box>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Button\",\"Flex\",\"Group\",\"usePageContext\",\"ROUTES\",\"useIsLarge\",\"Picture\",\"PointsList\",\"s\",\"isOdd\",\"num\",\"Paywall\",\"points\",\"button_text\",\"title\",\"color\",\"surveyId\",\"index\",\"mbti\",\"action\",\"isLarge\",\"routeParams\",\"reportId\",\"url\",\"isExamplePage\",\"includes\",\"currentUrl\",\"href\",\"TEST\",\"className\",\"wrapper\",\"wrap\",\"gap\",\"top\",\"w\",\"h\",\"cdn\",\"src\",\"h3\",\"paywallMan\",\"extraPath\",\"actions\",\"component\",\"fullWidth\",\"miw\",\"size\",\"maw\",\"leftSection\",\"aria-hidden\",\"alt\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,MAAM,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AACzD,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,MAAM,QAAQ,kBAAkB;AACzC,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,OAAO,EAAEC,UAAU,QAAQ,cAAc;AAElD,OAAOC,OAAO,uBAAuB;AAarC,SAASC,MAAMC,GAAW;IACtB,OAAOA,MAAM;AACjB;AAEA,OAAO,MAAMC,UAAU,CAAC,EACpBC,MAAM,EACNC,WAAW,EACXC,QAAQ,8BAA8B,EACtCC,KAAK,EACLC,QAAQ,EACRC,QAAQ,CAAC,EACTC,OAAO,MAAM,EACbC,SAAS,IAAI,EACF;IACX,MAAMC,UAAUf;IAChB,MAAM,EACFgB,aAAa,EAAEC,QAAQ,EAAE,EACzBC,GAAG,EACN,GAAGpB;IAEJ,MAAMqB,gBAAgBD,IAAIE,QAAQ,CAAC;IAEnC,MAAMC,aAAa;QACf,IAAIC,OAAO,CAAC,SAAS,CAAC;QAEtB,IAAIH,eAAe;YACfG,OAAOvB,OAAOwB,IAAI;YAClB,OAAOD;QACX;QAEA,IAAIX,UAAU;YACVW,QAAQ,CAAC,CAAC,EAAEX,UAAU;QAC1B;QAEA,IAAIE,QAAQ,CAACI,UAAU;YACnBK,QAAQ,CAAC,MAAM,EAAET,MAAM;QAC3B,OAAO;YACHS,QAAQ,CAAC,UAAU,EAAEL,UAAU;QACnC;QAEA,OAAOK;IACX;IAEA,qBACI,MAAC5B;QAAI8B,WAAWrB,EAAEsB,OAAO;;0BACrB,MAAC5B;gBAAM6B,MAAK;gBAASC,KAAI;gBAAKH,WAAWrB,EAAEyB,GAAG;;kCAC1C,KAAC3B;wBAAQ4B,GAAE;wBAAMC,GAAE;wBAAMC,GAAG;wBAACC,KAAI;;kCACjC,KAACC;kCAAIxB;;;;0BAET,KAACR;gBAAQ8B,GAAG;gBAACP,WAAWrB,EAAE+B,UAAU;gBAAEF,KAAK,CAAC,eAAe,EAAEnB,MAAM;gBAAEsB,WAAW/B,MAAMQ,SAAS,OAAO;;0BACtG,KAACV;gBAAWsB,WAAWrB,EAAEI,MAAM;gBAAEA,QAAQA;gBAAQG,OAAOA;;0BACxD,MAACd;gBAAK4B,WAAWrB,EAAEiC,OAAO;gBAAET,KAAI;;kCAC5B,KAAChC;wBACG0C,WAAU;wBACVC,SAAS;wBACTC,KAAK;wBACLjB,MAAMD;wBACNmB,MAAMzB,UAAU,OAAO;wBACvB0B,KAAK1B,UAAU,gBAAgB;wBAC/B2B,2BAAa,KAACzC;4BAAQ4B,GAAG;4BAAIC,GAAG;4BAAIC,GAAG;4BAACC,KAAI;4BAAaW,eAAa;4BAAMC,KAAI;;kCAE/EzB,gBAAgB,gBAAgBX;;oBAEpCM;;;;;AAIjB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Flex, Group } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nimport s from \"./Paywall.module.css\";\nfunction isOdd(num) {\n  return num % 2;\n}\nexport const Paywall = ({ points, button_text, title = \"Больше о Вас в полном отчете\", color, surveyId, index = 0, mbti = \"ENTP\", action = null }) => {\n  const isLarge = useIsLarge();\n  const { routeParams: { reportId }, url } = usePageContext();\n  const isExamplePage = url.includes(\"example\");\n  const currentUrl = () => {\n    let href = `/purchase`;\n    if (isExamplePage) {\n      href = ROUTES.TEST;\n      return href;\n    }\n    if (surveyId) {\n      href += `/${surveyId}`;\n    }\n    if (mbti && !reportId) {\n      href += `?type=${mbti}`;\n    } else {\n      href += `?reportId=${reportId}`;\n    }\n    return href;\n  };\n  return /* @__PURE__ */ _jsxs(Box, {\n    className: s.wrapper,\n    children: [\n      /* @__PURE__ */ _jsxs(Group, {\n        wrap: \"nowrap\",\n        gap: \"xs\",\n        className: s.top,\n        children: [\n          /* @__PURE__ */ _jsx(Picture, {\n            w: \"3xl\",\n            h: \"3xl\",\n            cdn: true,\n            src: \"/emoji/lock\"\n          }),\n          /* @__PURE__ */ _jsx(\"h3\", {\n            children: title\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        className: s.paywallMan,\n        src: `/types/circles/${mbti}`,\n        extraPath: isOdd(index) ? \"_2\" : \"\"\n      }),\n      /* @__PURE__ */ _jsx(PointsList, {\n        className: s.points,\n        points,\n        color\n      }),\n      /* @__PURE__ */ _jsxs(Flex, {\n        className: s.actions,\n        gap: \"sm\",\n        children: [\n          /* @__PURE__ */ _jsx(Button, {\n            component: \"a\",\n            fullWidth: true,\n            miw: 150,\n            href: currentUrl(),\n            size: isLarge ? \"md\" : \"sm\",\n            maw: isLarge ? \"fit-content\" : \"100%\",\n            leftSection: /* @__PURE__ */ _jsx(Picture, {\n              w: 20,\n              h: 20,\n              cdn: true,\n              src: \"/emoji/key\",\n              \"aria-hidden\": true,\n              alt: \"\"\n            }),\n            children: isExamplePage ? \"Пройти тест\" : button_text\n          }),\n          action\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308388,
-      "end": 1750239308537,
+      "start": 1750271784956,
+      "end": 1750271785082,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785082,
+      "end": 1750271785082,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Paywall/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Flex, Group } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nimport s from \"./Paywall.module.css\";\nfunction isOdd(num) {\n  return num % 2;\n}\nexport const Paywall = ({ points, button_text, title = \"Больше о Вас в полном отчете\", color, surveyId, index = 0, mbti = \"ENTP\", action = null }) => {\n  const isLarge = useIsLarge();\n  const { routeParams: { reportId }, url } = usePageContext();\n  const isExamplePage = url.includes(\"example\");\n  const currentUrl = () => {\n    let href = `/purchase`;\n    if (isExamplePage) {\n      href = ROUTES.TEST;\n      return href;\n    }\n    if (surveyId) {\n      href += `/${surveyId}`;\n    }\n    if (mbti && !reportId) {\n      href += `?type=${mbti}`;\n    } else {\n      href += `?reportId=${reportId}`;\n    }\n    return href;\n  };\n  return /* @__PURE__ */ _jsxs(Box, {\n    className: s.wrapper,\n    children: [\n      /* @__PURE__ */ _jsxs(Group, {\n        wrap: \"nowrap\",\n        gap: \"xs\",\n        className: s.top,\n        children: [\n          /* @__PURE__ */ _jsx(Picture, {\n            w: \"3xl\",\n            h: \"3xl\",\n            cdn: true,\n            src: \"/emoji/lock\"\n          }),\n          /* @__PURE__ */ _jsx(\"h3\", {\n            children: title\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        className: s.paywallMan,\n        src: `/types/circles/${mbti}`,\n        extraPath: isOdd(index) ? \"_2\" : \"\"\n      }),\n      /* @__PURE__ */ _jsx(PointsList, {\n        className: s.points,\n        points,\n        color\n      }),\n      /* @__PURE__ */ _jsxs(Flex, {\n        className: s.actions,\n        gap: \"sm\",\n        children: [\n          /* @__PURE__ */ _jsx(Button, {\n            component: \"a\",\n            fullWidth: true,\n            miw: 150,\n            href: currentUrl(),\n            size: isLarge ? \"md\" : \"sm\",\n            maw: isLarge ? \"fit-content\" : \"100%\",\n            leftSection: /* @__PURE__ */ _jsx(Picture, {\n              w: 20,\n              h: 20,\n              cdn: true,\n              src: \"/emoji/key\",\n              \"aria-hidden\": true,\n              alt: \"\"\n            }),\n            children: isExamplePage ? \"Пройти тест\" : button_text\n          }),\n          action\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785082,
+      "end": 1750271785082,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

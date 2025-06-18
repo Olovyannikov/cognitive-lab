@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Title, type TitleProps } from '@mantine/core';\n\nimport s from './Header.module.css';\n\ninterface HeaderProps extends TitleProps {\n    text: string;\n}\n\nexport const Header = ({ text, ...props }: HeaderProps) => (\n    <Title className={s.title} order={5} {...props}>\n        {text}\n    </Title>\n);\n",
-      "start": 1750239308359,
-      "end": 1750239308383,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from '@mantine/core';\nimport s from './Header.module.css';\nexport const Header = ({ text, ...props })=>/*#__PURE__*/ _jsx(Title, {\n        className: s.title,\n        order: 5,\n        ...props,\n        children: text\n    });\n",
-      "start": 1750239308383,
-      "end": 1750239308385,
+      "start": 1750271784943,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Header/index.tsx\"],\"sourcesContent\":[\"import { Title, type TitleProps } from '@mantine/core';\\n\\nimport s from './Header.module.css';\\n\\ninterface HeaderProps extends TitleProps {\\n    text: string;\\n}\\n\\nexport const Header = ({ text, ...props }: HeaderProps) => (\\n    <Title className={s.title} order={5} {...props}>\\n        {text}\\n    </Title>\\n);\\n\"],\"names\":[\"Title\",\"s\",\"Header\",\"text\",\"props\",\"className\",\"title\",\"order\"],\"mappings\":\";AAAA,SAASA,KAAK,QAAyB,gBAAgB;AAEvD,OAAOC,OAAO,sBAAsB;AAMpC,OAAO,MAAMC,SAAS,CAAC,EAAEC,IAAI,EAAE,GAAGC,OAAoB,iBAClD,KAACJ;QAAMK,WAAWJ,EAAEK,KAAK;QAAEC,OAAO;QAAI,GAAGH,KAAK;kBACzCD;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Header.module.css\";\nexport const Header = ({ text, ...props }) => /* @__PURE__ */ _jsx(Title, {\n  className: s.title,\n  order: 5,\n  ...props,\n  children: text\n});\n",
-      "start": 1750239308385,
-      "end": 1750239308517,
+      "start": 1750271784956,
+      "end": 1750271785073,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785073,
+      "end": 1750271785073,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Header/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Header.module.css\";\nexport const Header = ({ text, ...props }) => /* @__PURE__ */ _jsx(Title, {\n  className: s.title,\n  order: 5,\n  ...props,\n  children: text\n});\n",
-      "start": 1750239308518,
-      "end": 1750239308518,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

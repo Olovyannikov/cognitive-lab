@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const atom = <T>(factory: () => T) => factory();\n",
-      "start": 1750239308411,
-      "end": 1750239308429,
+      "start": 1750271784981,
+      "end": 1750271785005,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const atom = (factory)=>factory();\n",
-      "start": 1750239308429,
-      "end": 1750239308434,
+      "start": 1750271785005,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/atom.ts\"],\"sourcesContent\":[\"export const atom = <T>(factory: () => T) => factory();\\n\"],\"names\":[\"atom\",\"factory\"],\"mappings\":\"AAAA,OAAO,MAAMA,OAAO,CAAIC,UAAqBA,UAAU\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const atom = (factory) => factory();\n",
-      "start": 1750239308434,
-      "end": 1750239308630,
+      "start": 1750271785009,
+      "end": 1750271785205,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785205,
+      "end": 1750271785205,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308631,
-      "end": 1750239308631,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/factories/atom.ts [vike:pluginModuleBanner] */\nexport const atom = (factory) => factory();\n",
-      "start": 1750239308631,
-      "end": 1750239308631,
+      "start": 1750271785205,
+      "end": 1750271785205,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

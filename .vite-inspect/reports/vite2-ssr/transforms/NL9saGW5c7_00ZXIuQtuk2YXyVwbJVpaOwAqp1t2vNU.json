@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps, CSSProperties } from 'react';\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\n\nimport s from './PointsList.module.css';\n\ninterface PointsBlockProps extends ComponentProps<'div'> {\n    points?: string[];\n    position?: CSSProperties['position'];\n    color?: string;\n}\n\nexport const PointsList = ({ points, color = 'violet', ...props }: PointsBlockProps) => {\n    if (!points || !points.length) return null;\n\n    return (\n        <Stack className={clsx(s.stack, props.className)}>\n            {points.map((item, index) => (\n                <Group className={s.point} key={`${item}_${index}`}>\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\n                    <Text className={s.text}>{item}</Text>\n                </Group>\n            ))}\n        </Stack>\n    );\n};\n",
-      "start": 1750239308323,
-      "end": 1750239308336,
+      "start": 1750271784869,
+      "end": 1750271784894,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text } from '@mantine/core';\nimport { Check } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport s from './PointsList.module.css';\nexport const PointsList = ({ points, color = 'violet', ...props })=>{\n    if (!points || !points.length) return null;\n    return /*#__PURE__*/ _jsx(Stack, {\n        className: clsx(s.stack, props.className),\n        children: points.map((item, index)=>/*#__PURE__*/ _jsxs(Group, {\n                className: s.point,\n                children: [\n                    /*#__PURE__*/ _jsx(Check, {\n                        className: s.check,\n                        weight: \"bold\",\n                        color: `var(--mantine-color-${color}-9)`\n                    }),\n                    /*#__PURE__*/ _jsx(Text, {\n                        className: s.text,\n                        children: item\n                    })\n                ]\n            }, `${item}_${index}`))\n    });\n};\n",
-      "start": 1750239308336,
-      "end": 1750239308343,
+      "start": 1750271784894,
+      "end": 1750271784898,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PointsList/index.tsx\"],\"sourcesContent\":[\"import type { ComponentProps, CSSProperties } from 'react';\\nimport { Group, Stack, Text } from '@mantine/core';\\nimport { Check } from '@phosphor-icons/react/dist/ssr';\\nimport clsx from 'clsx';\\n\\nimport s from './PointsList.module.css';\\n\\ninterface PointsBlockProps extends ComponentProps<'div'> {\\n    points?: string[];\\n    position?: CSSProperties['position'];\\n    color?: string;\\n}\\n\\nexport const PointsList = ({ points, color = 'violet', ...props }: PointsBlockProps) => {\\n    if (!points || !points.length) return null;\\n\\n    return (\\n        <Stack className={clsx(s.stack, props.className)}>\\n            {points.map((item, index) => (\\n                <Group className={s.point} key={`${item}_${index}`}>\\n                    <Check className={s.check} weight='bold' color={`var(--mantine-color-${color}-9)`} />\\n                    <Text className={s.text}>{item}</Text>\\n                </Group>\\n            ))}\\n        </Stack>\\n    );\\n};\\n\"],\"names\":[\"Group\",\"Stack\",\"Text\",\"Check\",\"clsx\",\"s\",\"PointsList\",\"points\",\"color\",\"props\",\"length\",\"className\",\"stack\",\"map\",\"item\",\"index\",\"point\",\"check\",\"weight\",\"text\"],\"mappings\":\";AACA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AACnD,SAASC,KAAK,QAAQ,iCAAiC;AACvD,OAAOC,UAAU,OAAO;AAExB,OAAOC,OAAO,0BAA0B;AAQxC,OAAO,MAAMC,aAAa,CAAC,EAAEC,MAAM,EAAEC,QAAQ,QAAQ,EAAE,GAAGC,OAAyB;IAC/E,IAAI,CAACF,UAAU,CAACA,OAAOG,MAAM,EAAE,OAAO;IAEtC,qBACI,KAACT;QAAMU,WAAWP,KAAKC,EAAEO,KAAK,EAAEH,MAAME,SAAS;kBAC1CJ,OAAOM,GAAG,CAAC,CAACC,MAAMC,sBACf,MAACf;gBAAMW,WAAWN,EAAEW,KAAK;;kCACrB,KAACb;wBAAMQ,WAAWN,EAAEY,KAAK;wBAAEC,QAAO;wBAAOV,OAAO,CAAC,oBAAoB,EAAEA,MAAM,GAAG,CAAC;;kCACjF,KAACN;wBAAKS,WAAWN,EAAEc,IAAI;kCAAGL;;;eAFE,GAAGA,KAAK,CAAC,EAAEC,OAAO;;AAOlE,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport s from \"./PointsList.module.css\";\nexport const PointsList = ({ points, color = \"violet\", ...props }) => {\n  if (!points || !points.length) return null;\n  return /* @__PURE__ */ _jsx(Stack, {\n    className: clsx(s.stack, props.className),\n    children: points.map((item, index) => /* @__PURE__ */ _jsxs(Group, {\n      className: s.point,\n      children: [\n        /* @__PURE__ */ _jsx(Check, {\n          className: s.check,\n          weight: \"bold\",\n          color: `var(--mantine-color-${color}-9)`\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          className: s.text,\n          children: item\n        })\n      ]\n    }, `${item}_${index}`))\n  });\n};\n",
-      "start": 1750239308343,
-      "end": 1750239308452,
+      "start": 1750271784898,
+      "end": 1750271785009,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785009,
+      "end": 1750271785009,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785010,
+      "end": 1750271785010,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/PointsList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Stack, Text } from \"@mantine/core\";\nimport { Check } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport s from \"./PointsList.module.css\";\nexport const PointsList = ({ points, color = \"violet\", ...props }) => {\n  if (!points || !points.length) return null;\n  return /* @__PURE__ */ _jsx(Stack, {\n    className: clsx(s.stack, props.className),\n    children: points.map((item, index) => /* @__PURE__ */ _jsxs(Group, {\n      className: s.point,\n      children: [\n        /* @__PURE__ */ _jsx(Check, {\n          className: s.check,\n          weight: \"bold\",\n          color: `var(--mantine-color-${color}-9)`\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          className: s.text,\n          children: item\n        })\n      ]\n    }, `${item}_${index}`))\n  });\n};\n",
-      "start": 1750239308453,
-      "end": 1750239308453,
+      "start": 1750271785010,
+      "end": 1750271785010,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

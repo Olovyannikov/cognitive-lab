@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "/**\n * Константы для модели теста (опроса)\n */\n\n/** Задержка для debounce изменения ответа (мс) */\nexport const DELAY_MS = 250;\n",
-      "start": 1750239308433,
-      "end": 1750239308456,
+      "start": 1750271785006,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "/**\n * Константы для модели теста (опроса)\n */ /** Задержка для debounce изменения ответа (мс) */ export const DELAY_MS = 250;\n",
-      "start": 1750239308456,
-      "end": 1750239308463,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/constants.ts\"],\"sourcesContent\":[\"/**\\n * Константы для модели теста (опроса)\\n */\\n\\n/** Задержка для debounce изменения ответа (мс) */\\nexport const DELAY_MS = 250;\\n\"],\"names\":[\"DELAY_MS\"],\"mappings\":\"AAAA;;CAEC,GAED,gDAAgD,GAChD,OAAO,MAAMA,WAAW,IAAI\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const DELAY_MS = 250;\n",
-      "start": 1750239308463,
-      "end": 1750239308707,
+      "start": 1750271785023,
+      "end": 1750271785234,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785234,
+      "end": 1750271785234,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/constants.ts [vike:pluginModuleBanner] */\nexport const DELAY_MS = 250;\n",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

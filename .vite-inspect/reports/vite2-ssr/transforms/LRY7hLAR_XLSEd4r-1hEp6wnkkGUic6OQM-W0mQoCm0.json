@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\n\nimport { CreateReviewFormSchema } from '../schema';\n\nexport const useCreateReviewFormViewModel = () => {\n    const {\n        routeParams: { userReport },\n    } = usePageContext();\n\n    const [createReviewHandler, isSubmitted] = useUnit([\n        ReviewModel.reviewCreated,\n        ReviewModel.$isFormSubmittedSuccessfully,\n    ]);\n    const isLoading = useUnit(createReviewMutation.$pending);\n\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            text: '',\n            user_report: userReport ?? '',\n            informativeness_rate: 0,\n            convenience_rate: 0,\n            accuracy_rate: 0,\n            recommendability_rate: 0,\n            satisfaction_rate: 0,\n        },\n        validate: zodResolver(CreateReviewFormSchema),\n    });\n\n    const nameInputProps = {\n        name: 'name',\n        key: form.key('name'),\n        label: 'Имя',\n        placeholder: 'Как к вам обращаться?',\n        ...form.getInputProps('name'),\n    };\n\n    const textInputProps = {\n        name: 'text',\n        key: form.key('text'),\n        label: 'Ваш отзыв',\n        placeholder: 'Опишите ваш опыт прохождения теста',\n        ...form.getInputProps('text'),\n    };\n\n    const informativenessRateRatingProps = {\n        name: 'informativeness_rate',\n        key: form.key('informativeness_rate'),\n        label: 'Полнота информации',\n        ...form.getInputProps('informativeness_rate'),\n    };\n\n    const convenienceRateProps = {\n        name: 'convenience_rate',\n        key: form.key('convenience_rate'),\n        label: 'Удобство прохождения',\n        ...form.getInputProps('convenience_rate'),\n    };\n\n    const accuracyRateProps = {\n        name: 'accuracy_rate',\n        key: form.key('accuracy_rate'),\n        label: 'Точность результатов',\n        ...form.getInputProps('accuracy_rate'),\n    };\n\n    const recommendabilityRateProps = {\n        name: 'recommendability_rate',\n        key: form.key('recommendability_rate'),\n        label: 'Готовность рекомендовать друзьям',\n        ...form.getInputProps('recommendability_rate'),\n    };\n\n    const satisfactionRateProps = {\n        name: 'satisfaction_rate',\n        key: form.key('satisfaction_rate'),\n        label: 'Удовлетворенность результатом',\n        ...form.getInputProps('satisfaction_rate'),\n    };\n\n    const onSubmit = form.onSubmit((data) => {\n        createReviewHandler(data);\n        if (isSubmitted) {\n            form.reset();\n        }\n    });\n\n    return {\n        nameInputProps,\n        textInputProps,\n        informativenessRateRatingProps,\n        convenienceRateProps,\n        accuracyRateProps,\n        recommendabilityRateProps,\n        satisfactionRateProps,\n        onSubmit,\n        isLoading,\n    };\n};\n",
-      "start": 1750239308814,
-      "end": 1750239308822,
+      "start": 1750271785354,
+      "end": 1750271785370,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { useForm } from '@mantine/form';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\nimport { CreateReviewFormSchema } from '../schema';\nexport const useCreateReviewFormViewModel = ()=>{\n    const { routeParams: { userReport } } = usePageContext();\n    const [createReviewHandler, isSubmitted] = useUnit([\n        ReviewModel.reviewCreated,\n        ReviewModel.$isFormSubmittedSuccessfully\n    ]);\n    const isLoading = useUnit(createReviewMutation.$pending);\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            name: '',\n            text: '',\n            user_report: userReport ?? '',\n            informativeness_rate: 0,\n            convenience_rate: 0,\n            accuracy_rate: 0,\n            recommendability_rate: 0,\n            satisfaction_rate: 0\n        },\n        validate: zodResolver(CreateReviewFormSchema)\n    });\n    const nameInputProps = {\n        name: 'name',\n        key: form.key('name'),\n        label: 'Имя',\n        placeholder: 'Как к вам обращаться?',\n        ...form.getInputProps('name')\n    };\n    const textInputProps = {\n        name: 'text',\n        key: form.key('text'),\n        label: 'Ваш отзыв',\n        placeholder: 'Опишите ваш опыт прохождения теста',\n        ...form.getInputProps('text')\n    };\n    const informativenessRateRatingProps = {\n        name: 'informativeness_rate',\n        key: form.key('informativeness_rate'),\n        label: 'Полнота информации',\n        ...form.getInputProps('informativeness_rate')\n    };\n    const convenienceRateProps = {\n        name: 'convenience_rate',\n        key: form.key('convenience_rate'),\n        label: 'Удобство прохождения',\n        ...form.getInputProps('convenience_rate')\n    };\n    const accuracyRateProps = {\n        name: 'accuracy_rate',\n        key: form.key('accuracy_rate'),\n        label: 'Точность результатов',\n        ...form.getInputProps('accuracy_rate')\n    };\n    const recommendabilityRateProps = {\n        name: 'recommendability_rate',\n        key: form.key('recommendability_rate'),\n        label: 'Готовность рекомендовать друзьям',\n        ...form.getInputProps('recommendability_rate')\n    };\n    const satisfactionRateProps = {\n        name: 'satisfaction_rate',\n        key: form.key('satisfaction_rate'),\n        label: 'Удовлетворенность результатом',\n        ...form.getInputProps('satisfaction_rate')\n    };\n    const onSubmit = form.onSubmit((data)=>{\n        createReviewHandler(data);\n        if (isSubmitted) {\n            form.reset();\n        }\n    });\n    return {\n        nameInputProps,\n        textInputProps,\n        informativenessRateRatingProps,\n        convenienceRateProps,\n        accuracyRateProps,\n        recommendabilityRateProps,\n        satisfactionRateProps,\n        onSubmit,\n        isLoading\n    };\n};\n",
-      "start": 1750239308822,
-      "end": 1750239308823,
+      "start": 1750271785370,
+      "end": 1750271785373,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/view-model/use-create-review-form.ts\"],\"sourcesContent\":[\"import { useForm } from '@mantine/form';\\nimport { useUnit } from 'effector-react';\\nimport { zodResolver } from 'mantine-form-zod-resolver';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\\n\\nimport { CreateReviewFormSchema } from '../schema';\\n\\nexport const useCreateReviewFormViewModel = () => {\\n    const {\\n        routeParams: { userReport },\\n    } = usePageContext();\\n\\n    const [createReviewHandler, isSubmitted] = useUnit([\\n        ReviewModel.reviewCreated,\\n        ReviewModel.$isFormSubmittedSuccessfully,\\n    ]);\\n    const isLoading = useUnit(createReviewMutation.$pending);\\n\\n    const form = useForm({\\n        mode: 'controlled',\\n        initialValues: {\\n            name: '',\\n            text: '',\\n            user_report: userReport ?? '',\\n            informativeness_rate: 0,\\n            convenience_rate: 0,\\n            accuracy_rate: 0,\\n            recommendability_rate: 0,\\n            satisfaction_rate: 0,\\n        },\\n        validate: zodResolver(CreateReviewFormSchema),\\n    });\\n\\n    const nameInputProps = {\\n        name: 'name',\\n        key: form.key('name'),\\n        label: 'Имя',\\n        placeholder: 'Как к вам обращаться?',\\n        ...form.getInputProps('name'),\\n    };\\n\\n    const textInputProps = {\\n        name: 'text',\\n        key: form.key('text'),\\n        label: 'Ваш отзыв',\\n        placeholder: 'Опишите ваш опыт прохождения теста',\\n        ...form.getInputProps('text'),\\n    };\\n\\n    const informativenessRateRatingProps = {\\n        name: 'informativeness_rate',\\n        key: form.key('informativeness_rate'),\\n        label: 'Полнота информации',\\n        ...form.getInputProps('informativeness_rate'),\\n    };\\n\\n    const convenienceRateProps = {\\n        name: 'convenience_rate',\\n        key: form.key('convenience_rate'),\\n        label: 'Удобство прохождения',\\n        ...form.getInputProps('convenience_rate'),\\n    };\\n\\n    const accuracyRateProps = {\\n        name: 'accuracy_rate',\\n        key: form.key('accuracy_rate'),\\n        label: 'Точность результатов',\\n        ...form.getInputProps('accuracy_rate'),\\n    };\\n\\n    const recommendabilityRateProps = {\\n        name: 'recommendability_rate',\\n        key: form.key('recommendability_rate'),\\n        label: 'Готовность рекомендовать друзьям',\\n        ...form.getInputProps('recommendability_rate'),\\n    };\\n\\n    const satisfactionRateProps = {\\n        name: 'satisfaction_rate',\\n        key: form.key('satisfaction_rate'),\\n        label: 'Удовлетворенность результатом',\\n        ...form.getInputProps('satisfaction_rate'),\\n    };\\n\\n    const onSubmit = form.onSubmit((data) => {\\n        createReviewHandler(data);\\n        if (isSubmitted) {\\n            form.reset();\\n        }\\n    });\\n\\n    return {\\n        nameInputProps,\\n        textInputProps,\\n        informativenessRateRatingProps,\\n        convenienceRateProps,\\n        accuracyRateProps,\\n        recommendabilityRateProps,\\n        satisfactionRateProps,\\n        onSubmit,\\n        isLoading,\\n    };\\n};\\n\"],\"names\":[\"useForm\",\"useUnit\",\"zodResolver\",\"usePageContext\",\"createReviewMutation\",\"ReviewModel\",\"CreateReviewFormSchema\",\"useCreateReviewFormViewModel\",\"routeParams\",\"userReport\",\"createReviewHandler\",\"isSubmitted\",\"reviewCreated\",\"$isFormSubmittedSuccessfully\",\"isLoading\",\"$pending\",\"form\",\"mode\",\"initialValues\",\"name\",\"text\",\"user_report\",\"informativeness_rate\",\"convenience_rate\",\"accuracy_rate\",\"recommendability_rate\",\"satisfaction_rate\",\"validate\",\"nameInputProps\",\"key\",\"label\",\"placeholder\",\"getInputProps\",\"textInputProps\",\"informativenessRateRatingProps\",\"convenienceRateProps\",\"accuracyRateProps\",\"recommendabilityRateProps\",\"satisfactionRateProps\",\"onSubmit\",\"data\",\"reset\"],\"mappings\":\"AAAA,SAASA,OAAO,QAAQ,gBAAgB;AACxC,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,WAAW,QAAQ,4BAA4B;AACxD,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,oBAAoB,EAAEC,WAAW,QAAQ,oBAAoB;AAEtE,SAASC,sBAAsB,QAAQ,YAAY;AAEnD,OAAO,MAAMC,+BAA+B;IACxC,MAAM,EACFC,aAAa,EAAEC,UAAU,EAAE,EAC9B,GAAGN;IAEJ,MAAM,CAACO,qBAAqBC,YAAY,GAAGV,QAAQ;QAC/CI,YAAYO,aAAa;QACzBP,YAAYQ,4BAA4B;KAC3C;IACD,MAAMC,YAAYb,QAAQG,qBAAqBW,QAAQ;IAEvD,MAAMC,OAAOhB,QAAQ;QACjBiB,MAAM;QACNC,eAAe;YACXC,MAAM;YACNC,MAAM;YACNC,aAAaZ,cAAc;YAC3Ba,sBAAsB;YACtBC,kBAAkB;YAClBC,eAAe;YACfC,uBAAuB;YACvBC,mBAAmB;QACvB;QACAC,UAAUzB,YAAYI;IAC1B;IAEA,MAAMsB,iBAAiB;QACnBT,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACPC,aAAa;QACb,GAAGf,KAAKgB,aAAa,CAAC,OAAO;IACjC;IAEA,MAAMC,iBAAiB;QACnBd,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACPC,aAAa;QACb,GAAGf,KAAKgB,aAAa,CAAC,OAAO;IACjC;IAEA,MAAME,iCAAiC;QACnCf,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACP,GAAGd,KAAKgB,aAAa,CAAC,uBAAuB;IACjD;IAEA,MAAMG,uBAAuB;QACzBhB,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACP,GAAGd,KAAKgB,aAAa,CAAC,mBAAmB;IAC7C;IAEA,MAAMI,oBAAoB;QACtBjB,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACP,GAAGd,KAAKgB,aAAa,CAAC,gBAAgB;IAC1C;IAEA,MAAMK,4BAA4B;QAC9BlB,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACP,GAAGd,KAAKgB,aAAa,CAAC,wBAAwB;IAClD;IAEA,MAAMM,wBAAwB;QAC1BnB,MAAM;QACNU,KAAKb,KAAKa,GAAG,CAAC;QACdC,OAAO;QACP,GAAGd,KAAKgB,aAAa,CAAC,oBAAoB;IAC9C;IAEA,MAAMO,WAAWvB,KAAKuB,QAAQ,CAAC,CAACC;QAC5B9B,oBAAoB8B;QACpB,IAAI7B,aAAa;YACbK,KAAKyB,KAAK;QACd;IACJ;IAEA,OAAO;QACHb;QACAK;QACAC;QACAC;QACAC;QACAC;QACAC;QACAC;QACAzB;IACJ;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nimport { CreateReviewFormSchema } from \"../schema\";\nexport const useCreateReviewFormViewModel = () => {\n  const { routeParams: { userReport } } = usePageContext();\n  const [createReviewHandler, isSubmitted] = useUnit([\n    ReviewModel.reviewCreated,\n    ReviewModel.$isFormSubmittedSuccessfully\n  ]);\n  const isLoading = useUnit(createReviewMutation.$pending);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      text: \"\",\n      user_report: userReport ?? \"\",\n      informativeness_rate: 0,\n      convenience_rate: 0,\n      accuracy_rate: 0,\n      recommendability_rate: 0,\n      satisfaction_rate: 0\n    },\n    validate: zodResolver(CreateReviewFormSchema)\n  });\n  const nameInputProps = {\n    name: \"name\",\n    key: form.key(\"name\"),\n    label: \"Имя\",\n    placeholder: \"Как к вам обращаться?\",\n    ...form.getInputProps(\"name\")\n  };\n  const textInputProps = {\n    name: \"text\",\n    key: form.key(\"text\"),\n    label: \"Ваш отзыв\",\n    placeholder: \"Опишите ваш опыт прохождения теста\",\n    ...form.getInputProps(\"text\")\n  };\n  const informativenessRateRatingProps = {\n    name: \"informativeness_rate\",\n    key: form.key(\"informativeness_rate\"),\n    label: \"Полнота информации\",\n    ...form.getInputProps(\"informativeness_rate\")\n  };\n  const convenienceRateProps = {\n    name: \"convenience_rate\",\n    key: form.key(\"convenience_rate\"),\n    label: \"Удобство прохождения\",\n    ...form.getInputProps(\"convenience_rate\")\n  };\n  const accuracyRateProps = {\n    name: \"accuracy_rate\",\n    key: form.key(\"accuracy_rate\"),\n    label: \"Точность результатов\",\n    ...form.getInputProps(\"accuracy_rate\")\n  };\n  const recommendabilityRateProps = {\n    name: \"recommendability_rate\",\n    key: form.key(\"recommendability_rate\"),\n    label: \"Готовность рекомендовать друзьям\",\n    ...form.getInputProps(\"recommendability_rate\")\n  };\n  const satisfactionRateProps = {\n    name: \"satisfaction_rate\",\n    key: form.key(\"satisfaction_rate\"),\n    label: \"Удовлетворенность результатом\",\n    ...form.getInputProps(\"satisfaction_rate\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    createReviewHandler(data);\n    if (isSubmitted) {\n      form.reset();\n    }\n  });\n  return {\n    nameInputProps,\n    textInputProps,\n    informativenessRateRatingProps,\n    convenienceRateProps,\n    accuracyRateProps,\n    recommendabilityRateProps,\n    satisfactionRateProps,\n    onSubmit,\n    isLoading\n  };\n};\n",
-      "start": 1750239308823,
-      "end": 1750239308828,
+      "start": 1750271785373,
+      "end": 1750271785375,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785375,
+      "end": 1750271785375,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/view-model/use-create-review-form.ts [vike:pluginModuleBanner] */\nimport { useForm } from \"@mantine/form\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nimport { CreateReviewFormSchema } from \"../schema\";\nexport const useCreateReviewFormViewModel = () => {\n  const { routeParams: { userReport } } = usePageContext();\n  const [createReviewHandler, isSubmitted] = useUnit([\n    ReviewModel.reviewCreated,\n    ReviewModel.$isFormSubmittedSuccessfully\n  ]);\n  const isLoading = useUnit(createReviewMutation.$pending);\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      name: \"\",\n      text: \"\",\n      user_report: userReport ?? \"\",\n      informativeness_rate: 0,\n      convenience_rate: 0,\n      accuracy_rate: 0,\n      recommendability_rate: 0,\n      satisfaction_rate: 0\n    },\n    validate: zodResolver(CreateReviewFormSchema)\n  });\n  const nameInputProps = {\n    name: \"name\",\n    key: form.key(\"name\"),\n    label: \"Имя\",\n    placeholder: \"Как к вам обращаться?\",\n    ...form.getInputProps(\"name\")\n  };\n  const textInputProps = {\n    name: \"text\",\n    key: form.key(\"text\"),\n    label: \"Ваш отзыв\",\n    placeholder: \"Опишите ваш опыт прохождения теста\",\n    ...form.getInputProps(\"text\")\n  };\n  const informativenessRateRatingProps = {\n    name: \"informativeness_rate\",\n    key: form.key(\"informativeness_rate\"),\n    label: \"Полнота информации\",\n    ...form.getInputProps(\"informativeness_rate\")\n  };\n  const convenienceRateProps = {\n    name: \"convenience_rate\",\n    key: form.key(\"convenience_rate\"),\n    label: \"Удобство прохождения\",\n    ...form.getInputProps(\"convenience_rate\")\n  };\n  const accuracyRateProps = {\n    name: \"accuracy_rate\",\n    key: form.key(\"accuracy_rate\"),\n    label: \"Точность результатов\",\n    ...form.getInputProps(\"accuracy_rate\")\n  };\n  const recommendabilityRateProps = {\n    name: \"recommendability_rate\",\n    key: form.key(\"recommendability_rate\"),\n    label: \"Готовность рекомендовать друзьям\",\n    ...form.getInputProps(\"recommendability_rate\")\n  };\n  const satisfactionRateProps = {\n    name: \"satisfaction_rate\",\n    key: form.key(\"satisfaction_rate\"),\n    label: \"Удовлетворенность результатом\",\n    ...form.getInputProps(\"satisfaction_rate\")\n  };\n  const onSubmit = form.onSubmit((data) => {\n    createReviewHandler(data);\n    if (isSubmitted) {\n      form.reset();\n    }\n  });\n  return {\n    nameInputProps,\n    textInputProps,\n    informativenessRateRatingProps,\n    convenienceRateProps,\n    accuracyRateProps,\n    recommendabilityRateProps,\n    satisfactionRateProps,\n    onSubmit,\n    isLoading\n  };\n};\n",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785375,
+      "end": 1750271785375,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

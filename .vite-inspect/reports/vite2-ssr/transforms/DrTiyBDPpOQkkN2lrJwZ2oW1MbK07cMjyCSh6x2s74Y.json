@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Footer';\nexport * from './Header';\n",
-      "start": 1750239308228,
-      "end": 1750239308240,
+      "start": 1750271784781,
+      "end": 1750271784791,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './Footer';\nexport * from './Header';\n",
-      "start": 1750239308240,
-      "end": 1750239308260,
+      "start": 1750271784791,
+      "end": 1750271784811,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/index.ts\"],\"sourcesContent\":[\"export * from './Footer';\\nexport * from './Header';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,WAAW;AACzB,cAAc,WAAW\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Footer\";\nexport * from \"./Header\";\n",
-      "start": 1750239308260,
-      "end": 1750239308271,
+      "start": 1750271784811,
+      "end": 1750271784824,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784824,
+      "end": 1750271784824,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308271,
-      "end": 1750239308271,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Footer\";\nexport * from \"./Header\";\n",
-      "start": 1750239308272,
-      "end": 1750239308272,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

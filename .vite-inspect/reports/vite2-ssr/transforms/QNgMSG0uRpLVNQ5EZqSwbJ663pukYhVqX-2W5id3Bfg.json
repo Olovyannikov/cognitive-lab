@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Paper, Title } from '@mantine/core';\n\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\n\nimport s from './CategoryBanner.module.css';\n\ninterface CategoryBannerProps {\n    title: string;\n    color?: string;\n}\n\nexport const CategoryBanner = ({ color, title }: CategoryBannerProps) => (\n    <Paper className={s.paper} data-color={color}>\n        <Title className={s.title}>{title}</Title>\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\n            <CloudIcon width={474} height='100%' />\n        </Box>\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\n            <SemiCircle width={150} height='100%' />\n        </Box>\n    </Paper>\n);\n",
-      "start": 1750239308365,
-      "end": 1750239308387,
+      "start": 1750271784942,
+      "end": 1750271784962,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from '@mantine/core';\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\nimport s from './CategoryBanner.module.css';\nexport const CategoryBanner = ({ color, title })=>/*#__PURE__*/ _jsxs(Paper, {\n        className: s.paper,\n        \"data-color\": color,\n        children: [\n            /*#__PURE__*/ _jsx(Title, {\n                className: s.title,\n                children: title\n            }),\n            /*#__PURE__*/ _jsx(Box, {\n                visibleFrom: \"sm\",\n                className: s.box,\n                \"data-color\": color,\n                children: /*#__PURE__*/ _jsx(CloudIcon, {\n                    width: 474,\n                    height: \"100%\"\n                })\n            }),\n            /*#__PURE__*/ _jsx(Box, {\n                visibleFrom: \"xs\",\n                className: s.box,\n                \"data-color\": color,\n                children: /*#__PURE__*/ _jsx(SemiCircle, {\n                    width: 150,\n                    height: \"100%\"\n                })\n            })\n        ]\n    });\n",
-      "start": 1750239308387,
-      "end": 1750239308396,
+      "start": 1750271784962,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/CategoryBanner/index.tsx\"],\"sourcesContent\":[\"import { Box, Paper, Title } from '@mantine/core';\\n\\nimport CloudIcon from '@/shared/assets/icons/cloud.svg?react';\\nimport SemiCircle from '@/shared/assets/icons/semi-circle.svg?react';\\n\\nimport s from './CategoryBanner.module.css';\\n\\ninterface CategoryBannerProps {\\n    title: string;\\n    color?: string;\\n}\\n\\nexport const CategoryBanner = ({ color, title }: CategoryBannerProps) => (\\n    <Paper className={s.paper} data-color={color}>\\n        <Title className={s.title}>{title}</Title>\\n        <Box visibleFrom='sm' className={s.box} data-color={color}>\\n            <CloudIcon width={474} height='100%' />\\n        </Box>\\n        <Box visibleFrom='xs' className={s.box} data-color={color}>\\n            <SemiCircle width={150} height='100%' />\\n        </Box>\\n    </Paper>\\n);\\n\"],\"names\":[\"Box\",\"Paper\",\"Title\",\"CloudIcon\",\"SemiCircle\",\"s\",\"CategoryBanner\",\"color\",\"title\",\"className\",\"paper\",\"data-color\",\"visibleFrom\",\"box\",\"width\",\"height\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,KAAK,EAAEC,KAAK,QAAQ,gBAAgB;AAElD,OAAOC,eAAe,wCAAwC;AAC9D,OAAOC,gBAAgB,8CAA8C;AAErE,OAAOC,OAAO,8BAA8B;AAO5C,OAAO,MAAMC,iBAAiB,CAAC,EAAEC,KAAK,EAAEC,KAAK,EAAuB,iBAChE,MAACP;QAAMQ,WAAWJ,EAAEK,KAAK;QAAEC,cAAYJ;;0BACnC,KAACL;gBAAMO,WAAWJ,EAAEG,KAAK;0BAAGA;;0BAC5B,KAACR;gBAAIY,aAAY;gBAAKH,WAAWJ,EAAEQ,GAAG;gBAAEF,cAAYJ;0BAChD,cAAA,KAACJ;oBAAUW,OAAO;oBAAKC,QAAO;;;0BAElC,KAACf;gBAAIY,aAAY;gBAAKH,WAAWJ,EAAEQ,GAAG;gBAAEF,cAAYJ;0BAChD,cAAA,KAACH;oBAAWU,OAAO;oBAAKC,QAAO;;;;OAGzC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./CategoryBanner.module.css\";\nexport const CategoryBanner = ({ color, title }) => /* @__PURE__ */ _jsxs(Paper, {\n  className: s.paper,\n  \"data-color\": color,\n  children: [\n    /* @__PURE__ */ _jsx(Title, {\n      className: s.title,\n      children: title\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      visibleFrom: \"sm\",\n      className: s.box,\n      \"data-color\": color,\n      children: /* @__PURE__ */ _jsx(CloudIcon, {\n        width: 474,\n        height: \"100%\"\n      })\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      visibleFrom: \"xs\",\n      className: s.box,\n      \"data-color\": color,\n      children: /* @__PURE__ */ _jsx(SemiCircle, {\n        width: 150,\n        height: \"100%\"\n      })\n    })\n  ]\n});\n",
-      "start": 1750239308396,
-      "end": 1750239308553,
+      "start": 1750271784971,
+      "end": 1750271785110,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785110,
+      "end": 1750271785110,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/CategoryBanner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Paper, Title } from \"@mantine/core\";\nimport CloudIcon from \"@/shared/assets/icons/cloud.svg?react\";\nimport SemiCircle from \"@/shared/assets/icons/semi-circle.svg?react\";\nimport s from \"./CategoryBanner.module.css\";\nexport const CategoryBanner = ({ color, title }) => /* @__PURE__ */ _jsxs(Paper, {\n  className: s.paper,\n  \"data-color\": color,\n  children: [\n    /* @__PURE__ */ _jsx(Title, {\n      className: s.title,\n      children: title\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      visibleFrom: \"sm\",\n      className: s.box,\n      \"data-color\": color,\n      children: /* @__PURE__ */ _jsx(CloudIcon, {\n        width: 474,\n        height: \"100%\"\n      })\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      visibleFrom: \"xs\",\n      className: s.box,\n      \"data-color\": color,\n      children: /* @__PURE__ */ _jsx(SemiCircle, {\n        width: 150,\n        height: \"100%\"\n      })\n    })\n  ]\n});\n",
-      "start": 1750239308553,
-      "end": 1750239308553,
+      "start": 1750271785110,
+      "end": 1750271785110,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

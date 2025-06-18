@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  position: relative;\n  overflow: hidden;\n  margin-bottom: var(--mantine-spacing-3xl);\n  border-radius: var(--mantine-radius-5xl);\n  padding-top: var(--mantine-spacing-5xl);\n  padding-bottom: 255px;\n\n  @mixin data-color 2;\n\n  @mixin larger-than 1150px {\n    margin-bottom: 80px;\n    border-radius: 80px;\n    padding-top: 0;\n    padding-bottom: 0;\n    padding-left: 123px;\n    height: 400px;\n  }\n}\n\n.stack {\n  position: relative;\n  z-index: 100;\n  justify-content: center;\n  text-align: center;\n  gap: var(--mantine-spacing-lg);\n\n  @mixin larger-than 1150px {\n    justify-content: center;\n    height: 100%;\n    text-align: left;\n    gap: calc(var(--mantine-spacing-lg) / 2);\n  }\n}\n\n.personalityType {\n  font-size: 18px;\n\n  @mixin larger-than 998px {\n    font-size: 36px;\n  }\n}\n\n.name {\n  font-size: 32px;\n\n  @mixin larger-than 998px {\n    font-size: 56px;\n    line-height: 65px;\n  }\n}\n\n.type {\n  font-size: 18px;\n\n  @mixin larger-than 998px {\n    font-size: 36px;\n    line-height: 42px;\n  }\n}\n\n.image {\n  position: absolute;\n  right: 0;\n  top: 100px;\n  width: 364px;\n  height: 364px;\n  object-fit: contain;\n\n  &.desktop {\n    display: none;\n  }\n\n  @mixin larger-than 768px {\n    right: 0;\n    top: -144px;\n    width: 680px;\n    height: 680px;\n\n    &.desktop {\n      display: block;\n    }\n\n    &.mobile {\n      display: none;\n    }\n  }\n\n  @mixin banner-circle-color 4;\n}\n\n.character {\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  z-index: 1;\n  width: 247px;\n  height: 247px;\n  transform: translateX(-50%);\n\n  @mixin larger-than 1200px {\n    left: unset;\n    right: -150px;\n    bottom: 0;\n    width: 400px;\n    height: 380px;\n    object-fit: contain;\n  }\n}\n",
-      "start": 1750239308550,
-      "end": 1750239308576,
+      "start": 1750271785092,
+      "end": 1750271785115,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308576,
-      "end": 1750239308576,
+      "start": 1750271785115,
+      "end": 1750271785115,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785118,
+      "end": 1750271785118,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785118,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportHeader/ReportHeader.module.css [vike:pluginModuleBanner] */\nexport const paper = \"_694JK\";\nexport const stack = \"-HwUM\";\nexport const personalityType = \"kfkYq\";\nexport const name = \"SImdQ\";\nexport const type = \"vjjmS\";\nexport const image = \"NDUrk\";\nexport const desktop = \"-fOm5\";\nexport const mobile = \"w64lo\";\nexport const character = \"xZ7UR\";\nexport default {\n\tpaper: paper,\n\tstack: stack,\n\tpersonalityType: personalityType,\n\tname: name,\n\ttype: type,\n\timage: image,\n\tdesktop: desktop,\n\tmobile: mobile,\n\tcharacter: character\n};\n",
-      "start": 1750239308579,
-      "end": 1750239308579,
+      "start": 1750271785118,
+      "end": 1750271785119,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

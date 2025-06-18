@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { type ReactNode, useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\n\nimport s from './HowItHelpsCard.module.css';\n\ninterface CardProps {\n    title: string;\n    text: string;\n    bg: ReactNode;\n    i: number;\n}\n\nexport const HowItHelpsCard = ({ i, title, bg, text }: CardProps) => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Box ref={container} className={s.wrapper}>\n            <motion.div\n                className={s.card}\n                style={{\n                    top: `calc(${i * 90}px)`,\n                }}\n            >\n                {bg}\n                <Title order={4}>{title}</Title>\n                <Text>{text}</Text>\n            </motion.div>\n        </Box>\n    );\n};\n",
-      "start": 1750239308391,
-      "end": 1750239308411,
+      "start": 1750271784981,
+      "end": 1750271784996,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useRef } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { motion } from 'framer-motion';\nimport s from './HowItHelpsCard.module.css';\nexport const HowItHelpsCard = ({ i, title, bg, text })=>{\n    const container = useRef(null);\n    return /*#__PURE__*/ _jsx(Box, {\n        ref: container,\n        className: s.wrapper,\n        children: /*#__PURE__*/ _jsxs(motion.div, {\n            className: s.card,\n            style: {\n                top: `calc(${i * 90}px)`\n            },\n            children: [\n                bg,\n                /*#__PURE__*/ _jsx(Title, {\n                    order: 4,\n                    children: title\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    children: text\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308411,
-      "end": 1750239308415,
+      "start": 1750271784996,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/HowItHelpsCard/index.tsx\"],\"sourcesContent\":[\"import { type ReactNode, useRef } from 'react';\\nimport { Box, Text, Title } from '@mantine/core';\\nimport { motion } from 'framer-motion';\\n\\nimport s from './HowItHelpsCard.module.css';\\n\\ninterface CardProps {\\n    title: string;\\n    text: string;\\n    bg: ReactNode;\\n    i: number;\\n}\\n\\nexport const HowItHelpsCard = ({ i, title, bg, text }: CardProps) => {\\n    const container = useRef<HTMLDivElement>(null);\\n\\n    return (\\n        <Box ref={container} className={s.wrapper}>\\n            <motion.div\\n                className={s.card}\\n                style={{\\n                    top: `calc(${i * 90}px)`,\\n                }}\\n            >\\n                {bg}\\n                <Title order={4}>{title}</Title>\\n                <Text>{text}</Text>\\n            </motion.div>\\n        </Box>\\n    );\\n};\\n\"],\"names\":[\"useRef\",\"Box\",\"Text\",\"Title\",\"motion\",\"s\",\"HowItHelpsCard\",\"i\",\"title\",\"bg\",\"text\",\"container\",\"ref\",\"className\",\"wrapper\",\"div\",\"card\",\"style\",\"top\",\"order\"],\"mappings\":\";AAAA,SAAyBA,MAAM,QAAQ,QAAQ;AAC/C,SAASC,GAAG,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AACjD,SAASC,MAAM,QAAQ,gBAAgB;AAEvC,OAAOC,OAAO,8BAA8B;AAS5C,OAAO,MAAMC,iBAAiB,CAAC,EAAEC,CAAC,EAAEC,KAAK,EAAEC,EAAE,EAAEC,IAAI,EAAa;IAC5D,MAAMC,YAAYX,OAAuB;IAEzC,qBACI,KAACC;QAAIW,KAAKD;QAAWE,WAAWR,EAAES,OAAO;kBACrC,cAAA,MAACV,OAAOW,GAAG;YACPF,WAAWR,EAAEW,IAAI;YACjBC,OAAO;gBACHC,KAAK,CAAC,KAAK,EAAEX,IAAI,GAAG,GAAG,CAAC;YAC5B;;gBAECE;8BACD,KAACN;oBAAMgB,OAAO;8BAAIX;;8BAClB,KAACN;8BAAMQ;;;;;AAIvB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { motion } from \"framer-motion\";\nimport s from \"./HowItHelpsCard.module.css\";\nexport const HowItHelpsCard = ({ i, title, bg, text }) => {\n  const container = useRef(null);\n  return /* @__PURE__ */ _jsx(Box, {\n    ref: container,\n    className: s.wrapper,\n    children: /* @__PURE__ */ _jsxs(motion.div, {\n      className: s.card,\n      style: {\n        top: `calc(${i * 90}px)`\n      },\n      children: [\n        bg,\n        /* @__PURE__ */ _jsx(Title, {\n          order: 4,\n          children: title\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          children: text\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308415,
-      "end": 1750239308580,
+      "start": 1750271785009,
+      "end": 1750271785197,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785197,
+      "end": 1750271785197,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/HowItHelpsCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useRef } from \"react\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { motion } from \"framer-motion\";\nimport s from \"./HowItHelpsCard.module.css\";\nexport const HowItHelpsCard = ({ i, title, bg, text }) => {\n  const container = useRef(null);\n  return /* @__PURE__ */ _jsx(Box, {\n    ref: container,\n    className: s.wrapper,\n    children: /* @__PURE__ */ _jsxs(motion.div, {\n      className: s.card,\n      style: {\n        top: `calc(${i * 90}px)`\n      },\n      children: [\n        bg,\n        /* @__PURE__ */ _jsx(Title, {\n          order: 4,\n          children: title\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          children: text\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785197,
+      "end": 1750271785197,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Title } from '@mantine/core';\n\ninterface SubtitleProps {\n    text: string;\n    type: string;\n}\n\nimport s from './Subtitle.module.css';\n\nexport const Subtitle = ({ type, text }: SubtitleProps) => (\n    <Title data-type={type} className={s.subtitle} order={3} mb='md'>\n        {text}\n    </Title>\n);\n",
-      "start": 1750239308361,
-      "end": 1750239308384,
+      "start": 1750271784931,
+      "end": 1750271784944,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from '@mantine/core';\nimport s from './Subtitle.module.css';\nexport const Subtitle = ({ type, text })=>/*#__PURE__*/ _jsx(Title, {\n        \"data-type\": type,\n        className: s.subtitle,\n        order: 3,\n        mb: \"md\",\n        children: text\n    });\n",
-      "start": 1750239308384,
-      "end": 1750239308395,
+      "start": 1750271784944,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Subtitle/index.tsx\"],\"sourcesContent\":[\"import { Title } from '@mantine/core';\\n\\ninterface SubtitleProps {\\n    text: string;\\n    type: string;\\n}\\n\\nimport s from './Subtitle.module.css';\\n\\nexport const Subtitle = ({ type, text }: SubtitleProps) => (\\n    <Title data-type={type} className={s.subtitle} order={3} mb='md'>\\n        {text}\\n    </Title>\\n);\\n\"],\"names\":[\"Title\",\"s\",\"Subtitle\",\"type\",\"text\",\"data-type\",\"className\",\"subtitle\",\"order\",\"mb\"],\"mappings\":\";AAAA,SAASA,KAAK,QAAQ,gBAAgB;AAOtC,OAAOC,OAAO,wBAAwB;AAEtC,OAAO,MAAMC,WAAW,CAAC,EAAEC,IAAI,EAAEC,IAAI,EAAiB,iBAClD,KAACJ;QAAMK,aAAWF;QAAMG,WAAWL,EAAEM,QAAQ;QAAEC,OAAO;QAAGC,IAAG;kBACvDL;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Subtitle.module.css\";\nexport const Subtitle = ({ type, text }) => /* @__PURE__ */ _jsx(Title, {\n  \"data-type\": type,\n  className: s.subtitle,\n  order: 3,\n  mb: \"md\",\n  children: text\n});\n",
-      "start": 1750239308395,
-      "end": 1750239308537,
+      "start": 1750271784956,
+      "end": 1750271785083,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785083,
+      "end": 1750271785084,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Subtitle/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Title } from \"@mantine/core\";\nimport s from \"./Subtitle.module.css\";\nexport const Subtitle = ({ type, text }) => /* @__PURE__ */ _jsx(Title, {\n  \"data-type\": type,\n  className: s.subtitle,\n  order: 3,\n  mb: \"md\",\n  children: text\n});\n",
-      "start": 1750239308537,
-      "end": 1750239308537,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

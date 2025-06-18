@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Blockquote } from '@mantine/core';\n\nimport { Paragraph } from '../Paragraph';\n\ninterface BlockquoteLineProps {\n    text?: string;\n    color?: string;\n}\n\nexport const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (\n    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\n        <Paragraph text={text ?? ''} />\n    </Blockquote>\n);\n",
-      "start": 1750239308343,
-      "end": 1750239308365,
+      "start": 1750271784925,
+      "end": 1750271784942,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from '@mantine/core';\nimport { Paragraph } from '../Paragraph';\nexport const BlockquoteLine = ({ text, color })=>/*#__PURE__*/ _jsx(Blockquote, {\n        mb: \"md\",\n        py: \"sm\",\n        px: \"md\",\n        color: `${color}.9`,\n        bg: \"transparent\",\n        icon: null,\n        children: /*#__PURE__*/ _jsx(Paragraph, {\n            text: text ?? ''\n        })\n    });\n",
-      "start": 1750239308365,
-      "end": 1750239308381,
+      "start": 1750271784942,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteLine/index.tsx\"],\"sourcesContent\":[\"import { Blockquote } from '@mantine/core';\\n\\nimport { Paragraph } from '../Paragraph';\\n\\ninterface BlockquoteLineProps {\\n    text?: string;\\n    color?: string;\\n}\\n\\nexport const BlockquoteLine = ({ text, color }: BlockquoteLineProps) => (\\n    <Blockquote mb='md' py='sm' px='md' color={`${color}.9`} bg='transparent' icon={null}>\\n        <Paragraph text={text ?? ''} />\\n    </Blockquote>\\n);\\n\"],\"names\":[\"Blockquote\",\"Paragraph\",\"BlockquoteLine\",\"text\",\"color\",\"mb\",\"py\",\"px\",\"bg\",\"icon\"],\"mappings\":\";AAAA,SAASA,UAAU,QAAQ,gBAAgB;AAE3C,SAASC,SAAS,QAAQ,eAAe;AAOzC,OAAO,MAAMC,iBAAiB,CAAC,EAAEC,IAAI,EAAEC,KAAK,EAAuB,iBAC/D,KAACJ;QAAWK,IAAG;QAAKC,IAAG;QAAKC,IAAG;QAAKH,OAAO,GAAGA,MAAM,EAAE,CAAC;QAAEI,IAAG;QAAcC,MAAM;kBAC5E,cAAA,KAACR;YAAUE,MAAMA,QAAQ;;OAE/B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({ text, color }) => /* @__PURE__ */ _jsx(Blockquote, {\n  mb: \"md\",\n  py: \"sm\",\n  px: \"md\",\n  color: `${color}.9`,\n  bg: \"transparent\",\n  icon: null,\n  children: /* @__PURE__ */ _jsx(Paragraph, {\n    text: text ?? \"\"\n  })\n});\n",
-      "start": 1750239308381,
-      "end": 1750239308494,
+      "start": 1750271784956,
+      "end": 1750271785073,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785073,
+      "end": 1750271785073,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308494,
-      "end": 1750239308495,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BlockQuoteLine/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Blockquote } from \"@mantine/core\";\nimport { Paragraph } from \"../Paragraph\";\nexport const BlockquoteLine = ({ text, color }) => /* @__PURE__ */ _jsx(Blockquote, {\n  mb: \"md\",\n  py: \"sm\",\n  px: \"md\",\n  color: `${color}.9`,\n  bg: \"transparent\",\n  icon: null,\n  children: /* @__PURE__ */ _jsx(Paragraph, {\n    text: text ?? \"\"\n  })\n});\n",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785073,
+      "end": 1750271785073,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\n\nimport s from './List.module.css';\n\ninterface ListProps extends ComponentProps<'ul'> {\n    data: {\n        id: number;\n        label: ReactNode;\n        icon?: ReactNode;\n    }[];\n}\n\nexport const List = ({ data, className }: ListProps) => (\n    <ul className={clsx(s.list, className)}>\n        {data?.map((item) => (\n            <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>\n        ))}\n    </ul>\n);\n",
-      "start": 1750239308393,
-      "end": 1750239308411,
+      "start": 1750271784964,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from 'clsx';\nimport s from './List.module.css';\nexport const List = ({ data, className })=>/*#__PURE__*/ _jsx(\"ul\", {\n        className: clsx(s.list, className),\n        children: data?.map((item)=>/*#__PURE__*/ _jsxs(\"li\", {\n                children: [\n                    item.icon,\n                    item.label\n                ]\n            }, item.id))\n    });\n",
-      "start": 1750239308411,
-      "end": 1750239308415,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx\"],\"sourcesContent\":[\"import type { ComponentProps, ReactNode } from 'react';\\nimport clsx from 'clsx';\\n\\nimport s from './List.module.css';\\n\\ninterface ListProps extends ComponentProps<'ul'> {\\n    data: {\\n        id: number;\\n        label: ReactNode;\\n        icon?: ReactNode;\\n    }[];\\n}\\n\\nexport const List = ({ data, className }: ListProps) => (\\n    <ul className={clsx(s.list, className)}>\\n        {data?.map((item) => (\\n            <li key={item.id}>\\n                {item.icon}\\n                {item.label}\\n            </li>\\n        ))}\\n    </ul>\\n);\\n\"],\"names\":[\"clsx\",\"s\",\"List\",\"data\",\"className\",\"ul\",\"list\",\"map\",\"item\",\"li\",\"icon\",\"label\",\"id\"],\"mappings\":\";AACA,OAAOA,UAAU,OAAO;AAExB,OAAOC,OAAO,oBAAoB;AAUlC,OAAO,MAAMC,OAAO,CAAC,EAAEC,IAAI,EAAEC,SAAS,EAAa,iBAC/C,KAACC;QAAGD,WAAWJ,KAAKC,EAAEK,IAAI,EAAEF;kBACvBD,MAAMI,IAAI,CAACC,qBACR,MAACC;;oBACID,KAAKE,IAAI;oBACTF,KAAKG,KAAK;;eAFNH,KAAKI,EAAE;OAM1B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({ data, className }) => /* @__PURE__ */ _jsx(\"ul\", {\n  className: clsx(s.list, className),\n  children: data?.map((item) => /* @__PURE__ */ _jsxs(\"li\", {\n    children: [\n      item.icon,\n      item.label\n    ]\n  }, item.id))\n});\n",
-      "start": 1750239308415,
-      "end": 1750239308588,
+      "start": 1750271784986,
+      "end": 1750271785190,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785190,
+      "end": 1750271785190,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785190,
+      "end": 1750271785190,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/List/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({ data, className }) => /* @__PURE__ */ _jsx(\"ul\", {\n  className: clsx(s.list, className),\n  children: data?.map((item) => /* @__PURE__ */ _jsxs(\"li\", {\n    children: [\n      item.icon,\n      item.label\n    ]\n  }, item.id))\n});\n",
-      "start": 1750239308588,
-      "end": 1750239308588,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

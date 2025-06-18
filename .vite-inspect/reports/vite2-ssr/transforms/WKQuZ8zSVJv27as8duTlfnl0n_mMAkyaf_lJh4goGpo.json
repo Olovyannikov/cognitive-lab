@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\n\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { submitAnswersMutation, TestEmailFormModel, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\n\nexport const SubmitTestModel = atom(() => {\n    const $isSubmitModalShown = createStore<boolean>(false);\n    const submitScaleForm = createEvent();\n    const submitModalStateChanged = createEvent();\n\n    const redirectToCongratsPageFx = createEffect(async (reportId: string) => {\n        await navigate(`/congratulations/${reportId}`);\n    });\n\n    const showSubmitErrorFx = createEffect(async (message: string) => {\n        notifications.show({\n            color: 'red',\n            title: 'Ошибка!',\n            message,\n        });\n    });\n\n    sample({\n        clock: getSurveysInfoQuery.$data,\n        filter: Boolean,\n        fn: (data) => data?.user?.email,\n        target: TestEmailFormModel.form.fields.email.change,\n    });\n\n    sample({\n        clock: submitModalStateChanged,\n        source: $isSubmitModalShown,\n        fn: (param) => !param,\n        target: $isSubmitModalShown,\n    });\n\n    sample({\n        clock: submitScaleForm,\n        source: {\n            form: TestModel.$scaleForm,\n            emailForm: TestEmailFormModel.form.$values,\n        },\n        fn: ({ form, emailForm }) => ({\n            answers: form.answers,\n            email: emailForm.email,\n            approve_subscription: emailForm.approve_subscription,\n        }),\n        target: submitAnswersMutation.start,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        fn: () => false,\n        target: $isSubmitModalShown,\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        fn: ({ result }) => result.id,\n        target: [UserModel.$surveyId, getSurveysInfoQuery.start],\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.success,\n        filter: () => !window?.location.origin.includes('free-report'),\n        fn: (report) => report.result.user_free_report,\n        target: [redirectToCongratsPageFx],\n    });\n\n    sample({\n        clock: redirectToCongratsPageFx.done,\n        source: submitAnswersMutation.finished.success.map((params) => params.result),\n        fn: (data) => data.user_free_report,\n        target: [ReportModel.freeReportIdReceived],\n    });\n\n    sample({\n        clock: submitAnswersMutation.finished.failure,\n        fn: ({ error }) => error.message,\n        target: showSubmitErrorFx,\n    });\n\n    return {\n        redirectToFreeReportPageFx: redirectToCongratsPageFx,\n        $isSubmitModalShown,\n        submitScaleForm,\n        submitModalStateChanged,\n    };\n});\n",
-      "start": 1750239308406,
-      "end": 1750239308419,
+      "start": 1750271784981,
+      "end": 1750271785006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { submitAnswersMutation, TestEmailFormModel, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\nexport const SubmitTestModel = _effector$factory({\n    sid: \"6f2zj5ec\",\n    fn: ()=>atom(()=>{\n            const $isSubmitModalShown = createStore(false, {\n                sid: \"8cmy3vow\"\n            });\n            const submitScaleForm = createEvent({\n                sid: \"1yg2hp0v\"\n            });\n            const submitModalStateChanged = createEvent({\n                sid: \"caq91hbg\"\n            });\n            const redirectToCongratsPageFx = createEffect(async (reportId)=>{\n                await navigate(`/congratulations/${reportId}`);\n            }, {\n                sid: \"7zwq5rzn\"\n            });\n            const showSubmitErrorFx = createEffect(async (message)=>{\n                notifications.show({\n                    color: 'red',\n                    title: 'Ошибка!',\n                    message\n                });\n            }, {\n                sid: \"affxplg0\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: getSurveysInfoQuery.$data,\n                        filter: Boolean,\n                        fn: (data)=>data?.user?.email,\n                        target: TestEmailFormModel.form.fields.email.change\n                    }\n                ],\n                or: {\n                    sid: \"25tbf50j\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitModalStateChanged,\n                        source: $isSubmitModalShown,\n                        fn: (param)=>!param,\n                        target: $isSubmitModalShown\n                    }\n                ],\n                or: {\n                    sid: \"bx7bwbgt\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitScaleForm,\n                        source: {\n                            form: TestModel.$scaleForm,\n                            emailForm: TestEmailFormModel.form.$values\n                        },\n                        fn: ({ form, emailForm })=>({\n                                answers: form.answers,\n                                email: emailForm.email,\n                                approve_subscription: emailForm.approve_subscription\n                            }),\n                        target: submitAnswersMutation.start\n                    }\n                ],\n                or: {\n                    sid: \"9teybvvr\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitAnswersMutation.finished.success,\n                        fn: ()=>false,\n                        target: $isSubmitModalShown\n                    }\n                ],\n                or: {\n                    sid: \"4ocmak2u\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitAnswersMutation.finished.success,\n                        fn: ({ result })=>result.id,\n                        target: [\n                            UserModel.$surveyId,\n                            getSurveysInfoQuery.start\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"3ws7j767\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitAnswersMutation.finished.success,\n                        filter: ()=>!window?.location.origin.includes('free-report'),\n                        fn: (report)=>report.result.user_free_report,\n                        target: [\n                            redirectToCongratsPageFx\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"9fxwsupi\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: redirectToCongratsPageFx.done,\n                        source: submitAnswersMutation.finished.success.map((params)=>params.result),\n                        fn: (data)=>data.user_free_report,\n                        target: [\n                            ReportModel.freeReportIdReceived\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"5r6100go\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitAnswersMutation.finished.failure,\n                        fn: ({ error })=>error.message,\n                        target: showSubmitErrorFx\n                    }\n                ],\n                or: {\n                    sid: \"1ujvijet\"\n                }\n            });\n            return {\n                redirectToFreeReportPageFx: redirectToCongratsPageFx,\n                $isSubmitModalShown,\n                submitScaleForm,\n                submitModalStateChanged\n            };\n        })\n});\n",
-      "start": 1750239308419,
-      "end": 1750239308423,
+      "start": 1750271785006,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SubmitTestModal/model/index.ts\"],\"sourcesContent\":[\"import { notifications } from '@mantine/notifications';\\nimport { createEffect, createEvent, createStore, sample } from 'effector';\\nimport { navigate } from 'vike/client/router';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\\nimport { submitAnswersMutation, TestEmailFormModel, TestModel } from '@/entities/Test';\\nimport { UserModel } from '@/entities/User';\\n\\nexport const SubmitTestModel = atom(() => {\\n    const $isSubmitModalShown = createStore<boolean>(false);\\n    const submitScaleForm = createEvent();\\n    const submitModalStateChanged = createEvent();\\n\\n    const redirectToCongratsPageFx = createEffect(async (reportId: string) => {\\n        await navigate(`/congratulations/${reportId}`);\\n    });\\n\\n    const showSubmitErrorFx = createEffect(async (message: string) => {\\n        notifications.show({\\n            color: 'red',\\n            title: 'Ошибка!',\\n            message,\\n        });\\n    });\\n\\n    sample({\\n        clock: getSurveysInfoQuery.$data,\\n        filter: Boolean,\\n        fn: (data) => data?.user?.email,\\n        target: TestEmailFormModel.form.fields.email.change,\\n    });\\n\\n    sample({\\n        clock: submitModalStateChanged,\\n        source: $isSubmitModalShown,\\n        fn: (param) => !param,\\n        target: $isSubmitModalShown,\\n    });\\n\\n    sample({\\n        clock: submitScaleForm,\\n        source: {\\n            form: TestModel.$scaleForm,\\n            emailForm: TestEmailFormModel.form.$values,\\n        },\\n        fn: ({ form, emailForm }) => ({\\n            answers: form.answers,\\n            email: emailForm.email,\\n            approve_subscription: emailForm.approve_subscription,\\n        }),\\n        target: submitAnswersMutation.start,\\n    });\\n\\n    sample({\\n        clock: submitAnswersMutation.finished.success,\\n        fn: () => false,\\n        target: $isSubmitModalShown,\\n    });\\n\\n    sample({\\n        clock: submitAnswersMutation.finished.success,\\n        fn: ({ result }) => result.id,\\n        target: [UserModel.$surveyId, getSurveysInfoQuery.start],\\n    });\\n\\n    sample({\\n        clock: submitAnswersMutation.finished.success,\\n        filter: () => !window?.location.origin.includes('free-report'),\\n        fn: (report) => report.result.user_free_report,\\n        target: [redirectToCongratsPageFx],\\n    });\\n\\n    sample({\\n        clock: redirectToCongratsPageFx.done,\\n        source: submitAnswersMutation.finished.success.map((params) => params.result),\\n        fn: (data) => data.user_free_report,\\n        target: [ReportModel.freeReportIdReceived],\\n    });\\n\\n    sample({\\n        clock: submitAnswersMutation.finished.failure,\\n        fn: ({ error }) => error.message,\\n        target: showSubmitErrorFx,\\n    });\\n\\n    return {\\n        redirectToFreeReportPageFx: redirectToCongratsPageFx,\\n        $isSubmitModalShown,\\n        submitScaleForm,\\n        submitModalStateChanged,\\n    };\\n});\\n\"],\"names\":[\"notifications\",\"createEffect\",\"createEvent\",\"createStore\",\"sample\",\"navigate\",\"atom\",\"getSurveysInfoQuery\",\"ReportModel\",\"submitAnswersMutation\",\"TestEmailFormModel\",\"TestModel\",\"UserModel\",\"SubmitTestModel\",\"$isSubmitModalShown\",\"submitScaleForm\",\"submitModalStateChanged\",\"redirectToCongratsPageFx\",\"reportId\",\"showSubmitErrorFx\",\"message\",\"show\",\"color\",\"title\",\"clock\",\"$data\",\"filter\",\"Boolean\",\"fn\",\"data\",\"user\",\"email\",\"target\",\"form\",\"fields\",\"change\",\"source\",\"param\",\"$scaleForm\",\"emailForm\",\"$values\",\"answers\",\"approve_subscription\",\"start\",\"finished\",\"success\",\"result\",\"id\",\"$surveyId\",\"window\",\"location\",\"origin\",\"includes\",\"report\",\"user_free_report\",\"done\",\"map\",\"params\",\"freeReportIdReceived\",\"failure\",\"error\",\"redirectToFreeReportPageFx\"],\"mappings\":\"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\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { submitAnswersMutation, TestEmailFormModel, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const SubmitTestModel = _effector$factory({\n  sid: \"6f2zj5ec\",\n  fn: () => atom(() => {\n    const $isSubmitModalShown = createStore(false, {\n      sid: \"8cmy3vow\"\n    });\n    const submitScaleForm = createEvent({\n      sid: \"1yg2hp0v\"\n    });\n    const submitModalStateChanged = createEvent({\n      sid: \"caq91hbg\"\n    });\n    const redirectToCongratsPageFx = createEffect(async (reportId) => {\n      await navigate(`/congratulations/${reportId}`);\n    }, {\n      sid: \"7zwq5rzn\"\n    });\n    const showSubmitErrorFx = createEffect(async (message) => {\n      notifications.show({\n        color: \"red\",\n        title: \"Ошибка!\",\n        message\n      });\n    }, {\n      sid: \"affxplg0\"\n    });\n    sample({\n      and: [\n        {\n          clock: getSurveysInfoQuery.$data,\n          filter: Boolean,\n          fn: (data) => data?.user?.email,\n          target: TestEmailFormModel.form.fields.email.change\n        }\n      ],\n      or: {\n        sid: \"25tbf50j\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitModalStateChanged,\n          source: $isSubmitModalShown,\n          fn: (param) => !param,\n          target: $isSubmitModalShown\n        }\n      ],\n      or: {\n        sid: \"bx7bwbgt\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitScaleForm,\n          source: {\n            form: TestModel.$scaleForm,\n            emailForm: TestEmailFormModel.form.$values\n          },\n          fn: ({ form, emailForm }) => ({\n            answers: form.answers,\n            email: emailForm.email,\n            approve_subscription: emailForm.approve_subscription\n          }),\n          target: submitAnswersMutation.start\n        }\n      ],\n      or: {\n        sid: \"9teybvvr\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          fn: () => false,\n          target: $isSubmitModalShown\n        }\n      ],\n      or: {\n        sid: \"4ocmak2u\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          fn: ({ result }) => result.id,\n          target: [\n            UserModel.$surveyId,\n            getSurveysInfoQuery.start\n          ]\n        }\n      ],\n      or: {\n        sid: \"3ws7j767\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          filter: () => !window?.location.origin.includes(\"free-report\"),\n          fn: (report) => report.result.user_free_report,\n          target: [\n            redirectToCongratsPageFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"9fxwsupi\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: redirectToCongratsPageFx.done,\n          source: submitAnswersMutation.finished.success.map((params) => params.result),\n          fn: (data) => data.user_free_report,\n          target: [\n            ReportModel.freeReportIdReceived\n          ]\n        }\n      ],\n      or: {\n        sid: \"5r6100go\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.failure,\n          fn: ({ error }) => error.message,\n          target: showSubmitErrorFx\n        }\n      ],\n      or: {\n        sid: \"1ujvijet\"\n      }\n    });\n    return {\n      redirectToFreeReportPageFx: redirectToCongratsPageFx,\n      $isSubmitModalShown,\n      submitScaleForm,\n      submitModalStateChanged\n    };\n  })\n});\n",
-      "start": 1750239308423,
-      "end": 1750239308626,
+      "start": 1750271785009,
+      "end": 1750271785234,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785234,
+      "end": 1750271785234,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SubmitTestModal/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { submitAnswersMutation, TestEmailFormModel, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const SubmitTestModel = _effector$factory({\n  sid: \"6f2zj5ec\",\n  fn: () => atom(() => {\n    const $isSubmitModalShown = createStore(false, {\n      sid: \"8cmy3vow\"\n    });\n    const submitScaleForm = createEvent({\n      sid: \"1yg2hp0v\"\n    });\n    const submitModalStateChanged = createEvent({\n      sid: \"caq91hbg\"\n    });\n    const redirectToCongratsPageFx = createEffect(async (reportId) => {\n      await navigate(`/congratulations/${reportId}`);\n    }, {\n      sid: \"7zwq5rzn\"\n    });\n    const showSubmitErrorFx = createEffect(async (message) => {\n      notifications.show({\n        color: \"red\",\n        title: \"Ошибка!\",\n        message\n      });\n    }, {\n      sid: \"affxplg0\"\n    });\n    sample({\n      and: [\n        {\n          clock: getSurveysInfoQuery.$data,\n          filter: Boolean,\n          fn: (data) => data?.user?.email,\n          target: TestEmailFormModel.form.fields.email.change\n        }\n      ],\n      or: {\n        sid: \"25tbf50j\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitModalStateChanged,\n          source: $isSubmitModalShown,\n          fn: (param) => !param,\n          target: $isSubmitModalShown\n        }\n      ],\n      or: {\n        sid: \"bx7bwbgt\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitScaleForm,\n          source: {\n            form: TestModel.$scaleForm,\n            emailForm: TestEmailFormModel.form.$values\n          },\n          fn: ({ form, emailForm }) => ({\n            answers: form.answers,\n            email: emailForm.email,\n            approve_subscription: emailForm.approve_subscription\n          }),\n          target: submitAnswersMutation.start\n        }\n      ],\n      or: {\n        sid: \"9teybvvr\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          fn: () => false,\n          target: $isSubmitModalShown\n        }\n      ],\n      or: {\n        sid: \"4ocmak2u\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          fn: ({ result }) => result.id,\n          target: [\n            UserModel.$surveyId,\n            getSurveysInfoQuery.start\n          ]\n        }\n      ],\n      or: {\n        sid: \"3ws7j767\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.success,\n          filter: () => !window?.location.origin.includes(\"free-report\"),\n          fn: (report) => report.result.user_free_report,\n          target: [\n            redirectToCongratsPageFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"9fxwsupi\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: redirectToCongratsPageFx.done,\n          source: submitAnswersMutation.finished.success.map((params) => params.result),\n          fn: (data) => data.user_free_report,\n          target: [\n            ReportModel.freeReportIdReceived\n          ]\n        }\n      ],\n      or: {\n        sid: \"5r6100go\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitAnswersMutation.finished.failure,\n          fn: ({ error }) => error.message,\n          target: showSubmitErrorFx\n        }\n      ],\n      or: {\n        sid: \"1ujvijet\"\n      }\n    });\n    return {\n      redirectToFreeReportPageFx: redirectToCongratsPageFx,\n      $isSubmitModalShown,\n      submitScaleForm,\n      submitModalStateChanged\n    };\n  })\n});\n",
-      "start": 1750239308626,
-      "end": 1750239308626,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

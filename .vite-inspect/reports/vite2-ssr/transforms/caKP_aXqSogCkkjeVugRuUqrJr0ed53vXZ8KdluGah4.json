@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createFactory } from '@withease/factories';\nimport { createEvent, createStore, sample } from 'effector';\n\nexport const disclosureFactory = createFactory(({ open }: { open: boolean }) => {\n    const $open = createStore(open);\n\n    const toggle = createEvent();\n    const opened = createEvent<true>();\n    const closed = createEvent<false>();\n\n    sample({\n        clock: toggle,\n        source: $open,\n        fn: (isOpen) => !isOpen,\n        target: $open,\n    });\n\n    sample({\n        clock: [opened, closed],\n        target: $open,\n    });\n\n    return {\n        $open,\n        toggle,\n        opened,\n        closed,\n    };\n});\n",
-      "start": 1750239308411,
-      "end": 1750239308429,
+      "start": 1750271784981,
+      "end": 1750271785006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createFactory } from '@withease/factories';\nimport { createEvent, createStore, sample } from 'effector';\nexport const disclosureFactory = _effector$factory({\n    sid: \"6tf0ee1n\",\n    fn: ()=>createFactory(({ open })=>{\n            const $open = createStore(open, {\n                sid: \"1rxzfvaf\"\n            });\n            const toggle = createEvent({\n                sid: \"7e2b8not\"\n            });\n            const opened = createEvent({\n                sid: \"cfxpuvez\"\n            });\n            const closed = createEvent({\n                sid: \"5ov8p6i1\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: toggle,\n                        source: $open,\n                        fn: (isOpen)=>!isOpen,\n                        target: $open\n                    }\n                ],\n                or: {\n                    sid: \"5oyw4lho\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: [\n                            opened,\n                            closed\n                        ],\n                        target: $open\n                    }\n                ],\n                or: {\n                    sid: \"by0opxkd\"\n                }\n            });\n            return {\n                $open,\n                toggle,\n                opened,\n                closed\n            };\n        })\n});\n",
-      "start": 1750239308429,
-      "end": 1750239308434,
+      "start": 1750271785006,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/disclosure.ts\"],\"sourcesContent\":[\"import { createFactory } from '@withease/factories';\\nimport { createEvent, createStore, sample } from 'effector';\\n\\nexport const disclosureFactory = createFactory(({ open }: { open: boolean }) => {\\n    const $open = createStore(open);\\n\\n    const toggle = createEvent();\\n    const opened = createEvent<true>();\\n    const closed = createEvent<false>();\\n\\n    sample({\\n        clock: toggle,\\n        source: $open,\\n        fn: (isOpen) => !isOpen,\\n        target: $open,\\n    });\\n\\n    sample({\\n        clock: [opened, closed],\\n        target: $open,\\n    });\\n\\n    return {\\n        $open,\\n        toggle,\\n        opened,\\n        closed,\\n    };\\n});\\n\"],\"names\":[\"createFactory\",\"createEvent\",\"createStore\",\"sample\",\"disclosureFactory\",\"open\",\"$open\",\"toggle\",\"opened\",\"closed\",\"clock\",\"source\",\"fn\",\"isOpen\",\"target\"],\"mappings\":\";AAAA,SAASA,aAAa,QAAQ,sBAAsB;AACpD,SAASC,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE5D,OAAO,MAAMC;;YAAoBJ,cAAc,CAAC,EAAEK,IAAI,EAAqB;YACvE,MAAMC,QAAQJ,YAAYG;;;YAE1B,MAAME,SAASN;;;YACf,MAAMO,SAASP;;;YACf,MAAMQ,SAASR;;;YAEfE;;oBAAO;wBACHO,OAAOH;wBACPI,QAAQL;wBACRM,IAAI,CAACC,SAAW,CAACA;wBACjBC,QAAQR;oBACZ;;;;;;YAEAH;;oBAAO;wBACHO,OAAO;4BAACF;4BAAQC;yBAAO;wBACvBK,QAAQR;oBACZ;;;;;;YAEA,OAAO;gBACHA;gBACAC;gBACAC;gBACAC;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createFactory } from \"@withease/factories\";\nimport { createEvent, createStore, sample } from \"effector\";\nexport const disclosureFactory = _effector$factory({\n  sid: \"6tf0ee1n\",\n  fn: () => createFactory(({ open }) => {\n    const $open = createStore(open, {\n      sid: \"1rxzfvaf\"\n    });\n    const toggle = createEvent({\n      sid: \"7e2b8not\"\n    });\n    const opened = createEvent({\n      sid: \"cfxpuvez\"\n    });\n    const closed = createEvent({\n      sid: \"5ov8p6i1\"\n    });\n    sample({\n      and: [\n        {\n          clock: toggle,\n          source: $open,\n          fn: (isOpen) => !isOpen,\n          target: $open\n        }\n      ],\n      or: {\n        sid: \"5oyw4lho\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            opened,\n            closed\n          ],\n          target: $open\n        }\n      ],\n      or: {\n        sid: \"by0opxkd\"\n      }\n    });\n    return {\n      $open,\n      toggle,\n      opened,\n      closed\n    };\n  })\n});\n",
-      "start": 1750239308434,
-      "end": 1750239308630,
+      "start": 1750271785009,
+      "end": 1750271785212,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785212,
+      "end": 1750271785212,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308630,
-      "end": 1750239308630,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308631,
-      "end": 1750239308631,
+      "start": 1750271785212,
+      "end": 1750271785213,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/factories/disclosure.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createFactory } from \"@withease/factories\";\nimport { createEvent, createStore, sample } from \"effector\";\nexport const disclosureFactory = _effector$factory({\n  sid: \"6tf0ee1n\",\n  fn: () => createFactory(({ open }) => {\n    const $open = createStore(open, {\n      sid: \"1rxzfvaf\"\n    });\n    const toggle = createEvent({\n      sid: \"7e2b8not\"\n    });\n    const opened = createEvent({\n      sid: \"cfxpuvez\"\n    });\n    const closed = createEvent({\n      sid: \"5ov8p6i1\"\n    });\n    sample({\n      and: [\n        {\n          clock: toggle,\n          source: $open,\n          fn: (isOpen) => !isOpen,\n          target: $open\n        }\n      ],\n      or: {\n        sid: \"5oyw4lho\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            opened,\n            closed\n          ],\n          target: $open\n        }\n      ],\n      or: {\n        sid: \"by0opxkd\"\n      }\n    });\n    return {\n      $open,\n      toggle,\n      opened,\n      closed\n    };\n  })\n});\n",
-      "start": 1750239308631,
-      "end": 1750239308631,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

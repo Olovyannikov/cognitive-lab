@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { Markdown } from '@/shared/ui';\n\nimport type { BlogPost } from '../../types';\n\nimport s from './BlogPostCard.module.css';\n\ninterface BlogPostCardProps {\n    post: BlogPost;\n}\n\nexport const BlogPostCard = memo(({ post }: BlogPostCardProps) => (\n    <Grid.Col\n        span={{\n            base: 12,\n            lg: post.pinned ? 12 : 4,\n        }}\n        className={clsx(post.pinned && s.pinned)}\n    >\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\n                <Stack className={s.preview} justify='center'>\n                    <Title className={s.title}>{post.title}</Title>\n                    <Markdown>{post.body.data}</Markdown>\n                </Stack>\n            </Flex>\n        </Card>\n    </Grid.Col>\n));\n\nBlogPostCard.displayName = 'BlogPostCard';\n",
-      "start": 1750239308334,
-      "end": 1750239308360,
+      "start": 1750271784898,
+      "end": 1750271784931,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from 'react';\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { Markdown } from '@/shared/ui';\nimport s from './BlogPostCard.module.css';\nexport const BlogPostCard = /*#__PURE__*/ memo(({ post })=>/*#__PURE__*/ _jsx(Grid.Col, {\n        span: {\n            base: 12,\n            lg: post.pinned ? 12 : 4\n        },\n        className: clsx(post.pinned && s.pinned),\n        children: /*#__PURE__*/ _jsx(Card, {\n            className: s.cardMain,\n            h: \"100%\",\n            withBorder: true,\n            component: \"a\",\n            href: `/blog/${post.id}`,\n            children: /*#__PURE__*/ _jsxs(Flex, {\n                className: clsx(s.card, post.pinned && s.row),\n                gap: \"md\",\n                children: [\n                    /*#__PURE__*/ _jsx(Image, {\n                        className: s.image,\n                        fit: \"cover\",\n                        radius: \"xs\",\n                        src: post.thumbnail_image,\n                        alt: post.title\n                    }),\n                    /*#__PURE__*/ _jsxs(Stack, {\n                        className: s.preview,\n                        justify: \"center\",\n                        children: [\n                            /*#__PURE__*/ _jsx(Title, {\n                                className: s.title,\n                                children: post.title\n                            }),\n                            /*#__PURE__*/ _jsx(Markdown, {\n                                children: post.body.data\n                            })\n                        ]\n                    })\n                ]\n            })\n        })\n    }));\nBlogPostCard.displayName = 'BlogPostCard';\n",
-      "start": 1750239308360,
-      "end": 1750239308363,
+      "start": 1750271784931,
+      "end": 1750271784935,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/BlogPostCard/index.tsx\"],\"sourcesContent\":[\"import { memo } from 'react';\\nimport { Card, Flex, Grid, Image, Stack, Title } from '@mantine/core';\\nimport clsx from 'clsx';\\n\\nimport { Markdown } from '@/shared/ui';\\n\\nimport type { BlogPost } from '../../types';\\n\\nimport s from './BlogPostCard.module.css';\\n\\ninterface BlogPostCardProps {\\n    post: BlogPost;\\n}\\n\\nexport const BlogPostCard = memo(({ post }: BlogPostCardProps) => (\\n    <Grid.Col\\n        span={{\\n            base: 12,\\n            lg: post.pinned ? 12 : 4,\\n        }}\\n        className={clsx(post.pinned && s.pinned)}\\n    >\\n        <Card className={s.cardMain} h='100%' withBorder component='a' href={`/blog/${post.id}`}>\\n            <Flex className={clsx(s.card, post.pinned && s.row)} gap='md'>\\n                <Image className={s.image} fit='cover' radius='xs' src={post.thumbnail_image} alt={post.title} />\\n                <Stack className={s.preview} justify='center'>\\n                    <Title className={s.title}>{post.title}</Title>\\n                    <Markdown>{post.body.data}</Markdown>\\n                </Stack>\\n            </Flex>\\n        </Card>\\n    </Grid.Col>\\n));\\n\\nBlogPostCard.displayName = 'BlogPostCard';\\n\"],\"names\":[\"memo\",\"Card\",\"Flex\",\"Grid\",\"Image\",\"Stack\",\"Title\",\"clsx\",\"Markdown\",\"s\",\"BlogPostCard\",\"post\",\"Col\",\"span\",\"base\",\"lg\",\"pinned\",\"className\",\"cardMain\",\"h\",\"withBorder\",\"component\",\"href\",\"id\",\"card\",\"row\",\"gap\",\"image\",\"fit\",\"radius\",\"src\",\"thumbnail_image\",\"alt\",\"title\",\"preview\",\"justify\",\"body\",\"data\",\"displayName\"],\"mappings\":\";AAAA,SAASA,IAAI,QAAQ,QAAQ;AAC7B,SAASC,IAAI,EAAEC,IAAI,EAAEC,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,QAAQ,gBAAgB;AACtE,OAAOC,UAAU,OAAO;AAExB,SAASC,QAAQ,QAAQ,cAAc;AAIvC,OAAOC,OAAO,4BAA4B;AAM1C,OAAO,MAAMC,6BAAeV,KAAK,CAAC,EAAEW,IAAI,EAAqB,iBACzD,KAACR,KAAKS,GAAG;QACLC,MAAM;YACFC,MAAM;YACNC,IAAIJ,KAAKK,MAAM,GAAG,KAAK;QAC3B;QACAC,WAAWV,KAAKI,KAAKK,MAAM,IAAIP,EAAEO,MAAM;kBAEvC,cAAA,KAACf;YAAKgB,WAAWR,EAAES,QAAQ;YAAEC,GAAE;YAAOC,UAAU;YAACC,WAAU;YAAIC,MAAM,CAAC,MAAM,EAAEX,KAAKY,EAAE,EAAE;sBACnF,cAAA,MAACrB;gBAAKe,WAAWV,KAAKE,EAAEe,IAAI,EAAEb,KAAKK,MAAM,IAAIP,EAAEgB,GAAG;gBAAGC,KAAI;;kCACrD,KAACtB;wBAAMa,WAAWR,EAAEkB,KAAK;wBAAEC,KAAI;wBAAQC,QAAO;wBAAKC,KAAKnB,KAAKoB,eAAe;wBAAEC,KAAKrB,KAAKsB,KAAK;;kCAC7F,MAAC5B;wBAAMY,WAAWR,EAAEyB,OAAO;wBAAEC,SAAQ;;0CACjC,KAAC7B;gCAAMW,WAAWR,EAAEwB,KAAK;0CAAGtB,KAAKsB,KAAK;;0CACtC,KAACzB;0CAAUG,KAAKyB,IAAI,CAACC,IAAI;;;;;;;QAK1C;AAEH3B,aAAa4B,WAAW,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = /* @__PURE__ */ memo(({ post }) => /* @__PURE__ */ _jsx(Grid.Col, {\n  span: {\n    base: 12,\n    lg: post.pinned ? 12 : 4\n  },\n  className: clsx(post.pinned && s.pinned),\n  children: /* @__PURE__ */ _jsx(Card, {\n    className: s.cardMain,\n    h: \"100%\",\n    withBorder: true,\n    component: \"a\",\n    href: `/blog/${post.id}`,\n    children: /* @__PURE__ */ _jsxs(Flex, {\n      className: clsx(s.card, post.pinned && s.row),\n      gap: \"md\",\n      children: [\n        /* @__PURE__ */ _jsx(Image, {\n          className: s.image,\n          fit: \"cover\",\n          radius: \"xs\",\n          src: post.thumbnail_image,\n          alt: post.title\n        }),\n        /* @__PURE__ */ _jsxs(Stack, {\n          className: s.preview,\n          justify: \"center\",\n          children: [\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.title,\n              children: post.title\n            }),\n            /* @__PURE__ */ _jsx(Markdown, {\n              children: post.body.data\n            })\n          ]\n        })\n      ]\n    })\n  })\n}));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
-      "start": 1750239308363,
-      "end": 1750239308486,
+      "start": 1750271784935,
+      "end": 1750271785021,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785021,
+      "end": 1750271785021,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785022,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/BlogPostCard/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Card, Flex, Grid, Image, Stack, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { Markdown } from \"@/shared/ui\";\nimport s from \"./BlogPostCard.module.css\";\nexport const BlogPostCard = /* @__PURE__ */ memo(({ post }) => /* @__PURE__ */ _jsx(Grid.Col, {\n  span: {\n    base: 12,\n    lg: post.pinned ? 12 : 4\n  },\n  className: clsx(post.pinned && s.pinned),\n  children: /* @__PURE__ */ _jsx(Card, {\n    className: s.cardMain,\n    h: \"100%\",\n    withBorder: true,\n    component: \"a\",\n    href: `/blog/${post.id}`,\n    children: /* @__PURE__ */ _jsxs(Flex, {\n      className: clsx(s.card, post.pinned && s.row),\n      gap: \"md\",\n      children: [\n        /* @__PURE__ */ _jsx(Image, {\n          className: s.image,\n          fit: \"cover\",\n          radius: \"xs\",\n          src: post.thumbnail_image,\n          alt: post.title\n        }),\n        /* @__PURE__ */ _jsxs(Stack, {\n          className: s.preview,\n          justify: \"center\",\n          children: [\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.title,\n              children: post.title\n            }),\n            /* @__PURE__ */ _jsx(Markdown, {\n              children: post.body.data\n            })\n          ]\n        })\n      ]\n    })\n  })\n}));\nBlogPostCard.displayName = \"BlogPostCard\";\n",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

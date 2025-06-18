@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\n\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\n\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './PurchasePage.module.css';\n\nexport const PurchasePage = () => {\n    const { data, pending } = useUnit(getRegularPriceQuery);\n    const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n\n    if (!data && pending) return <PageLoader />;\n    if (!data) return null;\n\n    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n    const currentPromoPrice = type\n        ? dataWithPromocode?.skip_survey_price.final\n        : dataWithPromocode?.regular_price.final;\n\n    return (\n        <InnerLayout className={s.root} image='/payment/logo'>\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\n            <BuyReportForm />\n            <NavigateToHelpPage />\n        </InnerLayout>\n    );\n};\n",
-      "start": 1750239308234,
-      "end": 1750239308264,
+      "start": 1750271784786,
+      "end": 1750271784810,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { PageLoader } from '@/shared/ui';\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './PurchasePage.module.css';\nexport const PurchasePage = ()=>{\n    const { data, pending } = useUnit(getRegularPriceQuery);\n    const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n    const { urlParsed: { search: { type } } } = usePageContext();\n    if (!data && pending) return /*#__PURE__*/ _jsx(PageLoader, {});\n    if (!data) return null;\n    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n    const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n    return /*#__PURE__*/ _jsxs(InnerLayout, {\n        className: s.root,\n        image: \"/payment/logo\",\n        children: [\n            /*#__PURE__*/ _jsx(PriceInfo, {\n                regularPrice: currentRegularPrice,\n                promocodePrice: currentPromoPrice\n            }),\n            /*#__PURE__*/ _jsx(BuyReportForm, {}),\n            /*#__PURE__*/ _jsx(NavigateToHelpPage, {})\n        ]\n    });\n};\n",
-      "start": 1750239308264,
-      "end": 1750239308268,
+      "start": 1750271784810,
+      "end": 1750271784813,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/PurchasePage/index.tsx\"],\"sourcesContent\":[\"import { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { PageLoader } from '@/shared/ui';\\n\\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from '@/entities/Report';\\n\\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\\n\\nimport { BuyReportForm } from '@/widgets/BuyReportForm';\\nimport { InnerLayout } from '@/widgets/InnerLayout';\\n\\nimport s from './PurchasePage.module.css';\\n\\nexport const PurchasePage = () => {\\n    const { data, pending } = useUnit(getRegularPriceQuery);\\n    const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\\n\\n    const {\\n        urlParsed: {\\n            search: { type },\\n        },\\n    } = usePageContext();\\n\\n    if (!data && pending) return <PageLoader />;\\n    if (!data) return null;\\n\\n    const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\\n    const currentPromoPrice = type\\n        ? dataWithPromocode?.skip_survey_price.final\\n        : dataWithPromocode?.regular_price.final;\\n\\n    return (\\n        <InnerLayout className={s.root} image='/payment/logo'>\\n            <PriceInfo regularPrice={currentRegularPrice} promocodePrice={currentPromoPrice} />\\n            <BuyReportForm />\\n            <NavigateToHelpPage />\\n        </InnerLayout>\\n    );\\n};\\n\"],\"names\":[\"useUnit\",\"usePageContext\",\"PageLoader\",\"getPriceWithPromocodeQuery\",\"getRegularPriceQuery\",\"PriceInfo\",\"NavigateToHelpPage\",\"BuyReportForm\",\"InnerLayout\",\"s\",\"PurchasePage\",\"data\",\"pending\",\"dataWithPromocode\",\"urlParsed\",\"search\",\"type\",\"currentRegularPrice\",\"skip_survey_price\",\"regular_price\",\"currentPromoPrice\",\"final\",\"className\",\"root\",\"image\",\"regularPrice\",\"promocodePrice\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,UAAU,QAAQ,cAAc;AAEzC,SAASC,0BAA0B,EAAEC,oBAAoB,EAAEC,SAAS,QAAQ,oBAAoB;AAEhG,SAASC,kBAAkB,QAAQ,gCAAgC;AAEnE,SAASC,aAAa,QAAQ,0BAA0B;AACxD,SAASC,WAAW,QAAQ,wBAAwB;AAEpD,OAAOC,OAAO,4BAA4B;AAE1C,OAAO,MAAMC,eAAe;IACxB,MAAM,EAAEC,IAAI,EAAEC,OAAO,EAAE,GAAGZ,QAAQI;IAClC,MAAM,EAAEO,MAAME,iBAAiB,EAAE,GAAGb,QAAQG;IAE5C,MAAM,EACFW,WAAW,EACPC,QAAQ,EAAEC,IAAI,EAAE,EACnB,EACJ,GAAGf;IAEJ,IAAI,CAACU,QAAQC,SAAS,qBAAO,KAACV;IAC9B,IAAI,CAACS,MAAM,OAAO;IAElB,MAAMM,sBAAsBD,OAAOL,KAAKO,iBAAiB,GAAGP,KAAKQ,aAAa;IAC9E,MAAMC,oBAAoBJ,OACpBH,mBAAmBK,kBAAkBG,QACrCR,mBAAmBM,cAAcE;IAEvC,qBACI,MAACb;QAAYc,WAAWb,EAAEc,IAAI;QAAEC,OAAM;;0BAClC,KAACnB;gBAAUoB,cAAcR;gBAAqBS,gBAAgBN;;0BAC9D,KAACb;0BACD,KAACD;;;AAGb,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { BuyReportForm } from \"@/widgets/BuyReportForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PurchasePage.module.css\";\nexport const PurchasePage = () => {\n  const { data, pending } = useUnit(getRegularPriceQuery);\n  const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n  const { urlParsed: { search: { type } } } = usePageContext();\n  if (!data && pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return /* @__PURE__ */ _jsxs(InnerLayout, {\n    className: s.root,\n    image: \"/payment/logo\",\n    children: [\n      /* @__PURE__ */ _jsx(PriceInfo, {\n        regularPrice: currentRegularPrice,\n        promocodePrice: currentPromoPrice\n      }),\n      /* @__PURE__ */ _jsx(BuyReportForm, {}),\n      /* @__PURE__ */ _jsx(NavigateToHelpPage, {})\n    ]\n  });\n};\n",
-      "start": 1750239308268,
-      "end": 1750239308299,
+      "start": 1750271784813,
+      "end": 1750271784834,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784834,
+      "end": 1750271784834,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/PurchasePage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getPriceWithPromocodeQuery, getRegularPriceQuery, PriceInfo } from \"@/entities/Report\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { BuyReportForm } from \"@/widgets/BuyReportForm\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./PurchasePage.module.css\";\nexport const PurchasePage = () => {\n  const { data, pending } = useUnit(getRegularPriceQuery);\n  const { data: dataWithPromocode } = useUnit(getPriceWithPromocodeQuery);\n  const { urlParsed: { search: { type } } } = usePageContext();\n  if (!data && pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  if (!data) return null;\n  const currentRegularPrice = type ? data.skip_survey_price : data.regular_price;\n  const currentPromoPrice = type ? dataWithPromocode?.skip_survey_price.final : dataWithPromocode?.regular_price.final;\n  return /* @__PURE__ */ _jsxs(InnerLayout, {\n    className: s.root,\n    image: \"/payment/logo\",\n    children: [\n      /* @__PURE__ */ _jsx(PriceInfo, {\n        regularPrice: currentRegularPrice,\n        promocodePrice: currentPromoPrice\n      }),\n      /* @__PURE__ */ _jsx(BuyReportForm, {}),\n      /* @__PURE__ */ _jsx(NavigateToHelpPage, {})\n    ]\n  });\n};\n",
-      "start": 1750239308299,
-      "end": 1750239308299,
+      "start": 1750271784834,
+      "end": 1750271784834,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

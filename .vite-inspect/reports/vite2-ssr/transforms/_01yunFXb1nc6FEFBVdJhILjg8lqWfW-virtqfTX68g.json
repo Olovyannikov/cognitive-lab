@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\n\ninterface ConclusionPaywallProps {\n    text?: string;\n    title?: string;\n    points?: string[];\n    actionsSlot?: ReactNode;\n    color?: string;\n}\n\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' }: ConclusionPaywallProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper\n            pos='relative'\n            bg={`${color}.0`}\n            py={isLarge ? '3xl' : 'xl'}\n            px={isLarge ? '3xl' : 'md'}\n            radius={isLarge ? 'lg' : 'md'}\n        >\n            <Picture\n                cdn\n                right={0}\n                pos='absolute'\n                src='/report/gem'\n                top={isLarge ? 0 : 20}\n                w={isLarge ? 250 : 108}\n                h={isLarge ? 250 : 108}\n            />\n            <Stack gap={isLarge ? 'lg' : 'md'}>\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\n                    <Group gap='xs'>\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\n                        {title}\n                    </Group>\n                </Title>\n                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>\n                    {text}\n                </Text>\n                <PointsList position='static' points={points} />\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\n                    {actionsSlot}\n                </Group>\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308343,
-      "end": 1750239308365,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture, PointsList } from '@/shared/ui';\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' })=>{\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsxs(Paper, {\n        pos: \"relative\",\n        bg: `${color}.0`,\n        py: isLarge ? '3xl' : 'xl',\n        px: isLarge ? '3xl' : 'md',\n        radius: isLarge ? 'lg' : 'md',\n        children: [\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                right: 0,\n                pos: \"absolute\",\n                src: \"/report/gem\",\n                top: isLarge ? 0 : 20,\n                w: isLarge ? 250 : 108,\n                h: isLarge ? 250 : 108\n            }),\n            /*#__PURE__*/ _jsxs(Stack, {\n                gap: isLarge ? 'lg' : 'md',\n                children: [\n                    /*#__PURE__*/ _jsx(Title, {\n                        order: 5,\n                        fz: isLarge ? 32 : 20,\n                        textWrap: \"balance\",\n                        maw: isLarge ? '100%' : '60%',\n                        children: /*#__PURE__*/ _jsxs(Group, {\n                            gap: \"xs\",\n                            children: [\n                                /*#__PURE__*/ _jsx(Picture, {\n                                    cdn: true,\n                                    visibleFrom: \"md\",\n                                    src: \"/emoji/star\",\n                                    w: 48,\n                                    h: 48\n                                }),\n                                title\n                            ]\n                        })\n                    }),\n                    /*#__PURE__*/ _jsx(Text, {\n                        maw: isLarge ? 950 : '80%',\n                        style: {\n                            textWrap: 'balance'\n                        },\n                        fz: isLarge ? 24 : 16,\n                        children: text\n                    }),\n                    /*#__PURE__*/ _jsx(PointsList, {\n                        position: \"static\",\n                        points: points\n                    }),\n                    /*#__PURE__*/ _jsx(Group, {\n                        gap: \"sm\",\n                        w: isLarge ? 'fit-content' : '100%',\n                        children: actionsSlot\n                    })\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308365,
-      "end": 1750239308381,
+      "start": 1750271784943,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ConclusionPaywall/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Group, Paper, Stack, Text, Title } from '@mantine/core';\\n\\nimport { useIsLarge } from '@/shared/lib';\\nimport { Picture, PointsList } from '@/shared/ui';\\n\\ninterface ConclusionPaywallProps {\\n    text?: string;\\n    title?: string;\\n    points?: string[];\\n    actionsSlot?: ReactNode;\\n    color?: string;\\n}\\n\\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'violet' }: ConclusionPaywallProps) => {\\n    const isLarge = useIsLarge();\\n\\n    return (\\n        <Paper\\n            pos='relative'\\n            bg={`${color}.0`}\\n            py={isLarge ? '3xl' : 'xl'}\\n            px={isLarge ? '3xl' : 'md'}\\n            radius={isLarge ? 'lg' : 'md'}\\n        >\\n            <Picture\\n                cdn\\n                right={0}\\n                pos='absolute'\\n                src='/report/gem'\\n                top={isLarge ? 0 : 20}\\n                w={isLarge ? 250 : 108}\\n                h={isLarge ? 250 : 108}\\n            />\\n            <Stack gap={isLarge ? 'lg' : 'md'}>\\n                <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>\\n                    <Group gap='xs'>\\n                        <Picture cdn visibleFrom='md' src='/emoji/star' w={48} h={48} />\\n                        {title}\\n                    </Group>\\n                </Title>\\n                <Text maw={isLarge ? 950 : '80%'} style={{ textWrap: 'balance' }} fz={isLarge ? 24 : 16}>\\n                    {text}\\n                </Text>\\n                <PointsList position='static' points={points} />\\n                <Group gap='sm' w={isLarge ? 'fit-content' : '100%'}>\\n                    {actionsSlot}\\n                </Group>\\n            </Stack>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Group\",\"Paper\",\"Stack\",\"Text\",\"Title\",\"useIsLarge\",\"Picture\",\"PointsList\",\"ConclusionPaywall\",\"text\",\"title\",\"points\",\"actionsSlot\",\"color\",\"isLarge\",\"pos\",\"bg\",\"py\",\"px\",\"radius\",\"cdn\",\"right\",\"src\",\"top\",\"w\",\"h\",\"gap\",\"order\",\"fz\",\"textWrap\",\"maw\",\"visibleFrom\",\"style\",\"position\"],\"mappings\":\";AACA,SAASA,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAEjE,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,OAAO,EAAEC,UAAU,QAAQ,cAAc;AAUlD,OAAO,MAAMC,oBAAoB,CAAC,EAAEC,IAAI,EAAEC,KAAK,EAAEC,MAAM,EAAEC,WAAW,EAAEC,QAAQ,QAAQ,EAA0B;IAC5G,MAAMC,UAAUT;IAEhB,qBACI,MAACJ;QACGc,KAAI;QACJC,IAAI,GAAGH,MAAM,EAAE,CAAC;QAChBI,IAAIH,UAAU,QAAQ;QACtBI,IAAIJ,UAAU,QAAQ;QACtBK,QAAQL,UAAU,OAAO;;0BAEzB,KAACR;gBACGc,GAAG;gBACHC,OAAO;gBACPN,KAAI;gBACJO,KAAI;gBACJC,KAAKT,UAAU,IAAI;gBACnBU,GAAGV,UAAU,MAAM;gBACnBW,GAAGX,UAAU,MAAM;;0BAEvB,MAACZ;gBAAMwB,KAAKZ,UAAU,OAAO;;kCACzB,KAACV;wBAAMuB,OAAO;wBAAGC,IAAId,UAAU,KAAK;wBAAIe,UAAS;wBAAUC,KAAKhB,UAAU,SAAS;kCAC/E,cAAA,MAACd;4BAAM0B,KAAI;;8CACP,KAACpB;oCAAQc,GAAG;oCAACW,aAAY;oCAAKT,KAAI;oCAAcE,GAAG;oCAAIC,GAAG;;gCACzDf;;;;kCAGT,KAACP;wBAAK2B,KAAKhB,UAAU,MAAM;wBAAOkB,OAAO;4BAAEH,UAAU;wBAAU;wBAAGD,IAAId,UAAU,KAAK;kCAChFL;;kCAEL,KAACF;wBAAW0B,UAAS;wBAAStB,QAAQA;;kCACtC,KAACX;wBAAM0B,KAAI;wBAAKF,GAAGV,UAAU,gBAAgB;kCACxCF;;;;;;AAKrB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    pos: \"relative\",\n    bg: `${color}.0`,\n    py: isLarge ? \"3xl\" : \"xl\",\n    px: isLarge ? \"3xl\" : \"md\",\n    radius: isLarge ? \"lg\" : \"md\",\n    children: [\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        right: 0,\n        pos: \"absolute\",\n        src: \"/report/gem\",\n        top: isLarge ? 0 : 20,\n        w: isLarge ? 250 : 108,\n        h: isLarge ? 250 : 108\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: isLarge ? \"lg\" : \"md\",\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            order: 5,\n            fz: isLarge ? 32 : 20,\n            textWrap: \"balance\",\n            maw: isLarge ? \"100%\" : \"60%\",\n            children: /* @__PURE__ */ _jsxs(Group, {\n              gap: \"xs\",\n              children: [\n                /* @__PURE__ */ _jsx(Picture, {\n                  cdn: true,\n                  visibleFrom: \"md\",\n                  src: \"/emoji/star\",\n                  w: 48,\n                  h: 48\n                }),\n                title\n              ]\n            })\n          }),\n          /* @__PURE__ */ _jsx(Text, {\n            maw: isLarge ? 950 : \"80%\",\n            style: {\n              textWrap: \"balance\"\n            },\n            fz: isLarge ? 24 : 16,\n            children: text\n          }),\n          /* @__PURE__ */ _jsx(PointsList, {\n            position: \"static\",\n            points\n          }),\n          /* @__PURE__ */ _jsx(Group, {\n            gap: \"sm\",\n            w: isLarge ? \"fit-content\" : \"100%\",\n            children: actionsSlot\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308381,
-      "end": 1750239308515,
+      "start": 1750271784956,
+      "end": 1750271785076,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785076,
+      "end": 1750271785076,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308515,
-      "end": 1750239308515,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ConclusionPaywall/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture, PointsList } from \"@/shared/ui\";\nexport const ConclusionPaywall = ({ text, title, points, actionsSlot, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    pos: \"relative\",\n    bg: `${color}.0`,\n    py: isLarge ? \"3xl\" : \"xl\",\n    px: isLarge ? \"3xl\" : \"md\",\n    radius: isLarge ? \"lg\" : \"md\",\n    children: [\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        right: 0,\n        pos: \"absolute\",\n        src: \"/report/gem\",\n        top: isLarge ? 0 : 20,\n        w: isLarge ? 250 : 108,\n        h: isLarge ? 250 : 108\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: isLarge ? \"lg\" : \"md\",\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            order: 5,\n            fz: isLarge ? 32 : 20,\n            textWrap: \"balance\",\n            maw: isLarge ? \"100%\" : \"60%\",\n            children: /* @__PURE__ */ _jsxs(Group, {\n              gap: \"xs\",\n              children: [\n                /* @__PURE__ */ _jsx(Picture, {\n                  cdn: true,\n                  visibleFrom: \"md\",\n                  src: \"/emoji/star\",\n                  w: 48,\n                  h: 48\n                }),\n                title\n              ]\n            })\n          }),\n          /* @__PURE__ */ _jsx(Text, {\n            maw: isLarge ? 950 : \"80%\",\n            style: {\n              textWrap: \"balance\"\n            },\n            fz: isLarge ? 24 : 16,\n            children: text\n          }),\n          /* @__PURE__ */ _jsx(PointsList, {\n            position: \"static\",\n            points\n          }),\n          /* @__PURE__ */ _jsx(Group, {\n            gap: \"sm\",\n            w: isLarge ? \"fit-content\" : \"100%\",\n            children: actionsSlot\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308515,
-      "end": 1750239308516,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

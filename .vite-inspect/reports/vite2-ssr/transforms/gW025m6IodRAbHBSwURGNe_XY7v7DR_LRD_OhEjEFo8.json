@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';\n",
-      "start": 1750239308233,
-      "end": 1750239308261,
+      "start": 1750271784783,
+      "end": 1750271784809,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './model';\nexport * from './lib';\nexport * from './api';\nexport * from './api/types';\nexport * from './ui';\nexport * from './model/testEmailFormModel';\n",
-      "start": 1750239308264,
-      "end": 1750239308267,
+      "start": 1750271784809,
+      "end": 1750271784812,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/index.ts\"],\"sourcesContent\":[\"export * from './model';\\nexport * from './lib';\\nexport * from './api';\\nexport * from './api/types';\\nexport * from './ui';\\nexport * from './model/testEmailFormModel';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,UAAU;AACxB,cAAc,QAAQ;AACtB,cAAc,QAAQ;AACtB,cAAc,cAAc;AAC5B,cAAc,OAAO;AACrB,cAAc,6BAA6B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./model\";\nexport * from \"./lib\";\nexport * from \"./api\";\nexport * from \"./api/types\";\nexport * from \"./ui\";\nexport * from \"./model/testEmailFormModel\";\n",
-      "start": 1750239308267,
-      "end": 1750239308288,
+      "start": 1750271784812,
+      "end": 1750271784842,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784842,
+      "end": 1750271784842,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784842,
+      "end": 1750271784842,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/index.ts [vike:pluginModuleBanner] */\nexport * from \"./model\";\nexport * from \"./lib\";\nexport * from \"./api\";\nexport * from \"./api/types\";\nexport * from \"./ui\";\nexport * from \"./model/testEmailFormModel\";\n",
-      "start": 1750239308288,
-      "end": 1750239308288,
+      "start": 1750271784843,
+      "end": 1750271784843,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

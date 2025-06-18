@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { getFullReportQuery } from '../api';\n\nexport const $currentContentPage = createStore(0);\nexport const $currentPage = createStore(1);\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore<boolean>(false);\n\nsample({\n    clock: $currentPage,\n    source: getFullReportQuery.$data,\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n    target: $isLastPage,\n});\n",
-      "start": 1750239308384,
-      "end": 1750239308406,
+      "start": 1750271784943,
+      "end": 1750271784962,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { createStore, sample } from 'effector';\nimport { getFullReportQuery } from '../api';\nexport const $currentContentPage = createStore(0, {\n    sid: \"bcd69fl\"\n});\nexport const $currentPage = createStore(1, {\n    sid: \"7tnixdou\"\n});\nexport const $isFirstPage = $currentPage.map((page)=>page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n    sid: \"6tdl4dfv\"\n});\nsample({\n    and: [\n        {\n            clock: $currentPage,\n            source: getFullReportQuery.$data,\n            fn: (content, page)=>page >= content.content?.map((el)=>el.content)?.length,\n            target: $isLastPage\n        }\n    ],\n    or: {\n        sid: \"2rwh3zey\"\n    }\n});\n",
-      "start": 1750239308406,
-      "end": 1750239308409,
+      "start": 1750271784962,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/contentPage.ts\"],\"sourcesContent\":[\"import { createStore, sample } from 'effector';\\n\\nimport { getFullReportQuery } from '../api';\\n\\nexport const $currentContentPage = createStore(0);\\nexport const $currentPage = createStore(1);\\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\\nexport const $isLastPage = createStore<boolean>(false);\\n\\nsample({\\n    clock: $currentPage,\\n    source: getFullReportQuery.$data,\\n    fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\\n    target: $isLastPage,\\n});\\n\"],\"names\":[\"createStore\",\"sample\",\"getFullReportQuery\",\"$currentContentPage\",\"$currentPage\",\"$isFirstPage\",\"map\",\"page\",\"$isLastPage\",\"clock\",\"source\",\"$data\",\"fn\",\"content\",\"el\",\"length\",\"target\"],\"mappings\":\"AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,kBAAkB,QAAQ,SAAS;AAE5C,OAAO,MAAMC,sBAAsBH,YAAY;;GAAG;AAClD,OAAO,MAAMI,eAAeJ,YAAY;;GAAG;AAC3C,OAAO,MAAMK,eAAeD,aAAaE,GAAG,CAAC,CAACC,OAASA,OAAO,KAAK,GAAG;AACtE,OAAO,MAAMC,cAAcR,YAAqB;;GAAO;AAEvDC;;QAAO;YACHQ,OAAOL;YACPM,QAAQR,mBAAmBS,KAAK;YAChCC,IAAI,CAACC,SAASN,OAASA,QAAQM,QAAQA,OAAO,EAAEP,IAAI,CAACQ,KAAOA,GAAGD,OAAO,GAAGE;YACzEC,QAAQR;QACZ\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  sid: \"bcd69fl\"\n});\nexport const $currentPage = createStore(1, {\n  sid: \"7tnixdou\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  sid: \"6tdl4dfv\"\n});\nsample({\n  and: [\n    {\n      clock: $currentPage,\n      source: getFullReportQuery.$data,\n      fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n      target: $isLastPage\n    }\n  ],\n  or: {\n    sid: \"2rwh3zey\"\n  }\n});\n",
-      "start": 1750239308409,
-      "end": 1750239308563,
+      "start": 1750271784971,
+      "end": 1750271785103,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785104,
+      "end": 1750271785104,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308563,
-      "end": 1750239308563,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308563,
-      "end": 1750239308564,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/contentPage.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getFullReportQuery } from \"../api\";\nexport const $currentContentPage = createStore(0, {\n  sid: \"bcd69fl\"\n});\nexport const $currentPage = createStore(1, {\n  sid: \"7tnixdou\"\n});\nexport const $isFirstPage = $currentPage.map((page) => page - 1 <= 0);\nexport const $isLastPage = createStore(false, {\n  sid: \"6tdl4dfv\"\n});\nsample({\n  and: [\n    {\n      clock: $currentPage,\n      source: getFullReportQuery.$data,\n      fn: (content, page) => page >= content.content?.map((el) => el.content)?.length,\n      target: $isLastPage\n    }\n  ],\n  or: {\n    sid: \"2rwh3zey\"\n  }\n});\n",
-      "start": 1750239308564,
-      "end": 1750239308564,
+      "start": 1750271785104,
+      "end": 1750271785104,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

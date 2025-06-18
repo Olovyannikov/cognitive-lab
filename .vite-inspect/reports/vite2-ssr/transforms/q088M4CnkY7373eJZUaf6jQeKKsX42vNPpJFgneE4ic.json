@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, createStore, sample } from 'effector';\n\nimport { TestModel } from '@/entities/Test';\n\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n    hints: [question?.hint, ...(question?.rephrasing?.map((phrase) => phrase.hint) ?? [])].filter(Boolean),\n    texts: [question?.text, ...(question?.rephrasing?.map((phrase) => phrase.text) ?? [])].filter(Boolean),\n}));\nconst $currentPhraseIndex = createStore(0);\nconst changePhraseIndex = createEvent();\n\n$currentPhraseIndex.reset(TestModel.formPageChanged);\n\nsample({\n    clock: changePhraseIndex,\n    source: { index: $currentPhraseIndex, phrases: $currentPhrases },\n    fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n    },\n    target: $currentPhraseIndex,\n});\n\nexport const RephrasingModel = {\n    $currentPhrases,\n    $currentPhraseIndex,\n    changePhraseIndex,\n};\n",
-      "start": 1750239308429,
-      "end": 1750239308444,
+      "start": 1750271784982,
+      "end": 1750271785006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { createEvent, createStore, sample } from 'effector';\nimport { TestModel } from '@/entities/Test';\nconst $currentPhrases = TestModel.$currentQuestion.map((question)=>({\n        hints: [\n            question?.hint,\n            ...question?.rephrasing?.map((phrase)=>phrase.hint) ?? []\n        ].filter(Boolean),\n        texts: [\n            question?.text,\n            ...question?.rephrasing?.map((phrase)=>phrase.text) ?? []\n        ].filter(Boolean)\n    }));\nconst $currentPhraseIndex = createStore(0, {\n    sid: \"52vo7tk3\"\n});\nconst changePhraseIndex = createEvent({\n    sid: \"9ynhf6br\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n    and: [\n        {\n            clock: changePhraseIndex,\n            source: {\n                index: $currentPhraseIndex,\n                phrases: $currentPhrases\n            },\n            fn: ({ index, phrases })=>{\n                const phrasesLen = phrases.texts.length;\n                if (index >= phrasesLen - 1) return 0;\n                return index + 1;\n            },\n            target: $currentPhraseIndex\n        }\n    ],\n    or: {\n        sid: \"2z639wz8\"\n    }\n});\nexport const RephrasingModel = {\n    $currentPhrases,\n    $currentPhraseIndex,\n    changePhraseIndex\n};\n",
-      "start": 1750239308444,
-      "end": 1750239308457,
+      "start": 1750271785006,
+      "end": 1750271785011,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/Rephrasing/model/index.ts\"],\"sourcesContent\":[\"import { createEvent, createStore, sample } from 'effector';\\n\\nimport { TestModel } from '@/entities/Test';\\n\\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\\n    hints: [question?.hint, ...(question?.rephrasing?.map((phrase) => phrase.hint) ?? [])].filter(Boolean),\\n    texts: [question?.text, ...(question?.rephrasing?.map((phrase) => phrase.text) ?? [])].filter(Boolean),\\n}));\\nconst $currentPhraseIndex = createStore(0);\\nconst changePhraseIndex = createEvent();\\n\\n$currentPhraseIndex.reset(TestModel.formPageChanged);\\n\\nsample({\\n    clock: changePhraseIndex,\\n    source: { index: $currentPhraseIndex, phrases: $currentPhrases },\\n    fn: ({ index, phrases }) => {\\n        const phrasesLen = phrases.texts.length;\\n        if (index >= phrasesLen - 1) return 0;\\n        return index + 1;\\n    },\\n    target: $currentPhraseIndex,\\n});\\n\\nexport const RephrasingModel = {\\n    $currentPhrases,\\n    $currentPhraseIndex,\\n    changePhraseIndex,\\n};\\n\"],\"names\":[\"createEvent\",\"createStore\",\"sample\",\"TestModel\",\"$currentPhrases\",\"$currentQuestion\",\"map\",\"question\",\"hints\",\"hint\",\"rephrasing\",\"phrase\",\"filter\",\"Boolean\",\"texts\",\"text\",\"$currentPhraseIndex\",\"changePhraseIndex\",\"reset\",\"formPageChanged\",\"clock\",\"source\",\"index\",\"phrases\",\"fn\",\"phrasesLen\",\"length\",\"target\",\"RephrasingModel\"],\"mappings\":\"AAAA,SAASA,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE5D,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,MAAMC,kBAAkBD,UAAUE,gBAAgB,CAACC,GAAG,CAAC,CAACC,WAAc,CAAA;QAClEC,OAAO;YAACD,UAAUE;eAAUF,UAAUG,YAAYJ,IAAI,CAACK,SAAWA,OAAOF,IAAI,KAAK,EAAE;SAAE,CAACG,MAAM,CAACC;QAC9FC,OAAO;YAACP,UAAUQ;eAAUR,UAAUG,YAAYJ,IAAI,CAACK,SAAWA,OAAOI,IAAI,KAAK,EAAE;SAAE,CAACH,MAAM,CAACC;IAClG,CAAA;AACA,MAAMG,sBAAsBf,YAAY;;;AACxC,MAAMgB,oBAAoBjB;;;AAE1BgB,oBAAoBE,KAAK,CAACf,UAAUgB,eAAe;AAEnDjB;;QAAO;YACHkB,OAAOH;YACPI,QAAQ;gBAAEC,OAAON;gBAAqBO,SAASnB;YAAgB;YAC/DoB,IAAI,CAAC,EAAEF,KAAK,EAAEC,OAAO,EAAE;gBACnB,MAAME,aAAaF,QAAQT,KAAK,CAACY,MAAM;gBACvC,IAAIJ,SAASG,aAAa,GAAG,OAAO;gBACpC,OAAOH,QAAQ;YACnB;YACAK,QAAQX;QACZ;;;;;;AAEA,OAAO,MAAMY,kBAAkB;IAC3BxB;IACAY;IACAC;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [\n    question?.hint,\n    ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []\n  ].filter(Boolean),\n  texts: [\n    question?.text,\n    ...question?.rephrasing?.map((phrase) => phrase.text) ?? []\n  ].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  sid: \"52vo7tk3\"\n});\nconst changePhraseIndex = createEvent({\n  sid: \"9ynhf6br\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [\n    {\n      clock: changePhraseIndex,\n      source: {\n        index: $currentPhraseIndex,\n        phrases: $currentPhrases\n      },\n      fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n      },\n      target: $currentPhraseIndex\n    }\n  ],\n  or: {\n    sid: \"2z639wz8\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
-      "start": 1750239308457,
-      "end": 1750239308710,
+      "start": 1750271785011,
+      "end": 1750271785237,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785237,
+      "end": 1750271785237,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785237,
+      "end": 1750271785237,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785237,
+      "end": 1750271785238,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308710,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/Rephrasing/model/index.ts [vike:pluginModuleBanner] */\nimport { createEvent, createStore, sample } from \"effector\";\nimport { TestModel } from \"@/entities/Test\";\nconst $currentPhrases = TestModel.$currentQuestion.map((question) => ({\n  hints: [\n    question?.hint,\n    ...question?.rephrasing?.map((phrase) => phrase.hint) ?? []\n  ].filter(Boolean),\n  texts: [\n    question?.text,\n    ...question?.rephrasing?.map((phrase) => phrase.text) ?? []\n  ].filter(Boolean)\n}));\nconst $currentPhraseIndex = createStore(0, {\n  sid: \"52vo7tk3\"\n});\nconst changePhraseIndex = createEvent({\n  sid: \"9ynhf6br\"\n});\n$currentPhraseIndex.reset(TestModel.formPageChanged);\nsample({\n  and: [\n    {\n      clock: changePhraseIndex,\n      source: {\n        index: $currentPhraseIndex,\n        phrases: $currentPhrases\n      },\n      fn: ({ index, phrases }) => {\n        const phrasesLen = phrases.texts.length;\n        if (index >= phrasesLen - 1) return 0;\n        return index + 1;\n      },\n      target: $currentPhraseIndex\n    }\n  ],\n  or: {\n    sid: \"2z639wz8\"\n  }\n});\nexport const RephrasingModel = {\n  $currentPhrases,\n  $currentPhraseIndex,\n  changePhraseIndex\n};\n",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785238,
+      "end": 1750271785238,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

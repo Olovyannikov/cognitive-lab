@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getMainPageInfoQuery } from '../api';\nimport type { StatisticsAndTrust } from '../api/dto';\n\nexport const LandingModel = atom(() => {\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\n\n    sample({\n        clock: getMainPageInfoQuery.finished.success,\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n        target: $statisticsAndTrust,\n    });\n\n    return {\n        $statisticsAndTrust,\n    };\n});\n",
-      "start": 1750239308284,
-      "end": 1750239308303,
+      "start": 1750271784851,
+      "end": 1750271784865,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getMainPageInfoQuery } from '../api';\nexport const LandingModel = _effector$factory({\n    sid: \"b52k37nf\",\n    fn: ()=>atom(()=>{\n            const $statisticsAndTrust = createStore([], {\n                sid: \"5iw91bwu\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: getMainPageInfoQuery.finished.success,\n                        fn: (res)=>res.result.find((el)=>el.statistics_and_trust)?.statistics_and_trust ?? [],\n                        target: $statisticsAndTrust\n                    }\n                ],\n                or: {\n                    sid: \"rvlddml\"\n                }\n            });\n            return {\n                $statisticsAndTrust\n            };\n        })\n});\n",
-      "start": 1750239308303,
-      "end": 1750239308308,
+      "start": 1750271784865,
+      "end": 1750271784874,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/model/index.ts\"],\"sourcesContent\":[\"import { createStore, sample } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { getMainPageInfoQuery } from '../api';\\nimport type { StatisticsAndTrust } from '../api/dto';\\n\\nexport const LandingModel = atom(() => {\\n    const $statisticsAndTrust = createStore<StatisticsAndTrust[]>([]);\\n\\n    sample({\\n        clock: getMainPageInfoQuery.finished.success,\\n        fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\\n        target: $statisticsAndTrust,\\n    });\\n\\n    return {\\n        $statisticsAndTrust,\\n    };\\n});\\n\"],\"names\":[\"createStore\",\"sample\",\"atom\",\"getMainPageInfoQuery\",\"LandingModel\",\"$statisticsAndTrust\",\"clock\",\"finished\",\"success\",\"fn\",\"res\",\"result\",\"find\",\"el\",\"statistics_and_trust\",\"target\"],\"mappings\":\";AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,oBAAoB,QAAQ,SAAS;AAG9C,OAAO,MAAMC;;YAAeF,KAAK;YAC7B,MAAMG,sBAAsBL,YAAkC,EAAE;;;YAEhEC;;oBAAO;wBACHK,OAAOH,qBAAqBI,QAAQ,CAACC,OAAO;wBAC5CC,IAAI,CAACC,MAAQA,IAAIC,MAAM,CAACC,IAAI,CAAC,CAACC,KAAOA,GAAGC,oBAAoB,GAAGA,wBAAwB,EAAE;wBACzFC,QAAQV;oBACZ;;;;;;YAEA,OAAO;gBACHA;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = _effector$factory({\n  sid: \"b52k37nf\",\n  fn: () => atom(() => {\n    const $statisticsAndTrust = createStore([], {\n      sid: \"5iw91bwu\"\n    });\n    sample({\n      and: [\n        {\n          clock: getMainPageInfoQuery.finished.success,\n          fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n          target: $statisticsAndTrust\n        }\n      ],\n      or: {\n        sid: \"rvlddml\"\n      }\n    });\n    return {\n      $statisticsAndTrust\n    };\n  })\n});\n",
-      "start": 1750239308308,
-      "end": 1750239308361,
+      "start": 1750271784874,
+      "end": 1750271784957,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784957,
+      "end": 1750271784957,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784957,
+      "end": 1750271784957,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Landing/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getMainPageInfoQuery } from \"../api\";\nexport const LandingModel = _effector$factory({\n  sid: \"b52k37nf\",\n  fn: () => atom(() => {\n    const $statisticsAndTrust = createStore([], {\n      sid: \"5iw91bwu\"\n    });\n    sample({\n      and: [\n        {\n          clock: getMainPageInfoQuery.finished.success,\n          fn: (res) => res.result.find((el) => el.statistics_and_trust)?.statistics_and_trust ?? [],\n          target: $statisticsAndTrust\n        }\n      ],\n      or: {\n        sid: \"rvlddml\"\n      }\n    });\n    return {\n      $statisticsAndTrust\n    };\n  })\n});\n",
-      "start": 1750239308362,
-      "end": 1750239308362,
+      "start": 1750271784957,
+      "end": 1750271784958,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container } from '@mantine/core';\n\nimport s from './TestContainer.module.css';\n\nexport const TestContainer = ({ children }: PropsWithChildren) => (\n    <Box component='section'>\n        <Container className={s.container}>{children}</Container>\n    </Box>\n);\n",
-      "start": 1750239308406,
-      "end": 1750239308419,
+      "start": 1750271784996,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from '@mantine/core';\nimport s from './TestContainer.module.css';\nexport const TestContainer = ({ children })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        children: /*#__PURE__*/ _jsx(Container, {\n            className: s.container,\n            children: children\n        })\n    });\n",
-      "start": 1750239308419,
-      "end": 1750239308423,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestContainer/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { Box, Container } from '@mantine/core';\\n\\nimport s from './TestContainer.module.css';\\n\\nexport const TestContainer = ({ children }: PropsWithChildren) => (\\n    <Box component='section'>\\n        <Container className={s.container}>{children}</Container>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Container\",\"s\",\"TestContainer\",\"children\",\"component\",\"className\",\"container\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,SAAS,QAAQ,gBAAgB;AAE/C,OAAOC,OAAO,6BAA6B;AAE3C,OAAO,MAAMC,gBAAgB,CAAC,EAAEC,QAAQ,EAAqB,iBACzD,KAACJ;QAAIK,WAAU;kBACX,cAAA,KAACJ;YAAUK,WAAWJ,EAAEK,SAAS;sBAAGH;;OAE1C\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({ children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  children: /* @__PURE__ */ _jsx(Container, {\n    className: s.container,\n    children\n  })\n});\n",
-      "start": 1750239308423,
-      "end": 1750239308605,
+      "start": 1750271785023,
+      "end": 1750271785244,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785244,
+      "end": 1750271785244,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestContainer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport s from \"./TestContainer.module.css\";\nexport const TestContainer = ({ children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  children: /* @__PURE__ */ _jsx(Container, {\n    className: s.container,\n    children\n  })\n});\n",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785244,
+      "end": 1750271785245,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

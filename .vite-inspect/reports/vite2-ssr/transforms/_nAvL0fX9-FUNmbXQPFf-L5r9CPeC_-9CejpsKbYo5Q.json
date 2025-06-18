@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { cache, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { BlogPostByIdRequest, BlogPostsRequest, BlogPostsResponse } from './dto';\n\nexport const getBlogPostsQuery = createQuery({\n    initialData: {} as BlogPostsResponse,\n    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({\n        url: API.blog.posts,\n        params: {\n            post_type: 'post',\n            page_size: Number(params.page_size),\n            ...params,\n        },\n    })),\n    mapData: (data) => {\n        if (!data.result) return {} as BlogPostsResponse;\n        const payload = data.result?.payload?.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));\n\n        return {\n            ...data.result,\n            payload: payload,\n        };\n    },\n});\n\nexport const getAllBlogPostsQuery = createQuery({\n    initialData: {} as BlogPostsResponse,\n    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({\n        url: API.blog.posts,\n        params: {\n            post_type: 'post',\n            page_size: Number(params.page_size),\n            show_on_main: true,\n            ...params,\n        },\n    })),\n    mapData: (data) => {\n        if (!data.result) return {} as BlogPostsResponse;\n        const payload = data.result?.payload\n            .toSorted((a, b) => Number(b.pinned) - Number(a.pinned))\n            .map((data) => ({\n                ...data,\n                updated_at: new Date(data.updated_at).toLocaleDateString('ru-RU'),\n            }));\n\n        return {\n            ...data.result,\n            payload,\n        };\n    },\n});\n\nexport const getBlogPostByIdQuery = createQuery({\n    effect: createCommonRequestFx<string, BlogPostByIdRequest>((id) => ({\n        url: API.blog.postById(id),\n    })),\n});\n\ncache(getBlogPostsQuery);\n",
-      "start": 1750239308270,
-      "end": 1750239308284,
+      "start": 1750271784819,
+      "end": 1750271784838,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getBlogPostsQuery = _effector$factory({\n    sid: \"9tr3t5go\",\n    fn: ()=>createQuery({\n            initialData: {},\n            effect: createCommonRequestFx((params)=>({\n                    url: API.blog.posts,\n                    params: {\n                        post_type: 'post',\n                        page_size: Number(params.page_size),\n                        ...params\n                    }\n                })),\n            mapData: (data)=>{\n                if (!data.result) return {};\n                const payload = data.result?.payload?.toSorted((a, b)=>Number(b.pinned) - Number(a.pinned));\n                return {\n                    ...data.result,\n                    payload: payload\n                };\n            }\n        })\n});\nexport const getAllBlogPostsQuery = _effector$factory({\n    sid: \"184vyyna\",\n    fn: ()=>createQuery({\n            initialData: {},\n            effect: createCommonRequestFx((params)=>({\n                    url: API.blog.posts,\n                    params: {\n                        post_type: 'post',\n                        page_size: Number(params.page_size),\n                        show_on_main: true,\n                        ...params\n                    }\n                })),\n            mapData: (data)=>{\n                if (!data.result) return {};\n                const payload = data.result?.payload.toSorted((a, b)=>Number(b.pinned) - Number(a.pinned)).map((data)=>({\n                        ...data,\n                        updated_at: new Date(data.updated_at).toLocaleDateString('ru-RU')\n                    }));\n                return {\n                    ...data.result,\n                    payload\n                };\n            }\n        })\n});\nexport const getBlogPostByIdQuery = _effector$factory({\n    sid: \"2cq9rjig\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx((id)=>({\n                    url: API.blog.postById(id)\n                }))\n        })\n});\n_effector$factory({\n    sid: \"6ngi5umw\",\n    fn: ()=>cache(getBlogPostsQuery)\n});\n",
-      "start": 1750239308284,
-      "end": 1750239308293,
+      "start": 1750271784838,
+      "end": 1750271784841,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/api/index.ts\"],\"sourcesContent\":[\"import { cache, createQuery } from '@farfetched/core';\\n\\nimport { API, createCommonRequestFx } from '@/shared/api';\\n\\nimport type { BlogPostByIdRequest, BlogPostsRequest, BlogPostsResponse } from './dto';\\n\\nexport const getBlogPostsQuery = createQuery({\\n    initialData: {} as BlogPostsResponse,\\n    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({\\n        url: API.blog.posts,\\n        params: {\\n            post_type: 'post',\\n            page_size: Number(params.page_size),\\n            ...params,\\n        },\\n    })),\\n    mapData: (data) => {\\n        if (!data.result) return {} as BlogPostsResponse;\\n        const payload = data.result?.payload?.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));\\n\\n        return {\\n            ...data.result,\\n            payload: payload,\\n        };\\n    },\\n});\\n\\nexport const getAllBlogPostsQuery = createQuery({\\n    initialData: {} as BlogPostsResponse,\\n    effect: createCommonRequestFx<BlogPostsRequest, BlogPostsResponse>((params) => ({\\n        url: API.blog.posts,\\n        params: {\\n            post_type: 'post',\\n            page_size: Number(params.page_size),\\n            show_on_main: true,\\n            ...params,\\n        },\\n    })),\\n    mapData: (data) => {\\n        if (!data.result) return {} as BlogPostsResponse;\\n        const payload = data.result?.payload\\n            .toSorted((a, b) => Number(b.pinned) - Number(a.pinned))\\n            .map((data) => ({\\n                ...data,\\n                updated_at: new Date(data.updated_at).toLocaleDateString('ru-RU'),\\n            }));\\n\\n        return {\\n            ...data.result,\\n            payload,\\n        };\\n    },\\n});\\n\\nexport const getBlogPostByIdQuery = createQuery({\\n    effect: createCommonRequestFx<string, BlogPostByIdRequest>((id) => ({\\n        url: API.blog.postById(id),\\n    })),\\n});\\n\\ncache(getBlogPostsQuery);\\n\"],\"names\":[\"cache\",\"createQuery\",\"API\",\"createCommonRequestFx\",\"getBlogPostsQuery\",\"initialData\",\"effect\",\"params\",\"url\",\"blog\",\"posts\",\"post_type\",\"page_size\",\"Number\",\"mapData\",\"data\",\"result\",\"payload\",\"toSorted\",\"a\",\"b\",\"pinned\",\"getAllBlogPostsQuery\",\"show_on_main\",\"map\",\"updated_at\",\"Date\",\"toLocaleDateString\",\"getBlogPostByIdQuery\",\"id\",\"postById\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,WAAW,QAAQ,mBAAmB;AAEtD,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,eAAe;AAI1D,OAAO,MAAMC;;YAAoBH,YAAY;YACzCI,aAAa,CAAC;YACdC,QAAQH,sBAA2D,CAACI,SAAY,CAAA;oBAC5EC,KAAKN,IAAIO,IAAI,CAACC,KAAK;oBACnBH,QAAQ;wBACJI,WAAW;wBACXC,WAAWC,OAAON,OAAOK,SAAS;wBAClC,GAAGL,MAAM;oBACb;gBACJ,CAAA;YACAO,SAAS,CAACC;gBACN,IAAI,CAACA,KAAKC,MAAM,EAAE,OAAO,CAAC;gBAC1B,MAAMC,UAAUF,KAAKC,MAAM,EAAEC,SAASC,SAAS,CAACC,GAAGC,IAAMP,OAAOO,EAAEC,MAAM,IAAIR,OAAOM,EAAEE,MAAM;gBAE3F,OAAO;oBACH,GAAGN,KAAKC,MAAM;oBACdC,SAASA;gBACb;YACJ;QACJ;GAAG;AAEH,OAAO,MAAMK;;YAAuBrB,YAAY;YAC5CI,aAAa,CAAC;YACdC,QAAQH,sBAA2D,CAACI,SAAY,CAAA;oBAC5EC,KAAKN,IAAIO,IAAI,CAACC,KAAK;oBACnBH,QAAQ;wBACJI,WAAW;wBACXC,WAAWC,OAAON,OAAOK,SAAS;wBAClCW,cAAc;wBACd,GAAGhB,MAAM;oBACb;gBACJ,CAAA;YACAO,SAAS,CAACC;gBACN,IAAI,CAACA,KAAKC,MAAM,EAAE,OAAO,CAAC;gBAC1B,MAAMC,UAAUF,KAAKC,MAAM,EAAEC,QACxBC,SAAS,CAACC,GAAGC,IAAMP,OAAOO,EAAEC,MAAM,IAAIR,OAAOM,EAAEE,MAAM,GACrDG,IAAI,CAACT,OAAU,CAAA;wBACZ,GAAGA,IAAI;wBACPU,YAAY,IAAIC,KAAKX,KAAKU,UAAU,EAAEE,kBAAkB,CAAC;oBAC7D,CAAA;gBAEJ,OAAO;oBACH,GAAGZ,KAAKC,MAAM;oBACdC;gBACJ;YACJ;QACJ;GAAG;AAEH,OAAO,MAAMW;;YAAuB3B,YAAY;YAC5CK,QAAQH,sBAAmD,CAAC0B,KAAQ,CAAA;oBAChErB,KAAKN,IAAIO,IAAI,CAACqB,QAAQ,CAACD;gBAC3B,CAAA;QACJ;GAAG;;;YAEH7B,MAAMI\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getBlogPostsQuery = _effector$factory({\n  sid: \"9tr3t5go\",\n  fn: () => createQuery({\n    initialData: {},\n    effect: createCommonRequestFx((params) => ({\n      url: API.blog.posts,\n      params: {\n        post_type: \"post\",\n        page_size: Number(params.page_size),\n        ...params\n      }\n    })),\n    mapData: (data) => {\n      if (!data.result) return {};\n      const payload = data.result?.payload?.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));\n      return {\n        ...data.result,\n        payload\n      };\n    }\n  })\n});\nexport const getAllBlogPostsQuery = _effector$factory({\n  sid: \"184vyyna\",\n  fn: () => createQuery({\n    initialData: {},\n    effect: createCommonRequestFx((params) => ({\n      url: API.blog.posts,\n      params: {\n        post_type: \"post\",\n        page_size: Number(params.page_size),\n        show_on_main: true,\n        ...params\n      }\n    })),\n    mapData: (data) => {\n      if (!data.result) return {};\n      const payload = data.result?.payload.toSorted((a, b) => Number(b.pinned) - Number(a.pinned)).map((data2) => ({\n        ...data2,\n        updated_at: new Date(data2.updated_at).toLocaleDateString(\"ru-RU\")\n      }));\n      return {\n        ...data.result,\n        payload\n      };\n    }\n  })\n});\nexport const getBlogPostByIdQuery = _effector$factory({\n  sid: \"2cq9rjig\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((id) => ({\n      url: API.blog.postById(id)\n    }))\n  })\n});\n_effector$factory({\n  sid: \"6ngi5umw\",\n  fn: () => cache(getBlogPostsQuery)\n});\n",
-      "start": 1750239308293,
-      "end": 1750239308331,
+      "start": 1750271784842,
+      "end": 1750271784878,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784879,
+      "end": 1750271784879,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308331,
-      "end": 1750239308331,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Blog/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getBlogPostsQuery = _effector$factory({\n  sid: \"9tr3t5go\",\n  fn: () => createQuery({\n    initialData: {},\n    effect: createCommonRequestFx((params) => ({\n      url: API.blog.posts,\n      params: {\n        post_type: \"post\",\n        page_size: Number(params.page_size),\n        ...params\n      }\n    })),\n    mapData: (data) => {\n      if (!data.result) return {};\n      const payload = data.result?.payload?.toSorted((a, b) => Number(b.pinned) - Number(a.pinned));\n      return {\n        ...data.result,\n        payload\n      };\n    }\n  })\n});\nexport const getAllBlogPostsQuery = _effector$factory({\n  sid: \"184vyyna\",\n  fn: () => createQuery({\n    initialData: {},\n    effect: createCommonRequestFx((params) => ({\n      url: API.blog.posts,\n      params: {\n        post_type: \"post\",\n        page_size: Number(params.page_size),\n        show_on_main: true,\n        ...params\n      }\n    })),\n    mapData: (data) => {\n      if (!data.result) return {};\n      const payload = data.result?.payload.toSorted((a, b) => Number(b.pinned) - Number(a.pinned)).map((data2) => ({\n        ...data2,\n        updated_at: new Date(data2.updated_at).toLocaleDateString(\"ru-RU\")\n      }));\n      return {\n        ...data.result,\n        payload\n      };\n    }\n  })\n});\nexport const getBlogPostByIdQuery = _effector$factory({\n  sid: \"2cq9rjig\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((id) => ({\n      url: API.blog.postById(id)\n    }))\n  })\n});\n_effector$factory({\n  sid: \"6ngi5umw\",\n  fn: () => cache(getBlogPostsQuery)\n});\n",
-      "start": 1750239308332,
-      "end": 1750239308332,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

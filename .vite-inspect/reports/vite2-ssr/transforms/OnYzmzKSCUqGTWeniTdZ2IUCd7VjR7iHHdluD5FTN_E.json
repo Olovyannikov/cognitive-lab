@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".label {\n  margin-bottom: var(--mantine-spacing-xxs);\n  font-weight: 600;\n  font-size: 14px;\n\n  @mixin larger-than 976px {\n    font-size: 16px;\n  }\n}\n\n.required {\n  font-size: 16px;\n}\n",
-      "start": 1750239308463,
-      "end": 1750239308495,
+      "start": 1750271785032,
+      "end": 1750271785061,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785061,
+      "end": 1750271785061,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785061,
+      "end": 1750271785061,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785062,
+      "end": 1750271785062,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785062,
+      "end": 1750271785062,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormInput/FormInput.module.css [vike:pluginModuleBanner] */\nexport const label = \"HrlS-\";\nexport const required = \"-jGmj\";\nexport default {\n\tlabel: label,\n\trequired: required\n};\n",
-      "start": 1750239308496,
-      "end": 1750239308496,
+      "start": 1750271785062,
+      "end": 1750271785062,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

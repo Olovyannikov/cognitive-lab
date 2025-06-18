@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { useGate } from 'effector-react';\n\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\n\nimport s from './RootLayout.module.css';\n\nexport const RootLayout = ({ children }: PropsWithChildren) => {\n    useGate(RootLayoutModel.RootLayoutGate);\n    return (\n        <div className={s.app}>\n            <Header className={s.header} />\n            <main className={s.main} id='page-content'>\n                {children}\n            </main>\n            <Footer className={s.footer} />\n        </div>\n    );\n};\n",
-      "start": 1750239308153,
-      "end": 1750239308174,
+      "start": 1750271784655,
+      "end": 1750271784678,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useGate } from 'effector-react';\nimport { RootLayoutModel } from './model';\nimport { Footer, Header } from './ui';\nimport s from './RootLayout.module.css';\nexport const RootLayout = ({ children })=>{\n    useGate(RootLayoutModel.RootLayoutGate);\n    return /*#__PURE__*/ _jsxs(\"div\", {\n        className: s.app,\n        children: [\n            /*#__PURE__*/ _jsx(Header, {\n                className: s.header\n            }),\n            /*#__PURE__*/ _jsx(\"main\", {\n                className: s.main,\n                id: \"page-content\",\n                children: children\n            }),\n            /*#__PURE__*/ _jsx(Footer, {\n                className: s.footer\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308174,
-      "end": 1750239308183,
+      "start": 1750271784678,
+      "end": 1750271784685,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { useGate } from 'effector-react';\\n\\nimport { RootLayoutModel } from './model';\\nimport { Footer, Header } from './ui';\\n\\nimport s from './RootLayout.module.css';\\n\\nexport const RootLayout = ({ children }: PropsWithChildren) => {\\n    useGate(RootLayoutModel.RootLayoutGate);\\n    return (\\n        <div className={s.app}>\\n            <Header className={s.header} />\\n            <main className={s.main} id='page-content'>\\n                {children}\\n            </main>\\n            <Footer className={s.footer} />\\n        </div>\\n    );\\n};\\n\"],\"names\":[\"useGate\",\"RootLayoutModel\",\"Footer\",\"Header\",\"s\",\"RootLayout\",\"children\",\"RootLayoutGate\",\"div\",\"className\",\"app\",\"header\",\"main\",\"id\",\"footer\"],\"mappings\":\";AACA,SAASA,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,eAAe,QAAQ,UAAU;AAC1C,SAASC,MAAM,EAAEC,MAAM,QAAQ,OAAO;AAEtC,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,aAAa,CAAC,EAAEC,QAAQ,EAAqB;IACtDN,QAAQC,gBAAgBM,cAAc;IACtC,qBACI,MAACC;QAAIC,WAAWL,EAAEM,GAAG;;0BACjB,KAACP;gBAAOM,WAAWL,EAAEO,MAAM;;0BAC3B,KAACC;gBAAKH,WAAWL,EAAEQ,IAAI;gBAAEC,IAAG;0BACvBP;;0BAEL,KAACJ;gBAAOO,WAAWL,EAAEU,MAAM;;;;AAGvC,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { RootLayoutModel } from \"./model\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({ children }) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return /* @__PURE__ */ _jsxs(\"div\", {\n    className: s.app,\n    children: [\n      /* @__PURE__ */ _jsx(Header, {\n        className: s.header\n      }),\n      /* @__PURE__ */ _jsx(\"main\", {\n        className: s.main,\n        id: \"page-content\",\n        children\n      }),\n      /* @__PURE__ */ _jsx(Footer, {\n        className: s.footer\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308183,
-      "end": 1750239308223,
+      "start": 1750271784685,
+      "end": 1750271784774,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784774,
+      "end": 1750271784774,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784775,
+      "end": 1750271784775,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784775,
+      "end": 1750271784775,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784775,
+      "end": 1750271784775,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784775,
+      "end": 1750271784775,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784775,
+      "end": 1750271784775,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useGate } from \"effector-react\";\nimport { RootLayoutModel } from \"./model\";\nimport { Footer, Header } from \"./ui\";\nimport s from \"./RootLayout.module.css\";\nexport const RootLayout = ({ children }) => {\n  useGate(RootLayoutModel.RootLayoutGate);\n  return /* @__PURE__ */ _jsxs(\"div\", {\n    className: s.app,\n    children: [\n      /* @__PURE__ */ _jsx(Header, {\n        className: s.header\n      }),\n      /* @__PURE__ */ _jsx(\"main\", {\n        className: s.main,\n        id: \"page-content\",\n        children\n      }),\n      /* @__PURE__ */ _jsx(Footer, {\n        className: s.footer\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784775,
+      "end": 1750271784775,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

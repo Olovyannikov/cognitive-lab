@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ChangeEvent } from 'react';\n\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n    e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750239308320,
-      "end": 1750239308333,
+      "start": 1750271784944,
+      "end": 1750271784964,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const toInputUppercase = (e)=>{\n    e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750239308333,
-      "end": 1750239308336,
+      "start": 1750271784964,
+      "end": 1750271784972,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/toInputUpperCase/index.ts\"],\"sourcesContent\":[\"import type { ChangeEvent } from 'react';\\n\\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\\n    e.target.value = String(e.target.value).toUpperCase();\\n};\\n\"],\"names\":[\"toInputUppercase\",\"e\",\"target\",\"value\",\"String\",\"toUpperCase\"],\"mappings\":\"AAEA,OAAO,MAAMA,mBAAmB,CAACC;IAC7BA,EAAEC,MAAM,CAACC,KAAK,GAAGC,OAAOH,EAAEC,MAAM,CAACC,KAAK,EAAEE,WAAW;AACvD,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750239308336,
-      "end": 1750239308436,
+      "start": 1750271784972,
+      "end": 1750271785130,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "start": 1750271785130,
+      "end": 1750271785130,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308436,
-      "end": 1750239308436,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308437,
-      "end": 1750239308437,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785131,
+      "end": 1750271785131,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308437,
-      "end": 1750239308437,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308437,
-      "end": 1750239308437,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308437,
-      "end": 1750239308437,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/toInputUpperCase/index.ts [vike:pluginModuleBanner] */\nexport const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750239308437,
-      "end": 1750239308437,
+      "start": 1750271785131,
+      "end": 1750271785131,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const FaqPage = () => {\n    const { data } = useUnit(getFAQQuery);\n\n    return (\n        <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>\n    );\n};\n",
-      "start": 1750239308213,
-      "end": 1750239308231,
+      "start": 1750271784768,
+      "end": 1750271784781,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = ()=>{\n    const { data } = useUnit(getFAQQuery);\n    return /*#__PURE__*/ _jsx(PageLayout, {\n        title: \"Ответы на вопросы\",\n        children: /*#__PURE__*/ _jsx(Box, {\n            component: \"section\",\n            children: /*#__PURE__*/ _jsxs(Container, {\n                children: [\n                    /*#__PURE__*/ _jsx(Box, {\n                        mb: \"3xl\",\n                        children: /*#__PURE__*/ _jsx(FAQList, {\n                            items: data?.payload\n                        })\n                    }),\n                    /*#__PURE__*/ _jsxs(Text, {\n                        ta: \"center\",\n                        fz: 20,\n                        children: [\n                            \"Остались вопросы? Напишите нам в\",\n                            ' ',\n                            /*#__PURE__*/ _jsx(Text, {\n                                fz: 20,\n                                component: \"a\",\n                                href: \"/help\",\n                                span: true,\n                                c: \"blue.7\",\n                                children: \"Службу поддержки\"\n                            })\n                        ]\n                    })\n                ]\n            })\n        })\n    });\n};\n",
-      "start": 1750239308231,
-      "end": 1750239308236,
+      "start": 1750271784781,
+      "end": 1750271784786,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx\"],\"sourcesContent\":[\"import { Box, Container, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\n\\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\\n\\nimport { PageLayout } from '@/widgets/PageLayout';\\n\\nexport const FaqPage = () => {\\n    const { data } = useUnit(getFAQQuery);\\n\\n    return (\\n        <PageLayout title='Ответы на вопросы'>\\n            <Box component='section'>\\n                <Container>\\n                    <Box mb='3xl'>\\n                        <FAQList items={data?.payload} />\\n                    </Box>\\n                    <Text ta='center' fz={20}>\\n                        Остались вопросы? Напишите нам в{' '}\\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\\n                            Службу поддержки\\n                        </Text>\\n                    </Text>\\n                </Container>\\n            </Box>\\n        </PageLayout>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Container\",\"Text\",\"useUnit\",\"FAQList\",\"getFAQQuery\",\"PageLayout\",\"FaqPage\",\"data\",\"title\",\"component\",\"mb\",\"items\",\"payload\",\"ta\",\"fz\",\"href\",\"span\",\"c\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,SAAS,EAAEC,IAAI,QAAQ,gBAAgB;AACrD,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,OAAO,EAAEC,WAAW,QAAQ,iBAAiB;AAEtD,SAASC,UAAU,QAAQ,uBAAuB;AAElD,OAAO,MAAMC,UAAU;IACnB,MAAM,EAAEC,IAAI,EAAE,GAAGL,QAAQE;IAEzB,qBACI,KAACC;QAAWG,OAAM;kBACd,cAAA,KAACT;YAAIU,WAAU;sBACX,cAAA,MAACT;;kCACG,KAACD;wBAAIW,IAAG;kCACJ,cAAA,KAACP;4BAAQQ,OAAOJ,MAAMK;;;kCAE1B,MAACX;wBAAKY,IAAG;wBAASC,IAAI;;4BAAI;4BACW;0CACjC,KAACb;gCAAKa,IAAI;gCAAIL,WAAU;gCAAIM,MAAK;gCAAQC,IAAI;gCAACC,GAAE;0CAAS;;;;;;;;AAQjF,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const { data } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Ответы на вопросы\",\n    children: /* @__PURE__ */ _jsx(Box, {\n      component: \"section\",\n      children: /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          /* @__PURE__ */ _jsx(Box, {\n            mb: \"3xl\",\n            children: /* @__PURE__ */ _jsx(FAQList, {\n              items: data?.payload\n            })\n          }),\n          /* @__PURE__ */ _jsxs(Text, {\n            ta: \"center\",\n            fz: 20,\n            children: [\n              \"Остались вопросы? Напишите нам в\",\n              \" \",\n              /* @__PURE__ */ _jsx(Text, {\n                fz: 20,\n                component: \"a\",\n                href: \"/help\",\n                span: true,\n                c: \"blue.7\",\n                children: \"Службу поддержки\"\n              })\n            ]\n          })\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308236,
-      "end": 1750239308245,
+      "start": 1750271784786,
+      "end": 1750271784811,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784811,
+      "end": 1750271784811,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/FaqPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const { data } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Ответы на вопросы\",\n    children: /* @__PURE__ */ _jsx(Box, {\n      component: \"section\",\n      children: /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          /* @__PURE__ */ _jsx(Box, {\n            mb: \"3xl\",\n            children: /* @__PURE__ */ _jsx(FAQList, {\n              items: data?.payload\n            })\n          }),\n          /* @__PURE__ */ _jsxs(Text, {\n            ta: \"center\",\n            fz: 20,\n            children: [\n              \"Остались вопросы? Напишите нам в\",\n              \" \",\n              /* @__PURE__ */ _jsx(Text, {\n                fz: 20,\n                component: \"a\",\n                href: \"/help\",\n                span: true,\n                c: \"blue.7\",\n                children: \"Службу поддержки\"\n              })\n            ]\n          })\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308246,
-      "end": 1750239308246,
+      "start": 1750271784811,
+      "end": 1750271784811,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

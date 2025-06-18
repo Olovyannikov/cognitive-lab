@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Textarea } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FormInput, FormWrapper } from '@/shared/ui';\n\nimport { sendIssueMutation } from '../api';\nimport { useHelpFormViewModel } from '../view-model';\n\nexport const HelpForm = () => {\n    const { pending } = useUnit(sendIssueMutation);\n    const { nameProps, themeProps, emailProps, questionProps, onSubmit } = useHelpFormViewModel();\n\n    return (\n        <FormWrapper onSubmit={onSubmit}>\n            <FormInput {...nameProps} disabled={pending} />\n            <FormInput {...themeProps} disabled={pending} />\n            <FormInput {...emailProps} disabled={pending} />\n            <Textarea\n                rows={5}\n                styles={{\n                    label: {\n                        fontSize: 16,\n                        fontWeight: '600',\n                        marginBottom: 4,\n                    },\n                    input: {\n                        fontSize: 16,\n                    },\n                }}\n                {...questionProps}\n                disabled={pending}\n            />\n            <Button disabled={pending} loading={pending} type='submit' fullWidth size='md'>\n                Отправить\n            </Button>\n        </FormWrapper>\n    );\n};\n",
-      "start": 1750239308420,
-      "end": 1750239308439,
+      "start": 1750271784883,
+      "end": 1750271784906,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Textarea } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FormInput, FormWrapper } from '@/shared/ui';\nimport { sendIssueMutation } from '../api';\nimport { useHelpFormViewModel } from '../view-model';\nexport const HelpForm = ()=>{\n    const { pending } = useUnit(sendIssueMutation);\n    const { nameProps, themeProps, emailProps, questionProps, onSubmit } = useHelpFormViewModel();\n    return /*#__PURE__*/ _jsxs(FormWrapper, {\n        onSubmit: onSubmit,\n        children: [\n            /*#__PURE__*/ _jsx(FormInput, {\n                ...nameProps,\n                disabled: pending\n            }),\n            /*#__PURE__*/ _jsx(FormInput, {\n                ...themeProps,\n                disabled: pending\n            }),\n            /*#__PURE__*/ _jsx(FormInput, {\n                ...emailProps,\n                disabled: pending\n            }),\n            /*#__PURE__*/ _jsx(Textarea, {\n                rows: 5,\n                styles: {\n                    label: {\n                        fontSize: 16,\n                        fontWeight: '600',\n                        marginBottom: 4\n                    },\n                    input: {\n                        fontSize: 16\n                    }\n                },\n                ...questionProps,\n                disabled: pending\n            }),\n            /*#__PURE__*/ _jsx(Button, {\n                disabled: pending,\n                loading: pending,\n                type: \"submit\",\n                fullWidth: true,\n                size: \"md\",\n                children: \"Отправить\"\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308439,
-      "end": 1750239308444,
+      "start": 1750271784906,
+      "end": 1750271784930,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/ui/index.tsx\"],\"sourcesContent\":[\"import { Button, Textarea } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\n\\nimport { FormInput, FormWrapper } from '@/shared/ui';\\n\\nimport { sendIssueMutation } from '../api';\\nimport { useHelpFormViewModel } from '../view-model';\\n\\nexport const HelpForm = () => {\\n    const { pending } = useUnit(sendIssueMutation);\\n    const { nameProps, themeProps, emailProps, questionProps, onSubmit } = useHelpFormViewModel();\\n\\n    return (\\n        <FormWrapper onSubmit={onSubmit}>\\n            <FormInput {...nameProps} disabled={pending} />\\n            <FormInput {...themeProps} disabled={pending} />\\n            <FormInput {...emailProps} disabled={pending} />\\n            <Textarea\\n                rows={5}\\n                styles={{\\n                    label: {\\n                        fontSize: 16,\\n                        fontWeight: '600',\\n                        marginBottom: 4,\\n                    },\\n                    input: {\\n                        fontSize: 16,\\n                    },\\n                }}\\n                {...questionProps}\\n                disabled={pending}\\n            />\\n            <Button disabled={pending} loading={pending} type='submit' fullWidth size='md'>\\n                Отправить\\n            </Button>\\n        </FormWrapper>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Textarea\",\"useUnit\",\"FormInput\",\"FormWrapper\",\"sendIssueMutation\",\"useHelpFormViewModel\",\"HelpForm\",\"pending\",\"nameProps\",\"themeProps\",\"emailProps\",\"questionProps\",\"onSubmit\",\"disabled\",\"rows\",\"styles\",\"label\",\"fontSize\",\"fontWeight\",\"marginBottom\",\"input\",\"loading\",\"type\",\"fullWidth\",\"size\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,QAAQ,QAAQ,gBAAgB;AACjD,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,SAAS,EAAEC,WAAW,QAAQ,cAAc;AAErD,SAASC,iBAAiB,QAAQ,SAAS;AAC3C,SAASC,oBAAoB,QAAQ,gBAAgB;AAErD,OAAO,MAAMC,WAAW;IACpB,MAAM,EAAEC,OAAO,EAAE,GAAGN,QAAQG;IAC5B,MAAM,EAAEI,SAAS,EAAEC,UAAU,EAAEC,UAAU,EAAEC,aAAa,EAAEC,QAAQ,EAAE,GAAGP;IAEvE,qBACI,MAACF;QAAYS,UAAUA;;0BACnB,KAACV;gBAAW,GAAGM,SAAS;gBAAEK,UAAUN;;0BACpC,KAACL;gBAAW,GAAGO,UAAU;gBAAEI,UAAUN;;0BACrC,KAACL;gBAAW,GAAGQ,UAAU;gBAAEG,UAAUN;;0BACrC,KAACP;gBACGc,MAAM;gBACNC,QAAQ;oBACJC,OAAO;wBACHC,UAAU;wBACVC,YAAY;wBACZC,cAAc;oBAClB;oBACAC,OAAO;wBACHH,UAAU;oBACd;gBACJ;gBACC,GAAGN,aAAa;gBACjBE,UAAUN;;0BAEd,KAACR;gBAAOc,UAAUN;gBAASc,SAASd;gBAASe,MAAK;gBAASC,SAAS;gBAACC,MAAK;0BAAK;;;;AAK3F,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Textarea } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FormInput, FormWrapper } from \"@/shared/ui\";\nimport { sendIssueMutation } from \"../api\";\nimport { useHelpFormViewModel } from \"../view-model\";\nexport const HelpForm = () => {\n  const { pending } = useUnit(sendIssueMutation);\n  const { nameProps, themeProps, emailProps, questionProps, onSubmit } = useHelpFormViewModel();\n  return /* @__PURE__ */ _jsxs(FormWrapper, {\n    onSubmit,\n    children: [\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...nameProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...themeProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...emailProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(Textarea, {\n        rows: 5,\n        styles: {\n          label: {\n            fontSize: 16,\n            fontWeight: \"600\",\n            marginBottom: 4\n          },\n          input: {\n            fontSize: 16\n          }\n        },\n        ...questionProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        disabled: pending,\n        loading: pending,\n        type: \"submit\",\n        fullWidth: true,\n        size: \"md\",\n        children: \"Отправить\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308444,
-      "end": 1750239308672,
+      "start": 1750271784930,
+      "end": 1750271785049,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785049,
+      "end": 1750271785049,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308672,
-      "end": 1750239308672,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Textarea } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FormInput, FormWrapper } from \"@/shared/ui\";\nimport { sendIssueMutation } from \"../api\";\nimport { useHelpFormViewModel } from \"../view-model\";\nexport const HelpForm = () => {\n  const { pending } = useUnit(sendIssueMutation);\n  const { nameProps, themeProps, emailProps, questionProps, onSubmit } = useHelpFormViewModel();\n  return /* @__PURE__ */ _jsxs(FormWrapper, {\n    onSubmit,\n    children: [\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...nameProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...themeProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(FormInput, {\n        ...emailProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(Textarea, {\n        rows: 5,\n        styles: {\n          label: {\n            fontSize: 16,\n            fontWeight: \"600\",\n            marginBottom: 4\n          },\n          input: {\n            fontSize: 16\n          }\n        },\n        ...questionProps,\n        disabled: pending\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        disabled: pending,\n        loading: pending,\n        type: \"submit\",\n        fullWidth: true,\n        size: \"md\",\n        children: \"Отправить\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308672,
-      "end": 1750239308673,
+      "start": 1750271785049,
+      "end": 1750271785050,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

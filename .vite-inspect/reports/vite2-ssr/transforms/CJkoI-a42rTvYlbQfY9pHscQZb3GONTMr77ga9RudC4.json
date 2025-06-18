@@ -4,93 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImageCardDesktop4 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 224, height: 187, viewBox: \"0 0 224 187\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 68.5, cy: 31.5, r: 155.5, fill: \"#F59F00\" }));\nexport default SvgImageCardDesktop4;\n",
-      "start": 1750239308659,
-      "end": 1750239308787,
+      "start": 1750271785161,
+      "end": 1750271785328,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785328,
+      "end": 1750271785328,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785328,
+      "end": 1750271785328,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785329,
+      "end": 1750271785329,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785329,
+      "end": 1750271785329,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/ForWhom/img/image-card-desktop-4.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImageCardDesktop4 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 224, height: 187, viewBox: \"0 0 224 187\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 68.5, cy: 31.5, r: 155.5, fill: \"#F59F00\" }));\nexport default SvgImageCardDesktop4;\n",
-      "start": 1750239308787,
-      "end": 1750239308787,
+      "start": 1750271785329,
+      "end": 1750271785329,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n",
-      "start": 1750239308324,
-      "end": 1750239308336,
+      "start": 1750271784869,
+      "end": 1750271784894,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from '@mantine/core';\nexport const PageLoader = ()=>/*#__PURE__*/ _jsx(Center, {\n        mih: 200,\n        children: /*#__PURE__*/ _jsx(Loader, {\n            size: \"xl\",\n            color: \"violet.5\"\n        })\n    });\n",
-      "start": 1750239308336,
-      "end": 1750239308353,
+      "start": 1750271784894,
+      "end": 1750271784898,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx\"],\"sourcesContent\":[\"import { Center, Loader } from '@mantine/core';\\n\\nexport const PageLoader = () => (\\n    <Center mih={200}>\\n        <Loader size='xl' color='violet.5' />\\n    </Center>\\n);\\n\"],\"names\":[\"Center\",\"Loader\",\"PageLoader\",\"mih\",\"size\",\"color\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,MAAM,QAAQ,gBAAgB;AAE/C,OAAO,MAAMC,aAAa,kBACtB,KAACF;QAAOG,KAAK;kBACT,cAAA,KAACF;YAAOG,MAAK;YAAKC,OAAM;;OAE9B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ _jsx(Center, {\n  mih: 200,\n  children: /* @__PURE__ */ _jsx(Loader, {\n    size: \"xl\",\n    color: \"violet.5\"\n  })\n});\n",
-      "start": 1750239308353,
-      "end": 1750239308452,
+      "start": 1750271784898,
+      "end": 1750271785013,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785013,
+      "end": 1750271785013,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308452,
-      "end": 1750239308452,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ _jsx(Center, {\n  mih: 200,\n  children: /* @__PURE__ */ _jsx(Loader, {\n    size: \"xl\",\n    color: \"violet.5\"\n  })\n});\n",
-      "start": 1750239308453,
-      "end": 1750239308453,
+      "start": 1750271785013,
+      "end": 1750271785013,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

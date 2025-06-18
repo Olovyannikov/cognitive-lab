@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\n\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\n\ninterface UseMultipleQuestionViewModelProps {\n    onChange: (payload: {\n        question: string;\n        answer: { input?: string; value: string }[];\n        index: number;\n        isMultiple: boolean;\n    }) => void;\n    page: number;\n    id: string;\n    value: MultiChoiceAnswer[] | null;\n    options?: Option[];\n}\n\nexport const useMultipleQuestionViewModel = ({\n    onChange,\n    options,\n    page,\n    id,\n    value,\n}: UseMultipleQuestionViewModelProps) => {\n    const [input, setInput] = useState('');\n    const [localValues, setLocalValues] = useState<string[]>([]);\n    const [debounced] = useDebouncedValue(input, 200);\n\n    useEffect(() => {\n        const obj: { value: string; input?: string }[] = [];\n\n        // TODO: check and remove - ?\n        // if (localValues.length < 1) {\n        //     onChange({\n        //         question: id,\n        //         answer: obj,\n        //         index: page - 1,\n        //         isMultiple: true,\n        //     });\n        // }\n\n        localValues?.forEach((v, idx) => {\n            if (!options) return;\n\n            if (localValues[idx] === options[options?.length - 1].id) {\n                return (obj[idx] = {\n                    value: v,\n                    input: debounced,\n                });\n            }\n\n            obj[idx] = {\n                value: v,\n            };\n        });\n\n        onChange({\n            question: id,\n            answer: obj,\n            index: page - 1,\n            isMultiple: true,\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [localValues, debounced]);\n\n    useEffect(() => {\n        setInput(value?.find((el) => el.input)?.input ?? '');\n        setLocalValues(value?.map((el) => el.value) ?? []);\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [id, page]);\n\n    return {\n        localValues,\n        input,\n        setLocalValues,\n        setInput,\n    };\n};\n",
-      "start": 1750239308623,
-      "end": 1750239308634,
+      "start": 1750271785281,
+      "end": 1750271785289,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { useEffect, useState } from 'react';\nimport { useDebouncedValue } from '@mantine/hooks';\nexport const useMultipleQuestionViewModel = ({ onChange, options, page, id, value })=>{\n    const [input, setInput] = useState('');\n    const [localValues, setLocalValues] = useState([]);\n    const [debounced] = useDebouncedValue(input, 200);\n    useEffect(()=>{\n        const obj = [];\n        // TODO: check and remove - ?\n        // if (localValues.length < 1) {\n        //     onChange({\n        //         question: id,\n        //         answer: obj,\n        //         index: page - 1,\n        //         isMultiple: true,\n        //     });\n        // }\n        localValues?.forEach((v, idx)=>{\n            if (!options) return;\n            if (localValues[idx] === options[options?.length - 1].id) {\n                return obj[idx] = {\n                    value: v,\n                    input: debounced\n                };\n            }\n            obj[idx] = {\n                value: v\n            };\n        });\n        onChange({\n            question: id,\n            answer: obj,\n            index: page - 1,\n            isMultiple: true\n        });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        localValues,\n        debounced\n    ]);\n    useEffect(()=>{\n        setInput(value?.find((el)=>el.input)?.input ?? '');\n        setLocalValues(value?.map((el)=>el.value) ?? []);\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        id,\n        page\n    ]);\n    return {\n        localValues,\n        input,\n        setLocalValues,\n        setInput\n    };\n};\n",
-      "start": 1750239308634,
-      "end": 1750239308638,
+      "start": 1750271785289,
+      "end": 1750271785293,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestMultipleQuestion/view-model.ts\"],\"sourcesContent\":[\"import { useEffect, useState } from 'react';\\nimport { useDebouncedValue } from '@mantine/hooks';\\n\\nimport type { MultiChoiceAnswer, Option } from '@/entities/Test';\\n\\ninterface UseMultipleQuestionViewModelProps {\\n    onChange: (payload: {\\n        question: string;\\n        answer: { input?: string; value: string }[];\\n        index: number;\\n        isMultiple: boolean;\\n    }) => void;\\n    page: number;\\n    id: string;\\n    value: MultiChoiceAnswer[] | null;\\n    options?: Option[];\\n}\\n\\nexport const useMultipleQuestionViewModel = ({\\n    onChange,\\n    options,\\n    page,\\n    id,\\n    value,\\n}: UseMultipleQuestionViewModelProps) => {\\n    const [input, setInput] = useState('');\\n    const [localValues, setLocalValues] = useState<string[]>([]);\\n    const [debounced] = useDebouncedValue(input, 200);\\n\\n    useEffect(() => {\\n        const obj: { value: string; input?: string }[] = [];\\n\\n        // TODO: check and remove - ?\\n        // if (localValues.length < 1) {\\n        //     onChange({\\n        //         question: id,\\n        //         answer: obj,\\n        //         index: page - 1,\\n        //         isMultiple: true,\\n        //     });\\n        // }\\n\\n        localValues?.forEach((v, idx) => {\\n            if (!options) return;\\n\\n            if (localValues[idx] === options[options?.length - 1].id) {\\n                return (obj[idx] = {\\n                    value: v,\\n                    input: debounced,\\n                });\\n            }\\n\\n            obj[idx] = {\\n                value: v,\\n            };\\n        });\\n\\n        onChange({\\n            question: id,\\n            answer: obj,\\n            index: page - 1,\\n            isMultiple: true,\\n        });\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [localValues, debounced]);\\n\\n    useEffect(() => {\\n        setInput(value?.find((el) => el.input)?.input ?? '');\\n        setLocalValues(value?.map((el) => el.value) ?? []);\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [id, page]);\\n\\n    return {\\n        localValues,\\n        input,\\n        setLocalValues,\\n        setInput,\\n    };\\n};\\n\"],\"names\":[\"useEffect\",\"useState\",\"useDebouncedValue\",\"useMultipleQuestionViewModel\",\"onChange\",\"options\",\"page\",\"id\",\"value\",\"input\",\"setInput\",\"localValues\",\"setLocalValues\",\"debounced\",\"obj\",\"forEach\",\"v\",\"idx\",\"length\",\"question\",\"answer\",\"index\",\"isMultiple\",\"find\",\"el\",\"map\"],\"mappings\":\"AAAA,SAASA,SAAS,EAAEC,QAAQ,QAAQ,QAAQ;AAC5C,SAASC,iBAAiB,QAAQ,iBAAiB;AAiBnD,OAAO,MAAMC,+BAA+B,CAAC,EACzCC,QAAQ,EACRC,OAAO,EACPC,IAAI,EACJC,EAAE,EACFC,KAAK,EAC2B;IAChC,MAAM,CAACC,OAAOC,SAAS,GAAGT,SAAS;IACnC,MAAM,CAACU,aAAaC,eAAe,GAAGX,SAAmB,EAAE;IAC3D,MAAM,CAACY,UAAU,GAAGX,kBAAkBO,OAAO;IAE7CT,UAAU;QACN,MAAMc,MAA2C,EAAE;QAEnD,6BAA6B;QAC7B,gCAAgC;QAChC,iBAAiB;QACjB,wBAAwB;QACxB,uBAAuB;QACvB,2BAA2B;QAC3B,4BAA4B;QAC5B,UAAU;QACV,IAAI;QAEJH,aAAaI,QAAQ,CAACC,GAAGC;YACrB,IAAI,CAACZ,SAAS;YAEd,IAAIM,WAAW,CAACM,IAAI,KAAKZ,OAAO,CAACA,SAASa,SAAS,EAAE,CAACX,EAAE,EAAE;gBACtD,OAAQO,GAAG,CAACG,IAAI,GAAG;oBACfT,OAAOQ;oBACPP,OAAOI;gBACX;YACJ;YAEAC,GAAG,CAACG,IAAI,GAAG;gBACPT,OAAOQ;YACX;QACJ;QAEAZ,SAAS;YACLe,UAAUZ;YACVa,QAAQN;YACRO,OAAOf,OAAO;YACdgB,YAAY;QAChB;IACA,uDAAuD;IAC3D,GAAG;QAACX;QAAaE;KAAU;IAE3Bb,UAAU;QACNU,SAASF,OAAOe,KAAK,CAACC,KAAOA,GAAGf,KAAK,GAAGA,SAAS;QACjDG,eAAeJ,OAAOiB,IAAI,CAACD,KAAOA,GAAGhB,KAAK,KAAK,EAAE;IACjD,uDAAuD;IAC3D,GAAG;QAACD;QAAID;KAAK;IAEb,OAAO;QACHK;QACAF;QACAG;QACAF;IACJ;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { useEffect, useState } from \"react\";\nimport { useDebouncedValue } from \"@mantine/hooks\";\nexport const useMultipleQuestionViewModel = ({ onChange, options, page, id, value }) => {\n  const [input, setInput] = useState(\"\");\n  const [localValues, setLocalValues] = useState([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj = [];\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n  }, [\n    localValues,\n    debounced\n  ]);\n  useEffect(() => {\n    setInput(value?.find((el) => el.input)?.input ?? \"\");\n    setLocalValues(value?.map((el) => el.value) ?? []);\n  }, [\n    id,\n    page\n  ]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};\n",
-      "start": 1750239308638,
-      "end": 1750239308779,
+      "start": 1750271785293,
+      "end": 1750271785350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785350,
+      "end": 1750271785350,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestMultipleQuestion/view-model.ts [vike:pluginModuleBanner] */\nimport { useEffect, useState } from \"react\";\nimport { useDebouncedValue } from \"@mantine/hooks\";\nexport const useMultipleQuestionViewModel = ({ onChange, options, page, id, value }) => {\n  const [input, setInput] = useState(\"\");\n  const [localValues, setLocalValues] = useState([]);\n  const [debounced] = useDebouncedValue(input, 200);\n  useEffect(() => {\n    const obj = [];\n    localValues?.forEach((v, idx) => {\n      if (!options) return;\n      if (localValues[idx] === options[options?.length - 1].id) {\n        return obj[idx] = {\n          value: v,\n          input: debounced\n        };\n      }\n      obj[idx] = {\n        value: v\n      };\n    });\n    onChange({\n      question: id,\n      answer: obj,\n      index: page - 1,\n      isMultiple: true\n    });\n  }, [\n    localValues,\n    debounced\n  ]);\n  useEffect(() => {\n    setInput(value?.find((el) => el.input)?.input ?? \"\");\n    setLocalValues(value?.map((el) => el.value) ?? []);\n  }, [\n    id,\n    page\n  ]);\n  return {\n    localValues,\n    input,\n    setLocalValues,\n    setInput\n  };\n};\n",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

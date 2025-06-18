@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Checkbox, Paper, Stack } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { IconCheck, InputBorderless } from '@/shared/ui';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { MultiChoiceAnswer } from '../../api/types';\nimport { AnswerLabel } from '../AnswerLabel';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport { useMultipleQuestionViewModel } from './view-model';\n\nimport s from './TestMultipleQuestion.module.css';\n\ninterface TestMultipleQuestionProps extends QuestionsResponse {\n    page: number;\n    value: MultiChoiceAnswer[] | null;\n    onChange: (payload: {\n        question: string;\n        answer: { input?: string; value: string }[];\n        index: number;\n        isMultiple: boolean;\n    }) => void;\n}\n\nexport const TestMultipleQuestion = ({ text, hint, options, onChange, value, page, id }: TestMultipleQuestionProps) => {\n    const isLarge = useIsLarge();\n    const { localValues, input, setLocalValues, setInput } = useMultipleQuestionViewModel({\n        onChange,\n        options,\n        value,\n        page,\n        id,\n    });\n\n    const showInput = options && value?.map((el) => el.value)?.includes(options[options?.length - 1].id);\n\n    return (\n        <Paper mb='5xl'>\n            <QuestionTitle text={text} hint={hint} />\n            <Stack gap='xs' className={s.wrap}>\n                <Checkbox.Group\n                    value={localValues.length ? localValues : (value?.map((v) => v.value) ?? localValues)}\n                    onChange={setLocalValues}\n                >\n                    <Stack gap='lg' className={s.checkboxWrapper}>\n                        {options?.map((option) => (\n                            <Checkbox\n                                size={isLarge ? '32px' : 'lg'}\n                                radius='xs'\n                                color='lime.8'\n                                key={option.id}\n                                label={<AnswerLabel>{option.text}</AnswerLabel>}\n                                value={option.id}\n                                icon={IconCheck}\n                            />\n                        ))}\n                    </Stack>\n                </Checkbox.Group>\n                {showInput && (\n                    <InputBorderless\n                        value={input.length > 0 ? input : value?.find((el) => el.input)?.input}\n                        onChange={(e) => setInput(e.target.value)}\n                    />\n                )}\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308406,
-      "end": 1750239308420,
+      "start": 1750271784996,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Checkbox, Paper, Stack } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { IconCheck, InputBorderless } from '@/shared/ui';\nimport { AnswerLabel } from '../AnswerLabel';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport { useMultipleQuestionViewModel } from './view-model';\nimport s from './TestMultipleQuestion.module.css';\nexport const TestMultipleQuestion = ({ text, hint, options, onChange, value, page, id })=>{\n    const isLarge = useIsLarge();\n    const { localValues, input, setLocalValues, setInput } = useMultipleQuestionViewModel({\n        onChange,\n        options,\n        value,\n        page,\n        id\n    });\n    const showInput = options && value?.map((el)=>el.value)?.includes(options[options?.length - 1].id);\n    return /*#__PURE__*/ _jsxs(Paper, {\n        mb: \"5xl\",\n        children: [\n            /*#__PURE__*/ _jsx(QuestionTitle, {\n                text: text,\n                hint: hint\n            }),\n            /*#__PURE__*/ _jsxs(Stack, {\n                gap: \"xs\",\n                className: s.wrap,\n                children: [\n                    /*#__PURE__*/ _jsx(Checkbox.Group, {\n                        value: localValues.length ? localValues : value?.map((v)=>v.value) ?? localValues,\n                        onChange: setLocalValues,\n                        children: /*#__PURE__*/ _jsx(Stack, {\n                            gap: \"lg\",\n                            className: s.checkboxWrapper,\n                            children: options?.map((option)=>/*#__PURE__*/ _jsx(Checkbox, {\n                                    size: isLarge ? '32px' : 'lg',\n                                    radius: \"xs\",\n                                    color: \"lime.8\",\n                                    label: /*#__PURE__*/ _jsx(AnswerLabel, {\n                                        children: option.text\n                                    }),\n                                    value: option.id,\n                                    icon: IconCheck\n                                }, option.id))\n                        })\n                    }),\n                    showInput && /*#__PURE__*/ _jsx(InputBorderless, {\n                        value: input.length > 0 ? input : value?.find((el)=>el.input)?.input,\n                        onChange: (e)=>setInput(e.target.value)\n                    })\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308420,
-      "end": 1750239308423,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestMultipleQuestion/index.tsx\"],\"sourcesContent\":[\"import { Checkbox, Paper, Stack } from '@mantine/core';\\n\\nimport { useIsLarge } from '@/shared/lib';\\nimport { IconCheck, InputBorderless } from '@/shared/ui';\\n\\nimport type { QuestionsResponse } from '../../api/dto';\\nimport type { MultiChoiceAnswer } from '../../api/types';\\nimport { AnswerLabel } from '../AnswerLabel';\\nimport { QuestionTitle } from '../TestQuestionTitle';\\nimport { useMultipleQuestionViewModel } from './view-model';\\n\\nimport s from './TestMultipleQuestion.module.css';\\n\\ninterface TestMultipleQuestionProps extends QuestionsResponse {\\n    page: number;\\n    value: MultiChoiceAnswer[] | null;\\n    onChange: (payload: {\\n        question: string;\\n        answer: { input?: string; value: string }[];\\n        index: number;\\n        isMultiple: boolean;\\n    }) => void;\\n}\\n\\nexport const TestMultipleQuestion = ({ text, hint, options, onChange, value, page, id }: TestMultipleQuestionProps) => {\\n    const isLarge = useIsLarge();\\n    const { localValues, input, setLocalValues, setInput } = useMultipleQuestionViewModel({\\n        onChange,\\n        options,\\n        value,\\n        page,\\n        id,\\n    });\\n\\n    const showInput = options && value?.map((el) => el.value)?.includes(options[options?.length - 1].id);\\n\\n    return (\\n        <Paper mb='5xl'>\\n            <QuestionTitle text={text} hint={hint} />\\n            <Stack gap='xs' className={s.wrap}>\\n                <Checkbox.Group\\n                    value={localValues.length ? localValues : (value?.map((v) => v.value) ?? localValues)}\\n                    onChange={setLocalValues}\\n                >\\n                    <Stack gap='lg' className={s.checkboxWrapper}>\\n                        {options?.map((option) => (\\n                            <Checkbox\\n                                size={isLarge ? '32px' : 'lg'}\\n                                radius='xs'\\n                                color='lime.8'\\n                                key={option.id}\\n                                label={<AnswerLabel>{option.text}</AnswerLabel>}\\n                                value={option.id}\\n                                icon={IconCheck}\\n                            />\\n                        ))}\\n                    </Stack>\\n                </Checkbox.Group>\\n                {showInput && (\\n                    <InputBorderless\\n                        value={input.length > 0 ? input : value?.find((el) => el.input)?.input}\\n                        onChange={(e) => setInput(e.target.value)}\\n                    />\\n                )}\\n            </Stack>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Checkbox\",\"Paper\",\"Stack\",\"useIsLarge\",\"IconCheck\",\"InputBorderless\",\"AnswerLabel\",\"QuestionTitle\",\"useMultipleQuestionViewModel\",\"s\",\"TestMultipleQuestion\",\"text\",\"hint\",\"options\",\"onChange\",\"value\",\"page\",\"id\",\"isLarge\",\"localValues\",\"input\",\"setLocalValues\",\"setInput\",\"showInput\",\"map\",\"el\",\"includes\",\"length\",\"mb\",\"gap\",\"className\",\"wrap\",\"Group\",\"v\",\"checkboxWrapper\",\"option\",\"size\",\"radius\",\"color\",\"label\",\"icon\",\"find\",\"e\",\"target\"],\"mappings\":\";AAAA,SAASA,QAAQ,EAAEC,KAAK,EAAEC,KAAK,QAAQ,gBAAgB;AAEvD,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,SAAS,EAAEC,eAAe,QAAQ,cAAc;AAIzD,SAASC,WAAW,QAAQ,iBAAiB;AAC7C,SAASC,aAAa,QAAQ,uBAAuB;AACrD,SAASC,4BAA4B,QAAQ,eAAe;AAE5D,OAAOC,OAAO,oCAAoC;AAalD,OAAO,MAAMC,uBAAuB,CAAC,EAAEC,IAAI,EAAEC,IAAI,EAAEC,OAAO,EAAEC,QAAQ,EAAEC,KAAK,EAAEC,IAAI,EAAEC,EAAE,EAA6B;IAC9G,MAAMC,UAAUf;IAChB,MAAM,EAAEgB,WAAW,EAAEC,KAAK,EAAEC,cAAc,EAAEC,QAAQ,EAAE,GAAGd,6BAA6B;QAClFM;QACAD;QACAE;QACAC;QACAC;IACJ;IAEA,MAAMM,YAAYV,WAAWE,OAAOS,IAAI,CAACC,KAAOA,GAAGV,KAAK,GAAGW,SAASb,OAAO,CAACA,SAASc,SAAS,EAAE,CAACV,EAAE;IAEnG,qBACI,MAAChB;QAAM2B,IAAG;;0BACN,KAACrB;gBAAcI,MAAMA;gBAAMC,MAAMA;;0BACjC,MAACV;gBAAM2B,KAAI;gBAAKC,WAAWrB,EAAEsB,IAAI;;kCAC7B,KAAC/B,SAASgC,KAAK;wBACXjB,OAAOI,YAAYQ,MAAM,GAAGR,cAAeJ,OAAOS,IAAI,CAACS,IAAMA,EAAElB,KAAK,KAAKI;wBACzEL,UAAUO;kCAEV,cAAA,KAACnB;4BAAM2B,KAAI;4BAAKC,WAAWrB,EAAEyB,eAAe;sCACvCrB,SAASW,IAAI,CAACW,uBACX,KAACnC;oCACGoC,MAAMlB,UAAU,SAAS;oCACzBmB,QAAO;oCACPC,OAAM;oCAENC,qBAAO,KAACjC;kDAAa6B,OAAOxB,IAAI;;oCAChCI,OAAOoB,OAAOlB,EAAE;oCAChBuB,MAAMpC;mCAHD+B,OAAOlB,EAAE;;;oBAQ7BM,2BACG,KAAClB;wBACGU,OAAOK,MAAMO,MAAM,GAAG,IAAIP,QAAQL,OAAO0B,KAAK,CAAChB,KAAOA,GAAGL,KAAK,GAAGA;wBACjEN,UAAU,CAAC4B,IAAMpB,SAASoB,EAAEC,MAAM,CAAC5B,KAAK;;;;;;AAMhE,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Checkbox, Paper, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { IconCheck, InputBorderless } from \"@/shared/ui\";\nimport { AnswerLabel } from \"../AnswerLabel\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport { useMultipleQuestionViewModel } from \"./view-model\";\nimport s from \"./TestMultipleQuestion.module.css\";\nexport const TestMultipleQuestion = ({ text, hint, options, onChange, value, page, id }) => {\n  const isLarge = useIsLarge();\n  const { localValues, input, setLocalValues, setInput } = useMultipleQuestionViewModel({\n    onChange,\n    options,\n    value,\n    page,\n    id\n  });\n  const showInput = options && value?.map((el) => el.value)?.includes(options[options?.length - 1].id);\n  return /* @__PURE__ */ _jsxs(Paper, {\n    mb: \"5xl\",\n    children: [\n      /* @__PURE__ */ _jsx(QuestionTitle, {\n        text,\n        hint\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: \"xs\",\n        className: s.wrap,\n        children: [\n          /* @__PURE__ */ _jsx(Checkbox.Group, {\n            value: localValues.length ? localValues : value?.map((v) => v.value) ?? localValues,\n            onChange: setLocalValues,\n            children: /* @__PURE__ */ _jsx(Stack, {\n              gap: \"lg\",\n              className: s.checkboxWrapper,\n              children: options?.map((option) => /* @__PURE__ */ _jsx(Checkbox, {\n                size: isLarge ? \"32px\" : \"lg\",\n                radius: \"xs\",\n                color: \"lime.8\",\n                label: /* @__PURE__ */ _jsx(AnswerLabel, {\n                  children: option.text\n                }),\n                value: option.id,\n                icon: IconCheck\n              }, option.id))\n            })\n          }),\n          showInput && /* @__PURE__ */ _jsx(InputBorderless, {\n            value: input.length > 0 ? input : value?.find((el) => el.input)?.input,\n            onChange: (e) => setInput(e.target.value)\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308423,
-      "end": 1750239308613,
+      "start": 1750271785023,
+      "end": 1750271785244,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785244,
+      "end": 1750271785244,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestMultipleQuestion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Checkbox, Paper, Stack } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { IconCheck, InputBorderless } from \"@/shared/ui\";\nimport { AnswerLabel } from \"../AnswerLabel\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport { useMultipleQuestionViewModel } from \"./view-model\";\nimport s from \"./TestMultipleQuestion.module.css\";\nexport const TestMultipleQuestion = ({ text, hint, options, onChange, value, page, id }) => {\n  const isLarge = useIsLarge();\n  const { localValues, input, setLocalValues, setInput } = useMultipleQuestionViewModel({\n    onChange,\n    options,\n    value,\n    page,\n    id\n  });\n  const showInput = options && value?.map((el) => el.value)?.includes(options[options?.length - 1].id);\n  return /* @__PURE__ */ _jsxs(Paper, {\n    mb: \"5xl\",\n    children: [\n      /* @__PURE__ */ _jsx(QuestionTitle, {\n        text,\n        hint\n      }),\n      /* @__PURE__ */ _jsxs(Stack, {\n        gap: \"xs\",\n        className: s.wrap,\n        children: [\n          /* @__PURE__ */ _jsx(Checkbox.Group, {\n            value: localValues.length ? localValues : value?.map((v) => v.value) ?? localValues,\n            onChange: setLocalValues,\n            children: /* @__PURE__ */ _jsx(Stack, {\n              gap: \"lg\",\n              className: s.checkboxWrapper,\n              children: options?.map((option) => /* @__PURE__ */ _jsx(Checkbox, {\n                size: isLarge ? \"32px\" : \"lg\",\n                radius: \"xs\",\n                color: \"lime.8\",\n                label: /* @__PURE__ */ _jsx(AnswerLabel, {\n                  children: option.text\n                }),\n                value: option.id,\n                icon: IconCheck\n              }, option.id))\n            })\n          }),\n          showInput && /* @__PURE__ */ _jsx(InputBorderless, {\n            value: input.length > 0 ? input : value?.find((el) => el.input)?.input,\n            onChange: (e) => setInput(e.target.value)\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308613,
-      "end": 1750239308613,
+      "start": 1750271785244,
+      "end": 1750271785245,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

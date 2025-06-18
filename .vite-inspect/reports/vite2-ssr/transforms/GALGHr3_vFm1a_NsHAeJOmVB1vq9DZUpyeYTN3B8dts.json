@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ',\n} as const;\n\nexport type PersonalityType = keyof typeof PersonalityTypes;\n\nexport interface Personality {\n    code: PersonalityType;\n    name: string;\n    descriptions: string[];\n}\n",
-      "start": 1750239308266,
-      "end": 1750239308276,
+      "start": 1750271784838,
+      "end": 1750271784853,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ'\n};\n",
-      "start": 1750239308276,
-      "end": 1750239308282,
+      "start": 1750271784853,
+      "end": 1750271784856,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/types/index.ts\"],\"sourcesContent\":[\"export const PersonalityTypes = {\\n    ESTJ: 'ESTJ',\\n    ENTJ: 'ENTJ',\\n    ISPT: 'ISPT',\\n    INTP: 'INTP',\\n    ESFJ: 'ESFJ',\\n    ENFJ: 'ENFJ',\\n    INFT: 'INFT',\\n    ISFP: 'ISFP',\\n    ESTP: 'ESTP',\\n    ESFP: 'ESFP',\\n    ISFJ: 'ISFJ',\\n    ISTJ: 'ISTJ',\\n    ENFP: 'ENFP',\\n    ENTP: 'ENTP',\\n    INTJ: 'INTJ',\\n    INFJ: 'INFJ',\\n} as const;\\n\\nexport type PersonalityType = keyof typeof PersonalityTypes;\\n\\nexport interface Personality {\\n    code: PersonalityType;\\n    name: string;\\n    descriptions: string[];\\n}\\n\"],\"names\":[\"PersonalityTypes\",\"ESTJ\",\"ENTJ\",\"ISPT\",\"INTP\",\"ESFJ\",\"ENFJ\",\"INFT\",\"ISFP\",\"ESTP\",\"ESFP\",\"ISFJ\",\"ISTJ\",\"ENFP\",\"ENTP\",\"INTJ\",\"INFJ\"],\"mappings\":\"AAAA,OAAO,MAAMA,mBAAmB;IAC5BC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;AACV,EAAW\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const PersonalityTypes = {\n  ESTJ: \"ESTJ\",\n  ENTJ: \"ENTJ\",\n  ISPT: \"ISPT\",\n  INTP: \"INTP\",\n  ESFJ: \"ESFJ\",\n  ENFJ: \"ENFJ\",\n  INFT: \"INFT\",\n  ISFP: \"ISFP\",\n  ESTP: \"ESTP\",\n  ESFP: \"ESFP\",\n  ISFJ: \"ISFJ\",\n  ISTJ: \"ISTJ\",\n  ENFP: \"ENFP\",\n  ENTP: \"ENTP\",\n  INTJ: \"INTJ\",\n  INFJ: \"INFJ\"\n};\n",
-      "start": 1750239308282,
-      "end": 1750239308316,
+      "start": 1750271784857,
+      "end": 1750271784933,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308316,
-      "end": 1750239308316,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308316,
-      "end": 1750239308316,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308316,
-      "end": 1750239308316,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784933,
+      "end": 1750271784933,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784933,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Personality/types/index.ts [vike:pluginModuleBanner] */\nexport const PersonalityTypes = {\n  ESTJ: \"ESTJ\",\n  ENTJ: \"ENTJ\",\n  ISPT: \"ISPT\",\n  INTP: \"INTP\",\n  ESFJ: \"ESFJ\",\n  ENFJ: \"ENFJ\",\n  INFT: \"INFT\",\n  ISFP: \"ISFP\",\n  ESTP: \"ESTP\",\n  ESFP: \"ESFP\",\n  ISFJ: \"ISFJ\",\n  ISTJ: \"ISTJ\",\n  ENFP: \"ENFP\",\n  ENTP: \"ENTP\",\n  INTJ: \"INTJ\",\n  INFJ: \"INFJ\"\n};\n",
-      "start": 1750239308317,
-      "end": 1750239308317,
+      "start": 1750271784933,
+      "end": 1750271784934,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

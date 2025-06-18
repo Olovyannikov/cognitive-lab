@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { allSettled, fork, serialize } from 'effector';\nimport type { OnBeforeRenderAsync } from 'vike/types';\n\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\n    const { pageInitiated } = pageContext.config;\n\n    const scope = fork();\n\n    if (pageInitiated) {\n        await allSettled(pageInitiated, { scope, params: pageContext });\n    }\n\n    return {\n        pageContext: {\n            scope,\n            scopeValues: serialize(scope),\n        },\n    };\n};\n",
-      "start": 1750239308153,
-      "end": 1750239308173,
+      "start": 1750271784655,
+      "end": 1750271784678,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { allSettled, fork, serialize } from 'effector';\nexport const onBeforeRender = async (pageContext)=>{\n    const { pageInitiated } = pageContext.config;\n    const scope = fork();\n    if (pageInitiated) {\n        await allSettled(pageInitiated, {\n            scope,\n            params: pageContext\n        });\n    }\n    return {\n        pageContext: {\n            scope,\n            scopeValues: serialize(scope)\n        }\n    };\n};\n",
-      "start": 1750239308173,
-      "end": 1750239308183,
+      "start": 1750271784678,
+      "end": 1750271784685,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/+onBeforeRender.ts\"],\"sourcesContent\":[\"import { allSettled, fork, serialize } from 'effector';\\nimport type { OnBeforeRenderAsync } from 'vike/types';\\n\\nexport const onBeforeRender: OnBeforeRenderAsync = async (pageContext): ReturnType<OnBeforeRenderAsync> => {\\n    const { pageInitiated } = pageContext.config;\\n\\n    const scope = fork();\\n\\n    if (pageInitiated) {\\n        await allSettled(pageInitiated, { scope, params: pageContext });\\n    }\\n\\n    return {\\n        pageContext: {\\n            scope,\\n            scopeValues: serialize(scope),\\n        },\\n    };\\n};\\n\"],\"names\":[\"allSettled\",\"fork\",\"serialize\",\"onBeforeRender\",\"pageContext\",\"pageInitiated\",\"config\",\"scope\",\"params\",\"scopeValues\"],\"mappings\":\"AAAA,SAASA,UAAU,EAAEC,IAAI,EAAEC,SAAS,QAAQ,WAAW;AAGvD,OAAO,MAAMC,iBAAsC,OAAOC;IACtD,MAAM,EAAEC,aAAa,EAAE,GAAGD,YAAYE,MAAM;IAE5C,MAAMC,QAAQN;IAEd,IAAII,eAAe;QACf,MAAML,WAAWK,eAAe;YAAEE;YAAOC,QAAQJ;QAAY;IACjE;IAEA,OAAO;QACHA,aAAa;YACTG;YACAE,aAAaP,UAAUK;QAC3B;IACJ;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { allSettled, fork, serialize } from \"effector\";\nexport const onBeforeRender = async (pageContext) => {\n  const { pageInitiated } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};\n",
-      "start": 1750239308183,
-      "end": 1750239308235,
+      "start": 1750271784685,
+      "end": 1750271784784,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784785,
+      "end": 1750271784785,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/+onBeforeRender.ts [vike:pluginModuleBanner] */\nimport { allSettled, fork, serialize } from \"effector\";\nexport const onBeforeRender = async (pageContext) => {\n  const { pageInitiated } = pageContext.config;\n  const scope = fork();\n  if (pageInitiated) {\n    await allSettled(pageInitiated, {\n      scope,\n      params: pageContext\n    });\n  }\n  return {\n    pageContext: {\n      scope,\n      scopeValues: serialize(scope)\n    }\n  };\n};\n",
-      "start": 1750239308235,
-      "end": 1750239308235,
+      "start": 1750271784785,
+      "end": 1750271784785,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

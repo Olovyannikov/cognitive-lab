@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useState } from 'react';\nimport { Button, Group, Pagination } from '@mantine/core';\nimport { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { isArray, isObject } from 'lodash-es';\nimport { useTimeout } from 'usehooks-ts';\n\nimport { TestModel } from '@/entities/Test';\n\nimport { Rephrasing } from '@/features/Rephrasing';\n\nimport { SubmitTestModel } from '@/widgets/Test';\n\nimport s from './Controls.module.css';\n\nexport const Controls = () => {\n    const questions = useUnit(TestModel.$questions);\n    const { page, onChange, controlModal, value, onDirectionChange } = useUnit({\n        page: TestModel.$currentPage,\n        onChange: TestModel.formPageChanged,\n        controlModal: SubmitTestModel.submitModalStateChanged,\n        value: TestModel.$currentValue,\n        form: TestModel.$scaleForm,\n        onDirectionChange: TestModel.directionChanged,\n    });\n    const [visible, setVisible] = useState(false);\n\n    const isExists = () => {\n        if (isArray(value)) {\n            return value.length > 0;\n        }\n\n        if (isObject(value)) {\n            return value?.value !== undefined;\n        }\n\n        return value !== null;\n    };\n\n    useTimeout(() => (isExists() ? setVisible(true) : setVisible(false)), isExists() ? 250 : 0);\n\n    if (!questions) return null;\n\n    const isFirst = page === 1;\n    const isLast = page === questions.length;\n\n    return (\n        <Pagination.Root\n            className={s.root}\n            total={questions.length}\n            mt='auto'\n            value={page}\n            onChange={(payload) => {\n                onChange(payload);\n                onDirectionChange(payload > page ? 'forward' : 'backward');\n            }}\n        >\n            <Group className={s.group}>\n                <Pagination.Previous\n                    disabled={isFirst}\n                    opacity={isFirst ? 0 : 1}\n                    className={clsx(s.button, s.prev)}\n                    icon={() => <ArrowLeft weight='bold' />}\n                />\n\n                <Rephrasing />\n                <Pagination.Next\n                    opacity={!visible || isLast ? 0 : 1}\n                    disabled={!visible || isLast}\n                    className={clsx(s.button, s.next)}\n                    icon={() => <ArrowRight weight='bold' />}\n                />\n                <Button\n                    fw='700'\n                    fz={16}\n                    c='dark.6'\n                    variant='subtle'\n                    hidden={!isLast}\n                    onClick={controlModal}\n                    aria-label='Завершить тестирование'\n                    className={clsx(s.button, s.next, s.end)}\n                    rightSection={<ArrowRight weight='bold' />}\n                />\n            </Group>\n        </Pagination.Root>\n    );\n};\n",
-      "start": 1750239308402,
-      "end": 1750239308417,
+      "start": 1750271784981,
+      "end": 1750271785006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useState } from 'react';\nimport { Button, Group, Pagination } from '@mantine/core';\nimport { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { isArray, isObject } from 'lodash-es';\nimport { useTimeout } from 'usehooks-ts';\nimport { TestModel } from '@/entities/Test';\nimport { Rephrasing } from '@/features/Rephrasing';\nimport { SubmitTestModel } from '@/widgets/Test';\nimport s from './Controls.module.css';\nexport const Controls = ()=>{\n    const questions = useUnit(TestModel.$questions);\n    const { page, onChange, controlModal, value, onDirectionChange } = useUnit({\n        page: TestModel.$currentPage,\n        onChange: TestModel.formPageChanged,\n        controlModal: SubmitTestModel.submitModalStateChanged,\n        value: TestModel.$currentValue,\n        form: TestModel.$scaleForm,\n        onDirectionChange: TestModel.directionChanged\n    });\n    const [visible, setVisible] = useState(false);\n    const isExists = ()=>{\n        if (isArray(value)) {\n            return value.length > 0;\n        }\n        if (isObject(value)) {\n            return value?.value !== undefined;\n        }\n        return value !== null;\n    };\n    useTimeout(()=>isExists() ? setVisible(true) : setVisible(false), isExists() ? 250 : 0);\n    if (!questions) return null;\n    const isFirst = page === 1;\n    const isLast = page === questions.length;\n    return /*#__PURE__*/ _jsx(Pagination.Root, {\n        className: s.root,\n        total: questions.length,\n        mt: \"auto\",\n        value: page,\n        onChange: (payload)=>{\n            onChange(payload);\n            onDirectionChange(payload > page ? 'forward' : 'backward');\n        },\n        children: /*#__PURE__*/ _jsxs(Group, {\n            className: s.group,\n            children: [\n                /*#__PURE__*/ _jsx(Pagination.Previous, {\n                    disabled: isFirst,\n                    opacity: isFirst ? 0 : 1,\n                    className: clsx(s.button, s.prev),\n                    icon: ()=>/*#__PURE__*/ _jsx(ArrowLeft, {\n                            weight: \"bold\"\n                        })\n                }),\n                /*#__PURE__*/ _jsx(Rephrasing, {}),\n                /*#__PURE__*/ _jsx(Pagination.Next, {\n                    opacity: !visible || isLast ? 0 : 1,\n                    disabled: !visible || isLast,\n                    className: clsx(s.button, s.next),\n                    icon: ()=>/*#__PURE__*/ _jsx(ArrowRight, {\n                            weight: \"bold\"\n                        })\n                }),\n                /*#__PURE__*/ _jsx(Button, {\n                    fw: \"700\",\n                    fz: 16,\n                    c: \"dark.6\",\n                    variant: \"subtle\",\n                    hidden: !isLast,\n                    onClick: controlModal,\n                    \"aria-label\": \"Завершить тестирование\",\n                    className: clsx(s.button, s.next, s.end),\n                    rightSection: /*#__PURE__*/ _jsx(ArrowRight, {\n                        weight: \"bold\"\n                    })\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308417,
-      "end": 1750239308422,
+      "start": 1750271785006,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/Controls/index.tsx\"],\"sourcesContent\":[\"import { useState } from 'react';\\nimport { Button, Group, Pagination } from '@mantine/core';\\nimport { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';\\nimport clsx from 'clsx';\\nimport { useUnit } from 'effector-react';\\nimport { isArray, isObject } from 'lodash-es';\\nimport { useTimeout } from 'usehooks-ts';\\n\\nimport { TestModel } from '@/entities/Test';\\n\\nimport { Rephrasing } from '@/features/Rephrasing';\\n\\nimport { SubmitTestModel } from '@/widgets/Test';\\n\\nimport s from './Controls.module.css';\\n\\nexport const Controls = () => {\\n    const questions = useUnit(TestModel.$questions);\\n    const { page, onChange, controlModal, value, onDirectionChange } = useUnit({\\n        page: TestModel.$currentPage,\\n        onChange: TestModel.formPageChanged,\\n        controlModal: SubmitTestModel.submitModalStateChanged,\\n        value: TestModel.$currentValue,\\n        form: TestModel.$scaleForm,\\n        onDirectionChange: TestModel.directionChanged,\\n    });\\n    const [visible, setVisible] = useState(false);\\n\\n    const isExists = () => {\\n        if (isArray(value)) {\\n            return value.length > 0;\\n        }\\n\\n        if (isObject(value)) {\\n            return value?.value !== undefined;\\n        }\\n\\n        return value !== null;\\n    };\\n\\n    useTimeout(() => (isExists() ? setVisible(true) : setVisible(false)), isExists() ? 250 : 0);\\n\\n    if (!questions) return null;\\n\\n    const isFirst = page === 1;\\n    const isLast = page === questions.length;\\n\\n    return (\\n        <Pagination.Root\\n            className={s.root}\\n            total={questions.length}\\n            mt='auto'\\n            value={page}\\n            onChange={(payload) => {\\n                onChange(payload);\\n                onDirectionChange(payload > page ? 'forward' : 'backward');\\n            }}\\n        >\\n            <Group className={s.group}>\\n                <Pagination.Previous\\n                    disabled={isFirst}\\n                    opacity={isFirst ? 0 : 1}\\n                    className={clsx(s.button, s.prev)}\\n                    icon={() => <ArrowLeft weight='bold' />}\\n                />\\n\\n                <Rephrasing />\\n                <Pagination.Next\\n                    opacity={!visible || isLast ? 0 : 1}\\n                    disabled={!visible || isLast}\\n                    className={clsx(s.button, s.next)}\\n                    icon={() => <ArrowRight weight='bold' />}\\n                />\\n                <Button\\n                    fw='700'\\n                    fz={16}\\n                    c='dark.6'\\n                    variant='subtle'\\n                    hidden={!isLast}\\n                    onClick={controlModal}\\n                    aria-label='Завершить тестирование'\\n                    className={clsx(s.button, s.next, s.end)}\\n                    rightSection={<ArrowRight weight='bold' />}\\n                />\\n            </Group>\\n        </Pagination.Root>\\n    );\\n};\\n\"],\"names\":[\"useState\",\"Button\",\"Group\",\"Pagination\",\"ArrowLeft\",\"ArrowRight\",\"clsx\",\"useUnit\",\"isArray\",\"isObject\",\"useTimeout\",\"TestModel\",\"Rephrasing\",\"SubmitTestModel\",\"s\",\"Controls\",\"questions\",\"$questions\",\"page\",\"onChange\",\"controlModal\",\"value\",\"onDirectionChange\",\"$currentPage\",\"formPageChanged\",\"submitModalStateChanged\",\"$currentValue\",\"form\",\"$scaleForm\",\"directionChanged\",\"visible\",\"setVisible\",\"isExists\",\"length\",\"undefined\",\"isFirst\",\"isLast\",\"Root\",\"className\",\"root\",\"total\",\"mt\",\"payload\",\"group\",\"Previous\",\"disabled\",\"opacity\",\"button\",\"prev\",\"icon\",\"weight\",\"Next\",\"next\",\"fw\",\"fz\",\"c\",\"variant\",\"hidden\",\"onClick\",\"aria-label\",\"end\",\"rightSection\"],\"mappings\":\";AAAA,SAASA,QAAQ,QAAQ,QAAQ;AACjC,SAASC,MAAM,EAAEC,KAAK,EAAEC,UAAU,QAAQ,gBAAgB;AAC1D,SAASC,SAAS,EAAEC,UAAU,QAAQ,iCAAiC;AACvE,OAAOC,UAAU,OAAO;AACxB,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,OAAO,EAAEC,QAAQ,QAAQ,YAAY;AAC9C,SAASC,UAAU,QAAQ,cAAc;AAEzC,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,UAAU,QAAQ,wBAAwB;AAEnD,SAASC,eAAe,QAAQ,iBAAiB;AAEjD,OAAOC,OAAO,wBAAwB;AAEtC,OAAO,MAAMC,WAAW;IACpB,MAAMC,YAAYT,QAAQI,UAAUM,UAAU;IAC9C,MAAM,EAAEC,IAAI,EAAEC,QAAQ,EAAEC,YAAY,EAAEC,KAAK,EAAEC,iBAAiB,EAAE,GAAGf,QAAQ;QACvEW,MAAMP,UAAUY,YAAY;QAC5BJ,UAAUR,UAAUa,eAAe;QACnCJ,cAAcP,gBAAgBY,uBAAuB;QACrDJ,OAAOV,UAAUe,aAAa;QAC9BC,MAAMhB,UAAUiB,UAAU;QAC1BN,mBAAmBX,UAAUkB,gBAAgB;IACjD;IACA,MAAM,CAACC,SAASC,WAAW,GAAG/B,SAAS;IAEvC,MAAMgC,WAAW;QACb,IAAIxB,QAAQa,QAAQ;YAChB,OAAOA,MAAMY,MAAM,GAAG;QAC1B;QAEA,IAAIxB,SAASY,QAAQ;YACjB,OAAOA,OAAOA,UAAUa;QAC5B;QAEA,OAAOb,UAAU;IACrB;IAEAX,WAAW,IAAOsB,aAAaD,WAAW,QAAQA,WAAW,QAASC,aAAa,MAAM;IAEzF,IAAI,CAAChB,WAAW,OAAO;IAEvB,MAAMmB,UAAUjB,SAAS;IACzB,MAAMkB,SAASlB,SAASF,UAAUiB,MAAM;IAExC,qBACI,KAAC9B,WAAWkC,IAAI;QACZC,WAAWxB,EAAEyB,IAAI;QACjBC,OAAOxB,UAAUiB,MAAM;QACvBQ,IAAG;QACHpB,OAAOH;QACPC,UAAU,CAACuB;YACPvB,SAASuB;YACTpB,kBAAkBoB,UAAUxB,OAAO,YAAY;QACnD;kBAEA,cAAA,MAAChB;YAAMoC,WAAWxB,EAAE6B,KAAK;;8BACrB,KAACxC,WAAWyC,QAAQ;oBAChBC,UAAUV;oBACVW,SAASX,UAAU,IAAI;oBACvBG,WAAWhC,KAAKQ,EAAEiC,MAAM,EAAEjC,EAAEkC,IAAI;oBAChCC,MAAM,kBAAM,KAAC7C;4BAAU8C,QAAO;;;8BAGlC,KAACtC;8BACD,KAACT,WAAWgD,IAAI;oBACZL,SAAS,CAAChB,WAAWM,SAAS,IAAI;oBAClCS,UAAU,CAACf,WAAWM;oBACtBE,WAAWhC,KAAKQ,EAAEiC,MAAM,EAAEjC,EAAEsC,IAAI;oBAChCH,MAAM,kBAAM,KAAC5C;4BAAW6C,QAAO;;;8BAEnC,KAACjD;oBACGoD,IAAG;oBACHC,IAAI;oBACJC,GAAE;oBACFC,SAAQ;oBACRC,QAAQ,CAACrB;oBACTsB,SAAStC;oBACTuC,cAAW;oBACXrB,WAAWhC,KAAKQ,EAAEiC,MAAM,EAAEjC,EAAEsC,IAAI,EAAEtC,EAAE8C,GAAG;oBACvCC,4BAAc,KAACxD;wBAAW6C,QAAO;;;;;;AAKrD,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useState } from \"react\";\nimport { Button, Group, Pagination } from \"@mantine/core\";\nimport { ArrowLeft, ArrowRight } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { isArray, isObject } from \"lodash-es\";\nimport { useTimeout } from \"usehooks-ts\";\nimport { TestModel } from \"@/entities/Test\";\nimport { Rephrasing } from \"@/features/Rephrasing\";\nimport { SubmitTestModel } from \"@/widgets/Test\";\nimport s from \"./Controls.module.css\";\nexport const Controls = () => {\n  const questions = useUnit(TestModel.$questions);\n  const { page, onChange, controlModal, value, onDirectionChange } = useUnit({\n    page: TestModel.$currentPage,\n    onChange: TestModel.formPageChanged,\n    controlModal: SubmitTestModel.submitModalStateChanged,\n    value: TestModel.$currentValue,\n    form: TestModel.$scaleForm,\n    onDirectionChange: TestModel.directionChanged\n  });\n  const [visible, setVisible] = useState(false);\n  const isExists = () => {\n    if (isArray(value)) {\n      return value.length > 0;\n    }\n    if (isObject(value)) {\n      return value?.value !== void 0;\n    }\n    return value !== null;\n  };\n  useTimeout(() => isExists() ? setVisible(true) : setVisible(false), isExists() ? 250 : 0);\n  if (!questions) return null;\n  const isFirst = page === 1;\n  const isLast = page === questions.length;\n  return /* @__PURE__ */ _jsx(Pagination.Root, {\n    className: s.root,\n    total: questions.length,\n    mt: \"auto\",\n    value: page,\n    onChange: (payload) => {\n      onChange(payload);\n      onDirectionChange(payload > page ? \"forward\" : \"backward\");\n    },\n    children: /* @__PURE__ */ _jsxs(Group, {\n      className: s.group,\n      children: [\n        /* @__PURE__ */ _jsx(Pagination.Previous, {\n          disabled: isFirst,\n          opacity: isFirst ? 0 : 1,\n          className: clsx(s.button, s.prev),\n          icon: () => /* @__PURE__ */ _jsx(ArrowLeft, {\n            weight: \"bold\"\n          })\n        }),\n        /* @__PURE__ */ _jsx(Rephrasing, {}),\n        /* @__PURE__ */ _jsx(Pagination.Next, {\n          opacity: !visible || isLast ? 0 : 1,\n          disabled: !visible || isLast,\n          className: clsx(s.button, s.next),\n          icon: () => /* @__PURE__ */ _jsx(ArrowRight, {\n            weight: \"bold\"\n          })\n        }),\n        /* @__PURE__ */ _jsx(Button, {\n          fw: \"700\",\n          fz: 16,\n          c: \"dark.6\",\n          variant: \"subtle\",\n          hidden: !isLast,\n          onClick: controlModal,\n          \"aria-label\": \"Завершить тестирование\",\n          className: clsx(s.button, s.next, s.end),\n          rightSection: /* @__PURE__ */ _jsx(ArrowRight, {\n            weight: \"bold\"\n          })\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308422,
-      "end": 1750239308605,
+      "start": 1750271785009,
+      "end": 1750271785220,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785220,
+      "end": 1750271785220,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/Test/Controls/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useState } from \"react\";\nimport { Button, Group, Pagination } from \"@mantine/core\";\nimport { ArrowLeft, ArrowRight } from \"@phosphor-icons/react/dist/ssr\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { isArray, isObject } from \"lodash-es\";\nimport { useTimeout } from \"usehooks-ts\";\nimport { TestModel } from \"@/entities/Test\";\nimport { Rephrasing } from \"@/features/Rephrasing\";\nimport { SubmitTestModel } from \"@/widgets/Test\";\nimport s from \"./Controls.module.css\";\nexport const Controls = () => {\n  const questions = useUnit(TestModel.$questions);\n  const { page, onChange, controlModal, value, onDirectionChange } = useUnit({\n    page: TestModel.$currentPage,\n    onChange: TestModel.formPageChanged,\n    controlModal: SubmitTestModel.submitModalStateChanged,\n    value: TestModel.$currentValue,\n    form: TestModel.$scaleForm,\n    onDirectionChange: TestModel.directionChanged\n  });\n  const [visible, setVisible] = useState(false);\n  const isExists = () => {\n    if (isArray(value)) {\n      return value.length > 0;\n    }\n    if (isObject(value)) {\n      return value?.value !== void 0;\n    }\n    return value !== null;\n  };\n  useTimeout(() => isExists() ? setVisible(true) : setVisible(false), isExists() ? 250 : 0);\n  if (!questions) return null;\n  const isFirst = page === 1;\n  const isLast = page === questions.length;\n  return /* @__PURE__ */ _jsx(Pagination.Root, {\n    className: s.root,\n    total: questions.length,\n    mt: \"auto\",\n    value: page,\n    onChange: (payload) => {\n      onChange(payload);\n      onDirectionChange(payload > page ? \"forward\" : \"backward\");\n    },\n    children: /* @__PURE__ */ _jsxs(Group, {\n      className: s.group,\n      children: [\n        /* @__PURE__ */ _jsx(Pagination.Previous, {\n          disabled: isFirst,\n          opacity: isFirst ? 0 : 1,\n          className: clsx(s.button, s.prev),\n          icon: () => /* @__PURE__ */ _jsx(ArrowLeft, {\n            weight: \"bold\"\n          })\n        }),\n        /* @__PURE__ */ _jsx(Rephrasing, {}),\n        /* @__PURE__ */ _jsx(Pagination.Next, {\n          opacity: !visible || isLast ? 0 : 1,\n          disabled: !visible || isLast,\n          className: clsx(s.button, s.next),\n          icon: () => /* @__PURE__ */ _jsx(ArrowRight, {\n            weight: \"bold\"\n          })\n        }),\n        /* @__PURE__ */ _jsx(Button, {\n          fw: \"700\",\n          fz: 16,\n          c: \"dark.6\",\n          variant: \"subtle\",\n          hidden: !isLast,\n          onClick: controlModal,\n          \"aria-label\": \"Завершить тестирование\",\n          className: clsx(s.button, s.next, s.end),\n          rightSection: /* @__PURE__ */ _jsx(ArrowRight, {\n            weight: \"bold\"\n          })\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785220,
+      "end": 1750271785220,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

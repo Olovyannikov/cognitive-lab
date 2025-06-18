@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps } from 'react';\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\n\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\n\nimport s from './Footer.module.css';\n\nexport const Footer = ({ className }: ComponentProps<'footer'>) => (\n    <footer className={clsx(className, s.footer)}>\n        <Container>\n            <Box className={s.topWrapper}>\n                <Top />\n                <Flex className={s.items}>\n                    <Section title='Меню'>\n                        <List className={s.menu} data={MENU} />\n                    </Section>\n                    <Section title='Контакты'>\n                        <List className={s.contacts} data={CONTACTS} />\n                        <SubscribeToNews />\n                    </Section>\n                </Flex>\n            </Box>\n            <Divider className={s.divider} />\n            <MetaInfo className={s.docs} />\n        </Container>\n    </footer>\n);\n",
-      "start": 1750239308284,
-      "end": 1750239308303,
+      "start": 1750271784842,
+      "end": 1750271784858,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Divider, Flex } from '@mantine/core';\nimport clsx from 'clsx';\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\nimport { CONTACTS, MENU } from '../../const';\nimport { List } from '../List';\nimport { MetaInfo } from '../Metainfo';\nimport { Section } from '../Section';\nimport { Top } from '../Top';\nimport s from './Footer.module.css';\nexport const Footer = ({ className })=>/*#__PURE__*/ _jsx(\"footer\", {\n        className: clsx(className, s.footer),\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsxs(Box, {\n                    className: s.topWrapper,\n                    children: [\n                        /*#__PURE__*/ _jsx(Top, {}),\n                        /*#__PURE__*/ _jsxs(Flex, {\n                            className: s.items,\n                            children: [\n                                /*#__PURE__*/ _jsx(Section, {\n                                    title: \"Меню\",\n                                    children: /*#__PURE__*/ _jsx(List, {\n                                        className: s.menu,\n                                        data: MENU\n                                    })\n                                }),\n                                /*#__PURE__*/ _jsxs(Section, {\n                                    title: \"Контакты\",\n                                    children: [\n                                        /*#__PURE__*/ _jsx(List, {\n                                            className: s.contacts,\n                                            data: CONTACTS\n                                        }),\n                                        /*#__PURE__*/ _jsx(SubscribeToNews, {})\n                                    ]\n                                })\n                            ]\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Divider, {\n                    className: s.divider\n                }),\n                /*#__PURE__*/ _jsx(MetaInfo, {\n                    className: s.docs\n                })\n            ]\n        })\n    });\n",
-      "start": 1750239308303,
-      "end": 1750239308308,
+      "start": 1750271784858,
+      "end": 1750271784863,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Footer/index.tsx\"],\"sourcesContent\":[\"import type { ComponentProps } from 'react';\\nimport { Box, Container, Divider, Flex } from '@mantine/core';\\nimport clsx from 'clsx';\\n\\nimport { SubscribeToNews } from '@/features/SubscribeToNews';\\n\\nimport { CONTACTS, MENU } from '../../const';\\nimport { List } from '../List';\\nimport { MetaInfo } from '../Metainfo';\\nimport { Section } from '../Section';\\nimport { Top } from '../Top';\\n\\nimport s from './Footer.module.css';\\n\\nexport const Footer = ({ className }: ComponentProps<'footer'>) => (\\n    <footer className={clsx(className, s.footer)}>\\n        <Container>\\n            <Box className={s.topWrapper}>\\n                <Top />\\n                <Flex className={s.items}>\\n                    <Section title='Меню'>\\n                        <List className={s.menu} data={MENU} />\\n                    </Section>\\n                    <Section title='Контакты'>\\n                        <List className={s.contacts} data={CONTACTS} />\\n                        <SubscribeToNews />\\n                    </Section>\\n                </Flex>\\n            </Box>\\n            <Divider className={s.divider} />\\n            <MetaInfo className={s.docs} />\\n        </Container>\\n    </footer>\\n);\\n\"],\"names\":[\"Box\",\"Container\",\"Divider\",\"Flex\",\"clsx\",\"SubscribeToNews\",\"CONTACTS\",\"MENU\",\"List\",\"MetaInfo\",\"Section\",\"Top\",\"s\",\"Footer\",\"className\",\"footer\",\"topWrapper\",\"items\",\"title\",\"menu\",\"data\",\"contacts\",\"divider\",\"docs\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,SAAS,EAAEC,OAAO,EAAEC,IAAI,QAAQ,gBAAgB;AAC9D,OAAOC,UAAU,OAAO;AAExB,SAASC,eAAe,QAAQ,6BAA6B;AAE7D,SAASC,QAAQ,EAAEC,IAAI,QAAQ,cAAc;AAC7C,SAASC,IAAI,QAAQ,UAAU;AAC/B,SAASC,QAAQ,QAAQ,cAAc;AACvC,SAASC,OAAO,QAAQ,aAAa;AACrC,SAASC,GAAG,QAAQ,SAAS;AAE7B,OAAOC,OAAO,sBAAsB;AAEpC,OAAO,MAAMC,SAAS,CAAC,EAAEC,SAAS,EAA4B,iBAC1D,KAACC;QAAOD,WAAWV,KAAKU,WAAWF,EAAEG,MAAM;kBACvC,cAAA,MAACd;;8BACG,MAACD;oBAAIc,WAAWF,EAAEI,UAAU;;sCACxB,KAACL;sCACD,MAACR;4BAAKW,WAAWF,EAAEK,KAAK;;8CACpB,KAACP;oCAAQQ,OAAM;8CACX,cAAA,KAACV;wCAAKM,WAAWF,EAAEO,IAAI;wCAAEC,MAAMb;;;8CAEnC,MAACG;oCAAQQ,OAAM;;sDACX,KAACV;4CAAKM,WAAWF,EAAES,QAAQ;4CAAED,MAAMd;;sDACnC,KAACD;;;;;;;8BAIb,KAACH;oBAAQY,WAAWF,EAAEU,OAAO;;8BAC7B,KAACb;oBAASK,WAAWF,EAAEW,IAAI;;;;OAGrC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Divider, Flex } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { SubscribeToNews } from \"@/features/SubscribeToNews\";\nimport { CONTACTS, MENU } from \"../../const\";\nimport { List } from \"../List\";\nimport { MetaInfo } from \"../Metainfo\";\nimport { Section } from \"../Section\";\nimport { Top } from \"../Top\";\nimport s from \"./Footer.module.css\";\nexport const Footer = ({ className }) => /* @__PURE__ */ _jsx(\"footer\", {\n  className: clsx(className, s.footer),\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsxs(Box, {\n        className: s.topWrapper,\n        children: [\n          /* @__PURE__ */ _jsx(Top, {}),\n          /* @__PURE__ */ _jsxs(Flex, {\n            className: s.items,\n            children: [\n              /* @__PURE__ */ _jsx(Section, {\n                title: \"Меню\",\n                children: /* @__PURE__ */ _jsx(List, {\n                  className: s.menu,\n                  data: MENU\n                })\n              }),\n              /* @__PURE__ */ _jsxs(Section, {\n                title: \"Контакты\",\n                children: [\n                  /* @__PURE__ */ _jsx(List, {\n                    className: s.contacts,\n                    data: CONTACTS\n                  }),\n                  /* @__PURE__ */ _jsx(SubscribeToNews, {})\n                ]\n              })\n            ]\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Divider, {\n        className: s.divider\n      }),\n      /* @__PURE__ */ _jsx(MetaInfo, {\n        className: s.docs\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308308,
-      "end": 1750239308386,
+      "start": 1750271784863,
+      "end": 1750271784936,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784936,
+      "end": 1750271784936,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784937,
+      "end": 1750271784937,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Footer/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Divider, Flex } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { SubscribeToNews } from \"@/features/SubscribeToNews\";\nimport { CONTACTS, MENU } from \"../../const\";\nimport { List } from \"../List\";\nimport { MetaInfo } from \"../Metainfo\";\nimport { Section } from \"../Section\";\nimport { Top } from \"../Top\";\nimport s from \"./Footer.module.css\";\nexport const Footer = ({ className }) => /* @__PURE__ */ _jsx(\"footer\", {\n  className: clsx(className, s.footer),\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsxs(Box, {\n        className: s.topWrapper,\n        children: [\n          /* @__PURE__ */ _jsx(Top, {}),\n          /* @__PURE__ */ _jsxs(Flex, {\n            className: s.items,\n            children: [\n              /* @__PURE__ */ _jsx(Section, {\n                title: \"Меню\",\n                children: /* @__PURE__ */ _jsx(List, {\n                  className: s.menu,\n                  data: MENU\n                })\n              }),\n              /* @__PURE__ */ _jsxs(Section, {\n                title: \"Контакты\",\n                children: [\n                  /* @__PURE__ */ _jsx(List, {\n                    className: s.contacts,\n                    data: CONTACTS\n                  }),\n                  /* @__PURE__ */ _jsx(SubscribeToNews, {})\n                ]\n              })\n            ]\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Divider, {\n        className: s.divider\n      }),\n      /* @__PURE__ */ _jsx(MetaInfo, {\n        className: s.docs\n      })\n    ]\n  })\n});\n",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784937,
+      "end": 1750271784937,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

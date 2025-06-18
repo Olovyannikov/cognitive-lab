@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Group, Modal, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { submitAnswersMutation } from '@/entities/Test';\n\nimport { SubmitTestModel } from './model';\n\nexport const SubmitTestModal = () => {\n    const [opened, onClose, loading, onSubmit] = useUnit([\n        SubmitTestModel.$isSubmitModalShown,\n        SubmitTestModel.submitModalStateChanged,\n        submitAnswersMutation.$pending,\n        SubmitTestModel.submitScaleForm,\n    ]);\n\n    return (\n        <Modal\n            opened={opened}\n            onClose={onClose}\n            centered\n            title={\n                <Text fz={16} fw='bold'>\n                    Завершить тестирование?\n                </Text>\n            }\n        >\n            <Group gap='sm' justify='end'>\n                <Button\n                    size='sm'\n                    radius='md'\n                    variant='outline'\n                    c='dark.7'\n                    bd='1px solid var(--mantine-color-dark-7)'\n                    onClick={onClose}\n                >\n                    Отменить\n                </Button>\n                <Button loading={loading} size='sm' radius='md' onClick={onSubmit}>\n                    Завершить\n                </Button>\n            </Group>\n        </Modal>\n    );\n};\n",
-      "start": 1750239308404,
-      "end": 1750239308419,
+      "start": 1750271784981,
+      "end": 1750271785006,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Group, Modal, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { submitAnswersMutation } from '@/entities/Test';\nimport { SubmitTestModel } from './model';\nexport const SubmitTestModal = ()=>{\n    const [opened, onClose, loading, onSubmit] = useUnit([\n        SubmitTestModel.$isSubmitModalShown,\n        SubmitTestModel.submitModalStateChanged,\n        submitAnswersMutation.$pending,\n        SubmitTestModel.submitScaleForm\n    ]);\n    return /*#__PURE__*/ _jsx(Modal, {\n        opened: opened,\n        onClose: onClose,\n        centered: true,\n        title: /*#__PURE__*/ _jsx(Text, {\n            fz: 16,\n            fw: \"bold\",\n            children: \"Завершить тестирование?\"\n        }),\n        children: /*#__PURE__*/ _jsxs(Group, {\n            gap: \"sm\",\n            justify: \"end\",\n            children: [\n                /*#__PURE__*/ _jsx(Button, {\n                    size: \"sm\",\n                    radius: \"md\",\n                    variant: \"outline\",\n                    c: \"dark.7\",\n                    bd: \"1px solid var(--mantine-color-dark-7)\",\n                    onClick: onClose,\n                    children: \"Отменить\"\n                }),\n                /*#__PURE__*/ _jsx(Button, {\n                    loading: loading,\n                    size: \"sm\",\n                    radius: \"md\",\n                    onClick: onSubmit,\n                    children: \"Завершить\"\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308419,
-      "end": 1750239308423,
+      "start": 1750271785006,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SubmitTestModal/index.tsx\"],\"sourcesContent\":[\"import { Button, Group, Modal, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\n\\nimport { submitAnswersMutation } from '@/entities/Test';\\n\\nimport { SubmitTestModel } from './model';\\n\\nexport const SubmitTestModal = () => {\\n    const [opened, onClose, loading, onSubmit] = useUnit([\\n        SubmitTestModel.$isSubmitModalShown,\\n        SubmitTestModel.submitModalStateChanged,\\n        submitAnswersMutation.$pending,\\n        SubmitTestModel.submitScaleForm,\\n    ]);\\n\\n    return (\\n        <Modal\\n            opened={opened}\\n            onClose={onClose}\\n            centered\\n            title={\\n                <Text fz={16} fw='bold'>\\n                    Завершить тестирование?\\n                </Text>\\n            }\\n        >\\n            <Group gap='sm' justify='end'>\\n                <Button\\n                    size='sm'\\n                    radius='md'\\n                    variant='outline'\\n                    c='dark.7'\\n                    bd='1px solid var(--mantine-color-dark-7)'\\n                    onClick={onClose}\\n                >\\n                    Отменить\\n                </Button>\\n                <Button loading={loading} size='sm' radius='md' onClick={onSubmit}>\\n                    Завершить\\n                </Button>\\n            </Group>\\n        </Modal>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Group\",\"Modal\",\"Text\",\"useUnit\",\"submitAnswersMutation\",\"SubmitTestModel\",\"SubmitTestModal\",\"opened\",\"onClose\",\"loading\",\"onSubmit\",\"$isSubmitModalShown\",\"submitModalStateChanged\",\"$pending\",\"submitScaleForm\",\"centered\",\"title\",\"fz\",\"fw\",\"gap\",\"justify\",\"size\",\"radius\",\"variant\",\"c\",\"bd\",\"onClick\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AAC3D,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,qBAAqB,QAAQ,kBAAkB;AAExD,SAASC,eAAe,QAAQ,UAAU;AAE1C,OAAO,MAAMC,kBAAkB;IAC3B,MAAM,CAACC,QAAQC,SAASC,SAASC,SAAS,GAAGP,QAAQ;QACjDE,gBAAgBM,mBAAmB;QACnCN,gBAAgBO,uBAAuB;QACvCR,sBAAsBS,QAAQ;QAC9BR,gBAAgBS,eAAe;KAClC;IAED,qBACI,KAACb;QACGM,QAAQA;QACRC,SAASA;QACTO,QAAQ;QACRC,qBACI,KAACd;YAAKe,IAAI;YAAIC,IAAG;sBAAO;;kBAK5B,cAAA,MAAClB;YAAMmB,KAAI;YAAKC,SAAQ;;8BACpB,KAACrB;oBACGsB,MAAK;oBACLC,QAAO;oBACPC,SAAQ;oBACRC,GAAE;oBACFC,IAAG;oBACHC,SAASlB;8BACZ;;8BAGD,KAACT;oBAAOU,SAASA;oBAASY,MAAK;oBAAKC,QAAO;oBAAKI,SAAShB;8BAAU;;;;;AAMnF,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Group, Modal, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { submitAnswersMutation } from \"@/entities/Test\";\nimport { SubmitTestModel } from \"./model\";\nexport const SubmitTestModal = () => {\n  const [opened, onClose, loading, onSubmit] = useUnit([\n    SubmitTestModel.$isSubmitModalShown,\n    SubmitTestModel.submitModalStateChanged,\n    submitAnswersMutation.$pending,\n    SubmitTestModel.submitScaleForm\n  ]);\n  return /* @__PURE__ */ _jsx(Modal, {\n    opened,\n    onClose,\n    centered: true,\n    title: /* @__PURE__ */ _jsx(Text, {\n      fz: 16,\n      fw: \"bold\",\n      children: \"Завершить тестирование?\"\n    }),\n    children: /* @__PURE__ */ _jsxs(Group, {\n      gap: \"sm\",\n      justify: \"end\",\n      children: [\n        /* @__PURE__ */ _jsx(Button, {\n          size: \"sm\",\n          radius: \"md\",\n          variant: \"outline\",\n          c: \"dark.7\",\n          bd: \"1px solid var(--mantine-color-dark-7)\",\n          onClick: onClose,\n          children: \"Отменить\"\n        }),\n        /* @__PURE__ */ _jsx(Button, {\n          loading,\n          size: \"sm\",\n          radius: \"md\",\n          onClick: onSubmit,\n          children: \"Завершить\"\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308423,
-      "end": 1750239308605,
+      "start": 1750271785009,
+      "end": 1750271785218,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785218,
+      "end": 1750271785218,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SubmitTestModal/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Group, Modal, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { submitAnswersMutation } from \"@/entities/Test\";\nimport { SubmitTestModel } from \"./model\";\nexport const SubmitTestModal = () => {\n  const [opened, onClose, loading, onSubmit] = useUnit([\n    SubmitTestModel.$isSubmitModalShown,\n    SubmitTestModel.submitModalStateChanged,\n    submitAnswersMutation.$pending,\n    SubmitTestModel.submitScaleForm\n  ]);\n  return /* @__PURE__ */ _jsx(Modal, {\n    opened,\n    onClose,\n    centered: true,\n    title: /* @__PURE__ */ _jsx(Text, {\n      fz: 16,\n      fw: \"bold\",\n      children: \"Завершить тестирование?\"\n    }),\n    children: /* @__PURE__ */ _jsxs(Group, {\n      gap: \"sm\",\n      justify: \"end\",\n      children: [\n        /* @__PURE__ */ _jsx(Button, {\n          size: \"sm\",\n          radius: \"md\",\n          variant: \"outline\",\n          c: \"dark.7\",\n          bd: \"1px solid var(--mantine-color-dark-7)\",\n          onClick: onClose,\n          children: \"Отменить\"\n        }),\n        /* @__PURE__ */ _jsx(Button, {\n          loading,\n          size: \"sm\",\n          radius: \"md\",\n          onClick: onSubmit,\n          children: \"Завершить\"\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308605,
-      "end": 1750239308605,
+      "start": 1750271785218,
+      "end": 1750271785218,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

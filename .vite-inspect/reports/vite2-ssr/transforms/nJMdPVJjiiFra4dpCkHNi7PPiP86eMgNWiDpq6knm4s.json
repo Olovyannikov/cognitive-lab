@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".progress {\n  width: 100%;\n}\n\n.text {\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 19px;\n\n  @mixin larger-than 1200px {\n    font-size: 24px;\n    line-height: 28px;\n  }\n}\n",
-      "start": 1750239308633,
-      "end": 1750239308645,
+      "start": 1750271785273,
+      "end": 1750271785283,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308645,
-      "end": 1750239308645,
+      "start": 1750271785283,
+      "end": 1750271785283,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785284,
+      "end": 1750271785284,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestProgress/TestProgress.module.css [vike:pluginModuleBanner] */\nexport const progress = \"fY-vn\";\nexport const text = \"ucSMo\";\nexport default {\n\tprogress: progress,\n\ttext: text\n};\n",
-      "start": 1750239308646,
-      "end": 1750239308646,
+      "start": 1750271785284,
+      "end": 1750271785284,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

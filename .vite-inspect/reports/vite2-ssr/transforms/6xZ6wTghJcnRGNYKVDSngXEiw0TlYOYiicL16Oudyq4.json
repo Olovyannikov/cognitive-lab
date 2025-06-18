@@ -4,93 +4,99 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgLogo = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 36 36\", ...props }, /* @__PURE__ */ React.createElement(\"g\", { clipPath: \"url(#a)\" }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#7950F2\", d: \"M0 7a7 7 0 0 1 7-7h22a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7H7a7 7 0 0 1-7-7V7Z\" }), /* @__PURE__ */ React.createElement(\"path\", { fill: \"#fff\", d: \"M15.848 13.51c-2.2 2.177-2.269 6.362-.238 8.66 1.94 2.195 6.167 1.796 7.322-1.18l4.668 2.878c-.454.636-.827 1.3-1.33 1.835-1.717 1.829-3.904 2.657-6.3 2.957-6.853.856-11.675-5.24-11.568-11.123.09-4.934 3.798-9.383 8.531-10.116 3.047-.472 5.896-.017 8.387 2a7.32 7.32 0 0 1 1.98 2.46l-4.281 3.146c-.647-1.543-1.818-2.34-3.37-2.552-1.381-.189-2.68.019-3.8 1.035Z\" })), /* @__PURE__ */ React.createElement(\"defs\", null, /* @__PURE__ */ React.createElement(\"clipPath\", { id: \"a\" }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#fff\", d: \"M0 0h36v36H0z\" }))));\nexport default SvgLogo;\n",
-      "start": 1750239308429,
-      "end": 1750239308666,
+      "start": 1750271784981,
+      "end": 1750271785212,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785212,
+      "end": 1750271785212,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308667,
-      "end": 1750239308667,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308667,
-      "end": 1750239308667,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/app/assets/images/logo.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgLogo = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 36 36\", ...props }, /* @__PURE__ */ React.createElement(\"g\", { clipPath: \"url(#a)\" }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#7950F2\", d: \"M0 7a7 7 0 0 1 7-7h22a7 7 0 0 1 7 7v22a7 7 0 0 1-7 7H7a7 7 0 0 1-7-7V7Z\" }), /* @__PURE__ */ React.createElement(\"path\", { fill: \"#fff\", d: \"M15.848 13.51c-2.2 2.177-2.269 6.362-.238 8.66 1.94 2.195 6.167 1.796 7.322-1.18l4.668 2.878c-.454.636-.827 1.3-1.33 1.835-1.717 1.829-3.904 2.657-6.3 2.957-6.853.856-11.675-5.24-11.568-11.123.09-4.934 3.798-9.383 8.531-10.116 3.047-.472 5.896-.017 8.387 2a7.32 7.32 0 0 1 1.98 2.46l-4.281 3.146c-.647-1.543-1.818-2.34-3.37-2.552-1.381-.189-2.68.019-3.8 1.035Z\" })), /* @__PURE__ */ React.createElement(\"defs\", null, /* @__PURE__ */ React.createElement(\"clipPath\", { id: \"a\" }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"#fff\", d: \"M0 0h36v36H0z\" }))));\nexport default SvgLogo;\n",
-      "start": 1750239308667,
-      "end": 1750239308667,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

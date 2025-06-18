@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\n\nimport { navigate } from '@/shared/lib';\nimport { FormSuccessScreen, PageLoader } from '@/shared/ui';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\n\nimport { InnerLayout } from '@/widgets/InnerLayout';\n\nimport s from './ReviewPage.module.css';\n\nexport const ReviewPage = () => {\n    const { pending, stale } = useUnit(getSurveysInfoQuery);\n\n    const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\n\n    if (pending || stale) return <PageLoader />;\n\n    return (\n        <InnerLayout\n            maw={850}\n            className={isSubmitted ? s.root : ''}\n            title={!isSubmitted && 'Оставьте отзыв'}\n            text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}\n            image={!isSubmitted ? '/review/question-bubble' : undefined}\n        >\n            {!isSubmitted && (\n                <CreateReviewForm\n                    slots={{\n                        action: <NavigateToHelpPage />,\n                    }}\n                />\n            )}\n            {isSubmitted && (\n                <FormSuccessScreen\n                    description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'\n                    image='/review/star'\n                    slots={{\n                        action: (\n                            <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>\n                                Вернуться назад\n                            </NavigateToMainPage>\n                        ),\n                    }}\n                />\n            )}\n        </InnerLayout>\n    );\n};\n",
-      "start": 1750239308237,
-      "end": 1750239308268,
+      "start": 1750271784788,
+      "end": 1750271784812,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { navigate } from '@/shared/lib';\nimport { FormSuccessScreen, PageLoader } from '@/shared/ui';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\nimport { InnerLayout } from '@/widgets/InnerLayout';\nimport s from './ReviewPage.module.css';\nexport const ReviewPage = ()=>{\n    const { pending, stale } = useUnit(getSurveysInfoQuery);\n    const [isSubmitted] = useUnit([\n        CreateReviewFormModel.$isSubmitted\n    ]);\n    if (pending || stale) return /*#__PURE__*/ _jsx(PageLoader, {});\n    return /*#__PURE__*/ _jsxs(InnerLayout, {\n        maw: 850,\n        className: isSubmitted ? s.root : '',\n        title: !isSubmitted && 'Оставьте отзыв',\n        text: !isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!',\n        image: !isSubmitted ? '/review/question-bubble' : undefined,\n        children: [\n            !isSubmitted && /*#__PURE__*/ _jsx(CreateReviewForm, {\n                slots: {\n                    action: /*#__PURE__*/ _jsx(NavigateToHelpPage, {})\n                }\n            }),\n            isSubmitted && /*#__PURE__*/ _jsx(FormSuccessScreen, {\n                description: \"Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.\",\n                image: \"/review/star\",\n                slots: {\n                    action: /*#__PURE__*/ _jsx(NavigateToMainPage, {\n                        size: \"md\",\n                        onClick: ()=>navigate.back(),\n                        fullWidth: true,\n                        children: \"Вернуться назад\"\n                    })\n                }\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308268,
-      "end": 1750239308270,
+      "start": 1750271784812,
+      "end": 1750271784814,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/ReviewPage/index.tsx\"],\"sourcesContent\":[\"import { useUnit } from 'effector-react';\\n\\nimport { navigate } from '@/shared/lib';\\nimport { FormSuccessScreen, PageLoader } from '@/shared/ui';\\n\\nimport { getSurveysInfoQuery } from '@/entities/Report';\\n\\nimport { CreateReviewForm, CreateReviewFormModel } from '@/features/CreateReviewForm';\\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\\nimport { NavigateToMainPage } from '@/features/NavigateToMainPage';\\n\\nimport { InnerLayout } from '@/widgets/InnerLayout';\\n\\nimport s from './ReviewPage.module.css';\\n\\nexport const ReviewPage = () => {\\n    const { pending, stale } = useUnit(getSurveysInfoQuery);\\n\\n    const [isSubmitted] = useUnit([CreateReviewFormModel.$isSubmitted]);\\n\\n    if (pending || stale) return <PageLoader />;\\n\\n    return (\\n        <InnerLayout\\n            maw={850}\\n            className={isSubmitted ? s.root : ''}\\n            title={!isSubmitted && 'Оставьте отзыв'}\\n            text={!isSubmitted && 'Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!'}\\n            image={!isSubmitted ? '/review/question-bubble' : undefined}\\n        >\\n            {!isSubmitted && (\\n                <CreateReviewForm\\n                    slots={{\\n                        action: <NavigateToHelpPage />,\\n                    }}\\n                />\\n            )}\\n            {isSubmitted && (\\n                <FormSuccessScreen\\n                    description='Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.'\\n                    image='/review/star'\\n                    slots={{\\n                        action: (\\n                            <NavigateToMainPage size='md' onClick={() => navigate.back()} fullWidth>\\n                                Вернуться назад\\n                            </NavigateToMainPage>\\n                        ),\\n                    }}\\n                />\\n            )}\\n        </InnerLayout>\\n    );\\n};\\n\"],\"names\":[\"useUnit\",\"navigate\",\"FormSuccessScreen\",\"PageLoader\",\"getSurveysInfoQuery\",\"CreateReviewForm\",\"CreateReviewFormModel\",\"NavigateToHelpPage\",\"NavigateToMainPage\",\"InnerLayout\",\"s\",\"ReviewPage\",\"pending\",\"stale\",\"isSubmitted\",\"$isSubmitted\",\"maw\",\"className\",\"root\",\"title\",\"text\",\"image\",\"undefined\",\"slots\",\"action\",\"description\",\"size\",\"onClick\",\"back\",\"fullWidth\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,QAAQ,QAAQ,eAAe;AACxC,SAASC,iBAAiB,EAAEC,UAAU,QAAQ,cAAc;AAE5D,SAASC,mBAAmB,QAAQ,oBAAoB;AAExD,SAASC,gBAAgB,EAAEC,qBAAqB,QAAQ,8BAA8B;AACtF,SAASC,kBAAkB,QAAQ,gCAAgC;AACnE,SAASC,kBAAkB,QAAQ,gCAAgC;AAEnE,SAASC,WAAW,QAAQ,wBAAwB;AAEpD,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,aAAa;IACtB,MAAM,EAAEC,OAAO,EAAEC,KAAK,EAAE,GAAGb,QAAQI;IAEnC,MAAM,CAACU,YAAY,GAAGd,QAAQ;QAACM,sBAAsBS,YAAY;KAAC;IAElE,IAAIH,WAAWC,OAAO,qBAAO,KAACV;IAE9B,qBACI,MAACM;QACGO,KAAK;QACLC,WAAWH,cAAcJ,EAAEQ,IAAI,GAAG;QAClCC,OAAO,CAACL,eAAe;QACvBM,MAAM,CAACN,eAAe;QACtBO,OAAO,CAACP,cAAc,4BAA4BQ;;YAEjD,CAACR,6BACE,KAACT;gBACGkB,OAAO;oBACHC,sBAAQ,KAACjB;gBACb;;YAGPO,6BACG,KAACZ;gBACGuB,aAAY;gBACZJ,OAAM;gBACNE,OAAO;oBACHC,sBACI,KAAChB;wBAAmBkB,MAAK;wBAAKC,SAAS,IAAM1B,SAAS2B,IAAI;wBAAIC,SAAS;kCAAC;;gBAIhF;;;;AAKpB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { navigate } from \"@/shared/lib\";\nimport { FormSuccessScreen, PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { CreateReviewForm, CreateReviewFormModel } from \"@/features/CreateReviewForm\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./ReviewPage.module.css\";\nexport const ReviewPage = () => {\n  const { pending, stale } = useUnit(getSurveysInfoQuery);\n  const [isSubmitted] = useUnit([\n    CreateReviewFormModel.$isSubmitted\n  ]);\n  if (pending || stale) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsxs(InnerLayout, {\n    maw: 850,\n    className: isSubmitted ? s.root : \"\",\n    title: !isSubmitted && \"Оставьте отзыв\",\n    text: !isSubmitted && \"Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!\",\n    image: !isSubmitted ? \"/review/question-bubble\" : void 0,\n    children: [\n      !isSubmitted && /* @__PURE__ */ _jsx(CreateReviewForm, {\n        slots: {\n          action: /* @__PURE__ */ _jsx(NavigateToHelpPage, {})\n        }\n      }),\n      isSubmitted && /* @__PURE__ */ _jsx(FormSuccessScreen, {\n        description: \"Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.\",\n        image: \"/review/star\",\n        slots: {\n          action: /* @__PURE__ */ _jsx(NavigateToMainPage, {\n            size: \"md\",\n            onClick: () => navigate.back(),\n            fullWidth: true,\n            children: \"Вернуться назад\"\n          })\n        }\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308270,
-      "end": 1750239308306,
+      "start": 1750271784814,
+      "end": 1750271784854,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784854,
+      "end": 1750271784854,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784854,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/ReviewPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { navigate } from \"@/shared/lib\";\nimport { FormSuccessScreen, PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { CreateReviewForm, CreateReviewFormModel } from \"@/features/CreateReviewForm\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport { NavigateToMainPage } from \"@/features/NavigateToMainPage\";\nimport { InnerLayout } from \"@/widgets/InnerLayout\";\nimport s from \"./ReviewPage.module.css\";\nexport const ReviewPage = () => {\n  const { pending, stale } = useUnit(getSurveysInfoQuery);\n  const [isSubmitted] = useUnit([\n    CreateReviewFormModel.$isSubmitted\n  ]);\n  if (pending || stale) return /* @__PURE__ */ _jsx(PageLoader, {});\n  return /* @__PURE__ */ _jsxs(InnerLayout, {\n    maw: 850,\n    className: isSubmitted ? s.root : \"\",\n    title: !isSubmitted && \"Оставьте отзыв\",\n    text: !isSubmitted && \"Поделитесь вашим мнением о прохождении теста. Будем рады услышать вас!\",\n    image: !isSubmitted ? \"/review/question-bubble\" : void 0,\n    children: [\n      !isSubmitted && /* @__PURE__ */ _jsx(CreateReviewForm, {\n        slots: {\n          action: /* @__PURE__ */ _jsx(NavigateToHelpPage, {})\n        }\n      }),\n      isSubmitted && /* @__PURE__ */ _jsx(FormSuccessScreen, {\n        description: \"Благодарим вас за то, что поделились своим мнением! Мы высоко ценим любую обратную связь и стараемся использовать её для улучшения нашего сервиса.\",\n        image: \"/review/star\",\n        slots: {\n          action: /* @__PURE__ */ _jsx(NavigateToMainPage, {\n            size: \"md\",\n            onClick: () => navigate.back(),\n            fullWidth: true,\n            children: \"Вернуться назад\"\n          })\n        }\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308306,
-      "end": 1750239308306,
+      "start": 1750271784854,
+      "end": 1750271784855,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

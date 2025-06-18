@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { ROUTES } from '@/shared/config';\n\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\n\nimport s from './HowItWorks.module.css';\n\nexport const HowItWorks = () => {\n    const { isMobile } = usePageContext();\n    return (\n        <Paper className={s.wrapper} radius={40} component='section'>\n            <Decor />\n            <Title className={s.title} order={2}>\n                Как это работает?\n            </Title>\n            <Flex className={s.flex} gap='md'>\n                {FLOW_STEPS.map((step, idx) => (\n                    <Paper key={step.id} className={s.paper}>\n                        <Box className={s.number}>{icons[idx]}</Box>\n                        <Title className={s.cardTitle} order={4}>\n                            {step.label}\n                        </Title>\n                        <Text className={s.cardText}>{step.description}</Text>\n                    </Paper>\n                ))}\n            </Flex>\n            <Center>\n                <Button\n                    maw={706}\n                    fullWidth\n                    component='a'\n                    variant='white'\n                    href={ROUTES.TEST}\n                    size={isMobile ? 'md' : 'xl'}\n                >\n                    Пройти тест\n                </Button>\n            </Center>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308416,
-      "end": 1750239308434,
+      "start": 1750271784963,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { ROUTES } from '@/shared/config';\nimport { FLOW_STEPS } from './const';\nimport { Decor, icons } from './Icons';\nimport s from './HowItWorks.module.css';\nexport const HowItWorks = ()=>{\n    const { isMobile } = usePageContext();\n    return /*#__PURE__*/ _jsxs(Paper, {\n        className: s.wrapper,\n        radius: 40,\n        component: \"section\",\n        children: [\n            /*#__PURE__*/ _jsx(Decor, {}),\n            /*#__PURE__*/ _jsx(Title, {\n                className: s.title,\n                order: 2,\n                children: \"Как это работает?\"\n            }),\n            /*#__PURE__*/ _jsx(Flex, {\n                className: s.flex,\n                gap: \"md\",\n                children: FLOW_STEPS.map((step, idx)=>/*#__PURE__*/ _jsxs(Paper, {\n                        className: s.paper,\n                        children: [\n                            /*#__PURE__*/ _jsx(Box, {\n                                className: s.number,\n                                children: icons[idx]\n                            }),\n                            /*#__PURE__*/ _jsx(Title, {\n                                className: s.cardTitle,\n                                order: 4,\n                                children: step.label\n                            }),\n                            /*#__PURE__*/ _jsx(Text, {\n                                className: s.cardText,\n                                children: step.description\n                            })\n                        ]\n                    }, step.id))\n            }),\n            /*#__PURE__*/ _jsx(Center, {\n                children: /*#__PURE__*/ _jsx(Button, {\n                    maw: 706,\n                    fullWidth: true,\n                    component: \"a\",\n                    variant: \"white\",\n                    href: ROUTES.TEST,\n                    size: isMobile ? 'md' : 'xl',\n                    children: \"Пройти тест\"\n                })\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308441,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItWorks/index.tsx\"],\"sourcesContent\":[\"import { Box, Button, Center, Flex, Paper, Text, Title } from '@mantine/core';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { ROUTES } from '@/shared/config';\\n\\nimport { FLOW_STEPS } from './const';\\nimport { Decor, icons } from './Icons';\\n\\nimport s from './HowItWorks.module.css';\\n\\nexport const HowItWorks = () => {\\n    const { isMobile } = usePageContext();\\n    return (\\n        <Paper className={s.wrapper} radius={40} component='section'>\\n            <Decor />\\n            <Title className={s.title} order={2}>\\n                Как это работает?\\n            </Title>\\n            <Flex className={s.flex} gap='md'>\\n                {FLOW_STEPS.map((step, idx) => (\\n                    <Paper key={step.id} className={s.paper}>\\n                        <Box className={s.number}>{icons[idx]}</Box>\\n                        <Title className={s.cardTitle} order={4}>\\n                            {step.label}\\n                        </Title>\\n                        <Text className={s.cardText}>{step.description}</Text>\\n                    </Paper>\\n                ))}\\n            </Flex>\\n            <Center>\\n                <Button\\n                    maw={706}\\n                    fullWidth\\n                    component='a'\\n                    variant='white'\\n                    href={ROUTES.TEST}\\n                    size={isMobile ? 'md' : 'xl'}\\n                >\\n                    Пройти тест\\n                </Button>\\n            </Center>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Button\",\"Center\",\"Flex\",\"Paper\",\"Text\",\"Title\",\"usePageContext\",\"ROUTES\",\"FLOW_STEPS\",\"Decor\",\"icons\",\"s\",\"HowItWorks\",\"isMobile\",\"className\",\"wrapper\",\"radius\",\"component\",\"title\",\"order\",\"flex\",\"gap\",\"map\",\"step\",\"idx\",\"paper\",\"number\",\"cardTitle\",\"label\",\"cardText\",\"description\",\"id\",\"maw\",\"fullWidth\",\"variant\",\"href\",\"TEST\",\"size\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,MAAM,EAAEC,MAAM,EAAEC,IAAI,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAC9E,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,MAAM,QAAQ,kBAAkB;AAEzC,SAASC,UAAU,QAAQ,UAAU;AACrC,SAASC,KAAK,EAAEC,KAAK,QAAQ,UAAU;AAEvC,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,aAAa;IACtB,MAAM,EAAEC,QAAQ,EAAE,GAAGP;IACrB,qBACI,MAACH;QAAMW,WAAWH,EAAEI,OAAO;QAAEC,QAAQ;QAAIC,WAAU;;0BAC/C,KAACR;0BACD,KAACJ;gBAAMS,WAAWH,EAAEO,KAAK;gBAAEC,OAAO;0BAAG;;0BAGrC,KAACjB;gBAAKY,WAAWH,EAAES,IAAI;gBAAEC,KAAI;0BACxBb,WAAWc,GAAG,CAAC,CAACC,MAAMC,oBACnB,MAACrB;wBAAoBW,WAAWH,EAAEc,KAAK;;0CACnC,KAAC1B;gCAAIe,WAAWH,EAAEe,MAAM;0CAAGhB,KAAK,CAACc,IAAI;;0CACrC,KAACnB;gCAAMS,WAAWH,EAAEgB,SAAS;gCAAER,OAAO;0CACjCI,KAAKK,KAAK;;0CAEf,KAACxB;gCAAKU,WAAWH,EAAEkB,QAAQ;0CAAGN,KAAKO,WAAW;;;uBALtCP,KAAKQ,EAAE;;0BAS3B,KAAC9B;0BACG,cAAA,KAACD;oBACGgC,KAAK;oBACLC,SAAS;oBACThB,WAAU;oBACViB,SAAQ;oBACRC,MAAM5B,OAAO6B,IAAI;oBACjBC,MAAMxB,WAAW,OAAO;8BAC3B;;;;;AAMjB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Flex, Paper, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { FLOW_STEPS } from \"./const\";\nimport { Decor, icons } from \"./Icons\";\nimport s from \"./HowItWorks.module.css\";\nexport const HowItWorks = () => {\n  const { isMobile } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    className: s.wrapper,\n    radius: 40,\n    component: \"section\",\n    children: [\n      /* @__PURE__ */ _jsx(Decor, {}),\n      /* @__PURE__ */ _jsx(Title, {\n        className: s.title,\n        order: 2,\n        children: \"Как это работает?\"\n      }),\n      /* @__PURE__ */ _jsx(Flex, {\n        className: s.flex,\n        gap: \"md\",\n        children: FLOW_STEPS.map((step, idx) => /* @__PURE__ */ _jsxs(Paper, {\n          className: s.paper,\n          children: [\n            /* @__PURE__ */ _jsx(Box, {\n              className: s.number,\n              children: icons[idx]\n            }),\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.cardTitle,\n              order: 4,\n              children: step.label\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.cardText,\n              children: step.description\n            })\n          ]\n        }, step.id))\n      }),\n      /* @__PURE__ */ _jsx(Center, {\n        children: /* @__PURE__ */ _jsx(Button, {\n          maw: 706,\n          fullWidth: true,\n          component: \"a\",\n          variant: \"white\",\n          href: ROUTES.TEST,\n          size: isMobile ? \"md\" : \"xl\",\n          children: \"Пройти тест\"\n        })\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308441,
-      "end": 1750239308666,
+      "start": 1750271784986,
+      "end": 1750271785159,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785159,
+      "end": 1750271785159,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785159,
+      "end": 1750271785160,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785160,
+      "end": 1750271785160,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785160,
+      "end": 1750271785160,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItWorks/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Flex, Paper, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { ROUTES } from \"@/shared/config\";\nimport { FLOW_STEPS } from \"./const\";\nimport { Decor, icons } from \"./Icons\";\nimport s from \"./HowItWorks.module.css\";\nexport const HowItWorks = () => {\n  const { isMobile } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Paper, {\n    className: s.wrapper,\n    radius: 40,\n    component: \"section\",\n    children: [\n      /* @__PURE__ */ _jsx(Decor, {}),\n      /* @__PURE__ */ _jsx(Title, {\n        className: s.title,\n        order: 2,\n        children: \"Как это работает?\"\n      }),\n      /* @__PURE__ */ _jsx(Flex, {\n        className: s.flex,\n        gap: \"md\",\n        children: FLOW_STEPS.map((step, idx) => /* @__PURE__ */ _jsxs(Paper, {\n          className: s.paper,\n          children: [\n            /* @__PURE__ */ _jsx(Box, {\n              className: s.number,\n              children: icons[idx]\n            }),\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.cardTitle,\n              order: 4,\n              children: step.label\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.cardText,\n              children: step.description\n            })\n          ]\n        }, step.id))\n      }),\n      /* @__PURE__ */ _jsx(Center, {\n        children: /* @__PURE__ */ _jsx(Button, {\n          maw: 706,\n          fullWidth: true,\n          component: \"a\",\n          variant: \"white\",\n          href: ROUTES.TEST,\n          size: isMobile ? \"md\" : \"xl\",\n          children: \"Пройти тест\"\n        })\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308666,
-      "end": 1750239308666,
+      "start": 1750271785160,
+      "end": 1750271785160,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

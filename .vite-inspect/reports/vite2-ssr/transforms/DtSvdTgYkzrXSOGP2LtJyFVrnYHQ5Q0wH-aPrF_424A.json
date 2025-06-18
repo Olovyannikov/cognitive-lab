@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useRef } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport { Section } from '@/shared/ui';\n\nimport { HowItHelpsCard } from '@/entities/Landing';\n\nimport { CARDS } from './const';\n\nimport s from './HowItHelps.module.css';\n\nexport const HowItHelps = () => {\n    const container = useRef<HTMLDivElement>(null);\n\n    return (\n        <Section\n            title={\n                <>\n                    Как тест <span style={{ color: 'var(--mantine-color-violet-7)' }}>поможет вам?</span>\n                </>\n            }\n        >\n            <Stack ref={container} className={s.stack}>\n                {CARDS.map((card, i) => (\n                    <HowItHelpsCard {...card} key={card.id} i={i} />\n                ))}\n            </Stack>\n        </Section>\n    );\n};\n",
-      "start": 1750239308414,
-      "end": 1750239308430,
+      "start": 1750271784962,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useRef } from 'react';\nimport { Stack } from '@mantine/core';\nimport { Section } from '@/shared/ui';\nimport { HowItHelpsCard } from '@/entities/Landing';\nimport { CARDS } from './const';\nimport s from './HowItHelps.module.css';\nexport const HowItHelps = ()=>{\n    const container = useRef(null);\n    return /*#__PURE__*/ _jsx(Section, {\n        title: /*#__PURE__*/ _jsxs(_Fragment, {\n            children: [\n                \"Как тест \",\n                /*#__PURE__*/ _jsx(\"span\", {\n                    style: {\n                        color: 'var(--mantine-color-violet-7)'\n                    },\n                    children: \"поможет вам?\"\n                })\n            ]\n        }),\n        children: /*#__PURE__*/ _jsx(Stack, {\n            ref: container,\n            className: s.stack,\n            children: CARDS.map((card, i)=>/*#__PURE__*/ _createElement(HowItHelpsCard, {\n                    ...card,\n                    key: card.id,\n                    i: i\n                }))\n        })\n    });\n};\n",
-      "start": 1750239308430,
-      "end": 1750239308434,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/HowItHelps/index.tsx\"],\"sourcesContent\":[\"import { useRef } from 'react';\\nimport { Stack } from '@mantine/core';\\n\\nimport { Section } from '@/shared/ui';\\n\\nimport { HowItHelpsCard } from '@/entities/Landing';\\n\\nimport { CARDS } from './const';\\n\\nimport s from './HowItHelps.module.css';\\n\\nexport const HowItHelps = () => {\\n    const container = useRef<HTMLDivElement>(null);\\n\\n    return (\\n        <Section\\n            title={\\n                <>\\n                    Как тест <span style={{ color: 'var(--mantine-color-violet-7)' }}>поможет вам?</span>\\n                </>\\n            }\\n        >\\n            <Stack ref={container} className={s.stack}>\\n                {CARDS.map((card, i) => (\\n                    <HowItHelpsCard {...card} key={card.id} i={i} />\\n                ))}\\n            </Stack>\\n        </Section>\\n    );\\n};\\n\"],\"names\":[\"useRef\",\"Stack\",\"Section\",\"HowItHelpsCard\",\"CARDS\",\"s\",\"HowItHelps\",\"container\",\"title\",\"span\",\"style\",\"color\",\"ref\",\"className\",\"stack\",\"map\",\"card\",\"i\",\"key\",\"id\"],\"mappings\":\";;AAAA,SAASA,MAAM,QAAQ,QAAQ;AAC/B,SAASC,KAAK,QAAQ,gBAAgB;AAEtC,SAASC,OAAO,QAAQ,cAAc;AAEtC,SAASC,cAAc,QAAQ,qBAAqB;AAEpD,SAASC,KAAK,QAAQ,UAAU;AAEhC,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,aAAa;IACtB,MAAMC,YAAYP,OAAuB;IAEzC,qBACI,KAACE;QACGM,qBACI;;gBAAE;8BACW,KAACC;oBAAKC,OAAO;wBAAEC,OAAO;oBAAgC;8BAAG;;;;kBAI1E,cAAA,KAACV;YAAMW,KAAKL;YAAWM,WAAWR,EAAES,KAAK;sBACpCV,MAAMW,GAAG,CAAC,CAACC,MAAMC,kBACd,eAACd;oBAAgB,GAAGa,IAAI;oBAAEE,KAAKF,KAAKG,EAAE;oBAAEF,GAAGA;;;;AAK/D,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useRef } from \"react\";\nimport { Stack } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { HowItHelpsCard } from \"@/entities/Landing\";\nimport { CARDS } from \"./const\";\nimport s from \"./HowItHelps.module.css\";\nexport const HowItHelps = () => {\n  const container = useRef(null);\n  return /* @__PURE__ */ _jsx(Section, {\n    title: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        \"Как тест \",\n        /* @__PURE__ */ _jsx(\"span\", {\n          style: {\n            color: \"var(--mantine-color-violet-7)\"\n          },\n          children: \"поможет вам?\"\n        })\n      ]\n    }),\n    children: /* @__PURE__ */ _jsx(Stack, {\n      ref: container,\n      className: s.stack,\n      children: CARDS.map((card, i) => /* @__PURE__ */ _createElement(HowItHelpsCard, {\n        ...card,\n        key: card.id,\n        i\n      }))\n    })\n  });\n};\n",
-      "start": 1750239308434,
-      "end": 1750239308643,
+      "start": 1750271784986,
+      "end": 1750271785155,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785155,
+      "end": 1750271785155,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItHelps/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { createElement as _createElement } from \"react\";\nimport { useRef } from \"react\";\nimport { Stack } from \"@mantine/core\";\nimport { Section } from \"@/shared/ui\";\nimport { HowItHelpsCard } from \"@/entities/Landing\";\nimport { CARDS } from \"./const\";\nimport s from \"./HowItHelps.module.css\";\nexport const HowItHelps = () => {\n  const container = useRef(null);\n  return /* @__PURE__ */ _jsx(Section, {\n    title: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        \"Как тест \",\n        /* @__PURE__ */ _jsx(\"span\", {\n          style: {\n            color: \"var(--mantine-color-violet-7)\"\n          },\n          children: \"поможет вам?\"\n        })\n      ]\n    }),\n    children: /* @__PURE__ */ _jsx(Stack, {\n      ref: container,\n      className: s.stack,\n      children: CARDS.map((card, i) => /* @__PURE__ */ _createElement(HowItHelpsCard, {\n        ...card,\n        key: card.id,\n        i\n      }))\n    })\n  });\n};\n",
-      "start": 1750239308643,
-      "end": 1750239308643,
+      "start": 1750271785155,
+      "end": 1750271785155,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

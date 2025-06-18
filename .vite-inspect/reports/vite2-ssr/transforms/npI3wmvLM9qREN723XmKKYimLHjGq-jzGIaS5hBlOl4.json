@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".section {\n  position: relative;\n}\n\n.mainTitle {\n  margin-bottom: var(--mantine-spacing-xl);\n  font-size: 34px;\n  line-height: 40px;\n  text-align: center;\n\n  a {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-decoration: none;\n    color: var(--mantine-color-violet-7);\n\n    svg {\n      width: 32px;\n      height: 32px;\n\n      @mixin larger-than 992px {\n        width: 52px;\n        height: 52px;\n      }\n    }\n\n    @mixin larger-than 992px {\n      display: inline-flex;\n    }\n  }\n\n  @mixin larger-than 992px {\n    margin-bottom: 80px;\n    font-size: 64px;\n    line-height: 75px;\n  }\n}\n\n.accordionLabel {\n  font-size: 18px;\n  line-height: 21px;\n\n  @mixin larger-than 768px {\n    font-size: 28px;\n    line-height: 32px;\n  }\n}\n\n.item {\n  border-bottom: 1px solid var(--mantine-color-gray-3);\n  border-radius: 0;\n\n  &:not([data-active=\"true\"]) {\n    background-color: var(--mantine-color-white);\n  }\n\n  &:is(:first-child) {\n    border-top-left-radius: 32px;\n    border-top-right-radius: 32px;\n  }\n\n  &:last-child[data-active=\"true\"] {\n    border-bottom: 0;\n    border-bottom-right-radius: 32px;\n    border-bottom-left-radius: 32px;\n  }\n}\n\n.label {\n  padding-block: var(--mantine-radius-3xl);\n}\n\n.union {\n  position: absolute;\n  right: 12%;\n  bottom: 2%;\n  z-index: -1;\n  display: none;\n\n  @mixin larger-than 992px {\n    display: block;\n  }\n}\n\n.content {\n  font-size: 16px;\n  line-height: 18px;\n\n  @mixin larger-than 768px {\n    font-size: 22px;\n    line-height: 26px;\n  }\n}\n\n.chevron {\n  width: 24px;\n  height: 24px;\n}\n",
-      "start": 1750239308686,
-      "end": 1750239308701,
+      "start": 1750271785197,
+      "end": 1750271785214,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308701,
-      "end": 1750239308701,
+      "start": 1750271785215,
+      "end": 1750271785215,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308703,
-      "end": 1750239308703,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308703,
-      "end": 1750239308703,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308703,
-      "end": 1750239308703,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308703,
-      "end": 1750239308703,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785217,
+      "end": 1750271785217,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785217,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/FAQ/FAQ.module.css [vike:pluginModuleBanner] */\nexport const section = \"_5vOBl\";\nexport const mainTitle = \"f0edn\";\nexport const accordionLabel = \"FPEK9\";\nexport const item = \"ww-3b\";\nexport const label = \"t-ndd\";\nexport const union = \"OGbCb\";\nexport const content = \"dGZoU\";\nexport const chevron = \"_2raAR\";\nexport default {\n\tsection: section,\n\tmainTitle: mainTitle,\n\taccordionLabel: accordionLabel,\n\titem: item,\n\tlabel: label,\n\tunion: union,\n\tcontent: content,\n\tchevron: chevron\n};\n",
-      "start": 1750239308704,
-      "end": 1750239308704,
+      "start": 1750271785217,
+      "end": 1750271785218,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

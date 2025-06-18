@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Accordion, Title } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport Markdown from 'markdown-to-jsx';\n\nimport type { FaqItem } from '../../types';\n\nimport s from './FAQList.module.css';\n\ninterface FAQListProps {\n    items: FaqItem[];\n}\n\nexport const FAQList = ({ items }: FAQListProps) => (\n    <Accordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {items?.map((item) => (\n            <Accordion.Item key={item.id} value={item.title}>\n                <Accordion.Control>\n                    <Title className={s.title}>{item.title}</Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>\n        ))}\n    </Accordion>\n);\n",
-      "start": 1750239308334,
-      "end": 1750239308361,
+      "start": 1750271784898,
+      "end": 1750271784931,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport Markdown from 'markdown-to-jsx';\nimport s from './FAQList.module.css';\nexport const FAQList = ({ items })=>/*#__PURE__*/ _jsx(Accordion, {\n        radius: 0,\n        variant: \"filled\",\n        classNames: s,\n        chevron: /*#__PURE__*/ _jsx(CaretDown, {\n            weight: \"bold\",\n            size: 24\n        }),\n        children: items?.map((item)=>/*#__PURE__*/ _jsxs(Accordion.Item, {\n                value: item.title,\n                children: [\n                    /*#__PURE__*/ _jsx(Accordion.Control, {\n                        children: /*#__PURE__*/ _jsx(Title, {\n                            className: s.title,\n                            children: item.title\n                        })\n                    }),\n                    /*#__PURE__*/ _jsx(Accordion.Panel, {\n                        children: /*#__PURE__*/ _jsx(Markdown, {\n                            children: item.body.data\n                        })\n                    })\n                ]\n            }, item.id))\n    });\n",
-      "start": 1750239308361,
-      "end": 1750239308364,
+      "start": 1750271784931,
+      "end": 1750271784935,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/ui/FaqList/index.tsx\"],\"sourcesContent\":[\"import { Accordion, Title } from '@mantine/core';\\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\\nimport Markdown from 'markdown-to-jsx';\\n\\nimport type { FaqItem } from '../../types';\\n\\nimport s from './FAQList.module.css';\\n\\ninterface FAQListProps {\\n    items: FaqItem[];\\n}\\n\\nexport const FAQList = ({ items }: FAQListProps) => (\\n    <Accordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\\n        {items?.map((item) => (\\n            <Accordion.Item key={item.id} value={item.title}>\\n                <Accordion.Control>\\n                    <Title className={s.title}>{item.title}</Title>\\n                </Accordion.Control>\\n                <Accordion.Panel>\\n                    <Markdown>{item.body.data}</Markdown>\\n                </Accordion.Panel>\\n            </Accordion.Item>\\n        ))}\\n    </Accordion>\\n);\\n\"],\"names\":[\"Accordion\",\"Title\",\"CaretDown\",\"Markdown\",\"s\",\"FAQList\",\"items\",\"radius\",\"variant\",\"classNames\",\"chevron\",\"weight\",\"size\",\"map\",\"item\",\"Item\",\"value\",\"title\",\"Control\",\"className\",\"Panel\",\"body\",\"data\",\"id\"],\"mappings\":\";AAAA,SAASA,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AACjD,SAASC,SAAS,QAAQ,iCAAiC;AAC3D,OAAOC,cAAc,kBAAkB;AAIvC,OAAOC,OAAO,uBAAuB;AAMrC,OAAO,MAAMC,UAAU,CAAC,EAAEC,KAAK,EAAgB,iBAC3C,KAACN;QAAUO,QAAQ;QAAGC,SAAQ;QAASC,YAAYL;QAAGM,uBAAS,KAACR;YAAUS,QAAO;YAAOC,MAAM;;kBACzFN,OAAOO,IAAI,CAACC,qBACT,MAACd,UAAUe,IAAI;gBAAeC,OAAOF,KAAKG,KAAK;;kCAC3C,KAACjB,UAAUkB,OAAO;kCACd,cAAA,KAACjB;4BAAMkB,WAAWf,EAAEa,KAAK;sCAAGH,KAAKG,KAAK;;;kCAE1C,KAACjB,UAAUoB,KAAK;kCACZ,cAAA,KAACjB;sCAAUW,KAAKO,IAAI,CAACC,IAAI;;;;eALZR,KAAKS,EAAE;OAUtC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./FAQList.module.css\";\nexport const FAQList = ({ items }) => /* @__PURE__ */ _jsx(Accordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children: items?.map((item) => /* @__PURE__ */ _jsxs(Accordion.Item, {\n    value: item.title,\n    children: [\n      /* @__PURE__ */ _jsx(Accordion.Control, {\n        children: /* @__PURE__ */ _jsx(Title, {\n          className: s.title,\n          children: item.title\n        })\n      }),\n      /* @__PURE__ */ _jsx(Accordion.Panel, {\n        children: /* @__PURE__ */ _jsx(Markdown, {\n          children: item.body.data\n        })\n      })\n    ]\n  }, item.id))\n});\n",
-      "start": 1750239308364,
-      "end": 1750239308486,
+      "start": 1750271784935,
+      "end": 1750271785021,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785021,
+      "end": 1750271785021,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785021,
+      "end": 1750271785021,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785021,
+      "end": 1750271785022,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/ui/FaqList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./FAQList.module.css\";\nexport const FAQList = ({ items }) => /* @__PURE__ */ _jsx(Accordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children: items?.map((item) => /* @__PURE__ */ _jsxs(Accordion.Item, {\n    value: item.title,\n    children: [\n      /* @__PURE__ */ _jsx(Accordion.Control, {\n        children: /* @__PURE__ */ _jsx(Title, {\n          className: s.title,\n          children: item.title\n        })\n      }),\n      /* @__PURE__ */ _jsx(Accordion.Panel, {\n        children: /* @__PURE__ */ _jsx(Markdown, {\n          children: item.body.data\n        })\n      })\n    ]\n  }, item.id))\n});\n",
-      "start": 1750239308486,
-      "end": 1750239308486,
+      "start": 1750271785022,
+      "end": 1750271785022,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

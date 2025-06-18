@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box } from '@mantine/core';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\n\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\n\nimport s from './Top.module.css';\n\nexport const Top = () => (\n    <Box className={s.top}>\n        <CognitiveLogo width={200} height={35} />\n\n        <p>Технологии самопознания</p>\n        <List className={s.owner} data={OWNER_INFO} />\n    </Box>\n);\n",
-      "start": 1750239308393,
-      "end": 1750239308411,
+      "start": 1750271784979,
+      "end": 1750271784993,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box } from '@mantine/core';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport { OWNER_INFO } from '../../const';\nimport { List } from '../List';\nimport s from './Top.module.css';\nexport const Top = ()=>/*#__PURE__*/ _jsxs(Box, {\n        className: s.top,\n        children: [\n            /*#__PURE__*/ _jsx(CognitiveLogo, {\n                width: 200,\n                height: 35\n            }),\n            /*#__PURE__*/ _jsx(\"p\", {\n                children: \"Технологии самопознания\"\n            }),\n            /*#__PURE__*/ _jsx(List, {\n                className: s.owner,\n                data: OWNER_INFO\n            })\n        ]\n    });\n",
-      "start": 1750239308411,
-      "end": 1750239308416,
+      "start": 1750271784993,
+      "end": 1750271785009,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Top/index.tsx\"],\"sourcesContent\":[\"import { Box } from '@mantine/core';\\n\\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\\n\\nimport { OWNER_INFO } from '../../const';\\nimport { List } from '../List';\\n\\nimport s from './Top.module.css';\\n\\nexport const Top = () => (\\n    <Box className={s.top}>\\n        <CognitiveLogo width={200} height={35} />\\n\\n        <p>Технологии самопознания</p>\\n        <List className={s.owner} data={OWNER_INFO} />\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"CognitiveLogo\",\"OWNER_INFO\",\"List\",\"s\",\"Top\",\"className\",\"top\",\"width\",\"height\",\"p\",\"owner\",\"data\"],\"mappings\":\";AAAA,SAASA,GAAG,QAAQ,gBAAgB;AAEpC,OAAOC,mBAAmB,+CAA+C;AAEzE,SAASC,UAAU,QAAQ,cAAc;AACzC,SAASC,IAAI,QAAQ,UAAU;AAE/B,OAAOC,OAAO,mBAAmB;AAEjC,OAAO,MAAMC,MAAM,kBACf,MAACL;QAAIM,WAAWF,EAAEG,GAAG;;0BACjB,KAACN;gBAAcO,OAAO;gBAAKC,QAAQ;;0BAEnC,KAACC;0BAAE;;0BACH,KAACP;gBAAKG,WAAWF,EAAEO,KAAK;gBAAEC,MAAMV;;;OAEtC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { OWNER_INFO } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./Top.module.css\";\nexport const Top = () => /* @__PURE__ */ _jsxs(Box, {\n  className: s.top,\n  children: [\n    /* @__PURE__ */ _jsx(CognitiveLogo, {\n      width: 200,\n      height: 35\n    }),\n    /* @__PURE__ */ _jsx(\"p\", {\n      children: \"Технологии самопознания\"\n    }),\n    /* @__PURE__ */ _jsx(List, {\n      className: s.owner,\n      data: OWNER_INFO\n    })\n  ]\n});\n",
-      "start": 1750239308416,
-      "end": 1750239308595,
+      "start": 1750271785009,
+      "end": 1750271785214,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785214,
+      "end": 1750271785214,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Top/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box } from \"@mantine/core\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport { OWNER_INFO } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./Top.module.css\";\nexport const Top = () => /* @__PURE__ */ _jsxs(Box, {\n  className: s.top,\n  children: [\n    /* @__PURE__ */ _jsx(CognitiveLogo, {\n      width: 200,\n      height: 35\n    }),\n    /* @__PURE__ */ _jsx(\"p\", {\n      children: \"Технологии самопознания\"\n    }),\n    /* @__PURE__ */ _jsx(List, {\n      className: s.owner,\n      data: OWNER_INFO\n    })\n  ]\n});\n",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785214,
+      "end": 1750271785214,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

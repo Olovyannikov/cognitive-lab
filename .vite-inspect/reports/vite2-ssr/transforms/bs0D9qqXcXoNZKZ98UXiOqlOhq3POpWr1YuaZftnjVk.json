@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { ListItem } from '../types';\n\nexport function isListItemArray(value: unknown): value is ListItem[] {\n    return Array.isArray(value);\n}\n",
-      "start": 1750239308566,
-      "end": 1750239308599,
+      "start": 1750271785110,
+      "end": 1750271785133,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export function isListItemArray(value) {\n    return Array.isArray(value);\n}\n",
-      "start": 1750239308599,
-      "end": 1750239308601,
+      "start": 1750271785133,
+      "end": 1750271785137,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/guards.ts\"],\"sourcesContent\":[\"import { ListItem } from '../types';\\n\\nexport function isListItemArray(value: unknown): value is ListItem[] {\\n    return Array.isArray(value);\\n}\\n\"],\"names\":[\"isListItemArray\",\"value\",\"Array\",\"isArray\"],\"mappings\":\"AAEA,OAAO,SAASA,gBAAgBC,KAAc;IAC1C,OAAOC,MAAMC,OAAO,CAACF;AACzB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export function isListItemArray(value) {\n  return Array.isArray(value);\n}\n",
-      "start": 1750239308601,
-      "end": 1750239308772,
+      "start": 1750271785137,
+      "end": 1750271785281,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785281,
+      "end": 1750271785281,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785281,
+      "end": 1750271785281,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785282,
+      "end": 1750271785282,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308772,
-      "end": 1750239308772,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/guards.ts [vike:pluginModuleBanner] */\nexport function isListItemArray(value) {\n  return Array.isArray(value);\n}\n",
-      "start": 1750239308773,
-      "end": 1750239308773,
+      "start": 1750271785282,
+      "end": 1750271785282,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

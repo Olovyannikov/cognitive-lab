@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n",
-      "start": 1750239308284,
-      "end": 1750239308303,
+      "start": 1750271784850,
+      "end": 1750271784865,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getMainPageInfoQuery = _effector$factory({\n    sid: \"5jjq8tzi\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx(()=>({\n                    url: API.surveys.mainPage\n                })),\n            initialData: []\n        })\n});\n",
-      "start": 1750239308303,
-      "end": 1750239308306,
+      "start": 1750271784865,
+      "end": 1750271784874,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts\"],\"sourcesContent\":[\"import { createQuery } from '@farfetched/core';\\n\\nimport { API, createCommonRequestFx } from '@/shared/api';\\n\\nimport type { MainPageResponse } from './dto';\\n\\nexport const getMainPageInfoQuery = createQuery({\\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\\n        url: API.surveys.mainPage,\\n    })),\\n    initialData: [] as MainPageResponse,\\n});\\n\"],\"names\":[\"createQuery\",\"API\",\"createCommonRequestFx\",\"getMainPageInfoQuery\",\"effect\",\"url\",\"surveys\",\"mainPage\",\"initialData\"],\"mappings\":\";AAAA,SAASA,WAAW,QAAQ,mBAAmB;AAE/C,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,eAAe;AAI1D,OAAO,MAAMC;;YAAuBH,YAAY;YAC5CI,QAAQF,sBAA8C,IAAO,CAAA;oBACzDG,KAAKJ,IAAIK,OAAO,CAACC,QAAQ;gBAC7B,CAAA;YACAC,aAAa,EAAE;QACnB;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _effector$factory({\n  sid: \"5jjq8tzi\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  })\n});\n",
-      "start": 1750239308306,
-      "end": 1750239308358,
+      "start": 1750271784874,
+      "end": 1750271784944,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784949,
+      "end": 1750271784949,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Landing/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _effector$factory({\n  sid: \"5jjq8tzi\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  })\n});\n",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784950,
+      "end": 1750271784950,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

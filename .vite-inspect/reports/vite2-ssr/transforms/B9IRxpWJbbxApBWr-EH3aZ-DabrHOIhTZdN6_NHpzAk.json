@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\n\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\n\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\n);\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\n);\n\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\n",
-      "start": 1750239308384,
-      "end": 1750239308406,
+      "start": 1750271784943,
+      "end": 1750271784962,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { getSurveysInfoQuery } from '../api';\nconst filterUserReportsByKey = (response, key)=>response?.reports?.filter((report)=>report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user)=>Boolean(user?.reports?.find?.((report)=>report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user)=>user?.reports?.find?.((el)=>el.report_kind === 'free') ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el)=>el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'express'));\n",
-      "start": 1750239308406,
-      "end": 1750239308411,
+      "start": 1750271784962,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts\"],\"sourcesContent\":[\"import { getSurveysInfoQuery } from '../api';\\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\\n\\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\\n\\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\\n);\\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\\n);\\n\\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\\n\"],\"names\":[\"getSurveysInfoQuery\",\"filterUserReportsByKey\",\"response\",\"key\",\"reports\",\"filter\",\"report\",\"report_kind\",\"$isUserHasFreeReport\",\"$data\",\"map\",\"user\",\"Boolean\",\"find\",\"$lastUserFreeReport\",\"el\",\"$allUserReports\",\"$freeUserReports\",\"$paidUserReports\",\"$expressUserReports\"],\"mappings\":\"AAAA,SAASA,mBAAmB,QAAQ,SAAS;AAG7C,MAAMC,yBAAyB,CAACC,UAAuCC,MACnED,UAAUE,SAASC,OAAO,CAACC,SAAWA,OAAOC,WAAW,KAAKJ,QAAQ,EAAE;AAE3E,OAAO,MAAMK,uBAAuBR,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACC,OAC/DC,QAAQD,MAAMP,SAASS,OAAO,CAACP,SAAWA,OAAOC,WAAW,KAAK,UACnE;AACF,OAAO,MAAMO,sBAAsBd,oBAAoBS,KAAK,CAACC,GAAG,CAC5D,CAACC,OAASA,MAAMP,SAASS,OAAO,CAACE,KAAOA,GAAGR,WAAW,KAAK,WAAY,CAAC,GAC1E;AAEF,OAAO,MAAMS,kBAAkBhB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOA,IAAIX,WAAW,EAAE,EAAE;AACxF,OAAO,MAAMa,mBAAmBjB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,SAAS;AAC1G,OAAO,MAAMG,mBAAmBlB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,SAAS;AAC1G,OAAO,MAAMI,sBAAsBnB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,YAAY\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750239308411,
-      "end": 1750239308566,
+      "start": 1750271784971,
+      "end": 1750271785096,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785096,
+      "end": 1750271785096,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785097,
+      "end": 1750271785097,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308566,
-      "end": 1750239308566,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/userReports.ts [vike:pluginModuleBanner] */\nimport { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750239308566,
-      "end": 1750239308567,
+      "start": 1750271785097,
+      "end": 1750271785097,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

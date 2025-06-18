@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture } from '@/shared/ui';\n\nimport { PeopleTalkModel } from './model';\n\nimport s from './PeopleTalk.module.css';\n\nexport const Desktop = () => {\n    const { isMobile } = usePageContext();\n\n    const [opened, setIsActive, currentReview, close] = useUnit([\n        PeopleTalkModel.$isModalOpened,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.$currentReview,\n        PeopleTalkModel.modalActiveStateSettled,\n    ]);\n\n    return (\n        <Modal\n            size='lg'\n            centered\n            opened={!isMobile && opened}\n            onClose={() => {\n                close(false);\n                setIsActive(true);\n            }}\n        >\n            <>\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\n                    <Box>\n                        <Rating\n                            size={!isMobile ? 'lg' : 'md'}\n                            readOnly\n                            defaultValue={currentReview?.overall_rate}\n                            mb='xs'\n                            fractions={4}\n                        />\n                        <Text mb='xxs' className={s.name}>\n                            {currentReview?.name}\n                        </Text>\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\n                    </Box>\n                    <Picture\n                        cdn\n                        src={`/types/circles/${currentReview?.mbti_type}`}\n                        className={s.image}\n                        w={100}\n                        h={100}\n                    />\n                </Group>\n                <Text pb={40} px={40} className={s.reviewText}>\n                    {currentReview?.text}\n                </Text>\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\n                    {currentReview?.created_at}\n                </Text>\n            </>\n        </Modal>\n    );\n};\n",
-      "start": 1750239308699,
-      "end": 1750239308713,
+      "start": 1750271785201,
+      "end": 1750271785219,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture } from '@/shared/ui';\nimport { PeopleTalkModel } from './model';\nimport s from './PeopleTalk.module.css';\nexport const Desktop = ()=>{\n    const { isMobile } = usePageContext();\n    const [opened, setIsActive, currentReview, close] = useUnit([\n        PeopleTalkModel.$isModalOpened,\n        PeopleTalkModel.carouselActiveStateSettled,\n        PeopleTalkModel.$currentReview,\n        PeopleTalkModel.modalActiveStateSettled\n    ]);\n    return /*#__PURE__*/ _jsx(Modal, {\n        size: \"lg\",\n        centered: true,\n        opened: !isMobile && opened,\n        onClose: ()=>{\n            close(false);\n            setIsActive(true);\n        },\n        children: /*#__PURE__*/ _jsxs(_Fragment, {\n            children: [\n                /*#__PURE__*/ _jsxs(Group, {\n                    px: 40,\n                    justify: \"space-between\",\n                    align: \"flex-start\",\n                    gap: \"md\",\n                    wrap: \"nowrap\",\n                    children: [\n                        /*#__PURE__*/ _jsxs(Box, {\n                            children: [\n                                /*#__PURE__*/ _jsx(Rating, {\n                                    size: !isMobile ? 'lg' : 'md',\n                                    readOnly: true,\n                                    defaultValue: currentReview?.overall_rate,\n                                    mb: \"xs\",\n                                    fractions: 4\n                                }),\n                                /*#__PURE__*/ _jsx(Text, {\n                                    mb: \"xxs\",\n                                    className: s.name,\n                                    children: currentReview?.name\n                                }),\n                                /*#__PURE__*/ _jsx(Text, {\n                                    className: s.label,\n                                    children: currentReview?.mbti_type\n                                })\n                            ]\n                        }),\n                        /*#__PURE__*/ _jsx(Picture, {\n                            cdn: true,\n                            src: `/types/circles/${currentReview?.mbti_type}`,\n                            className: s.image,\n                            w: 100,\n                            h: 100\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    pb: 40,\n                    px: 40,\n                    className: s.reviewText,\n                    children: currentReview?.text\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    px: 40,\n                    fz: 24,\n                    c: \"dark.2\",\n                    mt: \"auto\",\n                    children: currentReview?.created_at\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308713,
-      "end": 1750239308722,
+      "start": 1750271785219,
+      "end": 1750271785222,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/desktop.tsx\"],\"sourcesContent\":[\"import { Box, Group, Modal, Rating, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { Picture } from '@/shared/ui';\\n\\nimport { PeopleTalkModel } from './model';\\n\\nimport s from './PeopleTalk.module.css';\\n\\nexport const Desktop = () => {\\n    const { isMobile } = usePageContext();\\n\\n    const [opened, setIsActive, currentReview, close] = useUnit([\\n        PeopleTalkModel.$isModalOpened,\\n        PeopleTalkModel.carouselActiveStateSettled,\\n        PeopleTalkModel.$currentReview,\\n        PeopleTalkModel.modalActiveStateSettled,\\n    ]);\\n\\n    return (\\n        <Modal\\n            size='lg'\\n            centered\\n            opened={!isMobile && opened}\\n            onClose={() => {\\n                close(false);\\n                setIsActive(true);\\n            }}\\n        >\\n            <>\\n                <Group px={40} justify='space-between' align='flex-start' gap='md' wrap='nowrap'>\\n                    <Box>\\n                        <Rating\\n                            size={!isMobile ? 'lg' : 'md'}\\n                            readOnly\\n                            defaultValue={currentReview?.overall_rate}\\n                            mb='xs'\\n                            fractions={4}\\n                        />\\n                        <Text mb='xxs' className={s.name}>\\n                            {currentReview?.name}\\n                        </Text>\\n                        <Text className={s.label}>{currentReview?.mbti_type}</Text>\\n                    </Box>\\n                    <Picture\\n                        cdn\\n                        src={`/types/circles/${currentReview?.mbti_type}`}\\n                        className={s.image}\\n                        w={100}\\n                        h={100}\\n                    />\\n                </Group>\\n                <Text pb={40} px={40} className={s.reviewText}>\\n                    {currentReview?.text}\\n                </Text>\\n                <Text px={40} fz={24} c='dark.2' mt='auto'>\\n                    {currentReview?.created_at}\\n                </Text>\\n            </>\\n        </Modal>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Group\",\"Modal\",\"Rating\",\"Text\",\"useUnit\",\"usePageContext\",\"Picture\",\"PeopleTalkModel\",\"s\",\"Desktop\",\"isMobile\",\"opened\",\"setIsActive\",\"currentReview\",\"close\",\"$isModalOpened\",\"carouselActiveStateSettled\",\"$currentReview\",\"modalActiveStateSettled\",\"size\",\"centered\",\"onClose\",\"px\",\"justify\",\"align\",\"gap\",\"wrap\",\"readOnly\",\"defaultValue\",\"overall_rate\",\"mb\",\"fractions\",\"className\",\"name\",\"label\",\"mbti_type\",\"cdn\",\"src\",\"image\",\"w\",\"h\",\"pb\",\"reviewText\",\"text\",\"fz\",\"c\",\"mt\",\"created_at\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,KAAK,EAAEC,KAAK,EAAEC,MAAM,EAAEC,IAAI,QAAQ,gBAAgB;AAChE,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,OAAO,QAAQ,cAAc;AAEtC,SAASC,eAAe,QAAQ,UAAU;AAE1C,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,UAAU;IACnB,MAAM,EAAEC,QAAQ,EAAE,GAAGL;IAErB,MAAM,CAACM,QAAQC,aAAaC,eAAeC,MAAM,GAAGV,QAAQ;QACxDG,gBAAgBQ,cAAc;QAC9BR,gBAAgBS,0BAA0B;QAC1CT,gBAAgBU,cAAc;QAC9BV,gBAAgBW,uBAAuB;KAC1C;IAED,qBACI,KAACjB;QACGkB,MAAK;QACLC,QAAQ;QACRT,QAAQ,CAACD,YAAYC;QACrBU,SAAS;YACLP,MAAM;YACNF,YAAY;QAChB;kBAEA,cAAA;;8BACI,MAACZ;oBAAMsB,IAAI;oBAAIC,SAAQ;oBAAgBC,OAAM;oBAAaC,KAAI;oBAAKC,MAAK;;sCACpE,MAAC3B;;8CACG,KAACG;oCACGiB,MAAM,CAACT,WAAW,OAAO;oCACzBiB,QAAQ;oCACRC,cAAcf,eAAegB;oCAC7BC,IAAG;oCACHC,WAAW;;8CAEf,KAAC5B;oCAAK2B,IAAG;oCAAME,WAAWxB,EAAEyB,IAAI;8CAC3BpB,eAAeoB;;8CAEpB,KAAC9B;oCAAK6B,WAAWxB,EAAE0B,KAAK;8CAAGrB,eAAesB;;;;sCAE9C,KAAC7B;4BACG8B,GAAG;4BACHC,KAAK,CAAC,eAAe,EAAExB,eAAesB,WAAW;4BACjDH,WAAWxB,EAAE8B,KAAK;4BAClBC,GAAG;4BACHC,GAAG;;;;8BAGX,KAACrC;oBAAKsC,IAAI;oBAAInB,IAAI;oBAAIU,WAAWxB,EAAEkC,UAAU;8BACxC7B,eAAe8B;;8BAEpB,KAACxC;oBAAKmB,IAAI;oBAAIsB,IAAI;oBAAIC,GAAE;oBAASC,IAAG;8BAC/BjC,eAAekC;;;;;AAKpC,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const { isMobile } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([\n    PeopleTalkModel.$isModalOpened,\n    PeopleTalkModel.carouselActiveStateSettled,\n    PeopleTalkModel.$currentReview,\n    PeopleTalkModel.modalActiveStateSettled\n  ]);\n  return /* @__PURE__ */ _jsx(Modal, {\n    size: \"lg\",\n    centered: true,\n    opened: !isMobile && opened,\n    onClose: () => {\n      close(false);\n      setIsActive(true);\n    },\n    children: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        /* @__PURE__ */ _jsxs(Group, {\n          px: 40,\n          justify: \"space-between\",\n          align: \"flex-start\",\n          gap: \"md\",\n          wrap: \"nowrap\",\n          children: [\n            /* @__PURE__ */ _jsxs(Box, {\n              children: [\n                /* @__PURE__ */ _jsx(Rating, {\n                  size: !isMobile ? \"lg\" : \"md\",\n                  readOnly: true,\n                  defaultValue: currentReview?.overall_rate,\n                  mb: \"xs\",\n                  fractions: 4\n                }),\n                /* @__PURE__ */ _jsx(Text, {\n                  mb: \"xxs\",\n                  className: s.name,\n                  children: currentReview?.name\n                }),\n                /* @__PURE__ */ _jsx(Text, {\n                  className: s.label,\n                  children: currentReview?.mbti_type\n                })\n              ]\n            }),\n            /* @__PURE__ */ _jsx(Picture, {\n              cdn: true,\n              src: `/types/circles/${currentReview?.mbti_type}`,\n              className: s.image,\n              w: 100,\n              h: 100\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          pb: 40,\n          px: 40,\n          className: s.reviewText,\n          children: currentReview?.text\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          px: 40,\n          fz: 24,\n          c: \"dark.2\",\n          mt: \"auto\",\n          children: currentReview?.created_at\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308722,
-      "end": 1750239308808,
+      "start": 1750271785222,
+      "end": 1750271785339,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785339,
+      "end": 1750271785339,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/PeopleTalk/desktop.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Box, Group, Modal, Rating, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nimport { PeopleTalkModel } from \"./model\";\nimport s from \"./PeopleTalk.module.css\";\nexport const Desktop = () => {\n  const { isMobile } = usePageContext();\n  const [opened, setIsActive, currentReview, close] = useUnit([\n    PeopleTalkModel.$isModalOpened,\n    PeopleTalkModel.carouselActiveStateSettled,\n    PeopleTalkModel.$currentReview,\n    PeopleTalkModel.modalActiveStateSettled\n  ]);\n  return /* @__PURE__ */ _jsx(Modal, {\n    size: \"lg\",\n    centered: true,\n    opened: !isMobile && opened,\n    onClose: () => {\n      close(false);\n      setIsActive(true);\n    },\n    children: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        /* @__PURE__ */ _jsxs(Group, {\n          px: 40,\n          justify: \"space-between\",\n          align: \"flex-start\",\n          gap: \"md\",\n          wrap: \"nowrap\",\n          children: [\n            /* @__PURE__ */ _jsxs(Box, {\n              children: [\n                /* @__PURE__ */ _jsx(Rating, {\n                  size: !isMobile ? \"lg\" : \"md\",\n                  readOnly: true,\n                  defaultValue: currentReview?.overall_rate,\n                  mb: \"xs\",\n                  fractions: 4\n                }),\n                /* @__PURE__ */ _jsx(Text, {\n                  mb: \"xxs\",\n                  className: s.name,\n                  children: currentReview?.name\n                }),\n                /* @__PURE__ */ _jsx(Text, {\n                  className: s.label,\n                  children: currentReview?.mbti_type\n                })\n              ]\n            }),\n            /* @__PURE__ */ _jsx(Picture, {\n              cdn: true,\n              src: `/types/circles/${currentReview?.mbti_type}`,\n              className: s.image,\n              w: 100,\n              h: 100\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          pb: 40,\n          px: 40,\n          className: s.reviewText,\n          children: currentReview?.text\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          px: 40,\n          fz: 24,\n          c: \"dark.2\",\n          mt: \"auto\",\n          children: currentReview?.created_at\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785339,
+      "end": 1750271785339,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

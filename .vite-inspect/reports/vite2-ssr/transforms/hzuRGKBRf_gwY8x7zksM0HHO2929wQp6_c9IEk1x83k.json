@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".indicator {\n  background-color: var(--mantine-color-dark-7);\n  opacity: 0.1;\n\n  &[data-active] {\n    opacity: 1;\n  }\n}\n",
-      "start": 1750239308509,
-      "end": 1750239308520,
+      "start": 1750271785137,
+      "end": 1750271785159,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785159,
+      "end": 1750271785159,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/context/CongratulationsProvider.module.css [vike:pluginModuleBanner] */\nexport const indicator = \"_4LrTi\";\nexport default {\n\tindicator: indicator\n};\n",
-      "start": 1750239308520,
-      "end": 1750239308520,
+      "start": 1750271785159,
+      "end": 1750271785159,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Fragment } from 'react';\nimport { Box, Container } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport {\n    Banner,\n    contentResolver,\n    findBannerIndex,\n    getPersonalityTypeQuery,\n    ReportHeader,\n    ReportModel,\n    TYPE_TO_COLOR_MAP,\n} from '@/entities/Report';\n\nimport { SendReportEmail } from '@/features/SendReportEmail';\n\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport { ShowFullStructure } from '@/widgets/ShowFullStructure';\n\nimport s from './TypePage.module.css';\n\nexport const TypePage = () => {\n    const { data } = useUnit(getPersonalityTypeQuery);\n    const {\n        routeParams: { type },\n    } = usePageContext();\n\n    const currentColor = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n\n    const beforeBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n        const end = findBannerIndex(content);\n\n        return content.slice(0, end).map((el, idx) => (\n            <div key={el.type + idx} className={s.block}>\n                {el.content.map((currentContent, idx) => (\n                    <Fragment key={currentContent.type + idx}>\n                        {contentResolver({ content: currentContent, color: currentColor })}\n                    </Fragment>\n                ))}\n            </div>\n        ));\n    });\n\n    const afterBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n        const end = findBannerIndex(content);\n\n        return content.slice(end).map((el, elIdx) => (\n            <div key={el.type + elIdx} className={s.block}>\n                {el.content.map((currentContent, idx) => (\n                    <Fragment key={currentContent.type + idx}>\n                        {contentResolver({\n                            content: currentContent,\n                            color: currentColor,\n                            slots: {\n                                subscribeEmail: <SendReportEmail type='block' />,\n                            },\n                        })}\n                    </Fragment>\n                ))}\n            </div>\n        ));\n    });\n\n    if (!data) return null;\n\n    return (\n        <Box component='section'>\n            <Container>\n                <ReportHeader\n                    name={data.title}\n                    preTitle='Тип личности'\n                    type={type ?? data.mbti_type}\n                    typeToColorMapper={TYPE_TO_COLOR_MAP}\n                />\n                <InnerContainer>\n                    <ShowFullStructure />\n                    <Box>{beforeBannerContent}</Box>\n                </InnerContainer>\n                <Banner\n                    color={TYPE_TO_COLOR_MAP[type ?? data?.mbti_type]}\n                    image={`/types/circles/${type ?? data?.mbti_type}`}\n                    actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}\n                />\n                <InnerContainer>{afterBannerContent}</InnerContainer>\n                <Banner\n                    title='Узнайте свой тип личности'\n                    description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'\n                    color={TYPE_TO_COLOR_MAP[type ?? data?.mbti_type]}\n                    actionSlot={CALL_TO_ACTION['redirectToTest']}\n                    image={{\n                        src: `/types/circles/${type ?? data?.mbti_type}`,\n                        extra: '_2',\n                    }}\n                />\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1750239308234,
-      "end": 1750239308264,
+      "start": 1750271784784,
+      "end": 1750271784809,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from 'react';\nimport { Box, Container } from '@mantine/core';\nimport { useList, useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport { SendReportEmail } from '@/features/SendReportEmail';\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport { ShowFullStructure } from '@/widgets/ShowFullStructure';\nimport s from './TypePage.module.css';\nexport const TypePage = ()=>{\n    const { data } = useUnit(getPersonalityTypeQuery);\n    const { routeParams: { type } } = usePageContext();\n    const currentColor = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n    const beforeBannerContent = useList(ReportModel.$reportContent, ({ content })=>{\n        const end = findBannerIndex(content);\n        return content.slice(0, end).map((el, idx)=>/*#__PURE__*/ _jsx(\"div\", {\n                className: s.block,\n                children: el.content.map((currentContent, idx)=>/*#__PURE__*/ _jsx(Fragment, {\n                        children: contentResolver({\n                            content: currentContent,\n                            color: currentColor\n                        })\n                    }, currentContent.type + idx))\n            }, el.type + idx));\n    });\n    const afterBannerContent = useList(ReportModel.$reportContent, ({ content })=>{\n        const end = findBannerIndex(content);\n        return content.slice(end).map((el, elIdx)=>/*#__PURE__*/ _jsx(\"div\", {\n                className: s.block,\n                children: el.content.map((currentContent, idx)=>/*#__PURE__*/ _jsx(Fragment, {\n                        children: contentResolver({\n                            content: currentContent,\n                            color: currentColor,\n                            slots: {\n                                subscribeEmail: /*#__PURE__*/ _jsx(SendReportEmail, {\n                                    type: \"block\"\n                                })\n                            }\n                        })\n                    }, currentContent.type + idx))\n            }, el.type + elIdx));\n    });\n    if (!data) return null;\n    return /*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsx(ReportHeader, {\n                    name: data.title,\n                    preTitle: \"Тип личности\",\n                    type: type ?? data.mbti_type,\n                    typeToColorMapper: TYPE_TO_COLOR_MAP\n                }),\n                /*#__PURE__*/ _jsxs(InnerContainer, {\n                    children: [\n                        /*#__PURE__*/ _jsx(ShowFullStructure, {}),\n                        /*#__PURE__*/ _jsx(Box, {\n                            children: beforeBannerContent\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Banner, {\n                    color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n                    image: `/types/circles/${type ?? data?.mbti_type}`,\n                    actionSlot: CALL_TO_ACTION['buyNowAndNavigateToFullStructure']\n                }),\n                /*#__PURE__*/ _jsx(InnerContainer, {\n                    children: afterBannerContent\n                }),\n                /*#__PURE__*/ _jsx(Banner, {\n                    title: \"Узнайте свой тип личности\",\n                    description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\",\n                    color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n                    actionSlot: CALL_TO_ACTION['redirectToTest'],\n                    image: {\n                        src: `/types/circles/${type ?? data?.mbti_type}`,\n                        extra: '_2'\n                    }\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308264,
-      "end": 1750239308268,
+      "start": 1750271784809,
+      "end": 1750271784814,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/TypePage/index.tsx\"],\"sourcesContent\":[\"import { Fragment } from 'react';\\nimport { Box, Container } from '@mantine/core';\\nimport { useList, useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { InnerContainer } from '@/shared/ui';\\n\\nimport {\\n    Banner,\\n    contentResolver,\\n    findBannerIndex,\\n    getPersonalityTypeQuery,\\n    ReportHeader,\\n    ReportModel,\\n    TYPE_TO_COLOR_MAP,\\n} from '@/entities/Report';\\n\\nimport { SendReportEmail } from '@/features/SendReportEmail';\\n\\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\\nimport { ShowFullStructure } from '@/widgets/ShowFullStructure';\\n\\nimport s from './TypePage.module.css';\\n\\nexport const TypePage = () => {\\n    const { data } = useUnit(getPersonalityTypeQuery);\\n    const {\\n        routeParams: { type },\\n    } = usePageContext();\\n\\n    const currentColor = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\\n\\n    const beforeBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\\n        const end = findBannerIndex(content);\\n\\n        return content.slice(0, end).map((el, idx) => (\\n            <div key={el.type + idx} className={s.block}>\\n                {el.content.map((currentContent, idx) => (\\n                    <Fragment key={currentContent.type + idx}>\\n                        {contentResolver({ content: currentContent, color: currentColor })}\\n                    </Fragment>\\n                ))}\\n            </div>\\n        ));\\n    });\\n\\n    const afterBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\\n        const end = findBannerIndex(content);\\n\\n        return content.slice(end).map((el, elIdx) => (\\n            <div key={el.type + elIdx} className={s.block}>\\n                {el.content.map((currentContent, idx) => (\\n                    <Fragment key={currentContent.type + idx}>\\n                        {contentResolver({\\n                            content: currentContent,\\n                            color: currentColor,\\n                            slots: {\\n                                subscribeEmail: <SendReportEmail type='block' />,\\n                            },\\n                        })}\\n                    </Fragment>\\n                ))}\\n            </div>\\n        ));\\n    });\\n\\n    if (!data) return null;\\n\\n    return (\\n        <Box component='section'>\\n            <Container>\\n                <ReportHeader\\n                    name={data.title}\\n                    preTitle='Тип личности'\\n                    type={type ?? data.mbti_type}\\n                    typeToColorMapper={TYPE_TO_COLOR_MAP}\\n                />\\n                <InnerContainer>\\n                    <ShowFullStructure />\\n                    <Box>{beforeBannerContent}</Box>\\n                </InnerContainer>\\n                <Banner\\n                    color={TYPE_TO_COLOR_MAP[type ?? data?.mbti_type]}\\n                    image={`/types/circles/${type ?? data?.mbti_type}`}\\n                    actionSlot={CALL_TO_ACTION['buyNowAndNavigateToFullStructure']}\\n                />\\n                <InnerContainer>{afterBannerContent}</InnerContainer>\\n                <Banner\\n                    title='Узнайте свой тип личности'\\n                    description='Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.'\\n                    color={TYPE_TO_COLOR_MAP[type ?? data?.mbti_type]}\\n                    actionSlot={CALL_TO_ACTION['redirectToTest']}\\n                    image={{\\n                        src: `/types/circles/${type ?? data?.mbti_type}`,\\n                        extra: '_2',\\n                    }}\\n                />\\n            </Container>\\n        </Box>\\n    );\\n};\\n\"],\"names\":[\"Fragment\",\"Box\",\"Container\",\"useList\",\"useUnit\",\"usePageContext\",\"InnerContainer\",\"Banner\",\"contentResolver\",\"findBannerIndex\",\"getPersonalityTypeQuery\",\"ReportHeader\",\"ReportModel\",\"TYPE_TO_COLOR_MAP\",\"SendReportEmail\",\"CALL_TO_ACTION\",\"ShowFullStructure\",\"s\",\"TypePage\",\"data\",\"routeParams\",\"type\",\"currentColor\",\"mbti_type\",\"beforeBannerContent\",\"$reportContent\",\"content\",\"end\",\"slice\",\"map\",\"el\",\"idx\",\"div\",\"className\",\"block\",\"currentContent\",\"color\",\"afterBannerContent\",\"elIdx\",\"slots\",\"subscribeEmail\",\"component\",\"name\",\"title\",\"preTitle\",\"typeToColorMapper\",\"image\",\"actionSlot\",\"description\",\"src\",\"extra\"],\"mappings\":\";AAAA,SAASA,QAAQ,QAAQ,QAAQ;AACjC,SAASC,GAAG,EAAEC,SAAS,QAAQ,gBAAgB;AAC/C,SAASC,OAAO,EAAEC,OAAO,QAAQ,iBAAiB;AAClD,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,cAAc,QAAQ,cAAc;AAE7C,SACIC,MAAM,EACNC,eAAe,EACfC,eAAe,EACfC,uBAAuB,EACvBC,YAAY,EACZC,WAAW,EACXC,iBAAiB,QACd,oBAAoB;AAE3B,SAASC,eAAe,QAAQ,6BAA6B;AAE7D,SAASC,cAAc,QAAQ,gBAAgB;AAC/C,SAASC,iBAAiB,QAAQ,8BAA8B;AAEhE,OAAOC,OAAO,wBAAwB;AAEtC,OAAO,MAAMC,WAAW;IACpB,MAAM,EAAEC,IAAI,EAAE,GAAGf,QAAQM;IACzB,MAAM,EACFU,aAAa,EAAEC,IAAI,EAAE,EACxB,GAAGhB;IAEJ,MAAMiB,eAAeT,iBAAiB,CAACQ,QAAQF,MAAMI,UAAU;IAE/D,MAAMC,sBAAsBrB,QAAQS,YAAYa,cAAc,EAAE,CAAC,EAAEC,OAAO,EAAE;QACxE,MAAMC,MAAMlB,gBAAgBiB;QAE5B,OAAOA,QAAQE,KAAK,CAAC,GAAGD,KAAKE,GAAG,CAAC,CAACC,IAAIC,oBAClC,KAACC;gBAAwBC,WAAWhB,EAAEiB,KAAK;0BACtCJ,GAAGJ,OAAO,CAACG,GAAG,CAAC,CAACM,gBAAgBJ,oBAC7B,KAAC/B;kCACIQ,gBAAgB;4BAAEkB,SAASS;4BAAgBC,OAAOd;wBAAa;uBADrDa,eAAed,IAAI,GAAGU;eAFnCD,GAAGT,IAAI,GAAGU;IAQ5B;IAEA,MAAMM,qBAAqBlC,QAAQS,YAAYa,cAAc,EAAE,CAAC,EAAEC,OAAO,EAAE;QACvE,MAAMC,MAAMlB,gBAAgBiB;QAE5B,OAAOA,QAAQE,KAAK,CAACD,KAAKE,GAAG,CAAC,CAACC,IAAIQ,sBAC/B,KAACN;gBAA0BC,WAAWhB,EAAEiB,KAAK;0BACxCJ,GAAGJ,OAAO,CAACG,GAAG,CAAC,CAACM,gBAAgBJ,oBAC7B,KAAC/B;kCACIQ,gBAAgB;4BACbkB,SAASS;4BACTC,OAAOd;4BACPiB,OAAO;gCACHC,8BAAgB,KAAC1B;oCAAgBO,MAAK;;4BAC1C;wBACJ;uBAPWc,eAAed,IAAI,GAAGU;eAFnCD,GAAGT,IAAI,GAAGiB;IAc5B;IAEA,IAAI,CAACnB,MAAM,OAAO;IAElB,qBACI,KAAClB;QAAIwC,WAAU;kBACX,cAAA,MAACvC;;8BACG,KAACS;oBACG+B,MAAMvB,KAAKwB,KAAK;oBAChBC,UAAS;oBACTvB,MAAMA,QAAQF,KAAKI,SAAS;oBAC5BsB,mBAAmBhC;;8BAEvB,MAACP;;sCACG,KAACU;sCACD,KAACf;sCAAKuB;;;;8BAEV,KAACjB;oBACG6B,OAAOvB,iBAAiB,CAACQ,QAAQF,MAAMI,UAAU;oBACjDuB,OAAO,CAAC,eAAe,EAAEzB,QAAQF,MAAMI,WAAW;oBAClDwB,YAAYhC,cAAc,CAAC,mCAAmC;;8BAElE,KAACT;8BAAgB+B;;8BACjB,KAAC9B;oBACGoC,OAAM;oBACNK,aAAY;oBACZZ,OAAOvB,iBAAiB,CAACQ,QAAQF,MAAMI,UAAU;oBACjDwB,YAAYhC,cAAc,CAAC,iBAAiB;oBAC5C+B,OAAO;wBACHG,KAAK,CAAC,eAAe,EAAE5B,QAAQF,MAAMI,WAAW;wBAChD2B,OAAO;oBACX;;;;;AAKpB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { SendReportEmail } from \"@/features/SendReportEmail\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport { ShowFullStructure } from \"@/widgets/ShowFullStructure\";\nimport s from \"./TypePage.module.css\";\nexport const TypePage = () => {\n  const { data } = useUnit(getPersonalityTypeQuery);\n  const { routeParams: { type } } = usePageContext();\n  const currentColor = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  const beforeBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n    const end = findBannerIndex(content);\n    return content.slice(0, end).map((el, idx) => /* @__PURE__ */ _jsx(\"div\", {\n      className: s.block,\n      children: el.content.map((currentContent, idx2) => /* @__PURE__ */ _jsx(Fragment, {\n        children: contentResolver({\n          content: currentContent,\n          color: currentColor\n        })\n      }, currentContent.type + idx2))\n    }, el.type + idx));\n  });\n  const afterBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n    const end = findBannerIndex(content);\n    return content.slice(end).map((el, elIdx) => /* @__PURE__ */ _jsx(\"div\", {\n      className: s.block,\n      children: el.content.map((currentContent, idx) => /* @__PURE__ */ _jsx(Fragment, {\n        children: contentResolver({\n          content: currentContent,\n          color: currentColor,\n          slots: {\n            subscribeEmail: /* @__PURE__ */ _jsx(SendReportEmail, {\n              type: \"block\"\n            })\n          }\n        })\n      }, currentContent.type + idx))\n    }, el.type + elIdx));\n  });\n  if (!data) return null;\n  return /* @__PURE__ */ _jsx(Box, {\n    component: \"section\",\n    children: /* @__PURE__ */ _jsxs(Container, {\n      children: [\n        /* @__PURE__ */ _jsx(ReportHeader, {\n          name: data.title,\n          preTitle: \"Тип личности\",\n          type: type ?? data.mbti_type,\n          typeToColorMapper: TYPE_TO_COLOR_MAP\n        }),\n        /* @__PURE__ */ _jsxs(InnerContainer, {\n          children: [\n            /* @__PURE__ */ _jsx(ShowFullStructure, {}),\n            /* @__PURE__ */ _jsx(Box, {\n              children: beforeBannerContent\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Banner, {\n          color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n          image: `/types/circles/${type ?? data?.mbti_type}`,\n          actionSlot: CALL_TO_ACTION[\"buyNowAndNavigateToFullStructure\"]\n        }),\n        /* @__PURE__ */ _jsx(InnerContainer, {\n          children: afterBannerContent\n        }),\n        /* @__PURE__ */ _jsx(Banner, {\n          title: \"Узнайте свой тип личности\",\n          description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\",\n          color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n          actionSlot: CALL_TO_ACTION[\"redirectToTest\"],\n          image: {\n            src: `/types/circles/${type ?? data?.mbti_type}`,\n            extra: \"_2\"\n          }\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308268,
-      "end": 1750239308301,
+      "start": 1750271784814,
+      "end": 1750271784852,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784852,
+      "end": 1750271784852,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/TypePage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useList, useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Banner, contentResolver, findBannerIndex, getPersonalityTypeQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { SendReportEmail } from \"@/features/SendReportEmail\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport { ShowFullStructure } from \"@/widgets/ShowFullStructure\";\nimport s from \"./TypePage.module.css\";\nexport const TypePage = () => {\n  const { data } = useUnit(getPersonalityTypeQuery);\n  const { routeParams: { type } } = usePageContext();\n  const currentColor = TYPE_TO_COLOR_MAP[type ?? data?.mbti_type];\n  const beforeBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n    const end = findBannerIndex(content);\n    return content.slice(0, end).map((el, idx) => /* @__PURE__ */ _jsx(\"div\", {\n      className: s.block,\n      children: el.content.map((currentContent, idx2) => /* @__PURE__ */ _jsx(Fragment, {\n        children: contentResolver({\n          content: currentContent,\n          color: currentColor\n        })\n      }, currentContent.type + idx2))\n    }, el.type + idx));\n  });\n  const afterBannerContent = useList(ReportModel.$reportContent, ({ content }) => {\n    const end = findBannerIndex(content);\n    return content.slice(end).map((el, elIdx) => /* @__PURE__ */ _jsx(\"div\", {\n      className: s.block,\n      children: el.content.map((currentContent, idx) => /* @__PURE__ */ _jsx(Fragment, {\n        children: contentResolver({\n          content: currentContent,\n          color: currentColor,\n          slots: {\n            subscribeEmail: /* @__PURE__ */ _jsx(SendReportEmail, {\n              type: \"block\"\n            })\n          }\n        })\n      }, currentContent.type + idx))\n    }, el.type + elIdx));\n  });\n  if (!data) return null;\n  return /* @__PURE__ */ _jsx(Box, {\n    component: \"section\",\n    children: /* @__PURE__ */ _jsxs(Container, {\n      children: [\n        /* @__PURE__ */ _jsx(ReportHeader, {\n          name: data.title,\n          preTitle: \"Тип личности\",\n          type: type ?? data.mbti_type,\n          typeToColorMapper: TYPE_TO_COLOR_MAP\n        }),\n        /* @__PURE__ */ _jsxs(InnerContainer, {\n          children: [\n            /* @__PURE__ */ _jsx(ShowFullStructure, {}),\n            /* @__PURE__ */ _jsx(Box, {\n              children: beforeBannerContent\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Banner, {\n          color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n          image: `/types/circles/${type ?? data?.mbti_type}`,\n          actionSlot: CALL_TO_ACTION[\"buyNowAndNavigateToFullStructure\"]\n        }),\n        /* @__PURE__ */ _jsx(InnerContainer, {\n          children: afterBannerContent\n        }),\n        /* @__PURE__ */ _jsx(Banner, {\n          title: \"Узнайте свой тип личности\",\n          description: \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете, как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь поставленных целей.\",\n          color: TYPE_TO_COLOR_MAP[type ?? data?.mbti_type],\n          actionSlot: CALL_TO_ACTION[\"redirectToTest\"],\n          image: {\n            src: `/types/circles/${type ?? data?.mbti_type}`,\n            extra: \"_2\"\n          }\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308301,
-      "end": 1750239308301,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

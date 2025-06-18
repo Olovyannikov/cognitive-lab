@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n    TYPES: '/mbti-types',\n};\n",
-      "start": 1750239308733,
-      "end": 1750239308738,
+      "start": 1750271785287,
+      "end": 1750271785297,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n    TEST: '/mbti-test',\n    TYPES: '/mbti-types'\n};\n",
-      "start": 1750239308738,
-      "end": 1750239308759,
+      "start": 1750271785297,
+      "end": 1750271785299,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/constants.ts\"],\"sourcesContent\":[\"export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\\n\\nexport const ROUTES = {\\n    TEST: '/mbti-test',\\n    TYPES: '/mbti-types',\\n};\\n\"],\"names\":[\"CDN_URL\",\"ROUTES\",\"TEST\",\"TYPES\"],\"mappings\":\"AAAA,OAAO,MAAMA,UAAU,qCAAqC;AAE5D,OAAO,MAAMC,SAAS;IAClBC,MAAM;IACNC,OAAO;AACX,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
-      "start": 1750239308759,
-      "end": 1750239308817,
+      "start": 1750271785299,
+      "end": 1750271785352,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785353,
+      "end": 1750271785353,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/config/constants.ts [vike:pluginModuleBanner] */\nexport const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

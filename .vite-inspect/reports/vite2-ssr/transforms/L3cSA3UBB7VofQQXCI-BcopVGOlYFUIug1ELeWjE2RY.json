@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';\n\nimport { ROUTES } from '@/shared/config';\n\nexport const OWNER_INFO = [\n    {\n        id: 0,\n        label: 'ИП Меренков Даниил Николаевич',\n    },\n    {\n        id: 1,\n        label: 'ИНН: 781304623016',\n    },\n    {\n        id: 2,\n        label: 'ОГРНИП: 322784700181787',\n    },\n];\nexport const CONTACTS = [\n    {\n        id: 0,\n        label: <a href='/help'>Написать в службу поддержки</a>,\n        icon: <ChatDots size={24} />,\n    },\n    {\n        id: 1,\n        label: (\n            <a rel='noopener noreferrer' target='_blank' href='https://api.whatsapp.com/send/?phone=79043330809'>\n                Поддержка в WhatsApp\n            </a>\n        ),\n        icon: <WhatsappLogo size={24} />,\n    },\n    {\n        id: 2,\n        label: (\n            <a rel='noopener noreferrer' target='_blank' href='https://t.me/cognitivelab_ru'>\n                Поддержка в Telegram\n            </a>\n        ),\n        icon: <TelegramLogo size={24} />,\n    },\n    {\n        id: 3,\n        label: (\n            <a rel='noopener noreferrer' target='_blank' href='https://www.instagram.com/cognitivelab.ru'>\n                Новости в Instagram*\n            </a>\n        ),\n        icon: <InstagramLogo size={24} />,\n    },\n];\n\nexport const MENU = [\n    {\n        id: 4,\n        label: <a href='/'>Главная</a>,\n    },\n    {\n        id: 3,\n        label: <a href='/#tariffs'>Тарифы</a>,\n    },\n    {\n        id: 0,\n        label: <a href={ROUTES.TYPES}>Типы личности</a>,\n    },\n    {\n        id: 1,\n        label: <a href='/blog'>Блог</a>,\n    },\n    {\n        id: 2,\n        label: <a href='/faq'>Ответы на вопросы</a>,\n    },\n];\n\nexport const DOCS = [\n    {\n        id: 0,\n        label: (\n            <a\n                rel='noopener noreferrer'\n                target='_blank'\n                href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'\n            >\n                Политика конфиденциальности\n            </a>\n        ),\n    },\n    {\n        id: 1,\n        label: (\n            <a\n                target='_blank'\n                href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf'\n                rel='noreferrer'\n            >\n                Публичная оферта\n            </a>\n        ),\n    },\n    {\n        id: 2,\n        label: `© ${new Date().getFullYear()} CognitiveLab • Cognitive Lab • КогнитивЛаб`,\n    },\n];\n",
-      "start": 1750239308393,
-      "end": 1750239308411,
+      "start": 1750271784963,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';\nimport { ROUTES } from '@/shared/config';\nexport const OWNER_INFO = [\n    {\n        id: 0,\n        label: 'ИП Меренков Даниил Николаевич'\n    },\n    {\n        id: 1,\n        label: 'ИНН: 781304623016'\n    },\n    {\n        id: 2,\n        label: 'ОГРНИП: 322784700181787'\n    }\n];\nexport const CONTACTS = [\n    {\n        id: 0,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: \"/help\",\n            children: \"Написать в службу поддержки\"\n        }),\n        icon: /*#__PURE__*/ _jsx(ChatDots, {\n            size: 24\n        })\n    },\n    {\n        id: 1,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            rel: \"noopener noreferrer\",\n            target: \"_blank\",\n            href: \"https://api.whatsapp.com/send/?phone=79043330809\",\n            children: \"Поддержка в WhatsApp\"\n        }),\n        icon: /*#__PURE__*/ _jsx(WhatsappLogo, {\n            size: 24\n        })\n    },\n    {\n        id: 2,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            rel: \"noopener noreferrer\",\n            target: \"_blank\",\n            href: \"https://t.me/cognitivelab_ru\",\n            children: \"Поддержка в Telegram\"\n        }),\n        icon: /*#__PURE__*/ _jsx(TelegramLogo, {\n            size: 24\n        })\n    },\n    {\n        id: 3,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            rel: \"noopener noreferrer\",\n            target: \"_blank\",\n            href: \"https://www.instagram.com/cognitivelab.ru\",\n            children: \"Новости в Instagram*\"\n        }),\n        icon: /*#__PURE__*/ _jsx(InstagramLogo, {\n            size: 24\n        })\n    }\n];\nexport const MENU = [\n    {\n        id: 4,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: \"/\",\n            children: \"Главная\"\n        })\n    },\n    {\n        id: 3,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: \"/#tariffs\",\n            children: \"Тарифы\"\n        })\n    },\n    {\n        id: 0,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: ROUTES.TYPES,\n            children: \"Типы личности\"\n        })\n    },\n    {\n        id: 1,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: \"/blog\",\n            children: \"Блог\"\n        })\n    },\n    {\n        id: 2,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            href: \"/faq\",\n            children: \"Ответы на вопросы\"\n        })\n    }\n];\nexport const DOCS = [\n    {\n        id: 0,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            rel: \"noopener noreferrer\",\n            target: \"_blank\",\n            href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf\",\n            children: \"Политика конфиденциальности\"\n        })\n    },\n    {\n        id: 1,\n        label: /*#__PURE__*/ _jsx(\"a\", {\n            target: \"_blank\",\n            href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf\",\n            rel: \"noreferrer\",\n            children: \"Публичная оферта\"\n        })\n    },\n    {\n        id: 2,\n        label: `© ${new Date().getFullYear()} CognitiveLab • Cognitive Lab • КогнитивЛаб`\n    }\n];\n",
-      "start": 1750239308411,
-      "end": 1750239308415,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/const/index.tsx\"],\"sourcesContent\":[\"import { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';\\n\\nimport { ROUTES } from '@/shared/config';\\n\\nexport const OWNER_INFO = [\\n    {\\n        id: 0,\\n        label: 'ИП Меренков Даниил Николаевич',\\n    },\\n    {\\n        id: 1,\\n        label: 'ИНН: 781304623016',\\n    },\\n    {\\n        id: 2,\\n        label: 'ОГРНИП: 322784700181787',\\n    },\\n];\\nexport const CONTACTS = [\\n    {\\n        id: 0,\\n        label: <a href='/help'>Написать в службу поддержки</a>,\\n        icon: <ChatDots size={24} />,\\n    },\\n    {\\n        id: 1,\\n        label: (\\n            <a rel='noopener noreferrer' target='_blank' href='https://api.whatsapp.com/send/?phone=79043330809'>\\n                Поддержка в WhatsApp\\n            </a>\\n        ),\\n        icon: <WhatsappLogo size={24} />,\\n    },\\n    {\\n        id: 2,\\n        label: (\\n            <a rel='noopener noreferrer' target='_blank' href='https://t.me/cognitivelab_ru'>\\n                Поддержка в Telegram\\n            </a>\\n        ),\\n        icon: <TelegramLogo size={24} />,\\n    },\\n    {\\n        id: 3,\\n        label: (\\n            <a rel='noopener noreferrer' target='_blank' href='https://www.instagram.com/cognitivelab.ru'>\\n                Новости в Instagram*\\n            </a>\\n        ),\\n        icon: <InstagramLogo size={24} />,\\n    },\\n];\\n\\nexport const MENU = [\\n    {\\n        id: 4,\\n        label: <a href='/'>Главная</a>,\\n    },\\n    {\\n        id: 3,\\n        label: <a href='/#tariffs'>Тарифы</a>,\\n    },\\n    {\\n        id: 0,\\n        label: <a href={ROUTES.TYPES}>Типы личности</a>,\\n    },\\n    {\\n        id: 1,\\n        label: <a href='/blog'>Блог</a>,\\n    },\\n    {\\n        id: 2,\\n        label: <a href='/faq'>Ответы на вопросы</a>,\\n    },\\n];\\n\\nexport const DOCS = [\\n    {\\n        id: 0,\\n        label: (\\n            <a\\n                rel='noopener noreferrer'\\n                target='_blank'\\n                href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'\\n            >\\n                Политика конфиденциальности\\n            </a>\\n        ),\\n    },\\n    {\\n        id: 1,\\n        label: (\\n            <a\\n                target='_blank'\\n                href='https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf'\\n                rel='noreferrer'\\n            >\\n                Публичная оферта\\n            </a>\\n        ),\\n    },\\n    {\\n        id: 2,\\n        label: `© ${new Date().getFullYear()} CognitiveLab • Cognitive Lab • КогнитивЛаб`,\\n    },\\n];\\n\"],\"names\":[\"ChatDots\",\"InstagramLogo\",\"TelegramLogo\",\"WhatsappLogo\",\"ROUTES\",\"OWNER_INFO\",\"id\",\"label\",\"CONTACTS\",\"a\",\"href\",\"icon\",\"size\",\"rel\",\"target\",\"MENU\",\"TYPES\",\"DOCS\",\"Date\",\"getFullYear\"],\"mappings\":\";AAAA,SAASA,QAAQ,EAAEC,aAAa,EAAEC,YAAY,EAAEC,YAAY,QAAQ,iCAAiC;AAErG,SAASC,MAAM,QAAQ,kBAAkB;AAEzC,OAAO,MAAMC,aAAa;IACtB;QACIC,IAAI;QACJC,OAAO;IACX;IACA;QACID,IAAI;QACJC,OAAO;IACX;IACA;QACID,IAAI;QACJC,OAAO;IACX;CACH,CAAC;AACF,OAAO,MAAMC,WAAW;IACpB;QACIF,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAK;sBAAQ;;QACvBC,oBAAM,KAACX;YAASY,MAAM;;IAC1B;IACA;QACIN,IAAI;QACJC,qBACI,KAACE;YAAEI,KAAI;YAAsBC,QAAO;YAASJ,MAAK;sBAAmD;;QAIzGC,oBAAM,KAACR;YAAaS,MAAM;;IAC9B;IACA;QACIN,IAAI;QACJC,qBACI,KAACE;YAAEI,KAAI;YAAsBC,QAAO;YAASJ,MAAK;sBAA+B;;QAIrFC,oBAAM,KAACT;YAAaU,MAAM;;IAC9B;IACA;QACIN,IAAI;QACJC,qBACI,KAACE;YAAEI,KAAI;YAAsBC,QAAO;YAASJ,MAAK;sBAA4C;;QAIlGC,oBAAM,KAACV;YAAcW,MAAM;;IAC/B;CACH,CAAC;AAEF,OAAO,MAAMG,OAAO;IAChB;QACIT,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAK;sBAAI;;IACvB;IACA;QACIJ,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAK;sBAAY;;IAC/B;IACA;QACIJ,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAMN,OAAOY,KAAK;sBAAE;;IAClC;IACA;QACIV,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAK;sBAAQ;;IAC3B;IACA;QACIJ,IAAI;QACJC,qBAAO,KAACE;YAAEC,MAAK;sBAAO;;IAC1B;CACH,CAAC;AAEF,OAAO,MAAMO,OAAO;IAChB;QACIX,IAAI;QACJC,qBACI,KAACE;YACGI,KAAI;YACJC,QAAO;YACPJ,MAAK;sBACR;;IAIT;IACA;QACIJ,IAAI;QACJC,qBACI,KAACE;YACGK,QAAO;YACPJ,MAAK;YACLG,KAAI;sBACP;;IAIT;IACA;QACIP,IAAI;QACJC,OAAO,CAAC,EAAE,EAAE,IAAIW,OAAOC,WAAW,GAAG,2CAA2C,CAAC;IACrF;CACH,CAAC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from \"@phosphor-icons/react/dist/ssr\";\nimport { ROUTES } from \"@/shared/config\";\nexport const OWNER_INFO = [\n  {\n    id: 0,\n    label: \"ИП Меренков Даниил Николаевич\"\n  },\n  {\n    id: 1,\n    label: \"ИНН: 781304623016\"\n  },\n  {\n    id: 2,\n    label: \"ОГРНИП: 322784700181787\"\n  }\n];\nexport const CONTACTS = [\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/help\",\n      children: \"Написать в службу поддержки\"\n    }),\n    icon: /* @__PURE__ */ _jsx(ChatDots, {\n      size: 24\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://api.whatsapp.com/send/?phone=79043330809\",\n      children: \"Поддержка в WhatsApp\"\n    }),\n    icon: /* @__PURE__ */ _jsx(WhatsappLogo, {\n      size: 24\n    })\n  },\n  {\n    id: 2,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://t.me/cognitivelab_ru\",\n      children: \"Поддержка в Telegram\"\n    }),\n    icon: /* @__PURE__ */ _jsx(TelegramLogo, {\n      size: 24\n    })\n  },\n  {\n    id: 3,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://www.instagram.com/cognitivelab.ru\",\n      children: \"Новости в Instagram*\"\n    }),\n    icon: /* @__PURE__ */ _jsx(InstagramLogo, {\n      size: 24\n    })\n  }\n];\nexport const MENU = [\n  {\n    id: 4,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/\",\n      children: \"Главная\"\n    })\n  },\n  {\n    id: 3,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/#tariffs\",\n      children: \"Тарифы\"\n    })\n  },\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: ROUTES.TYPES,\n      children: \"Типы личности\"\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/blog\",\n      children: \"Блог\"\n    })\n  },\n  {\n    id: 2,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/faq\",\n      children: \"Ответы на вопросы\"\n    })\n  }\n];\nexport const DOCS = [\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf\",\n      children: \"Политика конфиденциальности\"\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      target: \"_blank\",\n      href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf\",\n      rel: \"noreferrer\",\n      children: \"Публичная оферта\"\n    })\n  },\n  {\n    id: 2,\n    label: `© ${(/* @__PURE__ */ new Date()).getFullYear()} CognitiveLab • Cognitive Lab • КогнитивЛаб`\n  }\n];\n",
-      "start": 1750239308415,
-      "end": 1750239308601,
+      "start": 1750271784986,
+      "end": 1750271785194,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785194,
+      "end": 1750271785194,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785194,
+      "end": 1750271785194,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785195,
+      "end": 1750271785195,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785195,
+      "end": 1750271785195,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785195,
+      "end": 1750271785195,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308601,
-      "end": 1750239308601,
+      "start": 1750271785195,
+      "end": 1750271785195,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/const/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { ChatDots, InstagramLogo, TelegramLogo, WhatsappLogo } from \"@phosphor-icons/react/dist/ssr\";\nimport { ROUTES } from \"@/shared/config\";\nexport const OWNER_INFO = [\n  {\n    id: 0,\n    label: \"ИП Меренков Даниил Николаевич\"\n  },\n  {\n    id: 1,\n    label: \"ИНН: 781304623016\"\n  },\n  {\n    id: 2,\n    label: \"ОГРНИП: 322784700181787\"\n  }\n];\nexport const CONTACTS = [\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/help\",\n      children: \"Написать в службу поддержки\"\n    }),\n    icon: /* @__PURE__ */ _jsx(ChatDots, {\n      size: 24\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://api.whatsapp.com/send/?phone=79043330809\",\n      children: \"Поддержка в WhatsApp\"\n    }),\n    icon: /* @__PURE__ */ _jsx(WhatsappLogo, {\n      size: 24\n    })\n  },\n  {\n    id: 2,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://t.me/cognitivelab_ru\",\n      children: \"Поддержка в Telegram\"\n    }),\n    icon: /* @__PURE__ */ _jsx(TelegramLogo, {\n      size: 24\n    })\n  },\n  {\n    id: 3,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://www.instagram.com/cognitivelab.ru\",\n      children: \"Новости в Instagram*\"\n    }),\n    icon: /* @__PURE__ */ _jsx(InstagramLogo, {\n      size: 24\n    })\n  }\n];\nexport const MENU = [\n  {\n    id: 4,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/\",\n      children: \"Главная\"\n    })\n  },\n  {\n    id: 3,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/#tariffs\",\n      children: \"Тарифы\"\n    })\n  },\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: ROUTES.TYPES,\n      children: \"Типы личности\"\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/blog\",\n      children: \"Блог\"\n    })\n  },\n  {\n    id: 2,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      href: \"/faq\",\n      children: \"Ответы на вопросы\"\n    })\n  }\n];\nexport const DOCS = [\n  {\n    id: 0,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      rel: \"noopener noreferrer\",\n      target: \"_blank\",\n      href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf\",\n      children: \"Политика конфиденциальности\"\n    })\n  },\n  {\n    id: 1,\n    label: /* @__PURE__ */ _jsx(\"a\", {\n      target: \"_blank\",\n      href: \"https://storage.yandexcloud.net/cognitive-lab-public/%D0%94%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D1%8B.pdf\",\n      rel: \"noreferrer\",\n      children: \"Публичная оферта\"\n    })\n  },\n  {\n    id: 2,\n    label: `© ${(/* @__PURE__ */ new Date()).getFullYear()} CognitiveLab • Cognitive Lab • КогнитивЛаб`\n  }\n];\n",
-      "start": 1750239308601,
-      "end": 1750239308602,
+      "start": 1750271785195,
+      "end": 1750271785195,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

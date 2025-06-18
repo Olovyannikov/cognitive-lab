@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Text } from '@mantine/core';\n\nimport s from './AnswerLabel.module.css';\n\nexport const AnswerLabel = ({ children }: PropsWithChildren) => <Text className={s.text}>{children}</Text>;\n",
-      "start": 1750239308623,
-      "end": 1750239308634,
+      "start": 1750271785280,
+      "end": 1750271785287,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from '@mantine/core';\nimport s from './AnswerLabel.module.css';\nexport const AnswerLabel = ({ children })=>/*#__PURE__*/ _jsx(Text, {\n        className: s.text,\n        children: children\n    });\n",
-      "start": 1750239308634,
-      "end": 1750239308638,
+      "start": 1750271785287,
+      "end": 1750271785291,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/AnswerLabel/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { Text } from '@mantine/core';\\n\\nimport s from './AnswerLabel.module.css';\\n\\nexport const AnswerLabel = ({ children }: PropsWithChildren) => <Text className={s.text}>{children}</Text>;\\n\"],\"names\":[\"Text\",\"s\",\"AnswerLabel\",\"children\",\"className\",\"text\"],\"mappings\":\";AACA,SAASA,IAAI,QAAQ,gBAAgB;AAErC,OAAOC,OAAO,2BAA2B;AAEzC,OAAO,MAAMC,cAAc,CAAC,EAAEC,QAAQ,EAAqB,iBAAK,KAACH;QAAKI,WAAWH,EAAEI,IAAI;kBAAGF;OAAiB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport s from \"./AnswerLabel.module.css\";\nexport const AnswerLabel = ({ children }) => /* @__PURE__ */ _jsx(Text, {\n  className: s.text,\n  children\n});\n",
-      "start": 1750239308638,
-      "end": 1750239308779,
+      "start": 1750271785291,
+      "end": 1750271785350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785350,
+      "end": 1750271785350,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785350,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/AnswerLabel/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport s from \"./AnswerLabel.module.css\";\nexport const AnswerLabel = ({ children }) => /* @__PURE__ */ _jsx(Text, {\n  className: s.text,\n  children\n});\n",
-      "start": 1750239308779,
-      "end": 1750239308779,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { restore } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { getFAQQuery } from '../api';\nimport type { FaqItem } from '../types';\n\nexport const FaqModel = atom(() => {\n    const $faqItems = restore<FaqItem[]>(\n        getFAQQuery.finished.success.map(({ result }) => result.payload),\n        []\n    );\n\n    return {\n        $faqItems,\n    };\n});\n",
-      "start": 1750239308268,
-      "end": 1750239308282,
+      "start": 1750271784825,
+      "end": 1750271784841,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { restore } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { getFAQQuery } from '../api';\nexport const FaqModel = _effector$factory({\n    sid: \"bpzh28mm\",\n    fn: ()=>atom(()=>{\n            const $faqItems = restore(getFAQQuery.finished.success.map(({ result })=>result.payload), [], {\n                sid: \"357omr3b\"\n            });\n            return {\n                $faqItems\n            };\n        })\n});\n",
-      "start": 1750239308282,
-      "end": 1750239308285,
+      "start": 1750271784841,
+      "end": 1750271784844,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/model/index.ts\"],\"sourcesContent\":[\"import { restore } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { getFAQQuery } from '../api';\\nimport type { FaqItem } from '../types';\\n\\nexport const FaqModel = atom(() => {\\n    const $faqItems = restore<FaqItem[]>(\\n        getFAQQuery.finished.success.map(({ result }) => result.payload),\\n        []\\n    );\\n\\n    return {\\n        $faqItems,\\n    };\\n});\\n\"],\"names\":[\"restore\",\"atom\",\"getFAQQuery\",\"FaqModel\",\"$faqItems\",\"finished\",\"success\",\"map\",\"result\",\"payload\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,WAAW;AAEnC,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,WAAW,QAAQ,SAAS;AAGrC,OAAO,MAAMC;;YAAWF,KAAK;YACzB,MAAMG,YAAYJ,QACdE,YAAYG,QAAQ,CAACC,OAAO,CAACC,GAAG,CAAC,CAAC,EAAEC,MAAM,EAAE,GAAKA,OAAOC,OAAO,GAC/D,EAAE;;;YAGN,OAAO;gBACHL;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = _effector$factory({\n  sid: \"bpzh28mm\",\n  fn: () => atom(() => {\n    const $faqItems = restore(getFAQQuery.finished.success.map(({ result }) => result.payload), [], {\n      sid: \"357omr3b\"\n    });\n    return {\n      $faqItems\n    };\n  })\n});\n",
-      "start": 1750239308285,
-      "end": 1750239308325,
+      "start": 1750271784844,
+      "end": 1750271784895,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784896,
+      "end": 1750271784896,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { restore } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { getFAQQuery } from \"../api\";\nexport const FaqModel = _effector$factory({\n  sid: \"bpzh28mm\",\n  fn: () => atom(() => {\n    const $faqItems = restore(getFAQQuery.finished.success.map(({ result }) => result.payload), [], {\n      sid: \"357omr3b\"\n    });\n    return {\n      $faqItems\n    };\n  })\n});\n",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".stackWrapper {\n  gap: var(--mantine-spacing-md);\n}\n",
-      "start": 1750239308471,
-      "end": 1750239308499,
+      "start": 1750271785021,
+      "end": 1750271785046,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785046,
+      "end": 1750271785046,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormWrapper/FormWrapper.module.css [vike:pluginModuleBanner] */\nexport const stackWrapper = \"TXtRQ\";\nexport default {\n\tstackWrapper: stackWrapper\n};\n",
-      "start": 1750239308499,
-      "end": 1750239308499,
+      "start": 1750271785046,
+      "end": 1750271785046,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

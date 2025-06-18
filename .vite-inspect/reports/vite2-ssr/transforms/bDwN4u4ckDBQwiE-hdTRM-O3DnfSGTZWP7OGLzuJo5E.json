@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\n\nimport s from './ShowFullStructure.module.css';\n\nexport const ShowFullStructure = () => {\n    const {\n        routeParams: { type },\n    } = usePageContext();\n\n    return (\n        <Group className={s.group} justify='space-between'>\n            <Text className={s.text}>Больше информации в полном отчете</Text>\n            <Group>\n                <BuyNowButton mbti={type} />\n                <NavigateToFullStructureTemplate />\n            </Group>\n        </Group>\n    );\n};\n",
-      "start": 1750239308305,
-      "end": 1750239308324,
+      "start": 1750271784858,
+      "end": 1750271784878,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Text } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\nimport s from './ShowFullStructure.module.css';\nexport const ShowFullStructure = ()=>{\n    const { routeParams: { type } } = usePageContext();\n    return /*#__PURE__*/ _jsxs(Group, {\n        className: s.group,\n        justify: \"space-between\",\n        children: [\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: \"Больше информации в полном отчете\"\n            }),\n            /*#__PURE__*/ _jsxs(Group, {\n                children: [\n                    /*#__PURE__*/ _jsx(BuyNowButton, {\n                        mbti: type\n                    }),\n                    /*#__PURE__*/ _jsx(NavigateToFullStructureTemplate, {})\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308324,
-      "end": 1750239308329,
+      "start": 1750271784878,
+      "end": 1750271784880,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/ShowFullStructure/index.tsx\"],\"sourcesContent\":[\"import { Group, Text } from '@mantine/core';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { BuyNowButton } from '@/features/BuyNowButton';\\nimport { NavigateToFullStructureTemplate } from '@/features/NavigateToFullStructureTemplate';\\n\\nimport s from './ShowFullStructure.module.css';\\n\\nexport const ShowFullStructure = () => {\\n    const {\\n        routeParams: { type },\\n    } = usePageContext();\\n\\n    return (\\n        <Group className={s.group} justify='space-between'>\\n            <Text className={s.text}>Больше информации в полном отчете</Text>\\n            <Group>\\n                <BuyNowButton mbti={type} />\\n                <NavigateToFullStructureTemplate />\\n            </Group>\\n        </Group>\\n    );\\n};\\n\"],\"names\":[\"Group\",\"Text\",\"usePageContext\",\"BuyNowButton\",\"NavigateToFullStructureTemplate\",\"s\",\"ShowFullStructure\",\"routeParams\",\"type\",\"className\",\"group\",\"justify\",\"text\",\"mbti\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AAC5C,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,YAAY,QAAQ,0BAA0B;AACvD,SAASC,+BAA+B,QAAQ,6CAA6C;AAE7F,OAAOC,OAAO,iCAAiC;AAE/C,OAAO,MAAMC,oBAAoB;IAC7B,MAAM,EACFC,aAAa,EAAEC,IAAI,EAAE,EACxB,GAAGN;IAEJ,qBACI,MAACF;QAAMS,WAAWJ,EAAEK,KAAK;QAAEC,SAAQ;;0BAC/B,KAACV;gBAAKQ,WAAWJ,EAAEO,IAAI;0BAAE;;0BACzB,MAACZ;;kCACG,KAACG;wBAAaU,MAAML;;kCACpB,KAACJ;;;;;AAIjB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport s from \"./ShowFullStructure.module.css\";\nexport const ShowFullStructure = () => {\n  const { routeParams: { type } } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Group, {\n    className: s.group,\n    justify: \"space-between\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Больше информации в полном отчете\"\n      }),\n      /* @__PURE__ */ _jsxs(Group, {\n        children: [\n          /* @__PURE__ */ _jsx(BuyNowButton, {\n            mbti: type\n          }),\n          /* @__PURE__ */ _jsx(NavigateToFullStructureTemplate, {})\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308329,
-      "end": 1750239308420,
+      "start": 1750271784880,
+      "end": 1750271784986,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784986,
+      "end": 1750271784986,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784986,
+      "end": 1750271784986,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784986,
+      "end": 1750271784987,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784987,
+      "end": 1750271784987,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308420,
-      "end": 1750239308420,
+      "start": 1750271784987,
+      "end": 1750271784987,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/ShowFullStructure/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Group, Text } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { NavigateToFullStructureTemplate } from \"@/features/NavigateToFullStructureTemplate\";\nimport s from \"./ShowFullStructure.module.css\";\nexport const ShowFullStructure = () => {\n  const { routeParams: { type } } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Group, {\n    className: s.group,\n    justify: \"space-between\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Больше информации в полном отчете\"\n      }),\n      /* @__PURE__ */ _jsxs(Group, {\n        children: [\n          /* @__PURE__ */ _jsx(BuyNowButton, {\n            mbti: type\n          }),\n          /* @__PURE__ */ _jsx(NavigateToFullStructureTemplate, {})\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308421,
-      "end": 1750239308421,
+      "start": 1750271784987,
+      "end": 1750271784987,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

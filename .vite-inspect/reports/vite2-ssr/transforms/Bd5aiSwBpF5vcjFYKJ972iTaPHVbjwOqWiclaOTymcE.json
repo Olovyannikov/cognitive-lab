@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { ROUTES } from '@/shared/config';\n\nimport { Personality, titleColorMap } from '@/entities/Personality';\n\nimport s from './MenuItem.module.css';\n\ninterface MenuItemProps {\n    category: string;\n    description: string;\n    types: Personality[];\n    onClose: VoidFunction;\n}\n\nexport const MenuItem = ({ types, category, description, onClose }: MenuItemProps) => (\n    <Menu.Item className={s.item} component='div'>\n        <Title mb='xxs' fz={20} order={3}>\n            {category}\n        </Title>\n        <Text mb='xs' fz={18} lh='21px'>\n            {description}\n        </Text>\n        <Flex className={s.items} gap='md'>\n            {types.map((type) => (\n                <Paper\n                    py='sm'\n                    px={32}\n                    radius='md'\n                    component='a'\n                    key={type.code}\n                    onClick={onClose}\n                    className={s.paper}\n                    href={`${ROUTES.TYPES}/${type.code}`}\n                    data-color={`${titleColorMap[category]}`}\n                >\n                    <Stack gap={6} align='center'>\n                        <Text lh='20px' fw={600} fz={18}>\n                            {type.name}\n                        </Text>\n                        <Text fz={16} lh='18px'>\n                            {type.code}\n                        </Text>\n                    </Stack>\n                </Paper>\n            ))}\n        </Flex>\n    </Menu.Item>\n);\n",
-      "start": 1750239308831,
-      "end": 1750239308834,
+      "start": 1750271785374,
+      "end": 1750271785382,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\nimport { ROUTES } from '@/shared/config';\nimport { titleColorMap } from '@/entities/Personality';\nimport s from './MenuItem.module.css';\nexport const MenuItem = ({ types, category, description, onClose })=>/*#__PURE__*/ _jsxs(Menu.Item, {\n        className: s.item,\n        component: \"div\",\n        children: [\n            /*#__PURE__*/ _jsx(Title, {\n                mb: \"xxs\",\n                fz: 20,\n                order: 3,\n                children: category\n            }),\n            /*#__PURE__*/ _jsx(Text, {\n                mb: \"xs\",\n                fz: 18,\n                lh: \"21px\",\n                children: description\n            }),\n            /*#__PURE__*/ _jsx(Flex, {\n                className: s.items,\n                gap: \"md\",\n                children: types.map((type)=>/*#__PURE__*/ _jsx(Paper, {\n                        py: \"sm\",\n                        px: 32,\n                        radius: \"md\",\n                        component: \"a\",\n                        onClick: onClose,\n                        className: s.paper,\n                        href: `${ROUTES.TYPES}/${type.code}`,\n                        \"data-color\": `${titleColorMap[category]}`,\n                        children: /*#__PURE__*/ _jsxs(Stack, {\n                            gap: 6,\n                            align: \"center\",\n                            children: [\n                                /*#__PURE__*/ _jsx(Text, {\n                                    lh: \"20px\",\n                                    fw: 600,\n                                    fz: 18,\n                                    children: type.name\n                                }),\n                                /*#__PURE__*/ _jsx(Text, {\n                                    fz: 16,\n                                    lh: \"18px\",\n                                    children: type.code\n                                })\n                            ]\n                        })\n                    }, type.code))\n            })\n        ]\n    });\n",
-      "start": 1750239308834,
-      "end": 1750239308835,
+      "start": 1750271785382,
+      "end": 1750271785386,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx\"],\"sourcesContent\":[\"import { Flex, Menu, Paper, Stack, Text, Title } from '@mantine/core';\\n\\nimport { ROUTES } from '@/shared/config';\\n\\nimport { Personality, titleColorMap } from '@/entities/Personality';\\n\\nimport s from './MenuItem.module.css';\\n\\ninterface MenuItemProps {\\n    category: string;\\n    description: string;\\n    types: Personality[];\\n    onClose: VoidFunction;\\n}\\n\\nexport const MenuItem = ({ types, category, description, onClose }: MenuItemProps) => (\\n    <Menu.Item className={s.item} component='div'>\\n        <Title mb='xxs' fz={20} order={3}>\\n            {category}\\n        </Title>\\n        <Text mb='xs' fz={18} lh='21px'>\\n            {description}\\n        </Text>\\n        <Flex className={s.items} gap='md'>\\n            {types.map((type) => (\\n                <Paper\\n                    py='sm'\\n                    px={32}\\n                    radius='md'\\n                    component='a'\\n                    key={type.code}\\n                    onClick={onClose}\\n                    className={s.paper}\\n                    href={`${ROUTES.TYPES}/${type.code}`}\\n                    data-color={`${titleColorMap[category]}`}\\n                >\\n                    <Stack gap={6} align='center'>\\n                        <Text lh='20px' fw={600} fz={18}>\\n                            {type.name}\\n                        </Text>\\n                        <Text fz={16} lh='18px'>\\n                            {type.code}\\n                        </Text>\\n                    </Stack>\\n                </Paper>\\n            ))}\\n        </Flex>\\n    </Menu.Item>\\n);\\n\"],\"names\":[\"Flex\",\"Menu\",\"Paper\",\"Stack\",\"Text\",\"Title\",\"ROUTES\",\"titleColorMap\",\"s\",\"MenuItem\",\"types\",\"category\",\"description\",\"onClose\",\"Item\",\"className\",\"item\",\"component\",\"mb\",\"fz\",\"order\",\"lh\",\"items\",\"gap\",\"map\",\"type\",\"py\",\"px\",\"radius\",\"onClick\",\"paper\",\"href\",\"TYPES\",\"code\",\"data-color\",\"align\",\"fw\",\"name\"],\"mappings\":\";AAAA,SAASA,IAAI,EAAEC,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAEtE,SAASC,MAAM,QAAQ,kBAAkB;AAEzC,SAAsBC,aAAa,QAAQ,yBAAyB;AAEpE,OAAOC,OAAO,wBAAwB;AAStC,OAAO,MAAMC,WAAW,CAAC,EAAEC,KAAK,EAAEC,QAAQ,EAAEC,WAAW,EAAEC,OAAO,EAAiB,iBAC7E,MAACZ,KAAKa,IAAI;QAACC,WAAWP,EAAEQ,IAAI;QAAEC,WAAU;;0BACpC,KAACZ;gBAAMa,IAAG;gBAAMC,IAAI;gBAAIC,OAAO;0BAC1BT;;0BAEL,KAACP;gBAAKc,IAAG;gBAAKC,IAAI;gBAAIE,IAAG;0BACpBT;;0BAEL,KAACZ;gBAAKe,WAAWP,EAAEc,KAAK;gBAAEC,KAAI;0BACzBb,MAAMc,GAAG,CAAC,CAACC,qBACR,KAACvB;wBACGwB,IAAG;wBACHC,IAAI;wBACJC,QAAO;wBACPX,WAAU;wBAEVY,SAAShB;wBACTE,WAAWP,EAAEsB,KAAK;wBAClBC,MAAM,GAAGzB,OAAO0B,KAAK,CAAC,CAAC,EAAEP,KAAKQ,IAAI,EAAE;wBACpCC,cAAY,GAAG3B,aAAa,CAACI,SAAS,EAAE;kCAExC,cAAA,MAACR;4BAAMoB,KAAK;4BAAGY,OAAM;;8CACjB,KAAC/B;oCAAKiB,IAAG;oCAAOe,IAAI;oCAAKjB,IAAI;8CACxBM,KAAKY,IAAI;;8CAEd,KAACjC;oCAAKe,IAAI;oCAAIE,IAAG;8CACZI,KAAKQ,IAAI;;;;uBAXbR,KAAKQ,IAAI;;;OAkBhC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({ types, category, description, onClose }) => /* @__PURE__ */ _jsxs(Menu.Item, {\n  className: s.item,\n  component: \"div\",\n  children: [\n    /* @__PURE__ */ _jsx(Title, {\n      mb: \"xxs\",\n      fz: 20,\n      order: 3,\n      children: category\n    }),\n    /* @__PURE__ */ _jsx(Text, {\n      mb: \"xs\",\n      fz: 18,\n      lh: \"21px\",\n      children: description\n    }),\n    /* @__PURE__ */ _jsx(Flex, {\n      className: s.items,\n      gap: \"md\",\n      children: types.map((type) => /* @__PURE__ */ _jsx(Paper, {\n        py: \"sm\",\n        px: 32,\n        radius: \"md\",\n        component: \"a\",\n        onClick: onClose,\n        className: s.paper,\n        href: `${ROUTES.TYPES}/${type.code}`,\n        \"data-color\": `${titleColorMap[category]}`,\n        children: /* @__PURE__ */ _jsxs(Stack, {\n          gap: 6,\n          align: \"center\",\n          children: [\n            /* @__PURE__ */ _jsx(Text, {\n              lh: \"20px\",\n              fw: 600,\n              fz: 18,\n              children: type.name\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              fz: 16,\n              lh: \"18px\",\n              children: type.code\n            })\n          ]\n        })\n      }, type.code))\n    })\n  ]\n});\n",
-      "start": 1750239308835,
-      "end": 1750239308842,
+      "start": 1750271785386,
+      "end": 1750271785388,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785388,
+      "end": 1750271785388,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785388,
+      "end": 1750271785388,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785388,
+      "end": 1750271785389,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785389,
+      "end": 1750271785389,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785389,
+      "end": 1750271785389,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/MenuItem/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Menu, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { ROUTES } from \"@/shared/config\";\nimport { titleColorMap } from \"@/entities/Personality\";\nimport s from \"./MenuItem.module.css\";\nexport const MenuItem = ({ types, category, description, onClose }) => /* @__PURE__ */ _jsxs(Menu.Item, {\n  className: s.item,\n  component: \"div\",\n  children: [\n    /* @__PURE__ */ _jsx(Title, {\n      mb: \"xxs\",\n      fz: 20,\n      order: 3,\n      children: category\n    }),\n    /* @__PURE__ */ _jsx(Text, {\n      mb: \"xs\",\n      fz: 18,\n      lh: \"21px\",\n      children: description\n    }),\n    /* @__PURE__ */ _jsx(Flex, {\n      className: s.items,\n      gap: \"md\",\n      children: types.map((type) => /* @__PURE__ */ _jsx(Paper, {\n        py: \"sm\",\n        px: 32,\n        radius: \"md\",\n        component: \"a\",\n        onClick: onClose,\n        className: s.paper,\n        href: `${ROUTES.TYPES}/${type.code}`,\n        \"data-color\": `${titleColorMap[category]}`,\n        children: /* @__PURE__ */ _jsxs(Stack, {\n          gap: 6,\n          align: \"center\",\n          children: [\n            /* @__PURE__ */ _jsx(Text, {\n              lh: \"20px\",\n              fw: 600,\n              fz: 18,\n              children: type.name\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              fz: 16,\n              lh: \"18px\",\n              children: type.code\n            })\n          ]\n        })\n      }, type.code))\n    })\n  ]\n});\n",
-      "start": 1750239308842,
-      "end": 1750239308842,
+      "start": 1750271785389,
+      "end": 1750271785389,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\n\nimport type { QuestionsResponse } from '../../api/dto';\nimport type { PreparedAnswer } from '../../api/types';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\n\nimport s from './TestScaleQuestion.module.css';\n\ninterface TestScaleQuestionProps extends QuestionsResponse {\n    onChange: (payload: PreparedAnswer) => void;\n    page: number;\n    value: string;\n}\n\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }: TestScaleQuestionProps) => (\n    <Paper className={s.wrapper}>\n        <QuestionTitle fixed text={text} hint={hint} />\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\n            <Radio.Group\n                className={s.group}\n                name={id}\n                value={value}\n                onChange={(val) =>\n                    onChange({\n                        question: id,\n                        answer: {\n                            value: Number(val),\n                        },\n                        index: page - 1,\n                    })\n                }\n            >\n                <Flex className={s.radioWrapper} justify='space-between'>\n                    {SCALE_RADIO_ITEMS.map((radio) => (\n                        <RadioElement key={radio.value} size={radio.size} value={radio.value} />\n                    ))}\n                </Flex>\n            </Radio.Group>\n            <Flex className={s.agreedBlock} justify='space-between'>\n                <Text className={s.agreed} c='indigo.8' fw={700}>\n                    Не согласен\n                </Text>\n                <Text className={s.agreed} c='lime.8' fw={700}>\n                    Согласен\n                </Text>\n            </Flex>\n        </Stack>\n    </Paper>\n);\n",
-      "start": 1750239308411,
-      "end": 1750239308429,
+      "start": 1750271785002,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\nimport { RadioElement } from '../RadioElement';\nimport { QuestionTitle } from '../TestQuestionTitle';\nimport s from './TestScaleQuestion.module.css';\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange })=>/*#__PURE__*/ _jsxs(Paper, {\n        className: s.wrapper,\n        children: [\n            /*#__PURE__*/ _jsx(QuestionTitle, {\n                fixed: true,\n                text: text,\n                hint: hint\n            }),\n            /*#__PURE__*/ _jsxs(Stack, {\n                pos: \"relative\",\n                maw: 1145,\n                m: \"auto\",\n                gap: \"xs\",\n                children: [\n                    /*#__PURE__*/ _jsx(Radio.Group, {\n                        className: s.group,\n                        name: id,\n                        value: value,\n                        onChange: (val)=>onChange({\n                                question: id,\n                                answer: {\n                                    value: Number(val)\n                                },\n                                index: page - 1\n                            }),\n                        children: /*#__PURE__*/ _jsx(Flex, {\n                            className: s.radioWrapper,\n                            justify: \"space-between\",\n                            children: SCALE_RADIO_ITEMS.map((radio)=>/*#__PURE__*/ _jsx(RadioElement, {\n                                    size: radio.size,\n                                    value: radio.value\n                                }, radio.value))\n                        })\n                    }),\n                    /*#__PURE__*/ _jsxs(Flex, {\n                        className: s.agreedBlock,\n                        justify: \"space-between\",\n                        children: [\n                            /*#__PURE__*/ _jsx(Text, {\n                                className: s.agreed,\n                                c: \"indigo.8\",\n                                fw: 700,\n                                children: \"Не согласен\"\n                            }),\n                            /*#__PURE__*/ _jsx(Text, {\n                                className: s.agreed,\n                                c: \"lime.8\",\n                                fw: 700,\n                                children: \"Согласен\"\n                            })\n                        ]\n                    })\n                ]\n            })\n        ]\n    });\n",
-      "start": 1750239308429,
-      "end": 1750239308434,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/TestScaleQuestion/index.tsx\"],\"sourcesContent\":[\"import { Flex, Paper, Radio, Stack, Text } from '@mantine/core';\\n\\nimport type { QuestionsResponse } from '../../api/dto';\\nimport type { PreparedAnswer } from '../../api/types';\\nimport { SCALE_RADIO_ITEMS } from '../../lib/constants';\\nimport { RadioElement } from '../RadioElement';\\nimport { QuestionTitle } from '../TestQuestionTitle';\\n\\nimport s from './TestScaleQuestion.module.css';\\n\\ninterface TestScaleQuestionProps extends QuestionsResponse {\\n    onChange: (payload: PreparedAnswer) => void;\\n    page: number;\\n    value: string;\\n}\\n\\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }: TestScaleQuestionProps) => (\\n    <Paper className={s.wrapper}>\\n        <QuestionTitle fixed text={text} hint={hint} />\\n        <Stack pos='relative' maw={1145} m='auto' gap='xs'>\\n            <Radio.Group\\n                className={s.group}\\n                name={id}\\n                value={value}\\n                onChange={(val) =>\\n                    onChange({\\n                        question: id,\\n                        answer: {\\n                            value: Number(val),\\n                        },\\n                        index: page - 1,\\n                    })\\n                }\\n            >\\n                <Flex className={s.radioWrapper} justify='space-between'>\\n                    {SCALE_RADIO_ITEMS.map((radio) => (\\n                        <RadioElement key={radio.value} size={radio.size} value={radio.value} />\\n                    ))}\\n                </Flex>\\n            </Radio.Group>\\n            <Flex className={s.agreedBlock} justify='space-between'>\\n                <Text className={s.agreed} c='indigo.8' fw={700}>\\n                    Не согласен\\n                </Text>\\n                <Text className={s.agreed} c='lime.8' fw={700}>\\n                    Согласен\\n                </Text>\\n            </Flex>\\n        </Stack>\\n    </Paper>\\n);\\n\"],\"names\":[\"Flex\",\"Paper\",\"Radio\",\"Stack\",\"Text\",\"SCALE_RADIO_ITEMS\",\"RadioElement\",\"QuestionTitle\",\"s\",\"TestScaleQuestion\",\"value\",\"page\",\"text\",\"hint\",\"id\",\"onChange\",\"className\",\"wrapper\",\"fixed\",\"pos\",\"maw\",\"m\",\"gap\",\"Group\",\"group\",\"name\",\"val\",\"question\",\"answer\",\"Number\",\"index\",\"radioWrapper\",\"justify\",\"map\",\"radio\",\"size\",\"agreedBlock\",\"agreed\",\"c\",\"fw\"],\"mappings\":\";AAAA,SAASA,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AAIhE,SAASC,iBAAiB,QAAQ,sBAAsB;AACxD,SAASC,YAAY,QAAQ,kBAAkB;AAC/C,SAASC,aAAa,QAAQ,uBAAuB;AAErD,OAAOC,OAAO,iCAAiC;AAQ/C,OAAO,MAAMC,oBAAoB,CAAC,EAAEC,KAAK,EAAEC,IAAI,EAAEC,IAAI,EAAEC,IAAI,EAAEC,EAAE,EAAEC,QAAQ,EAA0B,iBAC/F,MAACd;QAAMe,WAAWR,EAAES,OAAO;;0BACvB,KAACV;gBAAcW,KAAK;gBAACN,MAAMA;gBAAMC,MAAMA;;0BACvC,MAACV;gBAAMgB,KAAI;gBAAWC,KAAK;gBAAMC,GAAE;gBAAOC,KAAI;;kCAC1C,KAACpB,MAAMqB,KAAK;wBACRP,WAAWR,EAAEgB,KAAK;wBAClBC,MAAMX;wBACNJ,OAAOA;wBACPK,UAAU,CAACW,MACPX,SAAS;gCACLY,UAAUb;gCACVc,QAAQ;oCACJlB,OAAOmB,OAAOH;gCAClB;gCACAI,OAAOnB,OAAO;4BAClB;kCAGJ,cAAA,KAACX;4BAAKgB,WAAWR,EAAEuB,YAAY;4BAAEC,SAAQ;sCACpC3B,kBAAkB4B,GAAG,CAAC,CAACC,sBACpB,KAAC5B;oCAA+B6B,MAAMD,MAAMC,IAAI;oCAAEzB,OAAOwB,MAAMxB,KAAK;mCAAjDwB,MAAMxB,KAAK;;;kCAI1C,MAACV;wBAAKgB,WAAWR,EAAE4B,WAAW;wBAAEJ,SAAQ;;0CACpC,KAAC5B;gCAAKY,WAAWR,EAAE6B,MAAM;gCAAEC,GAAE;gCAAWC,IAAI;0CAAK;;0CAGjD,KAACnC;gCAAKY,WAAWR,EAAE6B,MAAM;gCAAEC,GAAE;gCAASC,IAAI;0CAAK;;;;;;;OAM7D\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Radio, Stack, Text } from \"@mantine/core\";\nimport { SCALE_RADIO_ITEMS } from \"../../lib/constants\";\nimport { RadioElement } from \"../RadioElement\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestScaleQuestion.module.css\";\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }) => /* @__PURE__ */ _jsxs(Paper, {\n  className: s.wrapper,\n  children: [\n    /* @__PURE__ */ _jsx(QuestionTitle, {\n      fixed: true,\n      text,\n      hint\n    }),\n    /* @__PURE__ */ _jsxs(Stack, {\n      pos: \"relative\",\n      maw: 1145,\n      m: \"auto\",\n      gap: \"xs\",\n      children: [\n        /* @__PURE__ */ _jsx(Radio.Group, {\n          className: s.group,\n          name: id,\n          value,\n          onChange: (val) => onChange({\n            question: id,\n            answer: {\n              value: Number(val)\n            },\n            index: page - 1\n          }),\n          children: /* @__PURE__ */ _jsx(Flex, {\n            className: s.radioWrapper,\n            justify: \"space-between\",\n            children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ _jsx(RadioElement, {\n              size: radio.size,\n              value: radio.value\n            }, radio.value))\n          })\n        }),\n        /* @__PURE__ */ _jsxs(Flex, {\n          className: s.agreedBlock,\n          justify: \"space-between\",\n          children: [\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.agreed,\n              c: \"indigo.8\",\n              fw: 700,\n              children: \"Не согласен\"\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.agreed,\n              c: \"lime.8\",\n              fw: 700,\n              children: \"Согласен\"\n            })\n          ]\n        })\n      ]\n    })\n  ]\n});\n",
-      "start": 1750239308434,
-      "end": 1750239308638,
+      "start": 1750271785023,
+      "end": 1750271785244,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785244,
+      "end": 1750271785244,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785244,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestScaleQuestion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Paper, Radio, Stack, Text } from \"@mantine/core\";\nimport { SCALE_RADIO_ITEMS } from \"../../lib/constants\";\nimport { RadioElement } from \"../RadioElement\";\nimport { QuestionTitle } from \"../TestQuestionTitle\";\nimport s from \"./TestScaleQuestion.module.css\";\nexport const TestScaleQuestion = ({ value, page, text, hint, id, onChange }) => /* @__PURE__ */ _jsxs(Paper, {\n  className: s.wrapper,\n  children: [\n    /* @__PURE__ */ _jsx(QuestionTitle, {\n      fixed: true,\n      text,\n      hint\n    }),\n    /* @__PURE__ */ _jsxs(Stack, {\n      pos: \"relative\",\n      maw: 1145,\n      m: \"auto\",\n      gap: \"xs\",\n      children: [\n        /* @__PURE__ */ _jsx(Radio.Group, {\n          className: s.group,\n          name: id,\n          value,\n          onChange: (val) => onChange({\n            question: id,\n            answer: {\n              value: Number(val)\n            },\n            index: page - 1\n          }),\n          children: /* @__PURE__ */ _jsx(Flex, {\n            className: s.radioWrapper,\n            justify: \"space-between\",\n            children: SCALE_RADIO_ITEMS.map((radio) => /* @__PURE__ */ _jsx(RadioElement, {\n              size: radio.size,\n              value: radio.value\n            }, radio.value))\n          })\n        }),\n        /* @__PURE__ */ _jsxs(Flex, {\n          className: s.agreedBlock,\n          justify: \"space-between\",\n          children: [\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.agreed,\n              c: \"indigo.8\",\n              fw: 700,\n              children: \"Не согласен\"\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.agreed,\n              c: \"lime.8\",\n              fw: 700,\n              children: \"Согласен\"\n            })\n          ]\n        })\n      ]\n    })\n  ]\n});\n",
-      "start": 1750239308638,
-      "end": 1750239308638,
+      "start": 1750271785244,
+      "end": 1750271785245,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

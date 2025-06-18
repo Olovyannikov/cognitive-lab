@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Stack, Title } from '@mantine/core';\n\nimport s from './OrderedCards.module.css';\n\ninterface OrderedCardProps {\n    color: string;\n    items: {\n        text?: string;\n        highlight?: null;\n        title?: string;\n        order?: number;\n    }[];\n}\nexport const OrderedCards = ({ items, color }: OrderedCardProps) => (\n    <Stack>\n        {items.map((item) => (\n            <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\n                <Stack className={s.stack}>\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\n                        {item.order}. {item.title}\n                    </Title>\n                </Stack>\n            </Paper>\n        ))}\n    </Stack>\n);\n",
-      "start": 1750239308360,
-      "end": 1750239308384,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from '@mantine/core';\nimport s from './OrderedCards.module.css';\nexport const OrderedCards = ({ items, color })=>/*#__PURE__*/ _jsx(Stack, {\n        children: items.map((item)=>/*#__PURE__*/ _jsx(Paper, {\n                className: s.paper,\n                bg: color === 'positive' ? 'green.0' : 'pink.0',\n                children: /*#__PURE__*/ _jsx(Stack, {\n                    className: s.stack,\n                    children: /*#__PURE__*/ _jsxs(Title, {\n                        className: s.title,\n                        c: color === 'positive' ? 'green.9' : 'pink.9',\n                        order: 5,\n                        children: [\n                            item.order,\n                            \". \",\n                            item.title\n                        ]\n                    })\n                })\n            }, item.order))\n    });\n",
-      "start": 1750239308384,
-      "end": 1750239308387,
+      "start": 1750271784943,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/OrderedCards/index.tsx\"],\"sourcesContent\":[\"import { Paper, Stack, Title } from '@mantine/core';\\n\\nimport s from './OrderedCards.module.css';\\n\\ninterface OrderedCardProps {\\n    color: string;\\n    items: {\\n        text?: string;\\n        highlight?: null;\\n        title?: string;\\n        order?: number;\\n    }[];\\n}\\nexport const OrderedCards = ({ items, color }: OrderedCardProps) => (\\n    <Stack>\\n        {items.map((item) => (\\n            <Paper className={s.paper} bg={color === 'positive' ? 'green.0' : 'pink.0'} key={item.order}>\\n                <Stack className={s.stack}>\\n                    <Title className={s.title} c={color === 'positive' ? 'green.9' : 'pink.9'} order={5}>\\n                        {item.order}. {item.title}\\n                    </Title>\\n                </Stack>\\n            </Paper>\\n        ))}\\n    </Stack>\\n);\\n\"],\"names\":[\"Paper\",\"Stack\",\"Title\",\"s\",\"OrderedCards\",\"items\",\"color\",\"map\",\"item\",\"className\",\"paper\",\"bg\",\"stack\",\"title\",\"c\",\"order\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,KAAK,EAAEC,KAAK,QAAQ,gBAAgB;AAEpD,OAAOC,OAAO,4BAA4B;AAW1C,OAAO,MAAMC,eAAe,CAAC,EAAEC,KAAK,EAAEC,KAAK,EAAoB,iBAC3D,KAACL;kBACII,MAAME,GAAG,CAAC,CAACC,qBACR,KAACR;gBAAMS,WAAWN,EAAEO,KAAK;gBAAEC,IAAIL,UAAU,aAAa,YAAY;0BAC9D,cAAA,KAACL;oBAAMQ,WAAWN,EAAES,KAAK;8BACrB,cAAA,MAACV;wBAAMO,WAAWN,EAAEU,KAAK;wBAAEC,GAAGR,UAAU,aAAa,YAAY;wBAAUS,OAAO;;4BAC7EP,KAAKO,KAAK;4BAAC;4BAAGP,KAAKK,KAAK;;;;eAH4CL,KAAKO,KAAK;OASrG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({ items, color }) => /* @__PURE__ */ _jsx(Stack, {\n  children: items.map((item) => /* @__PURE__ */ _jsx(Paper, {\n    className: s.paper,\n    bg: color === \"positive\" ? \"green.0\" : \"pink.0\",\n    children: /* @__PURE__ */ _jsx(Stack, {\n      className: s.stack,\n      children: /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        c: color === \"positive\" ? \"green.9\" : \"pink.9\",\n        order: 5,\n        children: [\n          item.order,\n          \". \",\n          item.title\n        ]\n      })\n    })\n  }, item.order))\n});\n",
-      "start": 1750239308387,
-      "end": 1750239308526,
+      "start": 1750271784956,
+      "end": 1750271785079,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308526,
-      "end": 1750239308526,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785079,
+      "end": 1750271785079,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308526,
-      "end": 1750239308527,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/OrderedCards/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Title } from \"@mantine/core\";\nimport s from \"./OrderedCards.module.css\";\nexport const OrderedCards = ({ items, color }) => /* @__PURE__ */ _jsx(Stack, {\n  children: items.map((item) => /* @__PURE__ */ _jsx(Paper, {\n    className: s.paper,\n    bg: color === \"positive\" ? \"green.0\" : \"pink.0\",\n    children: /* @__PURE__ */ _jsx(Stack, {\n      className: s.stack,\n      children: /* @__PURE__ */ _jsxs(Title, {\n        className: s.title,\n        c: color === \"positive\" ? \"green.9\" : \"pink.9\",\n        order: 5,\n        children: [\n          item.order,\n          \". \",\n          item.title\n        ]\n      })\n    })\n  }, item.order))\n});\n",
-      "start": 1750239308527,
-      "end": 1750239308527,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

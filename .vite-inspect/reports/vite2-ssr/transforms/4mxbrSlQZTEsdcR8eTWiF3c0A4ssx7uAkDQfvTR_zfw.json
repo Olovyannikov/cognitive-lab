@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Text, type TextProps } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\n\nimport s from './Paragraph.module.css';\n\ninterface ParagraphProps extends TextProps {\n    text: string;\n}\n\nexport const Paragraph = ({ text, className, ...rest }: ParagraphProps) => (\n    <Markdown\n        className={s.text}\n        options={{\n            overrides: {\n                p: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                span: (props) => (\n                    <Text span className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                pre: (props) => (\n                    <Text className={clsx(s.text, className)} {...rest}>\n                        {props.children}\n                    </Text>\n                ),\n                code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,\n            },\n        }}\n    >\n        {text}\n    </Markdown>\n);\n",
-      "start": 1750239308361,
-      "end": 1750239308384,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from '@mantine/core';\nimport clsx from 'clsx';\nimport Markdown from 'markdown-to-jsx';\nimport s from './Paragraph.module.css';\nexport const Paragraph = ({ text, className, ...rest })=>/*#__PURE__*/ _jsx(Markdown, {\n        className: s.text,\n        options: {\n            overrides: {\n                p: (props)=>/*#__PURE__*/ _jsx(Text, {\n                        className: clsx(s.text, className),\n                        ...rest,\n                        children: props.children\n                    }),\n                span: (props)=>/*#__PURE__*/ _jsx(Text, {\n                        span: true,\n                        className: clsx(s.text, className),\n                        ...rest,\n                        children: props.children\n                    }),\n                pre: (props)=>/*#__PURE__*/ _jsx(Text, {\n                        className: clsx(s.text, className),\n                        ...rest,\n                        children: props.children\n                    }),\n                code: (props)=>/*#__PURE__*/ _jsx(Markdown, {\n                        className: s.text,\n                        children: props.children\n                    })\n            }\n        },\n        children: text\n    });\n",
-      "start": 1750239308384,
-      "end": 1750239308387,
+      "start": 1750271784943,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Paragraph/index.tsx\"],\"sourcesContent\":[\"import { Text, type TextProps } from '@mantine/core';\\nimport clsx from 'clsx';\\nimport Markdown from 'markdown-to-jsx';\\n\\nimport s from './Paragraph.module.css';\\n\\ninterface ParagraphProps extends TextProps {\\n    text: string;\\n}\\n\\nexport const Paragraph = ({ text, className, ...rest }: ParagraphProps) => (\\n    <Markdown\\n        className={s.text}\\n        options={{\\n            overrides: {\\n                p: (props) => (\\n                    <Text className={clsx(s.text, className)} {...rest}>\\n                        {props.children}\\n                    </Text>\\n                ),\\n                span: (props) => (\\n                    <Text span className={clsx(s.text, className)} {...rest}>\\n                        {props.children}\\n                    </Text>\\n                ),\\n                pre: (props) => (\\n                    <Text className={clsx(s.text, className)} {...rest}>\\n                        {props.children}\\n                    </Text>\\n                ),\\n                code: (props) => <Markdown className={s.text}>{props.children}</Markdown>,\\n            },\\n        }}\\n    >\\n        {text}\\n    </Markdown>\\n);\\n\"],\"names\":[\"Text\",\"clsx\",\"Markdown\",\"s\",\"Paragraph\",\"text\",\"className\",\"rest\",\"options\",\"overrides\",\"p\",\"props\",\"children\",\"span\",\"pre\",\"code\"],\"mappings\":\";AAAA,SAASA,IAAI,QAAwB,gBAAgB;AACrD,OAAOC,UAAU,OAAO;AACxB,OAAOC,cAAc,kBAAkB;AAEvC,OAAOC,OAAO,yBAAyB;AAMvC,OAAO,MAAMC,YAAY,CAAC,EAAEC,IAAI,EAAEC,SAAS,EAAE,GAAGC,MAAsB,iBAClE,KAACL;QACGI,WAAWH,EAAEE,IAAI;QACjBG,SAAS;YACLC,WAAW;gBACPC,GAAG,CAACC,sBACA,KAACX;wBAAKM,WAAWL,KAAKE,EAAEE,IAAI,EAAEC;wBAAa,GAAGC,IAAI;kCAC7CI,MAAMC,QAAQ;;gBAGvBC,MAAM,CAACF,sBACH,KAACX;wBAAKa,IAAI;wBAACP,WAAWL,KAAKE,EAAEE,IAAI,EAAEC;wBAAa,GAAGC,IAAI;kCAClDI,MAAMC,QAAQ;;gBAGvBE,KAAK,CAACH,sBACF,KAACX;wBAAKM,WAAWL,KAAKE,EAAEE,IAAI,EAAEC;wBAAa,GAAGC,IAAI;kCAC7CI,MAAMC,QAAQ;;gBAGvBG,MAAM,CAACJ,sBAAU,KAACT;wBAASI,WAAWH,EAAEE,IAAI;kCAAGM,MAAMC,QAAQ;;YACjE;QACJ;kBAECP;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./Paragraph.module.css\";\nexport const Paragraph = ({ text, className, ...rest }) => /* @__PURE__ */ _jsx(Markdown, {\n  className: s.text,\n  options: {\n    overrides: {\n      p: (props) => /* @__PURE__ */ _jsx(Text, {\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      span: (props) => /* @__PURE__ */ _jsx(Text, {\n        span: true,\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      pre: (props) => /* @__PURE__ */ _jsx(Text, {\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n        className: s.text,\n        children: props.children\n      })\n    }\n  },\n  children: text\n});\n",
-      "start": 1750239308387,
-      "end": 1750239308521,
+      "start": 1750271784956,
+      "end": 1750271785079,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308521,
-      "end": 1750239308521,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785079,
+      "end": 1750271785079,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308521,
-      "end": 1750239308522,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308522,
-      "end": 1750239308522,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308522,
-      "end": 1750239308522,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Paragraph/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport Markdown from \"markdown-to-jsx\";\nimport s from \"./Paragraph.module.css\";\nexport const Paragraph = ({ text, className, ...rest }) => /* @__PURE__ */ _jsx(Markdown, {\n  className: s.text,\n  options: {\n    overrides: {\n      p: (props) => /* @__PURE__ */ _jsx(Text, {\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      span: (props) => /* @__PURE__ */ _jsx(Text, {\n        span: true,\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      pre: (props) => /* @__PURE__ */ _jsx(Text, {\n        className: clsx(s.text, className),\n        ...rest,\n        children: props.children\n      }),\n      code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n        className: s.text,\n        children: props.children\n      })\n    }\n  },\n  children: text\n});\n",
-      "start": 1750239308522,
-      "end": 1750239308522,
+      "start": 1750271785079,
+      "end": 1750271785079,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

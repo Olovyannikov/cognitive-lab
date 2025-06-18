@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps } from 'react';\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\n\nimport { DOCS } from '../../const';\nimport { List } from '../List';\n\nimport s from './MetaInfo.module.css';\n\nexport const MetaInfo = ({ className }: ComponentProps<'ul'>) => (\n    <Flex className={s.root}>\n        <List className={clsx(className, s.docs)} data={DOCS} />\n        <Box className={s.text}>\n            <Text c='gray.6' className={s.disclamer}>\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\n                копирование и изменение.\n            </Text>\n            <Text c='gray.6' className={s.meta}>\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\n            </Text>\n        </Box>\n    </Flex>\n);\n",
-      "start": 1750239308393,
-      "end": 1750239308411,
+      "start": 1750271784964,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from '@mantine/core';\nimport clsx from 'clsx';\nimport { DOCS } from '../../const';\nimport { List } from '../List';\nimport s from './MetaInfo.module.css';\nexport const MetaInfo = ({ className })=>/*#__PURE__*/ _jsxs(Flex, {\n        className: s.root,\n        children: [\n            /*#__PURE__*/ _jsx(List, {\n                className: clsx(className, s.docs),\n                data: DOCS\n            }),\n            /*#__PURE__*/ _jsxs(Box, {\n                className: s.text,\n                children: [\n                    /*#__PURE__*/ _jsx(Text, {\n                        c: \"gray.6\",\n                        className: s.disclamer,\n                        children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\"\n                    }),\n                    /*#__PURE__*/ _jsx(Text, {\n                        c: \"gray.6\",\n                        className: s.meta,\n                        children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\"\n                    })\n                ]\n            })\n        ]\n    });\n",
-      "start": 1750239308411,
-      "end": 1750239308415,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Metainfo/index.tsx\"],\"sourcesContent\":[\"import type { ComponentProps } from 'react';\\nimport { Box, Flex, Text } from '@mantine/core';\\nimport clsx from 'clsx';\\n\\nimport { DOCS } from '../../const';\\nimport { List } from '../List';\\n\\nimport s from './MetaInfo.module.css';\\n\\nexport const MetaInfo = ({ className }: ComponentProps<'ul'>) => (\\n    <Flex className={s.root}>\\n        <List className={clsx(className, s.docs)} data={DOCS} />\\n        <Box className={s.text}>\\n            <Text c='gray.6' className={s.disclamer}>\\n                Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое\\n                копирование и изменение.\\n            </Text>\\n            <Text c='gray.6' className={s.meta}>\\n                *Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\\n            </Text>\\n        </Box>\\n    </Flex>\\n);\\n\"],\"names\":[\"Box\",\"Flex\",\"Text\",\"clsx\",\"DOCS\",\"List\",\"s\",\"MetaInfo\",\"className\",\"root\",\"docs\",\"data\",\"text\",\"c\",\"disclamer\",\"meta\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,IAAI,EAAEC,IAAI,QAAQ,gBAAgB;AAChD,OAAOC,UAAU,OAAO;AAExB,SAASC,IAAI,QAAQ,cAAc;AACnC,SAASC,IAAI,QAAQ,UAAU;AAE/B,OAAOC,OAAO,wBAAwB;AAEtC,OAAO,MAAMC,WAAW,CAAC,EAAEC,SAAS,EAAwB,iBACxD,MAACP;QAAKO,WAAWF,EAAEG,IAAI;;0BACnB,KAACJ;gBAAKG,WAAWL,KAAKK,WAAWF,EAAEI,IAAI;gBAAGC,MAAMP;;0BAChD,MAACJ;gBAAIQ,WAAWF,EAAEM,IAAI;;kCAClB,KAACV;wBAAKW,GAAE;wBAASL,WAAWF,EAAEQ,SAAS;kCAAE;;kCAIzC,KAACZ;wBAAKW,GAAE;wBAASL,WAAWF,EAAES,IAAI;kCAAE;;;;;OAK9C\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({ className }) => /* @__PURE__ */ _jsxs(Flex, {\n  className: s.root,\n  children: [\n    /* @__PURE__ */ _jsx(List, {\n      className: clsx(className, s.docs),\n      data: DOCS\n    }),\n    /* @__PURE__ */ _jsxs(Box, {\n      className: s.text,\n      children: [\n        /* @__PURE__ */ _jsx(Text, {\n          c: \"gray.6\",\n          className: s.disclamer,\n          children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\"\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          c: \"gray.6\",\n          className: s.meta,\n          children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\"\n        })\n      ]\n    })\n  ]\n});\n",
-      "start": 1750239308415,
-      "end": 1750239308595,
+      "start": 1750271784986,
+      "end": 1750271785212,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785212,
+      "end": 1750271785212,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785212,
+      "end": 1750271785212,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785212,
+      "end": 1750271785213,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Metainfo/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Flex, Text } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { DOCS } from \"../../const\";\nimport { List } from \"../List\";\nimport s from \"./MetaInfo.module.css\";\nexport const MetaInfo = ({ className }) => /* @__PURE__ */ _jsxs(Flex, {\n  className: s.root,\n  children: [\n    /* @__PURE__ */ _jsx(List, {\n      className: clsx(className, s.docs),\n      data: DOCS\n    }),\n    /* @__PURE__ */ _jsxs(Box, {\n      className: s.text,\n      children: [\n        /* @__PURE__ */ _jsx(Text, {\n          c: \"gray.6\",\n          className: s.disclamer,\n          children: \"Все текстовые и графические материалы сайта защищены исключительным авторским правом. Запрещено любое копирование и изменение.\"\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          c: \"gray.6\",\n          className: s.meta,\n          children: \"*Instagram — проект Meta Platforms Inc., деятельность которой в России запрещена.\"\n        })\n      ]\n    })\n  ]\n});\n",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785213,
+      "end": 1750271785213,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

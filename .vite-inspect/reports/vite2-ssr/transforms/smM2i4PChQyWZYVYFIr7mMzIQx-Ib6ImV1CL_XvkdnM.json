@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Tariffs = () => {\n    const { urlPathname } = usePageContext();\n\n    const isMainPage = urlPathname === '/';\n\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>\n    );\n};\n",
-      "start": 1750239308811,
-      "end": 1750239308820,
+      "start": 1750271785346,
+      "end": 1750271785351,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = ()=>{\n    const { urlPathname } = usePageContext();\n    const isMainPage = urlPathname === '/';\n    const onClose = useUnit(RootModel.allMenusClosed);\n    return /*#__PURE__*/ _jsx(Link, {\n        href: isMainPage ? '#tariffs' : '/#tariffs',\n        onClick: ()=>onClose(false),\n        children: \"Тарифы\"\n    });\n};\n",
-      "start": 1750239308820,
-      "end": 1750239308823,
+      "start": 1750271785351,
+      "end": 1750271785354,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx\"],\"sourcesContent\":[\"import { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Link } from '../../Link';\\n\\nexport const Tariffs = () => {\\n    const { urlPathname } = usePageContext();\\n\\n    const isMainPage = urlPathname === '/';\\n\\n    const onClose = useUnit(RootModel.allMenusClosed);\\n\\n    return (\\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\\n            Тарифы\\n        </Link>\\n    );\\n};\\n\"],\"names\":[\"useUnit\",\"usePageContext\",\"RootModel\",\"Link\",\"Tariffs\",\"urlPathname\",\"isMainPage\",\"onClose\",\"allMenusClosed\",\"href\",\"onClick\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,IAAI,QAAQ,aAAa;AAElC,OAAO,MAAMC,UAAU;IACnB,MAAM,EAAEC,WAAW,EAAE,GAAGJ;IAExB,MAAMK,aAAaD,gBAAgB;IAEnC,MAAME,UAAUP,QAAQE,UAAUM,cAAc;IAEhD,qBACI,KAACL;QAAKM,MAAMH,aAAa,aAAa;QAAaI,SAAS,IAAMH,QAAQ;kBAAQ;;AAI1F,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const { urlPathname } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: isMainPage ? \"#tariffs\" : \"/#tariffs\",\n    onClick: () => onClose(false),\n    children: \"Тарифы\"\n  });\n};\n",
-      "start": 1750239308823,
-      "end": 1750239308828,
+      "start": 1750271785354,
+      "end": 1750271785360,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785360,
+      "end": 1750271785360,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785360,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const { urlPathname } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: isMainPage ? \"#tariffs\" : \"/#tariffs\",\n    onClick: () => onClose(false),\n    children: \"Тарифы\"\n  });\n};\n",
-      "start": 1750239308828,
-      "end": 1750239308828,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

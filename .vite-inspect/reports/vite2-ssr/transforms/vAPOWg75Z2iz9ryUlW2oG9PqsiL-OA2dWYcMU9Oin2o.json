@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './types';\nexport * from './config';\nexport * from './api';\nexport * from './model';\nexport * from './ui';\n",
-      "start": 1750239308209,
-      "end": 1750239308226,
+      "start": 1750271784772,
+      "end": 1750271784786,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './types';\nexport * from './config';\nexport * from './api';\nexport * from './model';\nexport * from './ui';\n",
-      "start": 1750239308226,
-      "end": 1750239308233,
+      "start": 1750271784786,
+      "end": 1750271784788,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/index.ts\"],\"sourcesContent\":[\"export * from './types';\\nexport * from './config';\\nexport * from './api';\\nexport * from './model';\\nexport * from './ui';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,UAAU;AACxB,cAAc,WAAW;AACzB,cAAc,QAAQ;AACtB,cAAc,UAAU;AACxB,cAAc,OAAO\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./types\";\nexport * from \"./config\";\nexport * from \"./api\";\nexport * from \"./model\";\nexport * from \"./ui\";\n",
-      "start": 1750239308233,
-      "end": 1750239308245,
+      "start": 1750271784788,
+      "end": 1750271784824,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784824,
+      "end": 1750271784824,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308245,
-      "end": 1750239308245,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Personality/index.ts [vike:pluginModuleBanner] */\nexport * from \"./types\";\nexport * from \"./config\";\nexport * from \"./api\";\nexport * from \"./model\";\nexport * from \"./ui\";\n",
-      "start": 1750239308246,
-      "end": 1750239308246,
+      "start": 1750271784824,
+      "end": 1750271784824,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

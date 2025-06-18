@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\n\nimport { PageLoader } from '@/shared/ui';\n\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\n\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\n\nexport const FullReportPage = () => {\n    useGate(ReportModel.ReportPageGate);\n    const { data, pending, stale } = useUnit(getFullReportQuery);\n    const [isFirstPage, page] = useUnit([\n        ReportModel.$currentContentPage.map((page) => page === 0),\n        ReportModel.$currentContentPage,\n    ]);\n\n    const titleMap = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    if (stale || pending) return <PageLoader />;\n    if (!data) return;\n\n    return (\n        <Box component='section'>\n            <Container>\n                {isFirstPage && (\n                    <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />\n                )}\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\n                <FullReportNavigation />\n                <FullReportSlice page={page} />\n                <NavigateToReviewPage />\n            </Container>\n            <ReportPagination />\n        </Box>\n    );\n};\n",
-      "start": 1750239308237,
-      "end": 1750239308268,
+      "start": 1750271784788,
+      "end": 1750271784812,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from '@mantine/core';\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\nimport { PageLoader } from '@/shared/ui';\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\nimport { ReportPagination } from '@/widgets/ReportPagination';\nexport const FullReportPage = ()=>{\n    useGate(ReportModel.ReportPageGate);\n    const { data, pending, stale } = useUnit(getFullReportQuery);\n    const [isFirstPage, page] = useUnit([\n        ReportModel.$currentContentPage.map((page)=>page === 0),\n        ReportModel.$currentContentPage\n    ]);\n    const titleMap = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: [\n            'title',\n            page\n        ],\n        fn: (content)=>content?.content?.map(({ title })=>title)\n    });\n    if (stale || pending) return /*#__PURE__*/ _jsx(PageLoader, {});\n    if (!data) return;\n    return /*#__PURE__*/ _jsxs(Box, {\n        component: \"section\",\n        children: [\n            /*#__PURE__*/ _jsxs(Container, {\n                children: [\n                    isFirstPage && /*#__PURE__*/ _jsx(ReportHeader, {\n                        typeToColorMapper: TYPE_TO_COLOR_MAP,\n                        type: data.mbti_type,\n                        name: data.title\n                    }),\n                    !isFirstPage && /*#__PURE__*/ _jsx(CategoryBanner, {\n                        title: titleMap[page],\n                        color: TYPE_TO_COLOR_MAP[data.mbti_type]\n                    }),\n                    /*#__PURE__*/ _jsx(FullReportNavigation, {}),\n                    /*#__PURE__*/ _jsx(FullReportSlice, {\n                        page: page\n                    }),\n                    /*#__PURE__*/ _jsx(NavigateToReviewPage, {})\n                ]\n            }),\n            /*#__PURE__*/ _jsx(ReportPagination, {})\n        ]\n    });\n};\n",
-      "start": 1750239308268,
-      "end": 1750239308270,
+      "start": 1750271784812,
+      "end": 1750271784814,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FullReportPage/index.tsx\"],\"sourcesContent\":[\"import { Box, Container } from '@mantine/core';\\nimport { useGate, useStoreMap, useUnit } from 'effector-react';\\n\\nimport { PageLoader } from '@/shared/ui';\\n\\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\\n\\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\\n\\nimport { FullReportNavigation } from '@/widgets/FullReportNavigation';\\nimport { FullReportSlice } from '@/widgets/FullReportSlice';\\nimport { ReportPagination } from '@/widgets/ReportPagination';\\n\\nexport const FullReportPage = () => {\\n    useGate(ReportModel.ReportPageGate);\\n    const { data, pending, stale } = useUnit(getFullReportQuery);\\n    const [isFirstPage, page] = useUnit([\\n        ReportModel.$currentContentPage.map((page) => page === 0),\\n        ReportModel.$currentContentPage,\\n    ]);\\n\\n    const titleMap = useStoreMap({\\n        store: getFullReportQuery.$data,\\n        keys: ['title', page],\\n        fn: (content) => content?.content?.map(({ title }) => title),\\n    });\\n\\n    if (stale || pending) return <PageLoader />;\\n    if (!data) return;\\n\\n    return (\\n        <Box component='section'>\\n            <Container>\\n                {isFirstPage && (\\n                    <ReportHeader typeToColorMapper={TYPE_TO_COLOR_MAP} type={data.mbti_type} name={data.title} />\\n                )}\\n                {!isFirstPage && <CategoryBanner title={titleMap[page]} color={TYPE_TO_COLOR_MAP[data.mbti_type]} />}\\n                <FullReportNavigation />\\n                <FullReportSlice page={page} />\\n                <NavigateToReviewPage />\\n            </Container>\\n            <ReportPagination />\\n        </Box>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Container\",\"useGate\",\"useStoreMap\",\"useUnit\",\"PageLoader\",\"CategoryBanner\",\"getFullReportQuery\",\"ReportHeader\",\"ReportModel\",\"TYPE_TO_COLOR_MAP\",\"NavigateToReviewPage\",\"FullReportNavigation\",\"FullReportSlice\",\"ReportPagination\",\"FullReportPage\",\"ReportPageGate\",\"data\",\"pending\",\"stale\",\"isFirstPage\",\"page\",\"$currentContentPage\",\"map\",\"titleMap\",\"store\",\"$data\",\"keys\",\"fn\",\"content\",\"title\",\"component\",\"typeToColorMapper\",\"type\",\"mbti_type\",\"name\",\"color\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,SAAS,QAAQ,gBAAgB;AAC/C,SAASC,OAAO,EAAEC,WAAW,EAAEC,OAAO,QAAQ,iBAAiB;AAE/D,SAASC,UAAU,QAAQ,cAAc;AAEzC,SAASC,cAAc,EAAEC,kBAAkB,EAAEC,YAAY,EAAEC,WAAW,EAAEC,iBAAiB,QAAQ,oBAAoB;AAErH,SAASC,oBAAoB,QAAQ,kCAAkC;AAEvE,SAASC,oBAAoB,QAAQ,iCAAiC;AACtE,SAASC,eAAe,QAAQ,4BAA4B;AAC5D,SAASC,gBAAgB,QAAQ,6BAA6B;AAE9D,OAAO,MAAMC,iBAAiB;IAC1Bb,QAAQO,YAAYO,cAAc;IAClC,MAAM,EAAEC,IAAI,EAAEC,OAAO,EAAEC,KAAK,EAAE,GAAGf,QAAQG;IACzC,MAAM,CAACa,aAAaC,KAAK,GAAGjB,QAAQ;QAChCK,YAAYa,mBAAmB,CAACC,GAAG,CAAC,CAACF,OAASA,SAAS;QACvDZ,YAAYa,mBAAmB;KAClC;IAED,MAAME,WAAWrB,YAAY;QACzBsB,OAAOlB,mBAAmBmB,KAAK;QAC/BC,MAAM;YAAC;YAASN;SAAK;QACrBO,IAAI,CAACC,UAAYA,SAASA,SAASN,IAAI,CAAC,EAAEO,KAAK,EAAE,GAAKA;IAC1D;IAEA,IAAIX,SAASD,SAAS,qBAAO,KAACb;IAC9B,IAAI,CAACY,MAAM;IAEX,qBACI,MAACjB;QAAI+B,WAAU;;0BACX,MAAC9B;;oBACImB,6BACG,KAACZ;wBAAawB,mBAAmBtB;wBAAmBuB,MAAMhB,KAAKiB,SAAS;wBAAEC,MAAMlB,KAAKa,KAAK;;oBAE7F,CAACV,6BAAe,KAACd;wBAAewB,OAAON,QAAQ,CAACH,KAAK;wBAAEe,OAAO1B,iBAAiB,CAACO,KAAKiB,SAAS,CAAC;;kCAChG,KAACtB;kCACD,KAACC;wBAAgBQ,MAAMA;;kCACvB,KAACV;;;0BAEL,KAACG;;;AAGb,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useGate, useStoreMap, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { FullReportNavigation } from \"@/widgets/FullReportNavigation\";\nimport { FullReportSlice } from \"@/widgets/FullReportSlice\";\nimport { ReportPagination } from \"@/widgets/ReportPagination\";\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const { data, pending, stale } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([\n    ReportModel.$currentContentPage.map((page2) => page2 === 0),\n    ReportModel.$currentContentPage\n  ]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\n      \"title\",\n      page\n    ],\n    fn: (content) => content?.content?.map(({ title }) => title)\n  });\n  if (stale || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  if (!data) return;\n  return /* @__PURE__ */ _jsxs(Box, {\n    component: \"section\",\n    children: [\n      /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          isFirstPage && /* @__PURE__ */ _jsx(ReportHeader, {\n            typeToColorMapper: TYPE_TO_COLOR_MAP,\n            type: data.mbti_type,\n            name: data.title\n          }),\n          !isFirstPage && /* @__PURE__ */ _jsx(CategoryBanner, {\n            title: titleMap[page],\n            color: TYPE_TO_COLOR_MAP[data.mbti_type]\n          }),\n          /* @__PURE__ */ _jsx(FullReportNavigation, {}),\n          /* @__PURE__ */ _jsx(FullReportSlice, {\n            page\n          }),\n          /* @__PURE__ */ _jsx(NavigateToReviewPage, {})\n        ]\n      }),\n      /* @__PURE__ */ _jsx(ReportPagination, {})\n    ]\n  });\n};\n",
-      "start": 1750239308270,
-      "end": 1750239308304,
+      "start": 1750271784814,
+      "end": 1750271784852,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784852,
+      "end": 1750271784852,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/FullReportPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container } from \"@mantine/core\";\nimport { useGate, useStoreMap, useUnit } from \"effector-react\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { CategoryBanner, getFullReportQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { FullReportNavigation } from \"@/widgets/FullReportNavigation\";\nimport { FullReportSlice } from \"@/widgets/FullReportSlice\";\nimport { ReportPagination } from \"@/widgets/ReportPagination\";\nexport const FullReportPage = () => {\n  useGate(ReportModel.ReportPageGate);\n  const { data, pending, stale } = useUnit(getFullReportQuery);\n  const [isFirstPage, page] = useUnit([\n    ReportModel.$currentContentPage.map((page2) => page2 === 0),\n    ReportModel.$currentContentPage\n  ]);\n  const titleMap = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\n      \"title\",\n      page\n    ],\n    fn: (content) => content?.content?.map(({ title }) => title)\n  });\n  if (stale || pending) return /* @__PURE__ */ _jsx(PageLoader, {});\n  if (!data) return;\n  return /* @__PURE__ */ _jsxs(Box, {\n    component: \"section\",\n    children: [\n      /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          isFirstPage && /* @__PURE__ */ _jsx(ReportHeader, {\n            typeToColorMapper: TYPE_TO_COLOR_MAP,\n            type: data.mbti_type,\n            name: data.title\n          }),\n          !isFirstPage && /* @__PURE__ */ _jsx(CategoryBanner, {\n            title: titleMap[page],\n            color: TYPE_TO_COLOR_MAP[data.mbti_type]\n          }),\n          /* @__PURE__ */ _jsx(FullReportNavigation, {}),\n          /* @__PURE__ */ _jsx(FullReportSlice, {\n            page\n          }),\n          /* @__PURE__ */ _jsx(NavigateToReviewPage, {})\n        ]\n      }),\n      /* @__PURE__ */ _jsx(ReportPagination, {})\n    ]\n  });\n};\n",
-      "start": 1750239308304,
-      "end": 1750239308304,
+      "start": 1750271784852,
+      "end": 1750271784852,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

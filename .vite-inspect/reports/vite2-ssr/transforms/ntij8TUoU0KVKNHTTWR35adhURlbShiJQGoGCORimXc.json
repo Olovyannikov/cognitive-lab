@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\n\nimport s from './Section.module.css';\n\ninterface SectionProps {\n    title: string;\n}\n\nexport const Section = ({ title, children }: PropsWithChildren<SectionProps>) => (\n    <section className={s.section}>\n        <h2>{title}</h2>\n        {children}\n    </section>\n);\n",
-      "start": 1750239308393,
-      "end": 1750239308411,
+      "start": 1750271784964,
+      "end": 1750271784982,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport s from './Section.module.css';\nexport const Section = ({ title, children })=>/*#__PURE__*/ _jsxs(\"section\", {\n        className: s.section,\n        children: [\n            /*#__PURE__*/ _jsx(\"h2\", {\n                children: title\n            }),\n            children\n        ]\n    });\n",
-      "start": 1750239308411,
-      "end": 1750239308416,
+      "start": 1750271784982,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Section/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\n\\nimport s from './Section.module.css';\\n\\ninterface SectionProps {\\n    title: string;\\n}\\n\\nexport const Section = ({ title, children }: PropsWithChildren<SectionProps>) => (\\n    <section className={s.section}>\\n        <h2>{title}</h2>\\n        {children}\\n    </section>\\n);\\n\"],\"names\":[\"s\",\"Section\",\"title\",\"children\",\"section\",\"className\",\"h2\"],\"mappings\":\";AAEA,OAAOA,OAAO,uBAAuB;AAMrC,OAAO,MAAMC,UAAU,CAAC,EAAEC,KAAK,EAAEC,QAAQ,EAAmC,iBACxE,MAACC;QAAQC,WAAWL,EAAEI,OAAO;;0BACzB,KAACE;0BAAIJ;;YACJC;;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport s from \"./Section.module.css\";\nexport const Section = ({ title, children }) => /* @__PURE__ */ _jsxs(\"section\", {\n  className: s.section,\n  children: [\n    /* @__PURE__ */ _jsx(\"h2\", {\n      children: title\n    }),\n    children\n  ]\n});\n",
-      "start": 1750239308416,
-      "end": 1750239308595,
+      "start": 1750271784986,
+      "end": 1750271785191,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308595,
-      "end": 1750239308595,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785191,
+      "end": 1750271785191,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785191,
+      "end": 1750271785191,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785191,
+      "end": 1750271785192,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785192,
+      "end": 1750271785192,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Section/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport s from \"./Section.module.css\";\nexport const Section = ({ title, children }) => /* @__PURE__ */ _jsxs(\"section\", {\n  className: s.section,\n  children: [\n    /* @__PURE__ */ _jsx(\"h2\", {\n      children: title\n    }),\n    children\n  ]\n});\n",
-      "start": 1750239308596,
-      "end": 1750239308596,
+      "start": 1750271785192,
+      "end": 1750271785192,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

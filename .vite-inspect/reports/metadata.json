@@ -34,7 +34,7 @@
           "sharedDuringBuild": true
         },
         {
-          "name": "vike:commonConfig:pre",
+          "name": "vike:pluginCommon:pre",
           "enforce": "pre",
           "config": {
             "order": "pre",
@@ -57,13 +57,13 @@
           "configResolved": "[Function]"
         },
         {
-          "name": "vike:extractAssets:append-extractAssets-query",
+          "name": "vike:pluginExtractAssets:append-extractAssets-query",
           "apply": "build",
           "enforce": "pre",
           "resolveId": "[Function]"
         },
         {
-          "name": "vike:setGlobalContext:pre",
+          "name": "vike:pluginSetGlobalContext:pre",
           "enforce": "pre",
           "configureServer": {
             "order": "pre",
@@ -177,11 +177,11 @@
           "generateBundle": "[Function]"
         },
         {
-          "name": "vike:commonConfig",
+          "name": "vike:pluginCommon",
           "configResolved": "[Function]"
         },
         {
-          "name": "vike:importUserCode",
+          "name": "vike:pluginVirtualFiles",
           "configResolved": "[Function]",
           "resolveId": "[Function]",
           "handleHotUpdate": "[Function]",
@@ -200,17 +200,17 @@
           "generateBundle": "[Function]"
         },
         {
-          "name": "vike:extractAssets-3",
+          "name": "vike:pluginExtractAssets-3",
           "apply": "build",
           "load": "[Function]",
           "config": "[Function]"
         },
         {
-          "name": "vike:extractAssets-4",
+          "name": "vike:pluginExtractAssets-4",
           "configResolved": "[Function]"
         },
         {
-          "name": "vike:fileEnv",
+          "name": "vike:pluginFileEnv",
           "load": "[Function]",
           "transform": "[Function]",
           "generateBundle": "[Function]",
@@ -218,7 +218,7 @@
           "configureServer": "[Function]"
         },
         {
-          "name": "vike:workaroundCssModuleHmr",
+          "name": "vike:pluginWorkaroundCssModuleHmr",
           "handleHotUpdate": "[Function]"
         },
         {
@@ -306,7 +306,7 @@
           "hotUpdate": "[Function]"
         },
         {
-          "name": "vike:commonConfig:post",
+          "name": "vike:pluginCommon:post",
           "enforce": "post",
           "configResolved": {
             "order": "post",
@@ -332,7 +332,7 @@
           "buildStart": "[Function]"
         },
         {
-          "name": "vike:build:pluginAutoFullBuild:forceExit",
+          "name": "vike:build:pluginAutoFullBuild:post",
           "apply": "build",
           "enforce": "post",
           "closeBundle": {
@@ -370,7 +370,7 @@
           "configResolved": "[Function]"
         },
         {
-          "name": "vike:pluginModuleBanner",
+          "name": "vike:build:pluginModuleBanner",
           "enforce": "post",
           "apply": "build",
           "configResolved": "[Function]",
@@ -380,20 +380,20 @@
           }
         },
         {
-          "name": "vike:extractAssets:remove-javaScript",
+          "name": "vike:pluginExtractAssets:remove-javaScript",
           "apply": "build",
           "enforce": "post",
           "transform": "[Function]"
         },
         {
-          "name": "vike:extractExportNames",
+          "name": "vike:pluginExtractExportNames",
           "enforce": "post",
           "transform": "[Function]",
           "configureServer": "[Function]",
           "config": "[Function]"
         },
         {
-          "name": "vike:setGlobalContext:post",
+          "name": "vike:pluginSetGlobalContext:post",
           "enforce": "post",
           "configResolved": {
             "order": "post",
@@ -401,24 +401,31 @@
           }
         },
         {
-          "name": "vike:baseUrls",
+          "name": "vike:pluginBaseUrls",
           "enforce": "post",
           "config": "[Function]",
           "configResolved": "[Function]"
         },
         {
-          "name": "vike:envVars",
+          "name": "vike:pluginEnvVars",
           "enforce": "post",
           "configResolved": "[Function]",
           "transform": "[Function]"
         },
         {
-          "name": "vike:workaroundVite6HmrRegression",
+          "name": "vike:pluginWorkaroundVite6HmrRegression",
           "enforce": "post",
           "hotUpdate": {
             "order": "post",
             "handler": "[Function]"
           }
+        },
+        {
+          "name": "vike:pluginReplaceConstants",
+          "enforce": "post",
+          "apply": "build",
+          "configResolved": "[Function]",
+          "transform": "[Function]"
         },
         {
           "apply": "build",
@@ -516,7 +523,7 @@
         "ssr": [
           0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
           30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-          57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+          57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67
         ]
       }
     }

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { type ComponentProps, useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Navigation } from '../Navigation';\n\nimport s from './Header.module.css';\n\nexport const Header = ({ className }: ComponentProps<'header'>) => {\n    const { urlPathname } = usePageContext();\n    const [_, scrollTo] = useWindowScroll();\n    const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\n    const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\n\n    const pinned = useHeadroom({ fixedAt: 120 });\n\n    const isMainPage = urlPathname === '/';\n\n    const logoLink = useMemo(\n        () => ({\n            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }), href: '#' } : { href: '/' }),\n        }),\n        [isMainPage, scrollTo]\n    );\n    const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n\n    return (\n        <header className={clsx(s.header, pinned && s.pinned, className)}>\n            <Box className={s.container}>\n                <Group align='center' justify='space-between' w='100%'>\n                    <a className={s.logoLink} {...logoLink}>\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\n                    </a>\n                    <Burger\n                        lineSize={2}\n                        hiddenFrom='lg'\n                        opened={isOpened}\n                        className={s.burger}\n                        onClick={onBurgerClickHandler}\n                        aria-label='Открыть мобильное меню сайта'\n                    />\n                    <Navigation />\n                </Group>\n            </Box>\n        </header>\n    );\n};\n",
-      "start": 1750239308284,
-      "end": 1750239308303,
+      "start": 1750271784842,
+      "end": 1750271784858,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from 'react';\nimport { Box, Burger, Group } from '@mantine/core';\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\nimport clsx from 'clsx';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\nimport { RootModel } from '@/entities/Root';\nimport { Navigation } from '../Navigation';\nimport s from './Header.module.css';\nexport const Header = ({ className })=>{\n    const { urlPathname } = usePageContext();\n    const [_, scrollTo] = useWindowScroll();\n    const [isOpened, isSubmenuOpened] = useUnit([\n        RootModel.$isMenuOpened,\n        RootModel.$isSubmenuOpened\n    ]);\n    const [toggleMenu, allMenusClose] = useUnit([\n        RootModel.toggleMenu,\n        RootModel.allMenusClosed\n    ]);\n    const pinned = useHeadroom({\n        fixedAt: 120\n    });\n    const isMainPage = urlPathname === '/';\n    const logoLink = useMemo(()=>({\n            ...isMainPage ? {\n                onClick: ()=>scrollTo({\n                        y: 0\n                    }),\n                href: '#'\n            } : {\n                href: '/'\n            }\n        }), [\n        isMainPage,\n        scrollTo\n    ]);\n    const onBurgerClickHandler = isSubmenuOpened ? ()=>allMenusClose(false) : toggleMenu;\n    return /*#__PURE__*/ _jsx(\"header\", {\n        className: clsx(s.header, pinned && s.pinned, className),\n        children: /*#__PURE__*/ _jsx(Box, {\n            className: s.container,\n            children: /*#__PURE__*/ _jsxs(Group, {\n                align: \"center\",\n                justify: \"space-between\",\n                w: \"100%\",\n                children: [\n                    /*#__PURE__*/ _jsxs(\"a\", {\n                        className: s.logoLink,\n                        ...logoLink,\n                        children: [\n                            /*#__PURE__*/ _jsx(CognitiveLogo, {\n                                className: s.logoLarge,\n                                width: 220,\n                                height: 36\n                            }),\n                            /*#__PURE__*/ _jsx(LogoSmall, {\n                                className: s.logoSmall,\n                                width: 36,\n                                height: 36\n                            })\n                        ]\n                    }),\n                    /*#__PURE__*/ _jsx(Burger, {\n                        lineSize: 2,\n                        hiddenFrom: \"lg\",\n                        opened: isOpened,\n                        className: s.burger,\n                        onClick: onBurgerClickHandler,\n                        \"aria-label\": \"Открыть мобильное меню сайта\"\n                    }),\n                    /*#__PURE__*/ _jsx(Navigation, {})\n                ]\n            })\n        })\n    });\n};\n",
-      "start": 1750239308303,
-      "end": 1750239308308,
+      "start": 1750271784858,
+      "end": 1750271784863,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Header/index.tsx\"],\"sourcesContent\":[\"import { type ComponentProps, useMemo } from 'react';\\nimport { Box, Burger, Group } from '@mantine/core';\\nimport { useHeadroom, useWindowScroll } from '@mantine/hooks';\\nimport clsx from 'clsx';\\nimport { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport CognitiveLogo from '@/app/assets/images/cognitive-logo.svg?react';\\nimport LogoSmall from '@/app/assets/images/logo.svg?react';\\n\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Navigation } from '../Navigation';\\n\\nimport s from './Header.module.css';\\n\\nexport const Header = ({ className }: ComponentProps<'header'>) => {\\n    const { urlPathname } = usePageContext();\\n    const [_, scrollTo] = useWindowScroll();\\n    const [isOpened, isSubmenuOpened] = useUnit([RootModel.$isMenuOpened, RootModel.$isSubmenuOpened]);\\n    const [toggleMenu, allMenusClose] = useUnit([RootModel.toggleMenu, RootModel.allMenusClosed]);\\n\\n    const pinned = useHeadroom({ fixedAt: 120 });\\n\\n    const isMainPage = urlPathname === '/';\\n\\n    const logoLink = useMemo(\\n        () => ({\\n            ...(isMainPage ? { onClick: () => scrollTo({ y: 0 }), href: '#' } : { href: '/' }),\\n        }),\\n        [isMainPage, scrollTo]\\n    );\\n    const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\\n\\n    return (\\n        <header className={clsx(s.header, pinned && s.pinned, className)}>\\n            <Box className={s.container}>\\n                <Group align='center' justify='space-between' w='100%'>\\n                    <a className={s.logoLink} {...logoLink}>\\n                        <CognitiveLogo className={s.logoLarge} width={220} height={36} />\\n                        <LogoSmall className={s.logoSmall} width={36} height={36} />\\n                    </a>\\n                    <Burger\\n                        lineSize={2}\\n                        hiddenFrom='lg'\\n                        opened={isOpened}\\n                        className={s.burger}\\n                        onClick={onBurgerClickHandler}\\n                        aria-label='Открыть мобильное меню сайта'\\n                    />\\n                    <Navigation />\\n                </Group>\\n            </Box>\\n        </header>\\n    );\\n};\\n\"],\"names\":[\"useMemo\",\"Box\",\"Burger\",\"Group\",\"useHeadroom\",\"useWindowScroll\",\"clsx\",\"useUnit\",\"usePageContext\",\"CognitiveLogo\",\"LogoSmall\",\"RootModel\",\"Navigation\",\"s\",\"Header\",\"className\",\"urlPathname\",\"_\",\"scrollTo\",\"isOpened\",\"isSubmenuOpened\",\"$isMenuOpened\",\"$isSubmenuOpened\",\"toggleMenu\",\"allMenusClose\",\"allMenusClosed\",\"pinned\",\"fixedAt\",\"isMainPage\",\"logoLink\",\"onClick\",\"y\",\"href\",\"onBurgerClickHandler\",\"header\",\"container\",\"align\",\"justify\",\"w\",\"a\",\"logoLarge\",\"width\",\"height\",\"logoSmall\",\"lineSize\",\"hiddenFrom\",\"opened\",\"burger\",\"aria-label\"],\"mappings\":\";AAAA,SAA8BA,OAAO,QAAQ,QAAQ;AACrD,SAASC,GAAG,EAAEC,MAAM,EAAEC,KAAK,QAAQ,gBAAgB;AACnD,SAASC,WAAW,EAAEC,eAAe,QAAQ,iBAAiB;AAC9D,OAAOC,UAAU,OAAO;AACxB,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,OAAOC,mBAAmB,+CAA+C;AACzE,OAAOC,eAAe,qCAAqC;AAE3D,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,UAAU,QAAQ,gBAAgB;AAE3C,OAAOC,OAAO,sBAAsB;AAEpC,OAAO,MAAMC,SAAS,CAAC,EAAEC,SAAS,EAA4B;IAC1D,MAAM,EAAEC,WAAW,EAAE,GAAGR;IACxB,MAAM,CAACS,GAAGC,SAAS,GAAGb;IACtB,MAAM,CAACc,UAAUC,gBAAgB,GAAGb,QAAQ;QAACI,UAAUU,aAAa;QAAEV,UAAUW,gBAAgB;KAAC;IACjG,MAAM,CAACC,YAAYC,cAAc,GAAGjB,QAAQ;QAACI,UAAUY,UAAU;QAAEZ,UAAUc,cAAc;KAAC;IAE5F,MAAMC,SAAStB,YAAY;QAAEuB,SAAS;IAAI;IAE1C,MAAMC,aAAaZ,gBAAgB;IAEnC,MAAMa,WAAW7B,QACb,IAAO,CAAA;YACH,GAAI4B,aAAa;gBAAEE,SAAS,IAAMZ,SAAS;wBAAEa,GAAG;oBAAE;gBAAIC,MAAM;YAAI,IAAI;gBAAEA,MAAM;YAAI,CAAC;QACrF,CAAA,GACA;QAACJ;QAAYV;KAAS;IAE1B,MAAMe,uBAAuBb,kBAAkB,IAAMI,cAAc,SAASD;IAE5E,qBACI,KAACW;QAAOnB,WAAWT,KAAKO,EAAEqB,MAAM,EAAER,UAAUb,EAAEa,MAAM,EAAEX;kBAClD,cAAA,KAACd;YAAIc,WAAWF,EAAEsB,SAAS;sBACvB,cAAA,MAAChC;gBAAMiC,OAAM;gBAASC,SAAQ;gBAAgBC,GAAE;;kCAC5C,MAACC;wBAAExB,WAAWF,EAAEgB,QAAQ;wBAAG,GAAGA,QAAQ;;0CAClC,KAACpB;gCAAcM,WAAWF,EAAE2B,SAAS;gCAAEC,OAAO;gCAAKC,QAAQ;;0CAC3D,KAAChC;gCAAUK,WAAWF,EAAE8B,SAAS;gCAAEF,OAAO;gCAAIC,QAAQ;;;;kCAE1D,KAACxC;wBACG0C,UAAU;wBACVC,YAAW;wBACXC,QAAQ3B;wBACRJ,WAAWF,EAAEkC,MAAM;wBACnBjB,SAASG;wBACTe,cAAW;;kCAEf,KAACpC;;;;;AAKrB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Burger, Group } from \"@mantine/core\";\nimport { useHeadroom, useWindowScroll } from \"@mantine/hooks\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport LogoSmall from \"@/app/assets/images/logo.svg?react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Navigation } from \"../Navigation\";\nimport s from \"./Header.module.css\";\nexport const Header = ({ className }) => {\n  const { urlPathname } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([\n    RootModel.$isMenuOpened,\n    RootModel.$isSubmenuOpened\n  ]);\n  const [toggleMenu, allMenusClose] = useUnit([\n    RootModel.toggleMenu,\n    RootModel.allMenusClosed\n  ]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === \"/\";\n  const logoLink = useMemo(() => ({\n    ...isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: \"#\"\n    } : {\n      href: \"/\"\n    }\n  }), [\n    isMainPage,\n    scrollTo\n  ]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return /* @__PURE__ */ _jsx(\"header\", {\n    className: clsx(s.header, pinned && s.pinned, className),\n    children: /* @__PURE__ */ _jsx(Box, {\n      className: s.container,\n      children: /* @__PURE__ */ _jsxs(Group, {\n        align: \"center\",\n        justify: \"space-between\",\n        w: \"100%\",\n        children: [\n          /* @__PURE__ */ _jsxs(\"a\", {\n            className: s.logoLink,\n            ...logoLink,\n            children: [\n              /* @__PURE__ */ _jsx(CognitiveLogo, {\n                className: s.logoLarge,\n                width: 220,\n                height: 36\n              }),\n              /* @__PURE__ */ _jsx(LogoSmall, {\n                className: s.logoSmall,\n                width: 36,\n                height: 36\n              })\n            ]\n          }),\n          /* @__PURE__ */ _jsx(Burger, {\n            lineSize: 2,\n            hiddenFrom: \"lg\",\n            opened: isOpened,\n            className: s.burger,\n            onClick: onBurgerClickHandler,\n            \"aria-label\": \"Открыть мобильное меню сайта\"\n          }),\n          /* @__PURE__ */ _jsx(Navigation, {})\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308308,
-      "end": 1750239308400,
+      "start": 1750271784863,
+      "end": 1750271784944,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784944,
+      "end": 1750271784944,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784944,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784949,
+      "end": 1750271784949,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784949,
+      "end": 1750271784949,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Header/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useMemo } from \"react\";\nimport { Box, Burger, Group } from \"@mantine/core\";\nimport { useHeadroom, useWindowScroll } from \"@mantine/hooks\";\nimport clsx from \"clsx\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CognitiveLogo from \"@/app/assets/images/cognitive-logo.svg?react\";\nimport LogoSmall from \"@/app/assets/images/logo.svg?react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Navigation } from \"../Navigation\";\nimport s from \"./Header.module.css\";\nexport const Header = ({ className }) => {\n  const { urlPathname } = usePageContext();\n  const [_, scrollTo] = useWindowScroll();\n  const [isOpened, isSubmenuOpened] = useUnit([\n    RootModel.$isMenuOpened,\n    RootModel.$isSubmenuOpened\n  ]);\n  const [toggleMenu, allMenusClose] = useUnit([\n    RootModel.toggleMenu,\n    RootModel.allMenusClosed\n  ]);\n  const pinned = useHeadroom({\n    fixedAt: 120\n  });\n  const isMainPage = urlPathname === \"/\";\n  const logoLink = useMemo(() => ({\n    ...isMainPage ? {\n      onClick: () => scrollTo({\n        y: 0\n      }),\n      href: \"#\"\n    } : {\n      href: \"/\"\n    }\n  }), [\n    isMainPage,\n    scrollTo\n  ]);\n  const onBurgerClickHandler = isSubmenuOpened ? () => allMenusClose(false) : toggleMenu;\n  return /* @__PURE__ */ _jsx(\"header\", {\n    className: clsx(s.header, pinned && s.pinned, className),\n    children: /* @__PURE__ */ _jsx(Box, {\n      className: s.container,\n      children: /* @__PURE__ */ _jsxs(Group, {\n        align: \"center\",\n        justify: \"space-between\",\n        w: \"100%\",\n        children: [\n          /* @__PURE__ */ _jsxs(\"a\", {\n            className: s.logoLink,\n            ...logoLink,\n            children: [\n              /* @__PURE__ */ _jsx(CognitiveLogo, {\n                className: s.logoLarge,\n                width: 220,\n                height: 36\n              }),\n              /* @__PURE__ */ _jsx(LogoSmall, {\n                className: s.logoSmall,\n                width: 36,\n                height: 36\n              })\n            ]\n          }),\n          /* @__PURE__ */ _jsx(Burger, {\n            lineSize: 2,\n            hiddenFrom: \"lg\",\n            opened: isOpened,\n            className: s.burger,\n            onClick: onBurgerClickHandler,\n            \"aria-label\": \"Открыть мобильное меню сайта\"\n          }),\n          /* @__PURE__ */ _jsx(Navigation, {})\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308400,
-      "end": 1750239308400,
+      "start": 1750271784949,
+      "end": 1750271784950,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

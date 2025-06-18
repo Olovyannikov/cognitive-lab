@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\n\nimport s from './AdBanner.module.css';\n\ninterface AdBannerProps {\n    content?: string;\n    title?: string;\n    type?: string;\n}\n\nconst INITIAL_CONTENT =\n    'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' +\n    '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' +\n    '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' +\n    '                    поставленных целей.';\n\nexport const AdBanner = ({\n    children,\n    content = INITIAL_CONTENT,\n    title = 'Узнайте свой тип личности',\n    type = 'ESFJ',\n}: PropsWithChildren<AdBannerProps>) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper className={s.paper}>\n            <Stack className={s.root}>\n                <Group className={s.group}>\n                    <Picture className={s.image} src='/emoji/star' />\n                    <Title className={s.title} fz={20}>\n                        {title}\n                    </Title>\n                </Group>\n                <Text className={s.text}>{content}</Text>\n                <Image\n                    w={300}\n                    h={340}\n                    right={0}\n                    bottom={0}\n                    pos='absolute'\n                    visibleFrom='xl'\n                    className={s.image}\n                    src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`}\n                />\n                <Flex className={s.controls}>{children}</Flex>\n            </Stack>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308365,
-      "end": 1750239308387,
+      "start": 1750271784942,
+      "end": 1750271784962,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\nimport { useIsLarge } from '@/shared/lib';\nimport { Picture } from '@/shared/ui';\nimport s from './AdBanner.module.css';\nconst INITIAL_CONTENT = 'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n' + '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n' + '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n' + '                    поставленных целей.';\nexport const AdBanner = ({ children, content = INITIAL_CONTENT, title = 'Узнайте свой тип личности', type = 'ESFJ' })=>{\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsx(Paper, {\n        className: s.paper,\n        children: /*#__PURE__*/ _jsxs(Stack, {\n            className: s.root,\n            children: [\n                /*#__PURE__*/ _jsxs(Group, {\n                    className: s.group,\n                    children: [\n                        /*#__PURE__*/ _jsx(Picture, {\n                            className: s.image,\n                            src: \"/emoji/star\"\n                        }),\n                        /*#__PURE__*/ _jsx(Title, {\n                            className: s.title,\n                            fz: 20,\n                            children: title\n                        })\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    className: s.text,\n                    children: content\n                }),\n                /*#__PURE__*/ _jsx(Image, {\n                    w: 300,\n                    h: 340,\n                    right: 0,\n                    bottom: 0,\n                    pos: \"absolute\",\n                    visibleFrom: \"xl\",\n                    className: s.image,\n                    src: `/images/types/${isLarge ? '' : 'mobile/'}${type}.png`\n                }),\n                /*#__PURE__*/ _jsx(Flex, {\n                    className: s.controls,\n                    children: children\n                })\n            ]\n        })\n    });\n};\n",
-      "start": 1750239308387,
-      "end": 1750239308396,
+      "start": 1750271784962,
+      "end": 1750271784971,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AdBanner/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';\\n\\nimport { useIsLarge } from '@/shared/lib';\\nimport { Picture } from '@/shared/ui';\\n\\nimport s from './AdBanner.module.css';\\n\\ninterface AdBannerProps {\\n    content?: string;\\n    title?: string;\\n    type?: string;\\n}\\n\\nconst INITIAL_CONTENT =\\n    'Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\\\n' +\\n    '                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\\\n' +\\n    '                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\\\n' +\\n    '                    поставленных целей.';\\n\\nexport const AdBanner = ({\\n    children,\\n    content = INITIAL_CONTENT,\\n    title = 'Узнайте свой тип личности',\\n    type = 'ESFJ',\\n}: PropsWithChildren<AdBannerProps>) => {\\n    const isLarge = useIsLarge();\\n\\n    return (\\n        <Paper className={s.paper}>\\n            <Stack className={s.root}>\\n                <Group className={s.group}>\\n                    <Picture className={s.image} src='/emoji/star' />\\n                    <Title className={s.title} fz={20}>\\n                        {title}\\n                    </Title>\\n                </Group>\\n                <Text className={s.text}>{content}</Text>\\n                <Image\\n                    w={300}\\n                    h={340}\\n                    right={0}\\n                    bottom={0}\\n                    pos='absolute'\\n                    visibleFrom='xl'\\n                    className={s.image}\\n                    src={`/images/types/${isLarge ? '' : 'mobile/'}${type}.png`}\\n                />\\n                <Flex className={s.controls}>{children}</Flex>\\n            </Stack>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Flex\",\"Group\",\"Image\",\"Paper\",\"Stack\",\"Text\",\"Title\",\"useIsLarge\",\"Picture\",\"s\",\"INITIAL_CONTENT\",\"AdBanner\",\"children\",\"content\",\"title\",\"type\",\"isLarge\",\"className\",\"paper\",\"root\",\"group\",\"image\",\"src\",\"fz\",\"text\",\"w\",\"h\",\"right\",\"bottom\",\"pos\",\"visibleFrom\",\"controls\"],\"mappings\":\";AACA,SAASA,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAE9E,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,OAAO,QAAQ,cAAc;AAEtC,OAAOC,OAAO,wBAAwB;AAQtC,MAAMC,kBACF,uGACA,4HACA,qHACA;AAEJ,OAAO,MAAMC,WAAW,CAAC,EACrBC,QAAQ,EACRC,UAAUH,eAAe,EACzBI,QAAQ,2BAA2B,EACnCC,OAAO,MAAM,EACkB;IAC/B,MAAMC,UAAUT;IAEhB,qBACI,KAACJ;QAAMc,WAAWR,EAAES,KAAK;kBACrB,cAAA,MAACd;YAAMa,WAAWR,EAAEU,IAAI;;8BACpB,MAAClB;oBAAMgB,WAAWR,EAAEW,KAAK;;sCACrB,KAACZ;4BAAQS,WAAWR,EAAEY,KAAK;4BAAEC,KAAI;;sCACjC,KAAChB;4BAAMW,WAAWR,EAAEK,KAAK;4BAAES,IAAI;sCAC1BT;;;;8BAGT,KAACT;oBAAKY,WAAWR,EAAEe,IAAI;8BAAGX;;8BAC1B,KAACX;oBACGuB,GAAG;oBACHC,GAAG;oBACHC,OAAO;oBACPC,QAAQ;oBACRC,KAAI;oBACJC,aAAY;oBACZb,WAAWR,EAAEY,KAAK;oBAClBC,KAAK,CAAC,cAAc,EAAEN,UAAU,KAAK,YAAYD,KAAK,IAAI,CAAC;;8BAE/D,KAACf;oBAAKiB,WAAWR,EAAEsB,QAAQ;8BAAGnB;;;;;AAI9C,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./AdBanner.module.css\";\nconst INITIAL_CONTENT = \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n                    поставленных целей.\";\nexport const AdBanner = ({ children, content = INITIAL_CONTENT, title = \"Узнайте свой тип личности\", type = \"ESFJ\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    className: s.paper,\n    children: /* @__PURE__ */ _jsxs(Stack, {\n      className: s.root,\n      children: [\n        /* @__PURE__ */ _jsxs(Group, {\n          className: s.group,\n          children: [\n            /* @__PURE__ */ _jsx(Picture, {\n              className: s.image,\n              src: \"/emoji/star\"\n            }),\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.title,\n              fz: 20,\n              children: title\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          className: s.text,\n          children: content\n        }),\n        /* @__PURE__ */ _jsx(Image, {\n          w: 300,\n          h: 340,\n          right: 0,\n          bottom: 0,\n          pos: \"absolute\",\n          visibleFrom: \"xl\",\n          className: s.image,\n          src: `/images/types/${isLarge ? \"\" : \"mobile/\"}${type}.png`\n        }),\n        /* @__PURE__ */ _jsx(Flex, {\n          className: s.controls,\n          children\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308396,
-      "end": 1750239308555,
+      "start": 1750271784971,
+      "end": 1750271785122,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785122,
+      "end": 1750271785122,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785122,
+      "end": 1750271785122,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785123,
+      "end": 1750271785123,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/AdBanner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Flex, Group, Image, Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./AdBanner.module.css\";\nconst INITIAL_CONTENT = \"Наш тест — это мощный инструмент для самопознания и развития, который позволит вам глубже понять\\n                    свои сильные стороны, определить области для роста и осознанно двигаться вперёд. Вы сами решаете,\\n                    как использовать полученные знания и рекомендации, чтобы раскрыть свой потенциал и достичь\\n                    поставленных целей.\";\nexport const AdBanner = ({ children, content = INITIAL_CONTENT, title = \"Узнайте свой тип личности\", type = \"ESFJ\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    className: s.paper,\n    children: /* @__PURE__ */ _jsxs(Stack, {\n      className: s.root,\n      children: [\n        /* @__PURE__ */ _jsxs(Group, {\n          className: s.group,\n          children: [\n            /* @__PURE__ */ _jsx(Picture, {\n              className: s.image,\n              src: \"/emoji/star\"\n            }),\n            /* @__PURE__ */ _jsx(Title, {\n              className: s.title,\n              fz: 20,\n              children: title\n            })\n          ]\n        }),\n        /* @__PURE__ */ _jsx(Text, {\n          className: s.text,\n          children: content\n        }),\n        /* @__PURE__ */ _jsx(Image, {\n          w: 300,\n          h: 340,\n          right: 0,\n          bottom: 0,\n          pos: \"absolute\",\n          visibleFrom: \"xl\",\n          className: s.image,\n          src: `/images/types/${isLarge ? \"\" : \"mobile/\"}${type}.png`\n        }),\n        /* @__PURE__ */ _jsx(Flex, {\n          className: s.controls,\n          children\n        })\n      ]\n    })\n  });\n};\n",
-      "start": 1750239308555,
-      "end": 1750239308555,
+      "start": 1750271785123,
+      "end": 1750271785123,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

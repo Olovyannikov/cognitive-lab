@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, sample } from 'effector';\nimport { createAction } from 'effector-action';\n\nimport { atom } from '@/shared/factories';\n\nimport { RootModel } from '@/entities/Root';\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\n\nexport const TakeTestAgainModel = atom(() => {\n    const takeTestAgainClicked = createEvent();\n\n    const clearLocalStorageFx = createEffect(async () => {\n        await clearLocalStorageTestUnits();\n    });\n\n    const action = createAction({\n        target: {\n            surveyId: UserModel.$surveyId,\n            form: TestModel.$scaleForm,\n            page: TestModel.$currentPage,\n            progress: TestModel.$currentProgress,\n            redirect: UserModel.redirectToTestPageFx,\n            takeTestAgain: takeTestAgainMutation.start,\n            closeAllModals: RootModel.allMenusClosed,\n        },\n        fn: (target) => {\n            target.page(1);\n            target.progress(0);\n            target.form({ answers: [] });\n            target.closeAllModals(false);\n        },\n    });\n\n    sample({\n        clock: takeTestAgainClicked,\n        target: takeTestAgainMutation.start,\n    });\n\n    sample({\n        clock: takeTestAgainMutation.finished.success,\n        target: [action, clearLocalStorageFx],\n    });\n\n    return {\n        takeTestAgainClicked,\n    };\n});\n",
-      "start": 1750239308728,
-      "end": 1750239308733,
+      "start": 1750271785275,
+      "end": 1750271785285,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { atom } from '@/shared/factories';\nimport { RootModel } from '@/entities/Root';\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';\nimport { UserModel } from '@/entities/User';\nexport const TakeTestAgainModel = _effector$factory({\n    sid: \"1vgl8dwc\",\n    fn: ()=>atom(()=>{\n            const takeTestAgainClicked = createEvent({\n                sid: \"3l7raw0a\"\n            });\n            const clearLocalStorageFx = createEffect(async ()=>{\n                await clearLocalStorageTestUnits();\n            }, {\n                sid: \"8ifbikrb\"\n            });\n            const action = createAction({\n                target: {\n                    surveyId: UserModel.$surveyId,\n                    form: TestModel.$scaleForm,\n                    page: TestModel.$currentPage,\n                    progress: TestModel.$currentProgress,\n                    redirect: UserModel.redirectToTestPageFx,\n                    takeTestAgain: takeTestAgainMutation.start,\n                    closeAllModals: RootModel.allMenusClosed\n                },\n                fn: (target)=>{\n                    target.page(1);\n                    target.progress(0);\n                    target.form({\n                        answers: []\n                    });\n                    target.closeAllModals(false);\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: takeTestAgainClicked,\n                        target: takeTestAgainMutation.start\n                    }\n                ],\n                or: {\n                    sid: \"6no9dsu8\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: takeTestAgainMutation.finished.success,\n                        target: [\n                            action,\n                            clearLocalStorageFx\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"bzpwdwh7\"\n                }\n            });\n            return {\n                takeTestAgainClicked\n            };\n        })\n});\n",
-      "start": 1750239308733,
-      "end": 1750239308736,
+      "start": 1750271785285,
+      "end": 1750271785289,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/model/index.ts\"],\"sourcesContent\":[\"import { createEffect, createEvent, sample } from 'effector';\\nimport { createAction } from 'effector-action';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { RootModel } from '@/entities/Root';\\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from '@/entities/Test';\\nimport { UserModel } from '@/entities/User';\\n\\nexport const TakeTestAgainModel = atom(() => {\\n    const takeTestAgainClicked = createEvent();\\n\\n    const clearLocalStorageFx = createEffect(async () => {\\n        await clearLocalStorageTestUnits();\\n    });\\n\\n    const action = createAction({\\n        target: {\\n            surveyId: UserModel.$surveyId,\\n            form: TestModel.$scaleForm,\\n            page: TestModel.$currentPage,\\n            progress: TestModel.$currentProgress,\\n            redirect: UserModel.redirectToTestPageFx,\\n            takeTestAgain: takeTestAgainMutation.start,\\n            closeAllModals: RootModel.allMenusClosed,\\n        },\\n        fn: (target) => {\\n            target.page(1);\\n            target.progress(0);\\n            target.form({ answers: [] });\\n            target.closeAllModals(false);\\n        },\\n    });\\n\\n    sample({\\n        clock: takeTestAgainClicked,\\n        target: takeTestAgainMutation.start,\\n    });\\n\\n    sample({\\n        clock: takeTestAgainMutation.finished.success,\\n        target: [action, clearLocalStorageFx],\\n    });\\n\\n    return {\\n        takeTestAgainClicked,\\n    };\\n});\\n\"],\"names\":[\"createEffect\",\"createEvent\",\"sample\",\"createAction\",\"atom\",\"RootModel\",\"clearLocalStorageTestUnits\",\"takeTestAgainMutation\",\"TestModel\",\"UserModel\",\"TakeTestAgainModel\",\"takeTestAgainClicked\",\"clearLocalStorageFx\",\"action\",\"target\",\"surveyId\",\"$surveyId\",\"form\",\"$scaleForm\",\"page\",\"$currentPage\",\"progress\",\"$currentProgress\",\"redirect\",\"redirectToTestPageFx\",\"takeTestAgain\",\"start\",\"closeAllModals\",\"allMenusClosed\",\"fn\",\"answers\",\"clock\",\"finished\",\"success\"],\"mappings\":\";AAAA,SAASA,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAC7D,SAASC,YAAY,QAAQ,kBAAkB;AAE/C,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,SAAS,QAAQ,kBAAkB;AAC5C,SAASC,0BAA0B,EAAEC,qBAAqB,EAAEC,SAAS,QAAQ,kBAAkB;AAC/F,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,OAAO,MAAMC;;YAAqBN,KAAK;YACnC,MAAMO,uBAAuBV;;;YAE7B,MAAMW,sBAAsBZ,aAAa;gBACrC,MAAMM;YACV;;;YAEA,MAAMO,SAASV,aAAa;gBACxBW,QAAQ;oBACJC,UAAUN,UAAUO,SAAS;oBAC7BC,MAAMT,UAAUU,UAAU;oBAC1BC,MAAMX,UAAUY,YAAY;oBAC5BC,UAAUb,UAAUc,gBAAgB;oBACpCC,UAAUd,UAAUe,oBAAoB;oBACxCC,eAAelB,sBAAsBmB,KAAK;oBAC1CC,gBAAgBtB,UAAUuB,cAAc;gBAC5C;gBACAC,IAAI,CAACf;oBACDA,OAAOK,IAAI,CAAC;oBACZL,OAAOO,QAAQ,CAAC;oBAChBP,OAAOG,IAAI,CAAC;wBAAEa,SAAS,EAAE;oBAAC;oBAC1BhB,OAAOa,cAAc,CAAC;gBAC1B;YACJ;YAEAzB;;oBAAO;wBACH6B,OAAOpB;wBACPG,QAAQP,sBAAsBmB,KAAK;oBACvC;;;;;;YAEAxB;;oBAAO;wBACH6B,OAAOxB,sBAAsByB,QAAQ,CAACC,OAAO;wBAC7CnB,QAAQ;4BAACD;4BAAQD;yBAAoB;oBACzC;;;;;;YAEA,OAAO;gBACHD;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { atom } from \"@/shared/factories\";\nimport { RootModel } from \"@/entities/Root\";\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const TakeTestAgainModel = _effector$factory({\n  sid: \"1vgl8dwc\",\n  fn: () => atom(() => {\n    const takeTestAgainClicked = createEvent({\n      sid: \"3l7raw0a\"\n    });\n    const clearLocalStorageFx = createEffect(async () => {\n      await clearLocalStorageTestUnits();\n    }, {\n      sid: \"8ifbikrb\"\n    });\n    const action = createAction({\n      target: {\n        surveyId: UserModel.$surveyId,\n        form: TestModel.$scaleForm,\n        page: TestModel.$currentPage,\n        progress: TestModel.$currentProgress,\n        redirect: UserModel.redirectToTestPageFx,\n        takeTestAgain: takeTestAgainMutation.start,\n        closeAllModals: RootModel.allMenusClosed\n      },\n      fn: (target) => {\n        target.page(1);\n        target.progress(0);\n        target.form({\n          answers: []\n        });\n        target.closeAllModals(false);\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: takeTestAgainClicked,\n          target: takeTestAgainMutation.start\n        }\n      ],\n      or: {\n        sid: \"6no9dsu8\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: takeTestAgainMutation.finished.success,\n          target: [\n            action,\n            clearLocalStorageFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"bzpwdwh7\"\n      }\n    });\n    return {\n      takeTestAgainClicked\n    };\n  })\n});\n",
-      "start": 1750239308736,
-      "end": 1750239308817,
+      "start": 1750271785289,
+      "end": 1750271785350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785350,
+      "end": 1750271785350,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785350,
+      "end": 1750271785350,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785350,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/TakeTestAgain/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { atom } from \"@/shared/factories\";\nimport { RootModel } from \"@/entities/Root\";\nimport { clearLocalStorageTestUnits, takeTestAgainMutation, TestModel } from \"@/entities/Test\";\nimport { UserModel } from \"@/entities/User\";\nexport const TakeTestAgainModel = _effector$factory({\n  sid: \"1vgl8dwc\",\n  fn: () => atom(() => {\n    const takeTestAgainClicked = createEvent({\n      sid: \"3l7raw0a\"\n    });\n    const clearLocalStorageFx = createEffect(async () => {\n      await clearLocalStorageTestUnits();\n    }, {\n      sid: \"8ifbikrb\"\n    });\n    const action = createAction({\n      target: {\n        surveyId: UserModel.$surveyId,\n        form: TestModel.$scaleForm,\n        page: TestModel.$currentPage,\n        progress: TestModel.$currentProgress,\n        redirect: UserModel.redirectToTestPageFx,\n        takeTestAgain: takeTestAgainMutation.start,\n        closeAllModals: RootModel.allMenusClosed\n      },\n      fn: (target) => {\n        target.page(1);\n        target.progress(0);\n        target.form({\n          answers: []\n        });\n        target.closeAllModals(false);\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: takeTestAgainClicked,\n          target: takeTestAgainMutation.start\n        }\n      ],\n      or: {\n        sid: \"6no9dsu8\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: takeTestAgainMutation.finished.success,\n          target: [\n            action,\n            clearLocalStorageFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"bzpwdwh7\"\n      }\n    });\n    return {\n      takeTestAgainClicked\n    };\n  })\n});\n",
-      "start": 1750239308817,
-      "end": 1750239308817,
+      "start": 1750271785351,
+      "end": 1750271785351,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

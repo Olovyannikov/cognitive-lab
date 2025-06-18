@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\n\nimport { atom } from '@/shared/factories';\n\nexport const TestEmailFormModel = atom(() => {\n    const form = createForm({\n        schema: {\n            email: '',\n            approve_subscription: Boolean(false),\n        },\n        validation: zodAdapter(\n            z.object({\n                email: z.string().email(),\n                approve_subscription: z.boolean(),\n            })\n        ),\n    });\n\n    return {\n        form,\n    };\n});\n",
-      "start": 1750239308300,
-      "end": 1750239308311,
+      "start": 1750271784858,
+      "end": 1750271784876,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createForm } from '@effector-reform/core';\nimport { zodAdapter } from '@effector-reform/zod';\nimport { z } from 'zod';\nimport { atom } from '@/shared/factories';\nexport const TestEmailFormModel = _effector$factory({\n    sid: \"dvikc9ew\",\n    fn: ()=>atom(()=>{\n            const form = createForm({\n                schema: {\n                    email: '',\n                    approve_subscription: Boolean(false)\n                },\n                validation: zodAdapter(z.object({\n                    email: z.string().email(),\n                    approve_subscription: z.boolean()\n                }))\n            });\n            return {\n                form\n            };\n        })\n});\n",
-      "start": 1750239308311,
-      "end": 1750239308319,
+      "start": 1750271784876,
+      "end": 1750271784880,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/testEmailFormModel.ts\"],\"sourcesContent\":[\"import { createForm } from '@effector-reform/core';\\nimport { zodAdapter } from '@effector-reform/zod';\\nimport { z } from 'zod';\\n\\nimport { atom } from '@/shared/factories';\\n\\nexport const TestEmailFormModel = atom(() => {\\n    const form = createForm({\\n        schema: {\\n            email: '',\\n            approve_subscription: Boolean(false),\\n        },\\n        validation: zodAdapter(\\n            z.object({\\n                email: z.string().email(),\\n                approve_subscription: z.boolean(),\\n            })\\n        ),\\n    });\\n\\n    return {\\n        form,\\n    };\\n});\\n\"],\"names\":[\"createForm\",\"zodAdapter\",\"z\",\"atom\",\"TestEmailFormModel\",\"form\",\"schema\",\"email\",\"approve_subscription\",\"Boolean\",\"validation\",\"object\",\"string\",\"boolean\"],\"mappings\":\";AAAA,SAASA,UAAU,QAAQ,wBAAwB;AACnD,SAASC,UAAU,QAAQ,uBAAuB;AAClD,SAASC,CAAC,QAAQ,MAAM;AAExB,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,OAAO,MAAMC;;YAAqBD,KAAK;YACnC,MAAME,OAAOL,WAAW;gBACpBM,QAAQ;oBACJC,OAAO;oBACPC,sBAAsBC,QAAQ;gBAClC;gBACAC,YAAYT,WACRC,EAAES,MAAM,CAAC;oBACLJ,OAAOL,EAAEU,MAAM,GAAGL,KAAK;oBACvBC,sBAAsBN,EAAEW,OAAO;gBACnC;YAER;YAEA,OAAO;gBACHR;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = _effector$factory({\n  sid: \"dvikc9ew\",\n  fn: () => atom(() => {\n    const form = createForm({\n      schema: {\n        email: \"\",\n        approve_subscription: Boolean(false)\n      },\n      validation: zodAdapter(z.object({\n        email: z.string().email(),\n        approve_subscription: z.boolean()\n      }))\n    });\n    return {\n      form\n    };\n  })\n});\n",
-      "start": 1750239308319,
-      "end": 1750239308407,
+      "start": 1750271784880,
+      "end": 1750271784972,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784972,
+      "end": 1750271784972,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784972,
+      "end": 1750271784972,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/testEmailFormModel.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createForm } from \"@effector-reform/core\";\nimport { zodAdapter } from \"@effector-reform/zod\";\nimport { z } from \"zod\";\nimport { atom } from \"@/shared/factories\";\nexport const TestEmailFormModel = _effector$factory({\n  sid: \"dvikc9ew\",\n  fn: () => atom(() => {\n    const form = createForm({\n      schema: {\n        email: \"\",\n        approve_subscription: Boolean(false)\n      },\n      validation: zodAdapter(z.object({\n        email: z.string().email(),\n        approve_subscription: z.boolean()\n      }))\n    });\n    return {\n      form\n    };\n  })\n});\n",
-      "start": 1750239308407,
-      "end": 1750239308407,
+      "start": 1750271784973,
+      "end": 1750271784973,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

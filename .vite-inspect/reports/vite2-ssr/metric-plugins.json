@@ -2,7 +2,7 @@
   {
     "transform": {
       "invokeCount": 1,
-      "totalTime": 1
+      "totalTime": 2
     },
     "resolveId": {
       "invokeCount": 1,
@@ -29,8 +29,8 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 311,
-      "totalTime": 149
+      "invokeCount": 314,
+      "totalTime": 142
     },
     "name": "alias"
   },
@@ -54,18 +54,6 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:baseUrls",
-    "enforce": "post"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
     "name": "vike:build:pluginAutoFullBuild",
     "enforce": "pre"
   },
@@ -78,7 +66,7 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:build:pluginAutoFullBuild:forceExit",
+    "name": "vike:build:pluginAutoFullBuild:post",
     "enforce": "post"
   },
   {
@@ -141,6 +129,18 @@
   },
   {
     "transform": {
+      "invokeCount": 427,
+      "totalTime": 37
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:build:pluginModuleBanner",
+    "enforce": "post"
+  },
+  {
+    "transform": {
       "invokeCount": 0,
       "totalTime": 0
     },
@@ -160,18 +160,7 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:commonConfig"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:commonConfig:post",
+    "name": "vike:pluginBaseUrls",
     "enforce": "post"
   },
   {
@@ -183,19 +172,18 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:commonConfig:pre",
-    "enforce": "pre"
+    "name": "vike:pluginCommon"
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 3
+      "invokeCount": 0,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:envVars",
+    "name": "vike:pluginCommon:post",
     "enforce": "post"
   },
   {
@@ -207,88 +195,136 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:extractAssets-3"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:extractAssets-4"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:extractAssets:append-extractAssets-query",
+    "name": "vike:pluginCommon:pre",
     "enforce": "pre"
   },
   {
     "transform": {
-      "invokeCount": 426,
+      "invokeCount": 427,
       "totalTime": 6
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:extractAssets:remove-javaScript",
+    "name": "vike:pluginEnvVars",
     "enforce": "post"
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 3
+      "invokeCount": 0,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:extractExportNames",
-    "enforce": "post"
+    "name": "vike:pluginExtractAssets-3"
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 3
+      "invokeCount": 0,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:fileEnv"
+    "name": "vike:pluginExtractAssets-4"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginExtractAssets:append-extractAssets-query",
+    "enforce": "pre"
+  },
+  {
+    "transform": {
+      "invokeCount": 427,
+      "totalTime": 2
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginExtractAssets:remove-javaScript",
+    "enforce": "post"
+  },
+  {
+    "transform": {
+      "invokeCount": 427,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginExtractExportNames",
+    "enforce": "post"
+  },
+  {
+    "transform": {
+      "invokeCount": 427,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginFileEnv"
+  },
+  {
+    "transform": {
+      "invokeCount": 427,
+      "totalTime": 4
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginReplaceConstants",
+    "enforce": "post"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginSetGlobalContext:post",
+    "enforce": "post"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vike:pluginSetGlobalContext:pre",
+    "enforce": "pre"
   },
   {
     "transform": {
       "invokeCount": 18,
-      "totalTime": 86
+      "totalTime": 154
     },
     "resolveId": {
       "invokeCount": 35,
       "totalTime": 0
     },
-    "name": "vike:importUserCode"
-  },
-  {
-    "transform": {
-      "invokeCount": 426,
-      "totalTime": 31
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:pluginModuleBanner",
-    "enforce": "post"
+    "name": "vike:pluginVirtualFiles"
   },
   {
     "transform": {
@@ -299,8 +335,7 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:setGlobalContext:post",
-    "enforce": "post"
+    "name": "vike:pluginWorkaroundCssModuleHmr"
   },
   {
     "transform": {
@@ -311,30 +346,7 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vike:setGlobalContext:pre",
-    "enforce": "pre"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:workaroundCssModuleHmr"
-  },
-  {
-    "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vike:workaroundVite6HmrRegression",
+    "name": "vike:pluginWorkaroundVite6HmrRegression",
     "enforce": "post"
   },
   {
@@ -364,7 +376,7 @@
   {
     "transform": {
       "invokeCount": 22,
-      "totalTime": 2843
+      "totalTime": 3017
     },
     "resolveId": {
       "invokeCount": 0,
@@ -455,8 +467,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 3
+      "invokeCount": 427,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
@@ -466,8 +478,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 35
+      "invokeCount": 427,
+      "totalTime": 29
     },
     "resolveId": {
       "invokeCount": 0,
@@ -521,8 +533,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 246
+      "invokeCount": 427,
+      "totalTime": 230
     },
     "resolveId": {
       "invokeCount": 0,
@@ -532,8 +544,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 0
+      "invokeCount": 427,
+      "totalTime": 5
     },
     "resolveId": {
       "invokeCount": 0,
@@ -543,8 +555,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 30628
+      "invokeCount": 427,
+      "totalTime": 30656
     },
     "resolveId": {
       "invokeCount": 0,
@@ -587,8 +599,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 0
+      "invokeCount": 427,
+      "totalTime": 2
     },
     "resolveId": {
       "invokeCount": 0,
@@ -609,8 +621,8 @@
   },
   {
     "transform": {
-      "invokeCount": 404,
-      "totalTime": 7141
+      "invokeCount": 405,
+      "totalTime": 6742
     },
     "resolveId": {
       "invokeCount": 0,
@@ -642,8 +654,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 1934
+      "invokeCount": 427,
+      "totalTime": 2110
     },
     "resolveId": {
       "invokeCount": 0,
@@ -654,8 +666,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 1
+      "invokeCount": 427,
+      "totalTime": 4
     },
     "resolveId": {
       "invokeCount": 0,
@@ -669,8 +681,8 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 777,
-      "totalTime": 107
+      "invokeCount": 781,
+      "totalTime": 114
     },
     "name": "vite:resolve"
   },
@@ -681,7 +693,7 @@
     },
     "resolveId": {
       "invokeCount": 6,
-      "totalTime": 1
+      "totalTime": 2
     },
     "name": "vite:resolve (+alias)"
   },
@@ -753,8 +765,8 @@
   },
   {
     "transform": {
-      "invokeCount": 426,
-      "totalTime": 1
+      "invokeCount": 427,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Main = () => {\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href='/' onClick={() => onClose(false)}>\n            Главная\n        </Link>\n    );\n};\n",
-      "start": 1750239308811,
-      "end": 1750239308820,
+      "start": 1750271785346,
+      "end": 1750271785351,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Main = ()=>{\n    const onClose = useUnit(RootModel.allMenusClosed);\n    return /*#__PURE__*/ _jsx(Link, {\n        href: \"/\",\n        onClick: ()=>onClose(false),\n        children: \"Главная\"\n    });\n};\n",
-      "start": 1750239308820,
-      "end": 1750239308821,
+      "start": 1750271785351,
+      "end": 1750271785354,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Main/index.tsx\"],\"sourcesContent\":[\"import { useUnit } from 'effector-react';\\n\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Link } from '../../Link';\\n\\nexport const Main = () => {\\n    const onClose = useUnit(RootModel.allMenusClosed);\\n\\n    return (\\n        <Link href='/' onClick={() => onClose(false)}>\\n            Главная\\n        </Link>\\n    );\\n};\\n\"],\"names\":[\"useUnit\",\"RootModel\",\"Link\",\"Main\",\"onClose\",\"allMenusClosed\",\"href\",\"onClick\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,IAAI,QAAQ,aAAa;AAElC,OAAO,MAAMC,OAAO;IAChB,MAAMC,UAAUJ,QAAQC,UAAUI,cAAc;IAEhD,qBACI,KAACH;QAAKI,MAAK;QAAIC,SAAS,IAAMH,QAAQ;kBAAQ;;AAItD,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Main = () => {\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: \"/\",\n    onClick: () => onClose(false),\n    children: \"Главная\"\n  });\n};\n",
-      "start": 1750239308821,
-      "end": 1750239308827,
+      "start": 1750271785354,
+      "end": 1750271785360,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785360,
+      "end": 1750271785360,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785360,
+      "end": 1750271785360,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785360,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Main/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Main = () => {\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: \"/\",\n    onClick: () => onClose(false),\n    children: \"Главная\"\n  });\n};\n",
-      "start": 1750239308827,
-      "end": 1750239308827,
+      "start": 1750271785361,
+      "end": 1750271785361,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

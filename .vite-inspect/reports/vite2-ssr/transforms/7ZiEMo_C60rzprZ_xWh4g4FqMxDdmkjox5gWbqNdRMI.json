@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, type ButtonProps } from '@mantine/core';\nimport { FileText } from '@phosphor-icons/react/dist/ssr';\n\ninterface NavigateToFullStructureTemplateProps extends ButtonProps {\n    text?: string;\n    link?: string;\n}\n\nexport const NavigateToFullStructureTemplate = ({\n    text = 'Посмотреть структуру отчета',\n    link = '/full-report/example',\n    ...props\n}: NavigateToFullStructureTemplateProps) => (\n    <Button size='md' href={link} component='a' variant='default' leftSection={<FileText size={24} />} {...props}>\n        {text}\n    </Button>\n);\n",
-      "start": 1750239308430,
-      "end": 1750239308454,
+      "start": 1750271784993,
+      "end": 1750271785016,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from '@mantine/core';\nimport { FileText } from '@phosphor-icons/react/dist/ssr';\nexport const NavigateToFullStructureTemplate = ({ text = 'Посмотреть структуру отчета', link = '/full-report/example', ...props })=>/*#__PURE__*/ _jsx(Button, {\n        size: \"md\",\n        href: link,\n        component: \"a\",\n        variant: \"default\",\n        leftSection: /*#__PURE__*/ _jsx(FileText, {\n            size: 24\n        }),\n        ...props,\n        children: text\n    });\n",
-      "start": 1750239308454,
-      "end": 1750239308462,
+      "start": 1750271785016,
+      "end": 1750271785022,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToFullStructureTemplate/index.tsx\"],\"sourcesContent\":[\"import { Button, type ButtonProps } from '@mantine/core';\\nimport { FileText } from '@phosphor-icons/react/dist/ssr';\\n\\ninterface NavigateToFullStructureTemplateProps extends ButtonProps {\\n    text?: string;\\n    link?: string;\\n}\\n\\nexport const NavigateToFullStructureTemplate = ({\\n    text = 'Посмотреть структуру отчета',\\n    link = '/full-report/example',\\n    ...props\\n}: NavigateToFullStructureTemplateProps) => (\\n    <Button size='md' href={link} component='a' variant='default' leftSection={<FileText size={24} />} {...props}>\\n        {text}\\n    </Button>\\n);\\n\"],\"names\":[\"Button\",\"FileText\",\"NavigateToFullStructureTemplate\",\"text\",\"link\",\"props\",\"size\",\"href\",\"component\",\"variant\",\"leftSection\"],\"mappings\":\";AAAA,SAASA,MAAM,QAA0B,gBAAgB;AACzD,SAASC,QAAQ,QAAQ,iCAAiC;AAO1D,OAAO,MAAMC,kCAAkC,CAAC,EAC5CC,OAAO,6BAA6B,EACpCC,OAAO,sBAAsB,EAC7B,GAAGC,OACgC,iBACnC,KAACL;QAAOM,MAAK;QAAKC,MAAMH;QAAMI,WAAU;QAAIC,SAAQ;QAAUC,2BAAa,KAACT;YAASK,MAAM;;QAAS,GAAGD,KAAK;kBACvGF;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { FileText } from \"@phosphor-icons/react/dist/ssr\";\nexport const NavigateToFullStructureTemplate = ({ text = \"Посмотреть структуру отчета\", link = \"/full-report/example\", ...props }) => /* @__PURE__ */ _jsx(Button, {\n  size: \"md\",\n  href: link,\n  component: \"a\",\n  variant: \"default\",\n  leftSection: /* @__PURE__ */ _jsx(FileText, {\n    size: 24\n  }),\n  ...props,\n  children: text\n});\n",
-      "start": 1750239308462,
-      "end": 1750239308707,
+      "start": 1750271785022,
+      "end": 1750271785242,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785242,
+      "end": 1750271785242,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/NavigateToFullStructureTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { FileText } from \"@phosphor-icons/react/dist/ssr\";\nexport const NavigateToFullStructureTemplate = ({ text = \"Посмотреть структуру отчета\", link = \"/full-report/example\", ...props }) => /* @__PURE__ */ _jsx(Button, {\n  size: \"md\",\n  href: link,\n  component: \"a\",\n  variant: \"default\",\n  leftSection: /* @__PURE__ */ _jsx(FileText, {\n    size: 24\n  }),\n  ...props,\n  children: text\n});\n",
-      "start": 1750239308707,
-      "end": 1750239308707,
+      "start": 1750271785242,
+      "end": 1750271785242,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

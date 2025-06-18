@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  position: relative;\n\n  &::before,\n  &::after {\n    content: \"Экстраверсия\";\n    position: absolute;\n    left: 0;\n    bottom: -28px;\n    font-size: 16px;\n    color: var(--mantine-color-gray-6);\n  }\n\n  &::after {\n    content: \"Интраверсия\";\n    left: unset;\n    right: 0;\n  }\n\n  &[data-type=\"J-P\"] {\n    &::before {\n      content: \"Суждение\";\n    }\n\n    &::after {\n      content: \"Восприятие\";\n    }\n  }\n\n  &[data-type=\"S-N\"] {\n    &::before {\n      content: \"Сенсорика\";\n    }\n\n    &::after {\n      content: \"Интуиция\";\n    }\n  }\n\n  &[data-type=\"T-F\"] {\n    &::before {\n      content: \"Логика\";\n    }\n\n    &::after {\n      content: \"Чувства\";\n    }\n  }\n}\n\n.track {\n  min-height: 14px;\n}\n\n.bar {\n  background-color: var(--mantine-color-violet-6);\n\n  [data-type=\"J-P\"] & {\n    background-color: var(--mantine-color-yellow-7);\n  }\n\n  [data-type=\"S-N\"] & {\n    background-color: var(--mantine-color-green-7);\n  }\n\n  [data-type=\"T-F\"] & {\n    background-color: var(--mantine-color-indigo-7);\n  }\n}\n\n.thumb {\n  display: block;\n  border-width: 5px;\n  border-color: var(--mantine-color-violet-6);\n  width: 24px;\n  height: 24px;\n\n  [data-type=\"J-P\"] & {\n    border-color: var(--mantine-color-yellow-7);\n  }\n\n  [data-type=\"S-N\"] & {\n    border-color: var(--mantine-color-green-7);\n  }\n\n  [data-type=\"T-F\"] & {\n    border-color: var(--mantine-color-indigo-7);\n  }\n}\n\n.label {\n  border-radius: 4px;\n  background-color: var(--mantine-color-violet-6);\n\n  &::after {\n    content: \"%\";\n  }\n\n  [data-value=\"100\"] & {\n    right: 0;\n  }\n\n  [data-type=\"J-P\"] & {\n    background-color: var(--mantine-color-yellow-7);\n  }\n\n  [data-type=\"S-N\"] & {\n    background-color: var(--mantine-color-green-7);\n  }\n\n  [data-type=\"T-F\"] & {\n    background-color: var(--mantine-color-indigo-7);\n  }\n}\n\n.icon {\n  position: absolute;\n  left: calc(var(--offset) + 32px);\n  top: -30px;\n  color: var(--mantine-color-gray-6);\n\n  &:has(+ [data-value=\"95\"]),\n  &:has(+ [data-value=\"96\"]),\n  &:has(+ [data-value=\"97\"]),\n  &:has(+ [data-value=\"98\"]),\n  &:has(+ [data-value=\"99\"]),\n  &:has(+ [data-value=\"100\"]) {\n    left: unset;\n    right: 32px;\n  }\n\n  @mixin larger-than 1200px {\n    display: none;\n  }\n}\n",
-      "start": 1750239308517,
-      "end": 1750239308529,
+      "start": 1750271785075,
+      "end": 1750271785085,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308529,
-      "end": 1750239308529,
+      "start": 1750271785085,
+      "end": 1750271785085,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785090,
+      "end": 1750271785090,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BarChart/BarChart.module.css [vike:pluginModuleBanner] */\nexport const root = \"Mxu4L\";\nexport const track = \"lsTMr\";\nexport const bar = \"ttQak\";\nexport const thumb = \"TAonO\";\nexport const label = \"ArEV0\";\nexport const icon = \"rXUwB\";\nexport default {\n\troot: root,\n\ttrack: track,\n\tbar: bar,\n\tthumb: thumb,\n\tlabel: label,\n\ticon: icon\n};\n",
-      "start": 1750239308534,
-      "end": 1750239308534,
+      "start": 1750271785090,
+      "end": 1750271785090,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

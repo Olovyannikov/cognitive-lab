@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent, createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport type { Review } from '@/entities/Review';\n\nexport const PeopleTalkModel = atom(() => {\n    const $currentReview = createStore<null | Review>(null);\n    const currentReviewSettled = createEvent<Review>();\n    sample({\n        clock: currentReviewSettled,\n        fn: (review) => ({\n            ...review,\n            created_at: review.created_at.includes('.')\n                ? review.created_at\n                : new Date(review.created_at).toLocaleDateString(),\n        }),\n        target: $currentReview,\n    });\n\n    const $isCarouselActive = createStore<boolean>(true);\n    const carouselActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: carouselActiveStateSettled,\n        target: $isCarouselActive,\n    });\n\n    const $isModalOpened = createStore<boolean>(false);\n    const modalActiveStateSettled = createEvent<boolean>();\n    sample({\n        clock: modalActiveStateSettled,\n        target: $isModalOpened,\n    });\n\n    return {\n        $currentReview,\n        currentReviewSettled,\n        $isCarouselActive,\n        carouselActiveStateSettled,\n        $isModalOpened,\n        modalActiveStateSettled,\n    };\n});\n",
-      "start": 1750239308705,
-      "end": 1750239308714,
+      "start": 1750271785213,
+      "end": 1750271785221,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createEvent, createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nexport const PeopleTalkModel = _effector$factory({\n    sid: \"ylhvh23\",\n    fn: ()=>atom(()=>{\n            const $currentReview = createStore(null, {\n                sid: \"6728drwq\"\n            });\n            const currentReviewSettled = createEvent({\n                sid: \"j7wx4u9\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: currentReviewSettled,\n                        fn: (review)=>({\n                                ...review,\n                                created_at: review.created_at.includes('.') ? review.created_at : new Date(review.created_at).toLocaleDateString()\n                            }),\n                        target: $currentReview\n                    }\n                ],\n                or: {\n                    sid: \"2acqloeg\"\n                }\n            });\n            const $isCarouselActive = createStore(true, {\n                sid: \"4tn58v5m\"\n            });\n            const carouselActiveStateSettled = createEvent({\n                sid: \"7zs08xsq\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: carouselActiveStateSettled,\n                        target: $isCarouselActive\n                    }\n                ],\n                or: {\n                    sid: \"b4wmhhz\"\n                }\n            });\n            const $isModalOpened = createStore(false, {\n                sid: \"5go40b2o\"\n            });\n            const modalActiveStateSettled = createEvent({\n                sid: \"8v1wn9p0\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: modalActiveStateSettled,\n                        target: $isModalOpened\n                    }\n                ],\n                or: {\n                    sid: \"1cb1v\"\n                }\n            });\n            return {\n                $currentReview,\n                currentReviewSettled,\n                $isCarouselActive,\n                carouselActiveStateSettled,\n                $isModalOpened,\n                modalActiveStateSettled\n            };\n        })\n});\n",
-      "start": 1750239308714,
-      "end": 1750239308722,
+      "start": 1750271785221,
+      "end": 1750271785223,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/PeopleTalk/model.ts\"],\"sourcesContent\":[\"import { createEvent, createStore, sample } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport type { Review } from '@/entities/Review';\\n\\nexport const PeopleTalkModel = atom(() => {\\n    const $currentReview = createStore<null | Review>(null);\\n    const currentReviewSettled = createEvent<Review>();\\n    sample({\\n        clock: currentReviewSettled,\\n        fn: (review) => ({\\n            ...review,\\n            created_at: review.created_at.includes('.')\\n                ? review.created_at\\n                : new Date(review.created_at).toLocaleDateString(),\\n        }),\\n        target: $currentReview,\\n    });\\n\\n    const $isCarouselActive = createStore<boolean>(true);\\n    const carouselActiveStateSettled = createEvent<boolean>();\\n    sample({\\n        clock: carouselActiveStateSettled,\\n        target: $isCarouselActive,\\n    });\\n\\n    const $isModalOpened = createStore<boolean>(false);\\n    const modalActiveStateSettled = createEvent<boolean>();\\n    sample({\\n        clock: modalActiveStateSettled,\\n        target: $isModalOpened,\\n    });\\n\\n    return {\\n        $currentReview,\\n        currentReviewSettled,\\n        $isCarouselActive,\\n        carouselActiveStateSettled,\\n        $isModalOpened,\\n        modalActiveStateSettled,\\n    };\\n});\\n\"],\"names\":[\"createEvent\",\"createStore\",\"sample\",\"atom\",\"PeopleTalkModel\",\"$currentReview\",\"currentReviewSettled\",\"clock\",\"fn\",\"review\",\"created_at\",\"includes\",\"Date\",\"toLocaleDateString\",\"target\",\"$isCarouselActive\",\"carouselActiveStateSettled\",\"$isModalOpened\",\"modalActiveStateSettled\"],\"mappings\":\";AAAA,SAASA,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE5D,SAASC,IAAI,QAAQ,qBAAqB;AAI1C,OAAO,MAAMC;;YAAkBD,KAAK;YAChC,MAAME,iBAAiBJ,YAA2B;;;YAClD,MAAMK,uBAAuBN;;;YAC7BE;;oBAAO;wBACHK,OAAOD;wBACPE,IAAI,CAACC,SAAY,CAAA;gCACb,GAAGA,MAAM;gCACTC,YAAYD,OAAOC,UAAU,CAACC,QAAQ,CAAC,OACjCF,OAAOC,UAAU,GACjB,IAAIE,KAAKH,OAAOC,UAAU,EAAEG,kBAAkB;4BACxD,CAAA;wBACAC,QAAQT;oBACZ;;;;;;YAEA,MAAMU,oBAAoBd,YAAqB;;;YAC/C,MAAMe,6BAA6BhB;;;YACnCE;;oBAAO;wBACHK,OAAOS;wBACPF,QAAQC;oBACZ;;;;;;YAEA,MAAME,iBAAiBhB,YAAqB;;;YAC5C,MAAMiB,0BAA0BlB;;;YAChCE;;oBAAO;wBACHK,OAAOW;wBACPJ,QAAQG;oBACZ;;;;;;YAEA,OAAO;gBACHZ;gBACAC;gBACAS;gBACAC;gBACAC;gBACAC;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createEvent, createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nexport const PeopleTalkModel = _effector$factory({\n  sid: \"ylhvh23\",\n  fn: () => atom(() => {\n    const $currentReview = createStore(null, {\n      sid: \"6728drwq\"\n    });\n    const currentReviewSettled = createEvent({\n      sid: \"j7wx4u9\"\n    });\n    sample({\n      and: [\n        {\n          clock: currentReviewSettled,\n          fn: (review) => ({\n            ...review,\n            created_at: review.created_at.includes(\".\") ? review.created_at : new Date(review.created_at).toLocaleDateString()\n          }),\n          target: $currentReview\n        }\n      ],\n      or: {\n        sid: \"2acqloeg\"\n      }\n    });\n    const $isCarouselActive = createStore(true, {\n      sid: \"4tn58v5m\"\n    });\n    const carouselActiveStateSettled = createEvent({\n      sid: \"7zs08xsq\"\n    });\n    sample({\n      and: [\n        {\n          clock: carouselActiveStateSettled,\n          target: $isCarouselActive\n        }\n      ],\n      or: {\n        sid: \"b4wmhhz\"\n      }\n    });\n    const $isModalOpened = createStore(false, {\n      sid: \"5go40b2o\"\n    });\n    const modalActiveStateSettled = createEvent({\n      sid: \"8v1wn9p0\"\n    });\n    sample({\n      and: [\n        {\n          clock: modalActiveStateSettled,\n          target: $isModalOpened\n        }\n      ],\n      or: {\n        sid: \"1cb1v\"\n      }\n    });\n    return {\n      $currentReview,\n      currentReviewSettled,\n      $isCarouselActive,\n      carouselActiveStateSettled,\n      $isModalOpened,\n      modalActiveStateSettled\n    };\n  })\n});\n",
-      "start": 1750239308722,
-      "end": 1750239308809,
+      "start": 1750271785223,
+      "end": 1750271785341,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308809,
-      "end": 1750239308809,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308809,
-      "end": 1750239308810,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785341,
+      "end": 1750271785341,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/PeopleTalk/model.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createEvent, createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nexport const PeopleTalkModel = _effector$factory({\n  sid: \"ylhvh23\",\n  fn: () => atom(() => {\n    const $currentReview = createStore(null, {\n      sid: \"6728drwq\"\n    });\n    const currentReviewSettled = createEvent({\n      sid: \"j7wx4u9\"\n    });\n    sample({\n      and: [\n        {\n          clock: currentReviewSettled,\n          fn: (review) => ({\n            ...review,\n            created_at: review.created_at.includes(\".\") ? review.created_at : new Date(review.created_at).toLocaleDateString()\n          }),\n          target: $currentReview\n        }\n      ],\n      or: {\n        sid: \"2acqloeg\"\n      }\n    });\n    const $isCarouselActive = createStore(true, {\n      sid: \"4tn58v5m\"\n    });\n    const carouselActiveStateSettled = createEvent({\n      sid: \"7zs08xsq\"\n    });\n    sample({\n      and: [\n        {\n          clock: carouselActiveStateSettled,\n          target: $isCarouselActive\n        }\n      ],\n      or: {\n        sid: \"b4wmhhz\"\n      }\n    });\n    const $isModalOpened = createStore(false, {\n      sid: \"5go40b2o\"\n    });\n    const modalActiveStateSettled = createEvent({\n      sid: \"8v1wn9p0\"\n    });\n    sample({\n      and: [\n        {\n          clock: modalActiveStateSettled,\n          target: $isModalOpened\n        }\n      ],\n      or: {\n        sid: \"1cb1v\"\n      }\n    });\n    return {\n      $currentReview,\n      currentReviewSettled,\n      $isCarouselActive,\n      carouselActiveStateSettled,\n      $isModalOpened,\n      modalActiveStateSettled\n    };\n  })\n});\n",
-      "start": 1750239308810,
-      "end": 1750239308810,
+      "start": 1750271785341,
+      "end": 1750271785341,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

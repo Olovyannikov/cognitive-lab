@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Blockquote, Divider, Image, List, Stack, Text, Title } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport type { BlogPost } from '../../types';\n\nimport s from './Post.module.css';\n\ninterface PostProps {\n    post: BlogPost;\n    bannerSlot?: ReactNode;\n}\n\nexport const Post = ({ post, bannerSlot }: PostProps) => {\n    const { isMobile } = usePageContext();\n\n    return (\n        <Stack align='flex-start'>\n            <Image className={s.image} src={post.image} alt='post' />\n            <InnerContainer style={{ overflow: 'hidden' }} w='100%'>\n                <Title mb='md'>{post.title}</Title>\n                <Markdown\n                    options={{\n                        overrides: {\n                            h1: (props) => (\n                                <Title mb={16} order={1}>\n                                    {props.children}\n                                </Title>\n                            ),\n                            h2: (props) => (\n                                <Title mb={16} order={2}>\n                                    {props.children}\n                                </Title>\n                            ),\n                            h3: (props) => (\n                                <Title mb={16} order={3}>\n                                    {props.children}\n                                </Title>\n                            ),\n                            h4: (props) => (\n                                <Title mb={16} order={4}>\n                                    {props.children}\n                                </Title>\n                            ),\n                            h5: (props) => (\n                                <Title mb={16} order={5}>\n                                    {props.children}\n                                </Title>\n                            ),\n                            ol: (props) => (\n                                <List mb={16} type='ordered'>\n                                    {props.children}\n                                </List>\n                            ),\n                            ul: (props) => <List mb={16}>{props.children}</List>,\n                            li: (props) => <List.Item fz={isMobile ? 18 : 22}>{props.children}</List.Item>,\n                            p: (props) => (\n                                <Text className={s.text} mb={16}>\n                                    {props.children}\n                                </Text>\n                            ),\n                            hr: () => <Divider />,\n                            blockquote: (props) => (\n                                <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\n                                    {props.children}\n                                </Blockquote>\n                            ),\n                        },\n                    }}\n                >\n                    {post.body.data}\n                </Markdown>\n            </InnerContainer>\n            {bannerSlot}\n        </Stack>\n    );\n};\n",
-      "start": 1750239308334,
-      "end": 1750239308361,
+      "start": 1750271784898,
+      "end": 1750271784931,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Blockquote, Divider, Image, List, Stack, Text, Title } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport s from './Post.module.css';\nexport const Post = ({ post, bannerSlot })=>{\n    const { isMobile } = usePageContext();\n    return /*#__PURE__*/ _jsxs(Stack, {\n        align: \"flex-start\",\n        children: [\n            /*#__PURE__*/ _jsx(Image, {\n                className: s.image,\n                src: post.image,\n                alt: \"post\"\n            }),\n            /*#__PURE__*/ _jsxs(InnerContainer, {\n                style: {\n                    overflow: 'hidden'\n                },\n                w: \"100%\",\n                children: [\n                    /*#__PURE__*/ _jsx(Title, {\n                        mb: \"md\",\n                        children: post.title\n                    }),\n                    /*#__PURE__*/ _jsx(Markdown, {\n                        options: {\n                            overrides: {\n                                h1: (props)=>/*#__PURE__*/ _jsx(Title, {\n                                        mb: 16,\n                                        order: 1,\n                                        children: props.children\n                                    }),\n                                h2: (props)=>/*#__PURE__*/ _jsx(Title, {\n                                        mb: 16,\n                                        order: 2,\n                                        children: props.children\n                                    }),\n                                h3: (props)=>/*#__PURE__*/ _jsx(Title, {\n                                        mb: 16,\n                                        order: 3,\n                                        children: props.children\n                                    }),\n                                h4: (props)=>/*#__PURE__*/ _jsx(Title, {\n                                        mb: 16,\n                                        order: 4,\n                                        children: props.children\n                                    }),\n                                h5: (props)=>/*#__PURE__*/ _jsx(Title, {\n                                        mb: 16,\n                                        order: 5,\n                                        children: props.children\n                                    }),\n                                ol: (props)=>/*#__PURE__*/ _jsx(List, {\n                                        mb: 16,\n                                        type: \"ordered\",\n                                        children: props.children\n                                    }),\n                                ul: (props)=>/*#__PURE__*/ _jsx(List, {\n                                        mb: 16,\n                                        children: props.children\n                                    }),\n                                li: (props)=>/*#__PURE__*/ _jsx(List.Item, {\n                                        fz: isMobile ? 18 : 22,\n                                        children: props.children\n                                    }),\n                                p: (props)=>/*#__PURE__*/ _jsx(Text, {\n                                        className: s.text,\n                                        mb: 16,\n                                        children: props.children\n                                    }),\n                                hr: ()=>/*#__PURE__*/ _jsx(Divider, {}),\n                                blockquote: (props)=>/*#__PURE__*/ _jsx(Blockquote, {\n                                        mb: \"md\",\n                                        py: \"sm\",\n                                        px: \"md\",\n                                        color: `violet.9`,\n                                        bg: \"transparent\",\n                                        icon: null,\n                                        children: props.children\n                                    })\n                            }\n                        },\n                        children: post.body.data\n                    })\n                ]\n            }),\n            bannerSlot\n        ]\n    });\n};\n",
-      "start": 1750239308361,
-      "end": 1750239308363,
+      "start": 1750271784931,
+      "end": 1750271784935,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Blog/ui/Post/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Blockquote, Divider, Image, List, Stack, Text, Title } from '@mantine/core';\\nimport Markdown from 'markdown-to-jsx';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { InnerContainer } from '@/shared/ui';\\n\\nimport type { BlogPost } from '../../types';\\n\\nimport s from './Post.module.css';\\n\\ninterface PostProps {\\n    post: BlogPost;\\n    bannerSlot?: ReactNode;\\n}\\n\\nexport const Post = ({ post, bannerSlot }: PostProps) => {\\n    const { isMobile } = usePageContext();\\n\\n    return (\\n        <Stack align='flex-start'>\\n            <Image className={s.image} src={post.image} alt='post' />\\n            <InnerContainer style={{ overflow: 'hidden' }} w='100%'>\\n                <Title mb='md'>{post.title}</Title>\\n                <Markdown\\n                    options={{\\n                        overrides: {\\n                            h1: (props) => (\\n                                <Title mb={16} order={1}>\\n                                    {props.children}\\n                                </Title>\\n                            ),\\n                            h2: (props) => (\\n                                <Title mb={16} order={2}>\\n                                    {props.children}\\n                                </Title>\\n                            ),\\n                            h3: (props) => (\\n                                <Title mb={16} order={3}>\\n                                    {props.children}\\n                                </Title>\\n                            ),\\n                            h4: (props) => (\\n                                <Title mb={16} order={4}>\\n                                    {props.children}\\n                                </Title>\\n                            ),\\n                            h5: (props) => (\\n                                <Title mb={16} order={5}>\\n                                    {props.children}\\n                                </Title>\\n                            ),\\n                            ol: (props) => (\\n                                <List mb={16} type='ordered'>\\n                                    {props.children}\\n                                </List>\\n                            ),\\n                            ul: (props) => <List mb={16}>{props.children}</List>,\\n                            li: (props) => <List.Item fz={isMobile ? 18 : 22}>{props.children}</List.Item>,\\n                            p: (props) => (\\n                                <Text className={s.text} mb={16}>\\n                                    {props.children}\\n                                </Text>\\n                            ),\\n                            hr: () => <Divider />,\\n                            blockquote: (props) => (\\n                                <Blockquote mb='md' py='sm' px='md' color={`violet.9`} bg='transparent' icon={null}>\\n                                    {props.children}\\n                                </Blockquote>\\n                            ),\\n                        },\\n                    }}\\n                >\\n                    {post.body.data}\\n                </Markdown>\\n            </InnerContainer>\\n            {bannerSlot}\\n        </Stack>\\n    );\\n};\\n\"],\"names\":[\"Blockquote\",\"Divider\",\"Image\",\"List\",\"Stack\",\"Text\",\"Title\",\"Markdown\",\"usePageContext\",\"InnerContainer\",\"s\",\"Post\",\"post\",\"bannerSlot\",\"isMobile\",\"align\",\"className\",\"image\",\"src\",\"alt\",\"style\",\"overflow\",\"w\",\"mb\",\"title\",\"options\",\"overrides\",\"h1\",\"props\",\"order\",\"children\",\"h2\",\"h3\",\"h4\",\"h5\",\"ol\",\"type\",\"ul\",\"li\",\"Item\",\"fz\",\"p\",\"text\",\"hr\",\"blockquote\",\"py\",\"px\",\"color\",\"bg\",\"icon\",\"body\",\"data\"],\"mappings\":\";AACA,SAASA,UAAU,EAAEC,OAAO,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AACrF,OAAOC,cAAc,kBAAkB;AACvC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,cAAc,QAAQ,cAAc;AAI7C,OAAOC,OAAO,oBAAoB;AAOlC,OAAO,MAAMC,OAAO,CAAC,EAAEC,IAAI,EAAEC,UAAU,EAAa;IAChD,MAAM,EAAEC,QAAQ,EAAE,GAAGN;IAErB,qBACI,MAACJ;QAAMW,OAAM;;0BACT,KAACb;gBAAMc,WAAWN,EAAEO,KAAK;gBAAEC,KAAKN,KAAKK,KAAK;gBAAEE,KAAI;;0BAChD,MAACV;gBAAeW,OAAO;oBAAEC,UAAU;gBAAS;gBAAGC,GAAE;;kCAC7C,KAAChB;wBAAMiB,IAAG;kCAAMX,KAAKY,KAAK;;kCAC1B,KAACjB;wBACGkB,SAAS;4BACLC,WAAW;gCACPC,IAAI,CAACC,sBACD,KAACtB;wCAAMiB,IAAI;wCAAIM,OAAO;kDACjBD,MAAME,QAAQ;;gCAGvBC,IAAI,CAACH,sBACD,KAACtB;wCAAMiB,IAAI;wCAAIM,OAAO;kDACjBD,MAAME,QAAQ;;gCAGvBE,IAAI,CAACJ,sBACD,KAACtB;wCAAMiB,IAAI;wCAAIM,OAAO;kDACjBD,MAAME,QAAQ;;gCAGvBG,IAAI,CAACL,sBACD,KAACtB;wCAAMiB,IAAI;wCAAIM,OAAO;kDACjBD,MAAME,QAAQ;;gCAGvBI,IAAI,CAACN,sBACD,KAACtB;wCAAMiB,IAAI;wCAAIM,OAAO;kDACjBD,MAAME,QAAQ;;gCAGvBK,IAAI,CAACP,sBACD,KAACzB;wCAAKoB,IAAI;wCAAIa,MAAK;kDACdR,MAAME,QAAQ;;gCAGvBO,IAAI,CAACT,sBAAU,KAACzB;wCAAKoB,IAAI;kDAAKK,MAAME,QAAQ;;gCAC5CQ,IAAI,CAACV,sBAAU,KAACzB,KAAKoC,IAAI;wCAACC,IAAI1B,WAAW,KAAK;kDAAKc,MAAME,QAAQ;;gCACjEW,GAAG,CAACb,sBACA,KAACvB;wCAAKW,WAAWN,EAAEgC,IAAI;wCAAEnB,IAAI;kDACxBK,MAAME,QAAQ;;gCAGvBa,IAAI,kBAAM,KAAC1C;gCACX2C,YAAY,CAAChB,sBACT,KAAC5B;wCAAWuB,IAAG;wCAAKsB,IAAG;wCAAKC,IAAG;wCAAKC,OAAO,CAAC,QAAQ,CAAC;wCAAEC,IAAG;wCAAcC,MAAM;kDACzErB,MAAME,QAAQ;;4BAG3B;wBACJ;kCAEClB,KAAKsC,IAAI,CAACC,IAAI;;;;YAGtBtC;;;AAGb,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Blockquote, Divider, Image, List, Stack, Text, Title } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport s from \"./Post.module.css\";\nexport const Post = ({ post, bannerSlot }) => {\n  const { isMobile } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Stack, {\n    align: \"flex-start\",\n    children: [\n      /* @__PURE__ */ _jsx(Image, {\n        className: s.image,\n        src: post.image,\n        alt: \"post\"\n      }),\n      /* @__PURE__ */ _jsxs(InnerContainer, {\n        style: {\n          overflow: \"hidden\"\n        },\n        w: \"100%\",\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            mb: \"md\",\n            children: post.title\n          }),\n          /* @__PURE__ */ _jsx(Markdown, {\n            options: {\n              overrides: {\n                h1: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 1,\n                  children: props.children\n                }),\n                h2: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 2,\n                  children: props.children\n                }),\n                h3: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 3,\n                  children: props.children\n                }),\n                h4: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 4,\n                  children: props.children\n                }),\n                h5: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 5,\n                  children: props.children\n                }),\n                ol: (props) => /* @__PURE__ */ _jsx(List, {\n                  mb: 16,\n                  type: \"ordered\",\n                  children: props.children\n                }),\n                ul: (props) => /* @__PURE__ */ _jsx(List, {\n                  mb: 16,\n                  children: props.children\n                }),\n                li: (props) => /* @__PURE__ */ _jsx(List.Item, {\n                  fz: isMobile ? 18 : 22,\n                  children: props.children\n                }),\n                p: (props) => /* @__PURE__ */ _jsx(Text, {\n                  className: s.text,\n                  mb: 16,\n                  children: props.children\n                }),\n                hr: () => /* @__PURE__ */ _jsx(Divider, {}),\n                blockquote: (props) => /* @__PURE__ */ _jsx(Blockquote, {\n                  mb: \"md\",\n                  py: \"sm\",\n                  px: \"md\",\n                  color: `violet.9`,\n                  bg: \"transparent\",\n                  icon: null,\n                  children: props.children\n                })\n              }\n            },\n            children: post.body.data\n          })\n        ]\n      }),\n      bannerSlot\n    ]\n  });\n};\n",
-      "start": 1750239308363,
-      "end": 1750239308501,
+      "start": 1750271784935,
+      "end": 1750271785026,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785026,
+      "end": 1750271785026,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785026,
+      "end": 1750271785027,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785027,
+      "end": 1750271785027,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785027,
+      "end": 1750271785027,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785027,
+      "end": 1750271785027,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785027,
+      "end": 1750271785027,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Blog/ui/Post/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Blockquote, Divider, Image, List, Stack, Text, Title } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport s from \"./Post.module.css\";\nexport const Post = ({ post, bannerSlot }) => {\n  const { isMobile } = usePageContext();\n  return /* @__PURE__ */ _jsxs(Stack, {\n    align: \"flex-start\",\n    children: [\n      /* @__PURE__ */ _jsx(Image, {\n        className: s.image,\n        src: post.image,\n        alt: \"post\"\n      }),\n      /* @__PURE__ */ _jsxs(InnerContainer, {\n        style: {\n          overflow: \"hidden\"\n        },\n        w: \"100%\",\n        children: [\n          /* @__PURE__ */ _jsx(Title, {\n            mb: \"md\",\n            children: post.title\n          }),\n          /* @__PURE__ */ _jsx(Markdown, {\n            options: {\n              overrides: {\n                h1: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 1,\n                  children: props.children\n                }),\n                h2: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 2,\n                  children: props.children\n                }),\n                h3: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 3,\n                  children: props.children\n                }),\n                h4: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 4,\n                  children: props.children\n                }),\n                h5: (props) => /* @__PURE__ */ _jsx(Title, {\n                  mb: 16,\n                  order: 5,\n                  children: props.children\n                }),\n                ol: (props) => /* @__PURE__ */ _jsx(List, {\n                  mb: 16,\n                  type: \"ordered\",\n                  children: props.children\n                }),\n                ul: (props) => /* @__PURE__ */ _jsx(List, {\n                  mb: 16,\n                  children: props.children\n                }),\n                li: (props) => /* @__PURE__ */ _jsx(List.Item, {\n                  fz: isMobile ? 18 : 22,\n                  children: props.children\n                }),\n                p: (props) => /* @__PURE__ */ _jsx(Text, {\n                  className: s.text,\n                  mb: 16,\n                  children: props.children\n                }),\n                hr: () => /* @__PURE__ */ _jsx(Divider, {}),\n                blockquote: (props) => /* @__PURE__ */ _jsx(Blockquote, {\n                  mb: \"md\",\n                  py: \"sm\",\n                  px: \"md\",\n                  color: `violet.9`,\n                  bg: \"transparent\",\n                  icon: null,\n                  children: props.children\n                })\n              }\n            },\n            children: post.body.data\n          })\n        ]\n      }),\n      bannerSlot\n    ]\n  });\n};\n",
-      "start": 1750239308501,
-      "end": 1750239308501,
+      "start": 1750271785027,
+      "end": 1750271785027,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

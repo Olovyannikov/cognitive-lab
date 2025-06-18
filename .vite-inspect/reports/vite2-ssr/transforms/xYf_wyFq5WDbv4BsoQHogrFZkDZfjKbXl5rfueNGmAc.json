@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Menu, Stack } from '@mantine/core';\nimport { ArrowLeft } from '@phosphor-icons/react/dist/ssr';\nimport { useList, useUnit } from 'effector-react';\n\nimport { ROUTES } from '@/shared/config';\nimport { useIsMedium } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\nimport { MenuItem } from '../MenuItem';\n\nimport s from './Types.module.css';\n\nexport const Types = () => {\n    const isDesktop = useIsMedium();\n    const [isSubmenuOpen, onCloseSubmenu, onOpenSubmenu, onCloseAllMenus] = useUnit([\n        RootModel.$isSubmenuOpened,\n        RootModel.closeSubmenu,\n        RootModel.openSubmenu,\n        RootModel.allMenusClosed,\n    ]);\n\n    const list = useList(getPersonalityTypesWithCategoriesQuery.$data, (item) => (\n        <MenuItem {...item} onClose={() => onCloseAllMenus(false)} />\n    ));\n\n    return (\n        <Menu\n            classNames={s}\n            trapFocus={true}\n            closeOnEscape={true}\n            position='bottom-end'\n            opened={isSubmenuOpen}\n            closeOnItemClick={false}\n            closeOnClickOutside={false}\n            width={isDesktop ? 1084 : '100%'}\n            trigger={isDesktop ? 'hover' : 'click'}\n            onOpen={() => isDesktop && onOpenSubmenu(true)}\n            onClose={() => onCloseSubmenu(false)}\n            withinPortal={false}\n            openDelay={300}\n            disabled\n        >\n            <Menu.Target>\n                <Link href={ROUTES.TYPES} onClick={() => onCloseAllMenus(false)}>\n                    Типы личности\n                </Link>\n            </Menu.Target>\n            <Menu.Dropdown style={{ zIndex: 1200 }}>\n                <Button\n                    mb='lg'\n                    fz={20}\n                    size='md'\n                    fullWidth\n                    c='dark.7'\n                    justify='start'\n                    hiddenFrom='sm'\n                    variant='transparent'\n                    leftSection={<ArrowLeft size={24} />}\n                    onClick={() => onCloseSubmenu(false)}\n                >\n                    Назад\n                </Button>\n                <Stack pos='relative' gap={16}>\n                    {list}\n                </Stack>\n            </Menu.Dropdown>\n        </Menu>\n    );\n};\n",
-      "start": 1750239308811,
-      "end": 1750239308820,
+      "start": 1750271785346,
+      "end": 1750271785351,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Menu, Stack } from '@mantine/core';\nimport { ArrowLeft } from '@phosphor-icons/react/dist/ssr';\nimport { useList, useUnit } from 'effector-react';\nimport { ROUTES } from '@/shared/config';\nimport { useIsMedium } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nimport { MenuItem } from '../MenuItem';\nimport s from './Types.module.css';\nexport const Types = ()=>{\n    const isDesktop = useIsMedium();\n    const [isSubmenuOpen, onCloseSubmenu, onOpenSubmenu, onCloseAllMenus] = useUnit([\n        RootModel.$isSubmenuOpened,\n        RootModel.closeSubmenu,\n        RootModel.openSubmenu,\n        RootModel.allMenusClosed\n    ]);\n    const list = useList(getPersonalityTypesWithCategoriesQuery.$data, (item)=>/*#__PURE__*/ _jsx(MenuItem, {\n            ...item,\n            onClose: ()=>onCloseAllMenus(false)\n        }));\n    return /*#__PURE__*/ _jsxs(Menu, {\n        classNames: s,\n        trapFocus: true,\n        closeOnEscape: true,\n        position: \"bottom-end\",\n        opened: isSubmenuOpen,\n        closeOnItemClick: false,\n        closeOnClickOutside: false,\n        width: isDesktop ? 1084 : '100%',\n        trigger: isDesktop ? 'hover' : 'click',\n        onOpen: ()=>isDesktop && onOpenSubmenu(true),\n        onClose: ()=>onCloseSubmenu(false),\n        withinPortal: false,\n        openDelay: 300,\n        disabled: true,\n        children: [\n            /*#__PURE__*/ _jsx(Menu.Target, {\n                children: /*#__PURE__*/ _jsx(Link, {\n                    href: ROUTES.TYPES,\n                    onClick: ()=>onCloseAllMenus(false),\n                    children: \"Типы личности\"\n                })\n            }),\n            /*#__PURE__*/ _jsxs(Menu.Dropdown, {\n                style: {\n                    zIndex: 1200\n                },\n                children: [\n                    /*#__PURE__*/ _jsx(Button, {\n                        mb: \"lg\",\n                        fz: 20,\n                        size: \"md\",\n                        fullWidth: true,\n                        c: \"dark.7\",\n                        justify: \"start\",\n                        hiddenFrom: \"sm\",\n                        variant: \"transparent\",\n                        leftSection: /*#__PURE__*/ _jsx(ArrowLeft, {\n                            size: 24\n                        }),\n                        onClick: ()=>onCloseSubmenu(false),\n                        children: \"Назад\"\n                    }),\n                    /*#__PURE__*/ _jsx(Stack, {\n                        pos: \"relative\",\n                        gap: 16,\n                        children: list\n                    })\n                ]\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308820,
-      "end": 1750239308823,
+      "start": 1750271785351,
+      "end": 1750271785354,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Types/index.tsx\"],\"sourcesContent\":[\"import { Button, Menu, Stack } from '@mantine/core';\\nimport { ArrowLeft } from '@phosphor-icons/react/dist/ssr';\\nimport { useList, useUnit } from 'effector-react';\\n\\nimport { ROUTES } from '@/shared/config';\\nimport { useIsMedium } from '@/shared/lib';\\n\\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Link } from '../../Link';\\nimport { MenuItem } from '../MenuItem';\\n\\nimport s from './Types.module.css';\\n\\nexport const Types = () => {\\n    const isDesktop = useIsMedium();\\n    const [isSubmenuOpen, onCloseSubmenu, onOpenSubmenu, onCloseAllMenus] = useUnit([\\n        RootModel.$isSubmenuOpened,\\n        RootModel.closeSubmenu,\\n        RootModel.openSubmenu,\\n        RootModel.allMenusClosed,\\n    ]);\\n\\n    const list = useList(getPersonalityTypesWithCategoriesQuery.$data, (item) => (\\n        <MenuItem {...item} onClose={() => onCloseAllMenus(false)} />\\n    ));\\n\\n    return (\\n        <Menu\\n            classNames={s}\\n            trapFocus={true}\\n            closeOnEscape={true}\\n            position='bottom-end'\\n            opened={isSubmenuOpen}\\n            closeOnItemClick={false}\\n            closeOnClickOutside={false}\\n            width={isDesktop ? 1084 : '100%'}\\n            trigger={isDesktop ? 'hover' : 'click'}\\n            onOpen={() => isDesktop && onOpenSubmenu(true)}\\n            onClose={() => onCloseSubmenu(false)}\\n            withinPortal={false}\\n            openDelay={300}\\n            disabled\\n        >\\n            <Menu.Target>\\n                <Link href={ROUTES.TYPES} onClick={() => onCloseAllMenus(false)}>\\n                    Типы личности\\n                </Link>\\n            </Menu.Target>\\n            <Menu.Dropdown style={{ zIndex: 1200 }}>\\n                <Button\\n                    mb='lg'\\n                    fz={20}\\n                    size='md'\\n                    fullWidth\\n                    c='dark.7'\\n                    justify='start'\\n                    hiddenFrom='sm'\\n                    variant='transparent'\\n                    leftSection={<ArrowLeft size={24} />}\\n                    onClick={() => onCloseSubmenu(false)}\\n                >\\n                    Назад\\n                </Button>\\n                <Stack pos='relative' gap={16}>\\n                    {list}\\n                </Stack>\\n            </Menu.Dropdown>\\n        </Menu>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Menu\",\"Stack\",\"ArrowLeft\",\"useList\",\"useUnit\",\"ROUTES\",\"useIsMedium\",\"getPersonalityTypesWithCategoriesQuery\",\"RootModel\",\"Link\",\"MenuItem\",\"s\",\"Types\",\"isDesktop\",\"isSubmenuOpen\",\"onCloseSubmenu\",\"onOpenSubmenu\",\"onCloseAllMenus\",\"$isSubmenuOpened\",\"closeSubmenu\",\"openSubmenu\",\"allMenusClosed\",\"list\",\"$data\",\"item\",\"onClose\",\"classNames\",\"trapFocus\",\"closeOnEscape\",\"position\",\"opened\",\"closeOnItemClick\",\"closeOnClickOutside\",\"width\",\"trigger\",\"onOpen\",\"withinPortal\",\"openDelay\",\"disabled\",\"Target\",\"href\",\"TYPES\",\"onClick\",\"Dropdown\",\"style\",\"zIndex\",\"mb\",\"fz\",\"size\",\"fullWidth\",\"c\",\"justify\",\"hiddenFrom\",\"variant\",\"leftSection\",\"pos\",\"gap\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AACpD,SAASC,SAAS,QAAQ,iCAAiC;AAC3D,SAASC,OAAO,EAAEC,OAAO,QAAQ,iBAAiB;AAElD,SAASC,MAAM,QAAQ,kBAAkB;AACzC,SAASC,WAAW,QAAQ,eAAe;AAE3C,SAASC,sCAAsC,QAAQ,yBAAyB;AAChF,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,IAAI,QAAQ,aAAa;AAClC,SAASC,QAAQ,QAAQ,cAAc;AAEvC,OAAOC,OAAO,qBAAqB;AAEnC,OAAO,MAAMC,QAAQ;IACjB,MAAMC,YAAYP;IAClB,MAAM,CAACQ,eAAeC,gBAAgBC,eAAeC,gBAAgB,GAAGb,QAAQ;QAC5EI,UAAUU,gBAAgB;QAC1BV,UAAUW,YAAY;QACtBX,UAAUY,WAAW;QACrBZ,UAAUa,cAAc;KAC3B;IAED,MAAMC,OAAOnB,QAAQI,uCAAuCgB,KAAK,EAAE,CAACC,qBAChE,KAACd;YAAU,GAAGc,IAAI;YAAEC,SAAS,IAAMR,gBAAgB;;IAGvD,qBACI,MAACjB;QACG0B,YAAYf;QACZgB,WAAW;QACXC,eAAe;QACfC,UAAS;QACTC,QAAQhB;QACRiB,kBAAkB;QAClBC,qBAAqB;QACrBC,OAAOpB,YAAY,OAAO;QAC1BqB,SAASrB,YAAY,UAAU;QAC/BsB,QAAQ,IAAMtB,aAAaG,cAAc;QACzCS,SAAS,IAAMV,eAAe;QAC9BqB,cAAc;QACdC,WAAW;QACXC,QAAQ;;0BAER,KAACtC,KAAKuC,MAAM;0BACR,cAAA,KAAC9B;oBAAK+B,MAAMnC,OAAOoC,KAAK;oBAAEC,SAAS,IAAMzB,gBAAgB;8BAAQ;;;0BAIrE,MAACjB,KAAK2C,QAAQ;gBAACC,OAAO;oBAAEC,QAAQ;gBAAK;;kCACjC,KAAC9C;wBACG+C,IAAG;wBACHC,IAAI;wBACJC,MAAK;wBACLC,SAAS;wBACTC,GAAE;wBACFC,SAAQ;wBACRC,YAAW;wBACXC,SAAQ;wBACRC,2BAAa,KAACpD;4BAAU8C,MAAM;;wBAC9BN,SAAS,IAAM3B,eAAe;kCACjC;;kCAGD,KAACd;wBAAMsD,KAAI;wBAAWC,KAAK;kCACtBlC;;;;;;AAKrB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Menu, Stack } from \"@mantine/core\";\nimport { ArrowLeft } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList, useUnit } from \"effector-react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsMedium } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nimport { MenuItem } from \"../MenuItem\";\nimport s from \"./Types.module.css\";\nexport const Types = () => {\n  const isDesktop = useIsMedium();\n  const [isSubmenuOpen, onCloseSubmenu, onOpenSubmenu, onCloseAllMenus] = useUnit([\n    RootModel.$isSubmenuOpened,\n    RootModel.closeSubmenu,\n    RootModel.openSubmenu,\n    RootModel.allMenusClosed\n  ]);\n  const list = useList(getPersonalityTypesWithCategoriesQuery.$data, (item) => /* @__PURE__ */ _jsx(MenuItem, {\n    ...item,\n    onClose: () => onCloseAllMenus(false)\n  }));\n  return /* @__PURE__ */ _jsxs(Menu, {\n    classNames: s,\n    trapFocus: true,\n    closeOnEscape: true,\n    position: \"bottom-end\",\n    opened: isSubmenuOpen,\n    closeOnItemClick: false,\n    closeOnClickOutside: false,\n    width: isDesktop ? 1084 : \"100%\",\n    trigger: isDesktop ? \"hover\" : \"click\",\n    onOpen: () => isDesktop && onOpenSubmenu(true),\n    onClose: () => onCloseSubmenu(false),\n    withinPortal: false,\n    openDelay: 300,\n    disabled: true,\n    children: [\n      /* @__PURE__ */ _jsx(Menu.Target, {\n        children: /* @__PURE__ */ _jsx(Link, {\n          href: ROUTES.TYPES,\n          onClick: () => onCloseAllMenus(false),\n          children: \"Типы личности\"\n        })\n      }),\n      /* @__PURE__ */ _jsxs(Menu.Dropdown, {\n        style: {\n          zIndex: 1200\n        },\n        children: [\n          /* @__PURE__ */ _jsx(Button, {\n            mb: \"lg\",\n            fz: 20,\n            size: \"md\",\n            fullWidth: true,\n            c: \"dark.7\",\n            justify: \"start\",\n            hiddenFrom: \"sm\",\n            variant: \"transparent\",\n            leftSection: /* @__PURE__ */ _jsx(ArrowLeft, {\n              size: 24\n            }),\n            onClick: () => onCloseSubmenu(false),\n            children: \"Назад\"\n          }),\n          /* @__PURE__ */ _jsx(Stack, {\n            pos: \"relative\",\n            gap: 16,\n            children: list\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308823,
-      "end": 1750239308829,
+      "start": 1750271785354,
+      "end": 1750271785371,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785371,
+      "end": 1750271785371,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Types/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Menu, Stack } from \"@mantine/core\";\nimport { ArrowLeft } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList, useUnit } from \"effector-react\";\nimport { ROUTES } from \"@/shared/config\";\nimport { useIsMedium } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nimport { MenuItem } from \"../MenuItem\";\nimport s from \"./Types.module.css\";\nexport const Types = () => {\n  const isDesktop = useIsMedium();\n  const [isSubmenuOpen, onCloseSubmenu, onOpenSubmenu, onCloseAllMenus] = useUnit([\n    RootModel.$isSubmenuOpened,\n    RootModel.closeSubmenu,\n    RootModel.openSubmenu,\n    RootModel.allMenusClosed\n  ]);\n  const list = useList(getPersonalityTypesWithCategoriesQuery.$data, (item) => /* @__PURE__ */ _jsx(MenuItem, {\n    ...item,\n    onClose: () => onCloseAllMenus(false)\n  }));\n  return /* @__PURE__ */ _jsxs(Menu, {\n    classNames: s,\n    trapFocus: true,\n    closeOnEscape: true,\n    position: \"bottom-end\",\n    opened: isSubmenuOpen,\n    closeOnItemClick: false,\n    closeOnClickOutside: false,\n    width: isDesktop ? 1084 : \"100%\",\n    trigger: isDesktop ? \"hover\" : \"click\",\n    onOpen: () => isDesktop && onOpenSubmenu(true),\n    onClose: () => onCloseSubmenu(false),\n    withinPortal: false,\n    openDelay: 300,\n    disabled: true,\n    children: [\n      /* @__PURE__ */ _jsx(Menu.Target, {\n        children: /* @__PURE__ */ _jsx(Link, {\n          href: ROUTES.TYPES,\n          onClick: () => onCloseAllMenus(false),\n          children: \"Типы личности\"\n        })\n      }),\n      /* @__PURE__ */ _jsxs(Menu.Dropdown, {\n        style: {\n          zIndex: 1200\n        },\n        children: [\n          /* @__PURE__ */ _jsx(Button, {\n            mb: \"lg\",\n            fz: 20,\n            size: \"md\",\n            fullWidth: true,\n            c: \"dark.7\",\n            justify: \"start\",\n            hiddenFrom: \"sm\",\n            variant: \"transparent\",\n            leftSection: /* @__PURE__ */ _jsx(ArrowLeft, {\n              size: 24\n            }),\n            onClick: () => onCloseSubmenu(false),\n            children: \"Назад\"\n          }),\n          /* @__PURE__ */ _jsx(Stack, {\n            pos: \"relative\",\n            gap: 16,\n            children: list\n          })\n        ]\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308829,
-      "end": 1750239308829,
+      "start": 1750271785371,
+      "end": 1750271785371,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

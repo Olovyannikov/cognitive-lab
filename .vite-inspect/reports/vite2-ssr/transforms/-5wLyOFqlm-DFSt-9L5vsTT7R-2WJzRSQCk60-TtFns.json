@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation, createQuery } from '@farfetched/core';\nimport type { PageContextServer } from 'vike/types';\n\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\n\nexport const getReviewsQuery = createQuery({\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>((params) => ({\n        url: API.surveys.comments,\n        params: params ?? {},\n    })),\n});\n\nexport const createReviewMutation = createMutation({\n    effect: createInternalRequestFx<CreateReviewRequest, void>((body) => ({\n        url: API.surveys.comments,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n",
-      "start": 1750239308284,
-      "end": 1750239308303,
+      "start": 1750271784842,
+      "end": 1750271784858,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createMutation, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nexport const getReviewsQuery = _effector$factory({\n    sid: \"8pbh81cp\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx((params)=>({\n                    url: API.surveys.comments,\n                    params: params ?? {}\n                }))\n        })\n});\nexport const createReviewMutation = _effector$factory({\n    sid: \"479vqrgl\",\n    fn: ()=>createMutation({\n            effect: createInternalRequestFx((body)=>({\n                    url: API.surveys.comments,\n                    method: HTTP_METHODS.POST,\n                    body\n                }))\n        })\n});\n",
-      "start": 1750239308303,
-      "end": 1750239308306,
+      "start": 1750271784858,
+      "end": 1750271784863,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Review/api/index.ts\"],\"sourcesContent\":[\"import { createMutation, createQuery } from '@farfetched/core';\\nimport type { PageContextServer } from 'vike/types';\\n\\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\\n\\nimport type { CreateReviewRequest, ReviewRequest, ReviewResponse } from './dto';\\n\\nexport const getReviewsQuery = createQuery({\\n    effect: createCommonRequestFx<ReviewRequest | PageContextServer<void> | void, ReviewResponse>((params) => ({\\n        url: API.surveys.comments,\\n        params: params ?? {},\\n    })),\\n});\\n\\nexport const createReviewMutation = createMutation({\\n    effect: createInternalRequestFx<CreateReviewRequest, void>((body) => ({\\n        url: API.surveys.comments,\\n        method: HTTP_METHODS.POST,\\n        body,\\n    })),\\n});\\n\"],\"names\":[\"createMutation\",\"createQuery\",\"API\",\"createCommonRequestFx\",\"createInternalRequestFx\",\"HTTP_METHODS\",\"getReviewsQuery\",\"effect\",\"params\",\"url\",\"surveys\",\"comments\",\"createReviewMutation\",\"body\",\"method\",\"POST\"],\"mappings\":\";AAAA,SAASA,cAAc,EAAEC,WAAW,QAAQ,mBAAmB;AAG/D,SAASC,GAAG,EAAEC,qBAAqB,EAAEC,uBAAuB,EAAEC,YAAY,QAAQ,eAAe;AAIjG,OAAO,MAAMC;;YAAkBL,YAAY;YACvCM,QAAQJ,sBAAsF,CAACK,SAAY,CAAA;oBACvGC,KAAKP,IAAIQ,OAAO,CAACC,QAAQ;oBACzBH,QAAQA,UAAU,CAAC;gBACvB,CAAA;QACJ;GAAG;AAEH,OAAO,MAAMI;;YAAuBZ,eAAe;YAC/CO,QAAQH,wBAAmD,CAACS,OAAU,CAAA;oBAClEJ,KAAKP,IAAIQ,OAAO,CAACC,QAAQ;oBACzBG,QAAQT,aAAaU,IAAI;oBACzBF;gBACJ,CAAA;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getReviewsQuery = _effector$factory({\n  sid: \"8pbh81cp\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  })\n});\nexport const createReviewMutation = _effector$factory({\n  sid: \"479vqrgl\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  })\n});\n",
-      "start": 1750239308306,
-      "end": 1750239308361,
+      "start": 1750271784863,
+      "end": 1750271784940,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784940,
+      "end": 1750271784940,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784940,
+      "end": 1750271784940,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784940,
+      "end": 1750271784940,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784940,
+      "end": 1750271784940,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784941,
+      "end": 1750271784941,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308361,
-      "end": 1750239308361,
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Review/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getReviewsQuery = _effector$factory({\n  sid: \"8pbh81cp\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.surveys.comments,\n      params: params ?? {}\n    }))\n  })\n});\nexport const createReviewMutation = _effector$factory({\n  sid: \"479vqrgl\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.surveys.comments,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  })\n});\n",
-      "start": 1750239308361,
-      "end": 1750239308362,
+      "start": 1750271784941,
+      "end": 1750271784941,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

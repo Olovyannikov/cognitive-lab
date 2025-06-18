@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\nimport type { Scope, SerializedState } from 'effector';\nimport type { PageContextClient } from 'vike/types';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getScope } from './getScope';\n\nconst ScopeContext = createContext<Scope | undefined>(undefined);\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\n\nexport const ScopeProvider = ({ children }: PropsWithChildren) => {\n    const pageContext = usePageContext() as PageContextClient;\n    const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\n\n    const update = useCallback((values: SerializedState) => {\n        setScope(getScope(values));\n    }, []);\n\n    useEffect(() => {\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [pageContext]);\n\n    return (\n        <ScopeContext.Provider value={scope}>\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\n        </ScopeContext.Provider>\n    );\n};\n\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750239308242,
-      "end": 1750239308270,
+      "start": 1750271784817,
+      "end": 1750271784836,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from 'react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getScope } from './getScope';\nconst ScopeContext = /*#__PURE__*/ createContext(undefined);\nconst ScopeUpdateContext = /*#__PURE__*/ createContext(()=>{});\nexport const ScopeProvider = ({ children })=>{\n    const pageContext = usePageContext();\n    const [scope, setScope] = useState('scope' in pageContext ? pageContext.scope : getScope());\n    const update = useCallback((values)=>{\n        setScope(getScope(values));\n    }, []);\n    useEffect(()=>{\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [\n        pageContext\n    ]);\n    return /*#__PURE__*/ _jsx(ScopeContext.Provider, {\n        value: scope,\n        children: /*#__PURE__*/ _jsx(ScopeUpdateContext.Provider, {\n            value: update,\n            children: children\n        })\n    });\n};\nexport const useScope = ()=>useContext(ScopeContext);\n",
-      "start": 1750239308270,
-      "end": 1750239308276,
+      "start": 1750271784836,
+      "end": 1750271784841,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/ScopeProvider.tsx\"],\"sourcesContent\":[\"import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\\nimport type { Scope, SerializedState } from 'effector';\\nimport type { PageContextClient } from 'vike/types';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { getScope } from './getScope';\\n\\nconst ScopeContext = createContext<Scope | undefined>(undefined);\\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\\n\\nexport const ScopeProvider = ({ children }: PropsWithChildren) => {\\n    const pageContext = usePageContext() as PageContextClient;\\n    const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\\n\\n    const update = useCallback((values: SerializedState) => {\\n        setScope(getScope(values));\\n    }, []);\\n\\n    useEffect(() => {\\n        if (!pageContext.isHydration) {\\n            setScope(getScope());\\n        }\\n    }, [pageContext]);\\n\\n    return (\\n        <ScopeContext.Provider value={scope}>\\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\\n        </ScopeContext.Provider>\\n    );\\n};\\n\\nexport const useScope = () => useContext(ScopeContext);\\n\"],\"names\":[\"createContext\",\"useCallback\",\"useContext\",\"useEffect\",\"useState\",\"usePageContext\",\"getScope\",\"ScopeContext\",\"undefined\",\"ScopeUpdateContext\",\"ScopeProvider\",\"children\",\"pageContext\",\"scope\",\"setScope\",\"update\",\"values\",\"isHydration\",\"Provider\",\"value\",\"useScope\"],\"mappings\":\";AAAA,SAASA,aAAa,EAA0BC,WAAW,EAAEC,UAAU,EAAEC,SAAS,EAAEC,QAAQ,QAAQ,QAAQ;AAG5G,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,QAAQ,QAAQ,aAAa;AAEtC,MAAMC,6BAAeP,cAAiCQ;AACtD,MAAMC,mCAAqBT,cAAiD,KAAO;AAEnF,OAAO,MAAMU,gBAAgB,CAAC,EAAEC,QAAQ,EAAqB;IACzD,MAAMC,cAAcP;IACpB,MAAM,CAACQ,OAAOC,SAAS,GAAGV,SAA4B,WAAWQ,cAAcA,YAAYC,KAAK,GAAGP;IAEnG,MAAMS,SAASd,YAAY,CAACe;QACxBF,SAASR,SAASU;IACtB,GAAG,EAAE;IAELb,UAAU;QACN,IAAI,CAACS,YAAYK,WAAW,EAAE;YAC1BH,SAASR;QACb;IACJ,GAAG;QAACM;KAAY;IAEhB,qBACI,KAACL,aAAaW,QAAQ;QAACC,OAAON;kBAC1B,cAAA,KAACJ,mBAAmBS,QAAQ;YAACC,OAAOJ;sBAASJ;;;AAGzD,EAAE;AAEF,OAAO,MAAMS,WAAW,IAAMlB,WAAWK,cAAc\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = /* @__PURE__ */ createContext(void 0);\nconst ScopeUpdateContext = /* @__PURE__ */ createContext(() => {\n});\nexport const ScopeProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(ScopeContext.Provider, {\n    value: scope,\n    children: /* @__PURE__ */ _jsx(ScopeUpdateContext.Provider, {\n      value: update,\n      children\n    })\n  });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750239308276,
-      "end": 1750239308310,
+      "start": 1750271784841,
+      "end": 1750271784862,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784862,
+      "end": 1750271784862,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308310,
-      "end": 1750239308310,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/ScopeProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = /* @__PURE__ */ createContext(void 0);\nconst ScopeUpdateContext = /* @__PURE__ */ createContext(() => {\n});\nexport const ScopeProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(ScopeContext.Provider, {\n    value: scope,\n    children: /* @__PURE__ */ _jsx(ScopeUpdateContext.Provider, {\n      value: update,\n      children\n    })\n  });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750239308311,
-      "end": 1750239308311,
+      "start": 1750271784862,
+      "end": 1750271784862,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

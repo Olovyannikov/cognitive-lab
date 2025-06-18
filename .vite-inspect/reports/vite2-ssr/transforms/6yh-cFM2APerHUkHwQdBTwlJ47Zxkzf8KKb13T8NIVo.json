@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\n\nimport { getSurveysInfoQuery, UserReportComment } from '@/entities/Report';\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\n\nexport const CreateReviewFormModel = atom(() => {\n    const $isSubmitted = createStore(false);\n    const $comments = createStore<UserReportComment[]>([]);\n\n    sample({\n        clock: getSurveysInfoQuery.finished.success,\n        fn: ({ result }) => result?.left_comments ?? [],\n        target: $comments,\n    });\n\n    sample({\n        clock: $comments,\n        source: ReviewModel.$currentReviewId,\n        fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),\n        target: $isSubmitted,\n    });\n\n    sample({\n        clock: createReviewMutation.finished.success,\n        fn: noop,\n        target: getSurveysInfoQuery.refresh,\n    });\n\n    return {\n        $isSubmitted,\n    };\n});\n",
-      "start": 1750239308435,
-      "end": 1750239308463,
+      "start": 1750271785016,
+      "end": 1750271785032,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createStore, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { noop } from '@/shared/lib';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\nexport const CreateReviewFormModel = _effector$factory({\n    sid: \"atb2mzgj\",\n    fn: ()=>atom(()=>{\n            const $isSubmitted = createStore(false, {\n                sid: \"1dbth5xl\"\n            });\n            const $comments = createStore([], {\n                sid: \"90h4eiiz\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: getSurveysInfoQuery.finished.success,\n                        fn: ({ result })=>result?.left_comments ?? [],\n                        target: $comments\n                    }\n                ],\n                or: {\n                    sid: \"3ldfkz6t\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: $comments,\n                        source: ReviewModel.$currentReviewId,\n                        fn: (id, comments)=>Boolean(comments?.filter(({ user_report })=>user_report === id).length),\n                        target: $isSubmitted\n                    }\n                ],\n                or: {\n                    sid: \"arg70agu\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: createReviewMutation.finished.success,\n                        fn: noop,\n                        target: getSurveysInfoQuery.refresh\n                    }\n                ],\n                or: {\n                    sid: \"3ezd1jou\"\n                }\n            });\n            return {\n                $isSubmitted\n            };\n        })\n});\n",
-      "start": 1750239308463,
-      "end": 1750239308471,
+      "start": 1750271785032,
+      "end": 1750271785051,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/model/index.ts\"],\"sourcesContent\":[\"import { createStore, sample } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\nimport { noop } from '@/shared/lib';\\n\\nimport { getSurveysInfoQuery, UserReportComment } from '@/entities/Report';\\nimport { createReviewMutation, ReviewModel } from '@/entities/Review';\\n\\nexport const CreateReviewFormModel = atom(() => {\\n    const $isSubmitted = createStore(false);\\n    const $comments = createStore<UserReportComment[]>([]);\\n\\n    sample({\\n        clock: getSurveysInfoQuery.finished.success,\\n        fn: ({ result }) => result?.left_comments ?? [],\\n        target: $comments,\\n    });\\n\\n    sample({\\n        clock: $comments,\\n        source: ReviewModel.$currentReviewId,\\n        fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),\\n        target: $isSubmitted,\\n    });\\n\\n    sample({\\n        clock: createReviewMutation.finished.success,\\n        fn: noop,\\n        target: getSurveysInfoQuery.refresh,\\n    });\\n\\n    return {\\n        $isSubmitted,\\n    };\\n});\\n\"],\"names\":[\"createStore\",\"sample\",\"atom\",\"noop\",\"getSurveysInfoQuery\",\"createReviewMutation\",\"ReviewModel\",\"CreateReviewFormModel\",\"$isSubmitted\",\"$comments\",\"clock\",\"finished\",\"success\",\"fn\",\"result\",\"left_comments\",\"target\",\"source\",\"$currentReviewId\",\"id\",\"comments\",\"Boolean\",\"filter\",\"user_report\",\"length\",\"refresh\"],\"mappings\":\";AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,IAAI,QAAQ,qBAAqB;AAC1C,SAASC,IAAI,QAAQ,eAAe;AAEpC,SAASC,mBAAmB,QAA2B,oBAAoB;AAC3E,SAASC,oBAAoB,EAAEC,WAAW,QAAQ,oBAAoB;AAEtE,OAAO,MAAMC;;YAAwBL,KAAK;YACtC,MAAMM,eAAeR,YAAY;;;YACjC,MAAMS,YAAYT,YAAiC,EAAE;;;YAErDC;;oBAAO;wBACHS,OAAON,oBAAoBO,QAAQ,CAACC,OAAO;wBAC3CC,IAAI,CAAC,EAAEC,MAAM,EAAE,GAAKA,QAAQC,iBAAiB,EAAE;wBAC/CC,QAAQP;oBACZ;;;;;;YAEAR;;oBAAO;wBACHS,OAAOD;wBACPQ,QAAQX,YAAYY,gBAAgB;wBACpCL,IAAI,CAACM,IAAIC,WAAaC,QAAQD,UAAUE,OAAO,CAAC,EAAEC,WAAW,EAAE,GAAKA,gBAAgBJ,IAAIK;wBACxFR,QAAQR;oBACZ;;;;;;YAEAP;;oBAAO;wBACHS,OAAOL,qBAAqBM,QAAQ,CAACC,OAAO;wBAC5CC,IAAIV;wBACJa,QAAQZ,oBAAoBqB,OAAO;oBACvC;;;;;;YAEA,OAAO;gBACHjB;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nexport const CreateReviewFormModel = _effector$factory({\n  sid: \"atb2mzgj\",\n  fn: () => atom(() => {\n    const $isSubmitted = createStore(false, {\n      sid: \"1dbth5xl\"\n    });\n    const $comments = createStore([], {\n      sid: \"90h4eiiz\"\n    });\n    sample({\n      and: [\n        {\n          clock: getSurveysInfoQuery.finished.success,\n          fn: ({ result }) => result?.left_comments ?? [],\n          target: $comments\n        }\n      ],\n      or: {\n        sid: \"3ldfkz6t\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $comments,\n          source: ReviewModel.$currentReviewId,\n          fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),\n          target: $isSubmitted\n        }\n      ],\n      or: {\n        sid: \"arg70agu\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: createReviewMutation.finished.success,\n          fn: noop,\n          target: getSurveysInfoQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"3ezd1jou\"\n      }\n    });\n    return {\n      $isSubmitted\n    };\n  })\n});\n",
-      "start": 1750239308471,
-      "end": 1750239308712,
+      "start": 1750271785051,
+      "end": 1750271785267,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308712,
-      "end": 1750239308712,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308712,
-      "end": 1750239308712,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308712,
-      "end": 1750239308712,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785267,
+      "end": 1750271785267,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785267,
+      "end": 1750271785267,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785267,
+      "end": 1750271785268,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createStore, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { noop } from \"@/shared/lib\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport { createReviewMutation, ReviewModel } from \"@/entities/Review\";\nexport const CreateReviewFormModel = _effector$factory({\n  sid: \"atb2mzgj\",\n  fn: () => atom(() => {\n    const $isSubmitted = createStore(false, {\n      sid: \"1dbth5xl\"\n    });\n    const $comments = createStore([], {\n      sid: \"90h4eiiz\"\n    });\n    sample({\n      and: [\n        {\n          clock: getSurveysInfoQuery.finished.success,\n          fn: ({ result }) => result?.left_comments ?? [],\n          target: $comments\n        }\n      ],\n      or: {\n        sid: \"3ldfkz6t\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: $comments,\n          source: ReviewModel.$currentReviewId,\n          fn: (id, comments) => Boolean(comments?.filter(({ user_report }) => user_report === id).length),\n          target: $isSubmitted\n        }\n      ],\n      or: {\n        sid: \"arg70agu\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: createReviewMutation.finished.success,\n          fn: noop,\n          target: getSurveysInfoQuery.refresh\n        }\n      ],\n      or: {\n        sid: \"3ezd1jou\"\n      }\n    });\n    return {\n      $isSubmitted\n    };\n  })\n});\n",
-      "start": 1750239308713,
-      "end": 1750239308713,
+      "start": 1750271785268,
+      "end": 1750271785268,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

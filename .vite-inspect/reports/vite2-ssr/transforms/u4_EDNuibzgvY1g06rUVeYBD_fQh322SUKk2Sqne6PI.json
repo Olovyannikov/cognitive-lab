@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Flex, FocusTrap, Text, TextInput } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { InnerContainer } from '@/shared/ui';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\n\nimport { sendFreeReportOnEmailMutation } from './api';\nimport { SendReportEmailModel } from './model';\nimport { SendReportSchema } from './schema';\n\nimport s from './SendReportEmail.module.css';\n\ninterface SendReportEmailProps {\n    type?: 'block' | 'text';\n}\n\nexport const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {\n    const isLarge = useIsLarge();\n    const { pending: isLoading } = useUnit(sendFreeReportOnEmailMutation);\n    const [sendForm] = useUnit([SendReportEmailModel.submitForm]);\n    const {\n        routeParams: { reportId },\n    } = usePageContext();\n\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: '',\n            user_report_id: reportId ?? '',\n        },\n        validate: zodResolver(SendReportSchema),\n    });\n\n    const onSubmit = form.onSubmit((data) => {\n        sendForm(data);\n    });\n\n    return (\n        <InnerContainer className={type === 'block' ? s.container : ''}>\n            <form onSubmit={onSubmit}>\n                <Flex className={s.wrapper}>\n                    {type === 'text' && (\n                        <Text fw='bold' visibleFrom='md' fz={24}>\n                            Отправьте отчет на почту\n                        </Text>\n                    )}\n                    <FocusTrap active={Boolean(form.errors.email)}>\n                        <TextInput\n                            inputMode='email'\n                            disabled={isLoading}\n                            placeholder='name@mail.ru'\n                            key={form.key('email')}\n                            miw={isLarge ? 380 : '100%'}\n                            ml={type === 'text' ? 'auto' : 0}\n                            size={type === 'block' ? 'lg' : 'md'}\n                            bg={type === 'block' ? 'violet.0' : 'white'}\n                            {...form.getInputProps('email')}\n                        />\n                    </FocusTrap>\n                    <Button\n                        type='submit'\n                        loading={isLoading}\n                        fullWidth={!isLarge}\n                        disabled={isLoading}\n                        size={type === 'block' ? 'lg' : 'md'}\n                        leftSection={<EnvelopeSimple size={20} />}\n                        variant={type === 'block' ? undefined : 'default'}\n                        c={type === 'block' && !isLoading ? 'white' : 'dark.7'}\n                        px='md'\n                    >\n                        {isLarge ? 'Отправить' : 'Отправить отчет на почту'}\n                    </Button>\n                    <BuyNowButton px='md'>Купить полный отчёт</BuyNowButton>\n                </Flex>\n            </form>\n        </InnerContainer>\n    );\n};\n",
-      "start": 1750239308278,
-      "end": 1750239308296,
+      "start": 1750271784819,
+      "end": 1750271784838,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Flex, FocusTrap, Text, TextInput } from '@mantine/core';\nimport { useForm } from '@mantine/form';\nimport { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';\nimport { useUnit } from 'effector-react';\nimport { zodResolver } from 'mantine-form-zod-resolver';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { InnerContainer } from '@/shared/ui';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { sendFreeReportOnEmailMutation } from './api';\nimport { SendReportEmailModel } from './model';\nimport { SendReportSchema } from './schema';\nimport s from './SendReportEmail.module.css';\nexport const SendReportEmail = ({ type = 'text' })=>{\n    const isLarge = useIsLarge();\n    const { pending: isLoading } = useUnit(sendFreeReportOnEmailMutation);\n    const [sendForm] = useUnit([\n        SendReportEmailModel.submitForm\n    ]);\n    const { routeParams: { reportId } } = usePageContext();\n    const form = useForm({\n        mode: 'controlled',\n        initialValues: {\n            email: '',\n            user_report_id: reportId ?? ''\n        },\n        validate: zodResolver(SendReportSchema)\n    });\n    const onSubmit = form.onSubmit((data)=>{\n        sendForm(data);\n    });\n    return /*#__PURE__*/ _jsx(InnerContainer, {\n        className: type === 'block' ? s.container : '',\n        children: /*#__PURE__*/ _jsx(\"form\", {\n            onSubmit: onSubmit,\n            children: /*#__PURE__*/ _jsxs(Flex, {\n                className: s.wrapper,\n                children: [\n                    type === 'text' && /*#__PURE__*/ _jsx(Text, {\n                        fw: \"bold\",\n                        visibleFrom: \"md\",\n                        fz: 24,\n                        children: \"Отправьте отчет на почту\"\n                    }),\n                    /*#__PURE__*/ _jsx(FocusTrap, {\n                        active: Boolean(form.errors.email),\n                        children: /*#__PURE__*/ _jsx(TextInput, {\n                            inputMode: \"email\",\n                            disabled: isLoading,\n                            placeholder: \"name@mail.ru\",\n                            miw: isLarge ? 380 : '100%',\n                            ml: type === 'text' ? 'auto' : 0,\n                            size: type === 'block' ? 'lg' : 'md',\n                            bg: type === 'block' ? 'violet.0' : 'white',\n                            ...form.getInputProps('email')\n                        }, form.key('email'))\n                    }),\n                    /*#__PURE__*/ _jsx(Button, {\n                        type: \"submit\",\n                        loading: isLoading,\n                        fullWidth: !isLarge,\n                        disabled: isLoading,\n                        size: type === 'block' ? 'lg' : 'md',\n                        leftSection: /*#__PURE__*/ _jsx(EnvelopeSimple, {\n                            size: 20\n                        }),\n                        variant: type === 'block' ? undefined : 'default',\n                        c: type === 'block' && !isLoading ? 'white' : 'dark.7',\n                        px: \"md\",\n                        children: isLarge ? 'Отправить' : 'Отправить отчет на почту'\n                    }),\n                    /*#__PURE__*/ _jsx(BuyNowButton, {\n                        px: \"md\",\n                        children: \"Купить полный отчёт\"\n                    })\n                ]\n            })\n        })\n    });\n};\n",
-      "start": 1750239308296,
-      "end": 1750239308301,
+      "start": 1750271784838,
+      "end": 1750271784841,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/index.tsx\"],\"sourcesContent\":[\"import { Button, Flex, FocusTrap, Text, TextInput } from '@mantine/core';\\nimport { useForm } from '@mantine/form';\\nimport { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr';\\nimport { useUnit } from 'effector-react';\\nimport { zodResolver } from 'mantine-form-zod-resolver';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { useIsLarge } from '@/shared/lib';\\nimport { InnerContainer } from '@/shared/ui';\\n\\nimport { BuyNowButton } from '@/features/BuyNowButton';\\n\\nimport { sendFreeReportOnEmailMutation } from './api';\\nimport { SendReportEmailModel } from './model';\\nimport { SendReportSchema } from './schema';\\n\\nimport s from './SendReportEmail.module.css';\\n\\ninterface SendReportEmailProps {\\n    type?: 'block' | 'text';\\n}\\n\\nexport const SendReportEmail = ({ type = 'text' }: SendReportEmailProps) => {\\n    const isLarge = useIsLarge();\\n    const { pending: isLoading } = useUnit(sendFreeReportOnEmailMutation);\\n    const [sendForm] = useUnit([SendReportEmailModel.submitForm]);\\n    const {\\n        routeParams: { reportId },\\n    } = usePageContext();\\n\\n    const form = useForm({\\n        mode: 'controlled',\\n        initialValues: {\\n            email: '',\\n            user_report_id: reportId ?? '',\\n        },\\n        validate: zodResolver(SendReportSchema),\\n    });\\n\\n    const onSubmit = form.onSubmit((data) => {\\n        sendForm(data);\\n    });\\n\\n    return (\\n        <InnerContainer className={type === 'block' ? s.container : ''}>\\n            <form onSubmit={onSubmit}>\\n                <Flex className={s.wrapper}>\\n                    {type === 'text' && (\\n                        <Text fw='bold' visibleFrom='md' fz={24}>\\n                            Отправьте отчет на почту\\n                        </Text>\\n                    )}\\n                    <FocusTrap active={Boolean(form.errors.email)}>\\n                        <TextInput\\n                            inputMode='email'\\n                            disabled={isLoading}\\n                            placeholder='name@mail.ru'\\n                            key={form.key('email')}\\n                            miw={isLarge ? 380 : '100%'}\\n                            ml={type === 'text' ? 'auto' : 0}\\n                            size={type === 'block' ? 'lg' : 'md'}\\n                            bg={type === 'block' ? 'violet.0' : 'white'}\\n                            {...form.getInputProps('email')}\\n                        />\\n                    </FocusTrap>\\n                    <Button\\n                        type='submit'\\n                        loading={isLoading}\\n                        fullWidth={!isLarge}\\n                        disabled={isLoading}\\n                        size={type === 'block' ? 'lg' : 'md'}\\n                        leftSection={<EnvelopeSimple size={20} />}\\n                        variant={type === 'block' ? undefined : 'default'}\\n                        c={type === 'block' && !isLoading ? 'white' : 'dark.7'}\\n                        px='md'\\n                    >\\n                        {isLarge ? 'Отправить' : 'Отправить отчет на почту'}\\n                    </Button>\\n                    <BuyNowButton px='md'>Купить полный отчёт</BuyNowButton>\\n                </Flex>\\n            </form>\\n        </InnerContainer>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Flex\",\"FocusTrap\",\"Text\",\"TextInput\",\"useForm\",\"EnvelopeSimple\",\"useUnit\",\"zodResolver\",\"usePageContext\",\"useIsLarge\",\"InnerContainer\",\"BuyNowButton\",\"sendFreeReportOnEmailMutation\",\"SendReportEmailModel\",\"SendReportSchema\",\"s\",\"SendReportEmail\",\"type\",\"isLarge\",\"pending\",\"isLoading\",\"sendForm\",\"submitForm\",\"routeParams\",\"reportId\",\"form\",\"mode\",\"initialValues\",\"email\",\"user_report_id\",\"validate\",\"onSubmit\",\"data\",\"className\",\"container\",\"wrapper\",\"fw\",\"visibleFrom\",\"fz\",\"active\",\"Boolean\",\"errors\",\"inputMode\",\"disabled\",\"placeholder\",\"miw\",\"ml\",\"size\",\"bg\",\"getInputProps\",\"key\",\"loading\",\"fullWidth\",\"leftSection\",\"variant\",\"undefined\",\"c\",\"px\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,IAAI,EAAEC,SAAS,EAAEC,IAAI,EAAEC,SAAS,QAAQ,gBAAgB;AACzE,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,iCAAiC;AAChE,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,WAAW,QAAQ,4BAA4B;AACxD,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,UAAU,QAAQ,eAAe;AAC1C,SAASC,cAAc,QAAQ,cAAc;AAE7C,SAASC,YAAY,QAAQ,0BAA0B;AAEvD,SAASC,6BAA6B,QAAQ,QAAQ;AACtD,SAASC,oBAAoB,QAAQ,UAAU;AAC/C,SAASC,gBAAgB,QAAQ,WAAW;AAE5C,OAAOC,OAAO,+BAA+B;AAM7C,OAAO,MAAMC,kBAAkB,CAAC,EAAEC,OAAO,MAAM,EAAwB;IACnE,MAAMC,UAAUT;IAChB,MAAM,EAAEU,SAASC,SAAS,EAAE,GAAGd,QAAQM;IACvC,MAAM,CAACS,SAAS,GAAGf,QAAQ;QAACO,qBAAqBS,UAAU;KAAC;IAC5D,MAAM,EACFC,aAAa,EAAEC,QAAQ,EAAE,EAC5B,GAAGhB;IAEJ,MAAMiB,OAAOrB,QAAQ;QACjBsB,MAAM;QACNC,eAAe;YACXC,OAAO;YACPC,gBAAgBL,YAAY;QAChC;QACAM,UAAUvB,YAAYO;IAC1B;IAEA,MAAMiB,WAAWN,KAAKM,QAAQ,CAAC,CAACC;QAC5BX,SAASW;IACb;IAEA,qBACI,KAACtB;QAAeuB,WAAWhB,SAAS,UAAUF,EAAEmB,SAAS,GAAG;kBACxD,cAAA,KAACT;YAAKM,UAAUA;sBACZ,cAAA,MAAC/B;gBAAKiC,WAAWlB,EAAEoB,OAAO;;oBACrBlB,SAAS,wBACN,KAACf;wBAAKkC,IAAG;wBAAOC,aAAY;wBAAKC,IAAI;kCAAI;;kCAI7C,KAACrC;wBAAUsC,QAAQC,QAAQf,KAAKgB,MAAM,CAACb,KAAK;kCACxC,cAAA,KAACzB;4BACGuC,WAAU;4BACVC,UAAUvB;4BACVwB,aAAY;4BAEZC,KAAK3B,UAAU,MAAM;4BACrB4B,IAAI7B,SAAS,SAAS,SAAS;4BAC/B8B,MAAM9B,SAAS,UAAU,OAAO;4BAChC+B,IAAI/B,SAAS,UAAU,aAAa;4BACnC,GAAGQ,KAAKwB,aAAa,CAAC,QAAQ;2BAL1BxB,KAAKyB,GAAG,CAAC;;kCAQtB,KAACnD;wBACGkB,MAAK;wBACLkC,SAAS/B;wBACTgC,WAAW,CAAClC;wBACZyB,UAAUvB;wBACV2B,MAAM9B,SAAS,UAAU,OAAO;wBAChCoC,2BAAa,KAAChD;4BAAe0C,MAAM;;wBACnCO,SAASrC,SAAS,UAAUsC,YAAY;wBACxCC,GAAGvC,SAAS,WAAW,CAACG,YAAY,UAAU;wBAC9CqC,IAAG;kCAEFvC,UAAU,cAAc;;kCAE7B,KAACP;wBAAa8C,IAAG;kCAAK;;;;;;AAK1C,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Flex, FocusTrap, Text, TextInput } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { EnvelopeSimple } from \"@phosphor-icons/react/dist/ssr\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { sendFreeReportOnEmailMutation } from \"./api\";\nimport { SendReportEmailModel } from \"./model\";\nimport { SendReportSchema } from \"./schema\";\nimport s from \"./SendReportEmail.module.css\";\nexport const SendReportEmail = ({ type = \"text\" }) => {\n  const isLarge = useIsLarge();\n  const { pending: isLoading } = useUnit(sendFreeReportOnEmailMutation);\n  const [sendForm] = useUnit([\n    SendReportEmailModel.submitForm\n  ]);\n  const { routeParams: { reportId } } = usePageContext();\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\",\n      user_report_id: reportId ?? \"\"\n    },\n    validate: zodResolver(SendReportSchema)\n  });\n  const onSubmit = form.onSubmit((data) => {\n    sendForm(data);\n  });\n  return /* @__PURE__ */ _jsx(InnerContainer, {\n    className: type === \"block\" ? s.container : \"\",\n    children: /* @__PURE__ */ _jsx(\"form\", {\n      onSubmit,\n      children: /* @__PURE__ */ _jsxs(Flex, {\n        className: s.wrapper,\n        children: [\n          type === \"text\" && /* @__PURE__ */ _jsx(Text, {\n            fw: \"bold\",\n            visibleFrom: \"md\",\n            fz: 24,\n            children: \"Отправьте отчет на почту\"\n          }),\n          /* @__PURE__ */ _jsx(FocusTrap, {\n            active: Boolean(form.errors.email),\n            children: /* @__PURE__ */ _jsx(TextInput, {\n              inputMode: \"email\",\n              disabled: isLoading,\n              placeholder: \"name@mail.ru\",\n              miw: isLarge ? 380 : \"100%\",\n              ml: type === \"text\" ? \"auto\" : 0,\n              size: type === \"block\" ? \"lg\" : \"md\",\n              bg: type === \"block\" ? \"violet.0\" : \"white\",\n              ...form.getInputProps(\"email\")\n            }, form.key(\"email\"))\n          }),\n          /* @__PURE__ */ _jsx(Button, {\n            type: \"submit\",\n            loading: isLoading,\n            fullWidth: !isLarge,\n            disabled: isLoading,\n            size: type === \"block\" ? \"lg\" : \"md\",\n            leftSection: /* @__PURE__ */ _jsx(EnvelopeSimple, {\n              size: 20\n            }),\n            variant: type === \"block\" ? void 0 : \"default\",\n            c: type === \"block\" && !isLoading ? \"white\" : \"dark.7\",\n            px: \"md\",\n            children: isLarge ? \"Отправить\" : \"Отправить отчет на почту\"\n          }),\n          /* @__PURE__ */ _jsx(BuyNowButton, {\n            px: \"md\",\n            children: \"Купить полный отчёт\"\n          })\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308301,
-      "end": 1750239308354,
+      "start": 1750271784841,
+      "end": 1750271784878,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784879,
+      "end": 1750271784879,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/SendReportEmail/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Flex, FocusTrap, Text, TextInput } from \"@mantine/core\";\nimport { useForm } from \"@mantine/form\";\nimport { EnvelopeSimple } from \"@phosphor-icons/react/dist/ssr\";\nimport { useUnit } from \"effector-react\";\nimport { zodResolver } from \"mantine-form-zod-resolver\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { sendFreeReportOnEmailMutation } from \"./api\";\nimport { SendReportEmailModel } from \"./model\";\nimport { SendReportSchema } from \"./schema\";\nimport s from \"./SendReportEmail.module.css\";\nexport const SendReportEmail = ({ type = \"text\" }) => {\n  const isLarge = useIsLarge();\n  const { pending: isLoading } = useUnit(sendFreeReportOnEmailMutation);\n  const [sendForm] = useUnit([\n    SendReportEmailModel.submitForm\n  ]);\n  const { routeParams: { reportId } } = usePageContext();\n  const form = useForm({\n    mode: \"controlled\",\n    initialValues: {\n      email: \"\",\n      user_report_id: reportId ?? \"\"\n    },\n    validate: zodResolver(SendReportSchema)\n  });\n  const onSubmit = form.onSubmit((data) => {\n    sendForm(data);\n  });\n  return /* @__PURE__ */ _jsx(InnerContainer, {\n    className: type === \"block\" ? s.container : \"\",\n    children: /* @__PURE__ */ _jsx(\"form\", {\n      onSubmit,\n      children: /* @__PURE__ */ _jsxs(Flex, {\n        className: s.wrapper,\n        children: [\n          type === \"text\" && /* @__PURE__ */ _jsx(Text, {\n            fw: \"bold\",\n            visibleFrom: \"md\",\n            fz: 24,\n            children: \"Отправьте отчет на почту\"\n          }),\n          /* @__PURE__ */ _jsx(FocusTrap, {\n            active: Boolean(form.errors.email),\n            children: /* @__PURE__ */ _jsx(TextInput, {\n              inputMode: \"email\",\n              disabled: isLoading,\n              placeholder: \"name@mail.ru\",\n              miw: isLarge ? 380 : \"100%\",\n              ml: type === \"text\" ? \"auto\" : 0,\n              size: type === \"block\" ? \"lg\" : \"md\",\n              bg: type === \"block\" ? \"violet.0\" : \"white\",\n              ...form.getInputProps(\"email\")\n            }, form.key(\"email\"))\n          }),\n          /* @__PURE__ */ _jsx(Button, {\n            type: \"submit\",\n            loading: isLoading,\n            fullWidth: !isLarge,\n            disabled: isLoading,\n            size: type === \"block\" ? \"lg\" : \"md\",\n            leftSection: /* @__PURE__ */ _jsx(EnvelopeSimple, {\n              size: 20\n            }),\n            variant: type === \"block\" ? void 0 : \"default\",\n            c: type === \"block\" && !isLoading ? \"white\" : \"dark.7\",\n            px: \"md\",\n            children: isLarge ? \"Отправить\" : \"Отправить отчет на почту\"\n          }),\n          /* @__PURE__ */ _jsx(BuyNowButton, {\n            px: \"md\",\n            children: \"Купить полный отчёт\"\n          })\n        ]\n      })\n    })\n  });\n};\n",
-      "start": 1750239308354,
-      "end": 1750239308354,
+      "start": 1750271784879,
+      "end": 1750271784879,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

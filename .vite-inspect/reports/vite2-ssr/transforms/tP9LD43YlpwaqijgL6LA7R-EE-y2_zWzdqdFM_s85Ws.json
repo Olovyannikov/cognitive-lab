@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getFAQQuery } from '@/entities/FAQ';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh,\n});\n",
-      "start": 1750239308155,
-      "end": 1750239308174,
+      "start": 1750271784661,
+      "end": 1750271784680,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: noop,\n            target: getFAQQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"7km9xio0\"\n    }\n});\n",
-      "start": 1750239308174,
-      "end": 1750239308185,
+      "start": 1750271784680,
+      "end": 1750271784685,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/faq/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { noop } from '@/shared/lib';\\nimport { createPageInit } from '@/shared/lib/effector';\\n\\nimport { getFAQQuery } from '@/entities/FAQ';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: noop,\\n    target: getFAQQuery.refresh,\\n});\\n\"],\"names\":[\"sample\",\"noop\",\"createPageInit\",\"getFAQQuery\",\"pageInitiated\",\"clock\",\"fn\",\"target\",\"refresh\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,IAAI,QAAQ,eAAe;AACpC,SAASC,cAAc,QAAQ,wBAAwB;AAEvD,SAASC,WAAW,QAAQ,iBAAiB;AAE7C,OAAO,MAAMC,gBAAgBF,iBAAiB;AAE9CF;;QAAO;YACHK,OAAOD;YACPE,IAAIL;YACJM,QAAQJ,YAAYK,OAAO;QAC/B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: noop,\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"7km9xio0\"\n  }\n});\n",
-      "start": 1750239308185,
-      "end": 1750239308210,
+      "start": 1750271784685,
+      "end": 1750271784736,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308210,
-      "end": 1750239308210,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308210,
-      "end": 1750239308210,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308210,
-      "end": 1750239308210,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308210,
-      "end": 1750239308210,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308210,
-      "end": 1750239308210,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308210,
-      "end": 1750239308211,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784736,
+      "end": 1750271784736,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/faq/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: noop,\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"7km9xio0\"\n  }\n});\n",
-      "start": 1750239308211,
-      "end": 1750239308211,
+      "start": 1750271784736,
+      "end": 1750271784736,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { List, type ListProps, Text } from '@mantine/core';\n\nimport type { ListItem } from '../../types';\n\nimport s from './FilledBulletList.module.css';\n\ninterface FilledBulletListProps extends ListProps {\n    items?: ListItem[];\n}\n\nexport const FilledBulletList = ({ items, ...props }: FilledBulletListProps) => (\n    <List data-type='Filled Bullet List' classNames={s} {...props}>\n        {items?.map((item) => (\n            <List.Item hidden={!item.text && !item.title} key={`${item.type}_${item.title}`} mb='md'>\n                <Text lh='21px' className={s.text} span={item.text?.startsWith(' — ') || item.title?.endsWith(': ')}>\n                    {item.title}\n                </Text>\n                <Text className={s.text} span c='dark.7' lh='21px'>\n                    {item.text}\n                </Text>\n            </List.Item>\n        ))}\n    </List>\n);\n",
-      "start": 1750239308353,
-      "end": 1750239308379,
+      "start": 1750271784925,
+      "end": 1750271784943,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { List, Text } from '@mantine/core';\nimport s from './FilledBulletList.module.css';\nexport const FilledBulletList = ({ items, ...props })=>/*#__PURE__*/ _jsx(List, {\n        \"data-type\": \"Filled Bullet List\",\n        classNames: s,\n        ...props,\n        children: items?.map((item)=>/*#__PURE__*/ _jsxs(List.Item, {\n                hidden: !item.text && !item.title,\n                mb: \"md\",\n                children: [\n                    /*#__PURE__*/ _jsx(Text, {\n                        lh: \"21px\",\n                        className: s.text,\n                        span: item.text?.startsWith(' — ') || item.title?.endsWith(': '),\n                        children: item.title\n                    }),\n                    /*#__PURE__*/ _jsx(Text, {\n                        className: s.text,\n                        span: true,\n                        c: \"dark.7\",\n                        lh: \"21px\",\n                        children: item.text\n                    })\n                ]\n            }, `${item.type}_${item.title}`))\n    });\n",
-      "start": 1750239308379,
-      "end": 1750239308384,
+      "start": 1750271784943,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/FilledBulletList/index.tsx\"],\"sourcesContent\":[\"import { List, type ListProps, Text } from '@mantine/core';\\n\\nimport type { ListItem } from '../../types';\\n\\nimport s from './FilledBulletList.module.css';\\n\\ninterface FilledBulletListProps extends ListProps {\\n    items?: ListItem[];\\n}\\n\\nexport const FilledBulletList = ({ items, ...props }: FilledBulletListProps) => (\\n    <List data-type='Filled Bullet List' classNames={s} {...props}>\\n        {items?.map((item) => (\\n            <List.Item hidden={!item.text && !item.title} key={`${item.type}_${item.title}`} mb='md'>\\n                <Text lh='21px' className={s.text} span={item.text?.startsWith(' — ') || item.title?.endsWith(': ')}>\\n                    {item.title}\\n                </Text>\\n                <Text className={s.text} span c='dark.7' lh='21px'>\\n                    {item.text}\\n                </Text>\\n            </List.Item>\\n        ))}\\n    </List>\\n);\\n\"],\"names\":[\"List\",\"Text\",\"s\",\"FilledBulletList\",\"items\",\"props\",\"data-type\",\"classNames\",\"map\",\"item\",\"Item\",\"hidden\",\"text\",\"title\",\"mb\",\"lh\",\"className\",\"span\",\"startsWith\",\"endsWith\",\"c\",\"type\"],\"mappings\":\";AAAA,SAASA,IAAI,EAAkBC,IAAI,QAAQ,gBAAgB;AAI3D,OAAOC,OAAO,gCAAgC;AAM9C,OAAO,MAAMC,mBAAmB,CAAC,EAAEC,KAAK,EAAE,GAAGC,OAA8B,iBACvE,KAACL;QAAKM,aAAU;QAAqBC,YAAYL;QAAI,GAAGG,KAAK;kBACxDD,OAAOI,IAAI,CAACC,qBACT,MAACT,KAAKU,IAAI;gBAACC,QAAQ,CAACF,KAAKG,IAAI,IAAI,CAACH,KAAKI,KAAK;gBAAqCC,IAAG;;kCAChF,KAACb;wBAAKc,IAAG;wBAAOC,WAAWd,EAAEU,IAAI;wBAAEK,MAAMR,KAAKG,IAAI,EAAEM,WAAW,UAAUT,KAAKI,KAAK,EAAEM,SAAS;kCACzFV,KAAKI,KAAK;;kCAEf,KAACZ;wBAAKe,WAAWd,EAAEU,IAAI;wBAAEK,IAAI;wBAACG,GAAE;wBAASL,IAAG;kCACvCN,KAAKG,IAAI;;;eALiC,GAAGH,KAAKY,IAAI,CAAC,CAAC,EAAEZ,KAAKI,KAAK,EAAE;OAUzF\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { List, Text } from \"@mantine/core\";\nimport s from \"./FilledBulletList.module.css\";\nexport const FilledBulletList = ({ items, ...props }) => /* @__PURE__ */ _jsx(List, {\n  \"data-type\": \"Filled Bullet List\",\n  classNames: s,\n  ...props,\n  children: items?.map((item) => /* @__PURE__ */ _jsxs(List.Item, {\n    hidden: !item.text && !item.title,\n    mb: \"md\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        lh: \"21px\",\n        className: s.text,\n        span: item.text?.startsWith(\" — \") || item.title?.endsWith(\": \"),\n        children: item.title\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        span: true,\n        c: \"dark.7\",\n        lh: \"21px\",\n        children: item.text\n      })\n    ]\n  }, `${item.type}_${item.title}`))\n});\n",
-      "start": 1750239308384,
-      "end": 1750239308517,
+      "start": 1750271784956,
+      "end": 1750271785076,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785076,
+      "end": 1750271785076,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/FilledBulletList/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { List, Text } from \"@mantine/core\";\nimport s from \"./FilledBulletList.module.css\";\nexport const FilledBulletList = ({ items, ...props }) => /* @__PURE__ */ _jsx(List, {\n  \"data-type\": \"Filled Bullet List\",\n  classNames: s,\n  ...props,\n  children: items?.map((item) => /* @__PURE__ */ _jsxs(List.Item, {\n    hidden: !item.text && !item.title,\n    mb: \"md\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        lh: \"21px\",\n        className: s.text,\n        span: item.text?.startsWith(\" — \") || item.title?.endsWith(\": \"),\n        children: item.title\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        span: true,\n        c: \"dark.7\",\n        lh: \"21px\",\n        children: item.text\n      })\n    ]\n  }, `${item.type}_${item.title}`))\n});\n",
-      "start": 1750239308518,
-      "end": 1750239308518,
+      "start": 1750271785076,
+      "end": 1750271785076,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

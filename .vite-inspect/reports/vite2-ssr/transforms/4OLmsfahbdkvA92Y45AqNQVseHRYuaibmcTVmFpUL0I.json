@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n",
-      "start": 1750239308644,
-      "end": 1750239308660,
+      "start": 1750271785284,
+      "end": 1750271785292,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px'\n    },\n    {\n        value: '-2',\n        size: '40px'\n    },\n    {\n        value: '-1',\n        size: '30px'\n    },\n    {\n        value: '0',\n        size: '20px'\n    },\n    {\n        value: '1',\n        size: '30px'\n    },\n    {\n        value: '2',\n        size: '40px'\n    },\n    {\n        value: '3',\n        size: '50px'\n    }\n];\n",
-      "start": 1750239308660,
-      "end": 1750239308669,
+      "start": 1750271785292,
+      "end": 1750271785296,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts\"],\"sourcesContent\":[\"export const SCALE_RADIO_ITEMS = [\\n    {\\n        value: '-3',\\n        size: '50px',\\n    },\\n    {\\n        value: '-2',\\n        size: '40px',\\n    },\\n    {\\n        value: '-1',\\n        size: '30px',\\n    },\\n    {\\n        value: '0',\\n        size: '20px',\\n    },\\n    {\\n        value: '1',\\n        size: '30px',\\n    },\\n    {\\n        value: '2',\\n        size: '40px',\\n    },\\n    {\\n        value: '3',\\n        size: '50px',\\n    },\\n];\\n\"],\"names\":[\"SCALE_RADIO_ITEMS\",\"value\",\"size\"],\"mappings\":\"AAAA,OAAO,MAAMA,oBAAoB;IAC7B;QACIC,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;CACH,CAAC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const SCALE_RADIO_ITEMS = [\n  {\n    value: \"-3\",\n    size: \"50px\"\n  },\n  {\n    value: \"-2\",\n    size: \"40px\"\n  },\n  {\n    value: \"-1\",\n    size: \"30px\"\n  },\n  {\n    value: \"0\",\n    size: \"20px\"\n  },\n  {\n    value: \"1\",\n    size: \"30px\"\n  },\n  {\n    value: \"2\",\n    size: \"40px\"\n  },\n  {\n    value: \"3\",\n    size: \"50px\"\n  }\n];\n",
-      "start": 1750239308669,
-      "end": 1750239308781,
+      "start": 1750271785296,
+      "end": 1750271785352,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785353,
+      "end": 1750271785353,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/constants.ts [vike:pluginModuleBanner] */\nexport const SCALE_RADIO_ITEMS = [\n  {\n    value: \"-3\",\n    size: \"50px\"\n  },\n  {\n    value: \"-2\",\n    size: \"40px\"\n  },\n  {\n    value: \"-1\",\n    size: \"30px\"\n  },\n  {\n    value: \"0\",\n    size: \"20px\"\n  },\n  {\n    value: \"1\",\n    size: \"30px\"\n  },\n  {\n    value: \"2\",\n    size: \"40px\"\n  },\n  {\n    value: \"3\",\n    size: \"50px\"\n  }\n];\n",
-      "start": 1750239308781,
-      "end": 1750239308781,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

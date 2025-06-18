@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\n\nimport { TakeTestAgainModel } from '../model';\n\nexport const TakeTestAgain = reflect({\n    view: Button<'button'>,\n    bind: {\n        size: 'md',\n        variant: 'default',\n        children: 'Пройти тест заново',\n        leftSection: <ArrowClockwise size={20} />,\n        onClick: TakeTestAgainModel.takeTestAgainClicked,\n    },\n});\n",
-      "start": 1750239308727,
-      "end": 1750239308733,
+      "start": 1750271785274,
+      "end": 1750271785285,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { reflect } from '@effector/reflect';\nimport { Button } from '@mantine/core';\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\nimport { TakeTestAgainModel } from '../model';\nexport const TakeTestAgain = reflect({\n    view: Button,\n    bind: {\n        size: 'md',\n        variant: 'default',\n        children: 'Пройти тест заново',\n        leftSection: /*#__PURE__*/ _jsx(ArrowClockwise, {\n            size: 20\n        }),\n        onClick: TakeTestAgainModel.takeTestAgainClicked\n    }\n});\n",
-      "start": 1750239308733,
-      "end": 1750239308735,
+      "start": 1750271785285,
+      "end": 1750271785287,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/TakeTestAgain/ui/index.tsx\"],\"sourcesContent\":[\"import { reflect } from '@effector/reflect';\\nimport { Button } from '@mantine/core';\\nimport { ArrowClockwise } from '@phosphor-icons/react/dist/ssr';\\n\\nimport { TakeTestAgainModel } from '../model';\\n\\nexport const TakeTestAgain = reflect({\\n    view: Button<'button'>,\\n    bind: {\\n        size: 'md',\\n        variant: 'default',\\n        children: 'Пройти тест заново',\\n        leftSection: <ArrowClockwise size={20} />,\\n        onClick: TakeTestAgainModel.takeTestAgainClicked,\\n    },\\n});\\n\"],\"names\":[\"reflect\",\"Button\",\"ArrowClockwise\",\"TakeTestAgainModel\",\"TakeTestAgain\",\"view\",\"bind\",\"size\",\"variant\",\"children\",\"leftSection\",\"onClick\",\"takeTestAgainClicked\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,oBAAoB;AAC5C,SAASC,MAAM,QAAQ,gBAAgB;AACvC,SAASC,cAAc,QAAQ,iCAAiC;AAEhE,SAASC,kBAAkB,QAAQ,WAAW;AAE9C,OAAO,MAAMC,gBAAgBJ,QAAQ;IACjCK,MAAMJ;IACNK,MAAM;QACFC,MAAM;QACNC,SAAS;QACTC,UAAU;QACVC,2BAAa,KAACR;YAAeK,MAAM;;QACnCI,SAASR,mBAAmBS,oBAAoB;IACpD;AACJ,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { reflect } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowClockwise } from \"@phosphor-icons/react/dist/ssr\";\nimport { TakeTestAgainModel } from \"../model\";\nexport const TakeTestAgain = reflect({\n  view: Button,\n  bind: {\n    size: \"md\",\n    variant: \"default\",\n    children: \"Пройти тест заново\",\n    leftSection: /* @__PURE__ */ _jsx(ArrowClockwise, {\n      size: 20\n    }),\n    onClick: TakeTestAgainModel.takeTestAgainClicked\n  }\n});\n",
-      "start": 1750239308735,
-      "end": 1750239308812,
+      "start": 1750271785287,
+      "end": 1750271785349,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785349,
+      "end": 1750271785349,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/TakeTestAgain/ui/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { reflect } from \"@effector/reflect\";\nimport { Button } from \"@mantine/core\";\nimport { ArrowClockwise } from \"@phosphor-icons/react/dist/ssr\";\nimport { TakeTestAgainModel } from \"../model\";\nexport const TakeTestAgain = reflect({\n  view: Button,\n  bind: {\n    size: \"md\",\n    variant: \"default\",\n    children: \"Пройти тест заново\",\n    leftSection: /* @__PURE__ */ _jsx(ArrowClockwise, {\n      size: 20\n    }),\n    onClick: TakeTestAgainModel.takeTestAgainClicked\n  }\n});\n",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785349,
+      "end": 1750271785349,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

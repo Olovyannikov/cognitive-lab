@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TextInput } from '@mantine/core';\n\nimport s from './FormInput.module.css';\n\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md',\n});\n",
-      "start": 1750239308324,
-      "end": 1750239308336,
+      "start": 1750271784874,
+      "end": 1750271784897,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md'\n});\n",
-      "start": 1750239308336,
-      "end": 1750239308354,
+      "start": 1750271784897,
+      "end": 1750271784900,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx\"],\"sourcesContent\":[\"import { TextInput } from '@mantine/core';\\n\\nimport s from './FormInput.module.css';\\n\\nexport const FormInput = TextInput.withProps({\\n    classNames: s,\\n    size: 'md',\\n});\\n\"],\"names\":[\"TextInput\",\"s\",\"FormInput\",\"withProps\",\"classNames\",\"size\"],\"mappings\":\"AAAA,SAASA,SAAS,QAAQ,gBAAgB;AAE1C,OAAOC,OAAO,yBAAyB;AAEvC,OAAO,MAAMC,YAAYF,UAAUG,SAAS,CAAC;IACzCC,YAAYH;IACZI,MAAM;AACV,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750239308354,
-      "end": 1750239308461,
+      "start": 1750271784900,
+      "end": 1750271785030,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308461,
-      "end": 1750239308461,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308461,
-      "end": 1750239308461,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785030,
+      "end": 1750271785030,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormInput/index.tsx [vike:pluginModuleBanner] */\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750239308462,
-      "end": 1750239308462,
+      "start": 1750271785030,
+      "end": 1750271785030,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

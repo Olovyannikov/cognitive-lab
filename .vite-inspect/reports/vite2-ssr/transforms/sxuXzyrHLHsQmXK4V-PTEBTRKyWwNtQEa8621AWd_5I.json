@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\n\nimport { Section } from '@/shared/ui';\n\nimport { FaqModel } from '@/entities/FAQ';\n\nimport UnionImage from './union.svg?react';\n\nimport s from './FAQ.module.css';\n\nexport const FAQ = () => {\n    const items = useList(\n        FaqModel.$faqItems.map((el) => el.slice(0, 3)),\n        (item) => (\n            <Accordion.Item value={item.title}>\n                <Accordion.Control>\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\n                        {item.title}\n                    </Title>\n                </Accordion.Control>\n                <Accordion.Panel>\n                    <Markdown>{item.body.data}</Markdown>\n                </Accordion.Panel>\n            </Accordion.Item>\n        )\n    );\n\n    return (\n        <Section className={s.section}>\n            <Title className={s.mainTitle} order={2}>\n                Часто задаваемые{' '}\n                <a href='/faq'>\n                    вопросы <ArrowUpRight weight='bold' />\n                </a>\n            </Title>\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n                {items}\n            </Accordion>\n            <UnionImage width={228} height={208} className={s.union} />\n        </Section>\n    );\n};\n",
-      "start": 1750239308419,
-      "end": 1750239308435,
+      "start": 1750271784963,
+      "end": 1750271784981,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from '@mantine/core';\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { useList } from 'effector-react';\nimport Markdown from 'markdown-to-jsx';\nimport { Section } from '@/shared/ui';\nimport { FaqModel } from '@/entities/FAQ';\nimport UnionImage from './union.svg?react';\nimport s from './FAQ.module.css';\nexport const FAQ = ()=>{\n    const items = useList(FaqModel.$faqItems.map((el)=>el.slice(0, 3)), (item)=>/*#__PURE__*/ _jsxs(Accordion.Item, {\n            value: item.title,\n            children: [\n                /*#__PURE__*/ _jsx(Accordion.Control, {\n                    children: /*#__PURE__*/ _jsx(Title, {\n                        order: 5,\n                        className: s.accordionLabel,\n                        fw: \"bold\",\n                        children: item.title\n                    })\n                }),\n                /*#__PURE__*/ _jsx(Accordion.Panel, {\n                    children: /*#__PURE__*/ _jsx(Markdown, {\n                        children: item.body.data\n                    })\n                })\n            ]\n        }));\n    return /*#__PURE__*/ _jsxs(Section, {\n        className: s.section,\n        children: [\n            /*#__PURE__*/ _jsxs(Title, {\n                className: s.mainTitle,\n                order: 2,\n                children: [\n                    \"Часто задаваемые\",\n                    ' ',\n                    /*#__PURE__*/ _jsxs(\"a\", {\n                        href: \"/faq\",\n                        children: [\n                            \"вопросы \",\n                            /*#__PURE__*/ _jsx(ArrowUpRight, {\n                                weight: \"bold\"\n                            })\n                        ]\n                    })\n                ]\n            }),\n            /*#__PURE__*/ _jsx(Accordion, {\n                variant: \"filled\",\n                classNames: s,\n                chevron: /*#__PURE__*/ _jsx(CaretDown, {\n                    weight: \"bold\",\n                    size: 24\n                }),\n                children: items\n            }),\n            /*#__PURE__*/ _jsx(UnionImage, {\n                width: 228,\n                height: 208,\n                className: s.union\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308441,
+      "start": 1750271784981,
+      "end": 1750271784986,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/FAQ/index.tsx\"],\"sourcesContent\":[\"import { Accordion, Title } from '@mantine/core';\\nimport { ArrowUpRight, CaretDown } from '@phosphor-icons/react/dist/ssr';\\nimport { useList } from 'effector-react';\\nimport Markdown from 'markdown-to-jsx';\\n\\nimport { Section } from '@/shared/ui';\\n\\nimport { FaqModel } from '@/entities/FAQ';\\n\\nimport UnionImage from './union.svg?react';\\n\\nimport s from './FAQ.module.css';\\n\\nexport const FAQ = () => {\\n    const items = useList(\\n        FaqModel.$faqItems.map((el) => el.slice(0, 3)),\\n        (item) => (\\n            <Accordion.Item value={item.title}>\\n                <Accordion.Control>\\n                    <Title order={5} className={s.accordionLabel} fw='bold'>\\n                        {item.title}\\n                    </Title>\\n                </Accordion.Control>\\n                <Accordion.Panel>\\n                    <Markdown>{item.body.data}</Markdown>\\n                </Accordion.Panel>\\n            </Accordion.Item>\\n        )\\n    );\\n\\n    return (\\n        <Section className={s.section}>\\n            <Title className={s.mainTitle} order={2}>\\n                Часто задаваемые{' '}\\n                <a href='/faq'>\\n                    вопросы <ArrowUpRight weight='bold' />\\n                </a>\\n            </Title>\\n            <Accordion variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\\n                {items}\\n            </Accordion>\\n            <UnionImage width={228} height={208} className={s.union} />\\n        </Section>\\n    );\\n};\\n\"],\"names\":[\"Accordion\",\"Title\",\"ArrowUpRight\",\"CaretDown\",\"useList\",\"Markdown\",\"Section\",\"FaqModel\",\"UnionImage\",\"s\",\"FAQ\",\"items\",\"$faqItems\",\"map\",\"el\",\"slice\",\"item\",\"Item\",\"value\",\"title\",\"Control\",\"order\",\"className\",\"accordionLabel\",\"fw\",\"Panel\",\"body\",\"data\",\"section\",\"mainTitle\",\"a\",\"href\",\"weight\",\"variant\",\"classNames\",\"chevron\",\"size\",\"width\",\"height\",\"union\"],\"mappings\":\";AAAA,SAASA,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AACjD,SAASC,YAAY,EAAEC,SAAS,QAAQ,iCAAiC;AACzE,SAASC,OAAO,QAAQ,iBAAiB;AACzC,OAAOC,cAAc,kBAAkB;AAEvC,SAASC,OAAO,QAAQ,cAAc;AAEtC,SAASC,QAAQ,QAAQ,iBAAiB;AAE1C,OAAOC,gBAAgB,oBAAoB;AAE3C,OAAOC,OAAO,mBAAmB;AAEjC,OAAO,MAAMC,MAAM;IACf,MAAMC,QAAQP,QACVG,SAASK,SAAS,CAACC,GAAG,CAAC,CAACC,KAAOA,GAAGC,KAAK,CAAC,GAAG,KAC3C,CAACC,qBACG,MAAChB,UAAUiB,IAAI;YAACC,OAAOF,KAAKG,KAAK;;8BAC7B,KAACnB,UAAUoB,OAAO;8BACd,cAAA,KAACnB;wBAAMoB,OAAO;wBAAGC,WAAWb,EAAEc,cAAc;wBAAEC,IAAG;kCAC5CR,KAAKG,KAAK;;;8BAGnB,KAACnB,UAAUyB,KAAK;8BACZ,cAAA,KAACpB;kCAAUW,KAAKU,IAAI,CAACC,IAAI;;;;;IAMzC,qBACI,MAACrB;QAAQgB,WAAWb,EAAEmB,OAAO;;0BACzB,MAAC3B;gBAAMqB,WAAWb,EAAEoB,SAAS;gBAAER,OAAO;;oBAAG;oBACpB;kCACjB,MAACS;wBAAEC,MAAK;;4BAAO;0CACH,KAAC7B;gCAAa8B,QAAO;;;;;;0BAGrC,KAAChC;gBAAUiC,SAAQ;gBAASC,YAAYzB;gBAAG0B,uBAAS,KAAChC;oBAAU6B,QAAO;oBAAOI,MAAM;;0BAC9EzB;;0BAEL,KAACH;gBAAW6B,OAAO;gBAAKC,QAAQ;gBAAKhB,WAAWb,EAAE8B,KAAK;;;;AAGnE,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { ArrowUpRight, CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList } from \"effector-react\";\nimport Markdown from \"markdown-to-jsx\";\nimport { Section } from \"@/shared/ui\";\nimport { FaqModel } from \"@/entities/FAQ\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./FAQ.module.css\";\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map((el) => el.slice(0, 3)), (item) => /* @__PURE__ */ _jsxs(Accordion.Item, {\n    value: item.title,\n    children: [\n      /* @__PURE__ */ _jsx(Accordion.Control, {\n        children: /* @__PURE__ */ _jsx(Title, {\n          order: 5,\n          className: s.accordionLabel,\n          fw: \"bold\",\n          children: item.title\n        })\n      }),\n      /* @__PURE__ */ _jsx(Accordion.Panel, {\n        children: /* @__PURE__ */ _jsx(Markdown, {\n          children: item.body.data\n        })\n      })\n    ]\n  }));\n  return /* @__PURE__ */ _jsxs(Section, {\n    className: s.section,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        className: s.mainTitle,\n        order: 2,\n        children: [\n          \"Часто задаваемые\",\n          \" \",\n          /* @__PURE__ */ _jsxs(\"a\", {\n            href: \"/faq\",\n            children: [\n              \"вопросы \",\n              /* @__PURE__ */ _jsx(ArrowUpRight, {\n                weight: \"bold\"\n              })\n            ]\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Accordion, {\n        variant: \"filled\",\n        classNames: s,\n        chevron: /* @__PURE__ */ _jsx(CaretDown, {\n          weight: \"bold\",\n          size: 24\n        }),\n        children: items\n      }),\n      /* @__PURE__ */ _jsx(UnionImage, {\n        width: 228,\n        height: 208,\n        className: s.union\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308441,
-      "end": 1750239308671,
+      "start": 1750271784986,
+      "end": 1750271785165,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785165,
+      "end": 1750271785165,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/FAQ/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Accordion, Title } from \"@mantine/core\";\nimport { ArrowUpRight, CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { useList } from \"effector-react\";\nimport Markdown from \"markdown-to-jsx\";\nimport { Section } from \"@/shared/ui\";\nimport { FaqModel } from \"@/entities/FAQ\";\nimport UnionImage from \"./union.svg?react\";\nimport s from \"./FAQ.module.css\";\nexport const FAQ = () => {\n  const items = useList(FaqModel.$faqItems.map((el) => el.slice(0, 3)), (item) => /* @__PURE__ */ _jsxs(Accordion.Item, {\n    value: item.title,\n    children: [\n      /* @__PURE__ */ _jsx(Accordion.Control, {\n        children: /* @__PURE__ */ _jsx(Title, {\n          order: 5,\n          className: s.accordionLabel,\n          fw: \"bold\",\n          children: item.title\n        })\n      }),\n      /* @__PURE__ */ _jsx(Accordion.Panel, {\n        children: /* @__PURE__ */ _jsx(Markdown, {\n          children: item.body.data\n        })\n      })\n    ]\n  }));\n  return /* @__PURE__ */ _jsxs(Section, {\n    className: s.section,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        className: s.mainTitle,\n        order: 2,\n        children: [\n          \"Часто задаваемые\",\n          \" \",\n          /* @__PURE__ */ _jsxs(\"a\", {\n            href: \"/faq\",\n            children: [\n              \"вопросы \",\n              /* @__PURE__ */ _jsx(ArrowUpRight, {\n                weight: \"bold\"\n              })\n            ]\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Accordion, {\n        variant: \"filled\",\n        classNames: s,\n        chevron: /* @__PURE__ */ _jsx(CaretDown, {\n          weight: \"bold\",\n          size: 24\n        }),\n        children: items\n      }),\n      /* @__PURE__ */ _jsx(UnionImage, {\n        width: 228,\n        height: 208,\n        className: s.union\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308671,
-      "end": 1750239308671,
+      "start": 1750271785165,
+      "end": 1750271785165,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

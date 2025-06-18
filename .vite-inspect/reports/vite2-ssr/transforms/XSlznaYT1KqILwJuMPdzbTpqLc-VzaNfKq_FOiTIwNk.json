@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Paper, Stack, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './Banner.module.css';\n\ninterface BannerProps {\n    color?: string;\n    actionSlot?: ReactNode;\n    title?: string;\n    description?: string;\n    image?:\n        | string\n        | {\n              src: string;\n              extra: string;\n          };\n}\n\nconst BANNER_CONFIG = {\n    title: 'Купить отчет без прохождения теста',\n    description:\n        'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n    image: {\n        src: '/types/circles/ENTP',\n        extra: '_2',\n    },\n};\n\nexport const Banner = ({\n    color = 'violet',\n    actionSlot,\n    title = BANNER_CONFIG.title,\n    description = BANNER_CONFIG.description,\n    image = BANNER_CONFIG.image,\n}: BannerProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Stack className={s.inner}>\n            <Title order={3} className={s.title}>\n                <Picture cdn className={s.emoji} src='/emoji/star' />\n                {title}\n            </Title>\n            <Text className={s.description}>{description}</Text>\n            <Picture\n                className={s.image}\n                aria-hidden\n                src={typeof image !== 'string' ? image.src : image}\n                extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''}\n                w={260}\n                h={260}\n            />\n            {actionSlot}\n        </Stack>\n    </Paper>\n);\n",
-      "start": 1750239308342,
-      "end": 1750239308364,
+      "start": 1750271784925,
+      "end": 1750271784942,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './Banner.module.css';\nconst BANNER_CONFIG = {\n    title: 'Купить отчет без прохождения теста',\n    description: 'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\n    image: {\n        src: '/types/circles/ENTP',\n        extra: '_2'\n    }\n};\nexport const Banner = ({ color = 'violet', actionSlot, title = BANNER_CONFIG.title, description = BANNER_CONFIG.description, image = BANNER_CONFIG.image })=>/*#__PURE__*/ _jsx(Paper, {\n        \"data-color\": color,\n        className: s.paper,\n        children: /*#__PURE__*/ _jsxs(Stack, {\n            className: s.inner,\n            children: [\n                /*#__PURE__*/ _jsxs(Title, {\n                    order: 3,\n                    className: s.title,\n                    children: [\n                        /*#__PURE__*/ _jsx(Picture, {\n                            cdn: true,\n                            className: s.emoji,\n                            src: \"/emoji/star\"\n                        }),\n                        title\n                    ]\n                }),\n                /*#__PURE__*/ _jsx(Text, {\n                    className: s.description,\n                    children: description\n                }),\n                /*#__PURE__*/ _jsx(Picture, {\n                    className: s.image,\n                    \"aria-hidden\": true,\n                    src: typeof image !== 'string' ? image.src : image,\n                    extraPath: typeof image !== 'string' && 'extra' in image ? image.extra : '',\n                    w: 260,\n                    h: 260\n                }),\n                actionSlot\n            ]\n        })\n    });\n",
-      "start": 1750239308364,
-      "end": 1750239308381,
+      "start": 1750271784942,
+      "end": 1750271784955,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/Banner/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Paper, Stack, Text, Title } from '@mantine/core';\\n\\nimport { Picture } from '@/shared/ui';\\n\\nimport s from './Banner.module.css';\\n\\ninterface BannerProps {\\n    color?: string;\\n    actionSlot?: ReactNode;\\n    title?: string;\\n    description?: string;\\n    image?:\\n        | string\\n        | {\\n              src: string;\\n              extra: string;\\n          };\\n}\\n\\nconst BANNER_CONFIG = {\\n    title: 'Купить отчет без прохождения теста',\\n    description:\\n        'Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!',\\n    image: {\\n        src: '/types/circles/ENTP',\\n        extra: '_2',\\n    },\\n};\\n\\nexport const Banner = ({\\n    color = 'violet',\\n    actionSlot,\\n    title = BANNER_CONFIG.title,\\n    description = BANNER_CONFIG.description,\\n    image = BANNER_CONFIG.image,\\n}: BannerProps) => (\\n    <Paper data-color={color} className={s.paper}>\\n        <Stack className={s.inner}>\\n            <Title order={3} className={s.title}>\\n                <Picture cdn className={s.emoji} src='/emoji/star' />\\n                {title}\\n            </Title>\\n            <Text className={s.description}>{description}</Text>\\n            <Picture\\n                className={s.image}\\n                aria-hidden\\n                src={typeof image !== 'string' ? image.src : image}\\n                extraPath={typeof image !== 'string' && 'extra' in image ? image.extra : ''}\\n                w={260}\\n                h={260}\\n            />\\n            {actionSlot}\\n        </Stack>\\n    </Paper>\\n);\\n\"],\"names\":[\"Paper\",\"Stack\",\"Text\",\"Title\",\"Picture\",\"s\",\"BANNER_CONFIG\",\"title\",\"description\",\"image\",\"src\",\"extra\",\"Banner\",\"color\",\"actionSlot\",\"data-color\",\"className\",\"paper\",\"inner\",\"order\",\"cdn\",\"emoji\",\"aria-hidden\",\"extraPath\",\"w\",\"h\"],\"mappings\":\";AACA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAE1D,SAASC,OAAO,QAAQ,cAAc;AAEtC,OAAOC,OAAO,sBAAsB;AAepC,MAAMC,gBAAgB;IAClBC,OAAO;IACPC,aACI;IACJC,OAAO;QACHC,KAAK;QACLC,OAAO;IACX;AACJ;AAEA,OAAO,MAAMC,SAAS,CAAC,EACnBC,QAAQ,QAAQ,EAChBC,UAAU,EACVP,QAAQD,cAAcC,KAAK,EAC3BC,cAAcF,cAAcE,WAAW,EACvCC,QAAQH,cAAcG,KAAK,EACjB,iBACV,KAACT;QAAMe,cAAYF;QAAOG,WAAWX,EAAEY,KAAK;kBACxC,cAAA,MAAChB;YAAMe,WAAWX,EAAEa,KAAK;;8BACrB,MAACf;oBAAMgB,OAAO;oBAAGH,WAAWX,EAAEE,KAAK;;sCAC/B,KAACH;4BAAQgB,GAAG;4BAACJ,WAAWX,EAAEgB,KAAK;4BAAEX,KAAI;;wBACpCH;;;8BAEL,KAACL;oBAAKc,WAAWX,EAAEG,WAAW;8BAAGA;;8BACjC,KAACJ;oBACGY,WAAWX,EAAEI,KAAK;oBAClBa,aAAW;oBACXZ,KAAK,OAAOD,UAAU,WAAWA,MAAMC,GAAG,GAAGD;oBAC7Cc,WAAW,OAAOd,UAAU,YAAY,WAAWA,QAAQA,MAAME,KAAK,GAAG;oBACzEa,GAAG;oBACHC,GAAG;;gBAENX;;;OAGX\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Banner.module.css\";\nconst BANNER_CONFIG = {\n  title: \"Купить отчет без прохождения теста\",\n  description: \"Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!\",\n  image: {\n    src: \"/types/circles/ENTP\",\n    extra: \"_2\"\n  }\n};\nexport const Banner = ({ color = \"violet\", actionSlot, title = BANNER_CONFIG.title, description = BANNER_CONFIG.description, image = BANNER_CONFIG.image }) => /* @__PURE__ */ _jsx(Paper, {\n  \"data-color\": color,\n  className: s.paper,\n  children: /* @__PURE__ */ _jsxs(Stack, {\n    className: s.inner,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        order: 3,\n        className: s.title,\n        children: [\n          /* @__PURE__ */ _jsx(Picture, {\n            cdn: true,\n            className: s.emoji,\n            src: \"/emoji/star\"\n          }),\n          title\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.description,\n        children: description\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        className: s.image,\n        \"aria-hidden\": true,\n        src: typeof image !== \"string\" ? image.src : image,\n        extraPath: typeof image !== \"string\" && \"extra\" in image ? image.extra : \"\",\n        w: 260,\n        h: 260\n      }),\n      actionSlot\n    ]\n  })\n});\n",
-      "start": 1750239308381,
-      "end": 1750239308503,
+      "start": 1750271784955,
+      "end": 1750271785064,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785064,
+      "end": 1750271785064,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/Banner/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./Banner.module.css\";\nconst BANNER_CONFIG = {\n  title: \"Купить отчет без прохождения теста\",\n  description: \"Узнайте свои сильные стороны и потенциал с нашим готовым отчетом по типу личности – доступно сразу после заказа!\",\n  image: {\n    src: \"/types/circles/ENTP\",\n    extra: \"_2\"\n  }\n};\nexport const Banner = ({ color = \"violet\", actionSlot, title = BANNER_CONFIG.title, description = BANNER_CONFIG.description, image = BANNER_CONFIG.image }) => /* @__PURE__ */ _jsx(Paper, {\n  \"data-color\": color,\n  className: s.paper,\n  children: /* @__PURE__ */ _jsxs(Stack, {\n    className: s.inner,\n    children: [\n      /* @__PURE__ */ _jsxs(Title, {\n        order: 3,\n        className: s.title,\n        children: [\n          /* @__PURE__ */ _jsx(Picture, {\n            cdn: true,\n            className: s.emoji,\n            src: \"/emoji/star\"\n          }),\n          title\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.description,\n        children: description\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        className: s.image,\n        \"aria-hidden\": true,\n        src: typeof image !== \"string\" ? image.src : image,\n        extraPath: typeof image !== \"string\" && \"extra\" in image ? image.extra : \"\",\n        w: 260,\n        h: 260\n      }),\n      actionSlot\n    ]\n  })\n});\n",
-      "start": 1750239308503,
-      "end": 1750239308503,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrap {\n  @mixin larger-than 1200px {\n    margin: auto;\n    max-width: 860px;\n  }\n}\n\n.root {\n  --title-fz: 24px !important;\n  --title-lh: 28px !important;\n\n  position: relative;\n  text-align: center;\n}\n\n.hint {\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 18px;\n  text-align: center;\n  color: var(--mantine-color-gray-6);\n}\n\n.rephrase {\n  span {\n    align-items: start;\n  }\n}\n\n.checkboxWrapper [data-label-position] {\n  display: flex;\n  place-items: center;\n\n  > div {\n    align-items: center;\n  }\n\n  input[type=\"checkbox\"] {\n    border-color: var(--mantine-color-dark-2);\n  }\n}\n\n.checkboxWrapper input + svg {\n  position: absolute;\n  left: 50%;\n  top: unset;\n  width: 28px;\n  height: 28px;\n  color: #fff;\n  transform: translateX(-50%);\n  pointer-events: none;\n}\n",
-      "start": 1750239308623,
-      "end": 1750239308635,
+      "start": 1750271785282,
+      "end": 1750271785289,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
-      "start": 1750239308635,
-      "end": 1750239308635,
+      "start": 1750271785289,
+      "end": 1750271785289,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785291,
+      "end": 1750271785291,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/TestMultipleQuestion/TestMultipleQuestion.module.css [vike:pluginModuleBanner] */\nexport const wrap = \"_55tXB\";\nexport const root = \"M7exd\";\nexport const hint = \"WxJH1\";\nexport const rephrase = \"I0ues\";\nexport const checkboxWrapper = \"BP5ZV\";\nexport default {\n\twrap: wrap,\n\troot: root,\n\thint: hint,\n\trephrase: rephrase,\n\tcheckboxWrapper: checkboxWrapper\n};\n",
-      "start": 1750239308636,
-      "end": 1750239308636,
+      "start": 1750271785291,
+      "end": 1750271785291,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

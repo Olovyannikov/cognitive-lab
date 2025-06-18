@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\n\nimport { useIsLarge } from '@/shared/lib';\n\ninterface BlockQuoteFilledProps {\n    text: string;\n    color?: string;\n}\n\nexport const BlockQuoteFilled = ({ text, color = 'violet' }: BlockQuoteFilledProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\n            <Markdown\n                options={{\n                    overrides: {\n                        p: (props) => (\n                            <Text fz={isLarge ? 20 : 18} fw={500}>\n                                {props.children}\n                            </Text>\n                        ),\n                        span: (props) => (\n                            <Text fw={500} span fz={isLarge ? 20 : 18}>\n                                {props.children}\n                            </Text>\n                        ),\n                        pre: (props) => <Text fw={500}>{props.children}</Text>,\n                        code: (props) => <Markdown>{props.children}</Markdown>,\n                    },\n                }}\n            >\n                {text}\n            </Markdown>\n        </Paper>\n    );\n};\n",
-      "start": 1750239308343,
-      "end": 1750239308365,
+      "start": 1750271784925,
+      "end": 1750271784942,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { useIsLarge } from '@/shared/lib';\nexport const BlockQuoteFilled = ({ text, color = 'violet' })=>{\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsx(Paper, {\n        bg: `${color}.0`,\n        py: \"lg\",\n        px: \"3xl\",\n        my: \"md\",\n        c: `${color}.9`,\n        children: /*#__PURE__*/ _jsx(Markdown, {\n            options: {\n                overrides: {\n                    p: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fz: isLarge ? 20 : 18,\n                            fw: 500,\n                            children: props.children\n                        }),\n                    span: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            span: true,\n                            fz: isLarge ? 20 : 18,\n                            children: props.children\n                        }),\n                    pre: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            children: props.children\n                        }),\n                    code: (props)=>/*#__PURE__*/ _jsx(Markdown, {\n                            children: props.children\n                        })\n                }\n            },\n            children: text\n        })\n    });\n};\n",
-      "start": 1750239308365,
-      "end": 1750239308381,
+      "start": 1750271784942,
+      "end": 1750271784955,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteFilled/index.tsx\"],\"sourcesContent\":[\"import { Paper, Text } from '@mantine/core';\\nimport Markdown from 'markdown-to-jsx';\\n\\nimport { useIsLarge } from '@/shared/lib';\\n\\ninterface BlockQuoteFilledProps {\\n    text: string;\\n    color?: string;\\n}\\n\\nexport const BlockQuoteFilled = ({ text, color = 'violet' }: BlockQuoteFilledProps) => {\\n    const isLarge = useIsLarge();\\n\\n    return (\\n        <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\\n            <Markdown\\n                options={{\\n                    overrides: {\\n                        p: (props) => (\\n                            <Text fz={isLarge ? 20 : 18} fw={500}>\\n                                {props.children}\\n                            </Text>\\n                        ),\\n                        span: (props) => (\\n                            <Text fw={500} span fz={isLarge ? 20 : 18}>\\n                                {props.children}\\n                            </Text>\\n                        ),\\n                        pre: (props) => <Text fw={500}>{props.children}</Text>,\\n                        code: (props) => <Markdown>{props.children}</Markdown>,\\n                    },\\n                }}\\n            >\\n                {text}\\n            </Markdown>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Paper\",\"Text\",\"Markdown\",\"useIsLarge\",\"BlockQuoteFilled\",\"text\",\"color\",\"isLarge\",\"bg\",\"py\",\"px\",\"my\",\"c\",\"options\",\"overrides\",\"p\",\"props\",\"fz\",\"fw\",\"children\",\"span\",\"pre\",\"code\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AAC5C,OAAOC,cAAc,kBAAkB;AAEvC,SAASC,UAAU,QAAQ,eAAe;AAO1C,OAAO,MAAMC,mBAAmB,CAAC,EAAEC,IAAI,EAAEC,QAAQ,QAAQ,EAAyB;IAC9E,MAAMC,UAAUJ;IAEhB,qBACI,KAACH;QAAMQ,IAAI,GAAGF,MAAM,EAAE,CAAC;QAAEG,IAAG;QAAKC,IAAG;QAAMC,IAAG;QAAKC,GAAG,GAAGN,MAAM,EAAE,CAAC;kBAC7D,cAAA,KAACJ;YACGW,SAAS;gBACLC,WAAW;oBACPC,GAAG,CAACC,sBACA,KAACf;4BAAKgB,IAAIV,UAAU,KAAK;4BAAIW,IAAI;sCAC5BF,MAAMG,QAAQ;;oBAGvBC,MAAM,CAACJ,sBACH,KAACf;4BAAKiB,IAAI;4BAAKE,IAAI;4BAACH,IAAIV,UAAU,KAAK;sCAClCS,MAAMG,QAAQ;;oBAGvBE,KAAK,CAACL,sBAAU,KAACf;4BAAKiB,IAAI;sCAAMF,MAAMG,QAAQ;;oBAC9CG,MAAM,CAACN,sBAAU,KAACd;sCAAUc,MAAMG,QAAQ;;gBAC9C;YACJ;sBAECd;;;AAIjB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({ text, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    bg: `${color}.0`,\n    py: \"lg\",\n    px: \"3xl\",\n    my: \"md\",\n    c: `${color}.9`,\n    children: /* @__PURE__ */ _jsx(Markdown, {\n      options: {\n        overrides: {\n          p: (props) => /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 20 : 18,\n            fw: 500,\n            children: props.children\n          }),\n          span: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            span: true,\n            fz: isLarge ? 20 : 18,\n            children: props.children\n          }),\n          pre: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            children: props.children\n          }),\n          code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n            children: props.children\n          })\n        }\n      },\n      children: text\n    })\n  });\n};\n",
-      "start": 1750239308381,
-      "end": 1750239308494,
+      "start": 1750271784955,
+      "end": 1750271785059,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308494,
-      "end": 1750239308494,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785059,
+      "end": 1750271785059,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308494,
-      "end": 1750239308495,
+      "start": 1750271785059,
+      "end": 1750271785060,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BlockQuoteFilled/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({ text, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    bg: `${color}.0`,\n    py: \"lg\",\n    px: \"3xl\",\n    my: \"md\",\n    c: `${color}.9`,\n    children: /* @__PURE__ */ _jsx(Markdown, {\n      options: {\n        overrides: {\n          p: (props) => /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 20 : 18,\n            fw: 500,\n            children: props.children\n          }),\n          span: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            span: true,\n            fz: isLarge ? 20 : 18,\n            children: props.children\n          }),\n          pre: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            children: props.children\n          }),\n          code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n            children: props.children\n          })\n        }\n      },\n      children: text\n    })\n  });\n};\n",
-      "start": 1750239308495,
-      "end": 1750239308495,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

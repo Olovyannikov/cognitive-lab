@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const HTTP_METHODS = {\n    POST: 'POST',\n    PUT: 'PUT',\n    PATCH: 'PATCH',\n    DELETE: 'DELETE',\n    GET: 'GET',\n} as const;\n",
-      "start": 1750239308724,
-      "end": 1750239308732,
+      "start": 1750271785270,
+      "end": 1750271785281,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export const HTTP_METHODS = {\n    POST: 'POST',\n    PUT: 'PUT',\n    PATCH: 'PATCH',\n    DELETE: 'DELETE',\n    GET: 'GET'\n};\n",
-      "start": 1750239308732,
-      "end": 1750239308735,
+      "start": 1750271785281,
+      "end": 1750271785284,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/methods.ts\"],\"sourcesContent\":[\"export const HTTP_METHODS = {\\n    POST: 'POST',\\n    PUT: 'PUT',\\n    PATCH: 'PATCH',\\n    DELETE: 'DELETE',\\n    GET: 'GET',\\n} as const;\\n\"],\"names\":[\"HTTP_METHODS\",\"POST\",\"PUT\",\"PATCH\",\"DELETE\",\"GET\"],\"mappings\":\"AAAA,OAAO,MAAMA,eAAe;IACxBC,MAAM;IACNC,KAAK;IACLC,OAAO;IACPC,QAAQ;IACRC,KAAK;AACT,EAAW\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const HTTP_METHODS = {\n  POST: \"POST\",\n  PUT: \"PUT\",\n  PATCH: \"PATCH\",\n  DELETE: \"DELETE\",\n  GET: \"GET\"\n};\n",
-      "start": 1750239308735,
-      "end": 1750239308812,
+      "start": 1750271785284,
+      "end": 1750271785347,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785347,
+      "end": 1750271785347,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785347,
+      "end": 1750271785347,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/api/methods.ts [vike:pluginModuleBanner] */\nexport const HTTP_METHODS = {\n  POST: \"POST\",\n  PUT: \"PUT\",\n  PATCH: \"PATCH\",\n  DELETE: \"DELETE\",\n  GET: \"GET\"\n};\n",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785348,
+      "end": 1750271785348,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

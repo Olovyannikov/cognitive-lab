@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "/**\n * Вычисляет процент прогресса прохождения теста\n * @param answersCount Количество ответов\n * @param questionsCount Количество вопросов\n */\nexport const getProgress = (answersCount: number, questionsCount: number): number => {\n    if (!questionsCount) return 0;\n    return Number(((answersCount / questionsCount) * 100).toFixed(0));\n};\n",
-      "start": 1750239308435,
-      "end": 1750239308463,
+      "start": 1750271785006,
+      "end": 1750271785018,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "/**\n * Вычисляет процент прогресса прохождения теста\n * @param answersCount Количество ответов\n * @param questionsCount Количество вопросов\n */ export const getProgress = (answersCount, questionsCount)=>{\n    if (!questionsCount) return 0;\n    return Number((answersCount / questionsCount * 100).toFixed(0));\n};\n",
-      "start": 1750239308463,
-      "end": 1750239308469,
+      "start": 1750271785018,
+      "end": 1750271785023,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/getProgress.ts\"],\"sourcesContent\":[\"/**\\n * Вычисляет процент прогресса прохождения теста\\n * @param answersCount Количество ответов\\n * @param questionsCount Количество вопросов\\n */\\nexport const getProgress = (answersCount: number, questionsCount: number): number => {\\n    if (!questionsCount) return 0;\\n    return Number(((answersCount / questionsCount) * 100).toFixed(0));\\n};\\n\"],\"names\":[\"getProgress\",\"answersCount\",\"questionsCount\",\"Number\",\"toFixed\"],\"mappings\":\"AAAA;;;;CAIC,GACD,OAAO,MAAMA,cAAc,CAACC,cAAsBC;IAC9C,IAAI,CAACA,gBAAgB,OAAO;IAC5B,OAAOC,OAAO,AAAC,CAAA,AAACF,eAAeC,iBAAkB,GAAE,EAAGE,OAAO,CAAC;AAClE,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const getProgress = (answersCount, questionsCount) => {\n  if (!questionsCount) return 0;\n  return Number((answersCount / questionsCount * 100).toFixed(0));\n};\n",
-      "start": 1750239308469,
-      "end": 1750239308710,
+      "start": 1750271785023,
+      "end": 1750271785234,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308710,
-      "end": 1750239308710,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785234,
+      "end": 1750271785234,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308710,
-      "end": 1750239308711,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/getProgress.ts [vike:pluginModuleBanner] */\nexport const getProgress = (answersCount, questionsCount) => {\n  if (!questionsCount) return 0;\n  return Number((answersCount / questionsCount * 100).toFixed(0));\n};\n",
-      "start": 1750239308711,
-      "end": 1750239308711,
+      "start": 1750271785234,
+      "end": 1750271785234,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

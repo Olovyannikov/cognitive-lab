@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport CircleImage from '@/shared/assets/images/circle.svg?react';\nimport CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';\nimport { Picture } from '@/shared/ui';\n\nimport s from './ReportHeader.module.css';\n\ninterface ReportHeaderProps {\n    type: string;\n    name: string;\n    preTitle?: string;\n    typeToColorMapper?: Record<string, string>;\n}\n\nexport const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper }: ReportHeaderProps) => {\n    const currentColor = typeToColorMapper?.[type];\n    const { isMobile } = usePageContext();\n    const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');\n\n    return (\n        <Paper className={s.paper} data-color={currentColor}>\n            <Stack className={s.stack}>\n                <Text className={s.personalityType}>{preTitle}</Text>\n                <Title className={s.name}>{currentName ?? name}</Title>\n            </Stack>\n            <Picture\n                cdn\n                draggable={false}\n                className={s.character}\n                src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}\n            />\n            <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />\n            <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />\n        </Paper>\n    );\n};\n",
-      "start": 1750239308363,
-      "end": 1750239308384,
+      "start": 1750271784932,
+      "end": 1750271784944,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from '@mantine/core';\nimport clsx from 'clsx';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport CircleImage from '@/shared/assets/images/circle.svg?react';\nimport CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';\nimport { Picture } from '@/shared/ui';\nimport s from './ReportHeader.module.css';\nexport const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper })=>{\n    const currentColor = typeToColorMapper?.[type];\n    const { isMobile } = usePageContext();\n    const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');\n    return /*#__PURE__*/ _jsxs(Paper, {\n        className: s.paper,\n        \"data-color\": currentColor,\n        children: [\n            /*#__PURE__*/ _jsxs(Stack, {\n                className: s.stack,\n                children: [\n                    /*#__PURE__*/ _jsx(Text, {\n                        className: s.personalityType,\n                        children: preTitle\n                    }),\n                    /*#__PURE__*/ _jsx(Title, {\n                        className: s.name,\n                        children: currentName ?? name\n                    })\n                ]\n            }),\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                draggable: false,\n                className: s.character,\n                src: `/report/types/${isMobile ? 'mobile/' : ''}${type}`\n            }),\n            /*#__PURE__*/ _jsx(CircleImage, {\n                \"data-color\": currentColor,\n                className: clsx(s.image, s.desktop)\n            }),\n            /*#__PURE__*/ _jsx(CircleSmallImage, {\n                \"data-color\": currentColor,\n                className: clsx(s.image, s.mobile)\n            })\n        ]\n    });\n};\n",
-      "start": 1750239308384,
-      "end": 1750239308395,
+      "start": 1750271784944,
+      "end": 1750271784956,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportHeader/index.tsx\"],\"sourcesContent\":[\"import { Paper, Stack, Text, Title } from '@mantine/core';\\nimport clsx from 'clsx';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport CircleImage from '@/shared/assets/images/circle.svg?react';\\nimport CircleSmallImage from '@/shared/assets/images/circle_small.svg?react';\\nimport { Picture } from '@/shared/ui';\\n\\nimport s from './ReportHeader.module.css';\\n\\ninterface ReportHeaderProps {\\n    type: string;\\n    name: string;\\n    preTitle?: string;\\n    typeToColorMapper?: Record<string, string>;\\n}\\n\\nexport const ReportHeader = ({ type, name, preTitle = 'Ваш тип личности', typeToColorMapper }: ReportHeaderProps) => {\\n    const currentColor = typeToColorMapper?.[type];\\n    const { isMobile } = usePageContext();\\n    const currentName = name?.split('—')[1]?.replaceAll('»', '').replaceAll('«', '');\\n\\n    return (\\n        <Paper className={s.paper} data-color={currentColor}>\\n            <Stack className={s.stack}>\\n                <Text className={s.personalityType}>{preTitle}</Text>\\n                <Title className={s.name}>{currentName ?? name}</Title>\\n            </Stack>\\n            <Picture\\n                cdn\\n                draggable={false}\\n                className={s.character}\\n                src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}\\n            />\\n            <CircleImage data-color={currentColor} className={clsx(s.image, s.desktop)} />\\n            <CircleSmallImage data-color={currentColor} className={clsx(s.image, s.mobile)} />\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Paper\",\"Stack\",\"Text\",\"Title\",\"clsx\",\"usePageContext\",\"CircleImage\",\"CircleSmallImage\",\"Picture\",\"s\",\"ReportHeader\",\"type\",\"name\",\"preTitle\",\"typeToColorMapper\",\"currentColor\",\"isMobile\",\"currentName\",\"split\",\"replaceAll\",\"className\",\"paper\",\"data-color\",\"stack\",\"personalityType\",\"cdn\",\"draggable\",\"character\",\"src\",\"image\",\"desktop\",\"mobile\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAC1D,OAAOC,UAAU,OAAO;AACxB,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,OAAOC,iBAAiB,0CAA0C;AAClE,OAAOC,sBAAsB,gDAAgD;AAC7E,SAASC,OAAO,QAAQ,cAAc;AAEtC,OAAOC,OAAO,4BAA4B;AAS1C,OAAO,MAAMC,eAAe,CAAC,EAAEC,IAAI,EAAEC,IAAI,EAAEC,WAAW,kBAAkB,EAAEC,iBAAiB,EAAqB;IAC5G,MAAMC,eAAeD,mBAAmB,CAACH,KAAK;IAC9C,MAAM,EAAEK,QAAQ,EAAE,GAAGX;IACrB,MAAMY,cAAcL,MAAMM,MAAM,IAAI,CAAC,EAAE,EAAEC,WAAW,KAAK,IAAIA,WAAW,KAAK;IAE7E,qBACI,MAACnB;QAAMoB,WAAWX,EAAEY,KAAK;QAAEC,cAAYP;;0BACnC,MAACd;gBAAMmB,WAAWX,EAAEc,KAAK;;kCACrB,KAACrB;wBAAKkB,WAAWX,EAAEe,eAAe;kCAAGX;;kCACrC,KAACV;wBAAMiB,WAAWX,EAAEG,IAAI;kCAAGK,eAAeL;;;;0BAE9C,KAACJ;gBACGiB,GAAG;gBACHC,WAAW;gBACXN,WAAWX,EAAEkB,SAAS;gBACtBC,KAAK,CAAC,cAAc,EAAEZ,WAAW,YAAY,KAAKL,MAAM;;0BAE5D,KAACL;gBAAYgB,cAAYP;gBAAcK,WAAWhB,KAAKK,EAAEoB,KAAK,EAAEpB,EAAEqB,OAAO;;0BACzE,KAACvB;gBAAiBe,cAAYP;gBAAcK,WAAWhB,KAAKK,EAAEoB,KAAK,EAAEpB,EAAEsB,MAAM;;;;AAGzF,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CircleImage from \"@/shared/assets/images/circle.svg?react\";\nimport CircleSmallImage from \"@/shared/assets/images/circle_small.svg?react\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./ReportHeader.module.css\";\nexport const ReportHeader = ({ type, name, preTitle = \"Ваш тип личности\", typeToColorMapper }) => {\n  const currentColor = typeToColorMapper?.[type];\n  const { isMobile } = usePageContext();\n  const currentName = name?.split(\"—\")[1]?.replaceAll(\"»\", \"\").replaceAll(\"«\", \"\");\n  return /* @__PURE__ */ _jsxs(Paper, {\n    className: s.paper,\n    \"data-color\": currentColor,\n    children: [\n      /* @__PURE__ */ _jsxs(Stack, {\n        className: s.stack,\n        children: [\n          /* @__PURE__ */ _jsx(Text, {\n            className: s.personalityType,\n            children: preTitle\n          }),\n          /* @__PURE__ */ _jsx(Title, {\n            className: s.name,\n            children: currentName ?? name\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        draggable: false,\n        className: s.character,\n        src: `/report/types/${isMobile ? \"mobile/\" : \"\"}${type}`\n      }),\n      /* @__PURE__ */ _jsx(CircleImage, {\n        \"data-color\": currentColor,\n        className: clsx(s.image, s.desktop)\n      }),\n      /* @__PURE__ */ _jsx(CircleSmallImage, {\n        \"data-color\": currentColor,\n        className: clsx(s.image, s.mobile)\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308395,
-      "end": 1750239308544,
+      "start": 1750271784956,
+      "end": 1750271785083,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308544,
-      "end": 1750239308544,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308544,
-      "end": 1750239308545,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785083,
+      "end": 1750271785083,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785083,
+      "end": 1750271785084,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/ReportHeader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Paper, Stack, Text, Title } from \"@mantine/core\";\nimport clsx from \"clsx\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport CircleImage from \"@/shared/assets/images/circle.svg?react\";\nimport CircleSmallImage from \"@/shared/assets/images/circle_small.svg?react\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./ReportHeader.module.css\";\nexport const ReportHeader = ({ type, name, preTitle = \"Ваш тип личности\", typeToColorMapper }) => {\n  const currentColor = typeToColorMapper?.[type];\n  const { isMobile } = usePageContext();\n  const currentName = name?.split(\"—\")[1]?.replaceAll(\"»\", \"\").replaceAll(\"«\", \"\");\n  return /* @__PURE__ */ _jsxs(Paper, {\n    className: s.paper,\n    \"data-color\": currentColor,\n    children: [\n      /* @__PURE__ */ _jsxs(Stack, {\n        className: s.stack,\n        children: [\n          /* @__PURE__ */ _jsx(Text, {\n            className: s.personalityType,\n            children: preTitle\n          }),\n          /* @__PURE__ */ _jsx(Title, {\n            className: s.name,\n            children: currentName ?? name\n          })\n        ]\n      }),\n      /* @__PURE__ */ _jsx(Picture, {\n        cdn: true,\n        draggable: false,\n        className: s.character,\n        src: `/report/types/${isMobile ? \"mobile/\" : \"\"}${type}`\n      }),\n      /* @__PURE__ */ _jsx(CircleImage, {\n        \"data-color\": currentColor,\n        className: clsx(s.image, s.desktop)\n      }),\n      /* @__PURE__ */ _jsx(CircleSmallImage, {\n        \"data-color\": currentColor,\n        className: clsx(s.image, s.mobile)\n      })\n    ]\n  });\n};\n",
-      "start": 1750239308545,
-      "end": 1750239308545,
+      "start": 1750271785084,
+      "end": 1750271785084,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\n\nimport { atom } from '@/shared/factories';\n\nimport { sendIssueMutation } from '../api';\nimport type { HelpFormProps } from './types';\n\nexport const HelpFormModel = atom(() => {\n    const HelpFormGate = createGate();\n    const $isFormSent = createStore(false);\n    const sentFormChanged = createEvent();\n    const submitHelpForm = createEvent<HelpFormProps>();\n    const sendHelpFormFx = createEffect(() => {\n        notifications.show({\n            title: 'Успешно!',\n            message: 'Ваш вопрос отправлен',\n        });\n    });\n\n    sample({\n        clock: sentFormChanged,\n        source: $isFormSent,\n        fn: (isFormSent) => !isFormSent,\n        target: $isFormSent,\n    });\n\n    sample({\n        clock: submitHelpForm,\n        target: [sendIssueMutation.start, sendHelpFormFx],\n    });\n\n    sample({\n        clock: sendIssueMutation.finished.success,\n        fn: () => true,\n        target: $isFormSent,\n    });\n\n    sample({\n        clock: HelpFormGate.close,\n        fn: () => false,\n        target: $isFormSent,\n    });\n\n    return {\n        HelpFormGate,\n        sendHelpFormFx,\n        $isFormSent,\n        sentFormChanged,\n        submitHelpForm,\n    };\n});\n",
-      "start": 1750239308419,
-      "end": 1750239308439,
+      "start": 1750271784878,
+      "end": 1750271784900,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { atom } from '@/shared/factories';\nimport { sendIssueMutation } from '../api';\nexport const HelpFormModel = _effector$factory({\n    sid: \"63m9u39r\",\n    fn: ()=>atom(()=>{\n            const HelpFormGate = createGate({\n                and: [],\n                or: {\n                    sid: \"cfj6ufjw\"\n                }\n            });\n            const $isFormSent = createStore(false, {\n                sid: \"tn5sz8v\"\n            });\n            const sentFormChanged = createEvent({\n                sid: \"37jowtvg\"\n            });\n            const submitHelpForm = createEvent({\n                sid: \"2ud0pvcn\"\n            });\n            const sendHelpFormFx = createEffect(()=>{\n                notifications.show({\n                    title: 'Успешно!',\n                    message: 'Ваш вопрос отправлен'\n                });\n            }, {\n                sid: \"bmdcmvjx\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: sentFormChanged,\n                        source: $isFormSent,\n                        fn: (isFormSent)=>!isFormSent,\n                        target: $isFormSent\n                    }\n                ],\n                or: {\n                    sid: \"45z14a0t\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitHelpForm,\n                        target: [\n                            sendIssueMutation.start,\n                            sendHelpFormFx\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"7awxk8rf\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: sendIssueMutation.finished.success,\n                        fn: ()=>true,\n                        target: $isFormSent\n                    }\n                ],\n                or: {\n                    sid: \"da8e078y\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: HelpFormGate.close,\n                        fn: ()=>false,\n                        target: $isFormSent\n                    }\n                ],\n                or: {\n                    sid: \"20vqchhh\"\n                }\n            });\n            return {\n                HelpFormGate,\n                sendHelpFormFx,\n                $isFormSent,\n                sentFormChanged,\n                submitHelpForm\n            };\n        })\n});\n",
-      "start": 1750239308439,
-      "end": 1750239308451,
+      "start": 1750271784900,
+      "end": 1750271784905,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/HelpForm/model/index.ts\"],\"sourcesContent\":[\"import { notifications } from '@mantine/notifications';\\nimport { createEffect, createEvent, createStore, sample } from 'effector';\\nimport { createGate } from 'effector-react';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { sendIssueMutation } from '../api';\\nimport type { HelpFormProps } from './types';\\n\\nexport const HelpFormModel = atom(() => {\\n    const HelpFormGate = createGate();\\n    const $isFormSent = createStore(false);\\n    const sentFormChanged = createEvent();\\n    const submitHelpForm = createEvent<HelpFormProps>();\\n    const sendHelpFormFx = createEffect(() => {\\n        notifications.show({\\n            title: 'Успешно!',\\n            message: 'Ваш вопрос отправлен',\\n        });\\n    });\\n\\n    sample({\\n        clock: sentFormChanged,\\n        source: $isFormSent,\\n        fn: (isFormSent) => !isFormSent,\\n        target: $isFormSent,\\n    });\\n\\n    sample({\\n        clock: submitHelpForm,\\n        target: [sendIssueMutation.start, sendHelpFormFx],\\n    });\\n\\n    sample({\\n        clock: sendIssueMutation.finished.success,\\n        fn: () => true,\\n        target: $isFormSent,\\n    });\\n\\n    sample({\\n        clock: HelpFormGate.close,\\n        fn: () => false,\\n        target: $isFormSent,\\n    });\\n\\n    return {\\n        HelpFormGate,\\n        sendHelpFormFx,\\n        $isFormSent,\\n        sentFormChanged,\\n        submitHelpForm,\\n    };\\n});\\n\"],\"names\":[\"notifications\",\"createEffect\",\"createEvent\",\"createStore\",\"sample\",\"createGate\",\"atom\",\"sendIssueMutation\",\"HelpFormModel\",\"HelpFormGate\",\"$isFormSent\",\"sentFormChanged\",\"submitHelpForm\",\"sendHelpFormFx\",\"show\",\"title\",\"message\",\"clock\",\"source\",\"fn\",\"isFormSent\",\"target\",\"start\",\"finished\",\"success\",\"close\"],\"mappings\":\";AAAA,SAASA,aAAa,QAAQ,yBAAyB;AACvD,SAASC,YAAY,EAAEC,WAAW,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAC1E,SAASC,UAAU,QAAQ,iBAAiB;AAE5C,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,iBAAiB,QAAQ,SAAS;AAG3C,OAAO,MAAMC;;YAAgBF,KAAK;YAC9B,MAAMG,eAAeJ;;;;;;YACrB,MAAMK,cAAcP,YAAY;;;YAChC,MAAMQ,kBAAkBT;;;YACxB,MAAMU,iBAAiBV;;;YACvB,MAAMW,iBAAiBZ,aAAa;gBAChCD,cAAcc,IAAI,CAAC;oBACfC,OAAO;oBACPC,SAAS;gBACb;YACJ;;;YAEAZ;;oBAAO;wBACHa,OAAON;wBACPO,QAAQR;wBACRS,IAAI,CAACC,aAAe,CAACA;wBACrBC,QAAQX;oBACZ;;;;;;YAEAN;;oBAAO;wBACHa,OAAOL;wBACPS,QAAQ;4BAACd,kBAAkBe,KAAK;4BAAET;yBAAe;oBACrD;;;;;;YAEAT;;oBAAO;wBACHa,OAAOV,kBAAkBgB,QAAQ,CAACC,OAAO;wBACzCL,IAAI,IAAM;wBACVE,QAAQX;oBACZ;;;;;;YAEAN;;oBAAO;wBACHa,OAAOR,aAAagB,KAAK;wBACzBN,IAAI,IAAM;wBACVE,QAAQX;oBACZ;;;;;;YAEA,OAAO;gBACHD;gBACAI;gBACAH;gBACAC;gBACAC;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { sendIssueMutation } from \"../api\";\nexport const HelpFormModel = _effector$factory({\n  sid: \"63m9u39r\",\n  fn: () => atom(() => {\n    const HelpFormGate = createGate({\n      and: [],\n      or: {\n        sid: \"cfj6ufjw\"\n      }\n    });\n    const $isFormSent = createStore(false, {\n      sid: \"tn5sz8v\"\n    });\n    const sentFormChanged = createEvent({\n      sid: \"37jowtvg\"\n    });\n    const submitHelpForm = createEvent({\n      sid: \"2ud0pvcn\"\n    });\n    const sendHelpFormFx = createEffect(() => {\n      notifications.show({\n        title: \"Успешно!\",\n        message: \"Ваш вопрос отправлен\"\n      });\n    }, {\n      sid: \"bmdcmvjx\"\n    });\n    sample({\n      and: [\n        {\n          clock: sentFormChanged,\n          source: $isFormSent,\n          fn: (isFormSent) => !isFormSent,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"45z14a0t\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitHelpForm,\n          target: [\n            sendIssueMutation.start,\n            sendHelpFormFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"7awxk8rf\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendIssueMutation.finished.success,\n          fn: () => true,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"da8e078y\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: HelpFormGate.close,\n          fn: () => false,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"20vqchhh\"\n      }\n    });\n    return {\n      HelpFormGate,\n      sendHelpFormFx,\n      $isFormSent,\n      sentFormChanged,\n      submitHelpForm\n    };\n  })\n});\n",
-      "start": 1750239308451,
-      "end": 1750239308690,
+      "start": 1750271784905,
+      "end": 1750271785057,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785057,
+      "end": 1750271785057,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785057,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785057,
+      "end": 1750271785058,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/HelpForm/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { atom } from \"@/shared/factories\";\nimport { sendIssueMutation } from \"../api\";\nexport const HelpFormModel = _effector$factory({\n  sid: \"63m9u39r\",\n  fn: () => atom(() => {\n    const HelpFormGate = createGate({\n      and: [],\n      or: {\n        sid: \"cfj6ufjw\"\n      }\n    });\n    const $isFormSent = createStore(false, {\n      sid: \"tn5sz8v\"\n    });\n    const sentFormChanged = createEvent({\n      sid: \"37jowtvg\"\n    });\n    const submitHelpForm = createEvent({\n      sid: \"2ud0pvcn\"\n    });\n    const sendHelpFormFx = createEffect(() => {\n      notifications.show({\n        title: \"Успешно!\",\n        message: \"Ваш вопрос отправлен\"\n      });\n    }, {\n      sid: \"bmdcmvjx\"\n    });\n    sample({\n      and: [\n        {\n          clock: sentFormChanged,\n          source: $isFormSent,\n          fn: (isFormSent) => !isFormSent,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"45z14a0t\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: submitHelpForm,\n          target: [\n            sendIssueMutation.start,\n            sendHelpFormFx\n          ]\n        }\n      ],\n      or: {\n        sid: \"7awxk8rf\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendIssueMutation.finished.success,\n          fn: () => true,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"da8e078y\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: HelpFormGate.close,\n          fn: () => false,\n          target: $isFormSent\n        }\n      ],\n      or: {\n        sid: \"20vqchhh\"\n      }\n    });\n    return {\n      HelpFormGate,\n      sendHelpFormFx,\n      $isFormSent,\n      sentFormChanged,\n      submitHelpForm\n    };\n  })\n});\n",
-      "start": 1750239308690,
-      "end": 1750239308690,
+      "start": 1750271785058,
+      "end": 1750271785058,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

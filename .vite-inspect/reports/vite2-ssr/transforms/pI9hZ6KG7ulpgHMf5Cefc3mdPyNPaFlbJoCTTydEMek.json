@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './FaqList';\n",
-      "start": 1750239308270,
-      "end": 1750239308284,
+      "start": 1750271784830,
+      "end": 1750271784842,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './FaqList';\n",
-      "start": 1750239308284,
-      "end": 1750239308292,
+      "start": 1750271784842,
+      "end": 1750271784844,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/ui/index.ts\"],\"sourcesContent\":[\"export * from './FaqList';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,YAAY\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./FaqList\";\n",
-      "start": 1750239308292,
-      "end": 1750239308325,
+      "start": 1750271784844,
+      "end": 1750271784895,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -32,75 +32,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784895,
+      "end": 1750271784895,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784895,
+      "end": 1750271784896,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784896,
+      "end": 1750271784896,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/FAQ/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./FaqList\";\n",
-      "start": 1750239308326,
-      "end": 1750239308326,
+      "start": 1750271784896,
+      "end": 1750271784896,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

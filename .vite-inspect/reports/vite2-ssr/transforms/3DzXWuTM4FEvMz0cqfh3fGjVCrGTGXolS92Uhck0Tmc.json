@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getMainPageInfoQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page: 1,\n        page_size: 100,\n    }),\n    target: getReviewsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        page_size: 100,\n    }),\n    target: getAllBlogPostsQuery.refresh,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: () => ({\n        show_on_main: true,\n    }),\n    target: getFAQQuery.refresh,\n});\n\nsample({\n    clock: getReviewsQuery.finished.success,\n    fn: ({ result }) =>\n        result.payload.map((data) => ({\n            ...data,\n            created_at: new Date(data.created_at).toLocaleDateString('ru-RU'),\n        })),\n    target: ReviewModel.$allReviews,\n});\n",
-      "start": 1750239308157,
-      "end": 1750239308177,
+      "start": 1750271784667,
+      "end": 1750271784685,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\nimport { getFAQQuery } from '@/entities/FAQ';\nimport { getMainPageInfoQuery } from '@/entities/Landing';\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            target: getMainPageInfoQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"w8ny4ft\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ()=>({\n                    page: 1,\n                    page_size: 100\n                }),\n            target: getReviewsQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"b24fe0qz\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ()=>({\n                    page_size: 100\n                }),\n            target: getAllBlogPostsQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"2whvnnwa\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ()=>({\n                    show_on_main: true\n                }),\n            target: getFAQQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"2501thow\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: getReviewsQuery.finished.success,\n            fn: ({ result })=>result.payload.map((data)=>({\n                        ...data,\n                        created_at: new Date(data.created_at).toLocaleDateString('ru-RU')\n                    })),\n            target: ReviewModel.$allReviews\n        }\n    ],\n    or: {\n        sid: \"cgodelen\"\n    }\n});\n",
-      "start": 1750239308177,
-      "end": 1750239308185,
+      "start": 1750271784685,
+      "end": 1750271784689,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/index/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { createPageInit } from '@/shared/lib';\\n\\nimport { getAllBlogPostsQuery } from '@/entities/Blog';\\nimport { getFAQQuery } from '@/entities/FAQ';\\nimport { getMainPageInfoQuery } from '@/entities/Landing';\\nimport { getReviewsQuery, ReviewModel } from '@/entities/Review';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    target: getMainPageInfoQuery.refresh,\\n});\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: () => ({\\n        page: 1,\\n        page_size: 100,\\n    }),\\n    target: getReviewsQuery.refresh,\\n});\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: () => ({\\n        page_size: 100,\\n    }),\\n    target: getAllBlogPostsQuery.refresh,\\n});\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: () => ({\\n        show_on_main: true,\\n    }),\\n    target: getFAQQuery.refresh,\\n});\\n\\nsample({\\n    clock: getReviewsQuery.finished.success,\\n    fn: ({ result }) =>\\n        result.payload.map((data) => ({\\n            ...data,\\n            created_at: new Date(data.created_at).toLocaleDateString('ru-RU'),\\n        })),\\n    target: ReviewModel.$allReviews,\\n});\\n\"],\"names\":[\"sample\",\"createPageInit\",\"getAllBlogPostsQuery\",\"getFAQQuery\",\"getMainPageInfoQuery\",\"getReviewsQuery\",\"ReviewModel\",\"pageInitiated\",\"clock\",\"target\",\"refresh\",\"fn\",\"page\",\"page_size\",\"show_on_main\",\"finished\",\"success\",\"result\",\"payload\",\"map\",\"data\",\"created_at\",\"Date\",\"toLocaleDateString\",\"$allReviews\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,cAAc,QAAQ,eAAe;AAE9C,SAASC,oBAAoB,QAAQ,kBAAkB;AACvD,SAASC,WAAW,QAAQ,iBAAiB;AAC7C,SAASC,oBAAoB,QAAQ,qBAAqB;AAC1D,SAASC,eAAe,EAAEC,WAAW,QAAQ,oBAAoB;AAEjE,OAAO,MAAMC,gBAAgBN,iBAAiB;AAE9CD;;QAAO;YACHQ,OAAOD;YACPE,QAAQL,qBAAqBM,OAAO;QACxC;;;;;;AAEAV;;QAAO;YACHQ,OAAOD;YACPI,IAAI,IAAO,CAAA;oBACPC,MAAM;oBACNC,WAAW;gBACf,CAAA;YACAJ,QAAQJ,gBAAgBK,OAAO;QACnC;;;;;;AAEAV;;QAAO;YACHQ,OAAOD;YACPI,IAAI,IAAO,CAAA;oBACPE,WAAW;gBACf,CAAA;YACAJ,QAAQP,qBAAqBQ,OAAO;QACxC;;;;;;AAEAV;;QAAO;YACHQ,OAAOD;YACPI,IAAI,IAAO,CAAA;oBACPG,cAAc;gBAClB,CAAA;YACAL,QAAQN,YAAYO,OAAO;QAC/B;;;;;;AAEAV;;QAAO;YACHQ,OAAOH,gBAAgBU,QAAQ,CAACC,OAAO;YACvCL,IAAI,CAAC,EAAEM,MAAM,EAAE,GACXA,OAAOC,OAAO,CAACC,GAAG,CAAC,CAACC,OAAU,CAAA;wBAC1B,GAAGA,IAAI;wBACPC,YAAY,IAAIC,KAAKF,KAAKC,UAAU,EAAEE,kBAAkB,CAAC;oBAC7D,CAAA;YACJd,QAAQH,YAAYkB,WAAW;QACnC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getAllBlogPostsQuery } from \"@/entities/Blog\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nimport { getMainPageInfoQuery } from \"@/entities/Landing\";\nimport { getReviewsQuery, ReviewModel } from \"@/entities/Review\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getMainPageInfoQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"w8ny4ft\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        page: 1,\n        page_size: 100\n      }),\n      target: getReviewsQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"b24fe0qz\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        page_size: 100\n      }),\n      target: getAllBlogPostsQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"2whvnnwa\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        show_on_main: true\n      }),\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"2501thow\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: getReviewsQuery.finished.success,\n      fn: ({ result }) => result.payload.map((data) => ({\n        ...data,\n        created_at: new Date(data.created_at).toLocaleDateString(\"ru-RU\")\n      })),\n      target: ReviewModel.$allReviews\n    }\n  ],\n  or: {\n    sid: \"cgodelen\"\n  }\n});\n",
-      "start": 1750239308185,
-      "end": 1750239308219,
+      "start": 1750271784689,
+      "end": 1750271784770,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784770,
+      "end": 1750271784770,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784770,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/index/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getAllBlogPostsQuery } from \"@/entities/Blog\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nimport { getMainPageInfoQuery } from \"@/entities/Landing\";\nimport { getReviewsQuery, ReviewModel } from \"@/entities/Review\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getMainPageInfoQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"w8ny4ft\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        page: 1,\n        page_size: 100\n      }),\n      target: getReviewsQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"b24fe0qz\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        page_size: 100\n      }),\n      target: getAllBlogPostsQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"2whvnnwa\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: () => ({\n        show_on_main: true\n      }),\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"2501thow\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: getReviewsQuery.finished.success,\n      fn: ({ result }) => result.payload.map((data) => ({\n        ...data,\n        created_at: new Date(data.created_at).toLocaleDateString(\"ru-RU\")\n      })),\n      target: ReviewModel.$allReviews\n    }\n  ],\n  or: {\n    sid: \"cgodelen\"\n  }\n});\n",
-      "start": 1750239308219,
-      "end": 1750239308219,
+      "start": 1750271784770,
+      "end": 1750271784771,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './use-create-review-form';\n",
-      "start": 1750239308729,
-      "end": 1750239308733,
+      "start": 1750271785287,
+      "end": 1750271785298,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './use-create-review-form';\n",
-      "start": 1750239308733,
-      "end": 1750239308736,
+      "start": 1750271785298,
+      "end": 1750271785314,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/CreateReviewForm/view-model/index.ts\"],\"sourcesContent\":[\"export * from './use-create-review-form';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,2BAA2B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./use-create-review-form\";\n",
-      "start": 1750239308736,
-      "end": 1750239308812,
+      "start": 1750271785314,
+      "end": 1750271785352,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785353,
+      "end": 1750271785353,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/view-model/index.ts [vike:pluginModuleBanner] */\nexport * from \"./use-create-review-form\";\n",
-      "start": 1750239308812,
-      "end": 1750239308812,
+      "start": 1750271785353,
+      "end": 1750271785353,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

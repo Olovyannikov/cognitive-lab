@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getReportStructureQuery } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getReportStructureQuery.start,\n});\n",
-      "start": 1750239308156,
-      "end": 1750239308177,
+      "start": 1750271784664,
+      "end": 1750271784684,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getReportStructureQuery } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            target: getReportStructureQuery.start\n        }\n    ],\n    or: {\n        sid: \"cokpismi\"\n    }\n});\n",
-      "start": 1750239308177,
-      "end": 1750239308185,
+      "start": 1750271784684,
+      "end": 1750271784688,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/full-report/example/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { createPageInit } from '@/shared/lib/effector';\\n\\nimport { getReportStructureQuery } from '@/entities/Report';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    target: getReportStructureQuery.start,\\n});\\n\"],\"names\":[\"sample\",\"createPageInit\",\"getReportStructureQuery\",\"pageInitiated\",\"clock\",\"target\",\"start\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,cAAc,QAAQ,wBAAwB;AAEvD,SAASC,uBAAuB,QAAQ,oBAAoB;AAE5D,OAAO,MAAMC,gBAAgBF,iBAAiB;AAE9CD;;QAAO;YACHI,OAAOD;YACPE,QAAQH,wBAAwBI,KAAK;QACzC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getReportStructureQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getReportStructureQuery.start\n    }\n  ],\n  or: {\n    sid: \"cokpismi\"\n  }\n});\n",
-      "start": 1750239308185,
-      "end": 1750239308223,
+      "start": 1750271784688,
+      "end": 1750271784772,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308223,
-      "end": 1750239308223,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784772,
+      "end": 1750271784772,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/full-report/example/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getReportStructureQuery } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      target: getReportStructureQuery.start\n    }\n  ],\n  or: {\n    sid: \"cokpismi\"\n  }\n});\n",
-      "start": 1750239308224,
-      "end": 1750239308224,
+      "start": 1750271784772,
+      "end": 1750271784772,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\n\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\n\nexport const UserModel = atom(() => {\n    const UserGate = createGate();\n    const $userId = createStore('');\n    const $surveyId = createStore<string | null>(null);\n\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST));\n\n    persist({\n        store: $userId,\n        pickup: UserGate.open,\n    });\n\n    persist({\n        store: $surveyId,\n        pickup: UserGate.open,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $userId,\n        fn: (currentUuid) => (currentUuid?.length > 0 ? currentUuid : uuidv4()),\n        target: $userId,\n    });\n\n    sample({\n        clock: delay(UserGate.open, 500),\n        source: $surveyId,\n        fn: (currentSurveyId) => (currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : ''),\n        target: $surveyId,\n    });\n\n    return {\n        $userId,\n        $surveyId,\n        UserGate,\n        redirectToTestPageFx,\n    };\n});\n",
-      "start": 1750239308335,
-      "end": 1750239308363,
+      "start": 1750271784884,
+      "end": 1750271784909,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createEffect, createStore, sample } from 'effector';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { delay } from 'patronum';\nimport { v4 as uuidv4 } from 'uuid';\nimport { navigate } from 'vike/client/router';\nimport { ROUTES } from '@/shared/config';\nimport { atom } from '@/shared/factories';\nexport const UserModel = _effector$factory({\n    sid: \"c3ywzpwf\",\n    fn: ()=>atom(()=>{\n            const UserGate = createGate({\n                and: [],\n                or: {\n                    sid: \"7phlc2rv\"\n                }\n            });\n            const $userId = createStore('', {\n                sid: \"3fyqoeah\"\n            });\n            const $surveyId = createStore(null, {\n                sid: \"axf1kunu\"\n            });\n            const redirectToTestPageFx = createEffect(async ()=>await navigate(ROUTES.TEST), {\n                sid: \"88qizx89\"\n            });\n            persist({\n                store: $userId,\n                pickup: UserGate.open\n            });\n            persist({\n                store: $surveyId,\n                pickup: UserGate.open\n            });\n            sample({\n                and: [\n                    {\n                        clock: _effector$factory({\n                            sid: \"8gsgvp09\",\n                            fn: ()=>delay(UserGate.open, 500)\n                        }),\n                        source: $userId,\n                        fn: (currentUuid)=>currentUuid?.length > 0 ? currentUuid : uuidv4(),\n                        target: $userId\n                    }\n                ],\n                or: {\n                    sid: \"2pq652w9\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: _effector$factory({\n                            sid: \"1g6luamy\",\n                            fn: ()=>delay(UserGate.open, 500)\n                        }),\n                        source: $surveyId,\n                        fn: (currentSurveyId)=>currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : '',\n                        target: $surveyId\n                    }\n                ],\n                or: {\n                    sid: \"3heto40r\"\n                }\n            });\n            return {\n                $userId,\n                $surveyId,\n                UserGate,\n                redirectToTestPageFx\n            };\n        })\n});\n",
-      "start": 1750239308363,
-      "end": 1750239308380,
+      "start": 1750271784909,
+      "end": 1750271784931,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/User/model/index.ts\"],\"sourcesContent\":[\"import { createEffect, createStore, sample } from 'effector';\\nimport { createGate } from 'effector-react';\\nimport { persist } from 'effector-storage/local';\\nimport { delay } from 'patronum';\\nimport { v4 as uuidv4 } from 'uuid';\\nimport { navigate } from 'vike/client/router';\\n\\nimport { ROUTES } from '@/shared/config';\\nimport { atom } from '@/shared/factories';\\n\\nexport const UserModel = atom(() => {\\n    const UserGate = createGate();\\n    const $userId = createStore('');\\n    const $surveyId = createStore<string | null>(null);\\n\\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST));\\n\\n    persist({\\n        store: $userId,\\n        pickup: UserGate.open,\\n    });\\n\\n    persist({\\n        store: $surveyId,\\n        pickup: UserGate.open,\\n    });\\n\\n    sample({\\n        clock: delay(UserGate.open, 500),\\n        source: $userId,\\n        fn: (currentUuid) => (currentUuid?.length > 0 ? currentUuid : uuidv4()),\\n        target: $userId,\\n    });\\n\\n    sample({\\n        clock: delay(UserGate.open, 500),\\n        source: $surveyId,\\n        fn: (currentSurveyId) => (currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : ''),\\n        target: $surveyId,\\n    });\\n\\n    return {\\n        $userId,\\n        $surveyId,\\n        UserGate,\\n        redirectToTestPageFx,\\n    };\\n});\\n\"],\"names\":[\"createEffect\",\"createStore\",\"sample\",\"createGate\",\"persist\",\"delay\",\"v4\",\"uuidv4\",\"navigate\",\"ROUTES\",\"atom\",\"UserModel\",\"UserGate\",\"$userId\",\"$surveyId\",\"redirectToTestPageFx\",\"TEST\",\"store\",\"pickup\",\"open\",\"clock\",\"source\",\"fn\",\"currentUuid\",\"length\",\"target\",\"currentSurveyId\"],\"mappings\":\";AAAA,SAASA,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAC7D,SAASC,UAAU,QAAQ,iBAAiB;AAC5C,SAASC,OAAO,QAAQ,yBAAyB;AACjD,SAASC,KAAK,QAAQ,WAAW;AACjC,SAASC,MAAMC,MAAM,QAAQ,OAAO;AACpC,SAASC,QAAQ,QAAQ,qBAAqB;AAE9C,SAASC,MAAM,QAAQ,kBAAkB;AACzC,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,OAAO,MAAMC;;YAAYD,KAAK;YAC1B,MAAME,WAAWT;;;;;;YACjB,MAAMU,UAAUZ,YAAY;;;YAC5B,MAAMa,YAAYb,YAA2B;;;YAE7C,MAAMc,uBAAuBf,aAAa,UAAY,MAAMQ,SAASC,OAAOO,IAAI;;;YAEhFZ,QAAQ;gBACJa,OAAOJ;gBACPK,QAAQN,SAASO,IAAI;YACzB;YAEAf,QAAQ;gBACJa,OAAOH;gBACPI,QAAQN,SAASO,IAAI;YACzB;YAEAjB;;oBAAO;wBACHkB,KAAK;;oCAAEf,MAAMO,SAASO,IAAI,EAAE;;wBAC5BE,QAAQR;wBACRS,IAAI,CAACC,cAAiBA,aAAaC,SAAS,IAAID,cAAchB;wBAC9DkB,QAAQZ;oBACZ;;;;;;YAEAX;;oBAAO;wBACHkB,KAAK;;oCAAEf,MAAMO,SAASO,IAAI,EAAE;;wBAC5BE,QAAQP;wBACRQ,IAAI,CAACI,kBAAqBA,mBAAmBA,iBAAiBF,SAAS,IAAIE,kBAAkB;wBAC7FD,QAAQX;oBACZ;;;;;;YAEA,OAAO;gBACHD;gBACAC;gBACAF;gBACAG;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { v4 as uuidv4 } from \"uuid\";\nimport { navigate } from \"vike/client/router\";\nimport { ROUTES } from \"@/shared/config\";\nimport { atom } from \"@/shared/factories\";\nexport const UserModel = _effector$factory({\n  sid: \"c3ywzpwf\",\n  fn: () => atom(() => {\n    const UserGate = createGate({\n      and: [],\n      or: {\n        sid: \"7phlc2rv\"\n      }\n    });\n    const $userId = createStore(\"\", {\n      sid: \"3fyqoeah\"\n    });\n    const $surveyId = createStore(null, {\n      sid: \"axf1kunu\"\n    });\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n      sid: \"88qizx89\"\n    });\n    persist({\n      store: $userId,\n      pickup: UserGate.open\n    });\n    persist({\n      store: $surveyId,\n      pickup: UserGate.open\n    });\n    sample({\n      and: [\n        {\n          clock: _effector$factory({\n            sid: \"8gsgvp09\",\n            fn: () => delay(UserGate.open, 500)\n          }),\n          source: $userId,\n          fn: (currentUuid) => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n          target: $userId\n        }\n      ],\n      or: {\n        sid: \"2pq652w9\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: _effector$factory({\n            sid: \"1g6luamy\",\n            fn: () => delay(UserGate.open, 500)\n          }),\n          source: $surveyId,\n          fn: (currentSurveyId) => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : \"\",\n          target: $surveyId\n        }\n      ],\n      or: {\n        sid: \"3heto40r\"\n      }\n    });\n    return {\n      $userId,\n      $surveyId,\n      UserGate,\n      redirectToTestPageFx\n    };\n  })\n});\n",
-      "start": 1750239308380,
-      "end": 1750239308497,
+      "start": 1750271784931,
+      "end": 1750271785049,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785049,
+      "end": 1750271785049,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785049,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/User/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createEffect, createStore, sample } from \"effector\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { delay } from \"patronum\";\nimport { v4 as uuidv4 } from \"uuid\";\nimport { navigate } from \"vike/client/router\";\nimport { ROUTES } from \"@/shared/config\";\nimport { atom } from \"@/shared/factories\";\nexport const UserModel = _effector$factory({\n  sid: \"c3ywzpwf\",\n  fn: () => atom(() => {\n    const UserGate = createGate({\n      and: [],\n      or: {\n        sid: \"7phlc2rv\"\n      }\n    });\n    const $userId = createStore(\"\", {\n      sid: \"3fyqoeah\"\n    });\n    const $surveyId = createStore(null, {\n      sid: \"axf1kunu\"\n    });\n    const redirectToTestPageFx = createEffect(async () => await navigate(ROUTES.TEST), {\n      sid: \"88qizx89\"\n    });\n    persist({\n      store: $userId,\n      pickup: UserGate.open\n    });\n    persist({\n      store: $surveyId,\n      pickup: UserGate.open\n    });\n    sample({\n      and: [\n        {\n          clock: _effector$factory({\n            sid: \"8gsgvp09\",\n            fn: () => delay(UserGate.open, 500)\n          }),\n          source: $userId,\n          fn: (currentUuid) => currentUuid?.length > 0 ? currentUuid : uuidv4(),\n          target: $userId\n        }\n      ],\n      or: {\n        sid: \"2pq652w9\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: _effector$factory({\n            sid: \"1g6luamy\",\n            fn: () => delay(UserGate.open, 500)\n          }),\n          source: $surveyId,\n          fn: (currentSurveyId) => currentSurveyId && currentSurveyId?.length > 0 ? currentSurveyId : \"\",\n          target: $surveyId\n        }\n      ],\n      or: {\n        sid: \"3heto40r\"\n      }\n    });\n    return {\n      $userId,\n      $surveyId,\n      UserGate,\n      redirectToTestPageFx\n    };\n  })\n});\n",
-      "start": 1750239308497,
-      "end": 1750239308497,
+      "start": 1750271785049,
+      "end": 1750271785050,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -1,0 +1,123 @@
+{
+  "resolvedId": "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/parseNavigationRules.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export const convertToUrlId = (id: string) => id?.replaceAll(' ', '-')?.replaceAll(',', '_');\nexport const convertFromUrlId = (id: string) => id?.replaceAll('-', ' ')?.replaceAll('_', ',');\n",
+      "start": 1750271784944,
+      "end": 1750271784963,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:react-swc",
+      "result": "export const convertToUrlId = (id)=>id?.replaceAll(' ', '-')?.replaceAll(',', '_');\nexport const convertFromUrlId = (id)=>id?.replaceAll('-', ' ')?.replaceAll('_', ',');\n",
+      "start": 1750271784963,
+      "end": 1750271784972,
+      "order": "pre",
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/parseNavigationRules.ts\"],\"sourcesContent\":[\"export const convertToUrlId = (id: string) => id?.replaceAll(' ', '-')?.replaceAll(',', '_');\\nexport const convertFromUrlId = (id: string) => id?.replaceAll('-', ' ')?.replaceAll('_', ',');\\n\"],\"names\":[\"convertToUrlId\",\"id\",\"replaceAll\",\"convertFromUrlId\"],\"mappings\":\"AAAA,OAAO,MAAMA,iBAAiB,CAACC,KAAeA,IAAIC,WAAW,KAAK,MAAMA,WAAW,KAAK,KAAK;AAC7F,OAAO,MAAMC,mBAAmB,CAACF,KAAeA,IAAIC,WAAW,KAAK,MAAMA,WAAW,KAAK,KAAK\"}"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export const convertToUrlId = (id) => id?.replaceAll(\" \", \"-\")?.replaceAll(\",\", \"_\");\nexport const convertFromUrlId = (id) => id?.replaceAll(\"-\", \" \")?.replaceAll(\"_\", \",\");\n",
+      "start": 1750271784972,
+      "end": 1750271785102,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/parseNavigationRules.ts"
+        ],
+        "sourcesContent": [
+          "export const convertToUrlId = (id)=>id?.replaceAll(' ', '-')?.replaceAll(',', '_');\nexport const convertFromUrlId = (id)=>id?.replaceAll('-', ' ')?.replaceAll('_', ',');\n"
+        ],
+        "mappings": "AAAO,aAAM,iBAAiB,CAAC,OAAK,IAAI,WAAW,KAAK,GAAG,GAAG,WAAW,KAAK,GAAG;AAC1E,aAAM,mBAAmB,CAAC,OAAK,IAAI,WAAW,KAAK,GAAG,GAAG,WAAW,KAAK,GAAG;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "normal-normal"
+    },
+    {
+      "name": "vike:build:pluginModuleBanner",
+      "result": "/*! src/entities/Report/lib/parseNavigationRules.ts [vike:pluginModuleBanner] */\nexport const convertToUrlId = (id) => id?.replaceAll(\" \", \"-\")?.replaceAll(\",\", \"_\");\nexport const convertFromUrlId = (id) => id?.replaceAll(\"-\", \" \")?.replaceAll(\"_\", \",\");\n",
+      "start": 1750271785102,
+      "end": 1750271785102,
+      "order": "post-post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": ["src/entities/Report/lib/parseNavigationRules.ts"],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    }
+  ]
+}

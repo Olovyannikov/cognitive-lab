@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';\n",
-      "start": 1750239308289,
-      "end": 1750239308305,
+      "start": 1750271784842,
+      "end": 1750271784857,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "export * from './Hero';\nexport * from './About';\nexport * from './Statistics';\nexport * from './ForWhom';\nexport * from './HowItHelps';\nexport * from './Tariffs';\nexport * from './HowItWorks';\nexport * from './WhyUs';\nexport * from './PeopleTalk';\nexport * from './FAQ';\nexport * from './MoreInBlog';\nexport * from './LetsContinue';\n",
-      "start": 1750239308305,
-      "end": 1750239308309,
+      "start": 1750271784857,
+      "end": 1750271784863,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/index.ts\"],\"sourcesContent\":[\"export * from './Hero';\\nexport * from './About';\\nexport * from './Statistics';\\nexport * from './ForWhom';\\nexport * from './HowItHelps';\\nexport * from './Tariffs';\\nexport * from './HowItWorks';\\nexport * from './WhyUs';\\nexport * from './PeopleTalk';\\nexport * from './FAQ';\\nexport * from './MoreInBlog';\\nexport * from './LetsContinue';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,SAAS;AACvB,cAAc,UAAU;AACxB,cAAc,eAAe;AAC7B,cAAc,YAAY;AAC1B,cAAc,eAAe;AAC7B,cAAc,YAAY;AAC1B,cAAc,eAAe;AAC7B,cAAc,UAAU;AACxB,cAAc,eAAe;AAC7B,cAAc,QAAQ;AACtB,cAAc,eAAe;AAC7B,cAAc,iBAAiB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
-      "start": 1750239308309,
-      "end": 1750239308386,
+      "start": 1750271784863,
+      "end": 1750271784936,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784936,
+      "end": 1750271784936,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784936,
+      "end": 1750271784936,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784937,
+      "end": 1750271784937,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Hero\";\nexport * from \"./About\";\nexport * from \"./Statistics\";\nexport * from \"./ForWhom\";\nexport * from \"./HowItHelps\";\nexport * from \"./Tariffs\";\nexport * from \"./HowItWorks\";\nexport * from \"./WhyUs\";\nexport * from \"./PeopleTalk\";\nexport * from \"./FAQ\";\nexport * from \"./MoreInBlog\";\nexport * from \"./LetsContinue\";\n",
-      "start": 1750239308386,
-      "end": 1750239308386,
+      "start": 1750271784937,
+      "end": 1750271784937,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

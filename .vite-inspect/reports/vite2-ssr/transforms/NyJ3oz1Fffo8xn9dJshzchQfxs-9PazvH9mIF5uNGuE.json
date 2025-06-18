@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Fragment } from 'react';\nimport { Accordion as UIAccordion, Box, Group, Text, Title } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\n\nimport { Accordion, Picture } from '@/shared/ui';\n\nimport { contentResolver } from '@/entities/Report';\n\nimport type { ListItem } from '../../types';\n\nimport s from './AccordionBlock.module.css';\n\ninterface AccordionBlockProps {\n    items?: ListItem[];\n}\n\nexport const AccordionBlock = ({ items }: AccordionBlockProps) => (\n    <Accordion radius={0} variant='filled' chevron={<CaretDown weight='bold' size={24} />}>\n        {items?.map((item, index) => (\n            <UIAccordion.Item key={index + (item?.title ?? '') + item.subtitle} value={item.title ?? ''}>\n                <UIAccordion.Control>\n                    <Group>\n                        <Picture cdn width={60} height={60} src={`/types/circles/${item.title}`} />\n                        <Box>\n                            <Text className={s.description}>{item.subtitle}</Text>\n                            <Title className={s.title} order={3}>\n                                {item.title}\n                            </Title>\n                        </Box>\n                    </Group>\n                </UIAccordion.Control>\n                <UIAccordion.Panel>\n                    {item.content?.map((content, idx) => (\n                        <Fragment key={idx}>{contentResolver({ content, color: 'violet' })}</Fragment>\n                    ))}\n                </UIAccordion.Panel>\n            </UIAccordion.Item>\n        ))}\n    </Accordion>\n);\n",
-      "start": 1750239308342,
-      "end": 1750239308366,
+      "start": 1750271784925,
+      "end": 1750271784942,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from 'react';\nimport { Accordion as UIAccordion, Box, Group, Text, Title } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport { Accordion, Picture } from '@/shared/ui';\nimport { contentResolver } from '@/entities/Report';\nimport s from './AccordionBlock.module.css';\nexport const AccordionBlock = ({ items })=>/*#__PURE__*/ _jsx(Accordion, {\n        radius: 0,\n        variant: \"filled\",\n        chevron: /*#__PURE__*/ _jsx(CaretDown, {\n            weight: \"bold\",\n            size: 24\n        }),\n        children: items?.map((item, index)=>/*#__PURE__*/ _jsxs(UIAccordion.Item, {\n                value: item.title ?? '',\n                children: [\n                    /*#__PURE__*/ _jsx(UIAccordion.Control, {\n                        children: /*#__PURE__*/ _jsxs(Group, {\n                            children: [\n                                /*#__PURE__*/ _jsx(Picture, {\n                                    cdn: true,\n                                    width: 60,\n                                    height: 60,\n                                    src: `/types/circles/${item.title}`\n                                }),\n                                /*#__PURE__*/ _jsxs(Box, {\n                                    children: [\n                                        /*#__PURE__*/ _jsx(Text, {\n                                            className: s.description,\n                                            children: item.subtitle\n                                        }),\n                                        /*#__PURE__*/ _jsx(Title, {\n                                            className: s.title,\n                                            order: 3,\n                                            children: item.title\n                                        })\n                                    ]\n                                })\n                            ]\n                        })\n                    }),\n                    /*#__PURE__*/ _jsx(UIAccordion.Panel, {\n                        children: item.content?.map((content, idx)=>/*#__PURE__*/ _jsx(Fragment, {\n                                children: contentResolver({\n                                    content,\n                                    color: 'violet'\n                                })\n                            }, idx))\n                    })\n                ]\n            }, index + (item?.title ?? '') + item.subtitle))\n    });\n",
-      "start": 1750239308366,
-      "end": 1750239308381,
+      "start": 1750271784942,
+      "end": 1750271784951,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/AccordionBlock/index.tsx\"],\"sourcesContent\":[\"import { Fragment } from 'react';\\nimport { Accordion as UIAccordion, Box, Group, Text, Title } from '@mantine/core';\\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\\n\\nimport { Accordion, Picture } from '@/shared/ui';\\n\\nimport { contentResolver } from '@/entities/Report';\\n\\nimport type { ListItem } from '../../types';\\n\\nimport s from './AccordionBlock.module.css';\\n\\ninterface AccordionBlockProps {\\n    items?: ListItem[];\\n}\\n\\nexport const AccordionBlock = ({ items }: AccordionBlockProps) => (\\n    <Accordion radius={0} variant='filled' chevron={<CaretDown weight='bold' size={24} />}>\\n        {items?.map((item, index) => (\\n            <UIAccordion.Item key={index + (item?.title ?? '') + item.subtitle} value={item.title ?? ''}>\\n                <UIAccordion.Control>\\n                    <Group>\\n                        <Picture cdn width={60} height={60} src={`/types/circles/${item.title}`} />\\n                        <Box>\\n                            <Text className={s.description}>{item.subtitle}</Text>\\n                            <Title className={s.title} order={3}>\\n                                {item.title}\\n                            </Title>\\n                        </Box>\\n                    </Group>\\n                </UIAccordion.Control>\\n                <UIAccordion.Panel>\\n                    {item.content?.map((content, idx) => (\\n                        <Fragment key={idx}>{contentResolver({ content, color: 'violet' })}</Fragment>\\n                    ))}\\n                </UIAccordion.Panel>\\n            </UIAccordion.Item>\\n        ))}\\n    </Accordion>\\n);\\n\"],\"names\":[\"Fragment\",\"Accordion\",\"UIAccordion\",\"Box\",\"Group\",\"Text\",\"Title\",\"CaretDown\",\"Picture\",\"contentResolver\",\"s\",\"AccordionBlock\",\"items\",\"radius\",\"variant\",\"chevron\",\"weight\",\"size\",\"map\",\"item\",\"index\",\"Item\",\"value\",\"title\",\"Control\",\"cdn\",\"width\",\"height\",\"src\",\"className\",\"description\",\"subtitle\",\"order\",\"Panel\",\"content\",\"idx\",\"color\"],\"mappings\":\";AAAA,SAASA,QAAQ,QAAQ,QAAQ;AACjC,SAASC,aAAaC,WAAW,EAAEC,GAAG,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAClF,SAASC,SAAS,QAAQ,iCAAiC;AAE3D,SAASN,SAAS,EAAEO,OAAO,QAAQ,cAAc;AAEjD,SAASC,eAAe,QAAQ,oBAAoB;AAIpD,OAAOC,OAAO,8BAA8B;AAM5C,OAAO,MAAMC,iBAAiB,CAAC,EAAEC,KAAK,EAAuB,iBACzD,KAACX;QAAUY,QAAQ;QAAGC,SAAQ;QAASC,uBAAS,KAACR;YAAUS,QAAO;YAAOC,MAAM;;kBAC1EL,OAAOM,IAAI,CAACC,MAAMC,sBACf,MAAClB,YAAYmB,IAAI;gBAAmDC,OAAOH,KAAKI,KAAK,IAAI;;kCACrF,KAACrB,YAAYsB,OAAO;kCAChB,cAAA,MAACpB;;8CACG,KAACI;oCAAQiB,GAAG;oCAACC,OAAO;oCAAIC,QAAQ;oCAAIC,KAAK,CAAC,eAAe,EAAET,KAAKI,KAAK,EAAE;;8CACvE,MAACpB;;sDACG,KAACE;4CAAKwB,WAAWnB,EAAEoB,WAAW;sDAAGX,KAAKY,QAAQ;;sDAC9C,KAACzB;4CAAMuB,WAAWnB,EAAEa,KAAK;4CAAES,OAAO;sDAC7Bb,KAAKI,KAAK;;;;;;;kCAK3B,KAACrB,YAAY+B,KAAK;kCACbd,KAAKe,OAAO,EAAEhB,IAAI,CAACgB,SAASC,oBACzB,KAACnC;0CAAoBS,gBAAgB;oCAAEyB;oCAASE,OAAO;gCAAS;+BAAjDD;;;eAdJf,QAASD,CAAAA,MAAMI,SAAS,EAAC,IAAKJ,KAAKY,QAAQ;OAoB5E\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Accordion as UIAccordion, Box, Group, Text, Title } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { Accordion, Picture } from \"@/shared/ui\";\nimport { contentResolver } from \"@/entities/Report\";\nimport s from \"./AccordionBlock.module.css\";\nexport const AccordionBlock = ({ items }) => /* @__PURE__ */ _jsx(Accordion, {\n  radius: 0,\n  variant: \"filled\",\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children: items?.map((item, index) => /* @__PURE__ */ _jsxs(UIAccordion.Item, {\n    value: item.title ?? \"\",\n    children: [\n      /* @__PURE__ */ _jsx(UIAccordion.Control, {\n        children: /* @__PURE__ */ _jsxs(Group, {\n          children: [\n            /* @__PURE__ */ _jsx(Picture, {\n              cdn: true,\n              width: 60,\n              height: 60,\n              src: `/types/circles/${item.title}`\n            }),\n            /* @__PURE__ */ _jsxs(Box, {\n              children: [\n                /* @__PURE__ */ _jsx(Text, {\n                  className: s.description,\n                  children: item.subtitle\n                }),\n                /* @__PURE__ */ _jsx(Title, {\n                  className: s.title,\n                  order: 3,\n                  children: item.title\n                })\n              ]\n            })\n          ]\n        })\n      }),\n      /* @__PURE__ */ _jsx(UIAccordion.Panel, {\n        children: item.content?.map((content, idx) => /* @__PURE__ */ _jsx(Fragment, {\n          children: contentResolver({\n            content,\n            color: \"violet\"\n          })\n        }, idx))\n      })\n    ]\n  }, index + (item?.title ?? \"\") + item.subtitle))\n});\n",
-      "start": 1750239308381,
-      "end": 1750239308517,
+      "start": 1750271784955,
+      "end": 1750271785064,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -36,75 +36,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785064,
+      "end": 1750271785064,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308517,
-      "end": 1750239308517,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/AccordionBlock/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Accordion as UIAccordion, Box, Group, Text, Title } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport { Accordion, Picture } from \"@/shared/ui\";\nimport { contentResolver } from \"@/entities/Report\";\nimport s from \"./AccordionBlock.module.css\";\nexport const AccordionBlock = ({ items }) => /* @__PURE__ */ _jsx(Accordion, {\n  radius: 0,\n  variant: \"filled\",\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children: items?.map((item, index) => /* @__PURE__ */ _jsxs(UIAccordion.Item, {\n    value: item.title ?? \"\",\n    children: [\n      /* @__PURE__ */ _jsx(UIAccordion.Control, {\n        children: /* @__PURE__ */ _jsxs(Group, {\n          children: [\n            /* @__PURE__ */ _jsx(Picture, {\n              cdn: true,\n              width: 60,\n              height: 60,\n              src: `/types/circles/${item.title}`\n            }),\n            /* @__PURE__ */ _jsxs(Box, {\n              children: [\n                /* @__PURE__ */ _jsx(Text, {\n                  className: s.description,\n                  children: item.subtitle\n                }),\n                /* @__PURE__ */ _jsx(Title, {\n                  className: s.title,\n                  order: 3,\n                  children: item.title\n                })\n              ]\n            })\n          ]\n        })\n      }),\n      /* @__PURE__ */ _jsx(UIAccordion.Panel, {\n        children: item.content?.map((content, idx) => /* @__PURE__ */ _jsx(Fragment, {\n          children: contentResolver({\n            content,\n            color: \"violet\"\n          })\n        }, idx))\n      })\n    ]\n  }, index + (item?.title ?? \"\") + item.subtitle))\n});\n",
-      "start": 1750239308517,
-      "end": 1750239308518,
+      "start": 1750271785064,
+      "end": 1750271785064,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

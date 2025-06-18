@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport {\n    Brain,\n    Briefcase,\n    ChartLineUp,\n    Handshake,\n    Heart,\n    PuzzlePiece,\n    Scales,\n    Shapes,\n    SketchLogo,\n    Star,\n    ThumbsUp,\n    Trophy,\n    UserSquare,\n    Vibrate,\n} from '@phosphor-icons/react/dist/ssr';\n\nexport const getIconsMap = (isLarge?: boolean): Record<string, ReactNode> => ({\n    Введение: <Heart size={isLarge ? 24 : 20} />,\n    'Ваш психологический портрет': <UserSquare size={isLarge ? 24 : 20} />,\n    'Ключевые черты вашего характера': <SketchLogo size={isLarge ? 24 : 20} />,\n    'Как вы думаете и принимаете решения': <Brain size={isLarge ? 24 : 20} />,\n    'Ваш карьерный путь': <Briefcase size={isLarge ? 24 : 20} />,\n    'Сильные и слабые стороны': <ThumbsUp size={isLarge ? 24 : 20} />,\n    'Ваш стиль общения и взаимодействия с другими': <Shapes size={isLarge ? 24 : 20} />,\n    'Ловушки вашего разума — как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 24 : 20} />,\n    'Ловушки вашего разума - как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 24 : 20} />,\n    'Как стресс влияет на ваши решения': <Vibrate size={isLarge ? 24 : 20} />,\n    'Как сохранить внутренний баланс и энергию': <Scales size={isLarge ? 24 : 20} />,\n    'Знаменитости, похожие на вас': <Star size={isLarge ? 24 : 20} />,\n    'Как вы строите отношения с окружающими': <Handshake size={isLarge ? 24 : 20} />,\n    'Личный план развития': <ChartLineUp size={isLarge ? 24 : 20} />,\n    Заключение: <Trophy size={isLarge ? 24 : 20} />,\n});\n",
-      "start": 1750239308282,
-      "end": 1750239308300,
+      "start": 1750271784836,
+      "end": 1750271784851,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Brain, Briefcase, ChartLineUp, Handshake, Heart, PuzzlePiece, Scales, Shapes, SketchLogo, Star, ThumbsUp, Trophy, UserSquare, Vibrate } from '@phosphor-icons/react/dist/ssr';\nexport const getIconsMap = (isLarge)=>({\n        Введение: /*#__PURE__*/ _jsx(Heart, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ваш психологический портрет': /*#__PURE__*/ _jsx(UserSquare, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ключевые черты вашего характера': /*#__PURE__*/ _jsx(SketchLogo, {\n            size: isLarge ? 24 : 20\n        }),\n        'Как вы думаете и принимаете решения': /*#__PURE__*/ _jsx(Brain, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ваш карьерный путь': /*#__PURE__*/ _jsx(Briefcase, {\n            size: isLarge ? 24 : 20\n        }),\n        'Сильные и слабые стороны': /*#__PURE__*/ _jsx(ThumbsUp, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ваш стиль общения и взаимодействия с другими': /*#__PURE__*/ _jsx(Shapes, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ловушки вашего разума — как их распознать и преодолеть': /*#__PURE__*/ _jsx(PuzzlePiece, {\n            size: isLarge ? 24 : 20\n        }),\n        'Ловушки вашего разума - как их распознать и преодолеть': /*#__PURE__*/ _jsx(PuzzlePiece, {\n            size: isLarge ? 24 : 20\n        }),\n        'Как стресс влияет на ваши решения': /*#__PURE__*/ _jsx(Vibrate, {\n            size: isLarge ? 24 : 20\n        }),\n        'Как сохранить внутренний баланс и энергию': /*#__PURE__*/ _jsx(Scales, {\n            size: isLarge ? 24 : 20\n        }),\n        'Знаменитости, похожие на вас': /*#__PURE__*/ _jsx(Star, {\n            size: isLarge ? 24 : 20\n        }),\n        'Как вы строите отношения с окружающими': /*#__PURE__*/ _jsx(Handshake, {\n            size: isLarge ? 24 : 20\n        }),\n        'Личный план развития': /*#__PURE__*/ _jsx(ChartLineUp, {\n            size: isLarge ? 24 : 20\n        }),\n        Заключение: /*#__PURE__*/ _jsx(Trophy, {\n            size: isLarge ? 24 : 20\n        })\n    });\n",
-      "start": 1750239308300,
-      "end": 1750239308303,
+      "start": 1750271784851,
+      "end": 1750271784854,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/const/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport {\\n    Brain,\\n    Briefcase,\\n    ChartLineUp,\\n    Handshake,\\n    Heart,\\n    PuzzlePiece,\\n    Scales,\\n    Shapes,\\n    SketchLogo,\\n    Star,\\n    ThumbsUp,\\n    Trophy,\\n    UserSquare,\\n    Vibrate,\\n} from '@phosphor-icons/react/dist/ssr';\\n\\nexport const getIconsMap = (isLarge?: boolean): Record<string, ReactNode> => ({\\n    Введение: <Heart size={isLarge ? 24 : 20} />,\\n    'Ваш психологический портрет': <UserSquare size={isLarge ? 24 : 20} />,\\n    'Ключевые черты вашего характера': <SketchLogo size={isLarge ? 24 : 20} />,\\n    'Как вы думаете и принимаете решения': <Brain size={isLarge ? 24 : 20} />,\\n    'Ваш карьерный путь': <Briefcase size={isLarge ? 24 : 20} />,\\n    'Сильные и слабые стороны': <ThumbsUp size={isLarge ? 24 : 20} />,\\n    'Ваш стиль общения и взаимодействия с другими': <Shapes size={isLarge ? 24 : 20} />,\\n    'Ловушки вашего разума — как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 24 : 20} />,\\n    'Ловушки вашего разума - как их распознать и преодолеть': <PuzzlePiece size={isLarge ? 24 : 20} />,\\n    'Как стресс влияет на ваши решения': <Vibrate size={isLarge ? 24 : 20} />,\\n    'Как сохранить внутренний баланс и энергию': <Scales size={isLarge ? 24 : 20} />,\\n    'Знаменитости, похожие на вас': <Star size={isLarge ? 24 : 20} />,\\n    'Как вы строите отношения с окружающими': <Handshake size={isLarge ? 24 : 20} />,\\n    'Личный план развития': <ChartLineUp size={isLarge ? 24 : 20} />,\\n    Заключение: <Trophy size={isLarge ? 24 : 20} />,\\n});\\n\"],\"names\":[\"Brain\",\"Briefcase\",\"ChartLineUp\",\"Handshake\",\"Heart\",\"PuzzlePiece\",\"Scales\",\"Shapes\",\"SketchLogo\",\"Star\",\"ThumbsUp\",\"Trophy\",\"UserSquare\",\"Vibrate\",\"getIconsMap\",\"isLarge\",\"Введение\",\"size\",\"Заключение\"],\"mappings\":\";AACA,SACIA,KAAK,EACLC,SAAS,EACTC,WAAW,EACXC,SAAS,EACTC,KAAK,EACLC,WAAW,EACXC,MAAM,EACNC,MAAM,EACNC,UAAU,EACVC,IAAI,EACJC,QAAQ,EACRC,MAAM,EACNC,UAAU,EACVC,OAAO,QACJ,iCAAiC;AAExC,OAAO,MAAMC,cAAc,CAACC,UAAkD,CAAA;QAC1EC,wBAAU,KAACZ;YAAMa,MAAMF,UAAU,KAAK;;QACtC,6CAA+B,KAACH;YAAWK,MAAMF,UAAU,KAAK;;QAChE,iDAAmC,KAACP;YAAWS,MAAMF,UAAU,KAAK;;QACpE,qDAAuC,KAACf;YAAMiB,MAAMF,UAAU,KAAK;;QACnE,oCAAsB,KAACd;YAAUgB,MAAMF,UAAU,KAAK;;QACtD,0CAA4B,KAACL;YAASO,MAAMF,UAAU,KAAK;;QAC3D,8DAAgD,KAACR;YAAOU,MAAMF,UAAU,KAAK;;QAC7E,wEAA0D,KAACV;YAAYY,MAAMF,UAAU,KAAK;;QAC5F,wEAA0D,KAACV;YAAYY,MAAMF,UAAU,KAAK;;QAC5F,mDAAqC,KAACF;YAAQI,MAAMF,UAAU,KAAK;;QACnE,2DAA6C,KAACT;YAAOW,MAAMF,UAAU,KAAK;;QAC1E,8CAAgC,KAACN;YAAKQ,MAAMF,UAAU,KAAK;;QAC3D,wDAA0C,KAACZ;YAAUc,MAAMF,UAAU,KAAK;;QAC1E,sCAAwB,KAACb;YAAYe,MAAMF,UAAU,KAAK;;QAC1DG,0BAAY,KAACP;YAAOM,MAAMF,UAAU,KAAK;;IAC7C,CAAA,EAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Brain, Briefcase, ChartLineUp, Handshake, Heart, PuzzlePiece, Scales, Shapes, SketchLogo, Star, ThumbsUp, Trophy, UserSquare, Vibrate } from \"@phosphor-icons/react/dist/ssr\";\nexport const getIconsMap = (isLarge) => ({\n  Введение: /* @__PURE__ */ _jsx(Heart, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш психологический портрет\": /* @__PURE__ */ _jsx(UserSquare, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ключевые черты вашего характера\": /* @__PURE__ */ _jsx(SketchLogo, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как вы думаете и принимаете решения\": /* @__PURE__ */ _jsx(Brain, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш карьерный путь\": /* @__PURE__ */ _jsx(Briefcase, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Сильные и слабые стороны\": /* @__PURE__ */ _jsx(ThumbsUp, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш стиль общения и взаимодействия с другими\": /* @__PURE__ */ _jsx(Shapes, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ловушки вашего разума — как их распознать и преодолеть\": /* @__PURE__ */ _jsx(PuzzlePiece, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ловушки вашего разума - как их распознать и преодолеть\": /* @__PURE__ */ _jsx(PuzzlePiece, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как стресс влияет на ваши решения\": /* @__PURE__ */ _jsx(Vibrate, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как сохранить внутренний баланс и энергию\": /* @__PURE__ */ _jsx(Scales, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Знаменитости, похожие на вас\": /* @__PURE__ */ _jsx(Star, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как вы строите отношения с окружающими\": /* @__PURE__ */ _jsx(Handshake, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Личный план развития\": /* @__PURE__ */ _jsx(ChartLineUp, {\n    size: isLarge ? 24 : 20\n  }),\n  Заключение: /* @__PURE__ */ _jsx(Trophy, {\n    size: isLarge ? 24 : 20\n  })\n});\n",
-      "start": 1750239308304,
-      "end": 1750239308358,
+      "start": 1750271784854,
+      "end": 1750271784923,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784923,
+      "end": 1750271784923,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/const/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Brain, Briefcase, ChartLineUp, Handshake, Heart, PuzzlePiece, Scales, Shapes, SketchLogo, Star, ThumbsUp, Trophy, UserSquare, Vibrate } from \"@phosphor-icons/react/dist/ssr\";\nexport const getIconsMap = (isLarge) => ({\n  Введение: /* @__PURE__ */ _jsx(Heart, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш психологический портрет\": /* @__PURE__ */ _jsx(UserSquare, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ключевые черты вашего характера\": /* @__PURE__ */ _jsx(SketchLogo, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как вы думаете и принимаете решения\": /* @__PURE__ */ _jsx(Brain, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш карьерный путь\": /* @__PURE__ */ _jsx(Briefcase, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Сильные и слабые стороны\": /* @__PURE__ */ _jsx(ThumbsUp, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ваш стиль общения и взаимодействия с другими\": /* @__PURE__ */ _jsx(Shapes, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ловушки вашего разума — как их распознать и преодолеть\": /* @__PURE__ */ _jsx(PuzzlePiece, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Ловушки вашего разума - как их распознать и преодолеть\": /* @__PURE__ */ _jsx(PuzzlePiece, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как стресс влияет на ваши решения\": /* @__PURE__ */ _jsx(Vibrate, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как сохранить внутренний баланс и энергию\": /* @__PURE__ */ _jsx(Scales, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Знаменитости, похожие на вас\": /* @__PURE__ */ _jsx(Star, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Как вы строите отношения с окружающими\": /* @__PURE__ */ _jsx(Handshake, {\n    size: isLarge ? 24 : 20\n  }),\n  \"Личный план развития\": /* @__PURE__ */ _jsx(ChartLineUp, {\n    size: isLarge ? 24 : 20\n  }),\n  Заключение: /* @__PURE__ */ _jsx(Trophy, {\n    size: isLarge ? 24 : 20\n  })\n});\n",
-      "start": 1750239308358,
-      "end": 1750239308358,
+      "start": 1750271784923,
+      "end": 1750271784923,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

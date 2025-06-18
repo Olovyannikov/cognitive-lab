@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { sendFreeReportOnEmailMutation } from '../api';\n\nexport const SendReportEmailModel = atom(() => {\n    const submitForm = createEvent<{ email: string; user_report_id: string }>();\n\n    const showUserEmailNotificationFx = createEffect((email: string) => {\n        notifications.show({\n            title: 'Отчет отправлен!',\n            message: `Отчет отправлен на почту ${email}`,\n        });\n    });\n\n    sample({\n        clock: submitForm,\n        target: sendFreeReportOnEmailMutation.start,\n    });\n\n    sample({\n        clock: sendFreeReportOnEmailMutation.finished.success,\n        filter: ({ params }) => Boolean(params.email),\n        fn: ({ params: { email } }) => email,\n        target: showUserEmailNotificationFx,\n    });\n\n    return {\n        submitForm,\n    };\n});\n",
-      "start": 1750239308384,
-      "end": 1750239308402,
+      "start": 1750271784885,
+      "end": 1750271784909,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { withFactory as _effector$factory } from 'effector';\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { sendFreeReportOnEmailMutation } from '../api';\nexport const SendReportEmailModel = _effector$factory({\n    sid: \"vr1rhjg\",\n    fn: ()=>atom(()=>{\n            const submitForm = createEvent({\n                sid: \"973284qs\"\n            });\n            const showUserEmailNotificationFx = createEffect((email)=>{\n                notifications.show({\n                    title: 'Отчет отправлен!',\n                    message: `Отчет отправлен на почту ${email}`\n                });\n            }, {\n                sid: \"3918vd47\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitForm,\n                        target: sendFreeReportOnEmailMutation.start\n                    }\n                ],\n                or: {\n                    sid: \"drnskfxl\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: sendFreeReportOnEmailMutation.finished.success,\n                        filter: ({ params })=>Boolean(params.email),\n                        fn: ({ params: { email } })=>email,\n                        target: showUserEmailNotificationFx\n                    }\n                ],\n                or: {\n                    sid: \"5iuedrvp\"\n                }\n            });\n            return {\n                submitForm\n            };\n        })\n});\n",
-      "start": 1750239308402,
-      "end": 1750239308408,
+      "start": 1750271784909,
+      "end": 1750271784931,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/model/index.ts\"],\"sourcesContent\":[\"import { notifications } from '@mantine/notifications';\\nimport { createEffect, createEvent, sample } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { sendFreeReportOnEmailMutation } from '../api';\\n\\nexport const SendReportEmailModel = atom(() => {\\n    const submitForm = createEvent<{ email: string; user_report_id: string }>();\\n\\n    const showUserEmailNotificationFx = createEffect((email: string) => {\\n        notifications.show({\\n            title: 'Отчет отправлен!',\\n            message: `Отчет отправлен на почту ${email}`,\\n        });\\n    });\\n\\n    sample({\\n        clock: submitForm,\\n        target: sendFreeReportOnEmailMutation.start,\\n    });\\n\\n    sample({\\n        clock: sendFreeReportOnEmailMutation.finished.success,\\n        filter: ({ params }) => Boolean(params.email),\\n        fn: ({ params: { email } }) => email,\\n        target: showUserEmailNotificationFx,\\n    });\\n\\n    return {\\n        submitForm,\\n    };\\n});\\n\"],\"names\":[\"notifications\",\"createEffect\",\"createEvent\",\"sample\",\"atom\",\"sendFreeReportOnEmailMutation\",\"SendReportEmailModel\",\"submitForm\",\"showUserEmailNotificationFx\",\"email\",\"show\",\"title\",\"message\",\"clock\",\"target\",\"start\",\"finished\",\"success\",\"filter\",\"params\",\"Boolean\",\"fn\"],\"mappings\":\";AAAA,SAASA,aAAa,QAAQ,yBAAyB;AACvD,SAASC,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE7D,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,6BAA6B,QAAQ,SAAS;AAEvD,OAAO,MAAMC;;YAAuBF,KAAK;YACrC,MAAMG,aAAaL;;;YAEnB,MAAMM,8BAA8BP,aAAa,CAACQ;gBAC9CT,cAAcU,IAAI,CAAC;oBACfC,OAAO;oBACPC,SAAS,CAAC,yBAAyB,EAAEH,OAAO;gBAChD;YACJ;;;YAEAN;;oBAAO;wBACHU,OAAON;wBACPO,QAAQT,8BAA8BU,KAAK;oBAC/C;;;;;;YAEAZ;;oBAAO;wBACHU,OAAOR,8BAA8BW,QAAQ,CAACC,OAAO;wBACrDC,QAAQ,CAAC,EAAEC,MAAM,EAAE,GAAKC,QAAQD,OAAOV,KAAK;wBAC5CY,IAAI,CAAC,EAAEF,QAAQ,EAAEV,KAAK,EAAE,EAAE,GAAKA;wBAC/BK,QAAQN;oBACZ;;;;;;YAEA,OAAO;gBACHD;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = _effector$factory({\n  sid: \"vr1rhjg\",\n  fn: () => atom(() => {\n    const submitForm = createEvent({\n      sid: \"973284qs\"\n    });\n    const showUserEmailNotificationFx = createEffect((email) => {\n      notifications.show({\n        title: \"Отчет отправлен!\",\n        message: `Отчет отправлен на почту ${email}`\n      });\n    }, {\n      sid: \"3918vd47\"\n    });\n    sample({\n      and: [\n        {\n          clock: submitForm,\n          target: sendFreeReportOnEmailMutation.start\n        }\n      ],\n      or: {\n        sid: \"drnskfxl\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendFreeReportOnEmailMutation.finished.success,\n          filter: ({ params }) => Boolean(params.email),\n          fn: ({ params: { email } }) => email,\n          target: showUserEmailNotificationFx\n        }\n      ],\n      or: {\n        sid: \"5iuedrvp\"\n      }\n    });\n    return {\n      submitForm\n    };\n  })\n});\n",
-      "start": 1750239308408,
-      "end": 1750239308580,
+      "start": 1750271784931,
+      "end": 1750271785059,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308580,
-      "end": 1750239308580,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308580,
-      "end": 1750239308581,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271785059,
+      "end": 1750271785059,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271785059,
+      "end": 1750271785059,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785059,
+      "end": 1750271785060,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/SendReportEmail/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = _effector$factory({\n  sid: \"vr1rhjg\",\n  fn: () => atom(() => {\n    const submitForm = createEvent({\n      sid: \"973284qs\"\n    });\n    const showUserEmailNotificationFx = createEffect((email) => {\n      notifications.show({\n        title: \"Отчет отправлен!\",\n        message: `Отчет отправлен на почту ${email}`\n      });\n    }, {\n      sid: \"3918vd47\"\n    });\n    sample({\n      and: [\n        {\n          clock: submitForm,\n          target: sendFreeReportOnEmailMutation.start\n        }\n      ],\n      or: {\n        sid: \"drnskfxl\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendFreeReportOnEmailMutation.finished.success,\n          filter: ({ params }) => Boolean(params.email),\n          fn: ({ params: { email } }) => email,\n          target: showUserEmailNotificationFx\n        }\n      ],\n      or: {\n        sid: \"5iuedrvp\"\n      }\n    });\n    return {\n      submitForm\n    };\n  })\n});\n",
-      "start": 1750239308581,
-      "end": 1750239308581,
+      "start": 1750271785060,
+      "end": 1750271785060,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

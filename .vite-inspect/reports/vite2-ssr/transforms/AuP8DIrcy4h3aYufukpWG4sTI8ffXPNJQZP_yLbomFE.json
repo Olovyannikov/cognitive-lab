@@ -4,23 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button } from '@mantine/core';\n\nexport const NavigateToHelpPage = () => (\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\n        Служба поддержки\n    </Button>\n);\n",
-      "start": 1750239308247,
-      "end": 1750239308272,
+      "start": 1750271784813,
+      "end": 1750271784828,
       "sourcemaps": null
     },
     {
       "name": "vite:react-swc",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from '@mantine/core';\nexport const NavigateToHelpPage = ()=>/*#__PURE__*/ _jsx(Button, {\n        fullWidth: true,\n        variant: \"subtle\",\n        size: \"md\",\n        component: \"a\",\n        href: \"/help\",\n        children: \"Служба поддержки\"\n    });\n",
-      "start": 1750239308273,
-      "end": 1750239308280,
+      "start": 1750271784828,
+      "end": 1750271784832,
       "order": "pre",
       "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToHelpPage/index.tsx\"],\"sourcesContent\":[\"import { Button } from '@mantine/core';\\n\\nexport const NavigateToHelpPage = () => (\\n    <Button fullWidth variant='subtle' size='md' component='a' href='/help'>\\n        Служба поддержки\\n    </Button>\\n);\\n\"],\"names\":[\"Button\",\"NavigateToHelpPage\",\"fullWidth\",\"variant\",\"size\",\"component\",\"href\"],\"mappings\":\";AAAA,SAASA,MAAM,QAAQ,gBAAgB;AAEvC,OAAO,MAAMC,qBAAqB,kBAC9B,KAACD;QAAOE,SAAS;QAACC,SAAQ;QAASC,MAAK;QAAKC,WAAU;QAAIC,MAAK;kBAAQ;OAG1E\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ _jsx(Button, {\n  fullWidth: true,\n  variant: \"subtle\",\n  size: \"md\",\n  component: \"a\",\n  href: \"/help\",\n  children: \"Служба поддержки\"\n});\n",
-      "start": 1750239308280,
-      "end": 1750239308322,
+      "start": 1750271784832,
+      "end": 1750271784857,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -34,75 +34,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:fileEnv",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginFileEnv",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginExtractAssets:remove-javaScript",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
-      "name": "vike:extractExportNames",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginExtractExportNames",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
-      "name": "vike:envVars",
-      "start": 1750239308322,
-      "end": 1750239308322,
+      "name": "vike:pluginEnvVars",
+      "start": 1750271784857,
+      "end": 1750271784857,
+      "order": "post"
+    },
+    {
+      "name": "vike:pluginReplaceConstants",
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750239308322,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "normal-normal"
     },
     {
-      "name": "vike:pluginModuleBanner",
+      "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/NavigateToHelpPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nexport const NavigateToHelpPage = () => /* @__PURE__ */ _jsx(Button, {\n  fullWidth: true,\n  variant: \"subtle\",\n  size: \"md\",\n  component: \"a\",\n  href: \"/help\",\n  children: \"Служба поддержки\"\n});\n",
-      "start": 1750239308323,
-      "end": 1750239308323,
+      "start": 1750271784857,
+      "end": 1750271784857,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
