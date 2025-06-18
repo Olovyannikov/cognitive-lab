@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="81" failures="0" errors="0" time="0.967472832">
-    <testsuite name="src/shared/api/__tests__/create-request-fx.spec.ts" timestamp="2025-06-18T18:36:48.298Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.02957225">
-        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; calls ofetch with correct params (simple payload)" time="0.025421291">
+<testsuites name="vitest tests" tests="81" failures="0" errors="0" time="0.933955337">
+    <testsuite name="src/shared/api/__tests__/create-request-fx.spec.ts" timestamp="2025-06-18T18:47:25.088Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.032983792">
+        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; calls ofetch with correct params (simple payload)" time="0.029166709">
         </testcase>
-        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; calls ofetch with correct params (payload as function)" time="0.001115416">
+        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; calls ofetch with correct params (payload as function)" time="0.001120958">
         </testcase>
-        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; adds Authorization header if withTokenInHeaders is true" time="0.000714834">
+        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; adds Authorization header if withTokenInHeaders is true" time="0.000655292">
         </testcase>
-        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; does not add Authorization header if withTokenInHeaders is false" time="0.000671709">
+        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; does not add Authorization header if withTokenInHeaders is false" time="0.0006355">
         </testcase>
-        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; merges headers correctly" time="0.000643417">
+        <testcase classname="src/shared/api/__tests__/create-request-fx.spec.ts" name="createRequestFx &gt; merges headers correctly" time="0.000661584">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Blog/model/__tests__/BlogModel.spec.ts" timestamp="2025-06-18T18:36:48.299Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.355895834">
-        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; initial state" time="0.0020855">
+    <testsuite name="src/entities/Blog/model/__tests__/BlogModel.spec.ts" timestamp="2025-06-18T18:47:25.090Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.285078292">
+        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; initial state" time="0.002336875">
         </testcase>
-        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; pageChanged updates currentPage and triggers scroll" time="0.3301295">
+        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; pageChanged updates currentPage and triggers scroll" time="0.263708459">
         </testcase>
-        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; successful query updates blogPosts with full structure" time="0.00417825">
+        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; successful query updates blogPosts with full structure" time="0.010975416">
         </testcase>
-        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; handles null additional_info correctly" time="0.001634125">
+        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; handles null additional_info correctly" time="0.00151725">
         </testcase>
-        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; handles API error with blog structure" time="0.017116583">
+        <testcase classname="src/entities/Blog/model/__tests__/BlogModel.spec.ts" name="Blog Model &gt; handles API error with blog structure" time="0.005116625">
             <system-err>
 Error: [vike][Warning] Calling navigate() on the server-side has no effect
     at warnNoEffect [90m(file:///Users/ilaolovannikov/WebstormProjects/cognitive-lab/[39mnode_modules/[4m.pnpm[24m/vike@0.4.232_react-streaming@0.4.2_react-dom@19.1.0_react@19.1.0__react@19.1.0__vite@6._c17dae4c39a4996b203b91ba86e266d4/node_modules/[4mvike[24m/dist/esm/node/client/router.js:12:5[90m)[39m
@@ -35,106 +35,106 @@ Error: [vike][Warning] Calling navigate() on the server-side has no effect
             </system-err>
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Landing/model/__tests__/LandingModel.spec.ts" timestamp="2025-06-18T18:36:48.300Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.005105291">
-        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should populate store correctly" time="0.003203834">
+    <testsuite name="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" timestamp="2025-06-18T18:47:25.094Z" hostname="192.168.1.17" tests="7" failures="0" errors="0" skipped="0" time="0.020889459">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should start query when gate is opened" time="0.003631625">
         </testcase>
-        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should handle empty response" time="0.000706208">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should normalize and store data on successful response" time="0.001148708">
         </testcase>
-        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should extract first valid item" time="0.0006505">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle empty response correctly" time="0.000696958">
         </testcase>
-    </testsuite>
-    <testsuite name="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" timestamp="2025-06-18T18:36:48.301Z" hostname="192.168.1.17" tests="2" failures="0" errors="0" skipped="0" time="0.00147875">
-        <testcase classname="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" name="normalizePersonalities &gt; Should return a correct record" time="0.00087625">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle response with empty types arrays" time="0.00055">
         </testcase>
-        <testcase classname="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" name="normalizePersonalities &gt; Should return a not correct record" time="0.000117209">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should not ignore personality types with invalid codes" time="0.000889458">
         </testcase>
-    </testsuite>
-    <testsuite name="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" timestamp="2025-06-18T18:36:48.302Z" hostname="192.168.1.17" tests="7" failures="0" errors="0" skipped="0" time="0.01351325">
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should start query when gate is opened" time="0.004400709">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should not update store on query failure" time="0.012586875">
         </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should normalize and store data on successful response" time="0.001450875">
-        </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle empty response correctly" time="0.001194">
-        </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle response with empty types arrays" time="0.000703583">
-        </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should not ignore personality types with invalid codes" time="0.001263666">
-        </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should not update store on query failure" time="0.002615959">
-        </testcase>
-        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle partial data in categories" time="0.000630458">
+        <testcase classname="src/entities/Personality/model/__tests__/PersonalityModel.spec.ts" name="PersonalitiesModel &gt; should handle partial data in categories" time="0.000618542">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" timestamp="2025-06-18T18:36:48.303Z" hostname="192.168.1.17" tests="6" failures="0" errors="0" skipped="0" time="0.002345958">
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив для пустого объекта" time="0.000930167">
+    <testsuite name="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" timestamp="2025-06-18T18:47:25.097Z" hostname="192.168.1.17" tests="2" failures="0" errors="0" skipped="0" time="0.001570542">
+        <testcase classname="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" name="normalizePersonalities &gt; Should return a correct record" time="0.000900708">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив для undefined" time="0.000095458">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив при отсутствии mbti_percentages" time="0.000152583">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен корректно преобразовывать полные данные" time="0.0003315">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен обрабатывать отсутствие mbti_data" time="0.000164792">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен обрабатывать частичное отсутствие данных в mbti_data" time="0.000091834">
+        <testcase classname="src/entities/Personality/lib/__tests__/normalizePersonalities.spec.ts" name="normalizePersonalities &gt; Should return a not correct record" time="0.000108084">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" timestamp="2025-06-18T18:36:48.304Z" hostname="192.168.1.17" tests="10" failures="0" errors="0" skipped="0" time="0.002117166">
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should replace spaces with dashes and commas with underscores" time="0.000700667">
+    <testsuite name="src/entities/Landing/model/__tests__/LandingModel.spec.ts" timestamp="2025-06-18T18:47:25.099Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.005495583">
+        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should populate store correctly" time="0.003442125">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should handle multiple consecutive replacements" time="0.00008425">
+        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should handle empty response" time="0.000721">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should return empty string for empty input" time="0.000155542">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should not change already converted strings" time="0.000128583">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should replace dashes with spaces and underscores with commas" time="0.000075292">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should handle multiple consecutive replacements" time="0.000049875">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should return empty string for empty input" time="0.000044208">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should not change readable strings" time="0.000040584">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; Round-trip Conversion &gt; should recover original text after toUrl and fromUrl" time="0.000159667">
-        </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; Round-trip Conversion &gt; should maintain url format after fromUrl and toUrl" time="0.000063792">
+        <testcase classname="src/entities/Landing/model/__tests__/LandingModel.spec.ts" name="LandingModel &gt; should extract first valid item" time="0.000657417">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Report/lib/__tests__/statusInfo.spec.ts" timestamp="2025-06-18T18:36:48.306Z" hostname="192.168.1.17" tests="6" failures="0" errors="0" skipped="0" time="0.00211525">
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: undefined" time="0.00092925">
+    <testsuite name="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" timestamp="2025-06-18T18:47:25.100Z" hostname="192.168.1.17" tests="6" failures="0" errors="0" skipped="0" time="0.006092209">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив для пустого объекта" time="0.004339792">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: pending" time="0.000143875">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив для undefined" time="0.000106292">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: canceled_by_user" time="0.000072833">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен возвращать пустой массив при отсутствии mbti_percentages" time="0.000154166">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: cancelled" time="0.000122375">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен корректно преобразовывать полные данные" time="0.000326542">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об успехе для статуса &quot;paid&quot;" time="0.000149875">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен обрабатывать отсутствие mbti_data" time="0.000171625">
         </testcase>
-        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен корректно обрабатывать неизвестный статус" time="0.000129583">
-        </testcase>
-    </testsuite>
-    <testsuite name="src/entities/Root/model/__tests__/RootModel.spec.ts" timestamp="2025-06-18T18:36:48.307Z" hostname="192.168.1.17" tests="1" failures="0" errors="0" skipped="0" time="0.002370542">
-        <testcase classname="src/entities/Root/model/__tests__/RootModel.spec.ts" name="Root Model &gt; Initially Menu should be closed" time="0.001592833">
+        <testcase classname="src/entities/Report/lib/__tests__/barChartPreparedData.spec.ts" name="barChartPrepareData &gt; должен обрабатывать частичное отсутствие данных в mbti_data" time="0.00039975">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" timestamp="2025-06-18T18:36:48.307Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.003189583">
-        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should preserve existing userId" time="0.00181275">
+    <testsuite name="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" timestamp="2025-06-18T18:47:25.101Z" hostname="192.168.1.17" tests="10" failures="0" errors="0" skipped="0" time="0.002268334">
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should replace spaces with dashes and commas with underscores" time="0.000728625">
         </testcase>
-        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should set empty string if userId not exists" time="0.000165917">
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should handle multiple consecutive replacements" time="0.000085959">
         </testcase>
-        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should remove all keys except restored userId" time="0.000318583">
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should return empty string for empty input" time="0.000158583">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertToUrlId &gt; should not change already converted strings" time="0.00013175">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should replace dashes with spaces and underscores with commas" time="0.000078083">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should handle multiple consecutive replacements" time="0.000051041">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should return empty string for empty input" time="0.000045083">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; convertFromUrlId &gt; should not change readable strings" time="0.00004075">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; Round-trip Conversion &gt; should recover original text after toUrl and fromUrl" time="0.00016475">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/parseNavigationRules.spec.ts" name="URL ID Conversion Functions &gt; Round-trip Conversion &gt; should maintain url format after fromUrl and toUrl" time="0.000065375">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/Test/model/__tests__/TestModel.spec.ts" timestamp="2025-06-18T18:36:48.308Z" hostname="192.168.1.17" tests="7" failures="0" errors="0" skipped="0" time="0.513404583">
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; initial state" time="0.001351542">
+    <testsuite name="src/entities/Report/lib/__tests__/statusInfo.spec.ts" timestamp="2025-06-18T18:47:25.103Z" hostname="192.168.1.17" tests="6" failures="0" errors="0" skipped="0" time="0.002055625">
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: undefined" time="0.000916458">
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; setSplashScreenVisibility updates splash screen state" time="0.001110292">
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: pending" time="0.000136625">
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; formReset resets all stores" time="0.00037275">
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: canceled_by_user" time="0.000073542">
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; formPageChanged updates currentPage and triggers scroll" time="0.002255625">
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об ошибке для статуса: cancelled" time="0.000128584">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен возвращать информацию об успехе для статуса &quot;paid&quot;" time="0.000145292">
+        </testcase>
+        <testcase classname="src/entities/Report/lib/__tests__/statusInfo.spec.ts" name="getStatusInfo &gt; должен корректно обрабатывать неизвестный статус" time="0.000121292">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/entities/Root/model/__tests__/RootModel.spec.ts" timestamp="2025-06-18T18:47:25.103Z" hostname="192.168.1.17" tests="1" failures="0" errors="0" skipped="0" time="0.001432334">
+        <testcase classname="src/entities/Root/model/__tests__/RootModel.spec.ts" name="Root Model &gt; Initially Menu should be closed" time="0.000892166">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" timestamp="2025-06-18T18:47:25.103Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.00316175">
+        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should preserve existing userId" time="0.002095458">
+        </testcase>
+        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should set empty string if userId not exists" time="0.00017475">
+        </testcase>
+        <testcase classname="src/entities/Test/lib/__tests__/clearLocalStorage.spec.ts" name="clearLocalStorageTestUnits &gt; should remove all keys except restored userId" time="0.00032375">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/entities/Test/model/__tests__/TestModel.spec.ts" timestamp="2025-06-18T18:47:25.104Z" hostname="192.168.1.17" tests="7" failures="0" errors="0" skipped="0" time="0.512093125">
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; initial state" time="0.001346083">
+        </testcase>
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; setSplashScreenVisibility updates splash screen state" time="0.001117375">
+        </testcase>
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; formReset resets all stores" time="0.000383208">
+        </testcase>
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; formPageChanged updates currentPage and triggers scroll" time="0.002204292">
             <system-err>
 Error: 
     at [90m/Users/ilaolovannikov/WebstormProjects/cognitive-lab/[39msrc/entities/Test/model/index.ts:51:30
@@ -150,7 +150,7 @@ Error:
 
             </system-err>
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; scaleFormFieldChanged updates $scaleForm" time="0.255813542">
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; scaleFormFieldChanged updates $scaleForm" time="0.253209125">
             <system-err>
 Error: 
     at [90m/Users/ilaolovannikov/WebstormProjects/cognitive-lab/[39msrc/entities/Test/model/index.ts:51:30
@@ -166,71 +166,71 @@ Error:
 
             </system-err>
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; progress updates when answers change" time="0.251504875">
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; progress updates when answers change" time="0.252811375">
         </testcase>
-        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; currentQuestion updates when page or questions change" time="0.000268584">
-        </testcase>
-    </testsuite>
-    <testsuite name="src/entities/User/model/__tests__/UserModel.spec.ts" timestamp="2025-06-18T18:36:48.309Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.011554583">
-        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should generate new userId when empty" time="0.004199792">
-        </testcase>
-        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should keep existing userId" time="0.001539042">
-        </testcase>
-        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should initialize surveyId as empty string when null" time="0.001536958">
-        </testcase>
-        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should preserve existing surveyId" time="0.001077416">
-        </testcase>
-        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should navigate to test page" time="0.00202575">
+        <testcase classname="src/entities/Test/model/__tests__/TestModel.spec.ts" name="TestModel &gt; currentQuestion updates when page or questions change" time="0.00027825">
         </testcase>
     </testsuite>
-    <testsuite name="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" timestamp="2025-06-18T18:36:48.310Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.007513792">
-        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should initialize with empty faqItems" time="0.001113167">
+    <testsuite name="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" timestamp="2025-06-18T18:47:25.105Z" hostname="192.168.1.17" tests="3" failures="0" errors="0" skipped="0" time="0.023388875">
+        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should initialize with empty faqItems" time="0.001869709">
         </testcase>
-        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should handle successful data fetch" time="0.003121083">
+        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should handle successful data fetch" time="0.0192945">
         </testcase>
-        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should handle nullable image fields correctly" time="0.001096959">
-        </testcase>
-    </testsuite>
-    <testsuite name="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" timestamp="2025-06-18T18:36:48.310Z" hostname="192.168.1.17" tests="11" failures="0" errors="0" skipped="0" time="0.002206792">
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a non-empty string" time="0.000636">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an empty string" time="0.000157167">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a non-empty array" time="0.00006825">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an empty array" time="0.000122125">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for a value that is not a string or array" time="0.000110167">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for null" time="0.000053542">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for undefined" time="0.000042042">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a string longer than a specified length" time="0.000040042">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for a string not longer than a specified length" time="0.000110417">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for an array longer than a specified length" time="0.000113">
-        </testcase>
-        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an array not longer than a specified length" time="0.00004575">
+        <testcase classname="src/entities/FAQ/model/__tests__/FAQModel.spec.ts" name="FaqModel &gt; should handle nullable image fields correctly" time="0.001312375">
         </testcase>
     </testsuite>
-    <testsuite name="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" timestamp="2025-06-18T18:36:48.311Z" hostname="192.168.1.17" tests="2" failures="0" errors="0" skipped="0" time="0.013359">
-        <testcase classname="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" name="navigate.back &gt; should call window.history.back() when navigate.back() is invoked" time="0.000775958">
+    <testsuite name="src/entities/User/model/__tests__/UserModel.spec.ts" timestamp="2025-06-18T18:47:25.106Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.026470375">
+        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should generate new userId when empty" time="0.003552917">
         </testcase>
-        <testcase classname="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" name="navigate.back &gt; should not call window.history.back() if method is mocked" time="0.000160416">
+        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should keep existing userId" time="0.003808791">
+        </testcase>
+        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should initialize surveyId as empty string when null" time="0.0021355">
+        </testcase>
+        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should preserve existing surveyId" time="0.012617708">
+        </testcase>
+        <testcase classname="src/entities/User/model/__tests__/UserModel.spec.ts" name="UserModel &gt; should navigate to test page" time="0.00263325">
         </testcase>
     </testsuite>
-    <testsuite name="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" timestamp="2025-06-18T18:36:48.312Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.001730208">
-        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should convert input value to uppercase" time="0.0007035">
+    <testsuite name="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" timestamp="2025-06-18T18:47:25.107Z" hostname="192.168.1.17" tests="11" failures="0" errors="0" skipped="0" time="0.002150834">
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a non-empty string" time="0.000633125">
         </testcase>
-        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle empty input" time="0.000080166">
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an empty string" time="0.000157334">
         </testcase>
-        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle input already in uppercase" time="0.000114792">
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a non-empty array" time="0.000070875">
         </testcase>
-        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle mixed case input" time="0.000129666">
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an empty array" time="0.000122541">
         </testcase>
-        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle special characters" time="0.000114209">
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for a value that is not a string or array" time="0.000113084">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for null" time="0.000054208">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for undefined" time="0.00004325">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for a string longer than a specified length" time="0.00004125">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for a string not longer than a specified length" time="0.000111834">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return true for an array longer than a specified length" time="0.000116667">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/isExists/__tests__/isExists.spec.ts" name="isExists &gt; should return false for an array not longer than a specified length" time="0.000047208">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" timestamp="2025-06-18T18:47:25.108Z" hostname="192.168.1.17" tests="2" failures="0" errors="0" skipped="0" time="0.004349708">
+        <testcase classname="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" name="navigate.back &gt; should call window.history.back() when navigate.back() is invoked" time="0.000786">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/navigate/__tests__/navigate.spec.ts" name="navigate.back &gt; should not call window.history.back() if method is mocked" time="0.000160916">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" timestamp="2025-06-18T18:47:25.108Z" hostname="192.168.1.17" tests="5" failures="0" errors="0" skipped="0" time="0.0044745">
+        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should convert input value to uppercase" time="0.003392666">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle empty input" time="0.000114791">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle input already in uppercase" time="0.000135416">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle mixed case input" time="0.000131292">
+        </testcase>
+        <testcase classname="src/shared/lib/utils/toInputUpperCase/__tests__/toInputUpperCase.spec.ts" name="toInputUppercase &gt; should handle special characters" time="0.0001145">
         </testcase>
     </testsuite>
 </testsuites>
