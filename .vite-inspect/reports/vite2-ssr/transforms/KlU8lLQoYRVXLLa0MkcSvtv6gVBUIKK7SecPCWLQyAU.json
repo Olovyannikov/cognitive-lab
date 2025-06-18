@@ -4,117 +4,141 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\n\nimport s from './List.module.css';\n\ninterface ListProps extends ComponentProps<'ul'> {\n    data: {\n        id: number;\n        label: ReactNode;\n        icon?: ReactNode;\n    }[];\n}\n\nexport const List = ({ data, className }: ListProps) => (\n    <ul className={clsx(s.list, className)}>\n        {data?.map((item) => (\n            <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>\n        ))}\n    </ul>\n);\n",
-      "start": 1750271784964,
-      "end": 1750271784981,
+      "start": 1750275033899,
+      "end": 1750275033948,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from 'clsx';\nimport s from './List.module.css';\nexport const List = ({ data, className })=>/*#__PURE__*/ _jsx(\"ul\", {\n        className: clsx(s.list, className),\n        children: data?.map((item)=>/*#__PURE__*/ _jsxs(\"li\", {\n                children: [\n                    item.icon,\n                    item.label\n                ]\n            }, item.id))\n    });\n",
-      "start": 1750271784981,
-      "end": 1750271784986,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx\"],\"sourcesContent\":[\"import type { ComponentProps, ReactNode } from 'react';\\nimport clsx from 'clsx';\\n\\nimport s from './List.module.css';\\n\\ninterface ListProps extends ComponentProps<'ul'> {\\n    data: {\\n        id: number;\\n        label: ReactNode;\\n        icon?: ReactNode;\\n    }[];\\n}\\n\\nexport const List = ({ data, className }: ListProps) => (\\n    <ul className={clsx(s.list, className)}>\\n        {data?.map((item) => (\\n            <li key={item.id}>\\n                {item.icon}\\n                {item.label}\\n            </li>\\n        ))}\\n    </ul>\\n);\\n\"],\"names\":[\"clsx\",\"s\",\"List\",\"data\",\"className\",\"ul\",\"list\",\"map\",\"item\",\"li\",\"icon\",\"label\",\"id\"],\"mappings\":\";AACA,OAAOA,UAAU,OAAO;AAExB,OAAOC,OAAO,oBAAoB;AAUlC,OAAO,MAAMC,OAAO,CAAC,EAAEC,IAAI,EAAEC,SAAS,EAAa,iBAC/C,KAACC;QAAGD,WAAWJ,KAAKC,EAAEK,IAAI,EAAEF;kBACvBD,MAAMI,IAAI,CAACC,qBACR,MAACC;;oBACID,KAAKE,IAAI;oBACTF,KAAKG,KAAK;;eAFNH,KAAKI,EAAE;OAM1B\"}"
+      "name": "vite:react-babel",
+      "result": "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\nimport s from './List.module.css';\ninterface ListProps extends ComponentProps<'ul'> {\n  data: {\n    id: number;\n    label: ReactNode;\n    icon?: ReactNode;\n  }[];\n}\nexport const List = ({\n  data,\n  className\n}: ListProps) => <ul className={clsx(s.list, className)}>\n        {data?.map(item => <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>)}\n    </ul>;",
+      "start": 1750275033948,
+      "end": 1750275033949,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ComponentProps",
+          "ReactNode",
+          "clsx",
+          "s",
+          "ListProps",
+          "data",
+          "id",
+          "label",
+          "icon",
+          "List",
+          "className",
+          "list",
+          "map",
+          "item"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"],
+        "sourcesContent": [
+          "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\n\nimport s from './List.module.css';\n\ninterface ListProps extends ComponentProps<'ul'> {\n    data: {\n        id: number;\n        label: ReactNode;\n        icon?: ReactNode;\n    }[];\n}\n\nexport const List = ({ data, className }: ListProps) => (\n    <ul className={clsx(s.list, className)}>\n        {data?.map((item) => (\n            <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>\n        ))}\n    </ul>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,cAAc,EAAEC,SAAS,QAAQ,OAAO;AACtD,OAAOC,IAAI,MAAM,MAAM;AAEvB,OAAOC,CAAC,MAAM,mBAAmB;AAEjC,UAAUC,SAAS,SAASJ,cAAc,CAAC,IAAI,CAAC,CAAC;EAC7CK,IAAI,EAAE;IACFC,EAAE,EAAE,MAAM;IACVC,KAAK,EAAEN,SAAS;IAChBO,IAAI,CAAC,EAAEP,SAAS;EACpB,CAAC,EAAE;AACP;AAEA,OAAO,MAAMQ,IAAI,GAAGA,CAAC;EAAEJ,IAAI;EAAEK;AAAqB,CAAV,EAAEN,SAAS,KAC/C,CAAC,EAAE,CAAC,SAAS,CAAC,CAACF,IAAI,CAACC,CAAC,CAACQ,IAAI,EAAED,SAAS,CAAC,CAAC;AAC3C,QAAQ,CAACL,IAAI,EAAEO,GAAG,CAAEC,IAAI,IACZ,CAAC,EAAE,CAAC,GAAG,CAAC,CAACA,IAAI,CAACP,EAAE,CAAC;AAC7B,gBAAgB,CAACO,IAAI,CAACL,IAAI;AAC1B,gBAAgB,CAACK,IAAI,CAACN,KAAK;AAC3B,YAAY,EAAE,EAAE,CACP,CAAC;AACV,IAAI,EAAE,EAAE,CACP",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({ data, className }) => /* @__PURE__ */ _jsx(\"ul\", {\n  className: clsx(s.list, className),\n  children: data?.map((item) => /* @__PURE__ */ _jsxs(\"li\", {\n    children: [\n      item.icon,\n      item.label\n    ]\n  }, item.id))\n});\n",
-      "start": 1750271784986,
-      "end": 1750271785190,
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({\n  data,\n  className\n}) => /* @__PURE__ */ jsx(\"ul\", { className: clsx(s.list, className), children: data?.map((item) => /* @__PURE__ */ jsxs(\"li\", { children: [\n  item.icon,\n  item.label\n] }, item.id)) });\n",
+      "start": 1750275033949,
+      "end": 1750275034206,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/List/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from 'clsx';\nimport s from './List.module.css';\nexport const List = ({ data, className })=>/*#__PURE__*/ _jsx(\"ul\", {\n        className: clsx(s.list, className),\n        children: data?.map((item)=>/*#__PURE__*/ _jsxs(\"li\", {\n                children: [\n                    item.icon,\n                    item.label\n                ]\n            }, item.id))\n    });\n"
+          "import type { ComponentProps, ReactNode } from 'react';\nimport clsx from 'clsx';\nimport s from './List.module.css';\ninterface ListProps extends ComponentProps<'ul'> {\n  data: {\n    id: number;\n    label: ReactNode;\n    icon?: ReactNode;\n  }[];\n}\nexport const List = ({\n  data,\n  className\n}: ListProps) => <ul className={clsx(s.list, className)}>\n        {data?.map(item => <li key={item.id}>\n                {item.icon}\n                {item.label}\n            </li>)}\n    </ul>;"
         ],
-        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,OAAO,UAAU;AACjB,OAAO,OAAO;AACP,aAAM,OAAO,CAAC,EAAE,MAAM,UAAU,MAAkB,qBAAK,MAAM;AAAA,EAC5D,WAAW,KAAK,EAAE,MAAM,SAAS;AAAA,EACjC,UAAU,MAAM,IAAI,CAAC,SAAqB,sBAAM,MAAM;AAAA,IAC9C,UAAU;AAAA,MACN,KAAK;AAAA,MACL,KAAK;AAAA,IACT;AAAA,EACJ,GAAG,KAAK,EAAE,CAAC;AACnB,CAAC;",
+        "mappings": "AAaiB,cACU,YADV;AAZjB,OAAO,UAAU;AACjB,OAAO,OAAO;AAQP,aAAM,OAAO,CAAC;AAAA,EACnB;AAAA,EACA;AACF,MAAiB,oBAAC,QAAG,WAAW,KAAK,EAAE,MAAM,SAAS,GAC7C,gBAAM,IAAI,UAAQ,qBAAC,QACX;AAAA,OAAK;AAAA,EACL,KAAK;AAAA,KAFc,KAAK,EAG7B,CAAK,GACb;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785190,
-      "end": 1750271785190,
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/widgets/RootLayout/ui/List/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({ data, className }) => /* @__PURE__ */ _jsx(\"ul\", {\n  className: clsx(s.list, className),\n  children: data?.map((item) => /* @__PURE__ */ _jsxs(\"li\", {\n    children: [\n      item.icon,\n      item.label\n    ]\n  }, item.id))\n});\n",
-      "start": 1750271785191,
-      "end": 1750271785191,
+      "result": "/*! src/widgets/RootLayout/ui/List/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport clsx from \"clsx\";\nimport s from \"./List.module.css\";\nexport const List = ({\n  data,\n  className\n}) => /* @__PURE__ */ jsx(\"ul\", { className: clsx(s.list, className), children: data?.map((item) => /* @__PURE__ */ jsxs(\"li\", { children: [\n  item.icon,\n  item.label\n] }, item.id)) });\n",
+      "start": 1750275034206,
+      "end": 1750275034206,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/RootLayout/ui/List/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

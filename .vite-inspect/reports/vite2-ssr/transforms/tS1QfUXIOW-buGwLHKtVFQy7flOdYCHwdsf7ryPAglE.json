@@ -4,117 +4,147 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport s from './NavigateToReviewPage.module.css';\n\nexport const NavigateToReviewPage = () => {\n    const {\n        routeParams: { reportId },\n        isMobile,\n    } = usePageContext();\n    const hasComment = useUnit(\n        getSurveysInfoQuery.$data.map(\n            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null\n        )\n    );\n    if (hasComment) return;\n\n    return (\n        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\n\n            <Button\n                maw={311}\n                fullWidth\n                component='a'\n                variant='default'\n                href={`/review/${reportId}`}\n                size={isMobile ? 'sm' : 'lg'}\n            >\n                Оставить отзыв\n            </Button>\n        </Stack>\n    );\n};\n",
-      "start": 1750271784819,
-      "end": 1750271784838,
+      "start": 1750275033567,
+      "end": 1750275033614,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport s from './NavigateToReviewPage.module.css';\nexport const NavigateToReviewPage = ()=>{\n    const { routeParams: { reportId }, isMobile } = usePageContext();\n    const hasComment = useUnit(getSurveysInfoQuery.$data.map((user)=>user?.left_comments?.find((comment)=>comment.user_report === reportId) ?? null));\n    if (hasComment) return;\n    return /*#__PURE__*/ _jsxs(Stack, {\n        gap: isMobile ? 'lg' : '5xl',\n        mb: isMobile ? 'xl' : 100,\n        justify: \"center\",\n        align: \"center\",\n        ta: \"center\",\n        children: [\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n            }),\n            /*#__PURE__*/ _jsx(Button, {\n                maw: 311,\n                fullWidth: true,\n                component: \"a\",\n                variant: \"default\",\n                href: `/review/${reportId}`,\n                size: isMobile ? 'sm' : 'lg',\n                children: \"Оставить отзыв\"\n            })\n        ]\n    });\n};\n",
-      "start": 1750271784838,
-      "end": 1750271784841,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToReviewPage/index.tsx\"],\"sourcesContent\":[\"import { Button, Stack, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { getSurveysInfoQuery } from '@/entities/Report';\\n\\nimport s from './NavigateToReviewPage.module.css';\\n\\nexport const NavigateToReviewPage = () => {\\n    const {\\n        routeParams: { reportId },\\n        isMobile,\\n    } = usePageContext();\\n    const hasComment = useUnit(\\n        getSurveysInfoQuery.$data.map(\\n            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null\\n        )\\n    );\\n    if (hasComment) return;\\n\\n    return (\\n        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\\n\\n            <Button\\n                maw={311}\\n                fullWidth\\n                component='a'\\n                variant='default'\\n                href={`/review/${reportId}`}\\n                size={isMobile ? 'sm' : 'lg'}\\n            >\\n                Оставить отзыв\\n            </Button>\\n        </Stack>\\n    );\\n};\\n\"],\"names\":[\"Button\",\"Stack\",\"Text\",\"useUnit\",\"usePageContext\",\"getSurveysInfoQuery\",\"s\",\"NavigateToReviewPage\",\"routeParams\",\"reportId\",\"isMobile\",\"hasComment\",\"$data\",\"map\",\"user\",\"left_comments\",\"find\",\"comment\",\"user_report\",\"gap\",\"mb\",\"justify\",\"align\",\"ta\",\"className\",\"text\",\"maw\",\"fullWidth\",\"component\",\"variant\",\"href\",\"size\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AACpD,SAASC,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,mBAAmB,QAAQ,oBAAoB;AAExD,OAAOC,OAAO,oCAAoC;AAElD,OAAO,MAAMC,uBAAuB;IAChC,MAAM,EACFC,aAAa,EAAEC,QAAQ,EAAE,EACzBC,QAAQ,EACX,GAAGN;IACJ,MAAMO,aAAaR,QACfE,oBAAoBO,KAAK,CAACC,GAAG,CACzB,CAACC,OAASA,MAAMC,eAAeC,KAAK,CAACC,UAAYA,QAAQC,WAAW,KAAKT,aAAa;IAG9F,IAAIE,YAAY;IAEhB,qBACI,MAACV;QAAMkB,KAAKT,WAAW,OAAO;QAAOU,IAAIV,WAAW,OAAO;QAAKW,SAAQ;QAASC,OAAM;QAASC,IAAG;;0BAC/F,KAACrB;gBAAKsB,WAAWlB,EAAEmB,IAAI;0BAAE;;0BAEzB,KAACzB;gBACG0B,KAAK;gBACLC,SAAS;gBACTC,WAAU;gBACVC,SAAQ;gBACRC,MAAM,CAAC,QAAQ,EAAErB,UAAU;gBAC3BsB,MAAMrB,WAAW,OAAO;0BAC3B;;;;AAKb,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport s from './NavigateToReviewPage.module.css';\nexport const NavigateToReviewPage = () => {\n  const {\n    routeParams: {\n      reportId\n    },\n    isMobile\n  } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map(user => user?.left_comments?.find(comment => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\n\n            <Button maw={311} fullWidth component='a' variant='default' href={`/review/${reportId}`} size={isMobile ? 'sm' : 'lg'}>\n                Оставить отзыв\n            </Button>\n        </Stack>;\n};",
+      "start": 1750275033614,
+      "end": 1750275033615,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Button",
+          "Stack",
+          "Text",
+          "useUnit",
+          "usePageContext",
+          "getSurveysInfoQuery",
+          "s",
+          "NavigateToReviewPage",
+          "routeParams",
+          "reportId",
+          "isMobile",
+          "hasComment",
+          "$data",
+          "map",
+          "user",
+          "left_comments",
+          "find",
+          "comment",
+          "user_report",
+          "text"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToReviewPage/index.tsx"],
+        "sourcesContent": [
+          "import { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getSurveysInfoQuery } from '@/entities/Report';\n\nimport s from './NavigateToReviewPage.module.css';\n\nexport const NavigateToReviewPage = () => {\n    const {\n        routeParams: { reportId },\n        isMobile,\n    } = usePageContext();\n    const hasComment = useUnit(\n        getSurveysInfoQuery.$data.map(\n            (user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null\n        )\n    );\n    if (hasComment) return;\n\n    return (\n        <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\n\n            <Button\n                maw={311}\n                fullWidth\n                component='a'\n                variant='default'\n                href={`/review/${reportId}`}\n                size={isMobile ? 'sm' : 'lg'}\n            >\n                Оставить отзыв\n            </Button>\n        </Stack>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,EAAEC,KAAK,EAAEC,IAAI,QAAQ,eAAe;AACnD,SAASC,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,mBAAmB,QAAQ,mBAAmB;AAEvD,OAAOC,CAAC,MAAM,mCAAmC;AAEjD,OAAO,MAAMC,oBAAoB,GAAGA,CAAA,KAAM;EACtC,MAAM;IACFC,WAAW,EAAE;MAAEC;IAAS,CAAC;IACzBC;EACJ,CAAC,GAAGN,cAAc,CAAC,CAAC;EACpB,MAAMO,UAAU,GAAGR,OAAO,CACtBE,mBAAmB,CAACO,KAAK,CAACC,GAAG,CACxBC,IAAI,IAAKA,IAAI,EAAEC,aAAa,EAAEC,IAAI,CAAEC,OAAO,IAAKA,OAAO,CAACC,WAAW,KAAKT,QAAQ,CAAC,IAAI,IAC1F,CACJ,CAAC;EACD,IAAIE,UAAU,EAAE;EAEhB,OACI,CAAC,KAAK,CAAC,GAAG,CAAC,CAACD,QAAQ,GAAG,IAAI,GAAG,KAAK,CAAC,CAAC,EAAE,CAAC,CAACA,QAAQ,GAAG,IAAI,GAAG,GAAG,CAAC,CAAC,OAAO,CAAC,QAAQ,CAAC,KAAK,CAAC,QAAQ,CAAC,EAAE,CAAC,QAAQ;AACnH,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACa,IAAI,CAAC,CAAC,gEAAgE,EAAE,IAAI;AAC3G;AACA,YAAY,CAAC,MAAM,CACH,GAAG,CAAC,CAAC,GAAG,CAAC,CACT,SAAS,CACT,SAAS,CAAC,GAAG,CACb,OAAO,CAAC,SAAS,CACjB,IAAI,CAAC,CAAC,WAAWV,QAAQ,EAAE,CAAC,CAC5B,IAAI,CAAC,CAACC,QAAQ,GAAG,IAAI,GAAG,IAAI,CAAC;AAE7C;AACA,YAAY,EAAE,MAAM;AACpB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const { routeParams: { reportId }, isMobile } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ _jsxs(Stack, {\n    gap: isMobile ? \"lg\" : \"5xl\",\n    mb: isMobile ? \"xl\" : 100,\n    justify: \"center\",\n    align: \"center\",\n    ta: \"center\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        maw: 311,\n        fullWidth: true,\n        component: \"a\",\n        variant: \"default\",\n        href: `/review/${reportId}`,\n        size: isMobile ? \"sm\" : \"lg\",\n        children: \"Оставить отзыв\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750271784841,
-      "end": 1750271784872,
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const {\n    routeParams: {\n      reportId\n    },\n    isMobile\n  } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ jsxs(Stack, { gap: isMobile ? \"lg\" : \"5xl\", mb: isMobile ? \"xl\" : 100, justify: \"center\", align: \"center\", ta: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\" }),\n    /* @__PURE__ */ jsx(Button, { maw: 311, fullWidth: true, component: \"a\", variant: \"default\", href: `/review/${reportId}`, size: isMobile ? \"sm\" : \"lg\", children: \"Оставить отзыв\" })\n  ] });\n};\n",
+      "start": 1750275033615,
+      "end": 1750275033732,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/NavigateToReviewPage/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport s from './NavigateToReviewPage.module.css';\nexport const NavigateToReviewPage = ()=>{\n    const { routeParams: { reportId }, isMobile } = usePageContext();\n    const hasComment = useUnit(getSurveysInfoQuery.$data.map((user)=>user?.left_comments?.find((comment)=>comment.user_report === reportId) ?? null));\n    if (hasComment) return;\n    return /*#__PURE__*/ _jsxs(Stack, {\n        gap: isMobile ? 'lg' : '5xl',\n        mb: isMobile ? 'xl' : 100,\n        justify: \"center\",\n        align: \"center\",\n        ta: \"center\",\n        children: [\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n            }),\n            /*#__PURE__*/ _jsx(Button, {\n                maw: 311,\n                fullWidth: true,\n                component: \"a\",\n                variant: \"default\",\n                href: `/review/${reportId}`,\n                size: isMobile ? 'sm' : 'lg',\n                children: \"Оставить отзыв\"\n            })\n        ]\n    });\n};\n"
+          "import { Button, Stack, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getSurveysInfoQuery } from '@/entities/Report';\nimport s from './NavigateToReviewPage.module.css';\nexport const NavigateToReviewPage = () => {\n  const {\n    routeParams: {\n      reportId\n    },\n    isMobile\n  } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map(user => user?.left_comments?.find(comment => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return <Stack gap={isMobile ? 'lg' : '5xl'} mb={isMobile ? 'xl' : 100} justify='center' align='center' ta='center'>\n            <Text className={s.text}>Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!</Text>\n\n            <Button maw={311} fullWidth component='a' variant='default' href={`/review/${reportId}`} size={isMobile ? 'sm' : 'lg'}>\n                Оставить отзыв\n            </Button>\n        </Stack>;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,QAAQ,OAAO,YAAY;AACpC,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,2BAA2B;AACpC,OAAO,OAAO;AACP,aAAM,uBAAuB,MAAI;AACpC,QAAM,EAAE,aAAa,EAAE,SAAS,GAAG,SAAS,IAAI,eAAe;AAC/D,QAAM,aAAa,QAAQ,oBAAoB,MAAM,IAAI,CAAC,SAAO,MAAM,eAAe,KAAK,CAAC,YAAU,QAAQ,gBAAgB,QAAQ,KAAK,IAAI,CAAC;AAChJ,MAAI,WAAY;AAChB,SAAqB,sBAAM,OAAO;AAAA,IAC9B,KAAK,WAAW,OAAO;AAAA,IACvB,IAAI,WAAW,OAAO;AAAA,IACtB,SAAS;AAAA,IACT,OAAO;AAAA,IACP,IAAI;AAAA,IACJ,UAAU;AAAA,MACQ,qBAAK,MAAM;AAAA,QACrB,WAAW,EAAE;AAAA,QACb,UAAU;AAAA,MACd,CAAC;AAAA,MACa,qBAAK,QAAQ;AAAA,QACvB,KAAK;AAAA,QACL,WAAW;AAAA,QACX,WAAW;AAAA,QACX,SAAS;AAAA,QACT,MAAM,WAAW,QAAQ;AAAA,QACzB,MAAM,WAAW,OAAO;AAAA,QACxB,UAAU;AAAA,MACd,CAAC;AAAA,IACL;AAAA,EACJ,CAAC;AACL;",
+        "mappings": "AAcS,SACG,KADH;AAdT,SAAS,QAAQ,OAAO,YAAY;AACpC,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,2BAA2B;AACpC,OAAO,OAAO;AACP,aAAM,uBAAuB,MAAM;AACxC,QAAM;AAAA,IACJ,aAAa;AAAA,MACX;AAAA,IACF;AAAA,IACA;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,aAAa,QAAQ,oBAAoB,MAAM,IAAI,UAAQ,MAAM,eAAe,KAAK,aAAW,QAAQ,gBAAgB,QAAQ,KAAK,IAAI,CAAC;AAChJ,MAAI,WAAY;AAChB,SAAO,qBAAC,SAAM,KAAK,WAAW,OAAO,OAAO,IAAI,WAAW,OAAO,KAAK,SAAQ,UAAS,OAAM,UAAS,IAAG,UAChG;AAAA,wBAAC,QAAK,WAAW,EAAE,MAAM,8EAAgE;AAAA,IAEzF,oBAAC,UAAO,KAAK,KAAK,WAAS,MAAC,WAAU,KAAI,SAAQ,WAAU,MAAM,WAAW,QAAQ,IAAI,MAAM,WAAW,OAAO,MAAM,4BAEvH;AAAA,KACJ;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033732,
+      "end": 1750275033732,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/features/NavigateToReviewPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const { routeParams: { reportId }, isMobile } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ _jsxs(Stack, {\n    gap: isMobile ? \"lg\" : \"5xl\",\n    mb: isMobile ? \"xl\" : 100,\n    justify: \"center\",\n    align: \"center\",\n    ta: \"center\",\n    children: [\n      /* @__PURE__ */ _jsx(Text, {\n        className: s.text,\n        children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\"\n      }),\n      /* @__PURE__ */ _jsx(Button, {\n        maw: 311,\n        fullWidth: true,\n        component: \"a\",\n        variant: \"default\",\n        href: `/review/${reportId}`,\n        size: isMobile ? \"sm\" : \"lg\",\n        children: \"Оставить отзыв\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "result": "/*! src/features/NavigateToReviewPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Button, Stack, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getSurveysInfoQuery } from \"@/entities/Report\";\nimport s from \"./NavigateToReviewPage.module.css\";\nexport const NavigateToReviewPage = () => {\n  const {\n    routeParams: {\n      reportId\n    },\n    isMobile\n  } = usePageContext();\n  const hasComment = useUnit(getSurveysInfoQuery.$data.map((user) => user?.left_comments?.find((comment) => comment.user_report === reportId) ?? null));\n  if (hasComment) return;\n  return /* @__PURE__ */ jsxs(Stack, { gap: isMobile ? \"lg\" : \"5xl\", mb: isMobile ? \"xl\" : 100, justify: \"center\", align: \"center\", ta: \"center\", children: [\n    /* @__PURE__ */ jsx(Text, { className: s.text, children: \"Хотите поделиться отзывом об отчёте? Мы будем рады услышать вас!\" }),\n    /* @__PURE__ */ jsx(Button, { maw: 311, fullWidth: true, component: \"a\", variant: \"default\", href: `/review/${reportId}`, size: isMobile ? \"sm\" : \"lg\", children: \"Оставить отзыв\" })\n  ] });\n};\n",
+      "start": 1750275033733,
+      "end": 1750275033733,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/features/NavigateToReviewPage/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }
     }
   ]

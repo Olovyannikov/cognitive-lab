@@ -4,117 +4,145 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation } from '@farfetched/core';\n\nimport { API, createInternalRequestFx } from '@/shared/api';\n\nexport const subscribeToNewsMutation = createMutation({\n    effect: createInternalRequestFx<{ email: string }, void>((body) => ({\n        url: API.news.subscribe,\n        method: 'POST',\n        body,\n    })),\n});\n",
-      "start": 1750271785348,
-      "end": 1750271785355,
+      "start": 1750275034362,
+      "end": 1750275034389,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx } from '@/shared/api';\nexport const subscribeToNewsMutation = _effector$factory({\n    sid: \"2q789ep6\",\n    fn: ()=>createMutation({\n            effect: createInternalRequestFx((body)=>({\n                    url: API.news.subscribe,\n                    method: 'POST',\n                    body\n                }))\n        })\n});\n",
-      "start": 1750271785355,
-      "end": 1750271785360,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/api/index.ts\"],\"sourcesContent\":[\"import { createMutation } from '@farfetched/core';\\n\\nimport { API, createInternalRequestFx } from '@/shared/api';\\n\\nexport const subscribeToNewsMutation = createMutation({\\n    effect: createInternalRequestFx<{ email: string }, void>((body) => ({\\n        url: API.news.subscribe,\\n        method: 'POST',\\n        body,\\n    })),\\n});\\n\"],\"names\":[\"createMutation\",\"API\",\"createInternalRequestFx\",\"subscribeToNewsMutation\",\"effect\",\"body\",\"url\",\"news\",\"subscribe\",\"method\"],\"mappings\":\";AAAA,SAASA,cAAc,QAAQ,mBAAmB;AAElD,SAASC,GAAG,EAAEC,uBAAuB,QAAQ,eAAe;AAE5D,OAAO,MAAMC;;YAA0BH,eAAe;YAClDI,QAAQF,wBAAiD,CAACG,OAAU,CAAA;oBAChEC,KAAKL,IAAIM,IAAI,CAACC,SAAS;oBACvBC,QAAQ;oBACRJ;gBACJ,CAAA;QACJ;GAAG\"}"
+      "name": "vite:react-babel",
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx } from '@/shared/api';\nexport const subscribeToNewsMutation = _withFactory({\n  sid: \"1fueyv\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<{\n      email: string;\n    }, void>(body => ({\n      url: API.news.subscribe,\n      method: 'POST',\n      body\n    }))\n  }),\n  name: \"subscribeToNewsMutation\",\n  method: \"createMutation\"\n});",
+      "start": 1750275034389,
+      "end": 1750275034390,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createMutation",
+          "API",
+          "createInternalRequestFx",
+          "subscribeToNewsMutation",
+          "_withFactory",
+          "sid",
+          "\"1fueyv\"",
+          "fn",
+          "effect",
+          "email",
+          "body",
+          "url",
+          "news",
+          "subscribe",
+          "method",
+          "name",
+          "\"subscribeToNewsMutation\"",
+          "\"createMutation\""
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/api/index.ts"],
+        "sourcesContent": [
+          "import { createMutation } from '@farfetched/core';\n\nimport { API, createInternalRequestFx } from '@/shared/api';\n\nexport const subscribeToNewsMutation = createMutation({\n    effect: createInternalRequestFx<{ email: string }, void>((body) => ({\n        url: API.news.subscribe,\n        method: 'POST',\n        body,\n    })),\n});\n"
+        ],
+        "mappings": ";AAAA,SAASA,cAAc,QAAQ,kBAAkB;AAEjD,SAASC,GAAG,EAAEC,uBAAuB,QAAQ,cAAc;AAE3D,OAAO,MAAMC,uBAAuB,GAAAC,YAAA;EAAAC,GAAA,EAAAC,QAAA;EAAAC,EAAA,EAAAA,CAAA,KAAGP,cAAc,CAAC;IAClDQ,MAAM,EAAEN,uBAAuB,CAAC;MAAEO,KAAK,EAAE,MAAM;IAAC,CAAC,EAAE,IAAI,CAAC,CAAEC,IAAI,KAAM;MAChEC,GAAG,EAAEV,GAAG,CAACW,IAAI,CAACC,SAAS;MACvBC,MAAM,EAAE,MAAM;MACdJ;IACJ,CAAC,CAAC;EACN,CAAC,CAAC;EAAAK,IAAA,EAAAC,yBAAA;EAAAF,MAAA,EAAAG;AAAA",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx } from \"@/shared/api\";\nexport const subscribeToNewsMutation = _effector$factory({\n  sid: \"2q789ep6\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.news.subscribe,\n      method: \"POST\",\n      body\n    }))\n  })\n});\n",
-      "start": 1750271785360,
-      "end": 1750271785371,
+      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx } from \"@/shared/api\";\nexport const subscribeToNewsMutation = _withFactory({\n  sid: \"1fueyv\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.news.subscribe,\n      method: \"POST\",\n      body\n    }))\n  }),\n  name: \"subscribeToNewsMutation\",\n  method: \"createMutation\"\n});\n",
+      "start": 1750275034390,
+      "end": 1750275034412,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/api/index.ts"],
         "sourcesContent": [
-          "import { withFactory as _effector$factory } from 'effector';\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx } from '@/shared/api';\nexport const subscribeToNewsMutation = _effector$factory({\n    sid: \"2q789ep6\",\n    fn: ()=>createMutation({\n            effect: createInternalRequestFx((body)=>({\n                    url: API.news.subscribe,\n                    method: 'POST',\n                    body\n                }))\n        })\n});\n"
+          "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from '@farfetched/core';\nimport { API, createInternalRequestFx } from '@/shared/api';\nexport const subscribeToNewsMutation = _withFactory({\n  sid: \"1fueyv\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<{\n      email: string;\n    }, void>(body => ({\n      url: API.news.subscribe,\n      method: 'POST',\n      body\n    }))\n  }),\n  name: \"subscribeToNewsMutation\",\n  method: \"createMutation\"\n});"
         ],
-        "mappings": "AAAA,SAAS,eAAe,yBAAyB;AACjD,SAAS,sBAAsB;AAC/B,SAAS,KAAK,+BAA+B;AACtC,aAAM,0BAA0B,kBAAkB;AAAA,EACrD,KAAK;AAAA,EACL,IAAI,MAAI,eAAe;AAAA,IACf,QAAQ,wBAAwB,CAAC,UAAQ;AAAA,MACjC,KAAK,IAAI,KAAK;AAAA,MACd,QAAQ;AAAA,MACR;AAAA,IACJ,EAAE;AAAA,EACV,CAAC;AACT,CAAC;",
+        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,sBAAsB;AAC/B,SAAS,KAAK,+BAA+B;AACtC,aAAM,0BAA0B,aAAa;AAAA,EAClD,KAAK;AAAA,EACL,IAAI,MAAM,eAAe;AAAA,IACvB,QAAQ,wBAEC,WAAS;AAAA,MAChB,KAAK,IAAI,KAAK;AAAA,MACd,QAAQ;AAAA,MACR;AAAA,IACF,EAAE;AAAA,EACJ,CAAC;AAAA,EACD,MAAM;AAAA,EACN,QAAQ;AACV,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/features/SubscribeToNews/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx } from \"@/shared/api\";\nexport const subscribeToNewsMutation = _effector$factory({\n  sid: \"2q789ep6\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.news.subscribe,\n      method: \"POST\",\n      body\n    }))\n  })\n});\n",
-      "start": 1750271785371,
-      "end": 1750271785371,
+      "result": "/*! src/features/SubscribeToNews/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation } from \"@farfetched/core\";\nimport { API, createInternalRequestFx } from \"@/shared/api\";\nexport const subscribeToNewsMutation = _withFactory({\n  sid: \"1fueyv\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.news.subscribe,\n      method: \"POST\",\n      body\n    }))\n  }),\n  name: \"subscribeToNewsMutation\",\n  method: \"createMutation\"\n});\n",
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/features/SubscribeToNews/api/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;"
       }
     }
   ]

@@ -4,111 +4,120 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isArray, isString } from 'lodash-es';\n\nexport const isExists = (value: unknown, length = 0) => (isString(value) || isArray(value)) && value.length > length;\n",
-      "start": 1750271784944,
-      "end": 1750271784964,
+      "start": 1750275033638,
+      "end": 1750275033668,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { isArray, isString } from 'lodash-es';\nexport const isExists = (value, length = 0)=>(isString(value) || isArray(value)) && value.length > length;\n",
-      "start": 1750271784964,
-      "end": 1750271784972,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/isExists/index.ts\"],\"sourcesContent\":[\"import { isArray, isString } from 'lodash-es';\\n\\nexport const isExists = (value: unknown, length = 0) => (isString(value) || isArray(value)) && value.length > length;\\n\"],\"names\":[\"isArray\",\"isString\",\"isExists\",\"value\",\"length\"],\"mappings\":\"AAAA,SAASA,OAAO,EAAEC,QAAQ,QAAQ,YAAY;AAE9C,OAAO,MAAMC,WAAW,CAACC,OAAgBC,SAAS,CAAC,GAAK,AAACH,CAAAA,SAASE,UAAUH,QAAQG,MAAK,KAAMA,MAAMC,MAAM,GAAGA,OAAO\"}"
+      "name": "vite:react-babel",
+      "result": "import { isArray, isString } from 'lodash-es';\nexport const isExists = (value: unknown, length = 0) => (isString(value) || isArray(value)) && value.length > length;",
+      "start": 1750275033668,
+      "end": 1750275033668,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["isArray", "isString", "isExists", "value", "length"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/isExists/index.ts"],
+        "sourcesContent": [
+          "import { isArray, isString } from 'lodash-es';\n\nexport const isExists = (value: unknown, length = 0) => (isString(value) || isArray(value)) && value.length > length;\n"
+        ],
+        "mappings": "AAAA,SAASA,OAAO,EAAEC,QAAQ,QAAQ,WAAW;AAE7C,OAAO,MAAMC,QAAQ,GAAGA,CAACC,KAAK,EAAE,OAAO,EAAEC,MAAM,GAAG,CAAC,KAAK,CAACH,QAAQ,CAACE,KAAK,CAAC,IAAIH,OAAO,CAACG,KAAK,CAAC,KAAKA,KAAK,CAACC,MAAM,GAAGA,MAAM",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
       "result": "import { isArray, isString } from \"lodash-es\";\nexport const isExists = (value, length = 0) => (isString(value) || isArray(value)) && value.length > length;\n",
-      "start": 1750271784972,
-      "end": 1750271785130,
+      "start": 1750275033668,
+      "end": 1750275033887,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/isExists/index.ts"],
         "sourcesContent": [
-          "import { isArray, isString } from 'lodash-es';\nexport const isExists = (value, length = 0)=>(isString(value) || isArray(value)) && value.length > length;\n"
+          "import { isArray, isString } from 'lodash-es';\nexport const isExists = (value: unknown, length = 0) => (isString(value) || isArray(value)) && value.length > length;"
         ],
-        "mappings": "AAAA,SAAS,SAAS,gBAAgB;AAC3B,aAAM,WAAW,CAAC,OAAO,SAAS,OAAK,SAAS,KAAK,KAAK,QAAQ,KAAK,MAAM,MAAM,SAAS;",
+        "mappings": "AAAA,SAAS,SAAS,gBAAgB;AAC3B,aAAM,WAAW,CAAC,OAAgB,SAAS,OAAO,SAAS,KAAK,KAAK,QAAQ,KAAK,MAAM,MAAM,SAAS;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785130,
-      "end": 1750271785130,
+      "start": 1750275033887,
+      "end": 1750275033887,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/isExists/index.ts [vike:pluginModuleBanner] */\nimport { isArray, isString } from \"lodash-es\";\nexport const isExists = (value, length = 0) => (isString(value) || isArray(value)) && value.length > length;\n",
-      "start": 1750271785131,
-      "end": 1750271785131,
+      "start": 1750275033888,
+      "end": 1750275033888,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

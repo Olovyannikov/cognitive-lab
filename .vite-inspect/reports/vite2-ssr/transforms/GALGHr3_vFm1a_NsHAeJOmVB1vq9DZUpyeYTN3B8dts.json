@@ -4,111 +4,144 @@
     {
       "name": "vite:load-fallback",
       "result": "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ',\n} as const;\n\nexport type PersonalityType = keyof typeof PersonalityTypes;\n\nexport interface Personality {\n    code: PersonalityType;\n    name: string;\n    descriptions: string[];\n}\n",
-      "start": 1750271784838,
-      "end": 1750271784853,
+      "start": 1750275033479,
+      "end": 1750275033520,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ'\n};\n",
-      "start": 1750271784853,
-      "end": 1750271784856,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/types/index.ts\"],\"sourcesContent\":[\"export const PersonalityTypes = {\\n    ESTJ: 'ESTJ',\\n    ENTJ: 'ENTJ',\\n    ISPT: 'ISPT',\\n    INTP: 'INTP',\\n    ESFJ: 'ESFJ',\\n    ENFJ: 'ENFJ',\\n    INFT: 'INFT',\\n    ISFP: 'ISFP',\\n    ESTP: 'ESTP',\\n    ESFP: 'ESFP',\\n    ISFJ: 'ISFJ',\\n    ISTJ: 'ISTJ',\\n    ENFP: 'ENFP',\\n    ENTP: 'ENTP',\\n    INTJ: 'INTJ',\\n    INFJ: 'INFJ',\\n} as const;\\n\\nexport type PersonalityType = keyof typeof PersonalityTypes;\\n\\nexport interface Personality {\\n    code: PersonalityType;\\n    name: string;\\n    descriptions: string[];\\n}\\n\"],\"names\":[\"PersonalityTypes\",\"ESTJ\",\"ENTJ\",\"ISPT\",\"INTP\",\"ESFJ\",\"ENFJ\",\"INFT\",\"ISFP\",\"ESTP\",\"ESFP\",\"ISFJ\",\"ISTJ\",\"ENFP\",\"ENTP\",\"INTJ\",\"INFJ\"],\"mappings\":\"AAAA,OAAO,MAAMA,mBAAmB;IAC5BC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;AACV,EAAW\"}"
+      "name": "vite:react-babel",
+      "result": "export const PersonalityTypes = {\n  ESTJ: 'ESTJ',\n  ENTJ: 'ENTJ',\n  ISPT: 'ISPT',\n  INTP: 'INTP',\n  ESFJ: 'ESFJ',\n  ENFJ: 'ENFJ',\n  INFT: 'INFT',\n  ISFP: 'ISFP',\n  ESTP: 'ESTP',\n  ESFP: 'ESFP',\n  ISFJ: 'ISFJ',\n  ISTJ: 'ISTJ',\n  ENFP: 'ENFP',\n  ENTP: 'ENTP',\n  INTJ: 'INTJ',\n  INFJ: 'INFJ'\n} as const;\nexport type PersonalityType = keyof typeof PersonalityTypes;\nexport interface Personality {\n  code: PersonalityType;\n  name: string;\n  descriptions: string[];\n}",
+      "start": 1750275033520,
+      "end": 1750275033521,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "PersonalityTypes",
+          "ESTJ",
+          "ENTJ",
+          "ISPT",
+          "INTP",
+          "ESFJ",
+          "ENFJ",
+          "INFT",
+          "ISFP",
+          "ESTP",
+          "ESFP",
+          "ISFJ",
+          "ISTJ",
+          "ENFP",
+          "ENTP",
+          "INTJ",
+          "INFJ",
+          "const",
+          "PersonalityType",
+          "Personality",
+          "code",
+          "name",
+          "descriptions"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/types/index.ts"],
+        "sourcesContent": [
+          "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ',\n} as const;\n\nexport type PersonalityType = keyof typeof PersonalityTypes;\n\nexport interface Personality {\n    code: PersonalityType;\n    name: string;\n    descriptions: string[];\n}\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,gBAAgB,GAAG;EAC5BC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE,MAAM;EACZC,IAAI,EAAE;AACV,CAAC,IAAIC,KAAK;AAEV,OAAO,KAAKC,eAAe,GAAG,MAAM,OAAOlB,gBAAgB;AAE3D,OAAO,UAAUmB,WAAW,CAAC;EACzBC,IAAI,EAAEF,eAAe;EACrBG,IAAI,EAAE,MAAM;EACZC,YAAY,EAAE,MAAM,EAAE;AAC1B",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
       "result": "export const PersonalityTypes = {\n  ESTJ: \"ESTJ\",\n  ENTJ: \"ENTJ\",\n  ISPT: \"ISPT\",\n  INTP: \"INTP\",\n  ESFJ: \"ESFJ\",\n  ENFJ: \"ENFJ\",\n  INFT: \"INFT\",\n  ISFP: \"ISFP\",\n  ESTP: \"ESTP\",\n  ESFP: \"ESFP\",\n  ISFJ: \"ISFJ\",\n  ISTJ: \"ISTJ\",\n  ENFP: \"ENFP\",\n  ENTP: \"ENTP\",\n  INTJ: \"INTJ\",\n  INFJ: \"INFJ\"\n};\n",
-      "start": 1750271784857,
-      "end": 1750271784933,
+      "start": 1750275033521,
+      "end": 1750275033635,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/types/index.ts"],
         "sourcesContent": [
-          "export const PersonalityTypes = {\n    ESTJ: 'ESTJ',\n    ENTJ: 'ENTJ',\n    ISPT: 'ISPT',\n    INTP: 'INTP',\n    ESFJ: 'ESFJ',\n    ENFJ: 'ENFJ',\n    INFT: 'INFT',\n    ISFP: 'ISFP',\n    ESTP: 'ESTP',\n    ESFP: 'ESFP',\n    ISFJ: 'ISFJ',\n    ISTJ: 'ISTJ',\n    ENFP: 'ENFP',\n    ENTP: 'ENTP',\n    INTJ: 'INTJ',\n    INFJ: 'INFJ'\n};\n"
+          "export const PersonalityTypes = {\n  ESTJ: 'ESTJ',\n  ENTJ: 'ENTJ',\n  ISPT: 'ISPT',\n  INTP: 'INTP',\n  ESFJ: 'ESFJ',\n  ENFJ: 'ENFJ',\n  INFT: 'INFT',\n  ISFP: 'ISFP',\n  ESTP: 'ESTP',\n  ESFP: 'ESFP',\n  ISFJ: 'ISFJ',\n  ISTJ: 'ISTJ',\n  ENFP: 'ENFP',\n  ENTP: 'ENTP',\n  INTJ: 'INTJ',\n  INFJ: 'INFJ'\n} as const;\nexport type PersonalityType = keyof typeof PersonalityTypes;\nexport interface Personality {\n  code: PersonalityType;\n  name: string;\n  descriptions: string[];\n}"
         ],
-        "mappings": "AAAO,aAAM,mBAAmB;AAAA,EAC5B,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AACV;",
+        "mappings": "AAAO,aAAM,mBAAmB;AAAA,EAC9B,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033635,
+      "end": 1750275033635,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033635,
+      "end": 1750275033635,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033635,
+      "end": 1750275033635,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033635,
+      "end": 1750275033635,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033635,
+      "end": 1750275033635,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784933,
-      "end": 1750271784933,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Personality/types/index.ts [vike:pluginModuleBanner] */\nexport const PersonalityTypes = {\n  ESTJ: \"ESTJ\",\n  ENTJ: \"ENTJ\",\n  ISPT: \"ISPT\",\n  INTP: \"INTP\",\n  ESFJ: \"ESFJ\",\n  ENFJ: \"ENFJ\",\n  INFT: \"INFT\",\n  ISFP: \"ISFP\",\n  ESTP: \"ESTP\",\n  ESFP: \"ESFP\",\n  ISFJ: \"ISFJ\",\n  ISTJ: \"ISTJ\",\n  ENFP: \"ENFP\",\n  ENTP: \"ENTP\",\n  INTJ: \"INTJ\",\n  INFJ: \"INFJ\"\n};\n",
-      "start": 1750271784933,
-      "end": 1750271784934,
+      "start": 1750275033636,
+      "end": 1750275033636,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

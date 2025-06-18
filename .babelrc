@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        [
+            "effector/babel-plugin",
+            {
+                "addNames": true,
+                "factories": ["./src/shared/factories", "@/shared/factories"],
+                "debugSids": true,
+                "addLoc": true
+            }
+        ]
+    ]
+}

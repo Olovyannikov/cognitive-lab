@@ -4,99 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgUnion = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 229 209\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"var(--mantine-color-pink-6)\", fillRule: \"evenodd\", d: \"M114.322 33.445C69.1 2.94 26.308-8.87 8.646 7.15c-17.66 16.018-5.069 55.218 27.958 96.781-33.384 41.338-46.31 80.457-28.782 96.601 17.529 16.143 60.425 4.63 105.907-25.564 45.227 30.511 88.026 42.325 105.689 26.304 17.664-16.021 5.066-55.228-27.971-96.798 33.374-41.331 46.294-80.441 28.768-96.583-17.526-16.142-60.416-4.633-105.893 25.554Z\", clipRule: \"evenodd\" }));\nexport default SvgUnion;\n",
-      "start": 1750271785154,
-      "end": 1750271785314,
+      "start": 1750275034019,
+      "end": 1750275034258,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785314,
-      "end": 1750271785314,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785314,
-      "end": 1750271785314,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785314,
-      "end": 1750271785314,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785314,
-      "end": 1750271785314,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785314,
-      "end": 1750271785314,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785314,
-      "end": 1750271785314,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785314,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034258,
+      "end": 1750275034258,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/Tariffs/union.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgUnion = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 229 209\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fill: \"var(--mantine-color-pink-6)\", fillRule: \"evenodd\", d: \"M114.322 33.445C69.1 2.94 26.308-8.87 8.646 7.15c-17.66 16.018-5.069 55.218 27.958 96.781-33.384 41.338-46.31 80.457-28.782 96.601 17.529 16.143 60.425 4.63 105.907-25.564 45.227 30.511 88.026 42.325 105.689 26.304 17.664-16.021 5.066-55.228-27.971-96.798 33.374-41.331 46.294-80.441 28.768-96.583-17.526-16.142-60.416-4.633-105.893 25.554Z\", clipRule: \"evenodd\" }));\nexport default SvgUnion;\n",
-      "start": 1750271785315,
-      "end": 1750271785315,
+      "start": 1750275034259,
+      "end": 1750275034259,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

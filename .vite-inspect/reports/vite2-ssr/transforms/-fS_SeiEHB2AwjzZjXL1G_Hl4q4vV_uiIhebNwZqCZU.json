@@ -4,99 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  flex-direction: column;\n  gap: 32px;\n\n  @mixin larger-than 1200px {\n    flex-direction: row;\n    gap: 48px;\n  }\n}\n\n.docs {\n  @mixin larger-than 1200px {\n    min-width: 314px;\n  }\n}\n\n.meta {\n  max-width: 310px;\n\n  @mixin larger-than 1200px {\n    flex: 1 0 310px;\n  }\n}\n\n.text {\n  &:first-child {\n    margin-bottom: 1rem;\n  }\n\n  @mixin larger-than 1200px {\n    display: flex;\n    gap: 110px;\n  }\n}\n\n.disclamer {\n  max-width: 386px;\n}\n",
-      "start": 1750271785247,
-      "end": 1750271785262,
+      "start": 1750275034263,
+      "end": 1750275034295,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785262,
-      "end": 1750271785262,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785263,
-      "end": 1750271785263,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785264,
-      "end": 1750271785264,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785264,
-      "end": 1750271785264,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785264,
-      "end": 1750271785264,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785264,
-      "end": 1750271785264,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Metainfo/MetaInfo.module.css [vike:pluginModuleBanner] */\nexport const root = \"vDXJ4\";\nexport const docs = \"_2x-Gq\";\nexport const meta = \"CtELj\";\nexport const text = \"_7qTdS\";\nexport const disclamer = \"u74TF\";\nexport default {\n\troot: root,\n\tdocs: docs,\n\tmeta: meta,\n\ttext: text,\n\tdisclamer: disclamer\n};\n",
-      "start": 1750271785264,
-      "end": 1750271785264,
+      "start": 1750275034296,
+      "end": 1750275034296,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

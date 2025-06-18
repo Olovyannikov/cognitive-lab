@@ -4,99 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".root {\n  padding-top: 60px;\n  padding-bottom: 140px;\n\n  @mixin larger-than 992px {\n    padding-top: 140px;\n    padding-bottom: 160px;\n  }\n}\n\n.logo {\n  margin: 0 auto 40px;\n  width: 240px;\n  height: 42px;\n\n  @mixin larger-than 992px {\n    margin-bottom: 48px;\n    width: 360px;\n    height: 63px;\n  }\n}\n\n.title {\n  margin-bottom: 80px;\n  font-size: 34px;\n  line-height: 40px;\n  text-align: center;\n\n  span {\n    display: flex;\n    justify-content: center;\n    color: var(--mantine-color-violet-7);\n  }\n\n  @mixin larger-than 992px {\n    font-size: 64px;\n    line-height: 75px;\n\n    span {\n      display: inline-flex;\n    }\n  }\n}\n",
-      "start": 1750271785221,
-      "end": 1750271785236,
+      "start": 1750275034088,
+      "end": 1750275034108,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785236,
-      "end": 1750271785236,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/LetsContinue/LetsContinue.module.css [vike:pluginModuleBanner] */\nexport const root = \"RN9dn\";\nexport const logo = \"A4t7R\";\nexport const title = \"tOzzM\";\nexport default {\n\troot: root,\n\tlogo: logo,\n\ttitle: title\n};\n",
-      "start": 1750271785237,
-      "end": 1750271785237,
+      "start": 1750275034110,
+      "end": 1750275034110,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

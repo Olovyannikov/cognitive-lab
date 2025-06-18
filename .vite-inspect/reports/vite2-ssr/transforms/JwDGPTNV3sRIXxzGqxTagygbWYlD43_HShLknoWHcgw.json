@@ -4,111 +4,137 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isArray, isNumber } from 'lodash-es';\n\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\n\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */\nexport const getCurrentValue = (\n    answers: PreparedAnswer[],\n    page: number,\n    pages: number | Answers\n): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer as unknown as MultiChoiceAnswer;\n    }\n    if (current.isSingle) {\n        return current.answer as unknown as SingleChoiceAnswer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value as unknown as ScaleChoiceAnswer;\n    }\n    return null;\n};\n",
-      "start": 1750271785006,
-      "end": 1750271785018,
+      "start": 1750275033862,
+      "end": 1750275033900,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { isArray, isNumber } from 'lodash-es';\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */ export const getCurrentValue = (answers, page, pages)=>{\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer;\n    }\n    if (current.isSingle) {\n        return current.answer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value;\n    }\n    return null;\n};\n",
-      "start": 1750271785018,
-      "end": 1750271785023,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/getCurrentValue.ts\"],\"sourcesContent\":[\"import { isArray, isNumber } from 'lodash-es';\\n\\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\\n\\n/**\\n * Возвращает значение текущего ответа для страницы (индекса)\\n * @param answers Массив ответов\\n * @param page Текущий номер страницы (1-based)\\n * @param pages Все страницы\\n */\\nexport const getCurrentValue = (\\n    answers: PreparedAnswer[],\\n    page: number,\\n    pages: number | Answers\\n): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\\n    const current = answers[currentPage];\\n    if (!current?.answer) return null;\\n    if (isArray(current.answer)) {\\n        return current.answer as unknown as MultiChoiceAnswer;\\n    }\\n    if (current.isSingle) {\\n        return current.answer as unknown as SingleChoiceAnswer;\\n    }\\n    if ('value' in current.answer) {\\n        return current.answer.value as unknown as ScaleChoiceAnswer;\\n    }\\n    return null;\\n};\\n\"],\"names\":[\"isArray\",\"isNumber\",\"getCurrentValue\",\"answers\",\"page\",\"pages\",\"currentPage\",\"current\",\"answer\",\"isSingle\",\"value\"],\"mappings\":\"AAAA,SAASA,OAAO,EAAEC,QAAQ,QAAQ,YAAY;AAI9C;;;;;CAKC,GACD,OAAO,MAAMC,kBAAkB,CAC3BC,SACAC,MACAC;IAEA,MAAMC,cAAc,AAACL,CAAAA,SAASI,SAASA,QAAQD,IAAG,IAAK;IACvD,MAAMG,UAAUJ,OAAO,CAACG,YAAY;IACpC,IAAI,CAACC,SAASC,QAAQ,OAAO;IAC7B,IAAIR,QAAQO,QAAQC,MAAM,GAAG;QACzB,OAAOD,QAAQC,MAAM;IACzB;IACA,IAAID,QAAQE,QAAQ,EAAE;QAClB,OAAOF,QAAQC,MAAM;IACzB;IACA,IAAI,WAAWD,QAAQC,MAAM,EAAE;QAC3B,OAAOD,QAAQC,MAAM,CAACE,KAAK;IAC/B;IACA,OAAO;AACX,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { isArray, isNumber } from 'lodash-es';\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\n\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */\nexport const getCurrentValue = (answers: PreparedAnswer[], page: number, pages: number | Answers): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer as unknown as MultiChoiceAnswer;\n  }\n  if (current.isSingle) {\n    return current.answer as unknown as SingleChoiceAnswer;\n  }\n  if ('value' in current.answer) {\n    return current.answer.value as unknown as ScaleChoiceAnswer;\n  }\n  return null;\n};",
+      "start": 1750275033900,
+      "end": 1750275033901,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "isArray",
+          "isNumber",
+          "Answers",
+          "MultiChoiceAnswer",
+          "PreparedAnswer",
+          "ScaleChoiceAnswer",
+          "SingleChoiceAnswer",
+          "getCurrentValue",
+          "answers",
+          "page",
+          "pages",
+          "currentPage",
+          "current",
+          "answer",
+          "isSingle",
+          "value"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/getCurrentValue.ts"],
+        "sourcesContent": [
+          "import { isArray, isNumber } from 'lodash-es';\n\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\n\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */\nexport const getCurrentValue = (\n    answers: PreparedAnswer[],\n    page: number,\n    pages: number | Answers\n): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer as unknown as MultiChoiceAnswer;\n    }\n    if (current.isSingle) {\n        return current.answer as unknown as SingleChoiceAnswer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value as unknown as ScaleChoiceAnswer;\n    }\n    return null;\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,OAAO,EAAEC,QAAQ,QAAQ,WAAW;AAE7C,cAAcC,OAAO,EAAEC,iBAAiB,EAAEC,cAAc,EAAEC,iBAAiB,EAAEC,kBAAkB,QAAQ,cAAc;;AAErH;AACA;AACA;AACA;AACA;AACA;AACA,OAAO,MAAMC,eAAe,GAAGA,CAC3BC,OAAO,EAAEJ,cAAc,EAAE,EACzBK,IAAI,EAAE,MAAM,EACZC,KAAK,EAAE,MAAM,GAAGR,OAAO,CAC1B,EAAEC,iBAAiB,EAAE,GAAGG,kBAAkB,GAAGD,iBAAiB,GAAG,IAAI,IAAI;EACtE,MAAMM,WAAW,GAAG,CAACV,QAAQ,CAACS,KAAK,CAAC,GAAGA,KAAK,GAAGD,IAAI,IAAI,CAAC;EACxD,MAAMG,OAAO,GAAGJ,OAAO,CAACG,WAAW,CAAC;EACpC,IAAI,CAACC,OAAO,EAAEC,MAAM,EAAE,OAAO,IAAI;EACjC,IAAIb,OAAO,CAACY,OAAO,CAACC,MAAM,CAAC,EAAE;IACzB,OAAOD,OAAO,CAACC,MAAM,IAAI,OAAO,IAAIV,iBAAiB;EACzD;EACA,IAAIS,OAAO,CAACE,QAAQ,EAAE;IAClB,OAAOF,OAAO,CAACC,MAAM,IAAI,OAAO,IAAIP,kBAAkB;EAC1D;EACA,IAAI,OAAO,IAAIM,OAAO,CAACC,MAAM,EAAE;IAC3B,OAAOD,OAAO,CAACC,MAAM,CAACE,KAAK,IAAI,OAAO,IAAIV,iBAAiB;EAC/D;EACA,OAAO,IAAI;AACf,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
       "result": "import { isArray, isNumber } from \"lodash-es\";\nexport const getCurrentValue = (answers, page, pages) => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer;\n  }\n  if (current.isSingle) {\n    return current.answer;\n  }\n  if (\"value\" in current.answer) {\n    return current.answer.value;\n  }\n  return null;\n};\n",
-      "start": 1750271785023,
-      "end": 1750271785240,
+      "start": 1750275033901,
+      "end": 1750275034161,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/getCurrentValue.ts"],
         "sourcesContent": [
-          "import { isArray, isNumber } from 'lodash-es';\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */ export const getCurrentValue = (answers, page, pages)=>{\n    const currentPage = (isNumber(pages) ? pages : page) - 1;\n    const current = answers[currentPage];\n    if (!current?.answer) return null;\n    if (isArray(current.answer)) {\n        return current.answer;\n    }\n    if (current.isSingle) {\n        return current.answer;\n    }\n    if ('value' in current.answer) {\n        return current.answer.value;\n    }\n    return null;\n};\n"
+          "import { isArray, isNumber } from 'lodash-es';\nimport type { Answers, MultiChoiceAnswer, PreparedAnswer, ScaleChoiceAnswer, SingleChoiceAnswer } from '../api/types';\n\n/**\n * Возвращает значение текущего ответа для страницы (индекса)\n * @param answers Массив ответов\n * @param page Текущий номер страницы (1-based)\n * @param pages Все страницы\n */\nexport const getCurrentValue = (answers: PreparedAnswer[], page: number, pages: number | Answers): MultiChoiceAnswer[] | SingleChoiceAnswer | ScaleChoiceAnswer | null => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer as unknown as MultiChoiceAnswer;\n  }\n  if (current.isSingle) {\n    return current.answer as unknown as SingleChoiceAnswer;\n  }\n  if ('value' in current.answer) {\n    return current.answer.value as unknown as ScaleChoiceAnswer;\n  }\n  return null;\n};"
         ],
-        "mappings": "AAAA,SAAS,SAAS,gBAAgB;AAMvB,aAAM,kBAAkB,CAAC,SAAS,MAAM,UAAQ;AACvD,QAAM,eAAe,SAAS,KAAK,IAAI,QAAQ,QAAQ;AACvD,QAAM,UAAU,QAAQ,WAAW;AACnC,MAAI,CAAC,SAAS,OAAQ,QAAO;AAC7B,MAAI,QAAQ,QAAQ,MAAM,GAAG;AACzB,WAAO,QAAQ;AAAA,EACnB;AACA,MAAI,QAAQ,UAAU;AAClB,WAAO,QAAQ;AAAA,EACnB;AACA,MAAI,WAAW,QAAQ,QAAQ;AAC3B,WAAO,QAAQ,OAAO;AAAA,EAC1B;AACA,SAAO;AACX;",
+        "mappings": "AAAA,SAAS,SAAS,gBAAgB;AAS3B,aAAM,kBAAkB,CAAC,SAA2B,MAAc,UAAiG;AACxK,QAAM,eAAe,SAAS,KAAK,IAAI,QAAQ,QAAQ;AACvD,QAAM,UAAU,QAAQ,WAAW;AACnC,MAAI,CAAC,SAAS,OAAQ,QAAO;AAC7B,MAAI,QAAQ,QAAQ,MAAM,GAAG;AAC3B,WAAO,QAAQ;AAAA,EACjB;AACA,MAAI,QAAQ,UAAU;AACpB,WAAO,QAAQ;AAAA,EACjB;AACA,MAAI,WAAW,QAAQ,QAAQ;AAC7B,WAAO,QAAQ,OAAO;AAAA,EACxB;AACA,SAAO;AACT;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785240,
-      "end": 1750271785240,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785240,
-      "end": 1750271785241,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785241,
-      "end": 1750271785241,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785241,
-      "end": 1750271785241,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/getCurrentValue.ts [vike:pluginModuleBanner] */\nimport { isArray, isNumber } from \"lodash-es\";\nexport const getCurrentValue = (answers, page, pages) => {\n  const currentPage = (isNumber(pages) ? pages : page) - 1;\n  const current = answers[currentPage];\n  if (!current?.answer) return null;\n  if (isArray(current.answer)) {\n    return current.answer;\n  }\n  if (current.isSingle) {\n    return current.answer;\n  }\n  if (\"value\" in current.answer) {\n    return current.answer.value;\n  }\n  return null;\n};\n",
-      "start": 1750271785241,
-      "end": 1750271785241,
+      "start": 1750275034161,
+      "end": 1750275034161,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

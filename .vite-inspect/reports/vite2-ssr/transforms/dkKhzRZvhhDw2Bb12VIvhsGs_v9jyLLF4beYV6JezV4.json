@@ -4,23 +4,65 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport type { EmblaCarouselType } from 'embla-carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\n\nimport styles from './CongratulationsProvider.module.css';\n\ninterface CongratulationsContextProps {\n    embla: null | EmblaCarouselType;\n    onNextSlideHandler: VoidFunction;\n}\n\nexport const CongratulationsContext = createContext<CongratulationsContextProps>({\n    embla: null,\n    onNextSlideHandler: noop,\n});\n\nexport const CongratulationsProvider = ({ children }: PropsWithChildren) => {\n    const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);\n\n    const autoheight = useRef(AutoHeight());\n\n    const onNextSlideHandler = useCallback(() => {\n        embla?.scrollNext();\n        window.scrollTo({ top: 0, behavior: 'smooth' });\n    }, [embla]);\n\n    return (\n        <CongratulationsContext.Provider\n            value={{\n                embla,\n                onNextSlideHandler,\n            }}\n        >\n            <Carousel\n                styles={{\n                    container: {\n                        display: 'flex',\n                        height: '100%',\n                        alignItems: 'flex-start',\n                        transition: 'height 0.2s',\n                    },\n                }}\n                pb={60}\n                getEmblaApi={setEmbla}\n                withControls={false}\n                withIndicators\n                classNames={styles}\n                plugins={[autoheight.current]}\n            >\n                {children}\n            </Carousel>\n        </CongratulationsContext.Provider>\n    );\n};\n",
-      "start": 1750271784962,
-      "end": 1750271784979,
+      "start": 1750275033867,
+      "end": 1750275033904,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\nimport styles from './CongratulationsProvider.module.css';\nexport const CongratulationsContext = /*#__PURE__*/ createContext({\n    embla: null,\n    onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({ children })=>{\n    const [embla, setEmbla] = useState(null);\n    const autoheight = useRef(AutoHeight());\n    const onNextSlideHandler = useCallback(()=>{\n        embla?.scrollNext();\n        window.scrollTo({\n            top: 0,\n            behavior: 'smooth'\n        });\n    }, [\n        embla\n    ]);\n    return /*#__PURE__*/ _jsx(CongratulationsContext.Provider, {\n        value: {\n            embla,\n            onNextSlideHandler\n        },\n        children: /*#__PURE__*/ _jsx(Carousel, {\n            styles: {\n                container: {\n                    display: 'flex',\n                    height: '100%',\n                    alignItems: 'flex-start',\n                    transition: 'height 0.2s'\n                }\n            },\n            pb: 60,\n            getEmblaApi: setEmbla,\n            withControls: false,\n            withIndicators: true,\n            classNames: styles,\n            plugins: [\n                autoheight.current\n            ],\n            children: children\n        })\n    });\n};\n",
-      "start": 1750271784979,
-      "end": 1750271784985,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx\"],\"sourcesContent\":[\"import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';\\nimport { Carousel } from '@mantine/carousel';\\nimport type { EmblaCarouselType } from 'embla-carousel';\\nimport AutoHeight from 'embla-carousel-auto-height';\\nimport { noop } from 'lodash-es';\\n\\nimport styles from './CongratulationsProvider.module.css';\\n\\ninterface CongratulationsContextProps {\\n    embla: null | EmblaCarouselType;\\n    onNextSlideHandler: VoidFunction;\\n}\\n\\nexport const CongratulationsContext = createContext<CongratulationsContextProps>({\\n    embla: null,\\n    onNextSlideHandler: noop,\\n});\\n\\nexport const CongratulationsProvider = ({ children }: PropsWithChildren) => {\\n    const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);\\n\\n    const autoheight = useRef(AutoHeight());\\n\\n    const onNextSlideHandler = useCallback(() => {\\n        embla?.scrollNext();\\n        window.scrollTo({ top: 0, behavior: 'smooth' });\\n    }, [embla]);\\n\\n    return (\\n        <CongratulationsContext.Provider\\n            value={{\\n                embla,\\n                onNextSlideHandler,\\n            }}\\n        >\\n            <Carousel\\n                styles={{\\n                    container: {\\n                        display: 'flex',\\n                        height: '100%',\\n                        alignItems: 'flex-start',\\n                        transition: 'height 0.2s',\\n                    },\\n                }}\\n                pb={60}\\n                getEmblaApi={setEmbla}\\n                withControls={false}\\n                withIndicators\\n                classNames={styles}\\n                plugins={[autoheight.current]}\\n            >\\n                {children}\\n            </Carousel>\\n        </CongratulationsContext.Provider>\\n    );\\n};\\n\"],\"names\":[\"createContext\",\"useCallback\",\"useRef\",\"useState\",\"Carousel\",\"AutoHeight\",\"noop\",\"styles\",\"CongratulationsContext\",\"embla\",\"onNextSlideHandler\",\"CongratulationsProvider\",\"children\",\"setEmbla\",\"autoheight\",\"scrollNext\",\"window\",\"scrollTo\",\"top\",\"behavior\",\"Provider\",\"value\",\"container\",\"display\",\"height\",\"alignItems\",\"transition\",\"pb\",\"getEmblaApi\",\"withControls\",\"withIndicators\",\"classNames\",\"plugins\",\"current\"],\"mappings\":\";AAAA,SAASA,aAAa,EAA0BC,WAAW,EAAEC,MAAM,EAAEC,QAAQ,QAAQ,QAAQ;AAC7F,SAASC,QAAQ,QAAQ,oBAAoB;AAE7C,OAAOC,gBAAgB,6BAA6B;AACpD,SAASC,IAAI,QAAQ,YAAY;AAEjC,OAAOC,YAAY,uCAAuC;AAO1D,OAAO,MAAMC,uCAAyBR,cAA2C;IAC7ES,OAAO;IACPC,oBAAoBJ;AACxB,GAAG;AAEH,OAAO,MAAMK,0BAA0B,CAAC,EAAEC,QAAQ,EAAqB;IACnE,MAAM,CAACH,OAAOI,SAAS,GAAGV,SAAmC;IAE7D,MAAMW,aAAaZ,OAAOG;IAE1B,MAAMK,qBAAqBT,YAAY;QACnCQ,OAAOM;QACPC,OAAOC,QAAQ,CAAC;YAAEC,KAAK;YAAGC,UAAU;QAAS;IACjD,GAAG;QAACV;KAAM;IAEV,qBACI,KAACD,uBAAuBY,QAAQ;QAC5BC,OAAO;YACHZ;YACAC;QACJ;kBAEA,cAAA,KAACN;YACGG,QAAQ;gBACJe,WAAW;oBACPC,SAAS;oBACTC,QAAQ;oBACRC,YAAY;oBACZC,YAAY;gBAChB;YACJ;YACAC,IAAI;YACJC,aAAaf;YACbgB,cAAc;YACdC,cAAc;YACdC,YAAYxB;YACZyB,SAAS;gBAAClB,WAAWmB,OAAO;aAAC;sBAE5BrB;;;AAIjB,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport type { EmblaCarouselType } from 'embla-carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\nimport styles from './CongratulationsProvider.module.css';\ninterface CongratulationsContextProps {\n  embla: null | EmblaCarouselType;\n  onNextSlideHandler: VoidFunction;\n}\nexport const CongratulationsContext = createContext<CongratulationsContextProps>({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({\n  children\n}: PropsWithChildren) => {\n  const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth'\n    });\n  }, [embla]);\n  return <CongratulationsContext.Provider value={{\n    embla,\n    onNextSlideHandler\n  }}>\n            <Carousel styles={{\n      container: {\n        display: 'flex',\n        height: '100%',\n        alignItems: 'flex-start',\n        transition: 'height 0.2s'\n      }\n    }} pb={60} getEmblaApi={setEmbla} withControls={false} withIndicators classNames={styles} plugins={[autoheight.current]}>\n                {children}\n            </Carousel>\n        </CongratulationsContext.Provider>;\n};",
+      "start": 1750275033904,
+      "end": 1750275033905,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createContext",
+          "PropsWithChildren",
+          "useCallback",
+          "useRef",
+          "useState",
+          "Carousel",
+          "EmblaCarouselType",
+          "AutoHeight",
+          "noop",
+          "styles",
+          "CongratulationsContextProps",
+          "embla",
+          "onNextSlideHandler",
+          "VoidFunction",
+          "CongratulationsContext",
+          "CongratulationsProvider",
+          "children",
+          "setEmbla",
+          "autoheight",
+          "scrollNext",
+          "window",
+          "scrollTo",
+          "top",
+          "behavior",
+          "container",
+          "display",
+          "height",
+          "alignItems",
+          "transition",
+          "current"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx"
+        ],
+        "sourcesContent": [
+          "import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport type { EmblaCarouselType } from 'embla-carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\n\nimport styles from './CongratulationsProvider.module.css';\n\ninterface CongratulationsContextProps {\n    embla: null | EmblaCarouselType;\n    onNextSlideHandler: VoidFunction;\n}\n\nexport const CongratulationsContext = createContext<CongratulationsContextProps>({\n    embla: null,\n    onNextSlideHandler: noop,\n});\n\nexport const CongratulationsProvider = ({ children }: PropsWithChildren) => {\n    const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);\n\n    const autoheight = useRef(AutoHeight());\n\n    const onNextSlideHandler = useCallback(() => {\n        embla?.scrollNext();\n        window.scrollTo({ top: 0, behavior: 'smooth' });\n    }, [embla]);\n\n    return (\n        <CongratulationsContext.Provider\n            value={{\n                embla,\n                onNextSlideHandler,\n            }}\n        >\n            <Carousel\n                styles={{\n                    container: {\n                        display: 'flex',\n                        height: '100%',\n                        alignItems: 'flex-start',\n                        transition: 'height 0.2s',\n                    },\n                }}\n                pb={60}\n                getEmblaApi={setEmbla}\n                withControls={false}\n                withIndicators\n                classNames={styles}\n                plugins={[autoheight.current]}\n            >\n                {children}\n            </Carousel>\n        </CongratulationsContext.Provider>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,aAAa,EAAE,KAAKC,iBAAiB,EAAEC,WAAW,EAAEC,MAAM,EAAEC,QAAQ,QAAQ,OAAO;AAC5F,SAASC,QAAQ,QAAQ,mBAAmB;AAC5C,cAAcC,iBAAiB,QAAQ,gBAAgB;AACvD,OAAOC,UAAU,MAAM,4BAA4B;AACnD,SAASC,IAAI,QAAQ,WAAW;AAEhC,OAAOC,MAAM,MAAM,sCAAsC;AAEzD,UAAUC,2BAA2B,CAAC;EAClCC,KAAK,EAAE,IAAI,GAAGL,iBAAiB;EAC/BM,kBAAkB,EAAEC,YAAY;AACpC;AAEA,OAAO,MAAMC,sBAAsB,GAAGd,aAAa,CAACU,2BAA2B,CAAC,CAAC;EAC7EC,KAAK,EAAE,IAAI;EACXC,kBAAkB,EAAEJ;AACxB,CAAC,CAAC;AAEF,OAAO,MAAMO,uBAAuB,GAAGA,CAAC;EAAEC;AAA4B,CAAlB,EAAEf,iBAAiB,KAAK;EACxE,MAAM,CAACU,KAAK,EAAEM,QAAQ,CAAC,GAAGb,QAAQ,CAACE,iBAAiB,GAAG,IAAI,CAAC,CAAC,IAAI,CAAC;EAElE,MAAMY,UAAU,GAAGf,MAAM,CAACI,UAAU,CAAC,CAAC,CAAC;EAEvC,MAAMK,kBAAkB,GAAGV,WAAW,CAAC,MAAM;IACzCS,KAAK,EAAEQ,UAAU,CAAC,CAAC;IACnBC,MAAM,CAACC,QAAQ,CAAC;MAAEC,GAAG,EAAE,CAAC;MAAEC,QAAQ,EAAE;IAAS,CAAC,CAAC;EACnD,CAAC,EAAE,CAACZ,KAAK,CAAC,CAAC;EAEX,OACI,CAAC,sBAAsB,CAAC,QAAQ,CAC5B,KAAK,CAAC,CAAC;IACHA,KAAK;IACLC;EACJ,CAAC,CAAC;AAEd,YAAY,CAAC,QAAQ,CACL,MAAM,CAAC,CAAC;MACJY,SAAS,EAAE;QACPC,OAAO,EAAE,MAAM;QACfC,MAAM,EAAE,MAAM;QACdC,UAAU,EAAE,YAAY;QACxBC,UAAU,EAAE;MAChB;IACJ,CAAC,CAAC,CACF,EAAE,CAAC,CAAC,EAAE,CAAC,CACP,WAAW,CAAC,CAACX,QAAQ,CAAC,CACtB,YAAY,CAAC,CAAC,KAAK,CAAC,CACpB,cAAc,CACd,UAAU,CAAC,CAACR,MAAM,CAAC,CACnB,OAAO,CAAC,CAAC,CAACS,UAAU,CAACW,OAAO,CAAC,CAAC;AAE9C,gBAAgB,CAACb,QAAQ;AACzB,YAAY,EAAE,QAAQ;AACtB,QAAQ,EAAE,sBAAsB,CAAC,QAAQ,CAAC;AAE1C,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport AutoHeight from \"embla-carousel-auto-height\";\nimport { noop } from \"lodash-es\";\nimport styles from \"./CongratulationsProvider.module.css\";\nexport const CongratulationsContext = /* @__PURE__ */ createContext({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({ children }) => {\n  const [embla, setEmbla] = useState(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: \"smooth\"\n    });\n  }, [\n    embla\n  ]);\n  return /* @__PURE__ */ _jsx(CongratulationsContext.Provider, {\n    value: {\n      embla,\n      onNextSlideHandler\n    },\n    children: /* @__PURE__ */ _jsx(Carousel, {\n      styles: {\n        container: {\n          display: \"flex\",\n          height: \"100%\",\n          alignItems: \"flex-start\",\n          transition: \"height 0.2s\"\n        }\n      },\n      pb: 60,\n      getEmblaApi: setEmbla,\n      withControls: false,\n      withIndicators: true,\n      classNames: styles,\n      plugins: [\n        autoheight.current\n      ],\n      children\n    })\n  });\n};\n",
-      "start": 1750271784985,
-      "end": 1750271785133,
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport AutoHeight from \"embla-carousel-auto-height\";\nimport { noop } from \"lodash-es\";\nimport styles from \"./CongratulationsProvider.module.css\";\nexport const CongratulationsContext = createContext({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({\n  children\n}) => {\n  const [embla, setEmbla] = useState(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: \"smooth\"\n    });\n  }, [embla]);\n  return /* @__PURE__ */ jsx(CongratulationsContext.Provider, { value: {\n    embla,\n    onNextSlideHandler\n  }, children: /* @__PURE__ */ jsx(Carousel, { styles: {\n    container: {\n      display: \"flex\",\n      height: \"100%\",\n      alignItems: \"flex-start\",\n      transition: \"height 0.2s\"\n    }\n  }, pb: 60, getEmblaApi: setEmbla, withControls: false, withIndicators: true, classNames: styles, plugins: [autoheight.current], children }) });\n};\n",
+      "start": 1750275033905,
+      "end": 1750275034193,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -28,95 +70,95 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx"
         ],
         "sourcesContent": [
-          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\nimport styles from './CongratulationsProvider.module.css';\nexport const CongratulationsContext = /*#__PURE__*/ createContext({\n    embla: null,\n    onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({ children })=>{\n    const [embla, setEmbla] = useState(null);\n    const autoheight = useRef(AutoHeight());\n    const onNextSlideHandler = useCallback(()=>{\n        embla?.scrollNext();\n        window.scrollTo({\n            top: 0,\n            behavior: 'smooth'\n        });\n    }, [\n        embla\n    ]);\n    return /*#__PURE__*/ _jsx(CongratulationsContext.Provider, {\n        value: {\n            embla,\n            onNextSlideHandler\n        },\n        children: /*#__PURE__*/ _jsx(Carousel, {\n            styles: {\n                container: {\n                    display: 'flex',\n                    height: '100%',\n                    alignItems: 'flex-start',\n                    transition: 'height 0.2s'\n                }\n            },\n            pb: 60,\n            getEmblaApi: setEmbla,\n            withControls: false,\n            withIndicators: true,\n            classNames: styles,\n            plugins: [\n                autoheight.current\n            ],\n            children: children\n        })\n    });\n};\n"
+          "import { createContext, type PropsWithChildren, useCallback, useRef, useState } from 'react';\nimport { Carousel } from '@mantine/carousel';\nimport type { EmblaCarouselType } from 'embla-carousel';\nimport AutoHeight from 'embla-carousel-auto-height';\nimport { noop } from 'lodash-es';\nimport styles from './CongratulationsProvider.module.css';\ninterface CongratulationsContextProps {\n  embla: null | EmblaCarouselType;\n  onNextSlideHandler: VoidFunction;\n}\nexport const CongratulationsContext = createContext<CongratulationsContextProps>({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({\n  children\n}: PropsWithChildren) => {\n  const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth'\n    });\n  }, [embla]);\n  return <CongratulationsContext.Provider value={{\n    embla,\n    onNextSlideHandler\n  }}>\n            <Carousel styles={{\n      container: {\n        display: 'flex',\n        height: '100%',\n        alignItems: 'flex-start',\n        transition: 'height 0.2s'\n      }\n    }} pb={60} getEmblaApi={setEmbla} withControls={false} withIndicators classNames={styles} plugins={[autoheight.current]}>\n                {children}\n            </Carousel>\n        </CongratulationsContext.Provider>;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,eAAe,aAAa,QAAQ,gBAAgB;AAC7D,SAAS,gBAAgB;AACzB,OAAO,gBAAgB;AACvB,SAAS,YAAY;AACrB,OAAO,YAAY;AACZ,aAAM,yBAAuC,8BAAc;AAAA,EAC9D,OAAO;AAAA,EACP,oBAAoB;AACxB,CAAC;AACM,aAAM,0BAA0B,CAAC,EAAE,SAAS,MAAI;AACnD,QAAM,CAAC,OAAO,QAAQ,IAAI,SAAS,IAAI;AACvC,QAAM,aAAa,OAAO,WAAW,CAAC;AACtC,QAAM,qBAAqB,YAAY,MAAI;AACvC,WAAO,WAAW;AAClB,WAAO,SAAS;AAAA,MACZ,KAAK;AAAA,MACL,UAAU;AAAA,IACd,CAAC;AAAA,EACL,GAAG;AAAA,IACC;AAAA,EACJ,CAAC;AACD,SAAqB,qBAAK,uBAAuB,UAAU;AAAA,IACvD,OAAO;AAAA,MACH;AAAA,MACA;AAAA,IACJ;AAAA,IACA,UAAwB,qBAAK,UAAU;AAAA,MACnC,QAAQ;AAAA,QACJ,WAAW;AAAA,UACP,SAAS;AAAA,UACT,QAAQ;AAAA,UACR,YAAY;AAAA,UACZ,YAAY;AAAA,QAChB;AAAA,MACJ;AAAA,MACA,IAAI;AAAA,MACJ,aAAa;AAAA,MACb,cAAc;AAAA,MACd,gBAAgB;AAAA,MAChB,YAAY;AAAA,MACZ,SAAS;AAAA,QACL,WAAW;AAAA,MACf;AAAA,MACA;AAAA,IACJ,CAAC;AAAA,EACL,CAAC;AACL;",
+        "mappings": "AA8BY;AA9BZ,SAAS,eAAuC,aAAa,QAAQ,gBAAgB;AACrF,SAAS,gBAAgB;AAEzB,OAAO,gBAAgB;AACvB,SAAS,YAAY;AACrB,OAAO,YAAY;AAKZ,aAAM,yBAAyB,cAA2C;AAAA,EAC/E,OAAO;AAAA,EACP,oBAAoB;AACtB,CAAC;AACM,aAAM,0BAA0B,CAAC;AAAA,EACtC;AACF,MAAyB;AACvB,QAAM,CAAC,OAAO,QAAQ,IAAI,SAAmC,IAAI;AACjE,QAAM,aAAa,OAAO,WAAW,CAAC;AACtC,QAAM,qBAAqB,YAAY,MAAM;AAC3C,WAAO,WAAW;AAClB,WAAO,SAAS;AAAA,MACd,KAAK;AAAA,MACL,UAAU;AAAA,IACZ,CAAC;AAAA,EACH,GAAG,CAAC,KAAK,CAAC;AACV,SAAO,oBAAC,uBAAuB,UAAvB,EAAgC,OAAO;AAAA,IAC7C;AAAA,IACA;AAAA,EACF,GACU,8BAAC,YAAS,QAAQ;AAAA,IACxB,WAAW;AAAA,MACT,SAAS;AAAA,MACT,QAAQ;AAAA,MACR,YAAY;AAAA,MACZ,YAAY;AAAA,IACd;AAAA,EACF,GAAG,IAAI,IAAI,aAAa,UAAU,cAAc,OAAO,gBAAc,MAAC,YAAY,QAAQ,SAAS,CAAC,WAAW,OAAO,GACzG,UACL,GACJ;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034193,
+      "end": 1750275034193,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034193,
+      "end": 1750275034193,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034193,
+      "end": 1750275034193,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport AutoHeight from \"embla-carousel-auto-height\";\nimport { noop } from \"lodash-es\";\nimport styles from \"./CongratulationsProvider.module.css\";\nexport const CongratulationsContext = /* @__PURE__ */ createContext({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({ children }) => {\n  const [embla, setEmbla] = useState(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: \"smooth\"\n    });\n  }, [\n    embla\n  ]);\n  return /* @__PURE__ */ _jsx(CongratulationsContext.Provider, {\n    value: {\n      embla,\n      onNextSlideHandler\n    },\n    children: /* @__PURE__ */ _jsx(Carousel, {\n      styles: {\n        container: {\n          display: \"flex\",\n          height: \"100%\",\n          alignItems: \"flex-start\",\n          transition: \"height 0.2s\"\n        }\n      },\n      pb: 60,\n      getEmblaApi: setEmbla,\n      withControls: false,\n      withIndicators: true,\n      classNames: styles,\n      plugins: [\n        autoheight.current\n      ],\n      children\n    })\n  });\n};\n",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "result": "/*! src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useRef, useState } from \"react\";\nimport { Carousel } from \"@mantine/carousel\";\nimport AutoHeight from \"embla-carousel-auto-height\";\nimport { noop } from \"lodash-es\";\nimport styles from \"./CongratulationsProvider.module.css\";\nexport const CongratulationsContext = createContext({\n  embla: null,\n  onNextSlideHandler: noop\n});\nexport const CongratulationsProvider = ({\n  children\n}) => {\n  const [embla, setEmbla] = useState(null);\n  const autoheight = useRef(AutoHeight());\n  const onNextSlideHandler = useCallback(() => {\n    embla?.scrollNext();\n    window.scrollTo({\n      top: 0,\n      behavior: \"smooth\"\n    });\n  }, [embla]);\n  return /* @__PURE__ */ jsx(CongratulationsContext.Provider, { value: {\n    embla,\n    onNextSlideHandler\n  }, children: /* @__PURE__ */ jsx(Carousel, { styles: {\n    container: {\n      display: \"flex\",\n      height: \"100%\",\n      alignItems: \"flex-start\",\n      transition: \"height 0.2s\"\n    }\n  }, pb: 60, getEmblaApi: setEmbla, withControls: false, withIndicators: true, classNames: styles, plugins: [autoheight.current], children }) });\n};\n",
+      "start": 1750275034194,
+      "end": 1750275034194,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/CongratulationsSlider/context/CongratulationsProvider.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChJ,CAAC;"
       }
     }
   ]

@@ -4,99 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgCloud = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 474 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 213, height: 213, x: 86, y: 121, fill: \"currentColor\", rx: 106.934 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 214, height: 214, x: 192, y: 38, fill: \"currentColor\", rx: 107 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 188, height: 188, x: 348, y: 45, fill: \"currentColor\", rx: 94.232 }));\nexport default SvgCloud;\n",
-      "start": 1750271785101,
-      "end": 1750271785281,
+      "start": 1750275034162,
+      "end": 1750275034299,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785281,
-      "end": 1750271785281,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785281,
-      "end": 1750271785281,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785283,
-      "end": 1750271785283,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785283,
-      "end": 1750271785283,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/assets/icons/cloud.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgCloud = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 474 150\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 213, height: 213, x: 86, y: 121, fill: \"currentColor\", rx: 106.934 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 214, height: 214, x: 192, y: 38, fill: \"currentColor\", rx: 107 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 188, height: 188, x: 348, y: 45, fill: \"currentColor\", rx: 94.232 }));\nexport default SvgCloud;\n",
-      "start": 1750271785283,
-      "end": 1750271785283,
+      "start": 1750275034299,
+      "end": 1750275034299,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

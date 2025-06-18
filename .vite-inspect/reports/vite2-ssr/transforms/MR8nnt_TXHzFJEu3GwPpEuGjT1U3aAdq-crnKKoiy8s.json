@@ -4,99 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImage3 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 161, height: 223, viewBox: \"0 0 161 223\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M53.5929 0C48.0772 27.5388 28.7296 51.778 0 62C46.332 78.4849 68.2634 131.425 47.1308 175.869C91.5746 154.737 144.515 176.668 161 223L161 0H53.5929Z\", fill: \"#D6336C\" }));\nexport default SvgImage3;\n",
-      "start": 1750271785330,
-      "end": 1750271785355,
+      "start": 1750275034287,
+      "end": 1750275034368,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785355,
-      "end": 1750271785355,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034368,
+      "end": 1750275034369,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/HowItHelps/img/image-3.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImage3 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 161, height: 223, viewBox: \"0 0 161 223\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M53.5929 0C48.0772 27.5388 28.7296 51.778 0 62C46.332 78.4849 68.2634 131.425 47.1308 175.869C91.5746 154.737 144.515 176.668 161 223L161 0H53.5929Z\", fill: \"#D6336C\" }));\nexport default SvgImage3;\n",
-      "start": 1750271785355,
-      "end": 1750271785355,
+      "start": 1750275034369,
+      "end": 1750275034369,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

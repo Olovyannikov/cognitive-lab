@@ -4,117 +4,144 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { Section, SpinningText } from '@/shared/ui';\n\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\n\nimport s from './Statistics.module.css';\n\nexport const Statistics = () => {\n    const data = useList(LandingModel.$statisticsAndTrust, (el) => (\n        <StatisticsCard title={el.primary_text} text={el.secondary_text} />\n    ));\n\n    return (\n        <Section\n            containerClassName={s.section}\n            title={\n                <>\n                    Статистика{' '}\n                    <span>\n                        и&nbsp;<span style={{ display: 'inline' }}>доверие</span>\n                    </span>\n                </>\n            }\n        >\n            <Flex className={s.flex}>{data}</Flex>\n            <SpinningText radius={7} className={s.spinning}>\n                Cognitive Lab ✦ Cognitive Lab ✦\n            </SpinningText>\n        </Section>\n    );\n};\n",
-      "start": 1750271784962,
-      "end": 1750271784981,
+      "start": 1750275033679,
+      "end": 1750275033723,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { Section, SpinningText } from '@/shared/ui';\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\nimport s from './Statistics.module.css';\nexport const Statistics = ()=>{\n    const data = useList(LandingModel.$statisticsAndTrust, (el)=>/*#__PURE__*/ _jsx(StatisticsCard, {\n            title: el.primary_text,\n            text: el.secondary_text\n        }));\n    return /*#__PURE__*/ _jsxs(Section, {\n        containerClassName: s.section,\n        title: /*#__PURE__*/ _jsxs(_Fragment, {\n            children: [\n                \"Статистика\",\n                ' ',\n                /*#__PURE__*/ _jsxs(\"span\", {\n                    children: [\n                        \"и \",\n                        /*#__PURE__*/ _jsx(\"span\", {\n                            style: {\n                                display: 'inline'\n                            },\n                            children: \"доверие\"\n                        })\n                    ]\n                })\n            ]\n        }),\n        children: [\n            /*#__PURE__*/ _jsx(Flex, {\n                className: s.flex,\n                children: data\n            }),\n            /*#__PURE__*/ _jsx(SpinningText, {\n                radius: 7,\n                className: s.spinning,\n                children: \"Cognitive Lab ✦ Cognitive Lab ✦\"\n            })\n        ]\n    });\n};\n",
-      "start": 1750271784981,
-      "end": 1750271784986,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Statistics/index.tsx\"],\"sourcesContent\":[\"import { Flex } from '@mantine/core';\\nimport { useList } from 'effector-react';\\n\\nimport { Section, SpinningText } from '@/shared/ui';\\n\\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\\n\\nimport s from './Statistics.module.css';\\n\\nexport const Statistics = () => {\\n    const data = useList(LandingModel.$statisticsAndTrust, (el) => (\\n        <StatisticsCard title={el.primary_text} text={el.secondary_text} />\\n    ));\\n\\n    return (\\n        <Section\\n            containerClassName={s.section}\\n            title={\\n                <>\\n                    Статистика{' '}\\n                    <span>\\n                        и&nbsp;<span style={{ display: 'inline' }}>доверие</span>\\n                    </span>\\n                </>\\n            }\\n        >\\n            <Flex className={s.flex}>{data}</Flex>\\n            <SpinningText radius={7} className={s.spinning}>\\n                Cognitive Lab ✦ Cognitive Lab ✦\\n            </SpinningText>\\n        </Section>\\n    );\\n};\\n\"],\"names\":[\"Flex\",\"useList\",\"Section\",\"SpinningText\",\"LandingModel\",\"StatisticsCard\",\"s\",\"Statistics\",\"data\",\"$statisticsAndTrust\",\"el\",\"title\",\"primary_text\",\"text\",\"secondary_text\",\"containerClassName\",\"section\",\"span\",\"style\",\"display\",\"className\",\"flex\",\"radius\",\"spinning\"],\"mappings\":\";AAAA,SAASA,IAAI,QAAQ,gBAAgB;AACrC,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,OAAO,EAAEC,YAAY,QAAQ,cAAc;AAEpD,SAASC,YAAY,EAAEC,cAAc,QAAQ,qBAAqB;AAElE,OAAOC,OAAO,0BAA0B;AAExC,OAAO,MAAMC,aAAa;IACtB,MAAMC,OAAOP,QAAQG,aAAaK,mBAAmB,EAAE,CAACC,mBACpD,KAACL;YAAeM,OAAOD,GAAGE,YAAY;YAAEC,MAAMH,GAAGI,cAAc;;IAGnE,qBACI,MAACZ;QACGa,oBAAoBT,EAAEU,OAAO;QAC7BL,qBACI;;gBAAE;gBACa;8BACX,MAACM;;wBAAK;sCACK,KAACA;4BAAKC,OAAO;gCAAEC,SAAS;4BAAS;sCAAG;;;;;;;0BAKvD,KAACnB;gBAAKoB,WAAWd,EAAEe,IAAI;0BAAGb;;0BAC1B,KAACL;gBAAamB,QAAQ;gBAAGF,WAAWd,EAAEiB,QAAQ;0BAAE;;;;AAK5D,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { Section, SpinningText } from '@/shared/ui';\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\nimport s from './Statistics.module.css';\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, el => <StatisticsCard title={el.primary_text} text={el.secondary_text} />);\n  return <Section containerClassName={s.section} title={<>\n                    Статистика{' '}\n                    <span>\n                        и&nbsp;<span style={{\n        display: 'inline'\n      }}>доверие</span>\n                    </span>\n                </>}>\n            <Flex className={s.flex}>{data}</Flex>\n            <SpinningText radius={7} className={s.spinning}>\n                Cognitive Lab ✦ Cognitive Lab ✦\n            </SpinningText>\n        </Section>;\n};",
+      "start": 1750275033723,
+      "end": 1750275033724,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Flex",
+          "useList",
+          "Section",
+          "SpinningText",
+          "LandingModel",
+          "StatisticsCard",
+          "s",
+          "Statistics",
+          "data",
+          "$statisticsAndTrust",
+          "el",
+          "primary_text",
+          "secondary_text",
+          "section",
+          "display",
+          "flex",
+          "spinning"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Statistics/index.tsx"],
+        "sourcesContent": [
+          "import { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { Section, SpinningText } from '@/shared/ui';\n\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\n\nimport s from './Statistics.module.css';\n\nexport const Statistics = () => {\n    const data = useList(LandingModel.$statisticsAndTrust, (el) => (\n        <StatisticsCard title={el.primary_text} text={el.secondary_text} />\n    ));\n\n    return (\n        <Section\n            containerClassName={s.section}\n            title={\n                <>\n                    Статистика{' '}\n                    <span>\n                        и&nbsp;<span style={{ display: 'inline' }}>доверие</span>\n                    </span>\n                </>\n            }\n        >\n            <Flex className={s.flex}>{data}</Flex>\n            <SpinningText radius={7} className={s.spinning}>\n                Cognitive Lab ✦ Cognitive Lab ✦\n            </SpinningText>\n        </Section>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,QAAQ,eAAe;AACpC,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,OAAO,EAAEC,YAAY,QAAQ,aAAa;AAEnD,SAASC,YAAY,EAAEC,cAAc,QAAQ,oBAAoB;AAEjE,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,OAAO,MAAMC,UAAU,GAAGA,CAAA,KAAM;EAC5B,MAAMC,IAAI,GAAGP,OAAO,CAACG,YAAY,CAACK,mBAAmB,EAAGC,EAAE,IACtD,CAAC,cAAc,CAAC,KAAK,CAAC,CAACA,EAAE,CAACC,YAAY,CAAC,CAAC,IAAI,CAAC,CAACD,EAAE,CAACE,cAAc,CAAC,GACnE,CAAC;EAEF,OACI,CAAC,OAAO,CACJ,kBAAkB,CAAC,CAACN,CAAC,CAACO,OAAO,CAAC,CAC9B,KAAK,CAAC,CACF;AAChB,8BAA8B,CAAC,GAAG;AAClC,oBAAoB,CAAC,IAAI;AACzB,+BAA+B,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC;QAAEC,OAAO,EAAE;MAAS,CAAC,CAAC,CAAC,OAAO,EAAE,IAAI;AAChF,oBAAoB,EAAE,IAAI;AAC1B,gBAAgB,GACJ,CAAC;AAEb,YAAY,CAAC,IAAI,CAAC,SAAS,CAAC,CAACR,CAAC,CAACS,IAAI,CAAC,CAAC,CAACP,IAAI,CAAC,EAAE,IAAI;AACjD,YAAY,CAAC,YAAY,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAACF,CAAC,CAACU,QAAQ,CAAC;AAC3D;AACA,YAAY,EAAE,YAAY;AAC1B,QAAQ,EAAE,OAAO,CAAC;AAElB,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { Section, SpinningText } from \"@/shared/ui\";\nimport { LandingModel, StatisticsCard } from \"@/entities/Landing\";\nimport s from \"./Statistics.module.css\";\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, (el) => /* @__PURE__ */ _jsx(StatisticsCard, {\n    title: el.primary_text,\n    text: el.secondary_text\n  }));\n  return /* @__PURE__ */ _jsxs(Section, {\n    containerClassName: s.section,\n    title: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        \"Статистика\",\n        \" \",\n        /* @__PURE__ */ _jsxs(\"span\", {\n          children: [\n            \"и \",\n            /* @__PURE__ */ _jsx(\"span\", {\n              style: {\n                display: \"inline\"\n              },\n              children: \"доверие\"\n            })\n          ]\n        })\n      ]\n    }),\n    children: [\n      /* @__PURE__ */ _jsx(Flex, {\n        className: s.flex,\n        children: data\n      }),\n      /* @__PURE__ */ _jsx(SpinningText, {\n        radius: 7,\n        className: s.spinning,\n        children: \"Cognitive Lab ✦ Cognitive Lab ✦\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750271784986,
-      "end": 1750271785134,
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { Section, SpinningText } from \"@/shared/ui\";\nimport { LandingModel, StatisticsCard } from \"@/entities/Landing\";\nimport s from \"./Statistics.module.css\";\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, (el) => /* @__PURE__ */ jsx(StatisticsCard, { title: el.primary_text, text: el.secondary_text }));\n  return /* @__PURE__ */ jsxs(Section, { containerClassName: s.section, title: /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Статистика\",\n    \" \",\n    /* @__PURE__ */ jsxs(\"span\", { children: [\n      \"и \",\n      /* @__PURE__ */ jsx(\"span\", { style: {\n        display: \"inline\"\n      }, children: \"доверие\" })\n    ] })\n  ] }), children: [\n    /* @__PURE__ */ jsx(Flex, { className: s.flex, children: data }),\n    /* @__PURE__ */ jsx(SpinningText, { radius: 7, className: s.spinning, children: \"Cognitive Lab ✦ Cognitive Lab ✦\" })\n  ] });\n};\n",
+      "start": 1750275033724,
+      "end": 1750275033974,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/IndexPage/ui/Statistics/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { Section, SpinningText } from '@/shared/ui';\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\nimport s from './Statistics.module.css';\nexport const Statistics = ()=>{\n    const data = useList(LandingModel.$statisticsAndTrust, (el)=>/*#__PURE__*/ _jsx(StatisticsCard, {\n            title: el.primary_text,\n            text: el.secondary_text\n        }));\n    return /*#__PURE__*/ _jsxs(Section, {\n        containerClassName: s.section,\n        title: /*#__PURE__*/ _jsxs(_Fragment, {\n            children: [\n                \"Статистика\",\n                ' ',\n                /*#__PURE__*/ _jsxs(\"span\", {\n                    children: [\n                        \"и \",\n                        /*#__PURE__*/ _jsx(\"span\", {\n                            style: {\n                                display: 'inline'\n                            },\n                            children: \"доверие\"\n                        })\n                    ]\n                })\n            ]\n        }),\n        children: [\n            /*#__PURE__*/ _jsx(Flex, {\n                className: s.flex,\n                children: data\n            }),\n            /*#__PURE__*/ _jsx(SpinningText, {\n                radius: 7,\n                className: s.spinning,\n                children: \"Cognitive Lab ✦ Cognitive Lab ✦\"\n            })\n        ]\n    });\n};\n"
+          "import { Flex } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { Section, SpinningText } from '@/shared/ui';\nimport { LandingModel, StatisticsCard } from '@/entities/Landing';\nimport s from './Statistics.module.css';\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, el => <StatisticsCard title={el.primary_text} text={el.secondary_text} />);\n  return <Section containerClassName={s.section} title={<>\n                    Статистика{' '}\n                    <span>\n                        и&nbsp;<span style={{\n        display: 'inline'\n      }}>доверие</span>\n                    </span>\n                </>}>\n            <Flex className={s.flex}>{data}</Flex>\n            <SpinningText radius={7} className={s.spinning}>\n                Cognitive Lab ✦ Cognitive Lab ✦\n            </SpinningText>\n        </Section>;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,OAAO,YAAY,iBAAiB;AAClE,SAAS,YAAY;AACrB,SAAS,eAAe;AACxB,SAAS,SAAS,oBAAoB;AACtC,SAAS,cAAc,sBAAsB;AAC7C,OAAO,OAAO;AACP,aAAM,aAAa,MAAI;AAC1B,QAAM,OAAO,QAAQ,aAAa,qBAAqB,CAAC,OAAmB,qBAAK,gBAAgB;AAAA,IACxF,OAAO,GAAG;AAAA,IACV,MAAM,GAAG;AAAA,EACb,CAAC,CAAC;AACN,SAAqB,sBAAM,SAAS;AAAA,IAChC,oBAAoB,EAAE;AAAA,IACtB,OAAqB,sBAAM,WAAW;AAAA,MAClC,UAAU;AAAA,QACN;AAAA,QACA;AAAA,QACc,sBAAM,QAAQ;AAAA,UACxB,UAAU;AAAA,YACN;AAAA,YACc,qBAAK,QAAQ;AAAA,cACvB,OAAO;AAAA,gBACH,SAAS;AAAA,cACb;AAAA,cACA,UAAU;AAAA,YACd,CAAC;AAAA,UACL;AAAA,QACJ,CAAC;AAAA,MACL;AAAA,IACJ,CAAC;AAAA,IACD,UAAU;AAAA,MACQ,qBAAK,MAAM;AAAA,QACrB,WAAW,EAAE;AAAA,QACb,UAAU;AAAA,MACd,CAAC;AAAA,MACa,qBAAK,cAAc;AAAA,QAC7B,QAAQ;AAAA,QACR,WAAW,EAAE;AAAA,QACb,UAAU;AAAA,MACd,CAAC;AAAA,IACL;AAAA,EACJ,CAAC;AACL;",
+        "mappings": "AAM+D,SACP,UADO,KAG3C,YAH2C;AAN/D,SAAS,YAAY;AACrB,SAAS,eAAe;AACxB,SAAS,SAAS,oBAAoB;AACtC,SAAS,cAAc,sBAAsB;AAC7C,OAAO,OAAO;AACP,aAAM,aAAa,MAAM;AAC9B,QAAM,OAAO,QAAQ,aAAa,qBAAqB,QAAM,oBAAC,kBAAe,OAAO,GAAG,cAAc,MAAM,GAAG,gBAAgB,CAAE;AAChI,SAAO,qBAAC,WAAQ,oBAAoB,EAAE,SAAS,OAAO,iCAAE;AAAA;AAAA,IAC3B;AAAA,IACX,qBAAC,UAAK;AAAA;AAAA,MACK,oBAAC,UAAK,OAAO;AAAA,QACpC,SAAS;AAAA,MACX,GAAG,qBAAO;AAAA,OACI;AAAA,KACJ,GACJ;AAAA,wBAAC,QAAK,WAAW,EAAE,MAAO,gBAAK;AAAA,IAC/B,oBAAC,gBAAa,QAAQ,GAAG,WAAW,EAAE,UAAU,6CAEhD;AAAA,KACJ;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033974,
+      "end": 1750275033974,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "start": 1750275033975,
+      "end": 1750275033975,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/pages/IndexPage/ui/Statistics/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { Section, SpinningText } from \"@/shared/ui\";\nimport { LandingModel, StatisticsCard } from \"@/entities/Landing\";\nimport s from \"./Statistics.module.css\";\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, (el) => /* @__PURE__ */ _jsx(StatisticsCard, {\n    title: el.primary_text,\n    text: el.secondary_text\n  }));\n  return /* @__PURE__ */ _jsxs(Section, {\n    containerClassName: s.section,\n    title: /* @__PURE__ */ _jsxs(_Fragment, {\n      children: [\n        \"Статистика\",\n        \" \",\n        /* @__PURE__ */ _jsxs(\"span\", {\n          children: [\n            \"и \",\n            /* @__PURE__ */ _jsx(\"span\", {\n              style: {\n                display: \"inline\"\n              },\n              children: \"доверие\"\n            })\n          ]\n        })\n      ]\n    }),\n    children: [\n      /* @__PURE__ */ _jsx(Flex, {\n        className: s.flex,\n        children: data\n      }),\n      /* @__PURE__ */ _jsx(SpinningText, {\n        radius: 7,\n        className: s.spinning,\n        children: \"Cognitive Lab ✦ Cognitive Lab ✦\"\n      })\n    ]\n  });\n};\n",
-      "start": 1750271785134,
-      "end": 1750271785134,
+      "result": "/*! src/pages/IndexPage/ui/Statistics/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Flex } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { Section, SpinningText } from \"@/shared/ui\";\nimport { LandingModel, StatisticsCard } from \"@/entities/Landing\";\nimport s from \"./Statistics.module.css\";\nexport const Statistics = () => {\n  const data = useList(LandingModel.$statisticsAndTrust, (el) => /* @__PURE__ */ jsx(StatisticsCard, { title: el.primary_text, text: el.secondary_text }));\n  return /* @__PURE__ */ jsxs(Section, { containerClassName: s.section, title: /* @__PURE__ */ jsxs(Fragment, { children: [\n    \"Статистика\",\n    \" \",\n    /* @__PURE__ */ jsxs(\"span\", { children: [\n      \"и \",\n      /* @__PURE__ */ jsx(\"span\", { style: {\n        display: \"inline\"\n      }, children: \"доверие\" })\n    ] })\n  ] }), children: [\n    /* @__PURE__ */ jsx(Flex, { className: s.flex, children: data }),\n    /* @__PURE__ */ jsx(SpinningText, { radius: 7, className: s.spinning, children: \"Cognitive Lab ✦ Cognitive Lab ✦\" })\n  ] });\n};\n",
+      "start": 1750275033975,
+      "end": 1750275033975,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/pages/IndexPage/ui/Statistics/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC;"
       }
     }
   ]

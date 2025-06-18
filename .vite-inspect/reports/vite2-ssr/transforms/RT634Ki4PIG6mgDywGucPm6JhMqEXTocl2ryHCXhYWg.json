@@ -4,117 +4,144 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore, sample } from 'effector';\n\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n",
-      "start": 1750271784943,
-      "end": 1750271784962,
+      "start": 1750275033814,
+      "end": 1750275033872,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nexport const $reportContent = createStore([], {\n    sid: \"79c6waqf\"\n});\nsample({\n    and: [\n        {\n            clock: getPersonalityTypeQuery.finished.success,\n            fn: ({ result: { content } })=>content,\n            target: $reportContent\n        }\n    ],\n    or: {\n        sid: \"4eff6sqj\"\n    }\n});\n",
-      "start": 1750271784962,
-      "end": 1750271784971,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts\"],\"sourcesContent\":[\"import { createStore, sample } from 'effector';\\n\\nimport { getPersonalityTypeQuery } from '../api';\\nimport type { ContentBlock } from '../types';\\n\\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\\nsample({\\n    clock: getPersonalityTypeQuery.finished.success,\\n    fn: ({ result: { content } }) => content,\\n    target: $reportContent,\\n});\\n\"],\"names\":[\"createStore\",\"sample\",\"getPersonalityTypeQuery\",\"$reportContent\",\"clock\",\"finished\",\"success\",\"fn\",\"result\",\"content\",\"target\"],\"mappings\":\"AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,uBAAuB,QAAQ,SAAS;AAGjD,OAAO,MAAMC,iBAAiBH,YAA0D,EAAE;;GAAE;AAC5FC;;QAAO;YACHG,OAAOF,wBAAwBG,QAAQ,CAACC,OAAO;YAC/CC,IAAI,CAAC,EAAEC,QAAQ,EAAEC,OAAO,EAAE,EAAE,GAAKA;YACjCC,QAAQP;QACZ\"}"
+      "name": "vite:react-babel",
+      "result": "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});",
+      "start": 1750275033872,
+      "end": 1750275033873,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createStore",
+          "sample",
+          "getPersonalityTypeQuery",
+          "ContentBlock",
+          "$reportContent",
+          "title",
+          "content",
+          "name",
+          "sid",
+          "and",
+          "clock",
+          "finished",
+          "success",
+          "fn",
+          "result",
+          "target",
+          "or"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"],
+        "sourcesContent": [
+          "import { createStore, sample } from 'effector';\n\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\n\nexport const $reportContent = createStore<{ title: string; content: ContentBlock[] }[]>([]);\nsample({\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({ result: { content } }) => content,\n    target: $reportContent,\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE9C,SAASC,uBAAuB,QAAQ,QAAQ;AAChD,cAAcC,YAAY,QAAQ,UAAU;AAE5C,OAAO,MAAMC,cAAc,GAAGJ,WAAW,CAAC;EAAEK,KAAK,EAAE,MAAM;EAAEC,OAAO,EAAEH,YAAY,EAAE;AAAC,CAAC,EAAE,CAAC,CAAC,EAAE;EAAAI,IAAA;EAAAC,GAAA;AAAA,EAAC;AAC3FP,MAAM;EAAAQ,GAAA,GAAC;IACHC,KAAK,EAAER,uBAAuB,CAACS,QAAQ,CAACC,OAAO;IAC/CC,EAAE,EAAEA,CAAC;MAAEC,MAAM,EAAE;QAAER;MAAQ;IAAE,CAAC,KAAKA,OAAO;IACxCS,MAAM,EAAEX;EACZ,CAAC;EAAAY,EAAA;IAAAR,GAAA;EAAA;AAAA,EAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  sid: \"79c6waqf\"\n});\nsample({\n  and: [\n    {\n      clock: getPersonalityTypeQuery.finished.success,\n      fn: ({ result: { content } }) => content,\n      target: $reportContent\n    }\n  ],\n  or: {\n    sid: \"4eff6sqj\"\n  }\n});\n",
-      "start": 1750271784971,
-      "end": 1750271785104,
+      "result": "import { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
+      "start": 1750275033873,
+      "end": 1750275034126,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/reportContent.ts"],
         "sourcesContent": [
-          "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nexport const $reportContent = createStore([], {\n    sid: \"79c6waqf\"\n});\nsample({\n    and: [\n        {\n            clock: getPersonalityTypeQuery.finished.success,\n            fn: ({ result: { content } })=>content,\n            target: $reportContent\n        }\n    ],\n    or: {\n        sid: \"4eff6sqj\"\n    }\n});\n"
+          "import { createStore, sample } from 'effector';\nimport { getPersonalityTypeQuery } from '../api';\nimport type { ContentBlock } from '../types';\nexport const $reportContent = createStore<{\n  title: string;\n  content: ContentBlock[];\n}[]>([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});"
         ],
-        "mappings": "AAAA,SAAS,aAAa,cAAc;AACpC,SAAS,+BAA+B;AACjC,aAAM,iBAAiB,YAAY,CAAC,GAAG;AAAA,EAC1C,KAAK;AACT,CAAC;AACD,OAAO;AAAA,EACH,KAAK;AAAA,IACD;AAAA,MACI,OAAO,wBAAwB,SAAS;AAAA,MACxC,IAAI,CAAC,EAAE,QAAQ,EAAE,QAAQ,EAAE,MAAI;AAAA,MAC/B,QAAQ;AAAA,IACZ;AAAA,EACJ;AAAA,EACA,IAAI;AAAA,IACA,KAAK;AAAA,EACT;AACJ,CAAC;",
+        "mappings": "AAAA,SAAS,aAAa,cAAc;AACpC,SAAS,+BAA+B;AAEjC,aAAM,iBAAiB,YAGzB,CAAC,GAAG;AAAA,EACP,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACD,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO,wBAAwB,SAAS;AAAA,IACxC,IAAI,CAAC;AAAA,MACH,QAAQ;AAAA,QACN;AAAA,MACF;AAAA,IACF,MAAM;AAAA,IACN,QAAQ;AAAA,EACV,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/entities/Report/model/reportContent.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  sid: \"79c6waqf\"\n});\nsample({\n  and: [\n    {\n      clock: getPersonalityTypeQuery.finished.success,\n      fn: ({ result: { content } }) => content,\n      target: $reportContent\n    }\n  ],\n  or: {\n    sid: \"4eff6sqj\"\n  }\n});\n",
-      "start": 1750271785104,
-      "end": 1750271785104,
+      "result": "/*! src/entities/Report/model/reportContent.ts [vike:pluginModuleBanner] */\nimport { createStore, sample } from \"effector\";\nimport { getPersonalityTypeQuery } from \"../api\";\nexport const $reportContent = createStore([], {\n  name: \"$reportContent\",\n  sid: \"mitpif\"\n});\nsample({\n  and: [{\n    clock: getPersonalityTypeQuery.finished.success,\n    fn: ({\n      result: {\n        content\n      }\n    }) => content,\n    target: $reportContent\n  }],\n  or: {\n    sid: \"-wxy4pk\"\n  }\n});\n",
+      "start": 1750275034126,
+      "end": 1750275034126,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/model/reportContent.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC;AACF,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }
     }
   ]

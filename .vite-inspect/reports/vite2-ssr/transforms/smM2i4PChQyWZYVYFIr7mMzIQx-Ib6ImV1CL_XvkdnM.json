@@ -4,23 +4,44 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Tariffs = () => {\n    const { urlPathname } = usePageContext();\n\n    const isMainPage = urlPathname === '/';\n\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>\n    );\n};\n",
-      "start": 1750271785346,
-      "end": 1750271785351,
+      "start": 1750275034363,
+      "end": 1750275034394,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = ()=>{\n    const { urlPathname } = usePageContext();\n    const isMainPage = urlPathname === '/';\n    const onClose = useUnit(RootModel.allMenusClosed);\n    return /*#__PURE__*/ _jsx(Link, {\n        href: isMainPage ? '#tariffs' : '/#tariffs',\n        onClick: ()=>onClose(false),\n        children: \"Тарифы\"\n    });\n};\n",
-      "start": 1750271785351,
-      "end": 1750271785354,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx\"],\"sourcesContent\":[\"import { useUnit } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { RootModel } from '@/entities/Root';\\n\\nimport { Link } from '../../Link';\\n\\nexport const Tariffs = () => {\\n    const { urlPathname } = usePageContext();\\n\\n    const isMainPage = urlPathname === '/';\\n\\n    const onClose = useUnit(RootModel.allMenusClosed);\\n\\n    return (\\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\\n            Тарифы\\n        </Link>\\n    );\\n};\\n\"],\"names\":[\"useUnit\",\"usePageContext\",\"RootModel\",\"Link\",\"Tariffs\",\"urlPathname\",\"isMainPage\",\"onClose\",\"allMenusClosed\",\"href\",\"onClick\"],\"mappings\":\";AAAA,SAASA,OAAO,QAAQ,iBAAiB;AACzC,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,SAAS,QAAQ,kBAAkB;AAE5C,SAASC,IAAI,QAAQ,aAAa;AAElC,OAAO,MAAMC,UAAU;IACnB,MAAM,EAAEC,WAAW,EAAE,GAAGJ;IAExB,MAAMK,aAAaD,gBAAgB;IAEnC,MAAME,UAAUP,QAAQE,UAAUM,cAAc;IAEhD,qBACI,KAACL;QAAKM,MAAMH,aAAa,aAAa;QAAaI,SAAS,IAAMH,QAAQ;kBAAQ;;AAI1F,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === '/';\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>;\n};",
+      "start": 1750275034394,
+      "end": 1750275034398,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useUnit",
+          "usePageContext",
+          "RootModel",
+          "Link",
+          "Tariffs",
+          "urlPathname",
+          "isMainPage",
+          "onClose",
+          "allMenusClosed"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { RootModel } from '@/entities/Root';\n\nimport { Link } from '../../Link';\n\nexport const Tariffs = () => {\n    const { urlPathname } = usePageContext();\n\n    const isMainPage = urlPathname === '/';\n\n    const onClose = useUnit(RootModel.allMenusClosed);\n\n    return (\n        <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,OAAO,QAAQ,gBAAgB;AACxC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,SAAS,QAAQ,iBAAiB;AAE3C,SAASC,IAAI,QAAQ,YAAY;AAEjC,OAAO,MAAMC,OAAO,GAAGA,CAAA,KAAM;EACzB,MAAM;IAAEC;EAAY,CAAC,GAAGJ,cAAc,CAAC,CAAC;EAExC,MAAMK,UAAU,GAAGD,WAAW,KAAK,GAAG;EAEtC,MAAME,OAAO,GAAGP,OAAO,CAACE,SAAS,CAACM,cAAc,CAAC;EAEjD,OACI,CAAC,IAAI,CAAC,IAAI,CAAC,CAACF,UAAU,GAAG,UAAU,GAAG,WAAW,CAAC,CAAC,OAAO,CAAC,CAAC,MAAMC,OAAO,CAAC,KAAK,CAAC,CAAC;AACzF;AACA,QAAQ,EAAE,IAAI,CAAC;AAEf,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const { urlPathname } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: isMainPage ? \"#tariffs\" : \"/#tariffs\",\n    onClick: () => onClose(false),\n    children: \"Тарифы\"\n  });\n};\n",
-      "start": 1750271785354,
-      "end": 1750271785360,
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: isMainPage ? \"#tariffs\" : \"/#tariffs\", onClick: () => onClose(false), children: \"Тарифы\" });\n};\n",
+      "start": 1750275034398,
+      "end": 1750275034412,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -28,95 +49,95 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx"
         ],
         "sourcesContent": [
-          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = ()=>{\n    const { urlPathname } = usePageContext();\n    const isMainPage = urlPathname === '/';\n    const onClose = useUnit(RootModel.allMenusClosed);\n    return /*#__PURE__*/ _jsx(Link, {\n        href: isMainPage ? '#tariffs' : '/#tariffs',\n        onClick: ()=>onClose(false),\n        children: \"Тарифы\"\n    });\n};\n"
+          "import { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { RootModel } from '@/entities/Root';\nimport { Link } from '../../Link';\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === '/';\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return <Link href={isMainPage ? '#tariffs' : '/#tariffs'} onClick={() => onClose(false)}>\n            Тарифы\n        </Link>;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,iBAAiB;AAC1B,SAAS,YAAY;AACd,aAAM,UAAU,MAAI;AACvB,QAAM,EAAE,YAAY,IAAI,eAAe;AACvC,QAAM,aAAa,gBAAgB;AACnC,QAAM,UAAU,QAAQ,UAAU,cAAc;AAChD,SAAqB,qBAAK,MAAM;AAAA,IAC5B,MAAM,aAAa,aAAa;AAAA,IAChC,SAAS,MAAI,QAAQ,KAAK;AAAA,IAC1B,UAAU;AAAA,EACd,CAAC;AACL;",
+        "mappings": "AAUS;AAVT,SAAS,eAAe;AACxB,SAAS,sBAAsB;AAC/B,SAAS,iBAAiB;AAC1B,SAAS,YAAY;AACd,aAAM,UAAU,MAAM;AAC3B,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,aAAa,gBAAgB;AACnC,QAAM,UAAU,QAAQ,UAAU,cAAc;AAChD,SAAO,oBAAC,QAAK,MAAM,aAAa,aAAa,aAAa,SAAS,MAAM,QAAQ,KAAK,GAAG,oBAEnF;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785360,
-      "end": 1750271785360,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785360,
-      "end": 1750271785361,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785361,
-      "end": 1750271785361,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785361,
-      "end": 1750271785361,
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const { urlPathname } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ _jsx(Link, {\n    href: isMainPage ? \"#tariffs\" : \"/#tariffs\",\n    onClick: () => onClose(false),\n    children: \"Тарифы\"\n  });\n};\n",
-      "start": 1750271785361,
-      "end": 1750271785361,
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { RootModel } from \"@/entities/Root\";\nimport { Link } from \"../../Link\";\nexport const Tariffs = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const isMainPage = urlPathname === \"/\";\n  const onClose = useUnit(RootModel.allMenusClosed);\n  return /* @__PURE__ */ jsx(Link, { href: isMainPage ? \"#tariffs\" : \"/#tariffs\", onClick: () => onClose(false), children: \"Тарифы\" });\n};\n",
+      "start": 1750275034412,
+      "end": 1750275034412,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/RootLayout/ui/Navigation/Tariffs/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtI,CAAC;"
       }
     }
   ]

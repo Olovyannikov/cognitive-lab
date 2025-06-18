@@ -4,99 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".title {\n  margin-bottom: var(--mantine-spacing-md);\n  border-radius: var(--mantine-spacing-2xl);\n  font-size: 20px;\n  text-align: center;\n  background-color: var(--mantine-color-violet-1);\n  padding-block: var(--mantine-spacing-sm);\n  padding-inline: var(--mantine-spacing-md);\n\n  &[data-color=\"violet\"] {\n    background-color: var(--mantine-color-violet-2);\n  }\n\n  &[data-color=\"green\"] {\n    background-color: var(--mantine-color-green-2);\n  }\n\n  &[data-color=\"indigo\"] {\n    background-color: var(--mantine-color-indigo-2);\n  }\n\n  &[data-color=\"yellow\"] {\n    background-color: var(--mantine-color-yellow-2);\n  }\n\n  @mixin larger-than 992px {\n    margin-bottom: 40px;\n    border-radius: 62px;\n    font-size: 48px;\n    line-height: 1;\n    padding-block: var(--mantine-spacing-md);\n  }\n}\n\n.description {\n  margin-bottom: var(--mantine-spacing-md);\n  font-weight: 500;\n  font-size: 18px;\n  line-height: 1;\n  text-align: center;\n\n  @mixin larger-than 992px {\n    margin: 0 auto var(--mantine-spacing-5xl);\n    max-width: 1386px;\n    font-size: 24px;\n  }\n}\n",
-      "start": 1750271785136,
-      "end": 1750271785157,
+      "start": 1750275033950,
+      "end": 1750275033992,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "start": 1750271785157,
-      "end": 1750271785157,
-      "order": "pre"
-    },
-    {
       "name": "vite:esbuild",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785158,
-      "end": 1750271785158,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785159,
-      "end": 1750271785159,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785159,
-      "end": 1750271785159,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785159,
-      "end": 1750271785159,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785159,
-      "end": 1750271785159,
+      "start": 1750275033997,
+      "end": 1750275033997,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Personality/ui/PersonalityCategory/PersonalityCategory.module.css [vike:pluginModuleBanner] */\nexport const title = \"_4dbKh\";\nexport const description = \"VN-V5\";\nexport default {\n\ttitle: title,\n\tdescription: description\n};\n",
-      "start": 1750271785159,
-      "end": 1750271785159,
+      "start": 1750275033997,
+      "end": 1750275033998,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

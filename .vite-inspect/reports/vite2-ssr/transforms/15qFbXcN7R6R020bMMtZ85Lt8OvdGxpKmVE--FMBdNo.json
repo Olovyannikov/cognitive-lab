@@ -4,117 +4,159 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\n\nimport {\n    convertFromUrlId,\n    convertToUrlId,\n    getFreeResultQuery,\n    ReportModel,\n    ReportNavigationTemplate,\n    TYPE_TO_COLOR_MAP,\n} from '@/entities/Report';\n\nexport const FreeReportNavigation = () => {\n    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    const spy = useScrollSpy({\n        selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(', ')})`,\n    });\n\n    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n\n    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n\n    if (!content) return;\n\n    return (\n        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />\n    );\n};\n",
-      "start": 1750271784819,
-      "end": 1750271784838,
+      "start": 1750275033569,
+      "end": 1750275033618,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = ()=>{\n    const [page, onPageChange] = useUnit([\n        ReportModel.$currentContentPage,\n        ReportModel.currentPageChanged\n    ]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: [\n            'title',\n            page\n        ],\n        fn: (content)=>content?.content?.map(({ title })=>title)\n    });\n    const spy = useScrollSpy({\n        selector: `:is(${content?.map((title)=>`#${convertToUrlId(title)}`).join(', ')})`\n    });\n    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n    const mbti = useUnit(getFreeResultQuery.$data.map((el)=>el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n    if (!content) return;\n    return /*#__PURE__*/ _jsx(ReportNavigationTemplate, {\n        activeMenu: activeMenu,\n        color: color,\n        content: content,\n        onPageChange: onPageChange\n    });\n};\n",
-      "start": 1750271784838,
-      "end": 1750271784841,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx\"],\"sourcesContent\":[\"import { useScrollSpy } from '@mantine/hooks';\\nimport { useStoreMap, useUnit } from 'effector-react';\\n\\nimport {\\n    convertFromUrlId,\\n    convertToUrlId,\\n    getFreeResultQuery,\\n    ReportModel,\\n    ReportNavigationTemplate,\\n    TYPE_TO_COLOR_MAP,\\n} from '@/entities/Report';\\n\\nexport const FreeReportNavigation = () => {\\n    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\\n    const content = useStoreMap({\\n        store: getFreeResultQuery.$data,\\n        keys: ['title', page],\\n        fn: (content) => content?.content?.map(({ title }) => title),\\n    });\\n\\n    const spy = useScrollSpy({\\n        selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(', ')})`,\\n    });\\n\\n    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\\n\\n    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\\n\\n    if (!content) return;\\n\\n    return (\\n        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />\\n    );\\n};\\n\"],\"names\":[\"useScrollSpy\",\"useStoreMap\",\"useUnit\",\"convertFromUrlId\",\"convertToUrlId\",\"getFreeResultQuery\",\"ReportModel\",\"ReportNavigationTemplate\",\"TYPE_TO_COLOR_MAP\",\"FreeReportNavigation\",\"page\",\"onPageChange\",\"$currentContentPage\",\"currentPageChanged\",\"content\",\"store\",\"$data\",\"keys\",\"fn\",\"map\",\"title\",\"spy\",\"selector\",\"join\",\"activeMenu\",\"data\",\"active\",\"id\",\"mbti\",\"el\",\"mbti_type\",\"color\"],\"mappings\":\";AAAA,SAASA,YAAY,QAAQ,iBAAiB;AAC9C,SAASC,WAAW,EAAEC,OAAO,QAAQ,iBAAiB;AAEtD,SACIC,gBAAgB,EAChBC,cAAc,EACdC,kBAAkB,EAClBC,WAAW,EACXC,wBAAwB,EACxBC,iBAAiB,QACd,oBAAoB;AAE3B,OAAO,MAAMC,uBAAuB;IAChC,MAAM,CAACC,MAAMC,aAAa,GAAGT,QAAQ;QAACI,YAAYM,mBAAmB;QAAEN,YAAYO,kBAAkB;KAAC;IACtG,MAAMC,UAAUb,YAAY;QACxBc,OAAOV,mBAAmBW,KAAK;QAC/BC,MAAM;YAAC;YAASP;SAAK;QACrBQ,IAAI,CAACJ,UAAYA,SAASA,SAASK,IAAI,CAAC,EAAEC,KAAK,EAAE,GAAKA;IAC1D;IAEA,MAAMC,MAAMrB,aAAa;QACrBsB,UAAU,CAAC,IAAI,EAAER,SAASK,IAAI,CAACC,QAAU,CAAC,CAAC,EAAEhB,eAAegB,QAAQ,EAAEG,KAAK,MAAM,CAAC,CAAC;IACvF;IAEA,MAAMC,aAAarB,iBAAiBkB,IAAII,IAAI,EAAE,CAACJ,IAAIK,MAAM,CAAC,EAAEC,OAAOb,SAAS,CAACJ,KAAK;IAElF,MAAMkB,OAAO1B,QAAQG,mBAAmBW,KAAK,CAACG,GAAG,CAAC,CAACU,KAAOA,IAAIC;IAC9D,MAAMC,QAAQvB,iBAAiB,CAACoB,QAAQ,GAAG;IAE3C,IAAI,CAACd,SAAS;IAEd,qBACI,KAACP;QAAyBiB,YAAYA;QAAYO,OAAOA;QAAOjB,SAASA;QAASH,cAAcA;;AAExG,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map(title => `#${convertToUrlId(title)}`).join(', ')})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map(el => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n  if (!content) return;\n  return <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />;\n};",
+      "start": 1750275033618,
+      "end": 1750275033619,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "useScrollSpy",
+          "useStoreMap",
+          "useUnit",
+          "convertFromUrlId",
+          "convertToUrlId",
+          "getFreeResultQuery",
+          "ReportModel",
+          "ReportNavigationTemplate",
+          "TYPE_TO_COLOR_MAP",
+          "FreeReportNavigation",
+          "page",
+          "onPageChange",
+          "$currentContentPage",
+          "currentPageChanged",
+          "content",
+          "store",
+          "$data",
+          "keys",
+          "fn",
+          "map",
+          "title",
+          "spy",
+          "selector",
+          "join",
+          "activeMenu",
+          "data",
+          "active",
+          "id",
+          "mbti",
+          "el",
+          "mbti_type",
+          "color"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx"],
+        "sourcesContent": [
+          "import { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\n\nimport {\n    convertFromUrlId,\n    convertToUrlId,\n    getFreeResultQuery,\n    ReportModel,\n    ReportNavigationTemplate,\n    TYPE_TO_COLOR_MAP,\n} from '@/entities/Report';\n\nexport const FreeReportNavigation = () => {\n    const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: ['title', page],\n        fn: (content) => content?.content?.map(({ title }) => title),\n    });\n\n    const spy = useScrollSpy({\n        selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(', ')})`,\n    });\n\n    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n\n    const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n\n    if (!content) return;\n\n    return (\n        <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,YAAY,QAAQ,gBAAgB;AAC7C,SAASC,WAAW,EAAEC,OAAO,QAAQ,gBAAgB;AAErD,SACIC,gBAAgB,EAChBC,cAAc,EACdC,kBAAkB,EAClBC,WAAW,EACXC,wBAAwB,EACxBC,iBAAiB,QACd,mBAAmB;AAE1B,OAAO,MAAMC,oBAAoB,GAAGA,CAAA,KAAM;EACtC,MAAM,CAACC,IAAI,EAAEC,YAAY,CAAC,GAAGT,OAAO,CAAC,CAACI,WAAW,CAACM,mBAAmB,EAAEN,WAAW,CAACO,kBAAkB,CAAC,CAAC;EACvG,MAAMC,OAAO,GAAGb,WAAW,CAAC;IACxBc,KAAK,EAAEV,kBAAkB,CAACW,KAAK;IAC/BC,IAAI,EAAE,CAAC,OAAO,EAAEP,IAAI,CAAC;IACrBQ,EAAE,EAAGJ,OAAO,IAAKA,OAAO,EAAEA,OAAO,EAAEK,GAAG,CAAC,CAAC;MAAEC;IAAM,CAAC,KAAKA,KAAK;EAC/D,CAAC,CAAC;EAEF,MAAMC,GAAG,GAAGrB,YAAY,CAAC;IACrBsB,QAAQ,EAAE,OAAOR,OAAO,EAAEK,GAAG,CAAEC,KAAK,IAAK,IAAIhB,cAAc,CAACgB,KAAK,CAAC,EAAE,CAAC,CAACG,IAAI,CAAC,IAAI,CAAC;EACpF,CAAC,CAAC;EAEF,MAAMC,UAAU,GAAGrB,gBAAgB,CAACkB,GAAG,CAACI,IAAI,GAAGJ,GAAG,CAACK,MAAM,CAAC,EAAEC,EAAE,CAAC,IAAIb,OAAO,GAAGJ,IAAI,CAAC;EAElF,MAAMkB,IAAI,GAAG1B,OAAO,CAACG,kBAAkB,CAACW,KAAK,CAACG,GAAG,CAAEU,EAAE,IAAKA,EAAE,EAAEC,SAAS,CAAC,CAAC;EACzE,MAAMC,KAAK,GAAGvB,iBAAiB,CAACoB,IAAI,IAAI,EAAE,CAAC;EAE3C,IAAI,CAACd,OAAO,EAAE;EAEd,OACI,CAAC,wBAAwB,CAAC,UAAU,CAAC,CAACU,UAAU,CAAC,CAAC,KAAK,CAAC,CAACO,KAAK,CAAC,CAAC,OAAO,CAAC,CAACjB,OAAO,CAAC,CAAC,YAAY,CAAC,CAACH,YAAY,CAAC,GAAG;AAExH,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from \"@mantine/hooks\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([\n    ReportModel.$currentContentPage,\n    ReportModel.currentPageChanged\n  ]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\n      \"title\",\n      page\n    ],\n    fn: (content2) => content2?.content?.map(({ title }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(\", \")})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ _jsx(ReportNavigationTemplate, {\n    activeMenu,\n    color,\n    content,\n    onPageChange\n  });\n};\n",
-      "start": 1750271784841,
-      "end": 1750271784872,
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from \"@mantine/hooks\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(\", \")})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, onPageChange });\n};\n",
+      "start": 1750275033619,
+      "end": 1750275033836,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/FreeReportNavigation/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = ()=>{\n    const [page, onPageChange] = useUnit([\n        ReportModel.$currentContentPage,\n        ReportModel.currentPageChanged\n    ]);\n    const content = useStoreMap({\n        store: getFreeResultQuery.$data,\n        keys: [\n            'title',\n            page\n        ],\n        fn: (content)=>content?.content?.map(({ title })=>title)\n    });\n    const spy = useScrollSpy({\n        selector: `:is(${content?.map((title)=>`#${convertToUrlId(title)}`).join(', ')})`\n    });\n    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n    const mbti = useUnit(getFreeResultQuery.$data.map((el)=>el?.mbti_type));\n    const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n    if (!content) return;\n    return /*#__PURE__*/ _jsx(ReportNavigationTemplate, {\n        activeMenu: activeMenu,\n        color: color,\n        content: content,\n        onPageChange: onPageChange\n    });\n};\n"
+          "import { useScrollSpy } from '@mantine/hooks';\nimport { useStoreMap, useUnit } from 'effector-react';\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: ['title', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map(title => `#${convertToUrlId(title)}`).join(', ')})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map(el => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? ''];\n  if (!content) return;\n  return <ReportNavigationTemplate activeMenu={activeMenu} color={color} content={content} onPageChange={onPageChange} />;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,oBAAoB;AAC7B,SAAS,aAAa,eAAe;AACrC,SAAS,kBAAkB,gBAAgB,oBAAoB,aAAa,0BAA0B,yBAAyB;AACxH,aAAM,uBAAuB,MAAI;AACpC,QAAM,CAAC,MAAM,YAAY,IAAI,QAAQ;AAAA,IACjC,YAAY;AAAA,IACZ,YAAY;AAAA,EAChB,CAAC;AACD,QAAM,UAAU,YAAY;AAAA,IACxB,OAAO,mBAAmB;AAAA,IAC1B,MAAM;AAAA,MACF;AAAA,MACA;AAAA,IACJ;AAAA,IACA,IAAI,CAACA,aAAUA,UAAS,SAAS,IAAI,CAAC,EAAE,MAAM,MAAI,KAAK;AAAA,EAC3D,CAAC;AACD,QAAM,MAAM,aAAa;AAAA,IACrB,UAAU,OAAO,SAAS,IAAI,CAAC,UAAQ,IAAI,eAAe,KAAK,CAAC,EAAE,EAAE,KAAK,IAAI,CAAC;AAAA,EAClF,CAAC;AACD,QAAM,aAAa,iBAAiB,IAAI,OAAO,IAAI,MAAM,GAAG,EAAE,KAAK,UAAU,IAAI;AACjF,QAAM,OAAO,QAAQ,mBAAmB,MAAM,IAAI,CAAC,OAAK,IAAI,SAAS,CAAC;AACtE,QAAM,QAAQ,kBAAkB,QAAQ,EAAE;AAC1C,MAAI,CAAC,QAAS;AACd,SAAqB,qBAAK,0BAA0B;AAAA,IAChD;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACJ,CAAC;AACL;",
+        "mappings": "AAmBS;AAnBT,SAAS,oBAAoB;AAC7B,SAAS,aAAa,eAAe;AACrC,SAAS,kBAAkB,gBAAgB,oBAAoB,aAAa,0BAA0B,yBAAyB;AACxH,aAAM,uBAAuB,MAAM;AACxC,QAAM,CAAC,MAAM,YAAY,IAAI,QAAQ,CAAC,YAAY,qBAAqB,YAAY,kBAAkB,CAAC;AACtG,QAAM,UAAU,YAAY;AAAA,IAC1B,OAAO,mBAAmB;AAAA,IAC1B,MAAM,CAAC,SAAS,IAAI;AAAA,IACpB,IAAI,CAAAA,aAAWA,UAAS,SAAS,IAAI,CAAC;AAAA,MACpC;AAAA,IACF,MAAM,KAAK;AAAA,EACb,CAAC;AACD,QAAM,MAAM,aAAa;AAAA,IACvB,UAAU,OAAO,SAAS,IAAI,WAAS,IAAI,eAAe,KAAK,CAAC,EAAE,EAAE,KAAK,IAAI,CAAC;AAAA,EAChF,CAAC;AACD,QAAM,aAAa,iBAAiB,IAAI,OAAO,IAAI,MAAM,GAAG,EAAE,KAAK,UAAU,IAAI;AACjF,QAAM,OAAO,QAAQ,mBAAmB,MAAM,IAAI,QAAM,IAAI,SAAS,CAAC;AACtE,QAAM,QAAQ,kBAAkB,QAAQ,EAAE;AAC1C,MAAI,CAAC,QAAS;AACd,SAAO,oBAAC,4BAAyB,YAAwB,OAAc,SAAkB,cAA4B;AACvH;",
         "names": ["content"]
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033836,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033836,
+      "end": 1750275033837,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033837,
+      "end": 1750275033837,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "start": 1750275033837,
+      "end": 1750275033837,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/widgets/FreeReportNavigation/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from \"@mantine/hooks\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([\n    ReportModel.$currentContentPage,\n    ReportModel.currentPageChanged\n  ]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\n      \"title\",\n      page\n    ],\n    fn: (content2) => content2?.content?.map(({ title }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(\", \")})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ _jsx(ReportNavigationTemplate, {\n    activeMenu,\n    color,\n    content,\n    onPageChange\n  });\n};\n",
-      "start": 1750271784872,
-      "end": 1750271784872,
+      "result": "/*! src/widgets/FreeReportNavigation/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useScrollSpy } from \"@mantine/hooks\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { convertFromUrlId, convertToUrlId, getFreeResultQuery, ReportModel, ReportNavigationTemplate, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nexport const FreeReportNavigation = () => {\n  const [page, onPageChange] = useUnit([ReportModel.$currentContentPage, ReportModel.currentPageChanged]);\n  const content = useStoreMap({\n    store: getFreeResultQuery.$data,\n    keys: [\"title\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => title)\n  });\n  const spy = useScrollSpy({\n    selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(\", \")})`\n  });\n  const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];\n  const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));\n  const color = TYPE_TO_COLOR_MAP[mbti ?? \"\"];\n  if (!content) return;\n  return /* @__PURE__ */ jsx(ReportNavigationTemplate, { activeMenu, color, content, onPageChange });\n};\n",
+      "start": 1750275033837,
+      "end": 1750275033837,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/FreeReportNavigation/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpG,CAAC;"
       }
     }
   ]

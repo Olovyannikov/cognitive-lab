@@ -1,4 +1,4 @@
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 import vike from 'vike/plugin';
 import { defineConfig } from 'vite';
@@ -18,18 +18,10 @@ export default defineConfig(({ mode }) => {
             }),
             vike(),
             react({
-                plugins: [
-                    [
-                        '@effector/swc-plugin',
-                        {
-                            factories: ['./src/shared/factories', '@/shared/factories'],
-                            debugSids: isDev,
-                            addNames: isDev,
-                            addLoc: isDev,
-                            hmr: isDev ? 'es' : 'none',
-                        },
-                    ],
-                ],
+                babel: {
+                    plugins: ['effector/babel-plugin'],
+                    babelrc: true,
+                },
             }),
             svgr(),
             vercel(),

@@ -4,117 +4,139 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getFAQQuery } from '@/entities/FAQ';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh,\n});\n",
-      "start": 1750271784661,
-      "end": 1750271784680,
+      "start": 1750275033314,
+      "end": 1750275033353,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: noop,\n            target: getFAQQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"7km9xio0\"\n    }\n});\n",
-      "start": 1750271784680,
-      "end": 1750271784685,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/faq/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { noop } from '@/shared/lib';\\nimport { createPageInit } from '@/shared/lib/effector';\\n\\nimport { getFAQQuery } from '@/entities/FAQ';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: noop,\\n    target: getFAQQuery.refresh,\\n});\\n\"],\"names\":[\"sample\",\"noop\",\"createPageInit\",\"getFAQQuery\",\"pageInitiated\",\"clock\",\"fn\",\"target\",\"refresh\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,IAAI,QAAQ,eAAe;AACpC,SAASC,cAAc,QAAQ,wBAAwB;AAEvD,SAASC,WAAW,QAAQ,iBAAiB;AAE7C,OAAO,MAAMC,gBAAgBF,iBAAiB;AAE9CF;;QAAO;YACHK,OAAOD;YACPE,IAAIL;YACJM,QAAQJ,YAAYK,OAAO;QAC/B\"}"
+      "name": "vite:react-babel",
+      "result": "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});",
+      "start": 1750275033353,
+      "end": 1750275033354,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "sample",
+          "noop",
+          "createPageInit",
+          "getFAQQuery",
+          "pageInitiated",
+          "and",
+          "clock",
+          "fn",
+          "target",
+          "refresh",
+          "or",
+          "sid"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/faq/+pageInitiated.ts"],
+        "sourcesContent": [
+          "import { sample } from 'effector';\n\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\n\nimport { getFAQQuery } from '@/entities/FAQ';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh,\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,QAAQ,UAAU;AAEjC,SAASC,IAAI,QAAQ,cAAc;AACnC,SAASC,cAAc,QAAQ,uBAAuB;AAEtD,SAASC,WAAW,QAAQ,gBAAgB;AAE5C,OAAO,MAAMC,aAAa,GAAGF,cAAc,CAAC,CAAC;AAE7CF,MAAM;EAAAK,GAAA,GAAC;IACHC,KAAK,EAAEF,aAAa;IACpBG,EAAE,EAAEN,IAAI;IACRO,MAAM,EAAEL,WAAW,CAACM;EACxB,CAAC;EAAAC,EAAA;IAAAC,GAAA;EAAA;AAAA,EAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: noop,\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"7km9xio0\"\n  }\n});\n",
-      "start": 1750271784685,
-      "end": 1750271784736,
+      "result": "import { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});\n",
+      "start": 1750275033354,
+      "end": 1750275033397,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/faq/+pageInitiated.ts"],
         "sourcesContent": [
-          "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: noop,\n            target: getFAQQuery.refresh\n        }\n    ],\n    or: {\n        sid: \"7km9xio0\"\n    }\n});\n"
+          "import { sample } from 'effector';\nimport { noop } from '@/shared/lib';\nimport { createPageInit } from '@/shared/lib/effector';\nimport { getFAQQuery } from '@/entities/FAQ';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});"
         ],
-        "mappings": "AAAA,SAAS,cAAc;AACvB,SAAS,YAAY;AACrB,SAAS,sBAAsB;AAC/B,SAAS,mBAAmB;AACrB,aAAM,gBAAgB,eAAe;AAC5C,OAAO;AAAA,EACH,KAAK;AAAA,IACD;AAAA,MACI,OAAO;AAAA,MACP,IAAI;AAAA,MACJ,QAAQ,YAAY;AAAA,IACxB;AAAA,EACJ;AAAA,EACA,IAAI;AAAA,IACA,KAAK;AAAA,EACT;AACJ,CAAC;",
+        "mappings": "AAAA,SAAS,cAAc;AACvB,SAAS,YAAY;AACrB,SAAS,sBAAsB;AAC/B,SAAS,mBAAmB;AACrB,aAAM,gBAAgB,eAAe;AAC5C,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO;AAAA,IACP,IAAI;AAAA,IACJ,QAAQ,YAAY;AAAA,EACtB,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! pages/faq/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: noop,\n      target: getFAQQuery.refresh\n    }\n  ],\n  or: {\n    sid: \"7km9xio0\"\n  }\n});\n",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "result": "/*! pages/faq/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { noop } from \"@/shared/lib\";\nimport { createPageInit } from \"@/shared/lib/effector\";\nimport { getFAQQuery } from \"@/entities/FAQ\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: noop,\n    target: getFAQQuery.refresh\n  }],\n  or: {\n    sid: \"-pra530\"\n  }\n});\n",
+      "start": 1750275033397,
+      "end": 1750275033398,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["pages/faq/+pageInitiated.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC;AACF,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC,CAAC;"
       }
     }
   ]

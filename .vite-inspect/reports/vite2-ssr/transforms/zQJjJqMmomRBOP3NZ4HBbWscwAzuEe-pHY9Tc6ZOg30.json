@@ -4,117 +4,149 @@
     {
       "name": "vite:load-fallback",
       "result": "import { memo, PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\n\nimport { InnerContainer, Picture } from '@/shared/ui';\n\nimport s from './InnerLayout.module.css';\n\ninterface InnerLayoutProps {\n    image?: string;\n    text?: ReactNode;\n    title?: ReactNode;\n    navigateTo?: string;\n    className?: string;\n    maw?: number;\n}\n\nexport const InnerLayout = memo(\n    ({ text, title, image, children, className, maw = 538 }: PropsWithChildren<InnerLayoutProps>) => (\n        <Box component='section' className={className}>\n            <Container pb={80}>\n                <InnerContainer className={s.wrapper}>\n                    {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}\n                    <Stack w='100%' maw={maw} mx='auto'>\n                        <Title order={2} className={s.title} hidden={!title}>\n                            {title}\n                        </Title>\n                        <Text className={s.text} hidden={!text}>\n                            {text}\n                        </Text>\n                        {children}\n                    </Stack>\n                </InnerContainer>\n            </Container>\n        </Box>\n    )\n);\n\nInnerLayout.displayName = 'InnerLayout';\n",
-      "start": 1750271784813,
-      "end": 1750271784830,
+      "start": 1750275033515,
+      "end": 1750275033567,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\nexport const InnerLayout = /*#__PURE__*/ memo(({ text, title, image, children, className, maw = 538 })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        className: className,\n        children: /*#__PURE__*/ _jsx(Container, {\n            pb: 80,\n            children: /*#__PURE__*/ _jsxs(InnerContainer, {\n                className: s.wrapper,\n                children: [\n                    image && /*#__PURE__*/ _jsx(Picture, {\n                        cdn: true,\n                        src: image,\n                        w: 140,\n                        h: 140,\n                        flex: \"auto\"\n                    }),\n                    /*#__PURE__*/ _jsxs(Stack, {\n                        w: \"100%\",\n                        maw: maw,\n                        mx: \"auto\",\n                        children: [\n                            /*#__PURE__*/ _jsx(Title, {\n                                order: 2,\n                                className: s.title,\n                                hidden: !title,\n                                children: title\n                            }),\n                            /*#__PURE__*/ _jsx(Text, {\n                                className: s.text,\n                                hidden: !text,\n                                children: text\n                            }),\n                            children\n                        ]\n                    })\n                ]\n            })\n        })\n    }));\nInnerLayout.displayName = 'InnerLayout';\n",
-      "start": 1750271784830,
-      "end": 1750271784833,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx\"],\"sourcesContent\":[\"import { memo, PropsWithChildren, ReactNode } from 'react';\\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\\n\\nimport { InnerContainer, Picture } from '@/shared/ui';\\n\\nimport s from './InnerLayout.module.css';\\n\\ninterface InnerLayoutProps {\\n    image?: string;\\n    text?: ReactNode;\\n    title?: ReactNode;\\n    navigateTo?: string;\\n    className?: string;\\n    maw?: number;\\n}\\n\\nexport const InnerLayout = memo(\\n    ({ text, title, image, children, className, maw = 538 }: PropsWithChildren<InnerLayoutProps>) => (\\n        <Box component='section' className={className}>\\n            <Container pb={80}>\\n                <InnerContainer className={s.wrapper}>\\n                    {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}\\n                    <Stack w='100%' maw={maw} mx='auto'>\\n                        <Title order={2} className={s.title} hidden={!title}>\\n                            {title}\\n                        </Title>\\n                        <Text className={s.text} hidden={!text}>\\n                            {text}\\n                        </Text>\\n                        {children}\\n                    </Stack>\\n                </InnerContainer>\\n            </Container>\\n        </Box>\\n    )\\n);\\n\\nInnerLayout.displayName = 'InnerLayout';\\n\"],\"names\":[\"memo\",\"Box\",\"Container\",\"Stack\",\"Text\",\"Title\",\"InnerContainer\",\"Picture\",\"s\",\"InnerLayout\",\"text\",\"title\",\"image\",\"children\",\"className\",\"maw\",\"component\",\"pb\",\"wrapper\",\"cdn\",\"src\",\"w\",\"h\",\"flex\",\"mx\",\"order\",\"hidden\",\"displayName\"],\"mappings\":\";AAAA,SAASA,IAAI,QAAsC,QAAQ;AAC3D,SAASC,GAAG,EAAEC,SAAS,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAEnE,SAASC,cAAc,EAAEC,OAAO,QAAQ,cAAc;AAEtD,OAAOC,OAAO,2BAA2B;AAWzC,OAAO,MAAMC,4BAAcT,KACvB,CAAC,EAAEU,IAAI,EAAEC,KAAK,EAAEC,KAAK,EAAEC,QAAQ,EAAEC,SAAS,EAAEC,MAAM,GAAG,EAAuC,iBACxF,KAACd;QAAIe,WAAU;QAAUF,WAAWA;kBAChC,cAAA,KAACZ;YAAUe,IAAI;sBACX,cAAA,MAACX;gBAAeQ,WAAWN,EAAEU,OAAO;;oBAC/BN,uBAAS,KAACL;wBAAQY,GAAG;wBAACC,KAAKR;wBAAOS,GAAG;wBAAKC,GAAG;wBAAKC,MAAK;;kCACxD,MAACpB;wBAAMkB,GAAE;wBAAON,KAAKA;wBAAKS,IAAG;;0CACzB,KAACnB;gCAAMoB,OAAO;gCAAGX,WAAWN,EAAEG,KAAK;gCAAEe,QAAQ,CAACf;0CACzCA;;0CAEL,KAACP;gCAAKU,WAAWN,EAAEE,IAAI;gCAAEgB,QAAQ,CAAChB;0CAC7BA;;4BAEJG;;;;;;QAMvB;AAEFJ,YAAYkB,WAAW,GAAG\"}"
+      "name": "vite:react-babel",
+      "result": "import { memo, PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\ninterface InnerLayoutProps {\n  image?: string;\n  text?: ReactNode;\n  title?: ReactNode;\n  navigateTo?: string;\n  className?: string;\n  maw?: number;\n}\nexport const InnerLayout = memo(({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}: PropsWithChildren<InnerLayoutProps>) => <Box component='section' className={className}>\n            <Container pb={80}>\n                <InnerContainer className={s.wrapper}>\n                    {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}\n                    <Stack w='100%' maw={maw} mx='auto'>\n                        <Title order={2} className={s.title} hidden={!title}>\n                            {title}\n                        </Title>\n                        <Text className={s.text} hidden={!text}>\n                            {text}\n                        </Text>\n                        {children}\n                    </Stack>\n                </InnerContainer>\n            </Container>\n        </Box>);\nInnerLayout.displayName = 'InnerLayout';",
+      "start": 1750275033567,
+      "end": 1750275033569,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "memo",
+          "PropsWithChildren",
+          "ReactNode",
+          "Box",
+          "Container",
+          "Stack",
+          "Text",
+          "Title",
+          "InnerContainer",
+          "Picture",
+          "s",
+          "InnerLayoutProps",
+          "image",
+          "text",
+          "title",
+          "navigateTo",
+          "className",
+          "maw",
+          "InnerLayout",
+          "children",
+          "wrapper",
+          "displayName"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"],
+        "sourcesContent": [
+          "import { memo, PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\n\nimport { InnerContainer, Picture } from '@/shared/ui';\n\nimport s from './InnerLayout.module.css';\n\ninterface InnerLayoutProps {\n    image?: string;\n    text?: ReactNode;\n    title?: ReactNode;\n    navigateTo?: string;\n    className?: string;\n    maw?: number;\n}\n\nexport const InnerLayout = memo(\n    ({ text, title, image, children, className, maw = 538 }: PropsWithChildren<InnerLayoutProps>) => (\n        <Box component='section' className={className}>\n            <Container pb={80}>\n                <InnerContainer className={s.wrapper}>\n                    {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}\n                    <Stack w='100%' maw={maw} mx='auto'>\n                        <Title order={2} className={s.title} hidden={!title}>\n                            {title}\n                        </Title>\n                        <Text className={s.text} hidden={!text}>\n                            {text}\n                        </Text>\n                        {children}\n                    </Stack>\n                </InnerContainer>\n            </Container>\n        </Box>\n    )\n);\n\nInnerLayout.displayName = 'InnerLayout';\n"
+        ],
+        "mappings": "AAAA,SAASA,IAAI,EAAEC,iBAAiB,EAAEC,SAAS,QAAQ,OAAO;AAC1D,SAASC,GAAG,EAAEC,SAAS,EAAEC,KAAK,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAElE,SAASC,cAAc,EAAEC,OAAO,QAAQ,aAAa;AAErD,OAAOC,CAAC,MAAM,0BAA0B;AAExC,UAAUC,gBAAgB,CAAC;EACvBC,KAAK,CAAC,EAAE,MAAM;EACdC,IAAI,CAAC,EAAEX,SAAS;EAChBY,KAAK,CAAC,EAAEZ,SAAS;EACjBa,UAAU,CAAC,EAAE,MAAM;EACnBC,SAAS,CAAC,EAAE,MAAM;EAClBC,GAAG,CAAC,EAAE,MAAM;AAChB;AAEA,OAAO,MAAMC,WAAW,GAAGlB,IAAI,CAC3B,CAAC;EAAEa,IAAI;EAAEC,KAAK;EAAEF,KAAK;EAAEO,QAAQ;EAAEH,SAAS;EAAEC,GAAG,GAAG;AAAyC,CAApC,EAAEhB,iBAAiB,CAACU,gBAAgB,CAAC,KACxF,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS,CAAC,SAAS,CAAC,CAACK,SAAS,CAAC;AACtD,YAAY,CAAC,SAAS,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC;AAC9B,gBAAgB,CAAC,cAAc,CAAC,SAAS,CAAC,CAACN,CAAC,CAACU,OAAO,CAAC;AACrD,oBAAoB,CAACR,KAAK,IAAI,CAAC,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAACA,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,MAAM,GAAG;AACrF,oBAAoB,CAAC,KAAK,CAAC,CAAC,CAAC,MAAM,CAAC,GAAG,CAAC,CAACK,GAAG,CAAC,CAAC,EAAE,CAAC,MAAM;AACvD,wBAAwB,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAACP,CAAC,CAACI,KAAK,CAAC,CAAC,MAAM,CAAC,CAAC,CAACA,KAAK,CAAC;AAC5E,4BAA4B,CAACA,KAAK;AAClC,wBAAwB,EAAE,KAAK;AAC/B,wBAAwB,CAAC,IAAI,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACG,IAAI,CAAC,CAAC,MAAM,CAAC,CAAC,CAACA,IAAI,CAAC;AAC/D,4BAA4B,CAACA,IAAI;AACjC,wBAAwB,EAAE,IAAI;AAC9B,wBAAwB,CAACM,QAAQ;AACjC,oBAAoB,EAAE,KAAK;AAC3B,gBAAgB,EAAE,cAAc;AAChC,YAAY,EAAE,SAAS;AACvB,QAAQ,EAAE,GAAG,CAEb,CAAC;AAEDD,WAAW,CAACG,WAAW,GAAG,aAAa",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = /* @__PURE__ */ memo(({ text, title, image, children, className, maw = 538 }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  className,\n  children: /* @__PURE__ */ _jsx(Container, {\n    pb: 80,\n    children: /* @__PURE__ */ _jsxs(InnerContainer, {\n      className: s.wrapper,\n      children: [\n        image && /* @__PURE__ */ _jsx(Picture, {\n          cdn: true,\n          src: image,\n          w: 140,\n          h: 140,\n          flex: \"auto\"\n        }),\n        /* @__PURE__ */ _jsxs(Stack, {\n          w: \"100%\",\n          maw,\n          mx: \"auto\",\n          children: [\n            /* @__PURE__ */ _jsx(Title, {\n              order: 2,\n              className: s.title,\n              hidden: !title,\n              children: title\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.text,\n              hidden: !text,\n              children: text\n            }),\n            children\n          ]\n        })\n      ]\n    })\n  })\n}));\nInnerLayout.displayName = \"InnerLayout\";\n",
-      "start": 1750271784833,
-      "end": 1750271784857,
+      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = memo(({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", className, children: /* @__PURE__ */ jsx(Container, { pb: 80, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.wrapper, children: [\n  image && /* @__PURE__ */ jsx(Picture, { cdn: true, src: image, w: 140, h: 140, flex: \"auto\" }),\n  /* @__PURE__ */ jsxs(Stack, { w: \"100%\", maw, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, hidden: !title, children: title }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, hidden: !text, children: text }),\n    children\n  ] })\n] }) }) }));\nInnerLayout.displayName = \"InnerLayout\";\n",
+      "start": 1750275033569,
+      "end": 1750275033663,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/InnerLayout/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\nexport const InnerLayout = /*#__PURE__*/ memo(({ text, title, image, children, className, maw = 538 })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        className: className,\n        children: /*#__PURE__*/ _jsx(Container, {\n            pb: 80,\n            children: /*#__PURE__*/ _jsxs(InnerContainer, {\n                className: s.wrapper,\n                children: [\n                    image && /*#__PURE__*/ _jsx(Picture, {\n                        cdn: true,\n                        src: image,\n                        w: 140,\n                        h: 140,\n                        flex: \"auto\"\n                    }),\n                    /*#__PURE__*/ _jsxs(Stack, {\n                        w: \"100%\",\n                        maw: maw,\n                        mx: \"auto\",\n                        children: [\n                            /*#__PURE__*/ _jsx(Title, {\n                                order: 2,\n                                className: s.title,\n                                hidden: !title,\n                                children: title\n                            }),\n                            /*#__PURE__*/ _jsx(Text, {\n                                className: s.text,\n                                hidden: !text,\n                                children: text\n                            }),\n                            children\n                        ]\n                    })\n                ]\n            })\n        })\n    }));\nInnerLayout.displayName = 'InnerLayout';\n"
+          "import { memo, PropsWithChildren, ReactNode } from 'react';\nimport { Box, Container, Stack, Text, Title } from '@mantine/core';\nimport { InnerContainer, Picture } from '@/shared/ui';\nimport s from './InnerLayout.module.css';\ninterface InnerLayoutProps {\n  image?: string;\n  text?: ReactNode;\n  title?: ReactNode;\n  navigateTo?: string;\n  className?: string;\n  maw?: number;\n}\nexport const InnerLayout = memo(({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}: PropsWithChildren<InnerLayoutProps>) => <Box component='section' className={className}>\n            <Container pb={80}>\n                <InnerContainer className={s.wrapper}>\n                    {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}\n                    <Stack w='100%' maw={maw} mx='auto'>\n                        <Title order={2} className={s.title} hidden={!title}>\n                            {title}\n                        </Title>\n                        <Text className={s.text} hidden={!text}>\n                            {text}\n                        </Text>\n                        {children}\n                    </Stack>\n                </InnerContainer>\n            </Container>\n        </Box>);\nInnerLayout.displayName = 'InnerLayout';"
         ],
-        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,YAAY;AACrB,SAAS,KAAK,WAAW,OAAO,MAAM,aAAa;AACnD,SAAS,gBAAgB,eAAe;AACxC,OAAO,OAAO;AACP,aAAM,cAA4B,qBAAK,CAAC,EAAE,MAAM,OAAO,OAAO,UAAU,WAAW,MAAM,IAAI,MAAkB,qBAAK,KAAK;AAAA,EACxH,WAAW;AAAA,EACX;AAAA,EACA,UAAwB,qBAAK,WAAW;AAAA,IACpC,IAAI;AAAA,IACJ,UAAwB,sBAAM,gBAAgB;AAAA,MAC1C,WAAW,EAAE;AAAA,MACb,UAAU;AAAA,QACN,SAAuB,qBAAK,SAAS;AAAA,UACjC,KAAK;AAAA,UACL,KAAK;AAAA,UACL,GAAG;AAAA,UACH,GAAG;AAAA,UACH,MAAM;AAAA,QACV,CAAC;AAAA,QACa,sBAAM,OAAO;AAAA,UACvB,GAAG;AAAA,UACH;AAAA,UACA,IAAI;AAAA,UACJ,UAAU;AAAA,YACQ,qBAAK,OAAO;AAAA,cACtB,OAAO;AAAA,cACP,WAAW,EAAE;AAAA,cACb,QAAQ,CAAC;AAAA,cACT,UAAU;AAAA,YACd,CAAC;AAAA,YACa,qBAAK,MAAM;AAAA,cACrB,WAAW,EAAE;AAAA,cACb,QAAQ,CAAC;AAAA,cACT,UAAU;AAAA,YACd,CAAC;AAAA,YACD;AAAA,UACJ;AAAA,QACJ,CAAC;AAAA,MACL;AAAA,IACJ,CAAC;AAAA,EACL,CAAC;AACL,CAAC,CAAC;AACN,YAAY,cAAc;",
+        "mappings": "AAsB8B,cACV,YADU;AAtB9B,SAAS,YAA0C;AACnD,SAAS,KAAK,WAAW,OAAO,MAAM,aAAa;AACnD,SAAS,gBAAgB,eAAe;AACxC,OAAO,OAAO;AASP,aAAM,cAAc,KAAK,CAAC;AAAA,EAC/B;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA,MAAM;AACR,MAA2C,oBAAC,OAAI,WAAU,WAAU,WACxD,8BAAC,aAAU,IAAI,IACX,+BAAC,kBAAe,WAAW,EAAE,SACxB;AAAA,WAAS,oBAAC,WAAQ,KAAG,MAAC,KAAK,OAAO,GAAG,KAAK,GAAG,KAAK,MAAK,QAAO;AAAA,EAC/D,qBAAC,SAAM,GAAE,QAAO,KAAU,IAAG,QACzB;AAAA,wBAAC,SAAM,OAAO,GAAG,WAAW,EAAE,OAAO,QAAQ,CAAC,OACzC,iBACL;AAAA,IACA,oBAAC,QAAK,WAAW,EAAE,MAAM,QAAQ,CAAC,MAC7B,gBACL;AAAA,IACC;AAAA,KACL;AAAA,GACJ,GACJ,GACJ,CAAM;AACd,YAAY,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "start": 1750275033663,
+      "end": 1750275033663,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/widgets/InnerLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = /* @__PURE__ */ memo(({ text, title, image, children, className, maw = 538 }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  className,\n  children: /* @__PURE__ */ _jsx(Container, {\n    pb: 80,\n    children: /* @__PURE__ */ _jsxs(InnerContainer, {\n      className: s.wrapper,\n      children: [\n        image && /* @__PURE__ */ _jsx(Picture, {\n          cdn: true,\n          src: image,\n          w: 140,\n          h: 140,\n          flex: \"auto\"\n        }),\n        /* @__PURE__ */ _jsxs(Stack, {\n          w: \"100%\",\n          maw,\n          mx: \"auto\",\n          children: [\n            /* @__PURE__ */ _jsx(Title, {\n              order: 2,\n              className: s.title,\n              hidden: !title,\n              children: title\n            }),\n            /* @__PURE__ */ _jsx(Text, {\n              className: s.text,\n              hidden: !text,\n              children: text\n            }),\n            children\n          ]\n        })\n      ]\n    })\n  })\n}));\nInnerLayout.displayName = \"InnerLayout\";\n",
-      "start": 1750271784857,
-      "end": 1750271784857,
+      "result": "/*! src/widgets/InnerLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { memo } from \"react\";\nimport { Box, Container, Stack, Text, Title } from \"@mantine/core\";\nimport { InnerContainer, Picture } from \"@/shared/ui\";\nimport s from \"./InnerLayout.module.css\";\nexport const InnerLayout = memo(({\n  text,\n  title,\n  image,\n  children,\n  className,\n  maw = 538\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", className, children: /* @__PURE__ */ jsx(Container, { pb: 80, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.wrapper, children: [\n  image && /* @__PURE__ */ jsx(Picture, { cdn: true, src: image, w: 140, h: 140, flex: \"auto\" }),\n  /* @__PURE__ */ jsxs(Stack, { w: \"100%\", maw, mx: \"auto\", children: [\n    /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, hidden: !title, children: title }),\n    /* @__PURE__ */ jsx(Text, { className: s.text, hidden: !text, children: text }),\n    children\n  ] })\n] }) }) }));\nInnerLayout.displayName = \"InnerLayout\";\n",
+      "start": 1750275033664,
+      "end": 1750275033664,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/InnerLayout/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAA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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

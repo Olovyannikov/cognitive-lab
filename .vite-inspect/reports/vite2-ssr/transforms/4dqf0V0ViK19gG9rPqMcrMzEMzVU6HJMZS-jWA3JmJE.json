@@ -4,111 +4,139 @@
     {
       "name": "vite:load-fallback",
       "result": "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet',\n};\n",
-      "start": 1750271784943,
-      "end": 1750271784963,
+      "start": 1750275033713,
+      "end": 1750275033775,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "export const TYPE_TO_COLOR_MAP = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet'\n};\n",
-      "start": 1750271784963,
-      "end": 1750271784971,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts\"],\"sourcesContent\":[\"export const TYPE_TO_COLOR_MAP: Record<string, string> = {\\n    ISTJ: 'indigo',\\n    ISFJ: 'indigo',\\n    ESTJ: 'indigo',\\n    ESFJ: 'indigo',\\n\\n    ISTP: 'yellow',\\n    ISFP: 'yellow',\\n    ESTP: 'yellow',\\n    ESFP: 'yellow',\\n\\n    INFJ: 'green',\\n    INFP: 'green',\\n    ENFJ: 'green',\\n    ENFP: 'green',\\n\\n    INTJ: 'violet',\\n    INTP: 'violet',\\n    ENTJ: 'violet',\\n    ENTP: 'violet',\\n};\\n\"],\"names\":[\"TYPE_TO_COLOR_MAP\",\"ISTJ\",\"ISFJ\",\"ESTJ\",\"ESFJ\",\"ISTP\",\"ISFP\",\"ESTP\",\"ESFP\",\"INFJ\",\"INFP\",\"ENFJ\",\"ENFP\",\"INTJ\",\"INTP\",\"ENTJ\",\"ENTP\"],\"mappings\":\"AAAA,OAAO,MAAMA,oBAA4C;IACrDC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;IAENC,MAAM;IACNC,MAAM;IACNC,MAAM;IACNC,MAAM;AACV,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n  ISTJ: 'indigo',\n  ISFJ: 'indigo',\n  ESTJ: 'indigo',\n  ESFJ: 'indigo',\n  ISTP: 'yellow',\n  ISFP: 'yellow',\n  ESTP: 'yellow',\n  ESFP: 'yellow',\n  INFJ: 'green',\n  INFP: 'green',\n  ENFJ: 'green',\n  ENFP: 'green',\n  INTJ: 'violet',\n  INTP: 'violet',\n  ENTJ: 'violet',\n  ENTP: 'violet'\n};",
+      "start": 1750275033775,
+      "end": 1750275033777,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "TYPE_TO_COLOR_MAP",
+          "Record",
+          "ISTJ",
+          "ISFJ",
+          "ESTJ",
+          "ESFJ",
+          "ISTP",
+          "ISFP",
+          "ESTP",
+          "ESFP",
+          "INFJ",
+          "INFP",
+          "ENFJ",
+          "ENFP",
+          "INTJ",
+          "INTP",
+          "ENTJ",
+          "ENTP"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts"],
+        "sourcesContent": [
+          "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet',\n};\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,iBAAiB,EAAEC,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,GAAG;EACrDC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EAEdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EAEdC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EACbC,IAAI,EAAE,OAAO;EAEbC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE,QAAQ;EACdC,IAAI,EAAE;AACV,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
       "result": "export const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
-      "start": 1750271784971,
-      "end": 1750271785096,
+      "start": 1750275033777,
+      "end": 1750275034008,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/typeToColorMap.ts"],
         "sourcesContent": [
-          "export const TYPE_TO_COLOR_MAP = {\n    ISTJ: 'indigo',\n    ISFJ: 'indigo',\n    ESTJ: 'indigo',\n    ESFJ: 'indigo',\n    ISTP: 'yellow',\n    ISFP: 'yellow',\n    ESTP: 'yellow',\n    ESFP: 'yellow',\n    INFJ: 'green',\n    INFP: 'green',\n    ENFJ: 'green',\n    ENFP: 'green',\n    INTJ: 'violet',\n    INTP: 'violet',\n    ENTJ: 'violet',\n    ENTP: 'violet'\n};\n"
+          "export const TYPE_TO_COLOR_MAP: Record<string, string> = {\n  ISTJ: 'indigo',\n  ISFJ: 'indigo',\n  ESTJ: 'indigo',\n  ESFJ: 'indigo',\n  ISTP: 'yellow',\n  ISFP: 'yellow',\n  ESTP: 'yellow',\n  ESFP: 'yellow',\n  INFJ: 'green',\n  INFP: 'green',\n  ENFJ: 'green',\n  ENFP: 'green',\n  INTJ: 'violet',\n  INTP: 'violet',\n  ENTJ: 'violet',\n  ENTP: 'violet'\n};"
         ],
-        "mappings": "AAAO,aAAM,oBAAoB;AAAA,EAC7B,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AACV;",
+        "mappings": "AAAO,aAAM,oBAA4C;AAAA,EACvD,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AAAA,EACN,MAAM;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785096,
-      "end": 1750271785096,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785096,
-      "end": 1750271785096,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785096,
-      "end": 1750271785096,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034008,
+      "end": 1750275034008,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/typeToColorMap.ts [vike:pluginModuleBanner] */\nexport const TYPE_TO_COLOR_MAP = {\n  ISTJ: \"indigo\",\n  ISFJ: \"indigo\",\n  ESTJ: \"indigo\",\n  ESFJ: \"indigo\",\n  ISTP: \"yellow\",\n  ISFP: \"yellow\",\n  ESTP: \"yellow\",\n  ESFP: \"yellow\",\n  INFJ: \"green\",\n  INFP: \"green\",\n  ENFJ: \"green\",\n  ENFP: \"green\",\n  INTJ: \"violet\",\n  INTP: \"violet\",\n  ENTJ: \"violet\",\n  ENTP: \"violet\"\n};\n",
-      "start": 1750271785097,
-      "end": 1750271785097,
+      "start": 1750275034009,
+      "end": 1750275034009,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

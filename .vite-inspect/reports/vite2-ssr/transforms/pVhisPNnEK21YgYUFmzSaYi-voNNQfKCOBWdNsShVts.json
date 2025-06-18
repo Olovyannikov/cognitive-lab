@@ -4,117 +4,149 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile, urlParsed: { search } }) => {\n        let page = 1;\n        let page_size = isMobile ? 5 : 10;\n\n        if (search.page_size) page_size = Number(search.page_size);\n        if (search.page) page = Number(search.page);\n\n        return {\n            page,\n            page_size,\n        };\n    },\n    target: getBlogPostsQuery.start,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile }) => (isMobile ? 5 : 10),\n    target: BlogModel.$pageSize,\n});\n\nsample({\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx,\n});\n",
-      "start": 1750271784657,
-      "end": 1750271784684,
+      "start": 1750275033312,
+      "end": 1750275033346,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ({ isMobile, urlParsed: { search } })=>{\n                let page = 1;\n                let page_size = isMobile ? 5 : 10;\n                if (search.page_size) page_size = Number(search.page_size);\n                if (search.page) page = Number(search.page);\n                return {\n                    page,\n                    page_size\n                };\n            },\n            target: getBlogPostsQuery.start\n        }\n    ],\n    or: {\n        sid: \"ccsgthep\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ({ isMobile })=>isMobile ? 5 : 10,\n            target: BlogModel.$pageSize\n        }\n    ],\n    or: {\n        sid: \"atibpv1z\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: getBlogPostsQuery.finished.failure,\n            target: BlogModel.redirectToMainBlogPostPageFx\n        }\n    ],\n    or: {\n        sid: \"dzpaktn1\"\n    }\n});\n",
-      "start": 1750271784684,
-      "end": 1750271784688,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/blog/+pageInitiated.ts\"],\"sourcesContent\":[\"import { sample } from 'effector';\\n\\nimport { createPageInit } from '@/shared/lib';\\n\\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\\n\\nexport const pageInitiated = createPageInit();\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: ({ isMobile, urlParsed: { search } }) => {\\n        let page = 1;\\n        let page_size = isMobile ? 5 : 10;\\n\\n        if (search.page_size) page_size = Number(search.page_size);\\n        if (search.page) page = Number(search.page);\\n\\n        return {\\n            page,\\n            page_size,\\n        };\\n    },\\n    target: getBlogPostsQuery.start,\\n});\\n\\nsample({\\n    clock: pageInitiated,\\n    fn: ({ isMobile }) => (isMobile ? 5 : 10),\\n    target: BlogModel.$pageSize,\\n});\\n\\nsample({\\n    clock: getBlogPostsQuery.finished.failure,\\n    target: BlogModel.redirectToMainBlogPostPageFx,\\n});\\n\"],\"names\":[\"sample\",\"createPageInit\",\"BlogModel\",\"getBlogPostsQuery\",\"pageInitiated\",\"clock\",\"fn\",\"isMobile\",\"urlParsed\",\"search\",\"page\",\"page_size\",\"Number\",\"target\",\"start\",\"$pageSize\",\"finished\",\"failure\",\"redirectToMainBlogPostPageFx\"],\"mappings\":\"AAAA,SAASA,MAAM,QAAQ,WAAW;AAElC,SAASC,cAAc,QAAQ,eAAe;AAE9C,SAASC,SAAS,EAAEC,iBAAiB,QAAQ,kBAAkB;AAE/D,OAAO,MAAMC,gBAAgBH,iBAAiB;AAE9CD;;QAAO;YACHK,OAAOD;YACPE,IAAI,CAAC,EAAEC,QAAQ,EAAEC,WAAW,EAAEC,MAAM,EAAE,EAAE;gBACpC,IAAIC,OAAO;gBACX,IAAIC,YAAYJ,WAAW,IAAI;gBAE/B,IAAIE,OAAOE,SAAS,EAAEA,YAAYC,OAAOH,OAAOE,SAAS;gBACzD,IAAIF,OAAOC,IAAI,EAAEA,OAAOE,OAAOH,OAAOC,IAAI;gBAE1C,OAAO;oBACHA;oBACAC;gBACJ;YACJ;YACAE,QAAQV,kBAAkBW,KAAK;QACnC;;;;;;AAEAd;;QAAO;YACHK,OAAOD;YACPE,IAAI,CAAC,EAAEC,QAAQ,EAAE,GAAMA,WAAW,IAAI;YACtCM,QAAQX,UAAUa,SAAS;QAC/B;;;;;;AAEAf;;QAAO;YACHK,OAAOF,kBAAkBa,QAAQ,CAACC,OAAO;YACzCJ,QAAQX,UAAUgB,4BAA4B;QAClD\"}"
+      "name": "vite:react-babel",
+      "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});",
+      "start": 1750275033346,
+      "end": 1750275033347,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "sample",
+          "createPageInit",
+          "BlogModel",
+          "getBlogPostsQuery",
+          "pageInitiated",
+          "and",
+          "clock",
+          "fn",
+          "isMobile",
+          "urlParsed",
+          "search",
+          "page",
+          "page_size",
+          "Number",
+          "target",
+          "start",
+          "or",
+          "sid",
+          "$pageSize",
+          "finished",
+          "failure",
+          "redirectToMainBlogPostPageFx"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/blog/+pageInitiated.ts"],
+        "sourcesContent": [
+          "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile, urlParsed: { search } }) => {\n        let page = 1;\n        let page_size = isMobile ? 5 : 10;\n\n        if (search.page_size) page_size = Number(search.page_size);\n        if (search.page) page = Number(search.page);\n\n        return {\n            page,\n            page_size,\n        };\n    },\n    target: getBlogPostsQuery.start,\n});\n\nsample({\n    clock: pageInitiated,\n    fn: ({ isMobile }) => (isMobile ? 5 : 10),\n    target: BlogModel.$pageSize,\n});\n\nsample({\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx,\n});\n"
+        ],
+        "mappings": "AAAA,SAASA,MAAM,QAAQ,UAAU;AAEjC,SAASC,cAAc,QAAQ,cAAc;AAE7C,SAASC,SAAS,EAAEC,iBAAiB,QAAQ,iBAAiB;AAE9D,OAAO,MAAMC,aAAa,GAAGH,cAAc,CAAC,CAAC;AAE7CD,MAAM;EAAAK,GAAA,GAAC;IACHC,KAAK,EAAEF,aAAa;IACpBG,EAAE,EAAEA,CAAC;MAAEC,QAAQ;MAAEC,SAAS,EAAE;QAAEC;MAAO;IAAE,CAAC,KAAK;MACzC,IAAIC,IAAI,GAAG,CAAC;MACZ,IAAIC,SAAS,GAAGJ,QAAQ,GAAG,CAAC,GAAG,EAAE;MAEjC,IAAIE,MAAM,CAACE,SAAS,EAAEA,SAAS,GAAGC,MAAM,CAACH,MAAM,CAACE,SAAS,CAAC;MAC1D,IAAIF,MAAM,CAACC,IAAI,EAAEA,IAAI,GAAGE,MAAM,CAACH,MAAM,CAACC,IAAI,CAAC;MAE3C,OAAO;QACHA,IAAI;QACJC;MACJ,CAAC;IACL,CAAC;IACDE,MAAM,EAAEX,iBAAiB,CAACY;EAC9B,CAAC;EAAAC,EAAA;IAAAC,GAAA;EAAA;AAAA,EAAC;AAEFjB,MAAM;EAAAK,GAAA,GAAC;IACHC,KAAK,EAAEF,aAAa;IACpBG,EAAE,EAAEA,CAAC;MAAEC;IAAS,CAAC,KAAMA,QAAQ,GAAG,CAAC,GAAG,EAAG;IACzCM,MAAM,EAAEZ,SAAS,CAACgB;EACtB,CAAC;EAAAF,EAAA;IAAAC,GAAA;EAAA;AAAA,EAAC;AAEFjB,MAAM;EAAAK,GAAA,GAAC;IACHC,KAAK,EAAEH,iBAAiB,CAACgB,QAAQ,CAACC,OAAO;IACzCN,MAAM,EAAEZ,SAAS,CAACmB;EACtB,CAAC;EAAAL,EAAA;IAAAC,GAAA;EAAA;AAAA,EAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: ({ isMobile, urlParsed: { search } }) => {\n        let page = 1;\n        let page_size = isMobile ? 5 : 10;\n        if (search.page_size) page_size = Number(search.page_size);\n        if (search.page) page = Number(search.page);\n        return {\n          page,\n          page_size\n        };\n      },\n      target: getBlogPostsQuery.start\n    }\n  ],\n  or: {\n    sid: \"ccsgthep\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: ({ isMobile }) => isMobile ? 5 : 10,\n      target: BlogModel.$pageSize\n    }\n  ],\n  or: {\n    sid: \"atibpv1z\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: getBlogPostsQuery.finished.failure,\n      target: BlogModel.redirectToMainBlogPostPageFx\n    }\n  ],\n  or: {\n    sid: \"dzpaktn1\"\n  }\n});\n",
-      "start": 1750271784688,
-      "end": 1750271784736,
+      "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});\n",
+      "start": 1750275033347,
+      "end": 1750275033397,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/blog/+pageInitiated.ts"],
         "sourcesContent": [
-          "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ({ isMobile, urlParsed: { search } })=>{\n                let page = 1;\n                let page_size = isMobile ? 5 : 10;\n                if (search.page_size) page_size = Number(search.page_size);\n                if (search.page) page = Number(search.page);\n                return {\n                    page,\n                    page_size\n                };\n            },\n            target: getBlogPostsQuery.start\n        }\n    ],\n    or: {\n        sid: \"ccsgthep\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: pageInitiated,\n            fn: ({ isMobile })=>isMobile ? 5 : 10,\n            target: BlogModel.$pageSize\n        }\n    ],\n    or: {\n        sid: \"atibpv1z\"\n    }\n});\nsample({\n    and: [\n        {\n            clock: getBlogPostsQuery.finished.failure,\n            target: BlogModel.redirectToMainBlogPostPageFx\n        }\n    ],\n    or: {\n        sid: \"dzpaktn1\"\n    }\n});\n"
+          "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { BlogModel, getBlogPostsQuery } from '@/entities/Blog';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});"
         ],
-        "mappings": "AAAA,SAAS,cAAc;AACvB,SAAS,sBAAsB;AAC/B,SAAS,WAAW,yBAAyB;AACtC,aAAM,gBAAgB,eAAe;AAC5C,OAAO;AAAA,EACH,KAAK;AAAA,IACD;AAAA,MACI,OAAO;AAAA,MACP,IAAI,CAAC,EAAE,UAAU,WAAW,EAAE,OAAO,EAAE,MAAI;AACvC,YAAI,OAAO;AACX,YAAI,YAAY,WAAW,IAAI;AAC/B,YAAI,OAAO,UAAW,aAAY,OAAO,OAAO,SAAS;AACzD,YAAI,OAAO,KAAM,QAAO,OAAO,OAAO,IAAI;AAC1C,eAAO;AAAA,UACH;AAAA,UACA;AAAA,QACJ;AAAA,MACJ;AAAA,MACA,QAAQ,kBAAkB;AAAA,IAC9B;AAAA,EACJ;AAAA,EACA,IAAI;AAAA,IACA,KAAK;AAAA,EACT;AACJ,CAAC;AACD,OAAO;AAAA,EACH,KAAK;AAAA,IACD;AAAA,MACI,OAAO;AAAA,MACP,IAAI,CAAC,EAAE,SAAS,MAAI,WAAW,IAAI;AAAA,MACnC,QAAQ,UAAU;AAAA,IACtB;AAAA,EACJ;AAAA,EACA,IAAI;AAAA,IACA,KAAK;AAAA,EACT;AACJ,CAAC;AACD,OAAO;AAAA,EACH,KAAK;AAAA,IACD;AAAA,MACI,OAAO,kBAAkB,SAAS;AAAA,MAClC,QAAQ,UAAU;AAAA,IACtB;AAAA,EACJ;AAAA,EACA,IAAI;AAAA,IACA,KAAK;AAAA,EACT;AACJ,CAAC;",
+        "mappings": "AAAA,SAAS,cAAc;AACvB,SAAS,sBAAsB;AAC/B,SAAS,WAAW,yBAAyB;AACtC,aAAM,gBAAgB,eAAe;AAC5C,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO;AAAA,IACP,IAAI,CAAC;AAAA,MACH;AAAA,MACA,WAAW;AAAA,QACT;AAAA,MACF;AAAA,IACF,MAAM;AACJ,UAAI,OAAO;AACX,UAAI,YAAY,WAAW,IAAI;AAC/B,UAAI,OAAO,UAAW,aAAY,OAAO,OAAO,SAAS;AACzD,UAAI,OAAO,KAAM,QAAO,OAAO,OAAO,IAAI;AAC1C,aAAO;AAAA,QACL;AAAA,QACA;AAAA,MACF;AAAA,IACF;AAAA,IACA,QAAQ,kBAAkB;AAAA,EAC5B,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;AACD,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO;AAAA,IACP,IAAI,CAAC;AAAA,MACH;AAAA,IACF,MAAM,WAAW,IAAI;AAAA,IACrB,QAAQ,UAAU;AAAA,EACpB,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;AACD,OAAO;AAAA,EACL,KAAK,CAAC;AAAA,IACJ,OAAO,kBAAkB,SAAS;AAAA,IAClC,QAAQ,UAAU;AAAA,EACpB,CAAC;AAAA,EACD,IAAI;AAAA,IACF,KAAK;AAAA,EACP;AACF,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "start": 1750275033397,
+      "end": 1750275033397,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! pages/blog/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: ({ isMobile, urlParsed: { search } }) => {\n        let page = 1;\n        let page_size = isMobile ? 5 : 10;\n        if (search.page_size) page_size = Number(search.page_size);\n        if (search.page) page = Number(search.page);\n        return {\n          page,\n          page_size\n        };\n      },\n      target: getBlogPostsQuery.start\n    }\n  ],\n  or: {\n    sid: \"ccsgthep\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: pageInitiated,\n      fn: ({ isMobile }) => isMobile ? 5 : 10,\n      target: BlogModel.$pageSize\n    }\n  ],\n  or: {\n    sid: \"atibpv1z\"\n  }\n});\nsample({\n  and: [\n    {\n      clock: getBlogPostsQuery.finished.failure,\n      target: BlogModel.redirectToMainBlogPostPageFx\n    }\n  ],\n  or: {\n    sid: \"dzpaktn1\"\n  }\n});\n",
-      "start": 1750271784736,
-      "end": 1750271784736,
+      "result": "/*! pages/blog/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { BlogModel, getBlogPostsQuery } from \"@/entities/Blog\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile,\n      urlParsed: {\n        search\n      }\n    }) => {\n      let page = 1;\n      let page_size = isMobile ? 5 : 10;\n      if (search.page_size) page_size = Number(search.page_size);\n      if (search.page) page = Number(search.page);\n      return {\n        page,\n        page_size\n      };\n    },\n    target: getBlogPostsQuery.start\n  }],\n  or: {\n    sid: \"thv21i\"\n  }\n});\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ({\n      isMobile\n    }) => isMobile ? 5 : 10,\n    target: BlogModel.$pageSize\n  }],\n  or: {\n    sid: \"-c6c28n\"\n  }\n});\nsample({\n  and: [{\n    clock: getBlogPostsQuery.finished.failure,\n    target: BlogModel.redirectToMainBlogPostPageFx\n  }],\n  or: {\n    sid: \"-brhm7w\"\n  }\n});\n",
+      "start": 1750275033397,
+      "end": 1750275033398,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["pages/blog/+pageInitiated.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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"
       }
     }
   ]

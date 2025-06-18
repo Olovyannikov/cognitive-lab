@@ -4,117 +4,138 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport s from './FormWrapper.module.css';\n\ninterface FormWrapperProps {\n    onSubmit?: FormEventHandler<HTMLFormElement>;\n    className?: string;\n}\n\nexport const FormWrapper = ({ onSubmit, className, children }: PropsWithChildren<FormWrapperProps>) => (\n    <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>\n);\n",
-      "start": 1750271784876,
-      "end": 1750271784900,
+      "start": 1750275033662,
+      "end": 1750275033701,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from '@mantine/core';\nimport s from './FormWrapper.module.css';\nexport const FormWrapper = ({ onSubmit, className, children })=>/*#__PURE__*/ _jsx(\"form\", {\n        onSubmit: onSubmit,\n        className: className,\n        children: /*#__PURE__*/ _jsx(Stack, {\n            className: s.stackWrapper,\n            children: children\n        })\n    });\n",
-      "start": 1750271784900,
-      "end": 1750271784904,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormWrapper/index.tsx\"],\"sourcesContent\":[\"import type { FormEventHandler, PropsWithChildren } from 'react';\\nimport { Stack } from '@mantine/core';\\n\\nimport s from './FormWrapper.module.css';\\n\\ninterface FormWrapperProps {\\n    onSubmit?: FormEventHandler<HTMLFormElement>;\\n    className?: string;\\n}\\n\\nexport const FormWrapper = ({ onSubmit, className, children }: PropsWithChildren<FormWrapperProps>) => (\\n    <form onSubmit={onSubmit} className={className}>\\n        <Stack className={s.stackWrapper}>{children}</Stack>\\n    </form>\\n);\\n\"],\"names\":[\"Stack\",\"s\",\"FormWrapper\",\"onSubmit\",\"className\",\"children\",\"form\",\"stackWrapper\"],\"mappings\":\";AACA,SAASA,KAAK,QAAQ,gBAAgB;AAEtC,OAAOC,OAAO,2BAA2B;AAOzC,OAAO,MAAMC,cAAc,CAAC,EAAEC,QAAQ,EAAEC,SAAS,EAAEC,QAAQ,EAAuC,iBAC9F,KAACC;QAAKH,UAAUA;QAAUC,WAAWA;kBACjC,cAAA,KAACJ;YAAMI,WAAWH,EAAEM,YAAY;sBAAGF;;OAEzC\"}"
+      "name": "vite:react-babel",
+      "result": "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\nimport s from './FormWrapper.module.css';\ninterface FormWrapperProps {\n  onSubmit?: FormEventHandler<HTMLFormElement>;\n  className?: string;\n}\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}: PropsWithChildren<FormWrapperProps>) => <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>;",
+      "start": 1750275033701,
+      "end": 1750275033702,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "FormEventHandler",
+          "PropsWithChildren",
+          "Stack",
+          "s",
+          "FormWrapperProps",
+          "onSubmit",
+          "HTMLFormElement",
+          "className",
+          "FormWrapper",
+          "children",
+          "stackWrapper"
+        ],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormWrapper/index.tsx"],
+        "sourcesContent": [
+          "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\n\nimport s from './FormWrapper.module.css';\n\ninterface FormWrapperProps {\n    onSubmit?: FormEventHandler<HTMLFormElement>;\n    className?: string;\n}\n\nexport const FormWrapper = ({ onSubmit, className, children }: PropsWithChildren<FormWrapperProps>) => (\n    <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>\n);\n"
+        ],
+        "mappings": "AAAA,cAAcA,gBAAgB,EAAEC,iBAAiB,QAAQ,OAAO;AAChE,SAASC,KAAK,QAAQ,eAAe;AAErC,OAAOC,CAAC,MAAM,0BAA0B;AAExC,UAAUC,gBAAgB,CAAC;EACvBC,QAAQ,CAAC,EAAEL,gBAAgB,CAACM,eAAe,CAAC;EAC5CC,SAAS,CAAC,EAAE,MAAM;AACtB;AAEA,OAAO,MAAMC,WAAW,GAAGA,CAAC;EAAEH,QAAQ;EAAEE,SAAS;EAAEE;AAA8C,CAApC,EAAER,iBAAiB,CAACG,gBAAgB,CAAC,KAC9F,CAAC,IAAI,CAAC,QAAQ,CAAC,CAACC,QAAQ,CAAC,CAAC,SAAS,CAAC,CAACE,SAAS,CAAC;AACnD,QAAQ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACJ,CAAC,CAACO,YAAY,CAAC,CAAC,CAACD,QAAQ,CAAC,EAAE,KAAK;AAC3D,IAAI,EAAE,IAAI,CACT",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({ onSubmit, className, children }) => /* @__PURE__ */ _jsx(\"form\", {\n  onSubmit,\n  className,\n  children: /* @__PURE__ */ _jsx(Stack, {\n    className: s.stackWrapper,\n    children\n  })\n});\n",
-      "start": 1750271784904,
-      "end": 1750271785014,
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}) => /* @__PURE__ */ jsx(\"form\", { onSubmit, className, children: /* @__PURE__ */ jsx(Stack, { className: s.stackWrapper, children }) });\n",
+      "start": 1750275033702,
+      "end": 1750275033954,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormWrapper/index.tsx"],
         "sourcesContent": [
-          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from '@mantine/core';\nimport s from './FormWrapper.module.css';\nexport const FormWrapper = ({ onSubmit, className, children })=>/*#__PURE__*/ _jsx(\"form\", {\n        onSubmit: onSubmit,\n        className: className,\n        children: /*#__PURE__*/ _jsx(Stack, {\n            className: s.stackWrapper,\n            children: children\n        })\n    });\n"
+          "import type { FormEventHandler, PropsWithChildren } from 'react';\nimport { Stack } from '@mantine/core';\nimport s from './FormWrapper.module.css';\ninterface FormWrapperProps {\n  onSubmit?: FormEventHandler<HTMLFormElement>;\n  className?: string;\n}\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}: PropsWithChildren<FormWrapperProps>) => <form onSubmit={onSubmit} className={className}>\n        <Stack className={s.stackWrapper}>{children}</Stack>\n    </form>;"
         ],
-        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,aAAa;AACtB,OAAO,OAAO;AACP,aAAM,cAAc,CAAC,EAAE,UAAU,WAAW,SAAS,MAAkB,qBAAK,QAAQ;AAAA,EACnF;AAAA,EACA;AAAA,EACA,UAAwB,qBAAK,OAAO;AAAA,IAChC,WAAW,EAAE;AAAA,IACb;AAAA,EACJ,CAAC;AACL,CAAC;",
+        "mappings": "AAYQ;AAXR,SAAS,aAAa;AACtB,OAAO,OAAO;AAKP,aAAM,cAAc,CAAC;AAAA,EAC1B;AAAA,EACA;AAAA,EACA;AACF,MAA2C,oBAAC,UAAK,UAAoB,WAC7D,8BAAC,SAAM,WAAW,EAAE,cAAe,UAAS,GAChD;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785014,
-      "end": 1750271785014,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785014,
-      "end": 1750271785015,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785015,
-      "end": 1750271785015,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785015,
-      "end": 1750271785015,
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/shared/ui/FormWrapper/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({ onSubmit, className, children }) => /* @__PURE__ */ _jsx(\"form\", {\n  onSubmit,\n  className,\n  children: /* @__PURE__ */ _jsx(Stack, {\n    className: s.stackWrapper,\n    children\n  })\n});\n",
-      "start": 1750271785015,
-      "end": 1750271785015,
+      "result": "/*! src/shared/ui/FormWrapper/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Stack } from \"@mantine/core\";\nimport s from \"./FormWrapper.module.css\";\nexport const FormWrapper = ({\n  onSubmit,\n  className,\n  children\n}) => /* @__PURE__ */ jsx(\"form\", { onSubmit, className, children: /* @__PURE__ */ jsx(Stack, { className: s.stackWrapper, children }) });\n",
+      "start": 1750275033954,
+      "end": 1750275033954,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/ui/FormWrapper/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

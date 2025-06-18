@@ -4,117 +4,126 @@
     {
       "name": "vite:load-fallback",
       "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n",
-      "start": 1750271785284,
-      "end": 1750271785292,
+      "start": 1750275034233,
+      "end": 1750275034249,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px'\n    },\n    {\n        value: '-2',\n        size: '40px'\n    },\n    {\n        value: '-1',\n        size: '30px'\n    },\n    {\n        value: '0',\n        size: '20px'\n    },\n    {\n        value: '1',\n        size: '30px'\n    },\n    {\n        value: '2',\n        size: '40px'\n    },\n    {\n        value: '3',\n        size: '50px'\n    }\n];\n",
-      "start": 1750271785292,
-      "end": 1750271785296,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts\"],\"sourcesContent\":[\"export const SCALE_RADIO_ITEMS = [\\n    {\\n        value: '-3',\\n        size: '50px',\\n    },\\n    {\\n        value: '-2',\\n        size: '40px',\\n    },\\n    {\\n        value: '-1',\\n        size: '30px',\\n    },\\n    {\\n        value: '0',\\n        size: '20px',\\n    },\\n    {\\n        value: '1',\\n        size: '30px',\\n    },\\n    {\\n        value: '2',\\n        size: '40px',\\n    },\\n    {\\n        value: '3',\\n        size: '50px',\\n    },\\n];\\n\"],\"names\":[\"SCALE_RADIO_ITEMS\",\"value\",\"size\"],\"mappings\":\"AAAA,OAAO,MAAMA,oBAAoB;IAC7B;QACIC,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;IACA;QACID,OAAO;QACPC,MAAM;IACV;CACH,CAAC\"}"
+      "name": "vite:react-babel",
+      "result": "export const SCALE_RADIO_ITEMS = [{\n  value: '-3',\n  size: '50px'\n}, {\n  value: '-2',\n  size: '40px'\n}, {\n  value: '-1',\n  size: '30px'\n}, {\n  value: '0',\n  size: '20px'\n}, {\n  value: '1',\n  size: '30px'\n}, {\n  value: '2',\n  size: '40px'\n}, {\n  value: '3',\n  size: '50px'\n}];",
+      "start": 1750275034249,
+      "end": 1750275034250,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["SCALE_RADIO_ITEMS", "value", "size"],
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"],
+        "sourcesContent": [
+          "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,iBAAiB,GAAG,CAC7B;EACIC,KAAK,EAAE,IAAI;EACXC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,IAAI;EACXC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,IAAI;EACXC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,GAAG;EACVC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,GAAG;EACVC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,GAAG;EACVC,IAAI,EAAE;AACV,CAAC,EACD;EACID,KAAK,EAAE,GAAG;EACVC,IAAI,EAAE;AACV,CAAC,CACJ",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "export const SCALE_RADIO_ITEMS = [\n  {\n    value: \"-3\",\n    size: \"50px\"\n  },\n  {\n    value: \"-2\",\n    size: \"40px\"\n  },\n  {\n    value: \"-1\",\n    size: \"30px\"\n  },\n  {\n    value: \"0\",\n    size: \"20px\"\n  },\n  {\n    value: \"1\",\n    size: \"30px\"\n  },\n  {\n    value: \"2\",\n    size: \"40px\"\n  },\n  {\n    value: \"3\",\n    size: \"50px\"\n  }\n];\n",
-      "start": 1750271785296,
-      "end": 1750271785352,
+      "result": "export const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
+      "start": 1750275034250,
+      "end": 1750275034334,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/constants.ts"],
         "sourcesContent": [
-          "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px'\n    },\n    {\n        value: '-2',\n        size: '40px'\n    },\n    {\n        value: '-1',\n        size: '30px'\n    },\n    {\n        value: '0',\n        size: '20px'\n    },\n    {\n        value: '1',\n        size: '30px'\n    },\n    {\n        value: '2',\n        size: '40px'\n    },\n    {\n        value: '3',\n        size: '50px'\n    }\n];\n"
+          "export const SCALE_RADIO_ITEMS = [{\n  value: '-3',\n  size: '50px'\n}, {\n  value: '-2',\n  size: '40px'\n}, {\n  value: '-1',\n  size: '30px'\n}, {\n  value: '0',\n  size: '20px'\n}, {\n  value: '1',\n  size: '30px'\n}, {\n  value: '2',\n  size: '40px'\n}, {\n  value: '3',\n  size: '50px'\n}];"
         ],
-        "mappings": "AAAO,aAAM,oBAAoB;AAAA,EAC7B;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AAAA,EACA;AAAA,IACI,OAAO;AAAA,IACP,MAAM;AAAA,EACV;AACJ;",
+        "mappings": "AAAO,aAAM,oBAAoB,CAAC;AAAA,EAChC,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,GAAG;AAAA,EACD,OAAO;AAAA,EACP,MAAM;AACR,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034334,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034334,
+      "end": 1750275034335,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034335,
+      "end": 1750275034335,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "start": 1750275034335,
+      "end": 1750275034335,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/entities/Test/lib/constants.ts [vike:pluginModuleBanner] */\nexport const SCALE_RADIO_ITEMS = [\n  {\n    value: \"-3\",\n    size: \"50px\"\n  },\n  {\n    value: \"-2\",\n    size: \"40px\"\n  },\n  {\n    value: \"-1\",\n    size: \"30px\"\n  },\n  {\n    value: \"0\",\n    size: \"20px\"\n  },\n  {\n    value: \"1\",\n    size: \"30px\"\n  },\n  {\n    value: \"2\",\n    size: \"40px\"\n  },\n  {\n    value: \"3\",\n    size: \"50px\"\n  }\n];\n",
-      "start": 1750271785353,
-      "end": 1750271785353,
+      "result": "/*! src/entities/Test/lib/constants.ts [vike:pluginModuleBanner] */\nexport const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
+      "start": 1750275034335,
+      "end": 1750275034335,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Test/lib/constants.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC;"
       }
     }
   ]

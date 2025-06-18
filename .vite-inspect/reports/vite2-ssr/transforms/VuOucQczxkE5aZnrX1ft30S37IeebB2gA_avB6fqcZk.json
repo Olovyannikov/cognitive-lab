@@ -4,23 +4,51 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\n\nimport { useIsLarge } from '@/shared/lib';\n\ninterface BlockQuoteFilledProps {\n    text: string;\n    color?: string;\n}\n\nexport const BlockQuoteFilled = ({ text, color = 'violet' }: BlockQuoteFilledProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\n            <Markdown\n                options={{\n                    overrides: {\n                        p: (props) => (\n                            <Text fz={isLarge ? 20 : 18} fw={500}>\n                                {props.children}\n                            </Text>\n                        ),\n                        span: (props) => (\n                            <Text fw={500} span fz={isLarge ? 20 : 18}>\n                                {props.children}\n                            </Text>\n                        ),\n                        pre: (props) => <Text fw={500}>{props.children}</Text>,\n                        code: (props) => <Markdown>{props.children}</Markdown>,\n                    },\n                }}\n            >\n                {text}\n            </Markdown>\n        </Paper>\n    );\n};\n",
-      "start": 1750271784925,
-      "end": 1750271784942,
+      "start": 1750275033746,
+      "end": 1750275033794,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { useIsLarge } from '@/shared/lib';\nexport const BlockQuoteFilled = ({ text, color = 'violet' })=>{\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsx(Paper, {\n        bg: `${color}.0`,\n        py: \"lg\",\n        px: \"3xl\",\n        my: \"md\",\n        c: `${color}.9`,\n        children: /*#__PURE__*/ _jsx(Markdown, {\n            options: {\n                overrides: {\n                    p: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fz: isLarge ? 20 : 18,\n                            fw: 500,\n                            children: props.children\n                        }),\n                    span: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            span: true,\n                            fz: isLarge ? 20 : 18,\n                            children: props.children\n                        }),\n                    pre: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            children: props.children\n                        }),\n                    code: (props)=>/*#__PURE__*/ _jsx(Markdown, {\n                            children: props.children\n                        })\n                }\n            },\n            children: text\n        })\n    });\n};\n",
-      "start": 1750271784942,
-      "end": 1750271784955,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteFilled/index.tsx\"],\"sourcesContent\":[\"import { Paper, Text } from '@mantine/core';\\nimport Markdown from 'markdown-to-jsx';\\n\\nimport { useIsLarge } from '@/shared/lib';\\n\\ninterface BlockQuoteFilledProps {\\n    text: string;\\n    color?: string;\\n}\\n\\nexport const BlockQuoteFilled = ({ text, color = 'violet' }: BlockQuoteFilledProps) => {\\n    const isLarge = useIsLarge();\\n\\n    return (\\n        <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\\n            <Markdown\\n                options={{\\n                    overrides: {\\n                        p: (props) => (\\n                            <Text fz={isLarge ? 20 : 18} fw={500}>\\n                                {props.children}\\n                            </Text>\\n                        ),\\n                        span: (props) => (\\n                            <Text fw={500} span fz={isLarge ? 20 : 18}>\\n                                {props.children}\\n                            </Text>\\n                        ),\\n                        pre: (props) => <Text fw={500}>{props.children}</Text>,\\n                        code: (props) => <Markdown>{props.children}</Markdown>,\\n                    },\\n                }}\\n            >\\n                {text}\\n            </Markdown>\\n        </Paper>\\n    );\\n};\\n\"],\"names\":[\"Paper\",\"Text\",\"Markdown\",\"useIsLarge\",\"BlockQuoteFilled\",\"text\",\"color\",\"isLarge\",\"bg\",\"py\",\"px\",\"my\",\"c\",\"options\",\"overrides\",\"p\",\"props\",\"fz\",\"fw\",\"children\",\"span\",\"pre\",\"code\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,IAAI,QAAQ,gBAAgB;AAC5C,OAAOC,cAAc,kBAAkB;AAEvC,SAASC,UAAU,QAAQ,eAAe;AAO1C,OAAO,MAAMC,mBAAmB,CAAC,EAAEC,IAAI,EAAEC,QAAQ,QAAQ,EAAyB;IAC9E,MAAMC,UAAUJ;IAEhB,qBACI,KAACH;QAAMQ,IAAI,GAAGF,MAAM,EAAE,CAAC;QAAEG,IAAG;QAAKC,IAAG;QAAMC,IAAG;QAAKC,GAAG,GAAGN,MAAM,EAAE,CAAC;kBAC7D,cAAA,KAACJ;YACGW,SAAS;gBACLC,WAAW;oBACPC,GAAG,CAACC,sBACA,KAACf;4BAAKgB,IAAIV,UAAU,KAAK;4BAAIW,IAAI;sCAC5BF,MAAMG,QAAQ;;oBAGvBC,MAAM,CAACJ,sBACH,KAACf;4BAAKiB,IAAI;4BAAKE,IAAI;4BAACH,IAAIV,UAAU,KAAK;sCAClCS,MAAMG,QAAQ;;oBAGvBE,KAAK,CAACL,sBAAU,KAACf;4BAAKiB,IAAI;sCAAMF,MAAMG,QAAQ;;oBAC9CG,MAAM,CAACN,sBAAU,KAACd;sCAAUc,MAAMG,QAAQ;;gBAC9C;YACJ;sBAECd;;;AAIjB,EAAE\"}"
+      "name": "vite:react-babel",
+      "result": "import { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { useIsLarge } from '@/shared/lib';\ninterface BlockQuoteFilledProps {\n  text: string;\n  color?: string;\n}\nexport const BlockQuoteFilled = ({\n  text,\n  color = 'violet'\n}: BlockQuoteFilledProps) => {\n  const isLarge = useIsLarge();\n  return <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\n            <Markdown options={{\n      overrides: {\n        p: props => <Text fz={isLarge ? 20 : 18} fw={500}>\n                                {props.children}\n                            </Text>,\n        span: props => <Text fw={500} span fz={isLarge ? 20 : 18}>\n                                {props.children}\n                            </Text>,\n        pre: props => <Text fw={500}>{props.children}</Text>,\n        code: props => <Markdown>{props.children}</Markdown>\n      }\n    }}>\n                {text}\n            </Markdown>\n        </Paper>;\n};",
+      "start": 1750275033794,
+      "end": 1750275033795,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Paper",
+          "Text",
+          "Markdown",
+          "useIsLarge",
+          "BlockQuoteFilledProps",
+          "text",
+          "color",
+          "BlockQuoteFilled",
+          "isLarge",
+          "overrides",
+          "p",
+          "props",
+          "children",
+          "span",
+          "pre",
+          "code"
+        ],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteFilled/index.tsx"
+        ],
+        "sourcesContent": [
+          "import { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\n\nimport { useIsLarge } from '@/shared/lib';\n\ninterface BlockQuoteFilledProps {\n    text: string;\n    color?: string;\n}\n\nexport const BlockQuoteFilled = ({ text, color = 'violet' }: BlockQuoteFilledProps) => {\n    const isLarge = useIsLarge();\n\n    return (\n        <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\n            <Markdown\n                options={{\n                    overrides: {\n                        p: (props) => (\n                            <Text fz={isLarge ? 20 : 18} fw={500}>\n                                {props.children}\n                            </Text>\n                        ),\n                        span: (props) => (\n                            <Text fw={500} span fz={isLarge ? 20 : 18}>\n                                {props.children}\n                            </Text>\n                        ),\n                        pre: (props) => <Text fw={500}>{props.children}</Text>,\n                        code: (props) => <Markdown>{props.children}</Markdown>,\n                    },\n                }}\n            >\n                {text}\n            </Markdown>\n        </Paper>\n    );\n};\n"
+        ],
+        "mappings": "AAAA,SAASA,KAAK,EAAEC,IAAI,QAAQ,eAAe;AAC3C,OAAOC,QAAQ,MAAM,iBAAiB;AAEtC,SAASC,UAAU,QAAQ,cAAc;AAEzC,UAAUC,qBAAqB,CAAC;EAC5BC,IAAI,EAAE,MAAM;EACZC,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMC,gBAAgB,GAAGA,CAAC;EAAEF,IAAI;EAAEC,KAAK,GAAG;AAAgC,CAAtB,EAAEF,qBAAqB,KAAK;EACnF,MAAMI,OAAO,GAAGL,UAAU,CAAC,CAAC;EAE5B,OACI,CAAC,KAAK,CAAC,EAAE,CAAC,CAAC,GAAGG,KAAK,IAAI,CAAC,CAAC,EAAE,CAAC,IAAI,CAAC,EAAE,CAAC,KAAK,CAAC,EAAE,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,GAAGA,KAAK,IAAI,CAAC;AAC1E,YAAY,CAAC,QAAQ,CACL,OAAO,CAAC,CAAC;MACLG,SAAS,EAAE;QACPC,CAAC,EAAGC,KAAK,IACL,CAAC,IAAI,CAAC,EAAE,CAAC,CAACH,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC;AACjE,gCAAgC,CAACG,KAAK,CAACC,QAAQ;AAC/C,4BAA4B,EAAE,IAAI,CACT;QACDC,IAAI,EAAGF,KAAK,IACR,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,EAAE,CAAC,CAACH,OAAO,GAAG,EAAE,GAAG,EAAE,CAAC;AACtE,gCAAgC,CAACG,KAAK,CAACC,QAAQ;AAC/C,4BAA4B,EAAE,IAAI,CACT;QACDE,GAAG,EAAGH,KAAK,IAAK,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,CAAC,CAACA,KAAK,CAACC,QAAQ,CAAC,EAAE,IAAI,CAAC;QACtDG,IAAI,EAAGJ,KAAK,IAAK,CAAC,QAAQ,CAAC,CAACA,KAAK,CAACC,QAAQ,CAAC,EAAE,QAAQ;MACzD;IACJ,CAAC,CAAC;AAElB,gBAAgB,CAACP,IAAI;AACrB,YAAY,EAAE,QAAQ;AACtB,QAAQ,EAAE,KAAK,CAAC;AAEhB,CAAC",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({ text, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    bg: `${color}.0`,\n    py: \"lg\",\n    px: \"3xl\",\n    my: \"md\",\n    c: `${color}.9`,\n    children: /* @__PURE__ */ _jsx(Markdown, {\n      options: {\n        overrides: {\n          p: (props) => /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 20 : 18,\n            fw: 500,\n            children: props.children\n          }),\n          span: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            span: true,\n            fz: isLarge ? 20 : 18,\n            children: props.children\n          }),\n          pre: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            children: props.children\n          }),\n          code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n            children: props.children\n          })\n        }\n      },\n      children: text\n    })\n  });\n};\n",
-      "start": 1750271784955,
-      "end": 1750271785059,
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({\n  text,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Paper, { bg: `${color}.0`, py: \"lg\", px: \"3xl\", my: \"md\", c: `${color}.9`, children: /* @__PURE__ */ jsx(Markdown, { options: {\n    overrides: {\n      p: (props) => /* @__PURE__ */ jsx(Text, { fz: isLarge ? 20 : 18, fw: 500, children: props.children }),\n      span: (props) => /* @__PURE__ */ jsx(Text, { fw: 500, span: true, fz: isLarge ? 20 : 18, children: props.children }),\n      pre: (props) => /* @__PURE__ */ jsx(Text, { fw: 500, children: props.children }),\n      code: (props) => /* @__PURE__ */ jsx(Markdown, { children: props.children })\n    }\n  }, children: text }) });\n};\n",
+      "start": 1750275033795,
+      "end": 1750275034095,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -28,95 +56,95 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/BlockQuoteFilled/index.tsx"
         ],
         "sourcesContent": [
-          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { useIsLarge } from '@/shared/lib';\nexport const BlockQuoteFilled = ({ text, color = 'violet' })=>{\n    const isLarge = useIsLarge();\n    return /*#__PURE__*/ _jsx(Paper, {\n        bg: `${color}.0`,\n        py: \"lg\",\n        px: \"3xl\",\n        my: \"md\",\n        c: `${color}.9`,\n        children: /*#__PURE__*/ _jsx(Markdown, {\n            options: {\n                overrides: {\n                    p: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fz: isLarge ? 20 : 18,\n                            fw: 500,\n                            children: props.children\n                        }),\n                    span: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            span: true,\n                            fz: isLarge ? 20 : 18,\n                            children: props.children\n                        }),\n                    pre: (props)=>/*#__PURE__*/ _jsx(Text, {\n                            fw: 500,\n                            children: props.children\n                        }),\n                    code: (props)=>/*#__PURE__*/ _jsx(Markdown, {\n                            children: props.children\n                        })\n                }\n            },\n            children: text\n        })\n    });\n};\n"
+          "import { Paper, Text } from '@mantine/core';\nimport Markdown from 'markdown-to-jsx';\nimport { useIsLarge } from '@/shared/lib';\ninterface BlockQuoteFilledProps {\n  text: string;\n  color?: string;\n}\nexport const BlockQuoteFilled = ({\n  text,\n  color = 'violet'\n}: BlockQuoteFilledProps) => {\n  const isLarge = useIsLarge();\n  return <Paper bg={`${color}.0`} py='lg' px='3xl' my='md' c={`${color}.9`}>\n            <Markdown options={{\n      overrides: {\n        p: props => <Text fz={isLarge ? 20 : 18} fw={500}>\n                                {props.children}\n                            </Text>,\n        span: props => <Text fw={500} span fz={isLarge ? 20 : 18}>\n                                {props.children}\n                            </Text>,\n        pre: props => <Text fw={500}>{props.children}</Text>,\n        code: props => <Markdown>{props.children}</Markdown>\n      }\n    }}>\n                {text}\n            </Markdown>\n        </Paper>;\n};"
         ],
-        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,OAAO,YAAY;AAC5B,OAAO,cAAc;AACrB,SAAS,kBAAkB;AACpB,aAAM,mBAAmB,CAAC,EAAE,MAAM,QAAQ,SAAS,MAAI;AAC1D,QAAM,UAAU,WAAW;AAC3B,SAAqB,qBAAK,OAAO;AAAA,IAC7B,IAAI,GAAG,KAAK;AAAA,IACZ,IAAI;AAAA,IACJ,IAAI;AAAA,IACJ,IAAI;AAAA,IACJ,GAAG,GAAG,KAAK;AAAA,IACX,UAAwB,qBAAK,UAAU;AAAA,MACnC,SAAS;AAAA,QACL,WAAW;AAAA,UACP,GAAG,CAAC,UAAsB,qBAAK,MAAM;AAAA,YAC7B,IAAI,UAAU,KAAK;AAAA,YACnB,IAAI;AAAA,YACJ,UAAU,MAAM;AAAA,UACpB,CAAC;AAAA,UACL,MAAM,CAAC,UAAsB,qBAAK,MAAM;AAAA,YAChC,IAAI;AAAA,YACJ,MAAM;AAAA,YACN,IAAI,UAAU,KAAK;AAAA,YACnB,UAAU,MAAM;AAAA,UACpB,CAAC;AAAA,UACL,KAAK,CAAC,UAAsB,qBAAK,MAAM;AAAA,YAC/B,IAAI;AAAA,YACJ,UAAU,MAAM;AAAA,UACpB,CAAC;AAAA,UACL,MAAM,CAAC,UAAsB,qBAAK,UAAU;AAAA,YACpC,UAAU,MAAM;AAAA,UACpB,CAAC;AAAA,QACT;AAAA,MACJ;AAAA,MACA,UAAU;AAAA,IACd,CAAC;AAAA,EACL,CAAC;AACL;",
+        "mappings": "AAeoB;AAfpB,SAAS,OAAO,YAAY;AAC5B,OAAO,cAAc;AACrB,SAAS,kBAAkB;AAKpB,aAAM,mBAAmB,CAAC;AAAA,EAC/B;AAAA,EACA,QAAQ;AACV,MAA6B;AAC3B,QAAM,UAAU,WAAW;AAC3B,SAAO,oBAAC,SAAM,IAAI,GAAG,KAAK,MAAM,IAAG,MAAK,IAAG,OAAM,IAAG,MAAK,GAAG,GAAG,KAAK,MAC1D,8BAAC,YAAS,SAAS;AAAA,IACzB,WAAW;AAAA,MACT,GAAG,WAAS,oBAAC,QAAK,IAAI,UAAU,KAAK,IAAI,IAAI,KACpB,gBAAM,UACX;AAAA,MACpB,MAAM,WAAS,oBAAC,QAAK,IAAI,KAAK,MAAI,MAAC,IAAI,UAAU,KAAK,IAC7B,gBAAM,UACX;AAAA,MACpB,KAAK,WAAS,oBAAC,QAAK,IAAI,KAAM,gBAAM,UAAS;AAAA,MAC7C,MAAM,WAAS,oBAAC,YAAU,gBAAM,UAAS;AAAA,IAC3C;AAAA,EACF,GACa,gBACL,GACJ;AACR;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034095,
+      "end": 1750275034095,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034095,
+      "end": 1750275034095,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785059,
-      "end": 1750271785059,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785059,
-      "end": 1750271785060,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785060,
-      "end": 1750271785060,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785060,
-      "end": 1750271785060,
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
-      "result": "/*! src/entities/Report/ui/BlockQuoteFilled/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({ text, color = \"violet\" }) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ _jsx(Paper, {\n    bg: `${color}.0`,\n    py: \"lg\",\n    px: \"3xl\",\n    my: \"md\",\n    c: `${color}.9`,\n    children: /* @__PURE__ */ _jsx(Markdown, {\n      options: {\n        overrides: {\n          p: (props) => /* @__PURE__ */ _jsx(Text, {\n            fz: isLarge ? 20 : 18,\n            fw: 500,\n            children: props.children\n          }),\n          span: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            span: true,\n            fz: isLarge ? 20 : 18,\n            children: props.children\n          }),\n          pre: (props) => /* @__PURE__ */ _jsx(Text, {\n            fw: 500,\n            children: props.children\n          }),\n          code: (props) => /* @__PURE__ */ _jsx(Markdown, {\n            children: props.children\n          })\n        }\n      },\n      children: text\n    })\n  });\n};\n",
-      "start": 1750271785060,
-      "end": 1750271785060,
+      "result": "/*! src/entities/Report/ui/BlockQuoteFilled/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Paper, Text } from \"@mantine/core\";\nimport Markdown from \"markdown-to-jsx\";\nimport { useIsLarge } from \"@/shared/lib\";\nexport const BlockQuoteFilled = ({\n  text,\n  color = \"violet\"\n}) => {\n  const isLarge = useIsLarge();\n  return /* @__PURE__ */ jsx(Paper, { bg: `${color}.0`, py: \"lg\", px: \"3xl\", my: \"md\", c: `${color}.9`, children: /* @__PURE__ */ jsx(Markdown, { options: {\n    overrides: {\n      p: (props) => /* @__PURE__ */ jsx(Text, { fz: isLarge ? 20 : 18, fw: 500, children: props.children }),\n      span: (props) => /* @__PURE__ */ jsx(Text, { fw: 500, span: true, fz: isLarge ? 20 : 18, children: props.children }),\n      pre: (props) => /* @__PURE__ */ jsx(Text, { fw: 500, children: props.children }),\n      code: (props) => /* @__PURE__ */ jsx(Markdown, { children: props.children })\n    }\n  }, children: text }) });\n};\n",
+      "start": 1750275034096,
+      "end": 1750275034096,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/ui/BlockQuoteFilled/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3J,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjF,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC;"
       }
     }
   ]

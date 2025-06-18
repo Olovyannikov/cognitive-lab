@@ -4,23 +4,34 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n\nexport function is404Error(value: unknown): value is { error: { status: 404 } } {\n    return isObject(value) && 'error' in value && 'status' in (value.error as { error: { status: 404 } });\n}\n",
-      "start": 1750271785130,
-      "end": 1750271785141,
+      "start": 1750275033892,
+      "end": 1750275033932,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-swc",
-      "result": "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value) {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value) {\n    return isObject(value) && 'error' in value && 'status' in value.error;\n}\n",
-      "start": 1750271785141,
-      "end": 1750271785146,
-      "order": "pre",
-      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/type-guards/isErrorWithMessage.ts\"],\"sourcesContent\":[\"import { isObject } from 'lodash-es';\\n\\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\\n    return isObject(value) && 'data' in value && 'message' in value;\\n}\\n\\nexport function is404Error(value: unknown): value is { error: { status: 404 } } {\\n    return isObject(value) && 'error' in value && 'status' in (value.error as { error: { status: 404 } });\\n}\\n\"],\"names\":[\"isObject\",\"isErrorWithMessage\",\"value\",\"is404Error\",\"error\"],\"mappings\":\"AAAA,SAASA,QAAQ,QAAQ,YAAY;AAErC,OAAO,SAASC,mBAAmBC,KAAc;IAC7C,OAAOF,SAASE,UAAU,UAAUA,SAAS,aAAaA;AAC9D;AAEA,OAAO,SAASC,WAAWD,KAAc;IACrC,OAAOF,SAASE,UAAU,WAAWA,SAAS,YAAaA,MAAME,KAAK;AAC1E\"}"
+      "name": "vite:react-babel",
+      "result": "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value: unknown): value is {\n  error: {\n    status: 404;\n  };\n} {\n  return isObject(value) && 'error' in value && 'status' in (value.error as {\n    error: {\n      status: 404;\n    };\n  });\n}",
+      "start": 1750275033932,
+      "end": 1750275033934,
+      "order": "pre-normal",
+      "sourcemaps": {
+        "version": 3,
+        "names": ["isObject", "isErrorWithMessage", "value", "data", "message", "is404Error", "error", "status"],
+        "sources": [
+          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/type-guards/isErrorWithMessage.ts"
+        ],
+        "sourcesContent": [
+          "import { isObject } from 'lodash-es';\n\nexport function isErrorWithMessage(value: unknown): value is { data: { message: string } } {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\n\nexport function is404Error(value: unknown): value is { error: { status: 404 } } {\n    return isObject(value) && 'error' in value && 'status' in (value.error as { error: { status: 404 } });\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,QAAQ,QAAQ,WAAW;AAEpC,OAAO,SAASC,kBAAkBA,CAACC,KAAK,EAAE,OAAO,CAAC,EAAEA,KAAK,IAAI;EAAEC,IAAI,EAAE;IAAEC,OAAO,EAAE,MAAM;EAAC,CAAC;AAAC,CAAC,CAAC;EACvF,OAAOJ,QAAQ,CAACE,KAAK,CAAC,IAAI,MAAM,IAAIA,KAAK,IAAI,SAAS,IAAIA,KAAK;AACnE;AAEA,OAAO,SAASG,UAAUA,CAACH,KAAK,EAAE,OAAO,CAAC,EAAEA,KAAK,IAAI;EAAEI,KAAK,EAAE;IAAEC,MAAM,EAAE,GAAG;EAAC,CAAC;AAAC,CAAC,CAAC;EAC5E,OAAOP,QAAQ,CAACE,KAAK,CAAC,IAAI,OAAO,IAAIA,KAAK,IAAI,QAAQ,KAAKA,KAAK,CAACI,KAAK,IAAI;IAAEA,KAAK,EAAE;MAAEC,MAAM,EAAE,GAAG;IAAC,CAAC;EAAC,CAAC,CAAC;AACzG",
+        "ignoreList": []
+      }
     },
     {
       "name": "vite:esbuild",
       "result": "import { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\nexport function is404Error(value) {\n  return isObject(value) && \"error\" in value && \"status\" in value.error;\n}\n",
-      "start": 1750271785146,
-      "end": 1750271785281,
+      "start": 1750275033934,
+      "end": 1750275034197,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -28,89 +39,89 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/type-guards/isErrorWithMessage.ts"
         ],
         "sourcesContent": [
-          "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value) {\n    return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value) {\n    return isObject(value) && 'error' in value && 'status' in value.error;\n}\n"
+          "import { isObject } from 'lodash-es';\nexport function isErrorWithMessage(value: unknown): value is {\n  data: {\n    message: string;\n  };\n} {\n  return isObject(value) && 'data' in value && 'message' in value;\n}\nexport function is404Error(value: unknown): value is {\n  error: {\n    status: 404;\n  };\n} {\n  return isObject(value) && 'error' in value && 'status' in (value.error as {\n    error: {\n      status: 404;\n    };\n  });\n}"
         ],
-        "mappings": "AAAA,SAAS,gBAAgB;AAClB,gBAAS,mBAAmB,OAAO;AACtC,SAAO,SAAS,KAAK,KAAK,UAAU,SAAS,aAAa;AAC9D;AACO,gBAAS,WAAW,OAAO;AAC9B,SAAO,SAAS,KAAK,KAAK,WAAW,SAAS,YAAY,MAAM;AACpE;",
+        "mappings": "AAAA,SAAS,gBAAgB;AAClB,gBAAS,mBAAmB,OAIjC;AACA,SAAO,SAAS,KAAK,KAAK,UAAU,SAAS,aAAa;AAC5D;AACO,gBAAS,WAAW,OAIzB;AACA,SAAO,SAAS,KAAK,KAAK,WAAW,SAAS,YAAa,MAAM;AAKnE;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750271785281,
-      "end": 1750271785281,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750271785281,
-      "end": 1750271785281,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/type-guards/isErrorWithMessage.ts [vike:pluginModuleBanner] */\nimport { isObject } from \"lodash-es\";\nexport function isErrorWithMessage(value) {\n  return isObject(value) && \"data\" in value && \"message\" in value;\n}\nexport function is404Error(value) {\n  return isObject(value) && \"error\" in value && \"status\" in value.error;\n}\n",
-      "start": 1750271785282,
-      "end": 1750271785282,
+      "start": 1750275034197,
+      "end": 1750275034197,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
