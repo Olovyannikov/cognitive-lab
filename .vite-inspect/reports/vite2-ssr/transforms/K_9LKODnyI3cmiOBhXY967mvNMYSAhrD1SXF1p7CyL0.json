@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';\n",
-      "start": 1750184198836,
-      "end": 1750184198868,
+      "start": 1750239308242,
+      "end": 1750239308271,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';",
-      "start": 1750184198868,
-      "end": 1750184198869,
+      "name": "vite:react-swc",
+      "result": "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';\n",
+      "start": 1750239308271,
+      "end": 1750239308276,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/index.ts"],
-        "sourcesContent": [
-          "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';\n"
-        ],
-        "mappings": "AAAA,cAAc,oBAAoB;AAClC,cAAc,YAAY;AAC1B,cAAc,YAAY",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/index.ts\"],\"sourcesContent\":[\"export * from './toInputUpperCase';\\nexport * from './navigate';\\nexport * from './isExists';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,qBAAqB;AACnC,cAAc,aAAa;AAC3B,cAAc,aAAa\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./toInputUpperCase\";\nexport * from \"./navigate\";\nexport * from \"./isExists\";\n",
-      "start": 1750184198869,
-      "end": 1750184198982,
+      "start": 1750239308276,
+      "end": 1750239308316,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/index.ts"],
         "sourcesContent": [
-          "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';"
+          "export * from './toInputUpperCase';\nexport * from './navigate';\nexport * from './isExists';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308316,
+      "end": 1750239308316,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308316,
+      "end": 1750239308316,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308316,
+      "end": 1750239308316,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/index.ts [vike:pluginModuleBanner] */\nexport * from \"./toInputUpperCase\";\nexport * from \"./navigate\";\nexport * from \"./isExists\";\n",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308317,
+      "end": 1750239308317,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

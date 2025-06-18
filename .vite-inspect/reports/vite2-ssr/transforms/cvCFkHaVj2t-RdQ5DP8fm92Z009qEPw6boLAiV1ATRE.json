@@ -4,93 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 342 364\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 173, cy: 140, r: 224, fill: \"#6741D9\" }), /* @__PURE__ */ React.createElement(\"circle\", { cx: 171, cy: -62, r: 174, fill: \"#7048E8\" }));\nexport default SvgCircle;\n",
-      "start": 1750184199707,
-      "end": 1750184199736,
+      "start": 1750239308822,
+      "end": 1750239308831,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "name": "vite:react-swc",
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308831,
+      "end": 1750239308831,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308832,
+      "end": 1750239308832,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308832,
+      "end": 1750239308832,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199736,
-      "end": 1750184199736,
+      "start": 1750239308832,
+      "end": 1750239308832,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/ui/Card/circle.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 342 364\", ...props }, /* @__PURE__ */ React.createElement(\"circle\", { cx: 173, cy: 140, r: 224, fill: \"#6741D9\" }), /* @__PURE__ */ React.createElement(\"circle\", { cx: 171, cy: -62, r: 174, fill: \"#7048E8\" }));\nexport default SvgCircle;\n",
-      "start": 1750184199736,
-      "end": 1750184199737,
+      "start": 1750239308832,
+      "end": 1750239308832,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,51 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useScope } from './ScopeProvider';\n\nexport const EffectorProvider = ({ children }: { children: ReactNode }) => {\n    const pageContext = usePageContext();\n    const scope = useScope();\n\n    useEffect(() => {\n        const firePageStarted = async () => {\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, { scope: scope!, params: pageContext });\n            }\n        };\n        firePageStarted().catch(() => {\n            throw new Error('Page start failed');\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [pageContext]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return <Provider value={scope!}>{children}</Provider>;\n};\n",
-      "start": 1750184198836,
-      "end": 1750184198860,
+      "start": 1750239308242,
+      "end": 1750239308270,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({\n  children\n}: {\n  children: ReactNode;\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n        await allSettled(pageStarted, {\n          scope: scope!,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error('Page start failed');\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [pageContext]);\n  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n  return <Provider value={scope!}>{children}</Provider>;\n};",
-      "start": 1750184198860,
-      "end": 1750184198861,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({ children })=>{\n    const pageContext = usePageContext();\n    const scope = useScope();\n    useEffect(()=>{\n        const firePageStarted = async ()=>{\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, {\n                    scope: scope,\n                    params: pageContext\n                });\n            }\n        };\n        firePageStarted().catch(()=>{\n            throw new Error('Page start failed');\n        });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        pageContext\n    ]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return /*#__PURE__*/ _jsx(Provider, {\n        value: scope,\n        children: children\n    });\n};\n",
+      "start": 1750239308270,
+      "end": 1750239308275,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "ReactNode",
-          "useEffect",
-          "allSettled",
-          "Provider",
-          "usePageContext",
-          "useScope",
-          "EffectorProvider",
-          "children",
-          "pageContext",
-          "scope",
-          "firePageStarted",
-          "pageStarted",
-          "config",
-          "params",
-          "catch",
-          "Error"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/EffectorProvider.tsx"
-        ],
-        "sourcesContent": [
-          "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useScope } from './ScopeProvider';\n\nexport const EffectorProvider = ({ children }: { children: ReactNode }) => {\n    const pageContext = usePageContext();\n    const scope = useScope();\n\n    useEffect(() => {\n        const firePageStarted = async () => {\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, { scope: scope!, params: pageContext });\n            }\n        };\n        firePageStarted().catch(() => {\n            throw new Error('Page start failed');\n        });\n        // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [pageContext]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return <Provider value={scope!}>{children}</Provider>;\n};\n"
-        ],
-        "mappings": "AAAA,SAAS,KAAKA,SAAS,EAAEC,SAAS,QAAQ,OAAO;AACjD,SAASC,UAAU,QAAQ,UAAU;AACrC,SAASC,QAAQ,QAAQ,gBAAgB;AACzC,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,QAAQ,QAAQ,iBAAiB;AAE1C,OAAO,MAAMC,gBAAgB,GAAGA,CAAC;EAAEC;AAAkC,CAAxB,EAAE;EAAEA,QAAQ,EAAEP,SAAS;AAAC,CAAC,KAAK;EACvE,MAAMQ,WAAW,GAAGJ,cAAc,CAAC,CAAC;EACpC,MAAMK,KAAK,GAAGJ,QAAQ,CAAC,CAAC;EAExBJ,SAAS,CAAC,MAAM;IACZ,MAAMS,eAAe,GAAG,MAAAA,CAAA,KAAY;MAChC,MAAM;QAAEC;MAAY,CAAC,GAAGH,WAAW,CAACI,MAAM;MAC1C,IAAID,WAAW,EAAE;QACb;QACA,MAAMT,UAAU,CAACS,WAAW,EAAE;UAAEF,KAAK,EAAEA,KAAK,CAAC;UAAEI,MAAM,EAAEL;QAAY,CAAC,CAAC;MACzE;IACJ,CAAC;IACDE,eAAe,CAAC,CAAC,CAACI,KAAK,CAAC,MAAM;MAC1B,MAAM,IAAIC,KAAK,CAAC,mBAAmB,CAAC;IACxC,CAAC,CAAC;IACF;EACJ,CAAC,EAAE,CAACP,WAAW,CAAC,CAAC;EACjB;EACA,OAAO,CAAC,QAAQ,CAAC,KAAK,CAAC,CAACC,KAAK,CAAC,CAAC,CAAC,CAACF,QAAQ,CAAC,EAAE,QAAQ,CAAC;AACzD,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/EffectorProvider.tsx\"],\"sourcesContent\":[\"import { type ReactNode, useEffect } from 'react';\\nimport { allSettled } from 'effector';\\nimport { Provider } from 'effector-react';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { useScope } from './ScopeProvider';\\n\\nexport const EffectorProvider = ({ children }: { children: ReactNode }) => {\\n    const pageContext = usePageContext();\\n    const scope = useScope();\\n\\n    useEffect(() => {\\n        const firePageStarted = async () => {\\n            const { pageStarted } = pageContext.config;\\n            if (pageStarted) {\\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\\n                await allSettled(pageStarted, { scope: scope!, params: pageContext });\\n            }\\n        };\\n        firePageStarted().catch(() => {\\n            throw new Error('Page start failed');\\n        });\\n        // eslint-disable-next-line react-hooks/exhaustive-deps\\n    }, [pageContext]);\\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\\n    return <Provider value={scope!}>{children}</Provider>;\\n};\\n\"],\"names\":[\"useEffect\",\"allSettled\",\"Provider\",\"usePageContext\",\"useScope\",\"EffectorProvider\",\"children\",\"pageContext\",\"scope\",\"firePageStarted\",\"pageStarted\",\"config\",\"params\",\"catch\",\"Error\",\"value\"],\"mappings\":\";AAAA,SAAyBA,SAAS,QAAQ,QAAQ;AAClD,SAASC,UAAU,QAAQ,WAAW;AACtC,SAASC,QAAQ,QAAQ,iBAAiB;AAC1C,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,QAAQ,QAAQ,kBAAkB;AAE3C,OAAO,MAAMC,mBAAmB,CAAC,EAAEC,QAAQ,EAA2B;IAClE,MAAMC,cAAcJ;IACpB,MAAMK,QAAQJ;IAEdJ,UAAU;QACN,MAAMS,kBAAkB;YACpB,MAAM,EAAEC,WAAW,EAAE,GAAGH,YAAYI,MAAM;YAC1C,IAAID,aAAa;gBACb,oEAAoE;gBACpE,MAAMT,WAAWS,aAAa;oBAAEF,OAAOA;oBAAQI,QAAQL;gBAAY;YACvE;QACJ;QACAE,kBAAkBI,KAAK,CAAC;YACpB,MAAM,IAAIC,MAAM;QACpB;IACA,uDAAuD;IAC3D,GAAG;QAACP;KAAY;IAChB,oEAAoE;IACpE,qBAAO,KAACL;QAASa,OAAOP;kBAASF;;AACrC,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1750184198861,
-      "end": 1750184198934,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const { pageStarted } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(Provider, {\n    value: scope,\n    children\n  });\n};\n",
+      "start": 1750239308275,
+      "end": 1750239308306,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -56,89 +28,89 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/EffectorProvider.tsx"
         ],
         "sourcesContent": [
-          "import { type ReactNode, useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({\n  children\n}: {\n  children: ReactNode;\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n        await allSettled(pageStarted, {\n          scope: scope!,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error('Page start failed');\n    });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n  }, [pageContext]);\n  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n  return <Provider value={scope!}>{children}</Provider>;\n};"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useEffect } from 'react';\nimport { allSettled } from 'effector';\nimport { Provider } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useScope } from './ScopeProvider';\nexport const EffectorProvider = ({ children })=>{\n    const pageContext = usePageContext();\n    const scope = useScope();\n    useEffect(()=>{\n        const firePageStarted = async ()=>{\n            const { pageStarted } = pageContext.config;\n            if (pageStarted) {\n                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n                await allSettled(pageStarted, {\n                    scope: scope,\n                    params: pageContext\n                });\n            }\n        };\n        firePageStarted().catch(()=>{\n            throw new Error('Page start failed');\n        });\n    // eslint-disable-next-line react-hooks/exhaustive-deps\n    }, [\n        pageContext\n    ]);\n    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion\n    return /*#__PURE__*/ _jsx(Provider, {\n        value: scope,\n        children: children\n    });\n};\n"
         ],
-        "mappings": "AA+BS;AA/BT,SAAyB,iBAAiB;AAC1C,SAAS,kBAAkB;AAC3B,SAAS,gBAAgB;AACzB,SAAS,sBAAsB;AAC/B,SAAS,gBAAgB;AAClB,aAAM,mBAAmB,CAAC;AAAA,EAC/B;AACF,MAEM;AACJ,QAAM,cAAc,eAAe;AACnC,QAAM,QAAQ,SAAS;AACvB,YAAU,MAAM;AACd,UAAM,kBAAkB,YAAY;AAClC,YAAM;AAAA,QACJ;AAAA,MACF,IAAI,YAAY;AAChB,UAAI,aAAa;AAEf,cAAM,WAAW,aAAa;AAAA,UAC5B;AAAA,UACA,QAAQ;AAAA,QACV,CAAC;AAAA,MACH;AAAA,IACF;AACA,oBAAgB,EAAE,MAAM,MAAM;AAC5B,YAAM,IAAI,MAAM,mBAAmB;AAAA,IACrC,CAAC;AAAA,EAEH,GAAG,CAAC,WAAW,CAAC;AAEhB,SAAO,oBAAC,YAAS,OAAO,OAAS,UAAS;AAC5C;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,iBAAiB;AAC1B,SAAS,kBAAkB;AAC3B,SAAS,gBAAgB;AACzB,SAAS,sBAAsB;AAC/B,SAAS,gBAAgB;AAClB,aAAM,mBAAmB,CAAC,EAAE,SAAS,MAAI;AAC5C,QAAM,cAAc,eAAe;AACnC,QAAM,QAAQ,SAAS;AACvB,YAAU,MAAI;AACV,UAAM,kBAAkB,YAAU;AAC9B,YAAM,EAAE,YAAY,IAAI,YAAY;AACpC,UAAI,aAAa;AAEb,cAAM,WAAW,aAAa;AAAA,UAC1B;AAAA,UACA,QAAQ;AAAA,QACZ,CAAC;AAAA,MACL;AAAA,IACJ;AACA,oBAAgB,EAAE,MAAM,MAAI;AACxB,YAAM,IAAI,MAAM,mBAAmB;AAAA,IACvC,CAAC;AAAA,EAEL,GAAG;AAAA,IACC;AAAA,EACJ,CAAC;AAED,SAAqB,qBAAK,UAAU;AAAA,IAChC,OAAO;AAAA,IACP;AAAA,EACJ,CAAC;AACL;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198934,
-      "end": 1750184198934,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/lib/effector/EffectorProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const {\n        pageStarted\n      } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(Provider, { value: scope, children });\n};\n",
-      "start": 1750184198935,
-      "end": 1750184198935,
+      "result": "/*! src/shared/lib/effector/EffectorProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { useEffect } from \"react\";\nimport { allSettled } from \"effector\";\nimport { Provider } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useScope } from \"./ScopeProvider\";\nexport const EffectorProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const scope = useScope();\n  useEffect(() => {\n    const firePageStarted = async () => {\n      const { pageStarted } = pageContext.config;\n      if (pageStarted) {\n        await allSettled(pageStarted, {\n          scope,\n          params: pageContext\n        });\n      }\n    };\n    firePageStarted().catch(() => {\n      throw new Error(\"Page start failed\");\n    });\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(Provider, {\n    value: scope,\n    children\n  });\n};\n",
+      "start": 1750239308306,
+      "end": 1750239308306,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/lib/effector/EffectorProvider.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
       }
     }
   ]

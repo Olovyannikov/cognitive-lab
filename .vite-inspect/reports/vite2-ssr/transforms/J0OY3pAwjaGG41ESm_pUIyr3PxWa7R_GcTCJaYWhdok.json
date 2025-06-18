@@ -4,66 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\n\nimport s from './ReportNavigationTemplate.module.css';\n\ninterface ReportNavigationTemplateProps {\n    content: string[];\n    title?: string;\n    onPageChange(n: number): void;\n    color?: string;\n    activeMenu?: string;\n}\n\nexport const ReportNavigationTemplate = ({\n    content,\n    onPageChange,\n    title,\n    color = 'violet',\n    activeMenu = 'Введение',\n}: ReportNavigationTemplateProps) => {\n    const [_, scrollTo] = useWindowScroll();\n    const {\n        urlParsed: { pathname },\n    } = usePageContext();\n\n    const [opened, { close, toggle }] = useDisclosure();\n\n    const isFreeReport = pathname.includes('free');\n\n    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {\n        onPageChange(idx + 1);\n        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);\n    };\n\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler,\n    };\n\n    return (\n        <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>\n    );\n};\n",
-      "start": 1750184199157,
-      "end": 1750184199209,
+      "start": 1750239308365,
+      "end": 1750239308387,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\ninterface ReportNavigationTemplateProps {\n  content: string[];\n  title?: string;\n  onPageChange(n: number): void;\n  color?: string;\n  activeMenu?: string;\n}\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = 'violet',\n  activeMenu = 'Введение'\n}: ReportNavigationTemplateProps) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes('free');\n  const onPageChangeHandler = ({\n    idx\n  }: {\n    idx: number;\n    title: string;\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>;\n};",
-      "start": 1750184199209,
-      "end": 1750184199211,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\nexport const ReportNavigationTemplate = ({ content, onPageChange, title, color = 'violet', activeMenu = 'Введение' })=>{\n    const [_, scrollTo] = useWindowScroll();\n    const { urlParsed: { pathname } } = usePageContext();\n    const [opened, { close, toggle }] = useDisclosure();\n    const isFreeReport = pathname.includes('free');\n    const onPageChangeHandler = ({ idx })=>{\n        onPageChange(idx + 1);\n        setTimeout(()=>!isFreeReport && scrollTo({\n                y: 0\n            }), 0);\n    };\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler\n    };\n    return /*#__PURE__*/ _jsx(\"div\", {\n        className: s.wrapper,\n        children: /*#__PURE__*/ _jsxs(InnerContainer, {\n            className: s.block,\n            children: [\n                /*#__PURE__*/ _jsx(Desktop, {\n                    ...props,\n                    toggle: toggle\n                }),\n                /*#__PURE__*/ _jsx(Mobile, {\n                    ...props,\n                    close: close\n                })\n            ]\n        })\n    });\n};\n",
+      "start": 1750239308387,
+      "end": 1750239308395,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "useDisclosure",
-          "useWindowScroll",
-          "usePageContext",
-          "InnerContainer",
-          "Desktop",
-          "Mobile",
-          "s",
-          "ReportNavigationTemplateProps",
-          "content",
-          "title",
-          "onPageChange",
-          "n",
-          "color",
-          "activeMenu",
-          "ReportNavigationTemplate",
-          "_",
-          "scrollTo",
-          "urlParsed",
-          "pathname",
-          "opened",
-          "close",
-          "toggle",
-          "isFreeReport",
-          "includes",
-          "onPageChangeHandler",
-          "idx",
-          "setTimeout",
-          "y",
-          "props",
-          "wrapper",
-          "block"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportNavigationTemplate/index.tsx"
-        ],
-        "sourcesContent": [
-          "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { InnerContainer } from '@/shared/ui';\n\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\n\nimport s from './ReportNavigationTemplate.module.css';\n\ninterface ReportNavigationTemplateProps {\n    content: string[];\n    title?: string;\n    onPageChange(n: number): void;\n    color?: string;\n    activeMenu?: string;\n}\n\nexport const ReportNavigationTemplate = ({\n    content,\n    onPageChange,\n    title,\n    color = 'violet',\n    activeMenu = 'Введение',\n}: ReportNavigationTemplateProps) => {\n    const [_, scrollTo] = useWindowScroll();\n    const {\n        urlParsed: { pathname },\n    } = usePageContext();\n\n    const [opened, { close, toggle }] = useDisclosure();\n\n    const isFreeReport = pathname.includes('free');\n\n    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {\n        onPageChange(idx + 1);\n        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);\n    };\n\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler,\n    };\n\n    return (\n        <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>\n    );\n};\n"
-        ],
-        "mappings": "AAAA,SAASA,aAAa,EAAEC,eAAe,QAAQ,gBAAgB;AAC/D,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,cAAc,QAAQ,aAAa;AAE5C,SAASC,OAAO,QAAQ,WAAW;AACnC,SAASC,MAAM,QAAQ,UAAU;AAEjC,OAAOC,CAAC,MAAM,uCAAuC;AAErD,UAAUC,6BAA6B,CAAC;EACpCC,OAAO,EAAE,MAAM,EAAE;EACjBC,KAAK,CAAC,EAAE,MAAM;EACdC,YAAY,CAACC,CAAC,EAAE,MAAM,CAAC,EAAE,IAAI;EAC7BC,KAAK,CAAC,EAAE,MAAM;EACdC,UAAU,CAAC,EAAE,MAAM;AACvB;AAEA,OAAO,MAAMC,wBAAwB,GAAGA,CAAC;EACrCN,OAAO;EACPE,YAAY;EACZD,KAAK;EACLG,KAAK,GAAG,QAAQ;EAChBC,UAAU,GAAG;AACc,CAA9B,EAAEN,6BAA6B,KAAK;EACjC,MAAM,CAACQ,CAAC,EAAEC,QAAQ,CAAC,GAAGf,eAAe,CAAC,CAAC;EACvC,MAAM;IACFgB,SAAS,EAAE;MAAEC;IAAS;EAC1B,CAAC,GAAGhB,cAAc,CAAC,CAAC;EAEpB,MAAM,CAACiB,MAAM,EAAE;IAAEC,KAAK;IAAEC;EAAO,CAAC,CAAC,GAAGrB,aAAa,CAAC,CAAC;EAEnD,MAAMsB,YAAY,GAAGJ,QAAQ,CAACK,QAAQ,CAAC,MAAM,CAAC;EAE9C,MAAMC,mBAAmB,GAAGA,CAAC;IAAEC;EAAoC,CAA/B,EAAE;IAAEA,GAAG,EAAE,MAAM;IAAEhB,KAAK,EAAE,MAAM;EAAC,CAAC,KAAK;IACrEC,YAAY,CAACe,GAAG,GAAG,CAAC,CAAC;IACrBC,UAAU,CAAC,MAAM,CAACJ,YAAY,IAAIN,QAAQ,CAAC;MAAEW,CAAC,EAAE;IAAE,CAAC,CAAC,EAAE,CAAC,CAAC;EAC5D,CAAC;EAED,MAAMC,KAAK,GAAG;IACVhB,KAAK;IACLH,KAAK;IACLI,UAAU;IACVM,MAAM;IACNX,OAAO;IACPE,YAAY,EAAEc;EAClB,CAAC;EAED,OACI,CAAC,GAAG,CAAC,SAAS,CAAC,CAAClB,CAAC,CAACuB,OAAO,CAAC;AAClC,YAAY,CAAC,cAAc,CAAC,SAAS,CAAC,CAACvB,CAAC,CAACwB,KAAK,CAAC;AAC/C,gBAAgB,CAAC,OAAO,CAAC,IAAIF,KAAK,CAAC,CAAC,MAAM,CAAC,CAACP,MAAM,CAAC;AACnD,gBAAgB,CAAC,MAAM,CAAC,IAAIO,KAAK,CAAC,CAAC,KAAK,CAAC,CAACR,KAAK,CAAC;AAChD,YAAY,EAAE,cAAc;AAC5B,QAAQ,EAAE,GAAG,CAAC;AAEd,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportNavigationTemplate/index.tsx\"],\"sourcesContent\":[\"import { useDisclosure, useWindowScroll } from '@mantine/hooks';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { InnerContainer } from '@/shared/ui';\\n\\nimport { Desktop } from './desktop';\\nimport { Mobile } from './mobile';\\n\\nimport s from './ReportNavigationTemplate.module.css';\\n\\ninterface ReportNavigationTemplateProps {\\n    content: string[];\\n    title?: string;\\n    onPageChange(n: number): void;\\n    color?: string;\\n    activeMenu?: string;\\n}\\n\\nexport const ReportNavigationTemplate = ({\\n    content,\\n    onPageChange,\\n    title,\\n    color = 'violet',\\n    activeMenu = 'Введение',\\n}: ReportNavigationTemplateProps) => {\\n    const [_, scrollTo] = useWindowScroll();\\n    const {\\n        urlParsed: { pathname },\\n    } = usePageContext();\\n\\n    const [opened, { close, toggle }] = useDisclosure();\\n\\n    const isFreeReport = pathname.includes('free');\\n\\n    const onPageChangeHandler = ({ idx }: { idx: number; title: string }) => {\\n        onPageChange(idx + 1);\\n        setTimeout(() => !isFreeReport && scrollTo({ y: 0 }), 0);\\n    };\\n\\n    const props = {\\n        color,\\n        title,\\n        activeMenu,\\n        opened,\\n        content,\\n        onPageChange: onPageChangeHandler,\\n    };\\n\\n    return (\\n        <div className={s.wrapper}>\\n            <InnerContainer className={s.block}>\\n                <Desktop {...props} toggle={toggle} />\\n                <Mobile {...props} close={close} />\\n            </InnerContainer>\\n        </div>\\n    );\\n};\\n\"],\"names\":[\"useDisclosure\",\"useWindowScroll\",\"usePageContext\",\"InnerContainer\",\"Desktop\",\"Mobile\",\"s\",\"ReportNavigationTemplate\",\"content\",\"onPageChange\",\"title\",\"color\",\"activeMenu\",\"_\",\"scrollTo\",\"urlParsed\",\"pathname\",\"opened\",\"close\",\"toggle\",\"isFreeReport\",\"includes\",\"onPageChangeHandler\",\"idx\",\"setTimeout\",\"y\",\"props\",\"div\",\"className\",\"wrapper\",\"block\"],\"mappings\":\";AAAA,SAASA,aAAa,EAAEC,eAAe,QAAQ,iBAAiB;AAChE,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,cAAc,QAAQ,cAAc;AAE7C,SAASC,OAAO,QAAQ,YAAY;AACpC,SAASC,MAAM,QAAQ,WAAW;AAElC,OAAOC,OAAO,wCAAwC;AAUtD,OAAO,MAAMC,2BAA2B,CAAC,EACrCC,OAAO,EACPC,YAAY,EACZC,KAAK,EACLC,QAAQ,QAAQ,EAChBC,aAAa,UAAU,EACK;IAC5B,MAAM,CAACC,GAAGC,SAAS,GAAGb;IACtB,MAAM,EACFc,WAAW,EAAEC,QAAQ,EAAE,EAC1B,GAAGd;IAEJ,MAAM,CAACe,QAAQ,EAAEC,KAAK,EAAEC,MAAM,EAAE,CAAC,GAAGnB;IAEpC,MAAMoB,eAAeJ,SAASK,QAAQ,CAAC;IAEvC,MAAMC,sBAAsB,CAAC,EAAEC,GAAG,EAAkC;QAChEd,aAAac,MAAM;QACnBC,WAAW,IAAM,CAACJ,gBAAgBN,SAAS;gBAAEW,GAAG;YAAE,IAAI;IAC1D;IAEA,MAAMC,QAAQ;QACVf;QACAD;QACAE;QACAK;QACAT;QACAC,cAAca;IAClB;IAEA,qBACI,KAACK;QAAIC,WAAWtB,EAAEuB,OAAO;kBACrB,cAAA,MAAC1B;YAAeyB,WAAWtB,EAAEwB,KAAK;;8BAC9B,KAAC1B;oBAAS,GAAGsB,KAAK;oBAAEP,QAAQA;;8BAC5B,KAACd;oBAAQ,GAAGqB,KAAK;oBAAER,OAAOA;;;;;AAI1C,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1750184199211,
-      "end": 1750184199439,
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({ content, onPageChange, title, color = \"violet\", activeMenu = \"Введение\" }) => {\n  const [_, scrollTo] = useWindowScroll();\n  const { urlParsed: { pathname } } = usePageContext();\n  const [opened, { close, toggle }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({ idx }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ _jsx(\"div\", {\n    className: s.wrapper,\n    children: /* @__PURE__ */ _jsxs(InnerContainer, {\n      className: s.block,\n      children: [\n        /* @__PURE__ */ _jsx(Desktop, {\n          ...props,\n          toggle\n        }),\n        /* @__PURE__ */ _jsx(Mobile, {\n          ...props,\n          close\n        })\n      ]\n    })\n  });\n};\n",
+      "start": 1750239308395,
+      "end": 1750239308549,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -71,89 +28,89 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/ReportNavigationTemplate/index.tsx"
         ],
         "sourcesContent": [
-          "import { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\ninterface ReportNavigationTemplateProps {\n  content: string[];\n  title?: string;\n  onPageChange(n: number): void;\n  color?: string;\n  activeMenu?: string;\n}\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = 'violet',\n  activeMenu = 'Введение'\n}: ReportNavigationTemplateProps) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes('free');\n  const onPageChangeHandler = ({\n    idx\n  }: {\n    idx: number;\n    title: string;\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return <div className={s.wrapper}>\n            <InnerContainer className={s.block}>\n                <Desktop {...props} toggle={toggle} />\n                <Mobile {...props} close={close} />\n            </InnerContainer>\n        </div>;\n};"
+          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from '@mantine/hooks';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { InnerContainer } from '@/shared/ui';\nimport { Desktop } from './desktop';\nimport { Mobile } from './mobile';\nimport s from './ReportNavigationTemplate.module.css';\nexport const ReportNavigationTemplate = ({ content, onPageChange, title, color = 'violet', activeMenu = 'Введение' })=>{\n    const [_, scrollTo] = useWindowScroll();\n    const { urlParsed: { pathname } } = usePageContext();\n    const [opened, { close, toggle }] = useDisclosure();\n    const isFreeReport = pathname.includes('free');\n    const onPageChangeHandler = ({ idx })=>{\n        onPageChange(idx + 1);\n        setTimeout(()=>!isFreeReport && scrollTo({\n                y: 0\n            }), 0);\n    };\n    const props = {\n        color,\n        title,\n        activeMenu,\n        opened,\n        content,\n        onPageChange: onPageChangeHandler\n    };\n    return /*#__PURE__*/ _jsx(\"div\", {\n        className: s.wrapper,\n        children: /*#__PURE__*/ _jsxs(InnerContainer, {\n            className: s.block,\n            children: [\n                /*#__PURE__*/ _jsx(Desktop, {\n                    ...props,\n                    toggle: toggle\n                }),\n                /*#__PURE__*/ _jsx(Mobile, {\n                    ...props,\n                    close: close\n                })\n            ]\n        })\n    });\n};\n"
         ],
-        "mappings": "AAmDY,SACI,KADJ;AAnDZ,SAAS,eAAe,uBAAuB;AAC/C,SAAS,sBAAsB;AAC/B,SAAS,sBAAsB;AAC/B,SAAS,eAAe;AACxB,SAAS,cAAc;AACvB,OAAO,OAAO;AAQP,aAAM,2BAA2B,CAAC;AAAA,EACvC;AAAA,EACA;AAAA,EACA;AAAA,EACA,QAAQ;AAAA,EACR,aAAa;AACf,MAAqC;AACnC,QAAM,CAAC,GAAG,QAAQ,IAAI,gBAAgB;AACtC,QAAM;AAAA,IACJ,WAAW;AAAA,MACT;AAAA,IACF;AAAA,EACF,IAAI,eAAe;AACnB,QAAM,CAAC,QAAQ;AAAA,IACb;AAAA,IACA;AAAA,EACF,CAAC,IAAI,cAAc;AACnB,QAAM,eAAe,SAAS,SAAS,MAAM;AAC7C,QAAM,sBAAsB,CAAC;AAAA,IAC3B;AAAA,EACF,MAGM;AACJ,iBAAa,MAAM,CAAC;AACpB,eAAW,MAAM,CAAC,gBAAgB,SAAS;AAAA,MACzC,GAAG;AAAA,IACL,CAAC,GAAG,CAAC;AAAA,EACP;AACA,QAAM,QAAQ;AAAA,IACZ;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA,cAAc;AAAA,EAChB;AACA,SAAO,oBAAC,SAAI,WAAW,EAAE,SACf,+BAAC,kBAAe,WAAW,EAAE,OACzB;AAAA,wBAAC,WAAS,GAAG,OAAO,QAAgB;AAAA,IACpC,oBAAC,UAAQ,GAAG,OAAO,OAAc;AAAA,KACrC,GACJ;AACR;",
+        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,eAAe,uBAAuB;AAC/C,SAAS,sBAAsB;AAC/B,SAAS,sBAAsB;AAC/B,SAAS,eAAe;AACxB,SAAS,cAAc;AACvB,OAAO,OAAO;AACP,aAAM,2BAA2B,CAAC,EAAE,SAAS,cAAc,OAAO,QAAQ,UAAU,aAAa,WAAW,MAAI;AACnH,QAAM,CAAC,GAAG,QAAQ,IAAI,gBAAgB;AACtC,QAAM,EAAE,WAAW,EAAE,SAAS,EAAE,IAAI,eAAe;AACnD,QAAM,CAAC,QAAQ,EAAE,OAAO,OAAO,CAAC,IAAI,cAAc;AAClD,QAAM,eAAe,SAAS,SAAS,MAAM;AAC7C,QAAM,sBAAsB,CAAC,EAAE,IAAI,MAAI;AACnC,iBAAa,MAAM,CAAC;AACpB,eAAW,MAAI,CAAC,gBAAgB,SAAS;AAAA,MACjC,GAAG;AAAA,IACP,CAAC,GAAG,CAAC;AAAA,EACb;AACA,QAAM,QAAQ;AAAA,IACV;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA,cAAc;AAAA,EAClB;AACA,SAAqB,qBAAK,OAAO;AAAA,IAC7B,WAAW,EAAE;AAAA,IACb,UAAwB,sBAAM,gBAAgB;AAAA,MAC1C,WAAW,EAAE;AAAA,MACb,UAAU;AAAA,QACQ,qBAAK,SAAS;AAAA,UACxB,GAAG;AAAA,UACH;AAAA,QACJ,CAAC;AAAA,QACa,qBAAK,QAAQ;AAAA,UACvB,GAAG;AAAA,UACH;AAAA,QACJ,CAAC;AAAA,MACL;AAAA,IACJ,CAAC;AAAA,EACL,CAAC;AACL;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199439,
-      "end": 1750184199439,
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({\n  content,\n  onPageChange,\n  title,\n  color = \"violet\",\n  activeMenu = \"Введение\"\n}) => {\n  const [_, scrollTo] = useWindowScroll();\n  const {\n    urlParsed: {\n      pathname\n    }\n  } = usePageContext();\n  const [opened, {\n    close,\n    toggle\n  }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({\n    idx\n  }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ jsx(\"div\", { className: s.wrapper, children: /* @__PURE__ */ jsxs(InnerContainer, { className: s.block, children: [\n    /* @__PURE__ */ jsx(Desktop, { ...props, toggle }),\n    /* @__PURE__ */ jsx(Mobile, { ...props, close })\n  ] }) });\n};\n",
-      "start": 1750184199439,
-      "end": 1750184199440,
+      "result": "/*! src/entities/Report/ui/ReportNavigationTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { useDisclosure, useWindowScroll } from \"@mantine/hooks\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { Desktop } from \"./desktop\";\nimport { Mobile } from \"./mobile\";\nimport s from \"./ReportNavigationTemplate.module.css\";\nexport const ReportNavigationTemplate = ({ content, onPageChange, title, color = \"violet\", activeMenu = \"Введение\" }) => {\n  const [_, scrollTo] = useWindowScroll();\n  const { urlParsed: { pathname } } = usePageContext();\n  const [opened, { close, toggle }] = useDisclosure();\n  const isFreeReport = pathname.includes(\"free\");\n  const onPageChangeHandler = ({ idx }) => {\n    onPageChange(idx + 1);\n    setTimeout(() => !isFreeReport && scrollTo({\n      y: 0\n    }), 0);\n  };\n  const props = {\n    color,\n    title,\n    activeMenu,\n    opened,\n    content,\n    onPageChange: onPageChangeHandler\n  };\n  return /* @__PURE__ */ _jsx(\"div\", {\n    className: s.wrapper,\n    children: /* @__PURE__ */ _jsxs(InnerContainer, {\n      className: s.block,\n      children: [\n        /* @__PURE__ */ _jsx(Desktop, {\n          ...props,\n          toggle\n        }),\n        /* @__PURE__ */ _jsx(Mobile, {\n          ...props,\n          close\n        })\n      ]\n    })\n  });\n};\n",
+      "start": 1750239308549,
+      "end": 1750239308549,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/ui/ReportNavigationTemplate/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,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,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3I,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CA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"
       }
     }
   ]

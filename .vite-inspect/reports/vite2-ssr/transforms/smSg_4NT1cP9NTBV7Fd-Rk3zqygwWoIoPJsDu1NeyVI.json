@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './atom';\nexport * from './disclosure';\n",
-      "start": 1750184198957,
-      "end": 1750184198999,
+      "start": 1750239308292,
+      "end": 1750239308305,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './atom';\nexport * from './disclosure';",
-      "start": 1750184198999,
-      "end": 1750184199000,
+      "name": "vite:react-swc",
+      "result": "export * from './atom';\nexport * from './disclosure';\n",
+      "start": 1750239308305,
+      "end": 1750239308311,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts"],
-        "sourcesContent": ["export * from './atom';\nexport * from './disclosure';\n"],
-        "mappings": "AAAA,cAAc,QAAQ;AACtB,cAAc,cAAc",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts\"],\"sourcesContent\":[\"export * from './atom';\\nexport * from './disclosure';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,SAAS;AACvB,cAAc,eAAe\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./atom\";\nexport * from \"./disclosure\";\n",
-      "start": 1750184199000,
-      "end": 1750184199172,
+      "start": 1750239308311,
+      "end": 1750239308386,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/factories/index.ts"],
-        "sourcesContent": ["export * from './atom';\nexport * from './disclosure';"],
+        "sourcesContent": ["export * from './atom';\nexport * from './disclosure';\n"],
         "mappings": "AAAA,cAAc;AACd,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199172,
-      "end": 1750184199172,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199172,
-      "end": 1750184199173,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199173,
-      "end": 1750184199173,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199173,
-      "end": 1750184199173,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/factories/index.ts [vike:pluginModuleBanner] */\nexport * from \"./atom\";\nexport * from \"./disclosure\";\n",
-      "start": 1750184199173,
-      "end": 1750184199173,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

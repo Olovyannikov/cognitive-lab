@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TextInput, TextInputProps } from '@mantine/core';\n\nimport s from './InputBorderless.module.css';\n\ntype InputBorderless = TextInputProps;\n\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\n);\n",
-      "start": 1750184199034,
-      "end": 1750184199071,
+      "start": 1750239308328,
+      "end": 1750239308343,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { TextInput, TextInputProps } from '@mantine/core';\nimport s from './InputBorderless.module.css';\ntype InputBorderless = TextInputProps;\nexport const InputBorderless = ({\n  value,\n  onChange\n}: InputBorderless) => <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />;",
-      "start": 1750184199071,
-      "end": 1750184199072,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TextInput } from '@mantine/core';\nimport s from './InputBorderless.module.css';\nexport const InputBorderless = ({ value, onChange })=>/*#__PURE__*/ _jsx(TextInput, {\n        fz: 16,\n        autoFocus: true,\n        classNames: s,\n        value: value,\n        onChange: onChange\n    });\n",
+      "start": 1750239308343,
+      "end": 1750239308356,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["TextInput", "TextInputProps", "s", "InputBorderless", "value", "onChange"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx"],
-        "sourcesContent": [
-          "import { TextInput, TextInputProps } from '@mantine/core';\n\nimport s from './InputBorderless.module.css';\n\ntype InputBorderless = TextInputProps;\n\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\n);\n"
-        ],
-        "mappings": "AAAA,SAASA,SAAS,EAAEC,cAAc,QAAQ,eAAe;AAEzD,OAAOC,CAAC,MAAM,8BAA8B;AAE5C,KAAKC,eAAe,GAAGF,cAAc;AAErC,OAAO,MAAME,eAAe,GAAGA,CAAC;EAAEC,KAAK;EAAEC;AAA0B,CAAhB,EAAEF,eAAe,KAChE,CAAC,SAAS,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,SAAS,CAAC,UAAU,CAAC,CAACD,CAAC,CAAC,CAAC,KAAK,CAAC,CAACE,KAAK,CAAC,CAAC,QAAQ,CAAC,CAACC,QAAQ,CAAC,GAChF",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx\"],\"sourcesContent\":[\"import { TextInput, TextInputProps } from '@mantine/core';\\n\\nimport s from './InputBorderless.module.css';\\n\\ntype InputBorderless = TextInputProps;\\n\\nexport const InputBorderless = ({ value, onChange }: InputBorderless) => (\\n    <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />\\n);\\n\"],\"names\":[\"TextInput\",\"s\",\"InputBorderless\",\"value\",\"onChange\",\"fz\",\"autoFocus\",\"classNames\"],\"mappings\":\";AAAA,SAASA,SAAS,QAAwB,gBAAgB;AAE1D,OAAOC,OAAO,+BAA+B;AAI7C,OAAO,MAAMC,kBAAkB,CAAC,EAAEC,KAAK,EAAEC,QAAQ,EAAmB,iBAChE,KAACJ;QAAUK,IAAI;QAAIC,SAAS;QAACC,YAAYN;QAAGE,OAAOA;QAAOC,UAAUA;OACtE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
-      "start": 1750184199072,
-      "end": 1750184199244,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({ value, onChange }) => /* @__PURE__ */ _jsx(TextInput, {\n  fz: 16,\n  autoFocus: true,\n  classNames: s,\n  value,\n  onChange\n});\n",
+      "start": 1750239308356,
+      "end": 1750239308468,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/InputBorderless/index.tsx"],
         "sourcesContent": [
-          "import { TextInput, TextInputProps } from '@mantine/core';\nimport s from './InputBorderless.module.css';\ntype InputBorderless = TextInputProps;\nexport const InputBorderless = ({\n  value,\n  onChange\n}: InputBorderless) => <TextInput fz={16} autoFocus classNames={s} value={value} onChange={onChange} />;"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TextInput } from '@mantine/core';\nimport s from './InputBorderless.module.css';\nexport const InputBorderless = ({ value, onChange })=>/*#__PURE__*/ _jsx(TextInput, {\n        fz: 16,\n        autoFocus: true,\n        classNames: s,\n        value: value,\n        onChange: onChange\n    });\n"
         ],
-        "mappings": "AAMuB;AANvB,SAAS,iBAAiC;AAC1C,OAAO,OAAO;AAEP,aAAM,kBAAkB,CAAC;AAAA,EAC9B;AAAA,EACA;AACF,MAAuB,oBAAC,aAAU,IAAI,IAAI,WAAS,MAAC,YAAY,GAAG,OAAc,UAAoB;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,kBAAkB,CAAC,EAAE,OAAO,SAAS,MAAkB,qBAAK,WAAW;AAAA,EAC5E,IAAI;AAAA,EACJ,WAAW;AAAA,EACX,YAAY;AAAA,EACZ;AAAA,EACA;AACJ,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308468,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/ui/InputBorderless/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({\n  value,\n  onChange\n}) => /* @__PURE__ */ jsx(TextInput, { fz: 16, autoFocus: true, classNames: s, value, onChange });\n",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "result": "/*! src/shared/ui/InputBorderless/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./InputBorderless.module.css\";\nexport const InputBorderless = ({ value, onChange }) => /* @__PURE__ */ _jsx(TextInput, {\n  fz: 16,\n  autoFocus: true,\n  classNames: s,\n  value,\n  onChange\n});\n",
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/ui/InputBorderless/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC;"
       }
     }
   ]

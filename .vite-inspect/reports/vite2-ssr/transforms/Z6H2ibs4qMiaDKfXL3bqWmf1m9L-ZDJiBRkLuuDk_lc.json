@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './ui';\n",
-      "start": 1750184199258,
-      "end": 1750184199305,
+      "start": 1750239308395,
+      "end": 1750239308415,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './ui';",
-      "start": 1750184199305,
-      "end": 1750184199306,
+      "name": "vite:react-swc",
+      "result": "export * from './ui';\n",
+      "start": 1750239308415,
+      "end": 1750239308419,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"],
-        "sourcesContent": ["export * from './ui';\n"],
-        "mappings": "AAAA,cAAc,MAAM",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts\"],\"sourcesContent\":[\"export * from './ui';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,OAAO\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./ui\";\n",
-      "start": 1750184199306,
-      "end": 1750184199567,
+      "start": 1750239308419,
+      "end": 1750239308595,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SubscribeToNews/index.ts"],
-        "sourcesContent": ["export * from './ui';"],
+        "sourcesContent": ["export * from './ui';\n"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308595,
+      "end": 1750239308595,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308595,
+      "end": 1750239308595,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308595,
+      "end": 1750239308595,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308595,
+      "end": 1750239308595,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SubscribeToNews/index.ts [vike:pluginModuleBanner] */\nexport * from \"./ui\";\n",
-      "start": 1750184199567,
-      "end": 1750184199567,
+      "start": 1750239308596,
+      "end": 1750239308596,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

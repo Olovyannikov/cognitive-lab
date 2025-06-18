@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './ui';\nexport * from './context/CongratulationsProvider';\n",
-      "start": 1750184198922,
-      "end": 1750184198965,
+      "start": 1750239308271,
+      "end": 1750239308284,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './ui';\nexport * from './context/CongratulationsProvider';",
-      "start": 1750184198965,
-      "end": 1750184198966,
+      "name": "vite:react-swc",
+      "result": "export * from './ui';\nexport * from './context/CongratulationsProvider';\n",
+      "start": 1750239308284,
+      "end": 1750239308293,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/index.ts"],
-        "sourcesContent": ["export * from './ui';\nexport * from './context/CongratulationsProvider';\n"],
-        "mappings": "AAAA,cAAc,MAAM;AACpB,cAAc,mCAAmC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/index.ts\"],\"sourcesContent\":[\"export * from './ui';\\nexport * from './context/CongratulationsProvider';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,OAAO;AACrB,cAAc,oCAAoC\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./ui\";\nexport * from \"./context/CongratulationsProvider\";\n",
-      "start": 1750184198966,
-      "end": 1750184199119,
+      "start": 1750239308293,
+      "end": 1750239308330,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/CongratulationsSlider/index.ts"],
-        "sourcesContent": ["export * from './ui';\nexport * from './context/CongratulationsProvider';"],
+        "sourcesContent": ["export * from './ui';\nexport * from './context/CongratulationsProvider';\n"],
         "mappings": "AAAA,cAAc;AACd,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/CongratulationsSlider/index.ts [vike:pluginModuleBanner] */\nexport * from \"./ui\";\nexport * from \"./context/CongratulationsProvider\";\n",
-      "start": 1750184199119,
-      "end": 1750184199119,
+      "start": 1750239308330,
+      "end": 1750239308330,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

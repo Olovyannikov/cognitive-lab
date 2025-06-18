@@ -4,125 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import { isNumber } from 'lodash-es';\n\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n\n    return true;\n};\n",
-      "start": 1750184199086,
-      "end": 1750184199145,
+      "start": 1750239308435,
+      "end": 1750239308463,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { isNumber } from 'lodash-es';\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n  if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== '';\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};",
-      "start": 1750184199145,
-      "end": 1750184199146,
+      "name": "vite:react-swc",
+      "result": "import { isNumber } from 'lodash-es';\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */ export const isValidAnswer = (answer)=>{\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n    return true;\n};\n",
+      "start": 1750239308463,
+      "end": 1750239308468,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "isNumber",
-          "PreparedAnswer",
-          "isValidAnswer",
-          "answer",
-          "JSON",
-          "stringify",
-          "value",
-          "Array",
-          "isArray",
-          "length"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts"],
-        "sourcesContent": [
-          "import { isNumber } from 'lodash-es';\n\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n\n    return true;\n};\n"
-        ],
-        "mappings": "AAAA,SAASA,QAAQ,QAAQ,WAAW;AAEpC,cAAcC,cAAc,QAAQ,cAAc;;AAElD;AACA;AACA;AACA,OAAO,MAAMC,aAAa,GAAGA,CAACC,MAAM,EAAEF,cAAc,GAAG,SAAS,GAAG,IAAI,CAAC,EAAE,OAAO,IAAI;EACjF,IAAI,CAACD,QAAQ,CAACG,MAAM,CAAC,KAAKA,MAAM,EAAEA,MAAM,IAAI,IAAI,IAAIC,IAAI,CAACC,SAAS,CAACF,MAAM,CAACA,MAAM,CAAC,KAAK,IAAI,CAAC,EAAE,OAAO,KAAK;EACzG,IAAI,OAAOA,MAAM,CAACA,MAAM,KAAK,QAAQ,IAAI,OAAO,IAAIA,MAAM,CAACA,MAAM,EAAE;IAC/D,OAAOA,MAAM,CAACA,MAAM,CAACG,KAAK,KAAK,IAAI,IAAIH,MAAM,CAACA,MAAM,CAACG,KAAK,KAAK,EAAE;EACrE;EACA,IAAIC,KAAK,CAACC,OAAO,CAACL,MAAM,CAACA,MAAM,CAAC,EAAE;IAC9B,OAAOA,MAAM,CAACA,MAAM,CAACM,MAAM,GAAG,CAAC;EACnC;EAEA,OAAO,IAAI;AACf,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts\"],\"sourcesContent\":[\"import { isNumber } from 'lodash-es';\\n\\nimport type { PreparedAnswer } from '../api/types';\\n\\n/**\\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\\n */\\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\\n        return answer.answer.value !== null && answer.answer.value !== '';\\n    }\\n    if (Array.isArray(answer.answer)) {\\n        return answer.answer.length > 0;\\n    }\\n\\n    return true;\\n};\\n\"],\"names\":[\"isNumber\",\"isValidAnswer\",\"answer\",\"JSON\",\"stringify\",\"value\",\"Array\",\"isArray\",\"length\"],\"mappings\":\"AAAA,SAASA,QAAQ,QAAQ,YAAY;AAIrC;;CAEC,GACD,OAAO,MAAMC,gBAAgB,CAACC;IAC1B,IAAI,CAACF,SAASE,WAAYA,CAAAA,QAAQA,UAAU,QAAQC,KAAKC,SAAS,CAACF,OAAOA,MAAM,MAAM,IAAG,GAAI,OAAO;IACpG,IAAI,OAAOA,OAAOA,MAAM,KAAK,YAAY,WAAWA,OAAOA,MAAM,EAAE;QAC/D,OAAOA,OAAOA,MAAM,CAACG,KAAK,KAAK,QAAQH,OAAOA,MAAM,CAACG,KAAK,KAAK;IACnE;IACA,IAAIC,MAAMC,OAAO,CAACL,OAAOA,MAAM,GAAG;QAC9B,OAAOA,OAAOA,MAAM,CAACM,MAAM,GAAG;IAClC;IAEA,OAAO;AACX,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
-      "start": 1750184199146,
-      "end": 1750184199383,
+      "start": 1750239308468,
+      "end": 1750239308710,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/isValidAnswer.ts"],
         "sourcesContent": [
-          "import { isNumber } from 'lodash-es';\nimport type { PreparedAnswer } from '../api/types';\n\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */\nexport const isValidAnswer = (answer: PreparedAnswer | undefined | null): boolean => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n  if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== '';\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};"
+          "import { isNumber } from 'lodash-es';\n/**\n * Проверяет, валиден ли ответ пользователя для перехода к следующему вопросу\n */ export const isValidAnswer = (answer)=>{\n    if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === '{}')) return false;\n    if (typeof answer.answer === 'object' && 'value' in answer.answer) {\n        return answer.answer.value !== null && answer.answer.value !== '';\n    }\n    if (Array.isArray(answer.answer)) {\n        return answer.answer.length > 0;\n    }\n    return true;\n};\n"
         ],
-        "mappings": "AAAA,SAAS,gBAAgB;AAMlB,aAAM,gBAAgB,CAAC,WAAuD;AACnF,MAAI,CAAC,SAAS,MAAM,MAAM,QAAQ,UAAU,QAAQ,KAAK,UAAU,OAAO,MAAM,MAAM,MAAO,QAAO;AACpG,MAAI,OAAO,OAAO,WAAW,YAAY,WAAW,OAAO,QAAQ;AACjE,WAAO,OAAO,OAAO,UAAU,QAAQ,OAAO,OAAO,UAAU;AAAA,EACjE;AACA,MAAI,MAAM,QAAQ,OAAO,MAAM,GAAG;AAChC,WAAO,OAAO,OAAO,SAAS;AAAA,EAChC;AACA,SAAO;AACT;",
+        "mappings": "AAAA,SAAS,gBAAgB;AAGd,aAAM,gBAAgB,CAAC,WAAS;AACvC,MAAI,CAAC,SAAS,MAAM,MAAM,QAAQ,UAAU,QAAQ,KAAK,UAAU,OAAO,MAAM,MAAM,MAAO,QAAO;AACpG,MAAI,OAAO,OAAO,WAAW,YAAY,WAAW,OAAO,QAAQ;AAC/D,WAAO,OAAO,OAAO,UAAU,QAAQ,OAAO,OAAO,UAAU;AAAA,EACnE;AACA,MAAI,MAAM,QAAQ,OAAO,MAAM,GAAG;AAC9B,WAAO,OAAO,OAAO,SAAS;AAAA,EAClC;AACA,SAAO;AACX;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308710,
+      "end": 1750239308711,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308711,
+      "end": 1750239308711,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308711,
+      "end": 1750239308711,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/isValidAnswer.ts [vike:pluginModuleBanner] */\nimport { isNumber } from \"lodash-es\";\nexport const isValidAnswer = (answer) => {\n  if (!isNumber(answer) && (answer?.answer == null || JSON.stringify(answer.answer) === \"{}\")) return false;\n  if (typeof answer.answer === \"object\" && \"value\" in answer.answer) {\n    return answer.answer.value !== null && answer.answer.value !== \"\";\n  }\n  if (Array.isArray(answer.answer)) {\n    return answer.answer.length > 0;\n  }\n  return true;\n};\n",
-      "start": 1750184199383,
-      "end": 1750184199383,
+      "start": 1750239308711,
+      "end": 1750239308711,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

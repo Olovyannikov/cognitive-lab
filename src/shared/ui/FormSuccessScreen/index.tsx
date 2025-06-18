@@ -8,7 +8,7 @@ import s from './FormSuccessScreen.module.css';
 const BASE_TEXT = {
     title: 'Спасибо за ваш отзыв!',
     description: 'Спасибо за ваш отзыв!',
-    image: '/images/success-base-man.webp',
+    image: '/images/success-base-man',
 };
 
 interface FormSuccessScreenProps {
@@ -27,7 +27,7 @@ export const FormSuccessScreen = ({
     slots,
 }: FormSuccessScreenProps) => (
     <Box className={s.box}>
-        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />
+        <Picture cdn className={s.image} w={145} aria-hidden={true} src={image} alt={title} />
         <Title className={s.title} order={3}>
             {title}
         </Title>

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".container {\n  padding: 0;\n\n  @mixin larger-than 1024px {\n    --container-size: 100% !important;\n  }\n}\n\n.mainTitle {\n  margin-bottom: var(--mantine-spacing-xl);\n  font-size: 34px;\n  line-height: 40px;\n  text-align: center;\n\n  a {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    text-decoration: none;\n    color: var(--mantine-color-violet-7);\n\n    svg {\n      width: 32px;\n      height: 32px;\n\n      @mixin larger-than 992px {\n        width: 52px;\n        height: 52px;\n      }\n    }\n  }\n\n  @mixin larger-than 992px {\n    br {\n      display: none;\n    }\n  }\n\n  @mixin larger-than 992px {\n    margin-bottom: 80px;\n    font-size: 64px;\n    line-height: 75px;\n  }\n}\n\n.paper {\n  border-radius: 8px;\n  padding: 16px;\n  color: var(--mantine-color-dark-6);\n}\n\n.cardTitle {\n  font-size: 24px;\n  line-height: 28px;\n}\n\n.blogText {\n  font-size: 16px;\n  line-height: 25px;\n\n  @mixin larger-than 1024px {\n    font-size: 20px;\n  }\n}\n\n.image {\n  margin: 0 auto;\n  width: 304px;\n  height: 304px;\n  aspect-ratio: 16 / 9;\n\n  @mixin larger-than 992px {\n    width: 432px;\n    height: 432px;\n  }\n}\n",
-      "start": 1750184199580,
-      "end": 1750184199597,
+      "start": 1750239308707,
+      "end": 1750239308714,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199597,
-      "end": 1750184199597,
+      "name": "vite:react-swc",
+      "start": 1750239308714,
+      "end": 1750239308714,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199598,
-      "end": 1750184199598,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199598,
-      "end": 1750184199598,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308716,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/MoreInBlog/MoreInBlog.module.css [vike:pluginModuleBanner] */\nexport const container = \"WTIy4\";\nexport const mainTitle = \"zYuaB\";\nexport const paper = \"nPJnO\";\nexport const cardTitle = \"eM9Cp\";\nexport const blogText = \"_0iR97\";\nexport const image = \"gKOz6\";\nexport default {\n\tcontainer: container,\n\tmainTitle: mainTitle,\n\tpaper: paper,\n\tcardTitle: cardTitle,\n\tblogText: blogText,\n\timage: image\n};\n",
-      "start": 1750184199599,
-      "end": 1750184199599,
+      "start": 1750239308716,
+      "end": 1750239308717,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -19,6 +19,8 @@ pre-commit:
             run: pnpm run test:unit
         knip:
             run: knip && pnpm run knip:md && pnpm run knip:fix
+        version:
+            run: pnpm run version
 
 commit-msg:
     parallel: true

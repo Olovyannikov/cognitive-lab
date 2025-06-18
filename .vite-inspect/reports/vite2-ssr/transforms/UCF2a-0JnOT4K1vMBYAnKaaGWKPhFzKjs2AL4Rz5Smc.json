@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './constants';\n",
-      "start": 1750184199290,
-      "end": 1750184199327,
+      "start": 1750239308444,
+      "end": 1750239308473,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './constants';",
-      "start": 1750184199327,
-      "end": 1750184199328,
+      "name": "vite:react-swc",
+      "result": "export * from './constants';\n",
+      "start": 1750239308473,
+      "end": 1750239308483,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/index.ts"],
-        "sourcesContent": ["export * from './constants';\n"],
-        "mappings": "AAAA,cAAc,aAAa",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/index.ts\"],\"sourcesContent\":[\"export * from './constants';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,cAAc\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./constants\";\n",
-      "start": 1750184199328,
-      "end": 1750184199575,
+      "start": 1750239308483,
+      "end": 1750239308723,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/config/index.ts"],
-        "sourcesContent": ["export * from './constants';"],
+        "sourcesContent": ["export * from './constants';\n"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308723,
+      "end": 1750239308723,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308724,
+      "end": 1750239308724,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308724,
+      "end": 1750239308724,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308724,
+      "end": 1750239308724,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308724,
+      "end": 1750239308724,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/config/index.ts [vike:pluginModuleBanner] */\nexport * from \"./constants\";\n",
-      "start": 1750184199575,
-      "end": 1750184199575,
+      "start": 1750239308724,
+      "end": 1750239308724,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

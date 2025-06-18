@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".dropdown {\n  top: 83px !important;\n  overflow: auto;\n  border: 0;\n  width: 100% !important;\n  max-height: calc(100vh - 83px);\n\n  @mixin larger-than 768px {\n    top: 86px !important;\n    border-bottom-right-radius: var(--mantine-spacing-lg);\n    border-bottom-left-radius: var(--mantine-spacing-lg);\n    padding: calc(var(--mantine-spacing-5xl) - 24px) calc(var(--mantine-spacing-5xl) - 32px);\n    max-width: 1084px;\n    box-shadow: var(--mantine-shadow-lg);\n  }\n}\n",
-      "start": 1750184199737,
-      "end": 1750184199752,
+      "start": 1750239308831,
+      "end": 1750239308834,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "name": "vite:react-swc",
+      "start": 1750239308834,
+      "end": 1750239308834,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199752,
-      "end": 1750184199752,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199752,
-      "end": 1750184199753,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199753,
-      "end": 1750184199753,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199753,
-      "end": 1750184199753,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Types/Types.module.css [vike:pluginModuleBanner] */\nexport const dropdown = \"_3wmY5\";\nexport default {\n\tdropdown: dropdown\n};\n",
-      "start": 1750184199753,
-      "end": 1750184199753,
+      "start": 1750239308835,
+      "end": 1750239308835,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

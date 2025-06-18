@@ -4,159 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\n\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\n\nexport const RootModel = atom(() => {\n    const MainMenu = invoke(disclosureFactory, {\n        open: false,\n    });\n    const Submenu = invoke(disclosureFactory, {\n        open: false,\n    });\n\n    const allMenusClosed = createEvent<false>();\n\n    sample({\n        clock: [allMenusClosed, desktop.$matches],\n        fn: () => false,\n        target: [MainMenu.$open, Submenu.$open],\n    });\n    sample({\n        clock: MainMenu.$open,\n        filter: (isOpen) => !isOpen,\n        target: Submenu.$open,\n    });\n\n    return {\n        $isMenuOpened: MainMenu.$open,\n        closeMenu: MainMenu.closed,\n        toggleMenu: MainMenu.toggle,\n        $isSubmenuOpened: Submenu.$open,\n        allMenusClosed,\n        openSubmenu: Submenu.opened,\n        closeSubmenu: Submenu.closed,\n    };\n});\n",
-      "start": 1750184199582,
-      "end": 1750184199599,
+      "start": 1750239308713,
+      "end": 1750239308724,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\nexport const RootModel = atom(() => {\n  const MainMenu = _withFactory({\n    sid: \"16gk9r\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"MainMenu\",\n    method: \"invoke\"\n  });\n  const Submenu = _withFactory({\n    sid: \"-xn8lex\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"Submenu\",\n    method: \"invoke\"\n  });\n  const allMenusClosed = createEvent<false>({\n    name: \"allMenusClosed\",\n    sid: \"87ujbg\"\n  });\n  sample({\n    and: [{\n      clock: [allMenusClosed, desktop.$matches],\n      fn: () => false,\n      target: [MainMenu.$open, Submenu.$open]\n    }],\n    or: {\n      sid: \"-38w820\"\n    }\n  });\n  sample({\n    and: [{\n      clock: MainMenu.$open,\n      filter: isOpen => !isOpen,\n      target: Submenu.$open\n    }],\n    or: {\n      sid: \"-2ulkmm\"\n    }\n  });\n  return {\n    $isMenuOpened: MainMenu.$open,\n    closeMenu: MainMenu.closed,\n    toggleMenu: MainMenu.toggle,\n    $isSubmenuOpened: Submenu.$open,\n    allMenusClosed,\n    openSubmenu: Submenu.opened,\n    closeSubmenu: Submenu.closed\n  };\n});",
-      "start": 1750184199599,
-      "end": 1750184199601,
+      "name": "vite:react-swc",
+      "result": "import { withFactory as _effector$factory } from 'effector';\nimport { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\nexport const RootModel = _effector$factory({\n    sid: \"9dw06u10\",\n    fn: ()=>atom(()=>{\n            const MainMenu = _effector$factory({\n                sid: \"bi6ez88w\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const Submenu = _effector$factory({\n                sid: \"3l0ekbrq\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const allMenusClosed = createEvent({\n                sid: \"dknuxzxi\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: [\n                            allMenusClosed,\n                            desktop.$matches\n                        ],\n                        fn: ()=>false,\n                        target: [\n                            MainMenu.$open,\n                            Submenu.$open\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"4b0ccq3a\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: MainMenu.$open,\n                        filter: (isOpen)=>!isOpen,\n                        target: Submenu.$open\n                    }\n                ],\n                or: {\n                    sid: \"bn456wvo\"\n                }\n            });\n            return {\n                $isMenuOpened: MainMenu.$open,\n                closeMenu: MainMenu.closed,\n                toggleMenu: MainMenu.toggle,\n                $isSubmenuOpened: Submenu.$open,\n                allMenusClosed,\n                openSubmenu: Submenu.opened,\n                closeSubmenu: Submenu.closed\n            };\n        })\n});\n",
+      "start": 1750239308724,
+      "end": 1750239308729,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "invoke",
-          "createEvent",
-          "sample",
-          "atom",
-          "disclosureFactory",
-          "desktop",
-          "RootModel",
-          "MainMenu",
-          "_withFactory",
-          "sid",
-          "\"16gk9r\"",
-          "fn",
-          "open",
-          "name",
-          "\"MainMenu\"",
-          "method",
-          "\"invoke\"",
-          "Submenu",
-          "\"-xn8lex\"",
-          "\"Submenu\"",
-          "allMenusClosed",
-          "and",
-          "clock",
-          "$matches",
-          "target",
-          "$open",
-          "or",
-          "filter",
-          "isOpen",
-          "$isMenuOpened",
-          "closeMenu",
-          "closed",
-          "toggleMenu",
-          "toggle",
-          "$isSubmenuOpened",
-          "openSubmenu",
-          "opened",
-          "closeSubmenu"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Root/model/index.ts"],
-        "sourcesContent": [
-          "import { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\n\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\n\nexport const RootModel = atom(() => {\n    const MainMenu = invoke(disclosureFactory, {\n        open: false,\n    });\n    const Submenu = invoke(disclosureFactory, {\n        open: false,\n    });\n\n    const allMenusClosed = createEvent<false>();\n\n    sample({\n        clock: [allMenusClosed, desktop.$matches],\n        fn: () => false,\n        target: [MainMenu.$open, Submenu.$open],\n    });\n    sample({\n        clock: MainMenu.$open,\n        filter: (isOpen) => !isOpen,\n        target: Submenu.$open,\n    });\n\n    return {\n        $isMenuOpened: MainMenu.$open,\n        closeMenu: MainMenu.closed,\n        toggleMenu: MainMenu.toggle,\n        $isSubmenuOpened: Submenu.$open,\n        allMenusClosed,\n        openSubmenu: Submenu.opened,\n        closeSubmenu: Submenu.closed,\n    };\n});\n"
-        ],
-        "mappings": ";AAAA,SAASA,MAAM,QAAQ,qBAAqB;AAC5C,SAASC,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE9C,SAASC,IAAI,EAAEC,iBAAiB,QAAQ,oBAAoB;AAC5D,SAASC,OAAO,QAAQ,gBAAgB;AAExC,OAAO,MAAMC,SAAS,GAAGH,IAAI,CAAC,MAAM;EAChC,MAAMI,QAAQ,GAAAC,YAAA;IAAAC,GAAA,EAAAC,QAAA;IAAAC,EAAA,EAAAA,CAAA,KAAGX,MAAM,CAACI,iBAAiB,EAAE;MACvCQ,IAAI,EAAE;IACV,CAAC,CAAC;IAAAC,IAAA,EAAAC,UAAA;IAAAC,MAAA,EAAAC;EAAA;EACF,MAAMC,OAAO,GAAAT,YAAA;IAAAC,GAAA,EAAAS,SAAA;IAAAP,EAAA,EAAAA,CAAA,KAAGX,MAAM,CAACI,iBAAiB,EAAE;MACtCQ,IAAI,EAAE;IACV,CAAC,CAAC;IAAAC,IAAA,EAAAM,SAAA;IAAAJ,MAAA,EAAAC;EAAA;EAEF,MAAMI,cAAc,GAAGnB,WAAW,CAAC,KAAK,CAAC;IAAAY,IAAA;IAAAJ,GAAA;EAAA,CAAC,CAAC;EAE3CP,MAAM;IAAAmB,GAAA,GAAC;MACHC,KAAK,EAAE,CAACF,cAAc,EAAEf,OAAO,CAACkB,QAAQ,CAAC;MACzCZ,EAAE,EAAEA,CAAA,KAAM,KAAK;MACfa,MAAM,EAAE,CAACjB,QAAQ,CAACkB,KAAK,EAAER,OAAO,CAACQ,KAAK;IAC1C,CAAC;IAAAC,EAAA;MAAAjB,GAAA;IAAA;EAAA,EAAC;EACFP,MAAM;IAAAmB,GAAA,GAAC;MACHC,KAAK,EAAEf,QAAQ,CAACkB,KAAK;MACrBE,MAAM,EAAGC,MAAM,IAAK,CAACA,MAAM;MAC3BJ,MAAM,EAAEP,OAAO,CAACQ;IACpB,CAAC;IAAAC,EAAA;MAAAjB,GAAA;IAAA;EAAA,EAAC;EAEF,OAAO;IACHoB,aAAa,EAAEtB,QAAQ,CAACkB,KAAK;IAC7BK,SAAS,EAAEvB,QAAQ,CAACwB,MAAM;IAC1BC,UAAU,EAAEzB,QAAQ,CAAC0B,MAAM;IAC3BC,gBAAgB,EAAEjB,OAAO,CAACQ,KAAK;IAC/BL,cAAc;IACde,WAAW,EAAElB,OAAO,CAACmB,MAAM;IAC3BC,YAAY,EAAEpB,OAAO,CAACc;EAC1B,CAAC;AACL,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Root/model/index.ts\"],\"sourcesContent\":[\"import { invoke } from '@withease/factories';\\nimport { createEvent, sample } from 'effector';\\n\\nimport { atom, disclosureFactory } from '@/shared/factories';\\nimport { desktop } from '@/shared/media';\\n\\nexport const RootModel = atom(() => {\\n    const MainMenu = invoke(disclosureFactory, {\\n        open: false,\\n    });\\n    const Submenu = invoke(disclosureFactory, {\\n        open: false,\\n    });\\n\\n    const allMenusClosed = createEvent<false>();\\n\\n    sample({\\n        clock: [allMenusClosed, desktop.$matches],\\n        fn: () => false,\\n        target: [MainMenu.$open, Submenu.$open],\\n    });\\n    sample({\\n        clock: MainMenu.$open,\\n        filter: (isOpen) => !isOpen,\\n        target: Submenu.$open,\\n    });\\n\\n    return {\\n        $isMenuOpened: MainMenu.$open,\\n        closeMenu: MainMenu.closed,\\n        toggleMenu: MainMenu.toggle,\\n        $isSubmenuOpened: Submenu.$open,\\n        allMenusClosed,\\n        openSubmenu: Submenu.opened,\\n        closeSubmenu: Submenu.closed,\\n    };\\n});\\n\"],\"names\":[\"invoke\",\"createEvent\",\"sample\",\"atom\",\"disclosureFactory\",\"desktop\",\"RootModel\",\"MainMenu\",\"open\",\"Submenu\",\"allMenusClosed\",\"clock\",\"$matches\",\"fn\",\"target\",\"$open\",\"filter\",\"isOpen\",\"$isMenuOpened\",\"closeMenu\",\"closed\",\"toggleMenu\",\"toggle\",\"$isSubmenuOpened\",\"openSubmenu\",\"opened\",\"closeSubmenu\"],\"mappings\":\";AAAA,SAASA,MAAM,QAAQ,sBAAsB;AAC7C,SAASC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE/C,SAASC,IAAI,EAAEC,iBAAiB,QAAQ,qBAAqB;AAC7D,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,OAAO,MAAMC;;YAAYH,KAAK;YAC1B,MAAMI;;wBAAWP,OAAOI,mBAAmB;wBACvCI,MAAM;oBACV;;YACA,MAAMC;;wBAAUT,OAAOI,mBAAmB;wBACtCI,MAAM;oBACV;;YAEA,MAAME,iBAAiBT;;;YAEvBC;;oBAAO;wBACHS,OAAO;4BAACD;4BAAgBL,QAAQO,QAAQ;yBAAC;wBACzCC,IAAI,IAAM;wBACVC,QAAQ;4BAACP,SAASQ,KAAK;4BAAEN,QAAQM,KAAK;yBAAC;oBAC3C;;;;;;YACAb;;oBAAO;wBACHS,OAAOJ,SAASQ,KAAK;wBACrBC,QAAQ,CAACC,SAAW,CAACA;wBACrBH,QAAQL,QAAQM,KAAK;oBACzB;;;;;;YAEA,OAAO;gBACHG,eAAeX,SAASQ,KAAK;gBAC7BI,WAAWZ,SAASa,MAAM;gBAC1BC,YAAYd,SAASe,MAAM;gBAC3BC,kBAAkBd,QAAQM,KAAK;gBAC/BL;gBACAc,aAAaf,QAAQgB,MAAM;gBAC3BC,cAAcjB,QAAQW,MAAM;YAChC;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = atom(() => {\n  const MainMenu = _withFactory({\n    sid: \"16gk9r\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"MainMenu\",\n    method: \"invoke\"\n  });\n  const Submenu = _withFactory({\n    sid: \"-xn8lex\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"Submenu\",\n    method: \"invoke\"\n  });\n  const allMenusClosed = createEvent({\n    name: \"allMenusClosed\",\n    sid: \"87ujbg\"\n  });\n  sample({\n    and: [{\n      clock: [allMenusClosed, desktop.$matches],\n      fn: () => false,\n      target: [MainMenu.$open, Submenu.$open]\n    }],\n    or: {\n      sid: \"-38w820\"\n    }\n  });\n  sample({\n    and: [{\n      clock: MainMenu.$open,\n      filter: (isOpen) => !isOpen,\n      target: Submenu.$open\n    }],\n    or: {\n      sid: \"-2ulkmm\"\n    }\n  });\n  return {\n    $isMenuOpened: MainMenu.$open,\n    closeMenu: MainMenu.closed,\n    toggleMenu: MainMenu.toggle,\n    $isSubmenuOpened: Submenu.$open,\n    allMenusClosed,\n    openSubmenu: Submenu.opened,\n    closeSubmenu: Submenu.closed\n  };\n});\n",
-      "start": 1750184199601,
-      "end": 1750184199702,
+      "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = _effector$factory({\n  sid: \"9dw06u10\",\n  fn: () => atom(() => {\n    const MainMenu = _effector$factory({\n      sid: \"bi6ez88w\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const Submenu = _effector$factory({\n      sid: \"3l0ekbrq\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const allMenusClosed = createEvent({\n      sid: \"dknuxzxi\"\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            allMenusClosed,\n            desktop.$matches\n          ],\n          fn: () => false,\n          target: [\n            MainMenu.$open,\n            Submenu.$open\n          ]\n        }\n      ],\n      or: {\n        sid: \"4b0ccq3a\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: MainMenu.$open,\n          filter: (isOpen) => !isOpen,\n          target: Submenu.$open\n        }\n      ],\n      or: {\n        sid: \"bn456wvo\"\n      }\n    });\n    return {\n      $isMenuOpened: MainMenu.$open,\n      closeMenu: MainMenu.closed,\n      toggleMenu: MainMenu.toggle,\n      $isSubmenuOpened: Submenu.$open,\n      allMenusClosed,\n      openSubmenu: Submenu.opened,\n      closeSubmenu: Submenu.closed\n    };\n  })\n});\n",
+      "start": 1750239308729,
+      "end": 1750239308809,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Root/model/index.ts"],
         "sourcesContent": [
-          "import { withFactory as _withFactory } from \"effector\";\nimport { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\nexport const RootModel = atom(() => {\n  const MainMenu = _withFactory({\n    sid: \"16gk9r\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"MainMenu\",\n    method: \"invoke\"\n  });\n  const Submenu = _withFactory({\n    sid: \"-xn8lex\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"Submenu\",\n    method: \"invoke\"\n  });\n  const allMenusClosed = createEvent<false>({\n    name: \"allMenusClosed\",\n    sid: \"87ujbg\"\n  });\n  sample({\n    and: [{\n      clock: [allMenusClosed, desktop.$matches],\n      fn: () => false,\n      target: [MainMenu.$open, Submenu.$open]\n    }],\n    or: {\n      sid: \"-38w820\"\n    }\n  });\n  sample({\n    and: [{\n      clock: MainMenu.$open,\n      filter: isOpen => !isOpen,\n      target: Submenu.$open\n    }],\n    or: {\n      sid: \"-2ulkmm\"\n    }\n  });\n  return {\n    $isMenuOpened: MainMenu.$open,\n    closeMenu: MainMenu.closed,\n    toggleMenu: MainMenu.toggle,\n    $isSubmenuOpened: Submenu.$open,\n    allMenusClosed,\n    openSubmenu: Submenu.opened,\n    closeSubmenu: Submenu.closed\n  };\n});"
+          "import { withFactory as _effector$factory } from 'effector';\nimport { invoke } from '@withease/factories';\nimport { createEvent, sample } from 'effector';\nimport { atom, disclosureFactory } from '@/shared/factories';\nimport { desktop } from '@/shared/media';\nexport const RootModel = _effector$factory({\n    sid: \"9dw06u10\",\n    fn: ()=>atom(()=>{\n            const MainMenu = _effector$factory({\n                sid: \"bi6ez88w\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const Submenu = _effector$factory({\n                sid: \"3l0ekbrq\",\n                fn: ()=>invoke(disclosureFactory, {\n                        open: false\n                    })\n            });\n            const allMenusClosed = createEvent({\n                sid: \"dknuxzxi\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: [\n                            allMenusClosed,\n                            desktop.$matches\n                        ],\n                        fn: ()=>false,\n                        target: [\n                            MainMenu.$open,\n                            Submenu.$open\n                        ]\n                    }\n                ],\n                or: {\n                    sid: \"4b0ccq3a\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: MainMenu.$open,\n                        filter: (isOpen)=>!isOpen,\n                        target: Submenu.$open\n                    }\n                ],\n                or: {\n                    sid: \"bn456wvo\"\n                }\n            });\n            return {\n                $isMenuOpened: MainMenu.$open,\n                closeMenu: MainMenu.closed,\n                toggleMenu: MainMenu.toggle,\n                $isSubmenuOpened: Submenu.$open,\n                allMenusClosed,\n                openSubmenu: Submenu.opened,\n                closeSubmenu: Submenu.closed\n            };\n        })\n});\n"
         ],
-        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,cAAc;AACvB,SAAS,aAAa,cAAc;AACpC,SAAS,MAAM,yBAAyB;AACxC,SAAS,eAAe;AACjB,aAAM,YAAY,KAAK,MAAM;AAClC,QAAM,WAAW,aAAa;AAAA,IAC5B,KAAK;AAAA,IACL,IAAI,MAAM,OAAO,mBAAmB;AAAA,MAClC,MAAM;AAAA,IACR,CAAC;AAAA,IACD,MAAM;AAAA,IACN,QAAQ;AAAA,EACV,CAAC;AACD,QAAM,UAAU,aAAa;AAAA,IAC3B,KAAK;AAAA,IACL,IAAI,MAAM,OAAO,mBAAmB;AAAA,MAClC,MAAM;AAAA,IACR,CAAC;AAAA,IACD,MAAM;AAAA,IACN,QAAQ;AAAA,EACV,CAAC;AACD,QAAM,iBAAiB,YAAmB;AAAA,IACxC,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,CAAC,gBAAgB,QAAQ,QAAQ;AAAA,MACxC,IAAI,MAAM;AAAA,MACV,QAAQ,CAAC,SAAS,OAAO,QAAQ,KAAK;AAAA,IACxC,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,SAAS;AAAA,MAChB,QAAQ,YAAU,CAAC;AAAA,MACnB,QAAQ,QAAQ;AAAA,IAClB,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,eAAe,SAAS;AAAA,IACxB,WAAW,SAAS;AAAA,IACpB,YAAY,SAAS;AAAA,IACrB,kBAAkB,QAAQ;AAAA,IAC1B;AAAA,IACA,aAAa,QAAQ;AAAA,IACrB,cAAc,QAAQ;AAAA,EACxB;AACF,CAAC;",
+        "mappings": "AAAA,SAAS,eAAe,yBAAyB;AACjD,SAAS,cAAc;AACvB,SAAS,aAAa,cAAc;AACpC,SAAS,MAAM,yBAAyB;AACxC,SAAS,eAAe;AACjB,aAAM,YAAY,kBAAkB;AAAA,EACvC,KAAK;AAAA,EACL,IAAI,MAAI,KAAK,MAAI;AACT,UAAM,WAAW,kBAAkB;AAAA,MAC/B,KAAK;AAAA,MACL,IAAI,MAAI,OAAO,mBAAmB;AAAA,QAC1B,MAAM;AAAA,MACV,CAAC;AAAA,IACT,CAAC;AACD,UAAM,UAAU,kBAAkB;AAAA,MAC9B,KAAK;AAAA,MACL,IAAI,MAAI,OAAO,mBAAmB;AAAA,QAC1B,MAAM;AAAA,MACV,CAAC;AAAA,IACT,CAAC;AACD,UAAM,iBAAiB,YAAY;AAAA,MAC/B,KAAK;AAAA,IACT,CAAC;AACD,WAAO;AAAA,MACH,KAAK;AAAA,QACD;AAAA,UACI,OAAO;AAAA,YACH;AAAA,YACA,QAAQ;AAAA,UACZ;AAAA,UACA,IAAI,MAAI;AAAA,UACR,QAAQ;AAAA,YACJ,SAAS;AAAA,YACT,QAAQ;AAAA,UACZ;AAAA,QACJ;AAAA,MACJ;AAAA,MACA,IAAI;AAAA,QACA,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AACD,WAAO;AAAA,MACH,KAAK;AAAA,QACD;AAAA,UACI,OAAO,SAAS;AAAA,UAChB,QAAQ,CAAC,WAAS,CAAC;AAAA,UACnB,QAAQ,QAAQ;AAAA,QACpB;AAAA,MACJ;AAAA,MACA,IAAI;AAAA,QACA,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AACD,WAAO;AAAA,MACH,eAAe,SAAS;AAAA,MACxB,WAAW,SAAS;AAAA,MACpB,YAAY,SAAS;AAAA,MACrB,kBAAkB,QAAQ;AAAA,MAC1B;AAAA,MACA,aAAa,QAAQ;AAAA,MACrB,cAAc,QAAQ;AAAA,IAC1B;AAAA,EACJ,CAAC;AACT,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308809,
+      "end": 1750239308809,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Root/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = atom(() => {\n  const MainMenu = _withFactory({\n    sid: \"16gk9r\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"MainMenu\",\n    method: \"invoke\"\n  });\n  const Submenu = _withFactory({\n    sid: \"-xn8lex\",\n    fn: () => invoke(disclosureFactory, {\n      open: false\n    }),\n    name: \"Submenu\",\n    method: \"invoke\"\n  });\n  const allMenusClosed = createEvent({\n    name: \"allMenusClosed\",\n    sid: \"87ujbg\"\n  });\n  sample({\n    and: [{\n      clock: [allMenusClosed, desktop.$matches],\n      fn: () => false,\n      target: [MainMenu.$open, Submenu.$open]\n    }],\n    or: {\n      sid: \"-38w820\"\n    }\n  });\n  sample({\n    and: [{\n      clock: MainMenu.$open,\n      filter: (isOpen) => !isOpen,\n      target: Submenu.$open\n    }],\n    or: {\n      sid: \"-2ulkmm\"\n    }\n  });\n  return {\n    $isMenuOpened: MainMenu.$open,\n    closeMenu: MainMenu.closed,\n    toggleMenu: MainMenu.toggle,\n    $isSubmenuOpened: Submenu.$open,\n    allMenusClosed,\n    openSubmenu: Submenu.opened,\n    closeSubmenu: Submenu.closed\n  };\n});\n",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "result": "/*! src/entities/Root/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { invoke } from \"@withease/factories\";\nimport { createEvent, sample } from \"effector\";\nimport { atom, disclosureFactory } from \"@/shared/factories\";\nimport { desktop } from \"@/shared/media\";\nexport const RootModel = _effector$factory({\n  sid: \"9dw06u10\",\n  fn: () => atom(() => {\n    const MainMenu = _effector$factory({\n      sid: \"bi6ez88w\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const Submenu = _effector$factory({\n      sid: \"3l0ekbrq\",\n      fn: () => invoke(disclosureFactory, {\n        open: false\n      })\n    });\n    const allMenusClosed = createEvent({\n      sid: \"dknuxzxi\"\n    });\n    sample({\n      and: [\n        {\n          clock: [\n            allMenusClosed,\n            desktop.$matches\n          ],\n          fn: () => false,\n          target: [\n            MainMenu.$open,\n            Submenu.$open\n          ]\n        }\n      ],\n      or: {\n        sid: \"4b0ccq3a\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: MainMenu.$open,\n          filter: (isOpen) => !isOpen,\n          target: Submenu.$open\n        }\n      ],\n      or: {\n        sid: \"bn456wvo\"\n      }\n    });\n    return {\n      $isMenuOpened: MainMenu.$open,\n      closeMenu: MainMenu.closed,\n      toggleMenu: MainMenu.toggle,\n      $isSubmenuOpened: Submenu.$open,\n      allMenusClosed,\n      openSubmenu: Submenu.opened,\n      closeSubmenu: Submenu.closed\n    };\n  })\n});\n",
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Root/model/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }
     }
   ]

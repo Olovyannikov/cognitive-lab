@@ -4,34 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { z } from 'zod';\n\nexport const SendReportSchema = z.object({\n    email: z.string().min(1, { message: 'Обязательное поле' }).email('Введите почту в формате example@mail.org'),\n});\n",
-      "start": 1750184199072,
-      "end": 1750184199114,
+      "start": 1750239308384,
+      "end": 1750239308404,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { z } from 'zod';\nexport const SendReportSchema = z.object({\n  email: z.string().min(1, {\n    message: 'Обязательное поле'\n  }).email('Введите почту в формате example@mail.org')\n});",
-      "start": 1750184199114,
-      "end": 1750184199115,
+      "name": "vite:react-swc",
+      "result": "import { z } from 'zod';\nexport const SendReportSchema = z.object({\n    email: z.string().min(1, {\n        message: 'Обязательное поле'\n    }).email('Введите почту в формате example@mail.org')\n});\n",
+      "start": 1750239308404,
+      "end": 1750239308408,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["z", "SendReportSchema", "object", "email", "string", "min", "message"],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/schema/index.ts"
-        ],
-        "sourcesContent": [
-          "import { z } from 'zod';\n\nexport const SendReportSchema = z.object({\n    email: z.string().min(1, { message: 'Обязательное поле' }).email('Введите почту в формате example@mail.org'),\n});\n"
-        ],
-        "mappings": "AAAA,SAASA,CAAC,QAAQ,KAAK;AAEvB,OAAO,MAAMC,gBAAgB,GAAGD,CAAC,CAACE,MAAM,CAAC;EACrCC,KAAK,EAAEH,CAAC,CAACI,MAAM,CAAC,CAAC,CAACC,GAAG,CAAC,CAAC,EAAE;IAAEC,OAAO,EAAE;EAAoB,CAAC,CAAC,CAACH,KAAK,CAAC,0CAA0C;AAC/G,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/schema/index.ts\"],\"sourcesContent\":[\"import { z } from 'zod';\\n\\nexport const SendReportSchema = z.object({\\n    email: z.string().min(1, { message: 'Обязательное поле' }).email('Введите почту в формате example@mail.org'),\\n});\\n\"],\"names\":[\"z\",\"SendReportSchema\",\"object\",\"email\",\"string\",\"min\",\"message\"],\"mappings\":\"AAAA,SAASA,CAAC,QAAQ,MAAM;AAExB,OAAO,MAAMC,mBAAmBD,EAAEE,MAAM,CAAC;IACrCC,OAAOH,EAAEI,MAAM,GAAGC,GAAG,CAAC,GAAG;QAAEC,SAAS;IAAoB,GAAGH,KAAK,CAAC;AACrE,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { z } from \"zod\";\nexport const SendReportSchema = z.object({\n  email: z.string().min(1, {\n    message: \"Обязательное поле\"\n  }).email(\"Введите почту в формате example@mail.org\")\n});\n",
-      "start": 1750184199115,
-      "end": 1750184199377,
+      "start": 1750239308408,
+      "end": 1750239308566,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,83 +28,83 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/schema/index.ts"
         ],
         "sourcesContent": [
-          "import { z } from 'zod';\nexport const SendReportSchema = z.object({\n  email: z.string().min(1, {\n    message: 'Обязательное поле'\n  }).email('Введите почту в формате example@mail.org')\n});"
+          "import { z } from 'zod';\nexport const SendReportSchema = z.object({\n    email: z.string().min(1, {\n        message: 'Обязательное поле'\n    }).email('Введите почту в формате example@mail.org')\n});\n"
         ],
-        "mappings": "AAAA,SAAS,SAAS;AACX,aAAM,mBAAmB,EAAE,OAAO;AAAA,EACvC,OAAO,EAAE,OAAO,EAAE,IAAI,GAAG;AAAA,IACvB,SAAS;AAAA,EACX,CAAC,EAAE,MAAM,0CAA0C;AACrD,CAAC;",
+        "mappings": "AAAA,SAAS,SAAS;AACX,aAAM,mBAAmB,EAAE,OAAO;AAAA,EACrC,OAAO,EAAE,OAAO,EAAE,IAAI,GAAG;AAAA,IACrB,SAAS;AAAA,EACb,CAAC,EAAE,MAAM,0CAA0C;AACvD,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/SendReportEmail/schema/index.ts [vike:pluginModuleBanner] */\nimport { z } from \"zod\";\nexport const SendReportSchema = z.object({\n  email: z.string().min(1, {\n    message: \"Обязательное поле\"\n  }).email(\"Введите почту в формате example@mail.org\")\n});\n",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308567,
+      "end": 1750239308567,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\n\nimport s from './Accordion.module.css';\n\nexport const Accordion = ({ children }: AccordionProps) => (\n    <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {children}\n    </UIAccordion>\n);\n",
-      "start": 1750184199015,
-      "end": 1750184199052,
+      "start": 1750239308322,
+      "end": 1750239308334,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport s from './Accordion.module.css';\nexport const Accordion = ({\n  children\n}: AccordionProps) => <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {children}\n    </UIAccordion>;",
-      "start": 1750184199052,
-      "end": 1750184199053,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport s from './Accordion.module.css';\nexport const Accordion = ({ children })=>/*#__PURE__*/ _jsx(UIAccordion, {\n        radius: 0,\n        variant: \"filled\",\n        classNames: s,\n        chevron: /*#__PURE__*/ _jsx(CaretDown, {\n            weight: \"bold\",\n            size: 24\n        }),\n        children: children\n    });\n",
+      "start": 1750239308334,
+      "end": 1750239308343,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["Accordion", "UIAccordion", "AccordionProps", "CaretDown", "s", "children"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Accordion/index.tsx"],
-        "sourcesContent": [
-          "import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\n\nimport s from './Accordion.module.css';\n\nexport const Accordion = ({ children }: AccordionProps) => (\n    <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {children}\n    </UIAccordion>\n);\n"
-        ],
-        "mappings": "AAAA,SAASA,SAAS,IAAIC,WAAW,EAAEC,cAAc,QAAQ,eAAe;AACxE,SAASC,SAAS,QAAQ,gCAAgC;AAE1D,OAAOC,CAAC,MAAM,wBAAwB;AAEtC,OAAO,MAAMJ,SAAS,GAAGA,CAAC;EAAEK;AAAyB,CAAf,EAAEH,cAAc,KAClD,CAAC,WAAW,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC,CAAC,OAAO,CAAC,QAAQ,CAAC,UAAU,CAAC,CAACE,CAAC,CAAC,CAAC,OAAO,CAAC,CAAC,CAAC,SAAS,CAAC,MAAM,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC,EAAE,CAAC,GAAG,CAAC;AAC3G,QAAQ,CAACC,QAAQ;AACjB,IAAI,EAAE,WAAW,CAChB",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Accordion/index.tsx\"],\"sourcesContent\":[\"import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\\n\\nimport s from './Accordion.module.css';\\n\\nexport const Accordion = ({ children }: AccordionProps) => (\\n    <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\\n        {children}\\n    </UIAccordion>\\n);\\n\"],\"names\":[\"Accordion\",\"UIAccordion\",\"CaretDown\",\"s\",\"children\",\"radius\",\"variant\",\"classNames\",\"chevron\",\"weight\",\"size\"],\"mappings\":\";AAAA,SAASA,aAAaC,WAAW,QAAwB,gBAAgB;AACzE,SAASC,SAAS,QAAQ,iCAAiC;AAE3D,OAAOC,OAAO,yBAAyB;AAEvC,OAAO,MAAMH,YAAY,CAAC,EAAEI,QAAQ,EAAkB,iBAClD,KAACH;QAAYI,QAAQ;QAAGC,SAAQ;QAASC,YAAYJ;QAAGK,uBAAS,KAACN;YAAUO,QAAO;YAAOC,MAAM;;kBAC3FN;OAEP\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({\n  children\n}) => /* @__PURE__ */ jsx(UIAccordion, { radius: 0, variant: \"filled\", classNames: s, chevron: /* @__PURE__ */ jsx(CaretDown, { weight: \"bold\", size: 24 }), children });\n",
-      "start": 1750184199053,
-      "end": 1750184199244,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({ children }) => /* @__PURE__ */ _jsx(UIAccordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children\n});\n",
+      "start": 1750239308343,
+      "end": 1750239308452,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/Accordion/index.tsx"],
         "sourcesContent": [
-          "import { Accordion as UIAccordion, AccordionProps } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport s from './Accordion.module.css';\nexport const Accordion = ({\n  children\n}: AccordionProps) => <UIAccordion radius={0} variant='filled' classNames={s} chevron={<CaretDown weight='bold' size={24} />}>\n        {children}\n    </UIAccordion>;"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from '@mantine/core';\nimport { CaretDown } from '@phosphor-icons/react/dist/ssr';\nimport s from './Accordion.module.css';\nexport const Accordion = ({ children })=>/*#__PURE__*/ _jsx(UIAccordion, {\n        radius: 0,\n        variant: \"filled\",\n        classNames: s,\n        chevron: /*#__PURE__*/ _jsx(CaretDown, {\n            weight: \"bold\",\n            size: 24\n        }),\n        children: children\n    });\n"
         ],
-        "mappings": "AAKuF;AALvF,SAAS,aAAa,mBAAmC;AACzD,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,YAAY,CAAC;AAAA,EACxB;AACF,MAAsB,oBAAC,eAAY,QAAQ,GAAG,SAAQ,UAAS,YAAY,GAAG,SAAS,oBAAC,aAAU,QAAO,QAAO,MAAM,IAAI,GACjH,UACL;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,aAAa,mBAAmB;AACzC,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,YAAY,CAAC,EAAE,SAAS,MAAkB,qBAAK,aAAa;AAAA,EACjE,QAAQ;AAAA,EACR,SAAS;AAAA,EACT,YAAY;AAAA,EACZ,SAAuB,qBAAK,WAAW;AAAA,IACnC,QAAQ;AAAA,IACR,MAAM;AAAA,EACV,CAAC;AAAA,EACD;AACJ,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/ui/Accordion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({\n  children\n}) => /* @__PURE__ */ jsx(UIAccordion, { radius: 0, variant: \"filled\", classNames: s, chevron: /* @__PURE__ */ jsx(CaretDown, { weight: \"bold\", size: 24 }), children });\n",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "result": "/*! src/shared/ui/Accordion/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Accordion as UIAccordion } from \"@mantine/core\";\nimport { CaretDown } from \"@phosphor-icons/react/dist/ssr\";\nimport s from \"./Accordion.module.css\";\nexport const Accordion = ({ children }) => /* @__PURE__ */ _jsx(UIAccordion, {\n  radius: 0,\n  variant: \"filled\",\n  classNames: s,\n  chevron: /* @__PURE__ */ _jsx(CaretDown, {\n    weight: \"bold\",\n    size: 24\n  }),\n  children\n});\n",
+      "start": 1750239308453,
+      "end": 1750239308453,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/ui/Accordion/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC;"
       }
     }
   ]

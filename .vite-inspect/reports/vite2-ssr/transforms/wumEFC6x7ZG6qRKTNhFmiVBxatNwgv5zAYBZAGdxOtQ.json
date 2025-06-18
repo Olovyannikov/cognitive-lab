@@ -4,128 +4,107 @@
     {
       "name": "vite:load-fallback",
       "result": "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\n\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\n\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true,\n});\n\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n});\n",
-      "start": 1750184198981,
-      "end": 1750184199022,
+      "start": 1750239308333,
+      "end": 1750239308359,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});",
-      "start": 1750184199022,
-      "end": 1750184199023,
+      "name": "vite:react-swc",
+      "result": "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});\n",
+      "start": 1750239308359,
+      "end": 1750239308363,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "API",
-          "createRequestFx",
-          "createInternalRequestFx",
-          "baseURL",
-          "import",
-          "meta",
-          "env",
-          "VITE_BASE_URL",
-          "URL",
-          "withTokenInHeaders",
-          "createCommonRequestFx"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"],
-        "sourcesContent": [
-          "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\n\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\n\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true,\n});\n\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n});\n"
-        ],
-        "mappings": "AAAA,SAASA,GAAG,QAAQ,aAAa;AACjC,SAASC,eAAe,QAAQ,qBAAqB;AAErD,cAAc,aAAa;AAC3B,cAAc,qBAAqB;AACnC,cAAc,WAAW;AAEzB,OAAO,MAAMC,uBAAuB,GAAGD,eAAe,CAAC;EACnDE,OAAO,EAAEC,MAAM,CAACC,IAAI,CAACC,GAAG,CAACC,aAAa,IAAIP,GAAG,CAACQ,GAAG;EACjDC,kBAAkB,EAAE;AACxB,CAAC,CAAC;AAEF,OAAO,MAAMC,qBAAqB,GAAGT,eAAe,CAAC;EACjDE,OAAO,EAAEC,MAAM,CAACC,IAAI,CAACC,GAAG,CAACC,aAAa,IAAIP,GAAG,CAACQ;AAClD,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts\"],\"sourcesContent\":[\"import { API } from './constants';\\nimport { createRequestFx } from './create-request-fx';\\n\\nexport * from './constants';\\nexport * from './create-request-fx';\\nexport * from './methods';\\n\\nexport const createInternalRequestFx = createRequestFx({\\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\\n    withTokenInHeaders: true,\\n});\\n\\nexport const createCommonRequestFx = createRequestFx({\\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\\n});\\n\"],\"names\":[\"API\",\"createRequestFx\",\"createInternalRequestFx\",\"baseURL\",\"env\",\"VITE_BASE_URL\",\"URL\",\"withTokenInHeaders\",\"createCommonRequestFx\"],\"mappings\":\"AAAA,SAASA,GAAG,QAAQ,cAAc;AAClC,SAASC,eAAe,QAAQ,sBAAsB;AAEtD,cAAc,cAAc;AAC5B,cAAc,sBAAsB;AACpC,cAAc,YAAY;AAE1B,OAAO,MAAMC,0BAA0BD,gBAAgB;IACnDE,SAAS,YAAYC,GAAG,CAACC,aAAa,IAAIL,IAAIM,GAAG;IACjDC,oBAAoB;AACxB,GAAG;AAEH,OAAO,MAAMC,wBAAwBP,gBAAgB;IACjDE,SAAS,YAAYC,GAAG,CAACC,aAAa,IAAIL,IAAIM,GAAG;AACrD,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});\n",
-      "start": 1750184199023,
-      "end": 1750184199229,
+      "start": 1750239308363,
+      "end": 1750239308477,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/index.ts"],
         "sourcesContent": [
-          "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});"
+          "import { API } from './constants';\nimport { createRequestFx } from './create-request-fx';\nexport * from './constants';\nexport * from './create-request-fx';\nexport * from './methods';\nexport const createInternalRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL,\n    withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n    baseURL: import.meta.env.VITE_BASE_URL ?? API.URL\n});\n"
         ],
-        "mappings": "AAAA,SAAS,WAAW;AACpB,SAAS,uBAAuB;AAChC,cAAc;AACd,cAAc;AACd,cAAc;AACP,aAAM,0BAA0B,gBAAgB;AAAA,EACrD,SAAS,YAAY,IAAI,iBAAiB,IAAI;AAAA,EAC9C,oBAAoB;AACtB,CAAC;AACM,aAAM,wBAAwB,gBAAgB;AAAA,EACnD,SAAS,YAAY,IAAI,iBAAiB,IAAI;AAChD,CAAC;",
+        "mappings": "AAAA,SAAS,WAAW;AACpB,SAAS,uBAAuB;AAChC,cAAc;AACd,cAAc;AACd,cAAc;AACP,aAAM,0BAA0B,gBAAgB;AAAA,EACnD,SAAS,YAAY,IAAI,iBAAiB,IAAI;AAAA,EAC9C,oBAAoB;AACxB,CAAC;AACM,aAAM,wBAAwB,gBAAgB;AAAA,EACjD,SAAS,YAAY,IAAI,iBAAiB,IAAI;AAClD,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199229,
-      "end": 1750184199230,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\"\n});\n",
-      "start": 1750184199230,
-      "end": 1750184199446,
+      "start": 1750239308478,
+      "end": 1750239308710,
       "order": "normal-normal",
       "sourcemaps": null
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/api/index.ts [vike:pluginModuleBanner] */\nimport { API } from \"./constants\";\nimport { createRequestFx } from \"./create-request-fx\";\nexport * from \"./constants\";\nexport * from \"./create-request-fx\";\nexport * from \"./methods\";\nexport const createInternalRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\",\n  withTokenInHeaders: true\n});\nexport const createCommonRequestFx = createRequestFx({\n  baseURL: \"https://api.dev.cognitivelab.ru/api/v1\"\n});\n",
-      "start": 1750184199446,
-      "end": 1750184199446,
+      "start": 1750239308710,
+      "end": 1750239308710,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

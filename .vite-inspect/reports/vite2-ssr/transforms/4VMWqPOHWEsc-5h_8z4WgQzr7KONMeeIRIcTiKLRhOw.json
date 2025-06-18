@@ -4,114 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ContentBlock } from '../types';\n\nexport const findBannerIndex = (content: ContentBlock[]) =>\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\n",
-      "start": 1750184199094,
-      "end": 1750184199151,
+      "start": 1750239308366,
+      "end": 1750239308388,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { ContentBlock } from '../types';\nexport const findBannerIndex = (content: ContentBlock[]) => content.findIndex(el => el.content.find(el => el.type === 'ordered_cards' && el.color === 'negative'));",
-      "start": 1750184199151,
-      "end": 1750184199152,
+      "name": "vite:react-swc",
+      "result": "export const findBannerIndex = (content)=>content.findIndex((el)=>el.content.find((el)=>el.type === 'ordered_cards' && el.color === 'negative'));\n",
+      "start": 1750239308388,
+      "end": 1750239308400,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["ContentBlock", "findBannerIndex", "content", "findIndex", "el", "find", "type", "color"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"],
-        "sourcesContent": [
-          "import type { ContentBlock } from '../types';\n\nexport const findBannerIndex = (content: ContentBlock[]) =>\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\n"
-        ],
-        "mappings": "AAAA,cAAcA,YAAY,QAAQ,UAAU;AAE5C,OAAO,MAAMC,eAAe,GAAGA,CAACC,OAAO,EAAEF,YAAY,EAAE,KACnDE,OAAO,CAACC,SAAS,CAAEC,EAAE,IAAKA,EAAE,CAACF,OAAO,CAACG,IAAI,CAAED,EAAE,IAAKA,EAAE,CAACE,IAAI,KAAK,eAAe,IAAIF,EAAE,CAACG,KAAK,KAAK,UAAU,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts\"],\"sourcesContent\":[\"import type { ContentBlock } from '../types';\\n\\nexport const findBannerIndex = (content: ContentBlock[]) =>\\n    content.findIndex((el) => el.content.find((el) => el.type === 'ordered_cards' && el.color === 'negative'));\\n\"],\"names\":[\"findBannerIndex\",\"content\",\"findIndex\",\"el\",\"find\",\"type\",\"color\"],\"mappings\":\"AAEA,OAAO,MAAMA,kBAAkB,CAACC,UAC5BA,QAAQC,SAAS,CAAC,CAACC,KAAOA,GAAGF,OAAO,CAACG,IAAI,CAAC,CAACD,KAAOA,GAAGE,IAAI,KAAK,mBAAmBF,GAAGG,KAAK,KAAK,aAAa\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1750184199152,
-      "end": 1750184199390,
+      "start": 1750239308400,
+      "end": 1750239308537,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/findBannerIndex.ts"],
         "sourcesContent": [
-          "import type { ContentBlock } from '../types';\nexport const findBannerIndex = (content: ContentBlock[]) => content.findIndex(el => el.content.find(el => el.type === 'ordered_cards' && el.color === 'negative'));"
+          "export const findBannerIndex = (content)=>content.findIndex((el)=>el.content.find((el)=>el.type === 'ordered_cards' && el.color === 'negative'));\n"
         ],
-        "mappings": "AACO,aAAM,kBAAkB,CAAC,YAA4B,QAAQ,UAAU,QAAM,GAAG,QAAQ,KAAK,CAAAA,QAAMA,IAAG,SAAS,mBAAmBA,IAAG,UAAU,UAAU,CAAC;",
+        "mappings": "AAAO,aAAM,kBAAkB,CAAC,YAAU,QAAQ,UAAU,CAAC,OAAK,GAAG,QAAQ,KAAK,CAACA,QAAKA,IAAG,SAAS,mBAAmBA,IAAG,UAAU,UAAU,CAAC;",
         "names": ["el"]
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199390,
-      "end": 1750184199390,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199390,
-      "end": 1750184199391,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199391,
-      "end": 1750184199391,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199391,
-      "end": 1750184199391,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/findBannerIndex.ts [vike:pluginModuleBanner] */\nexport const findBannerIndex = (content) => content.findIndex((el) => el.content.find((el2) => el2.type === \"ordered_cards\" && el2.color === \"negative\"));\n",
-      "start": 1750184199391,
-      "end": 1750184199391,
+      "start": 1750239308537,
+      "end": 1750239308537,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

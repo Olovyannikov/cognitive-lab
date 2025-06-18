@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n",
-      "start": 1750184198906,
-      "end": 1750184198958,
+      "start": 1750239308279,
+      "end": 1750239308296,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';",
-      "start": 1750184198958,
-      "end": 1750184198959,
+      "name": "vite:react-swc",
+      "result": "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n",
+      "start": 1750239308296,
+      "end": 1750239308301,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"],
-        "sourcesContent": [
-          "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n"
-        ],
-        "mappings": "AAAA,cAAc,UAAU;AACxB,cAAc,kBAAkB;AAChC,cAAc,YAAY;AAC1B,cAAc,oBAAoB;AAClC,cAAc,kBAAkB;AAChC,cAAc,SAAS;AACvB,cAAc,qBAAqB;AACnC,cAAc,oBAAoB;AAClC,cAAc,UAAU;AACxB,cAAc,YAAY;AAC1B,cAAc,gBAAgB;AAC9B,cAAc,eAAe;AAC7B,cAAc,aAAa;AAC3B,cAAc,WAAW;AACzB,cAAc,eAAe;AAC7B,cAAc,gBAAgB;AAC9B,cAAc,YAAY;AAC1B,cAAc,kBAAkB;AAChC,cAAc,gBAAgB;AAC9B,cAAc,aAAa;AAC3B,cAAc,4BAA4B;AAC1C,cAAc,aAAa;AAC3B,cAAc,kBAAkB;AAChC,cAAc,YAAY",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts\"],\"sourcesContent\":[\"export * from './Banner';\\nexport * from './AccordionBlock';\\nexport * from './BarChart';\\nexport * from './BlockQuoteFilled';\\nexport * from './BlockQuoteLine';\\nexport * from './Cards';\\nexport * from './ConclusionPaywall';\\nexport * from './FilledBulletList';\\nexport * from './Header';\\nexport * from './IconList';\\nexport * from './OrderedCards';\\nexport * from './OrderedList';\\nexport * from './Paragraph';\\nexport * from './Paywall';\\nexport * from './ReportTitle';\\nexport * from './Subscription';\\nexport * from './Subtitle';\\nexport * from './TextStrokeDash';\\nexport * from './ReportHeader';\\nexport * from './Preheader';\\nexport * from './ReportNavigationTemplate';\\nexport * from './PriceInfo';\\nexport * from './CategoryBanner';\\nexport * from './AdBanner';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,WAAW;AACzB,cAAc,mBAAmB;AACjC,cAAc,aAAa;AAC3B,cAAc,qBAAqB;AACnC,cAAc,mBAAmB;AACjC,cAAc,UAAU;AACxB,cAAc,sBAAsB;AACpC,cAAc,qBAAqB;AACnC,cAAc,WAAW;AACzB,cAAc,aAAa;AAC3B,cAAc,iBAAiB;AAC/B,cAAc,gBAAgB;AAC9B,cAAc,cAAc;AAC5B,cAAc,YAAY;AAC1B,cAAc,gBAAgB;AAC9B,cAAc,iBAAiB;AAC/B,cAAc,aAAa;AAC3B,cAAc,mBAAmB;AACjC,cAAc,iBAAiB;AAC/B,cAAc,cAAc;AAC5B,cAAc,6BAA6B;AAC3C,cAAc,cAAc;AAC5B,cAAc,mBAAmB;AACjC,cAAc,aAAa\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./Banner\";\nexport * from \"./AccordionBlock\";\nexport * from \"./BarChart\";\nexport * from \"./BlockQuoteFilled\";\nexport * from \"./BlockQuoteLine\";\nexport * from \"./Cards\";\nexport * from \"./ConclusionPaywall\";\nexport * from \"./FilledBulletList\";\nexport * from \"./Header\";\nexport * from \"./IconList\";\nexport * from \"./OrderedCards\";\nexport * from \"./OrderedList\";\nexport * from \"./Paragraph\";\nexport * from \"./Paywall\";\nexport * from \"./ReportTitle\";\nexport * from \"./Subscription\";\nexport * from \"./Subtitle\";\nexport * from \"./TextStrokeDash\";\nexport * from \"./ReportHeader\";\nexport * from \"./Preheader\";\nexport * from \"./ReportNavigationTemplate\";\nexport * from \"./PriceInfo\";\nexport * from \"./CategoryBanner\";\nexport * from \"./AdBanner\";\n",
-      "start": 1750184198959,
-      "end": 1750184199091,
+      "start": 1750239308301,
+      "end": 1750239308335,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/ui/index.ts"],
         "sourcesContent": [
-          "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';"
+          "export * from './Banner';\nexport * from './AccordionBlock';\nexport * from './BarChart';\nexport * from './BlockQuoteFilled';\nexport * from './BlockQuoteLine';\nexport * from './Cards';\nexport * from './ConclusionPaywall';\nexport * from './FilledBulletList';\nexport * from './Header';\nexport * from './IconList';\nexport * from './OrderedCards';\nexport * from './OrderedList';\nexport * from './Paragraph';\nexport * from './Paywall';\nexport * from './ReportTitle';\nexport * from './Subscription';\nexport * from './Subtitle';\nexport * from './TextStrokeDash';\nexport * from './ReportHeader';\nexport * from './Preheader';\nexport * from './ReportNavigationTemplate';\nexport * from './PriceInfo';\nexport * from './CategoryBanner';\nexport * from './AdBanner';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199091,
-      "end": 1750184199091,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./Banner\";\nexport * from \"./AccordionBlock\";\nexport * from \"./BarChart\";\nexport * from \"./BlockQuoteFilled\";\nexport * from \"./BlockQuoteLine\";\nexport * from \"./Cards\";\nexport * from \"./ConclusionPaywall\";\nexport * from \"./FilledBulletList\";\nexport * from \"./Header\";\nexport * from \"./IconList\";\nexport * from \"./OrderedCards\";\nexport * from \"./OrderedList\";\nexport * from \"./Paragraph\";\nexport * from \"./Paywall\";\nexport * from \"./ReportTitle\";\nexport * from \"./Subscription\";\nexport * from \"./Subtitle\";\nexport * from \"./TextStrokeDash\";\nexport * from \"./ReportHeader\";\nexport * from \"./Preheader\";\nexport * from \"./ReportNavigationTemplate\";\nexport * from \"./PriceInfo\";\nexport * from \"./CategoryBanner\";\nexport * from \"./AdBanner\";\n",
-      "start": 1750184199092,
-      "end": 1750184199092,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';\n",
-      "start": 1750184198906,
-      "end": 1750184198957,
+      "start": 1750239308279,
+      "end": 1750239308296,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';",
-      "start": 1750184198957,
-      "end": 1750184198958,
+      "name": "vite:react-swc",
+      "result": "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';\n",
+      "start": 1750239308296,
+      "end": 1750239308301,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/index.ts"],
-        "sourcesContent": [
-          "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';\n"
-        ],
-        "mappings": "AAAA,cAAc,kBAAkB;AAChC,cAAc,mBAAmB;AACjC,cAAc,mBAAmB;AACjC,cAAc,cAAc;AAC5B,cAAc,iBAAiB",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/index.ts\"],\"sourcesContent\":[\"export * from './typeToColorMap';\\nexport * from './contentResolver';\\nexport * from './findBannerIndex';\\nexport * from './statusInfo';\\nexport * from './normalizeData';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,mBAAmB;AACjC,cAAc,oBAAoB;AAClC,cAAc,oBAAoB;AAClC,cAAc,eAAe;AAC7B,cAAc,kBAAkB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./typeToColorMap\";\nexport * from \"./contentResolver\";\nexport * from \"./findBannerIndex\";\nexport * from \"./statusInfo\";\nexport * from \"./normalizeData\";\n",
-      "start": 1750184198958,
-      "end": 1750184199073,
+      "start": 1750239308301,
+      "end": 1750239308335,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/index.ts"],
         "sourcesContent": [
-          "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';"
+          "export * from './typeToColorMap';\nexport * from './contentResolver';\nexport * from './findBannerIndex';\nexport * from './statusInfo';\nexport * from './normalizeData';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/index.ts [vike:pluginModuleBanner] */\nexport * from \"./typeToColorMap\";\nexport * from \"./contentResolver\";\nexport * from \"./findBannerIndex\";\nexport * from \"./statusInfo\";\nexport * from \"./normalizeData\";\n",
-      "start": 1750184199073,
-      "end": 1750184199073,
+      "start": 1750239308335,
+      "end": 1750239308335,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

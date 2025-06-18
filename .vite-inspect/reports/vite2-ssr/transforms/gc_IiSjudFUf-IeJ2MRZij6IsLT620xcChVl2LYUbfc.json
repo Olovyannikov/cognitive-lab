@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".card {\n  position: relative;\n  overflow: hidden;\n  max-height: 400px;\n\n  &:nth-child(odd) {\n    @mixin larger-than 1024px {\n      .description {\n        color: var(--mantine-color-white);\n      }\n    }\n  }\n\n  &:nth-child(even) {\n    @mixin larger-than 1024px {\n      .cardTop {\n        color: var(--mantine-color-dark-9);\n      }\n    }\n  }\n\n  &:nth-child(2) {\n    .cardTop {\n      background-color: var(--mantine-color-lime-5);\n    }\n  }\n\n  &:nth-child(3) {\n    .cardTop {\n      background-color: var(--mantine-color-pink-6);\n    }\n  }\n\n  &:nth-child(4) {\n    .cardTop {\n      background-color: var(--mantine-color-yellow-6);\n    }\n  }\n\n  @mixin larger-than 1024px {\n    &:hover {\n      img {\n        opacity: 0;\n      }\n\n      .description {\n        transform: translateY(-320px);\n      }\n    }\n  }\n}\n\n.cardTop {\n  position: relative;\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n  margin-bottom: 20px;\n  border-radius: 16px;\n  color: var(--mantine-color-white);\n  background-color: var(--mantine-color-violet-6);\n\n  img {\n    transition: 0.3s ease-in-out opacity;\n  }\n\n  svg {\n    position: absolute;\n    left: 0;\n    top: 0;\n    z-index: 0;\n  }\n\n  h4 {\n    z-index: 1;\n    padding: 22px 18px;\n    max-width: 210px;\n    font-size: 22px;\n    line-height: 25px;\n\n    @mixin larger-than 1024px {\n      padding: 32px 20px;\n      max-width: max-content;\n      font-size: 24px;\n      line-height: 28px;\n    }\n  }\n\n  picture,\n  img {\n    z-index: 1;\n    margin-left: auto;\n    object-fit: cover;\n\n    @mixin larger-than 1024px {\n      margin-top: auto;\n      margin-left: 0;\n      width: 352px !important;\n      height: 284px !important;\n    }\n  }\n\n  @mixin larger-than 1024px {\n    flex-direction: column;\n    align-items: flex-start;\n    margin-bottom: 0;\n    height: 400px;\n  }\n}\n\n.description {\n  padding-left: 20px;\n  font-size: 18px;\n  line-height: 21px;\n  white-space: pre-line;\n  transition: 0.3s ease-in-out transform;\n\n  @mixin larger-than 768px {\n    padding-left: 0;\n  }\n\n  @mixin larger-than 1024px {\n    padding: 20px;\n    max-height: 312px;\n    font-size: 20px;\n    line-height: 24px;\n    transform: translateY(0);\n  }\n}\n",
-      "start": 1750184199532,
-      "end": 1750184199550,
+      "start": 1750239308595,
+      "end": 1750239308608,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199550,
-      "end": 1750184199550,
+      "name": "vite:react-swc",
+      "start": 1750239308608,
+      "end": 1750239308608,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/ForWhomCard/ForWhomCard.module.css [vike:pluginModuleBanner] */\nexport const card = \"Uem9L\";\nexport const description = \"LZM4m\";\nexport const cardTop = \"JNlkJ\";\nexport default {\n\tcard: card,\n\tdescription: description,\n\tcardTop: cardTop\n};\n",
-      "start": 1750184199554,
-      "end": 1750184199554,
+      "start": 1750239308612,
+      "end": 1750239308612,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

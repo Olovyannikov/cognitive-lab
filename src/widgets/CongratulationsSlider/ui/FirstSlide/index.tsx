@@ -2,13 +2,15 @@ import { useContext } from 'react';
 import { Carousel } from '@mantine/carousel';
 import { ActionIcon, Box, Button, Flex, Paper, Stack, Text, Title } from '@mantine/core';
 import { ArrowRight, Trophy, X } from '@phosphor-icons/react/dist/ssr';
-import { useUnit } from 'effector-react/effector-react.umd';
+import { useUnit } from 'effector-react';
 import { usePageContext } from 'vike-react/usePageContext';
 
 import { useIsLarge } from '@/shared/lib';
 import { Picture } from '@/shared/ui';
 
 import { getFreeResultQuery } from '@/entities/Report';
+
+import { CONGRATULATIONS_MAP } from '@/widgets/CongratulationsSlider/const';
 
 import { CongratulationsContext } from '../../context/CongratulationsProvider';
 
@@ -39,13 +41,13 @@ export const FirstSlide = () => {
                             </Text>
                         </Title>
                         <Picture
-                            className={s.image}
+                            cdn
+                            m='auto'
                             width={180}
                             height={180}
-                            m='auto'
-                            cdn
-                            src={`/types/circles/${data?.mbti_type ?? 'ENTJ'}`}
                             extraPath={'_2'}
+                            className={s.image}
+                            src={`/types/circles/${data?.mbti_type ?? 'ENTJ'}`}
                         />
                         <Paper className={s.badge}>
                             <Flex gap='xs' align='center'>
@@ -53,7 +55,8 @@ export const FirstSlide = () => {
                                     <Trophy size={14} />
                                 </Flex>
                                 <Text className={s.badgeText}>
-                                    Вы входите в <b>топ-10%</b> людей с таким мышлением!
+                                    Вы входите в <b>топ-{CONGRATULATIONS_MAP[data?.mbti_type ?? 'ENTJ']}%</b> людей с
+                                    таким мышлением!
                                 </Text>
                             </Flex>
                         </Paper>

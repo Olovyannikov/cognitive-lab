@@ -4,144 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\nimport type { Scope, SerializedState } from 'effector';\nimport type { PageContextClient } from 'vike/types';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getScope } from './getScope';\n\nconst ScopeContext = createContext<Scope | undefined>(undefined);\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\n\nexport const ScopeProvider = ({ children }: PropsWithChildren) => {\n    const pageContext = usePageContext() as PageContextClient;\n    const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\n\n    const update = useCallback((values: SerializedState) => {\n        setScope(getScope(values));\n    }, []);\n\n    useEffect(() => {\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [pageContext]);\n\n    return (\n        <ScopeContext.Provider value={scope}>\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\n        </ScopeContext.Provider>\n    );\n};\n\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750184198836,
-      "end": 1750184198870,
+      "start": 1750239308242,
+      "end": 1750239308270,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\nimport type { Scope, SerializedState } from 'effector';\nimport type { PageContextClient } from 'vike/types';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getScope } from './getScope';\nconst ScopeContext = createContext<Scope | undefined>(undefined);\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\nexport const ScopeProvider = ({\n  children\n}: PropsWithChildren) => {\n  const pageContext = usePageContext() as PageContextClient;\n  const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values: SerializedState) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [pageContext]);\n  return <ScopeContext.Provider value={scope}>\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\n        </ScopeContext.Provider>;\n};\nexport const useScope = () => useContext(ScopeContext);",
-      "start": 1750184198870,
-      "end": 1750184198871,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from 'react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getScope } from './getScope';\nconst ScopeContext = /*#__PURE__*/ createContext(undefined);\nconst ScopeUpdateContext = /*#__PURE__*/ createContext(()=>{});\nexport const ScopeProvider = ({ children })=>{\n    const pageContext = usePageContext();\n    const [scope, setScope] = useState('scope' in pageContext ? pageContext.scope : getScope());\n    const update = useCallback((values)=>{\n        setScope(getScope(values));\n    }, []);\n    useEffect(()=>{\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [\n        pageContext\n    ]);\n    return /*#__PURE__*/ _jsx(ScopeContext.Provider, {\n        value: scope,\n        children: /*#__PURE__*/ _jsx(ScopeUpdateContext.Provider, {\n            value: update,\n            children: children\n        })\n    });\n};\nexport const useScope = ()=>useContext(ScopeContext);\n",
+      "start": 1750239308270,
+      "end": 1750239308276,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "createContext",
-          "PropsWithChildren",
-          "useCallback",
-          "useContext",
-          "useEffect",
-          "useState",
-          "Scope",
-          "SerializedState",
-          "PageContextClient",
-          "usePageContext",
-          "getScope",
-          "ScopeContext",
-          "undefined",
-          "ScopeUpdateContext",
-          "values",
-          "ScopeProvider",
-          "children",
-          "pageContext",
-          "scope",
-          "setScope",
-          "update",
-          "isHydration",
-          "useScope"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/ScopeProvider.tsx"],
-        "sourcesContent": [
-          "import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\nimport type { Scope, SerializedState } from 'effector';\nimport type { PageContextClient } from 'vike/types';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { getScope } from './getScope';\n\nconst ScopeContext = createContext<Scope | undefined>(undefined);\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\n\nexport const ScopeProvider = ({ children }: PropsWithChildren) => {\n    const pageContext = usePageContext() as PageContextClient;\n    const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\n\n    const update = useCallback((values: SerializedState) => {\n        setScope(getScope(values));\n    }, []);\n\n    useEffect(() => {\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [pageContext]);\n\n    return (\n        <ScopeContext.Provider value={scope}>\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\n        </ScopeContext.Provider>\n    );\n};\n\nexport const useScope = () => useContext(ScopeContext);\n"
-        ],
-        "mappings": "AAAA,SAASA,aAAa,EAAE,KAAKC,iBAAiB,EAAEC,WAAW,EAAEC,UAAU,EAAEC,SAAS,EAAEC,QAAQ,QAAQ,OAAO;AAC3G,cAAcC,KAAK,EAAEC,eAAe,QAAQ,UAAU;AACtD,cAAcC,iBAAiB,QAAQ,YAAY;AACnD,SAASC,cAAc,QAAQ,2BAA2B;AAE1D,SAASC,QAAQ,QAAQ,YAAY;AAErC,MAAMC,YAAY,GAAGX,aAAa,CAACM,KAAK,GAAG,SAAS,CAAC,CAACM,SAAS,CAAC;AAChE,MAAMC,kBAAkB,GAAGb,aAAa,CAAC,CAACc,MAAM,EAAEP,eAAe,EAAE,GAAG,IAAI,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC;AAErF,OAAO,MAAMQ,aAAa,GAAGA,CAAC;EAAEC;AAA4B,CAAlB,EAAEf,iBAAiB,KAAK;EAC9D,MAAMgB,WAAW,GAAGR,cAAc,CAAC,CAAC,IAAID,iBAAiB;EACzD,MAAM,CAACU,KAAK,EAAEC,QAAQ,CAAC,GAAGd,QAAQ,CAACC,KAAK,GAAG,SAAS,CAAC,CAAC,OAAO,IAAIW,WAAW,GAAGA,WAAW,CAACC,KAAK,GAAGR,QAAQ,CAAC,CAAC,CAAC;EAE9G,MAAMU,MAAM,GAAGlB,WAAW,CAAC,CAACY,MAAM,EAAEP,eAAe,KAAK;IACpDY,QAAQ,CAACT,QAAQ,CAACI,MAAM,CAAC,CAAC;EAC9B,CAAC,EAAE,EAAE,CAAC;EAENV,SAAS,CAAC,MAAM;IACZ,IAAI,CAACa,WAAW,CAACI,WAAW,EAAE;MAC1BF,QAAQ,CAACT,QAAQ,CAAC,CAAC,CAAC;IACxB;EACJ,CAAC,EAAE,CAACO,WAAW,CAAC,CAAC;EAEjB,OACI,CAAC,YAAY,CAAC,QAAQ,CAAC,KAAK,CAAC,CAACC,KAAK,CAAC;AAC5C,YAAY,CAAC,kBAAkB,CAAC,QAAQ,CAAC,KAAK,CAAC,CAACE,MAAM,CAAC,CAAC,CAACJ,QAAQ,CAAC,EAAE,kBAAkB,CAAC,QAAQ;AAC/F,QAAQ,EAAE,YAAY,CAAC,QAAQ,CAAC;AAEhC,CAAC;AAED,OAAO,MAAMM,QAAQ,GAAGA,CAAA,KAAMnB,UAAU,CAACQ,YAAY,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/ScopeProvider.tsx\"],\"sourcesContent\":[\"import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\\nimport type { Scope, SerializedState } from 'effector';\\nimport type { PageContextClient } from 'vike/types';\\nimport { usePageContext } from 'vike-react/usePageContext';\\n\\nimport { getScope } from './getScope';\\n\\nconst ScopeContext = createContext<Scope | undefined>(undefined);\\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\\n\\nexport const ScopeProvider = ({ children }: PropsWithChildren) => {\\n    const pageContext = usePageContext() as PageContextClient;\\n    const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\\n\\n    const update = useCallback((values: SerializedState) => {\\n        setScope(getScope(values));\\n    }, []);\\n\\n    useEffect(() => {\\n        if (!pageContext.isHydration) {\\n            setScope(getScope());\\n        }\\n    }, [pageContext]);\\n\\n    return (\\n        <ScopeContext.Provider value={scope}>\\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\\n        </ScopeContext.Provider>\\n    );\\n};\\n\\nexport const useScope = () => useContext(ScopeContext);\\n\"],\"names\":[\"createContext\",\"useCallback\",\"useContext\",\"useEffect\",\"useState\",\"usePageContext\",\"getScope\",\"ScopeContext\",\"undefined\",\"ScopeUpdateContext\",\"ScopeProvider\",\"children\",\"pageContext\",\"scope\",\"setScope\",\"update\",\"values\",\"isHydration\",\"Provider\",\"value\",\"useScope\"],\"mappings\":\";AAAA,SAASA,aAAa,EAA0BC,WAAW,EAAEC,UAAU,EAAEC,SAAS,EAAEC,QAAQ,QAAQ,QAAQ;AAG5G,SAASC,cAAc,QAAQ,4BAA4B;AAE3D,SAASC,QAAQ,QAAQ,aAAa;AAEtC,MAAMC,6BAAeP,cAAiCQ;AACtD,MAAMC,mCAAqBT,cAAiD,KAAO;AAEnF,OAAO,MAAMU,gBAAgB,CAAC,EAAEC,QAAQ,EAAqB;IACzD,MAAMC,cAAcP;IACpB,MAAM,CAACQ,OAAOC,SAAS,GAAGV,SAA4B,WAAWQ,cAAcA,YAAYC,KAAK,GAAGP;IAEnG,MAAMS,SAASd,YAAY,CAACe;QACxBF,SAASR,SAASU;IACtB,GAAG,EAAE;IAELb,UAAU;QACN,IAAI,CAACS,YAAYK,WAAW,EAAE;YAC1BH,SAASR;QACb;IACJ,GAAG;QAACM;KAAY;IAEhB,qBACI,KAACL,aAAaW,QAAQ;QAACC,OAAON;kBAC1B,cAAA,KAACJ,mBAAmBS,QAAQ;YAACC,OAAOJ;sBAASJ;;;AAGzD,EAAE;AAEF,OAAO,MAAMS,WAAW,IAAMlB,WAAWK,cAAc\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = createContext(void 0);\nconst ScopeUpdateContext = createContext(() => {\n});\nexport const ScopeProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(ScopeContext.Provider, { value: scope, children: /* @__PURE__ */ jsx(ScopeUpdateContext.Provider, { value: update, children }) });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750184198871,
-      "end": 1750184198948,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = /* @__PURE__ */ createContext(void 0);\nconst ScopeUpdateContext = /* @__PURE__ */ createContext(() => {\n});\nexport const ScopeProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(ScopeContext.Provider, {\n    value: scope,\n    children: /* @__PURE__ */ _jsx(ScopeUpdateContext.Provider, {\n      value: update,\n      children\n    })\n  });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
+      "start": 1750239308276,
+      "end": 1750239308310,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/ScopeProvider.tsx"],
         "sourcesContent": [
-          "import { createContext, type PropsWithChildren, useCallback, useContext, useEffect, useState } from 'react';\nimport type { Scope, SerializedState } from 'effector';\nimport type { PageContextClient } from 'vike/types';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getScope } from './getScope';\nconst ScopeContext = createContext<Scope | undefined>(undefined);\nconst ScopeUpdateContext = createContext<(values: SerializedState) => void>(() => {});\nexport const ScopeProvider = ({\n  children\n}: PropsWithChildren) => {\n  const pageContext = usePageContext() as PageContextClient;\n  const [scope, setScope] = useState<Scope | undefined>('scope' in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values: SerializedState) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [pageContext]);\n  return <ScopeContext.Provider value={scope}>\n            <ScopeUpdateContext.Provider value={update}>{children}</ScopeUpdateContext.Provider>\n        </ScopeContext.Provider>;\n};\nexport const useScope = () => useContext(ScopeContext);"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from 'react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { getScope } from './getScope';\nconst ScopeContext = /*#__PURE__*/ createContext(undefined);\nconst ScopeUpdateContext = /*#__PURE__*/ createContext(()=>{});\nexport const ScopeProvider = ({ children })=>{\n    const pageContext = usePageContext();\n    const [scope, setScope] = useState('scope' in pageContext ? pageContext.scope : getScope());\n    const update = useCallback((values)=>{\n        setScope(getScope(values));\n    }, []);\n    useEffect(()=>{\n        if (!pageContext.isHydration) {\n            setScope(getScope());\n        }\n    }, [\n        pageContext\n    ]);\n    return /*#__PURE__*/ _jsx(ScopeContext.Provider, {\n        value: scope,\n        children: /*#__PURE__*/ _jsx(ScopeUpdateContext.Provider, {\n            value: update,\n            children: children\n        })\n    });\n};\nexport const useScope = ()=>useContext(ScopeContext);\n"
         ],
-        "mappings": "AAqBY;AArBZ,SAAS,eAAuC,aAAa,YAAY,WAAW,gBAAgB;AAGpG,SAAS,sBAAsB;AAC/B,SAAS,gBAAgB;AACzB,MAAM,eAAe,cAAiC,MAAS;AAC/D,MAAM,qBAAqB,cAAiD,MAAM;AAAC,CAAC;AAC7E,aAAM,gBAAgB,CAAC;AAAA,EAC5B;AACF,MAAyB;AACvB,QAAM,cAAc,eAAe;AACnC,QAAM,CAAC,OAAO,QAAQ,IAAI,SAA4B,WAAW,cAAc,YAAY,QAAQ,SAAS,CAAC;AAC7G,QAAM,SAAS,YAAY,CAAC,WAA4B;AACtD,aAAS,SAAS,MAAM,CAAC;AAAA,EAC3B,GAAG,CAAC,CAAC;AACL,YAAU,MAAM;AACd,QAAI,CAAC,YAAY,aAAa;AAC5B,eAAS,SAAS,CAAC;AAAA,IACrB;AAAA,EACF,GAAG,CAAC,WAAW,CAAC;AAChB,SAAO,oBAAC,aAAa,UAAb,EAAsB,OAAO,OAC3B,8BAAC,mBAAmB,UAAnB,EAA4B,OAAO,QAAS,UAAS,GAC1D;AACR;AACO,aAAM,WAAW,MAAM,WAAW,YAAY;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,eAAe,aAAa,YAAY,WAAW,gBAAgB;AAC5E,SAAS,sBAAsB;AAC/B,SAAS,gBAAgB;AACzB,MAAM,eAA6B,8BAAc,MAAS;AAC1D,MAAM,qBAAmC,8BAAc,MAAI;AAAC,CAAC;AACtD,aAAM,gBAAgB,CAAC,EAAE,SAAS,MAAI;AACzC,QAAM,cAAc,eAAe;AACnC,QAAM,CAAC,OAAO,QAAQ,IAAI,SAAS,WAAW,cAAc,YAAY,QAAQ,SAAS,CAAC;AAC1F,QAAM,SAAS,YAAY,CAAC,WAAS;AACjC,aAAS,SAAS,MAAM,CAAC;AAAA,EAC7B,GAAG,CAAC,CAAC;AACL,YAAU,MAAI;AACV,QAAI,CAAC,YAAY,aAAa;AAC1B,eAAS,SAAS,CAAC;AAAA,IACvB;AAAA,EACJ,GAAG;AAAA,IACC;AAAA,EACJ,CAAC;AACD,SAAqB,qBAAK,aAAa,UAAU;AAAA,IAC7C,OAAO;AAAA,IACP,UAAwB,qBAAK,mBAAmB,UAAU;AAAA,MACtD,OAAO;AAAA,MACP;AAAA,IACJ,CAAC;AAAA,EACL,CAAC;AACL;AACO,aAAM,WAAW,MAAI,WAAW,YAAY;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198948,
-      "end": 1750184198949,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "start": 1750239308310,
+      "end": 1750239308310,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/lib/effector/ScopeProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = createContext(void 0);\nconst ScopeUpdateContext = createContext(() => {\n});\nexport const ScopeProvider = ({\n  children\n}) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [pageContext]);\n  return /* @__PURE__ */ jsx(ScopeContext.Provider, { value: scope, children: /* @__PURE__ */ jsx(ScopeUpdateContext.Provider, { value: update, children }) });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "result": "/*! src/shared/lib/effector/ScopeProvider.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { createContext, useCallback, useContext, useEffect, useState } from \"react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { getScope } from \"./getScope\";\nconst ScopeContext = /* @__PURE__ */ createContext(void 0);\nconst ScopeUpdateContext = /* @__PURE__ */ createContext(() => {\n});\nexport const ScopeProvider = ({ children }) => {\n  const pageContext = usePageContext();\n  const [scope, setScope] = useState(\"scope\" in pageContext ? pageContext.scope : getScope());\n  const update = useCallback((values) => {\n    setScope(getScope(values));\n  }, []);\n  useEffect(() => {\n    if (!pageContext.isHydration) {\n      setScope(getScope());\n    }\n  }, [\n    pageContext\n  ]);\n  return /* @__PURE__ */ _jsx(ScopeContext.Provider, {\n    value: scope,\n    children: /* @__PURE__ */ _jsx(ScopeUpdateContext.Provider, {\n      value: update,\n      children\n    })\n  });\n};\nexport const useScope = () => useContext(ScopeContext);\n",
+      "start": 1750239308311,
+      "end": 1750239308311,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/lib/effector/ScopeProvider.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9J,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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"
       }
     }
   ]

@@ -4,142 +4,109 @@
     {
       "name": "vite:load-fallback",
       "result": "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n    showInput?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n    email?: string;\n    approve_subscription?: boolean;\n}\n",
-      "start": 1750184198859,
-      "end": 1750184198923,
+      "start": 1750239308296,
+      "end": 1750239308308,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export interface Option {\n  id: string;\n  text: string;\n  order: number;\n  requires_input?: boolean;\n}\nexport interface Rephrasing {\n  hint: string;\n  text: string;\n}\nexport interface ScaleChoiceAnswer {\n  value: number;\n}\nexport interface MultiChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface SingleChoiceAnswer {\n  value: string;\n  input?: string;\n}\nexport interface PreparedAnswer {\n  question: string;\n  answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n  index: number;\n  isMultiple?: boolean;\n  isSingle?: boolean;\n  showInput?: boolean;\n}\nexport interface Answers {\n  answers: PreparedAnswer[];\n  email?: string;\n  approve_subscription?: boolean;\n}",
-      "start": 1750184198923,
-      "end": 1750184198925,
+      "name": "vite:react-swc",
+      "result": "export { };\n",
+      "start": 1750239308308,
+      "end": 1750239308312,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "Option",
-          "id",
-          "text",
-          "order",
-          "requires_input",
-          "Rephrasing",
-          "hint",
-          "ScaleChoiceAnswer",
-          "value",
-          "MultiChoiceAnswer",
-          "input",
-          "SingleChoiceAnswer",
-          "PreparedAnswer",
-          "question",
-          "answer",
-          "index",
-          "isMultiple",
-          "isSingle",
-          "showInput",
-          "Answers",
-          "answers",
-          "email",
-          "approve_subscription"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts"],
-        "sourcesContent": [
-          "export interface Option {\n    id: string;\n    text: string;\n    order: number;\n    requires_input?: boolean;\n}\n\nexport interface Rephrasing {\n    hint: string;\n    text: string;\n}\n\nexport interface ScaleChoiceAnswer {\n    value: number;\n}\n\nexport interface MultiChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface SingleChoiceAnswer {\n    value: string;\n    input?: string;\n}\n\nexport interface PreparedAnswer {\n    question: string;\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\n    index: number;\n    isMultiple?: boolean;\n    isSingle?: boolean;\n    showInput?: boolean;\n}\n\nexport interface Answers {\n    answers: PreparedAnswer[];\n    email?: string;\n    approve_subscription?: boolean;\n}\n"
-        ],
-        "mappings": "AAAA,OAAO,UAAUA,MAAM,CAAC;EACpBC,EAAE,EAAE,MAAM;EACVC,IAAI,EAAE,MAAM;EACZC,KAAK,EAAE,MAAM;EACbC,cAAc,CAAC,EAAE,OAAO;AAC5B;AAEA,OAAO,UAAUC,UAAU,CAAC;EACxBC,IAAI,EAAE,MAAM;EACZJ,IAAI,EAAE,MAAM;AAChB;AAEA,OAAO,UAAUK,iBAAiB,CAAC;EAC/BC,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,UAAUC,iBAAiB,CAAC;EAC/BD,KAAK,EAAE,MAAM;EACbE,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,UAAUC,kBAAkB,CAAC;EAChCH,KAAK,EAAE,MAAM;EACbE,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,UAAUE,cAAc,CAAC;EAC5BC,QAAQ,EAAE,MAAM;EAChBC,MAAM,EAAEP,iBAAiB,GAAGI,kBAAkB,GAAGA,kBAAkB,EAAE,GAAGF,iBAAiB,EAAE;EAC3FM,KAAK,EAAE,MAAM;EACbC,UAAU,CAAC,EAAE,OAAO;EACpBC,QAAQ,CAAC,EAAE,OAAO;EAClBC,SAAS,CAAC,EAAE,OAAO;AACvB;AAEA,OAAO,UAAUC,OAAO,CAAC;EACrBC,OAAO,EAAER,cAAc,EAAE;EACzBS,KAAK,CAAC,EAAE,MAAM;EACdC,oBAAoB,CAAC,EAAE,OAAO;AAClC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts\"],\"sourcesContent\":[\"export interface Option {\\n    id: string;\\n    text: string;\\n    order: number;\\n    requires_input?: boolean;\\n}\\n\\nexport interface Rephrasing {\\n    hint: string;\\n    text: string;\\n}\\n\\nexport interface ScaleChoiceAnswer {\\n    value: number;\\n}\\n\\nexport interface MultiChoiceAnswer {\\n    value: string;\\n    input?: string;\\n}\\n\\nexport interface SingleChoiceAnswer {\\n    value: string;\\n    input?: string;\\n}\\n\\nexport interface PreparedAnswer {\\n    question: string;\\n    answer: ScaleChoiceAnswer | SingleChoiceAnswer | SingleChoiceAnswer[] | MultiChoiceAnswer[];\\n    index: number;\\n    isMultiple?: boolean;\\n    isSingle?: boolean;\\n    showInput?: boolean;\\n}\\n\\nexport interface Answers {\\n    answers: PreparedAnswer[];\\n    email?: string;\\n    approve_subscription?: boolean;\\n}\\n\"],\"names\":[],\"mappings\":\"AAmCA,WAIC\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "",
-      "start": 1750184198925,
-      "end": 1750184198998,
+      "result": "export {};\n",
+      "start": 1750239308312,
+      "end": 1750239308386,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
-        "sources": [],
-        "sourcesContent": [],
-        "mappings": "",
+        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/api/types.ts"],
+        "sourcesContent": ["export { };\n"],
+        "mappings": "AAAA;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Test/api/types.ts [vike:pluginModuleBanner] */\n",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "result": "/*! src/entities/Test/api/types.ts [vike:pluginModuleBanner] */\nexport {};\n",
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Test/api/types.ts"],
         "names": [],
-        "mappings": ";"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

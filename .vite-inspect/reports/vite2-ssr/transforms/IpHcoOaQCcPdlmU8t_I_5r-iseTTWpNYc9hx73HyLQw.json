@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".stack {\n  margin-bottom: 32px;\n}\n\n.label {\n  font-weight: 700;\n}\n\n.controls {\n  display: flex;\n  flex-direction: column;\n  max-width: 523px;\n  gap: 16px;\n}\n",
-      "start": 1750184199601,
-      "end": 1750184199612,
+      "start": 1750239308732,
+      "end": 1750239308737,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "name": "vite:react-swc",
+      "start": 1750239308737,
+      "end": 1750239308737,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/ui/CreateReviewForm.module.css [vike:pluginModuleBanner] */\nexport const stack = \"GuFZR\";\nexport const label = \"G-ZZQ\";\nexport const controls = \"RRzxg\";\nexport default {\n\tstack: stack,\n\tlabel: label,\n\tcontrols: controls\n};\n",
-      "start": 1750184199612,
-      "end": 1750184199612,
+      "start": 1750239308738,
+      "end": 1750239308738,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

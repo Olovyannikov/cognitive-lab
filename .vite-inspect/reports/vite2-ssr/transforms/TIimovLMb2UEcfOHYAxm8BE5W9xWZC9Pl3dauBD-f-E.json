@@ -4,146 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { cache, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { FaqItemResponse, FaqRequest } from './dto';\n\nexport const getFAQQuery = createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>((params) => ({\n        url: API.faq.list,\n        params: {\n            post_type: 'faq',\n            ...params,\n        },\n    })),\n    initialData: {} as FaqItemResponse,\n});\n\ncache(getFAQQuery);\n",
-      "start": 1750184198841,
-      "end": 1750184198893,
+      "start": 1750239308268,
+      "end": 1750239308282,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { FaqItemResponse, FaqRequest } from './dto';\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>(params => ({\n      url: API.faq.list,\n      params: {\n        post_type: 'faq',\n        ...params\n      }\n    })),\n    initialData: {} as FaqItemResponse\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});",
-      "start": 1750184198893,
-      "end": 1750184198895,
+      "name": "vite:react-swc",
+      "result": "import { withFactory as _effector$factory } from 'effector';\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getFAQQuery = _effector$factory({\n    sid: \"7uzoinph\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx((params)=>({\n                    url: API.faq.list,\n                    params: {\n                        post_type: 'faq',\n                        ...params\n                    }\n                })),\n            initialData: {}\n        })\n});\n_effector$factory({\n    sid: \"4ya14gmh\",\n    fn: ()=>cache(getFAQQuery)\n});\n",
+      "start": 1750239308282,
+      "end": 1750239308284,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "cache",
-          "createQuery",
-          "API",
-          "createCommonRequestFx",
-          "FaqItemResponse",
-          "FaqRequest",
-          "getFAQQuery",
-          "_withFactory",
-          "sid",
-          "\"nqw9kt\"",
-          "fn",
-          "effect",
-          "params",
-          "url",
-          "faq",
-          "list",
-          "post_type",
-          "initialData",
-          "name",
-          "\"getFAQQuery\"",
-          "method",
-          "\"createQuery\"",
-          "\"-hhz2ow\"",
-          "\"none\"",
-          "\"cache\""
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/api/index.ts"],
-        "sourcesContent": [
-          "import { cache, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { FaqItemResponse, FaqRequest } from './dto';\n\nexport const getFAQQuery = createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>((params) => ({\n        url: API.faq.list,\n        params: {\n            post_type: 'faq',\n            ...params,\n        },\n    })),\n    initialData: {} as FaqItemResponse,\n});\n\ncache(getFAQQuery);\n"
-        ],
-        "mappings": ";AAAA,SAASA,KAAK,EAAEC,WAAW,QAAQ,kBAAkB;AAErD,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,cAAc;AAEzD,cAAcC,eAAe,EAAEC,UAAU,QAAQ,OAAO;AAExD,OAAO,MAAMC,WAAW,GAAAC,YAAA;EAAAC,GAAA,EAAAC,QAAA;EAAAC,EAAA,EAAAA,CAAA,KAAGT,WAAW,CAAC;IACnCU,MAAM,EAAER,qBAAqB,CAACE,UAAU,GAAG,IAAI,EAAED,eAAe,CAAC,CAAEQ,MAAM,KAAM;MAC3EC,GAAG,EAAEX,GAAG,CAACY,GAAG,CAACC,IAAI;MACjBH,MAAM,EAAE;QACJI,SAAS,EAAE,KAAK;QAChB,GAAGJ;MACP;IACJ,CAAC,CAAC,CAAC;IACHK,WAAW,EAAE,CAAC,CAAC,IAAIb;EACvB,CAAC,CAAC;EAAAc,IAAA,EAAAC,aAAA;EAAAC,MAAA,EAAAC;AAAA;AAEFd,YAAA;EAAAC,GAAA,EAAAc,SAAA;EAAAZ,EAAA,EAAAA,CAAA,KAAAV,KAAK,CAACM,WAAW,CAAC;EAAAY,IAAA,EAAAK,MAAA;EAAAH,MAAA,EAAAI;AAAA",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/api/index.ts\"],\"sourcesContent\":[\"import { cache, createQuery } from '@farfetched/core';\\n\\nimport { API, createCommonRequestFx } from '@/shared/api';\\n\\nimport type { FaqItemResponse, FaqRequest } from './dto';\\n\\nexport const getFAQQuery = createQuery({\\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>((params) => ({\\n        url: API.faq.list,\\n        params: {\\n            post_type: 'faq',\\n            ...params,\\n        },\\n    })),\\n    initialData: {} as FaqItemResponse,\\n});\\n\\ncache(getFAQQuery);\\n\"],\"names\":[\"cache\",\"createQuery\",\"API\",\"createCommonRequestFx\",\"getFAQQuery\",\"effect\",\"params\",\"url\",\"faq\",\"list\",\"post_type\",\"initialData\"],\"mappings\":\";AAAA,SAASA,KAAK,EAAEC,WAAW,QAAQ,mBAAmB;AAEtD,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,eAAe;AAI1D,OAAO,MAAMC;;YAAcH,YAAY;YACnCI,QAAQF,sBAA0D,CAACG,SAAY,CAAA;oBAC3EC,KAAKL,IAAIM,GAAG,CAACC,IAAI;oBACjBH,QAAQ;wBACJI,WAAW;wBACX,GAAGJ,MAAM;oBACb;gBACJ,CAAA;YACAK,aAAa,CAAC;QAClB;GAAG;;;YAEHX,MAAMI\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});\n",
-      "start": 1750184198895,
-      "end": 1750184198982,
+      "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _effector$factory({\n  sid: \"7uzoinph\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  })\n});\n_effector$factory({\n  sid: \"4ya14gmh\",\n  fn: () => cache(getFAQQuery)\n});\n",
+      "start": 1750239308285,
+      "end": 1750239308325,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/FAQ/api/index.ts"],
         "sourcesContent": [
-          "import { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { FaqItemResponse, FaqRequest } from './dto';\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<FaqRequest | void, FaqItemResponse>(params => ({\n      url: API.faq.list,\n      params: {\n        post_type: 'faq',\n        ...params\n      }\n    })),\n    initialData: {} as FaqItemResponse\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});"
+          "import { withFactory as _effector$factory } from 'effector';\nimport { cache, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getFAQQuery = _effector$factory({\n    sid: \"7uzoinph\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx((params)=>({\n                    url: API.faq.list,\n                    params: {\n                        post_type: 'faq',\n                        ...params\n                    }\n                })),\n            initialData: {}\n        })\n});\n_effector$factory({\n    sid: \"4ya14gmh\",\n    fn: ()=>cache(getFAQQuery)\n});\n"
         ],
-        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,OAAO,mBAAmB;AACnC,SAAS,KAAK,6BAA6B;AAEpC,aAAM,cAAc,aAAa;AAAA,EACtC,KAAK;AAAA,EACL,IAAI,MAAM,YAAY;AAAA,IACpB,QAAQ,sBAA0D,aAAW;AAAA,MAC3E,KAAK,IAAI,IAAI;AAAA,MACb,QAAQ;AAAA,QACN,WAAW;AAAA,QACX,GAAG;AAAA,MACL;AAAA,IACF,EAAE;AAAA,IACF,aAAa,CAAC;AAAA,EAChB,CAAC;AAAA,EACD,MAAM;AAAA,EACN,QAAQ;AACV,CAAC;AACD,aAAa;AAAA,EACX,KAAK;AAAA,EACL,IAAI,MAAM,MAAM,WAAW;AAAA,EAC3B,MAAM;AAAA,EACN,QAAQ;AACV,CAAC;",
+        "mappings": "AAAA,SAAS,eAAe,yBAAyB;AACjD,SAAS,OAAO,mBAAmB;AACnC,SAAS,KAAK,6BAA6B;AACpC,aAAM,cAAc,kBAAkB;AAAA,EACzC,KAAK;AAAA,EACL,IAAI,MAAI,YAAY;AAAA,IACZ,QAAQ,sBAAsB,CAAC,YAAU;AAAA,MACjC,KAAK,IAAI,IAAI;AAAA,MACb,QAAQ;AAAA,QACJ,WAAW;AAAA,QACX,GAAG;AAAA,MACP;AAAA,IACJ,EAAE;AAAA,IACN,aAAa,CAAC;AAAA,EAClB,CAAC;AACT,CAAC;AACD,kBAAkB;AAAA,EACd,KAAK;AAAA,EACL,IAAI,MAAI,MAAM,WAAW;AAC7B,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/FAQ/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _withFactory({\n  sid: \"nqw9kt\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  }),\n  name: \"getFAQQuery\",\n  method: \"createQuery\"\n});\n_withFactory({\n  sid: \"-hhz2ow\",\n  fn: () => cache(getFAQQuery),\n  name: \"none\",\n  method: \"cache\"\n});\n",
-      "start": 1750184198982,
-      "end": 1750184198982,
+      "result": "/*! src/entities/FAQ/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { cache, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getFAQQuery = _effector$factory({\n  sid: \"7uzoinph\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((params) => ({\n      url: API.faq.list,\n      params: {\n        post_type: \"faq\",\n        ...params\n      }\n    })),\n    initialData: {}\n  })\n});\n_effector$factory({\n  sid: \"4ya14gmh\",\n  fn: () => cache(getFAQQuery)\n});\n",
+      "start": 1750239308326,
+      "end": 1750239308326,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/FAQ/api/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC;"
       }
     }
   ]

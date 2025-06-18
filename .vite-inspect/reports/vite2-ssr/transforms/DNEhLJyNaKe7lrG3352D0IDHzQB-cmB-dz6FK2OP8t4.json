@@ -4,55 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { Mark } from '../types';\n\nexport function barChartPrepareData(\n    item: Partial<{\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\n    }>\n) {\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item.mbti_data ?? ''),\n    })) as Mark[];\n}\n",
-      "start": 1750184199395,
-      "end": 1750184199409,
+      "start": 1750239308566,
+      "end": 1750239308599,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { Mark } from '../types';\nexport function barChartPrepareData(item: Partial<{\n  mbti_data: Record<string, {\n    text: string;\n    type: 'header' | 'paragraph';\n  }[]>;\n  mbti_percentages: Record<string, {\n    negative: number;\n    positive: number;\n  }>;\n}>) {\n  return Object.entries(item.mbti_percentages ?? '').map(el => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? '')\n  })) as Mark[];\n}",
-      "start": 1750184199409,
-      "end": 1750184199410,
+      "name": "vite:react-swc",
+      "result": "export function barChartPrepareData(item) {\n    return Object.entries(item.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item.mbti_data ?? '')\n        }));\n}\n",
+      "start": 1750239308599,
+      "end": 1750239308601,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "Mark",
-          "barChartPrepareData",
-          "item",
-          "Partial",
-          "mbti_data",
-          "Record",
-          "text",
-          "type",
-          "mbti_percentages",
-          "negative",
-          "positive",
-          "Object",
-          "entries",
-          "map",
-          "el",
-          "value",
-          "label",
-          "data",
-          "mbti_type",
-          "keys"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts"
-        ],
-        "sourcesContent": [
-          "import type { Mark } from '../types';\n\nexport function barChartPrepareData(\n    item: Partial<{\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\n    }>\n) {\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item.mbti_data ?? ''),\n    })) as Mark[];\n}\n"
-        ],
-        "mappings": "AAAA,cAAcA,IAAI,QAAQ,UAAU;AAEpC,OAAO,SAASC,mBAAmBA,CAC/BC,IAAI,EAAEC,OAAO,CAAC;EACVC,SAAS,EAAEC,MAAM,CAAC,MAAM,EAAE;IAAEC,IAAI,EAAE,MAAM;IAAEC,IAAI,EAAE,QAAQ,GAAG,WAAW;EAAC,CAAC,EAAE,CAAC;EAC3EC,gBAAgB,EAAEH,MAAM,CAAC,MAAM,EAAE;IAAEI,QAAQ,EAAE,MAAM;IAAEC,QAAQ,EAAE,MAAM;EAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,EACJ;EACE,OAAOC,MAAM,CAACC,OAAO,CAACV,IAAI,CAACM,gBAAgB,IAAI,EAAE,CAAC,CAACK,GAAG,CAAEC,EAAE,KAAM;IAC5DC,KAAK,EAAED,EAAE,CAAC,CAAC,CAAC,CAACJ,QAAQ;IACrBM,KAAK,EAAEF,EAAE,CAAC,CAAC,CAAC;IACZG,IAAI,EAAEf,IAAI,CAACE,SAAS,GAAGU,EAAE,CAAC,CAAC,CAAC,CAAC;IAC7BI,SAAS,EAAEP,MAAM,CAACQ,IAAI,CAACjB,IAAI,CAACE,SAAS,IAAI,EAAE;EAC/C,CAAC,CAAC,CAAC,IAAIJ,IAAI,EAAE;AACjB",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts\"],\"sourcesContent\":[\"import type { Mark } from '../types';\\n\\nexport function barChartPrepareData(\\n    item: Partial<{\\n        mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\\n        mbti_percentages: Record<string, { negative: number; positive: number }>;\\n    }>\\n) {\\n    return Object.entries(item.mbti_percentages ?? '').map((el) => ({\\n        value: el[1].positive,\\n        label: el[0],\\n        data: item.mbti_data?.[el[0]],\\n        mbti_type: Object.keys(item.mbti_data ?? ''),\\n    })) as Mark[];\\n}\\n\"],\"names\":[\"barChartPrepareData\",\"item\",\"Object\",\"entries\",\"mbti_percentages\",\"map\",\"el\",\"value\",\"positive\",\"label\",\"data\",\"mbti_data\",\"mbti_type\",\"keys\"],\"mappings\":\"AAEA,OAAO,SAASA,oBACZC,IAGE;IAEF,OAAOC,OAAOC,OAAO,CAACF,KAAKG,gBAAgB,IAAI,IAAIC,GAAG,CAAC,CAACC,KAAQ,CAAA;YAC5DC,OAAOD,EAAE,CAAC,EAAE,CAACE,QAAQ;YACrBC,OAAOH,EAAE,CAAC,EAAE;YACZI,MAAMT,KAAKU,SAAS,EAAE,CAACL,EAAE,CAAC,EAAE,CAAC;YAC7BM,WAAWV,OAAOW,IAAI,CAACZ,KAAKU,SAAS,IAAI;QAC7C,CAAA;AACJ\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750184199410,
-      "end": 1750184199588,
+      "start": 1750239308601,
+      "end": 1750239308772,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,83 +28,83 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/barChartPreparedData.ts"
         ],
         "sourcesContent": [
-          "import type { Mark } from '../types';\nexport function barChartPrepareData(item: Partial<{\n  mbti_data: Record<string, {\n    text: string;\n    type: 'header' | 'paragraph';\n  }[]>;\n  mbti_percentages: Record<string, {\n    negative: number;\n    positive: number;\n  }>;\n}>) {\n  return Object.entries(item.mbti_percentages ?? '').map(el => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? '')\n  })) as Mark[];\n}"
+          "export function barChartPrepareData(item) {\n    return Object.entries(item.mbti_percentages ?? '').map((el)=>({\n            value: el[1].positive,\n            label: el[0],\n            data: item.mbti_data?.[el[0]],\n            mbti_type: Object.keys(item.mbti_data ?? '')\n        }));\n}\n"
         ],
-        "mappings": "AACO,gBAAS,oBAAoB,MAShC;AACF,SAAO,OAAO,QAAQ,KAAK,oBAAoB,EAAE,EAAE,IAAI,SAAO;AAAA,IAC5D,OAAO,GAAG,CAAC,EAAE;AAAA,IACb,OAAO,GAAG,CAAC;AAAA,IACX,MAAM,KAAK,YAAY,GAAG,CAAC,CAAC;AAAA,IAC5B,WAAW,OAAO,KAAK,KAAK,aAAa,EAAE;AAAA,EAC7C,EAAE;AACJ;",
+        "mappings": "AAAO,gBAAS,oBAAoB,MAAM;AACtC,SAAO,OAAO,QAAQ,KAAK,oBAAoB,EAAE,EAAE,IAAI,CAAC,QAAM;AAAA,IACtD,OAAO,GAAG,CAAC,EAAE;AAAA,IACb,OAAO,GAAG,CAAC;AAAA,IACX,MAAM,KAAK,YAAY,GAAG,CAAC,CAAC;AAAA,IAC5B,WAAW,OAAO,KAAK,KAAK,aAAa,EAAE;AAAA,EAC/C,EAAE;AACV;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308772,
+      "end": 1750239308772,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/barChartPreparedData.ts [vike:pluginModuleBanner] */\nexport function barChartPrepareData(item) {\n  return Object.entries(item.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308773,
+      "end": 1750239308773,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

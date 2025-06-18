@@ -68,7 +68,7 @@ export const Paywall = ({
                 <Picture w='3xl' h='3xl' cdn src='/emoji/lock' />
                 <h3>{title}</h3>
             </Group>
-            <Picture className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />
+            <Picture cdn className={s.paywallMan} src={`/types/circles/${mbti}`} extraPath={isOdd(index) ? '_2' : ''} />
             <PointsList className={s.points} points={points} color={color} />
             <Flex className={s.actions} gap='sm'>
                 <Button

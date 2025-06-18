@@ -4,114 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TextInput } from '@mantine/core';\n\nimport s from './FormInput.module.css';\n\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md',\n});\n",
-      "start": 1750184199022,
-      "end": 1750184199063,
+      "start": 1750239308324,
+      "end": 1750239308336,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: 'md'\n});",
-      "start": 1750184199063,
-      "end": 1750184199064,
+      "name": "vite:react-swc",
+      "result": "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md'\n});\n",
+      "start": 1750239308336,
+      "end": 1750239308354,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["TextInput", "s", "FormInput", "withProps", "classNames", "size"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"],
-        "sourcesContent": [
-          "import { TextInput } from '@mantine/core';\n\nimport s from './FormInput.module.css';\n\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md',\n});\n"
-        ],
-        "mappings": "AAAA,SAASA,SAAS,QAAQ,eAAe;AAEzC,OAAOC,CAAC,MAAM,wBAAwB;AAEtC,OAAO,MAAMC,SAAS,GAAGF,SAAS,CAACG,SAAS,CAAC;EACzCC,UAAU,EAAEH,CAAC;EACbI,IAAI,EAAE;AACV,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx\"],\"sourcesContent\":[\"import { TextInput } from '@mantine/core';\\n\\nimport s from './FormInput.module.css';\\n\\nexport const FormInput = TextInput.withProps({\\n    classNames: s,\\n    size: 'md',\\n});\\n\"],\"names\":[\"TextInput\",\"s\",\"FormInput\",\"withProps\",\"classNames\",\"size\"],\"mappings\":\"AAAA,SAASA,SAAS,QAAQ,gBAAgB;AAE1C,OAAOC,OAAO,yBAAyB;AAEvC,OAAO,MAAMC,YAAYF,UAAUG,SAAS,CAAC;IACzCC,YAAYH;IACZI,MAAM;AACV,GAAG\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750184199064,
-      "end": 1750184199244,
+      "start": 1750239308354,
+      "end": 1750239308461,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormInput/index.tsx"],
         "sourcesContent": [
-          "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: 'md'\n});"
+          "import { TextInput } from '@mantine/core';\nimport s from './FormInput.module.css';\nexport const FormInput = TextInput.withProps({\n    classNames: s,\n    size: 'md'\n});\n"
         ],
-        "mappings": "AAAA,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,YAAY,UAAU,UAAU;AAAA,EAC3C,YAAY;AAAA,EACZ,MAAM;AACR,CAAC;",
+        "mappings": "AAAA,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,YAAY,UAAU,UAAU;AAAA,EACzC,YAAY;AAAA,EACZ,MAAM;AACV,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308461,
+      "end": 1750239308461,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308461,
+      "end": 1750239308461,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/ui/FormInput/index.tsx [vike:pluginModuleBanner] */\nimport { TextInput } from \"@mantine/core\";\nimport s from \"./FormInput.module.css\";\nexport const FormInput = TextInput.withProps({\n  classNames: s,\n  size: \"md\"\n});\n",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308462,
+      "end": 1750239308462,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

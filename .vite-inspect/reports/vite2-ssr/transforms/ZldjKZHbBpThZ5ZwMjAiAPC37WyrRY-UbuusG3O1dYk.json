@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n",
-      "start": 1750184199019,
-      "end": 1750184199055,
+      "start": 1750239308324,
+      "end": 1750239308336,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;",
-      "start": 1750184199055,
-      "end": 1750184199058,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from '@mantine/core';\nexport const PageLoader = ()=>/*#__PURE__*/ _jsx(Center, {\n        mih: 200,\n        children: /*#__PURE__*/ _jsx(Loader, {\n            size: \"xl\",\n            color: \"violet.5\"\n        })\n    });\n",
+      "start": 1750239308336,
+      "end": 1750239308353,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["Center", "Loader", "PageLoader"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
-        "sourcesContent": [
-          "import { Center, Loader } from '@mantine/core';\n\nexport const PageLoader = () => (\n    <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>\n);\n"
-        ],
-        "mappings": "AAAA,SAASA,MAAM,EAAEC,MAAM,QAAQ,eAAe;AAE9C,OAAO,MAAMC,UAAU,GAAGA,CAAA,KACtB,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC;AACrB,QAAQ,CAAC,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,UAAU;AAC1C,IAAI,EAAE,MAAM,CACX",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx\"],\"sourcesContent\":[\"import { Center, Loader } from '@mantine/core';\\n\\nexport const PageLoader = () => (\\n    <Center mih={200}>\\n        <Loader size='xl' color='violet.5' />\\n    </Center>\\n);\\n\"],\"names\":[\"Center\",\"Loader\",\"PageLoader\",\"mih\",\"size\",\"color\"],\"mappings\":\";AAAA,SAASA,MAAM,EAAEC,MAAM,QAAQ,gBAAgB;AAE/C,OAAO,MAAMC,aAAa,kBACtB,KAACF;QAAOG,KAAK;kBACT,cAAA,KAACF;YAAOG,MAAK;YAAKC,OAAM;;OAE9B\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1750184199059,
-      "end": 1750184199244,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ _jsx(Center, {\n  mih: 200,\n  children: /* @__PURE__ */ _jsx(Loader, {\n    size: \"xl\",\n    color: \"violet.5\"\n  })\n});\n",
+      "start": 1750239308353,
+      "end": 1750239308452,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/PageLoader/index.tsx"],
         "sourcesContent": [
-          "import { Center, Loader } from '@mantine/core';\nexport const PageLoader = () => <Center mih={200}>\n        <Loader size='xl' color='violet.5' />\n    </Center>;"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from '@mantine/core';\nexport const PageLoader = ()=>/*#__PURE__*/ _jsx(Center, {\n        mih: 200,\n        children: /*#__PURE__*/ _jsx(Loader, {\n            size: \"xl\",\n            color: \"violet.5\"\n        })\n    });\n"
         ],
-        "mappings": "AAEQ;AAFR,SAAS,QAAQ,cAAc;AACxB,aAAM,aAAa,MAAM,oBAAC,UAAO,KAAK,KACrC,8BAAC,UAAO,MAAK,MAAK,OAAM,YAAW,GACvC;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,QAAQ,cAAc;AACxB,aAAM,aAAa,MAAkB,qBAAK,QAAQ;AAAA,EACjD,KAAK;AAAA,EACL,UAAwB,qBAAK,QAAQ;AAAA,IACjC,MAAM;AAAA,IACN,OAAO;AAAA,EACX,CAAC;AACL,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "start": 1750239308452,
+      "end": 1750239308452,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ jsx(Center, { mih: 200, children: /* @__PURE__ */ jsx(Loader, { size: \"xl\", color: \"violet.5\" }) });\n",
-      "start": 1750184199244,
-      "end": 1750184199244,
+      "result": "/*! src/shared/ui/PageLoader/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Center, Loader } from \"@mantine/core\";\nexport const PageLoader = () => /* @__PURE__ */ _jsx(Center, {\n  mih: 200,\n  children: /* @__PURE__ */ _jsx(Loader, {\n    size: \"xl\",\n    color: \"violet.5\"\n  })\n});\n",
+      "start": 1750239308453,
+      "end": 1750239308453,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/ui/PageLoader/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }
     }
   ]

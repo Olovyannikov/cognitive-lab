@@ -47,7 +47,6 @@ export const PeopleTalk = () => {
                 <span>говорят?</span>
             </Title>
             <Carousel
-                loop
                 slideGap='lg'
                 withControls={false}
                 plugins={[autoplay.current, wheel.current]}
@@ -86,7 +85,7 @@ export const PeopleTalk = () => {
                                     </Text>
                                     <Text className={s.label}>{review.mbti_type}</Text>
                                 </Box>
-                                <Picture src={`/types/circles/${review.mbti_type}`} className={s.image} />
+                                <Picture cdn src={`/types/circles/${review.mbti_type}`} className={s.image} />
                             </Group>
                             <Text mb='xs' lineClamp={isMobile ? 8 : 6} className={s.reviewText}>
                                 {review.text}

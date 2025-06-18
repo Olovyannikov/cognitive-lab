@@ -4,139 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n",
-      "start": 1750184198929,
-      "end": 1750184198975,
+      "start": 1750239308284,
+      "end": 1750239308303,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { MainPageResponse } from './dto';\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: [] as MainPageResponse\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1750184198975,
-      "end": 1750184198976,
+      "name": "vite:react-swc",
+      "result": "import { withFactory as _effector$factory } from 'effector';\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getMainPageInfoQuery = _effector$factory({\n    sid: \"5jjq8tzi\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx(()=>({\n                    url: API.surveys.mainPage\n                })),\n            initialData: []\n        })\n});\n",
+      "start": 1750239308303,
+      "end": 1750239308306,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "createQuery",
-          "API",
-          "createCommonRequestFx",
-          "MainPageResponse",
-          "getMainPageInfoQuery",
-          "_withFactory",
-          "sid",
-          "\"she8ei\"",
-          "fn",
-          "effect",
-          "url",
-          "surveys",
-          "mainPage",
-          "initialData",
-          "name",
-          "\"getMainPageInfoQuery\"",
-          "method",
-          "\"createQuery\""
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"],
-        "sourcesContent": [
-          "import { createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx } from '@/shared/api';\n\nimport type { MainPageResponse } from './dto';\n\nexport const getMainPageInfoQuery = createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n        url: API.surveys.mainPage,\n    })),\n    initialData: [] as MainPageResponse,\n});\n"
-        ],
-        "mappings": ";AAAA,SAASA,WAAW,QAAQ,kBAAkB;AAE9C,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,cAAc;AAEzD,cAAcC,gBAAgB,QAAQ,OAAO;AAE7C,OAAO,MAAMC,oBAAoB,GAAAC,YAAA;EAAAC,GAAA,EAAAC,QAAA;EAAAC,EAAA,EAAAA,CAAA,KAAGR,WAAW,CAAC;IAC5CS,MAAM,EAAEP,qBAAqB,CAAC,IAAI,EAAEC,gBAAgB,CAAC,CAAC,OAAO;MACzDO,GAAG,EAAET,GAAG,CAACU,OAAO,CAACC;IACrB,CAAC,CAAC,CAAC;IACHC,WAAW,EAAE,EAAE,IAAIV;EACvB,CAAC,CAAC;EAAAW,IAAA,EAAAC,sBAAA;EAAAC,MAAA,EAAAC;AAAA",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts\"],\"sourcesContent\":[\"import { createQuery } from '@farfetched/core';\\n\\nimport { API, createCommonRequestFx } from '@/shared/api';\\n\\nimport type { MainPageResponse } from './dto';\\n\\nexport const getMainPageInfoQuery = createQuery({\\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\\n        url: API.surveys.mainPage,\\n    })),\\n    initialData: [] as MainPageResponse,\\n});\\n\"],\"names\":[\"createQuery\",\"API\",\"createCommonRequestFx\",\"getMainPageInfoQuery\",\"effect\",\"url\",\"surveys\",\"mainPage\",\"initialData\"],\"mappings\":\";AAAA,SAASA,WAAW,QAAQ,mBAAmB;AAE/C,SAASC,GAAG,EAAEC,qBAAqB,QAAQ,eAAe;AAI1D,OAAO,MAAMC;;YAAuBH,YAAY;YAC5CI,QAAQF,sBAA8C,IAAO,CAAA;oBACzDG,KAAKJ,IAAIK,OAAO,CAACC,QAAQ;gBAC7B,CAAA;YACAC,aAAa,EAAE;QACnB;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750184198976,
-      "end": 1750184199130,
+      "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _effector$factory({\n  sid: \"5jjq8tzi\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  })\n});\n",
+      "start": 1750239308306,
+      "end": 1750239308358,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/api/index.ts"],
         "sourcesContent": [
-          "import { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nimport type { MainPageResponse } from './dto';\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, MainPageResponse>(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: [] as MainPageResponse\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});"
+          "import { withFactory as _effector$factory } from 'effector';\nimport { createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx } from '@/shared/api';\nexport const getMainPageInfoQuery = _effector$factory({\n    sid: \"5jjq8tzi\",\n    fn: ()=>createQuery({\n            effect: createCommonRequestFx(()=>({\n                    url: API.surveys.mainPage\n                })),\n            initialData: []\n        })\n});\n"
         ],
-        "mappings": "AAAA,SAAS,eAAe,oBAAoB;AAC5C,SAAS,mBAAmB;AAC5B,SAAS,KAAK,6BAA6B;AAEpC,aAAM,uBAAuB,aAAa;AAAA,EAC/C,KAAK;AAAA,EACL,IAAI,MAAM,YAAY;AAAA,IACpB,QAAQ,sBAA8C,OAAO;AAAA,MAC3D,KAAK,IAAI,QAAQ;AAAA,IACnB,EAAE;AAAA,IACF,aAAa,CAAC;AAAA,EAChB,CAAC;AAAA,EACD,MAAM;AAAA,EACN,QAAQ;AACV,CAAC;",
+        "mappings": "AAAA,SAAS,eAAe,yBAAyB;AACjD,SAAS,mBAAmB;AAC5B,SAAS,KAAK,6BAA6B;AACpC,aAAM,uBAAuB,kBAAkB;AAAA,EAClD,KAAK;AAAA,EACL,IAAI,MAAI,YAAY;AAAA,IACZ,QAAQ,sBAAsB,OAAK;AAAA,MAC3B,KAAK,IAAI,QAAQ;AAAA,IACrB,EAAE;AAAA,IACN,aAAa,CAAC;AAAA,EAClB,CAAC;AACT,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199130,
-      "end": 1750184199131,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Landing/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _withFactory({\n  sid: \"she8ei\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  }),\n  name: \"getMainPageInfoQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "result": "/*! src/entities/Landing/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx } from \"@/shared/api\";\nexport const getMainPageInfoQuery = _effector$factory({\n  sid: \"5jjq8tzi\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx(() => ({\n      url: API.surveys.mainPage\n    })),\n    initialData: []\n  })\n});\n",
+      "start": 1750239308358,
+      "end": 1750239308358,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Landing/api/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }
     }
   ]

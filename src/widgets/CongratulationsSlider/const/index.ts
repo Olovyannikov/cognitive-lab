@@ -1,0 +1,18 @@
+export const CONGRATULATIONS_MAP: Record<string, number> = {
+    ISTJ: 11,
+    ISFJ: 11,
+    ESTJ: 9,
+    ESFJ: 11,
+    ISTP: 5,
+    ISFP: 7,
+    ESTP: 5,
+    ESFP: 7,
+    INTJ: 2,
+    INTP: 3,
+    ENTJ: 2,
+    ENTP: 3,
+    INFJ: 1,
+    INFP: 4,
+    ENFJ: 2,
+    ENFP: 6,
+};

@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';\n",
-      "start": 1750184198766,
-      "end": 1750184198788,
+      "start": 1750239308213,
+      "end": 1750239308231,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';",
-      "start": 1750184198788,
-      "end": 1750184198788,
+      "name": "vite:react-swc",
+      "result": "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';\n",
+      "start": 1750239308231,
+      "end": 1750239308236,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/index.ts"],
-        "sourcesContent": [
-          "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';\n"
-        ],
-        "mappings": "AAAA,cAAc,YAAY;AAC1B,cAAc,iBAAiB;AAC/B,cAAc,oBAAoB;AAClC,cAAc,UAAU",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/index.ts\"],\"sourcesContent\":[\"export * from './getScope';\\nexport * from './ScopeProvider';\\nexport * from './EffectorProvider';\\nexport * from './events';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,aAAa;AAC3B,cAAc,kBAAkB;AAChC,cAAc,qBAAqB;AACnC,cAAc,WAAW\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./getScope\";\nexport * from \"./ScopeProvider\";\nexport * from \"./EffectorProvider\";\nexport * from \"./events\";\n",
-      "start": 1750184198788,
-      "end": 1750184198825,
+      "start": 1750239308236,
+      "end": 1750239308239,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/effector/index.ts"],
         "sourcesContent": [
-          "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';"
+          "export * from './getScope';\nexport * from './ScopeProvider';\nexport * from './EffectorProvider';\nexport * from './events';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/index.ts [vike:pluginModuleBanner] */\nexport * from \"./getScope\";\nexport * from \"./ScopeProvider\";\nexport * from \"./EffectorProvider\";\nexport * from \"./events\";\n",
-      "start": 1750184198825,
-      "end": 1750184198825,
+      "start": 1750239308239,
+      "end": 1750239308239,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

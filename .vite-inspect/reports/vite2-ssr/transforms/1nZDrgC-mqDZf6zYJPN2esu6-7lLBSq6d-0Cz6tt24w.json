@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper {\n  position: sticky;\n  top: 100px;\n\n  &:nth-child(even) .card {\n    color: var(--mantine-color-dark-9);\n  }\n\n  &:nth-child(2) .card {\n    background-color: var(--mantine-color-lime-5);\n  }\n\n  &:nth-child(3) .card {\n    background-color: var(--mantine-color-pink-6);\n  }\n\n  &:nth-child(4) .card {\n    background-color: var(--mantine-color-yellow-6);\n  }\n}\n\n.card {\n  position: relative;\n  top: 0;\n  overflow: hidden;\n  margin: 0 auto -90px;\n  border-radius: 20px;\n  padding: 32px 20px;\n  height: 360px;\n  max-width: 840px;\n  color: var(--mantine-color-white);\n  background-color: var(--mantine-color-violet-5);\n\n  svg {\n    position: absolute;\n    right: 0;\n    top: 0;\n    z-index: 0;\n  }\n\n  h4 {\n    position: relative;\n    z-index: 1;\n    margin-bottom: 12px;\n    min-height: 56px;\n    font-size: 24px;\n    line-height: 28px;\n  }\n\n  p {\n    position: relative;\n    z-index: 1;\n    font-size: 18px;\n    line-height: 21px;\n    white-space: pre-line;\n  }\n\n  @mixin larger-than 768px {\n    padding: 40px 60px;\n    min-height: 298px;\n\n    h4 {\n      font-size: 32px;\n      line-height: 38px;\n    }\n\n    p {\n      font-size: 22px;\n      line-height: 26px;\n    }\n  }\n}\n",
-      "start": 1750184199541,
-      "end": 1750184199562,
+      "start": 1750239308588,
+      "end": 1750239308602,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199562,
-      "end": 1750184199562,
+      "name": "vite:react-swc",
+      "start": 1750239308602,
+      "end": 1750239308602,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/HowItHelpsCard/HowItHelpsCard.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"wk7GU\";\nexport const card = \"AVJwS\";\nexport default {\n\twrapper: wrapper,\n\tcard: card\n};\n",
-      "start": 1750184199564,
-      "end": 1750184199564,
+      "start": 1750239308604,
+      "end": 1750239308604,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

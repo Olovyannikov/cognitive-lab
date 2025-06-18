@@ -43,7 +43,13 @@ export const Desktop = () => {
                         </Text>
                         <Text className={s.label}>{currentReview?.mbti_type}</Text>
                     </Box>
-                    <Picture src={`/types/circles/${currentReview?.mbti_type}`} className={s.image} w={100} h={100} />
+                    <Picture
+                        cdn
+                        src={`/types/circles/${currentReview?.mbti_type}`}
+                        className={s.image}
+                        w={100}
+                        h={100}
+                    />
                 </Group>
                 <Text pb={40} px={40} className={s.reviewText}>
                     {currentReview?.text}

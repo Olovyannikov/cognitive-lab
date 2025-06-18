@@ -26,13 +26,14 @@ export const Subscription = ({ title, text, subscriptionFormSlot }: Subscription
             py={isLarge ? '3xl' : 'xl'}
         >
             <Picture
-                pos='absolute'
-                top={isLarge ? 32 : 5}
+                cdn
                 right={32}
+                fit='contain'
+                pos='absolute'
+                src='/report/mail'
+                top={isLarge ? 32 : 5}
                 w={isLarge ? 261 : 90}
                 h={isLarge ? 232 : 90}
-                fit='contain'
-                src='/report/mail'
             />
             <Stack maw={1040} className={s.content}>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw='60%'>

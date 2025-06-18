@@ -17,19 +17,20 @@ export const ConclusionPaywall = ({ text, title, points, actionsSlot, color = 'v
 
     return (
         <Paper
-            bg={`${color}.0`}
             pos='relative'
+            bg={`${color}.0`}
             py={isLarge ? '3xl' : 'xl'}
             px={isLarge ? '3xl' : 'md'}
             radius={isLarge ? 'lg' : 'md'}
         >
             <Picture
+                cdn
+                right={0}
+                pos='absolute'
                 src='/report/gem'
+                top={isLarge ? 0 : 20}
                 w={isLarge ? 250 : 108}
                 h={isLarge ? 250 : 108}
-                pos='absolute'
-                top={isLarge ? 0 : 20}
-                right={0}
             />
             <Stack gap={isLarge ? 'lg' : 'md'}>
                 <Title order={5} fz={isLarge ? 32 : 20} textWrap='balance' maw={isLarge ? '100%' : '60%'}>

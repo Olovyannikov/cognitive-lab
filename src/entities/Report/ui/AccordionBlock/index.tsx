@@ -20,7 +20,7 @@ export const AccordionBlock = ({ items }: AccordionBlockProps) => (
             <UIAccordion.Item key={index + (item?.title ?? '') + item.subtitle} value={item.title ?? ''}>
                 <UIAccordion.Control>
                     <Group>
-                        <Picture width={60} height={60} src={`/types/circles/${item.title}`} />
+                        <Picture cdn width={60} height={60} src={`/types/circles/${item.title}`} />
                         <Box>
                             <Text className={s.description}>{item.subtitle}</Text>
                             <Title className={s.title} order={3}>

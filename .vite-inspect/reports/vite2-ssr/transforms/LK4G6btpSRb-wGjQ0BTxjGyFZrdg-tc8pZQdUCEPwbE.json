@@ -4,130 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container, Title } from '@mantine/core';\n\nimport s from './PageLayout.module.css';\n\ninterface PageLayoutProps {\n    title: string;\n}\n\nexport const PageLayout = ({ title, children }: PropsWithChildren<PageLayoutProps>) => (\n    <Box component='section' pb={32}>\n        <Container>\n            <Title order={2} className={s.title}>\n                {title}\n            </Title>\n            {children}\n        </Container>\n    </Box>\n);\n",
-      "start": 1750184198828,
-      "end": 1750184198853,
+      "start": 1750239308265,
+      "end": 1750239308276,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { PropsWithChildren } from 'react';\nimport { Box, Container, Title } from '@mantine/core';\nimport s from './PageLayout.module.css';\ninterface PageLayoutProps {\n  title: string;\n}\nexport const PageLayout = ({\n  title,\n  children\n}: PropsWithChildren<PageLayoutProps>) => <Box component='section' pb={32}>\n        <Container>\n            <Title order={2} className={s.title}>\n                {title}\n            </Title>\n            {children}\n        </Container>\n    </Box>;",
-      "start": 1750184198853,
-      "end": 1750184198853,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from '@mantine/core';\nimport s from './PageLayout.module.css';\nexport const PageLayout = ({ title, children })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        pb: 32,\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsx(Title, {\n                    order: 2,\n                    className: s.title,\n                    children: title\n                }),\n                children\n            ]\n        })\n    });\n",
+      "start": 1750239308276,
+      "end": 1750239308282,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "PropsWithChildren",
-          "Box",
-          "Container",
-          "Title",
-          "s",
-          "PageLayoutProps",
-          "title",
-          "PageLayout",
-          "children"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/PageLayout/index.tsx"],
-        "sourcesContent": [
-          "import type { PropsWithChildren } from 'react';\nimport { Box, Container, Title } from '@mantine/core';\n\nimport s from './PageLayout.module.css';\n\ninterface PageLayoutProps {\n    title: string;\n}\n\nexport const PageLayout = ({ title, children }: PropsWithChildren<PageLayoutProps>) => (\n    <Box component='section' pb={32}>\n        <Container>\n            <Title order={2} className={s.title}>\n                {title}\n            </Title>\n            {children}\n        </Container>\n    </Box>\n);\n"
-        ],
-        "mappings": "AAAA,cAAcA,iBAAiB,QAAQ,OAAO;AAC9C,SAASC,GAAG,EAAEC,SAAS,EAAEC,KAAK,QAAQ,eAAe;AAErD,OAAOC,CAAC,MAAM,yBAAyB;AAEvC,UAAUC,eAAe,CAAC;EACtBC,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,MAAMC,UAAU,GAAGA,CAAC;EAAED,KAAK;EAAEE;AAA6C,CAAnC,EAAER,iBAAiB,CAACK,eAAe,CAAC,KAC9E,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC;AACpC,QAAQ,CAAC,SAAS;AAClB,YAAY,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,SAAS,CAAC,CAACD,CAAC,CAACE,KAAK,CAAC;AAChD,gBAAgB,CAACA,KAAK;AACtB,YAAY,EAAE,KAAK;AACnB,YAAY,CAACE,QAAQ;AACrB,QAAQ,EAAE,SAAS;AACnB,IAAI,EAAE,GAAG,CACR",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/PageLayout/index.tsx\"],\"sourcesContent\":[\"import type { PropsWithChildren } from 'react';\\nimport { Box, Container, Title } from '@mantine/core';\\n\\nimport s from './PageLayout.module.css';\\n\\ninterface PageLayoutProps {\\n    title: string;\\n}\\n\\nexport const PageLayout = ({ title, children }: PropsWithChildren<PageLayoutProps>) => (\\n    <Box component='section' pb={32}>\\n        <Container>\\n            <Title order={2} className={s.title}>\\n                {title}\\n            </Title>\\n            {children}\\n        </Container>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Container\",\"Title\",\"s\",\"PageLayout\",\"title\",\"children\",\"component\",\"pb\",\"order\",\"className\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,SAAS,EAAEC,KAAK,QAAQ,gBAAgB;AAEtD,OAAOC,OAAO,0BAA0B;AAMxC,OAAO,MAAMC,aAAa,CAAC,EAAEC,KAAK,EAAEC,QAAQ,EAAsC,iBAC9E,KAACN;QAAIO,WAAU;QAAUC,IAAI;kBACzB,cAAA,MAACP;;8BACG,KAACC;oBAAMO,OAAO;oBAAGC,WAAWP,EAAEE,KAAK;8BAC9BA;;gBAEJC;;;OAGX\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({\n  title,\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", pb: 32, children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, children: title }),\n  children\n] }) });\n",
-      "start": 1750184198853,
-      "end": 1750184198948,
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({ title, children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  pb: 32,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        order: 2,\n        className: s.title,\n        children: title\n      }),\n      children\n    ]\n  })\n});\n",
+      "start": 1750239308282,
+      "end": 1750239308322,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/PageLayout/index.tsx"],
         "sourcesContent": [
-          "import type { PropsWithChildren } from 'react';\nimport { Box, Container, Title } from '@mantine/core';\nimport s from './PageLayout.module.css';\ninterface PageLayoutProps {\n  title: string;\n}\nexport const PageLayout = ({\n  title,\n  children\n}: PropsWithChildren<PageLayoutProps>) => <Box component='section' pb={32}>\n        <Container>\n            <Title order={2} className={s.title}>\n                {title}\n            </Title>\n            {children}\n        </Container>\n    </Box>;"
+          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from '@mantine/core';\nimport s from './PageLayout.module.css';\nexport const PageLayout = ({ title, children })=>/*#__PURE__*/ _jsx(Box, {\n        component: \"section\",\n        pb: 32,\n        children: /*#__PURE__*/ _jsxs(Container, {\n            children: [\n                /*#__PURE__*/ _jsx(Title, {\n                    order: 2,\n                    className: s.title,\n                    children: title\n                }),\n                children\n            ]\n        })\n    });\n"
         ],
-        "mappings": "AAUQ,SACI,KADJ;AATR,SAAS,KAAK,WAAW,aAAa;AACtC,OAAO,OAAO;AAIP,aAAM,aAAa,CAAC;AAAA,EACzB;AAAA,EACA;AACF,MAA0C,oBAAC,OAAI,WAAU,WAAU,IAAI,IAC/D,+BAAC,aACG;AAAA,sBAAC,SAAM,OAAO,GAAG,WAAW,EAAE,OACzB,iBACL;AAAA,EACC;AAAA,GACL,GACJ;",
+        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,KAAK,WAAW,aAAa;AACtC,OAAO,OAAO;AACP,aAAM,aAAa,CAAC,EAAE,OAAO,SAAS,MAAkB,qBAAK,KAAK;AAAA,EACjE,WAAW;AAAA,EACX,IAAI;AAAA,EACJ,UAAwB,sBAAM,WAAW;AAAA,IACrC,UAAU;AAAA,MACQ,qBAAK,OAAO;AAAA,QACtB,OAAO;AAAA,QACP,WAAW,EAAE;AAAA,QACb,UAAU;AAAA,MACd,CAAC;AAAA,MACD;AAAA,IACJ;AAAA,EACJ,CAAC;AACL,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198948,
-      "end": 1750184198948,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "start": 1750239308322,
+      "end": 1750239308323,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/widgets/PageLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({\n  title,\n  children\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", pb: 32, children: /* @__PURE__ */ jsxs(Container, { children: [\n  /* @__PURE__ */ jsx(Title, { order: 2, className: s.title, children: title }),\n  children\n] }) });\n",
-      "start": 1750184198949,
-      "end": 1750184198949,
+      "result": "/*! src/widgets/PageLayout/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Title } from \"@mantine/core\";\nimport s from \"./PageLayout.module.css\";\nexport const PageLayout = ({ title, children }) => /* @__PURE__ */ _jsx(Box, {\n  component: \"section\",\n  pb: 32,\n  children: /* @__PURE__ */ _jsxs(Container, {\n    children: [\n      /* @__PURE__ */ _jsx(Title, {\n        order: 2,\n        className: s.title,\n        children: title\n      }),\n      children\n    ]\n  })\n});\n",
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/PageLayout/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }
     }
   ]

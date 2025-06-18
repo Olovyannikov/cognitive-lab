@@ -4,127 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { PersonalityTypesResponse } from '../api/dto';\n\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) =>\n    data\n        .map((types) => types.types)\n        .flat()\n        .reduce(\n            (acc, curr) => {\n                acc[curr.code] = curr.name;\n\n                return acc;\n            },\n            {} as Record<string, string>\n        ) ?? ({} as Record<string, string>);\n",
-      "start": 1750184198981,
-      "end": 1750184199024,
+      "start": 1750239308334,
+      "end": 1750239308360,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { PersonalityTypesResponse } from '../api/dto';\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) => data.map(types => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {} as Record<string, string>) ?? {} as Record<string, string>;",
-      "start": 1750184199024,
-      "end": 1750184199028,
+      "name": "vite:react-swc",
+      "result": "export const normalizePersonalities = (data)=>data.map((types)=>types.types).flat().reduce((acc, curr)=>{\n        acc[curr.code] = curr.name;\n        return acc;\n    }, {}) ?? {};\n",
+      "start": 1750239308360,
+      "end": 1750239308363,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "PersonalityTypesResponse",
-          "normalizePersonalities",
-          "data",
-          "map",
-          "types",
-          "flat",
-          "reduce",
-          "acc",
-          "curr",
-          "code",
-          "name",
-          "Record"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"],
-        "sourcesContent": [
-          "import type { PersonalityTypesResponse } from '../api/dto';\n\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) =>\n    data\n        .map((types) => types.types)\n        .flat()\n        .reduce(\n            (acc, curr) => {\n                acc[curr.code] = curr.name;\n\n                return acc;\n            },\n            {} as Record<string, string>\n        ) ?? ({} as Record<string, string>);\n"
-        ],
-        "mappings": "AAAA,cAAcA,wBAAwB,QAAQ,YAAY;AAE1D,OAAO,MAAMC,sBAAsB,GAAGA,CAACC,IAAI,EAAEF,wBAAwB,EAAE,KACnEE,IAAI,CACCC,GAAG,CAAEC,KAAK,IAAKA,KAAK,CAACA,KAAK,CAAC,CAC3BC,IAAI,CAAC,CAAC,CACNC,MAAM,CACH,CAACC,GAAG,EAAEC,IAAI,KAAK;EACXD,GAAG,CAACC,IAAI,CAACC,IAAI,CAAC,GAAGD,IAAI,CAACE,IAAI;EAE1B,OAAOH,GAAG;AACd,CAAC,EACD,CAAC,CAAC,IAAII,MAAM,CAAC,MAAM,EAAE,MAAM,CAC/B,CAAC,IAAK,CAAC,CAAC,IAAIA,MAAM,CAAC,MAAM,EAAE,MAAM,CAAE",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts\"],\"sourcesContent\":[\"import type { PersonalityTypesResponse } from '../api/dto';\\n\\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) =>\\n    data\\n        .map((types) => types.types)\\n        .flat()\\n        .reduce(\\n            (acc, curr) => {\\n                acc[curr.code] = curr.name;\\n\\n                return acc;\\n            },\\n            {} as Record<string, string>\\n        ) ?? ({} as Record<string, string>);\\n\"],\"names\":[\"normalizePersonalities\",\"data\",\"map\",\"types\",\"flat\",\"reduce\",\"acc\",\"curr\",\"code\",\"name\"],\"mappings\":\"AAEA,OAAO,MAAMA,yBAAyB,CAACC,OACnCA,KACKC,GAAG,CAAC,CAACC,QAAUA,MAAMA,KAAK,EAC1BC,IAAI,GACJC,MAAM,CACH,CAACC,KAAKC;QACFD,GAAG,CAACC,KAAKC,IAAI,CAAC,GAAGD,KAAKE,IAAI;QAE1B,OAAOH;IACX,GACA,CAAC,MACC,CAAC,EAA6B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const normalizePersonalities = (data) => data.map((types) => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {}) ?? {};\n",
-      "start": 1750184199028,
-      "end": 1750184199227,
+      "start": 1750239308363,
+      "end": 1750239308477,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/lib/index.ts"],
         "sourcesContent": [
-          "import type { PersonalityTypesResponse } from '../api/dto';\nexport const normalizePersonalities = (data: PersonalityTypesResponse[]) => data.map(types => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {} as Record<string, string>) ?? {} as Record<string, string>;"
+          "export const normalizePersonalities = (data)=>data.map((types)=>types.types).flat().reduce((acc, curr)=>{\n        acc[curr.code] = curr.name;\n        return acc;\n    }, {}) ?? {};\n"
         ],
-        "mappings": "AACO,aAAM,yBAAyB,CAAC,SAAqC,KAAK,IAAI,WAAS,MAAM,KAAK,EAAE,KAAK,EAAE,OAAO,CAAC,KAAK,SAAS;AACtI,MAAI,KAAK,IAAI,IAAI,KAAK;AACtB,SAAO;AACT,GAAG,CAAC,CAA2B,KAAK,CAAC;",
+        "mappings": "AAAO,aAAM,yBAAyB,CAAC,SAAO,KAAK,IAAI,CAAC,UAAQ,MAAM,KAAK,EAAE,KAAK,EAAE,OAAO,CAAC,KAAK,SAAO;AAChG,MAAI,KAAK,IAAI,IAAI,KAAK;AACtB,SAAO;AACX,GAAG,CAAC,CAAC,KAAK,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/lib/index.ts [vike:pluginModuleBanner] */\nexport const normalizePersonalities = (data) => data.map((types) => types.types).flat().reduce((acc, curr) => {\n  acc[curr.code] = curr.name;\n  return acc;\n}, {}) ?? {};\n",
-      "start": 1750184199227,
-      "end": 1750184199227,
+      "start": 1750239308478,
+      "end": 1750239308478,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

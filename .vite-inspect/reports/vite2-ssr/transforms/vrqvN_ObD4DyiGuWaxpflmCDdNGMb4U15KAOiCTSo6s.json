@@ -4,148 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { sendFreeReportOnEmailMutation } from '../api';\n\nexport const SendReportEmailModel = atom(() => {\n    const submitForm = createEvent<{ email: string; user_report_id: string }>();\n\n    const showUserEmailNotificationFx = createEffect((email: string) => {\n        notifications.show({\n            title: 'Отчет отправлен!',\n            message: `Отчет отправлен на почту ${email}`,\n        });\n    });\n\n    sample({\n        clock: submitForm,\n        target: sendFreeReportOnEmailMutation.start,\n    });\n\n    sample({\n        clock: sendFreeReportOnEmailMutation.finished.success,\n        filter: ({ params }) => Boolean(params.email),\n        fn: ({ params: { email } }) => email,\n        target: showUserEmailNotificationFx,\n    });\n\n    return {\n        submitForm,\n    };\n});\n",
-      "start": 1750184199071,
-      "end": 1750184199113,
+      "start": 1750239308384,
+      "end": 1750239308402,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { sendFreeReportOnEmailMutation } from '../api';\nexport const SendReportEmailModel = atom(() => {\n  const submitForm = createEvent<{\n    email: string;\n    user_report_id: string;\n  }>({\n    name: \"submitForm\",\n    sid: \"-261mp6\"\n  });\n  const showUserEmailNotificationFx = createEffect((email: string) => {\n    notifications.show({\n      title: 'Отчет отправлен!',\n      message: `Отчет отправлен на почту ${email}`\n    });\n  }, {\n    name: \"showUserEmailNotificationFx\",\n    sid: \"82dtwb\"\n  });\n  sample({\n    and: [{\n      clock: submitForm,\n      target: sendFreeReportOnEmailMutation.start\n    }],\n    or: {\n      sid: \"-fgmro9\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendFreeReportOnEmailMutation.finished.success,\n      filter: ({\n        params\n      }) => Boolean(params.email),\n      fn: ({\n        params: {\n          email\n        }\n      }) => email,\n      target: showUserEmailNotificationFx\n    }],\n    or: {\n      sid: \"-f2c48v\"\n    }\n  });\n  return {\n    submitForm\n  };\n});",
-      "start": 1750184199113,
-      "end": 1750184199114,
+      "name": "vite:react-swc",
+      "result": "import { withFactory as _effector$factory } from 'effector';\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { sendFreeReportOnEmailMutation } from '../api';\nexport const SendReportEmailModel = _effector$factory({\n    sid: \"vr1rhjg\",\n    fn: ()=>atom(()=>{\n            const submitForm = createEvent({\n                sid: \"973284qs\"\n            });\n            const showUserEmailNotificationFx = createEffect((email)=>{\n                notifications.show({\n                    title: 'Отчет отправлен!',\n                    message: `Отчет отправлен на почту ${email}`\n                });\n            }, {\n                sid: \"3918vd47\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitForm,\n                        target: sendFreeReportOnEmailMutation.start\n                    }\n                ],\n                or: {\n                    sid: \"drnskfxl\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: sendFreeReportOnEmailMutation.finished.success,\n                        filter: ({ params })=>Boolean(params.email),\n                        fn: ({ params: { email } })=>email,\n                        target: showUserEmailNotificationFx\n                    }\n                ],\n                or: {\n                    sid: \"5iuedrvp\"\n                }\n            });\n            return {\n                submitForm\n            };\n        })\n});\n",
+      "start": 1750239308402,
+      "end": 1750239308408,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "notifications",
-          "createEffect",
-          "createEvent",
-          "sample",
-          "atom",
-          "sendFreeReportOnEmailMutation",
-          "SendReportEmailModel",
-          "submitForm",
-          "email",
-          "user_report_id",
-          "name",
-          "sid",
-          "showUserEmailNotificationFx",
-          "show",
-          "title",
-          "message",
-          "and",
-          "clock",
-          "target",
-          "start",
-          "or",
-          "finished",
-          "success",
-          "filter",
-          "params",
-          "Boolean",
-          "fn"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/model/index.ts"],
-        "sourcesContent": [
-          "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\n\nimport { atom } from '@/shared/factories';\n\nimport { sendFreeReportOnEmailMutation } from '../api';\n\nexport const SendReportEmailModel = atom(() => {\n    const submitForm = createEvent<{ email: string; user_report_id: string }>();\n\n    const showUserEmailNotificationFx = createEffect((email: string) => {\n        notifications.show({\n            title: 'Отчет отправлен!',\n            message: `Отчет отправлен на почту ${email}`,\n        });\n    });\n\n    sample({\n        clock: submitForm,\n        target: sendFreeReportOnEmailMutation.start,\n    });\n\n    sample({\n        clock: sendFreeReportOnEmailMutation.finished.success,\n        filter: ({ params }) => Boolean(params.email),\n        fn: ({ params: { email } }) => email,\n        target: showUserEmailNotificationFx,\n    });\n\n    return {\n        submitForm,\n    };\n});\n"
-        ],
-        "mappings": "AAAA,SAASA,aAAa,QAAQ,wBAAwB;AACtD,SAASC,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,UAAU;AAE5D,SAASC,IAAI,QAAQ,oBAAoB;AAEzC,SAASC,6BAA6B,QAAQ,QAAQ;AAEtD,OAAO,MAAMC,oBAAoB,GAAGF,IAAI,CAAC,MAAM;EAC3C,MAAMG,UAAU,GAAGL,WAAW,CAAC;IAAEM,KAAK,EAAE,MAAM;IAAEC,cAAc,EAAE,MAAM;EAAC,CAAC,CAAC;IAAAC,IAAA;IAAAC,GAAA;EAAA,CAAC,CAAC;EAE3E,MAAMC,2BAA2B,GAAGX,YAAY,CAAC,CAACO,KAAK,EAAE,MAAM,KAAK;IAChER,aAAa,CAACa,IAAI,CAAC;MACfC,KAAK,EAAE,kBAAkB;MACzBC,OAAO,EAAE,4BAA4BP,KAAK;IAC9C,CAAC,CAAC;EACN,CAAC;IAAAE,IAAA;IAAAC,GAAA;EAAA,EAAC;EAEFR,MAAM;IAAAa,GAAA,GAAC;MACHC,KAAK,EAAEV,UAAU;MACjBW,MAAM,EAAEb,6BAA6B,CAACc;IAC1C,CAAC;IAAAC,EAAA;MAAAT,GAAA;IAAA;EAAA,EAAC;EAEFR,MAAM;IAAAa,GAAA,GAAC;MACHC,KAAK,EAAEZ,6BAA6B,CAACgB,QAAQ,CAACC,OAAO;MACrDC,MAAM,EAAEA,CAAC;QAAEC;MAAO,CAAC,KAAKC,OAAO,CAACD,MAAM,CAAChB,KAAK,CAAC;MAC7CkB,EAAE,EAAEA,CAAC;QAAEF,MAAM,EAAE;UAAEhB;QAAM;MAAE,CAAC,KAAKA,KAAK;MACpCU,MAAM,EAAEN;IACZ,CAAC;IAAAQ,EAAA;MAAAT,GAAA;IAAA;EAAA,EAAC;EAEF,OAAO;IACHJ;EACJ,CAAC;AACL,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/model/index.ts\"],\"sourcesContent\":[\"import { notifications } from '@mantine/notifications';\\nimport { createEffect, createEvent, sample } from 'effector';\\n\\nimport { atom } from '@/shared/factories';\\n\\nimport { sendFreeReportOnEmailMutation } from '../api';\\n\\nexport const SendReportEmailModel = atom(() => {\\n    const submitForm = createEvent<{ email: string; user_report_id: string }>();\\n\\n    const showUserEmailNotificationFx = createEffect((email: string) => {\\n        notifications.show({\\n            title: 'Отчет отправлен!',\\n            message: `Отчет отправлен на почту ${email}`,\\n        });\\n    });\\n\\n    sample({\\n        clock: submitForm,\\n        target: sendFreeReportOnEmailMutation.start,\\n    });\\n\\n    sample({\\n        clock: sendFreeReportOnEmailMutation.finished.success,\\n        filter: ({ params }) => Boolean(params.email),\\n        fn: ({ params: { email } }) => email,\\n        target: showUserEmailNotificationFx,\\n    });\\n\\n    return {\\n        submitForm,\\n    };\\n});\\n\"],\"names\":[\"notifications\",\"createEffect\",\"createEvent\",\"sample\",\"atom\",\"sendFreeReportOnEmailMutation\",\"SendReportEmailModel\",\"submitForm\",\"showUserEmailNotificationFx\",\"email\",\"show\",\"title\",\"message\",\"clock\",\"target\",\"start\",\"finished\",\"success\",\"filter\",\"params\",\"Boolean\",\"fn\"],\"mappings\":\";AAAA,SAASA,aAAa,QAAQ,yBAAyB;AACvD,SAASC,YAAY,EAAEC,WAAW,EAAEC,MAAM,QAAQ,WAAW;AAE7D,SAASC,IAAI,QAAQ,qBAAqB;AAE1C,SAASC,6BAA6B,QAAQ,SAAS;AAEvD,OAAO,MAAMC;;YAAuBF,KAAK;YACrC,MAAMG,aAAaL;;;YAEnB,MAAMM,8BAA8BP,aAAa,CAACQ;gBAC9CT,cAAcU,IAAI,CAAC;oBACfC,OAAO;oBACPC,SAAS,CAAC,yBAAyB,EAAEH,OAAO;gBAChD;YACJ;;;YAEAN;;oBAAO;wBACHU,OAAON;wBACPO,QAAQT,8BAA8BU,KAAK;oBAC/C;;;;;;YAEAZ;;oBAAO;wBACHU,OAAOR,8BAA8BW,QAAQ,CAACC,OAAO;wBACrDC,QAAQ,CAAC,EAAEC,MAAM,EAAE,GAAKC,QAAQD,OAAOV,KAAK;wBAC5CY,IAAI,CAAC,EAAEF,QAAQ,EAAEV,KAAK,EAAE,EAAE,GAAKA;wBAC/BK,QAAQN;oBACZ;;;;;;YAEA,OAAO;gBACHD;YACJ;QACJ;GAAG\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = atom(() => {\n  const submitForm = createEvent({\n    name: \"submitForm\",\n    sid: \"-261mp6\"\n  });\n  const showUserEmailNotificationFx = createEffect((email) => {\n    notifications.show({\n      title: \"Отчет отправлен!\",\n      message: `Отчет отправлен на почту ${email}`\n    });\n  }, {\n    name: \"showUserEmailNotificationFx\",\n    sid: \"82dtwb\"\n  });\n  sample({\n    and: [{\n      clock: submitForm,\n      target: sendFreeReportOnEmailMutation.start\n    }],\n    or: {\n      sid: \"-fgmro9\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendFreeReportOnEmailMutation.finished.success,\n      filter: ({\n        params\n      }) => Boolean(params.email),\n      fn: ({\n        params: {\n          email\n        }\n      }) => email,\n      target: showUserEmailNotificationFx\n    }],\n    or: {\n      sid: \"-f2c48v\"\n    }\n  });\n  return {\n    submitForm\n  };\n});\n",
-      "start": 1750184199114,
-      "end": 1750184199377,
+      "result": "import { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = _effector$factory({\n  sid: \"vr1rhjg\",\n  fn: () => atom(() => {\n    const submitForm = createEvent({\n      sid: \"973284qs\"\n    });\n    const showUserEmailNotificationFx = createEffect((email) => {\n      notifications.show({\n        title: \"Отчет отправлен!\",\n        message: `Отчет отправлен на почту ${email}`\n      });\n    }, {\n      sid: \"3918vd47\"\n    });\n    sample({\n      and: [\n        {\n          clock: submitForm,\n          target: sendFreeReportOnEmailMutation.start\n        }\n      ],\n      or: {\n        sid: \"drnskfxl\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendFreeReportOnEmailMutation.finished.success,\n          filter: ({ params }) => Boolean(params.email),\n          fn: ({ params: { email } }) => email,\n          target: showUserEmailNotificationFx\n        }\n      ],\n      or: {\n        sid: \"5iuedrvp\"\n      }\n    });\n    return {\n      submitForm\n    };\n  })\n});\n",
+      "start": 1750239308408,
+      "end": 1750239308580,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/features/SendReportEmail/model/index.ts"],
         "sourcesContent": [
-          "import { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { sendFreeReportOnEmailMutation } from '../api';\nexport const SendReportEmailModel = atom(() => {\n  const submitForm = createEvent<{\n    email: string;\n    user_report_id: string;\n  }>({\n    name: \"submitForm\",\n    sid: \"-261mp6\"\n  });\n  const showUserEmailNotificationFx = createEffect((email: string) => {\n    notifications.show({\n      title: 'Отчет отправлен!',\n      message: `Отчет отправлен на почту ${email}`\n    });\n  }, {\n    name: \"showUserEmailNotificationFx\",\n    sid: \"82dtwb\"\n  });\n  sample({\n    and: [{\n      clock: submitForm,\n      target: sendFreeReportOnEmailMutation.start\n    }],\n    or: {\n      sid: \"-fgmro9\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendFreeReportOnEmailMutation.finished.success,\n      filter: ({\n        params\n      }) => Boolean(params.email),\n      fn: ({\n        params: {\n          email\n        }\n      }) => email,\n      target: showUserEmailNotificationFx\n    }],\n    or: {\n      sid: \"-f2c48v\"\n    }\n  });\n  return {\n    submitForm\n  };\n});"
+          "import { withFactory as _effector$factory } from 'effector';\nimport { notifications } from '@mantine/notifications';\nimport { createEffect, createEvent, sample } from 'effector';\nimport { atom } from '@/shared/factories';\nimport { sendFreeReportOnEmailMutation } from '../api';\nexport const SendReportEmailModel = _effector$factory({\n    sid: \"vr1rhjg\",\n    fn: ()=>atom(()=>{\n            const submitForm = createEvent({\n                sid: \"973284qs\"\n            });\n            const showUserEmailNotificationFx = createEffect((email)=>{\n                notifications.show({\n                    title: 'Отчет отправлен!',\n                    message: `Отчет отправлен на почту ${email}`\n                });\n            }, {\n                sid: \"3918vd47\"\n            });\n            sample({\n                and: [\n                    {\n                        clock: submitForm,\n                        target: sendFreeReportOnEmailMutation.start\n                    }\n                ],\n                or: {\n                    sid: \"drnskfxl\"\n                }\n            });\n            sample({\n                and: [\n                    {\n                        clock: sendFreeReportOnEmailMutation.finished.success,\n                        filter: ({ params })=>Boolean(params.email),\n                        fn: ({ params: { email } })=>email,\n                        target: showUserEmailNotificationFx\n                    }\n                ],\n                or: {\n                    sid: \"5iuedrvp\"\n                }\n            });\n            return {\n                submitForm\n            };\n        })\n});\n"
         ],
-        "mappings": "AAAA,SAAS,qBAAqB;AAC9B,SAAS,cAAc,aAAa,cAAc;AAClD,SAAS,YAAY;AACrB,SAAS,qCAAqC;AACvC,aAAM,uBAAuB,KAAK,MAAM;AAC7C,QAAM,aAAa,YAGhB;AAAA,IACD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,QAAM,8BAA8B,aAAa,CAAC,UAAkB;AAClE,kBAAc,KAAK;AAAA,MACjB,OAAO;AAAA,MACP,SAAS,4BAA4B,KAAK;AAAA,IAC5C,CAAC;AAAA,EACH,GAAG;AAAA,IACD,MAAM;AAAA,IACN,KAAK;AAAA,EACP,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO;AAAA,MACP,QAAQ,8BAA8B;AAAA,IACxC,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL,KAAK,CAAC;AAAA,MACJ,OAAO,8BAA8B,SAAS;AAAA,MAC9C,QAAQ,CAAC;AAAA,QACP;AAAA,MACF,MAAM,QAAQ,OAAO,KAAK;AAAA,MAC1B,IAAI,CAAC;AAAA,QACH,QAAQ;AAAA,UACN;AAAA,QACF;AAAA,MACF,MAAM;AAAA,MACN,QAAQ;AAAA,IACV,CAAC;AAAA,IACD,IAAI;AAAA,MACF,KAAK;AAAA,IACP;AAAA,EACF,CAAC;AACD,SAAO;AAAA,IACL;AAAA,EACF;AACF,CAAC;",
+        "mappings": "AAAA,SAAS,eAAe,yBAAyB;AACjD,SAAS,qBAAqB;AAC9B,SAAS,cAAc,aAAa,cAAc;AAClD,SAAS,YAAY;AACrB,SAAS,qCAAqC;AACvC,aAAM,uBAAuB,kBAAkB;AAAA,EAClD,KAAK;AAAA,EACL,IAAI,MAAI,KAAK,MAAI;AACT,UAAM,aAAa,YAAY;AAAA,MAC3B,KAAK;AAAA,IACT,CAAC;AACD,UAAM,8BAA8B,aAAa,CAAC,UAAQ;AACtD,oBAAc,KAAK;AAAA,QACf,OAAO;AAAA,QACP,SAAS,4BAA4B,KAAK;AAAA,MAC9C,CAAC;AAAA,IACL,GAAG;AAAA,MACC,KAAK;AAAA,IACT,CAAC;AACD,WAAO;AAAA,MACH,KAAK;AAAA,QACD;AAAA,UACI,OAAO;AAAA,UACP,QAAQ,8BAA8B;AAAA,QAC1C;AAAA,MACJ;AAAA,MACA,IAAI;AAAA,QACA,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AACD,WAAO;AAAA,MACH,KAAK;AAAA,QACD;AAAA,UACI,OAAO,8BAA8B,SAAS;AAAA,UAC9C,QAAQ,CAAC,EAAE,OAAO,MAAI,QAAQ,OAAO,KAAK;AAAA,UAC1C,IAAI,CAAC,EAAE,QAAQ,EAAE,MAAM,EAAE,MAAI;AAAA,UAC7B,QAAQ;AAAA,QACZ;AAAA,MACJ;AAAA,MACA,IAAI;AAAA,QACA,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AACD,WAAO;AAAA,MACH;AAAA,IACJ;AAAA,EACJ,CAAC;AACT,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308580,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308580,
+      "end": 1750239308581,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308581,
+      "end": 1750239308581,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308581,
+      "end": 1750239308581,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308581,
+      "end": 1750239308581,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/features/SendReportEmail/model/index.ts [vike:pluginModuleBanner] */\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = atom(() => {\n  const submitForm = createEvent({\n    name: \"submitForm\",\n    sid: \"-261mp6\"\n  });\n  const showUserEmailNotificationFx = createEffect((email) => {\n    notifications.show({\n      title: \"Отчет отправлен!\",\n      message: `Отчет отправлен на почту ${email}`\n    });\n  }, {\n    name: \"showUserEmailNotificationFx\",\n    sid: \"82dtwb\"\n  });\n  sample({\n    and: [{\n      clock: submitForm,\n      target: sendFreeReportOnEmailMutation.start\n    }],\n    or: {\n      sid: \"-fgmro9\"\n    }\n  });\n  sample({\n    and: [{\n      clock: sendFreeReportOnEmailMutation.finished.success,\n      filter: ({\n        params\n      }) => Boolean(params.email),\n      fn: ({\n        params: {\n          email\n        }\n      }) => email,\n      target: showUserEmailNotificationFx\n    }],\n    or: {\n      sid: \"-f2c48v\"\n    }\n  });\n  return {\n    submitForm\n  };\n});\n",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "result": "/*! src/features/SendReportEmail/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _effector$factory } from \"effector\";\nimport { notifications } from \"@mantine/notifications\";\nimport { createEffect, createEvent, sample } from \"effector\";\nimport { atom } from \"@/shared/factories\";\nimport { sendFreeReportOnEmailMutation } from \"../api\";\nexport const SendReportEmailModel = _effector$factory({\n  sid: \"vr1rhjg\",\n  fn: () => atom(() => {\n    const submitForm = createEvent({\n      sid: \"973284qs\"\n    });\n    const showUserEmailNotificationFx = createEffect((email) => {\n      notifications.show({\n        title: \"Отчет отправлен!\",\n        message: `Отчет отправлен на почту ${email}`\n      });\n    }, {\n      sid: \"3918vd47\"\n    });\n    sample({\n      and: [\n        {\n          clock: submitForm,\n          target: sendFreeReportOnEmailMutation.start\n        }\n      ],\n      or: {\n        sid: \"drnskfxl\"\n      }\n    });\n    sample({\n      and: [\n        {\n          clock: sendFreeReportOnEmailMutation.finished.success,\n          filter: ({ params }) => Boolean(params.email),\n          fn: ({ params: { email } }) => email,\n          target: showUserEmailNotificationFx\n        }\n      ],\n      or: {\n        sid: \"5iuedrvp\"\n      }\n    });\n    return {\n      submitForm\n    };\n  })\n});\n",
+      "start": 1750239308581,
+      "end": 1750239308581,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/features/SendReportEmail/model/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAA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"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;"
       }
     }
   ]

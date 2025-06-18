@@ -4,93 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 656 399\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 739, height: 739, y: -118, fill: \"var(--stroke-banner-color)\", rx: 369.5 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 483, height: 483, x: 203, y: 84, fill: \"var(--inner-circle-banner)\", rx: 241.5 }));\nexport default SvgCircle;\n",
-      "start": 1750184199439,
-      "end": 1750184199595,
+      "start": 1750239308550,
+      "end": 1750239308759,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "name": "vite:react-swc",
+      "start": 1750239308759,
+      "end": 1750239308759,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308759,
+      "end": 1750239308759,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308759,
+      "end": 1750239308759,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308759,
+      "end": 1750239308759,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199595,
-      "end": 1750184199595,
+      "start": 1750239308760,
+      "end": 1750239308760,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199596,
-      "end": 1750184199596,
+      "start": 1750239308761,
+      "end": 1750239308761,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199596,
-      "end": 1750184199596,
+      "start": 1750239308761,
+      "end": 1750239308761,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/assets/images/circle.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgCircle = (props) => /* @__PURE__ */ React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", fill: \"none\", viewBox: \"0 0 656 399\", ...props }, /* @__PURE__ */ React.createElement(\"rect\", { width: 739, height: 739, y: -118, fill: \"var(--stroke-banner-color)\", rx: 369.5 }), /* @__PURE__ */ React.createElement(\"rect\", { width: 483, height: 483, x: 203, y: 84, fill: \"var(--inner-circle-banner)\", rx: 241.5 }));\nexport default SvgCircle;\n",
-      "start": 1750184199596,
-      "end": 1750184199596,
+      "start": 1750239308761,
+      "end": 1750239308761,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

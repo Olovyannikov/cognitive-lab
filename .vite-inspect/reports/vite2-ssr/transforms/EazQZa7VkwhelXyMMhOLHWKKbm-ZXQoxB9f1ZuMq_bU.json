@@ -4,43 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ChangeEvent } from 'react';\n\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n    e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750184199003,
-      "end": 1750184199044,
+      "start": 1750239308320,
+      "end": 1750239308333,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { ChangeEvent } from 'react';\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};",
-      "start": 1750184199044,
-      "end": 1750184199044,
+      "name": "vite:react-swc",
+      "result": "export const toInputUppercase = (e)=>{\n    e.target.value = String(e.target.value).toUpperCase();\n};\n",
+      "start": 1750239308333,
+      "end": 1750239308336,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "ChangeEvent",
-          "toInputUppercase",
-          "e",
-          "HTMLInputElement",
-          "target",
-          "value",
-          "String",
-          "toUpperCase"
-        ],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/toInputUpperCase/index.ts"
-        ],
-        "sourcesContent": [
-          "import type { ChangeEvent } from 'react';\n\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n    e.target.value = String(e.target.value).toUpperCase();\n};\n"
-        ],
-        "mappings": "AAAA,cAAcA,WAAW,QAAQ,OAAO;AAExC,OAAO,MAAMC,gBAAgB,GAAGA,CAACC,CAAC,EAAEF,WAAW,CAACG,gBAAgB,CAAC,KAAK;EAClED,CAAC,CAACE,MAAM,CAACC,KAAK,GAAGC,MAAM,CAACJ,CAAC,CAACE,MAAM,CAACC,KAAK,CAAC,CAACE,WAAW,CAAC,CAAC;AACzD,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/toInputUpperCase/index.ts\"],\"sourcesContent\":[\"import type { ChangeEvent } from 'react';\\n\\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\\n    e.target.value = String(e.target.value).toUpperCase();\\n};\\n\"],\"names\":[\"toInputUppercase\",\"e\",\"target\",\"value\",\"String\",\"toUpperCase\"],\"mappings\":\"AAEA,OAAO,MAAMA,mBAAmB,CAACC;IAC7BA,EAAEC,MAAM,CAACC,KAAK,GAAGC,OAAOH,EAAEC,MAAM,CAACC,KAAK,EAAEE,WAAW;AACvD,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750184199045,
-      "end": 1750184199232,
+      "start": 1750239308336,
+      "end": 1750239308436,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -48,83 +28,83 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/toInputUpperCase/index.ts"
         ],
         "sourcesContent": [
-          "import type { ChangeEvent } from 'react';\nexport const toInputUppercase = (e: ChangeEvent<HTMLInputElement>) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};"
+          "export const toInputUppercase = (e)=>{\n    e.target.value = String(e.target.value).toUpperCase();\n};\n"
         ],
-        "mappings": "AACO,aAAM,mBAAmB,CAAC,MAAqC;AACpE,IAAE,OAAO,QAAQ,OAAO,EAAE,OAAO,KAAK,EAAE,YAAY;AACtD;",
+        "mappings": "AAAO,aAAM,mBAAmB,CAAC,MAAI;AACjC,IAAE,OAAO,QAAQ,OAAO,EAAE,OAAO,KAAK,EAAE,YAAY;AACxD;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/toInputUpperCase/index.ts [vike:pluginModuleBanner] */\nexport const toInputUppercase = (e) => {\n  e.target.value = String(e.target.value).toUpperCase();\n};\n",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';\n",
-      "start": 1750184198928,
-      "end": 1750184198974,
+      "start": 1750239308284,
+      "end": 1750239308303,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';",
-      "start": 1750184198974,
-      "end": 1750184198975,
+      "name": "vite:react-swc",
+      "result": "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';\n",
+      "start": 1750239308303,
+      "end": 1750239308306,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/index.ts"],
-        "sourcesContent": [
-          "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';\n"
-        ],
-        "mappings": "AAAA,cAAc,kBAAkB;AAChC,cAAc,eAAe;AAC7B,cAAc,kBAAkB;AAChC,cAAc,cAAc",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/index.ts\"],\"sourcesContent\":[\"export * from './StatisticsCard';\\nexport * from './ForWhomCard';\\nexport * from './HowItHelpsCard';\\nexport * from './TariffCard';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,mBAAmB;AACjC,cAAc,gBAAgB;AAC9B,cAAc,mBAAmB;AACjC,cAAc,eAAe\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./StatisticsCard\";\nexport * from \"./ForWhomCard\";\nexport * from \"./HowItHelpsCard\";\nexport * from \"./TariffCard\";\n",
-      "start": 1750184198975,
-      "end": 1750184199130,
+      "start": 1750239308306,
+      "end": 1750239308385,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Landing/ui/index.ts"],
         "sourcesContent": [
-          "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';"
+          "export * from './StatisticsCard';\nexport * from './ForWhomCard';\nexport * from './HowItHelpsCard';\nexport * from './TariffCard';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199130,
-      "end": 1750184199130,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199130,
-      "end": 1750184199131,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Landing/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./StatisticsCard\";\nexport * from \"./ForWhomCard\";\nexport * from \"./HowItHelpsCard\";\nexport * from \"./TariffCard\";\n",
-      "start": 1750184199131,
-      "end": 1750184199131,
+      "start": 1750239308385,
+      "end": 1750239308385,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

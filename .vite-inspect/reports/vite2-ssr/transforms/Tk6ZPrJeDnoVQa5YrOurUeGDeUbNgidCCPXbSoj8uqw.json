@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createStore } from 'effector';\n\nimport type { Order } from '../types';\n\nexport const $userOrder = createStore<Order | null>(null);\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\n",
-      "start": 1750184199163,
-      "end": 1750184199217,
+      "start": 1750239308384,
+      "end": 1750239308406,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { createStore } from 'effector';\nimport type { Order } from '../types';\nexport const $userOrder = createStore<Order | null>(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map(order => order?.status ?? 'pending');",
-      "start": 1750184199217,
-      "end": 1750184199218,
+      "name": "vite:react-swc",
+      "result": "import { createStore } from 'effector';\nexport const $userOrder = createStore(null, {\n    sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order)=>order?.status ?? 'pending');\n",
+      "start": 1750239308406,
+      "end": 1750239308409,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["createStore", "Order", "$userOrder", "name", "sid", "$userOrderStatus", "map", "order", "status"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"],
-        "sourcesContent": [
-          "import { createStore } from 'effector';\n\nimport type { Order } from '../types';\n\nexport const $userOrder = createStore<Order | null>(null);\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\n"
-        ],
-        "mappings": "AAAA,SAASA,WAAW,QAAQ,UAAU;AAEtC,cAAcC,KAAK,QAAQ,UAAU;AAErC,OAAO,MAAMC,UAAU,GAAGF,WAAW,CAACC,KAAK,GAAG,IAAI,CAAC,CAAC,IAAI;EAAAE,IAAA;EAAAC,GAAA;AAAA,EAAC;AACzD,OAAO,MAAMC,gBAAgB,GAAGH,UAAU,EAAEI,GAAG,CAAEC,KAAK,IAAKA,KAAK,EAAEC,MAAM,IAAI,SAAS,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts\"],\"sourcesContent\":[\"import { createStore } from 'effector';\\n\\nimport type { Order } from '../types';\\n\\nexport const $userOrder = createStore<Order | null>(null);\\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? 'pending');\\n\"],\"names\":[\"createStore\",\"$userOrder\",\"$userOrderStatus\",\"map\",\"order\",\"status\"],\"mappings\":\"AAAA,SAASA,WAAW,QAAQ,WAAW;AAIvC,OAAO,MAAMC,aAAaD,YAA0B;;GAAM;AAC1D,OAAO,MAAME,mBAAmBD,YAAYE,IAAI,CAACC,QAAUA,OAAOC,UAAU,WAAW\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750184199218,
-      "end": 1750184199420,
+      "result": "import { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
+      "start": 1750239308409,
+      "end": 1750239308566,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/order.ts"],
         "sourcesContent": [
-          "import { createStore } from 'effector';\nimport type { Order } from '../types';\nexport const $userOrder = createStore<Order | null>(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map(order => order?.status ?? 'pending');"
+          "import { createStore } from 'effector';\nexport const $userOrder = createStore(null, {\n    sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order)=>order?.status ?? 'pending');\n"
         ],
-        "mappings": "AAAA,SAAS,mBAAmB;AAErB,aAAM,aAAa,YAA0B,MAAM;AAAA,EACxD,MAAM;AAAA,EACN,KAAK;AACP,CAAC;AACM,aAAM,mBAAmB,YAAY,IAAI,WAAS,OAAO,UAAU,SAAS;",
+        "mappings": "AAAA,SAAS,mBAAmB;AACrB,aAAM,aAAa,YAAY,MAAM;AAAA,EACxC,KAAK;AACT,CAAC;AACM,aAAM,mBAAmB,YAAY,IAAI,CAAC,UAAQ,OAAO,UAAU,SAAS;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Report/model/order.ts [vike:pluginModuleBanner] */\nimport { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  name: \"$userOrder\",\n  sid: \"-ydxhpm\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
-      "start": 1750184199420,
-      "end": 1750184199420,
+      "result": "/*! src/entities/Report/model/order.ts [vike:pluginModuleBanner] */\nimport { createStore } from \"effector\";\nexport const $userOrder = createStore(null, {\n  sid: \"a2d9xmb6\"\n});\nexport const $userOrderStatus = $userOrder?.map((order) => order?.status ?? \"pending\");\n",
+      "start": 1750239308566,
+      "end": 1750239308567,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/model/order.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
       }
     }
   ]

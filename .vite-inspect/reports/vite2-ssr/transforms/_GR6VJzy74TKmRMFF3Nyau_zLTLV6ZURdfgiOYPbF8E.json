@@ -4,145 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n",
-      "start": 1750184199448,
-      "end": 1750184199493,
+      "start": 1750239308718,
+      "end": 1750239308729,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export const API = {\n  URL: 'https://api.dev.cognitivelab.ru',\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};",
-      "start": 1750184199493,
-      "end": 1750184199495,
+      "name": "vite:react-swc",
+      "result": "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type)=>`/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id)=>`/surveys/free-report/${id}`,\n        fullReport: (id)=>`/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id)=>`/surveys/free-report/${id}/email`\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id)=>`/posts/${id}`\n    },\n    faq: {\n        list: '/posts'\n    },\n    news: {\n        subscribe: '/users/subscribe'\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code)=>`/payments/promo-code-price?promo_code=${code}`\n    },\n    support: {\n        issues: '/support/issues'\n    }\n};\n",
+      "start": 1750239308729,
+      "end": 1750239308730,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "API",
-          "URL",
-          "surveys",
-          "mainPage",
-          "comments",
-          "personalityType",
-          "type",
-          "personalityTypes",
-          "structure",
-          "info",
-          "freeReport",
-          "freeReportById",
-          "id",
-          "fullReport",
-          "start",
-          "email",
-          "blog",
-          "posts",
-          "postById",
-          "faq",
-          "list",
-          "news",
-          "subscribe",
-          "payments",
-          "purchase",
-          "regularPrice",
-          "promoPrice",
-          "code",
-          "support",
-          "issues"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"],
-        "sourcesContent": [
-          "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id: string) => `/surveys/free-report/${id}/email`,\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id: string) => `/posts/${id}`,\n    },\n    faq: {\n        list: '/posts',\n    },\n    news: {\n        subscribe: '/users/subscribe',\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\n    },\n    support: {\n        issues: '/support/issues',\n    },\n};\n"
-        ],
-        "mappings": "AAAA,OAAO,MAAMA,GAAG,GAAG;EACfC,GAAG,EAAE,iCAAiC;EACtCC,OAAO,EAAE;IACLC,QAAQ,EAAE,oBAAoB;IAC9BC,QAAQ,EAAE,mBAAmB;IAC7BC,eAAe,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,8BAA8BA,IAAI,EAAE;IACvEC,gBAAgB,EAAE,4BAA4B;IAC9CC,SAAS,EAAE,oBAAoB;IAC/BC,IAAI,EAAE,eAAe;IACrBC,UAAU,EAAE,sBAAsB;IAClCC,cAAc,EAAEA,CAACC,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE,EAAE;IAC5DC,UAAU,EAAEA,CAACD,EAAE,EAAE,MAAM,KAAK,yBAAyBA,EAAE,EAAE;IACzDE,KAAK,EAAE,gBAAgB;IACvBC,KAAK,EAAEA,CAACH,EAAE,EAAE,MAAM,KAAK,wBAAwBA,EAAE;EACrD,CAAC;EACDI,IAAI,EAAE;IACFC,KAAK,EAAE,QAAQ;IACfC,QAAQ,EAAEA,CAACN,EAAE,EAAE,MAAM,KAAK,UAAUA,EAAE;EAC1C,CAAC;EACDO,GAAG,EAAE;IACDC,IAAI,EAAE;EACV,CAAC;EACDC,IAAI,EAAE;IACFC,SAAS,EAAE;EACf,CAAC;EACDC,QAAQ,EAAE;IACNC,QAAQ,EAAE,2BAA2B;IACrCC,YAAY,EAAE,yBAAyB;IACvCC,UAAU,EAAEA,CAACC,IAAI,EAAE,MAAM,KAAK,yCAAyCA,IAAI;EAC/E,CAAC;EACDC,OAAO,EAAE;IACLC,MAAM,EAAE;EACZ;AACJ,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts\"],\"sourcesContent\":[\"export const API = {\\n    URL: 'https://api.dev.cognitivelab.ru',\\n    surveys: {\\n        mainPage: '/surveys/main-page',\\n        comments: '/surveys/comments',\\n        personalityType: (type: string) => `/surveys/personality-types/${type}`,\\n        personalityTypes: '/surveys/personality-types',\\n        structure: '/surveys/structure',\\n        info: '/surveys/info',\\n        freeReport: '/surveys/free-report',\\n        freeReportById: (id: string) => `/surveys/free-report/${id}`,\\n        fullReport: (id: string) => `/surveys/full-reports/${id}`,\\n        start: '/surveys/start',\\n        email: (id: string) => `/surveys/free-report/${id}/email`,\\n    },\\n    blog: {\\n        posts: '/posts',\\n        postById: (id: string) => `/posts/${id}`,\\n    },\\n    faq: {\\n        list: '/posts',\\n    },\\n    news: {\\n        subscribe: '/users/subscribe',\\n    },\\n    payments: {\\n        purchase: '/payments/purchase-report',\\n        regularPrice: '/payments/regular-price',\\n        promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`,\\n    },\\n    support: {\\n        issues: '/support/issues',\\n    },\\n};\\n\"],\"names\":[\"API\",\"URL\",\"surveys\",\"mainPage\",\"comments\",\"personalityType\",\"type\",\"personalityTypes\",\"structure\",\"info\",\"freeReport\",\"freeReportById\",\"id\",\"fullReport\",\"start\",\"email\",\"blog\",\"posts\",\"postById\",\"faq\",\"list\",\"news\",\"subscribe\",\"payments\",\"purchase\",\"regularPrice\",\"promoPrice\",\"code\",\"support\",\"issues\"],\"mappings\":\"AAAA,OAAO,MAAMA,MAAM;IACfC,KAAK;IACLC,SAAS;QACLC,UAAU;QACVC,UAAU;QACVC,iBAAiB,CAACC,OAAiB,CAAC,2BAA2B,EAAEA,MAAM;QACvEC,kBAAkB;QAClBC,WAAW;QACXC,MAAM;QACNC,YAAY;QACZC,gBAAgB,CAACC,KAAe,CAAC,qBAAqB,EAAEA,IAAI;QAC5DC,YAAY,CAACD,KAAe,CAAC,sBAAsB,EAAEA,IAAI;QACzDE,OAAO;QACPC,OAAO,CAACH,KAAe,CAAC,qBAAqB,EAAEA,GAAG,MAAM,CAAC;IAC7D;IACAI,MAAM;QACFC,OAAO;QACPC,UAAU,CAACN,KAAe,CAAC,OAAO,EAAEA,IAAI;IAC5C;IACAO,KAAK;QACDC,MAAM;IACV;IACAC,MAAM;QACFC,WAAW;IACf;IACAC,UAAU;QACNC,UAAU;QACVC,cAAc;QACdC,YAAY,CAACC,OAAiB,CAAC,sCAAsC,EAAEA,MAAM;IACjF;IACAC,SAAS;QACLC,QAAQ;IACZ;AACJ,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const API = {\n  URL: \"https://api.dev.cognitivelab.ru\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
-      "start": 1750184199495,
-      "end": 1750184199676,
+      "start": 1750239308730,
+      "end": 1750239308812,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/api/constants.ts"],
         "sourcesContent": [
-          "export const API = {\n  URL: 'https://api.dev.cognitivelab.ru',\n  surveys: {\n    mainPage: '/surveys/main-page',\n    comments: '/surveys/comments',\n    personalityType: (type: string) => `/surveys/personality-types/${type}`,\n    personalityTypes: '/surveys/personality-types',\n    structure: '/surveys/structure',\n    info: '/surveys/info',\n    freeReport: '/surveys/free-report',\n    freeReportById: (id: string) => `/surveys/free-report/${id}`,\n    fullReport: (id: string) => `/surveys/full-reports/${id}`,\n    start: '/surveys/start',\n    email: (id: string) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: '/posts',\n    postById: (id: string) => `/posts/${id}`\n  },\n  faq: {\n    list: '/posts'\n  },\n  news: {\n    subscribe: '/users/subscribe'\n  },\n  payments: {\n    purchase: '/payments/purchase-report',\n    regularPrice: '/payments/regular-price',\n    promoPrice: (code: string) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: '/support/issues'\n  }\n};"
+          "export const API = {\n    URL: 'https://api.dev.cognitivelab.ru',\n    surveys: {\n        mainPage: '/surveys/main-page',\n        comments: '/surveys/comments',\n        personalityType: (type)=>`/surveys/personality-types/${type}`,\n        personalityTypes: '/surveys/personality-types',\n        structure: '/surveys/structure',\n        info: '/surveys/info',\n        freeReport: '/surveys/free-report',\n        freeReportById: (id)=>`/surveys/free-report/${id}`,\n        fullReport: (id)=>`/surveys/full-reports/${id}`,\n        start: '/surveys/start',\n        email: (id)=>`/surveys/free-report/${id}/email`\n    },\n    blog: {\n        posts: '/posts',\n        postById: (id)=>`/posts/${id}`\n    },\n    faq: {\n        list: '/posts'\n    },\n    news: {\n        subscribe: '/users/subscribe'\n    },\n    payments: {\n        purchase: '/payments/purchase-report',\n        regularPrice: '/payments/regular-price',\n        promoPrice: (code)=>`/payments/promo-code-price?promo_code=${code}`\n    },\n    support: {\n        issues: '/support/issues'\n    }\n};\n"
         ],
-        "mappings": "AAAO,aAAM,MAAM;AAAA,EACjB,KAAK;AAAA,EACL,SAAS;AAAA,IACP,UAAU;AAAA,IACV,UAAU;AAAA,IACV,iBAAiB,CAAC,SAAiB,8BAA8B,IAAI;AAAA,IACrE,kBAAkB;AAAA,IAClB,WAAW;AAAA,IACX,MAAM;AAAA,IACN,YAAY;AAAA,IACZ,gBAAgB,CAAC,OAAe,wBAAwB,EAAE;AAAA,IAC1D,YAAY,CAAC,OAAe,yBAAyB,EAAE;AAAA,IACvD,OAAO;AAAA,IACP,OAAO,CAAC,OAAe,wBAAwB,EAAE;AAAA,EACnD;AAAA,EACA,MAAM;AAAA,IACJ,OAAO;AAAA,IACP,UAAU,CAAC,OAAe,UAAU,EAAE;AAAA,EACxC;AAAA,EACA,KAAK;AAAA,IACH,MAAM;AAAA,EACR;AAAA,EACA,MAAM;AAAA,IACJ,WAAW;AAAA,EACb;AAAA,EACA,UAAU;AAAA,IACR,UAAU;AAAA,IACV,cAAc;AAAA,IACd,YAAY,CAAC,SAAiB,yCAAyC,IAAI;AAAA,EAC7E;AAAA,EACA,SAAS;AAAA,IACP,QAAQ;AAAA,EACV;AACF;",
+        "mappings": "AAAO,aAAM,MAAM;AAAA,EACf,KAAK;AAAA,EACL,SAAS;AAAA,IACL,UAAU;AAAA,IACV,UAAU;AAAA,IACV,iBAAiB,CAAC,SAAO,8BAA8B,IAAI;AAAA,IAC3D,kBAAkB;AAAA,IAClB,WAAW;AAAA,IACX,MAAM;AAAA,IACN,YAAY;AAAA,IACZ,gBAAgB,CAAC,OAAK,wBAAwB,EAAE;AAAA,IAChD,YAAY,CAAC,OAAK,yBAAyB,EAAE;AAAA,IAC7C,OAAO;AAAA,IACP,OAAO,CAAC,OAAK,wBAAwB,EAAE;AAAA,EAC3C;AAAA,EACA,MAAM;AAAA,IACF,OAAO;AAAA,IACP,UAAU,CAAC,OAAK,UAAU,EAAE;AAAA,EAChC;AAAA,EACA,KAAK;AAAA,IACD,MAAM;AAAA,EACV;AAAA,EACA,MAAM;AAAA,IACF,WAAW;AAAA,EACf;AAAA,EACA,UAAU;AAAA,IACN,UAAU;AAAA,IACV,cAAc;AAAA,IACd,YAAY,CAAC,SAAO,yCAAyC,IAAI;AAAA,EACrE;AAAA,EACA,SAAS;AAAA,IACL,QAAQ;AAAA,EACZ;AACJ;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/api/constants.ts [vike:pluginModuleBanner] */\nexport const API = {\n  URL: \"https://api.dev.cognitivelab.ru\",\n  surveys: {\n    mainPage: \"/surveys/main-page\",\n    comments: \"/surveys/comments\",\n    personalityType: (type) => `/surveys/personality-types/${type}`,\n    personalityTypes: \"/surveys/personality-types\",\n    structure: \"/surveys/structure\",\n    info: \"/surveys/info\",\n    freeReport: \"/surveys/free-report\",\n    freeReportById: (id) => `/surveys/free-report/${id}`,\n    fullReport: (id) => `/surveys/full-reports/${id}`,\n    start: \"/surveys/start\",\n    email: (id) => `/surveys/free-report/${id}/email`\n  },\n  blog: {\n    posts: \"/posts\",\n    postById: (id) => `/posts/${id}`\n  },\n  faq: {\n    list: \"/posts\"\n  },\n  news: {\n    subscribe: \"/users/subscribe\"\n  },\n  payments: {\n    purchase: \"/payments/purchase-report\",\n    regularPrice: \"/payments/regular-price\",\n    promoPrice: (code) => `/payments/promo-code-price?promo_code=${code}`\n  },\n  support: {\n    issues: \"/support/issues\"\n  }\n};\n",
-      "start": 1750184199676,
-      "end": 1750184199676,
+      "start": 1750239308812,
+      "end": 1750239308812,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

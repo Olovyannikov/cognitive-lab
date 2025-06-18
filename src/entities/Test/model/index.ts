@@ -1,4 +1,4 @@
-import { createEvent, createStore, restore, sample } from 'effector';
+import { createEffect, createEvent, createStore, restore, sample } from 'effector';
 import { createGate } from 'effector-react';
 import { isNull } from 'lodash-es';
 import { delay } from 'patronum';
@@ -73,9 +73,13 @@ export const TestModel = atom(() => {
 
     // --- Реактивные связи ---
 
+    const scrollToTopFx = createEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     sample({
         clock: setSplashScreenVisibility,
-        target: $isSplashScreenVisible,
+        target: [$isSplashScreenVisible, scrollToTopFx],
     });
 
     sample({

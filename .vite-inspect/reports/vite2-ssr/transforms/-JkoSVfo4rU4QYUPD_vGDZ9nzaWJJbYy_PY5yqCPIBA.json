@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".stack {\n  gap: 32px;\n\n  @mixin larger-than 998px {\n    gap: 80px;\n  }\n}\n",
-      "start": 1750184198915,
-      "end": 1750184198962,
+      "start": 1750239308271,
+      "end": 1750239308291,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184198962,
-      "end": 1750184198962,
+      "name": "vite:react-swc",
+      "start": 1750239308291,
+      "end": 1750239308291,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/pages/BlogPostPage/BlogPostPage.module.css [vike:pluginModuleBanner] */\nexport const stack = \"imPic\";\nexport default {\n\tstack: stack\n};\n",
-      "start": 1750184198963,
-      "end": 1750184198963,
+      "start": 1750239308292,
+      "end": 1750239308292,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

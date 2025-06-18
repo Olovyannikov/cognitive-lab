@@ -4,131 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const FaqPage = () => {\n    const { data } = useUnit(getFAQQuery);\n\n    return (\n        <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>\n    );\n};\n",
-      "start": 1750184198765,
-      "end": 1750184198780,
+      "start": 1750239308213,
+      "end": 1750239308231,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>;\n};",
-      "start": 1750184198780,
-      "end": 1750184198781,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = ()=>{\n    const { data } = useUnit(getFAQQuery);\n    return /*#__PURE__*/ _jsx(PageLayout, {\n        title: \"Ответы на вопросы\",\n        children: /*#__PURE__*/ _jsx(Box, {\n            component: \"section\",\n            children: /*#__PURE__*/ _jsxs(Container, {\n                children: [\n                    /*#__PURE__*/ _jsx(Box, {\n                        mb: \"3xl\",\n                        children: /*#__PURE__*/ _jsx(FAQList, {\n                            items: data?.payload\n                        })\n                    }),\n                    /*#__PURE__*/ _jsxs(Text, {\n                        ta: \"center\",\n                        fz: 20,\n                        children: [\n                            \"Остались вопросы? Напишите нам в\",\n                            ' ',\n                            /*#__PURE__*/ _jsx(Text, {\n                                fz: 20,\n                                component: \"a\",\n                                href: \"/help\",\n                                span: true,\n                                c: \"blue.7\",\n                                children: \"Службу поддержки\"\n                            })\n                        ]\n                    })\n                ]\n            })\n        })\n    });\n};\n",
+      "start": 1750239308231,
+      "end": 1750239308236,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "Box",
-          "Container",
-          "Text",
-          "useUnit",
-          "FAQList",
-          "getFAQQuery",
-          "PageLayout",
-          "FaqPage",
-          "data",
-          "payload"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"],
-        "sourcesContent": [
-          "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\n\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\n\nimport { PageLayout } from '@/widgets/PageLayout';\n\nexport const FaqPage = () => {\n    const { data } = useUnit(getFAQQuery);\n\n    return (\n        <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>\n    );\n};\n"
-        ],
-        "mappings": "AAAA,SAASA,GAAG,EAAEC,SAAS,EAAEC,IAAI,QAAQ,eAAe;AACpD,SAASC,OAAO,QAAQ,gBAAgB;AAExC,SAASC,OAAO,EAAEC,WAAW,QAAQ,gBAAgB;AAErD,SAASC,UAAU,QAAQ,sBAAsB;AAEjD,OAAO,MAAMC,OAAO,GAAGA,CAAA,KAAM;EACzB,MAAM;IAAEC;EAAK,CAAC,GAAGL,OAAO,CAACE,WAAW,CAAC;EAErC,OACI,CAAC,UAAU,CAAC,KAAK,CAAC,mBAAmB;AAC7C,YAAY,CAAC,GAAG,CAAC,SAAS,CAAC,SAAS;AACpC,gBAAgB,CAAC,SAAS;AAC1B,oBAAoB,CAAC,GAAG,CAAC,EAAE,CAAC,KAAK;AACjC,wBAAwB,CAAC,OAAO,CAAC,KAAK,CAAC,CAACG,IAAI,EAAEC,OAAO,CAAC;AACtD,oBAAoB,EAAE,GAAG;AACzB,oBAAoB,CAAC,IAAI,CAAC,EAAE,CAAC,QAAQ,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC;AAC7C,wDAAwD,CAAC,GAAG;AAC5D,wBAAwB,CAAC,IAAI,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,QAAQ;AAChF;AACA,wBAAwB,EAAE,IAAI;AAC9B,oBAAoB,EAAE,IAAI;AAC1B,gBAAgB,EAAE,SAAS;AAC3B,YAAY,EAAE,GAAG;AACjB,QAAQ,EAAE,UAAU,CAAC;AAErB,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx\"],\"sourcesContent\":[\"import { Box, Container, Text } from '@mantine/core';\\nimport { useUnit } from 'effector-react';\\n\\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\\n\\nimport { PageLayout } from '@/widgets/PageLayout';\\n\\nexport const FaqPage = () => {\\n    const { data } = useUnit(getFAQQuery);\\n\\n    return (\\n        <PageLayout title='Ответы на вопросы'>\\n            <Box component='section'>\\n                <Container>\\n                    <Box mb='3xl'>\\n                        <FAQList items={data?.payload} />\\n                    </Box>\\n                    <Text ta='center' fz={20}>\\n                        Остались вопросы? Напишите нам в{' '}\\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\\n                            Службу поддержки\\n                        </Text>\\n                    </Text>\\n                </Container>\\n            </Box>\\n        </PageLayout>\\n    );\\n};\\n\"],\"names\":[\"Box\",\"Container\",\"Text\",\"useUnit\",\"FAQList\",\"getFAQQuery\",\"PageLayout\",\"FaqPage\",\"data\",\"title\",\"component\",\"mb\",\"items\",\"payload\",\"ta\",\"fz\",\"href\",\"span\",\"c\"],\"mappings\":\";AAAA,SAASA,GAAG,EAAEC,SAAS,EAAEC,IAAI,QAAQ,gBAAgB;AACrD,SAASC,OAAO,QAAQ,iBAAiB;AAEzC,SAASC,OAAO,EAAEC,WAAW,QAAQ,iBAAiB;AAEtD,SAASC,UAAU,QAAQ,uBAAuB;AAElD,OAAO,MAAMC,UAAU;IACnB,MAAM,EAAEC,IAAI,EAAE,GAAGL,QAAQE;IAEzB,qBACI,KAACC;QAAWG,OAAM;kBACd,cAAA,KAACT;YAAIU,WAAU;sBACX,cAAA,MAACT;;kCACG,KAACD;wBAAIW,IAAG;kCACJ,cAAA,KAACP;4BAAQQ,OAAOJ,MAAMK;;;kCAE1B,MAACX;wBAAKY,IAAG;wBAASC,IAAI;;4BAAI;4BACW;0CACjC,KAACb;gCAAKa,IAAI;gCAAIL,WAAU;gCAAIM,MAAK;gCAAQC,IAAI;gCAACC,GAAE;0CAAS;;;;;;;;AAQjF,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Ответы на вопросы\", children: /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(Box, { mb: \"3xl\", children: /* @__PURE__ */ jsx(FAQList, { items: data?.payload }) }),\n    /* @__PURE__ */ jsxs(Text, { ta: \"center\", fz: 20, children: [\n      \"Остались вопросы? Напишите нам в\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 20, component: \"a\", href: \"/help\", span: true, c: \"blue.7\", children: \"Службу поддержки\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750184198782,
-      "end": 1750184198817,
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const { data } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Ответы на вопросы\",\n    children: /* @__PURE__ */ _jsx(Box, {\n      component: \"section\",\n      children: /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          /* @__PURE__ */ _jsx(Box, {\n            mb: \"3xl\",\n            children: /* @__PURE__ */ _jsx(FAQList, {\n              items: data?.payload\n            })\n          }),\n          /* @__PURE__ */ _jsxs(Text, {\n            ta: \"center\",\n            fz: 20,\n            children: [\n              \"Остались вопросы? Напишите нам в\",\n              \" \",\n              /* @__PURE__ */ _jsx(Text, {\n                fz: 20,\n                component: \"a\",\n                href: \"/help\",\n                span: true,\n                c: \"blue.7\",\n                children: \"Службу поддержки\"\n              })\n            ]\n          })\n        ]\n      })\n    })\n  });\n};\n",
+      "start": 1750239308236,
+      "end": 1750239308245,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/pages/FaqPage/index.tsx"],
         "sourcesContent": [
-          "import { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return <PageLayout title='Ответы на вопросы'>\n            <Box component='section'>\n                <Container>\n                    <Box mb='3xl'>\n                        <FAQList items={data?.payload} />\n                    </Box>\n                    <Text ta='center' fz={20}>\n                        Остались вопросы? Напишите нам в{' '}\n                        <Text fz={20} component='a' href='/help' span c='blue.7'>\n                            Службу поддержки\n                        </Text>\n                    </Text>\n                </Container>\n            </Box>\n        </PageLayout>;\n};"
+          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { FAQList, getFAQQuery } from '@/entities/FAQ';\nimport { PageLayout } from '@/widgets/PageLayout';\nexport const FaqPage = ()=>{\n    const { data } = useUnit(getFAQQuery);\n    return /*#__PURE__*/ _jsx(PageLayout, {\n        title: \"Ответы на вопросы\",\n        children: /*#__PURE__*/ _jsx(Box, {\n            component: \"section\",\n            children: /*#__PURE__*/ _jsxs(Container, {\n                children: [\n                    /*#__PURE__*/ _jsx(Box, {\n                        mb: \"3xl\",\n                        children: /*#__PURE__*/ _jsx(FAQList, {\n                            items: data?.payload\n                        })\n                    }),\n                    /*#__PURE__*/ _jsxs(Text, {\n                        ta: \"center\",\n                        fz: 20,\n                        children: [\n                            \"Остались вопросы? Напишите нам в\",\n                            ' ',\n                            /*#__PURE__*/ _jsx(Text, {\n                                fz: 20,\n                                component: \"a\",\n                                href: \"/help\",\n                                span: true,\n                                c: \"blue.7\",\n                                children: \"Службу поддержки\"\n                            })\n                        ]\n                    })\n                ]\n            })\n        })\n    });\n};\n"
         ],
-        "mappings": "AAYwB,cAEJ,YAFI;AAZxB,SAAS,KAAK,WAAW,YAAY;AACrC,SAAS,eAAe;AACxB,SAAS,SAAS,mBAAmB;AACrC,SAAS,kBAAkB;AACpB,aAAM,UAAU,MAAM;AAC3B,QAAM;AAAA,IACJ;AAAA,EACF,IAAI,QAAQ,WAAW;AACvB,SAAO,oBAAC,cAAW,OAAM,qBACf,8BAAC,OAAI,WAAU,WACX,+BAAC,aACG;AAAA,wBAAC,OAAI,IAAG,OACJ,8BAAC,WAAQ,OAAO,MAAM,SAAS,GACnC;AAAA,IACA,qBAAC,QAAK,IAAG,UAAS,IAAI,IAAI;AAAA;AAAA,MACW;AAAA,MACjC,oBAAC,QAAK,IAAI,IAAI,WAAU,KAAI,MAAK,SAAQ,MAAI,MAAC,GAAE,UAAS,8BAEzD;AAAA,OACJ;AAAA,KACJ,GACJ,GACJ;AACR;",
+        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,KAAK,WAAW,YAAY;AACrC,SAAS,eAAe;AACxB,SAAS,SAAS,mBAAmB;AACrC,SAAS,kBAAkB;AACpB,aAAM,UAAU,MAAI;AACvB,QAAM,EAAE,KAAK,IAAI,QAAQ,WAAW;AACpC,SAAqB,qBAAK,YAAY;AAAA,IAClC,OAAO;AAAA,IACP,UAAwB,qBAAK,KAAK;AAAA,MAC9B,WAAW;AAAA,MACX,UAAwB,sBAAM,WAAW;AAAA,QACrC,UAAU;AAAA,UACQ,qBAAK,KAAK;AAAA,YACpB,IAAI;AAAA,YACJ,UAAwB,qBAAK,SAAS;AAAA,cAClC,OAAO,MAAM;AAAA,YACjB,CAAC;AAAA,UACL,CAAC;AAAA,UACa,sBAAM,MAAM;AAAA,YACtB,IAAI;AAAA,YACJ,IAAI;AAAA,YACJ,UAAU;AAAA,cACN;AAAA,cACA;AAAA,cACc,qBAAK,MAAM;AAAA,gBACrB,IAAI;AAAA,gBACJ,WAAW;AAAA,gBACX,MAAM;AAAA,gBACN,MAAM;AAAA,gBACN,GAAG;AAAA,gBACH,UAAU;AAAA,cACd,CAAC;AAAA,YACL;AAAA,UACJ,CAAC;AAAA,QACL;AAAA,MACJ,CAAC;AAAA,IACL,CAAC;AAAA,EACL,CAAC;AACL;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198817,
-      "end": 1750184198817,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198817,
-      "end": 1750184198817,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "start": 1750239308245,
+      "end": 1750239308245,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/pages/FaqPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const {\n    data\n  } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ jsx(PageLayout, { title: \"Ответы на вопросы\", children: /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(Box, { mb: \"3xl\", children: /* @__PURE__ */ jsx(FAQList, { items: data?.payload }) }),\n    /* @__PURE__ */ jsxs(Text, { ta: \"center\", fz: 20, children: [\n      \"Остались вопросы? Напишите нам в\",\n      \" \",\n      /* @__PURE__ */ jsx(Text, { fz: 20, component: \"a\", href: \"/help\", span: true, c: \"blue.7\", children: \"Службу поддержки\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750184198818,
-      "end": 1750184198818,
+      "result": "/*! src/pages/FaqPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Container, Text } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { FAQList, getFAQQuery } from \"@/entities/FAQ\";\nimport { PageLayout } from \"@/widgets/PageLayout\";\nexport const FaqPage = () => {\n  const { data } = useUnit(getFAQQuery);\n  return /* @__PURE__ */ _jsx(PageLayout, {\n    title: \"Ответы на вопросы\",\n    children: /* @__PURE__ */ _jsx(Box, {\n      component: \"section\",\n      children: /* @__PURE__ */ _jsxs(Container, {\n        children: [\n          /* @__PURE__ */ _jsx(Box, {\n            mb: \"3xl\",\n            children: /* @__PURE__ */ _jsx(FAQList, {\n              items: data?.payload\n            })\n          }),\n          /* @__PURE__ */ _jsxs(Text, {\n            ta: \"center\",\n            fz: 20,\n            children: [\n              \"Остались вопросы? Напишите нам в\",\n              \" \",\n              /* @__PURE__ */ _jsx(Text, {\n                fz: 20,\n                component: \"a\",\n                href: \"/help\",\n                span: true,\n                c: \"blue.7\",\n                children: \"Службу поддержки\"\n              })\n            ]\n          })\n        ]\n      })\n    })\n  });\n};\n",
+      "start": 1750239308246,
+      "end": 1750239308246,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/pages/FaqPage/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
       }
     }
   ]

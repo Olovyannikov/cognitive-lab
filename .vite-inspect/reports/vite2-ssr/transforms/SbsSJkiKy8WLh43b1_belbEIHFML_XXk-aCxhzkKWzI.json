@@ -4,114 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "export const titleColorMap: Record<string, string> = {\n    Аналитики: 'violet',\n    Дипломаты: 'green',\n    Хранители: 'indigo',\n    Исследователи: 'yellow',\n};\n",
-      "start": 1750184198835,
-      "end": 1750184198856,
+      "start": 1750239308266,
+      "end": 1750239308277,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export const titleColorMap: Record<string, string> = {\n  Аналитики: 'violet',\n  Дипломаты: 'green',\n  Хранители: 'indigo',\n  Исследователи: 'yellow'\n};",
-      "start": 1750184198856,
-      "end": 1750184198857,
+      "name": "vite:react-swc",
+      "result": "export const titleColorMap = {\n    Аналитики: 'violet',\n    Дипломаты: 'green',\n    Хранители: 'indigo',\n    Исследователи: 'yellow'\n};\n",
+      "start": 1750239308277,
+      "end": 1750239308282,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["titleColorMap", "Record", "Аналитики", "Дипломаты", "Хранители", "Исследователи"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/config/index.ts"],
-        "sourcesContent": [
-          "export const titleColorMap: Record<string, string> = {\n    Аналитики: 'violet',\n    Дипломаты: 'green',\n    Хранители: 'indigo',\n    Исследователи: 'yellow',\n};\n"
-        ],
-        "mappings": "AAAA,OAAO,MAAMA,aAAa,EAAEC,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,GAAG;EACjDC,SAAS,EAAE,QAAQ;EACnBC,SAAS,EAAE,OAAO;EAClBC,SAAS,EAAE,QAAQ;EACnBC,aAAa,EAAE;AACnB,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/config/index.ts\"],\"sourcesContent\":[\"export const titleColorMap: Record<string, string> = {\\n    Аналитики: 'violet',\\n    Дипломаты: 'green',\\n    Хранители: 'indigo',\\n    Исследователи: 'yellow',\\n};\\n\"],\"names\":[\"titleColorMap\",\"Аналитики\",\"Дипломаты\",\"Хранители\",\"Исследователи\"],\"mappings\":\"AAAA,OAAO,MAAMA,gBAAwC;IACjDC,WAAW;IACXC,WAAW;IACXC,WAAW;IACXC,eAAe;AACnB,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const titleColorMap = {\n  Аналитики: \"violet\",\n  Дипломаты: \"green\",\n  Хранители: \"indigo\",\n  Исследователи: \"yellow\"\n};\n",
-      "start": 1750184198857,
-      "end": 1750184198952,
+      "start": 1750239308282,
+      "end": 1750239308322,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Personality/config/index.ts"],
         "sourcesContent": [
-          "export const titleColorMap: Record<string, string> = {\n  Аналитики: 'violet',\n  Дипломаты: 'green',\n  Хранители: 'indigo',\n  Исследователи: 'yellow'\n};"
+          "export const titleColorMap = {\n    Аналитики: 'violet',\n    Дипломаты: 'green',\n    Хранители: 'indigo',\n    Исследователи: 'yellow'\n};\n"
         ],
-        "mappings": "AAAO,aAAM,gBAAwC;AAAA,EACnD,WAAW;AAAA,EACX,WAAW;AAAA,EACX,WAAW;AAAA,EACX,eAAe;AACjB;",
+        "mappings": "AAAO,aAAM,gBAAgB;AAAA,EACzB,WAAW;AAAA,EACX,WAAW;AAAA,EACX,WAAW;AAAA,EACX,eAAe;AACnB;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308322,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308322,
+      "end": 1750239308323,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Personality/config/index.ts [vike:pluginModuleBanner] */\nexport const titleColorMap = {\n  Аналитики: \"violet\",\n  Дипломаты: \"green\",\n  Хранители: \"indigo\",\n  Исследователи: \"yellow\"\n};\n",
-      "start": 1750184198952,
-      "end": 1750184198952,
+      "start": 1750239308323,
+      "end": 1750239308323,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

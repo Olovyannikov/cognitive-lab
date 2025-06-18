@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './clearLocalStorageTestUnits';\n",
-      "start": 1750184198858,
-      "end": 1750184198921,
+      "start": 1750239308296,
+      "end": 1750239308308,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './clearLocalStorageTestUnits';",
-      "start": 1750184198921,
-      "end": 1750184198922,
+      "name": "vite:react-swc",
+      "result": "export * from './clearLocalStorageTestUnits';\n",
+      "start": 1750239308308,
+      "end": 1750239308312,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/index.ts"],
-        "sourcesContent": ["export * from './clearLocalStorageTestUnits';\n"],
-        "mappings": "AAAA,cAAc,8BAA8B",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/index.ts\"],\"sourcesContent\":[\"export * from './clearLocalStorageTestUnits';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,+BAA+B\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./clearLocalStorageTestUnits\";\n",
-      "start": 1750184198922,
-      "end": 1750184198998,
+      "start": 1750239308312,
+      "end": 1750239308386,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/lib/index.ts"],
-        "sourcesContent": ["export * from './clearLocalStorageTestUnits';"],
+        "sourcesContent": ["export * from './clearLocalStorageTestUnits';\n"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/index.ts [vike:pluginModuleBanner] */\nexport * from \"./clearLocalStorageTestUnits\";\n",
-      "start": 1750184198998,
-      "end": 1750184198998,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

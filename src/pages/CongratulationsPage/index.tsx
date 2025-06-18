@@ -1,5 +1,5 @@
 import { Box, Container } from '@mantine/core';
-import { useUnit } from 'effector-react/effector-react.umd';
+import { useUnit } from 'effector-react';
 
 import { PageLoader } from '@/shared/ui';
 

@@ -27,6 +27,7 @@ export const ReportHeader = ({ type, name, preTitle = 'Ваш тип лично�
                 <Title className={s.name}>{currentName ?? name}</Title>
             </Stack>
             <Picture
+                cdn
                 draggable={false}
                 className={s.character}
                 src={`/report/types/${isMobile ? 'mobile/' : ''}${type}`}

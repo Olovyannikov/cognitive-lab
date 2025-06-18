@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".top {\n  font-size: 16px;\n  color: var(--mantine-color-dark-3);\n\n  p {\n    margin: 4px 0 32px;\n    line-height: 18px;\n  }\n\n  @mixin larger-than 1200px {\n    min-width: 314px;\n  }\n}\n\n.owner {\n  margin-bottom: 60px;\n  gap: var(--mantine-spacing-sm);\n\n  @mixin larger-than 1200px {\n    margin-bottom: 0;\n  }\n}\n",
-      "start": 1750184199596,
-      "end": 1750184199608,
+      "start": 1750239308600,
+      "end": 1750239308621,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "name": "vite:react-swc",
+      "start": 1750239308621,
+      "end": 1750239308621,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Top/Top.module.css [vike:pluginModuleBanner] */\nexport const top = \"_2bRLP\";\nexport const owner = \"EKfGy\";\nexport default {\n\ttop: top,\n\towner: owner\n};\n",
-      "start": 1750184199608,
-      "end": 1750184199608,
+      "start": 1750239308622,
+      "end": 1750239308622,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

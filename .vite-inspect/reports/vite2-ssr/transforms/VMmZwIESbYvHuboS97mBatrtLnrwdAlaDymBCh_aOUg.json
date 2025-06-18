@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { TestPage } from '@/pages/TestPage';\n\nexport default function Page() {\n    return <TestPage />;\n}\n",
-      "start": 1750184198685,
-      "end": 1750184198725,
+      "start": 1750239308173,
+      "end": 1750239308187,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n  return <TestPage />;\n}",
-      "start": 1750184198725,
-      "end": 1750184198726,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n    return /*#__PURE__*/ _jsx(TestPage, {});\n}\n",
+      "start": 1750239308187,
+      "end": 1750239308189,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["TestPage", "Page"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx"],
-        "sourcesContent": [
-          "import { TestPage } from '@/pages/TestPage';\n\nexport default function Page() {\n    return <TestPage />;\n}\n"
-        ],
-        "mappings": "AAAA,SAASA,QAAQ,QAAQ,kBAAkB;AAE3C,eAAe,SAASC,IAAIA,CAAA,EAAG;EAC3B,OAAO,CAAC,QAAQ,GAAG;AACvB",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx\"],\"sourcesContent\":[\"import { TestPage } from '@/pages/TestPage';\\n\\nexport default function Page() {\\n    return <TestPage />;\\n}\\n\"],\"names\":[\"TestPage\",\"Page\"],\"mappings\":\";AAAA,SAASA,QAAQ,QAAQ,mBAAmB;AAE5C,eAAe,SAASC;IACpB,qBAAO,KAACD;AACZ\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TestPage, {});\n}\n",
-      "start": 1750184198726,
-      "end": 1750184198762,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ _jsx(TestPage, {});\n}\n",
+      "start": 1750239308189,
+      "end": 1750239308223,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/pages/mbti-test/+Page.tsx"],
         "sourcesContent": [
-          "import { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n  return <TestPage />;\n}"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TestPage } from '@/pages/TestPage';\nexport default function Page() {\n    return /*#__PURE__*/ _jsx(TestPage, {});\n}\n"
         ],
-        "mappings": "AAES;AAFT,SAAS,gBAAgB;AACzB,wBAAwB,OAAO;AAC7B,SAAO,oBAAC,YAAS;AACnB;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,gBAAgB;AACzB,wBAAwB,OAAO;AAC3B,SAAqB,qBAAK,UAAU,CAAC,CAAC;AAC1C;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308223,
+      "end": 1750239308223,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308224,
+      "end": 1750239308224,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308224,
+      "end": 1750239308224,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308224,
+      "end": 1750239308224,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198762,
-      "end": 1750184198762,
+      "start": 1750239308224,
+      "end": 1750239308224,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! pages/mbti-test/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(TestPage, {});\n}\n",
-      "start": 1750184198763,
-      "end": 1750184198763,
+      "result": "/*! pages/mbti-test/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { TestPage } from \"@/pages/TestPage\";\nexport default function Page() {\n  return /* @__PURE__ */ _jsx(TestPage, {});\n}\n",
+      "start": 1750239308224,
+      "end": 1750239308224,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["pages/mbti-test/+Page.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C;"
       }
     }
   ]

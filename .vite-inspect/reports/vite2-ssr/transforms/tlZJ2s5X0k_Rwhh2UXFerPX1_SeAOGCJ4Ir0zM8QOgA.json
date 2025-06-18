@@ -4,34 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "export const CARDS = [\n    {\n        id: 0,\n        title: 'Сколько времени займет тестирование?',\n        text: 'Тестирование займет примерно 15-20 минут',\n        image: 'clock',\n    },\n    {\n        id: 1,\n        title: 'Что делать, если я не понимаю вопрос?',\n        text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n        image: 'clockworks',\n    },\n    {\n        id: 2,\n        title: 'Как лучше отвечать: быстро или обдуманно?',\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n        image: 'bubble',\n    },\n    {\n        id: 3,\n        title: 'Как понять, что я ответил правильно?',\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n        image: 'heart',\n    },\n];\n",
-      "start": 1750184199359,
-      "end": 1750184199379,
+      "start": 1750239308627,
+      "end": 1750239308639,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export const CARDS = [{\n  id: 0,\n  title: 'Сколько времени займет тестирование?',\n  text: 'Тестирование займет примерно 15-20 минут',\n  image: 'clock'\n}, {\n  id: 1,\n  title: 'Что делать, если я не понимаю вопрос?',\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: 'clockworks'\n}, {\n  id: 2,\n  title: 'Как лучше отвечать: быстро или обдуманно?',\n  text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n  image: 'bubble'\n}, {\n  id: 3,\n  title: 'Как понять, что я ответил правильно?',\n  text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n  image: 'heart'\n}];",
-      "start": 1750184199379,
-      "end": 1750184199380,
+      "name": "vite:react-swc",
+      "result": "export const CARDS = [\n    {\n        id: 0,\n        title: 'Сколько времени займет тестирование?',\n        text: 'Тестирование займет примерно 15-20 минут',\n        image: 'clock'\n    },\n    {\n        id: 1,\n        title: 'Что делать, если я не понимаю вопрос?',\n        text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n        image: 'clockworks'\n    },\n    {\n        id: 2,\n        title: 'Как лучше отвечать: быстро или обдуманно?',\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n        image: 'bubble'\n    },\n    {\n        id: 3,\n        title: 'Как понять, что я ответил правильно?',\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n        image: 'heart'\n    }\n];\n",
+      "start": 1750239308639,
+      "end": 1750239308644,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["CARDS", "id", "title", "text", "image"],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/const/index.ts"
-        ],
-        "sourcesContent": [
-          "export const CARDS = [\n    {\n        id: 0,\n        title: 'Сколько времени займет тестирование?',\n        text: 'Тестирование займет примерно 15-20 минут',\n        image: 'clock',\n    },\n    {\n        id: 1,\n        title: 'Что делать, если я не понимаю вопрос?',\n        text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n        image: 'clockworks',\n    },\n    {\n        id: 2,\n        title: 'Как лучше отвечать: быстро или обдуманно?',\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n        image: 'bubble',\n    },\n    {\n        id: 3,\n        title: 'Как понять, что я ответил правильно?',\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n        image: 'heart',\n    },\n];\n"
-        ],
-        "mappings": "AAAA,OAAO,MAAMA,KAAK,GAAG,CACjB;EACIC,EAAE,EAAE,CAAC;EACLC,KAAK,EAAE,sCAAsC;EAC7CC,IAAI,EAAE,0CAA0C;EAChDC,KAAK,EAAE;AACX,CAAC,EACD;EACIH,EAAE,EAAE,CAAC;EACLC,KAAK,EAAE,uCAAuC;EAC9CC,IAAI,EAAE,4DAA4D;EAClEC,KAAK,EAAE;AACX,CAAC,EACD;EACIH,EAAE,EAAE,CAAC;EACLC,KAAK,EAAE,2CAA2C;EAClDC,IAAI,EAAE,0EAA0E;EAChFC,KAAK,EAAE;AACX,CAAC,EACD;EACIH,EAAE,EAAE,CAAC;EACLC,KAAK,EAAE,sCAAsC;EAC7CC,IAAI,EAAE,4EAA4E;EAClFC,KAAK,EAAE;AACX,CAAC,CACJ",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/const/index.ts\"],\"sourcesContent\":[\"export const CARDS = [\\n    {\\n        id: 0,\\n        title: 'Сколько времени займет тестирование?',\\n        text: 'Тестирование займет примерно 15-20 минут',\\n        image: 'clock',\\n    },\\n    {\\n        id: 1,\\n        title: 'Что делать, если я не понимаю вопрос?',\\n        text: 'Нажмите на кнопку \\\"Перефразировать\\\", чтобы заменить вопрос',\\n        image: 'clockworks',\\n    },\\n    {\\n        id: 2,\\n        title: 'Как лучше отвечать: быстро или обдуманно?',\\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\\n        image: 'bubble',\\n    },\\n    {\\n        id: 3,\\n        title: 'Как понять, что я ответил правильно?',\\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\\n        image: 'heart',\\n    },\\n];\\n\"],\"names\":[\"CARDS\",\"id\",\"title\",\"text\",\"image\"],\"mappings\":\"AAAA,OAAO,MAAMA,QAAQ;IACjB;QACIC,IAAI;QACJC,OAAO;QACPC,MAAM;QACNC,OAAO;IACX;IACA;QACIH,IAAI;QACJC,OAAO;QACPC,MAAM;QACNC,OAAO;IACX;IACA;QACIH,IAAI;QACJC,OAAO;QACPC,MAAM;QACNC,OAAO;IACX;IACA;QACIH,IAAI;QACJC,OAAO;QACPC,MAAM;QACNC,OAAO;IACX;CACH,CAAC\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "export const CARDS = [{\n  id: 0,\n  title: \"Сколько времени займет тестирование?\",\n  text: \"Тестирование займет примерно 15-20 минут\",\n  image: \"clock\"\n}, {\n  id: 1,\n  title: \"Что делать, если я не понимаю вопрос?\",\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: \"clockworks\"\n}, {\n  id: 2,\n  title: \"Как лучше отвечать: быстро или обдуманно?\",\n  text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n  image: \"bubble\"\n}, {\n  id: 3,\n  title: \"Как понять, что я ответил правильно?\",\n  text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n  image: \"heart\"\n}];\n",
-      "start": 1750184199380,
-      "end": 1750184199584,
+      "result": "export const CARDS = [\n  {\n    id: 0,\n    title: \"Сколько времени займет тестирование?\",\n    text: \"Тестирование займет примерно 15-20 минут\",\n    image: \"clock\"\n  },\n  {\n    id: 1,\n    title: \"Что делать, если я не понимаю вопрос?\",\n    text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n    image: \"clockworks\"\n  },\n  {\n    id: 2,\n    title: \"Как лучше отвечать: быстро или обдуманно?\",\n    text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n    image: \"bubble\"\n  },\n  {\n    id: 3,\n    title: \"Как понять, что я ответил правильно?\",\n    text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n    image: \"heart\"\n  }\n];\n",
+      "start": 1750239308645,
+      "end": 1750239308779,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,89 +28,89 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/Test/SplashScreen/const/index.ts"
         ],
         "sourcesContent": [
-          "export const CARDS = [{\n  id: 0,\n  title: 'Сколько времени займет тестирование?',\n  text: 'Тестирование займет примерно 15-20 минут',\n  image: 'clock'\n}, {\n  id: 1,\n  title: 'Что делать, если я не понимаю вопрос?',\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: 'clockworks'\n}, {\n  id: 2,\n  title: 'Как лучше отвечать: быстро или обдуманно?',\n  text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n  image: 'bubble'\n}, {\n  id: 3,\n  title: 'Как понять, что я ответил правильно?',\n  text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n  image: 'heart'\n}];"
+          "export const CARDS = [\n    {\n        id: 0,\n        title: 'Сколько времени займет тестирование?',\n        text: 'Тестирование займет примерно 15-20 минут',\n        image: 'clock'\n    },\n    {\n        id: 1,\n        title: 'Что делать, если я не понимаю вопрос?',\n        text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n        image: 'clockworks'\n    },\n    {\n        id: 2,\n        title: 'Как лучше отвечать: быстро или обдуманно?',\n        text: 'Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат',\n        image: 'bubble'\n    },\n    {\n        id: 3,\n        title: 'Как понять, что я ответил правильно?',\n        text: 'Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность',\n        image: 'heart'\n    }\n];\n"
         ],
-        "mappings": "AAAO,aAAM,QAAQ,CAAC;AAAA,EACpB,IAAI;AAAA,EACJ,OAAO;AAAA,EACP,MAAM;AAAA,EACN,OAAO;AACT,GAAG;AAAA,EACD,IAAI;AAAA,EACJ,OAAO;AAAA,EACP,MAAM;AAAA,EACN,OAAO;AACT,GAAG;AAAA,EACD,IAAI;AAAA,EACJ,OAAO;AAAA,EACP,MAAM;AAAA,EACN,OAAO;AACT,GAAG;AAAA,EACD,IAAI;AAAA,EACJ,OAAO;AAAA,EACP,MAAM;AAAA,EACN,OAAO;AACT,CAAC;",
+        "mappings": "AAAO,aAAM,QAAQ;AAAA,EACjB;AAAA,IACI,IAAI;AAAA,IACJ,OAAO;AAAA,IACP,MAAM;AAAA,IACN,OAAO;AAAA,EACX;AAAA,EACA;AAAA,IACI,IAAI;AAAA,IACJ,OAAO;AAAA,IACP,MAAM;AAAA,IACN,OAAO;AAAA,EACX;AAAA,EACA;AAAA,IACI,IAAI;AAAA,IACJ,OAAO;AAAA,IACP,MAAM;AAAA,IACN,OAAO;AAAA,EACX;AAAA,EACA;AAAA,IACI,IAAI;AAAA,IACJ,OAAO;AAAA,IACP,MAAM;AAAA,IACN,OAAO;AAAA,EACX;AACJ;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/widgets/Test/SplashScreen/const/index.ts [vike:pluginModuleBanner] */\nexport const CARDS = [{\n  id: 0,\n  title: \"Сколько времени займет тестирование?\",\n  text: \"Тестирование займет примерно 15-20 минут\",\n  image: \"clock\"\n}, {\n  id: 1,\n  title: \"Что делать, если я не понимаю вопрос?\",\n  text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n  image: \"clockworks\"\n}, {\n  id: 2,\n  title: \"Как лучше отвечать: быстро или обдуманно?\",\n  text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n  image: \"bubble\"\n}, {\n  id: 3,\n  title: \"Как понять, что я ответил правильно?\",\n  text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n  image: \"heart\"\n}];\n",
-      "start": 1750184199584,
-      "end": 1750184199584,
+      "result": "/*! src/widgets/Test/SplashScreen/const/index.ts [vike:pluginModuleBanner] */\nexport const CARDS = [\n  {\n    id: 0,\n    title: \"Сколько времени займет тестирование?\",\n    text: \"Тестирование займет примерно 15-20 минут\",\n    image: \"clock\"\n  },\n  {\n    id: 1,\n    title: \"Что делать, если я не понимаю вопрос?\",\n    text: 'Нажмите на кнопку \"Перефразировать\", чтобы заменить вопрос',\n    image: \"clockworks\"\n  },\n  {\n    id: 2,\n    title: \"Как лучше отвечать: быстро или обдуманно?\",\n    text: \"Рекомендуем отвечать по первому впечатлению, чтобы не искажать результат\",\n    image: \"bubble\"\n  },\n  {\n    id: 3,\n    title: \"Как понять, что я ответил правильно?\",\n    text: \"Здесь нет «правильных» или «неправильных» ответов — важна ваша искренность\",\n    image: \"heart\"\n  }\n];\n",
+      "start": 1750239308779,
+      "end": 1750239308779,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/Test/SplashScreen/const/index.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC;"
       }
     }
   ]

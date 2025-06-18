@@ -4,114 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n",
-      "start": 1750184199001,
-      "end": 1750184199042,
+      "start": 1750239308329,
+      "end": 1750239308353,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');",
-      "start": 1750184199042,
-      "end": 1750184199043,
+      "name": "vite:react-swc",
+      "result": "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = ()=>useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = ()=>useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = ()=>useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = ()=>useMediaQuery('(min-width: 1233px)');\n",
+      "start": 1750239308353,
+      "end": 1750239308356,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["useMediaQuery", "useIsMedium", "useIsLarge", "useIsHuge", "useIsLargeMenu"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
-        "sourcesContent": [
-          "import { useMediaQuery } from '@mantine/hooks';\n\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\n"
-        ],
-        "mappings": "AAAA,SAASA,aAAa,QAAQ,gBAAgB;AAE9C,OAAO,MAAMC,WAAW,GAAGA,CAAA,KAAMD,aAAa,CAAC,qBAAqB,CAAC;AACrE,OAAO,MAAME,UAAU,GAAGA,CAAA,KAAMF,aAAa,CAAC,oBAAoB,CAAC;AACnE,OAAO,MAAMG,SAAS,GAAGA,CAAA,KAAMH,aAAa,CAAC,qBAAqB,CAAC;AACnE,OAAO,MAAMI,cAAc,GAAGA,CAAA,KAAMJ,aAAa,CAAC,qBAAqB,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts\"],\"sourcesContent\":[\"import { useMediaQuery } from '@mantine/hooks';\\n\\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');\\n\"],\"names\":[\"useMediaQuery\",\"useIsMedium\",\"useIsLarge\",\"useIsHuge\",\"useIsLargeMenu\"],\"mappings\":\"AAAA,SAASA,aAAa,QAAQ,iBAAiB;AAE/C,OAAO,MAAMC,cAAc,IAAMD,cAAc,uBAAuB;AACtE,OAAO,MAAME,aAAa,IAAMF,cAAc,sBAAsB;AACpE,OAAO,MAAMG,YAAY,IAAMH,cAAc,uBAAuB;AACpE,OAAO,MAAMI,iBAAiB,IAAMJ,cAAc,uBAAuB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1750184199043,
-      "end": 1750184199232,
+      "start": 1750239308356,
+      "end": 1750239308468,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/hooks/media/index.ts"],
         "sourcesContent": [
-          "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = () => useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = () => useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = () => useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = () => useMediaQuery('(min-width: 1233px)');"
+          "import { useMediaQuery } from '@mantine/hooks';\nexport const useIsMedium = ()=>useMediaQuery('(min-width: 1150px)');\nexport const useIsLarge = ()=>useMediaQuery('(min-width: 1200px');\nexport const useIsHuge = ()=>useMediaQuery('(min-width: 1440px)');\nexport const useIsLargeMenu = ()=>useMediaQuery('(min-width: 1233px)');\n"
         ],
-        "mappings": "AAAA,SAAS,qBAAqB;AACvB,aAAM,cAAc,MAAM,cAAc,qBAAqB;AAC7D,aAAM,aAAa,MAAM,cAAc,oBAAoB;AAC3D,aAAM,YAAY,MAAM,cAAc,qBAAqB;AAC3D,aAAM,iBAAiB,MAAM,cAAc,qBAAqB;",
+        "mappings": "AAAA,SAAS,qBAAqB;AACvB,aAAM,cAAc,MAAI,cAAc,qBAAqB;AAC3D,aAAM,aAAa,MAAI,cAAc,oBAAoB;AACzD,aAAM,YAAY,MAAI,cAAc,qBAAqB;AACzD,aAAM,iBAAiB,MAAI,cAAc,qBAAqB;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308468,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/hooks/media/index.ts [vike:pluginModuleBanner] */\nimport { useMediaQuery } from \"@mantine/hooks\";\nexport const useIsMedium = () => useMediaQuery(\"(min-width: 1150px)\");\nexport const useIsLarge = () => useMediaQuery(\"(min-width: 1200px\");\nexport const useIsHuge = () => useMediaQuery(\"(min-width: 1440px)\");\nexport const useIsLargeMenu = () => useMediaQuery(\"(min-width: 1233px)\");\n",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

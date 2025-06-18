@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  gap: var(--mantine-spacing-xs);\n\n  :is(img) {\n    flex: 1 0 auto !important;\n    width: 140px;\n    height: 140px;\n    object-position: top;\n  }\n\n  @mixin larger-than 976px {\n    flex-direction: row-reverse;\n    align-items: flex-start;\n    gap: 60px;\n\n    :is(picture, img) {\n      width: 300px !important;\n      height: 300px !important;\n    }\n  }\n}\n\n.title {\n  font-size: 24px;\n  text-align: center;\n\n  @mixin larger-than 976px {\n    font-size: 40px;\n    text-align: left;\n  }\n}\n\n.text {\n  font-size: 16px;\n\n  @mixin larger-than 976px {\n    font-size: 18px;\n  }\n}\n",
-      "start": 1750184198976,
-      "end": 1750184199019,
+      "start": 1750239308402,
+      "end": 1750239308417,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199019,
-      "end": 1750184199019,
+      "name": "vite:react-swc",
+      "start": 1750239308417,
+      "end": 1750239308417,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199020,
-      "end": 1750184199020,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308418,
+      "end": 1750239308418,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308418,
+      "end": 1750239308419,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308419,
+      "end": 1750239308419,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/widgets/InnerLayout/InnerLayout.module.css [vike:pluginModuleBanner] */\nexport const wrapper = \"ScP6w\";\nexport const title = \"lsRD1\";\nexport const text = \"s58jM\";\nexport default {\n\twrapper: wrapper,\n\ttitle: title,\n\ttext: text\n};\n",
-      "start": 1750184199021,
-      "end": 1750184199021,
+      "start": 1750239308419,
+      "end": 1750239308419,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

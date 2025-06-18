@@ -4,137 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\n\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\n\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\n);\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\n);\n\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\n",
-      "start": 1750184199165,
-      "end": 1750184199219,
+      "start": 1750239308384,
+      "end": 1750239308406,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) => response?.reports?.filter(report => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map(user => Boolean(user?.reports?.find?.(report => report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(user => user?.reports?.find?.(el => el.report_kind === 'free') ?? {} as UserReportInfo);\nexport const $allUserReports = getSurveysInfoQuery.$data.map(el => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'express'));",
-      "start": 1750184199219,
-      "end": 1750184199224,
+      "name": "vite:react-swc",
+      "result": "import { getSurveysInfoQuery } from '../api';\nconst filterUserReportsByKey = (response, key)=>response?.reports?.filter((report)=>report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user)=>Boolean(user?.reports?.find?.((report)=>report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user)=>user?.reports?.find?.((el)=>el.report_kind === 'free') ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el)=>el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'express'));\n",
+      "start": 1750239308406,
+      "end": 1750239308411,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "getSurveysInfoQuery",
-          "SurveysInfoResponse",
-          "UserReportInfo",
-          "filterUserReportsByKey",
-          "response",
-          "key",
-          "reports",
-          "filter",
-          "report",
-          "report_kind",
-          "$isUserHasFreeReport",
-          "$data",
-          "map",
-          "user",
-          "Boolean",
-          "find",
-          "$lastUserFreeReport",
-          "el",
-          "$allUserReports",
-          "$freeUserReports",
-          "$paidUserReports",
-          "$expressUserReports"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"],
-        "sourcesContent": [
-          "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\n\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\n\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\n);\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\n);\n\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\n"
-        ],
-        "mappings": "AAAA,SAASA,mBAAmB,QAAQ,QAAQ;AAC5C,cAAcC,mBAAmB,EAAEC,cAAc,QAAQ,YAAY;AAErE,MAAMC,sBAAsB,GAAGA,CAACC,QAAqC,CAA5B,EAAEH,mBAAmB,GAAG,IAAI,EAAEI,GAAY,CAAR,EAAE,MAAM,KAC/ED,QAAQ,EAAEE,OAAO,EAAEC,MAAM,CAAEC,MAAM,IAAKA,MAAM,CAACC,WAAW,KAAKJ,GAAG,CAAC,IAAI,EAAE;AAE3E,OAAO,MAAMK,oBAAoB,GAAGV,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAAEC,IAAI,IACnEC,OAAO,CAACD,IAAI,EAAEP,OAAO,EAAES,IAAI,GAAIP,MAAM,IAAKA,MAAM,CAACC,WAAW,KAAK,MAAM,CAAC,CAC5E,CAAC;AACD,OAAO,MAAMO,mBAAmB,GAAGhB,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAC3DC,IAAI,IAAKA,IAAI,EAAEP,OAAO,EAAES,IAAI,GAAIE,EAAE,IAAKA,EAAE,CAACR,WAAW,KAAK,MAAM,CAAC,IAAK,CAAC,CAAC,IAAIP,cACjF,CAAC;AAED,OAAO,MAAMgB,eAAe,GAAGlB,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAAEK,EAAE,IAAKA,EAAE,EAAEX,OAAO,IAAI,EAAE,CAAC;AACvF,OAAO,MAAMa,gBAAgB,GAAGnB,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAAEK,EAAE,IAAKd,sBAAsB,CAACc,EAAE,EAAE,MAAM,CAAC,CAAC;AACzG,OAAO,MAAMG,gBAAgB,GAAGpB,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAAEK,EAAE,IAAKd,sBAAsB,CAACc,EAAE,EAAE,MAAM,CAAC,CAAC;AACzG,OAAO,MAAMI,mBAAmB,GAAGrB,mBAAmB,CAACW,KAAK,CAACC,GAAG,CAAEK,EAAE,IAAKd,sBAAsB,CAACc,EAAE,EAAE,SAAS,CAAC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts\"],\"sourcesContent\":[\"import { getSurveysInfoQuery } from '../api';\\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\\n\\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) =>\\n    response?.reports?.filter((report) => report.report_kind === key) ?? [];\\n\\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) =>\\n    Boolean(user?.reports?.find?.((report) => report.report_kind === 'free'))\\n);\\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(\\n    (user) => user?.reports?.find?.((el) => el.report_kind === 'free') ?? ({} as UserReportInfo)\\n);\\n\\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'free'));\\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'paid'));\\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, 'express'));\\n\"],\"names\":[\"getSurveysInfoQuery\",\"filterUserReportsByKey\",\"response\",\"key\",\"reports\",\"filter\",\"report\",\"report_kind\",\"$isUserHasFreeReport\",\"$data\",\"map\",\"user\",\"Boolean\",\"find\",\"$lastUserFreeReport\",\"el\",\"$allUserReports\",\"$freeUserReports\",\"$paidUserReports\",\"$expressUserReports\"],\"mappings\":\"AAAA,SAASA,mBAAmB,QAAQ,SAAS;AAG7C,MAAMC,yBAAyB,CAACC,UAAuCC,MACnED,UAAUE,SAASC,OAAO,CAACC,SAAWA,OAAOC,WAAW,KAAKJ,QAAQ,EAAE;AAE3E,OAAO,MAAMK,uBAAuBR,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACC,OAC/DC,QAAQD,MAAMP,SAASS,OAAO,CAACP,SAAWA,OAAOC,WAAW,KAAK,UACnE;AACF,OAAO,MAAMO,sBAAsBd,oBAAoBS,KAAK,CAACC,GAAG,CAC5D,CAACC,OAASA,MAAMP,SAASS,OAAO,CAACE,KAAOA,GAAGR,WAAW,KAAK,WAAY,CAAC,GAC1E;AAEF,OAAO,MAAMS,kBAAkBhB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOA,IAAIX,WAAW,EAAE,EAAE;AACxF,OAAO,MAAMa,mBAAmBjB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,SAAS;AAC1G,OAAO,MAAMG,mBAAmBlB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,SAAS;AAC1G,OAAO,MAAMI,sBAAsBnB,oBAAoBS,KAAK,CAACC,GAAG,CAAC,CAACK,KAAOd,uBAAuBc,IAAI,YAAY\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "import { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750184199224,
-      "end": 1750184199426,
+      "start": 1750239308411,
+      "end": 1750239308566,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/model/userReports.ts"],
         "sourcesContent": [
-          "import { getSurveysInfoQuery } from '../api';\nimport type { SurveysInfoResponse, UserReportInfo } from '../api/dto';\nconst filterUserReportsByKey = (response?: SurveysInfoResponse | null, key?: string) => response?.reports?.filter(report => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map(user => Boolean(user?.reports?.find?.(report => report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map(user => user?.reports?.find?.(el => el.report_kind === 'free') ?? {} as UserReportInfo);\nexport const $allUserReports = getSurveysInfoQuery.$data.map(el => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map(el => filterUserReportsByKey(el, 'express'));"
+          "import { getSurveysInfoQuery } from '../api';\nconst filterUserReportsByKey = (response, key)=>response?.reports?.filter((report)=>report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user)=>Boolean(user?.reports?.find?.((report)=>report.report_kind === 'free')));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user)=>user?.reports?.find?.((el)=>el.report_kind === 'free') ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el)=>el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'free'));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'paid'));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el)=>filterUserReportsByKey(el, 'express'));\n"
         ],
-        "mappings": "AAAA,SAAS,2BAA2B;AAEpC,MAAM,yBAAyB,CAAC,UAAuC,QAAiB,UAAU,SAAS,OAAO,YAAU,OAAO,gBAAgB,GAAG,KAAK,CAAC;AACrJ,aAAM,uBAAuB,oBAAoB,MAAM,IAAI,UAAQ,QAAQ,MAAM,SAAS,OAAO,YAAU,OAAO,gBAAgB,MAAM,CAAC,CAAC;AAC1I,aAAM,sBAAsB,oBAAoB,MAAM,IAAI,UAAQ,MAAM,SAAS,OAAO,QAAM,GAAG,gBAAgB,MAAM,KAAK,CAAC,CAAmB;AAChJ,aAAM,kBAAkB,oBAAoB,MAAM,IAAI,QAAM,IAAI,WAAW,CAAC,CAAC;AAC7E,aAAM,mBAAmB,oBAAoB,MAAM,IAAI,QAAM,uBAAuB,IAAI,MAAM,CAAC;AAC/F,aAAM,mBAAmB,oBAAoB,MAAM,IAAI,QAAM,uBAAuB,IAAI,MAAM,CAAC;AAC/F,aAAM,sBAAsB,oBAAoB,MAAM,IAAI,QAAM,uBAAuB,IAAI,SAAS,CAAC;",
+        "mappings": "AAAA,SAAS,2BAA2B;AACpC,MAAM,yBAAyB,CAAC,UAAU,QAAM,UAAU,SAAS,OAAO,CAAC,WAAS,OAAO,gBAAgB,GAAG,KAAK,CAAC;AAC7G,aAAM,uBAAuB,oBAAoB,MAAM,IAAI,CAAC,SAAO,QAAQ,MAAM,SAAS,OAAO,CAAC,WAAS,OAAO,gBAAgB,MAAM,CAAC,CAAC;AAC1I,aAAM,sBAAsB,oBAAoB,MAAM,IAAI,CAAC,SAAO,MAAM,SAAS,OAAO,CAAC,OAAK,GAAG,gBAAgB,MAAM,KAAK,CAAC,CAAC;AAC9H,aAAM,kBAAkB,oBAAoB,MAAM,IAAI,CAAC,OAAK,IAAI,WAAW,CAAC,CAAC;AAC7E,aAAM,mBAAmB,oBAAoB,MAAM,IAAI,CAAC,OAAK,uBAAuB,IAAI,MAAM,CAAC;AAC/F,aAAM,mBAAmB,oBAAoB,MAAM,IAAI,CAAC,OAAK,uBAAuB,IAAI,MAAM,CAAC;AAC/F,aAAM,sBAAsB,oBAAoB,MAAM,IAAI,CAAC,OAAK,uBAAuB,IAAI,SAAS,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308566,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/userReports.ts [vike:pluginModuleBanner] */\nimport { getSurveysInfoQuery } from \"../api\";\nconst filterUserReportsByKey = (response, key) => response?.reports?.filter((report) => report.report_kind === key) ?? [];\nexport const $isUserHasFreeReport = getSurveysInfoQuery.$data.map((user) => Boolean(user?.reports?.find?.((report) => report.report_kind === \"free\")));\nexport const $lastUserFreeReport = getSurveysInfoQuery.$data.map((user) => user?.reports?.find?.((el) => el.report_kind === \"free\") ?? {});\nexport const $allUserReports = getSurveysInfoQuery.$data.map((el) => el?.reports ?? []);\nexport const $freeUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"free\"));\nexport const $paidUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"paid\"));\nexport const $expressUserReports = getSurveysInfoQuery.$data.map((el) => filterUserReportsByKey(el, \"express\"));\n",
-      "start": 1750184199426,
-      "end": 1750184199426,
+      "start": 1750239308566,
+      "end": 1750239308567,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

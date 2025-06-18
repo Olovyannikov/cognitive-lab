@@ -4,34 +4,23 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\n\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1750184199583,
-      "end": 1750184199601,
+      "start": 1750239308713,
+      "end": 1750239308724,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];",
-      "start": 1750184199601,
-      "end": 1750184199602,
+      "name": "vite:react-swc",
+      "result": "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\nexport const NAV_ITEMS = [\n    Reports,\n    Main,\n    Tariffs,\n    Types,\n    Blog,\n    Faq\n];\n",
+      "start": 1750239308724,
+      "end": 1750239308729,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["Blog", "Faq", "Main", "Reports", "Tariffs", "Types", "NAV_ITEMS"],
-        "sources": [
-          "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/const.tsx"
-        ],
-        "sourcesContent": [
-          "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\n\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n"
-        ],
-        "mappings": "AAAA,SAASA,IAAI,QAAQ,QAAQ;AAC7B,SAASC,GAAG,QAAQ,OAAO;AAC3B,SAASC,IAAI,QAAQ,QAAQ;AAC7B,SAASC,OAAO,QAAQ,WAAW;AACnC,SAASC,OAAO,QAAQ,WAAW;AACnC,SAASC,KAAK,QAAQ,SAAS;AAE/B,OAAO,MAAMC,SAAS,GAAG,CAACH,OAAO,EAAED,IAAI,EAAEE,OAAO,EAAEC,KAAK,EAAEL,IAAI,EAAEC,GAAG,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/const.tsx\"],\"sourcesContent\":[\"import { Blog } from './Blog';\\nimport { Faq } from './Faq';\\nimport { Main } from './Main';\\nimport { Reports } from './Reports';\\nimport { Tariffs } from './Tariffs';\\nimport { Types } from './Types';\\n\\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\\n\"],\"names\":[\"Blog\",\"Faq\",\"Main\",\"Reports\",\"Tariffs\",\"Types\",\"NAV_ITEMS\"],\"mappings\":\"AAAA,SAASA,IAAI,QAAQ,SAAS;AAC9B,SAASC,GAAG,QAAQ,QAAQ;AAC5B,SAASC,IAAI,QAAQ,SAAS;AAC9B,SAASC,OAAO,QAAQ,YAAY;AACpC,SAASC,OAAO,QAAQ,YAAY;AACpC,SAASC,KAAK,QAAQ,UAAU;AAEhC,OAAO,MAAMC,YAAY;IAACH;IAASD;IAAME;IAASC;IAAOL;IAAMC;CAAI,CAAC\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1750184199602,
-      "end": 1750184199702,
+      "result": "import { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [\n  Reports,\n  Main,\n  Tariffs,\n  Types,\n  Blog,\n  Faq\n];\n",
+      "start": 1750239308729,
+      "end": 1750239308809,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,89 +28,89 @@
           "/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/widgets/RootLayout/ui/Navigation/const.tsx"
         ],
         "sourcesContent": [
-          "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];"
+          "import { Blog } from './Blog';\nimport { Faq } from './Faq';\nimport { Main } from './Main';\nimport { Reports } from './Reports';\nimport { Tariffs } from './Tariffs';\nimport { Types } from './Types';\nexport const NAV_ITEMS = [\n    Reports,\n    Main,\n    Tariffs,\n    Types,\n    Blog,\n    Faq\n];\n"
         ],
-        "mappings": "AAAA,SAAS,YAAY;AACrB,SAAS,WAAW;AACpB,SAAS,YAAY;AACrB,SAAS,eAAe;AACxB,SAAS,eAAe;AACxB,SAAS,aAAa;AACf,aAAM,YAAY,CAAC,SAAS,MAAM,SAAS,OAAO,MAAM,GAAG;",
+        "mappings": "AAAA,SAAS,YAAY;AACrB,SAAS,WAAW;AACpB,SAAS,YAAY;AACrB,SAAS,eAAe;AACxB,SAAS,eAAe;AACxB,SAAS,aAAa;AACf,aAAM,YAAY;AAAA,EACrB;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACJ;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308809,
+      "end": 1750239308809,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/widgets/RootLayout/ui/Navigation/const.tsx [vike:pluginModuleBanner] */\nimport { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [Reports, Main, Tariffs, Types, Blog, Faq];\n",
-      "start": 1750184199702,
-      "end": 1750184199702,
+      "result": "/*! src/widgets/RootLayout/ui/Navigation/const.tsx [vike:pluginModuleBanner] */\nimport { Blog } from \"./Blog\";\nimport { Faq } from \"./Faq\";\nimport { Main } from \"./Main\";\nimport { Reports } from \"./Reports\";\nimport { Tariffs } from \"./Tariffs\";\nimport { Types } from \"./Types\";\nexport const NAV_ITEMS = [\n  Reports,\n  Main,\n  Tariffs,\n  Types,\n  Blog,\n  Faq\n];\n",
+      "start": 1750239308810,
+      "end": 1750239308810,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/widgets/RootLayout/ui/Navigation/const.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC;"
       }
     }
   ]

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".paper {\n  border: 3px dashed currentcolor;\n  border-radius: var(--mantine-spacing-lg);\n  padding-block: var(--mantine-spacing-lg);\n  padding-inline: var(--mantine-spacing-3xl);\n\n  :is(span, p) {\n    color: var(--mantine-color-dark-9);\n  }\n\n  @mixin text-data-color 9;\n}\n",
-      "start": 1750184199430,
-      "end": 1750184199451,
+      "start": 1750239308544,
+      "end": 1750239308559,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "start": 1750184199451,
-      "end": 1750184199451,
+      "name": "vite:react-swc",
+      "start": 1750239308559,
+      "end": 1750239308559,
       "order": "pre"
     },
     {
       "name": "vite:esbuild",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/TextStrokeDash/TextStrokeDash.module.css [vike:pluginModuleBanner] */\nexport const paper = \"_8cR2t\";\nexport default {\n\tpaper: paper\n};\n",
-      "start": 1750184199452,
-      "end": 1750184199452,
+      "start": 1750239308560,
+      "end": 1750239308560,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -25,7 +25,7 @@ export const InnerLayout = ({
     <Box component='section' className={className}>
         <Container pb={80}>
             <InnerContainer className={s.wrapper}>
-                {image && <Picture src={image} w={140} h={140} flex='auto' />}
+                {image && <Picture cdn src={image} w={140} h={140} flex='auto' />}
                 <Stack w='100%' maw={maw} mx='auto'>
                     <Title order={2} className={s.title} hidden={!title}>
                         {title}

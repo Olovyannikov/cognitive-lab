@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export const navigate = {\n    back: () => window.history.back(),\n};\n",
-      "start": 1750184199004,
-      "end": 1750184199045,
+      "start": 1750239308320,
+      "end": 1750239308333,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export const navigate = {\n  back: () => window.history.back()\n};",
-      "start": 1750184199045,
-      "end": 1750184199045,
+      "name": "vite:react-swc",
+      "result": "export const navigate = {\n    back: ()=>window.history.back()\n};\n",
+      "start": 1750239308333,
+      "end": 1750239308336,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["navigate", "back", "window", "history"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"],
-        "sourcesContent": ["export const navigate = {\n    back: () => window.history.back(),\n};\n"],
-        "mappings": "AAAA,OAAO,MAAMA,QAAQ,GAAG;EACpBC,IAAI,EAAEA,CAAA,KAAMC,MAAM,CAACC,OAAO,CAACF,IAAI,CAAC;AACpC,CAAC",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts\"],\"sourcesContent\":[\"export const navigate = {\\n    back: () => window.history.back(),\\n};\\n\"],\"names\":[\"navigate\",\"back\",\"window\",\"history\"],\"mappings\":\"AAAA,OAAO,MAAMA,WAAW;IACpBC,MAAM,IAAMC,OAAOC,OAAO,CAACF,IAAI;AACnC,EAAE\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1750184199045,
-      "end": 1750184199232,
+      "start": 1750239308336,
+      "end": 1750239308436,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/utils/navigate/index.ts"],
-        "sourcesContent": ["export const navigate = {\n  back: () => window.history.back()\n};"],
-        "mappings": "AAAO,aAAM,WAAW;AAAA,EACtB,MAAM,MAAM,OAAO,QAAQ,KAAK;AAClC;",
+        "sourcesContent": ["export const navigate = {\n    back: ()=>window.history.back()\n};\n"],
+        "mappings": "AAAO,aAAM,WAAW;AAAA,EACpB,MAAM,MAAI,OAAO,QAAQ,KAAK;AAClC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308436,
+      "end": 1750239308436,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/navigate/index.ts [vike:pluginModuleBanner] */\nexport const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1750184199232,
-      "end": 1750184199232,
+      "start": 1750239308437,
+      "end": 1750239308437,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

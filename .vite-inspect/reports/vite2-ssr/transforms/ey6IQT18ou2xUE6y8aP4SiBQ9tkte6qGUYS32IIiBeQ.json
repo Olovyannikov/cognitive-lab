@@ -4,114 +4,105 @@
     {
       "name": "vite:load-fallback",
       "result": "/**\n * Константы для модели теста (опроса)\n */\n\n/** Задержка для debounce изменения ответа (мс) */\nexport const DELAY_MS = 250;\n",
-      "start": 1750184199078,
-      "end": 1750184199137,
+      "start": 1750239308433,
+      "end": 1750239308456,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "/**\n * Константы для модели теста (опроса)\n */\n\n/** Задержка для debounce изменения ответа (мс) */\nexport const DELAY_MS = 250;",
-      "start": 1750184199137,
-      "end": 1750184199138,
+      "name": "vite:react-swc",
+      "result": "/**\n * Константы для модели теста (опроса)\n */ /** Задержка для debounce изменения ответа (мс) */ export const DELAY_MS = 250;\n",
+      "start": 1750239308456,
+      "end": 1750239308463,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["DELAY_MS"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/constants.ts"],
-        "sourcesContent": [
-          "/**\n * Константы для модели теста (опроса)\n */\n\n/** Задержка для debounce изменения ответа (мс) */\nexport const DELAY_MS = 250;\n"
-        ],
-        "mappings": "AAAA;AACA;AACA;;AAEA;AACA,OAAO,MAAMA,QAAQ,GAAG,GAAG",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/constants.ts\"],\"sourcesContent\":[\"/**\\n * Константы для модели теста (опроса)\\n */\\n\\n/** Задержка для debounce изменения ответа (мс) */\\nexport const DELAY_MS = 250;\\n\"],\"names\":[\"DELAY_MS\"],\"mappings\":\"AAAA;;CAEC,GAED,gDAAgD,GAChD,OAAO,MAAMA,WAAW,IAAI\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export const DELAY_MS = 250;\n",
-      "start": 1750184199138,
-      "end": 1750184199377,
+      "start": 1750239308463,
+      "end": 1750239308707,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/model/constants.ts"],
         "sourcesContent": [
-          "/**\n * Константы для модели теста (опроса)\n */\n\n/** Задержка для debounce изменения ответа (мс) */\nexport const DELAY_MS = 250;"
+          "/**\n * Константы для модели теста (опроса)\n */ /** Задержка для debounce изменения ответа (мс) */ export const DELAY_MS = 250;\n"
         ],
-        "mappings": "AAKO,aAAM,WAAW;",
+        "mappings": "AAE8D,aAAM,WAAW;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/model/constants.ts [vike:pluginModuleBanner] */\nexport const DELAY_MS = 250;\n",
-      "start": 1750184199377,
-      "end": 1750184199377,
+      "start": 1750239308707,
+      "end": 1750239308707,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,110 +4,103 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './PartialRecord';\n",
-      "start": 1750184198987,
-      "end": 1750184199033,
+      "start": 1750239308321,
+      "end": 1750239308334,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './PartialRecord';",
-      "start": 1750184199033,
-      "end": 1750184199034,
+      "name": "vite:react-swc",
+      "result": "export * from './PartialRecord';\n",
+      "start": 1750239308334,
+      "end": 1750239308336,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"],
-        "sourcesContent": ["export * from './PartialRecord';\n"],
-        "mappings": "AAAA,cAAc,iBAAiB",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts\"],\"sourcesContent\":[\"export * from './PartialRecord';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,kBAAkB\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./PartialRecord\";\n",
-      "start": 1750184199034,
-      "end": 1750184199229,
+      "start": 1750239308336,
+      "end": 1750239308440,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/lib/types/utility-types/index.ts"],
-        "sourcesContent": ["export * from './PartialRecord';"],
+        "sourcesContent": ["export * from './PartialRecord';\n"],
         "mappings": "AAAA,cAAc;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199229,
-      "end": 1750184199229,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/shared/lib/types/utility-types/index.ts [vike:pluginModuleBanner] */\nexport * from \"./PartialRecord\";\n",
-      "start": 1750184199230,
-      "end": 1750184199230,
+      "start": 1750239308440,
+      "end": 1750239308440,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

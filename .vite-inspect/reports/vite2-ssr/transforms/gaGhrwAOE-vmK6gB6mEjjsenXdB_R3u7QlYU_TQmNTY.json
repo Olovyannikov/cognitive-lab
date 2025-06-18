@@ -3,138 +3,112 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './FormSuccessScreen.module.css';\n\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man.webp',\n};\n\ninterface FormSuccessScreenProps {\n    title?: string;\n    description?: string;\n    slots?: {\n        action?: ReactNode;\n    };\n    image?: string;\n}\n\nexport const FormSuccessScreen = ({\n    title = BASE_TEXT.title,\n    description = BASE_TEXT.description,\n    image = BASE_TEXT.image,\n    slots,\n}: FormSuccessScreenProps) => (\n    <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>\n);\n",
-      "start": 1750184199028,
-      "end": 1750184199067,
+      "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './FormSuccessScreen.module.css';\n\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man',\n};\n\ninterface FormSuccessScreenProps {\n    title?: string;\n    description?: string;\n    slots?: {\n        action?: ReactNode;\n    };\n    image?: string;\n}\n\nexport const FormSuccessScreen = ({\n    title = BASE_TEXT.title,\n    description = BASE_TEXT.description,\n    image = BASE_TEXT.image,\n    slots,\n}: FormSuccessScreenProps) => (\n    <Box className={s.box}>\n        <Picture cdn className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>\n);\n",
+      "start": 1750239308327,
+      "end": 1750239308343,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './FormSuccessScreen.module.css';\nconst BASE_TEXT = {\n  title: 'Спасибо за ваш отзыв!',\n  description: 'Спасибо за ваш отзыв!',\n  image: '/images/success-base-man.webp'\n};\ninterface FormSuccessScreenProps {\n  title?: string;\n  description?: string;\n  slots?: {\n    action?: ReactNode;\n  };\n  image?: string;\n}\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}: FormSuccessScreenProps) => <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>;",
-      "start": 1750184199067,
-      "end": 1750184199069,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './FormSuccessScreen.module.css';\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man'\n};\nexport const FormSuccessScreen = ({ title = BASE_TEXT.title, description = BASE_TEXT.description, image = BASE_TEXT.image, slots })=>/*#__PURE__*/ _jsxs(Box, {\n        className: s.box,\n        children: [\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                className: s.image,\n                w: 145,\n                \"aria-hidden\": true,\n                src: image,\n                alt: title\n            }),\n            /*#__PURE__*/ _jsx(Title, {\n                className: s.title,\n                order: 3,\n                children: title\n            }),\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: description\n            }),\n            /*#__PURE__*/ _jsx(Box, {\n                className: s.action,\n                children: slots?.action\n            })\n        ]\n    });\n",
+      "start": 1750239308343,
+      "end": 1750239308355,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [
-          "ReactNode",
-          "Box",
-          "Text",
-          "Title",
-          "Picture",
-          "s",
-          "BASE_TEXT",
-          "title",
-          "description",
-          "image",
-          "FormSuccessScreenProps",
-          "slots",
-          "action",
-          "FormSuccessScreen",
-          "box",
-          "text"
-        ],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormSuccessScreen/index.tsx"],
-        "sourcesContent": [
-          "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport s from './FormSuccessScreen.module.css';\n\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man.webp',\n};\n\ninterface FormSuccessScreenProps {\n    title?: string;\n    description?: string;\n    slots?: {\n        action?: ReactNode;\n    };\n    image?: string;\n}\n\nexport const FormSuccessScreen = ({\n    title = BASE_TEXT.title,\n    description = BASE_TEXT.description,\n    image = BASE_TEXT.image,\n    slots,\n}: FormSuccessScreenProps) => (\n    <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>\n);\n"
-        ],
-        "mappings": "AAAA,cAAcA,SAAS,QAAQ,OAAO;AACtC,SAASC,GAAG,EAAEC,IAAI,EAAEC,KAAK,QAAQ,eAAe;AAEhD,SAASC,OAAO,QAAQ,aAAa;AAErC,OAAOC,CAAC,MAAM,gCAAgC;AAE9C,MAAMC,SAAS,GAAG;EACdC,KAAK,EAAE,uBAAuB;EAC9BC,WAAW,EAAE,uBAAuB;EACpCC,KAAK,EAAE;AACX,CAAC;AAED,UAAUC,sBAAsB,CAAC;EAC7BH,KAAK,CAAC,EAAE,MAAM;EACdC,WAAW,CAAC,EAAE,MAAM;EACpBG,KAAK,CAAC,EAAE;IACJC,MAAM,CAAC,EAAEZ,SAAS;EACtB,CAAC;EACDS,KAAK,CAAC,EAAE,MAAM;AAClB;AAEA,OAAO,MAAMI,iBAAiB,GAAGA,CAAC;EAC9BN,KAAK,GAAGD,SAAS,CAACC,KAAK;EACvBC,WAAW,GAAGF,SAAS,CAACE,WAAW;EACnCC,KAAK,GAAGH,SAAS,CAACG,KAAK;EACvBE;AACoB,CAAvB,EAAED,sBAAsB,KACrB,CAAC,GAAG,CAAC,SAAS,CAAC,CAACL,CAAC,CAACS,GAAG,CAAC;AAC1B,QAAQ,CAAC,OAAO,CAAC,SAAS,CAAC,CAACT,CAAC,CAACI,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,WAAW,CAAC,CAAC,IAAI,CAAC,CAAC,GAAG,CAAC,CAACA,KAAK,CAAC,CAAC,GAAG,CAAC,CAACF,KAAK,CAAC;AACvF,QAAQ,CAAC,KAAK,CAAC,SAAS,CAAC,CAACF,CAAC,CAACE,KAAK,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAC5C,YAAY,CAACA,KAAK;AAClB,QAAQ,EAAE,KAAK;AACf,QAAQ,CAAC,IAAI,CAAC,SAAS,CAAC,CAACF,CAAC,CAACU,IAAI,CAAC,CAAC,CAACP,WAAW,CAAC,EAAE,IAAI;AACpD,QAAQ,CAAC,GAAG,CAAC,SAAS,CAAC,CAACH,CAAC,CAACO,MAAM,CAAC,CAAC,CAACD,KAAK,EAAEC,MAAM,CAAC,EAAE,GAAG;AACtD,IAAI,EAAE,GAAG,CACR",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormSuccessScreen/index.tsx\"],\"sourcesContent\":[\"import type { ReactNode } from 'react';\\nimport { Box, Text, Title } from '@mantine/core';\\n\\nimport { Picture } from '@/shared/ui';\\n\\nimport s from './FormSuccessScreen.module.css';\\n\\nconst BASE_TEXT = {\\n    title: 'Спасибо за ваш отзыв!',\\n    description: 'Спасибо за ваш отзыв!',\\n    image: '/images/success-base-man',\\n};\\n\\ninterface FormSuccessScreenProps {\\n    title?: string;\\n    description?: string;\\n    slots?: {\\n        action?: ReactNode;\\n    };\\n    image?: string;\\n}\\n\\nexport const FormSuccessScreen = ({\\n    title = BASE_TEXT.title,\\n    description = BASE_TEXT.description,\\n    image = BASE_TEXT.image,\\n    slots,\\n}: FormSuccessScreenProps) => (\\n    <Box className={s.box}>\\n        <Picture cdn className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\\n        <Title className={s.title} order={3}>\\n            {title}\\n        </Title>\\n        <Text className={s.text}>{description}</Text>\\n        <Box className={s.action}>{slots?.action}</Box>\\n    </Box>\\n);\\n\"],\"names\":[\"Box\",\"Text\",\"Title\",\"Picture\",\"s\",\"BASE_TEXT\",\"title\",\"description\",\"image\",\"FormSuccessScreen\",\"slots\",\"className\",\"box\",\"cdn\",\"w\",\"aria-hidden\",\"src\",\"alt\",\"order\",\"text\",\"action\"],\"mappings\":\";AACA,SAASA,GAAG,EAAEC,IAAI,EAAEC,KAAK,QAAQ,gBAAgB;AAEjD,SAASC,OAAO,QAAQ,cAAc;AAEtC,OAAOC,OAAO,iCAAiC;AAE/C,MAAMC,YAAY;IACdC,OAAO;IACPC,aAAa;IACbC,OAAO;AACX;AAWA,OAAO,MAAMC,oBAAoB,CAAC,EAC9BH,QAAQD,UAAUC,KAAK,EACvBC,cAAcF,UAAUE,WAAW,EACnCC,QAAQH,UAAUG,KAAK,EACvBE,KAAK,EACgB,iBACrB,MAACV;QAAIW,WAAWP,EAAEQ,GAAG;;0BACjB,KAACT;gBAAQU,GAAG;gBAACF,WAAWP,EAAEI,KAAK;gBAAEM,GAAG;gBAAKC,eAAa;gBAAMC,KAAKR;gBAAOS,KAAKX;;0BAC7E,KAACJ;gBAAMS,WAAWP,EAAEE,KAAK;gBAAEY,OAAO;0BAC7BZ;;0BAEL,KAACL;gBAAKU,WAAWP,EAAEe,IAAI;0BAAGZ;;0BAC1B,KAACP;gBAAIW,WAAWP,EAAEgB,MAAM;0BAAGV,OAAOU;;;OAExC\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man.webp\"\n};\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}) => /* @__PURE__ */ jsxs(Box, { className: s.box, children: [\n  /* @__PURE__ */ jsx(Picture, { className: s.image, w: 145, \"aria-hidden\": true, src: image, alt: title }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description }),\n  /* @__PURE__ */ jsx(Box, { className: s.action, children: slots?.action })\n] });\n",
-      "start": 1750184199069,
-      "end": 1750184199280,
+      "result": "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man\"\n};\nexport const FormSuccessScreen = ({ title = BASE_TEXT.title, description = BASE_TEXT.description, image = BASE_TEXT.image, slots }) => /* @__PURE__ */ _jsxs(Box, {\n  className: s.box,\n  children: [\n    /* @__PURE__ */ _jsx(Picture, {\n      cdn: true,\n      className: s.image,\n      w: 145,\n      \"aria-hidden\": true,\n      src: image,\n      alt: title\n    }),\n    /* @__PURE__ */ _jsx(Title, {\n      className: s.title,\n      order: 3,\n      children: title\n    }),\n    /* @__PURE__ */ _jsx(Text, {\n      className: s.text,\n      children: description\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      className: s.action,\n      children: slots?.action\n    })\n  ]\n});\n",
+      "start": 1750239308356,
+      "end": 1750239308468,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/shared/ui/FormSuccessScreen/index.tsx"],
         "sourcesContent": [
-          "import type { ReactNode } from 'react';\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './FormSuccessScreen.module.css';\nconst BASE_TEXT = {\n  title: 'Спасибо за ваш отзыв!',\n  description: 'Спасибо за ваш отзыв!',\n  image: '/images/success-base-man.webp'\n};\ninterface FormSuccessScreenProps {\n  title?: string;\n  description?: string;\n  slots?: {\n    action?: ReactNode;\n  };\n  image?: string;\n}\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}: FormSuccessScreenProps) => <Box className={s.box}>\n        <Picture className={s.image} w={145} aria-hidden={true} src={image} alt={title} />\n        <Title className={s.title} order={3}>\n            {title}\n        </Title>\n        <Text className={s.text}>{description}</Text>\n        <Box className={s.action}>{slots?.action}</Box>\n    </Box>;"
+          "import { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport s from './FormSuccessScreen.module.css';\nconst BASE_TEXT = {\n    title: 'Спасибо за ваш отзыв!',\n    description: 'Спасибо за ваш отзыв!',\n    image: '/images/success-base-man'\n};\nexport const FormSuccessScreen = ({ title = BASE_TEXT.title, description = BASE_TEXT.description, image = BASE_TEXT.image, slots })=>/*#__PURE__*/ _jsxs(Box, {\n        className: s.box,\n        children: [\n            /*#__PURE__*/ _jsx(Picture, {\n                cdn: true,\n                className: s.image,\n                w: 145,\n                \"aria-hidden\": true,\n                src: image,\n                alt: title\n            }),\n            /*#__PURE__*/ _jsx(Title, {\n                className: s.title,\n                order: 3,\n                children: title\n            }),\n            /*#__PURE__*/ _jsx(Text, {\n                className: s.text,\n                children: description\n            }),\n            /*#__PURE__*/ _jsx(Box, {\n                className: s.action,\n                children: slots?.action\n            })\n        ]\n    });\n"
         ],
-        "mappings": "AAsB8B,SACtB,KADsB;AArB9B,SAAS,KAAK,MAAM,aAAa;AACjC,SAAS,eAAe;AACxB,OAAO,OAAO;AACd,MAAM,YAAY;AAAA,EAChB,OAAO;AAAA,EACP,aAAa;AAAA,EACb,OAAO;AACT;AASO,aAAM,oBAAoB,CAAC;AAAA,EAChC,QAAQ,UAAU;AAAA,EAClB,cAAc,UAAU;AAAA,EACxB,QAAQ,UAAU;AAAA,EAClB;AACF,MAA8B,qBAAC,OAAI,WAAW,EAAE,KACxC;AAAA,sBAAC,WAAQ,WAAW,EAAE,OAAO,GAAG,KAAK,eAAa,MAAM,KAAK,OAAO,KAAK,OAAO;AAAA,EAChF,oBAAC,SAAM,WAAW,EAAE,OAAO,OAAO,GAC7B,iBACL;AAAA,EACA,oBAAC,QAAK,WAAW,EAAE,MAAO,uBAAY;AAAA,EACtC,oBAAC,OAAI,WAAW,EAAE,QAAS,iBAAO,QAAO;AAAA,GAC7C;",
+        "mappings": "AAAA,SAAS,OAAO,MAAM,QAAQ,aAAa;AAC3C,SAAS,KAAK,MAAM,aAAa;AACjC,SAAS,eAAe;AACxB,OAAO,OAAO;AACd,MAAM,YAAY;AAAA,EACd,OAAO;AAAA,EACP,aAAa;AAAA,EACb,OAAO;AACX;AACO,aAAM,oBAAoB,CAAC,EAAE,QAAQ,UAAU,OAAO,cAAc,UAAU,aAAa,QAAQ,UAAU,OAAO,MAAM,MAAkB,sBAAM,KAAK;AAAA,EACtJ,WAAW,EAAE;AAAA,EACb,UAAU;AAAA,IACQ,qBAAK,SAAS;AAAA,MACxB,KAAK;AAAA,MACL,WAAW,EAAE;AAAA,MACb,GAAG;AAAA,MACH,eAAe;AAAA,MACf,KAAK;AAAA,MACL,KAAK;AAAA,IACT,CAAC;AAAA,IACa,qBAAK,OAAO;AAAA,MACtB,WAAW,EAAE;AAAA,MACb,OAAO;AAAA,MACP,UAAU;AAAA,IACd,CAAC;AAAA,IACa,qBAAK,MAAM;AAAA,MACrB,WAAW,EAAE;AAAA,MACb,UAAU;AAAA,IACd,CAAC;AAAA,IACa,qBAAK,KAAK;AAAA,MACpB,WAAW,EAAE;AAAA,MACb,UAAU,OAAO;AAAA,IACrB,CAAC;AAAA,EACL;AACJ,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199280,
-      "end": 1750184199280,
+      "start": 1750239308468,
+      "end": 1750239308468,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199280,
-      "end": 1750184199281,
+      "start": 1750239308468,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199281,
-      "end": 1750184199281,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199281,
-      "end": 1750184199281,
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/shared/ui/FormSuccessScreen/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man.webp\"\n};\nexport const FormSuccessScreen = ({\n  title = BASE_TEXT.title,\n  description = BASE_TEXT.description,\n  image = BASE_TEXT.image,\n  slots\n}) => /* @__PURE__ */ jsxs(Box, { className: s.box, children: [\n  /* @__PURE__ */ jsx(Picture, { className: s.image, w: 145, \"aria-hidden\": true, src: image, alt: title }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 3, children: title }),\n  /* @__PURE__ */ jsx(Text, { className: s.text, children: description }),\n  /* @__PURE__ */ jsx(Box, { className: s.action, children: slots?.action })\n] });\n",
-      "start": 1750184199281,
-      "end": 1750184199281,
+      "result": "/*! src/shared/ui/FormSuccessScreen/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx, jsxs as _jsxs } from \"react/jsx-runtime\";\nimport { Box, Text, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport s from \"./FormSuccessScreen.module.css\";\nconst BASE_TEXT = {\n  title: \"Спасибо за ваш отзыв!\",\n  description: \"Спасибо за ваш отзыв!\",\n  image: \"/images/success-base-man\"\n};\nexport const FormSuccessScreen = ({ title = BASE_TEXT.title, description = BASE_TEXT.description, image = BASE_TEXT.image, slots }) => /* @__PURE__ */ _jsxs(Box, {\n  className: s.box,\n  children: [\n    /* @__PURE__ */ _jsx(Picture, {\n      cdn: true,\n      className: s.image,\n      w: 145,\n      \"aria-hidden\": true,\n      src: image,\n      alt: title\n    }),\n    /* @__PURE__ */ _jsx(Title, {\n      className: s.title,\n      order: 3,\n      children: title\n    }),\n    /* @__PURE__ */ _jsx(Text, {\n      className: s.text,\n      children: description\n    }),\n    /* @__PURE__ */ _jsx(Box, {\n      className: s.action,\n      children: slots?.action\n    })\n  ]\n});\n",
+      "start": 1750239308469,
+      "end": 1750239308469,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/shared/ui/FormSuccessScreen/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC;AACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,C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"
       }
     }
   ]

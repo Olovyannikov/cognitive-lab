@@ -24,13 +24,18 @@
 
 .pretitle {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: p;
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 18px;
   line-height: normal;
+  gap: 8px;
 
   @mixin larger-than 768px {
+    display: block;
     margin-bottom: 40px;
     font-size: 32px;
     text-align: left;

@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Radio } from '@mantine/core';\n\nimport { IconCheck } from '@/shared/ui';\n\nimport s from './RadioElement.module.css';\n\ninterface RadioElementProps {\n    size: string;\n    value: string;\n}\n\nexport const RadioElement = ({ size, value }: RadioElementProps) => (\n    <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />\n);\n",
-      "start": 1750184199382,
-      "end": 1750184199398,
+      "start": 1750239308644,
+      "end": 1750239308660,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import { Radio } from '@mantine/core';\nimport { IconCheck } from '@/shared/ui';\nimport s from './RadioElement.module.css';\ninterface RadioElementProps {\n  size: string;\n  value: string;\n}\nexport const RadioElement = ({\n  size,\n  value\n}: RadioElementProps) => <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />;",
-      "start": 1750184199398,
-      "end": 1750184199399,
+      "name": "vite:react-swc",
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Radio } from '@mantine/core';\nimport { IconCheck } from '@/shared/ui';\nimport s from './RadioElement.module.css';\nexport const RadioElement = ({ size, value })=>/*#__PURE__*/ _jsx(Radio, {\n        className: s.radioRoot,\n        icon: IconCheck,\n        size: size,\n        value: value\n    });\n",
+      "start": 1750239308660,
+      "end": 1750239308669,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["Radio", "IconCheck", "s", "RadioElementProps", "size", "value", "RadioElement", "radioRoot"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/RadioElement/index.tsx"],
-        "sourcesContent": [
-          "import { Radio } from '@mantine/core';\n\nimport { IconCheck } from '@/shared/ui';\n\nimport s from './RadioElement.module.css';\n\ninterface RadioElementProps {\n    size: string;\n    value: string;\n}\n\nexport const RadioElement = ({ size, value }: RadioElementProps) => (\n    <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />\n);\n"
-        ],
-        "mappings": "AAAA,SAASA,KAAK,QAAQ,eAAe;AAErC,SAASC,SAAS,QAAQ,aAAa;AAEvC,OAAOC,CAAC,MAAM,2BAA2B;AAEzC,UAAUC,iBAAiB,CAAC;EACxBC,IAAI,EAAE,MAAM;EACZC,KAAK,EAAE,MAAM;AACjB;AAEA,OAAO,MAAMC,YAAY,GAAGA,CAAC;EAAEF,IAAI;EAAEC;AAAyB,CAAlB,EAAEF,iBAAiB,KAC3D,CAAC,KAAK,CAAC,SAAS,CAAC,CAACD,CAAC,CAACK,SAAS,CAAC,CAAC,IAAI,CAAC,CAACN,SAAS,CAAC,CAAC,IAAI,CAAC,CAACG,IAAI,CAAC,CAAC,KAAK,CAAC,CAACC,KAAK,CAAC,GAC5E",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/RadioElement/index.tsx\"],\"sourcesContent\":[\"import { Radio } from '@mantine/core';\\n\\nimport { IconCheck } from '@/shared/ui';\\n\\nimport s from './RadioElement.module.css';\\n\\ninterface RadioElementProps {\\n    size: string;\\n    value: string;\\n}\\n\\nexport const RadioElement = ({ size, value }: RadioElementProps) => (\\n    <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />\\n);\\n\"],\"names\":[\"Radio\",\"IconCheck\",\"s\",\"RadioElement\",\"size\",\"value\",\"className\",\"radioRoot\",\"icon\"],\"mappings\":\";AAAA,SAASA,KAAK,QAAQ,gBAAgB;AAEtC,SAASC,SAAS,QAAQ,cAAc;AAExC,OAAOC,OAAO,4BAA4B;AAO1C,OAAO,MAAMC,eAAe,CAAC,EAAEC,IAAI,EAAEC,KAAK,EAAqB,iBAC3D,KAACL;QAAMM,WAAWJ,EAAEK,SAAS;QAAEC,MAAMP;QAAWG,MAAMA;QAAMC,OAAOA;OACrE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({\n  size,\n  value\n}) => /* @__PURE__ */ jsx(Radio, { className: s.radioRoot, icon: IconCheck, size, value });\n",
-      "start": 1750184199399,
-      "end": 1750184199588,
+      "result": "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({ size, value }) => /* @__PURE__ */ _jsx(Radio, {\n  className: s.radioRoot,\n  icon: IconCheck,\n  size,\n  value\n});\n",
+      "start": 1750239308669,
+      "end": 1750239308781,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/RadioElement/index.tsx"],
         "sourcesContent": [
-          "import { Radio } from '@mantine/core';\nimport { IconCheck } from '@/shared/ui';\nimport s from './RadioElement.module.css';\ninterface RadioElementProps {\n  size: string;\n  value: string;\n}\nexport const RadioElement = ({\n  size,\n  value\n}: RadioElementProps) => <Radio className={s.radioRoot} icon={IconCheck} size={size} value={value} />;"
+          "import { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Radio } from '@mantine/core';\nimport { IconCheck } from '@/shared/ui';\nimport s from './RadioElement.module.css';\nexport const RadioElement = ({ size, value })=>/*#__PURE__*/ _jsx(Radio, {\n        className: s.radioRoot,\n        icon: IconCheck,\n        size: size,\n        value: value\n    });\n"
         ],
-        "mappings": "AAUyB;AAVzB,SAAS,aAAa;AACtB,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AAKP,aAAM,eAAe,CAAC;AAAA,EAC3B;AAAA,EACA;AACF,MAAyB,oBAAC,SAAM,WAAW,EAAE,WAAW,MAAM,WAAW,MAAY,OAAc;",
+        "mappings": "AAAA,SAAS,OAAO,YAAY;AAC5B,SAAS,aAAa;AACtB,SAAS,iBAAiB;AAC1B,OAAO,OAAO;AACP,aAAM,eAAe,CAAC,EAAE,MAAM,MAAM,MAAkB,qBAAK,OAAO;AAAA,EACjE,WAAW,EAAE;AAAA,EACb,MAAM;AAAA,EACN;AAAA,EACA;AACJ,CAAC;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Test/ui/RadioElement/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({\n  size,\n  value\n}) => /* @__PURE__ */ jsx(Radio, { className: s.radioRoot, icon: IconCheck, size, value });\n",
-      "start": 1750184199588,
-      "end": 1750184199588,
+      "result": "/*! src/entities/Test/ui/RadioElement/index.tsx [vike:pluginModuleBanner] */\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { Radio } from \"@mantine/core\";\nimport { IconCheck } from \"@/shared/ui\";\nimport s from \"./RadioElement.module.css\";\nexport const RadioElement = ({ size, value }) => /* @__PURE__ */ _jsx(Radio, {\n  className: s.radioRoot,\n  icon: IconCheck,\n  size,\n  value\n});\n",
+      "start": 1750239308781,
+      "end": 1750239308781,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Test/ui/RadioElement/index.tsx"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC;"
       }
     }
   ]

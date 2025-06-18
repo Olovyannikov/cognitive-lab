@@ -4,120 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { Content } from '../types';\n\nexport function normalizeData(data?: { content: { type: 'block'; content: Content[] }[] } | null) {\n    return data?.content.map((content) => content.content ?? [content]);\n}\n",
-      "start": 1750184199098,
-      "end": 1750184199154,
+      "start": 1750239308384,
+      "end": 1750239308401,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "import type { Content } from '../types';\nexport function normalizeData(data?: {\n  content: {\n    type: 'block';\n    content: Content[];\n  }[];\n} | null) {\n  return data?.content.map(content => content.content ?? [content]);\n}",
-      "start": 1750184199154,
-      "end": 1750184199155,
+      "name": "vite:react-swc",
+      "result": "export function normalizeData(data) {\n    return data?.content.map((content)=>content.content ?? [\n            content\n        ]);\n}\n",
+      "start": 1750239308401,
+      "end": 1750239308408,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": ["Content", "normalizeData", "data", "content", "type", "map"],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/normalizeData.ts"],
-        "sourcesContent": [
-          "import type { Content } from '../types';\n\nexport function normalizeData(data?: { content: { type: 'block'; content: Content[] }[] } | null) {\n    return data?.content.map((content) => content.content ?? [content]);\n}\n"
-        ],
-        "mappings": "AAAA,cAAcA,OAAO,QAAQ,UAAU;AAEvC,OAAO,SAASC,aAAaA,CAACC,IAAkE,CAA7D,EAAE;EAAEC,OAAO,EAAE;IAAEC,IAAI,EAAE,OAAO;IAAED,OAAO,EAAEH,OAAO,EAAE;EAAC,CAAC,EAAE;AAAC,CAAC,GAAG,IAAI,EAAE;EAC9F,OAAOE,IAAI,EAAEC,OAAO,CAACE,GAAG,CAAEF,OAAO,IAAKA,OAAO,CAACA,OAAO,IAAI,CAACA,OAAO,CAAC,CAAC;AACvE",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/normalizeData.ts\"],\"sourcesContent\":[\"import type { Content } from '../types';\\n\\nexport function normalizeData(data?: { content: { type: 'block'; content: Content[] }[] } | null) {\\n    return data?.content.map((content) => content.content ?? [content]);\\n}\\n\"],\"names\":[\"normalizeData\",\"data\",\"content\",\"map\"],\"mappings\":\"AAEA,OAAO,SAASA,cAAcC,IAAkE;IAC5F,OAAOA,MAAMC,QAAQC,IAAI,CAACD,UAAYA,QAAQA,OAAO,IAAI;YAACA;SAAQ;AACtE\"}"
     },
     {
       "name": "vite:esbuild",
-      "result": "export function normalizeData(data) {\n  return data?.content.map((content) => content.content ?? [content]);\n}\n",
-      "start": 1750184199155,
-      "end": 1750184199394,
+      "result": "export function normalizeData(data) {\n  return data?.content.map((content) => content.content ?? [\n    content\n  ]);\n}\n",
+      "start": 1750239308408,
+      "end": 1750239308563,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Report/lib/normalizeData.ts"],
         "sourcesContent": [
-          "import type { Content } from '../types';\nexport function normalizeData(data?: {\n  content: {\n    type: 'block';\n    content: Content[];\n  }[];\n} | null) {\n  return data?.content.map(content => content.content ?? [content]);\n}"
+          "export function normalizeData(data) {\n    return data?.content.map((content)=>content.content ?? [\n            content\n        ]);\n}\n"
         ],
-        "mappings": "AACO,gBAAS,cAAc,MAKpB;AACR,SAAO,MAAM,QAAQ,IAAI,aAAW,QAAQ,WAAW,CAAC,OAAO,CAAC;AAClE;",
+        "mappings": "AAAO,gBAAS,cAAc,MAAM;AAChC,SAAO,MAAM,QAAQ,IAAI,CAAC,YAAU,QAAQ,WAAW;AAAA,IAC/C;AAAA,EACJ,CAAC;AACT;",
         "names": []
       }
     },
     {
       "name": "vite:worker",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308563,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "start": 1750239308563,
+      "end": 1750239308564,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
-      "result": "/*! src/entities/Report/lib/normalizeData.ts [vike:pluginModuleBanner] */\nexport function normalizeData(data) {\n  return data?.content.map((content) => content.content ?? [content]);\n}\n",
-      "start": 1750184199394,
-      "end": 1750184199394,
+      "result": "/*! src/entities/Report/lib/normalizeData.ts [vike:pluginModuleBanner] */\nexport function normalizeData(data) {\n  return data?.content.map((content) => content.content ?? [\n    content\n  ]);\n}\n",
+      "start": 1750239308564,
+      "end": 1750239308564,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
         "sources": ["src/entities/Report/lib/normalizeData.ts"],
         "names": [],
-        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE;"
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC;AACJ;"
       }
     }
   ]

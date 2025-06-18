@@ -4,38 +4,29 @@
     {
       "name": "vite:load-fallback",
       "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n",
-      "start": 1750184198860,
-      "end": 1750184198925,
+      "start": 1750239308298,
+      "end": 1750239308309,
       "sourcemaps": null
     },
     {
-      "name": "vite:react-babel",
-      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';",
-      "start": 1750184198925,
-      "end": 1750184198925,
+      "name": "vite:react-swc",
+      "result": "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n",
+      "start": 1750239308309,
+      "end": 1750239308312,
       "order": "pre",
-      "sourcemaps": {
-        "version": 3,
-        "names": [],
-        "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"],
-        "sourcesContent": [
-          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n"
-        ],
-        "mappings": "AAAA,cAAc,iBAAiB;AAC/B,cAAc,wBAAwB;AACtC,cAAc,gBAAgB;AAC9B,cAAc,qBAAqB;AACnC,cAAc,4BAA4B;AAC1C,cAAc,cAAc",
-        "ignoreList": []
-      }
+      "sourcemaps": "{\"version\":3,\"sources\":[\"/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts\"],\"sourcesContent\":[\"export * from './TestContainer';\\nexport * from './TestMultipleQuestion';\\nexport * from './TestProgress';\\nexport * from './TestScaleQuestion';\\nexport * from './TestSingleChoiceQuestion';\\nexport * from './EmailField';\\n\"],\"names\":[],\"mappings\":\"AAAA,cAAc,kBAAkB;AAChC,cAAc,yBAAyB;AACvC,cAAc,iBAAiB;AAC/B,cAAc,sBAAsB;AACpC,cAAc,6BAA6B;AAC3C,cAAc,eAAe\"}"
     },
     {
       "name": "vite:esbuild",
       "result": "export * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\nexport * from \"./EmailField\";\n",
-      "start": 1750184198925,
-      "end": 1750184198995,
+      "start": 1750239308312,
+      "end": 1750239308386,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
         "sources": ["/Users/ilaolovannikov/WebstormProjects/cognitive-lab/src/entities/Test/ui/index.ts"],
         "sourcesContent": [
-          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';"
+          "export * from './TestContainer';\nexport * from './TestMultipleQuestion';\nexport * from './TestProgress';\nexport * from './TestScaleQuestion';\nexport * from './TestSingleChoiceQuestion';\nexport * from './EmailField';\n"
         ],
         "mappings": "AAAA,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
         "names": []
@@ -43,75 +34,75 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:fileEnv",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:extractAssets:remove-javaScript",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:extractExportNames",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vike:envVars",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750184198995,
-      "end": 1750184198995,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750184198995,
-      "end": 1750184198996,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginModuleBanner",
       "result": "/*! src/entities/Test/ui/index.ts [vike:pluginModuleBanner] */\nexport * from \"./TestContainer\";\nexport * from \"./TestMultipleQuestion\";\nexport * from \"./TestProgress\";\nexport * from \"./TestScaleQuestion\";\nexport * from \"./TestSingleChoiceQuestion\";\nexport * from \"./EmailField\";\n",
-      "start": 1750184198996,
-      "end": 1750184198996,
+      "start": 1750239308386,
+      "end": 1750239308386,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
