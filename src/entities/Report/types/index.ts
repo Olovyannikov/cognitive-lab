@@ -88,11 +88,11 @@ export interface Order {
 export interface Mark {
     value: number;
     label: string;
-    data: {
+    mbti_type: string[];
+    data?: {
         text: string;
         type: 'paragraph' | 'header';
     }[];
-    mbti_type: string[];
 }
 
 export interface FullContentResult {
