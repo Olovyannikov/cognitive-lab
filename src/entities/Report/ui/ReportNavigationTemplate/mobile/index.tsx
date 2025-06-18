@@ -4,7 +4,7 @@ import { X } from '@phosphor-icons/react/dist/ssr';
 
 import { useIsLarge } from '@/shared/lib';
 
-import { extractNavigationRules } from '@/entities/Report';
+import { convertToUrlId } from '@/entities/Report';
 
 import { getIconsMap } from '../../../const';
 
@@ -84,7 +84,7 @@ export const Mobile = ({ opened, close, content, color, onPageChange, activeMenu
                         >
                             <Link
                                 spy
-                                to={extractNavigationRules(title)}
+                                to={convertToUrlId(title)}
                                 offset={-100}
                                 onClick={() => {
                                     onPageChange({ idx, title });

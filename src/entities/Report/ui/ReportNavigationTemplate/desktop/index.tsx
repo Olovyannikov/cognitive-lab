@@ -4,7 +4,7 @@ import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 
 import { useIsLarge } from '@/shared/lib';
 
-import { extractNavigationRules } from '@/entities/Report';
+import { convertToUrlId } from '@/entities/Report';
 
 import { getIconsMap } from '../../../const';
 
@@ -93,12 +93,7 @@ export const Desktop = ({ content, activeMenu, toggle, color, title, onPageChang
                         }
                         onClick={() => onPageChange({ idx, title })}
                     >
-                        <Link
-                            spy
-                            offset={-100}
-                            to={extractNavigationRules(title)}
-                            onClick={() => onPageChange({ idx, title })}
-                        >
+                        <Link spy offset={-100} to={convertToUrlId(title)} onClick={() => onPageChange({ idx, title })}>
                             <Text style={{ pointerEvents: 'none' }} span inline fz={14} fw='bold'>
                                 {title}
                             </Text>

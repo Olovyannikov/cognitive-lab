@@ -6,7 +6,7 @@ import { InnerContainer, PageLoader } from '@/shared/ui';
 
 import {
     contentResolver,
-    extractNavigationRules,
+    convertToUrlId,
     getFreeResultQuery,
     ReportHeader,
     ReportModel,
@@ -38,7 +38,7 @@ export const FreeReportPage = () => {
                 <FreeReportNavigation />
                 <InnerContainer>
                     {data.content?.map((el, index) => (
-                        <Stack key={el.title + index} id={extractNavigationRules(el.title)} data-block mb={100}>
+                        <Stack key={el.title + index} id={convertToUrlId(el.title)} data-block mb={100}>
                             <Box key={data?.title + el.title + index}>
                                 <Title mb='md'>{el.title}</Title>
                                 {el.content.map((currentEl, idx) => (

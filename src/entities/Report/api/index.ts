@@ -55,7 +55,7 @@ export const getSurveysInfoQuery = createQuery({
     effect: createInternalRequestFx<{ id?: string } | void, SurveysInfoResponse | null>(() => ({
         url: API.surveys.info,
     })),
-    initialData: null,
+    initialData: {} as SurveysInfoResponse,
 });
 
 export const getFreeResultQuery = createQuery({

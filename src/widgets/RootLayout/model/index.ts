@@ -24,6 +24,8 @@ export const RootLayoutModel = atom(() => {
 
     sample({
         clock: delay(getPersonalityTypesWithCategoriesQuery.finished.success, 600),
+        source: getSurveysInfoQuery.$data,
+        filter: (data) => data === null,
         fn: noop,
         target: getSurveysInfoQuery.start,
     });

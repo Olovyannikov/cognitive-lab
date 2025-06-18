@@ -2,9 +2,9 @@ import { useScrollSpy } from '@mantine/hooks';
 import { useStoreMap, useUnit } from 'effector-react';
 
 import {
-    extractNavigationRules,
+    convertFromUrlId,
+    convertToUrlId,
     getFreeResultQuery,
-    injectNavigationRules,
     ReportModel,
     ReportNavigationTemplate,
     TYPE_TO_COLOR_MAP,
@@ -19,10 +19,10 @@ export const FreeReportNavigation = () => {
     });
 
     const spy = useScrollSpy({
-        selector: `:is(${content?.map((title) => `#${extractNavigationRules(title)}`).join(', ')})`,
+        selector: `:is(${content?.map((title) => `#${convertToUrlId(title)}`).join(', ')})`,
     });
 
-    const activeMenu = injectNavigationRules(spy.data?.[spy.active]?.id) ?? content?.[page];
+    const activeMenu = convertFromUrlId(spy.data?.[spy.active]?.id) ?? content?.[page];
 
     const mbti = useUnit(getFreeResultQuery.$data.map((el) => el?.mbti_type));
     const color = TYPE_TO_COLOR_MAP[mbti ?? ''];

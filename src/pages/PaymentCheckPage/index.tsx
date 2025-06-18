@@ -1,6 +1,8 @@
 import { Button } from '@mantine/core';
 import { useUnit } from 'effector-react';
 
+import { ErrorPage } from '@/pages/ErrorPage';
+
 import { PageLoader } from '@/shared/ui';
 
 import { getStatusInfo, getSurveysInfoQuery, ReportModel } from '@/entities/Report';
@@ -12,7 +14,7 @@ import { InnerLayout } from '@/widgets/InnerLayout';
 import s from './PaymentCheckPage.module.css';
 
 export const PaymentCheckPage = () => {
-    const { pending, stale, data } = useUnit(getSurveysInfoQuery);
+    const { pending, data, stale, error } = useUnit(getSurveysInfoQuery);
     const { status, order } = useUnit({
         order: ReportModel.$userOrder,
         status: ReportModel.$userOrderStatus,
@@ -21,6 +23,7 @@ export const PaymentCheckPage = () => {
     const { title, buttonText, text, infoStatus } = getStatusInfo(status);
 
     if (pending || stale) return <PageLoader />;
+    if (error?.name) return <ErrorPage image='/errors/500' title='Произошла ошибка' />;
 
     const href =
         status === 'paid'
@@ -33,8 +36,8 @@ export const PaymentCheckPage = () => {
             className={s.root}
             title={title}
             text={text}
-            image={`/payment/${infoStatus}`}
             navigateTo='/'
+            image={`/payment/${infoStatus}`}
         >
             <Button size='md' component='a' href={href}>
                 {buttonText}
