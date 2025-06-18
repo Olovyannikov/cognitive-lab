@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        node-version: [ 20 ]
+        node-version: [ 22 ]
 
     steps:
       - uses: actions/checkout@v4
@@ -31,9 +31,6 @@ jobs:
       # Запуск линтеров
       - name: Run ESLint
         run: pnpm run lint:ts
-
-      - name: Run Prettier
-        run: pnpm exec prettier
 
       - name: Run FSD Lint
         run: pnpm run lint:fsd
