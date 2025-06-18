@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export const navigate = {\n    back: () => window.history.back(),\n};\n",
-      "start": 1750275033638,
-      "end": 1750275033667,
+      "start": 1750278467047,
+      "end": 1750278467088,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const navigate = {\n  back: () => window.history.back()\n};",
-      "start": 1750275033667,
-      "end": 1750275033668,
+      "start": 1750278467088,
+      "end": 1750278467089,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -26,8 +26,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1750275033668,
-      "end": 1750275033887,
+      "start": 1750278467089,
+      "end": 1750278467298,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -39,81 +39,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033887,
-      "end": 1750275033887,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/utils/navigate/index.ts [vike:pluginModuleBanner] */\nexport const navigate = {\n  back: () => window.history.back()\n};\n",
-      "start": 1750275033888,
-      "end": 1750275033888,
+      "start": 1750278467298,
+      "end": 1750278467298,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

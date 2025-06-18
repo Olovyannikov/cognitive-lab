@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useEffect, useState } from 'react';\nimport { Box, Button, Container, Flex, Stack, Title } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { PageLoader } from '@/shared/ui';\n\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { TestModel } from '@/entities/Test';\n\nimport { TakeTestAgainModel } from '@/features/TakeTestAgain';\n\nimport { CARDS } from './const';\nimport { Card } from './ui';\n\nimport s from './SplashScreen.module.css';\n\nexport const TestSplashScreen = () => {\n    const { isMobile } = usePageContext();\n    const isLarge = useIsLarge();\n    const [isStarted, setSplashScreen, testAgain] = useUnit([\n        TestModel.$currentProgress.map((progress) => progress > 0),\n        TestModel.setSplashScreenVisibility,\n        TakeTestAgainModel.takeTestAgainClicked,\n    ]);\n    const [reportsLen, isLoading, isStale] = useUnit([\n        ReportModel.$allUserReports.map((reports) => reports?.length),\n        getSurveysInfoQuery.$pending,\n        getSurveysInfoQuery.$stale,\n    ]);\n\n    const [mounted, setMounted] = useState(false);\n\n    const onStartClickHandler = () => {\n        testAgain();\n        setSplashScreen(false);\n    };\n\n    useEffect(() => setMounted(true), []);\n    if (isStale || isLoading || !mounted) return <PageLoader />;\n\n    return (\n        <Box py={!isLarge || isMobile ? 0 : 120}>\n            <Container mb='5xl'>\n                <Stack gap={0}>\n                    <Title className={s.title} order={2}>\n                        Тест на определение типа личности\n                    </Title>\n                    <Flex className={s.cards}>\n                        {CARDS.map((card) => (\n                            <Card {...card} key={card.id} />\n                        ))}\n                    </Flex>\n                    <Stack justify='center' align='center'>\n                        {(reportsLen < 1 || isStarted) && (\n                            <Button\n                                fullWidth\n                                maw={isLarge ? 350 : '100%'}\n                                size={isLarge ? 'xl' : 'lg'}\n                                className='mantine-button-rainbow'\n                                onClick={() => setSplashScreen(false)}\n                            >\n                                {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}\n                            </Button>\n                        )}\n                        {reportsLen > 0 && (\n                            <Button\n                                fullWidth\n                                variant='default'\n                                maw={isLarge ? 350 : '100%'}\n                                size={isLarge ? 'xl' : 'lg'}\n                                onClick={onStartClickHandler}\n                            >\n                                Начать заново\n                            </Button>\n                        )}\n                    </Stack>\n                </Stack>\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1750275033850,
-      "end": 1750275033895,
+      "start": 1750278467058,
+      "end": 1750278467105,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { useEffect, useState } from 'react';\nimport { Box, Button, Container, Flex, Stack, Title } from '@mantine/core';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLarge } from '@/shared/lib';\nimport { PageLoader } from '@/shared/ui';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { TestModel } from '@/entities/Test';\nimport { TakeTestAgainModel } from '@/features/TakeTestAgain';\nimport { CARDS } from './const';\nimport { Card } from './ui';\nimport s from './SplashScreen.module.css';\nexport const TestSplashScreen = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  const [isStarted, setSplashScreen, testAgain] = useUnit([TestModel.$currentProgress.map(progress => progress > 0), TestModel.setSplashScreenVisibility, TakeTestAgainModel.takeTestAgainClicked]);\n  const [reportsLen, isLoading, isStale] = useUnit([ReportModel.$allUserReports.map(reports => reports?.length), getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [mounted, setMounted] = useState(false);\n  const onStartClickHandler = () => {\n    testAgain();\n    setSplashScreen(false);\n  };\n  useEffect(() => setMounted(true), []);\n  if (isStale || isLoading || !mounted) return <PageLoader />;\n  return <Box py={!isLarge || isMobile ? 0 : 120}>\n            <Container mb='5xl'>\n                <Stack gap={0}>\n                    <Title className={s.title} order={2}>\n                        Тест на определение типа личности\n                    </Title>\n                    <Flex className={s.cards}>\n                        {CARDS.map(card => <Card {...card} key={card.id} />)}\n                    </Flex>\n                    <Stack justify='center' align='center'>\n                        {(reportsLen < 1 || isStarted) && <Button fullWidth maw={isLarge ? 350 : '100%'} size={isLarge ? 'xl' : 'lg'} className='mantine-button-rainbow' onClick={() => setSplashScreen(false)}>\n                                {isStarted ? 'Продолжить тестирование' : 'Пройти тестирование'}\n                            </Button>}\n                        {reportsLen > 0 && <Button fullWidth variant='default' maw={isLarge ? 350 : '100%'} size={isLarge ? 'xl' : 'lg'} onClick={onStartClickHandler}>\n                                Начать заново\n                            </Button>}\n                    </Stack>\n                </Stack>\n            </Container>\n        </Box>;\n};",
-      "start": 1750275033895,
-      "end": 1750275033897,
+      "start": 1750278467105,
+      "end": 1750278467107,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -74,8 +74,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useEffect, useState } from \"react\";\nimport { Box, Button, Container, Flex, Stack, Title } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { TestModel } from \"@/entities/Test\";\nimport { TakeTestAgainModel } from \"@/features/TakeTestAgain\";\nimport { CARDS } from \"./const\";\nimport { Card } from \"./ui\";\nimport s from \"./SplashScreen.module.css\";\nexport const TestSplashScreen = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  const [isStarted, setSplashScreen, testAgain] = useUnit([TestModel.$currentProgress.map((progress) => progress > 0), TestModel.setSplashScreenVisibility, TakeTestAgainModel.takeTestAgainClicked]);\n  const [reportsLen, isLoading, isStale] = useUnit([ReportModel.$allUserReports.map((reports) => reports?.length), getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [mounted, setMounted] = useState(false);\n  const onStartClickHandler = () => {\n    testAgain();\n    setSplashScreen(false);\n  };\n  useEffect(() => setMounted(true), []);\n  if (isStale || isLoading || !mounted) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsx(Box, { py: !isLarge || isMobile ? 0 : 120, children: /* @__PURE__ */ jsx(Container, { mb: \"5xl\", children: /* @__PURE__ */ jsxs(Stack, { gap: 0, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: \"Тест на определение типа личности\" }),\n    /* @__PURE__ */ jsx(Flex, { className: s.cards, children: CARDS.map((card) => /* @__PURE__ */ createElement(Card, { ...card, key: card.id })) }),\n    /* @__PURE__ */ jsxs(Stack, { justify: \"center\", align: \"center\", children: [\n      (reportsLen < 1 || isStarted) && /* @__PURE__ */ jsx(Button, { fullWidth: true, maw: isLarge ? 350 : \"100%\", size: isLarge ? \"xl\" : \"lg\", className: \"mantine-button-rainbow\", onClick: () => setSplashScreen(false), children: isStarted ? \"Продолжить тестирование\" : \"Пройти тестирование\" }),\n      reportsLen > 0 && /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"default\", maw: isLarge ? 350 : \"100%\", size: isLarge ? \"xl\" : \"lg\", onClick: onStartClickHandler, children: \"Начать заново\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750275033897,
-      "end": 1750275034184,
+      "start": 1750278467107,
+      "end": 1750278467350,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -89,81 +89,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467350,
+      "end": 1750278467350,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467350,
+      "end": 1750278467351,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467351,
+      "end": 1750278467352,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/Test/SplashScreen/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { createElement } from \"react\";\nimport { useEffect, useState } from \"react\";\nimport { Box, Button, Container, Flex, Stack, Title } from \"@mantine/core\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { PageLoader } from \"@/shared/ui\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { TestModel } from \"@/entities/Test\";\nimport { TakeTestAgainModel } from \"@/features/TakeTestAgain\";\nimport { CARDS } from \"./const\";\nimport { Card } from \"./ui\";\nimport s from \"./SplashScreen.module.css\";\nexport const TestSplashScreen = () => {\n  const {\n    isMobile\n  } = usePageContext();\n  const isLarge = useIsLarge();\n  const [isStarted, setSplashScreen, testAgain] = useUnit([TestModel.$currentProgress.map((progress) => progress > 0), TestModel.setSplashScreenVisibility, TakeTestAgainModel.takeTestAgainClicked]);\n  const [reportsLen, isLoading, isStale] = useUnit([ReportModel.$allUserReports.map((reports) => reports?.length), getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [mounted, setMounted] = useState(false);\n  const onStartClickHandler = () => {\n    testAgain();\n    setSplashScreen(false);\n  };\n  useEffect(() => setMounted(true), []);\n  if (isStale || isLoading || !mounted) return /* @__PURE__ */ jsx(PageLoader, {});\n  return /* @__PURE__ */ jsx(Box, { py: !isLarge || isMobile ? 0 : 120, children: /* @__PURE__ */ jsx(Container, { mb: \"5xl\", children: /* @__PURE__ */ jsxs(Stack, { gap: 0, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: \"Тест на определение типа личности\" }),\n    /* @__PURE__ */ jsx(Flex, { className: s.cards, children: CARDS.map((card) => /* @__PURE__ */ createElement(Card, { ...card, key: card.id })) }),\n    /* @__PURE__ */ jsxs(Stack, { justify: \"center\", align: \"center\", children: [\n      (reportsLen < 1 || isStarted) && /* @__PURE__ */ jsx(Button, { fullWidth: true, maw: isLarge ? 350 : \"100%\", size: isLarge ? \"xl\" : \"lg\", className: \"mantine-button-rainbow\", onClick: () => setSplashScreen(false), children: isStarted ? \"Продолжить тестирование\" : \"Пройти тестирование\" }),\n      reportsLen > 0 && /* @__PURE__ */ jsx(Button, { fullWidth: true, variant: \"default\", maw: isLarge ? 350 : \"100%\", size: isLarge ? \"xl\" : \"lg\", onClick: onStartClickHandler, children: \"Начать заново\" })\n    ] })\n  ] }) }) });\n};\n",
-      "start": 1750275034184,
-      "end": 1750275034184,
+      "start": 1750278467352,
+      "end": 1750278467352,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

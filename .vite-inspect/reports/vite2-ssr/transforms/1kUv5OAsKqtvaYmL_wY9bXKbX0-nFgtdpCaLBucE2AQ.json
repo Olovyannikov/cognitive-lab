@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "// to support proper scope updates and after transition effects\n\nimport { createStore, fork, type Json, launch, type Node, type Scope, type StateRef } from 'effector';\n\n// types for convenience\ntype StoreSerializationConfig = Exclude<Parameters<typeof createStore>[1], undefined>['serialize'];\n\ntype ScopeInternal = Scope & {\n    reg: Record<string, StateRef & { meta?: Record<string, string> }>;\n    additionalLinks: Record<string, Node[]>;\n};\ntype Values = Record<string, unknown>;\n\nconst isClient = typeof document !== 'undefined';\n\nfunction getServerScope(values?: Values) {\n    return fork({ values });\n}\n\n/**\n * The following code is some VERY VERY VERY BAD HACKS.\n *\n * This only work for a compatibility layer with Next.js and only because of the peculiarities of Next.js behavior.\n *\n * This temporary solution on hacks allows us to solve the pain of library users when working with Next.js, as well as gather much more information to develop a better API.\n */\nconst currentScope: Scope = fork();\n\nlet prevValues: Values;\n/**\n * @private\n *\n * Should not be exported to the public API\n */\n\nfunction HACK_injectValues(scope: Scope, values: Values) {\n    // @ts-expect-error this is a really hacky way to \"hydrate\" scope\n    Object.assign(scope.values.sidMap, values);\n}\n\nfunction HACK_runScopeWatchers(scope: ScopeInternal, linksToRun: string[]) {\n    if (linksToRun.length) {\n        linksToRun.forEach((nodeId) => {\n            const links = scope.additionalLinks[nodeId];\n\n            if (links) {\n                links.forEach((link) => {\n                    if (link.meta.watchOp === 'store') {\n                        launch({\n                            target: link,\n                            params: null,\n                            scope,\n                        });\n                    }\n                });\n            }\n        });\n    }\n}\n\nfunction HACK_updateScopeRefs(tscope: Scope, values: Values) {\n    const scope = tscope as ScopeInternal;\n\n    const linksToRun: string[] = [];\n\n    for (const id in scope.reg) {\n        if (Object.hasOwnProperty.call(scope.reg, id)) {\n            const ref = scope.reg[id];\n\n            /**\n             * Schedule external watchers (useUnit, etc.) re-run\n             */\n            const nodeId = ref?.meta?.id;\n\n            if (nodeId && scope.additionalLinks[nodeId]) {\n                linksToRun.push(nodeId);\n            }\n\n            if (!ref.meta || (!ref.meta?.named && ref.meta?.derived)) {\n                delete scope.reg[id];\n            } else {\n                const sid = ref?.meta?.sid;\n                if (sid && sid in values) {\n                    const serialize = ref?.meta?.serialize as StoreSerializationConfig;\n                    const read = serialize && serialize !== 'ignore' ? serialize?.read : null;\n                    ref.current = read ? read(values[sid] as Json) : values[sid];\n                }\n            }\n        }\n    }\n    queueMicrotask(() => {\n        HACK_runScopeWatchers(scope, linksToRun);\n    });\n}\n\nfunction INTERNAL_getClientScope(values?: Values) {\n    if (!values || values === prevValues) return currentScope;\n    prevValues = values;\n\n    HACK_injectValues(currentScope, values);\n    HACK_updateScopeRefs(currentScope, values);\n\n    return currentScope;\n}\n\nexport const getScope = isClient ? INTERNAL_getClientScope : getServerScope;\n",
-      "start": 1750275033476,
-      "end": 1750275033496,
+      "start": 1750278466855,
+      "end": 1750278466879,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "// to support proper scope updates and after transition effects\n\nimport { createStore, fork, type Json, launch, type Node, type Scope, type StateRef } from 'effector';\n\n// types for convenience\ntype StoreSerializationConfig = Exclude<Parameters<typeof createStore>[1], undefined>['serialize'];\ntype ScopeInternal = Scope & {\n  reg: Record<string, StateRef & {\n    meta?: Record<string, string>;\n  }>;\n  additionalLinks: Record<string, Node[]>;\n};\ntype Values = Record<string, unknown>;\nconst isClient = typeof document !== 'undefined';\nfunction getServerScope(values?: Values) {\n  return fork({\n    values\n  });\n}\n\n/**\n * The following code is some VERY VERY VERY BAD HACKS.\n *\n * This only work for a compatibility layer with Next.js and only because of the peculiarities of Next.js behavior.\n *\n * This temporary solution on hacks allows us to solve the pain of library users when working with Next.js, as well as gather much more information to develop a better API.\n */\nconst currentScope: Scope = fork();\nlet prevValues: Values;\n/**\n * @private\n *\n * Should not be exported to the public API\n */\n\nfunction HACK_injectValues(scope: Scope, values: Values) {\n  // @ts-expect-error this is a really hacky way to \"hydrate\" scope\n  Object.assign(scope.values.sidMap, values);\n}\nfunction HACK_runScopeWatchers(scope: ScopeInternal, linksToRun: string[]) {\n  if (linksToRun.length) {\n    linksToRun.forEach(nodeId => {\n      const links = scope.additionalLinks[nodeId];\n      if (links) {\n        links.forEach(link => {\n          if (link.meta.watchOp === 'store') {\n            launch({\n              target: link,\n              params: null,\n              scope\n            });\n          }\n        });\n      }\n    });\n  }\n}\nfunction HACK_updateScopeRefs(tscope: Scope, values: Values) {\n  const scope = tscope as ScopeInternal;\n  const linksToRun: string[] = [];\n  for (const id in scope.reg) {\n    if (Object.hasOwnProperty.call(scope.reg, id)) {\n      const ref = scope.reg[id];\n\n      /**\n       * Schedule external watchers (useUnit, etc.) re-run\n       */\n      const nodeId = ref?.meta?.id;\n      if (nodeId && scope.additionalLinks[nodeId]) {\n        linksToRun.push(nodeId);\n      }\n      if (!ref.meta || !ref.meta?.named && ref.meta?.derived) {\n        delete scope.reg[id];\n      } else {\n        const sid = ref?.meta?.sid;\n        if (sid && sid in values) {\n          const serialize = ref?.meta?.serialize as StoreSerializationConfig;\n          const read = serialize && serialize !== 'ignore' ? serialize?.read : null;\n          ref.current = read ? read(values[sid] as Json) : values[sid];\n        }\n      }\n    }\n  }\n  queueMicrotask(() => {\n    HACK_runScopeWatchers(scope, linksToRun);\n  });\n}\nfunction INTERNAL_getClientScope(values?: Values) {\n  if (!values || values === prevValues) return currentScope;\n  prevValues = values;\n  HACK_injectValues(currentScope, values);\n  HACK_updateScopeRefs(currentScope, values);\n  return currentScope;\n}\nexport const getScope = isClient ? INTERNAL_getClientScope : getServerScope;",
-      "start": 1750275033496,
-      "end": 1750275033499,
+      "start": 1750278466879,
+      "end": 1750278466883,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -82,8 +82,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { fork, launch } from \"effector\";\nconst isClient = typeof document !== \"undefined\";\nfunction getServerScope(values) {\n  return fork({\n    values\n  });\n}\nconst currentScope = fork();\nlet prevValues;\nfunction HACK_injectValues(scope, values) {\n  Object.assign(scope.values.sidMap, values);\n}\nfunction HACK_runScopeWatchers(scope, linksToRun) {\n  if (linksToRun.length) {\n    linksToRun.forEach((nodeId) => {\n      const links = scope.additionalLinks[nodeId];\n      if (links) {\n        links.forEach((link) => {\n          if (link.meta.watchOp === \"store\") {\n            launch({\n              target: link,\n              params: null,\n              scope\n            });\n          }\n        });\n      }\n    });\n  }\n}\nfunction HACK_updateScopeRefs(tscope, values) {\n  const scope = tscope;\n  const linksToRun = [];\n  for (const id in scope.reg) {\n    if (Object.hasOwnProperty.call(scope.reg, id)) {\n      const ref = scope.reg[id];\n      const nodeId = ref?.meta?.id;\n      if (nodeId && scope.additionalLinks[nodeId]) {\n        linksToRun.push(nodeId);\n      }\n      if (!ref.meta || !ref.meta?.named && ref.meta?.derived) {\n        delete scope.reg[id];\n      } else {\n        const sid = ref?.meta?.sid;\n        if (sid && sid in values) {\n          const serialize = ref?.meta?.serialize;\n          const read = serialize && serialize !== \"ignore\" ? serialize?.read : null;\n          ref.current = read ? read(values[sid]) : values[sid];\n        }\n      }\n    }\n  }\n  queueMicrotask(() => {\n    HACK_runScopeWatchers(scope, linksToRun);\n  });\n}\nfunction INTERNAL_getClientScope(values) {\n  if (!values || values === prevValues) return currentScope;\n  prevValues = values;\n  HACK_injectValues(currentScope, values);\n  HACK_updateScopeRefs(currentScope, values);\n  return currentScope;\n}\nexport const getScope = isClient ? INTERNAL_getClientScope : getServerScope;\n",
-      "start": 1750275033499,
-      "end": 1750275033591,
+      "start": 1750278466883,
+      "end": 1750278466943,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -97,81 +97,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033591,
-      "end": 1750275033591,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033591,
-      "end": 1750275033592,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033592,
-      "end": 1750275033592,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/getScope.ts [vike:pluginModuleBanner] */\nimport { fork, launch } from \"effector\";\nconst isClient = typeof document !== \"undefined\";\nfunction getServerScope(values) {\n  return fork({\n    values\n  });\n}\nconst currentScope = fork();\nlet prevValues;\nfunction HACK_injectValues(scope, values) {\n  Object.assign(scope.values.sidMap, values);\n}\nfunction HACK_runScopeWatchers(scope, linksToRun) {\n  if (linksToRun.length) {\n    linksToRun.forEach((nodeId) => {\n      const links = scope.additionalLinks[nodeId];\n      if (links) {\n        links.forEach((link) => {\n          if (link.meta.watchOp === \"store\") {\n            launch({\n              target: link,\n              params: null,\n              scope\n            });\n          }\n        });\n      }\n    });\n  }\n}\nfunction HACK_updateScopeRefs(tscope, values) {\n  const scope = tscope;\n  const linksToRun = [];\n  for (const id in scope.reg) {\n    if (Object.hasOwnProperty.call(scope.reg, id)) {\n      const ref = scope.reg[id];\n      const nodeId = ref?.meta?.id;\n      if (nodeId && scope.additionalLinks[nodeId]) {\n        linksToRun.push(nodeId);\n      }\n      if (!ref.meta || !ref.meta?.named && ref.meta?.derived) {\n        delete scope.reg[id];\n      } else {\n        const sid = ref?.meta?.sid;\n        if (sid && sid in values) {\n          const serialize = ref?.meta?.serialize;\n          const read = serialize && serialize !== \"ignore\" ? serialize?.read : null;\n          ref.current = read ? read(values[sid]) : values[sid];\n        }\n      }\n    }\n  }\n  queueMicrotask(() => {\n    HACK_runScopeWatchers(scope, linksToRun);\n  });\n}\nfunction INTERNAL_getClientScope(values) {\n  if (!values || values === prevValues) return currentScope;\n  prevValues = values;\n  HACK_injectValues(currentScope, values);\n  HACK_updateScopeRefs(currentScope, values);\n  return currentScope;\n}\nexport const getScope = isClient ? INTERNAL_getClientScope : getServerScope;\n",
-      "start": 1750275033592,
-      "end": 1750275033592,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

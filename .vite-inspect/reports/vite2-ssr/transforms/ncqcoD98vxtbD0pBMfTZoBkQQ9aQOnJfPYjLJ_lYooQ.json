@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { ReportModel } from '@/entities/Report';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    fn: (ctx) => ctx.routeParams.reportId,\n    target: ReportModel.$currentFullReportId,\n});\n",
-      "start": 1750275033356,
-      "end": 1750275033387,
+      "start": 1750278466713,
+      "end": 1750278466736,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { ReportModel } from '@/entities/Report';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: ctx => ctx.routeParams.reportId,\n    target: ReportModel.$currentFullReportId\n  }],\n  or: {\n    sid: \"-g2kckc\"\n  }\n});",
-      "start": 1750275033387,
-      "end": 1750275033388,
+      "start": 1750278466736,
+      "end": 1750278466737,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -43,8 +43,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { ReportModel } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: (ctx) => ctx.routeParams.reportId,\n    target: ReportModel.$currentFullReportId\n  }],\n  or: {\n    sid: \"-g2kckc\"\n  }\n});\n",
-      "start": 1750275033388,
-      "end": 1750275033435,
+      "start": 1750278466737,
+      "end": 1750278466775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -58,81 +58,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466775,
+      "end": 1750278466775,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466775,
+      "end": 1750278466775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/report/@reportId/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { ReportModel } from \"@/entities/Report\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    fn: (ctx) => ctx.routeParams.reportId,\n    target: ReportModel.$currentFullReportId\n  }],\n  or: {\n    sid: \"-g2kckc\"\n  }\n});\n",
-      "start": 1750275033436,
-      "end": 1750275033436,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

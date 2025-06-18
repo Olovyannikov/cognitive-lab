@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport s from './PriceInfo.module.css';\n\ninterface PriceInfoProps {\n    regularPrice: number;\n    promocodePrice?: number;\n}\n\nexport const PriceInfo = ({ regularPrice, promocodePrice }: PriceInfoProps) => {\n    const {\n        urlParsed: {\n            search: { type },\n        },\n    } = usePageContext();\n    return (\n        <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text\n                    hidden={!regularPrice}\n                    className={s.price}\n                    td={promocodePrice ? 'line-through' : ''}\n                    c={promocodePrice ? 'dark.0' : 'dark.7'}\n                >\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>\n    );\n};\n",
-      "start": 1750275033792,
-      "end": 1750275033849,
+      "start": 1750278467154,
+      "end": 1750278467188,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Group, Skeleton, Stack, Text, Title } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport s from './PriceInfo.module.css';\ninterface PriceInfoProps {\n  regularPrice: number;\n  promocodePrice?: number;\n}\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}: PriceInfoProps) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return <Stack className={s.wrapper}>\n            <Title className={s.title} order={2}>\n                {type ? 'Экспресс-отчёт по вашему типу личности' : 'Полный отчет по вашему типу личности'}\n            </Title>\n\n            <Skeleton className={s.skeleton} hidden={Boolean(regularPrice)} radius='sm' />\n\n            <Group gap='lg'>\n                <Text hidden={!regularPrice} className={s.price} td={promocodePrice ? 'line-through' : ''} c={promocodePrice ? 'dark.0' : 'dark.7'}>\n                    {regularPrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n\n                <Text hidden={!promocodePrice} className={s.price} c='violet.8'>\n                    {promocodePrice}{' '}\n                    <Text className={s.price} span ff='system-ui'>\n                        ₽\n                    </Text>\n                </Text>\n            </Group>\n        </Stack>;\n};",
-      "start": 1750275033849,
-      "end": 1750275033850,
+      "start": 1750278467188,
+      "end": 1750278467190,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -48,8 +48,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Skeleton, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport s from \"./PriceInfo.module.css\";\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Stack, { className: s.wrapper, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: type ? \"Экспресс-отчёт по вашему типу личности\" : \"Полный отчет по вашему типу личности\" }),\n    /* @__PURE__ */ jsx(Skeleton, { className: s.skeleton, hidden: Boolean(regularPrice), radius: \"sm\" }),\n    /* @__PURE__ */ jsxs(Group, { gap: \"lg\", children: [\n      /* @__PURE__ */ jsxs(Text, { hidden: !regularPrice, className: s.price, td: promocodePrice ? \"line-through\" : \"\", c: promocodePrice ? \"dark.0\" : \"dark.7\", children: [\n        regularPrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] }),\n      /* @__PURE__ */ jsxs(Text, { hidden: !promocodePrice, className: s.price, c: \"violet.8\", children: [\n        promocodePrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1750275033850,
-      "end": 1750275034128,
+      "start": 1750278467190,
+      "end": 1750278467408,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -63,81 +63,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/PriceInfo/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Group, Skeleton, Stack, Text, Title } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport s from \"./PriceInfo.module.css\";\nexport const PriceInfo = ({\n  regularPrice,\n  promocodePrice\n}) => {\n  const {\n    urlParsed: {\n      search: {\n        type\n      }\n    }\n  } = usePageContext();\n  return /* @__PURE__ */ jsxs(Stack, { className: s.wrapper, children: [\n    /* @__PURE__ */ jsx(Title, { className: s.title, order: 2, children: type ? \"Экспресс-отчёт по вашему типу личности\" : \"Полный отчет по вашему типу личности\" }),\n    /* @__PURE__ */ jsx(Skeleton, { className: s.skeleton, hidden: Boolean(regularPrice), radius: \"sm\" }),\n    /* @__PURE__ */ jsxs(Group, { gap: \"lg\", children: [\n      /* @__PURE__ */ jsxs(Text, { hidden: !regularPrice, className: s.price, td: promocodePrice ? \"line-through\" : \"\", c: promocodePrice ? \"dark.0\" : \"dark.7\", children: [\n        regularPrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] }),\n      /* @__PURE__ */ jsxs(Text, { hidden: !promocodePrice, className: s.price, c: \"violet.8\", children: [\n        promocodePrice,\n        \" \",\n        /* @__PURE__ */ jsx(Text, { className: s.price, span: true, ff: \"system-ui\", children: \"₽\" })\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1750275034128,
-      "end": 1750275034128,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

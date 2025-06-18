@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\n\ntype CreateRequestParams = FetchOptions & {\n    url: string;\n};\n\ntype Fn<P> = (params: P) => CreateRequestParams;\n\ntype Payload<P> = CreateRequestParams | Fn<P>;\n\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n    payload: Payload<P>;\n    withTokenInHeaders?: boolean;\n};\n\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\n\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n    return typeof payload === 'function' ? payload(params) : payload;\n}\n\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n    baseURL,\n    headers,\n    payload,\n    withTokenInHeaders,\n}: CreateRequestInstanceParams<P>) =>\n    createEffect<P, R>((params): Promise<R> => {\n        const { url, ...fetchOptions } = getConfig(payload, params);\n\n        const newHeaders = new Headers(headers);\n\n        if (withTokenInHeaders) {\n            newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n        }\n\n        return ofetch(url, {\n            ...fetchOptions,\n            headers: newHeaders,\n            baseURL,\n        }) as Promise<R>;\n    });\nexport const createRequestFx =\n    (params: CreateRequestFxParams) =>\n    <P = CreateRequestParams, R = void>(payload: Payload<P>) =>\n        createRequestInstance<P, R>({\n            ...(params as CreateRequestParams),\n            payload,\n        });\n",
-      "start": 1750275034239,
-      "end": 1750275034259,
+      "start": 1750278467589,
+      "end": 1750278467611,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEffect } from 'effector';\nimport { type FetchOptions, ofetch } from 'ofetch';\ntype CreateRequestParams = FetchOptions & {\n  url: string;\n};\ntype Fn<P> = (params: P) => CreateRequestParams;\ntype Payload<P> = CreateRequestParams | Fn<P>;\ntype CreateRequestInstanceParams<P> = CreateRequestParams & {\n  payload: Payload<P>;\n  withTokenInHeaders?: boolean;\n};\ntype CreateRequestFxParams = Omit<CreateRequestInstanceParams<CreateRequestParams>, 'payload' | 'url'>;\nfunction getConfig<P>(payload: Payload<P>, params: P): CreateRequestParams {\n  return typeof payload === 'function' ? payload(params) : payload;\n}\nconst createRequestInstance = <P = CreateRequestParams, R = void>({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}: CreateRequestInstanceParams<P>) => createEffect<P, R>((params): Promise<R> => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append('Authorization', `Token ${JSON.parse(localStorage.getItem('$userId') ?? '')}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  }) as Promise<R>;\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params: CreateRequestFxParams) => <P = CreateRequestParams, R = void>(payload: Payload<P>) => createRequestInstance<P, R>({\n  ...(params as CreateRequestParams),\n  payload\n});",
-      "start": 1750275034259,
-      "end": 1750275034261,
+      "start": 1750278467611,
+      "end": 1750278467613,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -60,8 +60,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEffect } from \"effector\";\nimport { ofetch } from \"ofetch\";\nfunction getConfig(payload, params) {\n  return typeof payload === \"function\" ? payload(params) : payload;\n}\nconst createRequestInstance = ({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}) => createEffect((params) => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append(\"Authorization\", `Token ${JSON.parse(localStorage.getItem(\"$userId\") ?? \"\")}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  });\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params) => (payload) => createRequestInstance({\n  ...params,\n  payload\n});\n",
-      "start": 1750275034261,
-      "end": 1750275034336,
+      "start": 1750278467613,
+      "end": 1750278467663,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -75,81 +75,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034336,
-      "end": 1750275034336,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/api/create-request-fx.ts [vike:pluginModuleBanner] */\nimport { createEffect } from \"effector\";\nimport { ofetch } from \"ofetch\";\nfunction getConfig(payload, params) {\n  return typeof payload === \"function\" ? payload(params) : payload;\n}\nconst createRequestInstance = ({\n  baseURL,\n  headers,\n  payload,\n  withTokenInHeaders\n}) => createEffect((params) => {\n  const {\n    url,\n    ...fetchOptions\n  } = getConfig(payload, params);\n  const newHeaders = new Headers(headers);\n  if (withTokenInHeaders) {\n    newHeaders.append(\"Authorization\", `Token ${JSON.parse(localStorage.getItem(\"$userId\") ?? \"\")}`);\n  }\n  return ofetch(url, {\n    ...fetchOptions,\n    headers: newHeaders,\n    baseURL\n  });\n}, {\n  name: \"createRequestInstance\",\n  sid: \"-2cl3s\"\n});\nexport const createRequestFx = (params) => (payload) => createRequestInstance({\n  ...params,\n  payload\n});\n",
-      "start": 1750275034336,
-      "end": 1750275034337,
+      "start": 1750278467663,
+      "end": 1750278467663,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\n\nexport default function Page() {\n    return <FreeReportPage />;\n}\n",
-      "start": 1750275033315,
-      "end": 1750275033354,
+      "start": 1750278466667,
+      "end": 1750278466714,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { FreeReportPage } from '@/pages/FreeReportPage';\nexport default function Page() {\n  return <FreeReportPage />;\n}",
-      "start": 1750275033354,
-      "end": 1750275033355,
+      "start": 1750278466714,
+      "end": 1750278466715,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1750275033355,
-      "end": 1750275033415,
+      "start": 1750278466715,
+      "end": 1750278466766,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,81 +43,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033415,
-      "end": 1750275033415,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033415,
-      "end": 1750275033415,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466766,
+      "end": 1750278466766,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/free-report/@reportId/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { FreeReportPage } from \"@/pages/FreeReportPage\";\nexport default function Page() {\n  return /* @__PURE__ */ jsx(FreeReportPage, {});\n}\n",
-      "start": 1750275033416,
-      "end": 1750275033416,
+      "start": 1750278466767,
+      "end": 1750278466767,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".actions {\n  flex-direction: column;\n  margin-top: auto;\n  width: 100%;\n  gap: var(--mantine-spacing-md);\n\n  @mixin larger-than 598px {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: var(--mantine-spacing-sm);\n  }\n\n  @mixin larger-than 1200px {\n    display: flex;\n    flex-direction: row;\n\n    a,\n    button {\n      width: fit-content;\n    }\n  }\n}\n",
-      "start": 1750275033906,
-      "end": 1750275033952,
+      "start": 1750278467237,
+      "end": 1750278467281,
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/CTA/ui/CTA.module.css [vike:pluginModuleBanner] */\nexport const actions = \"R5N-E\";\nexport default {\n\tactions: actions\n};\n",
-      "start": 1750275033953,
-      "end": 1750275033953,
+      "start": 1750278467282,
+      "end": 1750278467282,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": "/* Shadow */\n:is(button, a).mantine-button-rainbow {\n  --color-1: 0deg 100% 63%;\n  --color-2: 270deg 100% 63%;\n  --color-3: 210deg 100% 63%;\n  --color-4: 195deg 100% 63%;\n  --color-5: 90deg 100% 63%;\n\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: visible;\n  width: 100%;\n  min-height: 45px;\n  font-size: 16px;\n  line-height: 25px;\n\n  &:active {\n    transform: none;\n  }\n\n  @mixin larger-than 768px {\n    border-radius: 16px;\n    min-height: 64px;\n    max-width: 350px;\n    font-size: 20px;\n    line-height: 24px;\n  }\n}\n\n.mantine-button-rainbow::before,\n.mantine-button-rainbow::after {\n  content: \"\";\n  position: absolute;\n  left: 12px;\n  top: 0;\n  z-index: -1;\n  width: calc(100% - 24px);\n  height: calc(100%);\n  background: linear-gradient(\n    90deg,\n    hsl(var(--color-1)),\n    hsl(var(--color-5)),\n    hsl(var(--color-3)),\n    hsl(var(--color-4)),\n    hsl(var(--color-2))\n  );\n  background-size: 200%;\n  animation: animate 10s linear infinite;\n}\n\n.mantine-button-rainbow::after {\n  filter: blur(20px);\n}\n\n@keyframes animate {\n  0% {\n    background-position: 0 0;\n  }\n\n  50% {\n    background-position: 300% 0;\n  }\n\n  100% {\n    background-position: 0 0;\n  }\n}\n",
-      "start": 1750275034339,
-      "end": 1750275034354,
+      "start": 1750278467553,
+      "end": 1750278467568,
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034355,
-      "end": 1750275034355,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/app/providers/Mantine/mantine-styles.css [vike:pluginModuleBanner] */\n",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467569,
+      "end": 1750278467569,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

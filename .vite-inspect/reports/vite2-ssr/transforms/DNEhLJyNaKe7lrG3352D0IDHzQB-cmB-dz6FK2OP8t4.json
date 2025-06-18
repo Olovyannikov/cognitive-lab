@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { Mark } from '../types';\n\nexport type BarChartPreparedDataProps = Partial<{\n    mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;\n    mbti_percentages?: Record<string, { negative: number; positive: number }>;\n}>;\n\nexport function barChartPrepareData(item?: BarChartPreparedDataProps) {\n    return Object.entries(item?.mbti_percentages ?? '').map((el) => ({\n        value: el[1].positive,\n        label: el[0],\n        data: item?.mbti_data?.[el[0]],\n        mbti_type: Object.keys(item?.mbti_data ?? ''),\n    })) as Mark[];\n}\n",
-      "start": 1750275034028,
-      "end": 1750275034058,
+      "start": 1750278467347,
+      "end": 1750278467366,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { Mark } from '../types';\nexport type BarChartPreparedDataProps = Partial<{\n  mbti_data: Record<string, {\n    text: string;\n    type: 'header' | 'paragraph';\n  }[]>;\n  mbti_percentages?: Record<string, {\n    negative: number;\n    positive: number;\n  }>;\n}>;\nexport function barChartPrepareData(item?: BarChartPreparedDataProps) {\n  return Object.entries(item?.mbti_percentages ?? '').map(el => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item?.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item?.mbti_data ?? '')\n  })) as Mark[];\n}",
-      "start": 1750275034058,
-      "end": 1750275034060,
+      "start": 1750278467366,
+      "end": 1750278467367,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -52,8 +52,8 @@
     {
       "name": "vite:esbuild",
       "result": "export function barChartPrepareData(item) {\n  return Object.entries(item?.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item?.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item?.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750275034060,
-      "end": 1750275034258,
+      "start": 1750278467368,
+      "end": 1750278467559,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -69,81 +69,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/lib/barChartPreparedData.ts [vike:pluginModuleBanner] */\nexport function barChartPrepareData(item) {\n  return Object.entries(item?.mbti_percentages ?? \"\").map((el) => ({\n    value: el[1].positive,\n    label: el[0],\n    data: item?.mbti_data?.[el[0]],\n    mbti_type: Object.keys(item?.mbti_data ?? \"\")\n  }));\n}\n",
-      "start": 1750275034258,
-      "end": 1750275034258,
+      "start": 1750278467559,
+      "end": 1750278467559,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

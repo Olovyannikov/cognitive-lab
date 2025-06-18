@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Box, Button, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from '@mantine/core';\n\nimport { useCreateReviewFormViewModel } from '../view-model';\n\nimport s from './CreateReviewForm.module.css';\n\ninterface CreateReviewFormProps {\n    slots?: {\n        action?: ReactNode;\n    };\n}\n\nexport const CreateReviewForm = ({ slots }: CreateReviewFormProps) => {\n    const {\n        nameInputProps,\n        textInputProps,\n        informativenessRateRatingProps,\n        satisfactionRateProps,\n        convenienceRateProps,\n        accuracyRateProps,\n        recommendabilityRateProps,\n        onSubmit,\n        isLoading,\n    } = useCreateReviewFormViewModel();\n\n    return (\n        <>\n            <LoadingOverlay visible={isLoading} overlayProps={{ radius: 'sm', blur: 2 }} />\n            <form onSubmit={onSubmit}>\n                <Stack className={s.stack}>\n                    <TextInput radius='xs' size='md' classNames={s} {...nameInputProps} />\n                    <Textarea rows={4} radius='xs' size='md' classNames={s} {...textInputProps} mb='md' />\n                    <Stack gap='3xl'>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>\n                            <Rating size='xl' {...informativenessRateRatingProps} />\n                            {informativenessRateRatingProps.error && (\n                                <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>\n                            )}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{convenienceRateProps.label}</Text>\n                            <Rating size='xl' {...convenienceRateProps} />\n                            {convenienceRateProps.error && (\n                                <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>\n                            )}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{accuracyRateProps.label}</Text>\n                            <Rating size='xl' {...accuracyRateProps} />\n                            {accuracyRateProps.error && (\n                                <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>\n                            )}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{recommendabilityRateProps.label}</Text>\n                            <Rating size='xl' {...recommendabilityRateProps} />\n                            {recommendabilityRateProps.error && (\n                                <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>\n                            )}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{satisfactionRateProps.label}</Text>\n                            <Rating size='xl' {...satisfactionRateProps} />\n                            {satisfactionRateProps.error && (\n                                <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>\n                            )}\n                        </Stack>\n                    </Stack>\n                </Stack>\n                <Box className={s.controls}>\n                    <Button size='md' disabled={isLoading} loading={isLoading} type='submit'>\n                        Отправить\n                    </Button>\n                    {slots?.action}\n                </Box>\n            </form>\n        </>\n    );\n};\n",
-      "start": 1750275033897,
-      "end": 1750275033941,
+      "start": 1750278467223,
+      "end": 1750278467261,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Box, Button, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from '@mantine/core';\nimport { useCreateReviewFormViewModel } from '../view-model';\nimport s from './CreateReviewForm.module.css';\ninterface CreateReviewFormProps {\n  slots?: {\n    action?: ReactNode;\n  };\n}\nexport const CreateReviewForm = ({\n  slots\n}: CreateReviewFormProps) => {\n  const {\n    nameInputProps,\n    textInputProps,\n    informativenessRateRatingProps,\n    satisfactionRateProps,\n    convenienceRateProps,\n    accuracyRateProps,\n    recommendabilityRateProps,\n    onSubmit,\n    isLoading\n  } = useCreateReviewFormViewModel();\n  return <>\n            <LoadingOverlay visible={isLoading} overlayProps={{\n      radius: 'sm',\n      blur: 2\n    }} />\n            <form onSubmit={onSubmit}>\n                <Stack className={s.stack}>\n                    <TextInput radius='xs' size='md' classNames={s} {...nameInputProps} />\n                    <Textarea rows={4} radius='xs' size='md' classNames={s} {...textInputProps} mb='md' />\n                    <Stack gap='3xl'>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{informativenessRateRatingProps.label}</Text>\n                            <Rating size='xl' {...informativenessRateRatingProps} />\n                            {informativenessRateRatingProps.error && <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{convenienceRateProps.label}</Text>\n                            <Rating size='xl' {...convenienceRateProps} />\n                            {convenienceRateProps.error && <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{accuracyRateProps.label}</Text>\n                            <Rating size='xl' {...accuracyRateProps} />\n                            {accuracyRateProps.error && <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{recommendabilityRateProps.label}</Text>\n                            <Rating size='xl' {...recommendabilityRateProps} />\n                            {recommendabilityRateProps.error && <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>}\n                        </Stack>\n                        <Stack gap='xxs'>\n                            <Text fw='bold'>{satisfactionRateProps.label}</Text>\n                            <Rating size='xl' {...satisfactionRateProps} />\n                            {satisfactionRateProps.error && <Text fz={14} c='red'>\n                                    Поле обязательно\n                                </Text>}\n                        </Stack>\n                    </Stack>\n                </Stack>\n                <Box className={s.controls}>\n                    <Button size='md' disabled={isLoading} loading={isLoading} type='submit'>\n                        Отправить\n                    </Button>\n                    {slots?.action}\n                </Box>\n            </form>\n        </>;\n};",
-      "start": 1750275033941,
-      "end": 1750275033943,
+      "start": 1750278467261,
+      "end": 1750278467262,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -59,8 +59,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from \"@mantine/core\";\nimport { useCreateReviewFormViewModel } from \"../view-model\";\nimport s from \"./CreateReviewForm.module.css\";\nexport const CreateReviewForm = ({\n  slots\n}) => {\n  const {\n    nameInputProps,\n    textInputProps,\n    informativenessRateRatingProps,\n    satisfactionRateProps,\n    convenienceRateProps,\n    accuracyRateProps,\n    recommendabilityRateProps,\n    onSubmit,\n    isLoading\n  } = useCreateReviewFormViewModel();\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(LoadingOverlay, { visible: isLoading, overlayProps: {\n      radius: \"sm\",\n      blur: 2\n    } }),\n    /* @__PURE__ */ jsxs(\"form\", { onSubmit, children: [\n      /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n        /* @__PURE__ */ jsx(TextInput, { radius: \"xs\", size: \"md\", classNames: s, ...nameInputProps }),\n        /* @__PURE__ */ jsx(Textarea, { rows: 4, radius: \"xs\", size: \"md\", classNames: s, ...textInputProps, mb: \"md\" }),\n        /* @__PURE__ */ jsxs(Stack, { gap: \"3xl\", children: [\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: informativenessRateRatingProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...informativenessRateRatingProps }),\n            informativenessRateRatingProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: convenienceRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...convenienceRateProps }),\n            convenienceRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: accuracyRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...accuracyRateProps }),\n            accuracyRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: recommendabilityRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...recommendabilityRateProps }),\n            recommendabilityRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: satisfactionRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...satisfactionRateProps }),\n            satisfactionRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] })\n        ] })\n      ] }),\n      /* @__PURE__ */ jsxs(Box, { className: s.controls, children: [\n        /* @__PURE__ */ jsx(Button, { size: \"md\", disabled: isLoading, loading: isLoading, type: \"submit\", children: \"Отправить\" }),\n        slots?.action\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1750275033944,
-      "end": 1750275034206,
+      "start": 1750278467262,
+      "end": 1750278467518,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -74,81 +74,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467518,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467518,
+      "end": 1750278467519,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467519,
+      "end": 1750278467519,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467519,
+      "end": 1750278467519,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/CreateReviewForm/ui/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, LoadingOverlay, Rating, Stack, Text, Textarea, TextInput } from \"@mantine/core\";\nimport { useCreateReviewFormViewModel } from \"../view-model\";\nimport s from \"./CreateReviewForm.module.css\";\nexport const CreateReviewForm = ({\n  slots\n}) => {\n  const {\n    nameInputProps,\n    textInputProps,\n    informativenessRateRatingProps,\n    satisfactionRateProps,\n    convenienceRateProps,\n    accuracyRateProps,\n    recommendabilityRateProps,\n    onSubmit,\n    isLoading\n  } = useCreateReviewFormViewModel();\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(LoadingOverlay, { visible: isLoading, overlayProps: {\n      radius: \"sm\",\n      blur: 2\n    } }),\n    /* @__PURE__ */ jsxs(\"form\", { onSubmit, children: [\n      /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n        /* @__PURE__ */ jsx(TextInput, { radius: \"xs\", size: \"md\", classNames: s, ...nameInputProps }),\n        /* @__PURE__ */ jsx(Textarea, { rows: 4, radius: \"xs\", size: \"md\", classNames: s, ...textInputProps, mb: \"md\" }),\n        /* @__PURE__ */ jsxs(Stack, { gap: \"3xl\", children: [\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: informativenessRateRatingProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...informativenessRateRatingProps }),\n            informativenessRateRatingProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: convenienceRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...convenienceRateProps }),\n            convenienceRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: accuracyRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...accuracyRateProps }),\n            accuracyRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: recommendabilityRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...recommendabilityRateProps }),\n            recommendabilityRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] }),\n          /* @__PURE__ */ jsxs(Stack, { gap: \"xxs\", children: [\n            /* @__PURE__ */ jsx(Text, { fw: \"bold\", children: satisfactionRateProps.label }),\n            /* @__PURE__ */ jsx(Rating, { size: \"xl\", ...satisfactionRateProps }),\n            satisfactionRateProps.error && /* @__PURE__ */ jsx(Text, { fz: 14, c: \"red\", children: \"Поле обязательно\" })\n          ] })\n        ] })\n      ] }),\n      /* @__PURE__ */ jsxs(Box, { className: s.controls, children: [\n        /* @__PURE__ */ jsx(Button, { size: \"md\", disabled: isLoading, loading: isLoading, type: \"submit\", children: \"Отправить\" }),\n        slots?.action\n      ] })\n    ] })\n  ] });\n};\n",
-      "start": 1750275034206,
-      "end": 1750275034206,
+      "start": 1750278467519,
+      "end": 1750278467519,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

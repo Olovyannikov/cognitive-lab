@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Group, Paper, Popover, Slider, Stack, Transition } from '@mantine/core';\nimport { Info } from '@phosphor-icons/react/dist/ssr';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport type { Mark } from '../../types';\nimport { Header } from '../Header';\nimport { Paragraph } from '../Paragraph';\nimport { useBarChartViewModel } from './view-model';\n\nimport s from './BarChart.module.css';\n\ninterface BarChartProps {\n    marks?: Mark[];\n}\n\nconst TypeToColorMap: Record<string, string> = {\n    'E-I': 'violet',\n    'J-P': 'yellow',\n    'S-N': 'green',\n    'T-F': 'indigo',\n};\n\nexport const BarChart = ({ marks }: BarChartProps) => {\n    const isLarge = useIsLarge();\n    const { onSelectItemMouseOverHandler, selectedItem, mounted } = useBarChartViewModel({ marks });\n\n    return (\n        <Group align='stretch' gap='lg' mb={isLarge ? 100 : 0} mt={isLarge ? '5xl' : 0}>\n            <Stack flex={1} mt={isLarge ? 0 : 40} mb={isLarge ? 0 : 60} gap={isLarge ? 74 : 84}>\n                {marks?.map((mark, i) => (\n                    <Box key={i} onMouseOver={() => isLarge && onSelectItemMouseOverHandler(mark)}>\n                        <Popover offset={40} width='90%' position='top' shadow='sm'>\n                            <Popover.Target>\n                                <Box pos='relative'>\n                                    <Info style={{ '--offset': mark.value + '%' }} size={16} className={s.icon} />\n                                    <Slider\n                                        labelAlwaysOn\n                                        classNames={s}\n                                        value={mark.value}\n                                        data-type={mark.label}\n                                        data-value={mark.value}\n                                    />\n                                </Box>\n                            </Popover.Target>\n                            <Popover.Dropdown hidden={isLarge} bg={`${TypeToColorMap[mark.mbti_type[i]]}.0`}>\n                                {mark.data.map((item, idx) => {\n                                    switch (item.type) {\n                                        case 'paragraph':\n                                            return <Paragraph key={idx} text={item.text} />;\n                                        case 'header':\n                                            return (\n                                                <Header\n                                                    key={idx}\n                                                    text={item.text}\n                                                    c={`${TypeToColorMap[mark.mbti_type[i]]}.9`}\n                                                />\n                                            );\n                                        default:\n                                            return null;\n                                    }\n                                })}\n                            </Popover.Dropdown>\n                        </Popover>\n                    </Box>\n                ))}\n            </Stack>\n            <Box flex={1} h='auto' visibleFrom='lg'>\n                {selectedItem && (\n                    <Transition mounted={mounted}>\n                        {(styles) => (\n                            <Paper\n                                py={22}\n                                px='3xl'\n                                h='100%'\n                                mih='auto'\n                                radius={30}\n                                style={styles}\n                                visibleFrom='md'\n                                bg={`${TypeToColorMap[selectedItem.label]}.0`}\n                            >\n                                {selectedItem?.data.map((item, idx) => {\n                                    switch (item.type) {\n                                        case 'paragraph':\n                                            return <Paragraph key={idx} text={item.text} />;\n                                        case 'header':\n                                            return (\n                                                <Header\n                                                    key={idx}\n                                                    text={item.text}\n                                                    c={`${TypeToColorMap[selectedItem.label]}.9`}\n                                                />\n                                            );\n                                        default:\n                                            return null;\n                                    }\n                                })}\n                            </Paper>\n                        )}\n                    </Transition>\n                )}\n            </Box>\n        </Group>\n    );\n};\n",
-      "start": 1750275033739,
-      "end": 1750275033792,
+      "start": 1750278467098,
+      "end": 1750278467149,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Group, Paper, Popover, Slider, Stack, Transition } from '@mantine/core';\nimport { Info } from '@phosphor-icons/react/dist/ssr';\nimport { useIsLarge } from '@/shared/lib';\nimport type { Mark } from '../../types';\nimport { Header } from '../Header';\nimport { Paragraph } from '../Paragraph';\nimport { useBarChartViewModel } from './view-model';\nimport s from './BarChart.module.css';\ninterface BarChartProps {\n  marks?: Mark[];\n}\nconst TypeToColorMap: Record<string, string> = {\n  'E-I': 'violet',\n  'J-P': 'yellow',\n  'S-N': 'green',\n  'T-F': 'indigo'\n};\nexport const BarChart = ({\n  marks\n}: BarChartProps) => {\n  const isLarge = useIsLarge();\n  const {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  } = useBarChartViewModel({\n    marks\n  });\n  return <Group align='stretch' gap='lg' mb={isLarge ? 100 : 0} mt={isLarge ? '5xl' : 0}>\n            <Stack flex={1} mt={isLarge ? 0 : 40} mb={isLarge ? 0 : 60} gap={isLarge ? 74 : 84}>\n                {marks?.map((mark, i) => <Box key={i} onMouseOver={() => isLarge && onSelectItemMouseOverHandler(mark)}>\n                        <Popover offset={40} width='90%' position='top' shadow='sm'>\n                            <Popover.Target>\n                                <Box pos='relative'>\n                                    <Info style={{\n                '--offset': mark.value + '%'\n              }} size={16} className={s.icon} />\n                                    <Slider labelAlwaysOn classNames={s} value={mark.value} data-type={mark.label} data-value={mark.value} />\n                                </Box>\n                            </Popover.Target>\n                            <Popover.Dropdown hidden={isLarge} bg={`${TypeToColorMap[mark.mbti_type[i]]}.0`}>\n                                {mark.data.map((item, idx) => {\n              switch (item.type) {\n                case 'paragraph':\n                  return <Paragraph key={idx} text={item.text} />;\n                case 'header':\n                  return <Header key={idx} text={item.text} c={`${TypeToColorMap[mark.mbti_type[i]]}.9`} />;\n                default:\n                  return null;\n              }\n            })}\n                            </Popover.Dropdown>\n                        </Popover>\n                    </Box>)}\n            </Stack>\n            <Box flex={1} h='auto' visibleFrom='lg'>\n                {selectedItem && <Transition mounted={mounted}>\n                        {styles => <Paper py={22} px='3xl' h='100%' mih='auto' radius={30} style={styles} visibleFrom='md' bg={`${TypeToColorMap[selectedItem.label]}.0`}>\n                                {selectedItem?.data.map((item, idx) => {\n            switch (item.type) {\n              case 'paragraph':\n                return <Paragraph key={idx} text={item.text} />;\n              case 'header':\n                return <Header key={idx} text={item.text} c={`${TypeToColorMap[selectedItem.label]}.9`} />;\n              default:\n                return null;\n            }\n          })}\n                            </Paper>}\n                    </Transition>}\n            </Box>\n        </Group>;\n};",
-      "start": 1750275033792,
-      "end": 1750275033794,
+      "start": 1750278467149,
+      "end": 1750278467151,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -65,8 +65,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Paper, Popover, Slider, Stack, Transition } from \"@mantine/core\";\nimport { Info } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Header } from \"../Header\";\nimport { Paragraph } from \"../Paragraph\";\nimport { useBarChartViewModel } from \"./view-model\";\nimport s from \"./BarChart.module.css\";\nconst TypeToColorMap = {\n  \"E-I\": \"violet\",\n  \"J-P\": \"yellow\",\n  \"S-N\": \"green\",\n  \"T-F\": \"indigo\"\n};\nexport const BarChart = ({\n  marks\n}) => {\n  const isLarge = useIsLarge();\n  const {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  } = useBarChartViewModel({\n    marks\n  });\n  return /* @__PURE__ */ jsxs(Group, { align: \"stretch\", gap: \"lg\", mb: isLarge ? 100 : 0, mt: isLarge ? \"5xl\" : 0, children: [\n    /* @__PURE__ */ jsx(Stack, { flex: 1, mt: isLarge ? 0 : 40, mb: isLarge ? 0 : 60, gap: isLarge ? 74 : 84, children: marks?.map((mark, i) => /* @__PURE__ */ jsx(Box, { onMouseOver: () => isLarge && onSelectItemMouseOverHandler(mark), children: /* @__PURE__ */ jsxs(Popover, { offset: 40, width: \"90%\", position: \"top\", shadow: \"sm\", children: [\n      /* @__PURE__ */ jsx(Popover.Target, { children: /* @__PURE__ */ jsxs(Box, { pos: \"relative\", children: [\n        /* @__PURE__ */ jsx(Info, { style: {\n          \"--offset\": mark.value + \"%\"\n        }, size: 16, className: s.icon }),\n        /* @__PURE__ */ jsx(Slider, { labelAlwaysOn: true, classNames: s, value: mark.value, \"data-type\": mark.label, \"data-value\": mark.value })\n      ] }) }),\n      /* @__PURE__ */ jsx(Popover.Dropdown, { hidden: isLarge, bg: `${TypeToColorMap[mark.mbti_type[i]]}.0`, children: mark.data.map((item, idx) => {\n        switch (item.type) {\n          case \"paragraph\":\n            return /* @__PURE__ */ jsx(Paragraph, { text: item.text }, idx);\n          case \"header\":\n            return /* @__PURE__ */ jsx(Header, { text: item.text, c: `${TypeToColorMap[mark.mbti_type[i]]}.9` }, idx);\n          default:\n            return null;\n        }\n      }) })\n    ] }) }, i)) }),\n    /* @__PURE__ */ jsx(Box, { flex: 1, h: \"auto\", visibleFrom: \"lg\", children: selectedItem && /* @__PURE__ */ jsx(Transition, { mounted, children: (styles) => /* @__PURE__ */ jsx(Paper, { py: 22, px: \"3xl\", h: \"100%\", mih: \"auto\", radius: 30, style: styles, visibleFrom: \"md\", bg: `${TypeToColorMap[selectedItem.label]}.0`, children: selectedItem?.data.map((item, idx) => {\n      switch (item.type) {\n        case \"paragraph\":\n          return /* @__PURE__ */ jsx(Paragraph, { text: item.text }, idx);\n        case \"header\":\n          return /* @__PURE__ */ jsx(Header, { text: item.text, c: `${TypeToColorMap[selectedItem.label]}.9` }, idx);\n        default:\n          return null;\n      }\n    }) }) }) })\n  ] });\n};\n",
-      "start": 1750275033794,
-      "end": 1750275034095,
+      "start": 1750278467151,
+      "end": 1750278467365,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -80,81 +80,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034095,
-      "end": 1750275034095,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034095,
-      "end": 1750275034095,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/BarChart/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Group, Paper, Popover, Slider, Stack, Transition } from \"@mantine/core\";\nimport { Info } from \"@phosphor-icons/react/dist/ssr\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { Header } from \"../Header\";\nimport { Paragraph } from \"../Paragraph\";\nimport { useBarChartViewModel } from \"./view-model\";\nimport s from \"./BarChart.module.css\";\nconst TypeToColorMap = {\n  \"E-I\": \"violet\",\n  \"J-P\": \"yellow\",\n  \"S-N\": \"green\",\n  \"T-F\": \"indigo\"\n};\nexport const BarChart = ({\n  marks\n}) => {\n  const isLarge = useIsLarge();\n  const {\n    onSelectItemMouseOverHandler,\n    selectedItem,\n    mounted\n  } = useBarChartViewModel({\n    marks\n  });\n  return /* @__PURE__ */ jsxs(Group, { align: \"stretch\", gap: \"lg\", mb: isLarge ? 100 : 0, mt: isLarge ? \"5xl\" : 0, children: [\n    /* @__PURE__ */ jsx(Stack, { flex: 1, mt: isLarge ? 0 : 40, mb: isLarge ? 0 : 60, gap: isLarge ? 74 : 84, children: marks?.map((mark, i) => /* @__PURE__ */ jsx(Box, { onMouseOver: () => isLarge && onSelectItemMouseOverHandler(mark), children: /* @__PURE__ */ jsxs(Popover, { offset: 40, width: \"90%\", position: \"top\", shadow: \"sm\", children: [\n      /* @__PURE__ */ jsx(Popover.Target, { children: /* @__PURE__ */ jsxs(Box, { pos: \"relative\", children: [\n        /* @__PURE__ */ jsx(Info, { style: {\n          \"--offset\": mark.value + \"%\"\n        }, size: 16, className: s.icon }),\n        /* @__PURE__ */ jsx(Slider, { labelAlwaysOn: true, classNames: s, value: mark.value, \"data-type\": mark.label, \"data-value\": mark.value })\n      ] }) }),\n      /* @__PURE__ */ jsx(Popover.Dropdown, { hidden: isLarge, bg: `${TypeToColorMap[mark.mbti_type[i]]}.0`, children: mark.data.map((item, idx) => {\n        switch (item.type) {\n          case \"paragraph\":\n            return /* @__PURE__ */ jsx(Paragraph, { text: item.text }, idx);\n          case \"header\":\n            return /* @__PURE__ */ jsx(Header, { text: item.text, c: `${TypeToColorMap[mark.mbti_type[i]]}.9` }, idx);\n          default:\n            return null;\n        }\n      }) })\n    ] }) }, i)) }),\n    /* @__PURE__ */ jsx(Box, { flex: 1, h: \"auto\", visibleFrom: \"lg\", children: selectedItem && /* @__PURE__ */ jsx(Transition, { mounted, children: (styles) => /* @__PURE__ */ jsx(Paper, { py: 22, px: \"3xl\", h: \"100%\", mih: \"auto\", radius: 30, style: styles, visibleFrom: \"md\", bg: `${TypeToColorMap[selectedItem.label]}.0`, children: selectedItem?.data.map((item, idx) => {\n      switch (item.type) {\n        case \"paragraph\":\n          return /* @__PURE__ */ jsx(Paragraph, { text: item.text }, idx);\n        case \"header\":\n          return /* @__PURE__ */ jsx(Header, { text: item.text, c: `${TypeToColorMap[selectedItem.label]}.9` }, idx);\n        default:\n          return null;\n      }\n    }) }) }) })\n  ] });\n};\n",
-      "start": 1750275034096,
-      "end": 1750275034096,
+      "start": 1750278467365,
+      "end": 1750278467365,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

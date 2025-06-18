@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export const SCALE_RADIO_ITEMS = [\n    {\n        value: '-3',\n        size: '50px',\n    },\n    {\n        value: '-2',\n        size: '40px',\n    },\n    {\n        value: '-1',\n        size: '30px',\n    },\n    {\n        value: '0',\n        size: '20px',\n    },\n    {\n        value: '1',\n        size: '30px',\n    },\n    {\n        value: '2',\n        size: '40px',\n    },\n    {\n        value: '3',\n        size: '50px',\n    },\n];\n",
-      "start": 1750275034233,
-      "end": 1750275034249,
+      "start": 1750278467571,
+      "end": 1750278467591,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const SCALE_RADIO_ITEMS = [{\n  value: '-3',\n  size: '50px'\n}, {\n  value: '-2',\n  size: '40px'\n}, {\n  value: '-1',\n  size: '30px'\n}, {\n  value: '0',\n  size: '20px'\n}, {\n  value: '1',\n  size: '30px'\n}, {\n  value: '2',\n  size: '40px'\n}, {\n  value: '3',\n  size: '50px'\n}];",
-      "start": 1750275034249,
-      "end": 1750275034250,
+      "start": 1750278467591,
+      "end": 1750278467592,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
-      "start": 1750275034250,
-      "end": 1750275034334,
+      "start": 1750278467592,
+      "end": 1750278467657,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,81 +43,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034334,
-      "end": 1750275034334,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034334,
-      "end": 1750275034335,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034335,
-      "end": 1750275034335,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034335,
-      "end": 1750275034335,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Test/lib/constants.ts [vike:pluginModuleBanner] */\nexport const SCALE_RADIO_ITEMS = [{\n  value: \"-3\",\n  size: \"50px\"\n}, {\n  value: \"-2\",\n  size: \"40px\"\n}, {\n  value: \"-1\",\n  size: \"30px\"\n}, {\n  value: \"0\",\n  size: \"20px\"\n}, {\n  value: \"1\",\n  size: \"30px\"\n}, {\n  value: \"2\",\n  size: \"40px\"\n}, {\n  value: \"3\",\n  size: \"50px\"\n}];\n",
-      "start": 1750275034335,
-      "end": 1750275034335,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

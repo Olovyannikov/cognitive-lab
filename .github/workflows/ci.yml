@@ -49,3 +49,6 @@ jobs:
         run: pnpm run test:unit
         env:
           NODE_OPTIONS: '--max_old_space_size=4096' # При необходимости
+
+      - name: Build
+        run: pnpm run build

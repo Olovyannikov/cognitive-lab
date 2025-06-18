@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Drawer, Group, Skeleton } from '@mantine/core';\nimport { X } from '@phosphor-icons/react/dist/ssr';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { useIsLargeMenu } from '@/shared/lib';\n\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { RootModel } from '@/entities/Root';\nimport { UserModel } from '@/entities/User';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { RedirectToTestPage } from '@/features/RedirectToTestPage';\n\nimport { NAV_ITEMS } from './const';\n\nimport s from './Navigation.module.css';\n\nconst items = NAV_ITEMS.map((Component, idx) => <Component key={idx} />);\n\nexport const Navigation = () => {\n    const { urlPathname } = usePageContext();\n    const [isPending, isStale] = useUnit([getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n    const [isOpen, onClose] = useUnit([RootModel.$isMenuOpened, RootModel.closeMenu]);\n    const [isUserHasFreeReport, lastUserFreeReport] = useUnit([\n        ReportModel.$isUserHasFreeReport,\n        ReportModel.$lastUserFreeReport,\n    ]);\n    const [surveyId] = useUnit([UserModel.$surveyId]);\n\n    const isFreeReportPage = urlPathname.includes('/free-report/');\n\n    const isLoading = isStale || isPending;\n    const isLargeMenuSpace = useIsLargeMenu();\n\n    const getCurrentChildren = () => {\n        if (isLoading) return <Skeleton width={144} height={48} />;\n        if (isFreeReportPage || isUserHasFreeReport) {\n            return (\n                <BuyNowButton\n                    size='md'\n                    survey={surveyId}\n                    loading={isLoading}\n                    disabled={isLoading}\n                    className={s.testLink}\n                    onClick={() => onClose(false)}\n                    externalReportId={lastUserFreeReport?.user_report}\n                >\n                    Купить полный отчёт\n                </BuyNowButton>\n            );\n        }\n        if (!isFreeReportPage) {\n            return (\n                <RedirectToTestPage\n                    loading={isLoading}\n                    onClick={(e) => {\n                        if (isLoading) e.preventDefault();\n                        onClose(false);\n                    }}\n                    className={s.testLink}\n                />\n            );\n        }\n        return null;\n    };\n    return (\n        <>\n            <Drawer\n                closeButtonProps={{\n                    size: 32,\n                    icon: <X size='32px' />,\n                }}\n                size='100%'\n                hiddenFrom='lg'\n                opened={isOpen}\n                className={s.drawer}\n                onClose={() => onClose(false)}\n                title={getCurrentChildren()}\n            >\n                {items}\n            </Drawer>\n            <Group gap={isLargeMenuSpace ? 'md' : 'xs'} wrap='nowrap' component='nav' visibleFrom='lg'>\n                {items}\n                {getCurrentChildren()}\n            </Group>\n        </>\n    );\n};\n",
-      "start": 1750275033922,
-      "end": 1750275033963,
+      "start": 1750278466995,
+      "end": 1750278467033,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Drawer, Group, Skeleton } from '@mantine/core';\nimport { X } from '@phosphor-icons/react/dist/ssr';\nimport { useUnit } from 'effector-react';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { useIsLargeMenu } from '@/shared/lib';\nimport { getSurveysInfoQuery, ReportModel } from '@/entities/Report';\nimport { RootModel } from '@/entities/Root';\nimport { UserModel } from '@/entities/User';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { RedirectToTestPage } from '@/features/RedirectToTestPage';\nimport { NAV_ITEMS } from './const';\nimport s from './Navigation.module.css';\nconst items = NAV_ITEMS.map((Component, idx) => <Component key={idx} />);\nexport const Navigation = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [isPending, isStale] = useUnit([getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [isOpen, onClose] = useUnit([RootModel.$isMenuOpened, RootModel.closeMenu]);\n  const [isUserHasFreeReport, lastUserFreeReport] = useUnit([ReportModel.$isUserHasFreeReport, ReportModel.$lastUserFreeReport]);\n  const [surveyId] = useUnit([UserModel.$surveyId]);\n  const isFreeReportPage = urlPathname.includes('/free-report/');\n  const isLoading = isStale || isPending;\n  const isLargeMenuSpace = useIsLargeMenu();\n  const getCurrentChildren = () => {\n    if (isLoading) return <Skeleton width={144} height={48} />;\n    if (isFreeReportPage || isUserHasFreeReport) {\n      return <BuyNowButton size='md' survey={surveyId} loading={isLoading} disabled={isLoading} className={s.testLink} onClick={() => onClose(false)} externalReportId={lastUserFreeReport?.user_report}>\n                    Купить полный отчёт\n                </BuyNowButton>;\n    }\n    if (!isFreeReportPage) {\n      return <RedirectToTestPage loading={isLoading} onClick={e => {\n        if (isLoading) e.preventDefault();\n        onClose(false);\n      }} className={s.testLink} />;\n    }\n    return null;\n  };\n  return <>\n            <Drawer closeButtonProps={{\n      size: 32,\n      icon: <X size='32px' />\n    }} size='100%' hiddenFrom='lg' opened={isOpen} className={s.drawer} onClose={() => onClose(false)} title={getCurrentChildren()}>\n                {items}\n            </Drawer>\n            <Group gap={isLargeMenuSpace ? 'md' : 'xs'} wrap='nowrap' component='nav' visibleFrom='lg'>\n                {items}\n                {getCurrentChildren()}\n            </Group>\n        </>;\n};",
-      "start": 1750275033963,
-      "end": 1750275033965,
+      "start": 1750278467033,
+      "end": 1750278467038,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -78,8 +78,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Drawer, Group, Skeleton } from \"@mantine/core\";\nimport { X } from \"@phosphor-icons/react/dist/ssr\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLargeMenu } from \"@/shared/lib\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { RootModel } from \"@/entities/Root\";\nimport { UserModel } from \"@/entities/User\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { RedirectToTestPage } from \"@/features/RedirectToTestPage\";\nimport { NAV_ITEMS } from \"./const\";\nimport s from \"./Navigation.module.css\";\nconst items = NAV_ITEMS.map((Component, idx) => /* @__PURE__ */ jsx(Component, {}, idx));\nexport const Navigation = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [isPending, isStale] = useUnit([getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [isOpen, onClose] = useUnit([RootModel.$isMenuOpened, RootModel.closeMenu]);\n  const [isUserHasFreeReport, lastUserFreeReport] = useUnit([ReportModel.$isUserHasFreeReport, ReportModel.$lastUserFreeReport]);\n  const [surveyId] = useUnit([UserModel.$surveyId]);\n  const isFreeReportPage = urlPathname.includes(\"/free-report/\");\n  const isLoading = isStale || isPending;\n  const isLargeMenuSpace = useIsLargeMenu();\n  const getCurrentChildren = () => {\n    if (isLoading) return /* @__PURE__ */ jsx(Skeleton, { width: 144, height: 48 });\n    if (isFreeReportPage || isUserHasFreeReport) {\n      return /* @__PURE__ */ jsx(BuyNowButton, { size: \"md\", survey: surveyId, loading: isLoading, disabled: isLoading, className: s.testLink, onClick: () => onClose(false), externalReportId: lastUserFreeReport?.user_report, children: \"Купить полный отчёт\" });\n    }\n    if (!isFreeReportPage) {\n      return /* @__PURE__ */ jsx(RedirectToTestPage, { loading: isLoading, onClick: (e) => {\n        if (isLoading) e.preventDefault();\n        onClose(false);\n      }, className: s.testLink });\n    }\n    return null;\n  };\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(Drawer, { closeButtonProps: {\n      size: 32,\n      icon: /* @__PURE__ */ jsx(X, { size: \"32px\" })\n    }, size: \"100%\", hiddenFrom: \"lg\", opened: isOpen, className: s.drawer, onClose: () => onClose(false), title: getCurrentChildren(), children: items }),\n    /* @__PURE__ */ jsxs(Group, { gap: isLargeMenuSpace ? \"md\" : \"xs\", wrap: \"nowrap\", component: \"nav\", visibleFrom: \"lg\", children: [\n      items,\n      getCurrentChildren()\n    ] })\n  ] });\n};\n",
-      "start": 1750275033965,
-      "end": 1750275034218,
+      "start": 1750278467038,
+      "end": 1750278467251,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -95,81 +95,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467251,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/index.tsx [vike:pluginModuleBanner] */\nimport { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport { Drawer, Group, Skeleton } from \"@mantine/core\";\nimport { X } from \"@phosphor-icons/react/dist/ssr\";\nimport { useUnit } from \"effector-react\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { useIsLargeMenu } from \"@/shared/lib\";\nimport { getSurveysInfoQuery, ReportModel } from \"@/entities/Report\";\nimport { RootModel } from \"@/entities/Root\";\nimport { UserModel } from \"@/entities/User\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { RedirectToTestPage } from \"@/features/RedirectToTestPage\";\nimport { NAV_ITEMS } from \"./const\";\nimport s from \"./Navigation.module.css\";\nconst items = NAV_ITEMS.map((Component, idx) => /* @__PURE__ */ jsx(Component, {}, idx));\nexport const Navigation = () => {\n  const {\n    urlPathname\n  } = usePageContext();\n  const [isPending, isStale] = useUnit([getSurveysInfoQuery.$pending, getSurveysInfoQuery.$stale]);\n  const [isOpen, onClose] = useUnit([RootModel.$isMenuOpened, RootModel.closeMenu]);\n  const [isUserHasFreeReport, lastUserFreeReport] = useUnit([ReportModel.$isUserHasFreeReport, ReportModel.$lastUserFreeReport]);\n  const [surveyId] = useUnit([UserModel.$surveyId]);\n  const isFreeReportPage = urlPathname.includes(\"/free-report/\");\n  const isLoading = isStale || isPending;\n  const isLargeMenuSpace = useIsLargeMenu();\n  const getCurrentChildren = () => {\n    if (isLoading) return /* @__PURE__ */ jsx(Skeleton, { width: 144, height: 48 });\n    if (isFreeReportPage || isUserHasFreeReport) {\n      return /* @__PURE__ */ jsx(BuyNowButton, { size: \"md\", survey: surveyId, loading: isLoading, disabled: isLoading, className: s.testLink, onClick: () => onClose(false), externalReportId: lastUserFreeReport?.user_report, children: \"Купить полный отчёт\" });\n    }\n    if (!isFreeReportPage) {\n      return /* @__PURE__ */ jsx(RedirectToTestPage, { loading: isLoading, onClick: (e) => {\n        if (isLoading) e.preventDefault();\n        onClose(false);\n      }, className: s.testLink });\n    }\n    return null;\n  };\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(Drawer, { closeButtonProps: {\n      size: 32,\n      icon: /* @__PURE__ */ jsx(X, { size: \"32px\" })\n    }, size: \"100%\", hiddenFrom: \"lg\", opened: isOpen, className: s.drawer, onClose: () => onClose(false), title: getCurrentChildren(), children: items }),\n    /* @__PURE__ */ jsxs(Group, { gap: isLargeMenuSpace ? \"md\" : \"xs\", wrap: \"nowrap\", component: \"nav\", visibleFrom: \"lg\", children: [\n      items,\n      getCurrentChildren()\n    ] })\n  ] });\n};\n",
-      "start": 1750275034218,
-      "end": 1750275034218,
+      "start": 1750278467251,
+      "end": 1750278467252,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

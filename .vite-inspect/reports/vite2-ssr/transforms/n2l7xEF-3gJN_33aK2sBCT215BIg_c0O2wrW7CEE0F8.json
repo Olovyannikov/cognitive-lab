@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\n\nexport const createPageInit = <T = void>() => createEvent<PageContextServer<T>>();\nexport const createPageStart = <T = void>() => createEvent<PageContextClient<T>>();\n",
-      "start": 1750275033476,
-      "end": 1750275033507,
+      "start": 1750278466855,
+      "end": 1750278466883,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { createEvent } from 'effector';\nimport type { PageContextClient, PageContextServer } from 'vike/types';\nexport const createPageInit = <T = void,>() => createEvent<PageContextServer<T>>({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = <T = void,>() => createEvent<PageContextClient<T>>({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});",
-      "start": 1750275033507,
-      "end": 1750275033508,
+      "start": 1750278466883,
+      "end": 1750278466884,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -37,8 +37,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1750275033508,
-      "end": 1750275033594,
+      "start": 1750278466884,
+      "end": 1750278466943,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -52,81 +52,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033594,
-      "end": 1750275033594,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033594,
-      "end": 1750275033595,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033595,
-      "end": 1750275033595,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033595,
-      "end": 1750275033595,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/lib/effector/events.ts [vike:pluginModuleBanner] */\nimport { createEvent } from \"effector\";\nexport const createPageInit = () => createEvent({\n  name: \"createPageInit\",\n  sid: \"-1l190a\"\n});\nexport const createPageStart = () => createEvent({\n  name: \"createPageStart\",\n  sid: \"-jy57zs\"\n});\n",
-      "start": 1750275033595,
-      "end": 1750275033595,
+      "start": 1750278466943,
+      "end": 1750278466943,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

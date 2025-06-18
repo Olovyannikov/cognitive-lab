@@ -4,93 +4,93 @@
     {
       "name": "vite-plugin-svgr",
       "result": "import * as React from \"react\";\nconst SvgImageCardDesktop1 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 217, height: 200, viewBox: \"0 0 217 200\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { d: \"M217 38.5C170.524 21.9639 148.525 -31.141 169.723 -75.7228C125.141 -54.5246 72.0361 -76.5241 55.5 -123C38.9639 -76.5241 -14.141 -54.5246 -58.7228 -75.7228C-37.5246 -31.141 -59.5241 21.9639 -106 38.5C-59.5241 55.0361 -37.5246 108.141 -58.7228 152.723C-14.141 131.525 38.9639 153.524 55.5 200C72.0361 153.524 125.141 131.525 169.723 152.723C148.525 108.141 170.524 55.0361 217 38.5Z\", fill: \"#5F3DC4\" }));\nexport default SvgImageCardDesktop1;\n",
-      "start": 1750275034013,
-      "end": 1750275034243,
+      "start": 1750278467468,
+      "end": 1750278467589,
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034243,
-      "end": 1750275034243,
+      "start": 1750278467589,
+      "end": 1750278467589,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/IndexPage/ui/ForWhom/img/image-card-desktop-1.svg?react [vike:pluginModuleBanner] */\nimport * as React from \"react\";\nconst SvgImageCardDesktop1 = (props) => /* @__PURE__ */ React.createElement(\"svg\", { width: 217, height: 200, viewBox: \"0 0 217 200\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\", ...props }, /* @__PURE__ */ React.createElement(\"path\", { d: \"M217 38.5C170.524 21.9639 148.525 -31.141 169.723 -75.7228C125.141 -54.5246 72.0361 -76.5241 55.5 -123C38.9639 -76.5241 -14.141 -54.5246 -58.7228 -75.7228C-37.5246 -31.141 -59.5241 21.9639 -106 38.5C-59.5241 55.0361 -37.5246 108.141 -58.7228 152.723C-14.141 131.525 38.9639 153.524 55.5 200C72.0361 153.524 125.141 131.525 169.723 152.723C148.525 108.141 170.524 55.0361 217 38.5Z\", fill: \"#5F3DC4\" }));\nexport default SvgImageCardDesktop1;\n",
-      "start": 1750275034243,
-      "end": 1750275034244,
+      "start": 1750278467590,
+      "end": 1750278467590,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

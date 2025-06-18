@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import {\n    BuyNowAndNavigateToFullStructureAction,\n    BuyNowOrRedirectToTestPageAction,\n    RedirectToTestPageAndNavigateToFullStructureAction,\n    TakeTestAgainOrBuyReportAction,\n} from './ui';\n\nexport const CALL_TO_ACTION = {\n    buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n    redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n    redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n    takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />,\n};\n",
-      "start": 1750275033524,
-      "end": 1750275033579,
+      "start": 1750278466917,
+      "end": 1750278466959,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from './ui';\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: <BuyNowAndNavigateToFullStructureAction />,\n  redirectToTestPageAndNavigateToFullStructure: <RedirectToTestPageAndNavigateToFullStructureAction />,\n  redirectToTest: <BuyNowOrRedirectToTestPageAction />,\n  takeTestAgainOrBuyReport: <TakeTestAgainOrBuyReportAction />\n};",
-      "start": 1750275033579,
-      "end": 1750275033580,
+      "start": 1750278466959,
+      "end": 1750278466961,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -38,8 +38,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from \"./ui\";\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: /* @__PURE__ */ jsx(BuyNowAndNavigateToFullStructureAction, {}),\n  redirectToTestPageAndNavigateToFullStructure: /* @__PURE__ */ jsx(RedirectToTestPageAndNavigateToFullStructureAction, {}),\n  redirectToTest: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}),\n  takeTestAgainOrBuyReport: /* @__PURE__ */ jsx(TakeTestAgainOrBuyReportAction, {})\n};\n",
-      "start": 1750275033580,
-      "end": 1750275033673,
+      "start": 1750278466961,
+      "end": 1750278467082,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -53,81 +53,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467082,
+      "end": 1750278467082,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467083,
+      "end": 1750278467083,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467083,
+      "end": 1750278467083,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467083,
+      "end": 1750278467083,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467083,
+      "end": 1750278467083,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/CTA/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { BuyNowAndNavigateToFullStructureAction, BuyNowOrRedirectToTestPageAction, RedirectToTestPageAndNavigateToFullStructureAction, TakeTestAgainOrBuyReportAction } from \"./ui\";\nexport const CALL_TO_ACTION = {\n  buyNowAndNavigateToFullStructure: /* @__PURE__ */ jsx(BuyNowAndNavigateToFullStructureAction, {}),\n  redirectToTestPageAndNavigateToFullStructure: /* @__PURE__ */ jsx(RedirectToTestPageAndNavigateToFullStructureAction, {}),\n  redirectToTest: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}),\n  takeTestAgainOrBuyReport: /* @__PURE__ */ jsx(TakeTestAgainOrBuyReportAction, {})\n};\n",
-      "start": 1750275033673,
-      "end": 1750275033673,
+      "start": 1750278467083,
+      "end": 1750278467083,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\n\nimport s from './ReportGroupTemplate.module.css';\n\ninterface ReportGroupTemplateProps {\n    reports: { mbti_type: string; user_report: string; created_at: string; report_kind: string }[];\n    render: ReactNode;\n    label: string;\n}\n\nexport const ReportGroupTemplate = ({ reports, render, label }: ReportGroupTemplateProps) => (\n    <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>\n);\n",
-      "start": 1750275034418,
-      "end": 1750275034427,
+      "start": 1750278467700,
+      "end": 1750278467716,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import type { ReactNode } from 'react';\nimport { Stack, Text } from '@mantine/core';\nimport s from './ReportGroupTemplate.module.css';\ninterface ReportGroupTemplateProps {\n  reports: {\n    mbti_type: string;\n    user_report: string;\n    created_at: string;\n    report_kind: string;\n  }[];\n  render: ReactNode;\n  label: string;\n}\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}: ReportGroupTemplateProps) => <Stack gap={0} mb='xs'>\n        <Text hidden={!reports?.length} className={s.title}>\n            {label}\n        </Text>\n        {render}\n    </Stack>;",
-      "start": 1750275034427,
-      "end": 1750275034428,
+      "start": 1750278467716,
+      "end": 1750278467717,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -46,8 +46,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Stack, Text } from \"@mantine/core\";\nimport s from \"./ReportGroupTemplate.module.css\";\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}) => /* @__PURE__ */ jsxs(Stack, { gap: 0, mb: \"xs\", children: [\n  /* @__PURE__ */ jsx(Text, { hidden: !reports?.length, className: s.title, children: label }),\n  render\n] });\n",
-      "start": 1750275034428,
-      "end": 1750275034433,
+      "start": 1750278467717,
+      "end": 1750278467727,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -63,81 +63,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467727,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467727,
+      "end": 1750278467728,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467728,
+      "end": 1750278467728,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467728,
+      "end": 1750278467728,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Navigation/Reports/ReportGroupTemplate/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Stack, Text } from \"@mantine/core\";\nimport s from \"./ReportGroupTemplate.module.css\";\nexport const ReportGroupTemplate = ({\n  reports,\n  render,\n  label\n}) => /* @__PURE__ */ jsxs(Stack, { gap: 0, mb: \"xs\", children: [\n  /* @__PURE__ */ jsx(Text, { hidden: !reports?.length, className: s.title, children: label }),\n  render\n] });\n",
-      "start": 1750275034433,
-      "end": 1750275034433,
+      "start": 1750278467728,
+      "end": 1750278467728,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".list {\n  display: grid;\n  gap: var(--mantine-spacing-md);\n\n  li::marker {\n    font-weight: 700;\n    font-size: 24px;\n    line-height: 28px;\n  }\n\n  &[data-color=\"violet\"] {\n    li::marker {\n      color: var(--mantine-color-violet-9);\n    }\n  }\n\n  &[data-color=\"green\"] {\n    li::marker {\n      color: var(--mantine-color-green-9);\n    }\n  }\n\n  &[data-color=\"indigo\"] {\n    li::marker {\n      color: var(--mantine-color-indigo-9);\n    }\n  }\n\n  &[data-color=\"yellow\"] {\n    li::marker {\n      color: var(--mantine-color-yellow-9);\n    }\n  }\n\n  @mixin smaller-than 768px {\n    li {\n      max-width: calc(100% - 4vw);\n    }\n  }\n}\n\n.title {\n  overflow-wrap: anywhere;\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 28px;\n  word-break: normal;\n  hyphens: auto;\n\n  @mixin text-data-color 9;\n}\n",
-      "start": 1750275034139,
-      "end": 1750275034158,
+      "start": 1750278467384,
+      "end": 1750278467405,
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467407,
+      "end": 1750278467407,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/OrderedList/OrderedList.module.css [vike:pluginModuleBanner] */\nexport const list = \"h1b8U\";\nexport const title = \"LiCQs\";\nexport default {\n\tlist: list,\n\ttitle: title\n};\n",
-      "start": 1750275034160,
-      "end": 1750275034160,
+      "start": 1750278467408,
+      "end": 1750278467408,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

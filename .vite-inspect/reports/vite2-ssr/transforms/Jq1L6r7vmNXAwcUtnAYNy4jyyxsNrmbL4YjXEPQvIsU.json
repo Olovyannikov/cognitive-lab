@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { sample } from 'effector';\n\nimport { createPageInit } from '@/shared/lib';\n\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\n\nexport const pageInitiated = createPageInit();\n\nsample({\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh,\n});\n",
-      "start": 1750275033346,
-      "end": 1750275033377,
+      "start": 1750278466703,
+      "end": 1750278466732,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { sample } from 'effector';\nimport { createPageInit } from '@/shared/lib';\nimport { getPersonalityTypesWithCategoriesQuery } from '@/entities/Personality';\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});",
-      "start": 1750275033377,
-      "end": 1750275033378,
+      "start": 1750278466732,
+      "end": 1750278466732,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -39,8 +39,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});\n",
-      "start": 1750275033378,
-      "end": 1750275033426,
+      "start": 1750278466732,
+      "end": 1750278466769,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -54,81 +54,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033426,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466769,
+      "end": 1750278466769,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466770,
+      "end": 1750278466770,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/mbti-types/+pageInitiated.ts [vike:pluginModuleBanner] */\nimport { sample } from \"effector\";\nimport { createPageInit } from \"@/shared/lib\";\nimport { getPersonalityTypesWithCategoriesQuery } from \"@/entities/Personality\";\nexport const pageInitiated = createPageInit();\nsample({\n  and: [{\n    clock: pageInitiated,\n    target: getPersonalityTypesWithCategoriesQuery.refresh\n  }],\n  or: {\n    sid: \"-40l6ny\"\n  }\n});\n",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466770,
+      "end": 1750278466770,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

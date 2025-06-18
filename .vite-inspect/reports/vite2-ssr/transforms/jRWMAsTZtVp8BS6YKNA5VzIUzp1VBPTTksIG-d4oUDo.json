@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Fragment } from 'react';\nimport { Box, Container, Stack, Title } from '@mantine/core';\nimport { useList } from 'effector-react';\n\nimport { useIsLarge } from '@/shared/lib';\nimport { InnerContainer } from '@/shared/ui';\n\nimport { ConclusionPaywall, contentResolver, getReportStructureQuery, Preheader } from '@/entities/Report';\n\nimport { BuyNowButton } from '@/features/BuyNowButton';\n\nimport { BuyNowOrRedirectToTestPageAction } from '@/widgets/CTA/ui';\n\nimport s from './FullReportExamplePage.module.css';\n\nexport const FullReportExamplePage = () => {\n    const isLarge = useIsLarge();\n\n    const renderContent = useList(getReportStructureQuery.$data, {\n        keys: [isLarge],\n        fn: (data, index) => (\n            <Stack className={s.block} mb={80}>\n                <Title c='black'>{data.title}</Title>\n                {data.content?.map((el, idx) => (\n                    <Fragment key={el.type + data?.title + idx}>\n                        {el.content.map((currentEl, idx) => (\n                            <Fragment key={currentEl.type + idx}>\n                                {contentResolver({\n                                    content: currentEl,\n                                    color: 'violet',\n                                    index,\n                                    slots: {\n                                        paywallExtraAction: (\n                                            <BuyNowButton\n                                                fullWidth\n                                                variant='default'\n                                                href='/purchase?type=\"\"'\n                                                size={isLarge ? 'md' : 'sm'}\n                                                maw={isLarge ? 'fit-content' : '100%'}\n                                            />\n                                        ),\n                                    },\n                                })}\n                            </Fragment>\n                        ))}\n                    </Fragment>\n                ))}\n            </Stack>\n        ),\n    });\n\n    return (\n        <Box component='section'>\n            <Container mb={80}>\n                <Preheader title='Структура полной версии отчета' />\n                <InnerContainer>{renderContent}</InnerContainer>\n                <ConclusionPaywall\n                    title='Раскройте все грани своей личности'\n                    text='Получите полный отчет и разблокируйте доступ ко всем результатам, включая:'\n                    points={[\n                        'Глубокий анализ всех аспектов вашей личности.',\n                        'Индивидуальные рекомендации для развития и достижения целей.',\n                        'Полный набор стратегий для эффективного использования вашего потенциала.',\n                    ]}\n                    actionsSlot={<BuyNowOrRedirectToTestPageAction />}\n                />\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1750275033434,
-      "end": 1750275033463,
+      "start": 1750278466785,
+      "end": 1750278466817,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Fragment } from 'react';\nimport { Box, Container, Stack, Title } from '@mantine/core';\nimport { useList } from 'effector-react';\nimport { useIsLarge } from '@/shared/lib';\nimport { InnerContainer } from '@/shared/ui';\nimport { ConclusionPaywall, contentResolver, getReportStructureQuery, Preheader } from '@/entities/Report';\nimport { BuyNowButton } from '@/features/BuyNowButton';\nimport { BuyNowOrRedirectToTestPageAction } from '@/widgets/CTA/ui';\nimport s from './FullReportExamplePage.module.css';\nexport const FullReportExamplePage = () => {\n  const isLarge = useIsLarge();\n  const renderContent = useList(getReportStructureQuery.$data, {\n    keys: [isLarge],\n    fn: (data, index) => <Stack className={s.block} mb={80}>\n                <Title c='black'>{data.title}</Title>\n                {data.content?.map((el, idx) => <Fragment key={el.type + data?.title + idx}>\n                        {el.content.map((currentEl, idx) => <Fragment key={currentEl.type + idx}>\n                                {contentResolver({\n            content: currentEl,\n            color: 'violet',\n            index,\n            slots: {\n              paywallExtraAction: <BuyNowButton fullWidth variant='default' href='/purchase?type=\"\"' size={isLarge ? 'md' : 'sm'} maw={isLarge ? 'fit-content' : '100%'} />\n            }\n          })}\n                            </Fragment>)}\n                    </Fragment>)}\n            </Stack>\n  });\n  return <Box component='section'>\n            <Container mb={80}>\n                <Preheader title='Структура полной версии отчета' />\n                <InnerContainer>{renderContent}</InnerContainer>\n                <ConclusionPaywall title='Раскройте все грани своей личности' text='Получите полный отчет и разблокируйте доступ ко всем результатам, включая:' points={['Глубокий анализ всех аспектов вашей личности.', 'Индивидуальные рекомендации для развития и достижения целей.', 'Полный набор стратегий для эффективного использования вашего потенциала.']} actionsSlot={<BuyNowOrRedirectToTestPageAction />} />\n            </Container>\n        </Box>;\n};",
-      "start": 1750275033463,
-      "end": 1750275033464,
+      "start": 1750278466817,
+      "end": 1750278466819,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -63,8 +63,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container, Stack, Title } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { ConclusionPaywall, contentResolver, getReportStructureQuery, Preheader } from \"@/entities/Report\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { BuyNowOrRedirectToTestPageAction } from \"@/widgets/CTA/ui\";\nimport s from \"./FullReportExamplePage.module.css\";\nexport const FullReportExamplePage = () => {\n  const isLarge = useIsLarge();\n  const renderContent = useList(getReportStructureQuery.$data, {\n    keys: [isLarge],\n    fn: (data, index) => /* @__PURE__ */ jsxs(Stack, { className: s.block, mb: 80, children: [\n      /* @__PURE__ */ jsx(Title, { c: \"black\", children: data.title }),\n      data.content?.map((el, idx) => /* @__PURE__ */ jsx(Fragment, { children: el.content.map((currentEl, idx2) => /* @__PURE__ */ jsx(Fragment, { children: contentResolver({\n        content: currentEl,\n        color: \"violet\",\n        index,\n        slots: {\n          paywallExtraAction: /* @__PURE__ */ jsx(BuyNowButton, { fullWidth: true, variant: \"default\", href: '/purchase?type=\"\"', size: isLarge ? \"md\" : \"sm\", maw: isLarge ? \"fit-content\" : \"100%\" })\n        }\n      }) }, currentEl.type + idx2)) }, el.type + data?.title + idx))\n    ] })\n  });\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { mb: 80, children: [\n    /* @__PURE__ */ jsx(Preheader, { title: \"Структура полной версии отчета\" }),\n    /* @__PURE__ */ jsx(InnerContainer, { children: renderContent }),\n    /* @__PURE__ */ jsx(ConclusionPaywall, { title: \"Раскройте все грани своей личности\", text: \"Получите полный отчет и разблокируйте доступ ко всем результатам, включая:\", points: [\"Глубокий анализ всех аспектов вашей личности.\", \"Индивидуальные рекомендации для развития и достижения целей.\", \"Полный набор стратегий для эффективного использования вашего потенциала.\"], actionsSlot: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}) })\n  ] }) });\n};\n",
-      "start": 1750275033465,
-      "end": 1750275033550,
+      "start": 1750278466819,
+      "end": 1750278466899,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -78,81 +78,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033550,
-      "end": 1750275033550,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033550,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/FullReportExamplePage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container, Stack, Title } from \"@mantine/core\";\nimport { useList } from \"effector-react\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { InnerContainer } from \"@/shared/ui\";\nimport { ConclusionPaywall, contentResolver, getReportStructureQuery, Preheader } from \"@/entities/Report\";\nimport { BuyNowButton } from \"@/features/BuyNowButton\";\nimport { BuyNowOrRedirectToTestPageAction } from \"@/widgets/CTA/ui\";\nimport s from \"./FullReportExamplePage.module.css\";\nexport const FullReportExamplePage = () => {\n  const isLarge = useIsLarge();\n  const renderContent = useList(getReportStructureQuery.$data, {\n    keys: [isLarge],\n    fn: (data, index) => /* @__PURE__ */ jsxs(Stack, { className: s.block, mb: 80, children: [\n      /* @__PURE__ */ jsx(Title, { c: \"black\", children: data.title }),\n      data.content?.map((el, idx) => /* @__PURE__ */ jsx(Fragment, { children: el.content.map((currentEl, idx2) => /* @__PURE__ */ jsx(Fragment, { children: contentResolver({\n        content: currentEl,\n        color: \"violet\",\n        index,\n        slots: {\n          paywallExtraAction: /* @__PURE__ */ jsx(BuyNowButton, { fullWidth: true, variant: \"default\", href: '/purchase?type=\"\"', size: isLarge ? \"md\" : \"sm\", maw: isLarge ? \"fit-content\" : \"100%\" })\n        }\n      }) }, currentEl.type + idx2)) }, el.type + data?.title + idx))\n    ] })\n  });\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { mb: 80, children: [\n    /* @__PURE__ */ jsx(Preheader, { title: \"Структура полной версии отчета\" }),\n    /* @__PURE__ */ jsx(InnerContainer, { children: renderContent }),\n    /* @__PURE__ */ jsx(ConclusionPaywall, { title: \"Раскройте все грани своей личности\", text: \"Получите полный отчет и разблокируйте доступ ко всем результатам, включая:\", points: [\"Глубокий анализ всех аспектов вашей личности.\", \"Индивидуальные рекомендации для развития и достижения целей.\", \"Полный набор стратегий для эффективного использования вашего потенциала.\"], actionsSlot: /* @__PURE__ */ jsx(BuyNowOrRedirectToTestPageAction, {}) })\n  ] }) });\n};\n",
-      "start": 1750275033551,
-      "end": 1750275033551,
+      "start": 1750278466899,
+      "end": 1750278466900,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

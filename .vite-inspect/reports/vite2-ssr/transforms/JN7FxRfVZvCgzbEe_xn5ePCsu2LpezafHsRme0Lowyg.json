@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Paper } from '@mantine/core';\n\nimport { Paragraph } from '@/entities/Report';\n\nimport s from './TextStrokeDash.module.css';\n\ninterface TextStrokeDashProps {\n    text: string;\n    color?: string;\n}\n\nexport const TextStrokeDash = ({ text, color }: TextStrokeDashProps) => (\n    <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>\n);\n",
-      "start": 1750275033786,
-      "end": 1750275033845,
+      "start": 1750278467139,
+      "end": 1750278467177,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Paper } from '@mantine/core';\nimport { Paragraph } from '@/entities/Report';\nimport s from './TextStrokeDash.module.css';\ninterface TextStrokeDashProps {\n  text: string;\n  color?: string;\n}\nexport const TextStrokeDash = ({\n  text,\n  color\n}: TextStrokeDashProps) => <Paper data-color={color} className={s.paper}>\n        <Paragraph fz={22} text={text} />\n    </Paper>;",
-      "start": 1750275033845,
-      "end": 1750275033846,
+      "start": 1750278467177,
+      "end": 1750278467178,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -30,8 +30,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
-      "start": 1750275033846,
-      "end": 1750275034117,
+      "start": 1750278467178,
+      "end": 1750278467385,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -47,81 +47,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/ui/TextStrokeDash/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Paper } from \"@mantine/core\";\nimport { Paragraph } from \"@/entities/Report\";\nimport s from \"./TextStrokeDash.module.css\";\nexport const TextStrokeDash = ({\n  text,\n  color\n}) => /* @__PURE__ */ jsx(Paper, { \"data-color\": color, className: s.paper, children: /* @__PURE__ */ jsx(Paragraph, { fz: 22, text }) });\n",
-      "start": 1750275034117,
-      "end": 1750275034117,
+      "start": 1750278467385,
+      "end": 1750278467385,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

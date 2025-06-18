@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { isUndefined } from 'lodash-es';\nimport { combineEvents, delay } from 'patronum';\nimport { navigate } from 'vike/client/router';\n\nimport { atom } from '@/shared/factories';\nimport { is404Error } from '@/shared/lib';\n\nimport { getFreeResultQuery, getFullReportQuery, getSurveysInfoQuery } from '../api';\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './contentPage';\nimport { $userOrder, $userOrderStatus } from './order';\nimport { $reportContent } from './reportContent';\nimport {\n    $allUserReports,\n    $expressUserReports,\n    $freeUserReports,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $paidUserReports,\n} from './userReports';\n\nexport const ReportModel = atom(() => {\n    const ReportGate = createGate();\n    const FreeReportGate = createGate();\n\n    const freeReportIdReceived = createEvent<string>();\n    const fullReportIdReceived = createEvent<string>();\n    const $currentFreeReportId = createStore<string | null>(null);\n    const $currentFullReportId = createStore<string | null>(null);\n\n    sample({\n        clock: freeReportIdReceived,\n        target: $currentFreeReportId,\n    });\n\n    sample({\n        clock: fullReportIdReceived,\n        target: $currentFullReportId,\n    });\n\n    const redirectToMainPageFx = createEffect(async () => await navigate('/'));\n\n    sample({\n        clock: getFreeResultQuery.finished.success,\n        filter: ({ result }) => !result,\n        target: redirectToMainPageFx,\n    });\n\n    const ReportPageGate = createGate();\n\n    persist({\n        store: $currentPage,\n        pickup: ReportPageGate.open,\n    });\n    persist({\n        store: $currentContentPage,\n        pickup: ReportPageGate.open,\n    });\n    $currentContentPage.reset(ReportPageGate.close);\n    $currentPage.reset(ReportPageGate.close);\n\n    const currentPageChanged = createEvent<number>();\n\n    createAction({\n        clock: currentPageChanged,\n        target: {\n            $currentContentPage,\n            $currentPage,\n        },\n        fn: (target, clock) => {\n            target.$currentPage(clock);\n            target.$currentContentPage(clock - 1);\n        },\n    });\n\n    const $userMbtiTypes = createStore<Record<string, string>[]>([]);\n\n    sample({\n        clock: getSurveysInfoQuery.finished.success,\n        filter: (data) => !isUndefined(data.result),\n        fn: ({ result }) =>\n            result?.reports.map((report) => ({\n                [report.user_report]: report.mbti_type,\n            })) ?? [],\n        target: $userMbtiTypes,\n    });\n\n    const freeReportReceived = combineEvents([delay(FreeReportGate.open, 600), freeReportIdReceived]);\n\n    sample({\n        clock: $currentFreeReportId,\n        target: [getFreeResultQuery.reset],\n    });\n\n    sample({\n        clock: [freeReportReceived, $currentFreeReportId],\n        source: $currentFreeReportId,\n        fn: (id) => ({ id: id ?? '' }),\n        target: [getFreeResultQuery.refresh],\n    });\n\n    const fullReportReceived = combineEvents([delay(ReportPageGate.open, 600), fullReportIdReceived]);\n\n    sample({\n        clock: $currentFullReportId,\n        target: [getFullReportQuery.reset],\n    });\n\n    sample({\n        clock: [fullReportReceived, $currentFullReportId],\n        source: $currentFullReportId,\n        fn: (id) => ({ id: id ?? '' }),\n        target: [getFullReportQuery.refresh],\n    });\n\n    const redirectTo404Fx = createEffect(async () => {\n        await navigate('/error/404');\n    });\n\n    sample({\n        clock: getFreeResultQuery.finished.failure,\n        filter: is404Error,\n        target: redirectTo404Fx,\n    });\n\n    return {\n        ReportGate,\n        $isUserHasFreeReport,\n        $lastUserFreeReport,\n        $allUserReports,\n        $freeUserReports,\n        $paidUserReports,\n        $expressUserReports,\n        $reportContent,\n        $userOrder,\n        $userOrderStatus,\n        $isFirstPage,\n        $isLastPage,\n        $currentContentPage,\n        currentPageChanged,\n        $userMbtiTypes,\n        ReportPageGate,\n        $currentPage,\n        FreeReportGate,\n        fullReportIdReceived,\n        freeReportIdReceived,\n        $currentFreeReportId,\n        $currentFullReportId,\n    };\n});\n",
-      "start": 1750275033509,
-      "end": 1750275033583,
+      "start": 1750278466862,
+      "end": 1750278466906,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from 'effector';\nimport { createAction } from 'effector-action';\nimport { createGate } from 'effector-react';\nimport { persist } from 'effector-storage/local';\nimport { isUndefined } from 'lodash-es';\nimport { combineEvents, delay } from 'patronum';\nimport { navigate } from 'vike/client/router';\nimport { atom } from '@/shared/factories';\nimport { is404Error } from '@/shared/lib';\nimport { getFreeResultQuery, getFullReportQuery, getSurveysInfoQuery } from '../api';\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from './contentPage';\nimport { $userOrder, $userOrderStatus } from './order';\nimport { $reportContent } from './reportContent';\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from './userReports';\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"o75twi\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-1ng9xr\"\n    }\n  });\n  const freeReportIdReceived = createEvent<string>({\n    name: \"freeReportIdReceived\",\n    sid: \"3kugmb\"\n  });\n  const fullReportIdReceived = createEvent<string>({\n    name: \"fullReportIdReceived\",\n    sid: \"rsykga\"\n  });\n  const $currentFreeReportId = createStore<string | null>(null, {\n    name: \"$currentFreeReportId\",\n    sid: \"a1mbco\"\n  });\n  const $currentFullReportId = createStore<string | null>(null, {\n    name: \"$currentFullReportId\",\n    sid: \"g0nro\"\n  });\n  sample({\n    and: [{\n      clock: freeReportIdReceived,\n      target: $currentFreeReportId\n    }],\n    or: {\n      sid: \"st7cyp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: fullReportIdReceived,\n      target: $currentFullReportId\n    }],\n    or: {\n      sid: \"svybxi\"\n    }\n  });\n  const redirectToMainPageFx = createEffect(async () => await navigate('/'), {\n    name: \"redirectToMainPageFx\",\n    sid: \"668585\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.success,\n      filter: ({\n        result\n      }) => !result,\n      target: redirectToMainPageFx\n    }],\n    or: {\n      sid: \"tbckjm\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"n3dj12\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent<number>({\n    name: \"currentPageChanged\",\n    sid: \"acxd6l\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore<Record<string, string>[]>([], {\n    name: \"$userMbtiTypes\",\n    sid: \"qjydfj\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      filter: data => !isUndefined(data.result),\n      fn: ({\n        result\n      }) => result?.reports.map(report => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"v4s35l\"\n    }\n  });\n  const freeReportReceived = _withFactory({\n    sid: \"-1odlyp\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"kvyeys\",\n      fn: () => delay(FreeReportGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), freeReportIdReceived]),\n    name: \"freeReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFreeReportId,\n      target: [getFreeResultQuery.reset]\n    }],\n    or: {\n      sid: \"vmxaqi\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [freeReportReceived, $currentFreeReportId],\n      source: $currentFreeReportId,\n      fn: id => ({\n        id: id ?? ''\n      }),\n      target: [getFreeResultQuery.refresh]\n    }],\n    or: {\n      sid: \"vpo9pb\"\n    }\n  });\n  const fullReportReceived = _withFactory({\n    sid: \"-88ygbo\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"-jhs810\",\n      fn: () => delay(ReportPageGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), fullReportIdReceived]),\n    name: \"fullReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFullReportId,\n      target: [getFullReportQuery.reset]\n    }],\n    or: {\n      sid: \"9p9es2\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [fullReportReceived, $currentFullReportId],\n      source: $currentFullReportId,\n      fn: id => ({\n        id: id ?? ''\n      }),\n      target: [getFullReportQuery.refresh]\n    }],\n    or: {\n      sid: \"a3k27g\"\n    }\n  });\n  const redirectTo404Fx = createEffect(async () => {\n    await navigate('/error/404');\n  }, {\n    name: \"redirectTo404Fx\",\n    sid: \"h3z3s0\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.failure,\n      filter: is404Error,\n      target: redirectTo404Fx\n    }],\n    or: {\n      sid: \"al5h70\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    fullReportIdReceived,\n    freeReportIdReceived,\n    $currentFreeReportId,\n    $currentFullReportId\n  };\n});",
-      "start": 1750275033584,
-      "end": 1750275033587,
+      "start": 1750278466906,
+      "end": 1750278466910,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -110,8 +110,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { isUndefined } from \"lodash-es\";\nimport { combineEvents, delay } from \"patronum\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { is404Error } from \"@/shared/lib\";\nimport { getFreeResultQuery, getFullReportQuery, getSurveysInfoQuery } from \"../api\";\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from \"./contentPage\";\nimport { $userOrder, $userOrderStatus } from \"./order\";\nimport { $reportContent } from \"./reportContent\";\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from \"./userReports\";\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"o75twi\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-1ng9xr\"\n    }\n  });\n  const freeReportIdReceived = createEvent({\n    name: \"freeReportIdReceived\",\n    sid: \"3kugmb\"\n  });\n  const fullReportIdReceived = createEvent({\n    name: \"fullReportIdReceived\",\n    sid: \"rsykga\"\n  });\n  const $currentFreeReportId = createStore(null, {\n    name: \"$currentFreeReportId\",\n    sid: \"a1mbco\"\n  });\n  const $currentFullReportId = createStore(null, {\n    name: \"$currentFullReportId\",\n    sid: \"g0nro\"\n  });\n  sample({\n    and: [{\n      clock: freeReportIdReceived,\n      target: $currentFreeReportId\n    }],\n    or: {\n      sid: \"st7cyp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: fullReportIdReceived,\n      target: $currentFullReportId\n    }],\n    or: {\n      sid: \"svybxi\"\n    }\n  });\n  const redirectToMainPageFx = createEffect(async () => await navigate(\"/\"), {\n    name: \"redirectToMainPageFx\",\n    sid: \"668585\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.success,\n      filter: ({\n        result\n      }) => !result,\n      target: redirectToMainPageFx\n    }],\n    or: {\n      sid: \"tbckjm\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"n3dj12\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent({\n    name: \"currentPageChanged\",\n    sid: \"acxd6l\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore([], {\n    name: \"$userMbtiTypes\",\n    sid: \"qjydfj\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      filter: (data) => !isUndefined(data.result),\n      fn: ({\n        result\n      }) => result?.reports.map((report) => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"v4s35l\"\n    }\n  });\n  const freeReportReceived = _withFactory({\n    sid: \"-1odlyp\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"kvyeys\",\n      fn: () => delay(FreeReportGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), freeReportIdReceived]),\n    name: \"freeReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFreeReportId,\n      target: [getFreeResultQuery.reset]\n    }],\n    or: {\n      sid: \"vmxaqi\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [freeReportReceived, $currentFreeReportId],\n      source: $currentFreeReportId,\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: [getFreeResultQuery.refresh]\n    }],\n    or: {\n      sid: \"vpo9pb\"\n    }\n  });\n  const fullReportReceived = _withFactory({\n    sid: \"-88ygbo\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"-jhs810\",\n      fn: () => delay(ReportPageGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), fullReportIdReceived]),\n    name: \"fullReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFullReportId,\n      target: [getFullReportQuery.reset]\n    }],\n    or: {\n      sid: \"9p9es2\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [fullReportReceived, $currentFullReportId],\n      source: $currentFullReportId,\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: [getFullReportQuery.refresh]\n    }],\n    or: {\n      sid: \"a3k27g\"\n    }\n  });\n  const redirectTo404Fx = createEffect(async () => {\n    await navigate(\"/error/404\");\n  }, {\n    name: \"redirectTo404Fx\",\n    sid: \"h3z3s0\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.failure,\n      filter: is404Error,\n      target: redirectTo404Fx\n    }],\n    or: {\n      sid: \"al5h70\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    fullReportIdReceived,\n    freeReportIdReceived,\n    $currentFreeReportId,\n    $currentFullReportId\n  };\n});\n",
-      "start": 1750275033587,
-      "end": 1750275033721,
+      "start": 1750278466910,
+      "end": 1750278467002,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -125,81 +125,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467002,
+      "end": 1750278467002,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033721,
-      "end": 1750275033721,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/model/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createEffect, createEvent, createStore, sample } from \"effector\";\nimport { createAction } from \"effector-action\";\nimport { createGate } from \"effector-react\";\nimport { persist } from \"effector-storage/local\";\nimport { isUndefined } from \"lodash-es\";\nimport { combineEvents, delay } from \"patronum\";\nimport { navigate } from \"vike/client/router\";\nimport { atom } from \"@/shared/factories\";\nimport { is404Error } from \"@/shared/lib\";\nimport { getFreeResultQuery, getFullReportQuery, getSurveysInfoQuery } from \"../api\";\nimport { $currentContentPage, $currentPage, $isFirstPage, $isLastPage } from \"./contentPage\";\nimport { $userOrder, $userOrderStatus } from \"./order\";\nimport { $reportContent } from \"./reportContent\";\nimport { $allUserReports, $expressUserReports, $freeUserReports, $isUserHasFreeReport, $lastUserFreeReport, $paidUserReports } from \"./userReports\";\nexport const ReportModel = atom(() => {\n  const ReportGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportGate\",\n      sid: \"o75twi\"\n    }\n  });\n  const FreeReportGate = createGate({\n    and: [],\n    or: {\n      name: \"FreeReportGate\",\n      sid: \"-1ng9xr\"\n    }\n  });\n  const freeReportIdReceived = createEvent({\n    name: \"freeReportIdReceived\",\n    sid: \"3kugmb\"\n  });\n  const fullReportIdReceived = createEvent({\n    name: \"fullReportIdReceived\",\n    sid: \"rsykga\"\n  });\n  const $currentFreeReportId = createStore(null, {\n    name: \"$currentFreeReportId\",\n    sid: \"a1mbco\"\n  });\n  const $currentFullReportId = createStore(null, {\n    name: \"$currentFullReportId\",\n    sid: \"g0nro\"\n  });\n  sample({\n    and: [{\n      clock: freeReportIdReceived,\n      target: $currentFreeReportId\n    }],\n    or: {\n      sid: \"st7cyp\"\n    }\n  });\n  sample({\n    and: [{\n      clock: fullReportIdReceived,\n      target: $currentFullReportId\n    }],\n    or: {\n      sid: \"svybxi\"\n    }\n  });\n  const redirectToMainPageFx = createEffect(async () => await navigate(\"/\"), {\n    name: \"redirectToMainPageFx\",\n    sid: \"668585\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.success,\n      filter: ({\n        result\n      }) => !result,\n      target: redirectToMainPageFx\n    }],\n    or: {\n      sid: \"tbckjm\"\n    }\n  });\n  const ReportPageGate = createGate({\n    and: [],\n    or: {\n      name: \"ReportPageGate\",\n      sid: \"n3dj12\"\n    }\n  });\n  persist({\n    store: $currentPage,\n    pickup: ReportPageGate.open\n  });\n  persist({\n    store: $currentContentPage,\n    pickup: ReportPageGate.open\n  });\n  $currentContentPage.reset(ReportPageGate.close);\n  $currentPage.reset(ReportPageGate.close);\n  const currentPageChanged = createEvent({\n    name: \"currentPageChanged\",\n    sid: \"acxd6l\"\n  });\n  createAction({\n    clock: currentPageChanged,\n    target: {\n      $currentContentPage,\n      $currentPage\n    },\n    fn: (target, clock) => {\n      target.$currentPage(clock);\n      target.$currentContentPage(clock - 1);\n    }\n  });\n  const $userMbtiTypes = createStore([], {\n    name: \"$userMbtiTypes\",\n    sid: \"qjydfj\"\n  });\n  sample({\n    and: [{\n      clock: getSurveysInfoQuery.finished.success,\n      filter: (data) => !isUndefined(data.result),\n      fn: ({\n        result\n      }) => result?.reports.map((report) => ({\n        [report.user_report]: report.mbti_type\n      })) ?? [],\n      target: $userMbtiTypes\n    }],\n    or: {\n      sid: \"v4s35l\"\n    }\n  });\n  const freeReportReceived = _withFactory({\n    sid: \"-1odlyp\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"kvyeys\",\n      fn: () => delay(FreeReportGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), freeReportIdReceived]),\n    name: \"freeReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFreeReportId,\n      target: [getFreeResultQuery.reset]\n    }],\n    or: {\n      sid: \"vmxaqi\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [freeReportReceived, $currentFreeReportId],\n      source: $currentFreeReportId,\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: [getFreeResultQuery.refresh]\n    }],\n    or: {\n      sid: \"vpo9pb\"\n    }\n  });\n  const fullReportReceived = _withFactory({\n    sid: \"-88ygbo\",\n    fn: () => combineEvents([_withFactory({\n      sid: \"-jhs810\",\n      fn: () => delay(ReportPageGate.open, 600),\n      name: \"fn\",\n      method: \"delay\"\n    }), fullReportIdReceived]),\n    name: \"fullReportReceived\",\n    method: \"combineEvents\"\n  });\n  sample({\n    and: [{\n      clock: $currentFullReportId,\n      target: [getFullReportQuery.reset]\n    }],\n    or: {\n      sid: \"9p9es2\"\n    }\n  });\n  sample({\n    and: [{\n      clock: [fullReportReceived, $currentFullReportId],\n      source: $currentFullReportId,\n      fn: (id) => ({\n        id: id ?? \"\"\n      }),\n      target: [getFullReportQuery.refresh]\n    }],\n    or: {\n      sid: \"a3k27g\"\n    }\n  });\n  const redirectTo404Fx = createEffect(async () => {\n    await navigate(\"/error/404\");\n  }, {\n    name: \"redirectTo404Fx\",\n    sid: \"h3z3s0\"\n  });\n  sample({\n    and: [{\n      clock: getFreeResultQuery.finished.failure,\n      filter: is404Error,\n      target: redirectTo404Fx\n    }],\n    or: {\n      sid: \"al5h70\"\n    }\n  });\n  return {\n    ReportGate,\n    $isUserHasFreeReport,\n    $lastUserFreeReport,\n    $allUserReports,\n    $freeUserReports,\n    $paidUserReports,\n    $expressUserReports,\n    $reportContent,\n    $userOrder,\n    $userOrderStatus,\n    $isFirstPage,\n    $isLastPage,\n    $currentContentPage,\n    currentPageChanged,\n    $userMbtiTypes,\n    ReportPageGate,\n    $currentPage,\n    FreeReportGate,\n    fullReportIdReceived,\n    freeReportIdReceived,\n    $currentFreeReportId,\n    $currentFullReportId\n  };\n});\n",
-      "start": 1750275033721,
-      "end": 1750275033722,
+      "start": 1750278467003,
+      "end": 1750278467003,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

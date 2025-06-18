@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Fragment } from 'react';\nimport { Box, Container, Stack, Title } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\n\nimport { InnerContainer, PageLoader } from '@/shared/ui';\n\nimport {\n    contentResolver,\n    convertToUrlId,\n    getFreeResultQuery,\n    ReportHeader,\n    ReportModel,\n    TYPE_TO_COLOR_MAP,\n} from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\n\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\nimport { SendReportEmail } from '@/features/SendReportEmail';\n\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport { FreeReportNavigation } from '@/widgets/FreeReportNavigation';\n\nimport s from './FreeReportPage.module.css';\n\nexport const FreeReportPage = () => {\n    useGate(ReportModel.FreeReportGate);\n    const { data, stale, pending } = useUnit(getFreeResultQuery);\n    const surveyId = useUnit(UserModel.$surveyId);\n\n    if (pending || stale) return <PageLoader />;\n    if (!data) return null;\n\n    return (\n        <Box component='section'>\n            <Container>\n                <ReportHeader type={data?.mbti_type} name={data?.title} typeToColorMapper={TYPE_TO_COLOR_MAP} />\n                <SendReportEmail type='text' />\n                <FreeReportNavigation />\n                <InnerContainer>\n                    {data.content?.map((el, index) => (\n                        <Stack key={el.title + index} id={convertToUrlId(el.title)} data-block mb={100}>\n                            <Box key={data?.title + el.title + index}>\n                                <Title mb='md'>{el.title}</Title>\n                                {el.content.map((currentEl, idx) => (\n                                    <Box className={s.block} key={currentEl.type + idx + index + 'content'}>\n                                        {currentEl.content.map((currentContent) => (\n                                            <Fragment key={currentContent.type + index + idx + 'currentContent'}>\n                                                {contentResolver({\n                                                    content: currentContent,\n                                                    color: TYPE_TO_COLOR_MAP[data.mbti_type],\n                                                    actions: {\n                                                        conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport,\n                                                    },\n                                                    surveyId: surveyId ?? '',\n                                                    index: index,\n                                                    mbti: data.mbti_type,\n                                                    slots: {\n                                                        subscribeEmail: <SendReportEmail type='block' />,\n                                                    },\n                                                })}\n                                            </Fragment>\n                                        ))}\n                                    </Box>\n                                ))}\n                            </Box>\n                        </Stack>\n                    ))}\n                </InnerContainer>\n                <NavigateToReviewPage />\n            </Container>\n        </Box>\n    );\n};\n",
-      "start": 1750275033418,
-      "end": 1750275033449,
+      "start": 1750278466784,
+      "end": 1750278466814,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Fragment } from 'react';\nimport { Box, Container, Stack, Title } from '@mantine/core';\nimport { useGate, useUnit } from 'effector-react';\nimport { InnerContainer, PageLoader } from '@/shared/ui';\nimport { contentResolver, convertToUrlId, getFreeResultQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport { UserModel } from '@/entities/User';\nimport { NavigateToReviewPage } from '@/features/NavigateToReviewPage';\nimport { SendReportEmail } from '@/features/SendReportEmail';\nimport { CALL_TO_ACTION } from '@/widgets/CTA';\nimport { FreeReportNavigation } from '@/widgets/FreeReportNavigation';\nimport s from './FreeReportPage.module.css';\nexport const FreeReportPage = () => {\n  useGate(ReportModel.FreeReportGate);\n  const {\n    data,\n    stale,\n    pending\n  } = useUnit(getFreeResultQuery);\n  const surveyId = useUnit(UserModel.$surveyId);\n  if (pending || stale) return <PageLoader />;\n  if (!data) return null;\n  return <Box component='section'>\n            <Container>\n                <ReportHeader type={data?.mbti_type} name={data?.title} typeToColorMapper={TYPE_TO_COLOR_MAP} />\n                <SendReportEmail type='text' />\n                <FreeReportNavigation />\n                <InnerContainer>\n                    {data.content?.map((el, index) => <Stack key={el.title + index} id={convertToUrlId(el.title)} data-block mb={100}>\n                            <Box key={data?.title + el.title + index}>\n                                <Title mb='md'>{el.title}</Title>\n                                {el.content.map((currentEl, idx) => <Box className={s.block} key={currentEl.type + idx + index + 'content'}>\n                                        {currentEl.content.map(currentContent => <Fragment key={currentContent.type + index + idx + 'currentContent'}>\n                                                {contentResolver({\n                  content: currentContent,\n                  color: TYPE_TO_COLOR_MAP[data.mbti_type],\n                  actions: {\n                    conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport\n                  },\n                  surveyId: surveyId ?? '',\n                  index: index,\n                  mbti: data.mbti_type,\n                  slots: {\n                    subscribeEmail: <SendReportEmail type='block' />\n                  }\n                })}\n                                            </Fragment>)}\n                                    </Box>)}\n                            </Box>\n                        </Stack>)}\n                </InnerContainer>\n                <NavigateToReviewPage />\n            </Container>\n        </Box>;\n};",
-      "start": 1750275033449,
-      "end": 1750275033452,
+      "start": 1750278466814,
+      "end": 1750278466816,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -75,8 +75,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container, Stack, Title } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { InnerContainer, PageLoader } from \"@/shared/ui\";\nimport { contentResolver, convertToUrlId, getFreeResultQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { SendReportEmail } from \"@/features/SendReportEmail\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport { FreeReportNavigation } from \"@/widgets/FreeReportNavigation\";\nimport s from \"./FreeReportPage.module.css\";\nexport const FreeReportPage = () => {\n  useGate(ReportModel.FreeReportGate);\n  const {\n    data,\n    stale,\n    pending\n  } = useUnit(getFreeResultQuery);\n  const surveyId = useUnit(UserModel.$surveyId);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(ReportHeader, { type: data?.mbti_type, name: data?.title, typeToColorMapper: TYPE_TO_COLOR_MAP }),\n    /* @__PURE__ */ jsx(SendReportEmail, { type: \"text\" }),\n    /* @__PURE__ */ jsx(FreeReportNavigation, {}),\n    /* @__PURE__ */ jsx(InnerContainer, { children: data.content?.map((el, index) => /* @__PURE__ */ jsx(Stack, { id: convertToUrlId(el.title), \"data-block\": true, mb: 100, children: /* @__PURE__ */ jsxs(Box, { children: [\n      /* @__PURE__ */ jsx(Title, { mb: \"md\", children: el.title }),\n      el.content.map((currentEl, idx) => /* @__PURE__ */ jsx(Box, { className: s.block, children: currentEl.content.map((currentContent) => /* @__PURE__ */ jsx(Fragment, { children: contentResolver({\n        content: currentContent,\n        color: TYPE_TO_COLOR_MAP[data.mbti_type],\n        actions: {\n          conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport\n        },\n        surveyId: surveyId ?? \"\",\n        index,\n        mbti: data.mbti_type,\n        slots: {\n          subscribeEmail: /* @__PURE__ */ jsx(SendReportEmail, { type: \"block\" })\n        }\n      }) }, currentContent.type + index + idx + \"currentContent\")) }, currentEl.type + idx + index + \"content\"))\n    ] }, data?.title + el.title + index) }, el.title + index)) }),\n    /* @__PURE__ */ jsx(NavigateToReviewPage, {})\n  ] }) });\n};\n",
-      "start": 1750275033452,
-      "end": 1750275033490,
+      "start": 1750278466816,
+      "end": 1750278466899,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -90,81 +90,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466899,
+      "end": 1750278466899,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/FreeReportPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Fragment } from \"react\";\nimport { Box, Container, Stack, Title } from \"@mantine/core\";\nimport { useGate, useUnit } from \"effector-react\";\nimport { InnerContainer, PageLoader } from \"@/shared/ui\";\nimport { contentResolver, convertToUrlId, getFreeResultQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport { UserModel } from \"@/entities/User\";\nimport { NavigateToReviewPage } from \"@/features/NavigateToReviewPage\";\nimport { SendReportEmail } from \"@/features/SendReportEmail\";\nimport { CALL_TO_ACTION } from \"@/widgets/CTA\";\nimport { FreeReportNavigation } from \"@/widgets/FreeReportNavigation\";\nimport s from \"./FreeReportPage.module.css\";\nexport const FreeReportPage = () => {\n  useGate(ReportModel.FreeReportGate);\n  const {\n    data,\n    stale,\n    pending\n  } = useUnit(getFreeResultQuery);\n  const surveyId = useUnit(UserModel.$surveyId);\n  if (pending || stale) return /* @__PURE__ */ jsx(PageLoader, {});\n  if (!data) return null;\n  return /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsxs(Container, { children: [\n    /* @__PURE__ */ jsx(ReportHeader, { type: data?.mbti_type, name: data?.title, typeToColorMapper: TYPE_TO_COLOR_MAP }),\n    /* @__PURE__ */ jsx(SendReportEmail, { type: \"text\" }),\n    /* @__PURE__ */ jsx(FreeReportNavigation, {}),\n    /* @__PURE__ */ jsx(InnerContainer, { children: data.content?.map((el, index) => /* @__PURE__ */ jsx(Stack, { id: convertToUrlId(el.title), \"data-block\": true, mb: 100, children: /* @__PURE__ */ jsxs(Box, { children: [\n      /* @__PURE__ */ jsx(Title, { mb: \"md\", children: el.title }),\n      el.content.map((currentEl, idx) => /* @__PURE__ */ jsx(Box, { className: s.block, children: currentEl.content.map((currentContent) => /* @__PURE__ */ jsx(Fragment, { children: contentResolver({\n        content: currentContent,\n        color: TYPE_TO_COLOR_MAP[data.mbti_type],\n        actions: {\n          conclusion_paywall: CALL_TO_ACTION.takeTestAgainOrBuyReport\n        },\n        surveyId: surveyId ?? \"\",\n        index,\n        mbti: data.mbti_type,\n        slots: {\n          subscribeEmail: /* @__PURE__ */ jsx(SendReportEmail, { type: \"block\" })\n        }\n      }) }, currentContent.type + index + idx + \"currentContent\")) }, currentEl.type + idx + index + \"content\"))\n    ] }, data?.title + el.title + index) }, el.title + index)) }),\n    /* @__PURE__ */ jsx(NavigateToReviewPage, {})\n  ] }) });\n};\n",
-      "start": 1750275033490,
-      "end": 1750275033490,
+      "start": 1750278466900,
+      "end": 1750278466900,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

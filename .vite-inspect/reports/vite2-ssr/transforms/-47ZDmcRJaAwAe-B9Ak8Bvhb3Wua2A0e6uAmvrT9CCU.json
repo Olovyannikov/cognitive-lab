@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createMutation, createQuery } from '@farfetched/core';\n\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\n\nimport type { ContentResult, FullContentResult } from '../types';\nimport type {\n    PromoPriceResponse,\n    PurchasedReportRequest,\n    RegularPriceResponse,\n    ReportResult,\n    SurveysInfoResponse,\n} from './dto.ts';\n\nexport const getPersonalityTypeQuery = createQuery({\n    effect: createCommonRequestFx<string, ReportResult>((type) => ({\n        url: API.surveys.personalityType(type),\n    })),\n    initialData: {} as ReportResult,\n});\n\nexport const getReportStructureQuery = createQuery({\n    effect: createCommonRequestFx<void, ContentResult['content']>({\n        url: API.surveys.structure,\n    }),\n    initialData: [] as ContentResult['content'],\n});\n\nexport const getRegularPriceQuery = createQuery({\n    effect: createInternalRequestFx<void, RegularPriceResponse>({\n        url: API.payments.regularPrice,\n    }),\n});\n\nexport const getPriceWithPromocodeQuery = createQuery({\n    effect: createInternalRequestFx<string, PromoPriceResponse>((promocode) => ({\n        url: API.payments.promoPrice(promocode),\n    })),\n});\n\nexport const purchaseReportMutation = createMutation({\n    effect: createInternalRequestFx<\n        PurchasedReportRequest,\n        {\n            has_paid: boolean;\n            confirmation_url: string;\n        }\n    >((body) => ({\n        url: API.payments.purchase,\n        method: HTTP_METHODS.POST,\n        body,\n    })),\n});\n\nexport const getSurveysInfoQuery = createQuery({\n    effect: createInternalRequestFx<{ id?: string } | void, SurveysInfoResponse | null>(() => ({\n        url: API.surveys.info,\n    })),\n    initialData: {} as SurveysInfoResponse,\n});\n\nexport const getFreeResultQuery = createQuery({\n    effect: createInternalRequestFx<{ id: string } | void, ContentResult | null>((id) => ({\n        url: id ? API.surveys.freeReportById(id.id) : API.surveys.freeReport,\n    })),\n    initialData: null,\n});\n\nexport const getFullReportQuery = createQuery({\n    effect: createInternalRequestFx<{ id: string }, FullContentResult>((user) => ({\n        url: API.surveys.fullReport(user.id),\n    })),\n    initialData: {} as FullContentResult,\n});\n",
-      "start": 1750275033508,
-      "end": 1750275033559,
+      "start": 1750278466857,
+      "end": 1750278466891,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from '@farfetched/core';\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from '@/shared/api';\nimport type { ContentResult, FullContentResult } from '../types';\nimport type { PromoPriceResponse, PurchasedReportRequest, RegularPriceResponse, ReportResult, SurveysInfoResponse } from './dto.ts';\nexport const getPersonalityTypeQuery = _withFactory({\n  sid: \"gbbryw\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<string, ReportResult>(type => ({\n      url: API.surveys.personalityType(type)\n    })),\n    initialData: {} as ReportResult\n  }),\n  name: \"getPersonalityTypeQuery\",\n  method: \"createQuery\"\n});\nexport const getReportStructureQuery = _withFactory({\n  sid: \"gfzwyb\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx<void, ContentResult['content']>({\n      url: API.surveys.structure\n    }),\n    initialData: [] as ContentResult['content']\n  }),\n  name: \"getReportStructureQuery\",\n  method: \"createQuery\"\n});\nexport const getRegularPriceQuery = _withFactory({\n  sid: \"-vcg9xz\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<void, RegularPriceResponse>({\n      url: API.payments.regularPrice\n    })\n  }),\n  name: \"getRegularPriceQuery\",\n  method: \"createQuery\"\n});\nexport const getPriceWithPromocodeQuery = _withFactory({\n  sid: \"e0ri5v\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<string, PromoPriceResponse>(promocode => ({\n      url: API.payments.promoPrice(promocode)\n    }))\n  }),\n  name: \"getPriceWithPromocodeQuery\",\n  method: \"createQuery\"\n});\nexport const purchaseReportMutation = _withFactory({\n  sid: \"-5ahu2w\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx<PurchasedReportRequest, {\n      has_paid: boolean;\n      confirmation_url: string;\n    }>(body => ({\n      url: API.payments.purchase,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"purchaseReportMutation\",\n  method: \"createMutation\"\n});\nexport const getSurveysInfoQuery = _withFactory({\n  sid: \"-f6a1q9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<{\n      id?: string;\n    } | void, SurveysInfoResponse | null>(() => ({\n      url: API.surveys.info\n    })),\n    initialData: {} as SurveysInfoResponse\n  }),\n  name: \"getSurveysInfoQuery\",\n  method: \"createQuery\"\n});\nexport const getFreeResultQuery = _withFactory({\n  sid: \"-365nta\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<{\n      id: string;\n    } | void, ContentResult | null>(id => ({\n      url: id ? API.surveys.freeReportById(id.id) : API.surveys.freeReport\n    })),\n    initialData: null\n  }),\n  name: \"getFreeResultQuery\",\n  method: \"createQuery\"\n});\nexport const getFullReportQuery = _withFactory({\n  sid: \"alrmv9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx<{\n      id: string;\n    }, FullContentResult>(user => ({\n      url: API.surveys.fullReport(user.id)\n    })),\n    initialData: {} as FullContentResult\n  }),\n  name: \"getFullReportQuery\",\n  method: \"createQuery\"\n});",
-      "start": 1750275033559,
-      "end": 1750275033561,
+      "start": 1750278466891,
+      "end": 1750278466893,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -95,8 +95,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getPersonalityTypeQuery = _withFactory({\n  sid: \"gbbryw\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((type) => ({\n      url: API.surveys.personalityType(type)\n    })),\n    initialData: {}\n  }),\n  name: \"getPersonalityTypeQuery\",\n  method: \"createQuery\"\n});\nexport const getReportStructureQuery = _withFactory({\n  sid: \"gfzwyb\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx({\n      url: API.surveys.structure\n    }),\n    initialData: []\n  }),\n  name: \"getReportStructureQuery\",\n  method: \"createQuery\"\n});\nexport const getRegularPriceQuery = _withFactory({\n  sid: \"-vcg9xz\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx({\n      url: API.payments.regularPrice\n    })\n  }),\n  name: \"getRegularPriceQuery\",\n  method: \"createQuery\"\n});\nexport const getPriceWithPromocodeQuery = _withFactory({\n  sid: \"e0ri5v\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((promocode) => ({\n      url: API.payments.promoPrice(promocode)\n    }))\n  }),\n  name: \"getPriceWithPromocodeQuery\",\n  method: \"createQuery\"\n});\nexport const purchaseReportMutation = _withFactory({\n  sid: \"-5ahu2w\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.payments.purchase,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"purchaseReportMutation\",\n  method: \"createMutation\"\n});\nexport const getSurveysInfoQuery = _withFactory({\n  sid: \"-f6a1q9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx(() => ({\n      url: API.surveys.info\n    })),\n    initialData: {}\n  }),\n  name: \"getSurveysInfoQuery\",\n  method: \"createQuery\"\n});\nexport const getFreeResultQuery = _withFactory({\n  sid: \"-365nta\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((id) => ({\n      url: id ? API.surveys.freeReportById(id.id) : API.surveys.freeReport\n    })),\n    initialData: null\n  }),\n  name: \"getFreeResultQuery\",\n  method: \"createQuery\"\n});\nexport const getFullReportQuery = _withFactory({\n  sid: \"alrmv9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((user) => ({\n      url: API.surveys.fullReport(user.id)\n    })),\n    initialData: {}\n  }),\n  name: \"getFullReportQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750275033561,
-      "end": 1750275033663,
+      "start": 1750278466894,
+      "end": 1750278466963,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -110,81 +110,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033663,
-      "end": 1750275033663,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/entities/Report/api/index.ts [vike:pluginModuleBanner] */\nimport { withFactory as _withFactory } from \"effector\";\nimport { createMutation, createQuery } from \"@farfetched/core\";\nimport { API, createCommonRequestFx, createInternalRequestFx, HTTP_METHODS } from \"@/shared/api\";\nexport const getPersonalityTypeQuery = _withFactory({\n  sid: \"gbbryw\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx((type) => ({\n      url: API.surveys.personalityType(type)\n    })),\n    initialData: {}\n  }),\n  name: \"getPersonalityTypeQuery\",\n  method: \"createQuery\"\n});\nexport const getReportStructureQuery = _withFactory({\n  sid: \"gfzwyb\",\n  fn: () => createQuery({\n    effect: createCommonRequestFx({\n      url: API.surveys.structure\n    }),\n    initialData: []\n  }),\n  name: \"getReportStructureQuery\",\n  method: \"createQuery\"\n});\nexport const getRegularPriceQuery = _withFactory({\n  sid: \"-vcg9xz\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx({\n      url: API.payments.regularPrice\n    })\n  }),\n  name: \"getRegularPriceQuery\",\n  method: \"createQuery\"\n});\nexport const getPriceWithPromocodeQuery = _withFactory({\n  sid: \"e0ri5v\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((promocode) => ({\n      url: API.payments.promoPrice(promocode)\n    }))\n  }),\n  name: \"getPriceWithPromocodeQuery\",\n  method: \"createQuery\"\n});\nexport const purchaseReportMutation = _withFactory({\n  sid: \"-5ahu2w\",\n  fn: () => createMutation({\n    effect: createInternalRequestFx((body) => ({\n      url: API.payments.purchase,\n      method: HTTP_METHODS.POST,\n      body\n    }))\n  }),\n  name: \"purchaseReportMutation\",\n  method: \"createMutation\"\n});\nexport const getSurveysInfoQuery = _withFactory({\n  sid: \"-f6a1q9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx(() => ({\n      url: API.surveys.info\n    })),\n    initialData: {}\n  }),\n  name: \"getSurveysInfoQuery\",\n  method: \"createQuery\"\n});\nexport const getFreeResultQuery = _withFactory({\n  sid: \"-365nta\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((id) => ({\n      url: id ? API.surveys.freeReportById(id.id) : API.surveys.freeReport\n    })),\n    initialData: null\n  }),\n  name: \"getFreeResultQuery\",\n  method: \"createQuery\"\n});\nexport const getFullReportQuery = _withFactory({\n  sid: \"alrmv9\",\n  fn: () => createQuery({\n    effect: createInternalRequestFx((user) => ({\n      url: API.surveys.fullReport(user.id)\n    })),\n    initialData: {}\n  }),\n  name: \"getFullReportQuery\",\n  method: \"createQuery\"\n});\n",
-      "start": 1750275033663,
-      "end": 1750275033664,
+      "start": 1750278466963,
+      "end": 1750278466963,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

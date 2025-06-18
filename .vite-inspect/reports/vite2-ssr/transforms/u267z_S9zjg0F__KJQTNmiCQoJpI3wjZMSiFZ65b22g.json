@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { FullReportPage } from '@/pages/FullReportPage';\n\nexport function Page() {\n    return <FullReportPage />;\n}\n",
-      "start": 1750275033355,
-      "end": 1750275033386,
+      "start": 1750278466712,
+      "end": 1750278466736,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { FullReportPage } from '@/pages/FullReportPage';\nexport function Page() {\n  return <FullReportPage />;\n}",
-      "start": 1750275033386,
-      "end": 1750275033387,
+      "start": 1750278466736,
+      "end": 1750278466736,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { FullReportPage } from \"@/pages/FullReportPage\";\nexport function Page() {\n  return /* @__PURE__ */ jsx(FullReportPage, {});\n}\n",
-      "start": 1750275033387,
-      "end": 1750275033426,
+      "start": 1750278466736,
+      "end": 1750278466775,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,81 +43,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466775,
+      "end": 1750278466775,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466775,
+      "end": 1750278466775,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033426,
-      "end": 1750275033426,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033426,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! pages/report/@reportId/+Page.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { FullReportPage } from \"@/pages/FullReportPage\";\nexport function Page() {\n  return /* @__PURE__ */ jsx(FullReportPage, {});\n}\n",
-      "start": 1750275033427,
-      "end": 1750275033427,
+      "start": 1750278466776,
+      "end": 1750278466776,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

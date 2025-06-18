@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\n\nexport const ROUTES = {\n    TEST: '/mbti-test',\n    TYPES: '/mbti-types',\n};\n",
-      "start": 1750275034275,
-      "end": 1750275034305,
+      "start": 1750278467577,
+      "end": 1750278467599,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "export const CDN_URL = 'https://cdn.cognitivelab.ru/assets';\nexport const ROUTES = {\n  TEST: '/mbti-test',\n  TYPES: '/mbti-types'\n};",
-      "start": 1750275034305,
-      "end": 1750275034306,
+      "start": 1750278467599,
+      "end": 1750278467600,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -28,8 +28,8 @@
     {
       "name": "vite:esbuild",
       "result": "export const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
-      "start": 1750275034306,
-      "end": 1750275034356,
+      "start": 1750278467600,
+      "end": 1750278467657,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -43,81 +43,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034356,
-      "end": 1750275034356,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/shared/config/constants.ts [vike:pluginModuleBanner] */\nexport const CDN_URL = \"https://cdn.cognitivelab.ru/assets\";\nexport const ROUTES = {\n  TEST: \"/mbti-test\",\n  TYPES: \"/mbti-types\"\n};\n",
-      "start": 1750275034357,
-      "end": 1750275034357,
+      "start": 1750278467657,
+      "end": 1750278467657,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

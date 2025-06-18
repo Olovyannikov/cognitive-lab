@@ -4,93 +4,93 @@
     {
       "name": "vite:load-fallback",
       "result": ".link {\n  display: flex;\n  align-items: center;\n  padding: var(--mantine-spacing-sm);\n  width: 100%;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 21px;\n  white-space: pre;\n  text-decoration: none;\n  color: var(--mantine-color-dark-9);\n  cursor: pointer;\n  gap: var(--mantine-spacing-xs);\n\n  @mixin larger-than 1200px {\n    width: fit-content;\n    padding-block: var(--mantine-spacing-3xl);\n  }\n\n  @media (hover: hover) {\n    transition: 0.15s ease-in-out color;\n\n    &:hover {\n      color: var(--mantine-color-violet-6);\n    }\n  }\n}\n",
-      "start": 1750275034433,
-      "end": 1750275034436,
+      "start": 1750278467727,
+      "end": 1750278467732,
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467732,
+      "end": 1750278467732,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/RootLayout/ui/Link/Link.module.css [vike:pluginModuleBanner] */\nexport const link = \"G1J5V\";\nexport default {\n\tlink: link\n};\n",
-      "start": 1750275034437,
-      "end": 1750275034437,
+      "start": 1750278467733,
+      "end": 1750278467733,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

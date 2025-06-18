@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Box, Button, Center, Container, Stack, Title } from '@mantine/core';\n\nimport { Picture } from '@/shared/ui';\n\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\n\nimport s from './ErrorPage.module.css';\n\ninterface ErrorPageProps {\n    image?: string;\n    title?: string;\n}\n\nexport const ErrorPage = ({ title = 'Страница не найдена', image = '/errors/404' }: ErrorPageProps) => (\n    <Box component='section'>\n        <Container>\n            <Center ta='center' className={s.center}>\n                <Stack className={s.stack}>\n                    <Picture cdn className={s.pic} src={image} width={400} height={400} />\n                    <Title className={s.title} order={1}>\n                        {title}\n                    </Title>\n                    <Button size='md' component='a' href='/'>\n                        Перейти на главную\n                    </Button>\n                    <NavigateToHelpPage />\n                </Stack>\n            </Center>\n        </Container>\n    </Box>\n);\n",
-      "start": 1750275033419,
-      "end": 1750275033452,
+      "start": 1750278466761,
+      "end": 1750278466781,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Box, Button, Center, Container, Stack, Title } from '@mantine/core';\nimport { Picture } from '@/shared/ui';\nimport { NavigateToHelpPage } from '@/features/NavigateToHelpPage';\nimport s from './ErrorPage.module.css';\ninterface ErrorPageProps {\n  image?: string;\n  title?: string;\n}\nexport const ErrorPage = ({\n  title = 'Страница не найдена',\n  image = '/errors/404'\n}: ErrorPageProps) => <Box component='section'>\n        <Container>\n            <Center ta='center' className={s.center}>\n                <Stack className={s.stack}>\n                    <Picture cdn className={s.pic} src={image} width={400} height={400} />\n                    <Title className={s.title} order={1}>\n                        {title}\n                    </Title>\n                    <Button size='md' component='a' href='/'>\n                        Перейти на главную\n                    </Button>\n                    <NavigateToHelpPage />\n                </Stack>\n            </Center>\n        </Container>\n    </Box>;",
-      "start": 1750275033452,
-      "end": 1750275033453,
+      "start": 1750278466781,
+      "end": 1750278466783,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -45,8 +45,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Stack, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport s from \"./ErrorPage.module.css\";\nexport const ErrorPage = ({\n  title = \"Страница не найдена\",\n  image = \"/errors/404\"\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsx(Center, { ta: \"center\", className: s.center, children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n  /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.pic, src: image, width: 400, height: 400 }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 1, children: title }),\n  /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: \"/\", children: \"Перейти на главную\" }),\n  /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n] }) }) }) });\n",
-      "start": 1750275033453,
-      "end": 1750275033487,
+      "start": 1750278466783,
+      "end": 1750278466810,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -60,81 +60,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033487,
-      "end": 1750275033487,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033487,
-      "end": 1750275033487,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033487,
-      "end": 1750275033487,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033487,
-      "end": 1750275033487,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033487,
-      "end": 1750275033487,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466810,
+      "end": 1750278466810,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466810,
+      "end": 1750278466811,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466811,
+      "end": 1750278466811,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466811,
+      "end": 1750278466811,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/pages/ErrorPage/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Box, Button, Center, Container, Stack, Title } from \"@mantine/core\";\nimport { Picture } from \"@/shared/ui\";\nimport { NavigateToHelpPage } from \"@/features/NavigateToHelpPage\";\nimport s from \"./ErrorPage.module.css\";\nexport const ErrorPage = ({\n  title = \"Страница не найдена\",\n  image = \"/errors/404\"\n}) => /* @__PURE__ */ jsx(Box, { component: \"section\", children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsx(Center, { ta: \"center\", className: s.center, children: /* @__PURE__ */ jsxs(Stack, { className: s.stack, children: [\n  /* @__PURE__ */ jsx(Picture, { cdn: true, className: s.pic, src: image, width: 400, height: 400 }),\n  /* @__PURE__ */ jsx(Title, { className: s.title, order: 1, children: title }),\n  /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: \"/\", children: \"Перейти на главную\" }),\n  /* @__PURE__ */ jsx(NavigateToHelpPage, {})\n] }) }) }) });\n",
-      "start": 1750275033488,
-      "end": 1750275033488,
+      "start": 1750278466811,
+      "end": 1750278466811,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Container, Flex, Group, Pagination, Text } from '@mantine/core';\nimport { useWindowScroll } from '@mantine/hooks';\nimport { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';\nimport { useStoreMap, useUnit } from 'effector-react';\n\nimport { useIsLarge } from '@/shared/lib';\n\nimport { getFullReportQuery, getIconsMap, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\n\nimport s from './ReportPagination.module.css';\n\nexport const ReportPagination = () => {\n    const isLarge = useIsLarge();\n\n    const [page, onChangePage] = useUnit([ReportModel.$currentPage, ReportModel.currentPageChanged]);\n    const [isFirstPage, isLastPage] = useUnit([ReportModel.$isFirstPage, ReportModel.$isLastPage]);\n\n    const content = useStoreMap({\n        store: getFullReportQuery.$data,\n        keys: ['title', 'content', page],\n        fn: (content) => content?.content?.map(({ title }) => ({ title, mbti: content.mbti_type })),\n    });\n\n    const icons = getIconsMap(isLarge);\n    const titlePrev = content?.[page - 2]?.title ?? '';\n    const titleNext = content?.[page]?.title ?? '';\n    const color = TYPE_TO_COLOR_MAP[content?.[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content?.[0]?.mbti];\n    const [_, scrollTo] = useWindowScroll();\n\n    if (!content) return null;\n\n    return (\n        <Pagination.Root\n            className={s.root}\n            value={page}\n            onChange={(page) => {\n                onChangePage(page);\n                setTimeout(\n                    () =>\n                        scrollTo({\n                            x: 0,\n                            y: 0,\n                        }),\n                    0\n                );\n            }}\n            total={content?.length}\n        >\n            <Container>\n                <Group className={s.grid}>\n                    {!isFirstPage && (\n                        <Pagination.Previous\n                            className={s.prev}\n                            icon={() => (\n                                <Group className={s.controlWrapper} align='center' wrap='nowrap'>\n                                    <ArrowLeft color={`var(--mantine-color-${color}-9)`} weight='bold' size={24} />\n                                    <Group wrap='nowrap'>\n                                        <Flex\n                                            align='center'\n                                            justify='center'\n                                            className={s.paper}\n                                            p={isLarge ? 'sm' : 'xs'}\n                                            bg={`${color}.0`}\n                                            c={`${color}.9`}\n                                        >\n                                            {icons[titlePrev]}\n                                        </Flex>\n                                        <Text hidden={!isLarge} className={s.text}>\n                                            {titlePrev ?? ''}\n                                        </Text>\n                                    </Group>\n                                </Group>\n                            )}\n                        />\n                    )}\n                    <Pagination.Next\n                        className={s.next}\n                        hidden={isLastPage}\n                        icon={() => (\n                            <Group align='center' wrap='nowrap' className={s.controlWrapper} data-last>\n                                <Group className={s.nextGroup} wrap='nowrap'>\n                                    <Flex\n                                        data-last\n                                        align='center'\n                                        justify='center'\n                                        className={s.paper}\n                                        p={isLarge ? 'sm' : 'xs'}\n                                        bg={`${color}.0`}\n                                        c={`${color}.9`}\n                                    >\n                                        {icons[titleNext]}\n                                    </Flex>\n                                    <Text hidden={!isLarge} className={s.text}>\n                                        {content?.[page]?.title ?? ''}\n                                    </Text>\n                                </Group>\n                                <ArrowRight color={`var(--mantine-color-${color}-9)`} weight='bold' size={24} />\n                            </Group>\n                        )}\n                    />\n                </Group>\n            </Container>\n        </Pagination.Root>\n    );\n};\n",
-      "start": 1750275033583,
-      "end": 1750275033625,
+      "start": 1750278466969,
+      "end": 1750278467016,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Container, Flex, Group, Pagination, Text } from '@mantine/core';\nimport { useWindowScroll } from '@mantine/hooks';\nimport { ArrowLeft, ArrowRight } from '@phosphor-icons/react/dist/ssr';\nimport { useStoreMap, useUnit } from 'effector-react';\nimport { useIsLarge } from '@/shared/lib';\nimport { getFullReportQuery, getIconsMap, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';\nimport s from './ReportPagination.module.css';\nexport const ReportPagination = () => {\n  const isLarge = useIsLarge();\n  const [page, onChangePage] = useUnit([ReportModel.$currentPage, ReportModel.currentPageChanged]);\n  const [isFirstPage, isLastPage] = useUnit([ReportModel.$isFirstPage, ReportModel.$isLastPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: ['title', 'content', page],\n    fn: content => content?.content?.map(({\n      title\n    }) => ({\n      title,\n      mbti: content.mbti_type\n    }))\n  });\n  const icons = getIconsMap(isLarge);\n  const titlePrev = content?.[page - 2]?.title ?? '';\n  const titleNext = content?.[page]?.title ?? '';\n  const color = TYPE_TO_COLOR_MAP[content?.[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content?.[0]?.mbti];\n  const [_, scrollTo] = useWindowScroll();\n  if (!content) return null;\n  return <Pagination.Root className={s.root} value={page} onChange={page => {\n    onChangePage(page);\n    setTimeout(() => scrollTo({\n      x: 0,\n      y: 0\n    }), 0);\n  }} total={content?.length}>\n            <Container>\n                <Group className={s.grid}>\n                    {!isFirstPage && <Pagination.Previous className={s.prev} icon={() => <Group className={s.controlWrapper} align='center' wrap='nowrap'>\n                                    <ArrowLeft color={`var(--mantine-color-${color}-9)`} weight='bold' size={24} />\n                                    <Group wrap='nowrap'>\n                                        <Flex align='center' justify='center' className={s.paper} p={isLarge ? 'sm' : 'xs'} bg={`${color}.0`} c={`${color}.9`}>\n                                            {icons[titlePrev]}\n                                        </Flex>\n                                        <Text hidden={!isLarge} className={s.text}>\n                                            {titlePrev ?? ''}\n                                        </Text>\n                                    </Group>\n                                </Group>} />}\n                    <Pagination.Next className={s.next} hidden={isLastPage} icon={() => <Group align='center' wrap='nowrap' className={s.controlWrapper} data-last>\n                                <Group className={s.nextGroup} wrap='nowrap'>\n                                    <Flex data-last align='center' justify='center' className={s.paper} p={isLarge ? 'sm' : 'xs'} bg={`${color}.0`} c={`${color}.9`}>\n                                        {icons[titleNext]}\n                                    </Flex>\n                                    <Text hidden={!isLarge} className={s.text}>\n                                        {content?.[page]?.title ?? ''}\n                                    </Text>\n                                </Group>\n                                <ArrowRight color={`var(--mantine-color-${color}-9)`} weight='bold' size={24} />\n                            </Group>} />\n                </Group>\n            </Container>\n        </Pagination.Root>;\n};",
-      "start": 1750275033625,
-      "end": 1750275033627,
+      "start": 1750278467016,
+      "end": 1750278467018,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -82,8 +82,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Container, Flex, Group, Pagination, Text } from \"@mantine/core\";\nimport { useWindowScroll } from \"@mantine/hooks\";\nimport { ArrowLeft, ArrowRight } from \"@phosphor-icons/react/dist/ssr\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getFullReportQuery, getIconsMap, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./ReportPagination.module.css\";\nexport const ReportPagination = () => {\n  const isLarge = useIsLarge();\n  const [page, onChangePage] = useUnit([ReportModel.$currentPage, ReportModel.currentPageChanged]);\n  const [isFirstPage, isLastPage] = useUnit([ReportModel.$isFirstPage, ReportModel.$isLastPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", \"content\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => ({\n      title,\n      mbti: content2.mbti_type\n    }))\n  });\n  const icons = getIconsMap(isLarge);\n  const titlePrev = content?.[page - 2]?.title ?? \"\";\n  const titleNext = content?.[page]?.title ?? \"\";\n  const color = TYPE_TO_COLOR_MAP[content?.[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content?.[0]?.mbti];\n  const [_, scrollTo] = useWindowScroll();\n  if (!content) return null;\n  return /* @__PURE__ */ jsx(Pagination.Root, { className: s.root, value: page, onChange: (page2) => {\n    onChangePage(page2);\n    setTimeout(() => scrollTo({\n      x: 0,\n      y: 0\n    }), 0);\n  }, total: content?.length, children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Group, { className: s.grid, children: [\n    !isFirstPage && /* @__PURE__ */ jsx(Pagination.Previous, { className: s.prev, icon: () => /* @__PURE__ */ jsxs(Group, { className: s.controlWrapper, align: \"center\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsx(ArrowLeft, { color: `var(--mantine-color-${color}-9)`, weight: \"bold\", size: 24 }),\n      /* @__PURE__ */ jsxs(Group, { wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsx(Flex, { align: \"center\", justify: \"center\", className: s.paper, p: isLarge ? \"sm\" : \"xs\", bg: `${color}.0`, c: `${color}.9`, children: icons[titlePrev] }),\n        /* @__PURE__ */ jsx(Text, { hidden: !isLarge, className: s.text, children: titlePrev ?? \"\" })\n      ] })\n    ] }) }),\n    /* @__PURE__ */ jsx(Pagination.Next, { className: s.next, hidden: isLastPage, icon: () => /* @__PURE__ */ jsxs(Group, { align: \"center\", wrap: \"nowrap\", className: s.controlWrapper, \"data-last\": true, children: [\n      /* @__PURE__ */ jsxs(Group, { className: s.nextGroup, wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsx(Flex, { \"data-last\": true, align: \"center\", justify: \"center\", className: s.paper, p: isLarge ? \"sm\" : \"xs\", bg: `${color}.0`, c: `${color}.9`, children: icons[titleNext] }),\n        /* @__PURE__ */ jsx(Text, { hidden: !isLarge, className: s.text, children: content?.[page]?.title ?? \"\" })\n      ] }),\n      /* @__PURE__ */ jsx(ArrowRight, { color: `var(--mantine-color-${color}-9)`, weight: \"bold\", size: 24 })\n    ] }) })\n  ] }) }) });\n};\n",
-      "start": 1750275033627,
-      "end": 1750275033840,
+      "start": 1750278467018,
+      "end": 1750278467209,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -97,81 +97,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467209,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/widgets/ReportPagination/index.tsx [vike:pluginModuleBanner] */\nimport { jsx, jsxs } from \"react/jsx-runtime\";\nimport { Container, Flex, Group, Pagination, Text } from \"@mantine/core\";\nimport { useWindowScroll } from \"@mantine/hooks\";\nimport { ArrowLeft, ArrowRight } from \"@phosphor-icons/react/dist/ssr\";\nimport { useStoreMap, useUnit } from \"effector-react\";\nimport { useIsLarge } from \"@/shared/lib\";\nimport { getFullReportQuery, getIconsMap, ReportModel, TYPE_TO_COLOR_MAP } from \"@/entities/Report\";\nimport s from \"./ReportPagination.module.css\";\nexport const ReportPagination = () => {\n  const isLarge = useIsLarge();\n  const [page, onChangePage] = useUnit([ReportModel.$currentPage, ReportModel.currentPageChanged]);\n  const [isFirstPage, isLastPage] = useUnit([ReportModel.$isFirstPage, ReportModel.$isLastPage]);\n  const content = useStoreMap({\n    store: getFullReportQuery.$data,\n    keys: [\"title\", \"content\", page],\n    fn: (content2) => content2?.content?.map(({\n      title\n    }) => ({\n      title,\n      mbti: content2.mbti_type\n    }))\n  });\n  const icons = getIconsMap(isLarge);\n  const titlePrev = content?.[page - 2]?.title ?? \"\";\n  const titleNext = content?.[page]?.title ?? \"\";\n  const color = TYPE_TO_COLOR_MAP[content?.[page]?.mbti] ?? TYPE_TO_COLOR_MAP[content?.[0]?.mbti];\n  const [_, scrollTo] = useWindowScroll();\n  if (!content) return null;\n  return /* @__PURE__ */ jsx(Pagination.Root, { className: s.root, value: page, onChange: (page2) => {\n    onChangePage(page2);\n    setTimeout(() => scrollTo({\n      x: 0,\n      y: 0\n    }), 0);\n  }, total: content?.length, children: /* @__PURE__ */ jsx(Container, { children: /* @__PURE__ */ jsxs(Group, { className: s.grid, children: [\n    !isFirstPage && /* @__PURE__ */ jsx(Pagination.Previous, { className: s.prev, icon: () => /* @__PURE__ */ jsxs(Group, { className: s.controlWrapper, align: \"center\", wrap: \"nowrap\", children: [\n      /* @__PURE__ */ jsx(ArrowLeft, { color: `var(--mantine-color-${color}-9)`, weight: \"bold\", size: 24 }),\n      /* @__PURE__ */ jsxs(Group, { wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsx(Flex, { align: \"center\", justify: \"center\", className: s.paper, p: isLarge ? \"sm\" : \"xs\", bg: `${color}.0`, c: `${color}.9`, children: icons[titlePrev] }),\n        /* @__PURE__ */ jsx(Text, { hidden: !isLarge, className: s.text, children: titlePrev ?? \"\" })\n      ] })\n    ] }) }),\n    /* @__PURE__ */ jsx(Pagination.Next, { className: s.next, hidden: isLastPage, icon: () => /* @__PURE__ */ jsxs(Group, { align: \"center\", wrap: \"nowrap\", className: s.controlWrapper, \"data-last\": true, children: [\n      /* @__PURE__ */ jsxs(Group, { className: s.nextGroup, wrap: \"nowrap\", children: [\n        /* @__PURE__ */ jsx(Flex, { \"data-last\": true, align: \"center\", justify: \"center\", className: s.paper, p: isLarge ? \"sm\" : \"xs\", bg: `${color}.0`, c: `${color}.9`, children: icons[titleNext] }),\n        /* @__PURE__ */ jsx(Text, { hidden: !isLarge, className: s.text, children: content?.[page]?.title ?? \"\" })\n      ] }),\n      /* @__PURE__ */ jsx(ArrowRight, { color: `var(--mantine-color-${color}-9)`, weight: \"bold\", size: 24 })\n    ] }) })\n  ] }) }) });\n};\n",
-      "start": 1750275033840,
-      "end": 1750275033840,
+      "start": 1750278467209,
+      "end": 1750278467210,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,

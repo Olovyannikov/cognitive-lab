@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "import { Button, type ButtonProps } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\n\nimport { Picture } from '@/shared/ui';\n\ninterface BuyNowButtonProps extends ButtonProps {\n    mbti?: string;\n    survey?: string | null;\n    externalReportId?: string;\n    showIcon?: boolean;\n    onClick?: VoidFunction;\n    href?: string;\n}\n\nexport const BuyNowButton = ({\n    externalReportId,\n    mbti,\n    survey,\n    className,\n    children,\n    showIcon = false,\n    href,\n    ...props\n}: BuyNowButtonProps) => {\n    const {\n        routeParams: { reportId },\n    } = usePageContext();\n\n    const currentUrl = () => {\n        let href = `/purchase`;\n\n        if (survey) {\n            href += `/${survey}`;\n        }\n\n        if (mbti) {\n            href += `?type=${mbti}`;\n        } else if (reportId || externalReportId) {\n            href += `?reportId=${reportId || externalReportId}`;\n        }\n\n        return href;\n    };\n\n    const getChildren = () => {\n        if (children) {\n            return children;\n        }\n\n        if (survey) {\n            return 'Купить полный отчет';\n        }\n\n        return 'Купить сейчас';\n    };\n\n    return (\n        <Button\n            size='md'\n            component='a'\n            href={href ?? currentUrl()}\n            className={className}\n            leftSection={showIcon ? <Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' /> : null}\n            {...props}\n        >\n            {getChildren()}\n        </Button>\n    );\n};\n",
-      "start": 1750275033589,
-      "end": 1750275033627,
+      "start": 1750278466934,
+      "end": 1750278466972,
       "sourcemaps": null
     },
     {
       "name": "vite:react-babel",
       "result": "import { Button, type ButtonProps } from '@mantine/core';\nimport { usePageContext } from 'vike-react/usePageContext';\nimport { Picture } from '@/shared/ui';\ninterface BuyNowButtonProps extends ButtonProps {\n  mbti?: string;\n  survey?: string | null;\n  externalReportId?: string;\n  showIcon?: boolean;\n  onClick?: VoidFunction;\n  href?: string;\n}\nexport const BuyNowButton = ({\n  externalReportId,\n  mbti,\n  survey,\n  className,\n  children,\n  showIcon = false,\n  href,\n  ...props\n}: BuyNowButtonProps) => {\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  const currentUrl = () => {\n    let href = `/purchase`;\n    if (survey) {\n      href += `/${survey}`;\n    }\n    if (mbti) {\n      href += `?type=${mbti}`;\n    } else if (reportId || externalReportId) {\n      href += `?reportId=${reportId || externalReportId}`;\n    }\n    return href;\n  };\n  const getChildren = () => {\n    if (children) {\n      return children;\n    }\n    if (survey) {\n      return 'Купить полный отчет';\n    }\n    return 'Купить сейчас';\n  };\n  return <Button size='md' component='a' href={href ?? currentUrl()} className={className} leftSection={showIcon ? <Picture w={20} h={20} cdn src='/emoji/key' aria-hidden={true} alt='' /> : null} {...props}>\n            {getChildren()}\n        </Button>;\n};",
-      "start": 1750275033627,
-      "end": 1750275033629,
+      "start": 1750278466972,
+      "end": 1750278466973,
       "order": "pre-normal",
       "sourcemaps": {
         "version": 3,
@@ -49,8 +49,8 @@
     {
       "name": "vite:esbuild",
       "result": "import { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nexport const BuyNowButton = ({\n  externalReportId,\n  mbti,\n  survey,\n  className,\n  children,\n  showIcon = false,\n  href,\n  ...props\n}) => {\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  const currentUrl = () => {\n    let href2 = `/purchase`;\n    if (survey) {\n      href2 += `/${survey}`;\n    }\n    if (mbti) {\n      href2 += `?type=${mbti}`;\n    } else if (reportId || externalReportId) {\n      href2 += `?reportId=${reportId || externalReportId}`;\n    }\n    return href2;\n  };\n  const getChildren = () => {\n    if (children) {\n      return children;\n    }\n    if (survey) {\n      return \"Купить полный отчет\";\n    }\n    return \"Купить сейчас\";\n  };\n  return /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: href ?? currentUrl(), className, leftSection: showIcon ? /* @__PURE__ */ jsx(Picture, { w: 20, h: 20, cdn: true, src: \"/emoji/key\", \"aria-hidden\": true, alt: \"\" }) : null, ...props, children: getChildren() });\n};\n",
-      "start": 1750275033629,
-      "end": 1750275033842,
+      "start": 1750278466973,
+      "end": 1750278467119,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -64,81 +64,81 @@
     },
     {
       "name": "vite:worker",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467119,
+      "end": 1750278467119,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginFileEnv",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467119,
+      "end": 1750278467119,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal-normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal-normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal-normal"
     },
     {
       "name": "vike:pluginExtractAssets:remove-javaScript",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "post"
     },
     {
       "name": "vike:pluginExtractExportNames",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "post"
     },
     {
       "name": "vike:pluginEnvVars",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "post"
     },
     {
       "name": "vike:pluginReplaceConstants",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal-normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "normal-normal"
     },
     {
       "name": "vike:build:pluginModuleBanner",
       "result": "/*! src/features/BuyNowButton/index.tsx [vike:pluginModuleBanner] */\nimport { jsx } from \"react/jsx-runtime\";\nimport { Button } from \"@mantine/core\";\nimport { usePageContext } from \"vike-react/usePageContext\";\nimport { Picture } from \"@/shared/ui\";\nexport const BuyNowButton = ({\n  externalReportId,\n  mbti,\n  survey,\n  className,\n  children,\n  showIcon = false,\n  href,\n  ...props\n}) => {\n  const {\n    routeParams: {\n      reportId\n    }\n  } = usePageContext();\n  const currentUrl = () => {\n    let href2 = `/purchase`;\n    if (survey) {\n      href2 += `/${survey}`;\n    }\n    if (mbti) {\n      href2 += `?type=${mbti}`;\n    } else if (reportId || externalReportId) {\n      href2 += `?reportId=${reportId || externalReportId}`;\n    }\n    return href2;\n  };\n  const getChildren = () => {\n    if (children) {\n      return children;\n    }\n    if (survey) {\n      return \"Купить полный отчет\";\n    }\n    return \"Купить сейчас\";\n  };\n  return /* @__PURE__ */ jsx(Button, { size: \"md\", component: \"a\", href: href ?? currentUrl(), className, leftSection: showIcon ? /* @__PURE__ */ jsx(Picture, { w: 20, h: 20, cdn: true, src: \"/emoji/key\", \"aria-hidden\": true, alt: \"\" }) : null, ...props, children: getChildren() });\n};\n",
-      "start": 1750275033842,
-      "end": 1750275033842,
+      "start": 1750278467120,
+      "end": 1750278467120,
       "order": "post-post",
       "sourcemaps": {
         "version": 3,
