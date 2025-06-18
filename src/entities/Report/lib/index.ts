@@ -3,3 +3,4 @@ export * from './contentResolver';
 export * from './findBannerIndex';
 export * from './statusInfo';
 export * from './normalizeData';
+export * from './parseNavigationRules';

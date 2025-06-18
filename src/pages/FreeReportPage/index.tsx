@@ -1,11 +1,17 @@
 import { Fragment } from 'react';
-import { Element } from 'react-scroll';
 import { Box, Container, Stack, Title } from '@mantine/core';
 import { useGate, useUnit } from 'effector-react';
 
 import { InnerContainer, PageLoader } from '@/shared/ui';
 
-import { contentResolver, getFreeResultQuery, ReportHeader, ReportModel, TYPE_TO_COLOR_MAP } from '@/entities/Report';
+import {
+    contentResolver,
+    extractNavigationRules,
+    getFreeResultQuery,
+    ReportHeader,
+    ReportModel,
+    TYPE_TO_COLOR_MAP,
+} from '@/entities/Report';
 import { UserModel } from '@/entities/User';
 
 import { NavigateToReviewPage } from '@/features/NavigateToReviewPage';
@@ -32,8 +38,8 @@ export const FreeReportPage = () => {
                 <FreeReportNavigation />
                 <InnerContainer>
                     {data.content?.map((el, index) => (
-                        <Stack key={el.title + index} id={el.title} data-block mb={100}>
-                            <Element name={el.title} id={el.title} key={data?.title + el.title + index}>
+                        <Stack key={el.title + index} id={extractNavigationRules(el.title)} data-block mb={100}>
+                            <Box key={data?.title + el.title + index}>
                                 <Title mb='md'>{el.title}</Title>
                                 {el.content.map((currentEl, idx) => (
                                     <Box className={s.block} key={currentEl.type + idx + index + 'content'}>
@@ -56,7 +62,7 @@ export const FreeReportPage = () => {
                                         ))}
                                     </Box>
                                 ))}
-                            </Element>
+                            </Box>
                         </Stack>
                     ))}
                 </InnerContainer>

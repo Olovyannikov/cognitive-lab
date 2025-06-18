@@ -4,6 +4,8 @@ import { X } from '@phosphor-icons/react/dist/ssr';
 
 import { useIsLarge } from '@/shared/lib';
 
+import { extractNavigationRules } from '@/entities/Report';
+
 import { getIconsMap } from '../../../const';
 
 import s from '../ReportNavigationTemplate.module.css';
@@ -82,7 +84,7 @@ export const Mobile = ({ opened, close, content, color, onPageChange, activeMenu
                         >
                             <Link
                                 spy
-                                to={title}
+                                to={extractNavigationRules(title)}
                                 offset={-100}
                                 onClick={() => {
                                     onPageChange({ idx, title });
@@ -92,7 +94,7 @@ export const Mobile = ({ opened, close, content, color, onPageChange, activeMenu
                                     lineHeight: 1,
                                 }}
                             >
-                                <Text style={{ pointerEvents: 'none' }} span inline fz={16} lh={1} fw='bold'>
+                                <Text inert span inline fz={16} lh={1} fw='bold'>
                                     {title}
                                 </Text>
                             </Link>
