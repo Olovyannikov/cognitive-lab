@@ -1,0 +1,61 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ # Укажите путь к проекту, если нужно
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm' # Кэширование pnpm-зависимостей
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Запуск линтеров
+      - name: Run ESLint
+        run: pnpm run eslint --max-warnings=0
+
+      - name: Run Prettier
+        run: pnpm run prettier --check .
+
+      - name: Run FSD Lint
+        run: pnpm run lint:fsd
+
+      - name: Run TS Lint
+        run: pnpm run lint:ts
+
+      - name: Run CSS Lint
+        run: pnpm run lint:css
+
+      - name: Run Madge (circular deps)
+        run: npx madge --circular src/ # Укажите ваш путь
+
+      - name: Run Knip
+        run: npx knip
+
+      # Запуск тестов
+      - name: Run Unit Tests
+        run: pnpm run test:unit
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096' # При необходимости
