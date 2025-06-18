@@ -30,25 +30,22 @@ jobs:
 
       # Запуск линтеров
       - name: Run ESLint
-        run: pnpm run eslint --max-warnings=0
+        run: pnpm run lint:ts
 
       - name: Run Prettier
-        run: pnpm run prettier --check .
+        run: pnpm exec prettier
 
       - name: Run FSD Lint
         run: pnpm run lint:fsd
-
-      - name: Run TS Lint
-        run: pnpm run lint:ts
 
       - name: Run CSS Lint
         run: pnpm run lint:css
 
       - name: Run Madge (circular deps)
-        run: npx madge --circular src/ # Укажите ваш путь
+        run: pnpm exec madge --circular --extensions ts,tsx src/ # Укажите ваш путь
 
       - name: Run Knip
-        run: npx knip
+        run: pnpm exec knip
 
       # Запуск тестов
       - name: Run Unit Tests
