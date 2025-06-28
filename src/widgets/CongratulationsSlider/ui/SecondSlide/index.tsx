@@ -106,7 +106,7 @@ export const SecondSlide = () => {
                             w={isLarge ? 'fit-content' : '100%'}
                             rightSection={<ArrowRight size={20} />}
                         >
-                            Как получить?
+                            Далее
                         </Button>
                         {!isLarge && (
                             <Button size='md' variant='subtle' component='a' href={`/free-report/${id}`} c='dark.2'>
