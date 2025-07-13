@@ -67,9 +67,9 @@ export const HeadDefault = () => (
                 <noscript>
                     <div>
                         <img
-                            src="https://top-fwz1.mail.ru/counter?id=3668956;js=na"
+                            src='https://top-fwz1.mail.ru/counter?id=3668956;js=na'
                             style={{ position: 'absolute', left: '-9999px' }}
-                            alt="Top.Mail.Ru"
+                            alt='Top.Mail.Ru'
                         />
                     </div>
                 </noscript>
