@@ -144,6 +144,8 @@
 }
 
 .reportInfo {
+  position: relative;   /* создаём контекст */
+  z-index: 3;           /* выше .top, у которой z-index: auto (0) */
   text-align: left;
 
   @mixin larger-than 768px {
