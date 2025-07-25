@@ -10,11 +10,11 @@ pre-commit:
             glob: '*.{css}'
             run: pnpm run lint:css {staged_files}
         prettier:
-            run: npx prettier --write {staged_files} && git add {staged_files}
+            run: pnpm exec prettier --write {staged_files} && git add {staged_files}
         solidarity:
             run: solidarity
         circular:
-            run: npx madge --circular --extensions ts,tsx src
+            run: pnpm exec madge --circular --extensions ts,tsx src
         unit-test:
             run: pnpm run test:unit
         knip:
@@ -26,4 +26,4 @@ commit-msg:
     parallel: true
     commands:
         lint-commit-msg:
-            run: npx commitlint --edit $1
+            run: pnpm exec commitlint --edit $1

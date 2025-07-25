@@ -28,7 +28,6 @@ export interface Content {
     points: string[];
     title: string;
     button_text: string;
-    // eslint-disable-next-line no-use-before-define
     items: ListItem | ListItem[];
     mbti_percentages: Record<string, { negative: number; positive: number }>;
     mbti_data: Record<string, { text: string; type: 'header' | 'paragraph' }[]>;
